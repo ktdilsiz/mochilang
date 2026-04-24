@@ -1,0 +1,14 @@
+# deps
+node_modules/
+apps/web/node_modules/
+
+# build outputs
+apps/web/dist/
+apps/api/api   # compiled binary
+
+# DB (keep out of git — it's runtime data)
+apps/api/app.db
+
+# env
+.env
+.env.local
