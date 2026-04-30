@@ -4,11 +4,17 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
+    "start:tunnel": "expo start --tunnel",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "build:dict": "node scripts/build-dict.mjs",
-    "build:decomp": "node scripts/build-decomp.mjs"
+    "build:decomp": "node scripts/build-decomp.mjs",
+    "build:data": "pnpm run build:dict && pnpm run build:decomp",
+    "eas:login": "eas login",
+    "eas:whoami": "eas whoami",
+    "eas:setup": "eas init --non-interactive --force && eas update:configure --non-interactive --platform all",
+    "publish": "eas update --branch production --message \"$(git log -1 --pretty=%s 2>/dev/null || echo 'manual publish')\""
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",
@@ -16,6 +22,7 @@
     "expo": "~54.0.33",
     "expo-speech": "~14.0.8",
     "expo-status-bar": "~3.0.9",
+    "expo-updates": "~29.0.17",
     "pinyin-pro": "^3.28.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -24,6 +31,7 @@
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
+    "eas-cli": "^18.8.1",
     "typescript": "~5.9.2"
   },
   "private": true
