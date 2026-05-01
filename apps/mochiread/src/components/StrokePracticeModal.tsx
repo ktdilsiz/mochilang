@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Animated,
   Pressable,
@@ -10,29 +10,36 @@ import {
   HanziWriter,
   useHanziWriter,
 } from '@jamsch/react-native-hanzi-writer';
+import { isCJK } from '../lib/segment';
 import { useTheme } from '../theme';
 
 type Props = {
-  char: string | null;
+  /** A character or word; multi-character words are practiced one char at a time. */
+  word: string | null;
   onClose: () => void;
 };
 
 const DATA_URL = 'https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0';
 
-export function StrokePracticeModal({ char, onClose }: Props) {
+export function StrokePracticeModal({ word, onClose }: Props) {
   const fade = useRef(new Animated.Value(0)).current;
 
+  const chars = useMemo(
+    () => (word ? [...word].filter((c) => isCJK(c)) : []),
+    [word]
+  );
+
   useEffect(() => {
-    if (!char) return;
+    if (!word) return;
     fade.setValue(0);
     Animated.timing(fade, {
       toValue: 1,
       duration: 180,
       useNativeDriver: true,
     }).start();
-  }, [char]);
+  }, [word]);
 
-  if (!char) return null;
+  if (!word || chars.length === 0) return null;
 
   return (
     <Animated.View
@@ -40,13 +47,55 @@ export function StrokePracticeModal({ char, onClose }: Props) {
     >
       <Pressable style={s.backdrop} onPress={onClose} />
       <View style={s.center} pointerEvents="box-none">
-        <Practice char={char} onClose={onClose} />
+        <PracticeDeck chars={chars} onClose={onClose} />
       </View>
     </Animated.View>
   );
 }
 
-function Practice({ char, onClose }: { char: string; onClose: () => void }) {
+function PracticeDeck({
+  chars,
+  onClose,
+}: {
+  chars: string[];
+  onClose: () => void;
+}) {
+  const [index, setIndex] = useState(0);
+  const safeIndex = Math.min(Math.max(0, index), chars.length - 1);
+  const char = chars[safeIndex];
+  return (
+    <Practice
+      key={char}
+      char={char}
+      indexInfo={
+        chars.length > 1
+          ? { current: safeIndex, total: chars.length }
+          : undefined
+      }
+      onPrev={safeIndex > 0 ? () => setIndex(safeIndex - 1) : undefined}
+      onNext={
+        safeIndex < chars.length - 1
+          ? () => setIndex(safeIndex + 1)
+          : undefined
+      }
+      onClose={onClose}
+    />
+  );
+}
+
+function Practice({
+  char,
+  indexInfo,
+  onPrev,
+  onNext,
+  onClose,
+}: {
+  char: string;
+  indexInfo?: { current: number; total: number };
+  onPrev?: () => void;
+  onNext?: () => void;
+  onClose: () => void;
+}) {
   const theme = useTheme();
   const [completion, setCompletion] = useState<{
     mistakes: number;
@@ -95,7 +144,12 @@ function Practice({ char, onClose }: { char: string; onClose: () => void }) {
       onPress={() => {}}
     >
       <View style={[s.header, { borderBottomColor: theme.border }]}>
-        <Text style={[s.title, { color: theme.text }]}>Stroke order</Text>
+        <Text style={[s.title, { color: theme.text }]}>
+          Stroke order
+          {indexInfo
+            ? ` · ${indexInfo.current + 1} / ${indexInfo.total}`
+            : ''}
+        </Text>
         <Pressable
           onPress={onClose}
           hitSlop={8}
@@ -109,7 +163,37 @@ function Practice({ char, onClose }: { char: string; onClose: () => void }) {
         </Pressable>
       </View>
 
-      <Text style={[s.charLabel, { color: theme.text }]}>{char}</Text>
+      <View style={s.charRow}>
+        {onPrev ? (
+          <Pressable
+            onPress={onPrev}
+            hitSlop={10}
+            style={({ pressed }) => [
+              s.charNav,
+              pressed && { backgroundColor: theme.surfaceAlt },
+            ]}
+          >
+            <Text style={[s.charNavText, { color: theme.accent }]}>‹</Text>
+          </Pressable>
+        ) : (
+          <View style={s.charNav} />
+        )}
+        <Text style={[s.charLabel, { color: theme.text }]}>{char}</Text>
+        {onNext ? (
+          <Pressable
+            onPress={onNext}
+            hitSlop={10}
+            style={({ pressed }) => [
+              s.charNav,
+              pressed && { backgroundColor: theme.surfaceAlt },
+            ]}
+          >
+            <Text style={[s.charNavText, { color: theme.accent }]}>›</Text>
+          </Pressable>
+        ) : (
+          <View style={s.charNav} />
+        )}
+      </View>
 
       <View style={s.canvasWrap}>
         <HanziWriter
@@ -267,13 +351,28 @@ const s = StyleSheet.create({
     justifyContent: 'center',
   },
   closeIcon: { fontSize: 16 },
+  charRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 12,
+    gap: 24,
+  },
   charLabel: {
     fontSize: 32,
     fontWeight: '700',
     textAlign: 'center',
-    marginTop: 12,
     letterSpacing: -0.5,
+    minWidth: 48,
   },
+  charNav: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  charNavText: { fontSize: 28, fontWeight: '300', marginTop: -4 },
   canvasWrap: { alignItems: 'center', justifyContent: 'center', paddingVertical: 12 },
   canvas: { alignSelf: 'center' },
   loading: {

@@ -217,7 +217,7 @@ function AppRoot() {
       />
 
       <StrokePracticeModal
-        char={practicing}
+        word={practicing}
         onClose={() => setPracticing(null)}
       />
       <ExpoStatusBar style={theme.isDark ? 'light' : 'dark'} />

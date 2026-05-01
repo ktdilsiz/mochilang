@@ -235,20 +235,18 @@ export function ThoughtBubble({
                 </Text>
               </Pressable>
             )}
-            {[...word].length === 1 && (
-              <Pressable
-                onPress={() => onPractice(word)}
-                style={({ pressed }) => [
-                  s.exploreBtn,
-                  { backgroundColor: theme.accentBg, marginTop: 8 },
-                  pressed && { backgroundColor: theme.accentBgPressed },
-                ]}
-              >
-                <Text style={[s.exploreText, { color: theme.accent }]}>
-                  Practice writing ✎
-                </Text>
-              </Pressable>
-            )}
+            <Pressable
+              onPress={() => onPractice(word)}
+              style={({ pressed }) => [
+                s.exploreBtn,
+                { backgroundColor: theme.accentBg, marginTop: 8 },
+                pressed && { backgroundColor: theme.accentBgPressed },
+              ]}
+            >
+              <Text style={[s.exploreText, { color: theme.accent }]}>
+                Practice writing ✎
+              </Text>
+            </Pressable>
           </View>
         </Animated.View>
       </Pressable>
