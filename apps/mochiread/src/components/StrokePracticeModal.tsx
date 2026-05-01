@@ -83,6 +83,8 @@ function PracticeDeck({
   );
 }
 
+type QuizMode = 'trace' | 'test';
+
 function Practice({
   char,
   indexInfo,
@@ -100,6 +102,7 @@ function Practice({
   const [completion, setCompletion] = useState<{
     mistakes: number;
   } | null>(null);
+  const [quizMode, setQuizMode] = useState<QuizMode | null>(null);
 
   const writer = useHanziWriter({
     character: char,
@@ -118,8 +121,9 @@ function Practice({
   const animatorState = writer.animator.useStore((a) => a.state);
   const totalStrokes = writer.characterClass?.strokes.length ?? 0;
 
-  const startQuiz = () => {
+  const startQuiz = (mode: QuizMode) => {
     setCompletion(null);
+    setQuizMode(mode);
     writer.quiz.start({
       // Higher = looser grading on each stroke (start point, length, shape).
       // Stroke ORDER is enforced separately and stays strict regardless.
@@ -129,6 +133,11 @@ function Practice({
         setCompletion({ mistakes: totalMistakes });
       },
     });
+  };
+
+  const stopQuiz = () => {
+    writer.quiz.stop();
+    setQuizMode(null);
   };
 
   const playAnimation = () => {
@@ -235,7 +244,11 @@ function Practice({
                 recall the shape from memory; QuizMistakeHighlighter still
                 shows the right path after two misses. */}
             <HanziWriter.Outline
-              color={quizActive ? 'transparent' : theme.border}
+              color={
+                quizActive && quizMode === 'test'
+                  ? 'transparent'
+                  : theme.border
+              }
             />
             <HanziWriter.Character
               color={theme.text}
@@ -276,18 +289,37 @@ function Practice({
       </View>
 
       <View style={s.actions}>
-        <Action
-          label={animatorState === 'playing' ? 'Stop' : 'Watch'}
-          onPress={animatorState === 'playing' ? stopAnimation : playAnimation}
-          tone="neutral"
-          theme={theme}
-        />
-        <Action
-          label={quizActive ? 'Stop quiz' : 'Practice'}
-          onPress={quizActive ? writer.quiz.stop : startQuiz}
-          tone="primary"
-          theme={theme}
-        />
+        {quizActive ? (
+          <Action
+            label="Stop quiz"
+            onPress={stopQuiz}
+            tone="primary"
+            theme={theme}
+          />
+        ) : (
+          <>
+            <Action
+              label={animatorState === 'playing' ? 'Stop' : 'Watch'}
+              onPress={
+                animatorState === 'playing' ? stopAnimation : playAnimation
+              }
+              tone="neutral"
+              theme={theme}
+            />
+            <Action
+              label="Trace"
+              onPress={() => startQuiz('trace')}
+              tone="neutral"
+              theme={theme}
+            />
+            <Action
+              label="Test"
+              onPress={() => startQuiz('test')}
+              tone="primary"
+              theme={theme}
+            />
+          </>
+        )}
       </View>
     </Pressable>
   );
