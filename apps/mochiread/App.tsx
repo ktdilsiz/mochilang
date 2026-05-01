@@ -51,9 +51,25 @@ function AppRoot() {
   );
   const [exploring, setExploring] = useState<string | null>(null);
 
-  const { prefs, saveText } = useStore();
+  const { prefs, saveText, library, hydrated: storeHydrated } = useStore();
   const theme = useTheme();
   const tokens = useMemo(() => tokenize(text), [text]);
+
+  // If the persisted text matches a library entry modulo whitespace (meaning
+  // we updated a seed's formatting), promote the saved currentText to the
+  // refreshed version. Same content, just better line breaks.
+  useEffect(() => {
+    if (!storeHydrated || !hydrated) return;
+    const stripped = text.replace(/\s+/g, '');
+    if (!stripped) return;
+    for (const entry of library) {
+      if (entry.text === text) return;
+      if (entry.text.replace(/\s+/g, '') === stripped) {
+        setText(entry.text);
+        return;
+      }
+    }
+  }, [storeHydrated, hydrated, library, text]);
 
   useEffect(() => {
     (async () => {

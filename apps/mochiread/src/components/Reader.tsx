@@ -115,57 +115,92 @@ export function Reader({
 
   const togglePlay = () => setIsPlaying((p) => !p);
 
+  // Split the page's tokens into "logical lines" delimited by \n. Each line
+  // becomes its own row View; tokens within a line still wrap on overflow.
+  // This is more reliable than trying to force a flex break with width:100%.
+  const lines = useMemo(() => {
+    const out: { tokens: typeof currentTokens; index: number }[] = [
+      { tokens: [], index: 0 },
+    ];
+    let cursor = 0;
+    for (const t of currentTokens) {
+      if (t.word === '\n') {
+        cursor++;
+        out.push({ tokens: [], index: cursor });
+        continue;
+      }
+      out[out.length - 1].tokens.push(t);
+    }
+    return out;
+  }, [currentTokens]);
+
+  // Map each rendered token back to its position in `currentTokens` so the
+  // play loop can highlight the right one across split lines.
+  let runningIndex = 0;
+
   return (
     <View style={[s.root, { backgroundColor: theme.bg }]}>
       <View style={s.page} onLayout={handleLayout}>
-        <View style={s.flow}>
-          {currentTokens.map((t, i) => {
-            if (t.word === '\n') {
-              return <View key={i} style={s.lineBreak} />;
-            }
-            if (!isChinese(t.word)) {
-              return (
-                <Text
-                  key={i}
-                  style={[
-                    s.plain,
-                    {
-                      fontSize: hanziSize,
-                      lineHeight,
-                      color: theme.textMuted,
-                    },
-                  ]}
-                >
-                  {t.word}
-                </Text>
-              );
-            }
-            const isRevealed =
-              pinyinMode === 'on' || revealed.has(t.word);
-            return (
-              <WordChip
-                key={i}
-                token={t}
-                hanziSize={hanziSize}
-                pinyinSize={pinyinSize}
-                lineHeight={lineHeight}
-                pinyinMode={pinyinMode}
-                isRevealed={isRevealed}
-                showToneColors={showToneColors}
-                isPlaying={playingIndex === i}
-                theme={theme}
-                onPress={(token, rect) => {
-                  if (pinyinMode === 'hint' && !revealed.has(token.word)) {
-                    setRevealed((prev) => {
-                      const next = new Set(prev);
-                      next.add(token.word);
-                      return next;
-                    });
+        <View style={s.column}>
+          {lines.map((line, lineIdx) => {
+            // Each \n we encountered earlier in currentTokens advances the
+            // running index too.
+            const lineNode = (
+              <View key={`line-${lineIdx}`} style={s.line}>
+                {line.tokens.map((t) => {
+                  const tokenIndex = runningIndex++;
+                  if (!isChinese(t.word)) {
+                    return (
+                      <Text
+                        key={tokenIndex}
+                        style={[
+                          s.plain,
+                          {
+                            fontSize: hanziSize,
+                            lineHeight,
+                            color: theme.textMuted,
+                          },
+                        ]}
+                      >
+                        {t.word}
+                      </Text>
+                    );
                   }
-                  onWordPress(token, rect);
-                }}
-              />
+                  const isRevealed =
+                    pinyinMode === 'on' || revealed.has(t.word);
+                  return (
+                    <WordChip
+                      key={tokenIndex}
+                      token={t}
+                      hanziSize={hanziSize}
+                      pinyinSize={pinyinSize}
+                      lineHeight={lineHeight}
+                      pinyinMode={pinyinMode}
+                      isRevealed={isRevealed}
+                      showToneColors={showToneColors}
+                      isPlaying={playingIndex === tokenIndex}
+                      theme={theme}
+                      onPress={(token, rect) => {
+                        if (
+                          pinyinMode === 'hint' &&
+                          !revealed.has(token.word)
+                        ) {
+                          setRevealed((prev) => {
+                            const next = new Set(prev);
+                            next.add(token.word);
+                            return next;
+                          });
+                        }
+                        onWordPress(token, rect);
+                      }}
+                    />
+                  );
+                })}
+              </View>
             );
+            // Account for the \n token that separated this line from the next.
+            if (lineIdx < lines.length - 1) runningIndex++;
+            return lineNode;
           })}
         </View>
       </View>
@@ -356,8 +391,13 @@ const s = StyleSheet.create({
     padding: PAGE_PADDING,
     overflow: 'hidden',
   },
-  flow: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-end' },
-  lineBreak: { width: '100%', height: 6 },
+  column: { flexDirection: 'column' },
+  line: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-end',
+    width: '100%',
+  },
   token: {
     alignItems: 'center',
     paddingHorizontal: 3,
