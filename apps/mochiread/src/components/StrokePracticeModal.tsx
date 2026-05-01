@@ -220,12 +220,24 @@ function Practice({
             </View>
           }
           style={s.canvas}
+          userStrokeProps={{
+            stroke: theme.accent,
+            strokeWidth: 80,
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round',
+          }}
         >
           <HanziWriter.GridLines color={theme.border} />
           <HanziWriter.Svg>
             <HanziWriter.Outline color={theme.border} />
-            <HanziWriter.Character color={theme.text} radicalColor={theme.accent} />
-            <HanziWriter.QuizStrokes />
+            <HanziWriter.Character
+              color={theme.text}
+              radicalColor={theme.accent}
+            />
+            <HanziWriter.QuizStrokes
+              color={theme.text}
+              radicalColor={theme.accent}
+            />
             <HanziWriter.QuizMistakeHighlighter
               color={theme.accent}
               strokeDuration={400}
