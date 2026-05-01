@@ -24,6 +24,7 @@ const ITEMS: Item[] = [
   { id: 'library', label: 'Library', hint: 'Saved & recent texts' },
   { id: 'vocab', label: 'Vocabulary', hint: 'Words you’ve saved' },
   { id: 'flashcards', label: 'Flashcards', hint: 'Swipe-to-review your words' },
+  { id: 'stats', label: 'Stats', hint: 'Streak & reading activity' },
   { id: 'display', label: 'Display', hint: 'Font size & pinyin' },
   { id: 'audio', label: 'Audio', hint: 'Voice, rate & auto-play' },
   { id: 'help', label: 'Help' },

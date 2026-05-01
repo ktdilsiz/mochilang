@@ -21,6 +21,7 @@ import { EditorScreen } from './src/screens/EditorScreen';
 import { LibraryScreen } from './src/screens/LibraryScreen';
 import { VocabularyScreen } from './src/screens/VocabularyScreen';
 import { FlashcardsScreen } from './src/screens/FlashcardsScreen';
+import { StatsScreen } from './src/screens/StatsScreen';
 import { DisplayScreen } from './src/screens/DisplayScreen';
 import { AudioScreen } from './src/screens/AudioScreen';
 import { AboutScreen } from './src/screens/AboutScreen';
@@ -51,7 +52,14 @@ function AppRoot() {
   );
   const [exploring, setExploring] = useState<string | null>(null);
 
-  const { prefs, saveText, library, hydrated: storeHydrated } = useStore();
+  const {
+    prefs,
+    saveText,
+    library,
+    hydrated: storeHydrated,
+    recordWordTap,
+    recordReadingTime,
+  } = useStore();
   const theme = useTheme();
   const tokens = useMemo(() => tokenize(text), [text]);
 
@@ -104,6 +112,14 @@ function AppRoot() {
     });
   }, [prefs.speechRate, prefs.voiceId]);
 
+  // Track time on the reader screen in 30s ticks. Foreground-only because JS
+  // intervals are paused when the app goes to background.
+  useEffect(() => {
+    if (screen !== 'reader') return;
+    const interval = setInterval(() => recordReadingTime(30), 30_000);
+    return () => clearInterval(interval);
+  }, [screen, recordReadingTime]);
+
   const goReader = () => setScreen('reader');
 
   const handleMenuSelect = (target: Screen) => {
@@ -137,7 +153,10 @@ function AppRoot() {
             showToneColors={prefs.showToneColors}
             page={readingPage}
             onPageChange={setReadingPage}
-            onWordPress={(token, rect) => setSelected({ token, rect })}
+            onWordPress={(token, rect) => {
+              setSelected({ token, rect });
+              recordWordTap();
+            }}
           />
         </View>
       )}
@@ -160,6 +179,7 @@ function AppRoot() {
 
       {screen === 'vocab' && <VocabularyScreen onBack={goReader} />}
       {screen === 'flashcards' && <FlashcardsScreen onBack={goReader} />}
+      {screen === 'stats' && <StatsScreen onBack={goReader} />}
       {screen === 'display' && <DisplayScreen onBack={goReader} />}
       {screen === 'audio' && <AudioScreen onBack={goReader} />}
       {screen === 'about' && <AboutScreen onBack={goReader} />}

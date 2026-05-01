@@ -38,6 +38,13 @@ export type LibraryEntry = {
   createdAt: number;
 };
 
+export type DayStats = {
+  /** Local-day ISO key, e.g. "2026-05-01". */
+  date: string;
+  wordTaps: number;
+  secondsRead: number;
+};
+
 export type VocabEntry = {
   word: string;
   pinyin: string;
@@ -81,6 +88,7 @@ function migratePrefs(raw: unknown): Partial<Preferences> {
 const KEY_PREFS = 'mochiread:prefs';
 const KEY_LIBRARY = 'mochiread:library';
 const KEY_VOCAB = 'mochiread:vocab';
+const KEY_STATS = 'mochiread:stats';
 const KEY_SEEDED = 'mochiread:seeded';
 const KEY_INTRODUCED = 'mochiread:introduced-seeds';
 
@@ -116,6 +124,9 @@ type Store = {
   removeWord: (word: string) => void;
   isWordSaved: (word: string) => boolean;
   recordReview: (word: string, remembered: boolean) => void;
+  stats: DayStats[];
+  recordWordTap: () => void;
+  recordReadingTime: (seconds: number) => void;
 };
 
 const Ctx = createContext<Store | null>(null);
@@ -125,17 +136,30 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [prefs, setPrefsState] = useState<Preferences>(DEFAULT_PREFS);
   const [library, setLibrary] = useState<LibraryEntry[]>([]);
   const [vocab, setVocab] = useState<VocabEntry[]>([]);
+  const [stats, setStats] = useState<DayStats[]>([]);
 
   useEffect(() => {
     (async () => {
       try {
-        const [p, l, v, seeded, introducedRaw] = await Promise.all([
+        const [p, l, v, seeded, introducedRaw, statsRaw] = await Promise.all([
           AsyncStorage.getItem(KEY_PREFS),
           AsyncStorage.getItem(KEY_LIBRARY),
           AsyncStorage.getItem(KEY_VOCAB),
           AsyncStorage.getItem(KEY_SEEDED),
           AsyncStorage.getItem(KEY_INTRODUCED),
+          AsyncStorage.getItem(KEY_STATS),
         ]);
+        if (statsRaw) {
+          const parsed = JSON.parse(statsRaw) as Partial<DayStats>[];
+          setStats(
+            parsed
+              .filter((d): d is DayStats =>
+                typeof d?.date === 'string' &&
+                typeof d.wordTaps === 'number' &&
+                typeof d.secondsRead === 'number'
+              )
+          );
+        }
         if (p) {
           setPrefsState({ ...DEFAULT_PREFS, ...migratePrefs(JSON.parse(p)) });
         }
@@ -209,6 +233,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (hydrated) AsyncStorage.setItem(KEY_VOCAB, JSON.stringify(vocab));
   }, [vocab, hydrated]);
+  useEffect(() => {
+    if (hydrated) AsyncStorage.setItem(KEY_STATS, JSON.stringify(stats));
+  }, [stats, hydrated]);
 
   const value = useMemo<Store>(() => {
     return {
@@ -254,8 +281,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         setVocab((prev) =>
           prev.map((v) => (v.word === word ? applySm2(v, remembered) : v))
         ),
+      stats,
+      recordWordTap: () =>
+        setStats((prev) => upsertDay(prev, { wordTapsDelta: 1 })),
+      recordReadingTime: (seconds) => {
+        if (seconds <= 0) return;
+        setStats((prev) => upsertDay(prev, { secondsDelta: seconds }));
+      },
     };
-  }, [hydrated, prefs, library, vocab]);
+  }, [hydrated, prefs, library, vocab, stats]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
@@ -270,6 +304,77 @@ function makeTitle(text: string): string {
   const cleaned = text.replace(/\s+/g, ' ').trim();
   if (cleaned.length <= 32) return cleaned || 'Untitled';
   return cleaned.slice(0, 32) + '…';
+}
+
+export function todayKey(): string {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+function dayBefore(key: string, days: number): string {
+  const [y, m, d] = key.split('-').map(Number);
+  const date = new Date(y, m - 1, d);
+  date.setDate(date.getDate() - days);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+}
+
+function upsertDay(
+  prev: DayStats[],
+  delta: { wordTapsDelta?: number; secondsDelta?: number }
+): DayStats[] {
+  const today = todayKey();
+  const idx = prev.findIndex((d) => d.date === today);
+  const tapsDelta = delta.wordTapsDelta ?? 0;
+  const secondsDelta = delta.secondsDelta ?? 0;
+  if (idx === -1) {
+    return [
+      ...prev,
+      { date: today, wordTaps: tapsDelta, secondsRead: secondsDelta },
+    ];
+  }
+  const next = [...prev];
+  next[idx] = {
+    ...next[idx],
+    wordTaps: next[idx].wordTaps + tapsDelta,
+    secondsRead: next[idx].secondsRead + secondsDelta,
+  };
+  return next;
+}
+
+/** Count consecutive days of activity ending today (or yesterday). */
+export function computeStreak(stats: DayStats[]): number {
+  if (stats.length === 0) return 0;
+  const dates = new Set(stats.map((d) => d.date));
+  const today = todayKey();
+  // If today has no activity yet, the streak still holds if yesterday did.
+  let cursor = dates.has(today) ? today : dayBefore(today, 1);
+  let streak = 0;
+  while (dates.has(cursor)) {
+    streak++;
+    cursor = dayBefore(cursor, 1);
+  }
+  return streak;
+}
+
+export function statsForDate(
+  stats: DayStats[],
+  date: string
+): DayStats | null {
+  return stats.find((d) => d.date === date) ?? null;
+}
+
+export function statsLastNDays(
+  stats: DayStats[],
+  n: number
+): DayStats[] {
+  const today = todayKey();
+  const out: DayStats[] = [];
+  for (let i = n - 1; i >= 0; i--) {
+    const key = dayBefore(today, i);
+    const found = stats.find((d) => d.date === key);
+    out.push(found ?? { date: key, wordTaps: 0, secondsRead: 0 });
+  }
+  return out;
 }
 
 const DAY_MS = 24 * 60 * 60 * 1000;

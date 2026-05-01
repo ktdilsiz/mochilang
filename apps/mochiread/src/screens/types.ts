@@ -4,6 +4,7 @@ export type Screen =
   | 'library'
   | 'vocab'
   | 'flashcards'
+  | 'stats'
   | 'display'
   | 'audio'
   | 'about'
