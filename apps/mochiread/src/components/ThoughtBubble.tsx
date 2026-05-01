@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   Animated,
   Dimensions,
@@ -34,6 +34,7 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
   const scale = useRef(new Animated.Value(0.85)).current;
   const opacity = useRef(new Animated.Value(0)).current;
   const translateY = useRef(new Animated.Value(-6)).current;
+  const [bubbleHeight, setBubbleHeight] = useState(0);
   const { saveWord, removeWord, isWordSaved, prefs } = useStore();
   const theme = useTheme();
 
@@ -67,7 +68,8 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
 
   if (!visible) return null;
 
-  const screenWidth = Dimensions.get('window').width;
+  const { width: screenWidth, height: screenHeight } =
+    Dimensions.get('window');
   const wordCenterX = rect.x + rect.width / 2;
 
   const left = Math.max(
@@ -78,7 +80,16 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
     )
   );
   const arrowLeft = wordCenterX - left - 8;
-  const top = rect.y + rect.height + GAP + ARROW_HEIGHT;
+
+  // Decide whether the bubble fits below the word; if not, flip above.
+  const belowTop = rect.y + rect.height + GAP + ARROW_HEIGHT;
+  const aboveTop = rect.y - GAP - ARROW_HEIGHT - bubbleHeight;
+  const fitsBelow =
+    bubbleHeight === 0 ||
+    belowTop + bubbleHeight <= screenHeight - EDGE_PADDING;
+  const fitsAbove = aboveTop >= EDGE_PADDING;
+  const placeAbove = !fitsBelow && fitsAbove;
+  const top = placeAbove ? aboveTop : belowTop;
 
   const entry = lookup(word);
   const saved = isWordSaved(word);
@@ -110,13 +121,23 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
             },
           ]}
           pointerEvents="box-none"
+          onLayout={(e) => setBubbleHeight(e.nativeEvent.layout.height)}
         >
-          <View
-            style={[
-              s.arrow,
-              { left: arrowLeft, borderBottomColor: theme.surface },
-            ]}
-          />
+          {placeAbove ? (
+            <View
+              style={[
+                s.arrowDown,
+                { left: arrowLeft, borderTopColor: theme.surface },
+              ]}
+            />
+          ) : (
+            <View
+              style={[
+                s.arrowUp,
+                { left: arrowLeft, borderBottomColor: theme.surface },
+              ]}
+            />
+          )}
           <View
             style={[
               s.panelInner,
@@ -218,7 +239,7 @@ const s = StyleSheet.create({
   panel: {
     position: 'absolute',
   },
-  arrow: {
+  arrowUp: {
     position: 'absolute',
     top: -ARROW_HEIGHT,
     width: 0,
@@ -228,7 +249,17 @@ const s = StyleSheet.create({
     borderBottomWidth: ARROW_HEIGHT,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderBottomColor: '#ffffff',
+  },
+  arrowDown: {
+    position: 'absolute',
+    bottom: -ARROW_HEIGHT,
+    width: 0,
+    height: 0,
+    borderLeftWidth: 8,
+    borderRightWidth: 8,
+    borderTopWidth: ARROW_HEIGHT,
+    borderLeftColor: 'transparent',
+    borderRightColor: 'transparent',
   },
   panelInner: {
     backgroundColor: '#ffffff',
