@@ -7,6 +7,7 @@ import {
   type ReactNode,
 } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { HSK3_SENTENCES } from './data/hsk3-sentences';
 
 export type FontSize = 'sm' | 'md' | 'lg' | 'xl';
 export type SpeechRate = 'slow' | 'normal' | 'fast';
@@ -65,6 +66,9 @@ const KEY_PREFS = 'mochiread:prefs';
 const KEY_LIBRARY = 'mochiread:library';
 const KEY_VOCAB = 'mochiread:vocab';
 const KEY_SEEDED = 'mochiread:seeded';
+const KEY_INTRODUCED = 'mochiread:introduced-seeds';
+
+const ORIGINAL_SEED_IDS = ['seed-1', 'seed-2', 'seed-3', 'seed-4', 'seed-5'];
 
 type Store = {
   hydrated: boolean;
@@ -91,19 +95,34 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     (async () => {
       try {
-        const [p, l, v, seeded] = await Promise.all([
+        const [p, l, v, seeded, introducedRaw] = await Promise.all([
           AsyncStorage.getItem(KEY_PREFS),
           AsyncStorage.getItem(KEY_LIBRARY),
           AsyncStorage.getItem(KEY_VOCAB),
           AsyncStorage.getItem(KEY_SEEDED),
+          AsyncStorage.getItem(KEY_INTRODUCED),
         ]);
         if (p) setPrefsState({ ...DEFAULT_PREFS, ...JSON.parse(p) });
-        if (seeded) {
-          if (l) setLibrary(JSON.parse(l));
-        } else {
-          setLibrary(SEED_LIBRARY);
-          AsyncStorage.setItem(KEY_SEEDED, '1');
+
+        // Track which seeds have been introduced (added at least once). Once a
+        // seed is introduced, the user can delete it without us re-adding.
+        const introduced = new Set<string>(
+          introducedRaw ? (JSON.parse(introducedRaw) as string[]) : []
+        );
+        // Migrate legacy users: if KEY_SEEDED was set but introduced is empty,
+        // assume the original 5 seeds were introduced.
+        if (seeded && introduced.size === 0) {
+          ORIGINAL_SEED_IDS.forEach((id) => introduced.add(id));
         }
+
+        const existingLibrary: LibraryEntry[] = l ? JSON.parse(l) : [];
+        const newSeeds = SEED_LIBRARY.filter((s) => !introduced.has(s.id));
+        for (const s of newSeeds) introduced.add(s.id);
+        const nextLibrary = [...newSeeds, ...existingLibrary];
+        setLibrary(nextLibrary);
+
+        AsyncStorage.setItem(KEY_INTRODUCED, JSON.stringify([...introduced]));
+        if (!seeded) AsyncStorage.setItem(KEY_SEEDED, '1');
         if (v) {
           const parsed = JSON.parse(v) as Partial<VocabEntry>[];
           setVocab(
@@ -262,12 +281,27 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
       text: '床前明月光，疑是地上霜。举头望明月，低头思故乡。',
     },
   ];
-  return items.map((item, i) => ({
+  const baseSeeds = items.map((item, i) => ({
     id: `seed-${i + 1}`,
     title: item.title,
     text: item.text,
     createdAt: now - i * 60_000,
   }));
+
+  const HSK3_CHUNK = 30;
+  const hskSeeds: LibraryEntry[] = [];
+  for (let i = 0; i < HSK3_SENTENCES.length; i += HSK3_CHUNK) {
+    const slice = HSK3_SENTENCES.slice(i, i + HSK3_CHUNK);
+    const setNumber = i / HSK3_CHUNK + 1;
+    hskSeeds.push({
+      id: `seed-hsk3-${setNumber}`,
+      title: `HSK 3 · Set ${setNumber} (${i + 1}–${i + slice.length})`,
+      text: slice.join(''),
+      createdAt: now - (items.length + setNumber) * 60_000,
+    });
+  }
+
+  return [...baseSeeds, ...hskSeeds];
 })();
 
 export const FONT_SIZE_VALUES: Record<FontSize, number> = {
