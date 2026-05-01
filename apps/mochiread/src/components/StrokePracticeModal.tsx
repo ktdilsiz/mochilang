@@ -189,7 +189,19 @@ function Practice({
         ) : (
           <View style={s.charNav} />
         )}
-        <Text style={[s.charLabel, { color: theme.text }]}>{char}</Text>
+        <Text
+          style={[
+            s.charLabel,
+            {
+              color:
+                quizActive && quizMode === 'test'
+                  ? theme.textSubtle
+                  : theme.text,
+            },
+          ]}
+        >
+          {quizActive && quizMode === 'test' ? '?' : char}
+        </Text>
         {onNext ? (
           <Pressable
             onPress={onNext}
