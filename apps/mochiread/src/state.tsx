@@ -11,9 +11,13 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export type FontSize = 'sm' | 'md' | 'lg' | 'xl';
 export type SpeechRate = 'slow' | 'normal' | 'fast';
 
+export type ThemeMode = 'system' | 'light' | 'dark';
+
 export type Preferences = {
   fontSize: FontSize;
   showPinyin: boolean;
+  showToneColors: boolean;
+  themeMode: ThemeMode;
   speechRate: SpeechRate;
   autoPlay: boolean;
   voiceId?: string;
@@ -40,11 +44,19 @@ export type VocabEntry = {
   remembered: number;
   forgotten: number;
   lastReviewedAt?: number;
+  /** SM-2 ease factor; starts at 2.5, floored at 1.3. */
+  ease: number;
+  /** SM-2 interval in days. 0 = never reviewed. */
+  intervalDays: number;
+  /** Timestamp (ms) when the card is next due for review. */
+  dueAt: number;
 };
 
 const DEFAULT_PREFS: Preferences = {
   fontSize: 'md',
   showPinyin: true,
+  showToneColors: true,
+  themeMode: 'system',
   speechRate: 'normal',
   autoPlay: true,
 };
@@ -105,6 +117,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
                 remembered: e.remembered ?? 0,
                 forgotten: e.forgotten ?? 0,
                 lastReviewedAt: e.lastReviewedAt,
+                ease: e.ease ?? 2.5,
+                intervalDays: e.intervalDays ?? 0,
+                dueAt: e.dueAt ?? Date.now(),
               }))
           );
         }
@@ -147,12 +162,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       saveWord: (entry) =>
         setVocab((prev) => {
           if (prev.some((v) => v.word === entry.word)) return prev;
+          const now = Date.now();
           return [
             {
               ...entry,
-              savedAt: Date.now(),
+              savedAt: now,
               remembered: 0,
               forgotten: 0,
+              ease: 2.5,
+              intervalDays: 0,
+              dueAt: now,
             },
             ...prev,
           ];
@@ -162,16 +181,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       isWordSaved: (word) => vocab.some((v) => v.word === word),
       recordReview: (word, remembered) =>
         setVocab((prev) =>
-          prev.map((v) =>
-            v.word === word
-              ? {
-                  ...v,
-                  remembered: v.remembered + (remembered ? 1 : 0),
-                  forgotten: v.forgotten + (remembered ? 0 : 1),
-                  lastReviewedAt: Date.now(),
-                }
-              : v
-          )
+          prev.map((v) => (v.word === word ? applySm2(v, remembered) : v))
         ),
     };
   }, [hydrated, prefs, library, vocab]);
@@ -189,6 +199,43 @@ function makeTitle(text: string): string {
   const cleaned = text.replace(/\s+/g, ' ').trim();
   if (cleaned.length <= 32) return cleaned || 'Untitled';
   return cleaned.slice(0, 32) + '…';
+}
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+/**
+ * Simplified SM-2 with a binary remembered/forgot grade.
+ *
+ * Forgot: reset interval to 1 day, knock the ease factor down by 0.2
+ *   (floored at 1.3). Card returns tomorrow.
+ * Remembered: 1st time → 1 day; 2nd → 6 days; thereafter previous interval ×
+ *   ease. Ease nudges up by 0.05 per success, capped at 3.0.
+ */
+function applySm2(v: VocabEntry, remembered: boolean): VocabEntry {
+  const now = Date.now();
+  if (!remembered) {
+    return {
+      ...v,
+      forgotten: v.forgotten + 1,
+      ease: Math.max(1.3, v.ease - 0.2),
+      intervalDays: 1,
+      dueAt: now + DAY_MS,
+      lastReviewedAt: now,
+    };
+  }
+  let nextInterval: number;
+  if (v.intervalDays === 0) nextInterval = 1;
+  else if (v.intervalDays < 6) nextInterval = 6;
+  else nextInterval = Math.round(v.intervalDays * v.ease);
+  const nextEase = Math.min(3.0, v.ease + 0.05);
+  return {
+    ...v,
+    remembered: v.remembered + 1,
+    ease: nextEase,
+    intervalDays: nextInterval,
+    dueAt: now + nextInterval * DAY_MS,
+    lastReviewedAt: now,
+  };
 }
 
 const SEED_LIBRARY: LibraryEntry[] = (() => {

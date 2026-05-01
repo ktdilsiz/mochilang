@@ -16,6 +16,7 @@ import { ExploreModal } from './src/components/ExploreModal';
 import { tokenize, type Token } from './src/lib/cn';
 import { configureTTS } from './src/lib/tts';
 import { StoreProvider, useStore, SPEECH_RATE_VALUES } from './src/state';
+import { useTheme } from './src/theme';
 import { EditorScreen } from './src/screens/EditorScreen';
 import { LibraryScreen } from './src/screens/LibraryScreen';
 import { VocabularyScreen } from './src/screens/VocabularyScreen';
@@ -51,6 +52,7 @@ function AppRoot() {
   const [exploring, setExploring] = useState<string | null>(null);
 
   const { prefs, saveText } = useStore();
+  const theme = useTheme();
   const tokens = useMemo(() => tokenize(text), [text]);
 
   useEffect(() => {
@@ -104,7 +106,7 @@ function AppRoot() {
   };
 
   return (
-    <SafeAreaView style={s.root}>
+    <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}>
       {screen === 'reader' && (
         <View style={s.flex}>
           <AppHeader
@@ -116,6 +118,7 @@ function AppRoot() {
             tokens={tokens}
             fontSize={prefs.fontSize}
             showPinyin={prefs.showPinyin}
+            showToneColors={prefs.showToneColors}
             page={readingPage}
             onPageChange={setReadingPage}
             onWordPress={(token, rect) => setSelected({ token, rect })}
@@ -167,7 +170,7 @@ function AppRoot() {
         initial={exploring}
         onClose={() => setExploring(null)}
       />
-      <ExpoStatusBar style="auto" />
+      <ExpoStatusBar style={theme.isDark ? 'light' : 'dark'} />
     </SafeAreaView>
   );
 }
@@ -175,7 +178,6 @@ function AppRoot() {
 const s = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: '#fafafa',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   flex: { flex: 1 },

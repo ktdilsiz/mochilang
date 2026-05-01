@@ -1,4 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useTheme } from '../theme';
 
 type Props = {
   title: string;
@@ -8,33 +9,45 @@ type Props = {
 };
 
 export function AppHeader({ title, leading, onLeadingPress, trailing }: Props) {
+  const theme = useTheme();
   return (
-    <View style={s.header}>
+    <View
+      style={[
+        s.header,
+        { backgroundColor: theme.surface, borderBottomColor: theme.border },
+      ]}
+    >
       <View style={s.side}>
         {leading === 'menu' && (
           <Pressable
             onPress={onLeadingPress}
             hitSlop={8}
-            style={({ pressed }) => [s.iconBtn, pressed && s.iconBtnPressed]}
+            style={({ pressed }) => [
+              s.iconBtn,
+              pressed && { backgroundColor: theme.surfaceAlt },
+            ]}
             accessibilityLabel="Open menu"
           >
-            <View style={s.bar} />
-            <View style={s.bar} />
-            <View style={s.bar} />
+            <View style={[s.bar, { backgroundColor: theme.text }]} />
+            <View style={[s.bar, { backgroundColor: theme.text }]} />
+            <View style={[s.bar, { backgroundColor: theme.text }]} />
           </Pressable>
         )}
         {leading === 'back' && (
           <Pressable
             onPress={onLeadingPress}
             hitSlop={8}
-            style={({ pressed }) => [s.backBtn, pressed && s.iconBtnPressed]}
+            style={({ pressed }) => [
+              s.backBtn,
+              pressed && { backgroundColor: theme.surfaceAlt },
+            ]}
             accessibilityLabel="Back"
           >
-            <Text style={s.backChevron}>‹</Text>
+            <Text style={[s.backChevron, { color: theme.text }]}>‹</Text>
           </Pressable>
         )}
       </View>
-      <Text style={s.title} numberOfLines={1}>
+      <Text style={[s.title, { color: theme.text }]} numberOfLines={1}>
         {title}
       </Text>
       <View style={[s.side, s.sideRight]}>{trailing}</View>
@@ -49,8 +62,6 @@ const s = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: '#e5e7eb',
-    backgroundColor: '#fff',
   },
   side: { width: 60, flexDirection: 'row', alignItems: 'center' },
   sideRight: { justifyContent: 'flex-end' },
@@ -58,7 +69,6 @@ const s = StyleSheet.create({
     flex: 1,
     fontSize: 18,
     fontWeight: '700',
-    color: '#111827',
     textAlign: 'center',
   },
   iconBtn: {
@@ -69,12 +79,10 @@ const s = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: 8,
   },
-  iconBtnPressed: { backgroundColor: '#f3f4f6' },
   bar: {
     width: 20,
     height: 2,
     borderRadius: 1,
-    backgroundColor: '#111827',
     marginVertical: 2,
   },
   backBtn: {
@@ -87,7 +95,6 @@ const s = StyleSheet.create({
   backChevron: {
     fontSize: 32,
     lineHeight: 32,
-    color: '#111827',
     marginTop: -4,
   },
 });

@@ -1,5 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import { useTheme } from '../theme';
 
 type Props = {
   onBack: () => void;
@@ -16,11 +17,11 @@ const TIPS: { title: string; body: string }[] = [
   },
   {
     title: 'Save the text',
-    body: 'Open Library and tap “Save current” to keep the text you’re reading for later.',
+    body: 'Anything you open from “New text” is added to Library automatically.',
   },
   {
     title: 'Adjust display',
-    body: 'Open Display in the menu to change font size or hide pinyin entirely.',
+    body: 'Open Display in the menu to change font size, theme, or hide pinyin.',
   },
   {
     title: 'New text',
@@ -29,14 +30,21 @@ const TIPS: { title: string; body: string }[] = [
 ];
 
 export function HelpScreen({ onBack }: Props) {
+  const theme = useTheme();
   return (
-    <View style={s.root}>
+    <View style={[s.root, { backgroundColor: theme.bg }]}>
       <AppHeader title="Help" leading="back" onLeadingPress={onBack} />
       <ScrollView contentContainerStyle={s.body}>
         {TIPS.map((tip) => (
-          <View key={tip.title} style={s.card}>
-            <Text style={s.title}>{tip.title}</Text>
-            <Text style={s.copy}>{tip.body}</Text>
+          <View
+            key={tip.title}
+            style={[
+              s.card,
+              { backgroundColor: theme.surface, borderColor: theme.border },
+            ]}
+          >
+            <Text style={[s.title, { color: theme.text }]}>{tip.title}</Text>
+            <Text style={[s.copy, { color: theme.text }]}>{tip.body}</Text>
           </View>
         ))}
       </ScrollView>
@@ -45,15 +53,13 @@ export function HelpScreen({ onBack }: Props) {
 }
 
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#fafafa' },
+  root: { flex: 1 },
   body: { padding: 16, gap: 10 },
   card: {
-    backgroundColor: '#fff',
     borderRadius: 12,
     padding: 14,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#e5e7eb',
   },
-  title: { fontSize: 15, fontWeight: '700', color: '#111827' },
-  copy: { fontSize: 14, color: '#374151', marginTop: 4, lineHeight: 20 },
+  title: { fontSize: 15, fontWeight: '700' },
+  copy: { fontSize: 14, marginTop: 4, lineHeight: 20 },
 });

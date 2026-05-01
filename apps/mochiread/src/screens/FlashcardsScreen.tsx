@@ -11,6 +11,7 @@ import {
 import { AppHeader } from '../components/AppHeader';
 import { useStore, type VocabEntry } from '../state';
 import { speak } from '../lib/tts';
+import { useTheme, type Theme } from '../theme';
 
 type Props = {
   onBack: () => void;
@@ -21,28 +22,51 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export function FlashcardsScreen({ onBack }: Props) {
   const { vocab, recordReview } = useStore();
+  const theme = useTheme();
 
   const deck = useMemo(() => buildDeck(vocab), [vocab]);
 
   if (deck.length === 0) {
+    const hasAnyVocab = vocab.length > 0;
+    const nextDue = hasAnyVocab
+      ? Math.min(...vocab.map((v) => v.dueAt))
+      : null;
     return (
-      <View style={s.root}>
+      <View style={[s.root, { backgroundColor: theme.bg }]}>
         <AppHeader title="Flashcards" leading="back" onLeadingPress={onBack} />
         <View style={s.empty}>
-          <Text style={s.emptyTitle}>No words to review</Text>
-          <Text style={s.emptyHint}>
-            Tap a word in the reader and hit ★ to add it to your deck.
-          </Text>
+          {hasAnyVocab ? (
+            <>
+              <Text style={[s.emptyTitle, { color: theme.text }]}>
+                All caught up 🎉
+              </Text>
+              <Text style={[s.emptyHint, { color: theme.textMuted }]}>
+                {nextDue
+                  ? `Next card due ${formatDueDate(nextDue)}.`
+                  : 'No cards waiting.'}
+              </Text>
+            </>
+          ) : (
+            <>
+              <Text style={[s.emptyTitle, { color: theme.text }]}>
+                No words to review
+              </Text>
+              <Text style={[s.emptyHint, { color: theme.textMuted }]}>
+                Tap a word in the reader and hit ★ to add it to your deck.
+              </Text>
+            </>
+          )}
         </View>
       </View>
     );
   }
 
   return (
-    <View style={s.root}>
+    <View style={[s.root, { backgroundColor: theme.bg }]}>
       <AppHeader title="Flashcards" leading="back" onLeadingPress={onBack} />
       <DeckRunner
         deck={deck}
+        theme={theme}
         onResult={(word, remembered) => recordReview(word, remembered)}
       />
     </View>
@@ -51,9 +75,11 @@ export function FlashcardsScreen({ onBack }: Props) {
 
 function DeckRunner({
   deck,
+  theme,
   onResult,
 }: {
   deck: VocabEntry[];
+  theme: Theme;
   onResult: (word: string, remembered: boolean) => void;
 }) {
   const [index, setIndex] = useState(0);
@@ -66,12 +92,31 @@ function DeckRunner({
   if (finished) {
     return (
       <View style={s.summaryWrap}>
-        <View style={s.summaryCard}>
-          <Text style={s.summaryEyebrow}>Session complete</Text>
-          <Text style={s.summaryTitle}>{deck.length} cards reviewed</Text>
+        <View
+          style={[
+            s.summaryCard,
+            { backgroundColor: theme.surface, borderColor: theme.border },
+          ]}
+        >
+          <Text style={[s.summaryEyebrow, { color: theme.accent }]}>
+            Session complete
+          </Text>
+          <Text style={[s.summaryTitle, { color: theme.text }]}>
+            {deck.length} cards reviewed
+          </Text>
           <View style={s.summaryRow}>
-            <Stat label="Got it" value={stats.remembered} tone="good" />
-            <Stat label="Forgot" value={stats.forgotten} tone="bad" />
+            <Stat
+              label="Got it"
+              value={stats.remembered}
+              tone="good"
+              theme={theme}
+            />
+            <Stat
+              label="Forgot"
+              value={stats.forgotten}
+              tone="bad"
+              theme={theme}
+            />
           </View>
           <Pressable
             onPress={() => {
@@ -81,7 +126,8 @@ function DeckRunner({
             }}
             style={({ pressed }) => [
               s.primaryBtn,
-              pressed && s.primaryBtnPressed,
+              { backgroundColor: theme.accent },
+              pressed && { opacity: 0.85 },
             ]}
           >
             <Text style={s.primaryBtnText}>Start again</Text>
@@ -103,13 +149,14 @@ function DeckRunner({
 
   return (
     <View style={s.deckWrap}>
-      <Text style={s.progress}>
+      <Text style={[s.progress, { color: theme.textMuted }]}>
         {index + 1} / {deck.length}
       </Text>
       <SwipeCard
         key={card.word + index}
         card={card}
         revealed={revealed}
+        theme={theme}
         onTap={() => setRevealed((r) => !r)}
         onSwipe={handleResult}
       />
@@ -118,16 +165,19 @@ function DeckRunner({
           label="Forgot"
           onPress={() => handleResult(false)}
           tone="bad"
+          theme={theme}
         />
         <ActionButton
           label={revealed ? 'Hide' : 'Show'}
           onPress={() => setRevealed((r) => !r)}
           tone="neutral"
+          theme={theme}
         />
         <ActionButton
           label="Got it"
           onPress={() => handleResult(true)}
           tone="good"
+          theme={theme}
         />
       </View>
     </View>
@@ -137,11 +187,13 @@ function DeckRunner({
 function SwipeCard({
   card,
   revealed,
+  theme,
   onTap,
   onSwipe,
 }: {
   card: VocabEntry;
   revealed: boolean;
+  theme: Theme;
   onTap: () => void;
   onSwipe: (remembered: boolean) => void;
 }) {
@@ -213,6 +265,8 @@ function SwipeCard({
       style={[
         s.card,
         {
+          backgroundColor: theme.surface,
+          borderColor: theme.border,
           transform: [{ translateX: pan.x }, { translateY: pan.y }, { rotate }],
         },
       ]}
@@ -238,24 +292,32 @@ function SwipeCard({
             speak(card.word);
           }}
           hitSlop={8}
-          style={({ pressed }) => [s.speak, pressed && s.speakPressed]}
+          style={({ pressed }) => [
+            s.speak,
+            { backgroundColor: theme.accentBg },
+            pressed && { backgroundColor: theme.accentBgPressed },
+          ]}
         >
           <Text style={s.speakText}>🔊</Text>
         </Pressable>
-        <Text style={s.hanzi}>{card.word}</Text>
+        <Text style={[s.hanzi, { color: theme.text }]}>{card.word}</Text>
         {revealed ? (
           <View style={s.back}>
-            <Text style={s.pinyin}>{card.pinyin}</Text>
+            <Text style={[s.pinyin, { color: theme.textMuted }]}>
+              {card.pinyin}
+            </Text>
             <View style={s.meanings}>
               {card.meanings.slice(0, 4).map((m, i) => (
-                <Text key={i} style={s.meaning}>
+                <Text key={i} style={[s.meaning, { color: theme.text }]}>
                   • {m}
                 </Text>
               ))}
             </View>
           </View>
         ) : (
-          <Text style={s.hint}>Tap to reveal · swipe to grade</Text>
+          <Text style={[s.hint, { color: theme.textSubtle }]}>
+            Tap to reveal · swipe to grade
+          </Text>
         )}
       </Pressable>
     </Animated.View>
@@ -266,29 +328,44 @@ function ActionButton({
   label,
   onPress,
   tone,
+  theme,
 }: {
   label: string;
   onPress: () => void;
   tone: 'good' | 'bad' | 'neutral';
+  theme: Theme;
 }) {
-  const toneStyle =
-    tone === 'good' ? s.actionGood : tone === 'bad' ? s.actionBad : s.actionNeutral;
-  const toneText =
+  const isDark = theme.isDark;
+  const bg =
     tone === 'good'
-      ? s.actionGoodText
+      ? isDark
+        ? '#14532d'
+        : '#dcfce7'
       : tone === 'bad'
-      ? s.actionBadText
-      : s.actionNeutralText;
+      ? isDark
+        ? '#7f1d1d'
+        : '#fee2e2'
+      : theme.surfaceAlt;
+  const fg =
+    tone === 'good'
+      ? isDark
+        ? '#bbf7d0'
+        : '#166534'
+      : tone === 'bad'
+      ? isDark
+        ? '#fecaca'
+        : '#991b1b'
+      : theme.text;
   return (
     <Pressable
       onPress={onPress}
       style={({ pressed }) => [
         s.action,
-        toneStyle,
+        { backgroundColor: bg, borderColor: theme.border },
         pressed && { opacity: 0.85 },
       ]}
     >
-      <Text style={[s.actionText, toneText]}>{label}</Text>
+      <Text style={[s.actionText, { color: fg }]}>{label}</Text>
     </Pressable>
   );
 }
@@ -297,30 +374,47 @@ function Stat({
   label,
   value,
   tone,
+  theme,
 }: {
   label: string;
   value: number;
   tone: 'good' | 'bad';
+  theme: Theme;
 }) {
+  const color =
+    tone === 'good'
+      ? theme.isDark
+        ? '#4ade80'
+        : '#16a34a'
+      : theme.isDark
+      ? '#f87171'
+      : '#dc2626';
   return (
     <View style={s.statBox}>
-      <Text style={[s.statValue, tone === 'good' ? s.good : s.bad]}>{value}</Text>
-      <Text style={s.statLabel}>{label}</Text>
+      <Text style={[s.statValue, { color }]}>{value}</Text>
+      <Text style={[s.statLabel, { color: theme.textMuted }]}>{label}</Text>
     </View>
   );
 }
 
 function buildDeck(vocab: VocabEntry[]): VocabEntry[] {
-  const ranked = vocab
-    .map((v) => ({
-      v,
-      score:
-        (v.forgotten - v.remembered) * 5 -
-        (v.lastReviewedAt ? (Date.now() - v.lastReviewedAt) / 60000 : 0) * -1,
-    }))
-    .sort((a, b) => b.score - a.score)
-    .map((r) => r.v);
-  return shuffleSlight(ranked);
+  const now = Date.now();
+  // Only cards that are due (or overdue). Sort by how overdue they are so the
+  // longest-waiting cards come first.
+  const due = vocab
+    .filter((v) => v.dueAt <= now)
+    .sort((a, b) => a.dueAt - b.dueAt);
+  return shuffleSlight(due);
+}
+
+function formatDueDate(ms: number): string {
+  const diff = ms - Date.now();
+  if (diff <= 0) return 'now';
+  const hours = Math.round(diff / (60 * 60 * 1000));
+  if (hours < 24) return `in ${hours}h`;
+  const days = Math.round(diff / (24 * 60 * 60 * 1000));
+  if (days === 1) return 'tomorrow';
+  return `in ${days} days`;
 }
 
 function shuffleSlight<T>(arr: T[]): T[] {

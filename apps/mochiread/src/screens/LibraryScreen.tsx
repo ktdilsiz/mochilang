@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
 import { useStore } from '../state';
+import { useTheme } from '../theme';
 
 type Props = {
   currentText: string;
@@ -16,16 +17,19 @@ type Props = {
 
 export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
   const { library, removeText } = useStore();
+  const theme = useTheme();
 
   return (
-    <View style={s.root}>
+    <View style={[s.root, { backgroundColor: theme.bg }]}>
       <AppHeader title="Library" leading="back" onLeadingPress={onBack} />
       {library.length === 0 ? (
         <View style={s.empty}>
-          <Text style={s.emptyTitle}>No saved texts yet</Text>
-          <Text style={s.emptyHint}>
-            New texts are added automatically when you open them via “New
-            text.”
+          <Text style={[s.emptyTitle, { color: theme.text }]}>
+            No saved texts yet
+          </Text>
+          <Text style={[s.emptyHint, { color: theme.textMuted }]}>
+            New texts are added automatically when you open them via "New
+            text."
           </Text>
         </View>
       ) : (
@@ -34,35 +38,51 @@ export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
           keyExtractor={(e) => e.id}
           contentContainerStyle={s.list}
           ItemSeparatorComponent={() => <View style={s.sep} />}
-          renderItem={({ item }) => (
-            <Pressable
-              onPress={() => onLoad(item.text)}
-              style={({ pressed }) => [
-                s.row,
-                item.text === currentText && s.rowCurrent,
-                pressed && s.rowPressed,
-              ]}
-            >
-              <View style={s.rowText}>
-                <Text style={s.title} numberOfLines={1}>
-                  {item.title}
-                </Text>
-                <Text style={s.meta}>
-                  {item.text === currentText
-                    ? 'Currently reading'
-                    : formatDate(item.createdAt)}
-                </Text>
-              </View>
+          renderItem={({ item }) => {
+            const isCurrent = item.text === currentText;
+            return (
               <Pressable
-                onPress={() => removeText(item.id)}
-                hitSlop={10}
-                style={({ pressed }) => [s.trash, pressed && s.trashPressed]}
-                accessibilityLabel={`Delete ${item.title}`}
+                onPress={() => onLoad(item.text)}
+                style={({ pressed }) => [
+                  s.row,
+                  {
+                    backgroundColor: isCurrent
+                      ? theme.accentBg
+                      : theme.surface,
+                    borderColor: isCurrent ? theme.accent : theme.border,
+                  },
+                  pressed && { backgroundColor: theme.surfaceAlt },
+                ]}
               >
-                <Text style={s.trashIcon}>✕</Text>
+                <View style={s.rowText}>
+                  <Text
+                    style={[s.title, { color: theme.text }]}
+                    numberOfLines={1}
+                  >
+                    {item.title}
+                  </Text>
+                  <Text style={[s.meta, { color: theme.textMuted }]}>
+                    {isCurrent
+                      ? 'Currently reading'
+                      : formatDate(item.createdAt)}
+                  </Text>
+                </View>
+                <Pressable
+                  onPress={() => removeText(item.id)}
+                  hitSlop={10}
+                  style={({ pressed }) => [
+                    s.trash,
+                    pressed && { backgroundColor: theme.destructiveBg },
+                  ]}
+                  accessibilityLabel={`Delete ${item.title}`}
+                >
+                  <Text style={[s.trashIcon, { color: theme.textSubtle }]}>
+                    ✕
+                  </Text>
+                </Pressable>
               </Pressable>
-            </Pressable>
-          )}
+            );
+          }}
         />
       )}
     </View>
@@ -79,24 +99,20 @@ function formatDate(ms: number) {
 }
 
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#fafafa' },
+  root: { flex: 1 },
   list: { padding: 16 },
   sep: { height: 8 },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
     paddingVertical: 14,
     paddingHorizontal: 14,
     borderRadius: 12,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#e5e7eb',
   },
-  rowPressed: { backgroundColor: '#f9fafb' },
-  rowCurrent: { borderColor: '#3b82f6', backgroundColor: '#eff6ff' },
   rowText: { flex: 1, gap: 4 },
-  title: { fontSize: 16, color: '#111827', fontWeight: '600' },
-  meta: { fontSize: 12, color: '#6b7280' },
+  title: { fontSize: 16, fontWeight: '600' },
+  meta: { fontSize: 12 },
   trash: {
     width: 32,
     height: 32,
@@ -104,13 +120,11 @@ const s = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  trashPressed: { backgroundColor: '#fee2e2' },
-  trashIcon: { fontSize: 14, color: '#9ca3af', fontWeight: '700' },
+  trashIcon: { fontSize: 14, fontWeight: '700' },
   empty: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 },
-  emptyTitle: { fontSize: 16, color: '#374151', fontWeight: '600' },
+  emptyTitle: { fontSize: 16, fontWeight: '600' },
   emptyHint: {
     fontSize: 13,
-    color: '#6b7280',
     marginTop: 6,
     textAlign: 'center',
   },

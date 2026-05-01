@@ -12,6 +12,7 @@ import { lookup } from '../lib/dict';
 import { hasExploreData } from '../lib/decomp';
 import { speak, stop } from '../lib/tts';
 import { useStore } from '../state';
+import { useTheme } from '../theme';
 
 export type WordRect = { x: number; y: number; width: number; height: number };
 
@@ -34,6 +35,7 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
   const opacity = useRef(new Animated.Value(0)).current;
   const translateY = useRef(new Animated.Value(-6)).current;
   const { saveWord, removeWord, isWordSaved, prefs } = useStore();
+  const theme = useTheme();
 
   useEffect(() => {
     if (!visible) return;
@@ -109,12 +111,27 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
           ]}
           pointerEvents="box-none"
         >
-          <View style={[s.arrow, { left: arrowLeft }]} />
-          <View style={s.panelInner}>
+          <View
+            style={[
+              s.arrow,
+              { left: arrowLeft, borderBottomColor: theme.surface },
+            ]}
+          />
+          <View
+            style={[
+              s.panelInner,
+              {
+                backgroundColor: theme.surface,
+                borderColor: theme.border,
+              },
+            ]}
+          >
             <View style={s.headerRow}>
               <View style={s.headerText}>
-                <Text style={s.pinyin}>{pinyin}</Text>
-                <Text style={s.word}>{word}</Text>
+                <Text style={[s.pinyin, { color: theme.textMuted }]}>
+                  {pinyin}
+                </Text>
+                <Text style={[s.word, { color: theme.text }]}>{word}</Text>
               </View>
               <View style={s.headerButtons}>
                 <Pressable
@@ -122,12 +139,21 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
                   hitSlop={10}
                   style={({ pressed }) => [
                     s.iconBtn,
-                    saved && s.iconBtnSaved,
-                    pressed && s.iconBtnPressed,
+                    {
+                      backgroundColor: saved
+                        ? theme.savedBg
+                        : theme.surfaceAlt,
+                    },
+                    pressed && { opacity: 0.75 },
                   ]}
                   accessibilityLabel={saved ? 'Unsave word' : 'Save word'}
                 >
-                  <Text style={[s.iconText, saved && s.iconTextSaved]}>
+                  <Text
+                    style={[
+                      s.iconText,
+                      { color: saved ? theme.saved : theme.text },
+                    ]}
+                  >
                     {saved ? '★' : '☆'}
                   </Text>
                 </Pressable>
@@ -136,8 +162,8 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
                   hitSlop={10}
                   style={({ pressed }) => [
                     s.iconBtn,
-                    s.speakBtn,
-                    pressed && s.iconBtnPressed,
+                    { backgroundColor: theme.accentBg },
+                    pressed && { opacity: 0.75 },
                   ]}
                   accessibilityLabel="Play pronunciation"
                 >
@@ -148,28 +174,36 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
             {entry ? (
               <View style={s.meanings}>
                 {entry.meanings.slice(0, 6).map((m, i) => (
-                  <Text key={i} style={s.meaning}>
+                  <Text
+                    key={i}
+                    style={[s.meaning, { color: theme.text }]}
+                  >
                     • {m}
                   </Text>
                 ))}
                 {entry.meanings.length > 6 && (
-                  <Text style={s.more}>
+                  <Text style={[s.more, { color: theme.textSubtle }]}>
                     +{entry.meanings.length - 6} more
                   </Text>
                 )}
               </View>
             ) : (
-              <Text style={s.notFound}>No definition found.</Text>
+              <Text style={[s.notFound, { color: theme.textSubtle }]}>
+                No definition found.
+              </Text>
             )}
             {hasExploreData(word) && (
               <Pressable
                 onPress={() => onExplore(word)}
                 style={({ pressed }) => [
                   s.exploreBtn,
-                  pressed && s.exploreBtnPressed,
+                  { backgroundColor: theme.accentBg },
+                  pressed && { backgroundColor: theme.accentBgPressed },
                 ]}
               >
-                <Text style={s.exploreText}>Explore characters →</Text>
+                <Text style={[s.exploreText, { color: theme.accent }]}>
+                  Explore characters →
+                </Text>
               </Pressable>
             )}
           </View>

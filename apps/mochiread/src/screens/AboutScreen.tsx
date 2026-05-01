@@ -1,5 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import { useTheme, type Theme } from '../theme';
 
 type Props = {
   onBack: () => void;
@@ -8,48 +9,62 @@ type Props = {
 const VERSION = '0.1.0';
 
 export function AboutScreen({ onBack }: Props) {
+  const theme = useTheme();
   return (
-    <View style={s.root}>
+    <View style={[s.root, { backgroundColor: theme.bg }]}>
       <AppHeader title="About" leading="back" onLeadingPress={onBack} />
       <ScrollView contentContainerStyle={s.body}>
-        <View style={s.heroCard}>
-          <Text style={s.brand}>Mochiread</Text>
-          <Text style={s.tagline}>Read Chinese, tap a word.</Text>
-          <Text style={s.version}>Version {VERSION}</Text>
+        <View
+          style={[
+            s.heroCard,
+            { backgroundColor: theme.surface, borderColor: theme.border },
+          ]}
+        >
+          <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
+          <Text style={[s.tagline, { color: theme.textMuted }]}>
+            Read Chinese, tap a word.
+          </Text>
+          <Text style={[s.version, { color: theme.textSubtle }]}>
+            Version {VERSION}
+          </Text>
         </View>
 
-        <Section title="Dictionary">
-          <Text style={s.copy}>
+        <Section title="Dictionary" theme={theme}>
+          <Text style={[s.copy, { color: theme.text }]}>
             English definitions come from the{' '}
-            <Text style={s.bold}>CC-CEDICT</Text> project, distributed under the
-            Creative Commons Attribution-ShareAlike 4.0 International License.
+            <Text style={[s.bold, { color: theme.text }]}>CC-CEDICT</Text>{' '}
+            project, distributed under the Creative Commons
+            Attribution-ShareAlike 4.0 International License.
           </Text>
-          <Text style={s.copy}>
+          <Text style={[s.copy, { color: theme.text }]}>
             Source: mdbg.net/chinese/dictionary?page=cc-cedict
           </Text>
         </Section>
 
-        <Section title="Pinyin & segmentation">
-          <Text style={s.copy}>
+        <Section title="Pinyin & segmentation" theme={theme}>
+          <Text style={[s.copy, { color: theme.text }]}>
             Word splitting and pinyin generation are handled by{' '}
-            <Text style={s.bold}>pinyin-pro</Text> (MIT).
+            <Text style={[s.bold, { color: theme.text }]}>pinyin-pro</Text>{' '}
+            (MIT).
           </Text>
         </Section>
 
-        <Section title="Character decomposition">
-          <Text style={s.copy}>
+        <Section title="Character decomposition" theme={theme}>
+          <Text style={[s.copy, { color: theme.text }]}>
             The Explore view uses data from{' '}
-            <Text style={s.bold}>Make Me a Hanzi</Text>, distributed under the
-            LGPL and the Arphic Public License.
+            <Text style={[s.bold, { color: theme.text }]}>
+              Make Me a Hanzi
+            </Text>
+            , distributed under the LGPL and the Arphic Public License.
           </Text>
-          <Text style={s.copy}>
+          <Text style={[s.copy, { color: theme.text }]}>
             Source: github.com/skishore/makemeahanzi
           </Text>
         </Section>
 
-        <Section title="Speech">
-          <Text style={s.copy}>
-            Spoken Chinese uses your device’s built-in Mandarin voice via the
+        <Section title="Speech" theme={theme}>
+          <Text style={[s.copy, { color: theme.text }]}>
+            Spoken Chinese uses your device's built-in Mandarin voice via the
             system text-to-speech engine. No audio is sent to any server.
           </Text>
         </Section>
@@ -60,51 +75,55 @@ export function AboutScreen({ onBack }: Props) {
 
 function Section({
   title,
+  theme,
   children,
 }: {
   title: string;
+  theme: Theme;
   children: React.ReactNode;
 }) {
   return (
     <View style={s.section}>
-      <Text style={s.sectionTitle}>{title}</Text>
-      <View style={s.card}>{children}</View>
+      <Text style={[s.sectionTitle, { color: theme.textMuted }]}>{title}</Text>
+      <View
+        style={[
+          s.card,
+          { backgroundColor: theme.surface, borderColor: theme.border },
+        ]}
+      >
+        {children}
+      </View>
     </View>
   );
 }
 
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#fafafa' },
+  root: { flex: 1 },
   body: { padding: 16, gap: 16, paddingBottom: 32 },
   heroCard: {
-    backgroundColor: '#fff',
     borderRadius: 16,
     padding: 20,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#e5e7eb',
     alignItems: 'center',
     gap: 4,
   },
-  brand: { fontSize: 28, fontWeight: '800', color: '#111827' },
-  tagline: { fontSize: 14, color: '#6b7280' },
-  version: { fontSize: 12, color: '#9ca3af', marginTop: 6 },
+  brand: { fontSize: 28, fontWeight: '800' },
+  tagline: { fontSize: 14 },
+  version: { fontSize: 12, marginTop: 6 },
   section: { gap: 8 },
   sectionTitle: {
     fontSize: 12,
     fontWeight: '700',
-    color: '#6b7280',
     textTransform: 'uppercase',
     letterSpacing: 0.6,
     paddingHorizontal: 4,
   },
   card: {
-    backgroundColor: '#fff',
     borderRadius: 12,
     padding: 14,
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#e5e7eb',
     gap: 8,
   },
-  copy: { fontSize: 14, color: '#374151', lineHeight: 20 },
-  bold: { fontWeight: '700', color: '#111827' },
+  copy: { fontSize: 14, lineHeight: 20 },
+  bold: { fontWeight: '700' },
 });

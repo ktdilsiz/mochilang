@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Pressable,
   StyleSheet,
@@ -8,38 +8,45 @@ import {
 } from 'react-native';
 import { isChinese, type Token } from '../lib/cn';
 import { paginate } from '../lib/paginate';
+import { speakAsync, stop as stopSpeech } from '../lib/tts';
 import {
   FONT_SIZE_VALUES,
   PINYIN_SIZE_VALUES,
   type FontSize,
 } from '../state';
+import { useTheme, type Theme } from '../theme';
 import type { WordRect } from './ThoughtBubble';
 
 type Props = {
   tokens: Token[];
   fontSize: FontSize;
   showPinyin: boolean;
+  showToneColors: boolean;
   page: number;
   onPageChange: (page: number) => void;
   onWordPress: (token: Token, rect: WordRect) => void;
 };
 
 const PAGE_PADDING = 20;
-const FOOTER_HEIGHT = 40;
+const FOOTER_HEIGHT = 44;
 
 export function Reader({
   tokens,
   fontSize,
   showPinyin,
+  showToneColors,
   page,
   onPageChange,
   onWordPress,
 }: Props) {
+  const theme = useTheme();
   const hanziSize = FONT_SIZE_VALUES[fontSize];
   const pinyinSize = PINYIN_SIZE_VALUES[fontSize];
   const lineHeight = Math.round(hanziSize * 1.25);
 
   const [layout, setLayout] = useState({ width: 0, height: 0 });
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const pages = useMemo(() => {
     if (layout.width <= 0 || layout.height <= 0) return [tokens];
@@ -57,6 +64,40 @@ export function Reader({
   const safePage = Math.min(Math.max(0, page), pageCount - 1);
   const currentTokens = pages[safePage] ?? [];
 
+  // Stop playback on unmount or when the page / tokens change.
+  useEffect(() => {
+    if (!isPlaying) return;
+    let cancelled = false;
+    let i = 0;
+    (async () => {
+      while (!cancelled && i < currentTokens.length) {
+        const t = currentTokens[i];
+        if (!isChinese(t.word)) {
+          i++;
+          continue;
+        }
+        setPlayingIndex(i);
+        await speakAsync(t.word);
+        i++;
+      }
+      if (!cancelled) {
+        setPlayingIndex(null);
+        setIsPlaying(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+      stopSpeech();
+    };
+  }, [isPlaying, currentTokens]);
+
+  // Stop & reset when the page changes.
+  useEffect(() => {
+    setPlayingIndex(null);
+    setIsPlaying(false);
+    stopSpeech();
+  }, [safePage]);
+
   const handleLayout = (e: LayoutChangeEvent) => {
     const { width, height } = e.nativeEvent.layout;
     if (width !== layout.width || height !== layout.height) {
@@ -64,8 +105,10 @@ export function Reader({
     }
   };
 
+  const togglePlay = () => setIsPlaying((p) => !p);
+
   return (
-    <View style={s.root}>
+    <View style={[s.root, { backgroundColor: theme.bg }]}>
       <View style={s.page} onLayout={handleLayout}>
         <View style={s.flow}>
           {currentTokens.map((t, i) => {
@@ -75,7 +118,11 @@ export function Reader({
                   key={i}
                   style={[
                     s.plain,
-                    { fontSize: hanziSize, lineHeight },
+                    {
+                      fontSize: hanziSize,
+                      lineHeight,
+                      color: theme.textMuted,
+                    },
                   ]}
                 >
                   {t.word}
@@ -90,13 +137,24 @@ export function Reader({
                 pinyinSize={pinyinSize}
                 lineHeight={lineHeight}
                 showPinyin={showPinyin}
+                showToneColors={showToneColors}
+                isPlaying={playingIndex === i}
+                theme={theme}
                 onPress={onWordPress}
               />
             );
           })}
         </View>
       </View>
-      <View style={s.footer}>
+      <View
+        style={[
+          s.footer,
+          {
+            backgroundColor: theme.surface,
+            borderTopColor: theme.border,
+          },
+        ]}
+      >
         <Pressable
           onPress={() => safePage > 0 && onPageChange(safePage - 1)}
           disabled={safePage === 0}
@@ -104,17 +162,53 @@ export function Reader({
           style={({ pressed }) => [
             s.navBtn,
             safePage === 0 && s.navBtnDisabled,
-            pressed && s.navBtnPressed,
+            pressed && { backgroundColor: theme.accentBg },
           ]}
           accessibilityLabel="Previous page"
         >
-          <Text style={[s.navText, safePage === 0 && s.navTextDisabled]}>
+          <Text
+            style={[
+              s.navText,
+              {
+                color: safePage === 0 ? theme.textSubtle : theme.accent,
+              },
+            ]}
+          >
             ‹ Prev
           </Text>
         </Pressable>
-        <Text style={s.footerText}>
-          {pageCount > 0 ? `${safePage + 1} / ${pageCount}` : ''}
-        </Text>
+
+        <View style={s.footerCenter}>
+          <Pressable
+            onPress={togglePlay}
+            hitSlop={8}
+            style={({ pressed }) => [
+              s.playBtn,
+              {
+                backgroundColor: isPlaying
+                  ? theme.accent
+                  : theme.accentBg,
+              },
+              pressed && { opacity: 0.85 },
+            ]}
+            accessibilityLabel={isPlaying ? 'Pause' : 'Play page'}
+          >
+            <Text
+              style={[
+                s.playIcon,
+                {
+                  color: isPlaying ? '#ffffff' : theme.accent,
+                },
+              ]}
+            >
+              {isPlaying ? '◼' : '▶'}
+            </Text>
+          </Pressable>
+          <Text style={[s.footerText, { color: theme.textSubtle }]}>
+            {pageCount > 0 ? `${safePage + 1} / ${pageCount}` : ''}
+          </Text>
+        </View>
+
         <Pressable
           onPress={() =>
             safePage < pageCount - 1 && onPageChange(safePage + 1)
@@ -124,14 +218,19 @@ export function Reader({
           style={({ pressed }) => [
             s.navBtn,
             safePage >= pageCount - 1 && s.navBtnDisabled,
-            pressed && s.navBtnPressed,
+            pressed && { backgroundColor: theme.accentBg },
           ]}
           accessibilityLabel="Next page"
         >
           <Text
             style={[
               s.navText,
-              safePage >= pageCount - 1 && s.navTextDisabled,
+              {
+                color:
+                  safePage >= pageCount - 1
+                    ? theme.textSubtle
+                    : theme.accent,
+              },
             ]}
           >
             Next ›
@@ -148,6 +247,9 @@ function WordChip({
   pinyinSize,
   lineHeight,
   showPinyin,
+  showToneColors,
+  isPlaying,
+  theme,
   onPress,
 }: {
   token: Token;
@@ -155,6 +257,9 @@ function WordChip({
   pinyinSize: number;
   lineHeight: number;
   showPinyin: boolean;
+  showToneColors: boolean;
+  isPlaying: boolean;
+  theme: Theme;
   onPress: (token: Token, rect: WordRect) => void;
 }) {
   const ref = useRef<View>(null);
@@ -169,12 +274,38 @@ function WordChip({
     <Pressable
       ref={ref}
       onPress={handle}
-      style={({ pressed }) => [s.token, pressed && s.tokenPressed]}
+      style={({ pressed }) => [
+        s.token,
+        isPlaying && { backgroundColor: theme.highlight },
+        pressed && !isPlaying && { backgroundColor: theme.highlight },
+      ]}
     >
       {showPinyin && (
-        <Text style={[s.pinyin, { fontSize: pinyinSize }]}>{token.pinyin}</Text>
+        <View style={s.pinyinRow}>
+          {token.syllables.map((syl, i) => (
+            <Text
+              key={i}
+              style={[
+                s.pinyin,
+                {
+                  fontSize: pinyinSize,
+                  color: showToneColors
+                    ? theme.tones[syl.tone] ?? theme.pinyin
+                    : theme.pinyin,
+                },
+              ]}
+            >
+              {syl.text}
+            </Text>
+          ))}
+        </View>
       )}
-      <Text style={[s.hanzi, { fontSize: hanziSize, lineHeight }]}>
+      <Text
+        style={[
+          s.hanzi,
+          { fontSize: hanziSize, lineHeight, color: theme.hanzi },
+        ]}
+      >
         {token.word}
       </Text>
     </Pressable>
@@ -182,7 +313,7 @@ function WordChip({
 }
 
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#fafafa' },
+  root: { flex: 1 },
   page: {
     flex: 1,
     padding: PAGE_PADDING,
@@ -195,21 +326,20 @@ const s = StyleSheet.create({
     paddingVertical: 4,
     borderRadius: 6,
   },
-  tokenPressed: { backgroundColor: '#fef3c7' },
-  pinyin: { color: '#9ca3af', marginBottom: 2 },
-  hanzi: { color: '#111827' },
-  plain: { color: '#6b7280', alignSelf: 'flex-end' },
+  pinyinRow: { flexDirection: 'row' },
+  pinyin: { marginBottom: 2 },
+  hanzi: {},
+  plain: { alignSelf: 'flex-end' },
   footer: {
     height: FOOTER_HEIGHT,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingHorizontal: 16,
+    paddingHorizontal: 12,
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: '#e5e7eb',
-    backgroundColor: '#fff',
   },
-  footerText: { fontSize: 12, color: '#9ca3af', fontWeight: '600' },
+  footerCenter: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  footerText: { fontSize: 12, fontWeight: '600' },
   navBtn: {
     paddingVertical: 6,
     paddingHorizontal: 12,
@@ -217,8 +347,14 @@ const s = StyleSheet.create({
     minWidth: 64,
     alignItems: 'center',
   },
-  navBtnPressed: { backgroundColor: '#eff6ff' },
   navBtnDisabled: { opacity: 0.4 },
-  navText: { fontSize: 14, color: '#3b82f6', fontWeight: '600' },
-  navTextDisabled: { color: '#9ca3af' },
+  navText: { fontSize: 14, fontWeight: '600' },
+  playBtn: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  playIcon: { fontSize: 13, fontWeight: '700' },
 });

@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import { useTheme } from '../theme';
 
 type Props = {
   initialText: string;
@@ -15,23 +16,27 @@ type Props = {
 };
 
 export function EditorScreen({ initialText, onCancel, onCommit }: Props) {
+  const theme = useTheme();
   const [draft, setDraft] = useState(initialText);
+  const isEmpty = !draft.trim();
 
   return (
-    <View style={s.root}>
+    <View style={[s.root, { backgroundColor: theme.bg }]}>
       <AppHeader
         title="New text"
         leading="back"
         onLeadingPress={onCancel}
         trailing={
           <Pressable
-            onPress={() => draft.trim() && onCommit(draft)}
-            disabled={!draft.trim()}
+            onPress={() => !isEmpty && onCommit(draft)}
+            disabled={isEmpty}
             hitSlop={8}
           >
             <Text
-              style={[s.commit, !draft.trim() && s.commitDisabled]}
-              accessibilityLabel="Read"
+              style={[
+                s.commit,
+                { color: isEmpty ? theme.textSubtle : theme.accent },
+              ]}
             >
               Read
             </Text>
@@ -39,17 +44,26 @@ export function EditorScreen({ initialText, onCancel, onCommit }: Props) {
         }
       />
       <View style={s.body}>
-        <Text style={s.label}>Paste Chinese text to read</Text>
+        <Text style={[s.label, { color: theme.textMuted }]}>
+          Paste Chinese text to read
+        </Text>
         <TextInput
           multiline
           autoFocus
           placeholder="例如：你好，世界！"
-          placeholderTextColor="#9ca3af"
-          style={s.input}
+          placeholderTextColor={theme.textSubtle}
+          style={[
+            s.input,
+            {
+              backgroundColor: theme.surface,
+              borderColor: theme.border,
+              color: theme.text,
+            },
+          ]}
           value={draft}
           onChangeText={setDraft}
         />
-        <Text style={s.attribution}>
+        <Text style={[s.attribution, { color: theme.textSubtle }]}>
           Definitions: CC-CEDICT · CC BY-SA 4.0
         </Text>
       </View>
@@ -58,26 +72,18 @@ export function EditorScreen({ initialText, onCancel, onCommit }: Props) {
 }
 
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#fafafa' },
+  root: { flex: 1 },
   body: { flex: 1, padding: 20, gap: 12 },
-  label: { fontSize: 14, color: '#6b7280' },
+  label: { fontSize: 14 },
   input: {
     flex: 1,
     borderWidth: 1,
-    borderColor: '#e5e7eb',
     borderRadius: 12,
     padding: 14,
     fontSize: 18,
     lineHeight: 26,
     textAlignVertical: 'top',
-    backgroundColor: '#fff',
-    color: '#111827',
   },
-  commit: { fontSize: 16, color: '#3b82f6', fontWeight: '600' },
-  commitDisabled: { color: '#9ca3af' },
-  attribution: {
-    fontSize: 11,
-    color: '#9ca3af',
-    textAlign: 'center',
-  },
+  commit: { fontSize: 16, fontWeight: '600' },
+  attribution: { fontSize: 11, textAlign: 'center' },
 });

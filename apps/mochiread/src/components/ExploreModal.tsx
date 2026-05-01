@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { buildExploreItem, type ExploreItem } from '../lib/decomp';
 import { speak } from '../lib/tts';
+import { useTheme } from '../theme';
 
 type Props = {
   initial: string | null;
@@ -49,6 +50,7 @@ function ExploreContent({
   initial: string;
   onClose: () => void;
 }) {
+  const theme = useTheme();
   const [stack, setStack] = useState<ExploreItem[]>(() => [
     buildExploreItem(initial),
   ]);
@@ -69,90 +71,116 @@ function ExploreContent({
   );
 
   return (
-    <Pressable style={s.sheet} onPress={() => {}}>
-      <View style={s.header}>
+    <Pressable
+      style={[s.sheet, { backgroundColor: theme.surface }]}
+      onPress={() => {}}
+    >
+      <View style={[s.header, { borderBottomColor: theme.border }]}>
+        <Pressable
+          onPress={stack.length > 1 ? pop : onClose}
+          hitSlop={8}
+          style={({ pressed }) => [
+            s.iconBtn,
+            pressed && { backgroundColor: theme.surfaceAlt },
+          ]}
+          accessibilityLabel={stack.length > 1 ? 'Back' : 'Close'}
+        >
+          <Text style={[s.iconText, { color: theme.text }]}>
+            {stack.length > 1 ? '‹' : '✕'}
+          </Text>
+        </Pressable>
+        <Text style={[s.headerTitle, { color: theme.text }]}>Explore</Text>
+        <Pressable
+          onPress={onClose}
+          hitSlop={8}
+          style={({ pressed }) => [
+            s.iconBtn,
+            pressed && { backgroundColor: theme.surfaceAlt },
+          ]}
+          accessibilityLabel="Close"
+        >
+          <Text style={[s.iconTextMuted, { color: theme.textMuted }]}>✕</Text>
+        </Pressable>
+      </View>
+
+      {stack.length > 1 && (
+        <Text
+          style={[s.trail, { color: theme.textMuted }]}
+          numberOfLines={1}
+        >
+          {trail}
+        </Text>
+      )}
+
+      <ScrollView
+        style={s.body}
+        contentContainerStyle={s.bodyContent}
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={s.heroRow}>
+          <View style={s.hero}>
+            <Text style={[s.bigPinyin, { color: theme.textMuted }]}>
+              {current.pinyin}
+            </Text>
+            <Text style={[s.bigChar, { color: theme.text }]}>
+              {current.char}
+            </Text>
+          </View>
           <Pressable
-            onPress={stack.length > 1 ? pop : onClose}
+            onPress={() => speak(current.char)}
+            style={({ pressed }) => [
+              s.speak,
+              { backgroundColor: theme.accentBg },
+              pressed && { backgroundColor: theme.accentBgPressed },
+            ]}
             hitSlop={8}
-            style={({ pressed }) => [s.iconBtn, pressed && s.iconBtnPressed]}
-            accessibilityLabel={stack.length > 1 ? 'Back' : 'Close'}
+            accessibilityLabel="Play pronunciation"
           >
-            <Text style={s.iconText}>{stack.length > 1 ? '‹' : '✕'}</Text>
-          </Pressable>
-          <Text style={s.headerTitle}>Explore</Text>
-          <Pressable
-            onPress={onClose}
-            hitSlop={8}
-            style={({ pressed }) => [s.iconBtn, pressed && s.iconBtnPressed]}
-            accessibilityLabel="Close"
-          >
-            <Text style={s.iconTextMuted}>✕</Text>
+            <Text style={s.speakText}>🔊</Text>
           </Pressable>
         </View>
 
-        {stack.length > 1 && (
-          <Text style={s.trail} numberOfLines={1}>
-            {trail}
+        {current.meanings.length > 0 ? (
+          <View
+            style={[s.meaningCard, { backgroundColor: theme.surfaceAlt }]}
+          >
+            {current.meanings.slice(0, 8).map((m, i) => (
+              <Text key={i} style={[s.meaning, { color: theme.text }]}>
+                • {m}
+              </Text>
+            ))}
+            {current.meanings.length > 8 && (
+              <Text style={[s.more, { color: theme.textSubtle }]}>
+                +{current.meanings.length - 8} more
+              </Text>
+            )}
+          </View>
+        ) : (
+          <Text style={[s.noMeaning, { color: theme.textSubtle }]}>
+            No definition available.
           </Text>
         )}
 
-        <ScrollView
-          style={s.body}
-          contentContainerStyle={s.bodyContent}
-          showsVerticalScrollIndicator={false}
-        >
-          <View style={s.heroRow}>
-            <View style={s.hero}>
-              <Text style={s.bigPinyin}>{current.pinyin}</Text>
-              <Text style={s.bigChar}>{current.char}</Text>
-            </View>
-            <Pressable
-              onPress={() => speak(current.char)}
-              style={({ pressed }) => [s.speak, pressed && s.speakPressed]}
-              hitSlop={8}
-              accessibilityLabel="Play pronunciation"
-            >
-              <Text style={s.speakText}>🔊</Text>
-            </Pressable>
-          </View>
-
-          {current.meanings.length > 0 ? (
-            <View style={s.meaningCard}>
-              {current.meanings.slice(0, 8).map((m, i) => (
-                <Text key={i} style={s.meaning}>
-                  • {m}
-                </Text>
-              ))}
-              {current.meanings.length > 8 && (
-                <Text style={s.more}>
-                  +{current.meanings.length - 8} more
-                </Text>
-              )}
-            </View>
-          ) : (
-            <Text style={s.noMeaning}>No definition available.</Text>
-          )}
-
-          <Text style={s.sectionTitle}>
-            {[...current.char].length > 1 ? 'Characters' : 'Made of'}
+        <Text style={[s.sectionTitle, { color: theme.textMuted }]}>
+          {[...current.char].length > 1 ? 'Characters' : 'Made of'}
+        </Text>
+        {current.components.length === 0 ? (
+          <Text style={[s.noBreakdown, { color: theme.textSubtle }]}>
+            No further breakdown — this character is a primitive in our
+            dataset.
           </Text>
-          {current.components.length === 0 ? (
-            <Text style={s.noBreakdown}>
-              No further breakdown — this character is a primitive in our
-              dataset.
-            </Text>
-          ) : (
-            <View style={s.componentGrid}>
-              {current.components.map((ch, i) => (
-                <ComponentCard
-                  key={`${ch}-${i}`}
-                  char={ch}
-                  onPress={() => push(ch)}
-                />
-              ))}
-            </View>
-          )}
-        </ScrollView>
+        ) : (
+          <View style={s.componentGrid}>
+            {current.components.map((ch, i) => (
+              <ComponentCard
+                key={`${ch}-${i}`}
+                char={ch}
+                onPress={() => push(ch)}
+              />
+            ))}
+          </View>
+        )}
+      </ScrollView>
     </Pressable>
   );
 }
@@ -164,18 +192,27 @@ function ComponentCard({
   char: string;
   onPress: () => void;
 }) {
+  const theme = useTheme();
   const item = useMemo(() => buildExploreItem(char), [char]);
-  const summary =
-    item.meanings[0] ?? '—';
+  const summary = item.meanings[0] ?? '—';
 
   return (
     <Pressable
       onPress={onPress}
-      style={({ pressed }) => [s.compCard, pressed && s.compCardPressed]}
+      style={({ pressed }) => [
+        s.compCard,
+        { backgroundColor: theme.surface, borderColor: theme.border },
+        pressed && {
+          backgroundColor: theme.surfaceAlt,
+          borderColor: theme.accent,
+        },
+      ]}
     >
-      <Text style={s.compChar}>{char}</Text>
-      <Text style={s.compPinyin}>{item.pinyin || '—'}</Text>
-      <Text style={s.compMeaning} numberOfLines={2}>
+      <Text style={[s.compChar, { color: theme.text }]}>{char}</Text>
+      <Text style={[s.compPinyin, { color: theme.textMuted }]}>
+        {item.pinyin || '—'}
+      </Text>
+      <Text style={[s.compMeaning, { color: theme.text }]} numberOfLines={2}>
         {summary}
       </Text>
     </Pressable>

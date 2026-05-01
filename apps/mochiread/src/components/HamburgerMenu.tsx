@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import type { Screen } from '../screens/types';
+import { useTheme } from '../theme';
 
 type Item = {
   id: Screen;
@@ -38,6 +39,7 @@ type Props = {
 const DRAWER_WIDTH = Math.min(320, Dimensions.get('window').width * 0.84);
 
 export function HamburgerMenu({ open, onClose, onSelect }: Props) {
+  const theme = useTheme();
   const slide = useRef(new Animated.Value(-DRAWER_WIDTH)).current;
   const fade = useRef(new Animated.Value(0)).current;
 
@@ -69,26 +71,45 @@ export function HamburgerMenu({ open, onClose, onSelect }: Props) {
         <Animated.View
           style={[
             s.drawer,
-            { width: DRAWER_WIDTH, transform: [{ translateX: slide }] },
+            {
+              width: DRAWER_WIDTH,
+              transform: [{ translateX: slide }],
+              backgroundColor: theme.surface,
+            },
           ]}
         >
-          <Text style={s.brand}>Mochiread</Text>
-          <Text style={s.subBrand}>Read Chinese, tap a word.</Text>
-          <View style={s.divider} />
+          <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
+          <Text style={[s.subBrand, { color: theme.textMuted }]}>
+            Read Chinese, tap a word.
+          </Text>
+          <View style={[s.divider, { backgroundColor: theme.border }]} />
           <View style={s.list}>
             {ITEMS.map((item) => (
               <Pressable
                 key={item.id}
                 onPress={() => onSelect(item.id)}
-                style={({ pressed }) => [s.item, pressed && s.itemPressed]}
+                style={({ pressed }) => [
+                  s.item,
+                  pressed && { backgroundColor: theme.surfaceAlt },
+                ]}
               >
                 <View style={s.itemText}>
-                  <Text style={s.itemLabel}>{item.label}</Text>
-                  {item.hint && <Text style={s.itemHint}>{item.hint}</Text>}
+                  <Text style={[s.itemLabel, { color: theme.text }]}>
+                    {item.label}
+                  </Text>
+                  {item.hint && (
+                    <Text style={[s.itemHint, { color: theme.textMuted }]}>
+                      {item.hint}
+                    </Text>
+                  )}
                 </View>
                 {item.badge && (
-                  <View style={s.badge}>
-                    <Text style={s.badgeText}>{item.badge}</Text>
+                  <View
+                    style={[s.badge, { backgroundColor: theme.savedBg }]}
+                  >
+                    <Text style={[s.badgeText, { color: theme.saved }]}>
+                      {item.badge}
+                    </Text>
                   </View>
                 )}
               </Pressable>
@@ -111,7 +132,6 @@ const s = StyleSheet.create({
     top: 0,
     bottom: 0,
     left: 0,
-    backgroundColor: '#ffffff',
     paddingTop: 60,
     paddingHorizontal: 16,
     paddingBottom: 24,
@@ -121,16 +141,14 @@ const s = StyleSheet.create({
     shadowOffset: { width: 4, height: 0 },
     elevation: 12,
   },
-  brand: { fontSize: 24, fontWeight: '800', color: '#111827', paddingHorizontal: 12 },
+  brand: { fontSize: 24, fontWeight: '800', paddingHorizontal: 12 },
   subBrand: {
     fontSize: 13,
-    color: '#6b7280',
     paddingHorizontal: 12,
     marginTop: 2,
   },
   divider: {
     height: StyleSheet.hairlineWidth,
-    backgroundColor: '#e5e7eb',
     marginVertical: 16,
   },
   list: { gap: 2 },
@@ -141,15 +159,13 @@ const s = StyleSheet.create({
     paddingHorizontal: 12,
     borderRadius: 10,
   },
-  itemPressed: { backgroundColor: '#f3f4f6' },
   itemText: { flex: 1 },
-  itemLabel: { fontSize: 16, color: '#111827', fontWeight: '600' },
-  itemHint: { fontSize: 12, color: '#6b7280', marginTop: 2 },
+  itemLabel: { fontSize: 16, fontWeight: '600' },
+  itemHint: { fontSize: 12, marginTop: 2 },
   badge: {
-    backgroundColor: '#fef3c7',
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 10,
   },
-  badgeText: { fontSize: 11, fontWeight: '700', color: '#92400e' },
+  badgeText: { fontSize: 11, fontWeight: '700' },
 });

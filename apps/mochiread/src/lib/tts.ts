@@ -18,6 +18,26 @@ export function speak(text: string) {
   });
 }
 
+/**
+ * Speak the text and resolve when playback ends (whether by completion,
+ * external stop, or error). Useful for sequential playback loops where you
+ * want to await each utterance before moving on.
+ */
+export function speakAsync(text: string): Promise<void> {
+  return new Promise((resolve) => {
+    Speech.stop();
+    Speech.speak(text, {
+      language: 'zh-CN',
+      rate: config.rate,
+      pitch: 1.0,
+      voice: config.voice,
+      onDone: () => resolve(),
+      onStopped: () => resolve(),
+      onError: () => resolve(),
+    });
+  });
+}
+
 export function stop() {
   Speech.stop();
 }
