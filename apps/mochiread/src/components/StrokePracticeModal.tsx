@@ -222,7 +222,7 @@ function Practice({
           style={s.canvas}
           userStrokeProps={{
             stroke: theme.accent,
-            strokeWidth: 80,
+            strokeWidth: 50,
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
           }}
