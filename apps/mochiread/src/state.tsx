@@ -11,12 +11,13 @@ import { HSK3_SENTENCES } from './data/hsk3-sentences';
 
 export type FontSize = 'sm' | 'md' | 'lg' | 'xl';
 export type SpeechRate = 'slow' | 'normal' | 'fast';
+export type PinyinMode = 'on' | 'off' | 'hint';
 
 export type ThemeMode = 'system' | 'light' | 'dark';
 
 export type Preferences = {
   fontSize: FontSize;
-  showPinyin: boolean;
+  pinyinMode: PinyinMode;
   showToneColors: boolean;
   themeMode: ThemeMode;
   speechRate: SpeechRate;
@@ -55,12 +56,27 @@ export type VocabEntry = {
 
 const DEFAULT_PREFS: Preferences = {
   fontSize: 'md',
-  showPinyin: true,
+  pinyinMode: 'hint',
   showToneColors: true,
   themeMode: 'system',
   speechRate: 'normal',
   autoPlay: true,
 };
+
+/**
+ * Migrate legacy preferences. The old store used `showPinyin: boolean`; the
+ * new tri-state `pinyinMode` replaces it. We respect an explicit
+ * showPinyin: false (= 'off'); anyone else lands on the new 'hint' default.
+ */
+function migratePrefs(raw: unknown): Partial<Preferences> {
+  if (!raw || typeof raw !== 'object') return {};
+  const next: Record<string, unknown> = { ...(raw as Record<string, unknown>) };
+  if ('showPinyin' in next && next.pinyinMode === undefined) {
+    next.pinyinMode = next.showPinyin === false ? 'off' : 'hint';
+  }
+  delete next.showPinyin;
+  return next as Partial<Preferences>;
+}
 
 const KEY_PREFS = 'mochiread:prefs';
 const KEY_LIBRARY = 'mochiread:library';
@@ -102,7 +118,9 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           AsyncStorage.getItem(KEY_SEEDED),
           AsyncStorage.getItem(KEY_INTRODUCED),
         ]);
-        if (p) setPrefsState({ ...DEFAULT_PREFS, ...JSON.parse(p) });
+        if (p) {
+          setPrefsState({ ...DEFAULT_PREFS, ...migratePrefs(JSON.parse(p)) });
+        }
 
         // Track which seeds have been introduced (added at least once). Once a
         // seed is introduced, the user can delete it without us re-adding.

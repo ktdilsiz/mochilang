@@ -13,6 +13,7 @@ import {
   FONT_SIZE_VALUES,
   PINYIN_SIZE_VALUES,
   type FontSize,
+  type PinyinMode,
 } from '../state';
 import { useTheme, type Theme } from '../theme';
 import type { WordRect } from './ThoughtBubble';
@@ -20,7 +21,7 @@ import type { WordRect } from './ThoughtBubble';
 type Props = {
   tokens: Token[];
   fontSize: FontSize;
-  showPinyin: boolean;
+  pinyinMode: PinyinMode;
   showToneColors: boolean;
   page: number;
   onPageChange: (page: number) => void;
@@ -33,7 +34,7 @@ const FOOTER_HEIGHT = 44;
 export function Reader({
   tokens,
   fontSize,
-  showPinyin,
+  pinyinMode,
   showToneColors,
   page,
   onPageChange,
@@ -43,10 +44,17 @@ export function Reader({
   const hanziSize = FONT_SIZE_VALUES[fontSize];
   const pinyinSize = PINYIN_SIZE_VALUES[fontSize];
   const lineHeight = Math.round(hanziSize * 1.25);
+  const reservePinyinRow = pinyinMode !== 'off';
 
   const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [revealed, setRevealed] = useState<Set<string>>(() => new Set());
+
+  // Reset per-word reveals when the underlying text changes.
+  useEffect(() => {
+    setRevealed(new Set());
+  }, [tokens]);
 
   const pages = useMemo(() => {
     if (layout.width <= 0 || layout.height <= 0) return [tokens];
@@ -54,11 +62,11 @@ export function Reader({
       tokens,
       hanziSize,
       pinyinSize,
-      showPinyin,
+      reservePinyinRow,
       viewWidth: layout.width - PAGE_PADDING * 2,
       viewHeight: layout.height - PAGE_PADDING * 2,
     });
-  }, [tokens, hanziSize, pinyinSize, showPinyin, layout.width, layout.height]);
+  }, [tokens, hanziSize, pinyinSize, reservePinyinRow, layout.width, layout.height]);
 
   const pageCount = pages.length;
   const safePage = Math.min(Math.max(0, page), pageCount - 1);
@@ -129,6 +137,8 @@ export function Reader({
                 </Text>
               );
             }
+            const isRevealed =
+              pinyinMode === 'on' || revealed.has(t.word);
             return (
               <WordChip
                 key={i}
@@ -136,11 +146,21 @@ export function Reader({
                 hanziSize={hanziSize}
                 pinyinSize={pinyinSize}
                 lineHeight={lineHeight}
-                showPinyin={showPinyin}
+                pinyinMode={pinyinMode}
+                isRevealed={isRevealed}
                 showToneColors={showToneColors}
                 isPlaying={playingIndex === i}
                 theme={theme}
-                onPress={onWordPress}
+                onPress={(token, rect) => {
+                  if (pinyinMode === 'hint' && !revealed.has(token.word)) {
+                    setRevealed((prev) => {
+                      const next = new Set(prev);
+                      next.add(token.word);
+                      return next;
+                    });
+                  }
+                  onWordPress(token, rect);
+                }}
               />
             );
           })}
@@ -246,7 +266,8 @@ function WordChip({
   hanziSize,
   pinyinSize,
   lineHeight,
-  showPinyin,
+  pinyinMode,
+  isRevealed,
   showToneColors,
   isPlaying,
   theme,
@@ -256,7 +277,8 @@ function WordChip({
   hanziSize: number;
   pinyinSize: number;
   lineHeight: number;
-  showPinyin: boolean;
+  pinyinMode: PinyinMode;
+  isRevealed: boolean;
   showToneColors: boolean;
   isPlaying: boolean;
   theme: Theme;
@@ -270,6 +292,8 @@ function WordChip({
     });
   };
 
+  const showPinyinRow = pinyinMode !== 'off';
+
   return (
     <Pressable
       ref={ref}
@@ -280,24 +304,34 @@ function WordChip({
         pressed && !isPlaying && { backgroundColor: theme.highlight },
       ]}
     >
-      {showPinyin && (
+      {showPinyinRow && (
         <View style={s.pinyinRow}>
-          {token.syllables.map((syl, i) => (
-            <Text
-              key={i}
-              style={[
-                s.pinyin,
-                {
-                  fontSize: pinyinSize,
-                  color: showToneColors
-                    ? theme.tones[syl.tone] ?? theme.pinyin
-                    : theme.pinyin,
-                },
-              ]}
-            >
-              {syl.text}
-            </Text>
-          ))}
+          {token.syllables.map((syl, i) => {
+            const color = showToneColors
+              ? theme.tones[syl.tone] ?? theme.pinyin
+              : theme.pinyin;
+            // Render the pinyin text either visibly (revealed) or with the
+            // glyphs invisible but the underline drawn — the layout width
+            // matches the actual pinyin so the hanzi never shifts when you
+            // reveal a word.
+            return (
+              <Text
+                key={i}
+                style={[
+                  s.pinyin,
+                  {
+                    fontSize: pinyinSize,
+                    color: isRevealed ? color : 'transparent',
+                    textDecorationLine: isRevealed ? 'none' : 'underline',
+                    textDecorationColor: color,
+                    textDecorationStyle: 'solid',
+                  },
+                ]}
+              >
+                {syl.text}
+              </Text>
+            );
+          })}
         </View>
       )}
       <Text

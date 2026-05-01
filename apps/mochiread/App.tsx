@@ -117,7 +117,7 @@ function AppRoot() {
           <Reader
             tokens={tokens}
             fontSize={prefs.fontSize}
-            showPinyin={prefs.showPinyin}
+            pinyinMode={prefs.pinyinMode}
             showToneColors={prefs.showToneColors}
             page={readingPage}
             onPageChange={setReadingPage}

@@ -1,6 +1,11 @@
 import { Pressable, StyleSheet, Switch, Text, View } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
-import { useStore, type FontSize, type ThemeMode } from '../state';
+import {
+  useStore,
+  type FontSize,
+  type PinyinMode,
+  type ThemeMode,
+} from '../state';
 import { useTheme } from '../theme';
 
 type Props = {
@@ -18,6 +23,16 @@ const THEME_OPTIONS: { id: ThemeMode; label: string }[] = [
   { id: 'system', label: 'System' },
   { id: 'light', label: 'Light' },
   { id: 'dark', label: 'Dark' },
+];
+
+const PINYIN_OPTIONS: { id: PinyinMode; label: string; hint: string }[] = [
+  { id: 'on', label: 'Always show', hint: 'Pinyin appears above every word.' },
+  {
+    id: 'hint',
+    label: 'Tap to reveal',
+    hint: 'Each word starts as a colored underline. Tap to reveal its pinyin.',
+  },
+  { id: 'off', label: 'Hide', hint: 'No pinyin row. Hanzi only.' },
 ];
 
 export function DisplayScreen({ onBack }: Props) {
@@ -89,16 +104,59 @@ export function DisplayScreen({ onBack }: Props) {
         </Section>
 
         <Section title="Pinyin" theme={theme}>
-          <ToggleRow
-            label="Show pinyin above words"
-            value={prefs.showPinyin}
-            onChange={(v) => setPrefs({ showPinyin: v })}
-            theme={theme}
-          />
+          <View style={s.pinyinList}>
+            {PINYIN_OPTIONS.map((opt) => {
+              const selected = prefs.pinyinMode === opt.id;
+              return (
+                <Pressable
+                  key={opt.id}
+                  onPress={() => setPrefs({ pinyinMode: opt.id })}
+                  style={({ pressed }) => [
+                    s.pinyinRow,
+                    {
+                      borderColor: selected ? theme.accent : theme.border,
+                      backgroundColor: selected
+                        ? theme.accentBg
+                        : 'transparent',
+                    },
+                    pressed && { opacity: 0.85 },
+                  ]}
+                >
+                  <View style={s.pinyinText}>
+                    <Text style={[s.pinyinLabel, { color: theme.text }]}>
+                      {opt.label}
+                    </Text>
+                    <Text
+                      style={[s.pinyinHint, { color: theme.textMuted }]}
+                    >
+                      {opt.hint}
+                    </Text>
+                  </View>
+                  <View
+                    style={[
+                      s.radio,
+                      {
+                        borderColor: selected ? theme.accent : theme.border,
+                      },
+                    ]}
+                  >
+                    {selected && (
+                      <View
+                        style={[
+                          s.radioDot,
+                          { backgroundColor: theme.accent },
+                        ]}
+                      />
+                    )}
+                  </View>
+                </Pressable>
+              );
+            })}
+          </View>
           <View style={[s.divider, { backgroundColor: theme.border }]} />
           <ToggleRow
             label="Tone colors"
-            hint="Color each pinyin syllable by its tone."
+            hint="Color each pinyin syllable (or its underline hint) by its tone."
             value={prefs.showToneColors}
             onChange={(v) => setPrefs({ showToneColors: v })}
             theme={theme}
@@ -195,4 +253,29 @@ const s = StyleSheet.create({
   toggleLabel: { fontSize: 15, fontWeight: '600' },
   toggleHint: { fontSize: 12, marginTop: 2 },
   divider: { height: StyleSheet.hairlineWidth, marginHorizontal: -14 },
+  pinyinList: { gap: 8 },
+  pinyinRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    padding: 10,
+    borderRadius: 10,
+    borderWidth: StyleSheet.hairlineWidth,
+  },
+  pinyinText: { flex: 1 },
+  pinyinLabel: { fontSize: 15, fontWeight: '600' },
+  pinyinHint: { fontSize: 12, marginTop: 2 },
+  radio: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    borderWidth: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  radioDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+  },
 });

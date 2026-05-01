@@ -5,7 +5,8 @@ type Args = {
   tokens: Token[];
   hanziSize: number;
   pinyinSize: number;
-  showPinyin: boolean;
+  /** Reserve vertical space for pinyin (or its hidden-hint underline). */
+  reservePinyinRow: boolean;
   viewWidth: number;
   viewHeight: number;
 };
@@ -23,14 +24,14 @@ export function paginate({
   tokens,
   hanziSize,
   pinyinSize,
-  showPinyin,
+  reservePinyinRow,
   viewWidth,
   viewHeight,
 }: Args): Token[][] {
   if (viewWidth <= 0 || viewHeight <= 0) return [tokens];
 
   const lineHeight = Math.round(
-    hanziSize * 1.25 + (showPinyin ? pinyinSize + 2 : 0) + 8
+    hanziSize * 1.25 + (reservePinyinRow ? pinyinSize + 2 : 0) + 8
   );
   const linesPerPage = Math.max(1, Math.floor(viewHeight / lineHeight));
 
