@@ -131,6 +131,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setPrefs: (patch) => setPrefsState((prev) => ({ ...prev, ...patch })),
       library,
       saveText: (text) => {
+        const existing = library.find((e) => e.text === text);
+        if (existing) return existing;
         const entry: LibraryEntry = {
           id: String(Date.now()) + Math.random().toString(36).slice(2, 6),
           title: makeTitle(text),

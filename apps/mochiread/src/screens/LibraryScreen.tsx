@@ -15,38 +15,17 @@ type Props = {
 };
 
 export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
-  const { library, saveText, removeText } = useStore();
-
-  const handleSaveCurrent = () => {
-    if (!currentText.trim()) return;
-    saveText(currentText);
-  };
+  const { library, removeText } = useStore();
 
   return (
     <View style={s.root}>
-      <AppHeader
-        title="Library"
-        leading="back"
-        onLeadingPress={onBack}
-        trailing={
-          <Pressable
-            onPress={handleSaveCurrent}
-            disabled={!currentText.trim()}
-            hitSlop={8}
-          >
-            <Text
-              style={[s.action, !currentText.trim() && s.actionDisabled]}
-            >
-              Save current
-            </Text>
-          </Pressable>
-        }
-      />
+      <AppHeader title="Library" leading="back" onLeadingPress={onBack} />
       {library.length === 0 ? (
         <View style={s.empty}>
           <Text style={s.emptyTitle}>No saved texts yet</Text>
           <Text style={s.emptyHint}>
-            Tap “Save current” to keep the text you’re reading.
+            New texts are added automatically when you open them via “New
+            text.”
           </Text>
         </View>
       ) : (
@@ -58,13 +37,21 @@ export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
           renderItem={({ item }) => (
             <Pressable
               onPress={() => onLoad(item.text)}
-              style={({ pressed }) => [s.row, pressed && s.rowPressed]}
+              style={({ pressed }) => [
+                s.row,
+                item.text === currentText && s.rowCurrent,
+                pressed && s.rowPressed,
+              ]}
             >
               <View style={s.rowText}>
                 <Text style={s.title} numberOfLines={1}>
                   {item.title}
                 </Text>
-                <Text style={s.meta}>{formatDate(item.createdAt)}</Text>
+                <Text style={s.meta}>
+                  {item.text === currentText
+                    ? 'Currently reading'
+                    : formatDate(item.createdAt)}
+                </Text>
               </View>
               <Pressable
                 onPress={() => removeText(item.id)}
@@ -93,8 +80,6 @@ function formatDate(ms: number) {
 
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: '#fafafa' },
-  action: { fontSize: 14, color: '#3b82f6', fontWeight: '600' },
-  actionDisabled: { color: '#9ca3af' },
   list: { padding: 16 },
   sep: { height: 8 },
   row: {
@@ -108,6 +93,7 @@ const s = StyleSheet.create({
     borderColor: '#e5e7eb',
   },
   rowPressed: { backgroundColor: '#f9fafb' },
+  rowCurrent: { borderColor: '#3b82f6', backgroundColor: '#eff6ff' },
   rowText: { flex: 1, gap: 4 },
   title: { fontSize: 16, color: '#111827', fontWeight: '600' },
   meta: { fontSize: 12, color: '#6b7280' },

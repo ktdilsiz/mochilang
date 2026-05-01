@@ -6,6 +6,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 import { AppHeader } from './src/components/AppHeader';
 import { HamburgerMenu } from './src/components/HamburgerMenu';
@@ -27,6 +28,9 @@ import type { Screen } from './src/screens/types';
 
 const SAMPLE = '你好，世界！我喜欢吃苹果。今天天气很好。';
 
+const KEY_TEXT = 'mochiread:reading:text';
+const KEY_PAGE = 'mochiread:reading:page';
+
 export default function App() {
   return (
     <StoreProvider>
@@ -37,6 +41,8 @@ export default function App() {
 
 function AppRoot() {
   const [text, setText] = useState(SAMPLE);
+  const [readingPage, setReadingPage] = useState(0);
+  const [hydrated, setHydrated] = useState(false);
   const [screen, setScreen] = useState<Screen>('reader');
   const [menuOpen, setMenuOpen] = useState(false);
   const [selected, setSelected] = useState<{ token: Token; rect: WordRect } | null>(
@@ -44,8 +50,34 @@ function AppRoot() {
   );
   const [exploring, setExploring] = useState<string | null>(null);
 
-  const { prefs } = useStore();
+  const { prefs, saveText } = useStore();
   const tokens = useMemo(() => tokenize(text), [text]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const [savedText, savedPage] = await Promise.all([
+          AsyncStorage.getItem(KEY_TEXT),
+          AsyncStorage.getItem(KEY_PAGE),
+        ]);
+        if (savedText) setText(savedText);
+        if (savedPage) {
+          const n = parseInt(savedPage, 10);
+          if (Number.isFinite(n) && n >= 0) setReadingPage(n);
+        }
+      } finally {
+        setHydrated(true);
+      }
+    })();
+  }, []);
+
+  useEffect(() => {
+    if (hydrated) AsyncStorage.setItem(KEY_TEXT, text);
+  }, [text, hydrated]);
+
+  useEffect(() => {
+    if (hydrated) AsyncStorage.setItem(KEY_PAGE, String(readingPage));
+  }, [readingPage, hydrated]);
 
   useEffect(() => {
     configureTTS({
@@ -61,13 +93,13 @@ function AppRoot() {
     setScreen(target);
   };
 
-  const handleEditorCommit = (next: string) => {
-    setText(next);
-    setScreen('reader');
-  };
-
-  const handleLibraryLoad = (next: string) => {
-    setText(next);
+  const openText = (next: string) => {
+    const trimmed = next.trim();
+    if (trimmed && trimmed !== text) {
+      saveText(trimmed);
+      setText(trimmed);
+      setReadingPage(0);
+    }
     setScreen('reader');
   };
 
@@ -84,6 +116,8 @@ function AppRoot() {
             tokens={tokens}
             fontSize={prefs.fontSize}
             showPinyin={prefs.showPinyin}
+            page={readingPage}
+            onPageChange={setReadingPage}
             onWordPress={(token, rect) => setSelected({ token, rect })}
           />
         </View>
@@ -93,7 +127,7 @@ function AppRoot() {
         <EditorScreen
           initialText={text}
           onCancel={goReader}
-          onCommit={handleEditorCommit}
+          onCommit={openText}
         />
       )}
 
@@ -101,7 +135,7 @@ function AppRoot() {
         <LibraryScreen
           currentText={text}
           onBack={goReader}
-          onLoad={handleLibraryLoad}
+          onLoad={openText}
         />
       )}
 
