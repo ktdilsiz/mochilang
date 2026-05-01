@@ -121,7 +121,9 @@ function Practice({
   const startQuiz = () => {
     setCompletion(null);
     writer.quiz.start({
-      leniency: 1,
+      // Higher = looser grading on each stroke (start point, length, shape).
+      // Stroke ORDER is enforced separately and stays strict regardless.
+      leniency: 2.5,
       showHintAfterMisses: 2,
       onComplete: ({ totalMistakes }) => {
         setCompletion({ mistakes: totalMistakes });
@@ -229,7 +231,12 @@ function Practice({
         >
           <HanziWriter.GridLines color={theme.border} />
           <HanziWriter.Svg>
-            <HanziWriter.Outline color={theme.border} />
+            {/* Hide the faded outline during the quiz so the user has to
+                recall the shape from memory; QuizMistakeHighlighter still
+                shows the right path after two misses. */}
+            <HanziWriter.Outline
+              color={quizActive ? 'transparent' : theme.border}
+            />
             <HanziWriter.Character
               color={theme.text}
               radicalColor={theme.accent}
