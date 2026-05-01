@@ -134,9 +134,20 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         }
 
         const existingLibrary: LibraryEntry[] = l ? JSON.parse(l) : [];
+        // Refresh seed content for any seed entries the user still has, so
+        // updates to SEED_LIBRARY (e.g. switching to newline-joined sentences)
+        // reach existing installs. Deleted seeds stay deleted.
+        const seedsById = new Map(SEED_LIBRARY.map((s) => [s.id, s] as const));
+        const refreshed = existingLibrary.map((entry) => {
+          const seed = seedsById.get(entry.id);
+          if (seed && (seed.text !== entry.text || seed.title !== entry.title)) {
+            return { ...entry, title: seed.title, text: seed.text };
+          }
+          return entry;
+        });
         const newSeeds = SEED_LIBRARY.filter((s) => !introduced.has(s.id));
         for (const s of newSeeds) introduced.add(s.id);
-        const nextLibrary = [...newSeeds, ...existingLibrary];
+        const nextLibrary = [...newSeeds, ...refreshed];
         setLibrary(nextLibrary);
 
         AsyncStorage.setItem(KEY_INTRODUCED, JSON.stringify([...introduced]));
@@ -314,7 +325,7 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
     hskSeeds.push({
       id: `seed-hsk3-${setNumber}`,
       title: `HSK 3 · Set ${setNumber} (${i + 1}–${i + slice.length})`,
-      text: slice.join(''),
+      text: slice.join('\n'),
       createdAt: now - (items.length + setNumber) * 60_000,
     });
   }

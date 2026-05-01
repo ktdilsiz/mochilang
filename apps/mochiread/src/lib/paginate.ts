@@ -55,7 +55,18 @@ export function paginate({
 
   for (const t of tokens) {
     if (t.word === '\n') {
-      finishLine();
+      // Hard line break: flush whatever's on the current line and emit the
+      // newline token so the renderer can force a flex-wrap. The line count
+      // still ticks, so paragraph-heavy text paginates correctly.
+      pageBuf.push(...lineBuf, t);
+      lineBuf = [];
+      lineWidth = 0;
+      lineIndex++;
+      if (lineIndex >= linesPerPage) {
+        pages.push(pageBuf);
+        pageBuf = [];
+        lineIndex = 0;
+      }
       continue;
     }
     const w = estimateWidth(t.word, hanziSize);

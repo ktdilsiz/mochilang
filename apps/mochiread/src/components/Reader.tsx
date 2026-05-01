@@ -120,6 +120,9 @@ export function Reader({
       <View style={s.page} onLayout={handleLayout}>
         <View style={s.flow}>
           {currentTokens.map((t, i) => {
+            if (t.word === '\n') {
+              return <View key={i} style={s.lineBreak} />;
+            }
             if (!isChinese(t.word)) {
               return (
                 <Text
@@ -354,6 +357,7 @@ const s = StyleSheet.create({
     overflow: 'hidden',
   },
   flow: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-end' },
+  lineBreak: { width: '100%', height: 6 },
   token: {
     alignItems: 'center',
     paddingHorizontal: 3,
