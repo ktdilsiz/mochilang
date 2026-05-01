@@ -86,6 +86,24 @@ const KEY_INTRODUCED = 'mochiread:introduced-seeds';
 
 const ORIGINAL_SEED_IDS = ['seed-1', 'seed-2', 'seed-3', 'seed-4', 'seed-5'];
 
+/**
+ * Seed IDs we used to introduce but no longer want in the library. On
+ * hydration we strip these from any existing library so users who already
+ * received them get the cleanup automatically.
+ */
+const DEPRECATED_SEED_IDS = [
+  'seed-hsk3-1',
+  'seed-hsk3-2',
+  'seed-hsk3-3',
+  'seed-hsk3-4',
+  'seed-hsk3-5',
+  'seed-hsk3-6',
+  'seed-hsk3-7',
+  'seed-hsk3-8',
+  'seed-hsk3-9',
+  'seed-hsk3-10',
+];
+
 type Store = {
   hydrated: boolean;
   prefs: Preferences;
@@ -134,11 +152,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         }
 
         const existingLibrary: LibraryEntry[] = l ? JSON.parse(l) : [];
+        // Drop any deprecated seed entries we no longer want.
+        const deprecatedSet = new Set(DEPRECATED_SEED_IDS);
+        const cleaned = existingLibrary.filter(
+          (entry) => !deprecatedSet.has(entry.id)
+        );
         // Refresh seed content for any seed entries the user still has, so
         // updates to SEED_LIBRARY (e.g. switching to newline-joined sentences)
         // reach existing installs. Deleted seeds stay deleted.
         const seedsById = new Map(SEED_LIBRARY.map((s) => [s.id, s] as const));
-        const refreshed = existingLibrary.map((entry) => {
+        const refreshed = cleaned.map((entry) => {
           const seed = seedsById.get(entry.id);
           if (seed && (seed.text !== entry.text || seed.title !== entry.title)) {
             return { ...entry, title: seed.title, text: seed.text };
@@ -317,20 +340,14 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
     createdAt: now - i * 60_000,
   }));
 
-  const HSK3_CHUNK = 30;
-  const hskSeeds: LibraryEntry[] = [];
-  for (let i = 0; i < HSK3_SENTENCES.length; i += HSK3_CHUNK) {
-    const slice = HSK3_SENTENCES.slice(i, i + HSK3_CHUNK);
-    const setNumber = i / HSK3_CHUNK + 1;
-    hskSeeds.push({
-      id: `seed-hsk3-${setNumber}`,
-      title: `HSK 3 · Set ${setNumber} (${i + 1}–${i + slice.length})`,
-      text: slice.join('\n'),
-      createdAt: now - (items.length + setNumber) * 60_000,
-    });
-  }
+  const hsk3All: LibraryEntry = {
+    id: 'seed-hsk3-all',
+    title: `HSK 3 · 300 example sentences`,
+    text: HSK3_SENTENCES.join('\n'),
+    createdAt: now - (items.length + 1) * 60_000,
+  };
 
-  return [...baseSeeds, ...hskSeeds];
+  return [...baseSeeds, hsk3All];
 })();
 
 export const FONT_SIZE_VALUES: Record<FontSize, number> = {
