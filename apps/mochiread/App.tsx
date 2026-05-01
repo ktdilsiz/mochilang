@@ -144,7 +144,7 @@ function AppRoot() {
 
       {screen === 'editor' && (
         <EditorScreen
-          initialText={text}
+          initialText=""
           onCancel={goReader}
           onCommit={openText}
         />
