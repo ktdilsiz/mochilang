@@ -22,6 +22,7 @@ type Props = {
   rect: WordRect | null;
   onClose: () => void;
   onExplore: (word: string) => void;
+  onPractice: (char: string) => void;
 };
 
 const PANEL_WIDTH = 280;
@@ -29,7 +30,14 @@ const ARROW_HEIGHT = 10;
 const GAP = 8;
 const EDGE_PADDING = 8;
 
-export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props) {
+export function ThoughtBubble({
+  word,
+  pinyin,
+  rect,
+  onClose,
+  onExplore,
+  onPractice,
+}: Props) {
   const visible = word !== null && rect !== null;
   const scale = useRef(new Animated.Value(0.85)).current;
   const opacity = useRef(new Animated.Value(0)).current;
@@ -224,6 +232,20 @@ export function ThoughtBubble({ word, pinyin, rect, onClose, onExplore }: Props)
               >
                 <Text style={[s.exploreText, { color: theme.accent }]}>
                   Explore characters →
+                </Text>
+              </Pressable>
+            )}
+            {[...word].length === 1 && (
+              <Pressable
+                onPress={() => onPractice(word)}
+                style={({ pressed }) => [
+                  s.exploreBtn,
+                  { backgroundColor: theme.accentBg, marginTop: 8 },
+                  pressed && { backgroundColor: theme.accentBgPressed },
+                ]}
+              >
+                <Text style={[s.exploreText, { color: theme.accent }]}>
+                  Practice writing ✎
                 </Text>
               </Pressable>
             )}

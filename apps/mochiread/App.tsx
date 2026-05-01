@@ -8,11 +8,13 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { AppHeader } from './src/components/AppHeader';
 import { HamburgerMenu } from './src/components/HamburgerMenu';
 import { Reader } from './src/components/Reader';
 import { ThoughtBubble, type WordRect } from './src/components/ThoughtBubble';
 import { ExploreModal } from './src/components/ExploreModal';
+import { StrokePracticeModal } from './src/components/StrokePracticeModal';
 import { tokenize, type Token } from './src/lib/cn';
 import { configureTTS } from './src/lib/tts';
 import { StoreProvider, useStore, SPEECH_RATE_VALUES } from './src/state';
@@ -35,9 +37,11 @@ const KEY_PAGE = 'mochiread:reading:page';
 
 export default function App() {
   return (
-    <StoreProvider>
-      <AppRoot />
-    </StoreProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <StoreProvider>
+        <AppRoot />
+      </StoreProvider>
+    </GestureHandlerRootView>
   );
 }
 
@@ -51,6 +55,7 @@ function AppRoot() {
     null
   );
   const [exploring, setExploring] = useState<string | null>(null);
+  const [practicing, setPracticing] = useState<string | null>(null);
 
   const {
     prefs,
@@ -200,11 +205,20 @@ function AppRoot() {
           setSelected(null);
           setExploring(w);
         }}
+        onPractice={(c) => {
+          setSelected(null);
+          setPracticing(c);
+        }}
       />
 
       <ExploreModal
         initial={exploring}
         onClose={() => setExploring(null)}
+      />
+
+      <StrokePracticeModal
+        char={practicing}
+        onClose={() => setPracticing(null)}
       />
       <ExpoStatusBar style={theme.isDark ? 'light' : 'dark'} />
     </SafeAreaView>
