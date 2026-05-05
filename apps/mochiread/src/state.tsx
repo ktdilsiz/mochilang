@@ -8,6 +8,7 @@ import {
 } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { HSK3_SENTENCES } from './data/hsk3-sentences';
+import { HSK4_SENTENCES } from './data/hsk4-sentences';
 
 export type FontSize = 'sm' | 'md' | 'lg' | 'xl';
 export type SpeechRate = 'slow' | 'normal' | 'fast';
@@ -452,7 +453,14 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
     createdAt: now - (items.length + 1) * 60_000,
   };
 
-  return [...baseSeeds, hsk3All];
+  const hsk4All: LibraryEntry = {
+    id: 'seed-hsk4-all',
+    title: `HSK 4 · 600 example sentences`,
+    text: HSK4_SENTENCES.join('\n'),
+    createdAt: now - (items.length + 2) * 60_000,
+  };
+
+  return [...baseSeeds, hsk3All, hsk4All];
 })();
 
 export const FONT_SIZE_VALUES: Record<FontSize, number> = {
