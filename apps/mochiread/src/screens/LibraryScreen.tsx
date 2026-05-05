@@ -1,8 +1,10 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
-import DraggableFlatList, {
-  ScaleDecorator,
-  type RenderItemParams,
-} from 'react-native-draggable-flatlist';
+import {
+  FlatList,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import { AppHeader } from '../components/AppHeader';
 import { useStore, type LibraryEntry } from '../state';
 import { useTheme, type Theme } from '../theme';
@@ -17,25 +19,12 @@ export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
   const { library, removeText, reorderLibrary } = useStore();
   const theme = useTheme();
 
-  const renderItem = ({
-    item,
-    drag,
-    isActive,
-  }: RenderItemParams<LibraryEntry>) => {
-    const isCurrent = item.text === currentText;
-    return (
-      <ScaleDecorator>
-        <Row
-          item={item}
-          isCurrent={isCurrent}
-          isActive={isActive}
-          theme={theme}
-          onLoad={onLoad}
-          onRemove={removeText}
-          onLongPress={drag}
-        />
-      </ScaleDecorator>
-    );
+  const move = (index: number, direction: -1 | 1) => {
+    const target = index + direction;
+    if (target < 0 || target >= library.length) return;
+    const next = library.slice();
+    [next[index], next[target]] = [next[target], next[index]];
+    reorderLibrary(next);
   };
 
   return (
@@ -52,20 +41,25 @@ export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
           </Text>
         </View>
       ) : (
-        <DraggableFlatList
+        <FlatList
           data={library}
           keyExtractor={(e) => e.id}
           contentContainerStyle={s.list}
           ItemSeparatorComponent={() => <View style={s.sep} />}
-          onDragEnd={({ data }) => reorderLibrary(data)}
-          renderItem={renderItem}
-          activationDistance={10}
+          renderItem={({ item, index }) => (
+            <Row
+              item={item}
+              isCurrent={item.text === currentText}
+              isFirst={index === 0}
+              isLast={index === library.length - 1}
+              theme={theme}
+              onLoad={onLoad}
+              onRemove={removeText}
+              onMoveUp={() => move(index, -1)}
+              onMoveDown={() => move(index, 1)}
+            />
+          )}
         />
-      )}
-      {library.length > 1 && (
-        <Text style={[s.hint, { color: theme.textSubtle }]}>
-          Long-press an entry to reorder · tap to open · ✕ to delete
-        </Text>
       )}
     </View>
   );
@@ -74,43 +68,52 @@ export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
 function Row({
   item,
   isCurrent,
-  isActive,
+  isFirst,
+  isLast,
   theme,
   onLoad,
   onRemove,
-  onLongPress,
+  onMoveUp,
+  onMoveDown,
 }: {
   item: LibraryEntry;
   isCurrent: boolean;
-  isActive: boolean;
+  isFirst: boolean;
+  isLast: boolean;
   theme: Theme;
   onLoad: (text: string) => void;
   onRemove: (id: string) => void;
-  onLongPress: () => void;
+  onMoveUp: () => void;
+  onMoveDown: () => void;
 }) {
   return (
     <Pressable
       onPress={() => onLoad(item.text)}
-      onLongPress={onLongPress}
-      delayLongPress={250}
       style={({ pressed }) => [
         s.row,
         {
           backgroundColor: isCurrent ? theme.accentBg : theme.surface,
           borderColor: isCurrent ? theme.accent : theme.border,
         },
-        pressed && !isActive && { backgroundColor: theme.surfaceAlt },
-        isActive && {
-          shadowColor: '#000',
-          shadowOpacity: 0.25,
-          shadowRadius: 12,
-          shadowOffset: { width: 0, height: 6 },
-          elevation: 6,
-          borderColor: theme.accent,
-        },
+        pressed && { backgroundColor: theme.surfaceAlt },
       ]}
     >
-      <Text style={[s.handle, { color: theme.textSubtle }]}>⋮⋮</Text>
+      <View style={s.moveCol}>
+        <ArrowBtn
+          label="↑"
+          onPress={onMoveUp}
+          disabled={isFirst}
+          theme={theme}
+          accessibilityLabel="Move up"
+        />
+        <ArrowBtn
+          label="↓"
+          onPress={onMoveDown}
+          disabled={isLast}
+          theme={theme}
+          accessibilityLabel="Move down"
+        />
+      </View>
       <View style={s.rowText}>
         <Text style={[s.title, { color: theme.text }]} numberOfLines={1}>
           {item.title}
@@ -134,6 +137,42 @@ function Row({
   );
 }
 
+function ArrowBtn({
+  label,
+  onPress,
+  disabled,
+  theme,
+  accessibilityLabel,
+}: {
+  label: string;
+  onPress: () => void;
+  disabled: boolean;
+  theme: Theme;
+  accessibilityLabel: string;
+}) {
+  return (
+    <Pressable
+      onPress={onPress}
+      disabled={disabled}
+      hitSlop={4}
+      style={({ pressed }) => [
+        s.arrow,
+        pressed && !disabled && { backgroundColor: theme.surfaceAlt },
+      ]}
+      accessibilityLabel={accessibilityLabel}
+    >
+      <Text
+        style={[
+          s.arrowText,
+          { color: disabled ? theme.border : theme.textMuted },
+        ]}
+      >
+        {label}
+      </Text>
+    </Pressable>
+  );
+}
+
 function formatDate(ms: number) {
   const d = new Date(ms);
   return d.toLocaleDateString(undefined, {
@@ -150,14 +189,22 @@ const s = StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 14,
-    paddingHorizontal: 14,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
     borderRadius: 12,
     borderWidth: StyleSheet.hairlineWidth,
     gap: 8,
   },
-  handle: { fontSize: 16, fontWeight: '700', letterSpacing: -2 },
-  rowText: { flex: 1, gap: 4 },
+  moveCol: { gap: 0 },
+  arrow: {
+    width: 28,
+    height: 22,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 6,
+  },
+  arrowText: { fontSize: 16, fontWeight: '700', lineHeight: 18 },
+  rowText: { flex: 1, gap: 4, paddingVertical: 4 },
   title: { fontSize: 16, fontWeight: '600' },
   meta: { fontSize: 12 },
   trash: {
@@ -174,11 +221,5 @@ const s = StyleSheet.create({
     fontSize: 13,
     marginTop: 6,
     textAlign: 'center',
-  },
-  hint: {
-    fontSize: 11,
-    textAlign: 'center',
-    paddingVertical: 8,
-    paddingHorizontal: 16,
   },
 });
