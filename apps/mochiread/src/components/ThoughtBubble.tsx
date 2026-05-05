@@ -4,6 +4,7 @@ import {
   Dimensions,
   Modal,
   Pressable,
+  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -89,15 +90,24 @@ export function ThoughtBubble({
   );
   const arrowLeft = wordCenterX - left - 8;
 
-  // Decide whether the bubble fits below the word; if not, flip above.
+  // Compute how much vertical space is available above and below the word.
+  // The bubble will go on the side with more room and use a scrollable
+  // content area capped at that side's height — so long meanings or a tall
+  // bubble in the middle of the screen still fit instead of clipping.
+  const spaceBelow =
+    screenHeight - (rect.y + rect.height) - GAP - ARROW_HEIGHT - EDGE_PADDING;
+  const spaceAbove = rect.y - GAP - ARROW_HEIGHT - EDGE_PADDING;
+  const placeAbove = spaceAbove > spaceBelow;
+  const availableHeight = Math.max(120, placeAbove ? spaceAbove : spaceBelow);
   const belowTop = rect.y + rect.height + GAP + ARROW_HEIGHT;
-  const aboveTop = rect.y - GAP - ARROW_HEIGHT - bubbleHeight;
-  const fitsBelow =
-    bubbleHeight === 0 ||
-    belowTop + bubbleHeight <= screenHeight - EDGE_PADDING;
-  const fitsAbove = aboveTop >= EDGE_PADDING;
-  const placeAbove = !fitsBelow && fitsAbove;
+  const renderedHeight = Math.min(bubbleHeight || availableHeight, availableHeight);
+  const aboveTop = rect.y - GAP - ARROW_HEIGHT - renderedHeight;
   const top = placeAbove ? aboveTop : belowTop;
+
+  // Reserve space for the panel's header (pinyin + word + buttons) and
+  // padding so the inner ScrollView gets the right amount to scroll within.
+  const HEADER_AND_PADDING = 110;
+  const scrollMaxHeight = Math.max(60, availableHeight - HEADER_AND_PADDING);
 
   const entry = lookup(word);
   const saved = isWordSaved(word);
@@ -124,6 +134,7 @@ export function ThoughtBubble({
               top,
               left,
               width: PANEL_WIDTH,
+              maxHeight: availableHeight,
               opacity,
               transform: [{ translateY }, { scale }],
             },
@@ -200,53 +211,54 @@ export function ThoughtBubble({
                 </Pressable>
               </View>
             </View>
-            {entry ? (
-              <View style={s.meanings}>
-                {entry.meanings.slice(0, 6).map((m, i) => (
-                  <Text
-                    key={i}
-                    style={[s.meaning, { color: theme.text }]}
-                  >
-                    • {m}
+            <ScrollView
+              style={[s.scroll, { maxHeight: scrollMaxHeight }]}
+              contentContainerStyle={s.scrollContent}
+              showsVerticalScrollIndicator
+            >
+              {entry ? (
+                <View style={s.meanings}>
+                  {entry.meanings.map((m, i) => (
+                    <Text
+                      key={i}
+                      style={[s.meaning, { color: theme.text }]}
+                    >
+                      • {m}
+                    </Text>
+                  ))}
+                </View>
+              ) : (
+                <Text style={[s.notFound, { color: theme.textSubtle }]}>
+                  No definition found.
+                </Text>
+              )}
+              {hasExploreData(word) && (
+                <Pressable
+                  onPress={() => onExplore(word)}
+                  style={({ pressed }) => [
+                    s.exploreBtn,
+                    { backgroundColor: theme.accentBg },
+                    pressed && { backgroundColor: theme.accentBgPressed },
+                  ]}
+                >
+                  <Text style={[s.exploreText, { color: theme.accent }]}>
+                    Explore characters →
                   </Text>
-                ))}
-                {entry.meanings.length > 6 && (
-                  <Text style={[s.more, { color: theme.textSubtle }]}>
-                    +{entry.meanings.length - 6} more
-                  </Text>
-                )}
-              </View>
-            ) : (
-              <Text style={[s.notFound, { color: theme.textSubtle }]}>
-                No definition found.
-              </Text>
-            )}
-            {hasExploreData(word) && (
+                </Pressable>
+              )}
               <Pressable
-                onPress={() => onExplore(word)}
+                onPress={() => onPractice(word)}
                 style={({ pressed }) => [
                   s.exploreBtn,
-                  { backgroundColor: theme.accentBg },
+                  { backgroundColor: theme.accentBg, marginTop: 8 },
                   pressed && { backgroundColor: theme.accentBgPressed },
                 ]}
               >
                 <Text style={[s.exploreText, { color: theme.accent }]}>
-                  Explore characters →
+                  Practice writing ✎
                 </Text>
               </Pressable>
-            )}
-            <Pressable
-              onPress={() => onPractice(word)}
-              style={({ pressed }) => [
-                s.exploreBtn,
-                { backgroundColor: theme.accentBg, marginTop: 8 },
-                pressed && { backgroundColor: theme.accentBgPressed },
-              ]}
-            >
-              <Text style={[s.exploreText, { color: theme.accent }]}>
-                Practice writing ✎
-              </Text>
-            </Pressable>
+            </ScrollView>
           </View>
         </Animated.View>
       </Pressable>
@@ -342,4 +354,6 @@ const s = StyleSheet.create({
   },
   exploreBtnPressed: { backgroundColor: '#dbeafe' },
   exploreText: { fontSize: 13, color: '#1d4ed8', fontWeight: '600' },
+  scroll: { marginTop: 4 },
+  scrollContent: { paddingBottom: 4 },
 });
