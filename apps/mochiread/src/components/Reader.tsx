@@ -26,6 +26,7 @@ type Props = {
   page: number;
   onPageChange: (page: number) => void;
   onWordPress: (token: Token, rect: WordRect) => void;
+  onTranslate: (text: string) => void;
 };
 
 const PAGE_PADDING = 20;
@@ -39,6 +40,7 @@ export function Reader({
   page,
   onPageChange,
   onWordPress,
+  onTranslate,
 }: Props) {
   const theme = useTheme();
   const hanziSize = FONT_SIZE_VALUES[fontSize];
@@ -50,6 +52,18 @@ export function Reader({
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [revealed, setRevealed] = useState<Set<string>>(() => new Set());
+  const [selection, setSelection] = useState<{
+    start: number;
+    end: number;
+  } | null>(null);
+
+  // Clear selection on text change or page change.
+  useEffect(() => {
+    setSelection(null);
+  }, [tokens]);
+  useEffect(() => {
+    setSelection(null);
+  }, [page]);
 
   // Reset per-word reveals when the underlying text changes.
   useEffect(() => {
@@ -138,6 +152,49 @@ export function Reader({
   // play loop can highlight the right one across split lines.
   let runningIndex = 0;
 
+  const selStart = selection
+    ? Math.min(selection.start, selection.end)
+    : -1;
+  const selEnd = selection ? Math.max(selection.start, selection.end) : -1;
+  const isSelected = (i: number) => selStart <= i && i <= selEnd;
+  const selectedText = selection
+    ? currentTokens
+        .slice(selStart, selEnd + 1)
+        .map((t) => t.word)
+        .join('')
+    : '';
+
+  const handleTokenPress = (
+    token: Token,
+    rect: WordRect,
+    tokenIndex: number
+  ) => {
+    if (selection) {
+      // While selecting, taps extend the range instead of opening the bubble.
+      setSelection({ start: selection.start, end: tokenIndex });
+      return;
+    }
+    if (pinyinMode === 'hint' && !revealed.has(token.word)) {
+      setRevealed((prev) => {
+        const next = new Set(prev);
+        next.add(token.word);
+        return next;
+      });
+    }
+    onWordPress(token, rect);
+  };
+
+  const handleTokenLongPress = (tokenIndex: number) => {
+    setSelection({ start: tokenIndex, end: tokenIndex });
+  };
+
+  const cancelSelection = () => setSelection(null);
+  const submitSelection = () => {
+    const text = selectedText;
+    setSelection(null);
+    if (text) onTranslate(text);
+  };
+
   return (
     <View style={[s.root, { backgroundColor: theme.bg }]}>
       <View style={s.page} onLayout={handleLayout}>
@@ -149,6 +206,7 @@ export function Reader({
               <View key={`line-${lineIdx}`} style={s.line}>
                 {line.tokens.map((t) => {
                   const tokenIndex = runningIndex++;
+                  const selected = isSelected(tokenIndex);
                   if (!isChinese(t.word)) {
                     return (
                       <Text
@@ -159,6 +217,9 @@ export function Reader({
                             fontSize: hanziSize,
                             lineHeight,
                             color: theme.textMuted,
+                            backgroundColor: selected
+                              ? theme.accentBg
+                              : 'transparent',
                           },
                         ]}
                       >
@@ -172,6 +233,7 @@ export function Reader({
                     <WordChip
                       key={tokenIndex}
                       token={t}
+                      tokenIndex={tokenIndex}
                       hanziSize={hanziSize}
                       pinyinSize={pinyinSize}
                       lineHeight={lineHeight}
@@ -179,20 +241,10 @@ export function Reader({
                       isRevealed={isRevealed}
                       showToneColors={showToneColors}
                       isPlaying={playingIndex === tokenIndex}
+                      isSelected={selected}
                       theme={theme}
-                      onPress={(token, rect) => {
-                        if (
-                          pinyinMode === 'hint' &&
-                          !revealed.has(token.word)
-                        ) {
-                          setRevealed((prev) => {
-                            const next = new Set(prev);
-                            next.add(token.word);
-                            return next;
-                          });
-                        }
-                        onWordPress(token, rect);
-                      }}
+                      onPress={handleTokenPress}
+                      onLongPress={handleTokenLongPress}
                     />
                   );
                 })}
@@ -204,6 +256,51 @@ export function Reader({
           })}
         </View>
       </View>
+      {selection && (
+        <View
+          style={[
+            s.selectionBar,
+            {
+              backgroundColor: theme.surface,
+              borderTopColor: theme.border,
+            },
+          ]}
+        >
+          <Pressable
+            onPress={cancelSelection}
+            hitSlop={6}
+            style={({ pressed }) => [
+              s.selBtn,
+              pressed && { backgroundColor: theme.surfaceAlt },
+            ]}
+          >
+            <Text style={[s.selBtnText, { color: theme.textMuted }]}>
+              Cancel
+            </Text>
+          </Pressable>
+          <Text
+            style={[s.selPreview, { color: theme.text }]}
+            numberOfLines={1}
+          >
+            {selectedText || 'Tap a word to extend'}
+          </Text>
+          <Pressable
+            onPress={submitSelection}
+            disabled={!selectedText}
+            hitSlop={6}
+            style={({ pressed }) => [
+              s.selPrimary,
+              {
+                backgroundColor: selectedText ? theme.accent : theme.border,
+              },
+              pressed && { opacity: 0.85 },
+            ]}
+          >
+            <Text style={s.selPrimaryText}>Translate</Text>
+          </Pressable>
+        </View>
+      )}
+
       <View
         style={[
           s.footer,
@@ -301,6 +398,7 @@ export function Reader({
 
 function WordChip({
   token,
+  tokenIndex,
   hanziSize,
   pinyinSize,
   lineHeight,
@@ -308,10 +406,13 @@ function WordChip({
   isRevealed,
   showToneColors,
   isPlaying,
+  isSelected,
   theme,
   onPress,
+  onLongPress,
 }: {
   token: Token;
+  tokenIndex: number;
   hanziSize: number;
   pinyinSize: number;
   lineHeight: number;
@@ -319,14 +420,16 @@ function WordChip({
   isRevealed: boolean;
   showToneColors: boolean;
   isPlaying: boolean;
+  isSelected: boolean;
   theme: Theme;
-  onPress: (token: Token, rect: WordRect) => void;
+  onPress: (token: Token, rect: WordRect, tokenIndex: number) => void;
+  onLongPress: (tokenIndex: number) => void;
 }) {
   const ref = useRef<View>(null);
 
   const handle = () => {
     ref.current?.measureInWindow((x, y, width, height) => {
-      onPress(token, { x, y, width, height });
+      onPress(token, { x, y, width, height }, tokenIndex);
     });
   };
 
@@ -336,10 +439,15 @@ function WordChip({
     <Pressable
       ref={ref}
       onPress={handle}
+      onLongPress={() => onLongPress(tokenIndex)}
+      delayLongPress={350}
       style={({ pressed }) => [
         s.token,
+        isSelected && { backgroundColor: theme.accentBg },
         isPlaying && { backgroundColor: theme.highlight },
-        pressed && !isPlaying && { backgroundColor: theme.highlight },
+        pressed &&
+          !isPlaying &&
+          !isSelected && { backgroundColor: theme.highlight },
       ]}
     >
       {showPinyinRow && (
@@ -427,6 +535,27 @@ const s = StyleSheet.create({
   },
   navBtnDisabled: { opacity: 0.4 },
   navText: { fontSize: 14, fontWeight: '600' },
+  selectionBar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    borderTopWidth: StyleSheet.hairlineWidth,
+  },
+  selBtn: {
+    paddingVertical: 6,
+    paddingHorizontal: 10,
+    borderRadius: 8,
+  },
+  selBtnText: { fontSize: 13, fontWeight: '600' },
+  selPreview: { flex: 1, fontSize: 14 },
+  selPrimary: {
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    borderRadius: 8,
+  },
+  selPrimaryText: { color: '#fff', fontSize: 13, fontWeight: '700' },
   playBtn: {
     width: 32,
     height: 32,

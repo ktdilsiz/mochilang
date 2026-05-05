@@ -15,6 +15,7 @@ import { Reader } from './src/components/Reader';
 import { ThoughtBubble, type WordRect } from './src/components/ThoughtBubble';
 import { ExploreModal } from './src/components/ExploreModal';
 import { StrokePracticeModal } from './src/components/StrokePracticeModal';
+import { TranslationSheet } from './src/components/TranslationSheet';
 import { tokenize, type Token } from './src/lib/cn';
 import { configureTTS } from './src/lib/tts';
 import { StoreProvider, useStore, SPEECH_RATE_VALUES } from './src/state';
@@ -56,6 +57,7 @@ function AppRoot() {
   );
   const [exploring, setExploring] = useState<string | null>(null);
   const [practicing, setPracticing] = useState<string | null>(null);
+  const [translating, setTranslating] = useState<string | null>(null);
 
   const {
     prefs,
@@ -162,6 +164,7 @@ function AppRoot() {
               setSelected({ token, rect });
               recordWordTap();
             }}
+            onTranslate={(text) => setTranslating(text)}
           />
         </View>
       )}
@@ -219,6 +222,11 @@ function AppRoot() {
       <StrokePracticeModal
         word={practicing}
         onClose={() => setPracticing(null)}
+      />
+
+      <TranslationSheet
+        text={translating}
+        onClose={() => setTranslating(null)}
       />
       <ExpoStatusBar style={theme.isDark ? 'light' : 'dark'} />
     </SafeAreaView>

@@ -16,6 +16,10 @@ const TIPS: { title: string; body: string }[] = [
     body: 'In the bubble, tap ★ to save a word. Find it later under Vocabulary in the menu.',
   },
   {
+    title: 'Translate a passage',
+    body: 'Long-press a word to enter selection mode, then tap another word to extend the range. Hit Translate to get an English translation.',
+  },
+  {
     title: 'Save the text',
     body: 'Anything you open from “New text” is added to Library automatically.',
   },
