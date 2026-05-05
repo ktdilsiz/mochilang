@@ -120,6 +120,7 @@ type Store = {
   library: LibraryEntry[];
   saveText: (text: string) => LibraryEntry;
   removeText: (id: string) => void;
+  reorderLibrary: (next: LibraryEntry[]) => void;
   vocab: VocabEntry[];
   saveWord: (entry: Pick<VocabEntry, 'word' | 'pinyin' | 'meanings'>) => void;
   removeWord: (word: string) => void;
@@ -257,6 +258,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         return entry;
       },
       removeText: (id) => setLibrary((prev) => prev.filter((e) => e.id !== id)),
+      reorderLibrary: (next) => setLibrary(next),
       vocab,
       saveWord: (entry) =>
         setVocab((prev) => {
