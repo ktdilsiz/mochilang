@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import { Hedgehog } from '../components/Hedgehog';
 import { useStore, type VocabEntry } from '../state';
 import { speak } from '../lib/tts';
 import { useTheme, type Theme } from '../theme';
@@ -35,6 +36,7 @@ export function FlashcardsScreen({ onBack }: Props) {
       <View style={[s.root, { backgroundColor: theme.bg }]}>
         <AppHeader title="Flashcards" leading="back" onLeadingPress={onBack} />
         <View style={s.empty}>
+          <Hedgehog size={88} color={theme.textMuted} strokeWidth={3} />
           {hasAnyVocab ? (
             <>
               <Text style={[s.emptyTitle, { color: theme.text }]}>
@@ -429,7 +431,13 @@ function shuffleSlight<T>(arr: T[]): T[] {
 
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: '#fafafa' },
-  empty: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 },
+  empty: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 32,
+    gap: 12,
+  },
   emptyTitle: { fontSize: 16, color: '#374151', fontWeight: '600' },
   emptyHint: {
     fontSize: 13,

@@ -6,6 +6,7 @@ import {
   View,
 } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import { Hedgehog } from '../components/Hedgehog';
 import { useStore, type LibraryEntry } from '../state';
 import { useTheme, type Theme } from '../theme';
 
@@ -32,6 +33,7 @@ export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
       <AppHeader title="Library" leading="back" onLeadingPress={onBack} />
       {library.length === 0 ? (
         <View style={s.empty}>
+          <Hedgehog size={88} color={theme.textMuted} strokeWidth={3} />
           <Text style={[s.emptyTitle, { color: theme.text }]}>
             No saved texts yet
           </Text>
@@ -215,7 +217,13 @@ const s = StyleSheet.create({
     justifyContent: 'center',
   },
   trashIcon: { fontSize: 14, fontWeight: '700' },
-  empty: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 },
+  empty: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 32,
+    gap: 12,
+  },
   emptyTitle: { fontSize: 16, fontWeight: '600' },
   emptyHint: {
     fontSize: 13,

@@ -1,5 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import { Hedgehog } from '../components/Hedgehog';
 import { useTheme, type Theme } from '../theme';
 
 type Props = {
@@ -20,6 +21,7 @@ export function AboutScreen({ onBack }: Props) {
             { backgroundColor: theme.surface, borderColor: theme.border },
           ]}
         >
+          <Hedgehog size={108} color={theme.text} strokeWidth={3.5} />
           <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
           <Text style={[s.tagline, { color: theme.textMuted }]}>
             Read Chinese, tap a word.

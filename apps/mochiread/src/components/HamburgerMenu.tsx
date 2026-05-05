@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import type { Screen } from '../screens/types';
 import { useTheme } from '../theme';
+import { Hedgehog } from './Hedgehog';
 
 type Item = {
   id: Screen;
@@ -79,7 +80,10 @@ export function HamburgerMenu({ open, onClose, onSelect }: Props) {
             },
           ]}
         >
-          <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
+          <View style={s.brandRow}>
+            <Hedgehog size={36} color={theme.text} strokeWidth={3.5} />
+            <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
+          </View>
           <Text style={[s.subBrand, { color: theme.textMuted }]}>
             Read Chinese, tap a word.
           </Text>
@@ -142,7 +146,13 @@ const s = StyleSheet.create({
     shadowOffset: { width: 4, height: 0 },
     elevation: 12,
   },
-  brand: { fontSize: 24, fontWeight: '800', paddingHorizontal: 12 },
+  brandRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingHorizontal: 12,
+  },
+  brand: { fontSize: 24, fontWeight: '800' },
   subBrand: {
     fontSize: 13,
     paddingHorizontal: 12,

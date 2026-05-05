@@ -6,6 +6,7 @@ import {
   View,
 } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import { Hedgehog } from '../components/Hedgehog';
 import { useStore } from '../state';
 import { useTheme } from '../theme';
 import { speak } from '../lib/tts';
@@ -23,6 +24,7 @@ export function VocabularyScreen({ onBack }: Props) {
       <AppHeader title="Vocabulary" leading="back" onLeadingPress={onBack} />
       {vocab.length === 0 ? (
         <View style={s.empty}>
+          <Hedgehog size={88} color={theme.textMuted} strokeWidth={3} />
           <Text style={[s.emptyTitle, { color: theme.text }]}>
             No saved words yet
           </Text>
@@ -107,7 +109,13 @@ const s = StyleSheet.create({
     justifyContent: 'center',
   },
   trashIcon: { fontSize: 14, fontWeight: '700' },
-  empty: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 32 },
+  empty: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 32,
+    gap: 12,
+  },
   emptyTitle: { fontSize: 16, fontWeight: '600' },
   emptyHint: {
     fontSize: 13,
