@@ -17,6 +17,7 @@ import (
 	"time"
 
 	"github.com/ktdilsiz/mochilang/api/internal/config"
+	"github.com/ktdilsiz/mochilang/api/internal/content"
 	"github.com/ktdilsiz/mochilang/api/internal/seed"
 	"github.com/ktdilsiz/mochilang/api/internal/server"
 	"github.com/ktdilsiz/mochilang/api/internal/store"
@@ -38,7 +39,12 @@ func main() {
 	}
 	cancel()
 
-	srv := server.New(cfg, s)
+	courses, err := content.NewLoader()
+	if err != nil {
+		log.Fatalf("content: %v", err)
+	}
+
+	srv := server.New(cfg, s, courses)
 	httpServer := &http.Server{
 		Addr:              cfg.Addr,
 		Handler:           srv.Engine(),

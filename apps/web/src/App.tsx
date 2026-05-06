@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Lesson, Language, Topic } from './types'
-import { TOPICS_BY_COURSE } from './data/lessons'
+import { useCourse } from './data/lessons'
 import LanguageSelectScreen from './screens/LanguageSelectScreen'
 import LoginScreen from './screens/LoginScreen'
 import HomeScreen from './screens/HomeScreen'
@@ -143,8 +143,8 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
     }
   }, [])
 
-  const courseId = selectedLanguage ? `${selectedLanguage.code}-en` : null
-  const topics = courseId ? (TOPICS_BY_COURSE[courseId] ?? []) : []
+  const courseId = selectedLanguage ? `${selectedLanguage.code}-en` : 'zh-en'
+  const { topics } = useCourse(courseId)
 
   function handleLanguageSelect(lang: Language) {
     setSelectedLanguage(lang)

@@ -10,6 +10,7 @@ import (
 
 	"github.com/ktdilsiz/mochilang/api/internal/auth"
 	"github.com/ktdilsiz/mochilang/api/internal/config"
+	"github.com/ktdilsiz/mochilang/api/internal/content"
 	"github.com/ktdilsiz/mochilang/api/internal/store"
 )
 
@@ -24,14 +25,16 @@ const SessionTTL = 30 * 24 * time.Hour
 type Server struct {
 	cfg          config.Config
 	store        *store.Store
+	content      *content.Loader
 	now          func() time.Time
 	googleVerify *auth.GoogleVerifier
 }
 
-func New(cfg config.Config, s *store.Store) *Server {
+func New(cfg config.Config, s *store.Store, courses *content.Loader) *Server {
 	return &Server{
 		cfg:          cfg,
 		store:        s,
+		content:      courses,
 		now:          time.Now,
 		googleVerify: auth.NewGoogleVerifier(cfg.GoogleClientID),
 	}
@@ -54,6 +57,11 @@ func (s *Server) Engine() *gin.Engine {
 	r.POST("/api/auth/google", s.handleGoogleLogin)
 	r.POST("/api/auth/logout", s.handleLogout)
 	r.GET("/api/auth/me", s.handleMe)
+
+	// Content is public — same for everyone, no PII. Lets offline-but-
+	// online users (no session, network up) still pull the latest course.
+	r.GET("/api/content/courses", s.handleListCourses)
+	r.GET("/api/content/courses/:id", s.handleGetCourse)
 
 	api := r.Group("/api")
 	api.Use(s.requireSession())

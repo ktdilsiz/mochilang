@@ -224,4 +224,8 @@ export const api = {
     request<FriendsListResponse>('/api/friends', { signal }),
   getLeague: (signal?: AbortSignal) =>
     request<LeagueResponse>('/api/league', { signal }),
+
+  // Course content (public — no auth required server-side)
+  getCourse: <T = unknown>(courseId: string, signal?: AbortSignal) =>
+    request<T>(`/api/content/courses/${encodeURIComponent(courseId)}`, { signal }),
 }
