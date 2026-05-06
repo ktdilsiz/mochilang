@@ -68,6 +68,13 @@
 .home-stat-xp {
   color: var(--xp-700);
 }
+.home-stat-offline {
+  color: var(--text-subtle);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+}
 
 .home-hero {
   display: flex;
@@ -102,14 +109,193 @@
   margin-top: 4px;
 }
 
+/* Topic section header */
+
+.home-topic {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-topic-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: var(--theme-bg, var(--surface));
+  border: 2px solid var(--theme-edge, var(--border));
+  border-bottom-width: 4px;
+  border-bottom-color: var(--theme-edge-deep, var(--border));
+  color: var(--theme-fg, var(--text));
+  margin-top: 8px;
+}
+/* Reuse the same per-theme palette from .home-node so headers match nodes. */
+.home-topic-header[data-theme='greetings'] {
+  --theme-bg: #fff4d6;
+  --theme-edge: #ffd97a;
+  --theme-edge-deep: #d9a93d;
+  --theme-fg: #b8772f;
+}
+.home-topic-header[data-theme='numbers'] {
+  --theme-bg: #e0ecff;
+  --theme-edge: #9cc1ff;
+  --theme-edge-deep: #5a8be0;
+  --theme-fg: #335fa8;
+}
+.home-topic-header[data-theme='basics'] {
+  --theme-bg: #ece6db;
+  --theme-edge: #c4b89d;
+  --theme-edge-deep: #8a7d65;
+  --theme-fg: #6b5d44;
+}
+.home-topic-header[data-theme='family'] {
+  --theme-bg: #ffe1ec;
+  --theme-edge: #ffa6c2;
+  --theme-edge-deep: #e26e96;
+  --theme-fg: #b94a72;
+}
+.home-topic-header[data-theme='verbs'] {
+  --theme-bg: #ece1ff;
+  --theme-edge: #c1a6f5;
+  --theme-edge-deep: #8d6cd6;
+  --theme-fg: #6b48b3;
+}
+.home-topic-header[data-theme='food'] {
+  --theme-bg: #ffe6d1;
+  --theme-edge: #ffb27a;
+  --theme-edge-deep: #e07c3a;
+  --theme-fg: #b35a1f;
+}
+.home-topic-header[data-theme='location'],
+.home-topic-header[data-theme='directions'] {
+  --theme-bg: #d8f0d4;
+  --theme-edge: #92cf86;
+  --theme-edge-deep: #5da953;
+  --theme-fg: #3d7e36;
+}
+.home-topic-header[data-theme='time'] {
+  --theme-bg: #d6f1f3;
+  --theme-edge: #79cdd0;
+  --theme-edge-deep: #3d9da1;
+  --theme-fg: #257073;
+}
+.home-topic-header[data-theme='questions'] {
+  --theme-bg: #ffe0d6;
+  --theme-edge: #ff9e85;
+  --theme-edge-deep: #d96446;
+  --theme-fg: #a44229;
+}
+.home-topic-header[data-theme='colors'] {
+  --theme-bg: #ffe1f6;
+  --theme-edge: #ff9bdc;
+  --theme-edge-deep: #d36ab1;
+  --theme-fg: #a23e88;
+}
+.home-topic-header[data-theme='weather'] {
+  --theme-bg: #d8eaff;
+  --theme-edge: #84baff;
+  --theme-edge-deep: #4f8fdc;
+  --theme-fg: #2d629f;
+}
+.home-topic-header[data-theme='review'] {
+  --theme-bg: #fff0bd;
+  --theme-edge: #ffd84a;
+  --theme-edge-deep: #d3a300;
+  --theme-fg: #8a6500;
+}
+
+.home-topic-meta {
+  flex: 1;
+  min-width: 0;
+}
+.home-topic-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.home-topic-done {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: var(--radius-pill);
+  background: var(--success-500);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+  margin-left: 4px;
+}
+.home-topic-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--theme-fg, var(--text));
+  letter-spacing: -0.01em;
+  margin: 2px 0 0 0;
+}
+.home-topic-desc {
+  font-size: 13px;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+.home-topic-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.home-topic-progress {
+  font-weight: 900;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  white-space: nowrap;
+}
+
+.home-topic-notes {
+  appearance: none;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid currentColor;
+  color: inherit;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  transition:
+    background-color 100ms,
+    transform 80ms;
+}
+.home-topic-notes:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+.home-topic-notes:active {
+  transform: translateY(1px);
+}
+
 /* Lesson path */
 
 .home-path {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  padding: 24px 0 60px 0;
+  gap: 26px;
+  padding: 18px 0 24px 0;
   position: relative;
 }
 

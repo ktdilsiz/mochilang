@@ -96,6 +96,55 @@ export interface Lesson {
   exercises: Exercise[]
 }
 
+/**
+ * Topic — a curated cluster of 3–5 lessons that share a teaching focus
+ * (e.g., "Greetings", "Numbers"). Topics are the visible sections on the
+ * home screen; lessons inside a topic share `theme` for color/icon tinting.
+ *
+ * `guide` is optional grammar/explainer content that opens as its own
+ * reading page from the topic header — for teaching things like word order,
+ * particles, and tones that don't fit a multiple-choice exercise.
+ */
+export interface Topic {
+  id: string
+  title: string
+  /** Short tagline shown under the topic title. */
+  description: string
+  /** Drives the section banner color + lesson-node icons. */
+  theme: LessonTheme
+  lessons: Lesson[]
+  guide?: TopicGuide
+}
+
+/**
+ * Long-form grammar/explainer content for a topic. Rendered by
+ * `TopicGuideScreen` from a small set of structured section primitives so
+ * we get consistent typography without a markdown parser.
+ */
+export interface TopicGuide {
+  /** Optional short summary shown under the topic title at the top. */
+  intro?: string
+  sections: GuideSection[]
+}
+
+export type GuideSection =
+  | { kind: 'heading'; text: string }
+  | { kind: 'paragraph'; text: string }
+  | { kind: 'list'; items: string[] }
+  | { kind: 'examples'; rows: GuideExample[] }
+  | { kind: 'callout'; tone?: 'tip' | 'warn' | 'note'; text: string }
+  | { kind: 'table'; headers: string[]; rows: string[][] }
+
+/**
+ * A single bilingual example row. `pinyin` is optional for pre-pinyin
+ * languages and for English-only callouts.
+ */
+export interface GuideExample {
+  source: string
+  pinyin?: string
+  translation: string
+}
+
 export interface Language {
   code: string
   name: string
