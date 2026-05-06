@@ -1,5 +1,5 @@
-import type { Token } from './cn';
-import { isCJK } from './segment';
+import type { Token } from '@mochilang/dict';
+import { isCJK } from '@mochilang/dict';
 
 type Args = {
   tokens: Token[];

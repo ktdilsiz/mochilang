@@ -1,6 +1,6 @@
 import data from '../data/decomp.json';
-import { lookup } from './dict';
-import { isCJK } from './segment';
+import { lookup } from '@mochilang/dict';
+import { isCJK } from '@mochilang/dict';
 import { pinyin } from 'pinyin-pro';
 
 export type DecompEntry = {

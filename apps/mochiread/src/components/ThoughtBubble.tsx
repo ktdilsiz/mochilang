@@ -9,7 +9,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { lookup } from '../lib/dict';
+import { lookup } from '@mochilang/dict';
 import { hasExploreData } from '../lib/decomp';
 import { speak, stop } from '../lib/tts';
 import { useStore } from '../state';

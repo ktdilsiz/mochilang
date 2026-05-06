@@ -6,7 +6,7 @@ import {
   View,
   type LayoutChangeEvent,
 } from 'react-native';
-import { isChinese, type Token } from '../lib/cn';
+import { isChinese, type Token } from '@mochilang/dict';
 import { paginate } from '../lib/paginate';
 import { speakAsync, stop as stopSpeech } from '../lib/tts';
 import {

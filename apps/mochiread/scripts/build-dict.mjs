@@ -18,9 +18,15 @@ import os from 'node:os';
 
 const URL =
   'https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz';
+// Dictionary data lives in the shared @mochilang/dict package so both
+// mochiread and mochilang can import it.
 const OUT = path.join(
   path.dirname(fileURLToPath(import.meta.url)),
   '..',
+  '..',
+  '..',
+  'packages',
+  'dict',
   'src',
   'data',
   'dict.json'

@@ -10,7 +10,7 @@ import {
   HanziWriter,
   useHanziWriter,
 } from '@jamsch/react-native-hanzi-writer';
-import { isCJK } from '../lib/segment';
+import { isCJK } from '@mochilang/dict';
 import { useTheme } from '../theme';
 
 type Props = {
