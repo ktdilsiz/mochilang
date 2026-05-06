@@ -1,0 +1,923 @@
+{
+  "id": "a2",
+  "name": "A2 — Elementary",
+  "description": "Talk about your day, what you did yesterday, what you bought, and how you feel.",
+  "topics": [
+    {
+      "id": "zh-en-routines",
+      "title": "Daily routines",
+      "description": "Wake up, eat, work, sleep — your day in Chinese",
+      "theme": "time",
+      "lessons": [
+        {
+          "id": "zh-en-routines-1",
+          "title": "Wake up & sleep",
+          "description": "Mornings, nights, and going to bed",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rt1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"起床\" (qǐ chuáng) mean?",
+              "options": ["Eat breakfast", "Wake up / get up", "Take a nap", "Brush teeth"],
+              "answer": "Wake up / get up"
+            },
+            {
+              "id": "rt1-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"to sleep\"?",
+              "options": ["睡觉", "起床", "上班", "回家"],
+              "answer": "睡觉"
+            },
+            {
+              "id": "rt1-3",
+              "type": "fill_blank",
+              "prompt": "\"早上\" (zǎo shang) means ___",
+              "answer": "Morning",
+              "acceptableAnswers": ["In the morning"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-routines-2",
+          "title": "Meals through the day",
+          "description": "Breakfast, lunch, dinner — when do you eat?",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rt2-1",
+              "type": "match_pairs",
+              "prompt": "Match the meal to its time",
+              "pairs": [
+                { "left": "早饭", "right": "Breakfast" },
+                { "left": "午饭", "right": "Lunch" },
+                { "left": "晚饭", "right": "Dinner" },
+                { "left": "夜宵", "right": "Late-night snack" }
+              ]
+            },
+            {
+              "id": "rt2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I eat breakfast at seven\"",
+              "answer": "我 七点 吃 早饭",
+              "bank": ["我", "七点", "吃", "早饭", "晚饭", "在"]
+            },
+            {
+              "id": "rt2-3",
+              "type": "fill_blank",
+              "prompt": "\"中午\" (zhōng wǔ) means ___",
+              "answer": "Noon",
+              "acceptableAnswers": ["Midday"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-routines-3",
+          "title": "Work & school",
+          "description": "Going in, coming home",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rt3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"上班\" (shàng bān) mean?",
+              "options": ["Go to school", "Go to work", "Take a break", "Finish work"],
+              "answer": "Go to work"
+            },
+            {
+              "id": "rt3-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"finish work / get off\"?",
+              "options": ["上班", "下班", "上学", "放学"],
+              "answer": "下班"
+            },
+            {
+              "id": "rt3-3",
+              "type": "fill_blank",
+              "prompt": "\"放学\" (fàng xué) means ___",
+              "answer": "School ends",
+              "acceptableAnswers": ["Get out of school", "End of school"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-routines-4",
+          "title": "A typical day",
+          "description": "Stitch routines into sentences",
+          "theme": "time",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "rt4-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I go to work in the morning\"",
+              "answer": "我 早上 去 上班",
+              "bank": ["我", "早上", "去", "上班", "晚上", "睡觉"]
+            },
+            {
+              "id": "rt4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"At night I go to sleep\"",
+              "answer": "晚上 我 去 睡觉",
+              "bank": ["晚上", "我", "去", "睡觉", "起床", "早上"]
+            },
+            {
+              "id": "rt4-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"每天\" (měi tiān) mean?",
+              "options": ["Today", "Tomorrow", "Every day", "Sometimes"],
+              "answer": "Every day"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-completed",
+      "title": "Completed actions",
+      "description": "了 for what just happened, 过 for what you've ever done",
+      "theme": "verbs",
+      "guide": {
+        "intro": "A1 introduced 了 briefly. A2 is where it really earns its keep. There are also two siblings to learn — 过 (experience) and 还没 (not yet) — that round out talking about the past.",
+        "sections": [
+          { "kind": "heading", "text": "了 — completed action" },
+          {
+            "kind": "paragraph",
+            "text": "Tack 了 onto a verb to mark that the action is finished. It's the closest thing Mandarin has to a past tense, but technically it's an aspect marker — the action is complete, not necessarily long ago."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 吃 饭。", "pinyin": "Wǒ chī fàn.", "translation": "I am eating." },
+              { "source": "我 吃 了 饭。", "pinyin": "Wǒ chī le fàn.", "translation": "I ate / I have eaten." },
+              { "source": "他 来 了。", "pinyin": "Tā lái le.", "translation": "He came / he's here." }
+            ]
+          },
+          { "kind": "heading", "text": "Negation: 还没 (not yet)" },
+          {
+            "kind": "paragraph",
+            "text": "Don't pair 了 with 不/没. To say \"haven't done it\", drop 了 and use 还没 (hái méi):"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 还没 吃。", "pinyin": "Wǒ hái méi chī.", "translation": "I haven't eaten yet." },
+              { "source": "他 还没 来。", "pinyin": "Tā hái méi lái.", "translation": "He hasn't come yet." }
+            ]
+          },
+          { "kind": "heading", "text": "过 — experience marker" },
+          {
+            "kind": "paragraph",
+            "text": "过 (guò) tags a verb as \"have you ever done this in your life?\" — it's about experience, not completion. Compare:"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 吃 过 北京 烤鸭。", "pinyin": "Wǒ chī guo Běijīng kǎoyā.", "translation": "I have eaten Peking duck (sometime)." },
+              { "source": "我 吃 了 北京 烤鸭。", "pinyin": "Wǒ chī le Běijīng kǎoyā.", "translation": "I ate Peking duck (just now)." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Rule of thumb: 了 = the action is wrapped up. 过 = at some point in your life this happened. They occasionally co-occur but you'll mostly pick one."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-completed-1",
+          "title": "Did it (了)",
+          "description": "Past with the perfective particle",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "co1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 吃 了\" mean?",
+              "options": ["I will eat", "I am eating", "I ate / I have eaten", "I want to eat"],
+              "answer": "I ate / I have eaten"
+            },
+            {
+              "id": "co1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He went home\"",
+              "answer": "他 回 家 了",
+              "bank": ["他", "回", "家", "了", "去", "来"]
+            },
+            {
+              "id": "co1-3",
+              "type": "fill_blank",
+              "prompt": "\"我 看 了 书\" means ___",
+              "answer": "I read the book",
+              "acceptableAnswers": ["I have read the book", "I read a book"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-completed-2",
+          "title": "Already done",
+          "description": "已经…了 for \"already\"",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "co2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"已经\" (yǐ jīng) mean?",
+              "options": ["Already", "Not yet", "Soon", "Just now"],
+              "answer": "Already"
+            },
+            {
+              "id": "co2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have already eaten\"",
+              "answer": "我 已经 吃 了",
+              "bank": ["我", "已经", "吃", "了", "还没", "饭"]
+            },
+            {
+              "id": "co2-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct sentence for \"He has already come\":",
+              "options": ["他 已经 来 了", "他 还没 来", "他 不 来", "他 要 来"],
+              "answer": "他 已经 来 了"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-completed-3",
+          "title": "Not yet (还没)",
+          "description": "Negate a completed action",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "co3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"还没\" (hái méi) mean?",
+              "options": ["Already", "Not yet", "Never", "Just now"],
+              "answer": "Not yet"
+            },
+            {
+              "id": "co3-2",
+              "type": "multiple_choice",
+              "prompt": "Which is correct for \"I haven't eaten yet\"?",
+              "options": ["我 还没 吃", "我 不 吃", "我 已经 吃 了", "我 要 吃"],
+              "answer": "我 还没 吃",
+              "explanation": "Drop 了 when negating with 还没 — completed-yet-not-completed don't mix."
+            },
+            {
+              "id": "co3-3",
+              "type": "fill_blank",
+              "prompt": "\"我 还没 回家\" means ___",
+              "answer": "I haven't gone home yet",
+              "acceptableAnswers": ["I have not gone home yet", "I haven't returned home yet"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-completed-4",
+          "title": "Have you ever? (过)",
+          "description": "Experience with the 过 marker",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "co4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"过\" (guo) mark in \"我 吃 过 火锅\"?",
+              "options": ["A future plan", "Lifetime experience (have done before)", "An ongoing action", "A completed action"],
+              "answer": "Lifetime experience (have done before)"
+            },
+            {
+              "id": "co4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Have you ever been to China?\"",
+              "answer": "你 去 过 中国 吗",
+              "bank": ["你", "去", "过", "中国", "吗", "了"]
+            },
+            {
+              "id": "co4-3",
+              "type": "multiple_choice",
+              "prompt": "What's the difference between \"我 吃 了\" and \"我 吃 过\"?",
+              "options": [
+                "了 = ate just now; 过 = have eaten at some point",
+                "了 = future; 过 = past",
+                "了 = formal; 过 = casual",
+                "There is no difference"
+              ],
+              "answer": "了 = ate just now; 过 = have eaten at some point"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-shopping",
+      "title": "Shopping",
+      "description": "Money, prices, and getting what you want",
+      "theme": "food",
+      "guide": {
+        "intro": "Real Chinese shopping is fast and friendly. Three phrases get you 80% of the way there: 多少钱 (how much), 太贵了 (too expensive), and 给我 (give me).",
+        "sections": [
+          { "kind": "heading", "text": "Money words" },
+          {
+            "kind": "paragraph",
+            "text": "Spoken Chinese uses 块 (kuài) for the main currency unit; written and formal Chinese uses 元 (yuán). They're the same value — like \"buck\" vs \"dollar\". 毛 (máo) and 分 (fēn) are tenths and hundredths."
+          },
+          {
+            "kind": "table",
+            "headers": ["Spoken", "Written", "Value"],
+            "rows": [
+              ["块 (kuài)", "元 (yuán)", "main unit"],
+              ["毛 (máo)", "角 (jiǎo)", "1/10 of 块"],
+              ["分 (fēn)", "分 (fēn)", "1/100 of 块"]
+            ]
+          },
+          { "kind": "heading", "text": "Asking the price" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "多少 钱？", "pinyin": "Duō shǎo qián?", "translation": "How much (money)?" },
+              { "source": "这个 多少 钱？", "pinyin": "Zhè ge duō shǎo qián?", "translation": "How much is this one?" },
+              { "source": "十块。", "pinyin": "Shí kuài.", "translation": "Ten yuan." },
+              { "source": "太贵了！", "pinyin": "Tài guì le!", "translation": "Too expensive!" }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-shopping-1",
+          "title": "How much?",
+          "description": "Money basics + asking the price",
+          "theme": "food",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "sh1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"多少钱\" mean?",
+              "options": ["How old", "How much (money)", "How many", "How big"],
+              "answer": "How much (money)"
+            },
+            {
+              "id": "sh1-2",
+              "type": "multiple_choice",
+              "prompt": "Which is the casual word for \"yuan\"?",
+              "options": ["元", "块", "毛", "钱"],
+              "answer": "块"
+            },
+            {
+              "id": "sh1-3",
+              "type": "fill_blank",
+              "prompt": "\"二十块\" means ___ yuan",
+              "answer": "Twenty",
+              "acceptableAnswers": ["20"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-shopping-2",
+          "title": "Buy & sell",
+          "description": "买 and 卖 — easy to mix up",
+          "theme": "food",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "sh2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"买\" (mǎi) mean?",
+              "options": ["Buy", "Sell", "Pay", "Steal"],
+              "answer": "Buy"
+            },
+            {
+              "id": "sh2-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"卖\" (mài) mean?",
+              "options": ["Buy", "Sell", "Trade", "Borrow"],
+              "answer": "Sell",
+              "explanation": "买 (mǎi, 3rd tone) = buy. 卖 (mài, 4th tone) = sell. Tone is the only difference!"
+            },
+            {
+              "id": "sh2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to buy a book\"",
+              "answer": "我 要 买 一 本 书",
+              "bank": ["我", "要", "买", "一", "本", "书", "卖", "茶"],
+              "explanation": "本 (běn) is the measure word for books."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-shopping-3",
+          "title": "Expensive or cheap?",
+          "description": "贵 and 便宜",
+          "theme": "food",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "sh3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"贵\" (guì) mean?",
+              "options": ["Cheap", "Expensive", "Good", "Bad"],
+              "answer": "Expensive"
+            },
+            {
+              "id": "sh3-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"cheap\"?",
+              "options": ["贵", "便宜", "好", "大"],
+              "answer": "便宜"
+            },
+            {
+              "id": "sh3-3",
+              "type": "fill_blank",
+              "prompt": "\"太贵了\" (tài guì le) means ___",
+              "answer": "Too expensive",
+              "acceptableAnswers": ["It's too expensive"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-shopping-4",
+          "title": "At the market",
+          "description": "Putting it together",
+          "theme": "food",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "sh4-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"How much is the apple?\"",
+              "answer": "苹果 多少 钱",
+              "bank": ["苹果", "多少", "钱", "块", "几"]
+            },
+            {
+              "id": "sh4-2",
+              "type": "multiple_choice",
+              "prompt": "Shop owner says \"五块\" — what is the price?",
+              "options": ["1 yuan", "5 yuan", "50 yuan", "5 cents"],
+              "answer": "5 yuan"
+            },
+            {
+              "id": "sh4-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Give me two\"",
+              "answer": "给 我 两 个",
+              "bank": ["给", "我", "两", "个", "二", "你"],
+              "explanation": "Use 两 (liǎng, \"a pair of\") rather than 二 (èr) before measure words like 个."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-compare",
+      "title": "Comparisons",
+      "description": "A is bigger than B — the 比 pattern",
+      "theme": "basics",
+      "guide": {
+        "intro": "English uses \"-er\" or \"more\" for comparisons. Mandarin uses 比 (bǐ) — a single particle that does the same job, with a fixed word order: A 比 B + adjective.",
+        "sections": [
+          { "kind": "heading", "text": "Basic pattern: A 比 B + adjective" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 比 他 高。", "pinyin": "Wǒ bǐ tā gāo.", "translation": "I am taller than him." },
+              { "source": "苹果 比 香蕉 便宜。", "pinyin": "Píngguǒ bǐ xiāngjiāo piányi.", "translation": "Apples are cheaper than bananas." },
+              { "source": "今天 比 昨天 热。", "pinyin": "Jīntiān bǐ zuótiān rè.", "translation": "Today is hotter than yesterday." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warn",
+            "text": "Don't add 很 / 不 / 是 to a 比 sentence. \"我 比 他 很 高\" is wrong — drop 很. The comparison itself does the work."
+          },
+          { "kind": "heading", "text": "Even more: 更" },
+          {
+            "kind": "paragraph",
+            "text": "Add 更 (gèng, \"even more\") before the adjective when comparing to an already-strong baseline:"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他 比 我 更 高。", "pinyin": "Tā bǐ wǒ gèng gāo.", "translation": "He is even taller than me." }
+            ]
+          },
+          { "kind": "heading", "text": "The most: 最" },
+          {
+            "kind": "paragraph",
+            "text": "最 (zuì) before an adjective means \"the most\". No 比 needed — it's a superlative."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他 最 高。", "pinyin": "Tā zuì gāo.", "translation": "He is the tallest." },
+              { "source": "我 最 喜欢 茶。", "pinyin": "Wǒ zuì xǐhuan chá.", "translation": "I like tea the most." }
+            ]
+          },
+          { "kind": "heading", "text": "Negative: A 没有 B + adjective" },
+          {
+            "kind": "paragraph",
+            "text": "To say \"A is NOT as ___ as B\", flip to 没有 (méi yǒu, \"doesn't have\"):"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 没有 他 高。", "pinyin": "Wǒ méi yǒu tā gāo.", "translation": "I am not as tall as him." }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-compare-1",
+          "title": "A 比 B",
+          "description": "Saying X is more ___ than Y",
+          "theme": "basics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "cm1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 比 他 高\" mean?",
+              "options": ["He is taller than me", "I am taller than him", "I am as tall as him", "I am not as tall as him"],
+              "answer": "I am taller than him"
+            },
+            {
+              "id": "cm1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Apples are cheaper than bananas\"",
+              "answer": "苹果 比 香蕉 便宜",
+              "bank": ["苹果", "比", "香蕉", "便宜", "贵", "更"]
+            },
+            {
+              "id": "cm1-3",
+              "type": "multiple_choice",
+              "prompt": "Which is correct for \"Today is hotter than yesterday\"?",
+              "options": ["今天 比 昨天 热", "今天 很 比 昨天 热", "今天 不 热 昨天", "昨天 比 今天 热"],
+              "answer": "今天 比 昨天 热"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-compare-2",
+          "title": "Even more (更)",
+          "description": "Stacking the comparison",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cm2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"更\" (gèng) mean?",
+              "options": ["The most", "Even more", "Already", "Very"],
+              "answer": "Even more"
+            },
+            {
+              "id": "cm2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He is even taller than me\"",
+              "answer": "他 比 我 更 高",
+              "bank": ["他", "比", "我", "更", "高", "最"]
+            },
+            {
+              "id": "cm2-3",
+              "type": "fill_blank",
+              "prompt": "\"她 更 漂亮\" means \"She is ___ prettier\"",
+              "answer": "Even",
+              "acceptableAnswers": ["More", "Still"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-compare-3",
+          "title": "The most (最)",
+          "description": "Superlatives without 比",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cm3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"最\" (zuì) mean?",
+              "options": ["More", "The most", "Less", "Equal"],
+              "answer": "The most"
+            },
+            {
+              "id": "cm3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I like tea the most\"",
+              "answer": "我 最 喜欢 茶",
+              "bank": ["我", "最", "喜欢", "茶", "比", "更"]
+            },
+            {
+              "id": "cm3-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"她 最 高\" mean?",
+              "options": ["She is taller", "She is the tallest", "She is not tall", "She is shorter"],
+              "answer": "She is the tallest"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-compare-4",
+          "title": "Not as ___ as",
+          "description": "Negative comparison with 没有",
+          "theme": "basics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "cm4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 没有 他 高\" mean?",
+              "options": ["I am as tall as him", "I am taller than him", "I am not as tall as him", "He is not as tall as me"],
+              "answer": "I am not as tall as him"
+            },
+            {
+              "id": "cm4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This book is not as good as that one\"",
+              "answer": "这 本 书 没有 那 本 好",
+              "bank": ["这", "本", "书", "没有", "那", "好", "比", "不"]
+            },
+            {
+              "id": "cm4-3",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is grammatically correct?",
+              "options": ["我 比 他 很 高", "我 比 他 高", "我 不 比 他 很 高", "我 比 他 不 高"],
+              "answer": "我 比 他 高",
+              "explanation": "Don't add 很 or 不 inside a 比 comparison."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-transport",
+      "title": "Getting around",
+      "description": "Cars, buses, trains, and how you take them",
+      "theme": "directions",
+      "lessons": [
+        {
+          "id": "zh-en-transport-1",
+          "title": "Vehicles",
+          "description": "The basic words",
+          "theme": "directions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "tp1-1",
+              "type": "match_pairs",
+              "prompt": "Match the vehicle",
+              "pairs": [
+                { "left": "车", "right": "Car / vehicle" },
+                { "left": "公车", "right": "Bus" },
+                { "left": "火车", "right": "Train" },
+                { "left": "飞机", "right": "Airplane" }
+              ]
+            },
+            {
+              "id": "tp1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"出租车\" (chū zū chē) mean?",
+              "options": ["Subway", "Taxi", "Truck", "Boat"],
+              "answer": "Taxi"
+            },
+            {
+              "id": "tp1-3",
+              "type": "fill_blank",
+              "prompt": "\"自行车\" (zì xíng chē) means ___",
+              "answer": "Bicycle",
+              "acceptableAnswers": ["Bike"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-transport-2",
+          "title": "Take the bus (坐)",
+          "description": "Use 坐 to mean \"by\" a vehicle",
+          "theme": "directions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "tp2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"坐车\" (zuò chē) mean?",
+              "options": ["Park the car", "Take a vehicle (bus/train/etc.)", "Drive the car", "Wash the car"],
+              "answer": "Take a vehicle (bus/train/etc.)"
+            },
+            {
+              "id": "tp2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I take the bus to school\"",
+              "answer": "我 坐 公车 去 学校",
+              "bank": ["我", "坐", "公车", "去", "学校", "走", "的"]
+            },
+            {
+              "id": "tp2-3",
+              "type": "multiple_choice",
+              "prompt": "Which means \"take a plane\"?",
+              "options": ["开飞机", "坐飞机", "骑飞机", "走飞机"],
+              "answer": "坐飞机"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-transport-3",
+          "title": "Walk, ride, drive",
+          "description": "Three different verbs for getting there",
+          "theme": "directions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "tp3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"走路\" (zǒu lù) mean?",
+              "options": ["Walk", "Run", "Drive", "Hurry"],
+              "answer": "Walk"
+            },
+            {
+              "id": "tp3-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"to ride (a bike/horse)\"?",
+              "options": ["开", "坐", "骑", "走"],
+              "answer": "骑"
+            },
+            {
+              "id": "tp3-3",
+              "type": "fill_blank",
+              "prompt": "\"开车\" (kāi chē) means ___",
+              "answer": "Drive a car",
+              "acceptableAnswers": ["Drive", "To drive"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-transport-4",
+          "title": "Where are you going?",
+          "description": "Building real travel sentences",
+          "theme": "directions",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "tp4-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He drives to work\"",
+              "answer": "他 开 车 去 上班",
+              "bank": ["他", "开", "车", "去", "上班", "坐", "走"]
+            },
+            {
+              "id": "tp4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I ride a bike home\"",
+              "answer": "我 骑 自行车 回 家",
+              "bank": ["我", "骑", "自行车", "回", "家", "去", "坐"]
+            },
+            {
+              "id": "tp4-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"地铁\" (dì tiě) mean?",
+              "options": ["Train", "Subway / metro", "Highway", "Tunnel"],
+              "answer": "Subway / metro"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-feelings",
+      "title": "How are you feeling?",
+      "description": "Happy, tired, hungry — talking about how you feel",
+      "theme": "questions",
+      "lessons": [
+        {
+          "id": "zh-en-feelings-1",
+          "title": "Happy & sad",
+          "description": "The two big ones",
+          "theme": "questions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fl1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"高兴\" (gāo xìng) mean?",
+              "options": ["Happy", "Sad", "Angry", "Bored"],
+              "answer": "Happy"
+            },
+            {
+              "id": "fl1-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"sad\"?",
+              "options": ["难过", "高兴", "生气", "累"],
+              "answer": "难过"
+            },
+            {
+              "id": "fl1-3",
+              "type": "fill_blank",
+              "prompt": "\"生气\" (shēng qì) means ___",
+              "answer": "Angry",
+              "acceptableAnswers": ["Mad"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-feelings-2",
+          "title": "Tired & hungry",
+          "description": "Body states",
+          "theme": "questions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fl2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"累\" (lèi) mean?",
+              "options": ["Tired", "Sleepy", "Strong", "Hungry"],
+              "answer": "Tired"
+            },
+            {
+              "id": "fl2-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"hungry\"?",
+              "options": ["渴", "饿", "饱", "累"],
+              "answer": "饿"
+            },
+            {
+              "id": "fl2-3",
+              "type": "fill_blank",
+              "prompt": "\"我 很 渴\" (kě) means \"I am very ___\"",
+              "answer": "Thirsty"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-feelings-3",
+          "title": "I think / I feel (觉得)",
+          "description": "Soft expressions of feeling",
+          "theme": "questions",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "fl3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 觉得\" (wǒ jué de) mean?",
+              "options": ["I want", "I think / I feel", "I have", "I see"],
+              "answer": "I think / I feel"
+            },
+            {
+              "id": "fl3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I think this is very interesting\"",
+              "answer": "我 觉得 这 很 有意思",
+              "bank": ["我", "觉得", "这", "很", "有意思", "无聊", "不"]
+            },
+            {
+              "id": "fl3-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"有意思\" (yǒu yì si) mean?",
+              "options": ["Important", "Interesting", "Difficult", "Boring"],
+              "answer": "Interesting"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-feelings-4",
+          "title": "How was it?",
+          "description": "Asking and answering about feelings",
+          "theme": "questions",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "fl4-1",
+              "type": "multiple_choice",
+              "prompt": "How do you say \"How are you feeling?\" using \"觉得\"?",
+              "options": ["你 觉得 怎么样", "你 是 谁", "你 在 哪里", "你 几岁"],
+              "answer": "你 觉得 怎么样"
+            },
+            {
+              "id": "fl4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I am very tired today\"",
+              "answer": "我 今天 很 累",
+              "bank": ["我", "今天", "很", "累", "饿", "高兴"]
+            },
+            {
+              "id": "fl4-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the feeling you hear",
+              "spokenText": "我很高兴",
+              "options": ["我很高兴", "我很累", "我很饿", "我很难过"],
+              "answer": "我很高兴",
+              "explanation": "高兴 (gāo xìng) — happy. The full sentence \"I am very happy.\""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
