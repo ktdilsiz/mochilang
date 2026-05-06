@@ -120,6 +120,12 @@
   justify-content: center;
   transform: translateX(var(--offset, 0px));
   transition: transform 200ms ease;
+  z-index: 1;
+}
+/* The transform on every row creates a stacking context, so a row's popover
+ * gets buried behind later siblings unless we bump the open row above them. */
+.home-path-row-open {
+  z-index: 10;
 }
 
 .home-node {
@@ -165,8 +171,90 @@
   color: var(--primary-700);
 }
 .home-node-default {
-  background: var(--surface);
-  color: var(--text-subtle);
+  /* Each theme paints its own soft background + saturated icon color so the
+   * not-yet-started lessons read as a varied, colorful trail rather than a
+   * row of empty circles. The accent edge gives the chunky-button shape
+   * even before the lesson is unlocked. */
+  background: var(--theme-bg, var(--surface));
+  border-color: var(--theme-edge, var(--border));
+  border-bottom-color: var(--theme-edge-deep, var(--border));
+  color: var(--theme-fg, var(--text-subtle));
+}
+
+/* Theme tints — each gets a soft pastel surface + saturated foreground for
+ * the icon stroke. Edges are slightly darker than the surface. */
+.home-node[data-theme='greetings'] {
+  --theme-bg: #fff4d6;
+  --theme-edge: #ffd97a;
+  --theme-edge-deep: #d9a93d;
+  --theme-fg: #b8772f;
+}
+.home-node[data-theme='numbers'] {
+  --theme-bg: #e0ecff;
+  --theme-edge: #9cc1ff;
+  --theme-edge-deep: #5a8be0;
+  --theme-fg: #335fa8;
+}
+.home-node[data-theme='basics'] {
+  --theme-bg: #ece6db;
+  --theme-edge: #c4b89d;
+  --theme-edge-deep: #8a7d65;
+  --theme-fg: #6b5d44;
+}
+.home-node[data-theme='family'] {
+  --theme-bg: #ffe1ec;
+  --theme-edge: #ffa6c2;
+  --theme-edge-deep: #e26e96;
+  --theme-fg: #b94a72;
+}
+.home-node[data-theme='verbs'] {
+  --theme-bg: #ece1ff;
+  --theme-edge: #c1a6f5;
+  --theme-edge-deep: #8d6cd6;
+  --theme-fg: #6b48b3;
+}
+.home-node[data-theme='food'] {
+  --theme-bg: #ffe6d1;
+  --theme-edge: #ffb27a;
+  --theme-edge-deep: #e07c3a;
+  --theme-fg: #b35a1f;
+}
+.home-node[data-theme='location'],
+.home-node[data-theme='directions'] {
+  --theme-bg: #d8f0d4;
+  --theme-edge: #92cf86;
+  --theme-edge-deep: #5da953;
+  --theme-fg: #3d7e36;
+}
+.home-node[data-theme='time'] {
+  --theme-bg: #d6f1f3;
+  --theme-edge: #79cdd0;
+  --theme-edge-deep: #3d9da1;
+  --theme-fg: #257073;
+}
+.home-node[data-theme='questions'] {
+  --theme-bg: #ffe0d6;
+  --theme-edge: #ff9e85;
+  --theme-edge-deep: #d96446;
+  --theme-fg: #a44229;
+}
+.home-node[data-theme='colors'] {
+  --theme-bg: #ffe1f6;
+  --theme-edge: #ff9bdc;
+  --theme-edge-deep: #d36ab1;
+  --theme-fg: #a23e88;
+}
+.home-node[data-theme='weather'] {
+  --theme-bg: #d8eaff;
+  --theme-edge: #84baff;
+  --theme-edge-deep: #4f8fdc;
+  --theme-fg: #2d629f;
+}
+.home-node[data-theme='review'] {
+  --theme-bg: #fff0bd;
+  --theme-edge: #ffd84a;
+  --theme-edge-deep: #d3a300;
+  --theme-fg: #8a6500;
 }
 
 @keyframes home-pulse {

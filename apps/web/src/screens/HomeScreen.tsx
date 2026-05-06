@@ -84,7 +84,9 @@ export default function HomeScreen({
           return (
             <div
               key={lesson.id}
-              className="home-path-row"
+              className={
+                'home-path-row ' + (isOpen ? 'home-path-row-open' : '')
+              }
               style={{ ['--offset' as never]: `${offset}px` }}
               data-lesson={lesson.id}
             >
@@ -98,6 +100,7 @@ export default function HomeScreen({
                       ? 'home-node-next'
                       : 'home-node-default')
                 }
+                data-theme={lesson.theme}
                 onClick={() => setOpenId(isOpen ? null : lesson.id)}
                 aria-label={`${lesson.title}${done ? ' (completed)' : ''}`}
               >

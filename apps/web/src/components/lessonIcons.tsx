@@ -25,8 +25,9 @@ function Svg({
 }
 
 export function LessonIcon({ name }: { name: IconName }) {
+  // Inherit color from CSS so the parent node can theme the icon.
   const s = {
-    stroke: 'white',
+    stroke: 'currentColor',
     strokeWidth: 2.2,
     strokeLinecap: 'round' as const,
     strokeLinejoin: 'round' as const,
