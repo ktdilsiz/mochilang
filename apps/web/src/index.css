@@ -1,463 +1,253 @@
+/* -----------------------------------------------------------------------------
+ * Mochilang design tokens
+ * Inspired by Duolingo's "tactile" UI: chunky rounded buttons with a
+ * "shadow ledge" you can almost press, big bold sans-serif, lots of white
+ * space, and Mochi-themed warm cream surfaces with a popping accent.
+ * --------------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* Brand palette — built around Mochi (warm cream + tan + brown) */
+  --cream-50: #fffbf2;
+  --cream-100: #fff4dd;
+  --cream-200: #ffe7be;
+  --tan-300: #f0c98c;
+  --tan-400: #d9a35f;
+  --brown-600: #8a5a36;
+  --brown-700: #6b4226;
+  --brown-900: #3a2516;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* Primary action — warm coral so it pops against the cream */
+  --primary-100: #ffe2d6;
+  --primary-300: #ff9a73;
+  --primary-500: #ff6b3d;
+  --primary-700: #d3502a;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
+  /* Status colors */
+  --success-100: #d7f5b5;
+  --success-300: #93dd5d;
+  --success-500: #58cc02;
+  --success-700: #3a8c00;
+
+  --error-100: #ffe0e0;
+  --error-300: #ff8a8a;
+  --error-500: #ff4b4b;
+  --error-700: #c43232;
+
+  --xp-100: #fff0bd;
+  --xp-300: #ffd84a;
+  --xp-500: #ffc107;
+  --xp-700: #b88a00;
+
+  /* Surfaces & text */
+  --bg: var(--cream-50);
+  --surface: #ffffff;
+  --surface-alt: var(--cream-100);
+  --border: #efe6d2;
+  --text: var(--brown-900);
+  --text-muted: var(--brown-600);
+  --text-subtle: #b09c83;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* Type */
+  --sans: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows used for the chunky "ledge" buttons */
+  --ledge-2: 0 2px 0 rgba(0, 0, 0, 0.08);
+  --ledge-4: 0 4px 0 rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 4px 12px rgba(58, 37, 22, 0.06);
+  --shadow-elev: 0 12px 32px rgba(58, 37, 22, 0.12);
+
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+    --bg: #1a1410;
+    --surface: #241b15;
+    --surface-alt: #2c211a;
+    --border: #3a2c22;
+    --text: #fff4dd;
+    --text-muted: #d9bf99;
+    --text-subtle: #8a6f57;
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+    --primary-100: #4a2517;
+    --primary-300: #a64b2a;
+    --primary-500: #ff6b3d;
+    --primary-700: #ff8a5e;
+
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-elev: 0 12px 32px rgba(0, 0, 0, 0.5);
   }
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+* {
   box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
   margin: 0;
+  padding: 0;
+  min-height: 100svh;
 }
 
+body {
+  background: var(--bg);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings — chunky, friendly, big tracking */
 h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
+h2,
+h3 {
+  font-family: var(--sans);
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
+  font-size: 40px;
+  line-height: 1.15;
 }
 h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
+  font-size: 28px;
+  line-height: 1.2;
 }
+h3 {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
 p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+button {
+  font-family: var(--sans);
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
+/* -----------------------------------------------------------------------------
+ * Reusable primitive: .ledge-button — Duolingo-style chunky button with a
+ * solid shadow ledge that compresses on press. Color is picked via the
+ * --btn-* CSS vars so the same shape ships in any color.
+ * --------------------------------------------------------------------------- */
 
-/* --- MochiLang UI primitives --- */
+.ledge-button {
+  --btn-fg: #ffffff;
+  --btn-bg: var(--primary-500);
+  --btn-edge: var(--primary-700);
 
-.sqbtnWrap {
-  --sqbtn-face: #7c3aed; /* purple */
-  --sqbtn-border: rgba(255, 255, 255, 0.18);
-  --sqbtn-shadow-face: #3b0764; /* dark purple */
-  --sqbtn-shadow-soft: rgba(59, 7, 100, 0.35);
-  --sqbtn-lift: 12px;
-  --sqbtn-perspective: 900px;
-  --sqbtn-rotate-x: 13deg;
-  --sqbtn-rotate-y: -13deg;
-
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  transform-style: preserve-3d;
-  transform: perspective(var(--sqbtn-perspective)) rotateX(var(--sqbtn-rotate-x))
-    rotateY(var(--sqbtn-rotate-y));
-  transform-origin: center;
-}
-
-.sqbtnShadow {
-  position: absolute;
-  inset: 0;
-  transform: translateY(var(--sqbtn-lift));
-  border-radius: 16px;
-  background: var(--sqbtn-shadow-face);
-  box-shadow: 0 18px 28px -18px var(--sqbtn-shadow-soft);
-}
-
-.sqbtn {
   appearance: none;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  border: 2px solid var(--sqbtn-border);
-  border-radius: 16px;
-  background: var(--sqbtn-face);
+  border: 0;
   cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: var(--sans);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 14px 22px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 0 0 var(--btn-edge);
   transform: translateY(0);
   transition:
-    transform 120ms ease,
-    border-color 150ms ease,
-    background 150ms ease;
+    transform 80ms ease-out,
+    box-shadow 80ms ease-out,
+    background-color 100ms ease-out;
 }
 
-.sqbtn:hover:not(:disabled) {
-  border-color: rgba(255, 255, 255, 0.32);
+.ledge-button:hover:not(:disabled) {
+  filter: brightness(1.04);
 }
 
-.sqbtn:active:not(:disabled),
-.sqbtn--pressed:not(:disabled) {
-  /* Move down to fully cover the shadow block */
-  transform: translateY(var(--sqbtn-lift));
+.ledge-button:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 var(--btn-edge);
 }
 
-.sqbtn:focus-visible {
-  outline: 3px solid rgba(167, 139, 250, 0.75);
-  outline-offset: 3px;
-}
-
-.sqbtn:disabled {
+.ledge-button:disabled {
   cursor: not-allowed;
-  opacity: 0.55;
+  opacity: 0.45;
 }
 
-.sqbtnFace {
-  height: 100%;
-  display: grid;
-  place-items: center;
+.ledge-button.size-lg {
+  font-size: 17px;
+  padding: 18px 28px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 5px 0 0 var(--btn-edge);
 }
 
-.sqbtnIcon {
-  font-size: 34px;
-  line-height: 1;
-  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.12));
+.ledge-button.tone-primary {
+  --btn-bg: var(--primary-500);
+  --btn-edge: var(--primary-700);
+}
+.ledge-button.tone-success {
+  --btn-bg: var(--success-500);
+  --btn-edge: var(--success-700);
+}
+.ledge-button.tone-error {
+  --btn-bg: var(--error-500);
+  --btn-edge: var(--error-700);
+}
+.ledge-button.tone-neutral {
+  --btn-bg: var(--surface);
+  --btn-fg: var(--text);
+  --btn-edge: var(--border);
+  border: 2px solid var(--border);
+  padding: 12px 20px;
+}
+.ledge-button.tone-ghost {
+  --btn-bg: transparent;
+  --btn-fg: var(--text-muted);
+  --btn-edge: transparent;
+  box-shadow: none;
+  text-transform: none;
+  font-weight: 700;
 }
 
-.sqbtnWrap--success {
-  --sqbtn-face: #22c55e;
-  --sqbtn-border: rgba(255, 255, 255, 0.18);
-  --sqbtn-shadow-face: #14532d;
-  --sqbtn-shadow-soft: rgba(20, 83, 45, 0.32);
+/* -----------------------------------------------------------------------------
+ * .card — surface + border + soft shadow + rounded
+ * --------------------------------------------------------------------------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
 }
 
-.sqbtnWrap--locked {
-  --sqbtn-face: #f9fafb;
-  --sqbtn-border: #e5e7eb;
-  --sqbtn-shadow-face: rgba(17, 24, 39, 0.14);
-  --sqbtn-shadow-soft: rgba(17, 24, 39, 0.06);
-}
-
-/* --- Modal --- */
-
-.modalOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.42);
-  display: grid;
-  place-items: center;
-  padding: 18px;
-  z-index: 50;
-}
-
-.modalPanel {
-  width: min(520px, 100%);
-  border-radius: 18px;
-  border: 1px solid rgba(229, 231, 235, 0.65);
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
-  padding: 16px;
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  .modalPanel {
-    border-color: rgba(46, 48, 58, 0.9);
-    background: rgba(22, 23, 29, 0.92);
-  }
-}
-
-.modalTitle {
-  font-weight: 900;
-  font-size: 18px;
-  letter-spacing: -0.01em;
-  color: var(--text-h);
-  margin: 4px 4px 10px;
-}
-
-.modalBody {
-  padding: 4px;
-}
-
-.lessonModal {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.lessonModalDesc {
-  color: var(--text);
-  line-height: 1.35;
-}
-
-.lessonModalMeta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(229, 231, 235, 0.9);
-  background: rgba(244, 243, 236, 0.45);
-  color: var(--text-h);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-@media (prefers-color-scheme: dark) {
-  .pill {
-    border-color: rgba(46, 48, 58, 0.9);
-    background: rgba(31, 32, 40, 0.55);
-  }
-}
-
-.primaryBtn {
-  appearance: none;
-  border: none;
-  border-radius: 14px;
-  padding: 12px 14px;
-  font-weight: 900;
-  font-size: 16px;
-  cursor: pointer;
-  background: #58cc02;
-  color: white;
-  transition:
-    transform 90ms ease,
-    filter 120ms ease;
-}
-
-.primaryBtn:hover {
-  filter: brightness(0.98);
-}
-
-.primaryBtn:active {
-  transform: translateY(1px);
-}
-
-.primaryBtn:focus-visible {
-  outline: 3px solid rgba(88, 204, 2, 0.55);
-  outline-offset: 3px;
-}
-
-/* --- Lesson path layout --- */
-
-.lessonPath {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-bottom: 10px;
-  overflow: visible;
-}
-
-.lessonPathRow {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-  overflow: visible;
-}
-
-.lessonPathRow--spacer {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.lessonPathRow--open {
-  z-index: 10;
-}
-
-.lessonPathItem {
-  position: relative;
-  width: min(76px, 25vw);
-  transition: transform 220ms ease;
-  will-change: transform;
-  z-index: 0;
-}
-
-.lessonPathItem--open {
-  z-index: 20;
-}
-
-/* --- Lesson popover (thought bubble) --- */
-
-.lessonPop {
-  position: absolute;
-  left: 50%;
-  top: calc(100% + 20px);
-  transform: translateX(-50%);
-  width: min(340px, 84vw);
-  pointer-events: none;
-  z-index: 5;
-}
-
-.lessonPop__panel {
-  pointer-events: auto;
-  border-radius: 18px;
-  border: 1px solid rgba(229, 231, 235, 0.65);
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
-  padding: 14px;
-  text-align: left;
-
-  opacity: 0;
-  transform: translateY(-18px) scale(0.86) rotateX(18deg);
-  transform-origin: 50% 0%;
-  transition:
-    opacity 260ms ease,
-    transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.lessonPop__panel::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 12px solid rgba(255, 255, 255, 0.96);
-  filter: drop-shadow(0 -1px 0 rgba(229, 231, 235, 0.75));
-  opacity: 0;
-  transition: opacity 240ms ease, transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.lessonPop--open .lessonPop__panel {
-  opacity: 1;
-  transform: translateY(0) scale(1) rotateX(0deg);
-  animation: lessonPopIn 620ms cubic-bezier(0.2, 0.9, 0.2, 1);
-}
-
-.lessonPop--open .lessonPop__panel::before {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-@keyframes lessonPopIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-18px) scale(0.84) rotateX(18deg);
-  }
-  65% {
-    opacity: 1;
-    transform: translateY(2px) scale(1.02) rotateX(0deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotateX(0deg);
-  }
-}
-
+/* -----------------------------------------------------------------------------
+ * Reduced-motion accessibility
+ * --------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  .lessonPop__panel,
-  .lessonPop__panel::before,
-  .lessonPop--open .lessonPop__panel {
-    transition: none !important;
-    animation: none !important;
-    transform: none !important;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
-}
-
-@media (prefers-color-scheme: dark) {
-  .lessonPop__panel {
-    border-color: rgba(46, 48, 58, 0.9);
-    background: rgba(22, 23, 29, 0.96);
-  }
-  .lessonPop__panel::before {
-    border-bottom-color: rgba(22, 23, 29, 0.96);
-    filter: drop-shadow(0 -1px 0 rgba(46, 48, 58, 0.9));
-  }
-}
-
-.lessonPop__title {
-  font-weight: 950;
-  letter-spacing: -0.01em;
-  color: var(--text-h);
-  margin: 2px 2px 6px;
-}
-
-.lessonPop__desc {
-  color: var(--text);
-  line-height: 1.35;
-  margin: 0 2px 10px;
-}
-
-.lessonPop__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0 2px 12px;
 }

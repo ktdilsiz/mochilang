@@ -1,117 +1,153 @@
 import { useEffect, useState } from 'react'
-import type { Lesson } from '../types'
-import SquareButton from '../components/SquareButton'
-import LessonPopover from '../components/LessonPopover'
+import type { Language, Lesson } from '../types'
+import type { ProgressState } from '../state'
 import { iconForLesson } from '../components/lessonIcons'
+import mochiThinking from '../assets/mochi-thinking.png'
+import './HomeScreen.css'
 
 interface Props {
   lessons: Lesson[]
-  completedIds: Set<string>
+  language: Language | null
+  progress: ProgressState
+  isCompleted: (id: string) => boolean
   onSelect: (lesson: Lesson) => void
+  onSwitchLanguage: () => void
 }
 
-export default function HomeScreen({ lessons, completedIds, onSelect }: Props) {
-  const [openLesson, setOpenLesson] = useState<Lesson | null>(null)
+export default function HomeScreen({
+  lessons,
+  language,
+  progress,
+  isCompleted,
+  onSelect,
+  onSwitchLanguage,
+}: Props) {
+  const [openId, setOpenId] = useState<string | null>(null)
 
-  const maxOffsetPx = 120
-  const step = Math.PI / 4
+  // Index of the next-up lesson (first not-completed)
+  const nextIdx = lessons.findIndex((l) => !isCompleted(l.id))
+  const nextId = nextIdx >= 0 ? lessons[nextIdx].id : null
 
   useEffect(() => {
-    function onPointerDownCapture(e: PointerEvent) {
-      // If pointer down is inside any lesson item, let the button handler manage open/switch.
+    function close(e: PointerEvent) {
       const target = e.target as Element | null
-      const lessonItemEl = target?.closest?.('[data-lesson-item]')
-      if (lessonItemEl) return
-      setOpenLesson(null)
+      if (target?.closest?.('[data-lesson]')) return
+      setOpenId(null)
     }
-
-    function onKeyDown(e: KeyboardEvent) {
-      if (e.key === 'Escape') setOpenLesson(null)
-    }
-
-    window.addEventListener('pointerdown', onPointerDownCapture, true)
-    window.addEventListener('keydown', onKeyDown)
-    return () => {
-      window.removeEventListener('pointerdown', onPointerDownCapture, true)
-      window.removeEventListener('keydown', onKeyDown)
-    }
+    window.addEventListener('pointerdown', close, true)
+    return () => window.removeEventListener('pointerdown', close, true)
   }, [])
 
-  useEffect(() => {
-    if (!openLesson) return
-    const openId = openLesson.id
-
-    const padding = 12
-
-    // Wait for the popover to mount and layout.
-    const raf1 = window.requestAnimationFrame(() => {
-      const raf2 = window.requestAnimationFrame(() => {
-        const item = document.querySelector(`[data-lesson-item="${openId}"]`) as HTMLElement | null
-        const panel = item?.querySelector('.lessonPop__panel') as HTMLElement | null
-        if (!panel) return
-
-        const rect = panel.getBoundingClientRect()
-
-        if (rect.bottom > window.innerHeight - padding) {
-          const delta = rect.bottom - (window.innerHeight - padding)
-          window.scrollBy({ top: delta, behavior: 'smooth' })
-        } else if (rect.top < padding) {
-          const delta = rect.top - padding
-          window.scrollBy({ top: delta, behavior: 'smooth' })
-        }
-      })
-      return () => window.cancelAnimationFrame(raf2)
-    })
-
-    return () => window.cancelAnimationFrame(raf1)
-  }, [openLesson])
-
   return (
-    <div style={{ maxWidth: 480, margin: '0 auto', padding: '1.5rem' }}>
-      <h1 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '0.25rem' }}>
-        Learn Spanish
-      </h1>
-      <p style={{ color: '#6b7280', marginBottom: '2rem' }}>Pick a lesson to start</p>
+    <div className="home-shell">
+      <header className="home-topbar">
+        <button
+          type="button"
+          className="home-lang-pill"
+          onClick={onSwitchLanguage}
+          aria-label="Switch language"
+        >
+          <span className="home-lang-flag">{language?.flag}</span>
+          <span className="home-lang-name">{language?.name ?? 'Pick course'}</span>
+          <span className="home-lang-chev">▾</span>
+        </button>
 
-      <div className="lessonPath">
+        <div className="home-stats">
+          <span className="home-stat home-stat-streak" title="Streak">
+            🔥 <span>{progress.streak}</span>
+          </span>
+          <span className="home-stat home-stat-xp" title="Total XP">
+            ⚡ <span>{progress.totalXp}</span>
+          </span>
+        </div>
+      </header>
+
+      <section className="home-hero card">
+        <img src={mochiThinking} alt="" className="home-hero-mochi" />
+        <div className="home-hero-text">
+          <div className="home-hero-eyebrow">Section 1</div>
+          <h2 className="home-hero-title">
+            {language?.name ?? 'Chinese'} basics
+          </h2>
+          <p className="home-hero-body">
+            Tap a lesson to begin. Mochi believes in you.
+          </p>
+        </div>
+      </section>
+
+      <div className="home-path">
         {lessons.map((lesson, idx) => {
-          const done = completedIds.has(lesson.id)
-          const locked = false
-          const offset = Math.round(Math.sin(idx * step) * maxOffsetPx)
-          const isOpen = openLesson?.id === lesson.id
-          const isSpacer = (idx + 1 - 3) % 4 === 0
+          const done = isCompleted(lesson.id)
+          const isNext = lesson.id === nextId
+          const isOpen = openId === lesson.id
+          const offset = Math.sin(idx * (Math.PI / 4)) * 80
           return (
             <div
               key={lesson.id}
-              className={`lessonPathRow ${isOpen ? 'lessonPathRow--open' : ''} ${
-                isSpacer ? 'lessonPathRow--spacer' : ''
-              }`}
+              className="home-path-row"
+              style={{ ['--offset' as never]: `${offset}px` }}
+              data-lesson={lesson.id}
             >
-              <div
-                className={`lessonPathItem ${isOpen ? 'lessonPathItem--open' : ''}`}
-                data-lesson-item={lesson.id}
-                style={{ transform: `translateX(${offset}px)` }}
+              <button
+                type="button"
+                className={
+                  'home-node ' +
+                  (done
+                    ? 'home-node-done'
+                    : isNext
+                      ? 'home-node-next'
+                      : 'home-node-default')
+                }
+                onClick={() => setOpenId(isOpen ? null : lesson.id)}
+                aria-label={`${lesson.title}${done ? ' (completed)' : ''}`}
               >
-                <SquareButton
-                  ariaLabel={`Open lesson: ${lesson.title}`}
-                  tone={locked ? 'locked' : done ? 'success' : 'default'}
-                  disabled={locked}
-                  onClick={() => setOpenLesson(lesson)}
-                  icon={iconForLesson(lesson, { completed: done })}
-                />
-                {isOpen ? (
-                  <LessonPopover
-                    lesson={lesson}
-                    onStart={(l) => {
-                      setOpenLesson(null)
-                      onSelect(l)
+                {iconForLesson(lesson, { completed: done })}
+                {isNext && !done && <span className="home-node-pulse" />}
+              </button>
+
+              {isOpen && (
+                <div
+                  className="home-popover card"
+                  onPointerDown={(e) => e.stopPropagation()}
+                >
+                  <div className="home-pop-eyebrow">
+                    {done ? 'Completed' : isNext ? 'Up next' : 'Locked-in path'}
+                  </div>
+                  <div className="home-pop-title">{lesson.title}</div>
+                  <p className="home-pop-body">{lesson.description}</p>
+                  <div className="home-pop-meta">
+                    <span className="home-pill">⚡ {lesson.xp} XP</span>
+                    <span className="home-pill">
+                      {lesson.exercises.length} exercises
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    className={
+                      'ledge-button ' +
+                      (done ? 'tone-success' : 'tone-primary') +
+                      ' size-lg home-pop-btn'
+                    }
+                    onClick={() => {
+                      setOpenId(null)
+                      onSelect(lesson)
                     }}
-                  />
-                ) : null}
-              </div>
+                  >
+                    {done ? 'Practice again' : 'Start'}
+                  </button>
+                </div>
+              )}
             </div>
           )
         })}
+
+        {lessons.length === 0 && (
+          <div className="home-empty">
+            <img src={mochiThinking} alt="" className="home-empty-mochi" />
+            <h3>No lessons yet</h3>
+            <p>This course is being built. Try a different language for now.</p>
+          </div>
+        )}
       </div>
     </div>
   )

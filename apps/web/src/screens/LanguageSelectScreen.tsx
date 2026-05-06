@@ -1,6 +1,7 @@
 import type { Language } from '../types'
 import { APP_NAME, MASCOT_NAME, NATIVE_LANGUAGE, LANGUAGES } from '../data/languages'
 import { mochiMain } from '../assets'
+import './LanguageSelectScreen.css'
 
 interface Props {
   onSelect: (learning: Language) => void
@@ -8,73 +9,37 @@ interface Props {
 
 export default function LanguageSelectScreen({ onSelect }: Props) {
   return (
-    <div style={{ maxWidth: 480, margin: '0 auto', padding: '2rem 1.5rem' }}>
-      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <img
-            src={mochiMain}
-            alt={MASCOT_NAME}
-            width={120}
-            height={120}
-            style={{ margin: '0 auto 1rem' }}
-          />
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '0.5rem' }}>
-            Welcome to {APP_NAME}!
-          </h1>
-          <p style={{ color: '#6b7280', fontSize: '0.9rem' }}>
-            {MASCOT_NAME} will guide your journey 🦔
-          </p>
-          <p style={{ color: '#6b7280', fontSize: '0.9rem', marginTop: '0.25rem' }}>
-            Learning from {NATIVE_LANGUAGE.flag} {NATIVE_LANGUAGE.name}
-          </p>
-        </div>
-        <h1 style={{ fontSize: '1.75rem', fontWeight: 800, marginBottom: '0.5rem' }}>
-          What do you want to learn?
-        </h1>
-        <p style={{ color: '#6b7280', fontSize: '0.9rem' }}>
-          You are learning from {NATIVE_LANGUAGE.flag} {NATIVE_LANGUAGE.name}
+    <div className="lang-shell">
+      <div className="lang-hero">
+        <img src={mochiMain} alt={MASCOT_NAME} className="lang-mochi" />
+        <h1 className="lang-title">Welcome to {APP_NAME}</h1>
+        <p className="lang-tagline">
+          {MASCOT_NAME} the hedgehog will guide your journey.
         </p>
+        <div className="lang-from">
+          Learning from <strong>{NATIVE_LANGUAGE.flag} {NATIVE_LANGUAGE.name}</strong>
+        </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem' }}>
+      <div className="lang-pickHeader">
+        <h2>What do you want to learn?</h2>
+      </div>
+
+      <div className="lang-grid">
         {LANGUAGES.map((lang) => (
           <button
             key={lang.code}
+            type="button"
+            className={
+              'lang-card ' + (lang.available ? '' : 'lang-card-disabled')
+            }
+            disabled={!lang.available}
             onClick={() => lang.available && onSelect(lang)}
-            style={{
-              padding: '1.25rem 1rem',
-              borderRadius: '0.75rem',
-              border: '2px solid #e5e7eb',
-              background: lang.available ? 'white' : '#f9fafb',
-              cursor: lang.available ? 'pointer' : 'not-allowed',
-              opacity: lang.available ? 1 : 0.5,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '0.5rem',
-              transition: 'all 0.15s',
-            }}
-            onMouseEnter={(e) => {
-              if (lang.available) e.currentTarget.style.borderColor = '#58cc02'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = '#e5e7eb'
-            }}
           >
-            <span style={{ fontSize: '2.5rem' }}>{lang.flag}</span>
-            <span style={{ fontWeight: 700, fontSize: '0.95rem' }}>{lang.name}</span>
+            <span className="lang-card-flag">{lang.flag}</span>
+            <span className="lang-card-name">{lang.name}</span>
             {!lang.available && (
-              <span
-                style={{
-                  fontSize: '0.7rem',
-                  color: '#9ca3af',
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                Coming soon
-              </span>
+              <span className="lang-card-soon">Coming soon</span>
             )}
           </button>
         ))}
