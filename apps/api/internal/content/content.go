@@ -1,20 +1,28 @@
 // Package content serves the canonical course curriculum.
 //
-// Course JSON lives at internal/content/data/*.json — one file per course
-// (zh-en, fr-en, etc). The backend embeds them, parses at startup, and
-// holds them in memory; clients fetch via /api/content/courses/:id.
+// Each course is a directory under data/. Inside, every *.json file is
+// one fluency level (CEFR-style: a1.json, a2.json, b1.json …). The
+// directory name is the course id, the level files are sorted by name
+// to give a deterministic ordering on the wire.
 //
-// The same JSON files get copied into apps/web/src/data/generated/ by
-// cmd/genfallbacks so the web app can bundle them as offline fallbacks.
+//	data/
+//	├── zh-en/
+//	│   ├── a1.json
+//	│   └── a2.json   (future)
+//	└── fr-en/        (future)
 //
-// We deliberately keep the in-memory shape as `json.RawMessage` per course
-// rather than parsing into typed Go structs: course content evolves
-// quickly (new exercise types, new section kinds in guides), and forcing
-// the backend to model every variant just to re-serialize is busywork.
-// The JSON shape is the contract; both ends agree on it directly.
+// Splitting by level keeps individual files small enough to edit by hand
+// (no more 3000-line monoliths) and makes "ship A2 next" a one-file PR.
+//
+// We deliberately keep the in-memory shape as `json.RawMessage` per
+// level rather than parsing into typed Go structs: course content
+// evolves quickly (new exercise types, new section kinds in guides),
+// and forcing the backend to model every variant just to re-serialize
+// is busywork. The JSON shape is the contract; both ends agree on it.
 package content
 
 import (
+	"bytes"
 	"embed"
 	"encoding/json"
 	"fmt"
@@ -23,7 +31,7 @@ import (
 	"strings"
 )
 
-//go:embed data/*.json
+//go:embed data/*/*.json
 var dataFS embed.FS
 
 // Index lists the courses we ship without exposing their full content.
@@ -33,61 +41,137 @@ type Index struct {
 }
 
 type CourseSummary struct {
-	ID         string `json:"id"`
-	TopicCount int    `json:"topicCount"`
+	ID         string   `json:"id"`
+	Levels     []string `json:"levels"`
+	TopicCount int      `json:"topicCount"`
 }
 
-// Catalog is what we return for a single course request — the entire
-// payload the frontend needs to build screens. We pre-decode just enough
-// to validate at startup (top-level keys, topic count) but pass the rest
-// through unchanged so unknown fields propagate to the client untouched.
-type Catalog struct {
-	Raw json.RawMessage
+// course holds the assembled payload (already JSON-marshalled) plus a
+// quick summary, so cold-path List() doesn't re-parse on every call.
+type course struct {
+	id         string
+	levels     []string
+	topicCount int
+	body       json.RawMessage
 }
 
 type Loader struct {
-	courses map[string]*Catalog
+	courses map[string]*course
 }
 
-// NewLoader reads every embedded course file and validates the basic
-// shape. A bad file fails-fast at process start rather than 500-ing on
-// the first content request.
+// NewLoader walks every embedded course directory, parses each level
+// file, validates the basic shape, and assembles a single payload per
+// course in the wire format clients expect.
+//
+// Bad files fail-fast at process start rather than 500-ing on the first
+// content request.
 func NewLoader() (*Loader, error) {
-	files, err := fs.ReadDir(dataFS, "data")
+	dirs, err := fs.ReadDir(dataFS, "data")
 	if err != nil {
 		return nil, fmt.Errorf("read embedded data: %w", err)
 	}
-	courses := make(map[string]*Catalog, len(files))
-	for _, f := range files {
-		if f.IsDir() || !strings.HasSuffix(f.Name(), ".json") {
+	courses := make(map[string]*course, len(dirs))
+	for _, d := range dirs {
+		if !d.IsDir() {
 			continue
 		}
-		body, err := fs.ReadFile(dataFS, "data/"+f.Name())
+		c, err := loadCourse(d.Name())
 		if err != nil {
-			return nil, fmt.Errorf("read %s: %w", f.Name(), err)
+			return nil, fmt.Errorf("course %s: %w", d.Name(), err)
 		}
-		// Validate minimum shape so a malformed JSON file doesn't ship
-		// silently. Topics may not be empty for an active course.
-		var probe struct {
-			ID     string `json:"id"`
-			Topics []any  `json:"topics"`
-		}
-		if err := json.Unmarshal(body, &probe); err != nil {
-			return nil, fmt.Errorf("parse %s: %w", f.Name(), err)
-		}
-		if probe.ID == "" {
-			return nil, fmt.Errorf("%s: missing id", f.Name())
-		}
-		if len(probe.Topics) == 0 {
-			return nil, fmt.Errorf("%s: empty topics", f.Name())
-		}
-		courses[probe.ID] = &Catalog{Raw: body}
+		courses[c.id] = c
+	}
+	if len(courses) == 0 {
+		return nil, fmt.Errorf("no courses found under data/")
 	}
 	return &Loader{courses: courses}, nil
 }
 
-// List returns every course id in deterministic order so paginated
-// clients see stable results.
+func loadCourse(id string) (*course, error) {
+	files, err := fs.ReadDir(dataFS, "data/"+id)
+	if err != nil {
+		return nil, err
+	}
+	type levelEnvelope struct {
+		ID          string          `json:"id"`
+		Name        string          `json:"name"`
+		Description string          `json:"description"`
+		Topics      []json.RawMessage `json:"topics"`
+	}
+	type wireLevel struct {
+		ID          string            `json:"id"`
+		Name        string            `json:"name"`
+		Description string            `json:"description"`
+		Topics      []json.RawMessage `json:"topics"`
+	}
+
+	names := make([]string, 0, len(files))
+	for _, f := range files {
+		if f.IsDir() || !strings.HasSuffix(f.Name(), ".json") {
+			continue
+		}
+		names = append(names, f.Name())
+	}
+	if len(names) == 0 {
+		return nil, fmt.Errorf("no level files in data/%s", id)
+	}
+	sort.Strings(names) // a1, a2, b1, b2 — lexical = pedagogical here
+
+	levelIDs := make([]string, 0, len(names))
+	wireLevels := make([]wireLevel, 0, len(names))
+	totalTopics := 0
+	for _, name := range names {
+		body, err := fs.ReadFile(dataFS, "data/"+id+"/"+name)
+		if err != nil {
+			return nil, err
+		}
+		var env levelEnvelope
+		if err := json.Unmarshal(body, &env); err != nil {
+			return nil, fmt.Errorf("parse %s: %w", name, err)
+		}
+		if env.ID == "" {
+			return nil, fmt.Errorf("%s: missing level id", name)
+		}
+		if len(env.Topics) == 0 {
+			return nil, fmt.Errorf("%s: empty topics", name)
+		}
+		// Filename should match level id so authors can find files quickly.
+		expected := env.ID + ".json"
+		if name != expected {
+			return nil, fmt.Errorf("%s: filename should be %s", name, expected)
+		}
+		levelIDs = append(levelIDs, env.ID)
+		wireLevels = append(wireLevels, wireLevel{
+			ID:          env.ID,
+			Name:        env.Name,
+			Description: env.Description,
+			Topics:      env.Topics,
+		})
+		totalTopics += len(env.Topics)
+	}
+
+	// Marshal once at startup so request handlers can stream the bytes.
+	wire := struct {
+		ID     string      `json:"id"`
+		Levels []wireLevel `json:"levels"`
+	}{ID: id, Levels: wireLevels}
+	var buf bytes.Buffer
+	enc := json.NewEncoder(&buf)
+	enc.SetIndent("", "  ")
+	enc.SetEscapeHTML(false)
+	if err := enc.Encode(wire); err != nil {
+		return nil, err
+	}
+
+	return &course{
+		id:         id,
+		levels:     levelIDs,
+		topicCount: totalTopics,
+		body:       buf.Bytes(),
+	}, nil
+}
+
+// List returns every course id in deterministic order.
 func (l *Loader) List() []CourseSummary {
 	ids := make([]string, 0, len(l.courses))
 	for id := range l.courses {
@@ -96,23 +180,23 @@ func (l *Loader) List() []CourseSummary {
 	sort.Strings(ids)
 	out := make([]CourseSummary, 0, len(ids))
 	for _, id := range ids {
-		// Lazy topic count — re-decode just the headers field. Cheap,
-		// and avoids holding two parsed copies in memory.
-		var hdr struct {
-			Topics []any `json:"topics"`
-		}
-		_ = json.Unmarshal(l.courses[id].Raw, &hdr)
-		out = append(out, CourseSummary{ID: id, TopicCount: len(hdr.Topics)})
+		c := l.courses[id]
+		out = append(out, CourseSummary{
+			ID:         c.id,
+			Levels:     c.levels,
+			TopicCount: c.topicCount,
+		})
 	}
 	return out
 }
 
-// Get returns the raw course payload for direct streaming to the client.
-// The second return is `false` when the id isn't shipped.
+// Get returns the assembled course payload — already in wire format —
+// for direct streaming to the client. The second return is `false`
+// when the id isn't shipped.
 func (l *Loader) Get(id string) (json.RawMessage, bool) {
 	c, ok := l.courses[id]
 	if !ok {
 		return nil, false
 	}
-	return c.Raw, true
+	return c.body, true
 }

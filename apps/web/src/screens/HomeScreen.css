@@ -109,6 +109,45 @@
   margin-top: 4px;
 }
 
+/* Level divider — thin "A1 — Beginner" bar between fluency tiers. */
+
+.home-level {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-level-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 4px 4px;
+}
+.home-level-divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.home-level-divider-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 2px solid var(--border);
+}
+.home-level-divider-id {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--primary-700);
+}
+.home-level-divider-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
 /* Topic section header */
 
 .home-topic {

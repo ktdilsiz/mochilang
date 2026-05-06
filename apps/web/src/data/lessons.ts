@@ -1,31 +1,36 @@
 /**
  * Course content loader.
  *
- * Curriculum is owned by the backend now: canonical JSON at
- * apps/api/internal/content/data/zh-en.json, served via /api/content/
- * courses/zh-en, and bundled into apps/web/src/data/generated/
- * course-zh-en.json as offline fallback. The hook below tries the API
- * first and falls back to the bundle if anything goes wrong.
+ * Curriculum is owned by the backend: each level is a JSON file under
+ * apps/api/internal/content/data/<course>/<level>.json (e.g.
+ * `zh-en/a1.json`). The backend assembles them into a single payload
+ * served by /api/content/courses/:id; cmd/genfallbacks publishes the
+ * same wire payload into apps/web/src/data/generated/course-<id>.json
+ * for offline use.
+ *
+ * The hook below tries the API first (fresh content) and falls back to
+ * the bundled copy on any error. Both online and offline paths return
+ * the same shape, so screens don't have to care.
  *
  * The exported types come from the same shape both sides agree on; we
- * cast the parsed JSON to `Topic[]` since the JSON shape is the contract
+ * cast the parsed JSON to `Level[]` since the JSON shape is the contract
  * (any drift would surface in the LessonScreen as a render error rather
- * than a TypeScript error — accepted tradeoff for content authoring
+ * than a TypeScript error — accepted tradeoff for content-authoring
  * speed on the API side).
  */
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { coursesFallback } from './generated'
 import { api, ApiError } from '../lib/api'
-import type { Topic } from '../types'
+import type { Level, Topic } from '../types'
 
 interface CourseEnvelope {
   id: string
-  topics: Topic[]
+  levels: Level[]
 }
 
 export function useCourse(courseId: string) {
-  const [topics, setTopics] = useState<Topic[]>(() => topicsFromFallback(courseId))
+  const [levels, setLevels] = useState<Level[]>(() => levelsFromFallback(courseId))
   const [loading, setLoading] = useState(true)
   const [stale, setStale] = useState(false) // true when API failed and we're showing the bundle
 
@@ -37,11 +42,10 @@ export function useCourse(courseId: string) {
         if (r.id !== courseId) {
           throw new Error(`API returned course ${r.id}, expected ${courseId}`)
         }
-        setTopics(r.topics)
+        setLevels(r.levels)
         setStale(false)
       } catch (err) {
         if (err instanceof DOMException && err.name === 'AbortError') return
-        // ApiError or network failure → stay on the bundled fallback.
         if (!(err instanceof ApiError)) {
           console.warn('useCourse: API offline; using bundled course', err)
         }
@@ -53,12 +57,20 @@ export function useCourse(courseId: string) {
     return () => ctrl.abort()
   }, [courseId])
 
-  return { topics, loading, stale }
+  // Most existing UI walks topics flat. Provide both: the structured
+  // `levels` array for level-aware screens, and a flat `topics` array
+  // (with `levelId` annotated) for everything else.
+  const topics = useMemo<Topic[]>(
+    () => levels.flatMap((l) => l.topics),
+    [levels]
+  )
+
+  return { levels, topics, loading, stale }
 }
 
-function topicsFromFallback(courseId: string): Topic[] {
+function levelsFromFallback(courseId: string): Level[] {
   const raw = (coursesFallback as Record<string, unknown>)[courseId]
   if (!raw || typeof raw !== 'object') return []
-  const env = raw as { topics?: Topic[] }
-  return env.topics ?? []
+  const env = raw as { levels?: Level[] }
+  return env.levels ?? []
 }

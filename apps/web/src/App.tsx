@@ -144,7 +144,7 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
   }, [])
 
   const courseId = selectedLanguage ? `${selectedLanguage.code}-en` : 'zh-en'
-  const { topics } = useCourse(courseId)
+  const { levels } = useCourse(courseId)
 
   function handleLanguageSelect(lang: Language) {
     setSelectedLanguage(lang)
@@ -230,7 +230,7 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
     <>
       {tab === 'home' && (
         <HomeScreen
-          topics={topics}
+          levels={levels}
           progress={progress.state}
           isCompleted={progress.isCompleted}
           onSelect={handleLessonSelect}

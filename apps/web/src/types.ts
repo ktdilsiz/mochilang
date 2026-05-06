@@ -117,6 +117,27 @@ export interface Topic {
 }
 
 /**
+ * Level — a CEFR-style fluency tier (A1, A2, B1, …) that groups topics.
+ * The backend serves them in pedagogical order; the home screen renders
+ * a divider above each level so the user sees their progression.
+ */
+export interface Level {
+  /** Stable id like "a1", "a2". Lowercase, no spaces. */
+  id: string
+  /** Human label like "A1 — Beginner". */
+  name: string
+  /** One-line description for the level header. */
+  description: string
+  topics: Topic[]
+}
+
+/** A whole course payload as served by /api/content/courses/:id. */
+export interface Course {
+  id: string
+  levels: Level[]
+}
+
+/**
  * Long-form grammar/explainer content for a topic. Rendered by
  * `TopicGuideScreen` from a small set of structured section primitives so
  * we get consistent typography without a markdown parser.
@@ -152,7 +173,3 @@ export interface Language {
   available: boolean
 }
 
-export interface Course {
-  from: Language
-  to: Language
-}
