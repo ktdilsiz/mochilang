@@ -52,9 +52,18 @@ export default function ListenAndChoose({
                       ? 'ex-option-selected'
                       : '')
               }
-              onClick={() => onSelect(opt)}
+              onClick={() => {
+                // Speak the tapped option so the learner can compare it
+                // to the prompt audio. This is the easiest way to drill
+                // tone-pair distinctions (买/卖, 行 háng/行 xíng) — the
+                // exercise becomes "is what I'm hearing the same as what
+                // I'm tapping?" without authoring per-option audio.
+                speak(opt)
+                onSelect(opt)
+              }}
             >
               <span className="ex-option-text ex-hanzi">{opt}</span>
+              <span className="ex-option-listen" aria-hidden="true">🔊</span>
             </button>
           )
         })}

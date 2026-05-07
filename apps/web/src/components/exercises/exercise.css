@@ -89,6 +89,18 @@
   letter-spacing: -0.02em;
 }
 
+/* Tiny speaker mark on listen-and-choose options to hint they're tappable
+ * for audio. We deliberately keep it a sibling rather than absolute-
+ * positioned so the option auto-grows around it. */
+.ex-option-listen {
+  margin-left: 8px;
+  font-size: 14px;
+  opacity: 0.5;
+}
+.ex-option:hover:not(:disabled) .ex-option-listen {
+  opacity: 0.9;
+}
+
 /* Fill-blank input */
 
 .ex-input {
@@ -236,6 +248,19 @@
   gap: 8px;
   align-items: flex-start;
   background: var(--surface-alt);
+}
+.ex-build-area-long {
+  min-height: 132px; /* extra room for 12+ tokens */
+  align-content: flex-start;
+}
+.ex-build-progress {
+  align-self: flex-end;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  margin-bottom: -4px;
 }
 .ex-build-correct {
   border-color: var(--success-500);

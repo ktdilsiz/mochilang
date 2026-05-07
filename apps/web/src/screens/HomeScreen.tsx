@@ -28,6 +28,11 @@ export default function HomeScreen({
 }: Props) {
   const [openId, setOpenId] = useState<string | null>(null)
 
+  // Flat reference for prereq lookups — turning topic ids into topic
+  // objects so we can show "Complete <Title> first" when a prereq isn't
+  // met. Built once per render over the full level list.
+  const allTopics: Topic[] = levels.flatMap((l) => l.topics)
+
   // Find the global "next-up" lesson — the first uncompleted lesson when
   // scanning levels → topics → lessons in order. We track the level + topic
   // it lives in so the hero banner can advertise it accurately.
@@ -114,21 +119,30 @@ export default function HomeScreen({
 
       {levels.map((level) => {
         const showLevelHeader = levels.length > 1 || level.id !== 'a1'
+        const groups = groupConsecutiveByTheme(level.topics)
         return (
           <div key={level.id} className="home-level">
             {showLevelHeader && <LevelDivider level={level} />}
-            {level.topics.map((topic, topicIdx) => (
-              <TopicSection
-                key={topic.id}
-                topic={topic}
-                topicNumber={topicIdx + 1}
-                openId={openId}
-                setOpenId={setOpenId}
-                isCompleted={isCompleted}
-                nextId={nextId}
-                onSelect={onSelect}
-                onOpenGuide={onOpenGuide}
-              />
+            {groups.map((group, gi) => (
+              <div key={`${level.id}-grp-${gi}`} className="home-subgroup">
+                {group.length >= 2 && (
+                  <SubThemeDivider theme={group[0].topic.theme} />
+                )}
+                {group.map(({ topic, topicNumber }) => (
+                  <TopicSection
+                    key={topic.id}
+                    topic={topic}
+                    topicNumber={topicNumber}
+                    openId={openId}
+                    setOpenId={setOpenId}
+                    isCompleted={isCompleted}
+                    nextId={nextId}
+                    lockedReason={computeLockReason(topic, allTopics, isCompleted)}
+                    onSelect={onSelect}
+                    onOpenGuide={onOpenGuide}
+                  />
+                ))}
+              </div>
             ))}
           </div>
         )
@@ -141,6 +155,83 @@ export default function HomeScreen({
           <p>This course is being built. Try a different language for now.</p>
         </div>
       )}
+    </div>
+  )
+}
+
+/**
+ * computeLockReason walks the topic's `prerequisites` array and returns
+ * a human label like "Complete Greetings & Numbers first" if any prereq
+ * topic still has incomplete lessons. Returns null when the topic is
+ * either prereq-free or all prereqs are done.
+ *
+ * Soft lock — the topic still renders and is tappable. The reason just
+ * surfaces in the topic header so the learner knows what to brush up on.
+ */
+function computeLockReason(
+  topic: Topic,
+  allTopics: Topic[],
+  isCompleted: (id: string) => boolean
+): string | null {
+  if (!topic.prerequisites || topic.prerequisites.length === 0) return null
+  const unmet: string[] = []
+  for (const prereqId of topic.prerequisites) {
+    const prereq = allTopics.find((t) => t.id === prereqId)
+    if (!prereq) continue // Unknown id — silently skip rather than block
+    const allDone = prereq.lessons.every((l) => isCompleted(l.id))
+    if (!allDone) unmet.push(prereq.title)
+  }
+  if (unmet.length === 0) return null
+  if (unmet.length === 1) return `Complete ${unmet[0]} first`
+  if (unmet.length === 2) return `Complete ${unmet[0]} and ${unmet[1]} first`
+  return `Complete ${unmet.slice(0, -1).join(', ')} and ${unmet[unmet.length - 1]} first`
+}
+
+/**
+ * groupConsecutiveByTheme partitions a level's topics into runs of
+ * adjacent same-theme topics. Each entry preserves the original 1-indexed
+ * topic number so per-level "Topic N" labels stay continuous regardless
+ * of the new sub-grouping.
+ */
+function groupConsecutiveByTheme(
+  topics: Topic[]
+): { topic: Topic; topicNumber: number }[][] {
+  const groups: { topic: Topic; topicNumber: number }[][] = []
+  for (let i = 0; i < topics.length; i++) {
+    const t = topics[i]
+    const last = groups[groups.length - 1]
+    if (last && last[last.length - 1].topic.theme === t.theme) {
+      last.push({ topic: t, topicNumber: i + 1 })
+    } else {
+      groups.push([{ topic: t, topicNumber: i + 1 }])
+    }
+  }
+  return groups
+}
+
+/** Per-theme display label for the sub-divider. Falls back to the raw
+ * theme id (which is human-readable) if no friendlier label exists. */
+const THEME_LABELS: Record<string, string> = {
+  greetings: 'Greetings & social',
+  numbers: 'Numbers & quantity',
+  basics: 'Foundations',
+  family: 'People & family',
+  verbs: 'Actions',
+  food: 'Food & drink',
+  location: 'Places',
+  time: 'Time',
+  questions: 'Questions',
+  directions: 'Directions',
+  colors: 'Colors',
+  weather: 'Weather',
+  review: 'Review',
+}
+
+function SubThemeDivider({ theme }: { theme: string }) {
+  const label = THEME_LABELS[theme] ?? theme
+  return (
+    <div className="home-subtheme-divider">
+      <span className="home-subtheme-label">{label}</span>
     </div>
   )
 }
@@ -181,6 +272,8 @@ interface TopicSectionProps {
   setOpenId: (v: string | null) => void
   isCompleted: (id: string) => boolean
   nextId: string | null
+  /** Soft-lock label, or null if the topic's prerequisites are all met. */
+  lockedReason: string | null
   onSelect: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
 }
@@ -192,12 +285,13 @@ function TopicSection({
   setOpenId,
   isCompleted,
   nextId,
+  lockedReason,
   onSelect,
   onOpenGuide,
 }: TopicSectionProps) {
   const allDone = topic.lessons.every((l) => isCompleted(l.id))
   return (
-    <section className="home-topic">
+    <section className={'home-topic ' + (lockedReason ? 'home-topic-locked' : '')}>
       <header className="home-topic-header" data-theme={topic.theme}>
         <div className="home-topic-meta">
           <div className="home-topic-eyebrow">
@@ -206,6 +300,9 @@ function TopicSection({
           </div>
           <h3 className="home-topic-title">{topic.title}</h3>
           <p className="home-topic-desc">{topic.description}</p>
+          {lockedReason && (
+            <div className="home-topic-lock">🔒 {lockedReason}</div>
+          )}
         </div>
         <div className="home-topic-actions">
           {topic.guide && (

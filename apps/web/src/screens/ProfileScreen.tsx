@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react'
 import type { ProgressState } from '../state'
 import type { ProfileState } from '../profile'
+import type { Lesson, Level } from '../types'
 import { AVATAR_OPTIONS, avatarById } from '../data/avatars'
 import { tierAt } from '../lib/league'
+import { pickReviewSuggestions } from '../lib/reviewSuggestions'
 import './ProfileScreen.css'
 
 interface Props {
@@ -10,11 +12,14 @@ interface Props {
   profile: ProfileState
   setProfile: (patch: Partial<ProfileState>) => void
   offline: boolean
+  /** Course content — used to resolve lesson ids back to lesson objects for review. */
+  levels: Level[]
   onSwitchLanguage: () => void
   onResetProgress: () => void
   onResetProfile: () => void
   onSignOut: () => void
   onSwitchToLogin: () => void
+  onStartLesson: (lesson: Lesson) => void
 }
 
 export default function ProfileScreen({
@@ -22,12 +27,19 @@ export default function ProfileScreen({
   profile,
   setProfile,
   offline,
+  levels,
   onSwitchLanguage,
   onResetProgress,
   onResetProfile,
   onSignOut,
   onSwitchToLogin,
+  onStartLesson,
 }: Props) {
+  const [reviewOpen, setReviewOpen] = useState(false)
+  const reviewSuggestions = useMemo(
+    () => pickReviewSuggestions(levels, progress.results),
+    [levels, progress.results]
+  )
   const [editing, setEditing] = useState(false)
   const [name, setName] = useState(profile.name ?? '')
   const [avatarId, setAvatarId] = useState(profile.avatarId)
@@ -91,6 +103,31 @@ export default function ProfileScreen({
         <Stat label="Day streak" value={String(stats.streak)} accent="primary" />
         <Stat label="Lessons" value={String(stats.completed)} />
         <Stat label="Perfect runs" value={String(stats.perfect)} accent="success" />
+      </section>
+
+      <section className="profile-section">
+        <h3>Practice</h3>
+        <div className="profile-actions">
+          <button
+            type="button"
+            className="ledge-button tone-primary profile-action"
+            onClick={() => setReviewOpen(true)}
+            disabled={reviewSuggestions.length === 0}
+          >
+            🔁 Review older lessons
+            {reviewSuggestions.length > 0 && (
+              <span className="profile-action-count">
+                {reviewSuggestions.length}
+              </span>
+            )}
+          </button>
+        </div>
+        {reviewSuggestions.length === 0 && (
+          <p className="profile-action-hint">
+            Lessons you finish will appear here a week later for spaced
+            review.
+          </p>
+        )}
       </section>
 
       <section className="profile-section">
@@ -214,6 +251,58 @@ export default function ProfileScreen({
                 onClick={save}
               >
                 Save
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {reviewOpen && (
+        <div
+          className="profile-edit-overlay"
+          onClick={() => setReviewOpen(false)}
+          role="dialog"
+        >
+          <div
+            className="profile-edit-modal card"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="profile-edit-title">Brush up on these</h3>
+            <p className="profile-action-hint" style={{ marginTop: -4 }}>
+              Lessons you finished a while back. Tap one to replay it.
+            </p>
+            <ul className="profile-review-list">
+              {reviewSuggestions.map((s) => (
+                <li key={s.lesson.id}>
+                  <button
+                    type="button"
+                    className="profile-review-row"
+                    onClick={() => {
+                      setReviewOpen(false)
+                      onStartLesson(s.lesson)
+                    }}
+                  >
+                    <span className="profile-review-meta">
+                      <span className="profile-review-level">
+                        {s.levelId.toUpperCase()}
+                      </span>
+                      <span className="profile-review-topic">{s.topicTitle}</span>
+                    </span>
+                    <span className="profile-review-title">{s.lesson.title}</span>
+                    <span className="profile-review-age">
+                      {s.daysAgo === 1 ? '1 day ago' : `${s.daysAgo} days ago`}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <div className="profile-edit-buttons">
+              <button
+                type="button"
+                className="ledge-button tone-ghost"
+                onClick={() => setReviewOpen(false)}
+              >
+                Close
               </button>
             </div>
           </div>

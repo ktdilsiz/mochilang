@@ -65,12 +65,25 @@ export default function TapWordsInOrder({
   const isCorrect = locked && builtSentence === exercise.answer
   const isWrong = locked && !isCorrect
 
+  // For long sentences (≥8 expected tokens) show a "5 / 12" progress
+  // counter so the learner has a sense of how much sentence is left.
+  // The cap of 8 was picked to match the cognitive-load break Dr. Chen
+  // flagged in the C1/C2 review.
+  const expectedTokenCount = exercise.answer.split(' ').filter(Boolean).length
+  const showProgress = expectedTokenCount >= 8
+
   return (
     <div className="ex-root">
       <h2 className="ex-prompt">{exercise.prompt}</h2>
+      {showProgress && (
+        <div className="ex-build-progress" aria-live="polite">
+          {built.length} / {expectedTokenCount}
+        </div>
+      )}
       <div
         className={
           'ex-build-area ' +
+          (showProgress ? 'ex-build-area-long ' : '') +
           (isCorrect ? 'ex-build-correct' : isWrong ? 'ex-build-wrong' : '')
         }
       >

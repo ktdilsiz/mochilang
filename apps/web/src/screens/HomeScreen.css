@@ -109,6 +109,25 @@
   margin-top: 4px;
 }
 
+/* Sub-theme divider — quiet label between consecutive same-theme topics. */
+.home-subgroup {
+  display: flex;
+  flex-direction: column;
+}
+.home-subtheme-divider {
+  display: flex;
+  align-items: center;
+  margin: 8px 4px 0;
+}
+.home-subtheme-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+  padding: 4px 8px;
+}
+
 /* Level divider — thin "A1 — Beginner" bar between fluency tiers. */
 
 .home-level {
@@ -153,6 +172,25 @@
 .home-topic {
   display: flex;
   flex-direction: column;
+}
+/* Soft-lock state — topic still tappable but visually muted to encourage
+ * the user to finish prerequisites first. */
+.home-topic-locked {
+  opacity: 0.72;
+}
+.home-topic-locked:hover {
+  opacity: 1;
+}
+.home-topic-lock {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-subtle);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  display: inline-block;
+  width: fit-content;
 }
 
 .home-topic-header {

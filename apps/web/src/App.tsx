@@ -254,11 +254,13 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
           profile={profile.state}
           setProfile={profile.setProfile}
           offline={offline}
+          levels={levels}
           onSwitchLanguage={handleSwitchLanguage}
           onResetProgress={progress.reset}
           onResetProfile={profile.reset}
           onSignOut={handleSignOut}
           onSwitchToLogin={onSwitchToLogin}
+          onStartLesson={handleLessonSelect}
         />
       )}
 

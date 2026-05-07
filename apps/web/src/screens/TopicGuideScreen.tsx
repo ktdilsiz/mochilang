@@ -1,4 +1,5 @@
 import type { GuideExample, GuideSection, Topic } from '../types'
+import { speak } from '../lib/tts'
 import './TopicGuideScreen.css'
 
 interface Props {
@@ -109,7 +110,18 @@ function ExamplesBlock({ rows }: { rows: GuideExample[] }) {
     <div className="guide-examples">
       {rows.map((r, i) => (
         <div className="guide-example" key={i}>
-          <div className="guide-example-source">{r.source}</div>
+          <div className="guide-example-row">
+            <div className="guide-example-source">{r.source}</div>
+            <button
+              type="button"
+              className="guide-example-listen"
+              onClick={() => speak(r.source)}
+              aria-label={`Play "${r.source}"`}
+              title="Play"
+            >
+              🔊
+            </button>
+          </div>
           {r.pinyin && <div className="guide-example-pinyin">{r.pinyin}</div>}
           <div className="guide-example-translation">{r.translation}</div>
         </div>

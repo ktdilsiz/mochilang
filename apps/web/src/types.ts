@@ -114,6 +114,12 @@ export interface Topic {
   theme: LessonTheme
   lessons: Lesson[]
   guide?: TopicGuide
+  /**
+   * Optional list of topic ids the learner should finish before this one
+   * unlocks. Soft lock — the topic still renders but with a muted "review
+   * these first" affordance. Empty/missing means no prerequisites.
+   */
+  prerequisites?: string[]
 }
 
 /**
