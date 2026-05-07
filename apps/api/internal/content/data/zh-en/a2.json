@@ -918,6 +918,900 @@
           ]
         }
       ]
+    },
+    {
+      "id": "zh-en-clothing",
+      "title": "Clothing",
+      "description": "Wearing things — shirts, pants, shoes, and dressing for the weather",
+      "theme": "colors",
+      "lessons": [
+        {
+          "id": "zh-en-clothing-1",
+          "title": "Tops & bottoms",
+          "description": "Shirts, pants, dresses",
+          "theme": "colors",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cl1-1",
+              "type": "match_pairs",
+              "prompt": "Match the clothing item",
+              "pairs": [
+                { "left": "衣服", "right": "Clothes (general)" },
+                { "left": "裤子", "right": "Pants / trousers" },
+                { "left": "衬衫", "right": "Shirt" },
+                { "left": "裙子", "right": "Skirt / dress" }
+              ]
+            },
+            {
+              "id": "cl1-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"T-shirt\"?",
+              "options": ["T恤", "毛衣", "外套", "鞋子"],
+              "answer": "T恤"
+            },
+            {
+              "id": "cl1-3",
+              "type": "fill_blank",
+              "prompt": "\"毛衣\" (máo yī) means ___",
+              "answer": "Sweater",
+              "acceptableAnswers": ["Wool sweater", "Jumper"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-clothing-2",
+          "title": "Shoes & accessories",
+          "description": "鞋子, 帽子, 包",
+          "theme": "colors",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cl2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"鞋子\" (xié zi) mean?",
+              "options": ["Hat", "Shoes", "Bag", "Belt"],
+              "answer": "Shoes"
+            },
+            {
+              "id": "cl2-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"hat / cap\"?",
+              "options": ["眼镜", "帽子", "包", "袜子"],
+              "answer": "帽子"
+            },
+            {
+              "id": "cl2-3",
+              "type": "fill_blank",
+              "prompt": "\"袜子\" (wà zi) means ___",
+              "answer": "Socks"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-clothing-3",
+          "title": "Wear it (穿)",
+          "description": "穿 for clothes, 戴 for accessories",
+          "theme": "colors",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cl3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"穿\" (chuān) mean?",
+              "options": ["Wear (clothes/shoes)", "Wear (hats/glasses)", "Buy", "Sell"],
+              "answer": "Wear (clothes/shoes)"
+            },
+            {
+              "id": "cl3-2",
+              "type": "multiple_choice",
+              "prompt": "Which verb is correct for \"wearing a hat\"?",
+              "options": ["穿", "戴", "拿", "用"],
+              "answer": "戴",
+              "explanation": "穿 (chuān) for body-wrapping items (clothes, shoes). 戴 (dài) for accessories (hats, glasses, watches, jewelry)."
+            },
+            {
+              "id": "cl3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I am wearing a red shirt\"",
+              "answer": "我 穿 着 红 衬衫",
+              "bank": ["我", "穿", "着", "红", "衬衫", "戴", "鞋子"],
+              "explanation": "着 (zhe) marks an ongoing state — \"in the act of wearing\"."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-clothing-4",
+          "title": "Dressing for the day",
+          "description": "Putting weather + clothes together",
+          "theme": "colors",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "cl4-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It's cold today, I'm wearing a sweater\"",
+              "answer": "今天 很 冷 我 穿 毛衣",
+              "bank": ["今天", "很", "冷", "我", "穿", "毛衣", "热", "戴"]
+            },
+            {
+              "id": "cl4-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"外套\" (wài tào) mean?",
+              "options": ["Underwear", "Coat / jacket", "Suit", "Pajamas"],
+              "answer": "Coat / jacket"
+            },
+            {
+              "id": "cl4-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct sentence: \"It's hot today, I'm wearing a T-shirt\"",
+              "options": [
+                "今天 很 热 我 穿 T恤",
+                "今天 很 冷 我 穿 毛衣",
+                "今天 下雨 我 穿 外套",
+                "今天 很 热 我 戴 帽子"
+              ],
+              "answer": "今天 很 热 我 穿 T恤"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-body",
+      "title": "Body & health",
+      "description": "Parts of the body, feeling sick, going to the doctor",
+      "theme": "family",
+      "lessons": [
+        {
+          "id": "zh-en-body-1",
+          "title": "Head, hands, feet",
+          "description": "The big body parts",
+          "theme": "family",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "bd1-1",
+              "type": "match_pairs",
+              "prompt": "Match the body part",
+              "pairs": [
+                { "left": "头", "right": "Head" },
+                { "left": "手", "right": "Hand" },
+                { "left": "脚", "right": "Foot" },
+                { "left": "眼睛", "right": "Eye" }
+              ]
+            },
+            {
+              "id": "bd1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"嘴\" (zuǐ) mean?",
+              "options": ["Nose", "Ear", "Mouth", "Throat"],
+              "answer": "Mouth"
+            },
+            {
+              "id": "bd1-3",
+              "type": "fill_blank",
+              "prompt": "\"耳朵\" (ěr duo) means ___",
+              "answer": "Ear",
+              "acceptableAnswers": ["Ears"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-body-2",
+          "title": "It hurts (疼)",
+          "description": "Body part + 疼 = it hurts there",
+          "theme": "family",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "bd2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"疼\" (téng) mean?",
+              "options": ["Hot", "Cold", "Hurts / sore", "Tired"],
+              "answer": "Hurts / sore"
+            },
+            {
+              "id": "bd2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have a headache\"",
+              "answer": "我 头 疼",
+              "bank": ["我", "头", "疼", "肚子", "饿"]
+            },
+            {
+              "id": "bd2-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"肚子疼\" mean?",
+              "options": ["Headache", "Backache", "Stomach ache", "Sore throat"],
+              "answer": "Stomach ache"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-body-3",
+          "title": "Sick days",
+          "description": "Feeling unwell — 生病, 发烧, 感冒",
+          "theme": "family",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "bd3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"生病\" (shēng bìng) mean?",
+              "options": ["Get sick / be sick", "Get well", "Be tired", "Be hungry"],
+              "answer": "Get sick / be sick"
+            },
+            {
+              "id": "bd3-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"have a fever\"?",
+              "options": ["感冒", "发烧", "咳嗽", "吃药"],
+              "answer": "发烧"
+            },
+            {
+              "id": "bd3-3",
+              "type": "fill_blank",
+              "prompt": "\"感冒\" (gǎn mào) means ___",
+              "answer": "A cold",
+              "acceptableAnswers": ["Common cold", "Catch a cold"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-body-4",
+          "title": "At the doctor",
+          "description": "医生, 医院, 药",
+          "theme": "family",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "bd4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"医生\" (yī shēng) mean?",
+              "options": ["Nurse", "Doctor", "Patient", "Pharmacist"],
+              "answer": "Doctor"
+            },
+            {
+              "id": "bd4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I need to go to the hospital\"",
+              "answer": "我 要 去 医院",
+              "bank": ["我", "要", "去", "医院", "学校", "回家"]
+            },
+            {
+              "id": "bd4-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"吃药\" (chī yào) mean?",
+              "options": ["Eat food", "Take medicine", "Drink water", "Get a shot"],
+              "answer": "Take medicine",
+              "explanation": "Mandarin uses 吃 (eat) for taking pills, even though English would say \"take\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-hobbies",
+      "title": "Hobbies & free time",
+      "description": "Sports, music, games — what you do for fun",
+      "theme": "greetings",
+      "lessons": [
+        {
+          "id": "zh-en-hobbies-1",
+          "title": "Sports",
+          "description": "Soccer, basketball, swimming",
+          "theme": "greetings",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "hb1-1",
+              "type": "match_pairs",
+              "prompt": "Match the sport",
+              "pairs": [
+                { "left": "足球", "right": "Soccer / football" },
+                { "left": "篮球", "right": "Basketball" },
+                { "left": "游泳", "right": "Swimming" },
+                { "left": "跑步", "right": "Running" }
+              ]
+            },
+            {
+              "id": "hb1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"打\" (dǎ) mean for sports?",
+              "options": ["Watch a sport", "Play (ball sports)", "Win at", "Coach"],
+              "answer": "Play (ball sports)",
+              "explanation": "打 is used with ball sports (打篮球, 打网球). 踢 (tī, kick) is used for soccer (踢足球)."
+            },
+            {
+              "id": "hb1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I like playing basketball\"",
+              "answer": "我 喜欢 打 篮球",
+              "bank": ["我", "喜欢", "打", "篮球", "踢", "足球"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-hobbies-2",
+          "title": "Music & arts",
+          "description": "Listening, singing, drawing",
+          "theme": "greetings",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "hb2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"音乐\" (yīn yuè) mean?",
+              "options": ["Movie", "Music", "Painting", "Book"],
+              "answer": "Music"
+            },
+            {
+              "id": "hb2-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"to sing\"?",
+              "options": ["听歌", "唱歌", "弹琴", "跳舞"],
+              "answer": "唱歌"
+            },
+            {
+              "id": "hb2-3",
+              "type": "fill_blank",
+              "prompt": "\"画画\" (huà huà) means ___",
+              "answer": "To draw / paint",
+              "acceptableAnswers": ["Drawing", "Painting", "To draw", "To paint"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-hobbies-3",
+          "title": "Books, movies, games",
+          "description": "Reading, watching, playing",
+          "theme": "greetings",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "hb3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"看电影\" (kàn diàn yǐng) mean?",
+              "options": ["Watch a movie", "Watch TV", "Read a book", "Play a game"],
+              "answer": "Watch a movie"
+            },
+            {
+              "id": "hb3-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"play a video game\"?",
+              "options": ["看书", "玩游戏", "看电视", "听音乐"],
+              "answer": "玩游戏"
+            },
+            {
+              "id": "hb3-3",
+              "type": "fill_blank",
+              "prompt": "\"看书\" (kàn shū) means ___",
+              "answer": "Read a book",
+              "acceptableAnswers": ["Reading", "Read books", "To read"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-hobbies-4",
+          "title": "What do you do for fun?",
+          "description": "Asking and answering",
+          "theme": "greetings",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "hb4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"业余爱好\" (yè yú ài hào) mean?",
+              "options": ["Job", "Hobby", "Family", "School"],
+              "answer": "Hobby"
+            },
+            {
+              "id": "hb4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My hobby is reading\"",
+              "answer": "我 的 爱好 是 看书",
+              "bank": ["我", "的", "爱好", "是", "看书", "听音乐", "工作"]
+            },
+            {
+              "id": "hb4-3",
+              "type": "multiple_choice",
+              "prompt": "How do you say \"What do you usually do?\"",
+              "options": [
+                "你 平时 做什么",
+                "你 在 哪里",
+                "你 是 谁",
+                "你 几岁"
+              ],
+              "answer": "你 平时 做什么",
+              "explanation": "平时 (píng shí) = usually / normally."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-plans",
+      "title": "Making plans",
+      "description": "Inviting, suggesting, accepting, declining",
+      "theme": "time",
+      "lessons": [
+        {
+          "id": "zh-en-plans-1",
+          "title": "Want to (想)",
+          "description": "Soft \"would like to\" with 想",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pl1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 想 去\" mean?",
+              "options": ["I have to go", "I would like to go", "I went", "I'm going now"],
+              "answer": "I would like to go"
+            },
+            {
+              "id": "pl1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I would like to drink tea\"",
+              "answer": "我 想 喝 茶",
+              "bank": ["我", "想", "喝", "茶", "要", "咖啡"]
+            },
+            {
+              "id": "pl1-3",
+              "type": "multiple_choice",
+              "prompt": "What's the difference between 要 and 想?",
+              "options": [
+                "要 = need / want firmly. 想 = would like (softer)",
+                "要 = past, 想 = future",
+                "要 = formal, 想 = casual",
+                "There is no difference"
+              ],
+              "answer": "要 = need / want firmly. 想 = would like (softer)"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-plans-2",
+          "title": "Let's (一起 / 吧)",
+          "description": "Suggesting we do something together",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pl2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"一起\" (yī qǐ) mean?",
+              "options": ["Together", "Alone", "Sometimes", "Tomorrow"],
+              "answer": "Together"
+            },
+            {
+              "id": "pl2-2",
+              "type": "multiple_choice",
+              "prompt": "What does the suggestion-particle \"吧\" do at the end of a sentence?",
+              "options": [
+                "Turns it into a question",
+                "Softens to a suggestion (\"…shall we?\")",
+                "Marks the past tense",
+                "Adds emphasis"
+              ],
+              "answer": "Softens to a suggestion (\"…shall we?\")"
+            },
+            {
+              "id": "pl2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Let's go eat together\"",
+              "answer": "我们 一起 去 吃饭 吧",
+              "bank": ["我们", "一起", "去", "吃饭", "吧", "他们", "明天"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-plans-3",
+          "title": "Inviting & accepting",
+          "description": "请 / 好啊 / 当然",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pl3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"请\" (qǐng) mean?",
+              "options": ["Please / invite", "Sorry", "Thanks", "Hello"],
+              "answer": "Please / invite",
+              "explanation": "请 starts polite requests and invitations: 请喝茶 (please have tea), 请坐 (please sit)."
+            },
+            {
+              "id": "pl3-2",
+              "type": "multiple_choice",
+              "prompt": "Which is a friendly \"sure!\" reply?",
+              "options": ["好啊", "不好", "再见", "不知道"],
+              "answer": "好啊"
+            },
+            {
+              "id": "pl3-3",
+              "type": "fill_blank",
+              "prompt": "\"当然\" (dāng rán) means ___",
+              "answer": "Of course",
+              "acceptableAnswers": ["Sure", "Certainly"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-plans-4",
+          "title": "Saying no nicely",
+          "description": "Declining without sounding rude",
+          "theme": "time",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "pl4-1",
+              "type": "multiple_choice",
+              "prompt": "Which is a polite way to decline?",
+              "options": [
+                "对不起 我 没 时间",
+                "不要",
+                "我 不 喜欢 你",
+                "再见"
+              ],
+              "answer": "对不起 我 没 时间",
+              "explanation": "对不起 (sorry) softens the refusal. 没时间 = don't have time."
+            },
+            {
+              "id": "pl4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Maybe next time\"",
+              "answer": "下 次 吧",
+              "bank": ["下", "次", "吧", "上", "今天", "再"],
+              "explanation": "下次吧 — literally \"next time, eh?\" Common gentle decline."
+            },
+            {
+              "id": "pl4-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"改天\" (gǎi tiān) mean?",
+              "options": ["Today", "Yesterday", "Some other day", "Never"],
+              "answer": "Some other day",
+              "explanation": "改天 — literally \"change day\". The Chinese version of \"rain check\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-connect",
+      "title": "Connecting ideas",
+      "description": "And, but, because, so — stitch sentences together",
+      "theme": "basics",
+      "guide": {
+        "intro": "Up to now most sentences have been one thought. A2 is where you start chaining: \"I went and then I ate\", \"It rained but I went\", \"I'm tired because I worked\". Mandarin makes this easy — a small set of connectors does most of the heavy lifting.",
+        "sections": [
+          { "kind": "heading", "text": "然后 — and then" },
+          {
+            "kind": "paragraph",
+            "text": "然后 (rán hòu) chains two events in time. Use it to narrate sequences."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 起床，然后 吃 早饭。", "pinyin": "Wǒ qǐchuáng, ránhòu chī zǎofàn.", "translation": "I get up, and then I eat breakfast." }
+            ]
+          },
+          { "kind": "heading", "text": "但是 / 可是 — but" },
+          {
+            "kind": "paragraph",
+            "text": "Both mean \"but\" with no real difference; 可是 is a touch more conversational."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 想 去，但是 我 没 时间。", "pinyin": "Wǒ xiǎng qù, dànshì wǒ méi shíjiān.", "translation": "I want to go, but I don't have time." }
+            ]
+          },
+          { "kind": "heading", "text": "因为...所以 — because...so" },
+          {
+            "kind": "paragraph",
+            "text": "Mandarin often uses both halves where English uses just one (\"I'm tired BECAUSE I worked\" → 因为 我 工作 了，所以 我 很 累)."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "因为 下雨，所以 我 没 去。", "pinyin": "Yīnwèi xià yǔ, suǒyǐ wǒ méi qù.", "translation": "Because it was raining, (so) I didn't go." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "You can drop one half if context is clear: \"因为 下雨，我 没 去\" works too. The full pair just sounds slightly more emphatic."
+          },
+          { "kind": "heading", "text": "或者 vs 还是 — both mean \"or\"" },
+          {
+            "kind": "paragraph",
+            "text": "Easy mix-up. 或者 (huò zhě) goes in statements (\"I want tea or coffee\"). 还是 (hái shi) goes in questions (\"Do you want tea or coffee?\")."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 想 喝 茶 或者 咖啡。", "pinyin": "Wǒ xiǎng hē chá huòzhě kāfēi.", "translation": "I want to drink tea or coffee. (statement)" },
+              { "source": "你 想 喝 茶 还是 咖啡？", "pinyin": "Nǐ xiǎng hē chá háishi kāfēi?", "translation": "Do you want tea or coffee? (choice question)" }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-connect-1",
+          "title": "And then (然后)",
+          "description": "Chaining events in time",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cn1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"然后\" (rán hòu) mean?",
+              "options": ["Before", "And then", "But", "Because"],
+              "answer": "And then"
+            },
+            {
+              "id": "cn1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I get up, then eat breakfast\"",
+              "answer": "我 起床 然后 吃 早饭",
+              "bank": ["我", "起床", "然后", "吃", "早饭", "睡觉", "回家"]
+            },
+            {
+              "id": "cn1-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the best translation: \"我们 看 电影 然后 吃饭\"",
+              "options": [
+                "We watch a movie, then eat",
+                "We eat, then watch a movie",
+                "We watch a movie or eat",
+                "We don't watch movies and don't eat"
+              ],
+              "answer": "We watch a movie, then eat"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-connect-2",
+          "title": "But (但是)",
+          "description": "Contrasting two ideas",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cn2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"但是\" (dàn shì) mean?",
+              "options": ["And", "Or", "But", "Then"],
+              "answer": "But"
+            },
+            {
+              "id": "cn2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to go, but I have no time\"",
+              "answer": "我 想 去 但是 我 没 时间",
+              "bank": ["我", "想", "去", "但是", "我", "没", "时间", "因为", "所以"]
+            },
+            {
+              "id": "cn2-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"可是\" (kě shì) mean?",
+              "options": ["Also \"but\" (more conversational)", "Because", "Or", "Then"],
+              "answer": "Also \"but\" (more conversational)"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-connect-3",
+          "title": "Because…so (因为…所以)",
+          "description": "Cause and effect",
+          "theme": "basics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "cn3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"因为\" (yīn wèi) mean?",
+              "options": ["But", "Because", "Therefore", "Although"],
+              "answer": "Because"
+            },
+            {
+              "id": "cn3-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"所以\" (suǒ yǐ) mean?",
+              "options": ["Because", "But", "So / therefore", "Then"],
+              "answer": "So / therefore"
+            },
+            {
+              "id": "cn3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Because of the rain, I didn't go\"",
+              "answer": "因为 下雨 所以 我 没 去",
+              "bank": ["因为", "下雨", "所以", "我", "没", "去", "但是", "然后"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-connect-4",
+          "title": "Or (或者 / 还是)",
+          "description": "Two flavors of \"or\"",
+          "theme": "basics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "cn4-1",
+              "type": "multiple_choice",
+              "prompt": "Which \"or\" goes in a statement (\"I want tea or coffee\")?",
+              "options": ["还是", "或者", "或是", "都是"],
+              "answer": "或者"
+            },
+            {
+              "id": "cn4-2",
+              "type": "multiple_choice",
+              "prompt": "Which \"or\" goes in a choice question (\"Do you want tea or coffee?\")?",
+              "options": ["或者", "还是", "也是", "或是"],
+              "answer": "还是"
+            },
+            {
+              "id": "cn4-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Do you want to walk or drive?\"",
+              "answer": "你 想 走路 还是 开车",
+              "bank": ["你", "想", "走路", "还是", "开车", "或者", "吗"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-a2-review",
+      "title": "A2 review",
+      "description": "Mixed practice across the elementary topics",
+      "theme": "review",
+      "lessons": [
+        {
+          "id": "zh-en-a2-review-1",
+          "title": "Routines & feelings",
+          "description": "Daily life recap",
+          "theme": "review",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "rv1-1",
+              "type": "multiple_choice",
+              "prompt": "Which means \"every day\"?",
+              "options": ["每天", "明天", "今天", "昨天"],
+              "answer": "每天"
+            },
+            {
+              "id": "rv1-2",
+              "type": "match_pairs",
+              "prompt": "Match the feeling",
+              "pairs": [
+                { "left": "高兴", "right": "Happy" },
+                { "left": "累", "right": "Tired" },
+                { "left": "饿", "right": "Hungry" },
+                { "left": "渴", "right": "Thirsty" }
+              ]
+            },
+            {
+              "id": "rv1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I get up at seven every day\"",
+              "answer": "我 每天 七点 起床",
+              "bank": ["我", "每天", "七点", "起床", "睡觉", "上班"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-a2-review-2",
+          "title": "了 & 比",
+          "description": "Two big A2 grammars",
+          "theme": "review",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "rv2-1",
+              "type": "multiple_choice",
+              "prompt": "Which sentence means \"I have already eaten\"?",
+              "options": [
+                "我 已经 吃 了",
+                "我 还没 吃",
+                "我 想 吃",
+                "我 不 吃"
+              ],
+              "answer": "我 已经 吃 了"
+            },
+            {
+              "id": "rv2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He is taller than me\"",
+              "answer": "他 比 我 高",
+              "bank": ["他", "比", "我", "高", "更", "最", "很"]
+            },
+            {
+              "id": "rv2-3",
+              "type": "multiple_choice",
+              "prompt": "Which means \"I haven't gone yet\"?",
+              "options": [
+                "我 还没 去",
+                "我 已经 去 了",
+                "我 没 去 过",
+                "我 不 去"
+              ],
+              "answer": "我 还没 去"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-a2-review-3",
+          "title": "Out & about",
+          "description": "Shopping, transport, plans",
+          "theme": "review",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "rv3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"太贵了\" mean?",
+              "options": ["Too cheap", "Too expensive", "Just right", "Free"],
+              "answer": "Too expensive"
+            },
+            {
+              "id": "rv3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Let's go eat together\"",
+              "answer": "我们 一起 去 吃饭 吧",
+              "bank": ["我们", "一起", "去", "吃饭", "吧", "他", "明天"]
+            },
+            {
+              "id": "rv3-3",
+              "type": "multiple_choice",
+              "prompt": "Which means \"take the subway\"?",
+              "options": ["坐 地铁", "开 地铁", "走 地铁", "骑 地铁"],
+              "answer": "坐 地铁"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-a2-review-4",
+          "title": "Putting it together",
+          "description": "Connectors + everything else",
+          "theme": "review",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "rv4-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Because I'm tired, I want to sleep\"",
+              "answer": "因为 我 累 所以 我 想 睡觉",
+              "bank": ["因为", "我", "累", "所以", "想", "睡觉", "但是", "然后"]
+            },
+            {
+              "id": "rv4-2",
+              "type": "multiple_choice",
+              "prompt": "Translate: \"今天 很 冷，我 穿 毛衣\"",
+              "options": [
+                "It's cold today, I'm wearing a sweater",
+                "It's hot today, I'm wearing a T-shirt",
+                "It's raining today, I'm carrying an umbrella",
+                "I'm cold and I want a sweater"
+              ],
+              "answer": "It's cold today, I'm wearing a sweater"
+            },
+            {
+              "id": "rv4-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the sentence you hear",
+              "spokenText": "我喜欢打篮球",
+              "options": ["我喜欢打篮球", "我喜欢踢足球", "我喜欢游泳", "我喜欢看书"],
+              "answer": "我喜欢打篮球",
+              "explanation": "我 喜欢 打 篮球 — \"I like playing basketball.\""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
