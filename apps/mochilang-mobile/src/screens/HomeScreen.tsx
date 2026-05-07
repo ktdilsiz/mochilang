@@ -14,14 +14,16 @@ import { colors, fontSizes, radius, space, tintForTheme } from '../lib/theme'
 
 interface Props {
   onSelectLesson: (lesson: Lesson) => void
+  onOpenGuide: (topic: Topic) => void
 }
 
 /**
- * Phase 1 HomeScreen — vertical lesson list grouped by topic + level.
- * The web version's winding sin-wave path is fancier; we render a flat
- * list here so the basic flow works. The fancy path lands in Phase 2.
+ * Phase 2 HomeScreen — vertical lesson list grouped by topic + level.
+ * The web version's winding sin-wave path is fancier; we still render a
+ * flat list here for cleaner small-screen layout. Topics with guides
+ * surface a "📖 Notes" button that opens the TopicGuide modal.
  */
-export default function HomeScreen({ onSelectLesson }: Props) {
+export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
   const progress = useProgress()
   const course = useCourse('zh-en')
 
@@ -77,6 +79,7 @@ export default function HomeScreen({ onSelectLesson }: Props) {
           isCompleted={isCompleted}
           nextId={nextId}
           onSelectLesson={onSelectLesson}
+          onOpenGuide={onOpenGuide}
         />
       ))}
     </ScrollView>
@@ -97,11 +100,13 @@ function LevelSection({
   isCompleted,
   nextId,
   onSelectLesson,
+  onOpenGuide,
 }: {
   level: Level
   isCompleted: (id: string) => boolean
   nextId: string | null
   onSelectLesson: (lesson: Lesson) => void
+  onOpenGuide: (topic: Topic) => void
 }) {
   return (
     <View style={styles.level}>
@@ -118,6 +123,7 @@ function LevelSection({
           isCompleted={isCompleted}
           nextId={nextId}
           onSelectLesson={onSelectLesson}
+          onOpenGuide={onOpenGuide}
         />
       ))}
     </View>
@@ -130,12 +136,14 @@ function TopicCard({
   isCompleted,
   nextId,
   onSelectLesson,
+  onOpenGuide,
 }: {
   topic: Topic
   topicNumber: number
   isCompleted: (id: string) => boolean
   nextId: string | null
   onSelectLesson: (lesson: Lesson) => void
+  onOpenGuide: (topic: Topic) => void
 }) {
   const tint = tintForTheme(topic.theme)
   const allDone = topic.lessons.every((l) => isCompleted(l.id))
@@ -151,14 +159,34 @@ function TopicCard({
           },
         ]}
       >
-        <Text style={[styles.topicEyebrow, { color: tint.fg }]}>
-          Topic {topicNumber}
-          {allDone ? ' ✓' : ''}
-        </Text>
-        <Text style={[styles.topicTitle, { color: tint.fg }]}>{topic.title}</Text>
-        <Text style={[styles.topicDesc, { color: tint.fg }]}>
-          {topic.description}
-        </Text>
+        <View style={styles.topicHeaderRow}>
+          <View style={{ flex: 1 }}>
+            <Text style={[styles.topicEyebrow, { color: tint.fg }]}>
+              Topic {topicNumber}
+              {allDone ? ' ✓' : ''}
+            </Text>
+            <Text style={[styles.topicTitle, { color: tint.fg }]}>
+              {topic.title}
+            </Text>
+            <Text style={[styles.topicDesc, { color: tint.fg }]}>
+              {topic.description}
+            </Text>
+          </View>
+          {topic.guide && (
+            <Pressable
+              onPress={() => onOpenGuide(topic)}
+              style={({ pressed }) => [
+                styles.notesBtn,
+                { borderColor: tint.fg },
+                pressed && { transform: [{ translateY: 1 }] },
+              ]}
+            >
+              <Text style={[styles.notesBtnText, { color: tint.fg }]}>
+                📖 Notes
+              </Text>
+            </Pressable>
+          )}
+        </View>
       </View>
 
       <View style={styles.lessons}>
@@ -260,6 +288,24 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     padding: space.md,
     borderBottomWidth: 4,
+  },
+  topicHeaderRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: space.sm,
+  },
+  notesBtn: {
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    borderWidth: 2,
+    borderRadius: radius.pill,
+    paddingHorizontal: space.md,
+    paddingVertical: 4,
+  },
+  notesBtnText: {
+    fontSize: fontSizes.xs,
+    fontWeight: '900',
+    letterSpacing: 1,
+    textTransform: 'uppercase',
   },
   topicEyebrow: {
     fontSize: fontSizes.xs,

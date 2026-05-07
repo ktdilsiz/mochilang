@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { api, ApiError, type Level } from '@mochilang/shared'
+import courseZhEn from '../../assets/course-zh-en.json'
 
 interface CourseEnvelope {
   id: string
@@ -7,15 +8,23 @@ interface CourseEnvelope {
 }
 
 /**
- * RN equivalent of the web `useCourse` hook. The mobile app doesn't
- * bundle the course JSON yet (Phase 2 — would use Metro's `require`),
- * so today it's API-only with an empty initial state. Backend offline
- * = no levels render until it comes back. Acceptable for the Phase 1
- * preview; we'll add a bundled fallback once the rest of the screens
- * are ported.
+ * Mobile useCourse — bundled JSON fallback + API refresh.
+ *
+ * Metro inlines `course-zh-en.json` at build time so the app has the
+ * full curriculum on first launch without any network round-trip. The
+ * effect then re-fetches `/api/content/courses/:id` to pick up any
+ * server-side updates; on failure we silently keep the bundled copy.
  */
+const BUNDLE: Record<string, CourseEnvelope> = {
+  'zh-en': courseZhEn as unknown as CourseEnvelope,
+}
+
+function levelsFromBundle(courseId: string): Level[] {
+  return BUNDLE[courseId]?.levels ?? []
+}
+
 export function useCourse(courseId: string) {
-  const [levels, setLevels] = useState<Level[]>([])
+  const [levels, setLevels] = useState<Level[]>(() => levelsFromBundle(courseId))
   const [loading, setLoading] = useState(true)
   const [stale, setStale] = useState(false)
 
@@ -31,10 +40,10 @@ export function useCourse(courseId: string) {
         setStale(false)
       } catch (err) {
         if (err instanceof ApiError) {
-          // 4xx — empty state
+          // 4xx — bundle is the source of truth, keep it.
           return
         }
-        // Network failure — flag stale, keep empty for now
+        // Network failure — flag stale so the UI can show "offline" hint.
         setStale(true)
       } finally {
         setLoading(false)

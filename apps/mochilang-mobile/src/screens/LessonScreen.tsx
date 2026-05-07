@@ -6,9 +6,14 @@ import {
   Text,
   View,
 } from 'react-native'
-import * as Speech from 'expo-speech'
 import type { Exercise, Lesson } from '@mochilang/shared'
 import LedgeButton from '../components/LedgeButton'
+import FillBlank, {
+  checkAnswer as checkFillBlank,
+} from '../components/exercises/FillBlank'
+import MatchPairs from '../components/exercises/MatchPairs'
+import ListenAndChoose from '../components/exercises/ListenAndChoose'
+import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -17,29 +22,34 @@ interface Props {
   onBack: () => void
 }
 
+type Feedback = 'idle' | 'correct' | 'wrong'
+
 /**
- * Phase 1 LessonScreen — supports `multiple_choice` end-to-end and shows
- * a "this exercise type isn't ported yet" placeholder for the other four.
- * Phase 2 ports fill_blank, match_pairs, listen_and_choose, and
- * tap_words_in_order.
+ * LessonScreen — dispatches each `Exercise` to its specialized component
+ * and grades on the unified inputs (mcSelected / fbValue / tapValue) +
+ * the match_pairs auto-complete callback. Mirrors the web LessonScreen.
  */
 export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
   const [index, setIndex] = useState(0)
   const [mistakes, setMistakes] = useState(0)
-  const [selected, setSelected] = useState<string | null>(null)
-  const [feedback, setFeedback] = useState<'idle' | 'correct' | 'wrong'>('idle')
+  const [feedback, setFeedback] = useState<Feedback>('idle')
+  const [resetKey, setResetKey] = useState(0)
+
+  // Per-type input state. Lifted here so LessonScreen can grade on Check.
+  const [mcSelected, setMcSelected] = useState<string | null>(null)
+  const [fbValue, setFbValue] = useState('')
+  const [tapValue, setTapValue] = useState('')
 
   const ex = lesson.exercises[index]
   const isLast = index === lesson.exercises.length - 1
   const total = lesson.exercises.length
+  const locked = feedback !== 'idle'
 
   function check() {
-    if (ex.type !== 'multiple_choice') {
-      // Auto-advance unsupported types — they're stubs in Phase 1.
-      next()
-      return
-    }
-    if (selected === ex.answer) {
+    if (locked) return
+    const result = grade(ex, { mcSelected, fbValue, tapValue })
+    if (!result) return
+    if (result.correct) {
       setFeedback('correct')
     } else {
       setFeedback('wrong')
@@ -53,8 +63,36 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
       return
     }
     setIndex((i) => i + 1)
-    setSelected(null)
     setFeedback('idle')
+    setMcSelected(null)
+    setFbValue('')
+    setTapValue('')
+    setResetKey((k) => k + 1)
+  }
+
+  function canCheck(): boolean {
+    switch (ex.type) {
+      case 'multiple_choice':
+      case 'listen_and_choose':
+        return mcSelected !== null
+      case 'fill_blank':
+        return fbValue.trim().length > 0
+      case 'tap_words_in_order':
+        return tapValue.length > 0
+      case 'match_pairs':
+        return false
+    }
+  }
+
+  // match_pairs auto-completes once all pairs match. Treat extraMistakes
+  // (mismatches during the matching) the same as wrong attempts.
+  function handleMatchComplete(extraMistakes: number) {
+    if (extraMistakes > 0) {
+      setMistakes((m) => m + extraMistakes)
+      setFeedback('wrong')
+    } else {
+      setFeedback('correct')
+    }
   }
 
   return (
@@ -79,9 +117,14 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
       <ScrollView contentContainerStyle={styles.body}>
         <ExerciseView
           ex={ex}
-          locked={feedback !== 'idle'}
-          selected={selected}
-          onSelect={(v) => setSelected(v)}
+          locked={locked}
+          mcSelected={mcSelected}
+          setMcSelected={setMcSelected}
+          fbValue={fbValue}
+          setFbValue={setFbValue}
+          setTapValue={setTapValue}
+          onMatchComplete={handleMatchComplete}
+          resetKey={resetKey}
         />
       </ScrollView>
 
@@ -91,20 +134,27 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
             ✓ Correct!
           </Text>
         )}
-        {feedback === 'wrong' && ex.type === 'multiple_choice' && (
+        {feedback === 'wrong' && (
           <Text style={[styles.feedback, { color: colors.error700 }]}>
-            Correct: {ex.answer}
+            {wrongMessage(ex)}
           </Text>
         )}
-        <LedgeButton
-          label={feedback === 'idle' ? 'Check' : isLast ? 'Finish' : 'Continue'}
-          tone={feedback === 'wrong' ? 'error' : 'primary'}
-          size="lg"
-          disabled={
-            feedback === 'idle' && ex.type === 'multiple_choice' && !selected
-          }
-          onPress={feedback === 'idle' ? check : next}
-        />
+        {feedback === 'idle' && ex.type === 'match_pairs' ? (
+          <LedgeButton
+            label="Match all pairs to continue"
+            tone="neutral"
+            size="lg"
+            disabled
+          />
+        ) : (
+          <LedgeButton
+            label={feedback === 'idle' ? 'Check' : isLast ? 'Finish' : 'Continue'}
+            tone={feedback === 'wrong' ? 'error' : 'primary'}
+            size="lg"
+            disabled={feedback === 'idle' && !canCheck()}
+            onPress={feedback === 'idle' ? check : next}
+          />
+        )}
       </View>
     </View>
   )
@@ -113,62 +163,125 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
 interface ExerciseViewProps {
   ex: Exercise
   locked: boolean
-  selected: string | null
-  onSelect: (value: string) => void
+  mcSelected: string | null
+  setMcSelected: (v: string) => void
+  fbValue: string
+  setFbValue: (v: string) => void
+  setTapValue: (v: string) => void
+  onMatchComplete: (mistakes: number) => void
+  resetKey: number
 }
 
-function ExerciseView({ ex, locked, selected, onSelect }: ExerciseViewProps) {
-  if (ex.type === 'multiple_choice') {
-    return (
-      <View style={styles.exRoot}>
-        <Text style={styles.prompt}>{ex.prompt}</Text>
-        <View style={styles.options}>
-          {ex.options.map((opt) => {
-            const isSel = selected === opt
-            const isCorrect = locked && opt === ex.answer
-            const isWrong = locked && isSel && opt !== ex.answer
-            return (
-              <Pressable
-                key={opt}
-                onPress={() => !locked && onSelect(opt)}
-                style={[
-                  styles.option,
-                  isSel && styles.optionSelected,
-                  isCorrect && styles.optionCorrect,
-                  isWrong && styles.optionWrong,
-                ]}
-              >
-                <Text style={styles.optionText}>{opt}</Text>
-              </Pressable>
-            )
-          })}
+function ExerciseView({
+  ex,
+  locked,
+  mcSelected,
+  setMcSelected,
+  fbValue,
+  setFbValue,
+  setTapValue,
+  onMatchComplete,
+  resetKey,
+}: ExerciseViewProps) {
+  switch (ex.type) {
+    case 'multiple_choice':
+      return (
+        <View style={styles.exRoot}>
+          <Text style={styles.prompt}>{ex.prompt}</Text>
+          <View style={styles.options}>
+            {ex.options.map((opt) => {
+              const isSel = mcSelected === opt
+              const isCorrect = locked && opt === ex.answer
+              const isWrong = locked && isSel && opt !== ex.answer
+              return (
+                <Pressable
+                  key={opt}
+                  onPress={() => !locked && setMcSelected(opt)}
+                  style={[
+                    styles.option,
+                    isSel && !locked && styles.optionSelected,
+                    isCorrect && styles.optionCorrect,
+                    isWrong && styles.optionWrong,
+                  ]}
+                >
+                  <Text style={styles.optionText}>{opt}</Text>
+                </Pressable>
+              )
+            })}
+          </View>
         </View>
-      </View>
-    )
+      )
+    case 'fill_blank':
+      return (
+        <FillBlank
+          exercise={ex}
+          value={fbValue}
+          locked={locked}
+          onChange={setFbValue}
+        />
+      )
+    case 'match_pairs':
+      return (
+        <MatchPairs
+          exercise={ex}
+          locked={locked}
+          onComplete={onMatchComplete}
+          resetKey={resetKey}
+        />
+      )
+    case 'listen_and_choose':
+      return (
+        <ListenAndChoose
+          exercise={ex}
+          selected={mcSelected}
+          locked={locked}
+          onSelect={setMcSelected}
+        />
+      )
+    case 'tap_words_in_order':
+      return (
+        <TapWordsInOrder
+          exercise={ex}
+          locked={locked}
+          onChange={setTapValue}
+          resetKey={resetKey}
+        />
+      )
   }
+}
 
-  // Stubs for the other 4 exercise types — Phase 2 work.
-  return (
-    <View style={styles.exRoot}>
-      <Text style={styles.prompt}>{('prompt' in ex && ex.prompt) || ex.id}</Text>
-      <View style={styles.stubBox}>
-        <Text style={styles.stubTitle}>{ex.type} (Phase 2)</Text>
-        <Text style={styles.stubBody}>
-          This exercise type isn't ported yet — tap Continue to skip.
-        </Text>
-        {ex.type === 'listen_and_choose' && (
-          <Pressable
-            style={styles.stubPlay}
-            onPress={() =>
-              Speech.speak(ex.spokenText, { language: 'zh-CN' })
-            }
-          >
-            <Text style={styles.stubPlayText}>🔊 Hear it anyway</Text>
-          </Pressable>
-        )}
-      </View>
-    </View>
-  )
+function grade(
+  exercise: Exercise,
+  inputs: { mcSelected: string | null; fbValue: string; tapValue: string }
+): { correct: boolean } | null {
+  switch (exercise.type) {
+    case 'multiple_choice':
+    case 'listen_and_choose':
+      if (inputs.mcSelected === null) return null
+      return { correct: inputs.mcSelected === exercise.answer }
+    case 'fill_blank':
+      if (inputs.fbValue.trim().length === 0) return null
+      return { correct: checkFillBlank(inputs.fbValue, exercise) }
+    case 'tap_words_in_order':
+      if (inputs.tapValue.length === 0) return null
+      return { correct: inputs.tapValue === exercise.answer }
+    case 'match_pairs':
+      return null
+  }
+}
+
+function wrongMessage(ex: Exercise): string {
+  switch (ex.type) {
+    case 'multiple_choice':
+    case 'listen_and_choose':
+      return `Correct: ${ex.answer}`
+    case 'fill_blank':
+      return `Answer: ${ex.answer}`
+    case 'tap_words_in_order':
+      return `Correct: ${ex.answer}`
+    case 'match_pairs':
+      return 'Some pairs were missed.'
+  }
 }
 
 const styles = StyleSheet.create({
@@ -203,7 +316,13 @@ const styles = StyleSheet.create({
   progressText: { fontSize: fontSizes.xs, color: colors.textMuted, fontWeight: '700' },
   body: { padding: space.lg, gap: space.lg, flexGrow: 1 },
   exRoot: { gap: space.lg },
-  prompt: { fontSize: fontSizes.xl, fontWeight: '800', color: colors.text },
+  prompt: {
+    fontSize: fontSizes.xxl,
+    fontWeight: '800',
+    color: colors.text,
+    textAlign: 'center',
+    lineHeight: fontSizes.xxl * 1.3,
+  },
   options: { gap: space.sm },
   option: {
     backgroundColor: colors.surface,
@@ -225,22 +344,4 @@ const styles = StyleSheet.create({
     gap: space.sm,
   },
   feedback: { fontSize: fontSizes.md, fontWeight: '800' },
-  stubBox: {
-    backgroundColor: colors.surfaceAlt,
-    borderRadius: radius.md,
-    padding: space.lg,
-    gap: space.sm,
-  },
-  stubTitle: { fontSize: fontSizes.md, fontWeight: '900', color: colors.textMuted },
-  stubBody: { fontSize: fontSizes.sm, color: colors.textMuted },
-  stubPlay: {
-    backgroundColor: colors.surface,
-    padding: space.md,
-    borderRadius: radius.sm,
-    borderWidth: 2,
-    borderColor: colors.border,
-    alignItems: 'center',
-    marginTop: space.sm,
-  },
-  stubPlayText: { fontSize: fontSizes.md, fontWeight: '800', color: colors.text },
 })

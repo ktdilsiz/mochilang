@@ -3,30 +3,49 @@ import { useEffect, useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
 import Constants from 'expo-constants'
 import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import {
+  createNativeStackNavigator,
+  type NativeStackScreenProps,
+} from '@react-navigation/native-stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Text, View } from 'react-native'
-import { configureApiBaseUrl, setOfflineMode, type Lesson } from '@mochilang/shared'
+import {
+  configureApiBaseUrl,
+  setOfflineMode,
+  type Lesson,
+  type Topic,
+} from '@mochilang/shared'
 import LoginScreen from './src/screens/LoginScreen'
 import HomeScreen from './src/screens/HomeScreen'
 import LessonScreen from './src/screens/LessonScreen'
-import StubScreen from './src/screens/StubScreen'
+import LeagueScreen from './src/screens/LeagueScreen'
+import FriendsScreen from './src/screens/FriendsScreen'
+import ProfileScreen from './src/screens/ProfileScreen'
+import TopicGuideScreen from './src/screens/TopicGuideScreen'
+import ProfileSetup from './src/components/ProfileSetup'
 import { useProgress } from './src/state/useProgress'
+import { useProfile } from './src/state/useProfile'
+import { useCourse } from './src/state/useCourse'
 import { colors } from './src/lib/theme'
 
-// Wire the API base URL from Expo config so the shared client can run
-// in either app. The wrapper's app.json `extra.apiUrl` overrides; the
-// fallback assumes the API is on the same machine that's running
-// Expo Go (only useful for the Expo Go web preview).
+// API base URL — Expo Constants extra. Override in app.json for LAN/prod.
 configureApiBaseUrl(
   ((Constants.expoConfig?.extra as { apiUrl?: string })?.apiUrl) ??
     'http://localhost:8181'
 )
 
+// Phase 2 still ships offline-mode by default. Google sign-in (with
+// expo-auth-session) lands in Phase 3.
+setOfflineMode(true)
+
 type RootStackParamList = {
   Tabs: undefined
   Lesson: { lesson: Lesson }
+  Guide: { topic: Topic }
 }
+
+// Convenience alias used at the tab leaves to navigate the parent stack.
+type RootNav = NativeStackScreenProps<RootStackParamList>['navigation']
 
 type TabParamList = {
   Home: undefined
@@ -39,9 +58,6 @@ const Stack = createNativeStackNavigator<RootStackParamList>()
 const Tabs = createBottomTabNavigator<TabParamList>()
 
 export default function App() {
-  // Phase 1: skip the auth flow entirely on first mount, drop into
-  // offline mode, show the LoginScreen briefly, then advance. Phase 2
-  // will wire api.me() + Google sign-in.
   const [signedIn, setSignedIn] = useState(false)
 
   if (!signedIn) {
@@ -53,22 +69,67 @@ export default function App() {
     )
   }
 
+  return <SignedInApp onSignOut={() => setSignedIn(false)} />
+}
+
+interface SignedInAppProps {
+  onSignOut: () => void
+}
+
+function SignedInApp({ onSignOut }: SignedInAppProps) {
+  const progress = useProgress()
+  const profile = useProfile()
+  const course = useCourse('zh-en')
+
+  // First-launch profile setup overlay — same trigger as web. Stays
+  // mounted on top of the navigator until the user has picked a name.
+  const showSetup = profile.state.name === null
+
   return (
     <NavigationContainer>
       <StatusBar style="auto" />
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Tabs" component={SignedInTabs} />
+        <Stack.Screen name="Tabs">
+          {() => (
+            <SignedInTabs
+              progress={progress}
+              profile={profile}
+              course={course}
+              onSignOut={onSignOut}
+            />
+          )}
+        </Stack.Screen>
         <Stack.Screen
           name="Lesson"
-          component={LessonScreenWrapper}
           options={{ presentation: 'modal' }}
-        />
+        >
+          {(props) => <LessonRoute progress={progress} {...props} />}
+        </Stack.Screen>
+        <Stack.Screen
+          name="Guide"
+          options={{ presentation: 'modal' }}
+        >
+          {(props) => <GuideRoute {...props} />}
+        </Stack.Screen>
       </Stack.Navigator>
+
+      {showSetup && (
+        <ProfileSetup
+          onSubmit={(name, avatarId) => profile.setProfile({ name, avatarId })}
+        />
+      )}
     </NavigationContainer>
   )
 }
 
-function SignedInTabs() {
+interface SignedInTabsProps {
+  progress: ReturnType<typeof useProgress>
+  profile: ReturnType<typeof useProfile>
+  course: ReturnType<typeof useCourse>
+  onSignOut: () => void
+}
+
+function SignedInTabs({ progress, profile, course, onSignOut }: SignedInTabsProps) {
   return (
     <Tabs.Navigator
       screenOptions={{
@@ -88,62 +149,87 @@ function SignedInTabs() {
         {(props) => (
           <HomeScreen
             onSelectLesson={(lesson) =>
-              props.navigation.getParent()?.navigate('Lesson', { lesson })
+              (props.navigation.getParent() as RootNav | undefined)?.navigate('Lesson', { lesson })
+            }
+            onOpenGuide={(topic) =>
+              (props.navigation.getParent() as RootNav | undefined)?.navigate(
+                'Guide',
+                { topic }
+              )
             }
           />
         )}
       </Tabs.Screen>
-      <Tabs.Screen name="League" options={{ tabBarIcon: tabIcon('🛡') }}>
+      <Tabs.Screen
+        name="League"
+        options={{ tabBarLabel: 'League', tabBarIcon: tabIcon('🛡') }}
+      >
         {() => (
-          <StubScreen
-            title="League"
-            emoji="🛡"
-            body="Weekly leaderboard with bot competitors. Phase 2 brings the full ranked board with promote/demote zones."
+          <LeagueScreen
+            progress={progress.state}
+            profile={profile.state}
+            setProfile={profile.setProfile}
           />
         )}
       </Tabs.Screen>
-      <Tabs.Screen name="Friends" options={{ tabBarIcon: tabIcon('👥') }}>
-        {() => (
-          <StubScreen
-            title="Friends"
-            emoji="👥"
-            body="Your friend roster with weekly XP sparklines. Phase 2."
+      <Tabs.Screen
+        name="Friends"
+        options={{ tabBarLabel: 'Friends', tabBarIcon: tabIcon('👥') }}
+      >
+        {() => <FriendsScreen />}
+      </Tabs.Screen>
+      <Tabs.Screen
+        name="Profile"
+        options={{ tabBarLabel: 'Profile', tabBarIcon: tabIcon('👤') }}
+      >
+        {(props) => (
+          <ProfileScreen
+            progress={progress.state}
+            profile={profile.state}
+            setProfile={profile.setProfile}
+            offline={true /* Phase 2 stays offline-only */}
+            levels={course.levels}
+            onSwitchLanguage={onSignOut /* repurposed — Phase 3 will add a real picker */}
+            onResetProgress={() => void progress.reset()}
+            onResetProfile={() => void profile.reset()}
+            onSignOut={onSignOut}
+            onSwitchToLogin={onSignOut}
+            onStartLesson={(lesson) =>
+              (props.navigation.getParent() as RootNav | undefined)?.navigate('Lesson', { lesson })
+            }
           />
         )}
-      </Tabs.Screen>
-      <Tabs.Screen name="Profile" options={{ tabBarIcon: tabIcon('👤') }}>
-        {() => <ProfileStub />}
       </Tabs.Screen>
     </Tabs.Navigator>
   )
 }
 
-function ProfileStub() {
-  const progress = useProgress()
-  return (
-    <StubScreen
-      title="Profile"
-      emoji="👤"
-      body={`Stats are working: ${progress.state.totalXp} XP, ${progress.state.streak}-day streak. The full Profile screen with avatar selection, settings, and the spaced-review modal lands in Phase 2.`}
-    />
-  )
-}
-
-function LessonScreenWrapper(props: {
-  route: { params: { lesson: Lesson } }
-  navigation: { goBack: () => void }
+function LessonRoute({
+  route,
+  navigation,
+  progress,
+}: NativeStackScreenProps<RootStackParamList, 'Lesson'> & {
+  progress: ReturnType<typeof useProgress>
 }) {
-  const progress = useProgress()
-  const lesson = props.route.params.lesson
+  const lesson = route.params.lesson
   return (
     <LessonScreen
       lesson={lesson}
       onComplete={(mistakes) => {
         void progress.recordCompletion(lesson.id, mistakes, lesson.xp)
-        props.navigation.goBack()
+        navigation.goBack()
       }}
-      onBack={() => props.navigation.goBack()}
+      onBack={() => navigation.goBack()}
     />
+  )
+}
+
+function GuideRoute({
+  route,
+  navigation,
+}: NativeStackScreenProps<RootStackParamList, 'Guide'>) {
+  return (
+    <TopicGuideScreen topic={route.params.topic} onBack={() => navigation.goBack()} />
   )
 }
 
@@ -154,7 +240,3 @@ function tabIcon(emoji: string) {
     </View>
   )
 }
-
-// Wire the offline mode flag at module load so the Phase 1 offline-only
-// flow doesn't accidentally hit a non-existent API.
-setOfflineMode(true)
