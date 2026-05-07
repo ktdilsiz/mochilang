@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Mochilang",
+    "slug": "mochilang-mobile",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fffbf2"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mochilang.mobile"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#fffbf2"
+      },
+      "package": "com.mochilang.mobile",
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "_comment": "Edit webUrl to your laptop's LAN URL (vite dev server) or a hosted production URL. Phone needs network reachability — same WiFi for LAN, public internet for hosted.",
+      "webUrl": "http://localhost:5175"
+    }
+  }
+}
