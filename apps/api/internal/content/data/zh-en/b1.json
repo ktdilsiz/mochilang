@@ -1,0 +1,2654 @@
+{
+  "id": "b1",
+  "name": "B1 — Intermediate",
+  "description": "Travel, work, opinions, and stories — handle real situations and talk about past experiences in detail.",
+  "topics": [
+    {
+      "id": "zh-en-travel",
+      "title": "Travel & airports",
+      "description": "Booking flights, checking in, and finding your hotel",
+      "theme": "directions",
+      "lessons": [
+        {
+          "id": "zh-en-travel-1",
+          "title": "At the airport",
+          "description": "Tickets, gates, and luggage",
+          "theme": "directions",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "tv1-1",
+              "type": "match_pairs",
+              "prompt": "Match the airport word",
+              "pairs": [
+                { "left": "机场", "right": "Airport" },
+                { "left": "航班", "right": "Flight" },
+                { "left": "登机牌", "right": "Boarding pass" },
+                { "left": "行李", "right": "Luggage" }
+              ]
+            },
+            {
+              "id": "tv1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"护照\" (hù zhào) mean?",
+              "options": ["Visa", "Passport", "Ticket", "ID card"],
+              "answer": "Passport"
+            },
+            {
+              "id": "tv1-3",
+              "type": "fill_blank",
+              "prompt": "\"安检\" (ān jiǎn) means ___",
+              "answer": "Security check",
+              "acceptableAnswers": ["Security", "Airport security"]
+            },
+            {
+              "id": "tv1-4",
+              "type": "multiple_choice",
+              "prompt": "Which means \"to board (a plane)\"?",
+              "options": ["下机", "登机", "起飞", "降落"],
+              "answer": "登机"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-travel-2",
+          "title": "Booking & buying tickets",
+          "description": "Reservations and one-way vs round-trip",
+          "theme": "directions",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "tv2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"订机票\" (dìng jī piào) mean?",
+              "options": ["Cancel a ticket", "Book a flight ticket", "Lose a ticket", "Refund a ticket"],
+              "answer": "Book a flight ticket"
+            },
+            {
+              "id": "tv2-2",
+              "type": "match_pairs",
+              "prompt": "Match the ticket term",
+              "pairs": [
+                { "left": "单程", "right": "One-way" },
+                { "left": "往返", "right": "Round-trip" },
+                { "left": "经济舱", "right": "Economy class" },
+                { "left": "头等舱", "right": "First class" }
+              ]
+            },
+            {
+              "id": "tv2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to book a one-way ticket\"",
+              "answer": "我 想 订 一 张 单程 票",
+              "bank": ["我", "想", "订", "一", "张", "单程", "票", "往返", "买"],
+              "explanation": "张 (zhāng) is the measure word for tickets and flat objects."
+            },
+            {
+              "id": "tv2-4",
+              "type": "fill_blank",
+              "prompt": "\"取消\" (qǔ xiāo) means ___",
+              "answer": "Cancel",
+              "acceptableAnswers": ["To cancel"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-travel-3",
+          "title": "At the hotel",
+          "description": "Check in, room types, and key cards",
+          "theme": "directions",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "tv3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"酒店\" (jiǔ diàn) mean?",
+              "options": ["Restaurant", "Hotel", "Bar", "Hostel"],
+              "answer": "Hotel"
+            },
+            {
+              "id": "tv3-2",
+              "type": "match_pairs",
+              "prompt": "Match the hotel word",
+              "pairs": [
+                { "left": "前台", "right": "Front desk" },
+                { "left": "单人间", "right": "Single room" },
+                { "left": "双人间", "right": "Double room" },
+                { "left": "房卡", "right": "Key card" }
+              ]
+            },
+            {
+              "id": "tv3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'd like to check in\"",
+              "answer": "我 想 办 入住",
+              "bank": ["我", "想", "办", "入住", "退房", "登记"]
+            },
+            {
+              "id": "tv3-4",
+              "type": "multiple_choice",
+              "prompt": "What does \"退房\" (tuì fáng) mean?",
+              "options": ["Check in", "Check out", "Pay deposit", "Cancel reservation"],
+              "answer": "Check out"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-travel-4",
+          "title": "Lost & asking for help",
+          "description": "When things go wrong on the road",
+          "theme": "directions",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "tv4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 迷路 了\" (wǒ mí lù le) mean?",
+              "options": ["I'm hungry", "I'm lost", "I'm tired", "I'm late"],
+              "answer": "I'm lost"
+            },
+            {
+              "id": "tv4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My luggage is gone\"",
+              "answer": "我 的 行李 不见 了",
+              "bank": ["我", "的", "行李", "不见", "了", "找到", "丢"],
+              "explanation": "不见了 — \"is gone / missing\" — a very common pattern."
+            },
+            {
+              "id": "tv4-3",
+              "type": "fill_blank",
+              "prompt": "\"请 帮 我\" (qǐng bāng wǒ) means \"Please ___ me\"",
+              "answer": "Help",
+              "acceptableAnswers": ["help me"]
+            },
+            {
+              "id": "tv4-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "我的护照丢了",
+              "options": ["我的护照丢了", "我的行李丢了", "我的钱包丢了", "我的手机丢了"],
+              "answer": "我的护照丢了",
+              "explanation": "丢 (diū) — to lose. \"My passport is lost.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-disposal",
+      "title": "The 把 construction",
+      "description": "Putting the object first to talk about what you do TO it",
+      "theme": "verbs",
+      "guide": {
+        "intro": "把 (bǎ) is one of the most distinctive features of Mandarin grammar. It moves the object before the verb to say \"take X and do something to it\". You'll hear it constantly — and English doesn't have a clean equivalent.",
+        "sections": [
+          { "kind": "heading", "text": "The basic shape" },
+          {
+            "kind": "paragraph",
+            "text": "Normal Chinese order is Subject–Verb–Object. With 把, you reorder to Subject–把–Object–Verb–(extra). The \"extra\" part is crucial — 把 sentences almost never end on a bare verb. There has to be a result, location, or change attached."
+          },
+          {
+            "kind": "table",
+            "headers": ["Plain", "With 把"],
+            "rows": [
+              ["我 关 门", "我 把 门 关 上"],
+              ["他 吃 苹果", "他 把 苹果 吃 了"],
+              ["请 放 书 在 桌子 上", "请 把 书 放 在 桌子 上"]
+            ]
+          },
+          { "kind": "heading", "text": "When to use 把" },
+          {
+            "kind": "paragraph",
+            "text": "Use 把 when you want to emphasize what HAPPENS TO a specific, known object — moving it, finishing it, changing it, putting it somewhere. Both speaker and listener know which object you mean."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 把 作业 做 完 了。", "pinyin": "Wǒ bǎ zuòyè zuò wán le.", "translation": "I finished the homework." },
+              { "source": "请 把 窗户 打 开。", "pinyin": "Qǐng bǎ chuānghu dǎ kāi.", "translation": "Please open the window." },
+              { "source": "他 把 杯子 打 破 了。", "pinyin": "Tā bǎ bēizi dǎ pò le.", "translation": "He broke the cup." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "If you can't say what HAPPENS TO the object, don't use 把. \"我 把 苹果 喜欢\" is wrong — 喜欢 (like) doesn't change the apple."
+          },
+          { "kind": "heading", "text": "What can't follow 把" },
+          {
+            "kind": "paragraph",
+            "text": "把 needs a verb that physically affects the object. Verbs that don't qualify: feeling/perception verbs (爱, 喜欢, 觉得, 知道), existence verbs (有, 是), and most stative or motion-only verbs (来, 去, 走)."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 喜欢 这 本 书。", "pinyin": "Wǒ xǐhuan zhè běn shū.", "translation": "I like this book. (NOT 我 把 这 本 书 喜欢)" },
+              { "source": "他 知道 答案。", "pinyin": "Tā zhīdao dá'àn.", "translation": "He knows the answer. (NOT 他 把 答案 知道)" }
+            ]
+          },
+          { "kind": "heading", "text": "Negation: 没 / 不 goes BEFORE 把" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 没 把 作业 做 完。", "pinyin": "Wǒ méi bǎ zuòyè zuò wán.", "translation": "I didn't finish the homework." },
+              { "source": "请 不要 把 门 关 上。", "pinyin": "Qǐng bú yào bǎ mén guān shàng.", "translation": "Please don't close the door." }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-disposal-1",
+          "title": "Why object-fronting?",
+          "description": "Transform plain SVO into S 把 O V",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ds1-1",
+              "type": "tap_words_in_order",
+              "prompt": "Rewrite \"我 关 门\" with 把 — \"I closed the door\"",
+              "answer": "我 把 门 关 上 了",
+              "bank": ["我", "把", "门", "关", "上", "了", "被", "好"],
+              "explanation": "Take the object 门, move it after 把, and add a result (上) and 了 to complete the action."
+            },
+            {
+              "id": "ds1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Rewrite \"他 喝 了 咖啡\" with 把 — \"He drank up the coffee\"",
+              "answer": "他 把 咖啡 喝 完 了",
+              "bank": ["他", "把", "咖啡", "喝", "完", "了", "被", "做"],
+              "explanation": "Move 咖啡 to the 把 slot. Add 完 (finished) so the verb has a result."
+            },
+            {
+              "id": "ds1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Rewrite \"请 放 书 在 桌子 上\" with 把 — \"Please put the book on the table\"",
+              "answer": "请 把 书 放 在 桌子 上",
+              "bank": ["请", "把", "书", "放", "在", "桌子", "上", "里", "了"],
+              "explanation": "Object-fronting is the rule whenever you tell someone WHERE to put something. The location 在 桌子 上 lives where the result usually goes."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-disposal-2",
+          "title": "Object first with 把",
+          "description": "The basic 把 pattern",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ds2-1",
+              "type": "multiple_choice",
+              "prompt": "What's the function of 把 in \"我 把 门 关 上\"?",
+              "options": [
+                "Marks the verb as past",
+                "Moves the object before the verb to focus on what happens to it",
+                "Marks a question",
+                "Negates the verb"
+              ],
+              "answer": "Moves the object before the verb to focus on what happens to it"
+            },
+            {
+              "id": "ds2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I finished the homework\" with 把",
+              "answer": "我 把 作业 做 完 了",
+              "bank": ["我", "把", "作业", "做", "完", "了", "被", "看"]
+            },
+            {
+              "id": "ds2-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct 把 sentence for \"Please open the window\":",
+              "options": [
+                "请 把 窗户 打 开",
+                "请 打 开 把 窗户",
+                "请 把 打 开 窗户",
+                "请 开 把 窗户"
+              ],
+              "answer": "请 把 窗户 打 开"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-disposal-3",
+          "title": "When 把 needs a result",
+          "description": "Why bare verbs don't work after 把",
+          "theme": "verbs",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "ds3-1",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is the most natural?",
+              "options": [
+                "我 把 苹果 吃",
+                "我 把 苹果 吃 完 了",
+                "我 把 苹果",
+                "我 苹果 把 吃"
+              ],
+              "answer": "我 把 苹果 吃 完 了",
+              "explanation": "把 sentences need something after the verb. A bare 了 (我 把 苹果 吃 了) works but a result complement like 完 (finished) or 光 (all gone) is more natural and specific."
+            },
+            {
+              "id": "ds3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He broke the cup\"",
+              "answer": "他 把 杯子 打 破 了",
+              "bank": ["他", "把", "杯子", "打", "破", "了", "被", "好"]
+            },
+            {
+              "id": "ds3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I lost the key\" with 把",
+              "answer": "我 把 钥匙 丢 了",
+              "bank": ["我", "把", "钥匙", "丢", "了", "被", "找"],
+              "explanation": "丢 (to lose) carries its own \"gone\" result so a bare 了 is enough — no extra complement needed."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-disposal-4",
+          "title": "把 with locations",
+          "description": "Putting things somewhere",
+          "theme": "verbs",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "ds4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"请 把 书 放 在 桌子 上\" mean?",
+              "options": [
+                "I want to read the book on the table",
+                "Please put the book on the table",
+                "The book is on the table",
+                "Please move the table to the book"
+              ],
+              "answer": "Please put the book on the table"
+            },
+            {
+              "id": "ds4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I put the bag in the car\"",
+              "answer": "我 把 包 放 在 车 里",
+              "bank": ["我", "把", "包", "放", "在", "车", "里", "上", "了"]
+            },
+            {
+              "id": "ds4-3",
+              "type": "multiple_choice",
+              "prompt": "Which verb does NOT work with 把?",
+              "options": ["放 (put)", "做 (do)", "喜欢 (like)", "关 (close)"],
+              "answer": "喜欢 (like)",
+              "explanation": "把 needs a verb that physically affects the object. \"Liking\" doesn't change anything."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-disposal-5",
+          "title": "Negating 把",
+          "description": "没 / 不要 goes before 把, never after",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ds5-1",
+              "type": "multiple_choice",
+              "prompt": "How do you say \"I didn't finish the homework\"?",
+              "options": [
+                "我 把 作业 没 做 完",
+                "我 没 把 作业 做 完",
+                "我 不 把 作业 做 完",
+                "我 把 没 作业 做 完"
+              ],
+              "answer": "我 没 把 作业 做 完"
+            },
+            {
+              "id": "ds5-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please don't close the door\"",
+              "answer": "请 不要 把 门 关 上",
+              "bank": ["请", "不要", "把", "门", "关", "上", "没", "了"]
+            },
+            {
+              "id": "ds5-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the sentence you hear",
+              "spokenText": "他把电视打开了",
+              "options": [
+                "他把电视打开了",
+                "他把电视关上了",
+                "他把窗户打开了",
+                "他把门关上了"
+              ],
+              "answer": "他把电视打开了",
+              "explanation": "他 把 电视 打 开 了 — \"He turned on the TV.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-passive",
+      "title": "The 被 passive",
+      "description": "When something happens TO the subject — usually unpleasantly",
+      "theme": "verbs",
+      "guide": {
+        "intro": "被 (bèi) is the passive marker — \"got / was done by\". It's the mirror image of 把: where 把 puts the actor first and the patient mid-sentence, 被 puts the patient (victim) first.",
+        "sections": [
+          { "kind": "heading", "text": "The basic shape" },
+          {
+            "kind": "paragraph",
+            "text": "Pattern: Patient + 被 + (Agent) + Verb + result. The agent is optional — drop it if it's unknown or obvious."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 的 手机 被 偷 了。", "pinyin": "Wǒ de shǒujī bèi tōu le.", "translation": "My phone was stolen. (no agent)" },
+              { "source": "杯子 被 他 打 破 了。", "pinyin": "Bēizi bèi tā dǎ pò le.", "translation": "The cup was broken by him." },
+              { "source": "钱 被 老板 拿走 了。", "pinyin": "Qián bèi lǎobǎn ná zǒu le.", "translation": "The money was taken by the boss." }
+            ]
+          },
+          { "kind": "heading", "text": "把 vs 被 — same event, different POV" },
+          {
+            "kind": "table",
+            "headers": ["Active (把)", "Passive (被)"],
+            "rows": [
+              ["他 把 杯子 打 破 了", "杯子 被 他 打 破 了"],
+              ["小偷 偷 了 我 的 手机", "我 的 手机 被 (小偷) 偷 了"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Mandarin's 被 has a slightly negative or unfortunate flavor — it's used much more often for bad things (got stolen, broken, scolded) than for neutral or good ones. Sentences like \"I was praised\" (我 被 表扬 了) work but feel marked."
+          },
+          { "kind": "heading", "text": "叫 / 让 — informal alternatives" },
+          {
+            "kind": "paragraph",
+            "text": "In speech, 叫 (jiào) or 让 (ràng) often replace 被. They sound more casual — but unlike 被, they REQUIRE an agent."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 的 钱 让 他 拿走 了。", "pinyin": "Wǒ de qián ràng tā ná zǒu le.", "translation": "My money got taken by him." },
+              { "source": "他 叫 老师 批评 了。", "pinyin": "Tā jiào lǎoshī pīpíng le.", "translation": "He got scolded by the teacher." }
+            ]
+          },
+          { "kind": "heading", "text": "Negation" },
+          {
+            "kind": "paragraph",
+            "text": "Same as 把 — put 没 BEFORE 被."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 的 手机 没 被 偷。", "pinyin": "Wǒ de shǒujī méi bèi tōu.", "translation": "My phone wasn't stolen." }
+            ]
+          },
+          { "kind": "heading", "text": "Two flavors of 了" },
+          {
+            "kind": "paragraph",
+            "text": "Mandarin uses 了 in two distinct slots, and 把 / 被 sentences often need both. Knowing which is which is the difference between a complete sentence and a fragment."
+          },
+          {
+            "kind": "table",
+            "headers": ["Slot", "Name", "Meaning"],
+            "rows": [
+              ["After verb", "了₁ (perfective)", "The action completed / happened"],
+              ["End of sentence", "了₂ (change of state)", "Something is now different / new situation"]
+            ]
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他 吃 了 三 个 苹果。", "pinyin": "Tā chī le sān ge píngguǒ.", "translation": "He ate three apples. (perfective 了₁ — action complete)" },
+              { "source": "下 雨 了。", "pinyin": "Xià yǔ le.", "translation": "It's raining now. (sentence 了₂ — change of state, didn't use to be)" },
+              { "source": "已经 下 了 三 天 雨 了。", "pinyin": "Yǐjīng xià le sān tiān yǔ le.", "translation": "It's been raining for three days. (BOTH 了 — completed duration AND ongoing relevance)" }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Quick test: if the 了 hugs the verb (verb 了 object), it's 了₁. If the 了 is at the very end of the sentence, it's 了₂. Same character, different jobs."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-passive-1",
+          "title": "Got done (被)",
+          "description": "Basic passive sentences",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ps1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 的 手机 被 偷 了\" mean?",
+              "options": [
+                "I stole a phone",
+                "My phone was stolen",
+                "I want a new phone",
+                "My phone is broken"
+              ],
+              "answer": "My phone was stolen"
+            },
+            {
+              "id": "ps1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The cup was broken (by him)\"",
+              "answer": "杯子 被 他 打 破 了",
+              "bank": ["杯子", "被", "他", "打", "破", "了", "把", "做"]
+            },
+            {
+              "id": "ps1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The money was taken (by the boss)\"",
+              "answer": "钱 被 老板 拿 走 了",
+              "bank": ["钱", "被", "老板", "拿", "走", "了", "把", "买"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-passive-2",
+          "title": "把 vs 被",
+          "description": "Same event, two perspectives",
+          "theme": "verbs",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "ps2-1",
+              "type": "multiple_choice",
+              "prompt": "Which is the passive version of \"他 把 杯子 打 破 了\"?",
+              "options": [
+                "杯子 被 他 打 破 了",
+                "他 被 杯子 打 破 了",
+                "杯子 把 他 打 破 了",
+                "他 杯子 被 打 破 了"
+              ],
+              "answer": "杯子 被 他 打 破 了"
+            },
+            {
+              "id": "ps2-2",
+              "type": "match_pairs",
+              "prompt": "Match the active sentence with its passive equivalent",
+              "pairs": [
+                { "left": "他 偷 了 我 的 钱", "right": "我 的 钱 被 偷 了" },
+                { "left": "我 关 了 门", "right": "门 被 我 关 上 了" },
+                { "left": "老师 批评 学生", "right": "学生 被 老师 批评 了" },
+                { "left": "她 吃 了 蛋糕", "right": "蛋糕 被 她 吃 了" }
+              ]
+            },
+            {
+              "id": "ps2-3",
+              "type": "multiple_choice",
+              "prompt": "When is 被 most natural?",
+              "options": [
+                "For neutral information",
+                "For things that happen TO someone, often unfortunate",
+                "For describing colors",
+                "For asking questions"
+              ],
+              "answer": "For things that happen TO someone, often unfortunate"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-passive-3",
+          "title": "Casual: 让 / 叫",
+          "description": "Spoken alternatives to 被",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ps3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 的 钱 让 他 拿走 了\" mean?",
+              "options": [
+                "I let him take the money",
+                "My money got taken by him",
+                "I gave him money",
+                "He gave me money"
+              ],
+              "answer": "My money got taken by him"
+            },
+            {
+              "id": "ps3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He got scolded by the teacher\" (with 叫)",
+              "answer": "他 叫 老师 批评 了",
+              "bank": ["他", "叫", "老师", "批评", "了", "被", "让"]
+            },
+            {
+              "id": "ps3-3",
+              "type": "multiple_choice",
+              "prompt": "Which is the BIG difference between 被 and 让/叫?",
+              "options": [
+                "让/叫 require an agent; 被 can drop it",
+                "让/叫 are formal; 被 is casual",
+                "They mean opposite things",
+                "There is no difference"
+              ],
+              "answer": "让/叫 require an agent; 被 can drop it"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-passive-4",
+          "title": "Negating the passive",
+          "description": "没 before 被",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ps4-1",
+              "type": "multiple_choice",
+              "prompt": "Pick the right negation of \"我 的 手机 被 偷 了\":",
+              "options": [
+                "我 的 手机 被 没 偷",
+                "我 的 手机 没 被 偷",
+                "我 的 手机 不 被 偷 了",
+                "我 的 手机 被 偷 没 了"
+              ],
+              "answer": "我 的 手机 没 被 偷"
+            },
+            {
+              "id": "ps4-2",
+              "type": "fill_blank",
+              "prompt": "\"作业 没 被 做 完\" means \"The homework ___ finished\"",
+              "answer": "Wasn't",
+              "acceptableAnswers": ["was not", "wasn't"]
+            },
+            {
+              "id": "ps4-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the sentence you hear",
+              "spokenText": "我的钱包被偷了",
+              "options": [
+                "我的钱包被偷了",
+                "我的护照被偷了",
+                "我的手机被偷了",
+                "我的行李被偷了"
+              ],
+              "answer": "我的钱包被偷了",
+              "explanation": "钱包 (qián bāo) — wallet. \"My wallet was stolen.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-giving",
+      "title": "Giving with 给",
+      "description": "给 as both \"give\" and a coverb meaning \"for / to\"",
+      "theme": "verbs",
+      "guide": {
+        "intro": "给 (gěi) wears two hats. As a main verb it means \"give\". As a coverb sitting before another verb, it marks the recipient or beneficiary — \"for someone\", \"to someone\". Both uses are everywhere.",
+        "sections": [
+          { "kind": "heading", "text": "给 as main verb — \"give\"" },
+          {
+            "kind": "paragraph",
+            "text": "Pattern: Subject + 给 + recipient + thing. Two objects in a row, recipient first."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 给 他 一 本 书。", "pinyin": "Wǒ gěi tā yì běn shū.", "translation": "I gave him a book." },
+              { "source": "妈妈 给 我 钱。", "pinyin": "Māma gěi wǒ qián.", "translation": "Mom gave me money." }
+            ]
+          },
+          { "kind": "heading", "text": "给 as coverb — \"for / to\"" },
+          {
+            "kind": "paragraph",
+            "text": "Sandwiched before another verb, 给 marks who benefits or receives the action. Pattern: Subject + 给 + recipient + verb + object."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 给 你 买 了 一 杯 咖啡。", "pinyin": "Wǒ gěi nǐ mǎi le yì bēi kāfēi.", "translation": "I bought you a coffee. (the buying is FOR you)" },
+              { "source": "他 给 妈妈 打 电话。", "pinyin": "Tā gěi māma dǎ diànhuà.", "translation": "He's calling mom. (the call is TO mom)" },
+              { "source": "请 给 我 介绍 一下。", "pinyin": "Qǐng gěi wǒ jièshào yíxià.", "translation": "Please introduce (it) to me." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Notice how 给 you 买 (buy for you) and 给 妈妈 打 电话 (call mom) both keep 给 + person BEFORE the main verb. English flips this around — Chinese is rigid about the order."
+          },
+          { "kind": "heading", "text": "Common 给-verb pairings" },
+          {
+            "kind": "table",
+            "headers": ["Phrase", "Meaning"],
+            "rows": [
+              ["给 X 打 电话", "Call X (on the phone)"],
+              ["给 X 写 信", "Write a letter to X"],
+              ["给 X 买 …", "Buy … for X"],
+              ["给 X 做 饭", "Cook for X"],
+              ["给 X 介绍 …", "Introduce … to X"]
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-giving-1",
+          "title": "给 as 'give'",
+          "description": "Main-verb 给 with two objects",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "gv1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 给 他 一 本 书\" mean?",
+              "options": [
+                "He gave me a book",
+                "I gave him a book",
+                "I have a book",
+                "He bought a book"
+              ],
+              "answer": "I gave him a book"
+            },
+            {
+              "id": "gv1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Mom gave me money\"",
+              "answer": "妈妈 给 我 钱",
+              "bank": ["妈妈", "给", "我", "钱", "他", "了"]
+            },
+            {
+              "id": "gv1-3",
+              "type": "fill_blank",
+              "prompt": "In \"我 给 他 一 本 书\", who receives the book?",
+              "answer": "He",
+              "acceptableAnswers": ["him", "he", "he does"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-giving-2",
+          "title": "给 + verb (coverb)",
+          "description": "I bought you a coffee — 给你买了一杯咖啡",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "gv2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 给 你 买 了 一 杯 咖啡\" mean?",
+              "options": [
+                "You bought me a coffee",
+                "I bought you a coffee",
+                "I want to drink coffee",
+                "Give me a coffee"
+              ],
+              "answer": "I bought you a coffee",
+              "explanation": "给 你 (\"for you\") sits BEFORE the main verb 买 (\"buy\"). The buying is on your behalf."
+            },
+            {
+              "id": "gv2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He called mom\"",
+              "answer": "他 给 妈妈 打 了 电话",
+              "bank": ["他", "给", "妈妈", "打", "了", "电话", "买", "做"],
+              "explanation": "打 电话 = make a phone call. The call goes TO mom, so 给 妈妈 marks her as recipient."
+            },
+            {
+              "id": "gv2-3",
+              "type": "multiple_choice",
+              "prompt": "Which sentence means \"I'll cook for you\"?",
+              "options": [
+                "我 做 饭 给 你",
+                "我 给 你 做 饭",
+                "你 给 我 做 饭",
+                "我 你 给 做 饭"
+              ],
+              "answer": "我 给 你 做 饭",
+              "explanation": "Coverb order is rigid: 给 + recipient + verb + object."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-giving-3",
+          "title": "Common 给 pairings",
+          "description": "Calling, writing, buying, introducing",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "gv3-1",
+              "type": "match_pairs",
+              "prompt": "Match the 给-phrase",
+              "pairs": [
+                { "left": "给 你 打 电话", "right": "Call you" },
+                { "left": "给 你 写 信", "right": "Write you a letter" },
+                { "left": "给 你 做 饭", "right": "Cook for you" },
+                { "left": "给 你 介绍", "right": "Introduce to you" }
+              ]
+            },
+            {
+              "id": "gv3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please introduce (him) to me\"",
+              "answer": "请 给 我 介绍 一下",
+              "bank": ["请", "给", "我", "介绍", "一下", "他", "了"]
+            },
+            {
+              "id": "gv3-3",
+              "type": "fill_blank",
+              "prompt": "\"我 明天 给 你 打 电话\" means \"I'll ___ you tomorrow\"",
+              "answer": "Call",
+              "acceptableAnswers": ["phone", "call"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-giving-4",
+          "title": "给 vs 把 vs 被",
+          "description": "Three coverbs in a row",
+          "theme": "verbs",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "gv4-1",
+              "type": "multiple_choice",
+              "prompt": "Which coverb marks the recipient / beneficiary?",
+              "options": ["把 (object affected)", "被 (passive agent)", "给 (recipient)", "在 (location)"],
+              "answer": "给 (recipient)"
+            },
+            {
+              "id": "gv4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I bought a book for him\"",
+              "answer": "我 给 他 买 了 一 本 书",
+              "bank": ["我", "给", "他", "买", "了", "一", "本", "书", "把", "被"],
+              "explanation": "给 + recipient comes before the main verb 买. Don't confuse it with 把 (which fronts an affected object)."
+            },
+            {
+              "id": "gv4-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我给你打电话",
+              "options": [
+                "我给你打电话",
+                "我给你买咖啡",
+                "我给你写信",
+                "我给你做饭"
+              ],
+              "answer": "我给你打电话",
+              "explanation": "我 给 你 打 电话 — \"I'll call you.\" Standard 给-coverb structure."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-degree",
+      "title": "How well? — 得 complement",
+      "description": "Modify a verb with how it was done — 得 + adjective",
+      "theme": "verbs",
+      "guide": {
+        "intro": "得 (de) lets you describe the manner or degree of an action: not WHAT you did, but HOW WELL or HOW MUCH. It's the closest Mandarin gets to English adverbs.",
+        "sections": [
+          { "kind": "heading", "text": "The basic pattern" },
+          {
+            "kind": "paragraph",
+            "text": "Pattern: Subject + Verb + 得 + (very) + Adjective. Note the position of 很 — almost always required to keep the sentence sounding natural."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他 跑 得 很 快。", "pinyin": "Tā pǎo de hěn kuài.", "translation": "He runs very fast." },
+              { "source": "她 唱 得 很 好。", "pinyin": "Tā chàng de hěn hǎo.", "translation": "She sings very well." },
+              { "source": "我 睡 得 不 好。", "pinyin": "Wǒ shuì de bù hǎo.", "translation": "I didn't sleep well." }
+            ]
+          },
+          { "kind": "heading", "text": "When the verb has an object" },
+          {
+            "kind": "paragraph",
+            "text": "If your verb takes an object, you have to repeat the verb. Mandarin can't have an object AND a 得 phrase on the same verb. Pattern: Subject + Verb + Object, Verb + 得 + adjective."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他 说 中文 说 得 很 好。", "pinyin": "Tā shuō Zhōngwén shuō de hěn hǎo.", "translation": "He speaks Chinese very well. (literally: \"speaks Chinese, speaks very well\")" },
+              { "source": "她 写 字 写 得 很 漂亮。", "pinyin": "Tā xiě zì xiě de hěn piàoliang.", "translation": "She writes characters beautifully." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warn",
+            "text": "Common mistake: \"他 说 中文 得 很 好\" — wrong. The verb has to repeat. Or you can drop the object: \"他 中文 说 得 很 好\" also works."
+          },
+          { "kind": "heading", "text": "Three different 得 / 的 / 地" },
+          {
+            "kind": "table",
+            "headers": ["Particle", "Use", "Example"],
+            "rows": [
+              ["的 (de)", "links nouns: \"X's Y\" or descriptive", "我的书 — my book"],
+              ["地 (de)", "before a verb: -ly", "慢慢地走 — walk slowly"],
+              ["得 (de)", "after a verb: how it was done", "走 得 慢 — walks slowly"]
+            ]
+          },
+          {
+            "kind": "paragraph",
+            "text": "All three are pronounced \"de\" (neutral tone) — only writing distinguishes them. Pay attention to position: 的 between nouns, 地 before verbs, 得 after verbs."
+          },
+          { "kind": "heading", "text": "Negation: not 不 before 得 — 不 before the adjective" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他 跑 得 不 快。", "pinyin": "Tā pǎo de bù kuài.", "translation": "He doesn't run fast." },
+              { "source": "我 唱 得 不 好。", "pinyin": "Wǒ chàng de bù hǎo.", "translation": "I don't sing well." }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-degree-1",
+          "title": "Verb 得 adjective",
+          "description": "How well — the basic pattern",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "dg1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"他 跑 得 很 快\" mean?",
+              "options": [
+                "He's about to run",
+                "He runs very fast",
+                "He doesn't run",
+                "He ran yesterday"
+              ],
+              "answer": "He runs very fast"
+            },
+            {
+              "id": "dg1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She sings very well\"",
+              "answer": "她 唱 得 很 好",
+              "bank": ["她", "唱", "得", "很", "好", "的", "地"]
+            },
+            {
+              "id": "dg1-3",
+              "type": "fill_blank",
+              "prompt": "\"我 睡 得 很 好\" means \"I slept ___\"",
+              "answer": "Very well",
+              "acceptableAnswers": ["well"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-degree-2",
+          "title": "When you have an object",
+          "description": "Repeating the verb",
+          "theme": "verbs",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "dg2-1",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is grammatically correct for \"He speaks Chinese well\"?",
+              "options": [
+                "他 说 中文 得 很 好",
+                "他 说 中文 说 得 很 好",
+                "他 中文 得 很 好",
+                "他 很 好 说 中文"
+              ],
+              "answer": "他 说 中文 说 得 很 好",
+              "explanation": "When a verb takes an object AND has 得, the verb has to repeat. Or just drop the object: 他 中文 说 得 很 好."
+            },
+            {
+              "id": "dg2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She writes characters beautifully\"",
+              "answer": "她 写 字 写 得 很 漂亮",
+              "bank": ["她", "写", "字", "写", "得", "很", "漂亮", "好", "的"]
+            },
+            {
+              "id": "dg2-3",
+              "type": "multiple_choice",
+              "prompt": "Which means \"You drive slowly\"?",
+              "options": [
+                "你 开 车 开 得 很 慢",
+                "你 开 车 得 很 慢",
+                "你 慢 得 开 车",
+                "你 开 慢 车 得"
+              ],
+              "answer": "你 开 车 开 得 很 慢"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-degree-3",
+          "title": "的 vs 地 vs 得",
+          "description": "Three particles, all 'de'",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "dg3-1",
+              "type": "match_pairs",
+              "prompt": "Match the particle to its job",
+              "pairs": [
+                { "left": "的", "right": "Links nouns (X's Y / descriptive)" },
+                { "left": "地", "right": "Adverb marker — before a verb" },
+                { "left": "得", "right": "After a verb — how it was done" },
+                { "left": "了", "right": "Completed action" }
+              ]
+            },
+            {
+              "id": "dg3-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the right particle: \"她 唱 ___ 很 好\"",
+              "options": ["的", "地", "得", "了"],
+              "answer": "得",
+              "explanation": "After the verb 唱, before the adjective phrase 很 好 — that's 得."
+            },
+            {
+              "id": "dg3-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the right particle: \"他 慢慢 ___ 走\"",
+              "options": ["的", "地", "得", "了"],
+              "answer": "地",
+              "explanation": "Before a verb, turning an adjective into an adverb — 地."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-degree-4",
+          "title": "Negative & questions",
+          "description": "Doesn't run fast / Does she sing well?",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "dg4-1",
+              "type": "multiple_choice",
+              "prompt": "How do you say \"He doesn't run fast\"?",
+              "options": [
+                "他 不 跑 得 快",
+                "他 跑 不 得 快",
+                "他 跑 得 不 快",
+                "他 不 得 跑 快"
+              ],
+              "answer": "他 跑 得 不 快"
+            },
+            {
+              "id": "dg4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Does she sing well?\"",
+              "answer": "她 唱 得 好 不 好",
+              "bank": ["她", "唱", "得", "好", "不", "好", "吗", "很"],
+              "explanation": "好 不 好 is an A-not-A question — \"good or not good\" → \"is it good?\""
+            },
+            {
+              "id": "dg4-3",
+              "type": "fill_blank",
+              "prompt": "\"你 中文 说 得 怎么样？\" means \"How ___ speak Chinese?\"",
+              "answer": "Well do you",
+              "acceptableAnswers": ["well do you", "do you", "well you"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-work",
+      "title": "Work & jobs",
+      "description": "Careers, the office, and talking about what you do",
+      "theme": "basics",
+      "lessons": [
+        {
+          "id": "zh-en-work-1",
+          "title": "What do you do?",
+          "description": "Job titles and asking about work",
+          "theme": "basics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "wk1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"工作\" (gōng zuò) mean?",
+              "options": ["Salary", "Work / job", "Boss", "Office"],
+              "answer": "Work / job"
+            },
+            {
+              "id": "wk1-2",
+              "type": "match_pairs",
+              "prompt": "Match the profession",
+              "pairs": [
+                { "left": "医生", "right": "Doctor" },
+                { "left": "老师", "right": "Teacher" },
+                { "left": "工程师", "right": "Engineer" },
+                { "left": "律师", "right": "Lawyer" }
+              ]
+            },
+            {
+              "id": "wk1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"What do you do?\"",
+              "answer": "你 做 什么 工作",
+              "bank": ["你", "做", "什么", "工作", "是", "的"]
+            },
+            {
+              "id": "wk1-4",
+              "type": "fill_blank",
+              "prompt": "\"我 是 一 名 工程师\" means \"I am ___ engineer\"",
+              "answer": "An",
+              "acceptableAnswers": ["a", "an"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-work-2",
+          "title": "Office & company",
+          "description": "Where you spend the day",
+          "theme": "basics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "wk2-1",
+              "type": "match_pairs",
+              "prompt": "Match the workplace word",
+              "pairs": [
+                { "left": "公司", "right": "Company" },
+                { "left": "办公室", "right": "Office (room)" },
+                { "left": "同事", "right": "Coworker" },
+                { "left": "老板", "right": "Boss" }
+              ]
+            },
+            {
+              "id": "wk2-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"开会\" (kāi huì) mean?",
+              "options": ["Quit a job", "Have a meeting", "Take a break", "Take a call"],
+              "answer": "Have a meeting"
+            },
+            {
+              "id": "wk2-3",
+              "type": "fill_blank",
+              "prompt": "\"加班\" (jiā bān) means ___",
+              "answer": "Work overtime",
+              "acceptableAnswers": ["Overtime", "Working overtime"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-work-3",
+          "title": "Money & salary",
+          "description": "Getting paid and asking about it",
+          "theme": "basics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "wk3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"工资\" (gōng zī) mean?",
+              "options": ["Skill", "Salary / wages", "Vacation", "Bonus"],
+              "answer": "Salary / wages"
+            },
+            {
+              "id": "wk3-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"bonus\"?",
+              "options": ["奖金", "工资", "罚款", "学费"],
+              "answer": "奖金"
+            },
+            {
+              "id": "wk3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My salary isn't high\"",
+              "answer": "我 的 工资 不 高",
+              "bank": ["我", "的", "工资", "不", "高", "贵", "便宜"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-work-4",
+          "title": "Looking for & changing jobs",
+          "description": "Hiring and quitting",
+          "theme": "basics",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "wk4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"找 工作\" (zhǎo gōng zuò) mean?",
+              "options": ["Quit a job", "Look for a job", "Lose a job", "Hire someone"],
+              "answer": "Look for a job"
+            },
+            {
+              "id": "wk4-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"interview\"?",
+              "options": ["简历", "面试", "合同", "假期"],
+              "answer": "面试"
+            },
+            {
+              "id": "wk4-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to change jobs\"",
+              "answer": "我 想 换 工作",
+              "bank": ["我", "想", "换", "工作", "找", "的", "做"]
+            },
+            {
+              "id": "wk4-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap the sentence you hear",
+              "spokenText": "我明天要面试",
+              "options": [
+                "我明天要面试",
+                "我明天要开会",
+                "我明天要加班",
+                "我明天要上班"
+              ],
+              "answer": "我明天要面试",
+              "explanation": "面试 (miàn shì) — interview. \"I have an interview tomorrow.\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-b1-opinions",
+      "title": "Opinions & agreement",
+      "description": "I think, I believe, I agree — saying what you reckon",
+      "theme": "questions",
+      "guide": {
+        "intro": "B1 means saying more than \"I like\" or \"I want\". You need ways to express opinions softly, agree, disagree, and ask people what THEY think. Three verbs do the heavy lifting: 觉得, 认为, and 看.",
+        "sections": [
+          { "kind": "heading", "text": "觉得 — feel / think (everyday)" },
+          {
+            "kind": "paragraph",
+            "text": "觉得 (jué de) is the workhorse — \"I feel / think that...\". Use it for any soft, personal opinion. By far the most common in conversation."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 觉得 这 个 电影 很 好。", "pinyin": "Wǒ juéde zhè ge diànyǐng hěn hǎo.", "translation": "I think this movie is good." },
+              { "source": "你 觉得 怎么样？", "pinyin": "Nǐ juéde zěnmeyàng?", "translation": "What do you think?" }
+            ]
+          },
+          { "kind": "heading", "text": "认为 — believe / hold (more formal)" },
+          {
+            "kind": "paragraph",
+            "text": "认为 (rèn wéi) is firmer and more written — \"I hold the view that...\". Right for opinions on bigger issues, news, business, debate."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 认为 这 个 计划 不 行。", "pinyin": "Wǒ rènwéi zhè ge jìhuà bù xíng.", "translation": "I don't think this plan will work." },
+              { "source": "专家 认为 经济 会 好转。", "pinyin": "Zhuānjiā rènwéi jīngjì huì hǎozhuǎn.", "translation": "Experts believe the economy will improve." }
+            ]
+          },
+          { "kind": "heading", "text": "看 — see / view (informal opinion ask)" },
+          {
+            "kind": "paragraph",
+            "text": "看 (kàn) literally means \"look\", but \"你 看 …\" idiomatically means \"in your view, …\". Used to gently ask someone's take."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "你 看 我 该 怎么 办？", "pinyin": "Nǐ kàn wǒ gāi zěnme bàn?", "translation": "What do you think I should do?" },
+              { "source": "我 看 应该 没 问题。", "pinyin": "Wǒ kàn yīnggāi méi wèntí.", "translation": "I think it should be fine." }
+            ]
+          },
+          { "kind": "heading", "text": "Agreeing & disagreeing" },
+          {
+            "kind": "table",
+            "headers": ["Phrase", "Pinyin", "Meaning"],
+            "rows": [
+              ["同意", "tóngyì", "Agree"],
+              ["不同意", "bù tóngyì", "Disagree"],
+              ["对", "duì", "Right / true"],
+              ["不对", "bú duì", "Wrong / not right"],
+              ["有道理", "yǒu dàolǐ", "That makes sense"],
+              ["没道理", "méi dàolǐ", "That doesn't make sense"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Chinese conversation tends to soften disagreement. \"我 不 太 同意\" (I don't really agree) is gentler and more common than a flat \"不 同意\"."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-b1-opinions-1",
+          "title": "I think (觉得)",
+          "description": "Soft personal opinions",
+          "theme": "questions",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "op1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 觉得\" (wǒ juéde) mean?",
+              "options": ["I want", "I think / feel", "I see", "I know"],
+              "answer": "I think / feel"
+            },
+            {
+              "id": "op1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I think this movie is very good\"",
+              "answer": "我 觉得 这 个 电影 很 好",
+              "bank": ["我", "觉得", "这", "个", "电影", "很", "好", "认为", "看"]
+            },
+            {
+              "id": "op1-3",
+              "type": "multiple_choice",
+              "prompt": "How do you ask \"What do you think?\"",
+              "options": [
+                "你 觉得 怎么样",
+                "你 是 什么",
+                "你 在 哪里",
+                "你 喜欢 吗"
+              ],
+              "answer": "你 觉得 怎么样"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-b1-opinions-2",
+          "title": "I believe (认为)",
+          "description": "Firmer, more formal opinions",
+          "theme": "questions",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "op2-1",
+              "type": "multiple_choice",
+              "prompt": "How does \"认为\" differ from \"觉得\"?",
+              "options": [
+                "认为 means the opposite",
+                "认为 is firmer / more formal; 觉得 is everyday",
+                "There's no difference",
+                "认为 only goes in questions"
+              ],
+              "answer": "认为 is firmer / more formal; 觉得 is everyday"
+            },
+            {
+              "id": "op2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I don't think this plan will work\"",
+              "answer": "我 认为 这 个 计划 不 行",
+              "bank": ["我", "认为", "这", "个", "计划", "不", "行", "好", "觉得"]
+            },
+            {
+              "id": "op2-3",
+              "type": "fill_blank",
+              "prompt": "\"专家 认为\" means \"___ believe\"",
+              "answer": "Experts",
+              "acceptableAnswers": ["The experts", "Specialists"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-b1-opinions-3",
+          "title": "Agree & disagree",
+          "description": "同意, 不同意, and softer versions",
+          "theme": "questions",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "op3-1",
+              "type": "match_pairs",
+              "prompt": "Match the phrase",
+              "pairs": [
+                { "left": "同意", "right": "Agree" },
+                { "left": "不同意", "right": "Disagree" },
+                { "left": "有道理", "right": "Makes sense" },
+                { "left": "没道理", "right": "Doesn't make sense" }
+              ]
+            },
+            {
+              "id": "op3-2",
+              "type": "multiple_choice",
+              "prompt": "Which softens disagreement?",
+              "options": [
+                "我 不 同意",
+                "我 不 太 同意",
+                "我 完全 不 同意",
+                "我 觉得 不 对"
+              ],
+              "answer": "我 不 太 同意",
+              "explanation": "不 太 (not very) is the standard softener — politer than a flat \"不\"."
+            },
+            {
+              "id": "op3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"You're right, this makes sense\"",
+              "answer": "你 说 得 对 ， 这 很 有 道理",
+              "bank": ["你", "说", "得", "对", "，", "这", "很", "有", "道理", "没", "不"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-b1-opinions-4",
+          "title": "Asking for opinions",
+          "description": "你看 / 你怎么想",
+          "theme": "questions",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "op4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"你 看 我 该 怎么 办？\" mean?",
+              "options": [
+                "Look at what I'm doing",
+                "What do you think I should do?",
+                "Where are you going?",
+                "How are you feeling?"
+              ],
+              "answer": "What do you think I should do?"
+            },
+            {
+              "id": "op4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I think it should be fine\"",
+              "answer": "我 看 应该 没 问题",
+              "bank": ["我", "看", "应该", "没", "问题", "觉得", "有"]
+            },
+            {
+              "id": "op4-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the question you hear",
+              "spokenText": "你觉得怎么样",
+              "options": [
+                "你觉得怎么样",
+                "你看怎么样",
+                "你认为对吗",
+                "你同意吗"
+              ],
+              "answer": "你觉得怎么样"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-storytelling",
+      "title": "Telling a story",
+      "description": "Sequencing past events with 着 and directional verbs",
+      "theme": "verbs",
+      "guide": {
+        "intro": "When you narrate a story you need ways to set the scene (\"she was sitting\"), describe motion (\"he walked in\"), and string events together. 着 handles ongoing states; directional complements like 上来 and 下去 handle motion in space.",
+        "sections": [
+          { "kind": "heading", "text": "着 — ongoing state" },
+          {
+            "kind": "paragraph",
+            "text": "着 (zhe) attached to a verb means \"in the state of doing\". It's NOT the same as English -ing — 着 emphasizes a held position or background condition, often setting the scene."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他 站 着。", "pinyin": "Tā zhàn zhe.", "translation": "He is standing. (in a standing state)" },
+              { "source": "门 开 着。", "pinyin": "Mén kāi zhe.", "translation": "The door is open. (held open)" },
+              { "source": "她 笑 着 说。", "pinyin": "Tā xiào zhe shuō.", "translation": "She said with a smile. (smiling-while-speaking)" }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "着 vs 在: 在 means \"actively doing right now\" (\"我 在 吃饭\" — I'm eating). 着 means \"in this state\" (\"门 开 着\" — the door's open). For narration, 着 sets the scene; 在 reports a live action."
+          },
+          { "kind": "heading", "text": "Directional complements: 上 / 下 / 进 / 出 / 来 / 去" },
+          {
+            "kind": "paragraph",
+            "text": "Six little words combine into rich verbs of motion. Pair a base direction (up/down/in/out) with 来 (toward speaker) or 去 (away from speaker)."
+          },
+          {
+            "kind": "table",
+            "headers": ["Direction", "+ 来 (toward)", "+ 去 (away)"],
+            "rows": [
+              ["上 (up)", "上来 — come up", "上去 — go up"],
+              ["下 (down)", "下来 — come down", "下去 — go down"],
+              ["进 (in)", "进来 — come in", "进去 — go in"],
+              ["出 (out)", "出来 — come out", "出去 — go out"],
+              ["回 (back)", "回来 — come back", "回去 — go back"]
+            ]
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他 走 进来 了。", "pinyin": "Tā zǒu jìnlai le.", "translation": "He walked in." },
+              { "source": "她 跑 出去 了。", "pinyin": "Tā pǎo chūqu le.", "translation": "She ran out." },
+              { "source": "请 上来。", "pinyin": "Qǐng shànglai.", "translation": "Please come up." }
+            ]
+          },
+          { "kind": "heading", "text": "Figurative directionals — 起来 / 下去 / 出来" },
+          {
+            "kind": "paragraph",
+            "text": "Directional complements stretch beyond physical motion. Attached to non-motion verbs, they signal phase or aspect: starting, continuing, or coming-to-clarity."
+          },
+          {
+            "kind": "table",
+            "headers": ["Compound", "Figurative meaning", "Example"],
+            "rows": [
+              ["V 起来", "begin to V / V-ing started", "唱 起来 — start singing"],
+              ["V 下去", "keep V-ing / continue", "说 下去 — keep talking"],
+              ["V 出来", "figure out / discern", "想 出来 — figure out"],
+              ["看 起来", "looks / seems", "看 起来 很 累 — looks tired"]
+            ]
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 终于 想 出来 了。", "pinyin": "Wǒ zhōngyú xiǎng chūlai le.", "translation": "I finally figured it out." },
+              { "source": "请 你 说 下 去。", "pinyin": "Qǐng nǐ shuō xiàqu.", "translation": "Please keep talking." },
+              { "source": "他 突然 笑 起来 了。", "pinyin": "Tā tūrán xiào qǐlai le.", "translation": "He suddenly started to laugh." }
+            ]
+          },
+          { "kind": "heading", "text": "Sequencing words" },
+          {
+            "kind": "paragraph",
+            "text": "A2's 然后 still works, but B1 stories add 先...再... (first...then...), 最后 (finally), 突然 (suddenly), and 后来 (afterward — for events further apart)."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我 先 吃饭，再 看 电影。", "pinyin": "Wǒ xiān chīfàn, zài kàn diànyǐng.", "translation": "First I'll eat, then watch a movie." },
+              { "source": "突然 下雨 了。", "pinyin": "Tūrán xià yǔ le.", "translation": "It suddenly started to rain." },
+              { "source": "后来 他 搬 走 了。", "pinyin": "Hòulái tā bān zǒu le.", "translation": "Afterward, he moved away." }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-storytelling-1",
+          "title": "Setting the scene (着)",
+          "description": "Ongoing state with 着",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "st1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"门 开 着\" (mén kāi zhe) mean?",
+              "options": [
+                "The door is closing",
+                "Open the door!",
+                "The door is open (held open)",
+                "Did you open the door?"
+              ],
+              "answer": "The door is open (held open)"
+            },
+            {
+              "id": "st1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She said with a smile\"",
+              "answer": "她 笑 着 说",
+              "bank": ["她", "笑", "着", "说", "在", "了"]
+            },
+            {
+              "id": "st1-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the difference between 着 and 在:",
+              "options": [
+                "着 = ongoing state; 在 = actively in progress",
+                "They mean the same thing",
+                "着 = past; 在 = future",
+                "着 = formal; 在 = casual"
+              ],
+              "answer": "着 = ongoing state; 在 = actively in progress"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-storytelling-2",
+          "title": "Coming & going (来/去)",
+          "description": "Directional complements",
+          "theme": "verbs",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "st2-1",
+              "type": "match_pairs",
+              "prompt": "Match the directional",
+              "pairs": [
+                { "left": "进来", "right": "Come in" },
+                { "left": "出去", "right": "Go out" },
+                { "left": "上去", "right": "Go up" },
+                { "left": "下来", "right": "Come down" }
+              ]
+            },
+            {
+              "id": "st2-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"他 走 进来 了\" mean?",
+              "options": [
+                "He left",
+                "He walked in",
+                "He walked out",
+                "He walked up"
+              ],
+              "answer": "He walked in"
+            },
+            {
+              "id": "st2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She ran out\"",
+              "answer": "她 跑 出去 了",
+              "bank": ["她", "跑", "出去", "了", "进来", "上来"]
+            },
+            {
+              "id": "st2-4",
+              "type": "fill_blank",
+              "prompt": "\"请 上来\" means \"Please ___\"",
+              "answer": "Come up",
+              "acceptableAnswers": ["come up", "come upstairs"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-storytelling-3",
+          "title": "Sequence words",
+          "description": "先, 再, 后来, 突然, 最后",
+          "theme": "verbs",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "st3-1",
+              "type": "match_pairs",
+              "prompt": "Match the connector",
+              "pairs": [
+                { "left": "先", "right": "First" },
+                { "left": "再", "right": "Then (next)" },
+                { "left": "突然", "right": "Suddenly" },
+                { "left": "最后", "right": "Finally" }
+              ]
+            },
+            {
+              "id": "st3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"First I'll eat, then watch a movie\"",
+              "answer": "我 先 吃饭 再 看 电影",
+              "bank": ["我", "先", "吃饭", "再", "看", "电影", "然后", "突然"]
+            },
+            {
+              "id": "st3-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"后来\" (hòu lái) mean?",
+              "options": [
+                "Before",
+                "Afterward / later on",
+                "Just now",
+                "Already"
+              ],
+              "answer": "Afterward / later on"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-storytelling-4",
+          "title": "A short story",
+          "description": "Putting it all together",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "st4-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He was sitting on the chair, suddenly the phone rang\"",
+              "answer": "他 坐 在 椅子 上 ， 突然 电话 响 了",
+              "bank": ["他", "坐", "在", "椅子", "上", "，", "突然", "电话", "响", "了", "着"],
+              "explanation": "坐 着 cannot directly take a noun as object. Use 坐 在 + place + 上 for \"sit on\"."
+            },
+            {
+              "id": "st4-2",
+              "type": "multiple_choice",
+              "prompt": "Translate: \"她 笑 着 走 进来 了\"",
+              "options": [
+                "She walked in laughing",
+                "She walked out laughing",
+                "She stopped laughing",
+                "She told a joke"
+              ],
+              "answer": "She walked in laughing"
+            },
+            {
+              "id": "st4-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the sentence you hear",
+              "spokenText": "突然下雨了",
+              "options": [
+                "突然下雨了",
+                "突然下雪了",
+                "今天下雨了",
+                "明天下雨了"
+              ],
+              "answer": "突然下雨了",
+              "explanation": "突然 (tū rán) — suddenly. \"It suddenly started raining.\""
+            }
+          ]
+        },
+        {
+          "id": "zh-en-storytelling-5",
+          "title": "Figurative directionals",
+          "description": "起来, 下去, 出来 beyond literal motion",
+          "theme": "verbs",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "st5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 想 出来 了\" mean here?",
+              "options": [
+                "I came out",
+                "I figured it out",
+                "I went out",
+                "I want to go out"
+              ],
+              "answer": "I figured it out",
+              "explanation": "出来 attached to mental verbs (想, 看, 听) means \"out into clarity\" — figured out, recognized, made out."
+            },
+            {
+              "id": "st5-2",
+              "type": "match_pairs",
+              "prompt": "Match the figurative directional",
+              "pairs": [
+                { "left": "唱 起来", "right": "Start to sing" },
+                { "left": "说 下去", "right": "Keep talking / continue" },
+                { "left": "想 出来", "right": "Figure out" },
+                { "left": "看 起来", "right": "Looks (seems)" }
+              ]
+            },
+            {
+              "id": "st5-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It suddenly started to rain\" with 起来",
+              "answer": "突然 下 起 雨 来 了",
+              "bank": ["突然", "下", "起", "雨", "来", "了", "去", "出"],
+              "explanation": "下 起 … 来 — \"start to rain\". The object 雨 splits 起 and 来 — a quirk of this pattern."
+            },
+            {
+              "id": "st5-4",
+              "type": "multiple_choice",
+              "prompt": "What does \"请 你 说 下 去\" mean?",
+              "options": [
+                "Please go down and speak",
+                "Please keep talking / continue",
+                "Please stop talking",
+                "Please speak up"
+              ],
+              "answer": "Please keep talking / continue",
+              "explanation": "下去 with verbs of speech / action means \"continue, keep going\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-cuisine",
+      "title": "Chinese cuisine",
+      "description": "Regional dishes, dining etiquette, and ordering well",
+      "theme": "food",
+      "lessons": [
+        {
+          "id": "zh-en-cuisine-1",
+          "title": "Regional cuisines",
+          "description": "Sichuan, Cantonese, and the rest",
+          "theme": "food",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "cu1-1",
+              "type": "match_pairs",
+              "prompt": "Match the cuisine to its region",
+              "pairs": [
+                { "left": "川菜", "right": "Sichuan (spicy)" },
+                { "left": "粤菜", "right": "Cantonese (mild, fresh)" },
+                { "left": "湘菜", "right": "Hunan (spicy/sour)" },
+                { "left": "鲁菜", "right": "Shandong (savory)" }
+              ]
+            },
+            {
+              "id": "cu1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"麻辣\" (má là) mean?",
+              "options": [
+                "Sweet and sour",
+                "Numbing-spicy (Sichuan style)",
+                "Bland",
+                "Salty"
+              ],
+              "answer": "Numbing-spicy (Sichuan style)",
+              "explanation": "麻 = the tingly numbness from Sichuan peppercorns; 辣 = chili heat. The signature Sichuan combo."
+            },
+            {
+              "id": "cu1-3",
+              "type": "fill_blank",
+              "prompt": "\"清淡\" (qīng dàn) means ___",
+              "answer": "Light / mild",
+              "acceptableAnswers": ["Mild", "Light flavored", "Bland"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cuisine-2",
+          "title": "Tastes & textures",
+          "description": "Sweet, sour, salty, spicy",
+          "theme": "food",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "cu2-1",
+              "type": "match_pairs",
+              "prompt": "Match the taste",
+              "pairs": [
+                { "left": "甜", "right": "Sweet" },
+                { "left": "酸", "right": "Sour" },
+                { "left": "咸", "right": "Salty" },
+                { "left": "苦", "right": "Bitter" }
+              ]
+            },
+            {
+              "id": "cu2-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"糖醋\" (táng cù) mean?",
+              "options": [
+                "Salt and pepper",
+                "Sweet and sour",
+                "Garlic and ginger",
+                "Soy and vinegar"
+              ],
+              "answer": "Sweet and sour"
+            },
+            {
+              "id": "cu2-3",
+              "type": "fill_blank",
+              "prompt": "\"这 个 太 辣 了\" means \"This is too ___\"",
+              "answer": "Spicy",
+              "acceptableAnswers": ["hot", "spicy hot"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cuisine-3",
+          "title": "Ordering at a restaurant",
+          "description": "Menu, waiter, the bill",
+          "theme": "food",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "cu3-1",
+              "type": "match_pairs",
+              "prompt": "Match the restaurant word",
+              "pairs": [
+                { "left": "服务员", "right": "Waiter / staff" },
+                { "left": "菜单", "right": "Menu" },
+                { "left": "点菜", "right": "Order food" },
+                { "left": "买单", "right": "The bill" }
+              ]
+            },
+            {
+              "id": "cu3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Waiter, the bill please!\"",
+              "answer": "服务员 ， 请 买 单",
+              "bank": ["服务员", "，", "请", "买", "单", "菜单", "点菜", "结"],
+              "explanation": "Adding 请 makes the request polite. 结 账 (jié zhàng) is another common way to ask for the bill."
+            },
+            {
+              "id": "cu3-3",
+              "type": "multiple_choice",
+              "prompt": "Which means \"specialty / signature dish\"?",
+              "options": ["招牌菜", "热菜", "凉菜", "主食"],
+              "answer": "招牌菜"
+            },
+            {
+              "id": "cu3-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'd like to order this dish\"",
+              "answer": "我 想 点 这 个 菜",
+              "bank": ["我", "想", "点", "这", "个", "菜", "买", "吃"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cuisine-4",
+          "title": "Dining etiquette",
+          "description": "Toasts, sharing, and table manners",
+          "theme": "food",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "cu4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"干杯\" (gān bēi) mean?",
+              "options": [
+                "Cheers / bottoms up",
+                "Refill the glass",
+                "Empty cup",
+                "Pour the drink"
+              ],
+              "answer": "Cheers / bottoms up",
+              "explanation": "Literally \"dry the cup\" — the standard toast. At formal dinners it can mean drain the whole glass!"
+            },
+            {
+              "id": "cu4-2",
+              "type": "multiple_choice",
+              "prompt": "Which is the polite phrase before eating?",
+              "options": [
+                "请 慢 用",
+                "对不起",
+                "再见",
+                "辛苦了"
+              ],
+              "answer": "请 慢 用",
+              "explanation": "请 慢 用 — \"please enjoy\" (literally: please use slowly). The host says it; you say it back to others."
+            },
+            {
+              "id": "cu4-3",
+              "type": "fill_blank",
+              "prompt": "\"AA 制\" (AA zhì) means ___",
+              "answer": "Going Dutch",
+              "acceptableAnswers": ["Splitting the bill", "Going dutch", "Pay separately"]
+            },
+            {
+              "id": "cu4-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "服务员买单",
+              "options": [
+                "服务员买单",
+                "服务员菜单",
+                "服务员点菜",
+                "服务员请坐"
+              ],
+              "answer": "服务员买单"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-people",
+      "title": "Describing people",
+      "description": "Looks, personality, and how to introduce someone",
+      "theme": "family",
+      "lessons": [
+        {
+          "id": "zh-en-people-1",
+          "title": "Appearance",
+          "description": "Tall, short, good-looking",
+          "theme": "family",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "pp1-1",
+              "type": "match_pairs",
+              "prompt": "Match the descriptor",
+              "pairs": [
+                { "left": "高", "right": "Tall" },
+                { "left": "矮", "right": "Short (height)" },
+                { "left": "胖", "right": "Plump / chubby" },
+                { "left": "瘦", "right": "Thin / slim" }
+              ]
+            },
+            {
+              "id": "pp1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"帅\" (shuài) mean?",
+              "options": ["Pretty", "Handsome", "Cute", "Strong"],
+              "answer": "Handsome"
+            },
+            {
+              "id": "pp1-3",
+              "type": "fill_blank",
+              "prompt": "\"漂亮\" (piào liang) means ___",
+              "answer": "Pretty",
+              "acceptableAnswers": ["Beautiful", "Good-looking"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-people-2",
+          "title": "Hair, eyes, face",
+          "description": "Specific features",
+          "theme": "family",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "pp2-1",
+              "type": "multiple_choice",
+              "prompt": "Which body part is \"鼻子\" (bí zi)?",
+              "options": ["Hair", "Eyes", "Nose", "Face"],
+              "answer": "Nose",
+              "explanation": "头发 = hair, 眼睛 = eyes, 鼻子 = nose, 脸 = face."
+            },
+            {
+              "id": "pp2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She has long hair\"",
+              "answer": "她 头发 很 长",
+              "bank": ["她", "头发", "很", "长", "有", "短", "黑"],
+              "explanation": "Native phrasing uses topic-comment: literally \"she, hair very long\". 她 有 长 头发 sounds translated from English."
+            },
+            {
+              "id": "pp2-3",
+              "type": "multiple_choice",
+              "prompt": "Which means \"big eyes\"?",
+              "options": ["大 眼睛", "小 眼睛", "高 鼻子", "黑 头发"],
+              "answer": "大 眼睛"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-people-3",
+          "title": "Personality",
+          "description": "Friendly, shy, easy-going",
+          "theme": "family",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "pp3-1",
+              "type": "match_pairs",
+              "prompt": "Match the personality trait",
+              "pairs": [
+                { "left": "友好", "right": "Friendly" },
+                { "left": "害羞", "right": "Shy" },
+                { "left": "聪明", "right": "Smart" },
+                { "left": "幽默", "right": "Humorous" }
+              ]
+            },
+            {
+              "id": "pp3-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"性格\" (xìng gé) mean?",
+              "options": ["Appearance", "Personality / character", "Health", "Habit"],
+              "answer": "Personality / character"
+            },
+            {
+              "id": "pp3-3",
+              "type": "fill_blank",
+              "prompt": "\"她 性格 很 好\" means \"Her ___ is great\"",
+              "answer": "Personality",
+              "acceptableAnswers": ["character", "temperament"]
+            },
+            {
+              "id": "pp3-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He is very humorous\"",
+              "answer": "他 很 幽默",
+              "bank": ["他", "很", "幽默", "聪明", "害羞", "是"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-people-4",
+          "title": "Introducing someone",
+          "description": "This is my friend",
+          "theme": "family",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "pp4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"介绍\" (jiè shào) mean?",
+              "options": ["Forget", "Introduce", "Remember", "Thank"],
+              "answer": "Introduce"
+            },
+            {
+              "id": "pp4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Let me introduce — this is my friend\"",
+              "answer": "我 介绍 一下 这 是 我 的 朋友",
+              "bank": ["我", "介绍", "一下", "这", "是", "我", "的", "朋友", "认识"]
+            },
+            {
+              "id": "pp4-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the best way to describe a friend's personality:",
+              "options": [
+                "他 很 友好，性格 很 好",
+                "他 很 高，很 帅",
+                "他 是 工程师",
+                "他 在 北京"
+              ],
+              "answer": "他 很 友好，性格 很 好"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-seasons",
+      "title": "Seasons & weather",
+      "description": "Four seasons, festivals, and what it feels like",
+      "theme": "weather",
+      "lessons": [
+        {
+          "id": "zh-en-seasons-1",
+          "title": "The four seasons",
+          "description": "春夏秋冬",
+          "theme": "weather",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "se1-1",
+              "type": "match_pairs",
+              "prompt": "Match the season",
+              "pairs": [
+                { "left": "春天", "right": "Spring" },
+                { "left": "夏天", "right": "Summer" },
+                { "left": "秋天", "right": "Autumn" },
+                { "left": "冬天", "right": "Winter" }
+              ]
+            },
+            {
+              "id": "se1-2",
+              "type": "multiple_choice",
+              "prompt": "Which season is \"温暖\" (wēn nuǎn — warm) typical of?",
+              "options": ["春天", "夏天", "秋天", "冬天"],
+              "answer": "春天"
+            },
+            {
+              "id": "se1-3",
+              "type": "fill_blank",
+              "prompt": "\"我 最 喜欢 秋天\" means \"I like ___ the most\"",
+              "answer": "Autumn",
+              "acceptableAnswers": ["Fall"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-seasons-2",
+          "title": "Detailed weather",
+          "description": "Beyond hot and cold",
+          "theme": "weather",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "se2-1",
+              "type": "match_pairs",
+              "prompt": "Match the weather word",
+              "pairs": [
+                { "left": "潮湿", "right": "Humid" },
+                { "left": "干燥", "right": "Dry" },
+                { "left": "凉快", "right": "Cool / pleasant" },
+                { "left": "闷热", "right": "Stuffy hot" }
+              ]
+            },
+            {
+              "id": "se2-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"刮风\" (guā fēng) mean?",
+              "options": [
+                "Rain falls",
+                "It's windy / wind blows",
+                "Snow falls",
+                "It's sunny"
+              ],
+              "answer": "It's windy / wind blows"
+            },
+            {
+              "id": "se2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It's been raining for three days\"",
+              "answer": "已经 下 了 三 天 雨 了",
+              "bank": ["已经", "下", "了", "三", "天", "雨", "了", "雪", "风"],
+              "explanation": "The final 了 marks ongoing relevance — \"and it's still going\". The first 了 is verb-suffix (perfective)."
+            },
+            {
+              "id": "se2-4",
+              "type": "fill_blank",
+              "prompt": "\"今天 雾 很 大\" means \"There's a lot of ___ today\"",
+              "answer": "Fog",
+              "acceptableAnswers": ["mist", "haze"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-seasons-3",
+          "title": "Climate & forecasts",
+          "description": "Temperature, forecasts, and weather reports",
+          "theme": "weather",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "se3-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"气温\" (qì wēn) mean?",
+              "options": ["Climate", "Air temperature", "Wind speed", "Rainfall"],
+              "answer": "Air temperature"
+            },
+            {
+              "id": "se3-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"weather forecast\"?",
+              "options": ["天气预报", "天气情况", "气候变化", "晴天"],
+              "answer": "天气预报"
+            },
+            {
+              "id": "se3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Tomorrow's high is twenty-five degrees\"",
+              "answer": "明天 最高 二十五 度",
+              "bank": ["明天", "最高", "二十五", "度", "最低", "气温"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-seasons-4",
+          "title": "Festivals & seasons",
+          "description": "Spring Festival, Mid-Autumn, and more",
+          "theme": "weather",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "se4-1",
+              "type": "match_pairs",
+              "prompt": "Match the festival",
+              "pairs": [
+                { "left": "春节", "right": "Spring Festival (Lunar New Year)" },
+                { "left": "中秋节", "right": "Mid-Autumn Festival" },
+                { "left": "端午节", "right": "Dragon Boat Festival" },
+                { "left": "国庆节", "right": "National Day" }
+              ]
+            },
+            {
+              "id": "se4-2",
+              "type": "multiple_choice",
+              "prompt": "What food is most associated with 中秋节?",
+              "options": ["饺子", "月饼", "粽子", "汤圆"],
+              "answer": "月饼",
+              "explanation": "月饼 (yuè bǐng) — mooncake. Round, like the full moon at Mid-Autumn."
+            },
+            {
+              "id": "se4-3",
+              "type": "fill_blank",
+              "prompt": "\"过年\" (guò nián) means ___",
+              "answer": "Celebrate New Year",
+              "acceptableAnswers": ["Celebrate the new year", "Spend the new year", "Celebrate Spring Festival"]
+            },
+            {
+              "id": "se4-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "新年快乐",
+              "options": ["新年快乐", "生日快乐", "中秋快乐", "节日快乐"],
+              "answer": "新年快乐",
+              "explanation": "新年 快乐 — \"Happy New Year.\" The standard greeting at 春节."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-cityerrand",
+      "title": "Errands & city life",
+      "description": "Bank, post office, hospital — daily errands",
+      "theme": "location",
+      "lessons": [
+        {
+          "id": "zh-en-cityerrand-1",
+          "title": "At the bank",
+          "description": "Money, accounts, and ATMs",
+          "theme": "location",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "ce1-1",
+              "type": "match_pairs",
+              "prompt": "Match the bank word",
+              "pairs": [
+                { "left": "银行", "right": "Bank" },
+                { "left": "存钱", "right": "Deposit money" },
+                { "left": "取钱", "right": "Withdraw money" },
+                { "left": "转账", "right": "Transfer (money)" }
+              ]
+            },
+            {
+              "id": "ce1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"信用卡\" (xìn yòng kǎ) mean?",
+              "options": ["Cash", "Credit card", "Coin", "Receipt"],
+              "answer": "Credit card"
+            },
+            {
+              "id": "ce1-3",
+              "type": "fill_blank",
+              "prompt": "\"取款机\" (qǔ kuǎn jī) means ___",
+              "answer": "ATM",
+              "acceptableAnswers": ["Cash machine", "Cash dispenser"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cityerrand-2",
+          "title": "Post office & delivery",
+          "description": "Mailing things and getting packages",
+          "theme": "location",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "ce2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"邮局\" (yóu jú) mean?",
+              "options": ["Pharmacy", "Post office", "City hall", "Library"],
+              "answer": "Post office"
+            },
+            {
+              "id": "ce2-2",
+              "type": "match_pairs",
+              "prompt": "Match the mailing word",
+              "pairs": [
+                { "left": "包裹", "right": "Package" },
+                { "left": "寄", "right": "Send / mail" },
+                { "left": "快递", "right": "Express delivery" },
+                { "left": "地址", "right": "Address" }
+              ]
+            },
+            {
+              "id": "ce2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to mail this package\"",
+              "answer": "我 想 寄 这 个 包裹",
+              "bank": ["我", "想", "寄", "这", "个", "包裹", "收", "买"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cityerrand-3",
+          "title": "Pharmacy & hospital",
+          "description": "Getting medicine and seeing a doctor",
+          "theme": "location",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ce3-1",
+              "type": "match_pairs",
+              "prompt": "Match the medical word",
+              "pairs": [
+                { "left": "医院", "right": "Hospital" },
+                { "left": "药店", "right": "Pharmacy" },
+                { "left": "医生", "right": "Doctor" },
+                { "left": "药", "right": "Medicine" }
+              ]
+            },
+            {
+              "id": "ce3-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 不 舒服\" (wǒ bù shū fu) mean?",
+              "options": [
+                "I'm not full",
+                "I don't feel well",
+                "I'm not free",
+                "I don't understand"
+              ],
+              "answer": "I don't feel well"
+            },
+            {
+              "id": "ce3-3",
+              "type": "fill_blank",
+              "prompt": "\"看 病\" (kàn bìng) means ___",
+              "answer": "See a doctor",
+              "acceptableAnswers": ["Go to the doctor", "Get medical care"]
+            },
+            {
+              "id": "ce3-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have a headache\"",
+              "answer": "我 头 疼",
+              "bank": ["我", "头", "疼", "病", "肚子", "很"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cityerrand-4",
+          "title": "City troubles & favors",
+          "description": "Asking for help with errands",
+          "theme": "location",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ce4-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Can you help me a moment?\"",
+              "answer": "你 能 帮 我 一下 吗",
+              "bank": ["你", "能", "帮", "我", "一下", "吗", "可以", "请"]
+            },
+            {
+              "id": "ce4-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"no problem\"?",
+              "options": ["没 问题", "有 问题", "对不起", "不 客气"],
+              "answer": "没 问题"
+            },
+            {
+              "id": "ce4-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Sorry, I'm busy now\"",
+              "answer": "对不起 我 现在 很 忙",
+              "bank": ["对不起", "我", "现在", "很", "忙", "没", "时间"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cityerrand-5",
+          "title": "Distance with 离",
+          "description": "How far is X from Y? — A 离 B + far/near",
+          "theme": "location",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ce5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 家 离 学校 很 近\" mean?",
+              "options": [
+                "I live at school",
+                "My home is very close to school",
+                "School is far from home",
+                "I walk to school"
+              ],
+              "answer": "My home is very close to school",
+              "explanation": "Pattern: A 离 B + 远/近 — \"A is far from / close to B\". 离 (lí) measures the gap between two places."
+            },
+            {
+              "id": "ce5-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The bank is far from here\"",
+              "answer": "银行 离 这里 很 远",
+              "bank": ["银行", "离", "这里", "很", "远", "近", "在"],
+              "explanation": "离 sits between the two places: A 离 B 远 — \"A is far from B\"."
+            },
+            {
+              "id": "ce5-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the right pattern: \"How far is the post office from here?\"",
+              "options": [
+                "邮局 离 这里 多 远",
+                "邮局 这里 离 多 远",
+                "多 远 离 邮局 这里",
+                "离 邮局 这里 多 远"
+              ],
+              "answer": "邮局 离 这里 多 远",
+              "explanation": "多 远 (\"how far\") goes at the end of the 离 frame, just like 远 / 近 would."
+            },
+            {
+              "id": "ce5-4",
+              "type": "fill_blank",
+              "prompt": "\"医院 ___ 公司 不 远\" — fill the gap (the distance coverb)",
+              "answer": "离",
+              "acceptableAnswers": ["离"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-b1-review",
+      "title": "B1 review",
+      "description": "Mixed practice across the intermediate topics",
+      "theme": "review",
+      "lessons": [
+        {
+          "id": "zh-en-b1-review-1",
+          "title": "把 & 被",
+          "description": "Active and passive workout",
+          "theme": "review",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "br1-1",
+              "type": "multiple_choice",
+              "prompt": "Pick the right 把 sentence: \"He drank up the tea\"",
+              "options": [
+                "他 把 茶 喝 了",
+                "他 喝 把 茶 了",
+                "他 把 喝 了 茶",
+                "他 茶 把 喝 了"
+              ],
+              "answer": "他 把 茶 喝 了"
+            },
+            {
+              "id": "br1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build the passive: \"My phone got stolen\"",
+              "answer": "我 的 手机 被 偷 了",
+              "bank": ["我", "的", "手机", "被", "偷", "了", "把", "拿"]
+            },
+            {
+              "id": "br1-3",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is grammatically wrong?",
+              "options": [
+                "我 把 苹果 吃 了",
+                "我 把 这 本 书 喜欢",
+                "他 把 门 关 上 了",
+                "请 把 灯 打 开"
+              ],
+              "answer": "我 把 这 本 书 喜欢",
+              "explanation": "把 needs a verb that physically affects the object — 喜欢 (like) doesn't qualify."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-b1-review-2",
+          "title": "得 complement",
+          "description": "How well — review",
+          "theme": "review",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "br2-1",
+              "type": "multiple_choice",
+              "prompt": "Pick the right sentence: \"He speaks Chinese well\"",
+              "options": [
+                "他 说 中文 得 很 好",
+                "他 说 中文 说 得 很 好",
+                "他 中文 很 好 说",
+                "他 得 说 中文 好"
+              ],
+              "answer": "他 说 中文 说 得 很 好"
+            },
+            {
+              "id": "br2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She doesn't run fast\"",
+              "answer": "她 跑 得 不 快",
+              "bank": ["她", "跑", "得", "不", "快", "很", "了"]
+            },
+            {
+              "id": "br2-3",
+              "type": "multiple_choice",
+              "prompt": "Which 'de' goes after a verb to describe how it was done?",
+              "options": ["的", "地", "得", "了"],
+              "answer": "得"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-b1-review-3",
+          "title": "Travel & errands",
+          "description": "Travel, work, and city life",
+          "theme": "review",
+          "xp": 20,
+          "exercises": [
+            {
+              "id": "br3-1",
+              "type": "match_pairs",
+              "prompt": "Match the travel word",
+              "pairs": [
+                { "left": "护照", "right": "Passport" },
+                { "left": "登机牌", "right": "Boarding pass" },
+                { "left": "行李", "right": "Luggage" },
+                { "left": "酒店", "right": "Hotel" }
+              ]
+            },
+            {
+              "id": "br3-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"check out (of a hotel)\"?",
+              "options": ["入住", "退房", "登机", "买单"],
+              "answer": "退房"
+            },
+            {
+              "id": "br3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to mail this package\"",
+              "answer": "我 想 寄 这 个 包裹",
+              "bank": ["我", "想", "寄", "这", "个", "包裹", "买", "收"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-b1-review-4",
+          "title": "Story & opinion",
+          "description": "Putting B1 together",
+          "theme": "review",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "br4-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She walked in laughing\"",
+              "answer": "她 笑 着 走 进来 了",
+              "bank": ["她", "笑", "着", "走", "进来", "了", "出去", "在"]
+            },
+            {
+              "id": "br4-2",
+              "type": "multiple_choice",
+              "prompt": "Translate: \"我 不 太 同意 你 的 看法\"",
+              "options": [
+                "I really agree with your view",
+                "I don't really agree with your view",
+                "I have no opinion",
+                "I don't understand your view"
+              ],
+              "answer": "I don't really agree with your view"
+            },
+            {
+              "id": "br4-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我觉得这个电影很好",
+              "options": [
+                "我觉得这个电影很好",
+                "我认为这个电影很好",
+                "我看这个电影很好",
+                "我喜欢这个电影"
+              ],
+              "answer": "我觉得这个电影很好",
+              "explanation": "我 觉得 这 个 电影 很 好 — \"I think this movie is good.\" 觉得 is the everyday opinion verb."
+            },
+            {
+              "id": "br4-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Suddenly the phone rang\"",
+              "answer": "突然 电话 响 了",
+              "bank": ["突然", "电话", "响", "了", "后来", "先"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

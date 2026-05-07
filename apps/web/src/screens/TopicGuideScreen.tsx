@@ -71,7 +71,9 @@ function Section({ section }: { section: GuideSection }) {
               ? '⚠️'
               : section.tone === 'tip'
                 ? '💡'
-                : '📌'}
+                : section.tone === 'common_mistake'
+                  ? '🚫'
+                  : '📌'}
           </span>
           <p>{section.text}</p>
         </aside>

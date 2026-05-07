@@ -228,6 +228,12 @@
   border-color: var(--text-subtle);
   color: var(--text);
 }
+.guide-callout.tone-common_mistake {
+  background: #ffeceb;
+  border-left-style: dashed;
+  border-color: var(--error-500);
+  color: var(--error-700);
+}
 
 /* Tables */
 .guide-table-wrap {

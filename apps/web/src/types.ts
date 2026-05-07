@@ -153,7 +153,7 @@ export type GuideSection =
   | { kind: 'paragraph'; text: string }
   | { kind: 'list'; items: string[] }
   | { kind: 'examples'; rows: GuideExample[] }
-  | { kind: 'callout'; tone?: 'tip' | 'warn' | 'note'; text: string }
+  | { kind: 'callout'; tone?: 'tip' | 'warn' | 'note' | 'common_mistake'; text: string }
   | { kind: 'table'; headers: string[]; rows: string[][] }
 
 /**

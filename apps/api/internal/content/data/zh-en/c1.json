@@ -1,0 +1,2687 @@
+{
+  "id": "c1",
+  "name": "C1 — Advanced",
+  "description": "Operate in Mandarin for business, academic, and journalistic contexts. Argue a position, structure formal discourse, and use 成语 with confidence.",
+  "topics": [
+    {
+      "id": "zh-en-business",
+      "title": "Business Chinese",
+      "description": "Meetings, negotiation, and formal correspondence",
+      "theme": "verbs",
+      "guide": {
+        "intro": "Business Mandarin lives in a register far above everyday speech. The same idea you'd say with 因为...所以 over coffee gets dressed up with 鉴于... 因此 in a meeting. Three habits define the register: connectives that tie clauses together, nominalized topics with 至于, and a default to 您 / 贵 honorifics.",
+        "sections": [
+          { "kind": "heading", "text": "Formal causal connectives" },
+          {
+            "kind": "paragraph",
+            "text": "Casual Chinese uses 因为 X 所以 Y. In formal writing and meetings, you upgrade to 鉴于 X，因此 Y (\"in view of X, therefore Y\") or 由于 X，故 Y (\"owing to X, hence Y\"). 因此 and 故 are interchangeable for \"therefore\", but 故 sounds bookish."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "鉴于市场环境的变化，我们因此调整了战略。", "pinyin": "Jiànyú shìchǎng huánjìng de biànhuà, wǒmen yīncǐ tiáozhěng le zhànlüè.", "translation": "In view of market changes, we have therefore adjusted our strategy." },
+              { "source": "由于成本上升，公司因此决定提价。", "pinyin": "Yóuyú chéngběn shàngshēng, gōngsī yīncǐ juédìng tíjià.", "translation": "Owing to rising costs, the company has accordingly decided to raise prices." },
+              { "source": "因为成本上升，所以我们涨价了。", "pinyin": "Yīnwèi chéngběn shàngshēng, suǒyǐ wǒmen zhǎngjià le.", "translation": "Because costs rose, we raised prices. (casual)" }
+            ]
+          },
+          { "kind": "heading", "text": "然而 vs 但是 — \"however\"" },
+          {
+            "kind": "paragraph",
+            "text": "但是 works in any register. 然而 is the formal cousin you reach for in reports, op-eds, and presentations. 不过 sits in between — written Chinese friendly but not stiff."
+          },
+          {
+            "kind": "table",
+            "headers": ["Word", "Register", "Use"],
+            "rows": [
+              ["但是", "neutral / casual", "Default \"but\" in speech."],
+              ["不过", "semi-formal", "Soft \"however\"; common in articles."],
+              ["然而", "formal / written", "Strong contrast in essays, news, reports."],
+              ["却", "literary", "Inserted before a verb: \"yet [unexpectedly]\"."]
+            ]
+          },
+          { "kind": "heading", "text": "至于 — topic shift" },
+          {
+            "kind": "paragraph",
+            "text": "至于 X (\"as for X\") moves the spotlight to a new sub-topic and is heavily used in structured talks. The phrase always introduces a fresh clause and is followed by a comma. Think of it as the spoken equivalent of a slide transition."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "营收方面我们超出预期。至于成本，仍需进一步控制。", "pinyin": "Yíngshōu fāngmiàn wǒmen chāochū yùqī. Zhìyú chéngběn, réng xū jìnyībù kòngzhì.", "translation": "On revenue we exceeded expectations. As for costs, they still need to be controlled further." },
+              { "source": "至于您提到的合作方式，我们下周再深入讨论。", "pinyin": "Zhìyú nín tídào de hézuò fāngshì, wǒmen xiàzhōu zài shēnrù tǎolùn.", "translation": "As for the form of cooperation you mentioned, let us discuss it in depth next week." }
+            ]
+          },
+          { "kind": "heading", "text": "贵 — honorific prefix" },
+          {
+            "kind": "paragraph",
+            "text": "贵 (\"honored\") attaches to nouns referring to the other party's affiliations: 贵公司 (your company), 贵校 (your school), 贵姓 (your honored surname). Use 贵 anywhere a respectful tone is owed; in return, refer to your own side with the humble 敝 (敝公司 \"my humble company\") or simply 我方 (\"our side\")."
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Mixing registers will make you sound off. Once you open a meeting with 贵公司, stay in formal mode: keep using 您, swap 但是 for 然而, and lean on 至于 for transitions."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-business-1",
+          "title": "Opening a meeting",
+          "description": "Greet, thank, and frame the agenda",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "biz1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"承蒙贵公司的支持\" (chéng méng guì gōngsī de zhīchí) mean?",
+              "options": [
+                "Thanks to your company's support",
+                "Our company's support",
+                "Both companies cooperate",
+                "Please support us"
+              ],
+              "answer": "Thanks to your company's support",
+              "explanation": "承蒙 is a formal \"thanks to / kindly receiving\"; 贵公司 is the honorific \"your company\"."
+            },
+            {
+              "id": "biz1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today's agenda mainly covers three items\"",
+              "answer": "今天 的 议程 主要 包括 三 项 内容",
+              "bank": ["今天", "的", "议程", "主要", "包括", "三", "项", "内容", "会议", "结束"]
+            },
+            {
+              "id": "biz1-3",
+              "type": "match_pairs",
+              "prompt": "Match the formal opener to its function",
+              "pairs": [
+                { "left": "感谢各位拨冗出席", "right": "Thanks for taking time to attend" },
+                { "left": "请允许我做个简单的介绍", "right": "Allow me to make a brief introduction" },
+                { "left": "首先请看第一项议程", "right": "Let's begin with item one on the agenda" },
+                { "left": "希望今天能达成共识", "right": "I hope we can reach consensus today" }
+              ]
+            },
+            {
+              "id": "biz1-4",
+              "type": "fill_blank",
+              "prompt": "\"贵公司\" is the formal way to say ___",
+              "answer": "Your company",
+              "acceptableAnswers": ["your company", "your honorable company"],
+              "explanation": "The 贵 honorific elevates references to the other party."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-business-2",
+          "title": "Negotiation language",
+          "description": "Soften, push back, propose terms",
+          "theme": "verbs",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "biz2-1",
+              "type": "multiple_choice",
+              "prompt": "Which phrase most diplomatically rejects a proposal?",
+              "options": [
+                "我不同意",
+                "恐怕这个方案我们难以接受",
+                "不行",
+                "你错了"
+              ],
+              "answer": "恐怕这个方案我们难以接受",
+              "explanation": "恐怕 (\"I'm afraid\") + 难以接受 (\"hard to accept\") softens the rejection while staying firm."
+            },
+            {
+              "id": "biz2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"On the price issue we hope you can reconsider\"",
+              "answer": "在 价格 问题 上 我们 希望 贵方 可以 再 考虑 一下",
+              "bank": ["在", "价格", "问题", "上", "我们", "希望", "贵方", "可以", "再", "考虑", "一下", "便宜"]
+            },
+            {
+              "id": "biz2-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"双方各让一步\" (shuāngfāng gè ràng yí bù) suggest?",
+              "options": [
+                "Both sides walk away",
+                "Each side makes a concession",
+                "We push harder",
+                "We restart talks"
+              ],
+              "answer": "Each side makes a concession",
+              "explanation": "Literally \"both sides each yield one step\" — classic negotiation phrasing for a compromise."
+            },
+            {
+              "id": "biz2-4",
+              "type": "fill_blank",
+              "prompt": "\"我们的底线\" (wǒmen de dǐ xiàn) means \"our ___\"",
+              "answer": "Bottom line",
+              "acceptableAnswers": ["bottom line", "limit", "minimum"],
+              "explanation": "底线 = bottom line, the lowest acceptable terms."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-business-3",
+          "title": "Formal email & letters",
+          "description": "Salutations, body, and sign-offs",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "biz3-1",
+              "type": "match_pairs",
+              "prompt": "Match the email element to its position",
+              "pairs": [
+                { "left": "尊敬的王总：", "right": "Salutation" },
+                { "left": "兹就贵公司提出的方案，回复如下", "right": "Opening line" },
+                { "left": "敬请查收", "right": "Please kindly review" },
+                { "left": "此致 敬礼", "right": "Closing / sign-off" }
+              ]
+            },
+            {
+              "id": "biz3-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"兹\" (zī) mean in formal email?",
+              "options": [
+                "Until",
+                "Hereby / herewith",
+                "Although",
+                "Because"
+              ],
+              "answer": "Hereby / herewith",
+              "explanation": "兹 is a classical-style word still used in formal correspondence to mean \"hereby\"."
+            },
+            {
+              "id": "biz3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Attached please find the contract draft, please kindly review\"",
+              "answer": "附件 是 合同 草稿 敬请 查阅",
+              "bank": ["附件", "是", "合同", "草稿", "敬请", "查阅", "你", "给"]
+            },
+            {
+              "id": "biz3-4",
+              "type": "fill_blank",
+              "prompt": "\"此致 敬礼\" closes a Chinese formal letter, equivalent to ___",
+              "answer": "Sincerely",
+              "acceptableAnswers": ["sincerely", "yours sincerely", "best regards", "respectfully"],
+              "explanation": "Standard formal sign-off; literally \"to here, salute\"."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-business-4",
+          "title": "Discussing performance",
+          "description": "Numbers, growth, projections",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "biz4-1",
+              "type": "multiple_choice",
+              "prompt": "\"营收同比增长百分之十五\" means revenue grew ___",
+              "options": [
+                "15% quarter-over-quarter",
+                "15% year-over-year",
+                "15% in total",
+                "15% per month"
+              ],
+              "answer": "15% year-over-year",
+              "explanation": "同比 specifically means \"compared with the same period last year\". 环比 = quarter-over-quarter / period-over-period."
+            },
+            {
+              "id": "biz4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This quarter's profit is significantly higher than expected\"",
+              "answer": "本 季度 的 利润 远 高于 预期",
+              "bank": ["本", "季度", "的", "利润", "远", "高于", "预期", "低于", "差"]
+            },
+            {
+              "id": "biz4-3",
+              "type": "match_pairs",
+              "prompt": "Match the term to its meaning",
+              "pairs": [
+                { "left": "营收", "right": "Revenue" },
+                { "left": "利润率", "right": "Profit margin" },
+                { "left": "市场份额", "right": "Market share" },
+                { "left": "运营成本", "right": "Operating cost" }
+              ]
+            },
+            {
+              "id": "biz4-4",
+              "type": "fill_blank",
+              "prompt": "\"扭亏为盈\" describes a company turning ___",
+              "answer": "Loss into profit",
+              "acceptableAnswers": ["losses into profit", "losses to profit", "profitable", "from loss to profit"],
+              "explanation": "扭亏为盈 (niǔ kuī wéi yíng) — a fixed business expression for becoming profitable."
+            },
+            {
+              "id": "biz4-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the comparison metric you hear",
+              "spokenText": "同比增长百分之十五",
+              "options": ["同比增长百分之十五", "环比增长百分之十五", "同比下降百分之十五", "环比下降百分之十五"],
+              "answer": "同比增长百分之十五",
+              "explanation": "同比 (year-over-year) and 环比 (period-over-period) sound and look alike but mean different things. Train your ear to hear 同 vs 环."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-business-5",
+          "title": "Closing & follow-up",
+          "description": "Wrapping the meeting and confirming next steps",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "biz5-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Thank you all for your valuable input\"",
+              "answer": "感谢 各位 提出 的 宝贵 意见",
+              "bank": ["感谢", "各位", "提出", "的", "宝贵", "意见", "今天", "再见"]
+            },
+            {
+              "id": "biz5-2",
+              "type": "multiple_choice",
+              "prompt": "Which best translates \"We'll follow up by email next week\"?",
+              "options": [
+                "下周我们再用邮件跟进",
+                "下周我给你打电话",
+                "我们以后再说",
+                "再见"
+              ],
+              "answer": "下周我们再用邮件跟进",
+              "explanation": "跟进 (\"follow up\") is a borrowed business term in modern Chinese."
+            },
+            {
+              "id": "biz5-3",
+              "type": "match_pairs",
+              "prompt": "Match the closing phrase to its meaning",
+              "pairs": [
+                { "left": "期待下次合作", "right": "Looking forward to working together again" },
+                { "left": "保持联系", "right": "Stay in touch" },
+                { "left": "请多指教", "right": "Please offer your guidance" },
+                { "left": "辛苦各位了", "right": "Thanks for everyone's hard work" }
+              ]
+            },
+            {
+              "id": "biz5-4",
+              "type": "fill_blank",
+              "prompt": "\"双赢\" (shuāng yíng) means a ___ outcome",
+              "answer": "Win-win",
+              "acceptableAnswers": ["win-win", "winwin", "mutually beneficial"],
+              "explanation": "双赢 is the modern business calque from English \"win-win\"."
+            },
+            {
+              "id": "biz5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In view of recent market volatility, the company is therefore postponing its IPO\"",
+              "answer": "鉴于 近期 市场 波动 ， 公司 因此 暂缓 上市",
+              "bank": ["鉴于", "近期", "市场", "波动", "，", "公司", "因此", "暂缓", "上市", "由于", "所以"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-academic",
+      "title": "Academic discourse",
+      "description": "Lectures, papers, and presenting research",
+      "theme": "verbs",
+      "guide": {
+        "intro": "Academic Chinese is dense, nominalized, and emphasis-heavy. Two structures dominate: 是...的 to spotlight one component of an established fact, and nominalization with 的 / 来说 / 而言 to package whole clauses as topics. Master these and your writing instantly sounds academic.",
+        "sections": [
+          { "kind": "heading", "text": "是...的 — emphasis on a known event" },
+          {
+            "kind": "paragraph",
+            "text": "When the listener already knows the action happened and you want to highlight when, where, how, or who did it, wrap that element in 是...的. The 是 sits before the highlighted phrase; 的 closes the sentence."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他来了。", "pinyin": "Tā lái le.", "translation": "He came. (neutral statement)" },
+              { "source": "他是昨天来的。", "pinyin": "Tā shì zuótiān lái de.", "translation": "It was yesterday that he came. (when)" },
+              { "source": "他是从北京来的。", "pinyin": "Tā shì cóng Běijīng lái de.", "translation": "It is from Beijing that he came. (where)" },
+              { "source": "这本书是2018年出版的。", "pinyin": "Zhè běn shū shì èr líng yī bā nián chūbǎn de.", "translation": "This book was published in 2018. (focus on the year)" }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "是...的 only works for events the listener already accepts as fact. If you're announcing fresh news, use 了 instead — 是...的 would sound oddly defensive."
+          },
+          { "kind": "heading", "text": "Nominalization with 的话 / 来说 / 而言" },
+          {
+            "kind": "paragraph",
+            "text": "Academic writing turns clauses into topic NPs. 对 X 来说 / 对 X 而言 means \"as far as X is concerned\". 就 X 而言 raises the formality further. These structures let you front a scoped premise before delivering an argument."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "对发展中国家来说，气候变化是巨大的挑战。", "pinyin": "Duì fāzhǎn zhōng guójiā lái shuō, qìhòu biànhuà shì jùdà de tiǎozhàn.", "translation": "For developing countries, climate change is a huge challenge." },
+              { "source": "就经济效益而言，这个方案最为合理。", "pinyin": "Jiù jīngjì xiàoyì ér yán, zhège fāng'àn zuì wéi hélǐ.", "translation": "In terms of economic benefit, this plan is the most reasonable." },
+              { "source": "如果按这个标准的话，我们都不合格。", "pinyin": "Rúguǒ àn zhège biāozhǔn de huà, wǒmen dōu bù hégé.", "translation": "If we go by this standard, none of us qualify." }
+            ]
+          },
+          { "kind": "heading", "text": "Hedging your claims" },
+          {
+            "kind": "paragraph",
+            "text": "Academic Chinese hedges constantly. 似乎 (it seems), 可能 (possibly), 在一定程度上 (to a certain extent), and 总的来说 (generally speaking) are the four pillars. Stack them to soften strong claims."
+          },
+          {
+            "kind": "table",
+            "headers": ["Hedge", "Force", "Use"],
+            "rows": [
+              ["似乎", "soft", "appearance / impression"],
+              ["可能", "soft", "possibility / probability"],
+              ["在一定程度上", "medium", "\"to some extent\" — caveats a generalization"],
+              ["总的来说", "summarizing", "\"overall\" — sums up after evidence"]
+            ]
+          },
+          { "kind": "heading", "text": "Citing and quoting" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "根据王教授的研究…", "pinyin": "Gēnjù Wáng jiàoshòu de yánjiū…", "translation": "According to Professor Wang's research…" },
+              { "source": "正如学者所指出的…", "pinyin": "Zhèngrú xuézhě suǒ zhǐchū de…", "translation": "As scholars have pointed out…" },
+              { "source": "数据显示，过去十年间增长了百分之四十。", "pinyin": "Shùjù xiǎnshì, guòqù shí nián jiān zēngzhǎng le bǎi fēn zhī sìshí.", "translation": "The data show that over the past decade it grew by 40%." }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-academic-1",
+          "title": "是...的 emphasis",
+          "description": "Highlight when, where, or how something happened",
+          "theme": "verbs",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "ac1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"她是去年从英国回来的\" emphasize?",
+              "options": [
+                "That she returned (the fact itself)",
+                "When and where she returned from",
+                "That she will return",
+                "Whether she returned"
+              ],
+              "answer": "When and where she returned from",
+              "explanation": "是...的 highlights the time (去年) and origin (从英国); the listener already knows she returned."
+            },
+            {
+              "id": "ac1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This theory was first proposed by Einstein\"",
+              "answer": "这个 理论 是 爱因斯坦 最早 提出 的",
+              "bank": ["这个", "理论", "是", "爱因斯坦", "最早", "提出", "的", "新", "今年"]
+            },
+            {
+              "id": "ac1-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct emphasis sentence for \"It was in 1949 that the People's Republic was founded.\"",
+              "options": [
+                "中华人民共和国是1949年成立的",
+                "中华人民共和国1949年成立了",
+                "中华人民共和国成立1949年",
+                "中华人民共和国是1949年成立"
+              ],
+              "answer": "中华人民共和国是1949年成立的",
+              "explanation": "是...的 frames 1949 as the focused year; the other options either drop 是, drop 的, or scramble the word order."
+            },
+            {
+              "id": "ac1-4",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct word: \"这篇论文 ___ 王教授写的\" (focus: who wrote it)",
+              "options": ["是", "被", "把", "在"],
+              "answer": "是",
+              "explanation": "是...的 fronts \"by Professor Wang\" as the focus. 被 would create a passive but mismatch with 的; 把 needs a disposed object after it; 在 marks location, not agent focus."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-academic-2",
+          "title": "Topic framing — 对...来说",
+          "description": "Scope an argument to a population or angle",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "ac2-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"For young people, housing prices are unbearable\"",
+              "answer": "对 年轻人 来说 ， 房价 已经 难以 承受",
+              "bank": ["对", "年轻人", "来说", "，", "房价", "已经", "难以", "承受", "便宜", "可以"]
+            },
+            {
+              "id": "ac2-2",
+              "type": "multiple_choice",
+              "prompt": "Which is most formal?",
+              "options": [
+                "对我来说",
+                "对我而言",
+                "我觉得",
+                "我说"
+              ],
+              "answer": "对我而言",
+              "explanation": "对...而言 is the formal academic version of 对...来说; both go further than 我觉得."
+            },
+            {
+              "id": "ac2-3",
+              "type": "match_pairs",
+              "prompt": "Match the framing phrase",
+              "pairs": [
+                { "left": "对学生而言", "right": "As far as students are concerned" },
+                { "left": "就环境保护而言", "right": "In terms of environmental protection" },
+                { "left": "从长远来看", "right": "In the long run" },
+                { "left": "在一定程度上", "right": "To a certain extent" }
+              ]
+            },
+            {
+              "id": "ac2-4",
+              "type": "fill_blank",
+              "prompt": "\"从长远来看\" (cóng cháng yuǎn lái kàn) means \"in the ___ run\"",
+              "answer": "Long",
+              "acceptableAnswers": ["long term", "long run"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-academic-3",
+          "title": "Citing & paraphrasing",
+          "description": "Bring sources into your argument",
+          "theme": "verbs",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "ac3-1",
+              "type": "match_pairs",
+              "prompt": "Match the citation phrase",
+              "pairs": [
+                { "left": "根据最新的研究", "right": "According to the latest research" },
+                { "left": "正如他所说", "right": "As he said" },
+                { "left": "数据表明", "right": "The data indicate" },
+                { "left": "众所周知", "right": "As is well known" }
+              ]
+            },
+            {
+              "id": "ac3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The data show that population is rising year by year\"",
+              "answer": "数据 表明 ， 人口 正在 逐年 上升",
+              "bank": ["数据", "表明", "，", "人口", "正在", "逐年", "上升", "下降", "我们"]
+            },
+            {
+              "id": "ac3-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"众所周知\" (zhòng suǒ zhōu zhī) mean?",
+              "options": [
+                "It is well known to all",
+                "Many people don't know",
+                "Recently announced",
+                "Some have heard"
+              ],
+              "answer": "It is well known to all",
+              "explanation": "Literally \"what the masses all know\" — a fixed academic opener."
+            },
+            {
+              "id": "ac3-4",
+              "type": "fill_blank",
+              "prompt": "\"研究表明\" (yán jiū biǎo míng) means \"research ___\"",
+              "answer": "Shows",
+              "acceptableAnswers": ["indicates", "reveals", "demonstrates"]
+            },
+            {
+              "id": "ac3-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the connective you hear",
+              "spokenText": "因此我们得出以下结论",
+              "options": ["因此我们得出以下结论", "由此我们得出以下结论", "因为我们得出以下结论", "于是我们得出以下结论"],
+              "answer": "因此我们得出以下结论",
+              "explanation": "因此 (\"therefore\") and 由此 (\"from this\") both link cause to result, but 因此 fronts the conclusion while 由此 fronts the inference path. Train your ear to catch the difference."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-academic-4",
+          "title": "Hedging & qualifying",
+          "description": "Soften claims like a careful scholar",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "ac4-1",
+              "type": "multiple_choice",
+              "prompt": "Which phrase hedges a generalization the most?",
+              "options": [
+                "总是",
+                "在一定程度上",
+                "绝对",
+                "肯定"
+              ],
+              "answer": "在一定程度上",
+              "explanation": "在一定程度上 (\"to a certain extent\") signals a partial / qualified claim."
+            },
+            {
+              "id": "ac4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This phenomenon seems to be related to climate change\"",
+              "answer": "这 一 现象 似乎 与 气候 变化 有关",
+              "bank": ["这", "一", "现象", "似乎", "与", "气候", "变化", "有关", "无关", "肯定"]
+            },
+            {
+              "id": "ac4-3",
+              "type": "match_pairs",
+              "prompt": "Match the hedge to its function",
+              "pairs": [
+                { "left": "似乎", "right": "Seems / appears" },
+                { "left": "可能", "right": "Possibly" },
+                { "left": "据说", "right": "It is said" },
+                { "left": "总的来说", "right": "Overall / generally" }
+              ]
+            },
+            {
+              "id": "ac4-4",
+              "type": "fill_blank",
+              "prompt": "\"据说\" (jù shuō) introduces a claim attributed to others — \"___\" in English",
+              "answer": "It is said",
+              "acceptableAnswers": ["it is said", "reportedly", "allegedly", "they say"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-academic-5",
+          "title": "Presenting research",
+          "description": "Open, signpost, and conclude a talk",
+          "theme": "verbs",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "ac5-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today I want to discuss three main findings\"",
+              "answer": "今天 我 想 讨论 三 个 主要 发现",
+              "bank": ["今天", "我", "想", "讨论", "三", "个", "主要", "发现", "结束", "开始"]
+            },
+            {
+              "id": "ac5-2",
+              "type": "match_pairs",
+              "prompt": "Match the signpost to its function",
+              "pairs": [
+                { "left": "首先", "right": "First of all" },
+                { "left": "其次", "right": "Secondly" },
+                { "left": "最后", "right": "Finally" },
+                { "left": "综上所述", "right": "To summarize the above" }
+              ]
+            },
+            {
+              "id": "ac5-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"综上所述\" (zōng shàng suǒ shù) mean?",
+              "options": [
+                "Continuing on",
+                "To summarize the above",
+                "On the contrary",
+                "By the way"
+              ],
+              "answer": "To summarize the above",
+              "explanation": "Standard academic transition leading into the conclusion section."
+            },
+            {
+              "id": "ac5-4",
+              "type": "fill_blank",
+              "prompt": "\"谢谢大家，欢迎提问\" closes a talk and means \"thank you all, ___ for questions\"",
+              "answer": "Welcome",
+              "acceptableAnswers": ["welcome", "open"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-academic-6",
+          "title": "把…当作 / 视…为 — \"regard X as Y\"",
+          "description": "Frame an entity as something else for analysis",
+          "theme": "verbs",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "ac6-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我们把语言当作一种工具\" mean?",
+              "options": [
+                "We treat language as a tool",
+                "Our language is a tool",
+                "Language uses tools",
+                "We learn language tools"
+              ],
+              "answer": "We treat language as a tool",
+              "explanation": "把 X 当作 Y = \"take X to be Y / regard X as Y\". A core academic framing."
+            },
+            {
+              "id": "ac6-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This article regards education as the foundation of social mobility\"",
+              "answer": "这 篇 文章 把 教育 视为 社会 流动 的 基础",
+              "bank": ["这", "篇", "文章", "把", "教育", "视为", "社会", "流动", "的", "基础", "经济", "失败"]
+            },
+            {
+              "id": "ac6-3",
+              "type": "match_pairs",
+              "prompt": "Match the framing pattern to its register",
+              "pairs": [
+                { "left": "把 X 当作 Y", "right": "Neutral, common in speech and writing" },
+                { "left": "视 X 为 Y", "right": "Formal, classical-flavored" },
+                { "left": "将 X 视为 Y", "right": "Formal academic" },
+                { "left": "把 X 看成 Y", "right": "Casual / spoken" }
+              ]
+            },
+            {
+              "id": "ac6-4",
+              "type": "fill_blank",
+              "prompt": "Complete the formal version: \"我们 ___ 数据 视 ___ 决策的依据\" (regard data as the basis for decisions)",
+              "answer": "把 为",
+              "acceptableAnswers": ["把 为", "将 为"],
+              "explanation": "把/将 X 视为 Y is the formal academic frame; 把 X 当作 Y is the neutral cousin."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-academic-7",
+          "title": "由此可见 / 不难看出 — drawing inferences",
+          "description": "Lead the reader to your conclusion",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "ac7-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"由此可见\" (yóu cǐ kě jiàn) signal in academic writing?",
+              "options": [
+                "Introducing new evidence",
+                "From this we can see / it follows that",
+                "Changing the subject",
+                "Quoting a source"
+              ],
+              "answer": "From this we can see / it follows that",
+              "explanation": "由此可见 hands the reader a conclusion drawn from the evidence just presented."
+            },
+            {
+              "id": "ac7-2",
+              "type": "match_pairs",
+              "prompt": "Match the inference phrase",
+              "pairs": [
+                { "left": "由此可见", "right": "From this it can be seen" },
+                { "left": "不难看出", "right": "It is not hard to see" },
+                { "left": "由此可知", "right": "From this we can know" },
+                { "left": "可想而知", "right": "As one can imagine" }
+              ]
+            },
+            {
+              "id": "ac7-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It is not hard to see that this trend will continue\"",
+              "answer": "不难 看出 ， 这 一 趋势 将 持续",
+              "bank": ["不难", "看出", "，", "这", "一", "趋势", "将", "持续", "停止", "我们"]
+            },
+            {
+              "id": "ac7-4",
+              "type": "fill_blank",
+              "prompt": "Complete: \"___ ，教育对经济发展至关重要\" (from this it can be seen that...)",
+              "answer": "由此可见",
+              "explanation": "由此可见 fronts a concluding inference."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-society",
+      "title": "Society & policy",
+      "description": "Urbanization, aging, environment, education",
+      "theme": "basics",
+      "lessons": [
+        {
+          "id": "zh-en-society-1",
+          "title": "Urbanization",
+          "description": "Migration, megacities, and growing pains",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "soc1-1",
+              "type": "match_pairs",
+              "prompt": "Match the term to its meaning",
+              "pairs": [
+                { "left": "城市化", "right": "Urbanization" },
+                { "left": "农民工", "right": "Migrant worker" },
+                { "left": "户口", "right": "Household registration" },
+                { "left": "贫富差距", "right": "Wealth gap" }
+              ]
+            },
+            {
+              "id": "soc1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Urbanization has brought enormous economic benefits\"",
+              "answer": "城市化 给 经济 带来 了 巨大 的 好处",
+              "bank": ["城市化", "给", "经济", "带来", "了", "巨大", "的", "好处", "坏处", "城市"]
+            },
+            {
+              "id": "soc1-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"大城市的房价居高不下\" mean?",
+              "options": [
+                "Big-city housing prices remain stubbornly high",
+                "Big-city housing prices have crashed",
+                "Big cities have no houses",
+                "Houses are cheap in big cities"
+              ],
+              "answer": "Big-city housing prices remain stubbornly high",
+              "explanation": "居高不下 is a fixed expression meaning \"stay high and not come down\"."
+            },
+            {
+              "id": "soc1-4",
+              "type": "fill_blank",
+              "prompt": "\"农民工\" (nóng mín gōng) refers to ___ workers from the countryside",
+              "answer": "Migrant",
+              "acceptableAnswers": ["rural migrant", "migrant", "rural"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-society-2",
+          "title": "Aging society",
+          "description": "Demographics, retirement, and care",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "soc2-1",
+              "type": "match_pairs",
+              "prompt": "Match the demographic term",
+              "pairs": [
+                { "left": "老龄化", "right": "Aging (of population)" },
+                { "left": "出生率", "right": "Birth rate" },
+                { "left": "退休金", "right": "Pension" },
+                { "left": "养老院", "right": "Nursing home" }
+              ]
+            },
+            {
+              "id": "soc2-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"少子化\" (shǎo zǐ huà) mean?",
+              "options": [
+                "More children",
+                "Declining birth rate / fewer children",
+                "Younger generation",
+                "Education reform"
+              ],
+              "answer": "Declining birth rate / fewer children",
+              "explanation": "Coined from Japanese, becoming common in Chinese policy discussions; mainland writing still tends toward 出生率下降."
+            },
+            {
+              "id": "soc2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"China's population is aging rapidly\"",
+              "answer": "中国 的 人口 正在 快速 老龄化",
+              "bank": ["中国", "的", "人口", "正在", "快速", "老龄化", "年轻", "国家"]
+            },
+            {
+              "id": "soc2-4",
+              "type": "fill_blank",
+              "prompt": "\"养老问题\" (yǎng lǎo wèn tí) is the ___ issue",
+              "answer": "Elderly care",
+              "acceptableAnswers": ["aging", "elder care", "elderly care", "old-age care", "retirement care"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-society-3",
+          "title": "Environment & climate",
+          "description": "Pollution, policy, and sustainability",
+          "theme": "weather",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "soc3-1",
+              "type": "match_pairs",
+              "prompt": "Match the environmental term",
+              "pairs": [
+                { "left": "雾霾", "right": "Smog" },
+                { "left": "可再生能源", "right": "Renewable energy" },
+                { "left": "碳排放", "right": "Carbon emissions" },
+                { "left": "可持续发展", "right": "Sustainable development" }
+              ]
+            },
+            {
+              "id": "soc3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The government has issued new environmental protection policies\"",
+              "answer": "政府 出台 了 新 的 环保 政策",
+              "bank": ["政府", "出台", "了", "新", "的", "环保", "政策", "经济", "讨论"]
+            },
+            {
+              "id": "soc3-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"绿水青山就是金山银山\" mean?",
+              "options": [
+                "Mountains have gold inside",
+                "Clear waters and green mountains are mountains of gold and silver (i.e. environment is wealth)",
+                "Rivers are dangerous",
+                "Cities should be rebuilt"
+              ],
+              "answer": "Clear waters and green mountains are mountains of gold and silver (i.e. environment is wealth)",
+              "explanation": "A famous policy slogan equating ecological wealth with economic wealth."
+            },
+            {
+              "id": "soc3-4",
+              "type": "fill_blank",
+              "prompt": "\"碳中和\" (tàn zhōng hé) means carbon ___",
+              "answer": "Neutrality",
+              "acceptableAnswers": ["neutral", "neutrality"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-society-4",
+          "title": "Education & inequality",
+          "description": "Schools, exams, and access",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "soc4-1",
+              "type": "match_pairs",
+              "prompt": "Match the education term",
+              "pairs": [
+                { "left": "高考", "right": "College entrance exam" },
+                { "left": "义务教育", "right": "Compulsory education" },
+                { "left": "应试教育", "right": "Exam-oriented education" },
+                { "left": "教育资源", "right": "Educational resources" }
+              ]
+            },
+            {
+              "id": "soc4-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"内卷\" (nèi juǎn) describe?",
+              "options": [
+                "Studying abroad",
+                "Excessive internal competition / rat-race",
+                "Group projects",
+                "Easy classes"
+              ],
+              "answer": "Excessive internal competition / rat-race",
+              "explanation": "内卷 (\"involution\") is the modern buzzword for over-competition that yields no real progress."
+            },
+            {
+              "id": "soc4-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Educational resource distribution is still uneven\"",
+              "answer": "教育 资源 的 分配 仍然 不 均衡",
+              "bank": ["教育", "资源", "的", "分配", "仍然", "不", "均衡", "学校", "考试"]
+            },
+            {
+              "id": "soc4-4",
+              "type": "fill_blank",
+              "prompt": "\"寒门难出贵子\" laments that it is hard for ___ families to produce successful children",
+              "answer": "Poor",
+              "acceptableAnswers": ["poor", "humble", "low-income"],
+              "explanation": "寒门 = \"cold gate\" — a humble household; a recurring social issue refrain."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-arts",
+      "title": "Art & literature",
+      "description": "Read poems, discuss films, appreciate calligraphy",
+      "theme": "basics",
+      "guide": {
+        "intro": "Classical Chinese threads through modern writing in three little words: 之, 其, 所. They look intimidating but they're not new grammar — they're compressed forms of structures you already know. Recognize them and most literary and academic Chinese opens up.",
+        "sections": [
+          { "kind": "heading", "text": "之 — the literary 的" },
+          {
+            "kind": "paragraph",
+            "text": "之 (zhī) is what 的 used to be. In modern Chinese it survives in fixed expressions and titles. Wherever you see 之, mentally substitute 的. The structure 名词 + 之 + 名词 = \"X's Y\" or \"Y of X\"."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "中国之美", "pinyin": "Zhōngguó zhī měi", "translation": "The beauty of China (= 中国的美)" },
+              { "source": "成功之道", "pinyin": "Chénggōng zhī dào", "translation": "The path to success" },
+              { "source": "总而言之", "pinyin": "Zǒng ér yán zhī", "translation": "All in all (\"to sum up and speak of it\")" },
+              { "source": "一举两得之事", "pinyin": "Yì jǔ liǎng dé zhī shì", "translation": "Something that kills two birds with one stone" }
+            ]
+          },
+          { "kind": "heading", "text": "其 — \"its / their / his / her\"" },
+          {
+            "kind": "paragraph",
+            "text": "其 (qí) is the literary third-person possessive — equivalent to 它的 / 他的 / 她的 / 他们的, depending on context. You'll meet it in essays, instructions, and idioms."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "其结果令人震惊。", "pinyin": "Qí jiéguǒ lìng rén zhènjīng.", "translation": "Its (the) result is shocking." },
+              { "source": "公司及其员工", "pinyin": "Gōngsī jí qí yuángōng", "translation": "The company and its employees" },
+              { "source": "尤其", "pinyin": "Yóuqí", "translation": "Especially (\"particularly its [case]\")" },
+              { "source": "各取其所需", "pinyin": "Gè qǔ qí suǒ xū", "translation": "Each takes what they need" }
+            ]
+          },
+          { "kind": "heading", "text": "所 — turning verbs into nouns" },
+          {
+            "kind": "paragraph",
+            "text": "所 (suǒ) sits before a verb to nominalize the object: 所 + 动词 = \"that which is V-ed\". The full pattern is often 名词 + 所 + 动词 + 的 + 名词 = \"the X that N V's\". It feels ancient but appears constantly in titles and formal speech."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我所看到的", "pinyin": "Wǒ suǒ kàndào de", "translation": "What I have seen (literally: that which I saw)" },
+              { "source": "我们所做的努力", "pinyin": "Wǒmen suǒ zuò de nǔlì", "translation": "The efforts we have made" },
+              { "source": "众所周知", "pinyin": "Zhòng suǒ zhōu zhī", "translation": "As is universally known" },
+              { "source": "理所当然", "pinyin": "Lǐ suǒ dāng rán", "translation": "As reason dictates / naturally" }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "note",
+            "text": "You almost never need to write 之/其/所 yourself in everyday Chinese. The goal is recognition: when you see 其, your brain swaps in 它的; when you see 所...的, you read it as \"the thing that is V-ed\"."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-arts-1",
+          "title": "Talking about books",
+          "description": "Genres, plots, characters",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "art1-1",
+              "type": "match_pairs",
+              "prompt": "Match the genre",
+              "pairs": [
+                { "left": "小说", "right": "Novel" },
+                { "left": "散文", "right": "Essay / prose" },
+                { "left": "诗歌", "right": "Poetry" },
+                { "left": "传记", "right": "Biography" }
+              ]
+            },
+            {
+              "id": "art1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"这本小说情节曲折\" mean?",
+              "options": [
+                "This novel has a winding / twisty plot",
+                "This novel is short",
+                "This novel is boring",
+                "This novel was banned"
+              ],
+              "answer": "This novel has a winding / twisty plot",
+              "explanation": "曲折 = winding, turning — a positive description of an engaging plot."
+            },
+            {
+              "id": "art1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The hero's character is portrayed very vividly\"",
+              "answer": "主人公 的 性格 刻画 得 非常 生动",
+              "bank": ["主人公", "的", "性格", "刻画", "得", "非常", "生动", "差", "讨论"]
+            },
+            {
+              "id": "art1-4",
+              "type": "fill_blank",
+              "prompt": "\"这部作品堪称经典\" — 堪称 means \"___ to be called\"",
+              "answer": "Worthy",
+              "acceptableAnswers": ["worthy", "qualifies as", "can be called", "is worthy of being called"],
+              "explanation": "堪称经典 (\"worthy of being called a classic\") is a stock praise phrase."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-arts-2",
+          "title": "Film & cinema",
+          "description": "Direct, act, review",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "art2-1",
+              "type": "match_pairs",
+              "prompt": "Match the film term",
+              "pairs": [
+                { "left": "导演", "right": "Director" },
+                { "left": "演员", "right": "Actor" },
+                { "left": "票房", "right": "Box office" },
+                { "left": "剧本", "right": "Screenplay" }
+              ]
+            },
+            {
+              "id": "art2-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"票房口碑双丰收\" mean?",
+              "options": [
+                "Box office and word-of-mouth both succeed",
+                "Movie failed at box office",
+                "Critics didn't like it",
+                "It went straight to streaming"
+              ],
+              "answer": "Box office and word-of-mouth both succeed",
+              "explanation": "口碑 = word-of-mouth/reputation; 双丰收 = double harvest — high praise for a movie."
+            },
+            {
+              "id": "art2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This film reflects deep social issues\"",
+              "answer": "这 部 电影 反映 了 深刻 的 社会 问题",
+              "bank": ["这", "部", "电影", "反映", "了", "深刻", "的", "社会", "问题", "经济", "我"]
+            },
+            {
+              "id": "art2-4",
+              "type": "fill_blank",
+              "prompt": "\"这部电影感人至深\" — 感人至深 means deeply ___",
+              "answer": "Moving",
+              "acceptableAnswers": ["moving", "touching", "affecting"],
+              "explanation": "感人至深 = literally \"moves people to the depths\"."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-arts-3",
+          "title": "Classical traces — 之 / 其",
+          "description": "Recognize literary leftovers in modern writing",
+          "theme": "basics",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "art3-1",
+              "type": "multiple_choice",
+              "prompt": "In \"中国之美\", 之 functions as ___",
+              "options": [
+                "A verb",
+                "A possessive (= 的)",
+                "A pronoun",
+                "An adverb"
+              ],
+              "answer": "A possessive (= 的)",
+              "explanation": "之 in 中国之美 is the modifier-marker (= 的), linking 中国 to 美 — \"the beauty of China\"."
+            },
+            {
+              "id": "art3-2",
+              "type": "match_pairs",
+              "prompt": "Match the 之 / 其 expression",
+              "pairs": [
+                { "left": "总而言之", "right": "All in all" },
+                { "left": "尤其", "right": "Especially" },
+                { "left": "恰如其分", "right": "Apt / fitting (just right)" },
+                { "left": "其乐无穷", "right": "Endlessly enjoyable" }
+              ]
+            },
+            {
+              "id": "art3-3",
+              "type": "fill_blank",
+              "prompt": "Rewrite \"该书及它的译本\" in literary register: \"该书及 ___ 译本\"",
+              "answer": "其",
+              "explanation": "其 = 它的 — the literary possessive used in formal writing."
+            },
+            {
+              "id": "art3-4",
+              "type": "multiple_choice",
+              "prompt": "What does \"成功之道\" mean?",
+              "options": [
+                "After success",
+                "The path / way to success",
+                "Successful people",
+                "Failure of success"
+              ],
+              "answer": "The path / way to success",
+              "explanation": "之 = 的; 道 = way / path."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-arts-4",
+          "title": "所 — \"that which is...\"",
+          "description": "Nominalization with the classical 所",
+          "theme": "basics",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "art4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我所喜欢的书\" mean?",
+              "options": [
+                "I like books",
+                "The book(s) that I like",
+                "I have books",
+                "Books and I"
+              ],
+              "answer": "The book(s) that I like",
+              "explanation": "所 + verb + 的 + noun = the [noun] that [subject] [verbs]."
+            },
+            {
+              "id": "art4-2",
+              "type": "match_pairs",
+              "prompt": "Match the 所 idiom to its meaning",
+              "pairs": [
+                { "left": "众所周知", "right": "As is universally known" },
+                { "left": "理所当然", "right": "Naturally / as a matter of course" },
+                { "left": "有所改变", "right": "Has changed (somewhat)" },
+                { "left": "无所不能", "right": "Omnipotent" }
+              ]
+            },
+            {
+              "id": "art4-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"What he said is exactly what I think\"",
+              "answer": "他 所 说 的 正是 我 所 想 的",
+              "bank": ["他", "所", "说", "的", "正是", "我", "所", "想", "的", "不是"]
+            },
+            {
+              "id": "art4-4",
+              "type": "fill_blank",
+              "prompt": "\"理所当然\" means \"as ___ would have it / naturally\"",
+              "answer": "Reason",
+              "acceptableAnswers": ["reason", "logic", "naturally", "of course"],
+              "explanation": "理 (reason) + 所 + 当然 — \"that which reason makes natural\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-c1-news",
+      "title": "News & journalism",
+      "description": "Read headlines, parse op-eds, follow current events",
+      "theme": "basics",
+      "guide": {
+        "intro": "News Chinese is its own dialect — short, dense, and heavy with cause-effect connectives. Two patterns dominate explanatory writing: 之所以 X 是因为 Y for reverse-order causation, and 不仅 X 而且 Y for stacking points. Get fluent in these and headlines stop being puzzles.",
+        "sections": [
+          { "kind": "heading", "text": "之所以...是因为 — effect first, cause second" },
+          {
+            "kind": "paragraph",
+            "text": "Standard order is 因为 X 所以 Y (\"because X, so Y\"). When you want to lead with the surprising effect and explain it after, flip to 之所以 Y 是因为 X (\"the reason Y is because X\"). It's a hallmark of essay and op-ed Chinese."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "他之所以成功，是因为他从不放弃。", "pinyin": "Tā zhī suǒ yǐ chénggōng, shì yīnwèi tā cóng bù fàngqì.", "translation": "The reason he succeeded is that he never gave up." },
+              { "source": "中国之所以发展迅速，是因为改革开放的政策。", "pinyin": "Zhōngguó zhī suǒ yǐ fāzhǎn xùnsù, shì yīnwèi gǎigé kāifàng de zhèngcè.", "translation": "China developed rapidly because of the reform and opening-up policy." }
+            ]
+          },
+          { "kind": "heading", "text": "不仅...而且 — \"not only... but also\"" },
+          {
+            "kind": "paragraph",
+            "text": "不仅 X 而且 Y stacks points: not only X, but also Y. The formal form is 不但 X 而且 Y; the literary form 不仅...更 ramps up the second clause."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "这部电影不仅获得了好评，而且票房火爆。", "pinyin": "Zhè bù diànyǐng bùjǐn huòdé le hǎopíng, érqiě piàofáng huǒbào.", "translation": "This film not only got good reviews but also did huge box office." },
+              { "source": "他不仅是一位作家，更是一位思想家。", "pinyin": "Tā bùjǐn shì yí wèi zuòjiā, gèng shì yí wèi sīxiǎngjiā.", "translation": "He is not only a writer but, even more so, a thinker." }
+            ]
+          },
+          { "kind": "heading", "text": "Headline grammar" },
+          {
+            "kind": "paragraph",
+            "text": "Headlines compress hard. They drop pronouns, particles, and even verbs. Learn these high-frequency journalist verbs and you'll skim headlines in seconds."
+          },
+          {
+            "kind": "table",
+            "headers": ["Verb", "Pinyin", "Headline meaning"],
+            "rows": [
+              ["宣布", "xuānbù", "announces"],
+              ["公布", "gōngbù", "publishes / discloses"],
+              ["出台", "chūtái", "rolls out (a policy)"],
+              ["签署", "qiānshǔ", "signs"],
+              ["指出", "zhǐchū", "points out"],
+              ["呼吁", "hūyù", "calls on / appeals"],
+              ["谴责", "qiǎnzé", "condemns"]
+            ]
+          },
+          { "kind": "heading", "text": "据 X 报道 — quick refresher" },
+          {
+            "kind": "paragraph",
+            "text": "You met 据报道 at B2, so this is a refresher rather than new ground. At C1, focus on the variants: 据 X 报道 attributes to a named source, while 据悉 (\"it is learned\") is the unsourced, slightly official cousin. Both anchor the start of a sentence."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "据新华社报道，会议将于下周举行。", "pinyin": "Jù Xīnhuáshè bàodào, huìyì jiāng yú xiàzhōu jǔxíng.", "translation": "According to Xinhua News Agency, the meeting will be held next week." },
+              { "source": "据悉，相关部门正在调查此事。", "pinyin": "Jù xī, xiāngguān bùmén zhèngzài diàochá cǐ shì.", "translation": "It is learned that the relevant departments are investigating the matter." }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-c1-news-1",
+          "title": "Headline verbs",
+          "description": "The journalist's toolbox",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "nw1-1",
+              "type": "match_pairs",
+              "prompt": "Match the verb to its meaning",
+              "pairs": [
+                { "left": "宣布", "right": "Announce" },
+                { "left": "出台", "right": "Roll out (policy)" },
+                { "left": "呼吁", "right": "Call on / appeal" },
+                { "left": "谴责", "right": "Condemn" }
+              ]
+            },
+            {
+              "id": "nw1-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the most natural news translation: \"The government rolled out a new policy.\"",
+              "options": [
+                "政府出台了新政策",
+                "政府放出来新政策",
+                "政府给了新政策",
+                "政府打开新政策"
+              ],
+              "answer": "政府出台了新政策"
+            },
+            {
+              "id": "nw1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build the headline-style \"The two countries signed a trade agreement\"",
+              "answer": "两 国 签署 贸易 协议",
+              "bank": ["两", "国", "签署", "贸易", "协议", "了", "明天", "战争"]
+            },
+            {
+              "id": "nw1-4",
+              "type": "fill_blank",
+              "prompt": "\"据新华社报道\" means \"according to ___\"",
+              "answer": "Xinhua",
+              "acceptableAnswers": ["xinhua", "xinhua news agency", "xinhua news"]
+            },
+            {
+              "id": "nw1-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the headline you hear",
+              "spokenText": "两国签署贸易协议",
+              "options": ["两国签署贸易协议", "两国签署和平协议", "两国宣布贸易协议", "两国谴责贸易协议"],
+              "answer": "两国签署贸易协议",
+              "explanation": "Headlines drop particles and lean on a tight verb. Listen for 签署 (sign) vs neighbors like 宣布 (announce) and 谴责 (condemn)."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-news-2",
+          "title": "之所以…是因为",
+          "description": "Effect first, cause second",
+          "theme": "basics",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "nw2-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The reason he succeeded is that he never gave up\"",
+              "answer": "他 之所以 成功 ， 是因为 他 从不 放弃",
+              "bank": ["他", "之所以", "成功", "，", "是因为", "他", "从不", "放弃", "因为", "所以"]
+            },
+            {
+              "id": "nw2-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"她之所以受欢迎，是因为她真诚\" mean?",
+              "options": [
+                "She wants to be popular and so is sincere",
+                "The reason she is popular is that she is sincere",
+                "She is sincere but unpopular",
+                "She is popular because she pretends"
+              ],
+              "answer": "The reason she is popular is that she is sincere"
+            },
+            {
+              "id": "nw2-3",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 之所以...是因为 correctly?",
+              "options": [
+                "我之所以学中文，是因为我喜欢中国文化",
+                "我之所以是因为学中文喜欢",
+                "因为我喜欢中国文化之所以学中文",
+                "我学中文之所以"
+              ],
+              "answer": "我之所以学中文，是因为我喜欢中国文化"
+            },
+            {
+              "id": "nw2-4",
+              "type": "fill_blank",
+              "prompt": "Complete: \"中国 ___ 发展迅速，是因为改革开放\"",
+              "answer": "之所以",
+              "explanation": "之所以 fronts the effect; 是因为 introduces the cause."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-news-3",
+          "title": "不仅...而且 — stacking arguments",
+          "description": "Add weight without losing flow",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "nw3-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This plan is not only feasible but also efficient\"",
+              "answer": "这个 方案 不仅 可行 而且 高效",
+              "bank": ["这个", "方案", "不仅", "可行", "而且", "高效", "便宜", "贵", "差"]
+            },
+            {
+              "id": "nw3-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"他不仅是作家，更是思想家\" emphasize?",
+              "options": [
+                "Two equal facts",
+                "Both are true, but the second is the bigger point",
+                "Only the first is true",
+                "He is neither"
+              ],
+              "answer": "Both are true, but the second is the bigger point",
+              "explanation": "更 (\"even more so\") amplifies the second clause."
+            },
+            {
+              "id": "nw3-3",
+              "type": "match_pairs",
+              "prompt": "Match the connective to its register",
+              "pairs": [
+                { "left": "不仅...而且", "right": "Standard \"not only...but also\"" },
+                { "left": "不但...而且", "right": "Slightly more formal" },
+                { "left": "不仅...更", "right": "Literary, second clause amplified" },
+                { "left": "既...又...", "right": "\"Both...and...\" (parallel)" }
+              ]
+            },
+            {
+              "id": "nw3-4",
+              "type": "fill_blank",
+              "prompt": "Complete: \"这本书 ___ 内容丰富，___ 文笔优美\" (not only...but also)",
+              "answer": "不仅 而且",
+              "acceptableAnswers": ["不仅...而且", "不仅 而且", "不但 而且"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-news-4",
+          "title": "Politics & policy vocabulary",
+          "description": "Reform, regulate, enforce",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "nw4-1",
+              "type": "match_pairs",
+              "prompt": "Match the political term",
+              "pairs": [
+                { "left": "改革", "right": "Reform" },
+                { "left": "立法", "right": "Legislation" },
+                { "left": "外交", "right": "Diplomacy" },
+                { "left": "制裁", "right": "Sanction" }
+              ]
+            },
+            {
+              "id": "nw4-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"加大力度\" (jiā dà lì dù) mean in news writing?",
+              "options": [
+                "Reduce efforts",
+                "Step up efforts / intensify",
+                "Stop something",
+                "Be careful"
+              ],
+              "answer": "Step up efforts / intensify",
+              "explanation": "Common bureaucratic phrase: 加大 (increase) + 力度 (degree of force)."
+            },
+            {
+              "id": "nw4-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The two sides reached an important consensus\"",
+              "answer": "双方 达成 了 重要 共识",
+              "bank": ["双方", "达成", "了", "重要", "共识", "分歧", "战争"]
+            },
+            {
+              "id": "nw4-4",
+              "type": "fill_blank",
+              "prompt": "\"中美关系\" refers to ___ relations",
+              "answer": "China-US",
+              "acceptableAnswers": ["china-us", "us-china", "sino-american", "china and us"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-news-5",
+          "title": "Reading an op-ed",
+          "description": "Detect tone, claim, and stance",
+          "theme": "basics",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "nw5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"值得深思\" (zhí dé shēn sī) signal?",
+              "options": [
+                "Worth deep reflection",
+                "Easy to understand",
+                "Funny",
+                "Untrue"
+              ],
+              "answer": "Worth deep reflection",
+              "explanation": "Editorial favorite — pushes the reader to take the issue seriously."
+            },
+            {
+              "id": "nw5-2",
+              "type": "match_pairs",
+              "prompt": "Match the editorial phrase",
+              "pairs": [
+                { "left": "毋庸置疑", "right": "Beyond doubt" },
+                { "left": "不容忽视", "right": "Cannot be ignored" },
+                { "left": "刻不容缓", "right": "Brooks no delay (urgent)" },
+                { "left": "任重道远", "right": "Heavy responsibility, long road ahead" }
+              ]
+            },
+            {
+              "id": "nw5-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This issue cannot be ignored, immediate action is needed\"",
+              "answer": "这个 问题 不容 忽视 ， 必须 立即 行动",
+              "bank": ["这个", "问题", "不容", "忽视", "，", "必须", "立即", "行动", "等待", "无所谓"]
+            },
+            {
+              "id": "nw5-4",
+              "type": "fill_blank",
+              "prompt": "\"任重道远\" — literally \"the burden is heavy and the road is ___\"",
+              "answer": "Long",
+              "acceptableAnswers": ["long", "far", "distant"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-c1-debate",
+      "title": "Persuasion & debate",
+      "description": "Build arguments, concede, refute",
+      "theme": "verbs",
+      "guide": {
+        "intro": "Persuasive Chinese has its own choreography: state your premise, acknowledge the counter-argument, then refute. Three structures power the dance — conditionals (要是...就/便, 即使...也), the concessive 虽然...但是, and the rhetorical 难道...吗.",
+        "sections": [
+          { "kind": "heading", "text": "Conditionals" },
+          {
+            "kind": "table",
+            "headers": ["Pattern", "Sense", "Register"],
+            "rows": [
+              ["如果 X 就 Y", "If X then Y", "Neutral"],
+              ["要是 X 就 Y", "If X then Y", "Spoken / informal"],
+              ["假如 X 便 Y", "Should X, then Y", "Formal"],
+              ["即使 X 也 Y", "Even if X, still Y", "Concessive"],
+              ["只要 X 就 Y", "As long as X, then Y", "Sufficient condition"],
+              ["除非 X 否则 Y", "Unless X, otherwise Y", "Necessary condition"]
+            ]
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "要是你早点告诉我就好了。", "pinyin": "Yàoshi nǐ zǎo diǎn gàosù wǒ jiù hǎo le.", "translation": "If only you had told me earlier." },
+              { "source": "即使下雨，我们也要去。", "pinyin": "Jíshǐ xiàyǔ, wǒmen yě yào qù.", "translation": "Even if it rains, we are still going." },
+              { "source": "只要你努力，就一定会成功。", "pinyin": "Zhǐyào nǐ nǔlì, jiù yídìng huì chénggōng.", "translation": "As long as you work hard, you will surely succeed." },
+              { "source": "除非他道歉，否则我不会原谅他。", "pinyin": "Chúfēi tā dàoqiàn, fǒuzé wǒ bú huì yuánliàng tā.", "translation": "Unless he apologizes, I will not forgive him." }
+            ]
+          },
+          { "kind": "heading", "text": "虽然...但是 — concede then push back" },
+          {
+            "kind": "paragraph",
+            "text": "The strongest debaters concede. 虽然 X 但是 Y (\"although X, but Y\") signals you've heard the counterpoint and have an answer. Formal upgrade: 尽管 X，然而 Y."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "虽然这个方案有风险，但是收益也很大。", "pinyin": "Suīrán zhège fāng'àn yǒu fēngxiǎn, dànshì shōuyì yě hěn dà.", "translation": "Although this plan has risks, the returns are also large." },
+              { "source": "尽管成本上升，然而公司仍然盈利。", "pinyin": "Jǐnguǎn chéngběn shàngshēng, rán'ér gōngsī réngrán yínglì.", "translation": "Although costs rose, the company is nevertheless still profitable." }
+            ]
+          },
+          { "kind": "heading", "text": "难道...吗 — rhetorical question" },
+          {
+            "kind": "paragraph",
+            "text": "难道 (\"could it really be that\") fronts a question to which the speaker assumes the answer is obvious. Used to challenge an assumption or rebuke."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "难道你不知道吗？", "pinyin": "Nándào nǐ bù zhīdào ma?", "translation": "Could it be that you don't know? (You should know!)" },
+              { "source": "难道这就是答案吗？", "pinyin": "Nándào zhè jiù shì dá'àn ma?", "translation": "Is this really the answer?" }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "In writing, balance your concessives. A column that opens with 虽然...但是 and closes with 难道...吗 reads as classic argumentative Chinese."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-c1-debate-1",
+          "title": "Stating your position",
+          "description": "Open with confidence",
+          "theme": "verbs",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "deb1-1",
+              "type": "match_pairs",
+              "prompt": "Match the opener",
+              "pairs": [
+                { "left": "我认为", "right": "I think" },
+                { "left": "在我看来", "right": "In my view" },
+                { "left": "依我之见", "right": "In my (humble) opinion" },
+                { "left": "毫无疑问", "right": "Without a doubt" }
+              ]
+            },
+            {
+              "id": "deb1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In my view, this view is one-sided\"",
+              "answer": "在 我 看来 这个 观点 比较 片面",
+              "bank": ["在", "我", "看来", "这个", "观点", "比较", "片面", "完整", "好"]
+            },
+            {
+              "id": "deb1-3",
+              "type": "multiple_choice",
+              "prompt": "Which is most formal for \"I firmly believe\"?",
+              "options": [
+                "我深信",
+                "我相信",
+                "我坚信",
+                "我认定"
+              ],
+              "answer": "我坚信",
+              "explanation": "All four are plausible C1 alternatives, but 坚信 (\"firmly believe\") is the strongest and most formal — 深信 is close behind, 相信 is neutral, 认定 leans toward \"conclude / be convinced\"."
+            },
+            {
+              "id": "deb1-4",
+              "type": "fill_blank",
+              "prompt": "\"毫无疑问\" (háo wú yí wèn) means ___",
+              "answer": "Without a doubt",
+              "acceptableAnswers": ["without a doubt", "no doubt", "undoubtedly", "without any doubt"]
+            },
+            {
+              "id": "deb1-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the verb of belief you hear",
+              "spokenText": "我认为这个方案可行",
+              "options": ["我认为这个方案可行", "我以为这个方案可行", "我觉得这个方案可行", "我认定这个方案可行"],
+              "answer": "我认为这个方案可行",
+              "explanation": "认为 (\"hold the view that\") states a current belief; 以为 (\"used to think / mistakenly thought\") implies the speaker has since changed their mind. Mishearing one for the other flips the meaning."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-debate-2",
+          "title": "Conditionals — 要是, 即使, 只要",
+          "description": "Build hypothetical arguments",
+          "theme": "verbs",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "deb2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"即使下雨我们也要去\" mean?",
+              "options": [
+                "If it rains we won't go",
+                "Even if it rains we are still going",
+                "If it stops raining we'll go",
+                "We are going only if it rains"
+              ],
+              "answer": "Even if it rains we are still going"
+            },
+            {
+              "id": "deb2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"As long as you work hard, you will succeed\"",
+              "answer": "只要 你 努力 ， 就 一定 会 成功",
+              "bank": ["只要", "你", "努力", "，", "就", "一定", "会", "成功", "失败", "不"]
+            },
+            {
+              "id": "deb2-3",
+              "type": "match_pairs",
+              "prompt": "Match the conditional",
+              "pairs": [
+                { "left": "要是...就", "right": "If... then (spoken / informal)" },
+                { "left": "即使...也", "right": "Even if... still" },
+                { "left": "只要...就", "right": "As long as... then" },
+                { "left": "除非...否则", "right": "Unless... otherwise" }
+              ]
+            },
+            {
+              "id": "deb2-4",
+              "type": "fill_blank",
+              "prompt": "Complete: \"___ 他道歉，否则我不会原谅他\" (Unless...)",
+              "answer": "除非"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-debate-3",
+          "title": "Concede & refute",
+          "description": "虽然...但是 / 尽管...然而",
+          "theme": "verbs",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "deb3-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although this plan has risks, the returns are large\"",
+              "answer": "虽然 这个 方案 有 风险 ， 但是 收益 很 大",
+              "bank": ["虽然", "这个", "方案", "有", "风险", "，", "但是", "收益", "很", "大", "小"]
+            },
+            {
+              "id": "deb3-2",
+              "type": "multiple_choice",
+              "prompt": "Which is the most formal version of \"although...however\"?",
+              "options": [
+                "虽然...但是",
+                "尽管...然而",
+                "虽然...可是",
+                "虽然...不过"
+              ],
+              "answer": "尽管...然而",
+              "explanation": "尽管...然而 belongs in essays, news, and formal speech."
+            },
+            {
+              "id": "deb3-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the sentence that concedes a point and pushes back:",
+              "options": [
+                "你的观点完全错误",
+                "我同意你的全部意见",
+                "你说得有道理，但是我们也要看到另一面",
+                "我不想讨论"
+              ],
+              "answer": "你说得有道理，但是我们也要看到另一面"
+            },
+            {
+              "id": "deb3-4",
+              "type": "fill_blank",
+              "prompt": "\"你说得有道理\" means \"what you say is ___\"",
+              "answer": "Reasonable",
+              "acceptableAnswers": ["reasonable", "right", "valid", "fair", "has merit", "makes sense"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-debate-4",
+          "title": "Rhetorical questions — 难道...吗",
+          "description": "Sharpen a point with a challenge",
+          "theme": "questions",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "deb4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"难道你不知道吗？\" really mean?",
+              "options": [
+                "A genuine question — does he/she know?",
+                "An accusation — surely you know!",
+                "A polite request",
+                "A joke"
+              ],
+              "answer": "An accusation — surely you know!",
+              "explanation": "难道...吗 expects the answer \"of course\" or \"of course not\"."
+            },
+            {
+              "id": "deb4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build the rhetorical \"Could this really be the only solution?\"",
+              "answer": "难道 这 是 唯一 的 解决 办法 吗",
+              "bank": ["难道", "这", "是", "唯一", "的", "解决", "办法", "吗", "好", "可以"]
+            },
+            {
+              "id": "deb4-3",
+              "type": "match_pairs",
+              "prompt": "Match the rhetorical opener",
+              "pairs": [
+                { "left": "难道", "right": "Could it really be that...?" },
+                { "left": "岂不是", "right": "Wouldn't that be...?" },
+                { "left": "何尝", "right": "When have I/you ever...?" },
+                { "left": "试问", "right": "I ask: ...?" }
+              ]
+            },
+            {
+              "id": "deb4-4",
+              "type": "fill_blank",
+              "prompt": "\"难道你忘了吗？\" implies you ___ have forgotten",
+              "answer": "Shouldn't",
+              "acceptableAnswers": ["shouldn't", "should not", "must not"],
+              "explanation": "Rhetorically, the speaker assumes you remember."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-c1-idioms",
+      "title": "Chéngyǔ in context",
+      "description": "Eight high-frequency four-character idioms used the right way",
+      "theme": "review",
+      "guide": {
+        "intro": "成语 (chéngyǔ) are four-character idioms that compress a story or principle into one phrase. There are thousands of them, but only a few hundred are actually high-frequency. We'll meet eight that you'll see weekly in news, conversation, and writing — and learn the contexts where each lands well.",
+        "sections": [
+          { "kind": "heading", "text": "How idioms slot into sentences" },
+          {
+            "kind": "paragraph",
+            "text": "成语 typically work as adjectives, adverbs, or full predicates. Most can stand alone as a four-character verb phrase: 一举两得 (\"two birds, one stone\") can be the whole verb. Some need a 是 or 的 frame to slot in: 这是一举两得的事."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "这真是一举两得。", "pinyin": "Zhè zhēn shì yì jǔ liǎng dé.", "translation": "This really is killing two birds with one stone." },
+              { "source": "他工作半途而废。", "pinyin": "Tā gōngzuò bàn tú ér fèi.", "translation": "He gave up halfway through the work." },
+              { "source": "锦上添花的设计", "pinyin": "Jǐn shàng tiān huā de shèjì", "translation": "An icing-on-the-cake design" }
+            ]
+          },
+          { "kind": "heading", "text": "Eight to remember" },
+          {
+            "kind": "table",
+            "headers": ["Idiom", "Pinyin", "Literal", "Modern use"],
+            "rows": [
+              ["一举两得", "yì jǔ liǎng dé", "One action, two gains", "Win-win solution / two birds, one stone"],
+              ["半途而废", "bàn tú ér fèi", "Quit halfway", "Give up before finishing"],
+              ["锦上添花", "jǐn shàng tiān huā", "Add flowers to brocade", "Make a good thing better"],
+              ["雪中送炭", "xuě zhōng sòng tàn", "Send charcoal in the snow", "Help when help is most needed"],
+              ["入乡随俗", "rù xiāng suí sú", "Enter the village, follow its customs", "When in Rome, do as the Romans"],
+              ["不可思议", "bù kě sī yì", "Cannot be conceived", "Inconceivable / unbelievable"],
+              ["实事求是", "shí shì qiú shì", "Seek truth from facts", "Be pragmatic / fact-based"],
+              ["脚踏实地", "jiǎo tà shí dì", "Feet planted on solid ground", "Down-to-earth / steady"]
+            ]
+          },
+          { "kind": "heading", "text": "锦上添花 vs 雪中送炭" },
+          {
+            "kind": "paragraph",
+            "text": "These two are taught as a pair. 锦上添花 is help when things are already good — nice but not vital. 雪中送炭 is help in a crisis — the kind people remember forever. Pick the right one when praising someone."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "你这是雪中送炭，谢谢！", "pinyin": "Nǐ zhè shì xuě zhōng sòng tàn, xièxie!", "translation": "This is help when I really needed it — thank you!" },
+              { "source": "不算什么，只是锦上添花。", "pinyin": "Bú suàn shénme, zhǐshì jǐn shàng tiān huā.", "translation": "It's nothing, just a small bonus." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Don't pile 成语 on top of 成语. One per paragraph in writing, one per minute in speech. Used sparingly they sound elegant; used densely they sound like a textbook."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-c1-idioms-1",
+          "title": "Win-win — 一举两得",
+          "description": "And its sibling 一石二鸟",
+          "theme": "review",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "id1-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"一举两得\" literally mean?",
+              "options": [
+                "Two actions, one gain",
+                "One action, two gains",
+                "Two stones, one bird",
+                "One mountain, two tigers"
+              ],
+              "answer": "One action, two gains",
+              "explanation": "一举 = one move; 两得 = two gains."
+            },
+            {
+              "id": "id1-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This plan is really a two-birds-one-stone solution\"",
+              "answer": "这个 方案 真是 一举两得",
+              "bank": ["这个", "方案", "真是", "一举两得", "失败", "不可", "雪中"]
+            },
+            {
+              "id": "id1-3",
+              "type": "multiple_choice",
+              "prompt": "Which situation best fits \"一举两得\"?",
+              "options": [
+                "Walking the dog AND getting exercise",
+                "Forgetting the umbrella",
+                "Crying alone",
+                "Studying without a goal"
+              ],
+              "answer": "Walking the dog AND getting exercise"
+            },
+            {
+              "id": "id1-4",
+              "type": "fill_blank",
+              "prompt": "\"一石二鸟\" is the equivalent of \"___ stone, two birds\"",
+              "answer": "One",
+              "acceptableAnswers": ["one", "1"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-idioms-2",
+          "title": "Quitting halfway — 半途而废",
+          "description": "And the opposite: 坚持不懈",
+          "theme": "review",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "id2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"半途而废\" describe?",
+              "options": [
+                "Finishing strong",
+                "Giving up halfway",
+                "Starting twice",
+                "Repeating a step"
+              ],
+              "answer": "Giving up halfway"
+            },
+            {
+              "id": "id2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Don't give up halfway, persistence brings success\"",
+              "answer": "不要 半途而废 ， 坚持 才 能 成功",
+              "bank": ["不要", "半途而废", "，", "坚持", "才", "能", "成功", "会", "停止"]
+            },
+            {
+              "id": "id2-3",
+              "type": "match_pairs",
+              "prompt": "Match the idiom to its meaning",
+              "pairs": [
+                { "left": "半途而废", "right": "Give up halfway" },
+                { "left": "坚持不懈", "right": "Persevere without slacking" },
+                { "left": "全力以赴", "right": "Go all out" },
+                { "left": "前功尽弃", "right": "All previous effort wasted" }
+              ]
+            },
+            {
+              "id": "id2-4",
+              "type": "fill_blank",
+              "prompt": "\"坚持不懈\" — 不懈 means \"without ___\"",
+              "answer": "Slacking",
+              "acceptableAnswers": ["slacking", "slack", "ceasing", "letup", "rest"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-idioms-3",
+          "title": "锦上添花 vs 雪中送炭",
+          "description": "Bonus help vs critical help",
+          "theme": "review",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "id3-1",
+              "type": "multiple_choice",
+              "prompt": "A friend lends you money when you're broke. They are providing ___",
+              "options": [
+                "锦上添花",
+                "雪中送炭",
+                "半途而废",
+                "一举两得"
+              ],
+              "answer": "雪中送炭",
+              "explanation": "雪中送炭 = help in a crisis — \"sending charcoal in the snow\"."
+            },
+            {
+              "id": "id3-2",
+              "type": "multiple_choice",
+              "prompt": "Adding extra dessert to an already-feast is ___",
+              "options": [
+                "锦上添花",
+                "雪中送炭",
+                "脚踏实地",
+                "实事求是"
+              ],
+              "answer": "锦上添花",
+              "explanation": "Already-good situation + bonus = \"adding flowers to brocade\"."
+            },
+            {
+              "id": "id3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"What you did was truly help in time of need\"",
+              "answer": "你 这 真 是 雪中送炭",
+              "bank": ["你", "这", "真", "是", "雪中送炭", "锦上添花", "我"]
+            },
+            {
+              "id": "id3-4",
+              "type": "fill_blank",
+              "prompt": "\"锦\" originally means ___ — fine brocade silk",
+              "answer": "Brocade",
+              "acceptableAnswers": ["brocade", "patterned silk"],
+              "explanation": "锦 specifically refers to brocade or patterned silk — distinct from 绣 (embroidery)."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-idioms-4",
+          "title": "When in Rome — 入乡随俗",
+          "description": "And a couple cousins for adapting",
+          "theme": "review",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "id4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"入乡随俗\" mean?",
+              "options": [
+                "Stay home",
+                "When in Rome, do as the Romans",
+                "Travel slowly",
+                "Don't change"
+              ],
+              "answer": "When in Rome, do as the Romans"
+            },
+            {
+              "id": "id4-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In a foreign country we should follow local customs\"",
+              "answer": "在 外国 我们 应该 入乡随俗",
+              "bank": ["在", "外国", "我们", "应该", "入乡随俗", "回家", "拒绝"]
+            },
+            {
+              "id": "id4-3",
+              "type": "match_pairs",
+              "prompt": "Match the cultural-fit idiom",
+              "pairs": [
+                { "left": "入乡随俗", "right": "Adapt to local customs" },
+                { "left": "因地制宜", "right": "Tailor measures to local conditions" },
+                { "left": "顺其自然", "right": "Let things take their course" },
+                { "left": "随遇而安", "right": "Be content wherever one is" }
+              ]
+            },
+            {
+              "id": "id4-4",
+              "type": "fill_blank",
+              "prompt": "\"乡\" in 入乡随俗 originally means ___",
+              "answer": "Village",
+              "acceptableAnswers": ["village", "hometown", "rural area", "countryside"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-idioms-5",
+          "title": "Down-to-earth — 脚踏实地 / 实事求是",
+          "description": "Praise for pragmatism",
+          "theme": "review",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "id5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"脚踏实地\" describe a person as?",
+              "options": [
+                "Down-to-earth and steady",
+                "Daydreaming",
+                "Lazy",
+                "Reckless"
+              ],
+              "answer": "Down-to-earth and steady",
+              "explanation": "Literally \"feet planted on solid ground\"."
+            },
+            {
+              "id": "id5-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He is down-to-earth and works very steadily\"",
+              "answer": "他 脚踏实地 工作 非常 稳",
+              "bank": ["他", "脚踏实地", "工作", "非常", "稳", "懒", "不"]
+            },
+            {
+              "id": "id5-3",
+              "type": "multiple_choice",
+              "prompt": "What does \"实事求是\" mean?",
+              "options": [
+                "Make things up",
+                "Seek truth from facts / be pragmatic",
+                "Hide the truth",
+                "Argue for argument's sake"
+              ],
+              "answer": "Seek truth from facts / be pragmatic",
+              "explanation": "Famous phrase often associated with Deng Xiaoping's pragmatism."
+            },
+            {
+              "id": "id5-4",
+              "type": "fill_blank",
+              "prompt": "\"不可思议\" (bù kě sī yì) means literally \"cannot be ___\"",
+              "answer": "Conceived",
+              "acceptableAnswers": ["conceived", "thought", "imagined", "fathomed"],
+              "explanation": "Modern use: \"unbelievable / inconceivable\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-c1-philosophy",
+      "title": "Abstract & philosophical",
+      "description": "Talk about ideas, ethics, fate, and meaning",
+      "theme": "basics",
+      "guide": {
+        "intro": "Modern Mandarin still leans on a small cluster of fate-and-cause vocabulary inherited from Confucian, Buddhist, and Daoist thought. Three words do most of the work: 缘分 (fated connection), 因果 (cause and effect), and 命运 (destiny). They aren't religious jargon — speakers use them every day to talk about relationships, outcomes, and choices. Learning the cultural framing keeps you from translating them too flatly.",
+        "sections": [
+          { "kind": "heading", "text": "缘分 — the right people, the right time" },
+          {
+            "kind": "paragraph",
+            "text": "缘分 (yuán fèn) names the unseen tie that brings two people, or a person and a place, together. It's used loosely in romance (\"we have 缘分\"), friendship (\"我们很有缘\"), and even chance encounters. The Buddhist root is 缘 (\"condition that gives rise to a meeting\"); the modern register is warm, slightly fatalistic, and very common."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "我们能再见面，真是缘分。", "pinyin": "Wǒmen néng zài jiànmiàn, zhēn shì yuán fèn.", "translation": "That we could meet again is truly fate." },
+              { "source": "有缘千里来相会。", "pinyin": "Yǒu yuán qiān lǐ lái xiāng huì.", "translation": "If fated, even a thousand miles can't keep two from meeting." },
+              { "source": "这件事就随缘吧。", "pinyin": "Zhè jiàn shì jiù suí yuán ba.", "translation": "Let's just let this one go where fate takes it." }
+            ]
+          },
+          { "kind": "heading", "text": "因果 — cause and effect" },
+          {
+            "kind": "paragraph",
+            "text": "因果 (yīn guǒ) literally pairs 因 (cause) with 果 (fruit / result). In Buddhist usage it names karma; in modern speech it works as a neutral \"cause and effect\" — useful in argument, science writing, and ethics talk alike. The four-character expression 因果报应 (\"karmic retribution\") keeps the moral edge."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "凡事都有因果。", "pinyin": "Fán shì dōu yǒu yīn guǒ.", "translation": "Every event has a cause and an effect." },
+              { "source": "我们要分析这件事的因果关系。", "pinyin": "Wǒmen yào fēnxī zhè jiàn shì de yīn guǒ guānxi.", "translation": "We need to analyse the causal relationship of this matter." },
+              { "source": "种善因，得善果。", "pinyin": "Zhòng shàn yīn, dé shàn guǒ.", "translation": "Plant good causes, reap good fruits." }
+            ]
+          },
+          { "kind": "heading", "text": "命运 — destiny you can argue with" },
+          {
+            "kind": "paragraph",
+            "text": "命运 (mìng yùn) is destiny, but with more give than the English word suggests. Speakers talk about 改变命运 (\"change one's destiny\") and 与命运抗争 (\"struggle against fate\") freely — destiny is fixed enough to name, fluid enough to push against. Adjacent terms: 天命 (heavenly mandate, more solemn), 宿命 (predetermined fate, fatalistic)."
+          },
+          {
+            "kind": "table",
+            "headers": ["Word", "Sense", "Tone"],
+            "rows": [
+              ["命运", "destiny / fate", "Neutral; can be changed in modern usage"],
+              ["天命", "mandate of heaven", "Solemn / classical"],
+              ["宿命", "predestined fate", "Fatalistic, somewhat literary"],
+              ["缘分", "fated connection", "Warm, relational"],
+              ["因果", "cause and effect / karma", "Moral or analytical"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "These words sit in everyday conversation, not just temples. A friend who lands a job they nearly missed will say 这就是缘分; a parent reflecting on a child's path will say 改变命运. Don't over-translate them as \"karma\" or \"fate\" — let the context pick the English."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-c1-philosophy-1",
+          "title": "Big concepts",
+          "description": "Truth, freedom, justice, fate",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "ph1-1",
+              "type": "match_pairs",
+              "prompt": "Match the abstract noun",
+              "pairs": [
+                { "left": "真理", "right": "Truth" },
+                { "left": "自由", "right": "Freedom" },
+                { "left": "正义", "right": "Justice" },
+                { "left": "命运", "right": "Fate / destiny" }
+              ]
+            },
+            {
+              "id": "ph1-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"人生的意义\" mean?",
+              "options": [
+                "The length of life",
+                "The meaning of life",
+                "Life experience",
+                "Life events"
+              ],
+              "answer": "The meaning of life"
+            },
+            {
+              "id": "ph1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The pursuit of truth has no shortcut\"",
+              "answer": "对 真理 的 追求 没有 捷径",
+              "bank": ["对", "真理", "的", "追求", "没有", "捷径", "时间", "懒"]
+            },
+            {
+              "id": "ph1-4",
+              "type": "fill_blank",
+              "prompt": "\"价值观\" (jià zhí guān) means ___",
+              "answer": "Values",
+              "acceptableAnswers": ["values", "value system", "outlook on values"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-philosophy-2",
+          "title": "Cause, fate, and choice",
+          "description": "Confucian and Daoist threads in modern speech",
+          "theme": "basics",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "ph2-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"顺其自然\" advise?",
+              "options": [
+                "Force the result",
+                "Let things take their course",
+                "Plan everything",
+                "Refuse to act"
+              ],
+              "answer": "Let things take their course",
+              "explanation": "A Daoist-flavored phrase still used to mean \"don't fight the flow\"."
+            },
+            {
+              "id": "ph2-2",
+              "type": "match_pairs",
+              "prompt": "Match the philosophical phrase",
+              "pairs": [
+                { "left": "因果", "right": "Cause and effect / karma" },
+                { "left": "缘分", "right": "Fated connection" },
+                { "left": "天命", "right": "Mandate of heaven / destiny" },
+                { "left": "无为", "right": "Non-action (Daoist)" }
+              ]
+            },
+            {
+              "id": "ph2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Some things are out of human control\"",
+              "answer": "有些 事情 不是 人 能 控制 的",
+              "bank": ["有些", "事情", "不是", "人", "能", "控制", "的", "学校", "经济"]
+            },
+            {
+              "id": "ph2-4",
+              "type": "fill_blank",
+              "prompt": "\"缘分\" (yuán fèn) describes a ___ connection or chance encounter",
+              "answer": "Fated",
+              "acceptableAnswers": ["fated", "destined", "predestined", "lucky"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-philosophy-3",
+          "title": "Ethics and dilemmas",
+          "description": "Right, wrong, responsibility",
+          "theme": "basics",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "ph3-1",
+              "type": "match_pairs",
+              "prompt": "Match the ethics term",
+              "pairs": [
+                { "left": "道德", "right": "Morality" },
+                { "left": "良知", "right": "Conscience" },
+                { "left": "责任", "right": "Responsibility" },
+                { "left": "原则", "right": "Principle" }
+              ]
+            },
+            {
+              "id": "ph3-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"面对良心的拷问\" mean?",
+              "options": [
+                "Face an interrogator",
+                "Confront the questioning of one's conscience",
+                "Take a test",
+                "Be in court"
+              ],
+              "answer": "Confront the questioning of one's conscience",
+              "explanation": "拷问 (interrogate) + 良心 (conscience) — facing an internal moral test."
+            },
+            {
+              "id": "ph3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Each of us should be responsible for our own actions\"",
+              "answer": "每个 人 都 应该 对 自己 的 行为 负责",
+              "bank": ["每个", "人", "都", "应该", "对", "自己", "的", "行为", "负责", "拒绝", "无关"]
+            },
+            {
+              "id": "ph3-4",
+              "type": "fill_blank",
+              "prompt": "\"扪心自问\" — literally \"placing hand on chest and asking ___\"",
+              "answer": "Oneself",
+              "acceptableAnswers": ["oneself", "yourself", "myself", "your own heart"],
+              "explanation": "扪心自问 = ask yourself honestly, in your conscience."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-philosophy-4",
+          "title": "Time, change, and impermanence",
+          "description": "Talk about how things shift",
+          "theme": "time",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "ph4-1",
+              "type": "match_pairs",
+              "prompt": "Match the time / change idiom",
+              "pairs": [
+                { "left": "时过境迁", "right": "Times change, situations move on" },
+                { "left": "日新月异", "right": "Changing day by day, month by month" },
+                { "left": "稍纵即逝", "right": "Gone the moment you let go" },
+                { "left": "亘古不变", "right": "Unchanging through the ages" }
+              ]
+            },
+            {
+              "id": "ph4-2",
+              "type": "multiple_choice",
+              "prompt": "Which idiom best fits a fast-evolving tech industry?",
+              "options": [
+                "亘古不变",
+                "日新月异",
+                "时过境迁",
+                "稍纵即逝"
+              ],
+              "answer": "日新月异",
+              "explanation": "日新月异 = literally \"new day, different month\" — rapid renewal."
+            },
+            {
+              "id": "ph4-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Opportunity is fleeting, you must seize it\"",
+              "answer": "机会 稍纵即逝 必须 抓住",
+              "bank": ["机会", "稍纵即逝", "必须", "抓住", "明天", "永远"]
+            },
+            {
+              "id": "ph4-4",
+              "type": "fill_blank",
+              "prompt": "\"时过境迁\" — 境迁 means the ___ moved on",
+              "answer": "Situation",
+              "acceptableAnswers": ["situation", "circumstances", "context", "environment"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-c1-review",
+      "title": "C1 review",
+      "description": "Stitch together formal connectives, idioms, and discourse moves",
+      "theme": "review",
+      "lessons": [
+        {
+          "id": "zh-en-c1-review-1",
+          "title": "Register match",
+          "description": "Pick formal vs casual versions of the same idea",
+          "theme": "review",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "rv1-1",
+              "type": "match_pairs",
+              "prompt": "Match the casual phrase to its formal equivalent",
+              "pairs": [
+                { "left": "因为...所以", "right": "鉴于...因此" },
+                { "left": "但是", "right": "然而" },
+                { "left": "我觉得", "right": "依我之见" },
+                { "left": "你的公司", "right": "贵公司" }
+              ]
+            },
+            {
+              "id": "rv1-2",
+              "type": "multiple_choice",
+              "prompt": "Which is the most formal way to say \"as for the price\"?",
+              "options": [
+                "至于价格",
+                "价格的话",
+                "说到价格",
+                "价格嘛"
+              ],
+              "answer": "至于价格"
+            },
+            {
+              "id": "rv1-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the most formal \"although...however\":",
+              "options": [
+                "虽然...可是",
+                "虽然...但是",
+                "尽管...然而",
+                "虽然...不过"
+              ],
+              "answer": "尽管...然而"
+            },
+            {
+              "id": "rv1-4",
+              "type": "fill_blank",
+              "prompt": "Replace 它的 with the literary equivalent in: \"___ 结果令人震惊\"",
+              "answer": "其",
+              "explanation": "其 = 它的 — literary possessive."
+            },
+            {
+              "id": "rv1-5",
+              "type": "multiple_choice",
+              "prompt": "Spot the register mismatch — which sentence sounds wrong because a casual word slipped into a formal frame?",
+              "options": [
+                "鉴于市场啥的都不稳定，公司因此暂缓上市",
+                "鉴于市场近期不稳定，公司因此暂缓上市",
+                "由于市场近期不稳定，公司决定暂缓上市",
+                "因为市场不稳定，所以公司暂缓上市了"
+              ],
+              "answer": "鉴于市场啥的都不稳定，公司因此暂缓上市",
+              "explanation": "鉴于...因此 is formal business register; 啥 is colloquial filler from northern speech. Mixing them sounds jarring. The other three are register-internally consistent."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-review-2",
+          "title": "Idiom in context",
+          "description": "Pick the right 成语 for each situation",
+          "theme": "review",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "rv2-1",
+              "type": "multiple_choice",
+              "prompt": "A colleague helps you finish a project at 2am before deadline. They are showing ___",
+              "options": [
+                "锦上添花",
+                "雪中送炭",
+                "半途而废",
+                "顺其自然"
+              ],
+              "answer": "雪中送炭"
+            },
+            {
+              "id": "rv2-2",
+              "type": "multiple_choice",
+              "prompt": "A coach scolds an athlete who quit halfway through training:",
+              "options": [
+                "你不能半途而废",
+                "你真是脚踏实地",
+                "你一举两得",
+                "你顺其自然"
+              ],
+              "answer": "你不能半途而废"
+            },
+            {
+              "id": "rv2-3",
+              "type": "match_pairs",
+              "prompt": "Match the situation to the idiom",
+              "pairs": [
+                { "left": "Walking the dog AND exercising", "right": "一举两得" },
+                { "left": "Adapting to a new country's customs", "right": "入乡随俗" },
+                { "left": "Steady, no-shortcut work ethic", "right": "脚踏实地" },
+                { "left": "Tech industry's rapid renewal", "right": "日新月异" }
+              ]
+            },
+            {
+              "id": "rv2-4",
+              "type": "fill_blank",
+              "prompt": "Complete the praise: \"你工作 ___，让人很放心\" (down-to-earth)",
+              "answer": "脚踏实地",
+              "explanation": "脚踏实地 = steady and grounded."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-review-3",
+          "title": "Build a paragraph",
+          "description": "Stitch connectives into longer sentences",
+          "theme": "review",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "rv3-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although there are many challenges, in my view this plan is still feasible\"",
+              "answer": "虽然 挑战 很 多 ， 但是 在 我 看来 这个 方案 仍然 可行",
+              "bank": ["虽然", "挑战", "很", "多", "，", "但是", "在", "我", "看来", "这个", "方案", "仍然", "可行", "经济"]
+            },
+            {
+              "id": "rv3-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The reason China developed rapidly is the policy of reform and opening-up\"",
+              "answer": "中国 之所以 发展 迅速 ， 是因为 改革 开放 的 政策",
+              "bank": ["中国", "之所以", "发展", "迅速", "，", "是因为", "改革", "开放", "的", "政策", "战争", "因为"]
+            },
+            {
+              "id": "rv3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"As far as young people are concerned, the cost of housing is unbearable\"",
+              "answer": "对 年轻人 而言 ， 房价 已经 难以 承受",
+              "bank": ["对", "年轻人", "而言", "，", "房价", "已经", "难以", "承受", "便宜", "可以"]
+            },
+            {
+              "id": "rv3-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This issue brooks no delay; we must take action immediately\"",
+              "answer": "这个 问题 刻不容缓 ， 我们 必须 立即 行动",
+              "bank": ["这个", "问题", "刻不容缓", "，", "我们", "必须", "立即", "行动", "等待", "无关"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-review-4",
+          "title": "Read like a native",
+          "description": "Decode dense sentences",
+          "theme": "review",
+          "xp": 26,
+          "exercises": [
+            {
+              "id": "rv4-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"鉴于近期市场波动，公司因此暂缓上市\" mean?",
+              "options": [
+                "The company will IPO soon despite volatility",
+                "Given recent market volatility, the company is therefore postponing its IPO",
+                "The company canceled the IPO permanently",
+                "The market is stable so the IPO continues"
+              ],
+              "answer": "Given recent market volatility, the company is therefore postponing its IPO",
+              "explanation": "鉴于 X 因此 Y is the formal causal frame; 暂缓 = postpone temporarily."
+            },
+            {
+              "id": "rv4-2",
+              "type": "multiple_choice",
+              "prompt": "What does \"众所周知，气候变化是全人类共同面临的挑战\" mean?",
+              "options": [
+                "Few know that climate change is a challenge",
+                "As is well known, climate change is a challenge faced by all of humanity together",
+                "Climate change is a recent discovery",
+                "Climate change only affects some countries"
+              ],
+              "answer": "As is well known, climate change is a challenge faced by all of humanity together"
+            },
+            {
+              "id": "rv4-3",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 是...的 emphasis?",
+              "options": [
+                "我去过北京",
+                "我是去年去的北京",
+                "我要去北京",
+                "我没去北京"
+              ],
+              "answer": "我是去年去的北京",
+              "explanation": "是...的 frames the time (去年) as the focused element."
+            },
+            {
+              "id": "rv4-4",
+              "type": "fill_blank",
+              "prompt": "\"任重道远\" expresses that the ___ is heavy and the road is long",
+              "answer": "Burden",
+              "acceptableAnswers": ["burden", "responsibility", "task", "load"],
+              "explanation": "Used to admit a long, arduous mission ahead."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-review-5",
+          "title": "Complements — 得 / 不 / 完 / 光 / 掉 / 破",
+          "description": "Potential and result complements that fine-tune verbs",
+          "theme": "review",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "rv5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"这么多菜我吃不完\" mean?",
+              "options": [
+                "I don't want to eat so many dishes",
+                "I can't possibly finish so many dishes",
+                "I have not eaten the dishes",
+                "I am still eating the dishes"
+              ],
+              "answer": "I can't possibly finish so many dishes",
+              "explanation": "吃不完 is the potential complement: V + 不 + 完 = \"unable to finish V-ing\". Positive form: 吃得完 (\"can finish\")."
+            },
+            {
+              "id": "rv5-2",
+              "type": "match_pairs",
+              "prompt": "Match the result complement to its sense",
+              "pairs": [
+                { "left": "吃完", "right": "Eat (it) up — finish" },
+                { "left": "卖光", "right": "Sell out — none left" },
+                { "left": "扔掉", "right": "Throw away — get rid of" },
+                { "left": "打破", "right": "Break — shatter" }
+              ]
+            },
+            {
+              "id": "rv5-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This wine is so good we'll definitely finish it\"",
+              "answer": "这 瓶 酒 这么 好 喝 ， 我们 一定 喝 得 完",
+              "bank": ["这", "瓶", "酒", "这么", "好", "喝", "，", "我们", "一定", "喝", "得", "完", "不", "光"]
+            },
+            {
+              "id": "rv5-4",
+              "type": "fill_blank",
+              "prompt": "Insert the right complement: \"票卖 ___ 了\" (the tickets are sold out)",
+              "answer": "光",
+              "acceptableAnswers": ["光", "完"],
+              "explanation": "卖光 = sold out, none left. 卖完 also works but 光 emphasises emptiness."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-review-6",
+          "title": "Separable verbs — 离合词",
+          "description": "见过面, 帮了一个忙, 结过婚",
+          "theme": "review",
+          "xp": 24,
+          "exercises": [
+            {
+              "id": "rv6-1",
+              "type": "multiple_choice",
+              "prompt": "Why is \"我见面他了\" wrong?",
+              "options": [
+                "见面 is a separable verb — the object goes in the middle: 我见过他的面 / 我跟他见过面",
+                "见面 is too formal",
+                "见面 only takes a time word",
+                "见面 means 'see only'"
+              ],
+              "answer": "见面 is a separable verb — the object goes in the middle: 我见过他的面 / 我跟他见过面",
+              "explanation": "Separable verbs (离合词) like 见面, 帮忙, 结婚 are V-O compounds. You can't tack a second object on; aspect markers and modifiers go between the two halves."
+            },
+            {
+              "id": "rv6-2",
+              "type": "match_pairs",
+              "prompt": "Match the separable-verb form to its sense",
+              "pairs": [
+                { "left": "见过面", "right": "Have met (before)" },
+                { "left": "帮了我一个忙", "right": "Did me a favor" },
+                { "left": "结过婚", "right": "Has been married before" },
+                { "left": "睡了一觉", "right": "Took a nap / slept once" }
+              ]
+            },
+            {
+              "id": "rv6-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He did me a big favor yesterday\"",
+              "answer": "他 昨天 帮 了 我 一 个 大 忙",
+              "bank": ["他", "昨天", "帮", "了", "我", "一", "个", "大", "忙", "忙了", "帮忙"]
+            },
+            {
+              "id": "rv6-4",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is correct?",
+              "options": [
+                "我们见面过两次",
+                "我们见过两次面",
+                "我们两次见面",
+                "我们见面两次过"
+              ],
+              "answer": "我们见过两次面",
+              "explanation": "With 离合词, the experience marker 过 follows the verb-half (见), and the count phrase splits the compound: 见过两次面."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-c1-review-7",
+          "title": "Measure words beyond 个",
+          "description": "一番, 一阵, 一笔, 一项, 一系列",
+          "theme": "review",
+          "xp": 22,
+          "exercises": [
+            {
+              "id": "rv7-1",
+              "type": "match_pairs",
+              "prompt": "Match the measure word to what it counts",
+              "pairs": [
+                { "left": "一番", "right": "A round (of effort, talk, scolding)" },
+                { "left": "一阵", "right": "A burst / spell (of rain, applause, pain)" },
+                { "left": "一笔", "right": "A sum (of money, transaction, debt)" },
+                { "left": "一项", "right": "An item (policy, task, achievement)" },
+                { "left": "一系列", "right": "A series (of measures, events)" }
+              ]
+            },
+            {
+              "id": "rv7-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the right measure word: \"政府出台了 ___ 改革措施\" (the government rolled out a series of reform measures)",
+              "options": [
+                "一系列",
+                "一番",
+                "一阵",
+                "一笔"
+              ],
+              "answer": "一系列",
+              "explanation": "一系列 + plural noun = \"a series of\". 一番 fits an effort/talk; 一阵 fits a burst; 一笔 fits a sum."
+            },
+            {
+              "id": "rv7-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"After a heated debate, both sides reached a consensus\"",
+              "answer": "经过 一 番 激烈 的 讨论 ， 双方 达成 了 共识",
+              "bank": ["经过", "一", "番", "激烈", "的", "讨论", "，", "双方", "达成", "了", "共识", "阵", "项"]
+            },
+            {
+              "id": "rv7-4",
+              "type": "fill_blank",
+              "prompt": "Pick the measure word: \"这是一 ___ 大生意\" (this is a big business deal)",
+              "answer": "笔",
+              "explanation": "一笔 counts transactions, sums of money, and deals. 一项 would suggest a project/item rather than a deal."
+            },
+            {
+              "id": "rv7-5",
+              "type": "multiple_choice",
+              "prompt": "Which measure fits \"a sudden shower\"?",
+              "options": [
+                "一阵雨",
+                "一番雨",
+                "一笔雨",
+                "一项雨"
+              ],
+              "answer": "一阵雨",
+              "explanation": "一阵 captures a short burst — perfect for showers, applause, gusts of wind."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
