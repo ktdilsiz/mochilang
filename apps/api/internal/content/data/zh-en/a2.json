@@ -36,6 +36,70 @@
               "prompt": "\"早上\" (zǎo shang) means ___",
               "answer": "Morning",
               "acceptableAnswers": ["In the morning"]
+            },
+            {
+              "id": "rt1-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"to wake up / get up\" (two characters)",
+              "answer": "起床",
+              "acceptableAnswers": ["qǐ chuáng", "qichuang"]
+            },
+            {
+              "id": "rt1-5",
+              "type": "match_pairs",
+              "prompt": "Match the time word",
+              "pairs": [
+                { "left": "早上", "right": "Morning" },
+                { "left": "晚上", "right": "Evening / night" },
+                { "left": "中午", "right": "Noon" },
+                { "left": "半夜", "right": "Midnight" }
+              ]
+            },
+            {
+              "id": "rt1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I wake up at seven in the morning every day\"",
+              "answer": "我 每天 早上 七点 起床",
+              "bank": ["我", "每天", "早上", "七点", "起床", "睡觉", "晚上"]
+            },
+            {
+              "id": "rt1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I usually go to bed at eleven at night\"",
+              "answer": "我 平时 晚上 十一点 睡觉",
+              "bank": ["我", "平时", "晚上", "十一点", "睡觉", "起床", "早上"]
+            },
+            {
+              "id": "rt1-8",
+              "type": "multiple_choice",
+              "prompt": "Which is the OPPOSITE of \"起床\"?",
+              "options": ["睡觉", "上班", "吃饭", "回家"],
+              "answer": "睡觉",
+              "explanation": "起床 = get up; 睡觉 = go to sleep / sleep."
+            },
+            {
+              "id": "rt1-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我早上六点起床",
+              "options": ["我早上六点起床", "我晚上六点睡觉", "我早上七点起床", "我晚上六点起床"],
+              "answer": "我早上六点起床",
+              "explanation": "六 (liù) = six; 起床 (qǐ chuáng) = get up."
+            },
+            {
+              "id": "rt1-10",
+              "type": "multiple_choice",
+              "prompt": "You're sleepy and heading to bed. What do you say?",
+              "options": ["我 要 去 睡觉 了", "我 要 起床", "我 不 累", "早上好"],
+              "answer": "我 要 去 睡觉 了",
+              "explanation": "了 at the end signals \"about to / change of state\" — \"I'm off to bed now.\""
+            },
+            {
+              "id": "rt1-11",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: \"我 ___ 累了，晚安！\" (\"I'm so tired, good night!\")",
+              "answer": "太",
+              "acceptableAnswers": ["很", "好"]
             }
           ]
         },
@@ -70,6 +134,63 @@
               "prompt": "\"中午\" (zhōng wǔ) means ___",
               "answer": "Noon",
               "acceptableAnswers": ["Midday"]
+            },
+            {
+              "id": "rt2-4",
+              "type": "multiple_choice",
+              "prompt": "Which means \"breakfast\"?",
+              "options": ["早饭", "午饭", "晚饭", "夜宵"],
+              "answer": "早饭"
+            },
+            {
+              "id": "rt2-5",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"dinner\" (two characters)",
+              "answer": "晚饭",
+              "acceptableAnswers": ["wǎn fàn", "wanfan"]
+            },
+            {
+              "id": "rt2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I eat lunch with friends at noon\"",
+              "answer": "我 中午 和 朋友 一起 吃 午饭",
+              "bank": ["我", "中午", "和", "朋友", "一起", "吃", "午饭", "晚饭"]
+            },
+            {
+              "id": "rt2-7",
+              "type": "multiple_choice",
+              "prompt": "It's 12:30 — your friend asks 你 吃 午饭 了 吗? Best response if you've eaten:",
+              "options": ["我 已经 吃 了", "我 还没 吃", "我 不 吃", "我 要 吃"],
+              "answer": "我 已经 吃 了"
+            },
+            {
+              "id": "rt2-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the meal time you hear",
+              "spokenText": "我中午十二点吃午饭",
+              "options": ["我中午十二点吃午饭", "我早上七点吃早饭", "我晚上六点吃晚饭", "我中午一点吃午饭"],
+              "answer": "我中午十二点吃午饭"
+            },
+            {
+              "id": "rt2-9",
+              "type": "multiple_choice",
+              "prompt": "What does \"夜宵\" (yè xiāo) mean?",
+              "options": ["Breakfast", "Brunch", "Late-night snack", "Tea time"],
+              "answer": "Late-night snack"
+            },
+            {
+              "id": "rt2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I don't eat breakfast in the morning\"",
+              "answer": "我 早上 不 吃 早饭",
+              "bank": ["我", "早上", "不", "吃", "早饭", "晚饭", "没"]
+            },
+            {
+              "id": "rt2-11",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural way to ask \"Have you had dinner yet?\"",
+              "options": ["你 吃 晚饭 了 吗", "你 是 晚饭 吗", "你 要 晚饭", "晚饭 是 谁"],
+              "answer": "你 吃 晚饭 了 吗"
             }
           ]
         },
@@ -100,6 +221,69 @@
               "prompt": "\"放学\" (fàng xué) means ___",
               "answer": "School ends",
               "acceptableAnswers": ["Get out of school", "End of school"]
+            },
+            {
+              "id": "rt3-4",
+              "type": "match_pairs",
+              "prompt": "Match the daily action",
+              "pairs": [
+                { "left": "上班", "right": "Go to work" },
+                { "left": "下班", "right": "Get off work" },
+                { "left": "上学", "right": "Go to school" },
+                { "left": "放学", "right": "School ends" }
+              ]
+            },
+            {
+              "id": "rt3-5",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"go to work\" (two characters)",
+              "answer": "上班",
+              "acceptableAnswers": ["shàng bān", "shangban"]
+            },
+            {
+              "id": "rt3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I go to work at nine and get off at six\"",
+              "answer": "我 九点 上班 六点 下班",
+              "bank": ["我", "九点", "上班", "六点", "下班", "上学", "放学"]
+            },
+            {
+              "id": "rt3-7",
+              "type": "multiple_choice",
+              "prompt": "Which sentence means \"I just got off work\"?",
+              "options": ["我 刚 下班", "我 要 上班", "我 不 上班", "我 还没 下班"],
+              "answer": "我 刚 下班",
+              "explanation": "刚 (gāng) = just (now). \"I just got off work.\""
+            },
+            {
+              "id": "rt3-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我下班了",
+              "options": ["我下班了", "我上班了", "我下课了", "我上课了"],
+              "answer": "我下班了",
+              "explanation": "Sentence-final 了 marks the change of state — \"I'm off work now.\""
+            },
+            {
+              "id": "rt3-9",
+              "type": "multiple_choice",
+              "prompt": "Your child asks 你 几点 下班? You finish at 5:30 PM. Reply:",
+              "options": ["我 五点半 下班", "我 五点半 上班", "我 五点半 上学", "我 五点半 放学"],
+              "answer": "我 五点半 下班"
+            },
+            {
+              "id": "rt3-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"After school I go home and do homework\"",
+              "answer": "放学 以后 我 回家 做 作业",
+              "bank": ["放学", "以后", "我", "回家", "做", "作业", "上班", "然后"]
+            },
+            {
+              "id": "rt3-11",
+              "type": "fill_blank",
+              "prompt": "\"上课\" (shàng kè) means ___",
+              "answer": "Have class",
+              "acceptableAnswers": ["Attend class", "Go to class", "Start class"]
             }
           ]
         },
@@ -130,6 +314,331 @@
               "prompt": "What does \"每天\" (měi tiān) mean?",
               "options": ["Today", "Tomorrow", "Every day", "Sometimes"],
               "answer": "Every day"
+            },
+            {
+              "id": "rt4-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I get up at seven, then eat breakfast\"",
+              "answer": "我 七点 起床 然后 吃 早饭",
+              "bank": ["我", "七点", "起床", "然后", "吃", "早饭", "晚饭", "睡觉"]
+            },
+            {
+              "id": "rt4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I work in the morning and rest at night\"",
+              "answer": "我 早上 上班 晚上 休息",
+              "bank": ["我", "早上", "上班", "晚上", "休息", "起床", "睡觉"]
+            },
+            {
+              "id": "rt4-6",
+              "type": "multiple_choice",
+              "prompt": "What does \"休息\" (xiū xi) mean?",
+              "options": ["Work", "Rest", "Study", "Eat"],
+              "answer": "Rest"
+            },
+            {
+              "id": "rt4-7",
+              "type": "fill_blank",
+              "prompt": "\"平时\" (píng shí) means ___",
+              "answer": "Usually",
+              "acceptableAnswers": ["Normally", "Usually / on weekdays"]
+            },
+            {
+              "id": "rt4-8",
+              "type": "match_pairs",
+              "prompt": "Match the frequency word",
+              "pairs": [
+                { "left": "每天", "right": "Every day" },
+                { "left": "平时", "right": "Usually" },
+                { "left": "经常", "right": "Often" },
+                { "left": "有时候", "right": "Sometimes" }
+              ]
+            },
+            {
+              "id": "rt4-9",
+              "type": "multiple_choice",
+              "prompt": "A coworker asks 你 每天 几点 上班? You start at 9. Best reply:",
+              "options": ["我 每天 九点 上班", "我 每天 九点 下班", "我 每天 上学", "我 不 上班"],
+              "answer": "我 每天 九点 上班"
+            },
+            {
+              "id": "rt4-10",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我每天晚上看电视",
+              "options": ["我每天晚上看电视", "我每天早上看电视", "我有时候看电视", "我不看电视"],
+              "answer": "我每天晚上看电视"
+            },
+            {
+              "id": "rt4-11",
+              "type": "match_pairs",
+              "prompt": "Match the daily-routine sentence to its meaning",
+              "pairs": [
+                { "left": "我 早上 上班", "right": "I work in the morning" },
+                { "left": "我 中午 吃 午饭", "right": "I eat lunch at noon" },
+                { "left": "我 晚上 休息", "right": "I rest in the evening" },
+                { "left": "我 每天 起床 很 早", "right": "I get up very early every day" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-routines-5",
+          "title": "Weekend routines",
+          "description": "周末, 休息, 出去玩",
+          "theme": "time",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "rt5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"周末\" (zhōu mò) mean?",
+              "options": ["Weekday", "Weekend", "Holiday", "Birthday"],
+              "answer": "Weekend"
+            },
+            {
+              "id": "rt5-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"go out and have fun\"?",
+              "options": ["上班", "出去 玩", "回家", "睡觉"],
+              "answer": "出去 玩"
+            },
+            {
+              "id": "rt5-3",
+              "type": "fill_blank",
+              "prompt": "\"睡 懒觉\" (shuì lǎn jiào) means ___",
+              "answer": "Sleep in",
+              "acceptableAnswers": ["Sleep late", "Lie in"]
+            },
+            {
+              "id": "rt5-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"On weekends I usually sleep in until ten\"",
+              "answer": "周末 我 平时 睡 到 十点",
+              "bank": ["周末", "我", "平时", "睡", "到", "十点", "起床", "上班"]
+            },
+            {
+              "id": "rt5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This weekend I want to go to the park with friends\"",
+              "answer": "这个 周末 我 想 和 朋友 去 公园",
+              "bank": ["这个", "周末", "我", "想", "和", "朋友", "去", "公园", "学校"]
+            },
+            {
+              "id": "rt5-6",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 周末 你 做 什么? You'll stay home and rest. Reply:",
+              "options": ["我 在 家 休息", "我 去 上班", "我 去 上学", "我 不 知道"],
+              "answer": "我 在 家 休息"
+            },
+            {
+              "id": "rt5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我周末喜欢看电影",
+              "options": ["我周末喜欢看电影", "我周末喜欢看书", "我周末喜欢睡觉", "我周末喜欢上班"],
+              "answer": "我周末喜欢看电影"
+            },
+            {
+              "id": "rt5-8",
+              "type": "match_pairs",
+              "prompt": "Match the weekend activity",
+              "pairs": [
+                { "left": "睡懒觉", "right": "Sleep in" },
+                { "left": "看电影", "right": "Watch a movie" },
+                { "left": "逛街", "right": "Go shopping / stroll" },
+                { "left": "做饭", "right": "Cook" }
+              ]
+            },
+            {
+              "id": "rt5-9",
+              "type": "multiple_choice",
+              "prompt": "What does \"逛街\" (guàng jiē) mean?",
+              "options": ["Drive a car", "Stroll the streets / window-shop", "Cross the street", "Wait at a stop"],
+              "answer": "Stroll the streets / window-shop"
+            },
+            {
+              "id": "rt5-10",
+              "type": "fill_blank",
+              "prompt": "\"放假\" (fàng jià) means ___",
+              "answer": "Have a holiday",
+              "acceptableAnswers": ["Have time off", "Be on vacation", "Be on holiday"]
+            },
+            {
+              "id": "rt5-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I don't work on Saturdays and Sundays\"",
+              "answer": "星期六 和 星期天 我 不 上班",
+              "bank": ["星期六", "和", "星期天", "我", "不", "上班", "下班", "去"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-routines-6",
+          "title": "Getting ready (morning)",
+          "description": "刷牙, 洗脸, 洗澡",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rt6-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"刷牙\" (shuā yá) mean?",
+              "options": ["Wash face", "Brush teeth", "Take a shower", "Comb hair"],
+              "answer": "Brush teeth"
+            },
+            {
+              "id": "rt6-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"to wash the face\"?",
+              "options": ["洗脸", "洗澡", "刷牙", "梳头"],
+              "answer": "洗脸"
+            },
+            {
+              "id": "rt6-3",
+              "type": "fill_blank",
+              "prompt": "\"洗澡\" (xǐ zǎo) means ___",
+              "answer": "Take a shower / bath",
+              "acceptableAnswers": ["Shower", "Bathe", "Take a bath"]
+            },
+            {
+              "id": "rt6-4",
+              "type": "match_pairs",
+              "prompt": "Match the morning routine",
+              "pairs": [
+                { "left": "刷牙", "right": "Brush teeth" },
+                { "left": "洗脸", "right": "Wash face" },
+                { "left": "洗澡", "right": "Shower" },
+                { "left": "梳头", "right": "Comb hair" }
+              ]
+            },
+            {
+              "id": "rt6-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"After I get up I brush my teeth and wash my face\"",
+              "answer": "我 起床 以后 刷牙 洗脸",
+              "bank": ["我", "起床", "以后", "刷牙", "洗脸", "洗澡", "睡觉"]
+            },
+            {
+              "id": "rt6-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I shower in the morning every day\"",
+              "answer": "我 每天 早上 都 洗澡",
+              "bank": ["我", "每天", "早上", "都", "洗澡", "晚上", "刷牙"]
+            },
+            {
+              "id": "rt6-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural order: get up → ___ → eat breakfast",
+              "options": ["刷牙 洗脸", "睡觉", "下班", "放学"],
+              "answer": "刷牙 洗脸"
+            },
+            {
+              "id": "rt6-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我现在去洗澡",
+              "options": ["我现在去洗澡", "我现在去刷牙", "我现在去睡觉", "我现在去洗脸"],
+              "answer": "我现在去洗澡"
+            },
+            {
+              "id": "rt6-9",
+              "type": "multiple_choice",
+              "prompt": "Your kid hasn't brushed yet. You say:",
+              "options": ["你 还没 刷牙", "你 已经 刷牙 了", "你 不 刷牙", "你 想 刷牙"],
+              "answer": "你 还没 刷牙"
+            },
+            {
+              "id": "rt6-10",
+              "type": "fill_blank",
+              "prompt": "\"换 衣服\" (huàn yī fu) means ___",
+              "answer": "Change clothes",
+              "acceptableAnswers": ["Get changed", "Change outfit"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-routines-7",
+          "title": "Evening wind-down",
+          "description": "回家, 看电视, 睡觉前",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rt7-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"回家\" (huí jiā) mean?",
+              "options": ["Leave home", "Go home / return home", "Be at home", "Move house"],
+              "answer": "Go home / return home"
+            },
+            {
+              "id": "rt7-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"watch TV\"?",
+              "options": ["看 电视", "看 电影", "听 音乐", "玩 游戏"],
+              "answer": "看 电视"
+            },
+            {
+              "id": "rt7-3",
+              "type": "fill_blank",
+              "prompt": "\"睡觉 前\" (shuì jiào qián) means ___",
+              "answer": "Before going to sleep",
+              "acceptableAnswers": ["Before bed", "Before sleeping"]
+            },
+            {
+              "id": "rt7-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"After dinner I usually watch TV at home\"",
+              "answer": "晚饭 以后 我 平时 在 家 看 电视",
+              "bank": ["晚饭", "以后", "我", "平时", "在", "家", "看", "电视", "电影"]
+            },
+            {
+              "id": "rt7-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I read a book before bed\"",
+              "answer": "我 睡觉 前 看 书",
+              "bank": ["我", "睡觉", "前", "看", "书", "电视", "起床"]
+            },
+            {
+              "id": "rt7-6",
+              "type": "multiple_choice",
+              "prompt": "What does \"晚安\" (wǎn ān) mean?",
+              "options": ["Good morning", "Good afternoon", "Good night", "Hello"],
+              "answer": "Good night"
+            },
+            {
+              "id": "rt7-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "晚安做个好梦",
+              "options": ["晚安做个好梦", "早安你好", "晚上吃饭", "我要睡觉"],
+              "answer": "晚安做个好梦",
+              "explanation": "做个好梦 = \"have a good dream\" (sweet dreams)."
+            },
+            {
+              "id": "rt7-8",
+              "type": "match_pairs",
+              "prompt": "Match the evening word",
+              "pairs": [
+                { "left": "回家", "right": "Go home" },
+                { "left": "看电视", "right": "Watch TV" },
+                { "left": "睡觉前", "right": "Before bed" },
+                { "left": "晚安", "right": "Good night" }
+              ]
+            },
+            {
+              "id": "rt7-9",
+              "type": "multiple_choice",
+              "prompt": "It's late. You're saying good night to family. Pick the natural line:",
+              "options": ["我 去 睡觉 了，晚安", "我 要 起床", "我 不 累", "我 要 上班"],
+              "answer": "我 去 睡觉 了，晚安"
+            },
+            {
+              "id": "rt7-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I get home at six and rest a little\"",
+              "answer": "我 六点 回家 然后 休息 一下",
+              "bank": ["我", "六点", "回家", "然后", "休息", "一下", "上班", "起床"]
             }
           ]
         }
@@ -215,6 +724,66 @@
               "prompt": "\"我 看 了 书\" means ___",
               "answer": "I read the book",
               "acceptableAnswers": ["I have read the book", "I read a book"]
+            },
+            {
+              "id": "co1-4",
+              "type": "multiple_choice",
+              "prompt": "Which sentence describes a completed action?",
+              "options": ["我 吃 了 饭", "我 想 吃 饭", "我 要 吃 饭", "我 不 吃 饭"],
+              "answer": "我 吃 了 饭"
+            },
+            {
+              "id": "co1-5",
+              "type": "fill_blank",
+              "prompt": "Type the missing particle: \"她 买 ___ 一 本 书\" (\"She bought a book\")",
+              "answer": "了"
+            },
+            {
+              "id": "co1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Yesterday I bought two apples\"",
+              "answer": "昨天 我 买 了 两 个 苹果",
+              "bank": ["昨天", "我", "买", "了", "两", "个", "苹果", "三", "卖"]
+            },
+            {
+              "id": "co1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This morning he drank a cup of coffee\"",
+              "answer": "今天 早上 他 喝 了 一 杯 咖啡",
+              "bank": ["今天", "早上", "他", "喝", "了", "一", "杯", "咖啡", "茶"]
+            },
+            {
+              "id": "co1-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear (listen for the sentence-final 了)",
+              "spokenText": "他来了",
+              "options": ["他来了", "他来", "他不来", "他要来"],
+              "answer": "他来了",
+              "explanation": "Sentence-final 了 (le) is short and unstressed — pay attention to it!"
+            },
+            {
+              "id": "co1-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我吃了三个饺子",
+              "options": ["我吃了三个饺子", "我吃三个饺子", "我吃了一个饺子", "我要吃三个饺子"],
+              "answer": "我吃了三个饺子"
+            },
+            {
+              "id": "co1-10",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 看 电影 了 吗? You did watch it. Best reply:",
+              "options": ["看 了", "我 想 看", "还没", "不 看"],
+              "answer": "看 了",
+              "explanation": "Short answer to a 了 question — repeat the verb + 了."
+            },
+            {
+              "id": "co1-11",
+              "type": "multiple_choice",
+              "prompt": "Which is WRONG?",
+              "options": ["我 不 吃 了 饭", "我 吃 了 饭", "我 没 吃 饭", "我 还没 吃 饭"],
+              "answer": "我 不 吃 了 饭",
+              "explanation": "了 doesn't pair with 不. To negate completed actions, use 没 or 还没."
             }
           ]
         },
@@ -245,6 +814,56 @@
               "prompt": "Pick the correct sentence for \"He has already come\":",
               "options": ["他 已经 来 了", "他 还没 来", "他 不 来", "他 要 来"],
               "answer": "他 已经 来 了"
+            },
+            {
+              "id": "co2-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: \"我 ___ 看完 了\" (\"I have already finished reading\")",
+              "answer": "已经"
+            },
+            {
+              "id": "co2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My older sister has already gone home\"",
+              "answer": "我 姐姐 已经 回家 了",
+              "bank": ["我", "姐姐", "已经", "回家", "了", "还没", "妹妹"]
+            },
+            {
+              "id": "co2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It's already eight, he hasn't come yet\"",
+              "answer": "已经 八点 了 他 还没 来",
+              "bank": ["已经", "八点", "了", "他", "还没", "来", "去", "六点"]
+            },
+            {
+              "id": "co2-7",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 已经 三十 岁 了\" mean?",
+              "options": ["I'm thirty already", "I will be thirty", "I am not thirty", "I just turned thirty"],
+              "answer": "I'm thirty already",
+              "explanation": "已经…了 with an age = \"already this old\". 了 here marks the new state."
+            },
+            {
+              "id": "co2-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我已经吃饭了",
+              "options": ["我已经吃饭了", "我还没吃饭", "我要吃饭", "我不吃饭"],
+              "answer": "我已经吃饭了"
+            },
+            {
+              "id": "co2-9",
+              "type": "multiple_choice",
+              "prompt": "Mom calls — \"Have you done your homework?\" You finished. Reply:",
+              "options": ["我 已经 做完 了", "我 还没 做", "我 不 做", "我 要 做"],
+              "answer": "我 已经 做完 了"
+            },
+            {
+              "id": "co2-10",
+              "type": "fill_blank",
+              "prompt": "\"已经…了\" together emphasizes ___",
+              "answer": "Already done",
+              "acceptableAnswers": ["Already complete", "Already finished", "Already happened", "Completion"]
             }
           ]
         },
@@ -276,6 +895,68 @@
               "prompt": "\"我 还没 回家\" means ___",
               "answer": "I haven't gone home yet",
               "acceptableAnswers": ["I have not gone home yet", "I haven't returned home yet"]
+            },
+            {
+              "id": "co3-4",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 看 那 部 电影 了 吗? You haven't yet. Best reply:",
+              "options": ["还没 看", "已经 看 了", "我 不 看", "看 不 了"],
+              "answer": "还没 看"
+            },
+            {
+              "id": "co3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He hasn't come back home yet\"",
+              "answer": "他 还没 回 家",
+              "bank": ["他", "还没", "回", "家", "已经", "了", "不"]
+            },
+            {
+              "id": "co3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I haven't decided yet, give me a minute\"",
+              "answer": "我 还没 决定 等 我 一下",
+              "bank": ["我", "还没", "决定", "等", "一下", "已经", "了"]
+            },
+            {
+              "id": "co3-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the WRONG sentence:",
+              "options": ["我 还没 吃 了", "我 还没 吃", "我 没 吃", "我 还没 看 那 本 书"],
+              "answer": "我 还没 吃 了",
+              "explanation": "还没 + verb (no 了)! Mixing 还没 with 了 is the classic learner mistake."
+            },
+            {
+              "id": "co3-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我还没睡觉",
+              "options": ["我还没睡觉", "我已经睡觉了", "我要睡觉", "我不睡觉"],
+              "answer": "我还没睡觉"
+            },
+            {
+              "id": "co3-9",
+              "type": "fill_blank",
+              "prompt": "Pinyin: \"还没\" is pronounced ___",
+              "answer": "hái méi",
+              "acceptableAnswers": ["haimei", "hai mei"]
+            },
+            {
+              "id": "co3-10",
+              "type": "match_pairs",
+              "prompt": "Match each sentence to its meaning",
+              "pairs": [
+                { "left": "我 已经 看 了", "right": "I have already watched" },
+                { "left": "我 还没 看", "right": "I haven't watched yet" },
+                { "left": "我 没 看 过", "right": "I have never watched" },
+                { "left": "我 不 看", "right": "I don't watch" }
+              ]
+            },
+            {
+              "id": "co3-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I haven't bought the ticket yet, what do I do?\"",
+              "answer": "我 还没 买 票 怎么办",
+              "bank": ["我", "还没", "买", "票", "怎么办", "已经", "了"]
             }
           ]
         },
@@ -311,6 +992,164 @@
                 "There is no difference"
               ],
               "answer": "了 = ate just now; 过 = have eaten at some point"
+            },
+            {
+              "id": "co4-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: \"我 没 去 ___ 北京\" (\"I haven't been to Beijing\")",
+              "answer": "过"
+            },
+            {
+              "id": "co4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have eaten Peking duck before\"",
+              "answer": "我 吃 过 北京 烤鸭",
+              "bank": ["我", "吃", "过", "北京", "烤鸭", "了", "饺子"]
+            },
+            {
+              "id": "co4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Have you ever ridden a horse?\"",
+              "answer": "你 骑 过 马 吗",
+              "bank": ["你", "骑", "过", "马", "吗", "了", "车"]
+            },
+            {
+              "id": "co4-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct sentence for \"I have never seen this movie\":",
+              "options": [
+                "我 没 看 过 这 部 电影",
+                "我 不 看 过 这 部 电影",
+                "我 还没 看 这 部 电影",
+                "我 不 看 这 部 电影"
+              ],
+              "answer": "我 没 看 过 这 部 电影",
+              "explanation": "Negate 过 with 没 (not 不) — \"never (in my life) seen it\"."
+            },
+            {
+              "id": "co4-8",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which sentence emphasizes the action JUST happened?",
+              "options": ["他 来 了", "他 来 过", "他 还没 来", "他 不 来"],
+              "answer": "他 来 了",
+              "explanation": "了 = he came (and is here / just came). 过 = he's been here before but isn't necessarily here now."
+            },
+            {
+              "id": "co4-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我去过日本",
+              "options": ["我去过日本", "我去日本", "我要去日本", "我没去过日本"],
+              "answer": "我去过日本"
+            },
+            {
+              "id": "co4-10",
+              "type": "match_pairs",
+              "prompt": "Match the sentence to its meaning",
+              "pairs": [
+                { "left": "我 吃 了", "right": "I ate / I have eaten (just now)" },
+                { "left": "我 吃 过", "right": "I have eaten this before (sometime)" },
+                { "left": "我 还没 吃", "right": "I haven't eaten yet" },
+                { "left": "我 没 吃 过", "right": "I have never eaten it" }
+              ]
+            },
+            {
+              "id": "co4-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have been to Shanghai twice\"",
+              "answer": "我 去 过 上海 两 次",
+              "bank": ["我", "去", "过", "上海", "两", "次", "三", "了"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-completed-5",
+          "title": "How long? (了 + duration)",
+          "description": "Duration with completed actions",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "co5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 学 中文 学 了 两 年\" mean?",
+              "options": [
+                "I have studied Chinese for two years",
+                "I will study Chinese for two years",
+                "I studied Chinese two years ago",
+                "I want to study Chinese for two years"
+              ],
+              "answer": "I have studied Chinese for two years"
+            },
+            {
+              "id": "co5-2",
+              "type": "fill_blank",
+              "prompt": "Type the duration word: \"我 等 了 一 ___ 钟\" (\"I waited an hour\")",
+              "answer": "个小时",
+              "acceptableAnswers": ["小时", "个 小时"]
+            },
+            {
+              "id": "co5-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I worked for eight hours today\"",
+              "answer": "我 今天 工作 了 八 个 小时",
+              "bank": ["我", "今天", "工作", "了", "八", "个", "小时", "分钟", "天"]
+            },
+            {
+              "id": "co5-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He has lived in Beijing for three years\"",
+              "answer": "他 在 北京 住 了 三 年",
+              "bank": ["他", "在", "北京", "住", "了", "三", "年", "上海", "月"]
+            },
+            {
+              "id": "co5-5",
+              "type": "multiple_choice",
+              "prompt": "Question form: \"How long have you studied Chinese?\"",
+              "options": [
+                "你 学 中文 学 了 多 久",
+                "你 学 中文 多少 钱",
+                "你 学 中文 在 哪里",
+                "你 学 什么"
+              ],
+              "answer": "你 学 中文 学 了 多 久",
+              "explanation": "多久 (duō jiǔ) = how long. Verb-repeat pattern is common: 学中文学了多久."
+            },
+            {
+              "id": "co5-6",
+              "type": "fill_blank",
+              "prompt": "\"多久\" (duō jiǔ) means ___",
+              "answer": "How long",
+              "acceptableAnswers": ["How long (duration)"]
+            },
+            {
+              "id": "co5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我学了三年",
+              "options": ["我学了三年", "我学了两年", "我学了三个月", "我没学过"],
+              "answer": "我学了三年"
+            },
+            {
+              "id": "co5-8",
+              "type": "multiple_choice",
+              "prompt": "Boss asks 你 在 这家 公司 工作 多 久 了? You started 5 years ago. Reply:",
+              "options": ["五 年 了", "五 块 钱", "五 个 人", "我 不 知道"],
+              "answer": "五 年 了"
+            },
+            {
+              "id": "co5-9",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I haven't seen him for a long time\"",
+              "answer": "我 很 久 没 看 过 他",
+              "bank": ["我", "很", "久", "没", "看", "过", "他", "了", "不"]
+            },
+            {
+              "id": "co5-10",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which is \"I lived there for three years (and moved)\"?",
+              "options": ["我 在 那里 住 了 三 年", "我 在 那里 住 三 年", "我 还在 那里 住", "我 没 住 过 那里"],
+              "answer": "我 在 那里 住 了 三 年"
             }
           ]
         }
@@ -378,6 +1217,65 @@
               "prompt": "\"二十块\" means ___ yuan",
               "answer": "Twenty",
               "acceptableAnswers": ["20"]
+            },
+            {
+              "id": "sh1-4",
+              "type": "match_pairs",
+              "prompt": "Match the money word",
+              "pairs": [
+                { "left": "钱", "right": "Money" },
+                { "left": "块", "right": "Yuan (spoken)" },
+                { "left": "元", "right": "Yuan (written)" },
+                { "left": "毛", "right": "1/10 of a yuan" }
+              ]
+            },
+            {
+              "id": "sh1-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"How much is this one?\"",
+              "answer": "这个 多少 钱",
+              "bank": ["这个", "多少", "钱", "几", "块", "什么"]
+            },
+            {
+              "id": "sh1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This bag costs three hundred yuan\"",
+              "answer": "这个 包 三 百 块",
+              "bank": ["这个", "包", "三", "百", "块", "钱", "二", "十"]
+            },
+            {
+              "id": "sh1-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap the price you hear",
+              "spokenText": "三十五块",
+              "options": ["三十五块", "三十五毛", "十五块", "五十三块"],
+              "answer": "三十五块"
+            },
+            {
+              "id": "sh1-8",
+              "type": "multiple_choice",
+              "prompt": "You're at a fruit stall and want to ask the price of grapes. Best line:",
+              "options": ["葡萄 多少 钱", "葡萄 是 谁", "我 是 葡萄", "葡萄 在 哪里"],
+              "answer": "葡萄 多少 钱"
+            },
+            {
+              "id": "sh1-9",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"money\" (one character)",
+              "answer": "钱",
+              "acceptableAnswers": ["qián", "qian"]
+            },
+            {
+              "id": "sh1-10",
+              "type": "multiple_choice",
+              "prompt": "What's the difference between 多少 and 几?",
+              "options": [
+                "多少 = any amount; 几 = small numbers (under ~10)",
+                "多少 = past, 几 = future",
+                "多少 = formal, 几 = casual",
+                "There is no difference"
+              ],
+              "answer": "多少 = any amount; 几 = small numbers (under ~10)"
             }
           ]
         },
@@ -410,6 +1308,67 @@
               "answer": "我 要 买 一 本 书",
               "bank": ["我", "要", "买", "一", "本", "书", "卖", "茶"],
               "explanation": "本 (běn) is the measure word for books."
+            },
+            {
+              "id": "sh2-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"to buy\" (one character)",
+              "answer": "买",
+              "acceptableAnswers": ["mǎi", "mai"]
+            },
+            {
+              "id": "sh2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Yesterday I bought a new phone\"",
+              "answer": "昨天 我 买 了 一 个 新 手机",
+              "bank": ["昨天", "我", "买", "了", "一", "个", "新", "手机", "卖", "旧"]
+            },
+            {
+              "id": "sh2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This shop sells fruit and vegetables\"",
+              "answer": "这家 商店 卖 水果 和 蔬菜",
+              "bank": ["这家", "商店", "卖", "水果", "和", "蔬菜", "买", "肉"]
+            },
+            {
+              "id": "sh2-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear (mind the tones!)",
+              "spokenText": "我要买苹果",
+              "options": ["我要买苹果", "我要卖苹果", "我不买苹果", "我买了苹果"],
+              "answer": "我要买苹果",
+              "explanation": "买 mǎi (3rd tone, dipping) vs 卖 mài (4th tone, falling). Listen carefully!"
+            },
+            {
+              "id": "sh2-8",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which sentence is the SHOPKEEPER's line?",
+              "options": [
+                "我 卖 这个 五 块",
+                "我 买 这个 五 块",
+                "我 想 买 这个",
+                "请 给 我 一 个"
+              ],
+              "answer": "我 卖 这个 五 块",
+              "explanation": "卖 = sell — the shopkeeper sells. 买 = buy — the customer buys."
+            },
+            {
+              "id": "sh2-9",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence:",
+              "options": ["我 没 买 过 这个", "我 不 买 过 这个", "我 没 买 了 这个", "我 不 买 了 这个"],
+              "answer": "我 没 买 过 这个"
+            },
+            {
+              "id": "sh2-10",
+              "type": "match_pairs",
+              "prompt": "Match the measure word to the item",
+              "pairs": [
+                { "left": "本", "right": "Books" },
+                { "left": "件", "right": "Clothing items" },
+                { "left": "瓶", "right": "Bottles" },
+                { "left": "斤", "right": "Half kilo (fruit/veg)" }
+              ]
             }
           ]
         },
@@ -440,6 +1399,62 @@
               "prompt": "\"太贵了\" (tài guì le) means ___",
               "answer": "Too expensive",
               "acceptableAnswers": ["It's too expensive"]
+            },
+            {
+              "id": "sh3-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"cheap\" (two characters)",
+              "answer": "便宜",
+              "acceptableAnswers": ["pián yi", "pianyi"]
+            },
+            {
+              "id": "sh3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This shirt is too expensive, can it be cheaper?\"",
+              "answer": "这 件 衬衫 太 贵 了 能 便宜 点 吗",
+              "bank": ["这", "件", "衬衫", "太", "贵", "了", "能", "便宜", "点", "吗", "便宜", "买"]
+            },
+            {
+              "id": "sh3-6",
+              "type": "multiple_choice",
+              "prompt": "Vendor says 一百块. You think it's expensive. Best reaction:",
+              "options": ["哎呀，太 贵 了", "哎呀，太 便宜 了", "哎呀，太 好 了", "哎呀，太 小 了"],
+              "answer": "哎呀，太 贵 了",
+              "explanation": "哎呀 (āi yā) is a common interjection — \"oh no / oof\" before complaining."
+            },
+            {
+              "id": "sh3-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Apples are cheaper than bananas\"",
+              "answer": "苹果 比 香蕉 便宜",
+              "bank": ["苹果", "比", "香蕉", "便宜", "贵", "更"]
+            },
+            {
+              "id": "sh3-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "太贵了便宜点吧",
+              "options": ["太贵了便宜点吧", "太便宜了", "贵不贵", "我要买"],
+              "answer": "太贵了便宜点吧",
+              "explanation": "便宜 点 吧 = \"make it a bit cheaper, eh?\" — classic bargaining."
+            },
+            {
+              "id": "sh3-9",
+              "type": "match_pairs",
+              "prompt": "Match price-related words",
+              "pairs": [
+                { "left": "贵", "right": "Expensive" },
+                { "left": "便宜", "right": "Cheap" },
+                { "left": "打折", "right": "Discount" },
+                { "left": "免费", "right": "Free (no charge)" }
+              ]
+            },
+            {
+              "id": "sh3-10",
+              "type": "multiple_choice",
+              "prompt": "What does \"打折\" (dǎ zhé) mean?",
+              "options": ["Pay full price", "Discount", "Free", "Out of stock"],
+              "answer": "Discount"
             }
           ]
         },
@@ -471,6 +1486,244 @@
               "answer": "给 我 两 个",
               "bank": ["给", "我", "两", "个", "二", "你"],
               "explanation": "Use 两 (liǎng, \"a pair of\") rather than 二 (èr) before measure words like 个."
+            },
+            {
+              "id": "sh4-4",
+              "type": "tap_words_in_order",
+              "prompt": "Scenario: at the market, you want to buy two apples. Build it!",
+              "answer": "我 要 买 两 个 苹果",
+              "bank": ["我", "要", "买", "两", "个", "苹果", "二", "卖"]
+            },
+            {
+              "id": "sh4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want one kilo of apples please\"",
+              "answer": "请 给 我 一 斤 苹果",
+              "bank": ["请", "给", "我", "一", "斤", "苹果", "块", "个"]
+            },
+            {
+              "id": "sh4-6",
+              "type": "multiple_choice",
+              "prompt": "Vendor says 一共 三十块. What does 一共 mean?",
+              "options": ["Each one", "All together / total", "Tax", "Discount"],
+              "answer": "All together / total"
+            },
+            {
+              "id": "sh4-7",
+              "type": "fill_blank",
+              "prompt": "\"找钱\" (zhǎo qián) means ___",
+              "answer": "Give change",
+              "acceptableAnswers": ["Return change", "Make change"]
+            },
+            {
+              "id": "sh4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the total you hear",
+              "spokenText": "一共四十二块",
+              "options": ["一共四十二块", "一共二十四块", "一共四十块", "一共二十块"],
+              "answer": "一共四十二块"
+            },
+            {
+              "id": "sh4-9",
+              "type": "multiple_choice",
+              "prompt": "You hand the cashier 50 元 for a 32 元 item. What do you say?",
+              "options": ["请 找 我 钱", "请 给 我 钱", "请 卖 我 钱", "请 找 我 路"],
+              "answer": "请 找 我 钱"
+            },
+            {
+              "id": "sh4-10",
+              "type": "match_pairs",
+              "prompt": "Match the checkout phrase",
+              "pairs": [
+                { "left": "一共", "right": "Total / all together" },
+                { "left": "找钱", "right": "Give change" },
+                { "left": "刷卡", "right": "Pay by card" },
+                { "left": "现金", "right": "Cash" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-shopping-5",
+          "title": "Bargaining",
+          "description": "Pushing back on the price",
+          "theme": "food",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "sh5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"便宜 点\" (pián yi diǎn) mean?",
+              "options": ["A bit cheaper", "Way too cheap", "Too expensive", "Not cheap"],
+              "answer": "A bit cheaper"
+            },
+            {
+              "id": "sh5-2",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Boss, can you make it cheaper?\"",
+              "answer": "老板 能 不 能 便宜 点",
+              "bank": ["老板", "能", "不", "能", "便宜", "点", "贵", "吗"]
+            },
+            {
+              "id": "sh5-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This is way too expensive, fifty yuan is fine\"",
+              "answer": "这个 太 贵 了 五十 块 行 吗",
+              "bank": ["这个", "太", "贵", "了", "五十", "块", "行", "吗", "便宜"]
+            },
+            {
+              "id": "sh5-4",
+              "type": "multiple_choice",
+              "prompt": "Vendor: 八十块. You: 太贵了！便宜点吧！ Vendor: 那 七十. What does 那 mean here?",
+              "options": ["No way", "OK then / in that case", "That one", "Wait"],
+              "answer": "OK then / in that case",
+              "explanation": "那 here = \"in that case…\" — used to soften concessions in negotiations."
+            },
+            {
+              "id": "sh5-5",
+              "type": "fill_blank",
+              "prompt": "\"行\" (xíng) means ___",
+              "answer": "OK / fine",
+              "acceptableAnswers": ["OK", "Fine", "Alright", "Sure"]
+            },
+            {
+              "id": "sh5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap the bargain offer",
+              "spokenText": "便宜点行不行",
+              "options": ["便宜点行不行", "便宜点好不好", "贵一点行吗", "你卖不卖"],
+              "answer": "便宜点行不行"
+            },
+            {
+              "id": "sh5-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the polite-but-firm bargaining line:",
+              "options": [
+                "老板 能 不 能 再 便宜 一点",
+                "你 卖 太 贵",
+                "我 不 要",
+                "再见"
+              ],
+              "answer": "老板 能 不 能 再 便宜 一点"
+            },
+            {
+              "id": "sh5-8",
+              "type": "match_pairs",
+              "prompt": "Match the bargaining phrase",
+              "pairs": [
+                { "left": "便宜点", "right": "A bit cheaper" },
+                { "left": "再便宜点", "right": "Even cheaper" },
+                { "left": "行不行", "right": "OK or not?" },
+                { "left": "算了", "right": "Forget it" }
+              ]
+            },
+            {
+              "id": "sh5-9",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Forget it, it's too expensive, I won't buy it\"",
+              "answer": "算 了 太 贵 了 我 不 买 了",
+              "bank": ["算", "了", "太", "贵", "了", "我", "不", "买", "便宜"]
+            },
+            {
+              "id": "sh5-10",
+              "type": "multiple_choice",
+              "prompt": "What does \"算了\" (suàn le) mean?",
+              "options": ["Let's count", "Forget it / never mind", "Sold out", "Done"],
+              "answer": "Forget it / never mind"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-shopping-6",
+          "title": "Returning items & online",
+          "description": "退货, 换货, 网购",
+          "theme": "food",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "sh6-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"退货\" (tuì huò) mean?",
+              "options": ["Restock", "Return goods", "Sell out", "Wholesale"],
+              "answer": "Return goods"
+            },
+            {
+              "id": "sh6-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"exchange goods\"?",
+              "options": ["退货", "换货", "买货", "卖货"],
+              "answer": "换货"
+            },
+            {
+              "id": "sh6-3",
+              "type": "fill_blank",
+              "prompt": "\"网购\" (wǎng gòu) means ___",
+              "answer": "Online shopping",
+              "acceptableAnswers": ["Shop online", "Buy online"]
+            },
+            {
+              "id": "sh6-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This shirt is too small, I want to exchange it\"",
+              "answer": "这 件 衬衫 太 小 了 我 想 换",
+              "bank": ["这", "件", "衬衫", "太", "小", "了", "我", "想", "换", "买", "大"]
+            },
+            {
+              "id": "sh6-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I bought this online yesterday\"",
+              "answer": "这个 是 我 昨天 在 网上 买 的",
+              "bank": ["这个", "是", "我", "昨天", "在", "网上", "买", "的", "卖", "了"]
+            },
+            {
+              "id": "sh6-6",
+              "type": "multiple_choice",
+              "prompt": "You bought a sweater online but it's the wrong color. What do you say?",
+              "options": [
+                "我 想 退货",
+                "我 想 买货",
+                "我 想 卖货",
+                "我 想 看货"
+              ],
+              "answer": "我 想 退货"
+            },
+            {
+              "id": "sh6-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我想退货可以吗",
+              "options": ["我想退货可以吗", "我想买货可以吗", "我想换货可以吗", "我不退货"],
+              "answer": "我想退货可以吗"
+            },
+            {
+              "id": "sh6-8",
+              "type": "match_pairs",
+              "prompt": "Match the e-commerce term",
+              "pairs": [
+                { "left": "网购", "right": "Online shopping" },
+                { "left": "快递", "right": "Express delivery" },
+                { "left": "退货", "right": "Return" },
+                { "left": "评价", "right": "Review / rating" }
+              ]
+            },
+            {
+              "id": "sh6-9",
+              "type": "fill_blank",
+              "prompt": "\"快递\" (kuài dì) means ___",
+              "answer": "Express delivery",
+              "acceptableAnswers": ["Courier", "Delivery"]
+            },
+            {
+              "id": "sh6-10",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence:",
+              "options": [
+                "我 喜欢 网上 买 衣服",
+                "我 喜欢 网上 卖 衣服",
+                "我 喜欢 衣服 网上",
+                "我 网上 是 衣服"
+              ],
+              "answer": "我 喜欢 网上 买 衣服"
             }
           ]
         }
@@ -562,6 +1815,67 @@
               "prompt": "Which is correct for \"Today is hotter than yesterday\"?",
               "options": ["今天 比 昨天 热", "今天 很 比 昨天 热", "今天 不 热 昨天", "昨天 比 今天 热"],
               "answer": "今天 比 昨天 热"
+            },
+            {
+              "id": "cm1-4",
+              "type": "fill_blank",
+              "prompt": "Type the missing word: \"我 ___ 他 大\" (\"I am older than him\")",
+              "answer": "比"
+            },
+            {
+              "id": "cm1-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My older brother is taller than my dad\"",
+              "answer": "我 哥哥 比 我 爸爸 高",
+              "bank": ["我", "哥哥", "比", "爸爸", "高", "矮", "更"]
+            },
+            {
+              "id": "cm1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This restaurant's food is better than that one's\"",
+              "answer": "这家 饭馆 的 菜 比 那家 好吃",
+              "bank": ["这家", "饭馆", "的", "菜", "比", "那家", "好吃", "便宜", "贵"]
+            },
+            {
+              "id": "cm1-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which sentence is GRAMMATICAL?",
+              "options": [
+                "他 比 我 高",
+                "他 比 我 很 高",
+                "他 比 我 不 高",
+                "他 比 我 是 高"
+              ],
+              "answer": "他 比 我 高",
+              "explanation": "No 很/不/是 inside a 比 sentence — the comparison alone does the work."
+            },
+            {
+              "id": "cm1-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我比他大三岁",
+              "options": ["我比他大三岁", "我比他大两岁", "他比我大三岁", "我和他一样大"],
+              "answer": "我比他大三岁",
+              "explanation": "After 比 + adj you can add a number: \"three years older\"."
+            },
+            {
+              "id": "cm1-9",
+              "type": "multiple_choice",
+              "prompt": "Build with numbers: \"He is two years older than me\"",
+              "options": [
+                "他 比 我 大 两 岁",
+                "他 比 我 大 二 岁",
+                "他 大 两 岁 比 我",
+                "他 比 大 我 两 岁"
+              ],
+              "answer": "他 比 我 大 两 岁"
+            },
+            {
+              "id": "cm1-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My brother runs faster than me\"",
+              "answer": "我 弟弟 比 我 跑 得 快",
+              "bank": ["我", "弟弟", "比", "我", "跑", "得", "快", "慢", "高"]
             }
           ]
         },
@@ -592,6 +1906,67 @@
               "prompt": "\"她 更 漂亮\" means \"She is ___ prettier\"",
               "answer": "Even",
               "acceptableAnswers": ["More", "Still"]
+            },
+            {
+              "id": "cm2-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This phone is even more expensive than that one\"",
+              "answer": "这个 手机 比 那个 更 贵",
+              "bank": ["这个", "手机", "比", "那个", "更", "贵", "便宜", "最"]
+            },
+            {
+              "id": "cm2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today is even hotter than yesterday\"",
+              "answer": "今天 比 昨天 更 热",
+              "bank": ["今天", "比", "昨天", "更", "热", "冷", "最"]
+            },
+            {
+              "id": "cm2-6",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct word order:",
+              "options": [
+                "他 比 我 更 高",
+                "他 更 比 我 高",
+                "他 比 更 我 高",
+                "更 他 比 我 高"
+              ],
+              "answer": "他 比 我 更 高",
+              "explanation": "更 sits right before the adjective: …比 B 更 + adj."
+            },
+            {
+              "id": "cm2-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "他比我更聪明",
+              "options": ["他比我更聪明", "他比我聪明", "他没有我聪明", "我比他更聪明"],
+              "answer": "他比我更聪明"
+            },
+            {
+              "id": "cm2-8",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"even more / still more\" (one character)",
+              "answer": "更",
+              "acceptableAnswers": ["gèng", "geng"]
+            },
+            {
+              "id": "cm2-9",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 更 喜欢 茶\" imply?",
+              "options": [
+                "I like tea even more (compared to something else)",
+                "I don't like tea",
+                "I like tea the most",
+                "I just started liking tea"
+              ],
+              "answer": "I like tea even more (compared to something else)"
+            },
+            {
+              "id": "cm2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This summer is even hotter than last summer\"",
+              "answer": "今年 夏天 比 去年 更 热",
+              "bank": ["今年", "夏天", "比", "去年", "更", "热", "冷", "最"]
             }
           ]
         },
@@ -622,6 +1997,65 @@
               "prompt": "What does \"她 最 高\" mean?",
               "options": ["She is taller", "She is the tallest", "She is not tall", "She is shorter"],
               "answer": "She is the tallest"
+            },
+            {
+              "id": "cm3-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"the most\" (one character)",
+              "answer": "最",
+              "acceptableAnswers": ["zuì", "zui"]
+            },
+            {
+              "id": "cm3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In our class, he is the smartest\"",
+              "answer": "在 我们 班 他 最 聪明",
+              "bank": ["在", "我们", "班", "他", "最", "聪明", "高", "比"]
+            },
+            {
+              "id": "cm3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Of all the fruits, I like apples the most\"",
+              "answer": "所有 水果 里 我 最 喜欢 苹果",
+              "bank": ["所有", "水果", "里", "我", "最", "喜欢", "苹果", "香蕉", "更"]
+            },
+            {
+              "id": "cm3-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: pick the SUPERLATIVE",
+              "options": ["他 最 高", "他 比 我 高", "他 更 高", "他 很 高"],
+              "answer": "他 最 高"
+            },
+            {
+              "id": "cm3-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我最喜欢吃饺子",
+              "options": ["我最喜欢吃饺子", "我更喜欢吃饺子", "我比较喜欢吃饺子", "我不喜欢吃饺子"],
+              "answer": "我最喜欢吃饺子"
+            },
+            {
+              "id": "cm3-9",
+              "type": "match_pairs",
+              "prompt": "Match the intensifier",
+              "pairs": [
+                { "left": "最", "right": "Most" },
+                { "left": "更", "right": "Even more" },
+                { "left": "太", "right": "Too" },
+                { "left": "特别", "right": "Especially" }
+              ]
+            },
+            {
+              "id": "cm3-10",
+              "type": "multiple_choice",
+              "prompt": "Which means \"This is the most expensive one\"?",
+              "options": [
+                "这个 最 贵",
+                "这个 比 贵",
+                "这个 更 贵",
+                "这个 很 贵"
+              ],
+              "answer": "这个 最 贵"
             }
           ]
         },
@@ -653,6 +2087,155 @@
               "options": ["我 比 他 很 高", "我 比 他 高", "我 不 比 他 很 高", "我 比 他 不 高"],
               "answer": "我 比 他 高",
               "explanation": "Don't add 很 or 不 inside a 比 comparison."
+            },
+            {
+              "id": "cm4-4",
+              "type": "fill_blank",
+              "prompt": "Type the missing word: \"我 ___ 他 高\" (\"I'm not as tall as him\")",
+              "answer": "没有",
+              "acceptableAnswers": ["没"]
+            },
+            {
+              "id": "cm4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My phone is not as new as yours\"",
+              "answer": "我 的 手机 没有 你 的 新",
+              "bank": ["我", "的", "手机", "没有", "你", "新", "旧", "比"]
+            },
+            {
+              "id": "cm4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The weather today is not as cold as yesterday\"",
+              "answer": "今天 的 天气 没有 昨天 冷",
+              "bank": ["今天", "的", "天气", "没有", "昨天", "冷", "热", "比"]
+            },
+            {
+              "id": "cm4-7",
+              "type": "multiple_choice",
+              "prompt": "Transform 我 比 他 大 (\"I'm older than him\") into the negative form:",
+              "options": ["我 没有 他 大", "我 不 比 他 大", "他 没有 我 大", "我 没 比 他 大"],
+              "answer": "我 没有 他 大",
+              "explanation": "To flip A 比 B + adj → A 没有 B + adj."
+            },
+            {
+              "id": "cm4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "他没有我高",
+              "options": ["他没有我高", "他比我高", "他和我一样高", "我没有他高"],
+              "answer": "他没有我高"
+            },
+            {
+              "id": "cm4-9",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which means \"A and B are equally tall\"?",
+              "options": [
+                "A 和 B 一样 高",
+                "A 比 B 高",
+                "A 没有 B 高",
+                "A 最 高"
+              ],
+              "answer": "A 和 B 一样 高",
+              "explanation": "一样 (yī yàng) = the same — \"A and B are the same in tallness\"."
+            },
+            {
+              "id": "cm4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My Chinese is not as good as my English\"",
+              "answer": "我 的 中文 没有 我 的 英文 好",
+              "bank": ["我", "的", "中文", "没有", "英文", "好", "差", "比"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-compare-5",
+          "title": "Intensifiers (太/特别/极了)",
+          "description": "Boosting an adjective",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cm5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"特别\" (tè bié) mean as an intensifier?",
+              "options": ["Especially / particularly", "Almost", "Hardly", "Sometimes"],
+              "answer": "Especially / particularly"
+            },
+            {
+              "id": "cm5-2",
+              "type": "match_pairs",
+              "prompt": "Match the intensifier strength",
+              "pairs": [
+                { "left": "有点", "right": "A little (often negative)" },
+                { "left": "很", "right": "Very" },
+                { "left": "特别", "right": "Especially / really" },
+                { "left": "极了", "right": "Extremely (after the adjective)" }
+              ]
+            },
+            {
+              "id": "cm5-3",
+              "type": "multiple_choice",
+              "prompt": "Where does 极了 (jí le) go?",
+              "options": [
+                "After the adjective",
+                "Before the adjective",
+                "At the start of the sentence",
+                "Anywhere works"
+              ],
+              "answer": "After the adjective",
+              "explanation": "好 极 了 = \"extremely good\". 极了 attaches to the END of the adjective."
+            },
+            {
+              "id": "cm5-4",
+              "type": "fill_blank",
+              "prompt": "\"太…了\" frames the meaning ___",
+              "answer": "Too / excessively",
+              "acceptableAnswers": ["Too much", "Excessively", "Way too"]
+            },
+            {
+              "id": "cm5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This dish is extremely delicious!\"",
+              "answer": "这 个 菜 好吃 极 了",
+              "bank": ["这", "个", "菜", "好吃", "极", "了", "太", "很"]
+            },
+            {
+              "id": "cm5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today's weather is especially good\"",
+              "answer": "今天 的 天气 特别 好",
+              "bank": ["今天", "的", "天气", "特别", "好", "差", "比", "更"]
+            },
+            {
+              "id": "cm5-7",
+              "type": "multiple_choice",
+              "prompt": "\"我 有点 累\" means:",
+              "options": ["I'm a little tired", "I'm not tired", "I'm extremely tired", "I'm always tired"],
+              "answer": "I'm a little tired",
+              "explanation": "有点 + adj usually has a negative tilt — \"a bit (annoyingly) ___.\""
+            },
+            {
+              "id": "cm5-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "今天特别冷",
+              "options": ["今天特别冷", "今天有点冷", "今天很冷", "今天不冷"],
+              "answer": "今天特别冷"
+            },
+            {
+              "id": "cm5-9",
+              "type": "multiple_choice",
+              "prompt": "Pick the WRONG sentence:",
+              "options": ["这个 太 贵", "这个 太 贵 了", "这个 很 贵", "这个 特别 贵"],
+              "answer": "这个 太 贵",
+              "explanation": "太 nearly always pairs with sentence-final 了: 太…了 (\"too ___\")."
+            },
+            {
+              "id": "cm5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This movie is too long, I'm a bit sleepy\"",
+              "answer": "这 部 电影 太 长 了 我 有点 困",
+              "bank": ["这", "部", "电影", "太", "长", "了", "我", "有点", "困", "短", "饿"]
             }
           ]
         }
@@ -695,6 +2278,61 @@
               "prompt": "\"自行车\" (zì xíng chē) means ___",
               "answer": "Bicycle",
               "acceptableAnswers": ["Bike"]
+            },
+            {
+              "id": "tp1-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"airplane\" (two characters)",
+              "answer": "飞机",
+              "acceptableAnswers": ["fēi jī", "feiji"]
+            },
+            {
+              "id": "tp1-5",
+              "type": "multiple_choice",
+              "prompt": "Which means \"high-speed train\"?",
+              "options": ["地铁", "高铁", "公车", "出租车"],
+              "answer": "高铁"
+            },
+            {
+              "id": "tp1-6",
+              "type": "match_pairs",
+              "prompt": "Match the modern transport word",
+              "pairs": [
+                { "left": "地铁", "right": "Subway / metro" },
+                { "left": "高铁", "right": "High-speed rail" },
+                { "left": "出租车", "right": "Taxi" },
+                { "left": "电动车", "right": "Electric scooter" }
+              ]
+            },
+            {
+              "id": "tp1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"There is a bicycle in front of my house\"",
+              "answer": "我 家 前面 有 一 辆 自行车",
+              "bank": ["我", "家", "前面", "有", "一", "辆", "自行车", "辆", "汽车"]
+            },
+            {
+              "id": "tp1-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the vehicle you hear",
+              "spokenText": "我坐高铁去上海",
+              "options": ["我坐高铁去上海", "我坐火车去上海", "我坐飞机去上海", "我开车去上海"],
+              "answer": "我坐高铁去上海"
+            },
+            {
+              "id": "tp1-9",
+              "type": "multiple_choice",
+              "prompt": "What's the measure word for vehicles like cars, bikes?",
+              "options": ["辆", "本", "件", "只"],
+              "answer": "辆",
+              "explanation": "辆 (liàng) is the measure word for wheeled vehicles: 一 辆 车, 两 辆 自行车."
+            },
+            {
+              "id": "tp1-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"There are too many cars on the road today\"",
+              "answer": "今天 路 上 的 车 太 多 了",
+              "bank": ["今天", "路", "上", "的", "车", "太", "多", "了", "少"]
             }
           ]
         },
@@ -725,6 +2363,60 @@
               "prompt": "Which means \"take a plane\"?",
               "options": ["开飞机", "坐飞机", "骑飞机", "走飞机"],
               "answer": "坐飞机"
+            },
+            {
+              "id": "tp2-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: \"我 ___ 地铁 去 公司\" (\"I take the subway to the company\")",
+              "answer": "坐"
+            },
+            {
+              "id": "tp2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He takes the high-speed train to Beijing\"",
+              "answer": "他 坐 高铁 去 北京",
+              "bank": ["他", "坐", "高铁", "去", "北京", "上海", "开"]
+            },
+            {
+              "id": "tp2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I usually take the subway to work\"",
+              "answer": "我 平时 坐 地铁 上班",
+              "bank": ["我", "平时", "坐", "地铁", "上班", "下班", "去", "开"]
+            },
+            {
+              "id": "tp2-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which verb is wrong with 飞机?",
+              "options": ["骑 飞机", "坐 飞机", "开 飞机", "下 飞机"],
+              "answer": "骑 飞机",
+              "explanation": "骑 = ride straddling (bikes/horses), so 骑飞机 is wrong. 开 = pilot, 坐 = take/sit in."
+            },
+            {
+              "id": "tp2-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我每天坐公交车上班",
+              "options": ["我每天坐公交车上班", "我每天开车上班", "我每天走路上班", "我每天骑车上班"],
+              "answer": "我每天坐公交车上班"
+            },
+            {
+              "id": "tp2-9",
+              "type": "match_pairs",
+              "prompt": "Match the verb to the vehicle",
+              "pairs": [
+                { "left": "坐", "right": "Take (bus/train/plane)" },
+                { "left": "开", "right": "Drive (car)" },
+                { "left": "骑", "right": "Ride (bike)" },
+                { "left": "走路", "right": "Walk" }
+              ]
+            },
+            {
+              "id": "tp2-10",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 怎么 来 的? (\"How did you come?\") You took the subway. Reply:",
+              "options": ["我 坐 地铁 来 的", "我 是 地铁", "我 来 地铁", "地铁 我 来"],
+              "answer": "我 坐 地铁 来 的"
             }
           ]
         },
@@ -755,6 +2447,56 @@
               "prompt": "\"开车\" (kāi chē) means ___",
               "answer": "Drive a car",
               "acceptableAnswers": ["Drive", "To drive"]
+            },
+            {
+              "id": "tp3-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"to walk\" (two characters)",
+              "answer": "走路",
+              "acceptableAnswers": ["zǒu lù", "zoulu"]
+            },
+            {
+              "id": "tp3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I walked to school today\"",
+              "answer": "我 今天 走路 去 学校",
+              "bank": ["我", "今天", "走路", "去", "学校", "坐车", "公司"]
+            },
+            {
+              "id": "tp3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My dad drives to work every day\"",
+              "answer": "我 爸爸 每天 开车 上班",
+              "bank": ["我", "爸爸", "每天", "开车", "上班", "下班", "走路", "骑"]
+            },
+            {
+              "id": "tp3-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: pick the correct verb for \"ride a bike\"",
+              "options": ["骑 自行车", "开 自行车", "坐 自行车", "走 自行车"],
+              "answer": "骑 自行车"
+            },
+            {
+              "id": "tp3-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我喜欢骑自行车",
+              "options": ["我喜欢骑自行车", "我喜欢开车", "我喜欢走路", "我喜欢坐车"],
+              "answer": "我喜欢骑自行车"
+            },
+            {
+              "id": "tp3-9",
+              "type": "multiple_choice",
+              "prompt": "What does \"骑摩托车\" (qí mó tuō chē) mean?",
+              "options": ["Drive a truck", "Ride a motorcycle", "Drive a tractor", "Ride a horse"],
+              "answer": "Ride a motorcycle"
+            },
+            {
+              "id": "tp3-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He rides a bike to school every day\"",
+              "answer": "他 每天 骑 自行车 去 学校",
+              "bank": ["他", "每天", "骑", "自行车", "去", "学校", "开车", "走"]
             }
           ]
         },
@@ -785,6 +2527,144 @@
               "prompt": "What does \"地铁\" (dì tiě) mean?",
               "options": ["Train", "Subway / metro", "Highway", "Tunnel"],
               "answer": "Subway / metro"
+            },
+            {
+              "id": "tp4-4",
+              "type": "fill_blank",
+              "prompt": "\"机场\" (jī chǎng) means ___",
+              "answer": "Airport"
+            },
+            {
+              "id": "tp4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to take a taxi to the airport\"",
+              "answer": "我 想 坐 出租车 去 机场",
+              "bank": ["我", "想", "坐", "出租车", "去", "机场", "公司", "骑"]
+            },
+            {
+              "id": "tp4-6",
+              "type": "match_pairs",
+              "prompt": "Match the destination",
+              "pairs": [
+                { "left": "机场", "right": "Airport" },
+                { "left": "车站", "right": "Bus / train station" },
+                { "left": "学校", "right": "School" },
+                { "left": "公司", "right": "Company / office" }
+              ]
+            },
+            {
+              "id": "tp4-7",
+              "type": "multiple_choice",
+              "prompt": "Stranger asks 火车站 在 哪里? (\"Where is the train station?\") You don't know. Reply politely:",
+              "options": ["对不起 我 也 不 知道", "再见", "我 不 喜欢", "我 是 老师"],
+              "answer": "对不起 我 也 不 知道"
+            },
+            {
+              "id": "tp4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "请问火车站怎么走",
+              "options": ["请问火车站怎么走", "请问机场怎么走", "请问公司在哪里", "请问医院怎么走"],
+              "answer": "请问火车站怎么走",
+              "explanation": "请问 = a polite \"may I ask\". 怎么走 = \"how to get to / how to walk to\"."
+            },
+            {
+              "id": "tp4-9",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Excuse me, how do I get to the subway station?\"",
+              "answer": "请问 地铁 站 怎么 走",
+              "bank": ["请问", "地铁", "站", "怎么", "走", "去", "在哪里"]
+            },
+            {
+              "id": "tp4-10",
+              "type": "multiple_choice",
+              "prompt": "What does \"换乘\" (huàn chéng) mean?",
+              "options": ["Buy a ticket", "Transfer (between lines)", "Get off", "Get on"],
+              "answer": "Transfer (between lines)"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-transport-5",
+          "title": "Punctuality (赶/来得及)",
+          "description": "On time, late, missed it",
+          "theme": "directions",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "tp5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"赶不上\" (gǎn bu shàng) mean?",
+              "options": ["Catch up", "Won't make it / can't catch", "On time", "Slow down"],
+              "answer": "Won't make it / can't catch"
+            },
+            {
+              "id": "tp5-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"there's still time / will make it\"?",
+              "options": ["来得及", "来不及", "赶不上", "迟到"],
+              "answer": "来得及"
+            },
+            {
+              "id": "tp5-3",
+              "type": "fill_blank",
+              "prompt": "\"迟到\" (chí dào) means ___",
+              "answer": "Be late",
+              "acceptableAnswers": ["Arrive late", "Late"]
+            },
+            {
+              "id": "tp5-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Hurry up, otherwise we won't make it!\"",
+              "answer": "快 一点 不然 我们 来不及 了",
+              "bank": ["快", "一点", "不然", "我们", "来不及", "了", "来得及", "慢"]
+            },
+            {
+              "id": "tp5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm sorry, I was late this morning\"",
+              "answer": "对不起 我 今天 早上 迟到 了",
+              "bank": ["对不起", "我", "今天", "早上", "迟到", "了", "晚上", "上班"]
+            },
+            {
+              "id": "tp5-6",
+              "type": "multiple_choice",
+              "prompt": "It's 8:55, your meeting is at 9:00 across town. You say:",
+              "options": ["哎呀，要 迟到 了", "哎呀，太 早 了", "哎呀，太 好 了", "哎呀，没 事"],
+              "answer": "哎呀，要 迟到 了"
+            },
+            {
+              "id": "tp5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我快迟到了",
+              "options": ["我快迟到了", "我已经迟到了", "我不会迟到", "我来得及"],
+              "answer": "我快迟到了"
+            },
+            {
+              "id": "tp5-8",
+              "type": "match_pairs",
+              "prompt": "Match the punctuality phrase",
+              "pairs": [
+                { "left": "来得及", "right": "Have time / will make it" },
+                { "left": "来不及", "right": "Won't make it" },
+                { "left": "赶不上", "right": "Can't catch (the bus/train)" },
+                { "left": "准时", "right": "On time / punctual" }
+              ]
+            },
+            {
+              "id": "tp5-9",
+              "type": "multiple_choice",
+              "prompt": "What does \"准时\" (zhǔn shí) mean?",
+              "options": ["Eventually", "On time / punctual", "Late again", "Around the time"],
+              "answer": "On time / punctual"
+            },
+            {
+              "id": "tp5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"If we don't go now, we won't catch the train\"",
+              "answer": "如果 现在 不 走 就 赶不上 火车 了",
+              "bank": ["如果", "现在", "不", "走", "就", "赶不上", "火车", "了", "来不及"]
             }
           ]
         }
@@ -823,6 +2703,61 @@
               "prompt": "\"生气\" (shēng qì) means ___",
               "answer": "Angry",
               "acceptableAnswers": ["Mad"]
+            },
+            {
+              "id": "fl1-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"happy\" (two characters)",
+              "answer": "高兴",
+              "acceptableAnswers": ["gāo xìng", "gaoxing", "开心"]
+            },
+            {
+              "id": "fl1-5",
+              "type": "match_pairs",
+              "prompt": "Match the emotion",
+              "pairs": [
+                { "left": "高兴", "right": "Happy" },
+                { "left": "难过", "right": "Sad" },
+                { "left": "生气", "right": "Angry" },
+                { "left": "害怕", "right": "Scared" }
+              ]
+            },
+            {
+              "id": "fl1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today I'm really happy because I saw my friend\"",
+              "answer": "我 今天 很 高兴 因为 我 看到 了 朋友",
+              "bank": ["我", "今天", "很", "高兴", "因为", "看到", "了", "朋友", "难过"]
+            },
+            {
+              "id": "fl1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Mom is angry because I came home late\"",
+              "answer": "妈妈 生气 了 因为 我 回家 晚 了",
+              "bank": ["妈妈", "生气", "了", "因为", "我", "回家", "晚", "早"]
+            },
+            {
+              "id": "fl1-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the feeling you hear",
+              "spokenText": "我今天很难过",
+              "options": ["我今天很难过", "我今天很高兴", "我今天很生气", "我今天很累"],
+              "answer": "我今天很难过"
+            },
+            {
+              "id": "fl1-9",
+              "type": "multiple_choice",
+              "prompt": "Friend tells you bad news. You sympathize with:",
+              "options": ["哎，你 一定 很 难过", "哈哈，太 好 了", "我 不 知道", "再见"],
+              "answer": "哎，你 一定 很 难过",
+              "explanation": "哎 (āi) — sympathetic interjection. 一定 = surely/definitely."
+            },
+            {
+              "id": "fl1-10",
+              "type": "multiple_choice",
+              "prompt": "What does \"开心\" (kāi xīn) mean?",
+              "options": ["Open the heart (literally) — cheerful / happy", "Heartbroken", "Worried", "Surprised"],
+              "answer": "Open the heart (literally) — cheerful / happy"
             }
           ]
         },
@@ -852,6 +2787,60 @@
               "type": "fill_blank",
               "prompt": "\"我 很 渴\" (kě) means \"I am very ___\"",
               "answer": "Thirsty"
+            },
+            {
+              "id": "fl2-4",
+              "type": "match_pairs",
+              "prompt": "Match the body-state word",
+              "pairs": [
+                { "left": "累", "right": "Tired" },
+                { "left": "饿", "right": "Hungry" },
+                { "left": "渴", "right": "Thirsty" },
+                { "left": "困", "right": "Sleepy" }
+              ]
+            },
+            {
+              "id": "fl2-5",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"sleepy\" (one character)",
+              "answer": "困",
+              "acceptableAnswers": ["kùn", "kun"]
+            },
+            {
+              "id": "fl2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm very thirsty, I want to drink water\"",
+              "answer": "我 很 渴 我 要 喝 水",
+              "bank": ["我", "很", "渴", "要", "喝", "水", "饿", "茶"]
+            },
+            {
+              "id": "fl2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"After working all day I'm extremely tired\"",
+              "answer": "工作 了 一 天 我 累 极 了",
+              "bank": ["工作", "了", "一", "天", "我", "累", "极", "了", "饿", "困"]
+            },
+            {
+              "id": "fl2-8",
+              "type": "multiple_choice",
+              "prompt": "What does \"饱\" (bǎo) mean?",
+              "options": ["Full (after eating)", "Empty", "Hungry", "Sleepy"],
+              "answer": "Full (after eating)"
+            },
+            {
+              "id": "fl2-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我有点饿",
+              "options": ["我有点饿", "我很饿", "我不饿", "我太饿了"],
+              "answer": "我有点饿"
+            },
+            {
+              "id": "fl2-10",
+              "type": "multiple_choice",
+              "prompt": "It's late, you can barely keep your eyes open. You say:",
+              "options": ["我 太 困 了", "我 太 饿 了", "我 太 渴 了", "我 太 高兴 了"],
+              "answer": "我 太 困 了"
             }
           ]
         },
@@ -882,6 +2871,60 @@
               "prompt": "What does \"有意思\" (yǒu yì si) mean?",
               "options": ["Important", "Interesting", "Difficult", "Boring"],
               "answer": "Interesting"
+            },
+            {
+              "id": "fl3-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"to think / feel\" (two characters)",
+              "answer": "觉得",
+              "acceptableAnswers": ["jué de", "juede"]
+            },
+            {
+              "id": "fl3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I think Chinese is hard but interesting\"",
+              "answer": "我 觉得 中文 很 难 但是 很 有意思",
+              "bank": ["我", "觉得", "中文", "很", "难", "但是", "有意思", "无聊", "容易"]
+            },
+            {
+              "id": "fl3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He thinks this restaurant's food is delicious\"",
+              "answer": "他 觉得 这家 饭馆 的 菜 很 好吃",
+              "bank": ["他", "觉得", "这家", "饭馆", "的", "菜", "很", "好吃", "难吃", "贵"]
+            },
+            {
+              "id": "fl3-7",
+              "type": "multiple_choice",
+              "prompt": "What does \"无聊\" (wú liáo) mean?",
+              "options": ["Interesting", "Boring", "Tired", "Difficult"],
+              "answer": "Boring"
+            },
+            {
+              "id": "fl3-8",
+              "type": "match_pairs",
+              "prompt": "Match the opinion word",
+              "pairs": [
+                { "left": "有意思", "right": "Interesting" },
+                { "left": "无聊", "right": "Boring" },
+                { "left": "难", "right": "Difficult" },
+                { "left": "容易", "right": "Easy" }
+              ]
+            },
+            {
+              "id": "fl3-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我觉得有点无聊",
+              "options": ["我觉得有点无聊", "我觉得很有意思", "我觉得很难", "我觉得很累"],
+              "answer": "我觉得有点无聊"
+            },
+            {
+              "id": "fl3-10",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 觉得 这 部 电影 怎么样? You found it boring. Best reply:",
+              "options": ["我 觉得 有点 无聊", "我 觉得 很 高兴", "我 觉得 很 累", "我 觉得 很 渴"],
+              "answer": "我 觉得 有点 无聊"
             }
           ]
         },
@@ -914,6 +2957,157 @@
               "options": ["我很高兴", "我很累", "我很饿", "我很难过"],
               "answer": "我很高兴",
               "explanation": "高兴 (gāo xìng) — happy. The full sentence \"I am very happy.\""
+            },
+            {
+              "id": "fl4-4",
+              "type": "multiple_choice",
+              "prompt": "What does \"怎么样\" (zěn me yàng) mean?",
+              "options": ["How is it / how about it", "Where", "When", "Who"],
+              "answer": "How is it / how about it"
+            },
+            {
+              "id": "fl4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"How was your trip yesterday?\"",
+              "answer": "你 昨天 的 旅行 怎么样",
+              "bank": ["你", "昨天", "的", "旅行", "怎么样", "很好", "在哪里"]
+            },
+            {
+              "id": "fl4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm a little tired today, I want to rest\"",
+              "answer": "我 今天 有点 累 想 休息 一下",
+              "bank": ["我", "今天", "有点", "累", "想", "休息", "一下", "高兴", "工作"]
+            },
+            {
+              "id": "fl4-7",
+              "type": "fill_blank",
+              "prompt": "\"哎呀\" (āi yā) is an interjection meaning ___",
+              "answer": "Oh no / oh dear",
+              "acceptableAnswers": ["Oh no", "Oh dear", "Yikes", "Oof"]
+            },
+            {
+              "id": "fl4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "你怎么了",
+              "options": ["你怎么了", "你是谁", "你在哪里", "你叫什么"],
+              "answer": "你怎么了",
+              "explanation": "你 怎么 了? = \"What happened to you? / What's wrong?\" — common when someone looks off."
+            },
+            {
+              "id": "fl4-9",
+              "type": "multiple_choice",
+              "prompt": "Friend says 我 妈妈 生病 了. You sympathize with:",
+              "options": [
+                "哎呀，希望 她 早 点 好",
+                "哈哈，太 好 了",
+                "我 不 知道",
+                "再见"
+              ],
+              "answer": "哎呀，希望 她 早 点 好",
+              "explanation": "希望 = hope. 早 点 好 = get better soon. Natural sympathy."
+            },
+            {
+              "id": "fl4-10",
+              "type": "match_pairs",
+              "prompt": "Match the degree of feeling",
+              "pairs": [
+                { "left": "有点 累", "right": "A little tired" },
+                { "left": "很 累", "right": "Very tired" },
+                { "left": "特别 累", "right": "Especially tired" },
+                { "left": "累 极 了", "right": "Extremely tired" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-feelings-5",
+          "title": "Surprise & sympathy",
+          "description": "哎呀, 真的吗, 不会吧",
+          "theme": "questions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fl5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"真的吗\" (zhēn de ma) mean?",
+              "options": ["Really?", "Where?", "When?", "Why?"],
+              "answer": "Really?"
+            },
+            {
+              "id": "fl5-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"No way! / You're kidding!\"?",
+              "options": ["不 会 吧", "再 见", "对 不 起", "好 啊"],
+              "answer": "不 会 吧"
+            },
+            {
+              "id": "fl5-3",
+              "type": "fill_blank",
+              "prompt": "\"太…了\" expressing strong feeling — \"太 好 了\" means ___",
+              "answer": "That's great / awesome",
+              "acceptableAnswers": ["Great", "Awesome", "So good", "Wonderful"]
+            },
+            {
+              "id": "fl5-4",
+              "type": "match_pairs",
+              "prompt": "Match the reaction",
+              "pairs": [
+                { "left": "真的吗", "right": "Really?" },
+                { "left": "不会吧", "right": "No way!" },
+                { "left": "太好了", "right": "Awesome!" },
+                { "left": "天哪", "right": "Oh my god" }
+              ]
+            },
+            {
+              "id": "fl5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Really? I don't believe it!\"",
+              "answer": "真 的 吗 我 不 相信",
+              "bank": ["真", "的", "吗", "我", "不", "相信", "也", "信"]
+            },
+            {
+              "id": "fl5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Oh no, I'm so sorry to hear that\"",
+              "answer": "哎呀 真 不 好意思 听到 这个 消息",
+              "bank": ["哎呀", "真", "不", "好意思", "听到", "这个", "消息", "高兴"]
+            },
+            {
+              "id": "fl5-7",
+              "type": "multiple_choice",
+              "prompt": "Friend tells you they got a job. Best reaction:",
+              "options": ["太 好 了 恭喜 你", "哎呀 真 难过", "我 不 知道", "再见"],
+              "answer": "太 好 了 恭喜 你",
+              "explanation": "恭喜 (gōng xǐ) = congratulations."
+            },
+            {
+              "id": "fl5-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "真的吗太好了",
+              "options": ["真的吗太好了", "真的吗不会吧", "哎呀不好了", "我不知道"],
+              "answer": "真的吗太好了"
+            },
+            {
+              "id": "fl5-9",
+              "type": "multiple_choice",
+              "prompt": "What does the particle \"啊\" at the end of \"是 啊!\" do?",
+              "options": [
+                "Adds a warm/agreeable tone",
+                "Marks the past",
+                "Turns it into a question",
+                "Means 'no'"
+              ],
+              "answer": "Adds a warm/agreeable tone"
+            },
+            {
+              "id": "fl5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm so glad to hear it!\"",
+              "answer": "听 到 这个 我 太 高兴 了",
+              "bank": ["听", "到", "这个", "我", "太", "高兴", "了", "难过"]
             }
           ]
         }
@@ -956,6 +3150,61 @@
               "prompt": "\"毛衣\" (máo yī) means ___",
               "answer": "Sweater",
               "acceptableAnswers": ["Wool sweater", "Jumper"]
+            },
+            {
+              "id": "cl1-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"clothes\" (two characters)",
+              "answer": "衣服",
+              "acceptableAnswers": ["yī fu", "yifu"]
+            },
+            {
+              "id": "cl1-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"裙子\" (qún zi) mean?",
+              "options": ["Pants", "Skirt / dress", "Shorts", "Underwear"],
+              "answer": "Skirt / dress"
+            },
+            {
+              "id": "cl1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I bought a new shirt yesterday\"",
+              "answer": "我 昨天 买 了 一 件 新 衬衫",
+              "bank": ["我", "昨天", "买", "了", "一", "件", "新", "衬衫", "卖", "旧"]
+            },
+            {
+              "id": "cl1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This skirt is very pretty, I really like it\"",
+              "answer": "这 条 裙子 很 漂亮 我 很 喜欢",
+              "bank": ["这", "条", "裙子", "很", "漂亮", "我", "喜欢", "丑", "买"]
+            },
+            {
+              "id": "cl1-8",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: pick the right measure word for 裤子 (pants)",
+              "options": ["条", "件", "本", "个"],
+              "answer": "条",
+              "explanation": "条 (tiáo) — long thin items like pants, skirts, fish, roads."
+            },
+            {
+              "id": "cl1-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我喜欢这件衬衫",
+              "options": ["我喜欢这件衬衫", "我喜欢这条裤子", "我喜欢这条裙子", "我不喜欢"],
+              "answer": "我喜欢这件衬衫"
+            },
+            {
+              "id": "cl1-10",
+              "type": "match_pairs",
+              "prompt": "Match the measure word to clothing",
+              "pairs": [
+                { "left": "件", "right": "Shirts, jackets" },
+                { "left": "条", "right": "Pants, skirts" },
+                { "left": "双", "right": "Pair (shoes/socks)" },
+                { "left": "顶", "right": "Hats" }
+              ]
             }
           ]
         },
@@ -985,6 +3234,61 @@
               "type": "fill_blank",
               "prompt": "\"袜子\" (wà zi) means ___",
               "answer": "Socks"
+            },
+            {
+              "id": "cl2-4",
+              "type": "match_pairs",
+              "prompt": "Match the accessory",
+              "pairs": [
+                { "left": "鞋子", "right": "Shoes" },
+                { "left": "袜子", "right": "Socks" },
+                { "left": "帽子", "right": "Hat" },
+                { "left": "眼镜", "right": "Glasses" }
+              ]
+            },
+            {
+              "id": "cl2-5",
+              "type": "multiple_choice",
+              "prompt": "Which means \"bag / handbag\"?",
+              "options": ["包", "本", "瓶", "杯"],
+              "answer": "包"
+            },
+            {
+              "id": "cl2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to buy a pair of new shoes\"",
+              "answer": "我 想 买 一 双 新 鞋子",
+              "bank": ["我", "想", "买", "一", "双", "新", "鞋子", "件", "旧"]
+            },
+            {
+              "id": "cl2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today's sun is strong, wear a hat\"",
+              "answer": "今天 太阳 很 大 戴 个 帽子 吧",
+              "bank": ["今天", "太阳", "很", "大", "戴", "个", "帽子", "吧", "穿"]
+            },
+            {
+              "id": "cl2-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct verb for putting on glasses:",
+              "options": ["穿 眼镜", "戴 眼镜", "拿 眼镜", "用 眼镜"],
+              "answer": "戴 眼镜",
+              "explanation": "戴 — used for things you wear ON or AROUND a body part (glasses, hat, watch)."
+            },
+            {
+              "id": "cl2-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我的包在哪里",
+              "options": ["我的包在哪里", "我的鞋子在哪里", "我的帽子在哪里", "我的衣服在哪里"],
+              "answer": "我的包在哪里"
+            },
+            {
+              "id": "cl2-10",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"shoes\" (two characters)",
+              "answer": "鞋子",
+              "acceptableAnswers": ["xié zi", "xiezi"]
             }
           ]
         },
@@ -1017,6 +3321,71 @@
               "answer": "我 穿 着 红 衬衫",
               "bank": ["我", "穿", "着", "红", "衬衫", "戴", "鞋子"],
               "explanation": "着 (zhe) marks an ongoing state — \"in the act of wearing\"."
+            },
+            {
+              "id": "cl3-4",
+              "type": "match_pairs",
+              "prompt": "Match the verb to the item",
+              "pairs": [
+                { "left": "穿 衣服", "right": "Wear clothes" },
+                { "left": "穿 鞋", "right": "Wear shoes" },
+                { "left": "戴 帽子", "right": "Wear a hat" },
+                { "left": "戴 手表", "right": "Wear a watch" }
+              ]
+            },
+            {
+              "id": "cl3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My older sister is wearing a black skirt today\"",
+              "answer": "我 姐姐 今天 穿 着 黑色 的 裙子",
+              "bank": ["我", "姐姐", "今天", "穿", "着", "黑色", "的", "裙子", "戴", "白色"]
+            },
+            {
+              "id": "cl3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He always wears a cap and glasses\"",
+              "answer": "他 总是 戴 着 帽子 和 眼镜",
+              "bank": ["他", "总是", "戴", "着", "帽子", "和", "眼镜", "穿", "袜子"]
+            },
+            {
+              "id": "cl3-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: pick the WRONG verb pairing",
+              "options": ["穿 帽子", "穿 衬衫", "戴 眼镜", "穿 鞋子"],
+              "answer": "穿 帽子",
+              "explanation": "Hats use 戴, not 穿 — common learner mistake."
+            },
+            {
+              "id": "cl3-8",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: \"她 ___ 着 一 个 红 包\" (\"She is carrying a red bag\")",
+              "answer": "拿",
+              "acceptableAnswers": ["背"]
+            },
+            {
+              "id": "cl3-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "他穿着白衬衫戴着眼镜",
+              "options": [
+                "他穿着白衬衫戴着眼镜",
+                "他戴着白衬衫穿着眼镜",
+                "他穿着白裤子戴着帽子",
+                "他没有穿衣服"
+              ],
+              "answer": "他穿着白衬衫戴着眼镜"
+            },
+            {
+              "id": "cl3-10",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence:",
+              "options": [
+                "她 喜欢 穿 漂亮 的 裙子",
+                "她 喜欢 戴 漂亮 的 裙子",
+                "她 喜欢 拿 漂亮 的 裙子",
+                "她 喜欢 看 穿 裙子"
+              ],
+              "answer": "她 喜欢 穿 漂亮 的 裙子"
             }
           ]
         },
@@ -1052,6 +3421,73 @@
                 "今天 很 热 我 戴 帽子"
               ],
               "answer": "今天 很 热 我 穿 T恤"
+            },
+            {
+              "id": "cl4-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It's cold outside, put on your coat\"",
+              "answer": "外面 很 冷 你 穿 上 外套 吧",
+              "bank": ["外面", "很", "冷", "你", "穿", "上", "外套", "吧", "热", "脱"]
+            },
+            {
+              "id": "cl4-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"脱\" (tuō) mean?",
+              "options": ["Put on", "Take off", "Wash", "Fold"],
+              "answer": "Take off"
+            },
+            {
+              "id": "cl4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It's hot inside, take off your coat\"",
+              "answer": "里面 很 热 把 外套 脱 了 吧",
+              "bank": ["里面", "很", "热", "把", "外套", "脱", "了", "吧", "穿", "冷"]
+            },
+            {
+              "id": "cl4-7",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"size\" (one character)",
+              "answer": "号",
+              "acceptableAnswers": ["hào", "hao", "码"]
+            },
+            {
+              "id": "cl4-8",
+              "type": "match_pairs",
+              "prompt": "Match the size word",
+              "pairs": [
+                { "left": "大号", "right": "Large" },
+                { "left": "中号", "right": "Medium" },
+                { "left": "小号", "right": "Small" },
+                { "left": "试穿", "right": "Try on" }
+              ]
+            },
+            {
+              "id": "cl4-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我可以试穿一下吗",
+              "options": ["我可以试穿一下吗", "我可以买一下吗", "我可以看一下吗", "我可以走吗"],
+              "answer": "我可以试穿一下吗",
+              "explanation": "试穿 (shì chuān) = try on. 一下 softens the request — \"have a quick try\"."
+            },
+            {
+              "id": "cl4-10",
+              "type": "multiple_choice",
+              "prompt": "In a clothing shop you want to try a shirt. Best line:",
+              "options": [
+                "我 可以 试穿 一下 吗",
+                "我 想 卖 这个",
+                "请 给 我 钱",
+                "我 不 喜欢"
+              ],
+              "answer": "我 可以 试穿 一下 吗"
+            },
+            {
+              "id": "cl4-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This shirt is too small, do you have a bigger size?\"",
+              "answer": "这 件 衬衫 太 小 了 有 大 号 的 吗",
+              "bank": ["这", "件", "衬衫", "太", "小", "了", "有", "大", "号", "的", "吗", "中"]
             }
           ]
         }
@@ -1094,6 +3530,60 @@
               "prompt": "\"耳朵\" (ěr duo) means ___",
               "answer": "Ear",
               "acceptableAnswers": ["Ears"]
+            },
+            {
+              "id": "bd1-4",
+              "type": "multiple_choice",
+              "prompt": "Which means \"nose\"?",
+              "options": ["鼻子", "嘴巴", "耳朵", "脖子"],
+              "answer": "鼻子"
+            },
+            {
+              "id": "bd1-5",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"head\" (one character)",
+              "answer": "头",
+              "acceptableAnswers": ["tóu", "tou"]
+            },
+            {
+              "id": "bd1-6",
+              "type": "match_pairs",
+              "prompt": "Match the body part (set 2)",
+              "pairs": [
+                { "left": "鼻子", "right": "Nose" },
+                { "left": "嘴", "right": "Mouth" },
+                { "left": "脖子", "right": "Neck" },
+                { "left": "头发", "right": "Hair" }
+              ]
+            },
+            {
+              "id": "bd1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My little sister has very big eyes\"",
+              "answer": "我 妹妹 的 眼睛 很 大",
+              "bank": ["我", "妹妹", "的", "眼睛", "很", "大", "小", "鼻子"]
+            },
+            {
+              "id": "bd1-8",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Wash your hands before eating\"",
+              "answer": "吃饭 前 要 洗 手",
+              "bank": ["吃饭", "前", "要", "洗", "手", "脚", "脸"]
+            },
+            {
+              "id": "bd1-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "他的眼睛很漂亮",
+              "options": ["他的眼睛很漂亮", "他的鼻子很漂亮", "他的头发很漂亮", "他的嘴很漂亮"],
+              "answer": "他的眼睛很漂亮"
+            },
+            {
+              "id": "bd1-10",
+              "type": "multiple_choice",
+              "prompt": "What does \"头发\" (tóu fa) mean?",
+              "options": ["Forehead", "Hair (on the head)", "Hat", "Hat brim"],
+              "answer": "Hair (on the head)"
             }
           ]
         },
@@ -1124,6 +3614,60 @@
               "prompt": "What does \"肚子疼\" mean?",
               "options": ["Headache", "Backache", "Stomach ache", "Sore throat"],
               "answer": "Stomach ache"
+            },
+            {
+              "id": "bd2-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"hurts\" (one character)",
+              "answer": "疼",
+              "acceptableAnswers": ["téng", "teng", "痛"]
+            },
+            {
+              "id": "bd2-5",
+              "type": "match_pairs",
+              "prompt": "Match the ache",
+              "pairs": [
+                { "left": "头疼", "right": "Headache" },
+                { "left": "肚子疼", "right": "Stomach ache" },
+                { "left": "嗓子疼", "right": "Sore throat" },
+                { "left": "牙疼", "right": "Toothache" }
+              ]
+            },
+            {
+              "id": "bd2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I've had a stomachache since this morning\"",
+              "answer": "我 从 今天 早上 就 肚子 疼",
+              "bank": ["我", "从", "今天", "早上", "就", "肚子", "疼", "晚上", "头"]
+            },
+            {
+              "id": "bd2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My throat hurts a little, I want to drink some water\"",
+              "answer": "我 嗓子 有点 疼 想 喝 点 水",
+              "bank": ["我", "嗓子", "有点", "疼", "想", "喝", "点", "水", "茶", "饭"]
+            },
+            {
+              "id": "bd2-8",
+              "type": "multiple_choice",
+              "prompt": "Pattern: 哪里 + 疼? — \"Where does it hurt?\". Pick the correct phrasing:",
+              "options": ["你 哪里 疼", "你 疼 哪里", "你 在 哪 疼", "你 疼 是 哪里"],
+              "answer": "你 哪里 疼"
+            },
+            {
+              "id": "bd2-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我的头很疼",
+              "options": ["我的头很疼", "我的脚很疼", "我的肚子很疼", "我的嗓子很疼"],
+              "answer": "我的头很疼"
+            },
+            {
+              "id": "bd2-10",
+              "type": "multiple_choice",
+              "prompt": "Doctor asks 你 哪里 不 舒服? Your stomach hurts. Reply:",
+              "options": ["我 肚子 疼", "我 头 疼", "我 嗓子 疼", "我 没事"],
+              "answer": "我 肚子 疼"
             }
           ]
         },
@@ -1154,6 +3698,65 @@
               "prompt": "\"感冒\" (gǎn mào) means ___",
               "answer": "A cold",
               "acceptableAnswers": ["Common cold", "Catch a cold"]
+            },
+            {
+              "id": "bd3-4",
+              "type": "match_pairs",
+              "prompt": "Match the symptom",
+              "pairs": [
+                { "left": "感冒", "right": "Cold" },
+                { "left": "发烧", "right": "Fever" },
+                { "left": "咳嗽", "right": "Cough" },
+                { "left": "流鼻涕", "right": "Runny nose" }
+              ]
+            },
+            {
+              "id": "bd3-5",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"to cough\" (two characters)",
+              "answer": "咳嗽",
+              "acceptableAnswers": ["ké sou", "kesou"]
+            },
+            {
+              "id": "bd3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I caught a cold yesterday and have a fever today\"",
+              "answer": "我 昨天 感冒 了 今天 发烧 了",
+              "bank": ["我", "昨天", "感冒", "了", "今天", "发烧", "高兴", "下班"]
+            },
+            {
+              "id": "bd3-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He's been coughing all day, he's quite uncomfortable\"",
+              "answer": "他 咳嗽 了 一 天 很 不 舒服",
+              "bank": ["他", "咳嗽", "了", "一", "天", "很", "不", "舒服", "高兴", "饿"]
+            },
+            {
+              "id": "bd3-8",
+              "type": "multiple_choice",
+              "prompt": "What does \"舒服\" (shū fu) mean?",
+              "options": ["Comfortable / well", "Hungry", "Cold", "Tired"],
+              "answer": "Comfortable / well"
+            },
+            {
+              "id": "bd3-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我有点不舒服",
+              "options": ["我有点不舒服", "我很舒服", "我有点累", "我有点饿"],
+              "answer": "我有点不舒服"
+            },
+            {
+              "id": "bd3-10",
+              "type": "multiple_choice",
+              "prompt": "Friend looks pale. You ask:",
+              "options": [
+                "你 是 不 是 不 舒服",
+                "你 是 不 是 高兴",
+                "你 是 不 是 饿 了",
+                "你 是 不 是 渴 了"
+              ],
+              "answer": "你 是 不 是 不 舒服"
             }
           ]
         },
@@ -1185,6 +3788,162 @@
               "options": ["Eat food", "Take medicine", "Drink water", "Get a shot"],
               "answer": "Take medicine",
               "explanation": "Mandarin uses 吃 (eat) for taking pills, even though English would say \"take\"."
+            },
+            {
+              "id": "bd4-4",
+              "type": "match_pairs",
+              "prompt": "Match the medical word",
+              "pairs": [
+                { "left": "医生", "right": "Doctor" },
+                { "left": "医院", "right": "Hospital" },
+                { "left": "药", "right": "Medicine" },
+                { "left": "护士", "right": "Nurse" }
+              ]
+            },
+            {
+              "id": "bd4-5",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"medicine\" (one character)",
+              "answer": "药",
+              "acceptableAnswers": ["yào", "yao"]
+            },
+            {
+              "id": "bd4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Doctor, my head and stomach both hurt\"",
+              "answer": "医生 我 的 头 和 肚子 都 疼",
+              "bank": ["医生", "我", "的", "头", "和", "肚子", "都", "疼", "脚", "高兴"]
+            },
+            {
+              "id": "bd4-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"You should rest more and drink lots of water\"",
+              "answer": "你 应该 多 休息 多 喝水",
+              "bank": ["你", "应该", "多", "休息", "喝水", "睡觉", "工作", "吃药"]
+            },
+            {
+              "id": "bd4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我要去看医生",
+              "options": ["我要去看医生", "我要去看朋友", "我要去医院", "我要吃药"],
+              "answer": "我要去看医生",
+              "explanation": "看医生 = \"see a doctor\". Note 看 = look at / see, also \"go see (a professional)\"."
+            },
+            {
+              "id": "bd4-9",
+              "type": "multiple_choice",
+              "prompt": "What does \"药店\" (yào diàn) mean?",
+              "options": ["Hospital", "Pharmacy", "Clinic", "Doctor's office"],
+              "answer": "Pharmacy"
+            },
+            {
+              "id": "bd4-10",
+              "type": "multiple_choice",
+              "prompt": "Pharmacist asks 你 哪里 不 舒服? You have a sore throat. Reply:",
+              "options": [
+                "我 嗓子 疼 想 买 点 药",
+                "我 想 买 衣服",
+                "我 头 不 疼",
+                "我 没事"
+              ],
+              "answer": "我 嗓子 疼 想 买 点 药"
+            },
+            {
+              "id": "bd4-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"After taking the medicine, I feel a bit better now\"",
+              "answer": "吃 了 药 现在 好 一点 了",
+              "bank": ["吃", "了", "药", "现在", "好", "一点", "了", "差", "疼"]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-body-5",
+          "title": "Routine vs urgent",
+          "description": "看医生 vs 急诊, 体检",
+          "theme": "family",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "bd5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"急诊\" (jí zhěn) mean?",
+              "options": ["Pharmacy", "Emergency room", "Routine check-up", "Pediatrics"],
+              "answer": "Emergency room"
+            },
+            {
+              "id": "bd5-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"physical / health check-up\"?",
+              "options": ["体检", "急诊", "看病", "住院"],
+              "answer": "体检"
+            },
+            {
+              "id": "bd5-3",
+              "type": "fill_blank",
+              "prompt": "\"看病\" (kàn bìng) means ___",
+              "answer": "See a doctor",
+              "acceptableAnswers": ["Get medical care", "Visit the doctor"]
+            },
+            {
+              "id": "bd5-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He's seriously sick, he needs to go to the ER\"",
+              "answer": "他 病 得 很 严重 要 去 急诊",
+              "bank": ["他", "病", "得", "很", "严重", "要", "去", "急诊", "医院", "学校"]
+            },
+            {
+              "id": "bd5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have a check-up at the hospital next week\"",
+              "answer": "我 下 周 去 医院 体检",
+              "bank": ["我", "下", "周", "去", "医院", "体检", "急诊", "上"]
+            },
+            {
+              "id": "bd5-6",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which is for routine prevention?",
+              "options": ["体检", "急诊", "住院", "手术"],
+              "answer": "体检"
+            },
+            {
+              "id": "bd5-7",
+              "type": "match_pairs",
+              "prompt": "Match the medical visit",
+              "pairs": [
+                { "left": "看病", "right": "See a doctor" },
+                { "left": "体检", "right": "Check-up" },
+                { "left": "急诊", "right": "Emergency" },
+                { "left": "住院", "right": "Be hospitalized" }
+              ]
+            },
+            {
+              "id": "bd5-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我明天要去体检",
+              "options": ["我明天要去体检", "我明天要去急诊", "我明天要去看病", "我明天要去医院"],
+              "answer": "我明天要去体检"
+            },
+            {
+              "id": "bd5-9",
+              "type": "fill_blank",
+              "prompt": "\"住院\" (zhù yuàn) means ___",
+              "answer": "Be hospitalized",
+              "acceptableAnswers": ["Stay in hospital", "In-patient", "Get admitted"]
+            },
+            {
+              "id": "bd5-10",
+              "type": "multiple_choice",
+              "prompt": "It's 2am. Your roommate has chest pain. You say:",
+              "options": [
+                "我们 现在 去 急诊",
+                "等 明天 再 去",
+                "去 药店 买 药 吧",
+                "再 睡 一 会儿"
+              ],
+              "answer": "我们 现在 去 急诊"
             }
           ]
         }
@@ -1228,6 +3987,57 @@
               "prompt": "Build \"I like playing basketball\"",
               "answer": "我 喜欢 打 篮球",
               "bank": ["我", "喜欢", "打", "篮球", "踢", "足球"]
+            },
+            {
+              "id": "hb1-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"swimming\" (two characters)",
+              "answer": "游泳",
+              "acceptableAnswers": ["yóu yǒng", "youyong"]
+            },
+            {
+              "id": "hb1-5",
+              "type": "multiple_choice",
+              "prompt": "Which verb pairs with 足球 (soccer)?",
+              "options": ["踢", "打", "玩", "跑"],
+              "answer": "踢"
+            },
+            {
+              "id": "hb1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I play basketball with friends every week\"",
+              "answer": "我 每周 和 朋友 一起 打 篮球",
+              "bank": ["我", "每周", "和", "朋友", "一起", "打", "篮球", "足球", "踢"]
+            },
+            {
+              "id": "hb1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My older brother loves playing soccer\"",
+              "answer": "我 哥哥 特别 喜欢 踢 足球",
+              "bank": ["我", "哥哥", "特别", "喜欢", "踢", "足球", "篮球", "打"]
+            },
+            {
+              "id": "hb1-8",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which is WRONG?",
+              "options": ["打 足球", "踢 足球", "打 篮球", "打 网球"],
+              "answer": "打 足球",
+              "explanation": "Soccer uses 踢 (kick), not 打."
+            },
+            {
+              "id": "hb1-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我喜欢游泳",
+              "options": ["我喜欢游泳", "我喜欢跑步", "我喜欢打球", "我不喜欢运动"],
+              "answer": "我喜欢游泳"
+            },
+            {
+              "id": "hb1-10",
+              "type": "fill_blank",
+              "prompt": "\"运动\" (yùn dòng) means ___",
+              "answer": "Sports / exercise",
+              "acceptableAnswers": ["Exercise", "Sport", "Athletics"]
             }
           ]
         },
@@ -1258,6 +4068,65 @@
               "prompt": "\"画画\" (huà huà) means ___",
               "answer": "To draw / paint",
               "acceptableAnswers": ["Drawing", "Painting", "To draw", "To paint"]
+            },
+            {
+              "id": "hb2-4",
+              "type": "match_pairs",
+              "prompt": "Match the music/art activity",
+              "pairs": [
+                { "left": "听音乐", "right": "Listen to music" },
+                { "left": "唱歌", "right": "Sing songs" },
+                { "left": "弹钢琴", "right": "Play piano" },
+                { "left": "跳舞", "right": "Dance" }
+              ]
+            },
+            {
+              "id": "hb2-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"弹钢琴\" (tán gāng qín) mean?",
+              "options": ["Play the piano", "Play the guitar", "Sing", "Dance"],
+              "answer": "Play the piano"
+            },
+            {
+              "id": "hb2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I listen to music while running every day\"",
+              "answer": "我 每天 一边 跑步 一边 听 音乐",
+              "bank": ["我", "每天", "一边", "跑步", "一边", "听", "音乐", "唱歌", "看"]
+            },
+            {
+              "id": "hb2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My younger sister has been learning piano for two years\"",
+              "answer": "我 妹妹 学 钢琴 学 了 两 年",
+              "bank": ["我", "妹妹", "学", "钢琴", "了", "两", "年", "三", "唱歌"]
+            },
+            {
+              "id": "hb2-8",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"to dance\" (two characters)",
+              "answer": "跳舞",
+              "acceptableAnswers": ["tiào wǔ", "tiaowu"]
+            },
+            {
+              "id": "hb2-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我喜欢一边唱歌一边跳舞",
+              "options": [
+                "我喜欢一边唱歌一边跳舞",
+                "我喜欢一边听歌一边跳舞",
+                "我喜欢一边画画一边唱歌",
+                "我不喜欢唱歌"
+              ],
+              "answer": "我喜欢一边唱歌一边跳舞"
+            },
+            {
+              "id": "hb2-10",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 会 弹 钢琴 吗? You play a little. Reply:",
+              "options": ["我 会 一点", "我 不 会", "我 是 钢琴", "我 想 钢琴"],
+              "answer": "我 会 一点"
             }
           ]
         },
@@ -1288,6 +4157,61 @@
               "prompt": "\"看书\" (kàn shū) means ___",
               "answer": "Read a book",
               "acceptableAnswers": ["Reading", "Read books", "To read"]
+            },
+            {
+              "id": "hb3-4",
+              "type": "match_pairs",
+              "prompt": "Match the leisure activity",
+              "pairs": [
+                { "left": "看书", "right": "Read a book" },
+                { "left": "看电影", "right": "Watch a movie" },
+                { "left": "看电视", "right": "Watch TV" },
+                { "left": "玩游戏", "right": "Play games" }
+              ]
+            },
+            {
+              "id": "hb3-5",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"movie\" (two characters)",
+              "answer": "电影",
+              "acceptableAnswers": ["diàn yǐng", "dianying"]
+            },
+            {
+              "id": "hb3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I watched two movies last weekend\"",
+              "answer": "上 个 周末 我 看 了 两 部 电影",
+              "bank": ["上", "个", "周末", "我", "看", "了", "两", "部", "电影", "本", "书"]
+            },
+            {
+              "id": "hb3-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He often plays games at home in the evening\"",
+              "answer": "他 经常 晚上 在 家 玩 游戏",
+              "bank": ["他", "经常", "晚上", "在", "家", "玩", "游戏", "看书", "白天"]
+            },
+            {
+              "id": "hb3-8",
+              "type": "multiple_choice",
+              "prompt": "What's the measure word for movies?",
+              "options": ["部", "本", "条", "只"],
+              "answer": "部",
+              "explanation": "部 (bù) — for movies, novels, dramas (long works)."
+            },
+            {
+              "id": "hb3-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "你看过这部电影吗",
+              "options": ["你看过这部电影吗", "你看过这本书吗", "你看了这部电影吗", "你想看电影吗"],
+              "answer": "你看过这部电影吗"
+            },
+            {
+              "id": "hb3-10",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 喜欢 看 什么 书? You like novels. Reply:",
+              "options": ["我 喜欢 看 小说", "我 喜欢 看 电影", "我 喜欢 玩 游戏", "我 不 看 书"],
+              "answer": "我 喜欢 看 小说"
             }
           ]
         },
@@ -1324,6 +4248,72 @@
               ],
               "answer": "你 平时 做什么",
               "explanation": "平时 (píng shí) = usually / normally."
+            },
+            {
+              "id": "hb4-4",
+              "type": "match_pairs",
+              "prompt": "Match the frequency word",
+              "pairs": [
+                { "left": "每周", "right": "Every week" },
+                { "left": "经常", "right": "Often" },
+                { "left": "偶尔", "right": "Occasionally" },
+                { "left": "从来 不", "right": "Never" }
+              ]
+            },
+            {
+              "id": "hb4-5",
+              "type": "fill_blank",
+              "prompt": "\"偶尔\" (ǒu ěr) means ___",
+              "answer": "Occasionally",
+              "acceptableAnswers": ["Once in a while", "Now and then", "Sometimes"]
+            },
+            {
+              "id": "hb4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I often play basketball, but I rarely run\"",
+              "answer": "我 经常 打 篮球 但是 很 少 跑步",
+              "bank": ["我", "经常", "打", "篮球", "但是", "很", "少", "跑步", "游泳", "唱歌"]
+            },
+            {
+              "id": "hb4-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My hobbies are reading and listening to music\"",
+              "answer": "我 的 爱好 是 看书 和 听 音乐",
+              "bank": ["我", "的", "爱好", "是", "看书", "和", "听", "音乐", "工作", "上学"]
+            },
+            {
+              "id": "hb4-8",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which means \"never\"?",
+              "options": ["从来 不", "经常", "偶尔", "有时候"],
+              "answer": "从来 不"
+            },
+            {
+              "id": "hb4-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我每周都游泳",
+              "options": ["我每周都游泳", "我经常游泳", "我偶尔游泳", "我不游泳"],
+              "answer": "我每周都游泳"
+            },
+            {
+              "id": "hb4-10",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 多 久 去 一 次 健身房? You go twice a week. Reply:",
+              "options": [
+                "我 每周 去 两 次",
+                "我 偶尔 去",
+                "我 不 去",
+                "我 想 去"
+              ],
+              "answer": "我 每周 去 两 次"
+            },
+            {
+              "id": "hb4-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm not great at swimming but I really like it\"",
+              "answer": "我 游泳 游 得 不 好 但是 很 喜欢",
+              "bank": ["我", "游泳", "游", "得", "不", "好", "但是", "很", "喜欢", "讨厌"]
             }
           ]
         }
@@ -1367,6 +4357,72 @@
                 "There is no difference"
               ],
               "answer": "要 = need / want firmly. 想 = would like (softer)"
+            },
+            {
+              "id": "pl1-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"would like to / want to\" (one character — softer form)",
+              "answer": "想",
+              "acceptableAnswers": ["xiǎng", "xiang"]
+            },
+            {
+              "id": "pl1-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This summer I want to go traveling in China\"",
+              "answer": "今年 夏天 我 想 去 中国 旅行",
+              "bank": ["今年", "夏天", "我", "想", "去", "中国", "旅行", "日本", "工作"]
+            },
+            {
+              "id": "pl1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'd like to learn how to cook\"",
+              "answer": "我 想 学 做饭",
+              "bank": ["我", "想", "学", "做饭", "唱歌", "跳舞"]
+            },
+            {
+              "id": "pl1-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the SOFTER request:",
+              "options": [
+                "我 想 喝 一 杯 咖啡",
+                "我 要 喝 一 杯 咖啡",
+                "我 喝 一 杯 咖啡",
+                "给 我 一 杯 咖啡"
+              ],
+              "answer": "我 想 喝 一 杯 咖啡",
+              "explanation": "想 is softer/more polite. 要 is firmer. 给 我 is brusque."
+            },
+            {
+              "id": "pl1-8",
+              "type": "match_pairs",
+              "prompt": "Match the modal verb",
+              "pairs": [
+                { "left": "想", "right": "Would like to (soft)" },
+                { "left": "要", "right": "Want / will (firm)" },
+                { "left": "可以", "right": "Can / may" },
+                { "left": "应该", "right": "Should" }
+              ]
+            },
+            {
+              "id": "pl1-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我想去看电影",
+              "options": ["我想去看电影", "我要去看电影", "我去看电影", "我不去看电影"],
+              "answer": "我想去看电影"
+            },
+            {
+              "id": "pl1-10",
+              "type": "multiple_choice",
+              "prompt": "Pick the WRONG sentence:",
+              "options": [
+                "我 想 不 去",
+                "我 不 想 去",
+                "我 想 去",
+                "我 不 想 喝"
+              ],
+              "answer": "我 想 不 去",
+              "explanation": "Negate 想 with 不 placed BEFORE 想: 不 想 + verb."
             }
           ]
         },
@@ -1402,6 +4458,57 @@
               "prompt": "Build \"Let's go eat together\"",
               "answer": "我们 一起 去 吃饭 吧",
               "bank": ["我们", "一起", "去", "吃饭", "吧", "他们", "明天"]
+            },
+            {
+              "id": "pl2-4",
+              "type": "fill_blank",
+              "prompt": "Type the suggestion particle (one character)",
+              "answer": "吧",
+              "acceptableAnswers": ["ba"]
+            },
+            {
+              "id": "pl2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Let's go to the movies together this weekend\"",
+              "answer": "这个 周末 我们 一起 去 看 电影 吧",
+              "bank": ["这个", "周末", "我们", "一起", "去", "看", "电影", "吧", "吃饭", "玩"]
+            },
+            {
+              "id": "pl2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Let's drink some tea together\"",
+              "answer": "我们 一起 喝 点 茶 吧",
+              "bank": ["我们", "一起", "喝", "点", "茶", "吧", "饭", "咖啡"]
+            },
+            {
+              "id": "pl2-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which is a SUGGESTION?",
+              "options": ["走 吧", "走 吗", "走 了", "走 啊"],
+              "answer": "走 吧",
+              "explanation": "吧 = let's / shall we. 吗 makes a yes/no question. 了 marks completion."
+            },
+            {
+              "id": "pl2-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我们一起去吧",
+              "options": ["我们一起去吧", "我们一起去吗", "我们一起去了", "我一个人去"],
+              "answer": "我们一起去吧"
+            },
+            {
+              "id": "pl2-9",
+              "type": "multiple_choice",
+              "prompt": "Friend invites you for coffee. You agree warmly:",
+              "options": ["好 啊 一起 去", "我 不 去", "再见", "不 知道"],
+              "answer": "好 啊 一起 去"
+            },
+            {
+              "id": "pl2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Tomorrow let's all eat lunch together\"",
+              "answer": "明天 我们 一起 吃 午饭 吧",
+              "bank": ["明天", "我们", "一起", "吃", "午饭", "吧", "晚饭", "去"]
             }
           ]
         },
@@ -1433,6 +4540,65 @@
               "prompt": "\"当然\" (dāng rán) means ___",
               "answer": "Of course",
               "acceptableAnswers": ["Sure", "Certainly"]
+            },
+            {
+              "id": "pl3-4",
+              "type": "match_pairs",
+              "prompt": "Match the polite reply",
+              "pairs": [
+                { "left": "好啊", "right": "Sure!" },
+                { "left": "当然", "right": "Of course" },
+                { "left": "没问题", "right": "No problem" },
+                { "left": "可以", "right": "OK / it's possible" }
+              ]
+            },
+            {
+              "id": "pl3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'd like to invite you to dinner this Saturday\"",
+              "answer": "这个 星期六 我 想 请 你 吃饭",
+              "bank": ["这个", "星期六", "我", "想", "请", "你", "吃饭", "晚饭", "明天"]
+            },
+            {
+              "id": "pl3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Sure, I'd really like to go!\"",
+              "answer": "好 啊 我 很 想 去",
+              "bank": ["好", "啊", "我", "很", "想", "去", "不想", "再见"]
+            },
+            {
+              "id": "pl3-7",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 想 来 我家 吃饭 吗? You enthusiastically accept:",
+              "options": ["当然 想 啊", "不 想", "我 不 知道", "再见"],
+              "answer": "当然 想 啊"
+            },
+            {
+              "id": "pl3-8",
+              "type": "fill_blank",
+              "prompt": "\"没问题\" (méi wèn tí) means ___",
+              "answer": "No problem",
+              "acceptableAnswers": ["Not a problem", "No issue", "Sure"]
+            },
+            {
+              "id": "pl3-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "好啊我也想去",
+              "options": ["好啊我也想去", "好啊我不想去", "我不去", "我不知道"],
+              "answer": "好啊我也想去"
+            },
+            {
+              "id": "pl3-10",
+              "type": "multiple_choice",
+              "prompt": "Pick the polite invitation:",
+              "options": [
+                "我 请 你 喝 茶 吧",
+                "你 喝 茶",
+                "茶 我 喝",
+                "我 喝 茶 你"
+              ],
+              "answer": "我 请 你 喝 茶 吧"
             }
           ]
         },
@@ -1471,6 +4637,154 @@
               "options": ["Today", "Yesterday", "Some other day", "Never"],
               "answer": "Some other day",
               "explanation": "改天 — literally \"change day\". The Chinese version of \"rain check\"."
+            },
+            {
+              "id": "pl4-4",
+              "type": "match_pairs",
+              "prompt": "Match the gentle decline",
+              "pairs": [
+                { "left": "下次吧", "right": "Maybe next time" },
+                { "left": "改天吧", "right": "Some other day" },
+                { "left": "我有事", "right": "I have something on" },
+                { "left": "对不起", "right": "Sorry" }
+              ]
+            },
+            {
+              "id": "pl4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm really sorry, I'm busy tonight\"",
+              "answer": "真 不好意思 我 今天 晚上 有 事",
+              "bank": ["真", "不好意思", "我", "今天", "晚上", "有", "事", "没", "时间"]
+            },
+            {
+              "id": "pl4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today doesn't work, how about another day?\"",
+              "answer": "今天 不 行 改 天 怎么样",
+              "bank": ["今天", "不", "行", "改", "天", "怎么样", "好啊", "下次"]
+            },
+            {
+              "id": "pl4-7",
+              "type": "fill_blank",
+              "prompt": "\"不好意思\" (bù hǎo yì si) means ___",
+              "answer": "Sorry / embarrassed",
+              "acceptableAnswers": ["Sorry", "Excuse me", "Pardon me"]
+            },
+            {
+              "id": "pl4-8",
+              "type": "multiple_choice",
+              "prompt": "Friend invites you, but you're already busy. Pick the most natural decline:",
+              "options": [
+                "今天 不 行，下 次 吧",
+                "我 不 想",
+                "不 要 来",
+                "再见"
+              ],
+              "answer": "今天 不 行，下 次 吧"
+            },
+            {
+              "id": "pl4-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "对不起我有点忙",
+              "options": ["对不起我有点忙", "对不起我不想去", "对不起我没有时间", "好啊我有空"],
+              "answer": "对不起我有点忙"
+            },
+            {
+              "id": "pl4-10",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which is a RUDE refusal?",
+              "options": ["不 要", "下 次 吧", "改 天 吧", "对不起 我 有 事"],
+              "answer": "不 要",
+              "explanation": "不要 alone is curt — fine with kids/strangers but harsh among friends."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-plans-5",
+          "title": "Rescheduling & group plans",
+          "description": "改时间, 大家, 一起约",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pl5-1",
+              "type": "multiple_choice",
+              "prompt": "What does \"约\" (yuē) mean as a verb?",
+              "options": ["Make an appointment / arrange to meet", "Cancel", "Refuse", "Forget"],
+              "answer": "Make an appointment / arrange to meet"
+            },
+            {
+              "id": "pl5-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"everyone / all of us\"?",
+              "options": ["大家", "一个人", "他们", "我"],
+              "answer": "大家"
+            },
+            {
+              "id": "pl5-3",
+              "type": "fill_blank",
+              "prompt": "\"改时间\" (gǎi shí jiān) means ___",
+              "answer": "Change the time / reschedule",
+              "acceptableAnswers": ["Reschedule", "Change time"]
+            },
+            {
+              "id": "pl5-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Sorry, can we change the time?\"",
+              "answer": "对 不 起 我们 可以 改 时间 吗",
+              "bank": ["对", "不", "起", "我们", "可以", "改", "时间", "吗", "去", "饭"]
+            },
+            {
+              "id": "pl5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Let's all have dinner together this Friday\"",
+              "answer": "这个 星期五 大家 一起 吃 晚饭 吧",
+              "bank": ["这个", "星期五", "大家", "一起", "吃", "晚饭", "吧", "明天", "午饭"]
+            },
+            {
+              "id": "pl5-6",
+              "type": "multiple_choice",
+              "prompt": "You can't make Friday. Pick the natural reschedule:",
+              "options": [
+                "星期五 不 行，星期六 可以 吗",
+                "星期五 我 不 来",
+                "我 没 时间",
+                "再见"
+              ],
+              "answer": "星期五 不 行，星期六 可以 吗"
+            },
+            {
+              "id": "pl5-7",
+              "type": "match_pairs",
+              "prompt": "Match the planning phrase",
+              "pairs": [
+                { "left": "约时间", "right": "Set a time" },
+                { "left": "改时间", "right": "Reschedule" },
+                { "left": "取消", "right": "Cancel" },
+                { "left": "大家都行", "right": "Works for everyone" }
+              ]
+            },
+            {
+              "id": "pl5-8",
+              "type": "fill_blank",
+              "prompt": "\"取消\" (qǔ xiāo) means ___",
+              "answer": "Cancel"
+            },
+            {
+              "id": "pl5-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我们改天再约吧",
+              "options": ["我们改天再约吧", "我们一起去吧", "我们今天去吧", "我不想去"],
+              "answer": "我们改天再约吧"
+            },
+            {
+              "id": "pl5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"What time works best for everyone?\"",
+              "answer": "大家 什么 时候 都 方便",
+              "bank": ["大家", "什么", "时候", "都", "方便", "去", "吃饭", "我们"]
             }
           ]
         }
@@ -1569,6 +4883,61 @@
                 "We don't watch movies and don't eat"
               ],
               "answer": "We watch a movie, then eat"
+            },
+            {
+              "id": "cn1-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"and then\" (two characters)",
+              "answer": "然后",
+              "acceptableAnswers": ["rán hòu", "ranhou"]
+            },
+            {
+              "id": "cn1-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'll go home first, then eat dinner\"",
+              "answer": "我 先 回家 然后 吃 晚饭",
+              "bank": ["我", "先", "回家", "然后", "吃", "晚饭", "睡觉", "去"]
+            },
+            {
+              "id": "cn1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He went to the park, then went home\"",
+              "answer": "他 去 了 公园 然后 回 家 了",
+              "bank": ["他", "去", "了", "公园", "然后", "回", "家", "学校"]
+            },
+            {
+              "id": "cn1-7",
+              "type": "multiple_choice",
+              "prompt": "What does \"先\" (xiān) often pair with 然后?",
+              "options": ["First", "Last", "Already", "Maybe"],
+              "answer": "First",
+              "explanation": "先…然后 = first…then. Common sequencing pair."
+            },
+            {
+              "id": "cn1-8",
+              "type": "match_pairs",
+              "prompt": "Match the time connector",
+              "pairs": [
+                { "left": "先", "right": "First" },
+                { "left": "然后", "right": "Then" },
+                { "left": "最后", "right": "Finally" },
+                { "left": "以前", "right": "Before" }
+              ]
+            },
+            {
+              "id": "cn1-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我先吃饭然后睡觉",
+              "options": ["我先吃饭然后睡觉", "我先睡觉然后吃饭", "我吃饭和睡觉", "我不吃饭"],
+              "answer": "我先吃饭然后睡觉"
+            },
+            {
+              "id": "cn1-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"First do homework, then watch TV\"",
+              "answer": "先 做 作业 然后 看 电视",
+              "bank": ["先", "做", "作业", "然后", "看", "电视", "睡觉", "电影"]
             }
           ]
         },
@@ -1599,6 +4968,65 @@
               "prompt": "What does \"可是\" (kě shì) mean?",
               "options": ["Also \"but\" (more conversational)", "Because", "Or", "Then"],
               "answer": "Also \"but\" (more conversational)"
+            },
+            {
+              "id": "cn2-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"but\" (two characters, formal)",
+              "answer": "但是",
+              "acceptableAnswers": ["dàn shì", "danshi"]
+            },
+            {
+              "id": "cn2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This restaurant is delicious but very expensive\"",
+              "answer": "这家 饭馆 很 好吃 但是 很 贵",
+              "bank": ["这家", "饭馆", "很", "好吃", "但是", "贵", "便宜", "因为"]
+            },
+            {
+              "id": "cn2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He's tired but he still wants to go to work\"",
+              "answer": "他 很 累 但是 还 想 去 上班",
+              "bank": ["他", "很", "累", "但是", "还", "想", "去", "上班", "下班", "因为"]
+            },
+            {
+              "id": "cn2-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: pick the contrasting connector",
+              "options": ["但是", "因为", "所以", "然后"],
+              "answer": "但是"
+            },
+            {
+              "id": "cn2-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我喜欢茶但是不喜欢咖啡",
+              "options": [
+                "我喜欢茶但是不喜欢咖啡",
+                "我喜欢茶和咖啡",
+                "我不喜欢茶但是喜欢咖啡",
+                "我不喜欢茶和咖啡"
+              ],
+              "answer": "我喜欢茶但是不喜欢咖啡"
+            },
+            {
+              "id": "cn2-9",
+              "type": "match_pairs",
+              "prompt": "Match the connector",
+              "pairs": [
+                { "left": "但是", "right": "But (formal)" },
+                { "left": "可是", "right": "But (conversational)" },
+                { "left": "不过", "right": "Though / however" },
+                { "left": "虽然", "right": "Although" }
+              ]
+            },
+            {
+              "id": "cn2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although she's tired, she's still very happy\"",
+              "answer": "虽然 她 很 累 但是 她 很 高兴",
+              "bank": ["虽然", "她", "很", "累", "但是", "高兴", "因为", "所以"]
             }
           ]
         },
@@ -1629,6 +5057,65 @@
               "prompt": "Build \"Because of the rain, I didn't go\"",
               "answer": "因为 下雨 所以 我 没 去",
               "bank": ["因为", "下雨", "所以", "我", "没", "去", "但是", "然后"]
+            },
+            {
+              "id": "cn3-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: \"___ 我 累 了，所以 我 想 睡觉\" (\"Because I'm tired, I want to sleep\")",
+              "answer": "因为"
+            },
+            {
+              "id": "cn3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Because she's sick, she didn't come to school today\"",
+              "answer": "因为 她 生病 了 所以 今天 没 来 学校",
+              "bank": ["因为", "她", "生病", "了", "所以", "今天", "没", "来", "学校", "去", "工作"]
+            },
+            {
+              "id": "cn3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Because the weather is nice, we went to the park\"",
+              "answer": "因为 天气 好 所以 我们 去 了 公园",
+              "bank": ["因为", "天气", "好", "所以", "我们", "去", "了", "公园", "但是", "差"]
+            },
+            {
+              "id": "cn3-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: pick the cause-effect pair",
+              "options": ["因为...所以", "虽然...但是", "先...然后", "或者...或者"],
+              "answer": "因为...所以"
+            },
+            {
+              "id": "cn3-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence:",
+              "options": [
+                "因为 我 累 所以 不 想 工作",
+                "因为 我 累 但是 不 想 工作",
+                "所以 我 累 因为 不 想 工作",
+                "我 累 我 不 想 工作 因为"
+              ],
+              "answer": "因为 我 累 所以 不 想 工作"
+            },
+            {
+              "id": "cn3-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "因为下雨所以我没去",
+              "options": [
+                "因为下雨所以我没去",
+                "虽然下雨但是我去了",
+                "因为天气好所以我去了",
+                "我没去因为下雪"
+              ],
+              "answer": "因为下雨所以我没去"
+            },
+            {
+              "id": "cn3-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Because I had no time, I didn't watch the movie\"",
+              "answer": "因为 我 没 时间 所以 没 看 电影",
+              "bank": ["因为", "我", "没", "时间", "所以", "看", "电影", "了", "想"]
             }
           ]
         },
@@ -1659,6 +5146,76 @@
               "prompt": "Build \"Do you want to walk or drive?\"",
               "answer": "你 想 走路 还是 开车",
               "bank": ["你", "想", "走路", "还是", "开车", "或者", "吗"]
+            },
+            {
+              "id": "cn4-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: \"我 喝 咖啡 ___ 茶\" (\"I drink coffee or tea\")",
+              "answer": "或者",
+              "acceptableAnswers": ["还是"]
+            },
+            {
+              "id": "cn4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to drink tea or coffee, both are fine\"",
+              "answer": "我 想 喝 茶 或者 咖啡 都 行",
+              "bank": ["我", "想", "喝", "茶", "或者", "咖啡", "都", "行", "还是"]
+            },
+            {
+              "id": "cn4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This weekend should we go to a movie or go shopping?\"",
+              "answer": "这个 周末 我们 看 电影 还是 逛街",
+              "bank": ["这个", "周末", "我们", "看", "电影", "还是", "逛街", "或者", "吗"]
+            },
+            {
+              "id": "cn4-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: pick the WRONG \"or\" usage",
+              "options": [
+                "你 喜欢 茶 或者 咖啡？",
+                "你 喜欢 茶 还是 咖啡？",
+                "我 喝 茶 或者 咖啡 都 行",
+                "我 喜欢 茶 或者 咖啡"
+              ],
+              "answer": "你 喜欢 茶 或者 咖啡？",
+              "explanation": "In a choice question, use 还是, not 或者."
+            },
+            {
+              "id": "cn4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "你想吃面还是吃饭",
+              "options": [
+                "你想吃面还是吃饭",
+                "你想吃面或者吃饭",
+                "你想吃面和吃饭",
+                "你不想吃面"
+              ],
+              "answer": "你想吃面还是吃饭"
+            },
+            {
+              "id": "cn4-9",
+              "type": "match_pairs",
+              "prompt": "Match \"or\" use",
+              "pairs": [
+                { "left": "或者", "right": "Or (in statement)" },
+                { "left": "还是", "right": "Or (in question — pick one)" },
+                { "left": "或者...或者...", "right": "Either...or..." },
+                { "left": "都行", "right": "Either is fine" }
+              ]
+            },
+            {
+              "id": "cn4-10",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 想 去 哪里? You're easy. Reply:",
+              "options": [
+                "去 公园 或者 商场 都 行",
+                "我 不 去",
+                "公园 还是 商场",
+                "我 是 公园"
+              ],
+              "answer": "去 公园 或者 商场 都 行"
             }
           ]
         }
@@ -1701,6 +5258,55 @@
               "prompt": "Build \"I get up at seven every day\"",
               "answer": "我 每天 七点 起床",
               "bank": ["我", "每天", "七点", "起床", "睡觉", "上班"]
+            },
+            {
+              "id": "rv1-4",
+              "type": "fill_blank",
+              "prompt": "\"周末\" (zhōu mò) means ___",
+              "answer": "Weekend"
+            },
+            {
+              "id": "rv1-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"On weekends I usually sleep in\"",
+              "answer": "周末 我 平时 睡 懒觉",
+              "bank": ["周末", "我", "平时", "睡", "懒觉", "起床", "工作"]
+            },
+            {
+              "id": "rv1-6",
+              "type": "multiple_choice",
+              "prompt": "What does \"特别 累\" mean?",
+              "options": ["A bit tired", "Especially tired", "Not tired", "Always tired"],
+              "answer": "Especially tired"
+            },
+            {
+              "id": "rv1-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我今天有点累",
+              "options": ["我今天有点累", "我今天很累", "我今天特别累", "我今天不累"],
+              "answer": "我今天有点累"
+            },
+            {
+              "id": "rv1-8",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today I'm really happy because the weather is great\"",
+              "answer": "我 今天 很 高兴 因为 天气 特别 好",
+              "bank": ["我", "今天", "很", "高兴", "因为", "天气", "特别", "好", "差", "难过"]
+            },
+            {
+              "id": "rv1-9",
+              "type": "multiple_choice",
+              "prompt": "Friend asks 你 怎么 了? You feel sick. Reply:",
+              "options": ["我 有点 不 舒服", "我 很 高兴", "我 不 知道", "再见"],
+              "answer": "我 有点 不 舒服"
+            },
+            {
+              "id": "rv1-10",
+              "type": "fill_blank",
+              "prompt": "\"经常\" (jīng cháng) means ___",
+              "answer": "Often",
+              "acceptableAnswers": ["Frequently"]
             }
           ]
         },
@@ -1741,6 +5347,65 @@
                 "我 不 去"
               ],
               "answer": "我 还没 去"
+            },
+            {
+              "id": "rv2-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: \"我 ___ 北京 烤鸭\" (\"I have eaten Peking duck before\")",
+              "answer": "吃过",
+              "acceptableAnswers": ["吃 过"]
+            },
+            {
+              "id": "rv2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm not as tall as my older brother\"",
+              "answer": "我 没有 我 哥哥 高",
+              "bank": ["我", "没有", "哥哥", "高", "比", "更", "最"]
+            },
+            {
+              "id": "rv2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have already worked here for three years\"",
+              "answer": "我 已经 在 这里 工作 了 三 年",
+              "bank": ["我", "已经", "在", "这里", "工作", "了", "三", "年", "两", "月"]
+            },
+            {
+              "id": "rv2-7",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which contrasts 了 vs 过 correctly?",
+              "options": [
+                "了 = just completed; 过 = lifetime experience",
+                "了 = past, 过 = future",
+                "了 = formal, 过 = casual",
+                "They are the same"
+              ],
+              "answer": "了 = just completed; 过 = lifetime experience"
+            },
+            {
+              "id": "rv2-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear (mind the final 了!)",
+              "spokenText": "他来了",
+              "options": ["他来了", "他来", "他没来", "他要来"],
+              "answer": "他来了"
+            },
+            {
+              "id": "rv2-9",
+              "type": "match_pairs",
+              "prompt": "Match the completion form",
+              "pairs": [
+                { "left": "已经…了", "right": "Already done" },
+                { "left": "还没", "right": "Not yet" },
+                { "left": "过", "right": "Have done before" },
+                { "left": "没…过", "right": "Have never done" }
+              ]
+            },
+            {
+              "id": "rv2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today is even hotter than yesterday\"",
+              "answer": "今天 比 昨天 更 热",
+              "bank": ["今天", "比", "昨天", "更", "热", "冷", "最"]
             }
           ]
         },
@@ -1771,6 +5436,65 @@
               "prompt": "Which means \"take the subway\"?",
               "options": ["坐 地铁", "开 地铁", "走 地铁", "骑 地铁"],
               "answer": "坐 地铁"
+            },
+            {
+              "id": "rv3-4",
+              "type": "fill_blank",
+              "prompt": "Type the Chinese for \"how much (money)?\" (three characters)",
+              "answer": "多少钱",
+              "acceptableAnswers": ["duō shǎo qián", "多 少 钱"]
+            },
+            {
+              "id": "rv3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"How much is this shirt? Can it be cheaper?\"",
+              "answer": "这 件 衬衫 多少 钱 能 便宜 点 吗",
+              "bank": ["这", "件", "衬衫", "多少", "钱", "能", "便宜", "点", "吗", "贵"]
+            },
+            {
+              "id": "rv3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to take a taxi to the airport\"",
+              "answer": "我 想 坐 出租车 去 机场",
+              "bank": ["我", "想", "坐", "出租车", "去", "机场", "学校", "开"]
+            },
+            {
+              "id": "rv3-7",
+              "type": "match_pairs",
+              "prompt": "Match the transport verb",
+              "pairs": [
+                { "left": "坐 地铁", "right": "Take the subway" },
+                { "left": "开 车", "right": "Drive a car" },
+                { "left": "骑 自行车", "right": "Ride a bike" },
+                { "left": "走 路", "right": "Walk" }
+              ]
+            },
+            {
+              "id": "rv3-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "便宜点行不行",
+              "options": ["便宜点行不行", "贵一点行吗", "你卖什么", "我要买"],
+              "answer": "便宜点行不行"
+            },
+            {
+              "id": "rv3-9",
+              "type": "multiple_choice",
+              "prompt": "You can't make Friday's plan. Reschedule politely:",
+              "options": [
+                "对不起 星期五 不 行 改天 吧",
+                "我 不 去",
+                "再见",
+                "我 不 喜欢"
+              ],
+              "answer": "对不起 星期五 不 行 改天 吧"
+            },
+            {
+              "id": "rv3-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Excuse me, how do I get to the train station?\"",
+              "answer": "请问 火车 站 怎么 走",
+              "bank": ["请问", "火车", "站", "怎么", "走", "去", "在哪里"]
             }
           ]
         },
@@ -1808,6 +5532,75 @@
               "options": ["我喜欢打篮球", "我喜欢踢足球", "我喜欢游泳", "我喜欢看书"],
               "answer": "我喜欢打篮球",
               "explanation": "我 喜欢 打 篮球 — \"I like playing basketball.\""
+            },
+            {
+              "id": "rv4-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I get up at seven, then eat breakfast\"",
+              "answer": "我 七点 起床 然后 吃 早饭",
+              "bank": ["我", "七点", "起床", "然后", "吃", "早饭", "晚饭", "回家"]
+            },
+            {
+              "id": "rv4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to drink tea or coffee, both are fine\"",
+              "answer": "我 想 喝 茶 或者 咖啡 都 行",
+              "bank": ["我", "想", "喝", "茶", "或者", "咖啡", "都", "行", "还是"]
+            },
+            {
+              "id": "rv4-6",
+              "type": "multiple_choice",
+              "prompt": "Discriminate: which uses 还是 correctly?",
+              "options": [
+                "你 喝 茶 还是 咖啡？",
+                "我 喝 茶 还是 咖啡",
+                "我 想 茶 还是 咖啡 都 行",
+                "我 喜欢 茶 还是"
+              ],
+              "answer": "你 喝 茶 还是 咖啡？"
+            },
+            {
+              "id": "rv4-7",
+              "type": "match_pairs",
+              "prompt": "Match the connector",
+              "pairs": [
+                { "left": "然后", "right": "And then" },
+                { "left": "但是", "right": "But" },
+                { "left": "因为", "right": "Because" },
+                { "left": "所以", "right": "So / therefore" }
+              ]
+            },
+            {
+              "id": "rv4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "因为下雨所以我没去",
+              "options": [
+                "因为下雨所以我没去",
+                "虽然下雨但是我去了",
+                "下雨我去了",
+                "我没去因为下雪"
+              ],
+              "answer": "因为下雨所以我没去"
+            },
+            {
+              "id": "rv4-9",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have already finished my homework, now I want to watch a movie\"",
+              "answer": "我 已经 做完 作业 了 现在 想 看 电影",
+              "bank": ["我", "已经", "做完", "作业", "了", "现在", "想", "看", "电影", "睡觉"]
+            },
+            {
+              "id": "rv4-10",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence using 但是:",
+              "options": [
+                "我 想 去 但是 没 时间",
+                "我 想 去 因为 没 时间",
+                "我 不 去 然后 没 时间",
+                "我 去 但是 我 也 不 去"
+              ],
+              "answer": "我 想 去 但是 没 时间"
             }
           ]
         }

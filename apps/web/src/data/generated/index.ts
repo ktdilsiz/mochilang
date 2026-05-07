@@ -4,7 +4,7 @@
 // are the wire payload assembled by the content loader from
 // apps/api/internal/content/data/<id>/*.json. league_meta.json is
 // derived from Go constants in internal/league.
-// Last published: 2026-05-07T04:39:01Z
+// Last published: 2026-05-07T05:36:30Z
 
 import friends from './friends.json'
 import competitors from './competitors.json'
