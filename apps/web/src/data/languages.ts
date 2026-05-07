@@ -1,4 +1,4 @@
-import type { Language } from '../types'
+import type { Language } from '@mochilang/shared'
 
 export const LANGUAGES: Language[] = [
   { code: 'zh', name: 'Chinese', flag: '🇨🇳', available: true },

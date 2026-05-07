@@ -1,0 +1,15 @@
+/**
+ * @mochilang/shared — platform-agnostic core for the mochilang clients.
+ *
+ * Anything that doesn't depend on a specific runtime (DOM vs RN) lives
+ * here: type shapes, the API client, league math, date helpers, and the
+ * review-suggestion picker. Apps wire these into their own state hooks
+ * and screens.
+ */
+
+export * from './types'
+export * from './stateTypes'
+export * from './api'
+export * from './league'
+export * from './dates'
+export * from './reviewSuggestions'

@@ -10,9 +10,20 @@
  * to fall back to bundled JSON / cached state.
  */
 
-const BASE: string =
-  (import.meta.env.VITE_API_BASE_URL as string | undefined) ??
-  'http://localhost:8181'
+/**
+ * The base URL is configured per-app at startup since web (Vite env)
+ * and React Native (Expo Constants) read environment differently.
+ * Defaults to localhost so unit tests + a casual `import` work.
+ */
+let BASE: string = 'http://localhost:8181'
+
+export function configureApiBaseUrl(url: string): void {
+  BASE = url
+}
+
+export function getApiBaseUrl(): string {
+  return BASE
+}
 
 export class ApiError extends Error {
   status: number
@@ -153,7 +164,11 @@ export interface FriendsListResponse {
   asOf: string
 }
 
-export interface LeagueTier {
+/**
+ * Wire-shape tier — the subset the server returns. The richer
+ * client-side LeagueTier (with palette colors) lives in `./league`.
+ */
+export interface LeagueTierResponse {
   id: string
   name: string
   emoji: string
@@ -173,8 +188,8 @@ export interface LeagueResponse {
   daysIntoWeek: number
   userRank: number
   userTier: number
-  tier: LeagueTier
-  nextTier: LeagueTier | null
+  tier: LeagueTierResponse
+  nextTier: LeagueTierResponse | null
   promoteRank: number
   demoteRank: number
   lastWeekRank: number | null

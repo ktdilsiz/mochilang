@@ -12,7 +12,7 @@
  */
 
 import { useCallback, useEffect, useState } from 'react'
-import { api, ApiError, type ProfileResponse } from './lib/api'
+import { api, ApiError, type ProfileResponse } from '@mochilang/shared'
 
 const STORAGE_KEY = 'mochilang:profile:v1'
 

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { Exercise, Lesson } from '../types'
+import type { Exercise, Lesson } from '@mochilang/shared'
 import MultipleChoice from '../components/exercises/MultipleChoice'
 import FillBlank, { checkAnswer as checkFillBlank } from '../components/exercises/FillBlank'
 import MatchPairs from '../components/exercises/MatchPairs'

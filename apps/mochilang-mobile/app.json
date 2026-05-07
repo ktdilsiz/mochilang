@@ -28,8 +28,8 @@
       "favicon": "./assets/favicon.png"
     },
     "extra": {
-      "_comment": "Edit webUrl to your laptop's LAN URL (vite dev server) or a hosted production URL. Phone needs network reachability — same WiFi for LAN, public internet for hosted.",
-      "webUrl": "http://localhost:5175"
+      "_comment": "Edit apiUrl to point at your hosted API (or LAN IP for dev). The Phase 1 build defaults to offline mode anyway, so this only matters once Phase 2 wires real API calls.",
+      "apiUrl": "http://localhost:8181"
     }
   }
 }

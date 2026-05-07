@@ -1,4 +1,4 @@
-import type { FillBlankExercise } from '../../types'
+import type { FillBlankExercise } from '@mochilang/shared'
 import './exercise.css'
 
 interface Props {

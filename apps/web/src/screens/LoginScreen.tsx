@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import mochiHero from '../assets/hero.png'
-import { api, ApiError } from '../lib/api'
+import { api, ApiError } from '@mochilang/shared'
 import { loadGSI, GOOGLE_CLIENT_ID } from '../lib/google'
 import './LoginScreen.css'
 

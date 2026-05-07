@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { Lesson, Language, Topic } from './types'
+import type { Lesson, Language, Topic } from '@mochilang/shared'
 import { useCourse } from './data/lessons'
 import LanguageSelectScreen from './screens/LanguageSelectScreen'
 import LoginScreen from './screens/LoginScreen'
@@ -13,7 +13,7 @@ import BottomNav, { type Tab } from './components/BottomNav'
 import ProfileSetup from './components/ProfileSetup'
 import { useProgress } from './state'
 import { useProfile } from './profile'
-import { api, ApiError, setOfflineMode } from './lib/api'
+import { api, ApiError, setOfflineMode } from '@mochilang/shared'
 
 /**
  * Auth states:

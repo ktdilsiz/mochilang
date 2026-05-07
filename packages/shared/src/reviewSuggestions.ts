@@ -11,8 +11,8 @@
  * called from a future cron / preload step.
  */
 
-import type { Lesson, Level } from '../types'
-import type { LessonResult } from '../state'
+import type { Lesson, Level } from './types'
+import type { LessonResult } from './stateTypes'
 
 export interface ReviewSuggestion {
   lesson: Lesson

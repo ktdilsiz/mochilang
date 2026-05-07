@@ -5,9 +5,9 @@ import {
   PROMOTE_RANK,
   DEMOTE_RANK,
   tierAt,
-} from '../lib/league'
-import { mondayOf, daysSinceMonday, daysUntilMonday } from '../lib/dates'
-import { api, ApiError, type LeagueResponse, type LeagueRow } from '../lib/api'
+} from '@mochilang/shared'
+import { mondayOf, daysSinceMonday, daysUntilMonday } from '@mochilang/shared'
+import { api, ApiError, type LeagueResponse, type LeagueRow } from '@mochilang/shared'
 import type { ProgressState } from '../state'
 import type { ProfileState } from '../profile'
 import { avatarById } from '../data/avatars'

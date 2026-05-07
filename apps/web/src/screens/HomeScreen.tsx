@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import type { Language, Lesson, Level, Topic } from '../types'
+import type { Language, Lesson, Level, Topic } from '@mochilang/shared'
 import type { ProgressState } from '../state'
 import { iconForLesson } from '../components/lessonIcons'
 import mochiThinking from '../assets/mochi-thinking.png'

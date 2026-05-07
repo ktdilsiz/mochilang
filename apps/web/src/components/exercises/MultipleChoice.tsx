@@ -1,4 +1,4 @@
-import type { MultipleChoiceExercise } from '../../types'
+import type { MultipleChoiceExercise } from '@mochilang/shared'
 import './exercise.css'
 
 interface Props {

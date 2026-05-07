@@ -9,7 +9,7 @@
  */
 
 import competitorsData from './generated/competitors.json'
-import { seededRng } from '../lib/dates'
+import { seededRng } from '@mochilang/shared'
 
 export interface Competitor {
   id: string

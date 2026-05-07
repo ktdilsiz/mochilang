@@ -1,10 +1,10 @@
 import { useMemo, useState } from 'react'
 import type { ProgressState } from '../state'
 import type { ProfileState } from '../profile'
-import type { Lesson, Level } from '../types'
+import type { Lesson, Level } from '@mochilang/shared'
 import { AVATAR_OPTIONS, avatarById } from '../data/avatars'
-import { tierAt } from '../lib/league'
-import { pickReviewSuggestions } from '../lib/reviewSuggestions'
+import { tierAt } from '@mochilang/shared'
+import { pickReviewSuggestions } from '@mochilang/shared'
 import './ProfileScreen.css'
 
 interface Props {

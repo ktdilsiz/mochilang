@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import type { MatchPairsExercise } from '../../types'
+import type { MatchPairsExercise } from '@mochilang/shared'
 import './exercise.css'
 
 interface Props {

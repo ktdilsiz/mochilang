@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { FRIENDS, friendDailyXp, friendWeeklyXp } from '../data/friends'
-import { mondayOf, daysSinceMonday } from '../lib/dates'
-import { api, ApiError, type FriendResponse } from '../lib/api'
+import { mondayOf, daysSinceMonday } from '@mochilang/shared'
+import { api, ApiError, type FriendResponse } from '@mochilang/shared'
 import './FriendsScreen.css'
 
 /**

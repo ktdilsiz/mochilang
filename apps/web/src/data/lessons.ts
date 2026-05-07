@@ -21,8 +21,8 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { coursesFallback } from './generated'
-import { api, ApiError } from '../lib/api'
-import type { Level, Topic } from '../types'
+import { api, ApiError } from '@mochilang/shared'
+import type { Level, Topic } from '@mochilang/shared'
 
 interface CourseEnvelope {
   id: string

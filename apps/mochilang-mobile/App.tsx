@@ -1,126 +1,160 @@
-import Constants from 'expo-constants'
+import 'react-native-gesture-handler'
+import { useEffect, useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { useState } from 'react'
-import {
-  ActivityIndicator,
-  Platform,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
-import { WebView } from 'react-native-webview'
+import Constants from 'expo-constants'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Text, View } from 'react-native'
+import { configureApiBaseUrl, setOfflineMode, type Lesson } from '@mochilang/shared'
+import LoginScreen from './src/screens/LoginScreen'
+import HomeScreen from './src/screens/HomeScreen'
+import LessonScreen from './src/screens/LessonScreen'
+import StubScreen from './src/screens/StubScreen'
+import { useProgress } from './src/state/useProgress'
+import { colors } from './src/lib/theme'
 
-/**
- * Single-screen Expo wrapper around the mochilang web app.
- *
- * The web app at apps/web does the entire UI; this project just embeds
- * it in a native WebView so it shows up in Expo Go and (eventually) on
- * the App Store. The URL comes from app.json's `extra.webUrl` — point
- * it at your laptop's vite dev server when developing on LAN, swap to
- * the hosted URL once you deploy.
- *
- * Cookies and inline media playback are enabled so the web app's
- * Google Sign-In session and TTS playback both behave normally.
- */
+// Wire the API base URL from Expo config so the shared client can run
+// in either app. The wrapper's app.json `extra.apiUrl` overrides; the
+// fallback assumes the API is on the same machine that's running
+// Expo Go (only useful for the Expo Go web preview).
+configureApiBaseUrl(
+  ((Constants.expoConfig?.extra as { apiUrl?: string })?.apiUrl) ??
+    'http://localhost:8181'
+)
+
+type RootStackParamList = {
+  Tabs: undefined
+  Lesson: { lesson: Lesson }
+}
+
+type TabParamList = {
+  Home: undefined
+  League: undefined
+  Friends: undefined
+  Profile: undefined
+}
+
+const Stack = createNativeStackNavigator<RootStackParamList>()
+const Tabs = createBottomTabNavigator<TabParamList>()
+
 export default function App() {
-  const url =
-    (Constants.expoConfig?.extra as { webUrl?: string })?.webUrl ??
-    'http://localhost:5175'
+  // Phase 1: skip the auth flow entirely on first mount, drop into
+  // offline mode, show the LoginScreen briefly, then advance. Phase 2
+  // will wire api.me() + Google sign-in.
+  const [signedIn, setSignedIn] = useState(false)
 
-  const [loading, setLoading] = useState(true)
-  const [errMsg, setErrMsg] = useState<string | null>(null)
+  if (!signedIn) {
+    return (
+      <>
+        <StatusBar style="auto" />
+        <LoginScreen onContinueOffline={() => setSignedIn(true)} />
+      </>
+    )
+  }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <NavigationContainer>
       <StatusBar style="auto" />
-      <WebView
-        source={{ uri: url }}
-        style={styles.web}
-        onLoadStart={() => {
-          setLoading(true)
-          setErrMsg(null)
-        }}
-        onLoadEnd={() => setLoading(false)}
-        onError={(e) =>
-          setErrMsg(
-            e.nativeEvent?.description ?? 'Failed to load — check the URL'
-          )
-        }
-        // Keep cookies so /api/auth/* sessions survive across visits.
-        sharedCookiesEnabled
-        thirdPartyCookiesEnabled
-        // Allow the web app's TTS / sound effects to play without a tap.
-        allowsInlineMediaPlayback
-        mediaPlaybackRequiresUserAction={false}
-        // The mochilang topbar handles its own scroll; keep system
-        // bounce scrolling off so it doesn't fight the in-app scroll.
-        bounces={false}
-        // Useful logging when something goes wrong on a real device.
-        originWhitelist={['*']}
-      />
-
-      {loading && !errMsg && (
-        <View style={styles.overlay} pointerEvents="none">
-          <ActivityIndicator size="large" />
-        </View>
-      )}
-
-      {errMsg && (
-        <View style={styles.errBox}>
-          <Text style={styles.errTitle}>Couldn't reach Mochilang</Text>
-          <Text style={styles.errBody}>
-            {errMsg}
-            {'\n\n'}Tried: <Text style={styles.url}>{url}</Text>
-            {'\n\n'}Edit{' '}
-            <Text style={styles.code}>extra.webUrl</Text> in{' '}
-            <Text style={styles.code}>app.json</Text> and reload.
-          </Text>
-        </View>
-      )}
-    </SafeAreaView>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Tabs" component={SignedInTabs} />
+        <Stack.Screen
+          name="Lesson"
+          component={LessonScreenWrapper}
+          options={{ presentation: 'modal' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fffbf2',
-  },
-  web: {
-    flex: 1,
-    backgroundColor: 'transparent',
-  },
-  overlay: {
-    ...StyleSheet.absoluteFillObject,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  errBox: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: '#fffbf2',
-    padding: 24,
-    paddingTop: Platform.OS === 'ios' ? 80 : 48,
-  },
-  errTitle: {
-    fontSize: 22,
-    fontWeight: '900',
-    color: '#3a2516',
-    marginBottom: 12,
-  },
-  errBody: {
-    fontSize: 15,
-    color: '#6b4226',
-    lineHeight: 22,
-  },
-  url: {
-    fontWeight: '700',
-    color: '#d3502a',
-  },
-  code: {
-    fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
-    backgroundColor: '#fff4dd',
-    paddingHorizontal: 4,
-    color: '#3a2516',
-  },
-})
+function SignedInTabs() {
+  return (
+    <Tabs.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: colors.primary700,
+        tabBarInactiveTintColor: colors.textSubtle,
+        tabBarStyle: {
+          borderTopColor: colors.border,
+          backgroundColor: colors.surface,
+        },
+      }}
+    >
+      <Tabs.Screen
+        name="Home"
+        options={{ tabBarLabel: 'Learn', tabBarIcon: tabIcon('🏠') }}
+      >
+        {(props) => (
+          <HomeScreen
+            onSelectLesson={(lesson) =>
+              props.navigation.getParent()?.navigate('Lesson', { lesson })
+            }
+          />
+        )}
+      </Tabs.Screen>
+      <Tabs.Screen name="League" options={{ tabBarIcon: tabIcon('🛡') }}>
+        {() => (
+          <StubScreen
+            title="League"
+            emoji="🛡"
+            body="Weekly leaderboard with bot competitors. Phase 2 brings the full ranked board with promote/demote zones."
+          />
+        )}
+      </Tabs.Screen>
+      <Tabs.Screen name="Friends" options={{ tabBarIcon: tabIcon('👥') }}>
+        {() => (
+          <StubScreen
+            title="Friends"
+            emoji="👥"
+            body="Your friend roster with weekly XP sparklines. Phase 2."
+          />
+        )}
+      </Tabs.Screen>
+      <Tabs.Screen name="Profile" options={{ tabBarIcon: tabIcon('👤') }}>
+        {() => <ProfileStub />}
+      </Tabs.Screen>
+    </Tabs.Navigator>
+  )
+}
+
+function ProfileStub() {
+  const progress = useProgress()
+  return (
+    <StubScreen
+      title="Profile"
+      emoji="👤"
+      body={`Stats are working: ${progress.state.totalXp} XP, ${progress.state.streak}-day streak. The full Profile screen with avatar selection, settings, and the spaced-review modal lands in Phase 2.`}
+    />
+  )
+}
+
+function LessonScreenWrapper(props: {
+  route: { params: { lesson: Lesson } }
+  navigation: { goBack: () => void }
+}) {
+  const progress = useProgress()
+  const lesson = props.route.params.lesson
+  return (
+    <LessonScreen
+      lesson={lesson}
+      onComplete={(mistakes) => {
+        void progress.recordCompletion(lesson.id, mistakes, lesson.xp)
+        props.navigation.goBack()
+      }}
+      onBack={() => props.navigation.goBack()}
+    />
+  )
+}
+
+function tabIcon(emoji: string) {
+  return ({ focused }: { focused: boolean }) => (
+    <View>
+      <Text style={{ fontSize: 22, opacity: focused ? 1 : 0.55 }}>{emoji}</Text>
+    </View>
+  )
+}
+
+// Wire the offline mode flag at module load so the Phase 1 offline-only
+// flow doesn't accidentally hit a non-existent API.
+setOfflineMode(true)

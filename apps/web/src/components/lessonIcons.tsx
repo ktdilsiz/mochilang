@@ -1,4 +1,4 @@
-import type { Lesson, LessonTheme } from '../types'
+import type { Lesson, LessonTheme } from '@mochilang/shared'
 
 type IconName = 'chat' | 'numbers' | 'check' | 'family' | 'food' | 'pin' | 'clock' | 'palette' | 'cloud'
 

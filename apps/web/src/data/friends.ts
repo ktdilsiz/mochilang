@@ -6,7 +6,7 @@
  */
 
 import friendsData from './generated/friends.json'
-import { seededRng } from '../lib/dates'
+import { seededRng } from '@mochilang/shared'
 
 export interface Friend {
   id: string

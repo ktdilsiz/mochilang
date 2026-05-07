@@ -1,4 +1,4 @@
-import type { Language } from '../types'
+import type { Language } from '@mochilang/shared'
 import { APP_NAME, MASCOT_NAME, NATIVE_LANGUAGE, LANGUAGES } from '../data/languages'
 import { mochiMain } from '../assets'
 import './LanguageSelectScreen.css'

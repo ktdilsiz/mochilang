@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import type { TapWordsInOrderExercise } from '../../types'
+import type { TapWordsInOrderExercise } from '@mochilang/shared'
 import './exercise.css'
 
 interface Props {
