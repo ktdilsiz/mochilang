@@ -269,7 +269,15 @@ function TopicCard({
           return (
             <View
               key={lesson.id}
-              style={[styles.pathRow, { transform: [{ translateX: offset }] }]}
+              // The transform on every row creates a stacking context, so
+              // the open popover would otherwise be buried behind later
+              // siblings. Bump the open row's zIndex/elevation so the
+              // popover overlays everything below.
+              style={[
+                styles.pathRow,
+                { transform: [{ translateX: offset }] },
+                isOpen && styles.pathRowOpen,
+              ]}
             >
               <LessonNode
                 lesson={lesson}
@@ -286,8 +294,6 @@ function TopicCard({
                     setOpenLessonId(null)
                     onSelectLesson(lesson)
                   }}
-                  /* Counter-translate so the popover sits centered on
-                   * the natural column even though the row is offset. */
                   rowOffset={offset}
                 />
               )}
@@ -505,13 +511,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: space.lg,
     gap: 30,
+    // Allow popovers to extend beyond the row's natural height without
+    // pushing later rows down.
+    overflow: 'visible',
   },
   pathRow: {
     alignItems: 'center',
+    // Each row's translateX creates a stacking context, so default
+    // ordering puts later rows on top. zIndex 1 + elevation matches
+    // the baseline; the open row bumps these up below.
+    zIndex: 1,
+    elevation: 1,
+  },
+  pathRowOpen: {
+    zIndex: 20,
+    elevation: 20,
   },
 
   popover: {
-    marginTop: space.md,
+    // Absolute so the card overlays subsequent rows instead of pushing
+    // them down. `top` clears the 88px node + a small gap.
+    position: 'absolute',
+    top: 96,
     width: 300,
     backgroundColor: colors.surface,
     borderWidth: 1,
@@ -519,10 +540,10 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     padding: space.lg,
     shadowColor: colors.brown900,
-    shadowOpacity: 0.12,
-    shadowRadius: 32,
-    shadowOffset: { width: 0, height: 12 },
-    elevation: 6,
+    shadowOpacity: 0.18,
+    shadowRadius: 24,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 12,
   },
   popoverEyebrow: {
     fontSize: fontSizes.xs,

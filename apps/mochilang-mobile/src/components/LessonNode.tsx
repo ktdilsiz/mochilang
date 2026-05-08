@@ -1,4 +1,5 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { useEffect, useRef } from 'react'
+import { Animated, Pressable, StyleSheet, Text, View } from 'react-native'
 import type { Lesson } from '@mochilang/shared'
 import { colors, radius, tintForTheme } from '../lib/theme'
 
@@ -13,8 +14,8 @@ interface Props {
  * LessonNode — circular tappable button on the winding home path.
  * Mirrors the web's `.home-node` look: chunky 4px border with a thicker
  * bottom edge, themed colors, an icon centered. The "next-up" lesson
- * pulses (a static thin ring around the node — RN doesn't have CSS
- * keyframes; a real animation would need Reanimated).
+ * gets an animated pulse ring (`Animated.loop` driving scale + opacity)
+ * to draw the eye, equivalent to the web's CSS `@keyframes home-pulse`.
  */
 export default function LessonNode({ lesson, done, isNext, onPress }: Props) {
   const tint = tintForTheme(lesson.theme)
@@ -34,9 +35,47 @@ export default function LessonNode({ lesson, done, isNext, onPress }: Props) {
         }
       : tint
 
+  // Pulse animation only runs when this node is the active "next up".
+  // We always create the Animated.Value so the hooks rule is satisfied;
+  // the `useEffect` early-returns when isNext is false.
+  const pulse = useRef(new Animated.Value(0)).current
+  useEffect(() => {
+    if (!isNext || done) {
+      pulse.setValue(0)
+      return
+    }
+    const loop = Animated.loop(
+      Animated.timing(pulse, {
+        toValue: 1,
+        duration: 1600,
+        useNativeDriver: true,
+      })
+    )
+    loop.start()
+    return () => loop.stop()
+  }, [isNext, done, pulse])
+
+  const pulseScale = pulse.interpolate({
+    inputRange: [0, 0.5, 1],
+    outputRange: [1, 1.18, 1],
+  })
+  const pulseOpacity = pulse.interpolate({
+    inputRange: [0, 0.5, 1],
+    outputRange: [0.65, 0, 0.65],
+  })
+
   return (
     <View style={styles.wrap}>
-      {isNext && !done && <View style={[styles.pulse, { borderColor: colors.primary500 }]} />}
+      {isNext && !done && (
+        <Animated.View
+          pointerEvents="none"
+          style={[
+            styles.pulse,
+            { borderColor: colors.primary500 },
+            { transform: [{ scale: pulseScale }], opacity: pulseOpacity },
+          ]}
+        />
+      )}
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={lesson.title + (done ? ' (completed)' : '')}
@@ -59,12 +98,6 @@ export default function LessonNode({ lesson, done, isNext, onPress }: Props) {
   )
 }
 
-/**
- * nodeGlyph picks a thematic emoji for the not-yet-started lesson node.
- * Web uses an SVG icon set keyed by theme; this is a quick stand-in
- * that keeps the trail visually varied. A future pass could swap in
- * react-native-svg with the real icons.
- */
 function nodeGlyph(lesson: Lesson): string {
   switch (lesson.theme) {
     case 'greetings':
@@ -114,7 +147,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     fontSize: 30,
-    fontWeight: '900',
+    fontFamily: 'Nunito_900Black',
   },
   pulse: {
     position: 'absolute',
@@ -122,6 +155,5 @@ const styles = StyleSheet.create({
     height: 104,
     borderRadius: radius.pill,
     borderWidth: 4,
-    opacity: 0.5,
   },
 })
