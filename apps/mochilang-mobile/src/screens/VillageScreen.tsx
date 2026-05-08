@@ -1,19 +1,16 @@
 import { useMemo } from 'react'
 import {
   Dimensions,
+  ImageBackground,
   Pressable,
   ScrollView,
   StyleSheet,
   Text,
   View,
 } from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
-  type LessonTheme,
   type MochiSpec,
-  type ProgressState,
-  type TopicExamsPassed,
   type VillageRegion,
   buildVillageRoster,
   isTopicCleared,
@@ -42,34 +39,20 @@ interface Props {
 }
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window')
-/** Each level scene is wider than the screen so the user has to walk it. */
-const SCENE_WIDTH = Math.max(SCREEN_WIDTH * 1.6, 560)
-/** Reserves space for sky vs. ground in the scene's gradient. */
-const HORIZON = 0.62
+/** Each level claims a slice of the panorama this wide. */
+const LEVEL_SLICE_WIDTH = SCREEN_WIDTH * 0.95
+/** Reserve space at the bottom edge so mochis don't sit on the very last pixel. */
+const BOTTOM_PAD = 20
 
 /**
- * Per-level palette for the panorama scene. Sky on top, horizon line,
- * ground on bottom. Real PNG backgrounds slot in later — the named
- * keys here just need to keep matching level ids.
- */
-const LEVEL_PALETTE: Record<string, { sky: [string, string]; ground: string; sign: string }> = {
-  a1: { sky: ['#cdeaff', '#fff4d6'], ground: '#bdd86c', sign: '#7fa831' }, // sunny garden
-  a2: { sky: ['#ffe6c4', '#ffd09a'], ground: '#e3b27a', sign: '#a06a35' }, // market lane at dusk
-  b1: { sky: ['#d6ecff', '#eaf6ff'], ground: '#b8c8e3', sign: '#506a96' }, // riverside library
-  b2: { sky: ['#cfe9d4', '#e7f5e1'], ground: '#92cf86', sign: '#3d7e36' }, // forest grove
-  c1: { sky: ['#e3d4ff', '#fbe8ff'], ground: '#b8a3e0', sign: '#6f53a8' }, // dusk square
-  c2: { sky: ['#cad3eb', '#9ea9c9'], ground: '#5d6985', sign: '#2c344a' }, // mountain pass
-}
-const FALLBACK_PALETTE = LEVEL_PALETTE.a1
-
-/**
- * Mochi Village — horizontal panorama. Each level is a wide scene the
- * user walks left → right. Within a scene, mochis are placed along a
- * sin-wave "path" so they cluster organically rather than in a grid.
+ * Mochi Village — horizontal panorama with the Gemini-generated
+ * background art behind every level. The art is one wide image
+ * (`assets/village-bg.png`) that ImageBackground scales to fill the
+ * full scrollable panorama; mochis are placed absolutely on top.
  *
  * Locked mochis still show, but as silhouettes — the village should
- * feel populated even before it's actually populated, so the user can
- * see where empty plots will fill in.
+ * feel populated even before it's actually populated, so the user
+ * can see where empty plots will fill in.
  */
 export default function VillageScreen({ courseId }: Props) {
   const insets = useSafeAreaInsets()
@@ -106,9 +89,10 @@ export default function VillageScreen({ courseId }: Props) {
     return { unlockedCount: unlocked, totalCount: total }
   }, [roster, isMochiUnlocked])
 
+  const panoramaWidth = roster.length * LEVEL_SLICE_WIDTH
+
   return (
     <View style={styles.shell}>
-      {/* Fixed top header — sits over the scrolling scene. */}
       <View style={[styles.header, { paddingTop: insets.top + space.sm }]}>
         <View style={styles.headerInner}>
           <Text style={styles.title}>Mochi Village</Text>
@@ -134,125 +118,79 @@ export default function VillageScreen({ courseId }: Props) {
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.panorama}
           decelerationRate="fast"
         >
-          {roster.map((region, i) => {
-            const levelExamPassed = levelExams.state[region.levelId] === true
-            return (
-              <LevelScene
-                key={region.levelId}
-                region={region}
-                index={i}
-                isUnlocked={isMochiUnlocked}
-                examPassed={levelExamPassed}
-                progressResults={progress.state.results}
-                topicExams={topicExams.state}
-              />
-            )
-          })}
-          {/* Trailing pad so the last scene doesn't butt against the edge. */}
-          <View style={{ width: space.lg }} />
+          <ImageBackground
+            source={require('../../assets/village-bg.png')}
+            resizeMode="cover"
+            style={[styles.panorama, { width: panoramaWidth }]}
+          >
+            {/* Level-marker signs sit above mochis so they're never hidden. */}
+            {roster.map((region, i) => {
+              const offsetX = i * LEVEL_SLICE_WIDTH
+              const examPassed = levelExams.state[region.levelId] === true
+              const cleared = region.mochis.filter(isMochiUnlocked).length
+              return (
+                <View
+                  key={`sign-${region.levelId}`}
+                  style={[styles.sign, { left: offsetX + 16 }]}
+                >
+                  <Text style={styles.signTitle}>{region.levelName}</Text>
+                  <Text style={styles.signCount}>
+                    {cleared} / {region.mochis.length} mochis
+                  </Text>
+                  {examPassed && (
+                    <View style={styles.signBadge}>
+                      <Text style={styles.signBadgeText}>Level exam ✓</Text>
+                    </View>
+                  )}
+                </View>
+              )
+            })}
+
+            {/* Mochis distributed inside each level's slice. */}
+            {roster.map((region, i) =>
+              region.mochis.map((m, j) => {
+                const sliceStart = i * LEVEL_SLICE_WIDTH
+                const pos = layoutForMochi(j, region.mochis.length, sliceStart)
+                return (
+                  <MochiCharacter
+                    key={m.id}
+                    mochi={m}
+                    unlocked={isMochiUnlocked(m)}
+                    x={pos.x}
+                    y={pos.y}
+                  />
+                )
+              })
+            )}
+          </ImageBackground>
         </ScrollView>
       )}
     </View>
   )
 }
 
-interface SceneProps {
-  region: VillageRegion
-  index: number
-  isUnlocked: (m: MochiSpec) => boolean
-  examPassed: boolean
-  progressResults: ProgressState['results']
-  topicExams: TopicExamsPassed
-}
-
-function LevelScene({
-  region,
-  index,
-  isUnlocked,
-  examPassed,
-  progressResults,
-  topicExams,
-}: SceneProps) {
-  const palette = LEVEL_PALETTE[region.levelId] ?? FALLBACK_PALETTE
-
-  const clearedCount = region.mochis.filter((m) => {
-    if (DEV_UNLOCK_ALL) return true
-    return (
-      topicExams[m.topicId] === true ||
-      // light inline check — we don't have the Topic object here, just
-      // ids — so we ask "did the user complete every lesson in topic X?"
-      // by counting results keyed by lesson id. The roster already
-      // captured the topic structure when it was built.
-      false
-    )
-  }).length
-
-  return (
-    <View style={[styles.scene, { width: SCENE_WIDTH }]}>
-      <LinearGradient
-        colors={[palette.sky[0], palette.sky[1], palette.ground]}
-        locations={[0, HORIZON, HORIZON]}
-        style={StyleSheet.absoluteFill}
-      />
-
-      {/* Scene-marker sign */}
-      <View style={[styles.sign, { borderColor: palette.sign }]}>
-        <Text style={[styles.signTitle, { color: palette.sign }]}>
-          {region.levelName}
-        </Text>
-        <Text style={styles.signCount}>
-          {clearedCount} / {region.mochis.length} mochis
-        </Text>
-        {examPassed && (
-          <View style={[styles.signBadge, { backgroundColor: palette.sign }]}>
-            <Text style={styles.signBadgeText}>Level exam ✓</Text>
-          </View>
-        )}
-      </View>
-
-      {/* Mochis placed along an organic sin-wave path. */}
-      {region.mochis.map((m, i) => {
-        const pos = layoutForMochi(i, region.mochis.length)
-        return (
-          <MochiCharacter
-            key={m.id}
-            mochi={m}
-            unlocked={isUnlocked(m)}
-            x={pos.x}
-            y={pos.y}
-          />
-        )
-      })}
-
-      {/* Trailing arrow if more scenes follow */}
-      {index >= 0 && (
-        <View style={styles.scrollHint} pointerEvents="none">
-          <Text style={styles.scrollHintText}>›</Text>
-        </View>
-      )}
-    </View>
-  )
-}
-
 /**
- * Pick a position inside the scene for the i-th mochi. Distributed
- * evenly along the x-axis with a sin-wave vertical offset around the
- * horizon line so the placement feels intentional rather than gridded.
+ * Pick a position for the i-th mochi inside a level's slice. Spreads
+ * evenly along x, with a sin-wave vertical offset around the bottom
+ * third of the scene so they sit on the village ground.
  */
-function layoutForMochi(i: number, total: number): { x: number; y: number } {
-  const margin = 60
-  const usable = SCENE_WIDTH - margin * 2
+function layoutForMochi(
+  i: number,
+  total: number,
+  sliceStart: number
+): { x: number; y: number } {
+  const margin = 50
+  const usable = LEVEL_SLICE_WIDTH - margin * 2
   const step = total <= 1 ? 0 : usable / Math.max(1, total - 1)
-  const x = margin + step * i
-  // Place mochis around the horizon line. Two staggered rows via the
-  // sin pattern give the village some depth.
-  const horizonY = 360 // approx pixel y for horizon at typical screen height
-  const wave = Math.sin(i * 0.95) * 70
-  const stagger = (i % 2 === 0 ? 0 : 30)
-  return { x, y: horizonY + wave + stagger }
+  const x = sliceStart + margin + step * i
+  // Anchor mochis to the bottom third of the scene where the ground
+  // tends to be in the painting; sin-wave wiggle keeps depth interest.
+  const baseY = 320
+  const wave = Math.sin(i * 0.95) * 60
+  const stagger = i % 2 === 0 ? 0 : 30
+  return { x, y: baseY + wave + stagger }
 }
 
 interface CharProps {
@@ -291,7 +229,7 @@ function MochiCharacter({ mochi, unlocked, x, y }: CharProps) {
       <Text
         style={[
           styles.mochiName,
-          { color: unlocked ? colors.text : 'rgba(0,0,0,0.45)' },
+          { color: unlocked ? colors.text : 'rgba(0,0,0,0.55)' },
         ]}
         numberOfLines={1}
       >
@@ -341,17 +279,16 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
 
-  panorama: { flexDirection: 'row' },
-  scene: {
+  panorama: {
     height: '100%',
-    overflow: 'hidden',
+    paddingBottom: BOTTOM_PAD,
   },
   sign: {
     position: 'absolute',
     top: 16,
-    left: 16,
     backgroundColor: 'rgba(255,255,255,0.92)',
     borderWidth: 2,
+    borderColor: colors.brown600,
     borderRadius: radius.md,
     paddingHorizontal: space.md,
     paddingVertical: 6,
@@ -360,6 +297,7 @@ const styles = StyleSheet.create({
   signTitle: {
     fontSize: fontSizes.sm,
     fontFamily: 'Nunito_900Black',
+    color: colors.brown700,
   },
   signCount: {
     fontSize: fontSizes.xs,
@@ -368,6 +306,7 @@ const styles = StyleSheet.create({
   },
   signBadge: {
     alignSelf: 'flex-start',
+    backgroundColor: colors.success500,
     borderRadius: radius.pill,
     paddingHorizontal: 8,
     paddingVertical: 1,
@@ -417,24 +356,6 @@ const styles = StyleSheet.create({
     height: 8,
     borderRadius: 4,
     backgroundColor: 'rgba(0,0,0,0.18)',
-  },
-
-  scrollHint: {
-    position: 'absolute',
-    right: 12,
-    top: '45%',
-    backgroundColor: 'rgba(0,0,0,0.18)',
-    width: 24,
-    height: 36,
-    borderRadius: 12,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  scrollHintText: {
-    color: '#fff',
-    fontSize: 22,
-    lineHeight: 22,
-    fontFamily: 'Nunito_900Black',
   },
 
   emptyShell: {
