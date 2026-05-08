@@ -29,6 +29,7 @@ interface Props {
   /** Course content — used to resolve lesson ids back to lesson objects for review. */
   levels: Level[]
   onSwitchLanguage: () => void
+  onOpenSettings: () => void
   onResetProgress: () => void
   onResetProfile: () => void
   onSignOut: () => void
@@ -51,6 +52,7 @@ export default function ProfileScreen({
   offline,
   levels,
   onSwitchLanguage,
+  onOpenSettings,
   onResetProgress,
   onResetProfile,
   onSignOut,
@@ -191,6 +193,11 @@ export default function ProfileScreen({
       <View style={styles.section}>
         <Text style={styles.sectionHead}>Settings</Text>
         <View style={styles.actionsCol}>
+          <ActionButton
+            label="App settings"
+            tone="neutral"
+            onPress={onOpenSettings}
+          />
           <ActionButton
             label="Switch course language"
             tone="neutral"

@@ -9,7 +9,19 @@ import {
   View,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import type { Lesson, Level, Topic } from '@mochilang/shared'
+import type {
+  Lesson,
+  Level,
+  LevelExamsPassed,
+  Topic,
+  TopicExamsPassed,
+} from '@mochilang/shared'
+import {
+  isLevelCleared,
+  isTopicCleared,
+  isTopicUnlocked,
+  previousTopic,
+} from '@mochilang/shared'
 import { useProgress } from '../state/useProgress'
 import { useCourse } from '../state/useCourse'
 import LedgeButton from '../components/LedgeButton'
@@ -17,8 +29,13 @@ import LessonNode from '../components/LessonNode'
 import { colors, fontSizes, radius, space, tintForTheme } from '../lib/theme'
 
 interface Props {
+  courseId: string
+  examsPassed: TopicExamsPassed
+  levelExamsPassed: LevelExamsPassed
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
+  onTakeExam: (topic: Topic) => void
+  onTakeLevelExam: (level: Level) => void
 }
 
 /**
@@ -35,9 +52,17 @@ const POPOVER_GAP = 8 // vertical gap between node and popover
  * a popover card; we auto-scroll the path so the popover stays visible
  * (and flip above when the node is near the screen bottom).
  */
-export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
+export default function HomeScreen({
+  courseId,
+  examsPassed,
+  levelExamsPassed,
+  onSelectLesson,
+  onOpenGuide,
+  onTakeExam,
+  onTakeLevelExam,
+}: Props) {
   const progress = useProgress()
-  const course = useCourse('zh-en')
+  const course = useCourse(courseId)
   const [openLessonId, setOpenLessonId] = useState<string | null>(null)
   const [popoverPlacement, setPopoverPlacement] = useState<'below' | 'above'>(
     'below'
@@ -50,6 +75,21 @@ export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
   const rowRefs = useRef<Record<string, View | null>>({})
 
   const isCompleted = (id: string) => !!progress.state.results[id]
+
+  // Cumulative lesson index where each topic starts, reset at level
+  // boundaries. Used by the lesson-path sine offset so the snake keeps
+  // its phase across topic headers instead of resetting at every topic.
+  const lessonStartIndices = useMemo(() => {
+    const map = new Map<string, number>()
+    for (const level of course.levels) {
+      let cumulative = 0
+      for (const topic of level.topics) {
+        map.set(topic.id, cumulative)
+        cumulative += topic.lessons.length
+      }
+    }
+    return map
+  }, [course.levels])
 
   function handleNodePress(lessonId: string) {
     if (openLessonId === lessonId) {
@@ -124,7 +164,8 @@ export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
   const currentScrollY = useRef(0)
 
   // Find the next-up lesson + the topic/level that contains it for the
-  // hero card.
+  // hero card. Skips locked topics so the hero never advertises a
+  // lesson the user can't open.
   const heroInfo = useMemo(() => {
     let nextId: string | null = null
     let heroLevel: Level | null = null
@@ -133,6 +174,17 @@ export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
     outer: for (const level of course.levels) {
       for (let t = 0; t < level.topics.length; t++) {
         const topic = level.topics[t]
+        if (
+          !isTopicUnlocked(
+            course.levels,
+            topic.id,
+            progress.state.results,
+            examsPassed,
+            levelExamsPassed
+          )
+        ) {
+          continue
+        }
         for (const lesson of topic.lessons) {
           if (!isCompleted(lesson.id)) {
             nextId = lesson.id
@@ -154,7 +206,7 @@ export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
     }
     return { nextId, heroLevel, heroTopic, heroTopicIndex }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [course.levels, progress.state.results])
+  }, [course.levels, progress.state.results, examsPassed, levelExamsPassed])
 
   if (course.loading && course.levels.length === 0) {
     return (
@@ -212,21 +264,49 @@ export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
         </LinearGradient>
       )}
 
-      {course.levels.map((level) => (
-        <LevelSection
-          key={level.id}
-          level={level}
-          isCompleted={isCompleted}
-          nextId={nextId}
-          openLessonId={openLessonId}
-          popoverPlacement={popoverPlacement}
-          rowRefs={rowRefs}
-          onSelectLesson={onSelectLesson}
-          onOpenGuide={onOpenGuide}
-          onNodePress={handleNodePress}
-          onCloseLesson={() => setOpenLessonId(null)}
-        />
-      ))}
+      {course.levels.map((level, levelIdx) => {
+        const levelDone = isLevelCleared(
+          level,
+          progress.state.results,
+          examsPassed,
+          levelExamsPassed
+        )
+        const prevLevelCleared =
+          levelIdx === 0 ||
+          isLevelCleared(
+            course.levels[levelIdx - 1],
+            progress.state.results,
+            examsPassed,
+            levelExamsPassed
+          )
+        const showLevelExam =
+          prevLevelCleared && level.topics.length >= 2 && !levelDone
+        const levelExamPassed = levelExamsPassed[level.id] === true
+        return (
+          <LevelSection
+            key={level.id}
+            level={level}
+            allLevels={course.levels}
+            progressResults={progress.state.results}
+            examsPassed={examsPassed}
+            levelExamsPassed={levelExamsPassed}
+            showLevelExam={showLevelExam}
+            levelExamPassed={levelExamPassed}
+            lessonStartIndices={lessonStartIndices}
+            isCompleted={isCompleted}
+            nextId={nextId}
+            openLessonId={openLessonId}
+            popoverPlacement={popoverPlacement}
+            rowRefs={rowRefs}
+            onSelectLesson={onSelectLesson}
+            onOpenGuide={onOpenGuide}
+            onTakeExam={onTakeExam}
+            onTakeLevelExam={onTakeLevelExam}
+            onNodePress={handleNodePress}
+            onCloseLesson={() => setOpenLessonId(null)}
+          />
+        )
+      })}
     </ScrollView>
   )
 }
@@ -242,6 +322,14 @@ function Stat({ label, value }: { label: string; value: string }) {
 
 interface SectionProps {
   level: Level
+  allLevels: Level[]
+  progressResults: Record<string, unknown>
+  examsPassed: TopicExamsPassed
+  levelExamsPassed: LevelExamsPassed
+  showLevelExam: boolean
+  levelExamPassed: boolean
+  /** Cumulative lesson index per topic id, scoped to this level. */
+  lessonStartIndices: Map<string, number>
   isCompleted: (id: string) => boolean
   nextId: string | null
   openLessonId: string | null
@@ -249,12 +337,21 @@ interface SectionProps {
   rowRefs: React.MutableRefObject<Record<string, View | null>>
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
+  onTakeExam: (topic: Topic) => void
+  onTakeLevelExam: (level: Level) => void
   onNodePress: (lessonId: string) => void
   onCloseLesson: () => void
 }
 
 function LevelSection({
   level,
+  allLevels,
+  progressResults,
+  examsPassed,
+  levelExamsPassed,
+  showLevelExam,
+  levelExamPassed,
+  lessonStartIndices,
   isCompleted,
   nextId,
   openLessonId,
@@ -262,6 +359,8 @@ function LevelSection({
   rowRefs,
   onSelectLesson,
   onOpenGuide,
+  onTakeExam,
+  onTakeLevelExam,
   onNodePress,
   onCloseLesson,
 }: SectionProps) {
@@ -279,22 +378,53 @@ function LevelSection({
         <Text style={styles.levelPill}>{level.name}</Text>
         <View style={styles.dividerLine} />
       </View>
-      {level.topics.map((topic, ti) => (
-        <TopicCard
-          key={topic.id}
-          topic={topic}
-          topicNumber={ti + 1}
-          isCompleted={isCompleted}
-          nextId={nextId}
-          openLessonId={openLessonId}
-          popoverPlacement={popoverPlacement}
-          rowRefs={rowRefs}
-          onSelectLesson={onSelectLesson}
-          onOpenGuide={onOpenGuide}
-          onNodePress={onNodePress}
-          onCloseLesson={onCloseLesson}
-        />
-      ))}
+      {showLevelExam && (
+        <Pressable
+          onPress={() => onTakeLevelExam(level)}
+          style={({ pressed }) => [
+            styles.levelExamBtn,
+            pressed && { transform: [{ translateY: 1 }] },
+          ]}
+        >
+          <Text style={styles.levelExamBtnText}>
+            📝 {levelExamPassed ? 'Retake level exam' : `Skip ${level.id.toUpperCase()} — level exam`}
+          </Text>
+        </Pressable>
+      )}
+      {level.topics.map((topic, ti) => {
+        const unlocked = isTopicUnlocked(
+          allLevels,
+          topic.id,
+          progressResults,
+          examsPassed,
+          levelExamsPassed
+        )
+        const cleared = isTopicCleared(topic, progressResults, examsPassed)
+        const examPassed = examsPassed[topic.id] === true
+        const prev = unlocked ? null : previousTopic(allLevels, topic.id)
+        return (
+          <TopicCard
+            key={topic.id}
+            topic={topic}
+            topicNumber={ti + 1}
+            lessonStartIdx={lessonStartIndices.get(topic.id) ?? 0}
+            unlocked={unlocked}
+            cleared={cleared}
+            examPassed={examPassed}
+            previousTopic={prev}
+            isCompleted={isCompleted}
+            nextId={nextId}
+            openLessonId={openLessonId}
+            popoverPlacement={popoverPlacement}
+            rowRefs={rowRefs}
+            onSelectLesson={onSelectLesson}
+            onOpenGuide={onOpenGuide}
+            onTakeExam={onTakeExam}
+            onNodePress={onNodePress}
+            onCloseLesson={onCloseLesson}
+          />
+        )
+      })}
     </View>
   )
 }
@@ -302,6 +432,12 @@ function LevelSection({
 interface TopicProps {
   topic: Topic
   topicNumber: number
+  /** Cumulative lesson index this topic starts at within its level. */
+  lessonStartIdx: number
+  unlocked: boolean
+  cleared: boolean
+  examPassed: boolean
+  previousTopic: Topic | null
   isCompleted: (id: string) => boolean
   nextId: string | null
   openLessonId: string | null
@@ -309,6 +445,7 @@ interface TopicProps {
   rowRefs: React.MutableRefObject<Record<string, View | null>>
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
+  onTakeExam: (topic: Topic) => void
   onNodePress: (lessonId: string) => void
   onCloseLesson: () => void
 }
@@ -316,6 +453,11 @@ interface TopicProps {
 function TopicCard({
   topic,
   topicNumber,
+  lessonStartIdx,
+  unlocked,
+  cleared,
+  examPassed,
+  previousTopic: prevTopic,
   isCompleted,
   nextId,
   openLessonId,
@@ -323,6 +465,7 @@ function TopicCard({
   rowRefs,
   onSelectLesson,
   onOpenGuide,
+  onTakeExam,
   onNodePress,
   onCloseLesson,
 }: TopicProps) {
@@ -335,9 +478,16 @@ function TopicCard({
   // orders siblings within the same parent, so we have to bump at every
   // level the popover wants to escape.
   const topicHasOpen = openLessonId !== null && topic.lessons.some((l) => l.id === openLessonId)
+  const showExamButton = unlocked && !allDone && topic.lessons.length >= 2
 
   return (
-    <View style={[styles.topic, topicHasOpen && styles.topicOpen]}>
+    <View
+      style={[
+        styles.topic,
+        topicHasOpen && styles.topicOpen,
+        !unlocked && styles.topicLocked,
+      ]}
+    >
       <View
         style={[
           styles.topicHeader,
@@ -354,8 +504,9 @@ function TopicCard({
               <Text style={[styles.topicEyebrow, { color: tint.fg }]}>
                 Topic {topicNumber}
               </Text>
-              {allDone && (
-                <Text style={styles.topicDone}>✓</Text>
+              {(cleared || allDone) && <Text style={styles.topicDone}>✓</Text>}
+              {examPassed && !allDone && (
+                <Text style={styles.topicExamTag}>Exam passed</Text>
               )}
             </View>
             <Text style={[styles.topicTitle, { color: tint.fg }]}>
@@ -364,6 +515,13 @@ function TopicCard({
             <Text style={[styles.topicDesc, { color: tint.fg }]}>
               {topic.description}
             </Text>
+            {!unlocked && prevTopic && (
+              <View style={styles.lockBadge}>
+                <Text style={styles.lockBadgeText}>
+                  🔒 Finish {prevTopic.title} or pass its exam
+                </Text>
+              </View>
+            )}
           </View>
           <View style={styles.topicActions}>
             {topic.guide && (
@@ -380,6 +538,20 @@ function TopicCard({
                 </Text>
               </Pressable>
             )}
+            {showExamButton && (
+              <Pressable
+                onPress={() => onTakeExam(topic)}
+                style={({ pressed }) => [
+                  styles.notesBtn,
+                  { borderColor: tint.fg },
+                  pressed && { transform: [{ translateY: 1 }] },
+                ]}
+              >
+                <Text style={[styles.notesBtnText, { color: tint.fg }]}>
+                  📝 {examPassed ? 'Retake' : 'Skip exam'}
+                </Text>
+              </Pressable>
+            )}
             <View style={styles.progressPill}>
               <Text style={styles.progressPillText}>
                 {completed} / {topic.lessons.length}
@@ -391,7 +563,7 @@ function TopicCard({
 
       <View style={styles.path}>
         {topic.lessons.map((lesson, idx) => {
-          const offset = Math.sin(idx * (Math.PI / 4)) * 80
+          const offset = Math.sin((lessonStartIdx + idx) * (Math.PI / 4)) * 80
           const isOpen = openLessonId === lesson.id
           return (
             <View
@@ -416,9 +588,10 @@ function TopicCard({
                 lesson={lesson}
                 done={isCompleted(lesson.id)}
                 isNext={lesson.id === nextId}
-                onPress={() => onNodePress(lesson.id)}
+                onPress={() => unlocked && onNodePress(lesson.id)}
+                locked={!unlocked}
               />
-              {isOpen && (
+              {isOpen && unlocked && (
                 <LessonPopover
                   lesson={lesson}
                   done={isCompleted(lesson.id)}
@@ -579,12 +752,30 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     fontFamily: 'Nunito_900Black',
   },
+  levelExamBtn: {
+    alignSelf: 'center',
+    backgroundColor: colors.primary100,
+    borderColor: colors.primary500,
+    borderWidth: 2,
+    borderBottomWidth: 4,
+    borderRadius: radius.pill,
+    paddingHorizontal: space.lg,
+    paddingVertical: 8,
+    marginTop: 4,
+    marginBottom: space.sm,
+  },
+  levelExamBtnText: {
+    color: colors.primary700,
+    fontSize: fontSizes.sm,
+    fontFamily: 'Nunito_900Black',
+  },
 
   // `position: 'relative'` is required by RN-Web for zIndex to map to a
   // CSS stacking context; native RN respects zIndex on plain Views, so
   // it's a no-op there.
   topic: { gap: space.sm, position: 'relative', zIndex: 1 },
   topicOpen: { zIndex: 30, elevation: 30 },
+  topicLocked: { opacity: 0.6 },
   topicHeader: {
     borderWidth: 2,
     borderRadius: radius.md,
@@ -615,6 +806,31 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
     overflow: 'hidden',
     fontFamily: 'Nunito_900Black',
+  },
+  topicExamTag: {
+    fontSize: 10,
+    color: colors.success700,
+    backgroundColor: colors.success100,
+    paddingHorizontal: 6,
+    paddingVertical: 1,
+    borderRadius: radius.pill,
+    overflow: 'hidden',
+    fontFamily: 'Nunito_900Black',
+    letterSpacing: 0.6,
+    textTransform: 'uppercase',
+  },
+  lockBadge: {
+    marginTop: 6,
+    backgroundColor: 'rgba(0,0,0,0.06)',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: radius.pill,
+    alignSelf: 'flex-start',
+  },
+  lockBadgeText: {
+    fontSize: fontSizes.xs,
+    fontFamily: 'Nunito_700Bold',
+    color: colors.text,
   },
   topicTitle: {
     fontSize: fontSizes.xl,

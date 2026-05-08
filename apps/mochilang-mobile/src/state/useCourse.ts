@@ -1,23 +1,17 @@
 import { useEffect, useState } from 'react'
 import { api, ApiError, type Level } from '@mochilang/shared'
-import courseZhEn from '../../assets/course-zh-en.json'
-
-interface CourseEnvelope {
-  id: string
-  levels: Level[]
-}
+import { COURSE_BUNDLES, type CourseEnvelope } from '../data/courseBundles'
 
 /**
  * Mobile useCourse — bundled JSON fallback + API refresh.
  *
- * Metro inlines `course-zh-en.json` at build time so the app has the
- * full curriculum on first launch without any network round-trip. The
- * effect then re-fetches `/api/content/courses/:id` to pick up any
- * server-side updates; on failure we silently keep the bundled copy.
+ * Metro inlines bundled course JSON at build time (see
+ * src/data/courseBundles.ts) so the app has full curriculum on first
+ * launch without any network round-trip. The effect then re-fetches
+ * `/api/content/courses/:id` to pick up any server-side updates; on
+ * failure we silently keep the bundled copy.
  */
-const BUNDLE: Record<string, CourseEnvelope> = {
-  'zh-en': courseZhEn as unknown as CourseEnvelope,
-}
+const BUNDLE: Record<string, CourseEnvelope> = COURSE_BUNDLES
 
 function levelsFromBundle(courseId: string): Level[] {
   return BUNDLE[courseId]?.levels ?? []

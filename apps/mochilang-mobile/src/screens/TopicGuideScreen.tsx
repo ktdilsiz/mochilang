@@ -1,6 +1,6 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
-import * as Speech from 'expo-speech'
 import type { GuideExample, GuideSection, Topic } from '@mochilang/shared'
+import { speak } from '../lib/tts'
 import { colors, fontSizes, radius, space, tintForTheme } from '../lib/theme'
 import LedgeButton from '../components/LedgeButton'
 
@@ -111,8 +111,7 @@ function ExamplesBlock({ rows }: { rows: GuideExample[] }) {
             <Text style={styles.exampleSource}>{r.source}</Text>
             <Pressable
               onPress={() => {
-                Speech.stop()
-                Speech.speak(r.source, { language: 'zh-CN' })
+                speak(r.source)
               }}
               accessibilityLabel={`Play "${r.source}"`}
               accessibilityRole="button"

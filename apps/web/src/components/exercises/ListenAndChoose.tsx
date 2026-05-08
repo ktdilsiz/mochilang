@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import type { ListenAndChooseExercise } from '@mochilang/shared'
 import { speak } from '../../lib/tts'
+import { useSettings } from '../../settings'
 import './exercise.css'
 
 interface Props {
@@ -16,10 +17,12 @@ export default function ListenAndChoose({
   locked,
   onSelect,
 }: Props) {
-  // Auto-play once on mount.
+  const { state: settings } = useSettings()
+
+  // Auto-play once on mount when the user has opted in.
   useEffect(() => {
-    speak(exercise.spokenText)
-  }, [exercise.spokenText])
+    if (settings.autoPlayAudio) speak(exercise.spokenText)
+  }, [exercise.spokenText, settings.autoPlayAudio])
 
   return (
     <div className="ex-root">

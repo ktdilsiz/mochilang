@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import * as Speech from 'expo-speech'
 import type { ListenAndChooseExercise } from '@mochilang/shared'
+import { speak } from '../../lib/tts'
+import { useSettings } from '../../state/useSettings'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -11,21 +12,18 @@ interface Props {
   onSelect: (value: string) => void
 }
 
-function speak(text: string) {
-  Speech.stop()
-  Speech.speak(text, { language: 'zh-CN', rate: 0.9 })
-}
-
 export default function ListenAndChoose({
   exercise,
   selected,
   locked,
   onSelect,
 }: Props) {
-  // Auto-play once on mount.
+  const { state: settings } = useSettings()
+
+  // Auto-play once on mount, when the user has opted in.
   useEffect(() => {
-    speak(exercise.spokenText)
-  }, [exercise.spokenText])
+    if (settings.autoPlayAudio) speak(exercise.spokenText)
+  }, [exercise.spokenText, settings.autoPlayAudio])
 
   return (
     <View style={styles.root}>

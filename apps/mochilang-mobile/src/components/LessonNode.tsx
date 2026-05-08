@@ -8,6 +8,8 @@ interface Props {
   done: boolean
   isNext: boolean
   onPress: () => void
+  /** When true, render the node muted/disabled (topic gate). */
+  locked?: boolean
 }
 
 /**
@@ -17,7 +19,7 @@ interface Props {
  * gets an animated pulse ring (`Animated.loop` driving scale + opacity)
  * to draw the eye, equivalent to the web's CSS `@keyframes home-pulse`.
  */
-export default function LessonNode({ lesson, done, isNext, onPress }: Props) {
+export default function LessonNode({ lesson, done, isNext, onPress, locked }: Props) {
   const tint = tintForTheme(lesson.theme)
   const tone = done
     ? {
@@ -78,7 +80,12 @@ export default function LessonNode({ lesson, done, isNext, onPress }: Props) {
       )}
       <Pressable
         accessibilityRole="button"
-        accessibilityLabel={lesson.title + (done ? ' (completed)' : '')}
+        accessibilityLabel={
+          lesson.title +
+          (done ? ' (completed)' : '') +
+          (locked ? ' (locked)' : '')
+        }
+        disabled={locked}
         onPress={onPress}
         style={({ pressed }) => [
           styles.node,
@@ -87,11 +94,12 @@ export default function LessonNode({ lesson, done, isNext, onPress }: Props) {
             borderColor: tone.edge,
             borderBottomColor: tone.edgeDeep,
           },
-          pressed && { transform: [{ translateY: 2 }] },
+          pressed && !locked && { transform: [{ translateY: 2 }] },
+          locked && styles.nodeLocked,
         ]}
       >
         <Text style={[styles.icon, { color: tone.fg }]}>
-          {done ? '✓' : nodeGlyph(lesson)}
+          {done ? '✓' : locked ? '🔒' : nodeGlyph(lesson)}
         </Text>
       </Pressable>
     </View>
@@ -155,5 +163,8 @@ const styles = StyleSheet.create({
     height: 104,
     borderRadius: radius.pill,
     borderWidth: 4,
+  },
+  nodeLocked: {
+    opacity: 0.55,
   },
 })

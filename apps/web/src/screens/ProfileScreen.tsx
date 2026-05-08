@@ -15,6 +15,7 @@ interface Props {
   /** Course content — used to resolve lesson ids back to lesson objects for review. */
   levels: Level[]
   onSwitchLanguage: () => void
+  onOpenSettings: () => void
   onResetProgress: () => void
   onResetProfile: () => void
   onSignOut: () => void
@@ -29,6 +30,7 @@ export default function ProfileScreen({
   offline,
   levels,
   onSwitchLanguage,
+  onOpenSettings,
   onResetProgress,
   onResetProfile,
   onSignOut,
@@ -133,6 +135,13 @@ export default function ProfileScreen({
       <section className="profile-section">
         <h3>Settings</h3>
         <div className="profile-actions">
+          <button
+            type="button"
+            className="ledge-button tone-neutral profile-action"
+            onClick={onOpenSettings}
+          >
+            ⚙️ App settings
+          </button>
           <button
             type="button"
             className="ledge-button tone-neutral profile-action"

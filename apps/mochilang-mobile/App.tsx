@@ -19,10 +19,13 @@ import {
 } from '@expo-google-fonts/nunito'
 import {
   configureApiBaseUrl,
+  parseCourseId,
   setOfflineMode,
   type Lesson,
+  type Level,
   type Topic,
 } from '@mochilang/shared'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import LoginScreen from './src/screens/LoginScreen'
 import HomeScreen from './src/screens/HomeScreen'
 import LessonScreen from './src/screens/LessonScreen'
@@ -30,11 +33,21 @@ import LeagueScreen from './src/screens/LeagueScreen'
 import FriendsScreen from './src/screens/FriendsScreen'
 import ProfileScreen from './src/screens/ProfileScreen'
 import TopicGuideScreen from './src/screens/TopicGuideScreen'
+import LanguageSelectScreen from './src/screens/LanguageSelectScreen'
+import SettingsScreen from './src/screens/SettingsScreen'
+import TopicExamScreen from './src/screens/TopicExamScreen'
+import LevelExamScreen from './src/screens/LevelExamScreen'
+import LevelExamIntroScreen from './src/screens/LevelExamIntroScreen'
 import ProfileSetup from './src/components/ProfileSetup'
 import { useProgress } from './src/state/useProgress'
 import { useProfile } from './src/state/useProfile'
 import { useCourse } from './src/state/useCourse'
+import { useTopicExams } from './src/state/useTopicExams'
+import { useLevelExams } from './src/state/useLevelExams'
 import { colors } from './src/lib/theme'
+
+const SELECTED_COURSE_KEY = 'mochilang:selectedCourse'
+const DEFAULT_COURSE_ID = 'zh-en'
 
 // API base URL — Expo Constants extra. Override in app.json for LAN/prod.
 configureApiBaseUrl(
@@ -47,9 +60,14 @@ configureApiBaseUrl(
 setOfflineMode(true)
 
 type RootStackParamList = {
+  LanguageSelect: { initialCourseId: string | null; allowCancel: boolean }
   Tabs: undefined
   Lesson: { lesson: Lesson }
   Guide: { topic: Topic }
+  Settings: undefined
+  Exam: { topic: Topic }
+  LevelExamIntro: { level: Level }
+  LevelExam: { level: Level }
 }
 
 // Convenience alias used at the tab leaves to navigate the parent stack.
@@ -127,37 +145,139 @@ interface SignedInAppProps {
 function SignedInApp({ onSignOut }: SignedInAppProps) {
   const progress = useProgress()
   const profile = useProfile()
-  const course = useCourse('zh-en')
+  const exams = useTopicExams()
+  const levelExams = useLevelExams()
+  const [courseId, setCourseId] = useState<string | null>(null)
+  // null while we read AsyncStorage; once known we either render the
+  // picker (no stored course) or the tabs (have a course).
+  const [hydrated, setHydrated] = useState(false)
+
+  useEffect(() => {
+    void (async () => {
+      try {
+        const stored = await AsyncStorage.getItem(SELECTED_COURSE_KEY)
+        if (stored && parseCourseId(stored)) {
+          setCourseId(stored)
+        }
+      } catch {
+        /* ignore */
+      } finally {
+        setHydrated(true)
+      }
+    })()
+  }, [])
+
+  const course = useCourse(courseId ?? DEFAULT_COURSE_ID)
 
   // First-launch profile setup overlay — same trigger as web. Stays
   // mounted on top of the navigator until the user has picked a name.
   const showSetup = profile.state.name === null
 
+  function handleSelectCourse(id: string) {
+    setCourseId(id)
+    void AsyncStorage.setItem(SELECTED_COURSE_KEY, id).catch(() => {})
+  }
+
+  if (!hydrated) {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.bg }}>
+        <ActivityIndicator size="large" />
+      </View>
+    )
+  }
+
   return (
     <NavigationContainer>
       <StatusBar style="auto" />
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName={courseId ? 'Tabs' : 'LanguageSelect'}
+      >
+        <Stack.Screen
+          name="LanguageSelect"
+          initialParams={{ initialCourseId: courseId, allowCancel: false }}
+        >
+          {(props) => (
+            <LanguageSelectScreen
+              initialCourseId={props.route.params?.initialCourseId ?? courseId}
+              onSelect={(id) => {
+                handleSelectCourse(id)
+                props.navigation.reset({ index: 0, routes: [{ name: 'Tabs' }] })
+              }}
+              onCancel={
+                props.route.params?.allowCancel
+                  ? () => props.navigation.goBack()
+                  : undefined
+              }
+            />
+          )}
+        </Stack.Screen>
         <Stack.Screen name="Tabs">
-          {() => (
+          {(props) => (
             <SignedInTabs
               progress={progress}
               profile={profile}
               course={course}
+              courseId={courseId ?? DEFAULT_COURSE_ID}
+              exams={exams}
+              levelExams={levelExams}
               onSignOut={onSignOut}
+              onSwitchLanguage={() =>
+                props.navigation.navigate('LanguageSelect', {
+                  initialCourseId: courseId,
+                  allowCancel: true,
+                })
+              }
+              onOpenSettings={() => props.navigation.navigate('Settings')}
+              onTakeExam={(topic) => props.navigation.navigate('Exam', { topic })}
+              onTakeLevelExam={(level) =>
+                props.navigation.navigate('LevelExamIntro', { level })
+              }
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name="Lesson" options={{ presentation: 'modal' }}>
+          {(props) => <LessonRoute progress={progress} {...props} />}
+        </Stack.Screen>
+        <Stack.Screen name="Guide" options={{ presentation: 'modal' }}>
+          {(props) => <GuideRoute {...props} />}
+        </Stack.Screen>
+        <Stack.Screen name="Settings">
+          {(props) => <SettingsScreen onBack={() => props.navigation.goBack()} />}
+        </Stack.Screen>
+        <Stack.Screen name="Exam" options={{ presentation: 'modal' }}>
+          {(props) => (
+            <TopicExamScreen
+              topic={props.route.params.topic}
+              onPass={() => exams.pass(props.route.params.topic.id)}
+              onBack={() => props.navigation.goBack()}
             />
           )}
         </Stack.Screen>
         <Stack.Screen
-          name="Lesson"
+          name="LevelExamIntro"
           options={{ presentation: 'modal' }}
         >
-          {(props) => <LessonRoute progress={progress} {...props} />}
+          {(props) => (
+            <LevelExamIntroScreen
+              level={props.route.params.level}
+              onStart={() =>
+                props.navigation.replace('LevelExam', {
+                  level: props.route.params.level,
+                })
+              }
+              onCancel={() => props.navigation.goBack()}
+            />
+          )}
         </Stack.Screen>
-        <Stack.Screen
-          name="Guide"
-          options={{ presentation: 'modal' }}
-        >
-          {(props) => <GuideRoute {...props} />}
+        <Stack.Screen name="LevelExam" options={{ presentation: 'modal' }}>
+          {(props) => (
+            <LevelExamScreen
+              level={props.route.params.level}
+              onPass={() => levelExams.pass(props.route.params.level.id)}
+              onBack={() => props.navigation.goBack()}
+            />
+          )}
         </Stack.Screen>
       </Stack.Navigator>
 
@@ -174,10 +294,29 @@ interface SignedInTabsProps {
   progress: ReturnType<typeof useProgress>
   profile: ReturnType<typeof useProfile>
   course: ReturnType<typeof useCourse>
+  courseId: string
+  exams: ReturnType<typeof useTopicExams>
+  levelExams: ReturnType<typeof useLevelExams>
   onSignOut: () => void
+  onSwitchLanguage: () => void
+  onOpenSettings: () => void
+  onTakeExam: (topic: Topic) => void
+  onTakeLevelExam: (level: Level) => void
 }
 
-function SignedInTabs({ progress, profile, course, onSignOut }: SignedInTabsProps) {
+function SignedInTabs({
+  progress,
+  profile,
+  course,
+  courseId,
+  exams,
+  levelExams,
+  onSignOut,
+  onSwitchLanguage,
+  onOpenSettings,
+  onTakeExam,
+  onTakeLevelExam,
+}: SignedInTabsProps) {
   return (
     <Tabs.Navigator
       screenOptions={{
@@ -196,6 +335,9 @@ function SignedInTabs({ progress, profile, course, onSignOut }: SignedInTabsProp
       >
         {(props) => (
           <HomeScreen
+            courseId={courseId}
+            examsPassed={exams.state}
+            levelExamsPassed={levelExams.state}
             onSelectLesson={(lesson) =>
               (props.navigation.getParent() as RootNav | undefined)?.navigate('Lesson', { lesson })
             }
@@ -205,6 +347,8 @@ function SignedInTabs({ progress, profile, course, onSignOut }: SignedInTabsProp
                 { topic }
               )
             }
+            onTakeExam={onTakeExam}
+            onTakeLevelExam={onTakeLevelExam}
           />
         )}
       </Tabs.Screen>
@@ -237,8 +381,13 @@ function SignedInTabs({ progress, profile, course, onSignOut }: SignedInTabsProp
             setProfile={profile.setProfile}
             offline={true /* Phase 2 stays offline-only */}
             levels={course.levels}
-            onSwitchLanguage={onSignOut /* repurposed — Phase 3 will add a real picker */}
-            onResetProgress={() => void progress.reset()}
+            onSwitchLanguage={onSwitchLanguage}
+            onOpenSettings={onOpenSettings}
+            onResetProgress={() => {
+              void progress.reset()
+              exams.reset()
+              levelExams.reset()
+            }}
             onResetProfile={() => void profile.reset()}
             onSignOut={onSignOut}
             onSwitchToLogin={onSignOut}

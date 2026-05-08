@@ -1,5 +1,18 @@
-import { useEffect, useState } from 'react'
-import type { Language, Lesson, Level, Topic } from '@mochilang/shared'
+import { useEffect, useMemo, useState } from 'react'
+import type {
+  LanguageInfo,
+  Lesson,
+  Level,
+  LevelExamsPassed,
+  Topic,
+  TopicExamsPassed,
+} from '@mochilang/shared'
+import {
+  isLevelCleared,
+  isTopicCleared,
+  isTopicUnlocked,
+  previousTopic,
+} from '@mochilang/shared'
 import type { ProgressState } from '../state'
 import { iconForLesson } from '../components/lessonIcons'
 import mochiThinking from '../assets/mochi-thinking.png'
@@ -7,11 +20,15 @@ import './HomeScreen.css'
 
 interface Props {
   levels: Level[]
-  language: Language | null
+  language: LanguageInfo | null
   progress: ProgressState
+  examsPassed: TopicExamsPassed
+  levelExamsPassed: LevelExamsPassed
   isCompleted: (id: string) => boolean
   onSelect: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
+  onTakeExam: (topic: Topic) => void
+  onTakeLevelExam: (level: Level) => void
   onSwitchLanguage: () => void
   offline?: boolean
 }
@@ -20,9 +37,13 @@ export default function HomeScreen({
   levels,
   language,
   progress,
+  examsPassed,
+  levelExamsPassed,
   isCompleted,
   onSelect,
   onOpenGuide,
+  onTakeExam,
+  onTakeLevelExam,
   onSwitchLanguage,
   offline,
 }: Props) {
@@ -33,9 +54,27 @@ export default function HomeScreen({
   // met. Built once per render over the full level list.
   const allTopics: Topic[] = levels.flatMap((l) => l.topics)
 
-  // Find the global "next-up" lesson — the first uncompleted lesson when
-  // scanning levels → topics → lessons in order. We track the level + topic
-  // it lives in so the hero banner can advertise it accurately.
+  // Cumulative lesson index where each topic starts, reset at level
+  // boundaries. Drives the sine-wave offset on the lesson path so the
+  // snake keeps its phase across topic headers instead of restarting
+  // at center on every topic. Reset at level dividers so each level
+  // begins the snake fresh.
+  const lessonStartIndices = useMemo(() => {
+    const map = new Map<string, number>()
+    for (const level of levels) {
+      let cumulative = 0
+      for (const topic of level.topics) {
+        map.set(topic.id, cumulative)
+        cumulative += topic.lessons.length
+      }
+    }
+    return map
+  }, [levels])
+
+  // Find the global "next-up" lesson — the first uncompleted lesson in
+  // an unlocked topic when scanning levels → topics → lessons in order.
+  // Locked topics are skipped so the hero never advertises a lesson the
+  // user can't open.
   let nextId: string | null = null
   let heroLevel: Level | null = null
   let heroTopic: Topic | null = null
@@ -43,6 +82,11 @@ export default function HomeScreen({
   outer: for (const level of levels) {
     for (let t = 0; t < level.topics.length; t++) {
       const topic = level.topics[t]
+      if (
+        !isTopicUnlocked(levels, topic.id, progress.results, examsPassed, levelExamsPassed)
+      ) {
+        continue
+      }
       for (const lesson of topic.lessons) {
         if (!isCompleted(lesson.id)) {
           nextId = lesson.id
@@ -117,31 +161,81 @@ export default function HomeScreen({
         </section>
       )}
 
-      {levels.map((level) => {
+      {levels.map((level, levelIdx) => {
         const showLevelHeader = levels.length > 1 || level.id !== 'a1'
         const groups = groupConsecutiveByTheme(level.topics)
+        const levelDone = isLevelCleared(
+          level,
+          progress.results,
+          examsPassed,
+          levelExamsPassed
+        )
+        const levelExamPassed = levelExamsPassed[level.id] === true
+        // Show the level-skip exam offer when the user can actually start
+        // the level (its prerequisite level is cleared or it's the first
+        // level), there's enough material to test against (≥2 topics), and
+        // the level isn't already finished.
+        const prevLevelCleared =
+          levelIdx === 0 ||
+          isLevelCleared(
+            levels[levelIdx - 1],
+            progress.results,
+            examsPassed,
+            levelExamsPassed
+          )
+        const showLevelExam =
+          prevLevelCleared && level.topics.length >= 2 && !levelDone
         return (
           <div key={level.id} className="home-level">
-            {showLevelHeader && <LevelDivider level={level} />}
+            {showLevelHeader && (
+              <LevelDivider
+                level={level}
+                showExam={showLevelExam}
+                examPassed={levelExamPassed}
+                onTakeExam={onTakeLevelExam}
+              />
+            )}
             {groups.map((group, gi) => (
               <div key={`${level.id}-grp-${gi}`} className="home-subgroup">
                 {group.length >= 2 && (
                   <SubThemeDivider theme={group[0].topic.theme} />
                 )}
-                {group.map(({ topic, topicNumber }) => (
-                  <TopicSection
-                    key={topic.id}
-                    topic={topic}
-                    topicNumber={topicNumber}
-                    openId={openId}
-                    setOpenId={setOpenId}
-                    isCompleted={isCompleted}
-                    nextId={nextId}
-                    lockedReason={computeLockReason(topic, allTopics, isCompleted)}
-                    onSelect={onSelect}
-                    onOpenGuide={onOpenGuide}
-                  />
-                ))}
+                {group.map(({ topic, topicNumber }) => {
+                  const unlocked = isTopicUnlocked(
+                    levels,
+                    topic.id,
+                    progress.results,
+                    examsPassed,
+                    levelExamsPassed
+                  )
+                  const cleared = isTopicCleared(topic, progress.results, examsPassed)
+                  const examPassed = examsPassed[topic.id] === true
+                  const prereqReason = unlocked
+                    ? computeLockReason(topic, allTopics, isCompleted)
+                    : null
+                  const hardLockReason = unlocked
+                    ? null
+                    : describeHardLock(levels, topic.id)
+                  return (
+                    <TopicSection
+                      key={topic.id}
+                      topic={topic}
+                      topicNumber={topicNumber}
+                      lessonStartIdx={lessonStartIndices.get(topic.id) ?? 0}
+                      openId={openId}
+                      setOpenId={setOpenId}
+                      isCompleted={isCompleted}
+                      nextId={nextId}
+                      hardLockReason={hardLockReason}
+                      softLockReason={prereqReason}
+                      cleared={cleared}
+                      examPassed={examPassed}
+                      onSelect={onSelect}
+                      onOpenGuide={onOpenGuide}
+                      onTakeExam={onTakeExam}
+                    />
+                  )
+                })}
               </div>
             ))}
           </div>
@@ -157,6 +251,18 @@ export default function HomeScreen({
       )}
     </div>
   )
+}
+
+/**
+ * Describes why a topic is hard-locked: the previous topic isn't done
+ * and its skip-exam isn't passed. Returns a human-readable label that
+ * names the previous topic, or null when there's no previous topic
+ * (which would be a logic error elsewhere).
+ */
+function describeHardLock(levels: Level[], topicId: string): string | null {
+  const prev = previousTopic(levels, topicId)
+  if (!prev) return null
+  return `Finish ${prev.title} or pass its exam to unlock`
 }
 
 /**
@@ -239,9 +345,21 @@ function SubThemeDivider({ theme }: { theme: string }) {
 /**
  * LevelDivider — the thin "A1 — Beginner" bar between fluency tiers.
  * Suppressed when there's only one level so single-tier courses don't
- * show a meaningless header.
+ * show a meaningless header. The optional skip-exam button rides on
+ * the right so the offer is visible without scrolling deep into the
+ * topic list.
  */
-function LevelDivider({ level }: { level: Level }) {
+function LevelDivider({
+  level,
+  showExam,
+  examPassed,
+  onTakeExam,
+}: {
+  level: Level
+  showExam: boolean
+  examPassed: boolean
+  onTakeExam: (level: Level) => void
+}) {
   return (
     <div className="home-level-divider">
       <div className="home-level-divider-line" />
@@ -252,6 +370,16 @@ function LevelDivider({ level }: { level: Level }) {
         </span>
       </div>
       <div className="home-level-divider-line" />
+      {showExam && (
+        <button
+          type="button"
+          className="home-level-exam"
+          onClick={() => onTakeExam(level)}
+          aria-label={`Take ${level.name} skip exam`}
+        >
+          📝 {examPassed ? 'Retake level exam' : 'Skip level exam'}
+        </button>
+      )}
     </div>
   )
 }
@@ -268,40 +396,72 @@ function stripIdPrefix(name: string, id: string): string {
 interface TopicSectionProps {
   topic: Topic
   topicNumber: number
+  /**
+   * Cumulative lesson index this topic starts at within its level.
+   * Drives the sine-wave snake so the phase carries over from the
+   * previous topic instead of restarting at zero.
+   */
+  lessonStartIdx: number
   openId: string | null
   setOpenId: (v: string | null) => void
   isCompleted: (id: string) => boolean
   nextId: string | null
-  /** Soft-lock label, or null if the topic's prerequisites are all met. */
-  lockedReason: string | null
+  /** Hard-lock label — set when the previous topic isn't cleared. */
+  hardLockReason: string | null
+  /** Soft-lock label from `prerequisites`, when prereqs aren't met. */
+  softLockReason: string | null
+  /** True when every lesson is done OR the skip-exam was passed. */
+  cleared: boolean
+  /** True when the user has passed this topic's skip exam. */
+  examPassed: boolean
   onSelect: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
+  onTakeExam: (topic: Topic) => void
 }
 
 function TopicSection({
   topic,
   topicNumber,
+  lessonStartIdx,
   openId,
   setOpenId,
   isCompleted,
   nextId,
-  lockedReason,
+  hardLockReason,
+  softLockReason,
+  cleared,
+  examPassed,
   onSelect,
   onOpenGuide,
+  onTakeExam,
 }: TopicSectionProps) {
   const allDone = topic.lessons.every((l) => isCompleted(l.id))
+  const isLocked = hardLockReason !== null
+  const showExamButton = !isLocked && !allDone && topic.lessons.length >= 2
   return (
-    <section className={'home-topic ' + (lockedReason ? 'home-topic-locked' : '')}>
+    <section
+      className={
+        'home-topic' +
+        (softLockReason ? ' home-topic-locked' : '') +
+        (isLocked ? ' home-topic-hardlocked' : '')
+      }
+    >
       <header className="home-topic-header" data-theme={topic.theme}>
         <div className="home-topic-meta">
           <div className="home-topic-eyebrow">
             Topic {topicNumber}
-            {allDone && <span className="home-topic-done">✓</span>}
+            {(cleared || allDone) && <span className="home-topic-done">✓</span>}
+            {examPassed && !allDone && (
+              <span className="home-topic-exam-tag">Exam passed</span>
+            )}
           </div>
           <h3 className="home-topic-title">{topic.title}</h3>
           <p className="home-topic-desc">{topic.description}</p>
-          {lockedReason && (
-            <div className="home-topic-lock">🔒 {lockedReason}</div>
+          {hardLockReason && (
+            <div className="home-topic-hardlock">🔒 {hardLockReason}</div>
+          )}
+          {!hardLockReason && softLockReason && (
+            <div className="home-topic-lock">🔒 {softLockReason}</div>
           )}
         </div>
         <div className="home-topic-actions">
@@ -315,6 +475,16 @@ function TopicSection({
               📖 <span>Notes</span>
             </button>
           )}
+          {showExamButton && (
+            <button
+              type="button"
+              className="home-topic-exam"
+              onClick={() => onTakeExam(topic)}
+              aria-label={`Take ${topic.title} skip exam`}
+            >
+              📝 <span>{examPassed ? 'Retake exam' : 'Skip exam'}</span>
+            </button>
+          )}
           <div className="home-topic-progress">
             {topic.lessons.filter((l) => isCompleted(l.id)).length} /{' '}
             {topic.lessons.length}
@@ -326,8 +496,8 @@ function TopicSection({
         {topic.lessons.map((lesson, idx) => {
           const done = isCompleted(lesson.id)
           const isNext = lesson.id === nextId
-          const isOpen = openId === lesson.id
-          const offset = Math.sin(idx * (Math.PI / 4)) * 80
+          const isOpen = openId === lesson.id && !isLocked
+          const offset = Math.sin((lessonStartIdx + idx) * (Math.PI / 4)) * 80
           return (
             <div
               key={lesson.id}
@@ -343,11 +513,16 @@ function TopicSection({
                     ? 'home-node-done'
                     : isNext
                       ? 'home-node-next'
-                      : 'home-node-default')
+                      : isLocked
+                        ? 'home-node-locked'
+                        : 'home-node-default')
                 }
                 data-theme={lesson.theme}
-                onClick={() => setOpenId(isOpen ? null : lesson.id)}
-                aria-label={`${lesson.title}${done ? ' (completed)' : ''}`}
+                disabled={isLocked}
+                onClick={() => !isLocked && setOpenId(isOpen ? null : lesson.id)}
+                aria-label={`${lesson.title}${done ? ' (completed)' : ''}${
+                  isLocked ? ' (locked)' : ''
+                }`}
               >
                 {iconForLesson(lesson, { completed: done })}
                 {isNext && !done && <span className="home-node-pulse" />}

@@ -197,6 +197,21 @@ export interface LeagueResponse {
   rows: LeagueRow[]
 }
 
+// ---------- Content shapes ----------
+
+/** One row from GET /api/content/courses. */
+export interface CourseSummary {
+  /** `${target}-${source}` — see packages/shared/src/languages.ts. */
+  id: string
+  /** Level ids in pedagogical order: ["a1","a2",…]. */
+  levels: string[]
+  topicCount: number
+}
+
+export interface CourseIndexResponse {
+  courses: CourseSummary[]
+}
+
 // ---------- Endpoints ----------
 
 export const api = {
@@ -241,6 +256,8 @@ export const api = {
     request<LeagueResponse>('/api/league', { signal }),
 
   // Course content (public — no auth required server-side)
+  listCourses: (signal?: AbortSignal) =>
+    request<CourseIndexResponse>('/api/content/courses', { signal }),
   getCourse: <T = unknown>(courseId: string, signal?: AbortSignal) =>
     request<T>(`/api/content/courses/${encodeURIComponent(courseId)}`, { signal }),
 }

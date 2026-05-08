@@ -140,6 +140,7 @@
   align-items: center;
   gap: 12px;
   margin: 18px 4px 4px;
+  flex-wrap: wrap;
 }
 .home-level-divider-line {
   flex: 1;
@@ -166,6 +167,28 @@
   font-weight: 700;
   color: var(--text-muted);
 }
+.home-level-exam {
+  appearance: none;
+  border: 2px solid var(--primary-500);
+  background: var(--primary-100, #ffe2d6);
+  color: var(--primary-700);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: var(--sans);
+  white-space: nowrap;
+  transition:
+    background-color 100ms,
+    transform 80ms;
+}
+.home-level-exam:hover {
+  background: white;
+}
+.home-level-exam:active {
+  transform: translateY(1px);
+}
 
 /* Topic section header */
 
@@ -191,6 +214,68 @@
   border-radius: var(--radius-pill);
   display: inline-block;
   width: fit-content;
+}
+
+/* Hard-lock — the topic gate. Lessons are not tappable; the only way
+ * forward is to finish the previous topic or pass its skip exam. */
+.home-topic-hardlocked {
+  opacity: 0.55;
+}
+.home-topic-hardlocked .home-path {
+  filter: grayscale(0.4);
+  pointer-events: none;
+}
+.home-topic-hardlock {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.06);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  display: inline-block;
+  width: fit-content;
+}
+
+.home-topic-exam-tag {
+  font-size: 10px;
+  font-weight: 800;
+  background: var(--success-100, #d7f5b5);
+  color: var(--success-700, #3a8c00);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  margin-left: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.home-topic-exam {
+  appearance: none;
+  border: 2px solid currentColor;
+  background: rgba(255, 255, 255, 0.7);
+  color: inherit;
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--sans);
+  white-space: nowrap;
+}
+.home-topic-exam:hover {
+  background: white;
+}
+.home-topic-exam:active {
+  transform: translateY(1px);
+}
+
+.home-node-locked {
+  opacity: 0.6;
+  filter: grayscale(0.6);
+  cursor: not-allowed;
 }
 
 .home-topic-header {

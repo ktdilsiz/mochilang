@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import type { Lesson, Language, Topic } from '@mochilang/shared'
+import type { Lesson, Level, Topic } from '@mochilang/shared'
+import { findLanguage, parseCourseId } from '@mochilang/shared'
 import { useCourse } from './data/lessons'
 import LanguageSelectScreen from './screens/LanguageSelectScreen'
 import LoginScreen from './screens/LoginScreen'
@@ -9,10 +10,17 @@ import LeagueScreen from './screens/LeagueScreen'
 import FriendsScreen from './screens/FriendsScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import TopicGuideScreen from './screens/TopicGuideScreen'
+import SettingsScreen from './screens/SettingsScreen'
+import TopicExamScreen from './screens/TopicExamScreen'
+import LevelExamScreen from './screens/LevelExamScreen'
+import LevelExamIntroScreen from './screens/LevelExamIntroScreen'
 import BottomNav, { type Tab } from './components/BottomNav'
 import ProfileSetup from './components/ProfileSetup'
 import { useProgress } from './state'
 import { useProfile } from './profile'
+import { useSettings } from './settings'
+import { useTopicExams } from './topicExams'
+import { useLevelExams } from './levelExams'
 import { api, ApiError, setOfflineMode } from '@mochilang/shared'
 
 /**
@@ -23,12 +31,41 @@ import { api, ApiError, setOfflineMode } from '@mochilang/shared'
  *   - offline    : explicitly skipped login OR API unreachable; localStorage only
  */
 type AuthState = 'checking' | 'signed-out' | 'signed-in' | 'offline'
-type Screen = 'language-select' | 'tabs' | 'lesson' | 'guide'
+type Screen =
+  | 'language-select'
+  | 'tabs'
+  | 'lesson'
+  | 'guide'
+  | 'settings'
+  | 'exam'
+  | 'level-exam-intro'
+  | 'level-exam'
 
-const SELECTED_LANG_KEY = 'mochilang:selectedLanguage'
+const SELECTED_COURSE_KEY = 'mochilang:selectedCourse'
+const LEGACY_SELECTED_LANG_KEY = 'mochilang:selectedLanguage'
 
 export default function App() {
   const [authState, setAuthState] = useState<AuthState>('checking')
+  const { state: settings } = useSettings()
+
+  // Reflect the theme preference on <html> so CSS can branch on
+  // `[data-theme="dark"]`. `system` clears the attribute and lets
+  // `prefers-color-scheme` take over.
+  useEffect(() => {
+    const root = document.documentElement
+    if (settings.theme === 'system') {
+      root.removeAttribute('data-theme')
+    } else {
+      root.setAttribute('data-theme', settings.theme)
+    }
+  }, [settings.theme])
+
+  // Toggle a class so screens can disable transition/animation rules
+  // when the user prefers reduced motion.
+  useEffect(() => {
+    document.documentElement.classList.toggle('no-anim', !settings.animations)
+  }, [settings.animations])
+
   // `authVersion` increments on logout so the data hooks (useProgress /
   // useProfile) remount cleanly and don't carry stale per-user state.
   const [authVersion, setAuthVersion] = useState(0)
@@ -124,32 +161,51 @@ interface SignedInProps {
 function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
   const [screen, setScreen] = useState<Screen>('language-select')
   const [tab, setTab] = useState<Tab>('home')
-  const [selectedLanguage, setSelectedLanguage] = useState<Language | null>(null)
+  const [courseId, setCourseId] = useState<string | null>(null)
   const [activeLesson, setActiveLesson] = useState<Lesson | null>(null)
   const [activeTopic, setActiveTopic] = useState<Topic | null>(null)
+  const [examTopic, setExamTopic] = useState<Topic | null>(null)
+  const [examLevel, setExamLevel] = useState<Level | null>(null)
   const progress = useProgress()
   const profile = useProfile()
+  const exams = useTopicExams()
+  const levelExams = useLevelExams()
 
   useEffect(() => {
     try {
-      const raw = localStorage.getItem(SELECTED_LANG_KEY)
-      if (raw) {
-        const lang = JSON.parse(raw) as Language
-        setSelectedLanguage(lang)
+      const stored = localStorage.getItem(SELECTED_COURSE_KEY)
+      if (stored && parseCourseId(stored)) {
+        setCourseId(stored)
         setScreen('tabs')
+        return
+      }
+      // Migrate v1 storage: { code: 'zh', ... } → 'zh-en'
+      const legacy = localStorage.getItem(LEGACY_SELECTED_LANG_KEY)
+      if (legacy) {
+        const parsed = JSON.parse(legacy) as { code?: string }
+        if (parsed?.code) {
+          const migrated = `${parsed.code}-en`
+          if (parseCourseId(migrated)) {
+            localStorage.setItem(SELECTED_COURSE_KEY, migrated)
+            localStorage.removeItem(LEGACY_SELECTED_LANG_KEY)
+            setCourseId(migrated)
+            setScreen('tabs')
+          }
+        }
       }
     } catch {
       /* ignore */
     }
   }, [])
 
-  const courseId = selectedLanguage ? `${selectedLanguage.code}-en` : 'zh-en'
-  const { levels } = useCourse(courseId)
+  const activeCourseId = courseId ?? 'zh-en'
+  const { levels } = useCourse(activeCourseId)
+  const targetLang = findLanguage(parseCourseId(activeCourseId)?.target ?? 'zh') ?? null
 
-  function handleLanguageSelect(lang: Language) {
-    setSelectedLanguage(lang)
+  function handleLanguageSelect(id: string) {
+    setCourseId(id)
     try {
-      localStorage.setItem(SELECTED_LANG_KEY, JSON.stringify(lang))
+      localStorage.setItem(SELECTED_COURSE_KEY, id)
     } catch {
       /* ignore */
     }
@@ -167,6 +223,16 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
     setScreen('guide')
   }
 
+  function handleTakeExam(topic: Topic) {
+    setExamTopic(topic)
+    setScreen('exam')
+  }
+
+  function handleTakeLevelExam(level: Level) {
+    setExamLevel(level)
+    setScreen('level-exam-intro')
+  }
+
   function handleLessonComplete(mistakes: number) {
     if (activeLesson) {
       progress.recordCompletion(activeLesson.id, mistakes, activeLesson.xp)
@@ -176,11 +242,12 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
 
   function handleSwitchLanguage() {
     try {
-      localStorage.removeItem(SELECTED_LANG_KEY)
+      localStorage.removeItem(SELECTED_COURSE_KEY)
+      localStorage.removeItem(LEGACY_SELECTED_LANG_KEY)
     } catch {
       /* ignore */
     }
-    setSelectedLanguage(null)
+    setCourseId(null)
     setScreen('language-select')
   }
 
@@ -194,9 +261,12 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
       }
     }
     try {
-      localStorage.removeItem(SELECTED_LANG_KEY)
+      localStorage.removeItem(SELECTED_COURSE_KEY)
+      localStorage.removeItem(LEGACY_SELECTED_LANG_KEY)
       localStorage.removeItem('mochilang:progress:v1')
       localStorage.removeItem('mochilang:profile:v1')
+      localStorage.removeItem('mochilang:topicExams:v1')
+      localStorage.removeItem('mochilang:levelExams:v1')
     } catch {
       /* ignore */
     }
@@ -204,7 +274,16 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
   }
 
   if (screen === 'language-select') {
-    return <LanguageSelectScreen onSelect={handleLanguageSelect} />
+    return (
+      <LanguageSelectScreen
+        initialCourseId={courseId}
+        onSelect={handleLanguageSelect}
+      />
+    )
+  }
+
+  if (screen === 'settings') {
+    return <SettingsScreen onBack={() => setScreen('tabs')} />
   }
 
   if (screen === 'lesson' && activeLesson) {
@@ -226,17 +305,51 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
     )
   }
 
+  if (screen === 'exam' && examTopic) {
+    return (
+      <TopicExamScreen
+        topic={examTopic}
+        onPass={() => exams.pass(examTopic.id)}
+        onBack={() => setScreen('tabs')}
+      />
+    )
+  }
+
+  if (screen === 'level-exam-intro' && examLevel) {
+    return (
+      <LevelExamIntroScreen
+        level={examLevel}
+        onStart={() => setScreen('level-exam')}
+        onCancel={() => setScreen('tabs')}
+      />
+    )
+  }
+
+  if (screen === 'level-exam' && examLevel) {
+    return (
+      <LevelExamScreen
+        level={examLevel}
+        onPass={() => levelExams.pass(examLevel.id)}
+        onBack={() => setScreen('tabs')}
+      />
+    )
+  }
+
   return (
     <>
       {tab === 'home' && (
         <HomeScreen
           levels={levels}
           progress={progress.state}
+          examsPassed={exams.state}
+          levelExamsPassed={levelExams.state}
           isCompleted={progress.isCompleted}
           onSelect={handleLessonSelect}
           onOpenGuide={handleOpenGuide}
+          onTakeExam={handleTakeExam}
+          onTakeLevelExam={handleTakeLevelExam}
           onSwitchLanguage={handleSwitchLanguage}
-          language={selectedLanguage}
+          language={targetLang}
           offline={offline}
         />
       )}
@@ -256,7 +369,12 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
           offline={offline}
           levels={levels}
           onSwitchLanguage={handleSwitchLanguage}
-          onResetProgress={progress.reset}
+          onOpenSettings={() => setScreen('settings')}
+          onResetProgress={() => {
+            void progress.reset()
+            exams.reset()
+            levelExams.reset()
+          }}
           onResetProfile={profile.reset}
           onSignOut={handleSignOut}
           onSwitchToLogin={onSwitchToLogin}
