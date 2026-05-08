@@ -1,14 +1,18 @@
 /**
- * Mochi Village — Phase 1: collection roster.
+ * Mochi Village — collection roster.
  *
- * One mochi per topic. The mochi's "archetype" (role, glyph, flavor)
- * is keyed off the topic's LessonTheme so we don't have to hand-author
- * 60+ mochis — adding a new topic to a course content JSON automatically
- * creates a new collectible. Real artwork will replace the emoji
- * placeholders later; the data model stays the same.
+ * The roster is a fixed-size set of 60 mochies, unlocked one-by-one
+ * as the user accumulates total XP. Independent of course content:
+ * studying zh-en or en-tr or whatever shares the same village
+ * population, since XP is tracked per user, not per course.
+ *
+ * Each mochi has a placeholder "archetype" (role + emoji glyph +
+ * flavor line) cycled through the LessonTheme set so the 60 feel
+ * varied. Real PNG art will replace the glyph later; the data model
+ * doesn't change.
  */
 
-import type { LessonTheme, Level, Topic } from './types'
+import type { LessonTheme } from './types'
 
 export interface MochiArchetype {
   /** Title-cased role appended to "Mochi the …", e.g. "Chef". */
@@ -20,8 +24,8 @@ export interface MochiArchetype {
 }
 
 /**
- * Per-theme mochi archetype. Keep additions in sync with LessonTheme so
- * `MOCHI_ARCHETYPES[topic.theme]` is always defined.
+ * Per-theme mochi archetype. Used to give 60 mochies varied identities
+ * by cycling through these in MOCHI_ROSTER.
  */
 export const MOCHI_ARCHETYPES: Record<LessonTheme, MochiArchetype> = {
   greetings: {
@@ -92,50 +96,92 @@ export const MOCHI_ARCHETYPES: Record<LessonTheme, MochiArchetype> = {
 }
 
 export interface MochiSpec {
-  /** Stable id — currently equal to the topic id. */
+  /** Stable id like 'mochi-1', 'mochi-2', … 'mochi-60'. */
   id: string
-  topicId: string
-  topicTitle: string
-  /** Topic's level id (a1, a2, …) — drives which region the mochi lives in. */
-  levelId: string
-  theme: LessonTheme
+  /** 0-indexed slot in the roster. */
+  index: number
   archetype: MochiArchetype
+  /** Total-XP threshold required to unlock this mochi. */
+  unlockXp: number
+}
+
+export const MOCHI_ROSTER_SIZE = 60
+
+/**
+ * Order in which archetype themes get cycled through the roster.
+ * Front-loaded with welcoming archetypes so the first mochies feel
+ * varied + friendly; later positions repeat archetypes deeper into
+ * the curve.
+ */
+const ARCHETYPE_CYCLE: LessonTheme[] = [
+  'greetings',
+  'basics',
+  'numbers',
+  'family',
+  'food',
+  'verbs',
+  'colors',
+  'weather',
+  'time',
+  'location',
+  'directions',
+  'questions',
+  'review',
+]
+
+/**
+ * XP threshold for the n-th mochi (0-indexed). Mild polynomial curve:
+ *   n=0:  ~10 XP   (immediate first reward)
+ *   n=9:  ~250 XP  (first ten in the first session-ish)
+ *   n=29: ~1,000 XP
+ *   n=59: ~3,050 XP (full roster — long-term aspiration)
+ *
+ * Reachable for dedicated learners; aspirational for casuals. We can
+ * tune the exponent later without changing the data model.
+ */
+function unlockXpFor(n: number): number {
+  // Round to friendly-looking numbers (multiples of 5) so the
+  // milestones feel hand-picked rather than arbitrary.
+  const raw = 10 * Math.pow(n + 1, 1.4)
+  return Math.max(5, Math.round(raw / 5) * 5)
+}
+
+export const MOCHI_ROSTER: MochiSpec[] = Array.from(
+  { length: MOCHI_ROSTER_SIZE },
+  (_, i): MochiSpec => ({
+    id: `mochi-${i + 1}`,
+    index: i,
+    archetype:
+      MOCHI_ARCHETYPES[ARCHETYPE_CYCLE[i % ARCHETYPE_CYCLE.length]],
+    unlockXp: unlockXpFor(i),
+  })
+)
+
+/** True when the user's total XP meets the mochi's threshold. */
+export function mochiUnlocked(mochi: MochiSpec, totalXp: number): boolean {
+  return totalXp >= mochi.unlockXp
 }
 
 /**
- * Build the mochi spec for a single topic. Falls back to the `basics`
- * archetype if the theme is somehow unknown — defensive against future
- * content shapes.
+ * How many mochies the user has unlocked. Roster is sorted by
+ * unlockXp ascending, so the first miss terminates the count.
  */
-export function mochiForTopic(topic: Topic, levelId: string): MochiSpec {
-  return {
-    id: topic.id,
-    topicId: topic.id,
-    topicTitle: topic.title,
-    levelId,
-    theme: topic.theme,
-    archetype: MOCHI_ARCHETYPES[topic.theme] ?? MOCHI_ARCHETYPES.basics,
-  }
-}
-
-export interface VillageRegion {
-  levelId: string
-  levelName: string
-  mochis: MochiSpec[]
-}
-
-/** Group mochis by their level so the village UI can render per-region. */
-export function buildVillageRoster(levels: Level[]): VillageRegion[] {
-  return levels.map((level) => ({
-    levelId: level.id,
-    levelName: level.name,
-    mochis: level.topics.map((t) => mochiForTopic(t, level.id)),
-  }))
-}
-
-/** Total mochis across the whole course. Useful for the header stat. */
-export function rosterSize(levels: Level[]): number {
+export function countUnlockedMochis(totalXp: number): number {
   let n = 0
-  for (const level of levels) n += level.topics.length
+  for (const m of MOCHI_ROSTER) {
+    if (mochiUnlocked(m, totalXp)) n++
+    else break
+  }
   return n
+}
+
+/**
+ * The next mochi the user will unlock — useful for "next at X XP"
+ * teasers. Returns null when the whole roster is unlocked.
+ */
+export function nextMochi(totalXp: number): MochiSpec | null {
+  for (const m of MOCHI_ROSTER) {
+    if (totalXp < m.unlockXp) return m
+  }
+  return null
 }

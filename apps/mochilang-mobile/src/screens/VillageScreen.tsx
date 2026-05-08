@@ -8,9 +8,14 @@ import {
   View,
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { buildVillageRoster } from '@mochilang/shared'
+import {
+  MOCHI_ROSTER_SIZE,
+  countUnlockedMochis,
+  nextMochi,
+} from '@mochilang/shared'
 import { useCourse } from '../state/useCourse'
 import { useLevelExams } from '../state/useLevelExams'
+import { useProgress } from '../state/useProgress'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -36,12 +41,8 @@ export default function VillageScreen({ courseId }: Props) {
   const insets = useSafeAreaInsets()
   const course = useCourse(courseId)
   const levelExams = useLevelExams()
+  const progress = useProgress()
   const [viewportHeight, setViewportHeight] = useState(0)
-
-  const roster = useMemo(
-    () => buildVillageRoster(course.levels),
-    [course.levels]
-  )
 
   function handleLayout(e: LayoutChangeEvent) {
     const h = e.nativeEvent.layout.height
@@ -49,18 +50,32 @@ export default function VillageScreen({ courseId }: Props) {
   }
 
   const panoramaWidth = viewportHeight * IMAGE_ASPECT
+  const totalXp = progress.state.totalXp
+  const unlockedCount = useMemo(() => countUnlockedMochis(totalXp), [totalXp])
+  const next = useMemo(() => nextMochi(totalXp), [totalXp])
 
   return (
     <View style={styles.shell}>
       <View style={[styles.header, { paddingTop: insets.top + space.sm }]}>
-        <Text style={styles.title}>Mochi Village</Text>
+        <View style={styles.headerInner}>
+          <Text style={styles.title}>Mochi Village</Text>
+          <View style={styles.countPill}>
+            <Text style={styles.countPillText}>
+              {unlockedCount} / {MOCHI_ROSTER_SIZE}
+            </Text>
+          </View>
+        </View>
         <Text style={styles.subtitle}>
-          Scroll right to walk the village.
+          {next
+            ? `Next mochi unlocks at ${next.unlockXp} XP — ${
+                next.unlockXp - totalXp
+              } to go.`
+            : 'You unlocked the entire village. ✨'}
         </Text>
       </View>
 
       <View style={styles.scrollWrap} onLayout={handleLayout}>
-        {roster.length === 0 ? (
+        {course.levels.length === 0 ? (
           <View style={styles.emptyShell}>
             <Text style={styles.emptyText}>
               Pick a course and start clearing topics to populate your village.
@@ -80,16 +95,16 @@ export default function VillageScreen({ courseId }: Props) {
                 height: viewportHeight,
               }}
             >
-              {roster.map((region, i) => {
-                const sliceWidth = panoramaWidth / roster.length
+              {course.levels.map((level, i) => {
+                const sliceWidth = panoramaWidth / course.levels.length
                 const offsetX = i * sliceWidth + 16
-                const examPassed = levelExams.state[region.levelId] === true
+                const examPassed = levelExams.state[level.id] === true
                 return (
                   <View
-                    key={`sign-${region.levelId}`}
+                    key={`sign-${level.id}`}
                     style={[styles.sign, { left: offsetX }]}
                   >
-                    <Text style={styles.signTitle}>{region.levelName}</Text>
+                    <Text style={styles.signTitle}>{level.name}</Text>
                     {examPassed && (
                       <View style={styles.signBadge}>
                         <Text style={styles.signBadgeText}>Level exam ✓</Text>
@@ -115,8 +130,26 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: colors.border,
   },
+  headerInner: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    justifyContent: 'space-between',
+  },
   title: {
     fontSize: fontSizes.xl,
+    color: colors.text,
+    fontFamily: 'Nunito_900Black',
+  },
+  countPill: {
+    backgroundColor: colors.cream100,
+    borderWidth: 2,
+    borderColor: colors.border,
+    borderRadius: radius.pill,
+    paddingHorizontal: space.md,
+    paddingVertical: 2,
+  },
+  countPillText: {
+    fontSize: fontSizes.xs,
     color: colors.text,
     fontFamily: 'Nunito_900Black',
   },
