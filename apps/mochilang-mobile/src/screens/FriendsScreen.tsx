@@ -18,8 +18,14 @@ import { colors, fontSizes, radius, space } from '../lib/theme'
  * modal with stats + a 7-day bar chart. No bundled-JSON fallback
  * yet — offline state shows an empty message (Phase 2 mobile).
  */
-export default function FriendsScreen() {
+interface Props {
+  /** When rendered inside SocialScreen's segment, skip our own safe-area top. */
+  nested?: boolean
+}
+
+export default function FriendsScreen({ nested }: Props = {}) {
   const insets = useSafeAreaInsets()
+  const topInset = nested ? 0 : insets.top + space.md
   const [friends, setFriends] = useState<FriendResponse[]>([])
   const [daysIntoWeek, setDaysIntoWeek] = useState(0)
   const [offline, setOffline] = useState(false)
@@ -55,10 +61,7 @@ export default function FriendsScreen() {
 
   return (
     <ScrollView
-      contentContainerStyle={[
-        styles.shell,
-        { paddingTop: insets.top + space.md },
-      ]}
+      contentContainerStyle={[styles.shell, { paddingTop: topInset }]}
     >
       <View style={styles.header}>
         <Text style={styles.title}>Friends</Text>

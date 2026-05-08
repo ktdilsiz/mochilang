@@ -30,8 +30,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import LoginScreen from './src/screens/LoginScreen'
 import HomeScreen from './src/screens/HomeScreen'
 import LessonScreen from './src/screens/LessonScreen'
-import LeagueScreen from './src/screens/LeagueScreen'
-import FriendsScreen from './src/screens/FriendsScreen'
+import SocialScreen from './src/screens/SocialScreen'
+import VillageScreen from './src/screens/VillageScreen'
 import ProfileScreen from './src/screens/ProfileScreen'
 import TopicGuideScreen from './src/screens/TopicGuideScreen'
 import LanguageSelectScreen from './src/screens/LanguageSelectScreen'
@@ -85,8 +85,8 @@ type RootNav = NativeStackScreenProps<RootStackParamList>['navigation']
 
 type TabParamList = {
   Home: undefined
-  League: undefined
-  Friends: undefined
+  Village: undefined
+  Social: undefined
   Profile: undefined
 }
 
@@ -444,22 +444,22 @@ function SignedInTabs({
         )}
       </Tabs.Screen>
       <Tabs.Screen
-        name="League"
-        options={{ tabBarLabel: 'League', tabBarIcon: tabIcon('🛡') }}
+        name="Village"
+        options={{ tabBarLabel: 'Village', tabBarIcon: tabIcon('🏡') }}
+      >
+        {() => <VillageScreen courseId={courseId} />}
+      </Tabs.Screen>
+      <Tabs.Screen
+        name="Social"
+        options={{ tabBarLabel: 'Social', tabBarIcon: tabIcon('🏆') }}
       >
         {() => (
-          <LeagueScreen
+          <SocialScreen
             progress={progress.state}
             profile={profile.state}
             setProfile={profile.setProfile}
           />
         )}
-      </Tabs.Screen>
-      <Tabs.Screen
-        name="Friends"
-        options={{ tabBarLabel: 'Friends', tabBarIcon: tabIcon('👥') }}
-      >
-        {() => <FriendsScreen />}
       </Tabs.Screen>
       <Tabs.Screen
         name="Profile"

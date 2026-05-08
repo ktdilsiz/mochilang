@@ -23,7 +23,11 @@ import {
 } from '@mochilang/shared'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
-interface Props {
+interface OuterProps {
+  /** When rendered inside SocialScreen's segment, skip our own safe-area top. */
+  nested?: boolean
+}
+interface Props extends OuterProps {
   progress: ProgressState
   profile: ProfileState
   setProfile: (patch: Partial<ProfileState>) => void
@@ -59,8 +63,10 @@ export default function LeagueScreen({
   progress,
   profile,
   setProfile,
+  nested,
 }: Props) {
   const insets = useSafeAreaInsets()
+  const topInset = nested ? 0 : insets.top + space.md
   const [vm, setVM] = useState<ViewModel | null>(null)
   const [offline, setOffline] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -121,10 +127,7 @@ export default function LeagueScreen({
 
   return (
     <ScrollView
-      contentContainerStyle={[
-        styles.shell,
-        { paddingTop: insets.top + space.md },
-      ]}
+      contentContainerStyle={[styles.shell, { paddingTop: topInset }]}
     >
       {banner && (
         <View
