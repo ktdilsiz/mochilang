@@ -21,6 +21,13 @@ import {
   tintForTheme,
 } from '../lib/theme'
 
+/**
+ * Dev override — flip to false before shipping. While true, every
+ * mochi shows as unlocked regardless of topic progress so the village
+ * art can be poked at without grinding lessons first.
+ */
+const DEV_UNLOCK_ALL = true
+
 interface Props {
   courseId: string
 }
@@ -57,7 +64,10 @@ export default function VillageScreen({ courseId }: Props) {
           .find((l) => l.id === mochi.levelId)
           ?.topics.find((t) => t.id === mochi.topicId)
         if (!topic) continue
-        if (isTopicCleared(topic, progress.state.results, topicExams.state)) {
+        if (
+          DEV_UNLOCK_ALL ||
+          isTopicCleared(topic, progress.state.results, topicExams.state)
+        ) {
           unlocked += 1
         }
       }
@@ -134,6 +144,7 @@ function RegionCard({
   findTopic,
 }: RegionCardProps) {
   const cleared = mochis.filter((m) => {
+    if (DEV_UNLOCK_ALL) return true
     const topic = findTopic(m)
     if (!topic) return false
     // Inline isTopicCleared so we can reuse the lookup above without
@@ -162,10 +173,11 @@ function RegionCard({
         {mochis.map((m) => {
           const topic = findTopic(m)
           const unlocked =
-            topic !== null &&
-            (topicExamsPassed[topic.id] === true ||
-              (topic.lessons.length > 0 &&
-                topic.lessons.every((l) => results[l.id] !== undefined)))
+            DEV_UNLOCK_ALL ||
+            (topic !== null &&
+              (topicExamsPassed[topic.id] === true ||
+                (topic.lessons.length > 0 &&
+                  topic.lessons.every((l) => results[l.id] !== undefined))))
           return <MochiCard key={m.id} mochi={m} unlocked={unlocked} />
         })}
       </View>
