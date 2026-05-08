@@ -1,0 +1,1039 @@
+{
+  "id": "b1",
+  "name": "B1 — Orta Düzey",
+  "description": "Present perfect, modaller, koşul cümleleri, edilgen yapı, phrasal verb'ler ve sahte arkadaşlar. Türkçedeki yapılarla doğrudan karşılığı olmayan İngilizce yapılara odaklanır.",
+  "topics": [
+    {
+      "id": "en-tr-present-perfect",
+      "title": "Present Perfect (have/has + V3)",
+      "description": "Geçmişten şimdiye uzanan eylemleri anlatma",
+      "theme": "tense",
+      "guide": {
+        "intro": "Present perfect İngilizcedeki en yanıltıcı zamandır çünkü Türkçede tam karşılığı yoktur. Bazen Türkçedeki '-mış' ekiyle ('gitmişim'), bazen geniş zamanla ('üç yıldır yaşıyorum'), bazen geçmiş zamanla ('hiç gitmedim') çevrilir. Anahtar fikir: eylem geçmişte başladı ve şu anla bağlantılı.",
+        "sections": [
+          { "kind": "heading", "text": "Yapı" },
+          { "kind": "paragraph", "text": "have/has + fiilin 3. hali (V3, past participle). Olumsuz: haven't/hasn't + V3. Soru: Have/Has + özne + V3?" },
+          {
+            "kind": "table",
+            "headers": ["Özne", "Yardımcı", "V3 örneği"],
+            "rows": [
+              ["I / you / we / they", "have", "lived, gone, eaten"],
+              ["he / she / it", "has", "lived, gone, eaten"]
+            ]
+          },
+          { "kind": "heading", "text": "Past simple ile karşılaştırma" },
+          { "kind": "paragraph", "text": "İki cümle Türkçeye benzer çevrilebilir, ama anlamları çok farklıdır." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "I have lived in Istanbul for 3 years.", "translation": "Üç yıldır İstanbul'da yaşıyorum (hâlâ orada)." },
+              { "source": "I lived in Istanbul for 3 years.", "translation": "Üç yıl İstanbul'da yaşadım (artık yaşamıyorum)." },
+              { "source": "She has read the book.", "translation": "Kitabı okumuş (sonuç şimdi: biliyor)." },
+              { "source": "She read the book yesterday.", "translation": "Kitabı dün okudu (bitmiş, geçmişte kalmış)." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "'Yesterday', 'last week', 'in 2010', 'when I was a child' gibi belirli geçmiş zaman ifadeleri ile present perfect KULLANILMAZ. 'I have seen him yesterday' YANLIŞTIR. Doğrusu: 'I saw him yesterday'."
+          },
+          { "kind": "heading", "text": "for / since" },
+          {
+            "kind": "table",
+            "headers": ["Kelime", "Kullanım", "Örnek"],
+            "rows": [
+              ["for", "süre (3 yıl, 2 saat)", "for three years"],
+              ["since", "başlangıç noktası (2020, Pazartesi)", "since 2020"]
+            ]
+          },
+          { "kind": "heading", "text": "just / already / yet / ever / never" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "I have just finished my homework.", "translation": "Ödevimi az önce bitirdim." },
+              { "source": "She has already left.", "translation": "O zaten ayrıldı." },
+              { "source": "Have you finished yet?", "translation": "Henüz bitirdin mi?" },
+              { "source": "I haven't seen that movie yet.", "translation": "Henüz o filmi görmedim." },
+              { "source": "Have you ever been to London?", "translation": "Hiç Londra'ya gittin mi?" },
+              { "source": "I have never tried sushi.", "translation": "Hiç suşi denemedim." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Türk öğrenenlerin sık hatası: 'I am living here for 3 years' demek. Doğrusu present perfect ile: 'I have lived here for 3 years' veya present perfect continuous ile: 'I have been living here for 3 years'."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-present-perfect-1",
+          "title": "Yapı: have/has + V3",
+          "description": "Present perfect'in temel kurulumu",
+          "theme": "tense",
+          "xp": 12,
+          "exercises": [
+            { "id": "pp1-1", "type": "multiple_choice", "prompt": "'She ___ finished her work.' Boşluğa hangisi gelir?", "options": ["have", "has", "is", "had"], "answer": "has", "explanation": "Üçüncü tekil şahıs (she/he/it) için 'has' kullanılır." },
+            { "id": "pp1-2", "type": "multiple_choice", "prompt": "'go' fiilinin 3. hali (past participle) nedir?", "options": ["went", "goed", "gone", "going"], "answer": "gone", "explanation": "go-went-gone. 'went' geçmiş zaman, 'gone' past participle." },
+            { "id": "pp1-3", "type": "fill_blank", "prompt": "'I ___ seen that film.' Olumsuz cümleyi tamamlayın (Türkçe: 'O filmi görmedim.')", "answer": "haven't", "acceptableAnswers": ["have not", "haven't"], "explanation": "Olumsuz: have + not = haven't." },
+            { "id": "pp1-4", "type": "fill_blank", "prompt": "'eat' fiilinin 3. hali: ___", "answer": "eaten", "acceptableAnswers": ["Eaten", "EATEN"], "explanation": "eat-ate-eaten." },
+            { "id": "pp1-5", "type": "match_pairs", "prompt": "Fiilin 3. halini eşleştir", "pairs": [
+              { "left": "see", "right": "seen" },
+              { "left": "write", "right": "written" },
+              { "left": "take", "right": "taken" },
+              { "left": "drink", "right": "drunk" }
+            ]},
+            { "id": "pp1-6", "type": "tap_words_in_order", "prompt": "Sırala: 'They have finished the project.'", "answer": "They have finished the project", "bank": ["They", "have", "finished", "the", "project", "has", "finish", "are"] },
+            { "id": "pp1-7", "type": "multiple_choice", "prompt": "Hangi cümle DOĞRU?", "options": ["He have gone home.", "He has went home.", "He has gone home.", "He is gone home."], "answer": "He has gone home.", "explanation": "he/she/it + has + V3 (gone)." },
+            { "id": "pp1-8", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "I have lost my keys.", "options": ["I have lost my keys.", "I had lost my keys.", "I have lose my keys.", "I lost my keys."], "answer": "I have lost my keys." },
+            { "id": "pp1-9", "type": "fill_blank", "prompt": "Soru kurun: '___ you ever been to Paris?'", "answer": "Have", "acceptableAnswers": ["have", "Have"], "explanation": "Soru: Have/Has + özne + V3?" },
+            { "id": "pp1-10", "type": "multiple_choice", "prompt": "'write' fiilinin past participle hali:", "options": ["wrote", "writed", "written", "writing"], "answer": "written" }
+          ]
+        },
+        {
+          "id": "en-tr-present-perfect-2",
+          "title": "Past Simple ile Fark",
+          "description": "Hangi durumda hangi zaman?",
+          "theme": "tense",
+          "xp": 12,
+          "exercises": [
+            { "id": "pp2-1", "type": "multiple_choice", "prompt": "'Üç yıldır İstanbul'da yaşıyorum (hâlâ oradayım).' İngilizcede:", "options": ["I lived in Istanbul for 3 years.", "I am living in Istanbul for 3 years.", "I have lived in Istanbul for 3 years.", "I live in Istanbul since 3 years."], "answer": "I have lived in Istanbul for 3 years.", "explanation": "Hâlâ devam eden durum → present perfect." },
+            { "id": "pp2-2", "type": "multiple_choice", "prompt": "'Onu dün gördüm.' İngilizcede:", "options": ["I have seen him yesterday.", "I saw him yesterday.", "I see him yesterday.", "I had seen him yesterday."], "answer": "I saw him yesterday.", "explanation": "'Yesterday' belirli geçmiş → past simple." },
+            { "id": "pp2-3", "type": "multiple_choice", "prompt": "Hangi zaman ifadesi present perfect ile UYUMSUZDUR?", "options": ["this week", "since 2020", "yesterday", "for two hours"], "answer": "yesterday", "explanation": "'Yesterday' bitmiş bir noktayı işaret eder; past simple ister." },
+            { "id": "pp2-4", "type": "fill_blank", "prompt": "'I ___ (live) here since 2018.'", "answer": "have lived", "acceptableAnswers": ["have lived", "'ve lived"], "explanation": "since + present perfect." },
+            { "id": "pp2-5", "type": "fill_blank", "prompt": "'She ___ (visit) Rome last summer.'", "answer": "visited", "acceptableAnswers": ["Visited"], "explanation": "'Last summer' belirli geçmiş → past simple." },
+            { "id": "pp2-6", "type": "match_pairs", "prompt": "Cümleyi uygun zamanla eşleştir", "pairs": [
+              { "left": "I lived in Ankara in 2010.", "right": "Past simple — bitmiş bir an" },
+              { "left": "I have lived in Ankara since 2010.", "right": "Present perfect — hâlâ orada" },
+              { "left": "I worked here last year.", "right": "Past simple — geçen yıl, şimdi yok" },
+              { "left": "I have worked here for a year.", "right": "Present perfect — bir yıldır devam" }
+            ]},
+            { "id": "pp2-7", "type": "tap_words_in_order", "prompt": "Sırala: 'She has worked here since January.'", "answer": "She has worked here since January", "bank": ["She", "has", "worked", "here", "since", "January", "for", "in", "have"] },
+            { "id": "pp2-8", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "We have known each other for ten years.", "options": ["We have known each other for ten years.", "We knew each other for ten years.", "We have known each other since ten years.", "We have know each other for ten years."], "answer": "We have known each other for ten years." },
+            { "id": "pp2-9", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["I have been here since Monday.", "I have lived here for two years.", "I have seen him in 2015.", "I have already finished."], "answer": "I have seen him in 2015.", "explanation": "'In 2015' belirli geçmiş → past simple gerekir: 'I saw him in 2015.'" },
+            { "id": "pp2-10", "type": "fill_blank", "prompt": "'When I was a child, I ___ (love) ice cream.'", "answer": "loved", "acceptableAnswers": ["Loved"], "explanation": "'When I was a child' belirli geçmiş bağlamı → past simple." }
+          ]
+        },
+        {
+          "id": "en-tr-present-perfect-3",
+          "title": "for / since",
+          "description": "Süre mi başlangıç mı?",
+          "theme": "tense",
+          "xp": 12,
+          "exercises": [
+            { "id": "pp3-1", "type": "multiple_choice", "prompt": "'___ three years' (üç yıldır)", "options": ["since", "for", "from", "during"], "answer": "for", "explanation": "Süre uzunluğu → for." },
+            { "id": "pp3-2", "type": "multiple_choice", "prompt": "'___ 2020' (2020'den beri)", "options": ["for", "since", "from", "in"], "answer": "since", "explanation": "Başlangıç noktası → since." },
+            { "id": "pp3-3", "type": "fill_blank", "prompt": "'I have known her ___ five years.'", "answer": "for", "acceptableAnswers": ["For"], "explanation": "Süre → for." },
+            { "id": "pp3-4", "type": "fill_blank", "prompt": "'He has worked here ___ Monday.'", "answer": "since", "acceptableAnswers": ["Since"], "explanation": "Başlangıç noktası → since." },
+            { "id": "pp3-5", "type": "match_pairs", "prompt": "for mu since mi?", "pairs": [
+              { "left": "ten minutes", "right": "for ten minutes" },
+              { "left": "this morning", "right": "since this morning" },
+              { "left": "a long time", "right": "for a long time" },
+              { "left": "I was a child", "right": "since I was a child" }
+            ]},
+            { "id": "pp3-6", "type": "tap_words_in_order", "prompt": "Sırala: 'I have studied English for two years.'", "answer": "I have studied English for two years", "bank": ["I", "have", "studied", "English", "for", "two", "years", "since", "have"] },
+            { "id": "pp3-7", "type": "multiple_choice", "prompt": "Hangi cümle DOĞRU?", "options": ["I have lived here since 5 years.", "I have lived here for 5 years.", "I have lived here from 5 years.", "I am living here since 5 years."], "answer": "I have lived here for 5 years.", "explanation": "Süre → for. 'Since 5 years' Türkçe etkisiyle yapılan sık bir hatadır." },
+            { "id": "pp3-8", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "She has been ill since Tuesday.", "options": ["She has been ill since Tuesday.", "She has been ill for Tuesday.", "She has been ill from Tuesday.", "She is ill since Tuesday."], "answer": "She has been ill since Tuesday." },
+            { "id": "pp3-9", "type": "fill_blank", "prompt": "'We haven't seen each other ___ a long time.'", "answer": "for", "acceptableAnswers": ["For"] },
+            { "id": "pp3-10", "type": "multiple_choice", "prompt": "'Sabahtan beri çalışıyorum.' İngilizcede:", "options": ["I am working since morning.", "I have been working since morning.", "I worked for morning.", "I work since morning."], "answer": "I have been working since morning." }
+          ]
+        },
+        {
+          "id": "en-tr-present-perfect-4",
+          "title": "just / already / yet / ever / never",
+          "description": "Zarflarla nüans katma",
+          "theme": "tense",
+          "xp": 12,
+          "exercises": [
+            { "id": "pp4-1", "type": "multiple_choice", "prompt": "'I have ___ finished.' (az önce)", "options": ["already", "just", "yet", "ever"], "answer": "just", "explanation": "'Just' = az önce, çok yakın geçmişte." },
+            { "id": "pp4-2", "type": "multiple_choice", "prompt": "'Have you finished ___?' (henüz)", "options": ["just", "already", "yet", "ever"], "answer": "yet", "explanation": "'Yet' soru ve olumsuzlarda kullanılır." },
+            { "id": "pp4-3", "type": "fill_blank", "prompt": "'I have ___ been to Italy.' (hiç gitmedim — olumsuz anlamlı)", "answer": "never", "acceptableAnswers": ["Never"], "explanation": "'Never' tek başına olumsuzluk taşır." },
+            { "id": "pp4-4", "type": "fill_blank", "prompt": "'Have you ___ tried sushi?' (hiç)", "answer": "ever", "acceptableAnswers": ["Ever"], "explanation": "'Ever' soru cümlelerinde 'hiç' anlamında." },
+            { "id": "pp4-5", "type": "match_pairs", "prompt": "Zarfı kullanım yeriyle eşle", "pairs": [
+              { "left": "just", "right": "az önce (olumlu)" },
+              { "left": "already", "right": "zaten (olumlu)" },
+              { "left": "yet", "right": "henüz (soru/olumsuz)" },
+              { "left": "ever", "right": "hiç (soru)" }
+            ]},
+            { "id": "pp4-6", "type": "tap_words_in_order", "prompt": "Sırala: 'She has already left the office.'", "answer": "She has already left the office", "bank": ["She", "has", "already", "left", "the", "office", "yet", "just", "have"] },
+            { "id": "pp4-7", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["I have already eaten.", "Have you ever been to Japan?", "She has yet finished her work.", "We haven't decided yet."], "answer": "She has yet finished her work.", "explanation": "'Yet' olumlu cümlede bu konumda olmaz; 'already' kullanılmalı." },
+            { "id": "pp4-8", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "I haven't seen that film yet.", "options": ["I haven't seen that film yet.", "I have seen that film yet.", "I haven't seen that film just.", "I haven't see that film yet."], "answer": "I haven't seen that film yet." },
+            { "id": "pp4-9", "type": "fill_blank", "prompt": "'They have ___ arrived.' (zaten geldiler)", "answer": "already", "acceptableAnswers": ["Already"] },
+            { "id": "pp4-10", "type": "multiple_choice", "prompt": "'Hiç Londra'ya gittin mi?' İngilizcede:", "options": ["Did you ever go to London?", "Have you ever been to London?", "Have you never been to London?", "Are you ever in London?"], "answer": "Have you ever been to London?" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-modals",
+      "title": "Modal Fiiller (can, must, should, may, might)",
+      "description": "Yetenek, izin, zorunluluk ve olasılık",
+      "theme": "grammar",
+      "guide": {
+        "intro": "Modal fiiller İngilizcede tonun yarısını taşır. Türkçedeki '-ebil' (yetenek/olasılık) ve '-meli/-malı' (zorunluluk) ekleri tek başlarına İngilizcedeki birkaç farklı modale karşılık gelir. Yanlış modal seçmek anlamı tamamen değiştirebilir.",
+        "sections": [
+          { "kind": "heading", "text": "Modal yapı kuralları" },
+          { "kind": "paragraph", "text": "Modal + V1 (yalın fiil). Modaller -s almaz, -ed almaz, do/does ile soru kurmaz. Olumsuz: modal + not." },
+          {
+            "kind": "table",
+            "headers": ["Modal", "Anlamı", "Türkçe karşılığı"],
+            "rows": [
+              ["can", "yetenek / izin / olasılık", "-ebilir"],
+              ["could", "geçmiş yetenek / kibar istek / olasılık", "-ebilirdi"],
+              ["should", "tavsiye / hafif zorunluluk", "-meli (yumuşak)"],
+              ["must", "güçlü zorunluluk / kesin çıkarım", "-meli (güçlü), zorunda"],
+              ["may", "izin / olasılık (resmi)", "-ebilir (resmi)"],
+              ["might", "düşük olasılık", "-ebilir (zayıf)"],
+              ["have to", "dış zorunluluk", "-mek zorunda"]
+            ]
+          },
+          { "kind": "heading", "text": "must vs have to" },
+          { "kind": "paragraph", "text": "İkisi de 'zorunluluk' anlamı taşır ama kaynak farklıdır. 'Must' iç ses, kişisel inanç ya da kuraldır. 'Have to' dış zorunluluktur (patron, yasa, durum)." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "I must call my mother. (kendi kararım)", "translation": "Annemi aramalıyım." },
+              { "source": "I have to wear a uniform at work. (iş kuralı)", "translation": "İşte üniforma giymek zorundayım." },
+              { "source": "You must be tired. (çıkarım: kesin yorgunsun)", "translation": "Yorgun olmalısın (kesin)." },
+              { "source": "You don't have to come. (gerek yok)", "translation": "Gelmek zorunda değilsin." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "'Mustn't' ve 'don't have to' AYNI ŞEY DEĞİLDİR. 'Mustn't' = yapmamalısın (yasak). 'Don't have to' = yapmana gerek yok (seçim). Türk öğrenenlerin sık karıştırdığı yer."
+          },
+          { "kind": "heading", "text": "should — tavsiye" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "You should see a doctor.", "translation": "Bir doktora görünmelisin." },
+              { "source": "Should I bring a gift?", "translation": "Hediye getirmeli miyim?" },
+              { "source": "He shouldn't drive so fast.", "translation": "O kadar hızlı sürmemeli." }
+            ]
+          },
+          { "kind": "heading", "text": "may / might — olasılık" },
+          { "kind": "paragraph", "text": "'May' biraz daha yüksek olasılık ve daha resmi. 'Might' düşük olasılık. İkisi de 'belki' ile çevrilebilir ama ton farklıdır." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "It may rain tomorrow.", "translation": "Yarın yağabilir (orta olasılık)." },
+              { "source": "She might be at home.", "translation": "Belki evdedir (düşük olasılık)." }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-modals-1",
+          "title": "can / could — yetenek ve izin",
+          "description": "-ebil ekinin İngilizce karşılıkları",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "mod1-1", "type": "multiple_choice", "prompt": "'I ___ swim.' (yüzebilirim)", "options": ["can", "must", "should", "may"], "answer": "can", "explanation": "Yetenek için 'can'." },
+            { "id": "mod1-2", "type": "multiple_choice", "prompt": "'When I was 5, I ___ ride a bike.' (binebiliyordum — geçmiş yetenek)", "options": ["can", "could", "should", "must"], "answer": "could", "explanation": "Geçmiş yetenek için 'could'." },
+            { "id": "mod1-3", "type": "fill_blank", "prompt": "Kibar istek: '___ you help me, please?'", "answer": "Could", "acceptableAnswers": ["Could", "Can"], "explanation": "'Could' daha kibar; 'Can' de mümkündür." },
+            { "id": "mod1-4", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["She can speaks English.", "She can speak English.", "Can she speak English?", "She cannot speak English."], "answer": "She can speaks English.", "explanation": "Modal + V1 (yalın fiil); 'speaks' olmaz." },
+            { "id": "mod1-5", "type": "match_pairs", "prompt": "Anlam ile eşle", "pairs": [
+              { "left": "Can I leave?", "right": "İzin isteme" },
+              { "left": "I can swim.", "right": "Yetenek" },
+              { "left": "Could you wait?", "right": "Kibar rica" },
+              { "left": "It can be cold here.", "right": "Genel olasılık" }
+            ]},
+            { "id": "mod1-6", "type": "tap_words_in_order", "prompt": "Sırala: 'Could you open the window please?'", "answer": "Could you open the window please", "bank": ["Could", "you", "open", "the", "window", "please", "can", "opens", "to"] },
+            { "id": "mod1-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "I couldn't hear you.", "options": ["I couldn't hear you.", "I can't hear you.", "I couldn't here you.", "I could hear you."], "answer": "I couldn't hear you." },
+            { "id": "mod1-8", "type": "fill_blank", "prompt": "Olumsuz: 'She ___ come tomorrow.' (gelemez)", "answer": "can't", "acceptableAnswers": ["cannot", "can not", "can't"], "explanation": "'cannot' = 'can't'." },
+            { "id": "mod1-9", "type": "multiple_choice", "prompt": "'-ebil' ekinin karşılığı olan modal hangisidir? (yetenek anlamında)", "options": ["must", "should", "can", "have to"], "answer": "can" },
+            { "id": "mod1-10", "type": "multiple_choice", "prompt": "'Buraya park edebilir miyim?' İngilizcede:", "options": ["Must I park here?", "Can I park here?", "Should I park here?", "I can park here?"], "answer": "Can I park here?" }
+          ]
+        },
+        {
+          "id": "en-tr-modals-2",
+          "title": "must / have to — zorunluluk",
+          "description": "İçten gelen mi, dıştan gelen mi?",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "mod2-1", "type": "multiple_choice", "prompt": "'I ___ wear a uniform at work.' (iş kuralı)", "options": ["must", "have to", "should", "can"], "answer": "have to", "explanation": "Dış kural → have to." },
+            { "id": "mod2-2", "type": "multiple_choice", "prompt": "'You ___ be exhausted after that flight.' (kesin çıkarım)", "options": ["should", "can", "must", "may"], "answer": "must", "explanation": "Kesinlik / güçlü çıkarım → must." },
+            { "id": "mod2-3", "type": "multiple_choice", "prompt": "'You ___ smoke here.' (yasak)", "options": ["don't have to", "mustn't", "shouldn't", "couldn't"], "answer": "mustn't", "explanation": "Yasak → mustn't. 'Don't have to' = gerek yok (yasak değil)." },
+            { "id": "mod2-4", "type": "multiple_choice", "prompt": "'You ___ pay; it's free.' (gerek yok)", "options": ["mustn't", "don't have to", "shouldn't", "can't"], "answer": "don't have to", "explanation": "Gerek yok = don't have to. Mustn't yasak demek." },
+            { "id": "mod2-5", "type": "fill_blank", "prompt": "'She ___ work on Saturdays.' (çalışmak zorunda)", "answer": "has to", "acceptableAnswers": ["has to", "must"], "explanation": "Üçüncü tekil için 'has to'." },
+            { "id": "mod2-6", "type": "match_pairs", "prompt": "Anlamla eşle", "pairs": [
+              { "left": "You must stop.", "right": "Güçlü emir" },
+              { "left": "You mustn't lie.", "right": "Yasak" },
+              { "left": "You have to wait.", "right": "Dış zorunluluk" },
+              { "left": "You don't have to wait.", "right": "Gerek yok" }
+            ]},
+            { "id": "mod2-7", "type": "tap_words_in_order", "prompt": "Sırala: 'You don't have to come if you're tired.'", "answer": "You don't have to come if you're tired", "bank": ["You", "don't", "have", "to", "come", "if", "you're", "tired", "must", "should"] },
+            { "id": "mod2-8", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "You mustn't tell anyone.", "options": ["You mustn't tell anyone.", "You don't have to tell anyone.", "You shouldn't tell anyone.", "You must tell anyone."], "answer": "You mustn't tell anyone." },
+            { "id": "mod2-9", "type": "multiple_choice", "prompt": "Hangi çift AYNI anlamı taşır?", "options": ["mustn't / don't have to", "must / have to", "should / mustn't", "can / must"], "answer": "must / have to", "explanation": "İkisi de zorunluluk (kaynakları farklı olsa da). Mustn't ve don't have to AYRI anlamlardır." },
+            { "id": "mod2-10", "type": "fill_blank", "prompt": "'Saat 10'a kadar evde olmalıyım (kendi kararım): I ___ be home by 10.'", "answer": "must", "acceptableAnswers": ["Must", "have to"], "explanation": "Kişisel zorunluluk → must (have to da kabul)." }
+          ]
+        },
+        {
+          "id": "en-tr-modals-3",
+          "title": "should — tavsiye",
+          "description": "Yumuşak öneri ve eleştiri",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "mod3-1", "type": "multiple_choice", "prompt": "'You ___ see a doctor.' (görünmelisin — tavsiye)", "options": ["must", "should", "can", "may"], "answer": "should" },
+            { "id": "mod3-2", "type": "fill_blank", "prompt": "Soru: '___ I bring a gift?'", "answer": "Should", "acceptableAnswers": ["should"], "explanation": "Tavsiye sorusu → Should I…?" },
+            { "id": "mod3-3", "type": "multiple_choice", "prompt": "'shouldn't' ne demektir?", "options": ["Yapamaz", "Yapmamalı (tavsiye)", "Yasaktır (kesin)", "Yapacak"], "answer": "Yapmamalı (tavsiye)" },
+            { "id": "mod3-4", "type": "multiple_choice", "prompt": "Hangisi en YUMUŞAK tavsiye?", "options": ["You must rest.", "You have to rest.", "You should rest.", "You will rest."], "answer": "You should rest.", "explanation": "Should = yumuşak tavsiye; must/have to daha sert." },
+            { "id": "mod3-5", "type": "fill_blank", "prompt": "'He ___ drive so fast.' (sürmemeli)", "answer": "shouldn't", "acceptableAnswers": ["should not", "shouldn't"], "explanation": "should + not = shouldn't." },
+            { "id": "mod3-6", "type": "match_pairs", "prompt": "Türkçe-İngilizce eşleme", "pairs": [
+              { "left": "Erken yatmalısın.", "right": "You should go to bed early." },
+              { "left": "O kadar para harcamamalı.", "right": "She shouldn't spend so much money." },
+              { "left": "Onu aramalı mıyım?", "right": "Should I call him?" },
+              { "left": "Daha çok çalışmalıyız.", "right": "We should work harder." }
+            ]},
+            { "id": "mod3-7", "type": "tap_words_in_order", "prompt": "Sırala: 'You should drink more water.'", "answer": "You should drink more water", "bank": ["You", "should", "drink", "more", "water", "must", "drinks", "the"] },
+            { "id": "mod3-8", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "You shouldn't worry too much.", "options": ["You shouldn't worry too much.", "You should worry too much.", "You couldn't worry too much.", "You shouldn't hurry too much."], "answer": "You shouldn't worry too much." },
+            { "id": "mod3-9", "type": "multiple_choice", "prompt": "Türkçedeki '-meli/-malı' ekinin EN YAYGIN karşılığı:", "options": ["can", "should", "may", "could"], "answer": "should", "explanation": "Genelde yumuşak; daha güçlü olunca 'must'." },
+            { "id": "mod3-10", "type": "fill_blank", "prompt": "'We ___ be more careful next time.' (olmalıyız)", "answer": "should", "acceptableAnswers": ["Should", "must"], "explanation": "Tavsiye → should." }
+          ]
+        },
+        {
+          "id": "en-tr-modals-4",
+          "title": "may / might — olasılık",
+          "description": "Belki kelimesinin İngilizce yüzleri",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "mod4-1", "type": "multiple_choice", "prompt": "'It ___ rain tomorrow.' (yağabilir — orta olasılık)", "options": ["must", "may", "should", "can't"], "answer": "may" },
+            { "id": "mod4-2", "type": "multiple_choice", "prompt": "'She ___ be at the office.' (belki — düşük olasılık)", "options": ["must", "might", "have to", "should"], "answer": "might" },
+            { "id": "mod4-3", "type": "multiple_choice", "prompt": "'May I come in?' kalıbı ne için kullanılır?", "options": ["Tavsiye", "Resmi izin isteme", "Kesin çıkarım", "Yetenek"], "answer": "Resmi izin isteme", "explanation": "'May' izin için 'can'den daha resmi." },
+            { "id": "mod4-4", "type": "fill_blank", "prompt": "'They ___ be late because of traffic.' (gecikebilirler)", "answer": "may", "acceptableAnswers": ["may", "might", "could"] },
+            { "id": "mod4-5", "type": "match_pairs", "prompt": "Olasılık derecesine göre eşleştir", "pairs": [
+              { "left": "must be", "right": "Kesin (çıkarım)" },
+              { "left": "may be", "right": "Orta olasılık" },
+              { "left": "might be", "right": "Düşük olasılık" },
+              { "left": "can't be", "right": "Kesinlikle değil" }
+            ]},
+            { "id": "mod4-6", "type": "tap_words_in_order", "prompt": "Sırala: 'I might go to the cinema tonight.'", "answer": "I might go to the cinema tonight", "bank": ["I", "might", "go", "to", "the", "cinema", "tonight", "must", "be", "in"] },
+            { "id": "mod4-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "He might not come to the meeting.", "options": ["He might not come to the meeting.", "He must not come to the meeting.", "He may not come to the meeting.", "He might now come to the meeting."], "answer": "He might not come to the meeting." },
+            { "id": "mod4-8", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["It might rains.", "It might rain.", "It may rain.", "It could rain."], "answer": "It might rains.", "explanation": "Modal + V1; 'rains' olmaz." },
+            { "id": "mod4-9", "type": "fill_blank", "prompt": "'You ___ be right; I'm not sure.' (haklı olabilirsin)", "answer": "might", "acceptableAnswers": ["might", "may", "could"] },
+            { "id": "mod4-10", "type": "multiple_choice", "prompt": "'Belki yarın gelirim.' En doğal İngilizce:", "options": ["Maybe I come tomorrow.", "I might come tomorrow.", "I must come tomorrow maybe.", "I can come tomorrow maybe."], "answer": "I might come tomorrow." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-conditionals",
+      "title": "Koşul Cümleleri (if-clauses)",
+      "description": "Zero, first ve second conditional",
+      "theme": "grammar",
+      "guide": {
+        "intro": "Türkçedeki '-se/-sa' eki İngilizcede tek bir kalıba değil, üç farklı koşul tipine karşılık gelir. Hangisini seçeceğin OLAYIN OLASILIĞINA bağlıdır: genel doğru mu, gelecekte muhtemel mi, yoksa hayali mi?",
+        "sections": [
+          { "kind": "heading", "text": "Üç tip koşul cümlesi" },
+          {
+            "kind": "table",
+            "headers": ["Tip", "Yapı", "Anlam", "Türkçe örnek"],
+            "rows": [
+              ["Zero", "If + present, present", "Genel gerçek / kural", "Su 100°C'de kaynar."],
+              ["First", "If + present, will + V1", "Gelecekte muhtemel", "Yarın yağmur yağarsa evde kalırım."],
+              ["Second", "If + past, would + V1", "Şimdi gerçek dışı / hayali", "Zengin olsam bir ev alırdım."]
+            ]
+          },
+          { "kind": "heading", "text": "Zero conditional" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "If you heat water to 100°C, it boils.", "translation": "Suyu 100°C'ye ısıtırsan kaynar." },
+              { "source": "If I'm tired, I go to bed early.", "translation": "Yorgunsam erken yatarım." }
+            ]
+          },
+          { "kind": "heading", "text": "First conditional" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "If it rains tomorrow, I will stay at home.", "translation": "Yarın yağmur yağarsa evde kalacağım." },
+              { "source": "If you study, you will pass.", "translation": "Çalışırsan geçersin." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "If kelimesinden sonra 'will' KULLANILMAZ. 'If it will rain' YANLIŞ. Doğrusu: 'If it rains, I will…' (if'li kısımda present, ana cümlede will)."
+          },
+          { "kind": "heading", "text": "Second conditional — hayali" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "If I were rich, I would buy a house.", "translation": "Zengin olsaydım bir ev alırdım." },
+              { "source": "If I had time, I would travel more.", "translation": "Zamanım olsa daha çok seyahat ederdim." },
+              { "source": "What would you do if you saw a ghost?", "translation": "Hayalet görsen ne yapardın?" }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Second conditional'da 'I/he/she/it' için 'were' kullanmak resmi/doğru sayılır: 'If I were you'. Konuşma dilinde 'If I was you' da duyulur ama yazıda 'were' tercih edilir."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-conditionals-1",
+          "title": "Zero conditional — genel gerçekler",
+          "description": "Bilimsel ve genel kurallar",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "con1-1", "type": "multiple_choice", "prompt": "'If you heat ice, it ___.'", "options": ["will melt", "melts", "would melt", "melted"], "answer": "melts", "explanation": "Zero conditional: if + present, present." },
+            { "id": "con1-2", "type": "fill_blank", "prompt": "'If I ___ (be) tired, I go to bed early.'", "answer": "am", "acceptableAnswers": ["'m", "am"], "explanation": "Zero conditional, present simple." },
+            { "id": "con1-3", "type": "multiple_choice", "prompt": "Zero conditional ne için kullanılır?", "options": ["Hayali durumlar", "Genel gerçekler / kurallar", "Geçmiş pişmanlıklar", "Gelecekteki kesin planlar"], "answer": "Genel gerçekler / kurallar" },
+            { "id": "con1-4", "type": "fill_blank", "prompt": "'If it ___ (rain), the ground gets wet.' (genel gerçek)", "answer": "rains", "acceptableAnswers": ["Rains"] },
+            { "id": "con1-5", "type": "match_pairs", "prompt": "Cümleyi anlamla eşle", "pairs": [
+              { "left": "If you press this button, the machine starts.", "right": "Genel kural" },
+              { "left": "If it rains tomorrow, I'll stay home.", "right": "Gelecek olasılık" },
+              { "left": "If I were you, I'd apologize.", "right": "Hayali tavsiye" },
+              { "left": "Water freezes if you cool it enough.", "right": "Bilimsel gerçek" }
+            ]},
+            { "id": "con1-6", "type": "tap_words_in_order", "prompt": "Sırala: 'If you mix red and blue you get purple.'", "answer": "If you mix red and blue you get purple", "bank": ["If", "you", "mix", "red", "and", "blue", "you", "get", "purple", "will", "would"] },
+            { "id": "con1-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "If you don't water plants, they die.", "options": ["If you don't water plants, they die.", "If you don't water plants, they will die.", "If you don't watch plants, they die.", "If you water plants, they die."], "answer": "If you don't water plants, they die." },
+            { "id": "con1-8", "type": "multiple_choice", "prompt": "Hangi cümle DOĞRU zero conditional?", "options": ["If I will see him, I tell him.", "If I see him, I tell him.", "If I see him, I will tell him.", "If I saw him, I would tell him."], "answer": "If I see him, I tell him.", "explanation": "Zero conditional: her iki kısım da present." },
+            { "id": "con1-9", "type": "fill_blank", "prompt": "'If you ___ (not eat), you feel weak.'", "answer": "don't eat", "acceptableAnswers": ["do not eat", "don't eat"] },
+            { "id": "con1-10", "type": "multiple_choice", "prompt": "'Yorgunsam erken yatarım.' (genel alışkanlık)", "options": ["If I am tired I go to bed early.", "If I will be tired I will go to bed early.", "If I were tired I would go to bed early.", "If I tired I went to bed early."], "answer": "If I am tired I go to bed early." }
+          ]
+        },
+        {
+          "id": "en-tr-conditionals-2",
+          "title": "First conditional — gelecek olasılık",
+          "description": "Muhtemel gelecek planlar",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "con2-1", "type": "multiple_choice", "prompt": "'If it rains tomorrow, I ___ at home.'", "options": ["stay", "stayed", "will stay", "would stay"], "answer": "will stay", "explanation": "First conditional: if + present, will + V1." },
+            { "id": "con2-2", "type": "fill_blank", "prompt": "'If you ___ (study), you will pass the exam.'", "answer": "study", "acceptableAnswers": ["Study"], "explanation": "If'li kısımda present." },
+            { "id": "con2-3", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["If she calls, I will answer.", "If she will call, I will answer.", "I will answer if she calls.", "If she doesn't call, I won't answer."], "answer": "If she will call, I will answer.", "explanation": "If sonrası 'will' KULLANILMAZ." },
+            { "id": "con2-4", "type": "fill_blank", "prompt": "'If we don't hurry, we ___ (miss) the train.'", "answer": "will miss", "acceptableAnswers": ["'ll miss", "will miss"] },
+            { "id": "con2-5", "type": "match_pairs", "prompt": "Cümle başını eşleştir", "pairs": [
+              { "left": "If it's sunny tomorrow,", "right": "we will go to the beach." },
+              { "left": "If you don't sleep,", "right": "you'll be tired." },
+              { "left": "If she comes,", "right": "I'll be happy." },
+              { "left": "If they ask,", "right": "we'll tell them the truth." }
+            ]},
+            { "id": "con2-6", "type": "tap_words_in_order", "prompt": "Sırala: 'If you call me I will come immediately.'", "answer": "If you call me I will come immediately", "bank": ["If", "you", "call", "me", "I", "will", "come", "immediately", "would", "called"] },
+            { "id": "con2-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "If you don't hurry, you'll miss the bus.", "options": ["If you don't hurry, you'll miss the bus.", "If you don't worry, you'll miss the bus.", "If you don't hurry, you missed the bus.", "If you hurry, you'll miss the bus."], "answer": "If you don't hurry, you'll miss the bus." },
+            { "id": "con2-8", "type": "multiple_choice", "prompt": "First conditional ne ifade eder?", "options": ["Geçmiş pişmanlık", "Hayali durum", "Muhtemel gelecek olay", "Genel gerçek"], "answer": "Muhtemel gelecek olay" },
+            { "id": "con2-9", "type": "fill_blank", "prompt": "'If I ___ (find) your wallet, I'll let you know.'", "answer": "find", "acceptableAnswers": ["Find"] },
+            { "id": "con2-10", "type": "multiple_choice", "prompt": "'Yarın görsem ona söylerim.' (muhtemel)", "options": ["If I will see him tomorrow, I will tell him.", "If I see him tomorrow, I will tell him.", "If I saw him tomorrow, I would tell him.", "If I see him tomorrow, I tell him."], "answer": "If I see him tomorrow, I will tell him." }
+          ]
+        },
+        {
+          "id": "en-tr-conditionals-3",
+          "title": "Second conditional — hayali şimdi",
+          "description": "Gerçek olmayan durumlar",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "con3-1", "type": "multiple_choice", "prompt": "'If I ___ rich, I would travel the world.'", "options": ["am", "was", "were", "be"], "answer": "were", "explanation": "Second conditional'da 'I/he/she/it' için 'were' tercih edilir." },
+            { "id": "con3-2", "type": "fill_blank", "prompt": "'If I had more time, I ___ (read) more books.'", "answer": "would read", "acceptableAnswers": ["'d read", "would read"] },
+            { "id": "con3-3", "type": "multiple_choice", "prompt": "Second conditional ne ifade eder?", "options": ["Gelecekte kesin olay", "Geçmiş gerçek", "Şu anki hayali / gerçek dışı durum", "Genel kural"], "answer": "Şu anki hayali / gerçek dışı durum" },
+            { "id": "con3-4", "type": "fill_blank", "prompt": "'If I ___ (be) you, I would apologize.'", "answer": "were", "acceptableAnswers": ["was", "were"], "explanation": "Klasik kalıp: 'If I were you'." },
+            { "id": "con3-5", "type": "match_pairs", "prompt": "Cümleyi tamamla", "pairs": [
+              { "left": "If I were you,", "right": "I would tell the truth." },
+              { "left": "If she had a car,", "right": "she would drive to work." },
+              { "left": "If we lived in Spain,", "right": "we would speak Spanish." },
+              { "left": "If they knew the answer,", "right": "they would help us." }
+            ]},
+            { "id": "con3-6", "type": "tap_words_in_order", "prompt": "Sırala: 'If I had more money I would buy a house.'", "answer": "If I had more money I would buy a house", "bank": ["If", "I", "had", "more", "money", "I", "would", "buy", "a", "house", "have", "will"] },
+            { "id": "con3-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "What would you do if you won the lottery?", "options": ["What would you do if you won the lottery?", "What will you do if you win the lottery?", "What did you do if you won the lottery?", "What would you do if you want the lottery?"], "answer": "What would you do if you won the lottery?" },
+            { "id": "con3-8", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["If I were rich, I would travel.", "If I had a car, I would drive.", "If I would have time, I would call.", "If she knew, she would tell us."], "answer": "If I would have time, I would call.", "explanation": "If sonrası 'would' YANLIŞTIR. 'If I had time' olmalı." },
+            { "id": "con3-9", "type": "fill_blank", "prompt": "'If she ___ (know), she would help us.'", "answer": "knew", "acceptableAnswers": ["Knew"] },
+            { "id": "con3-10", "type": "multiple_choice", "prompt": "'Zengin olsam bir ev alırdım.' (hayali)", "options": ["If I am rich, I will buy a house.", "If I were rich, I would buy a house.", "If I will be rich, I buy a house.", "If I rich, I buy house."], "answer": "If I were rich, I would buy a house." }
+          ]
+        },
+        {
+          "id": "en-tr-conditionals-4",
+          "title": "Üç tipi karıştırma",
+          "description": "Doğru tipi seçme alıştırması",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "con4-1", "type": "multiple_choice", "prompt": "'If water reaches 100°C, it ___.'", "options": ["will boil", "boils", "would boil", "boiled"], "answer": "boils", "explanation": "Genel gerçek → zero conditional." },
+            { "id": "con4-2", "type": "multiple_choice", "prompt": "'If I have time tomorrow, I ___ you.'", "options": ["call", "called", "will call", "would call"], "answer": "will call", "explanation": "Gelecek muhtemel → first conditional." },
+            { "id": "con4-3", "type": "multiple_choice", "prompt": "'If I were a bird, I ___ fly south.'", "options": ["will", "would", "did", "have"], "answer": "would", "explanation": "Hayali → second conditional." },
+            { "id": "con4-4", "type": "fill_blank", "prompt": "'If she ___ (have) more confidence, she would speak up.'", "answer": "had", "acceptableAnswers": ["Had"], "explanation": "Hayali → second conditional." },
+            { "id": "con4-5", "type": "fill_blank", "prompt": "'If you ___ (heat) iron, it expands.'", "answer": "heat", "acceptableAnswers": ["Heat"], "explanation": "Bilimsel gerçek → zero." },
+            { "id": "con4-6", "type": "match_pairs", "prompt": "Cümleyi koşul tipiyle eşle", "pairs": [
+              { "left": "If I see her, I will tell her.", "right": "First — muhtemel gelecek" },
+              { "left": "If I were taller, I would be a model.", "right": "Second — hayali şimdi" },
+              { "left": "If you press it, the light turns on.", "right": "Zero — kural" },
+              { "left": "If it snows, schools close.", "right": "Zero — genel gerçek" }
+            ]},
+            { "id": "con4-7", "type": "tap_words_in_order", "prompt": "Sırala: 'If I were you I would not worry.'", "answer": "If I were you I would not worry", "bank": ["If", "I", "were", "you", "I", "would", "not", "worry", "am", "will"] },
+            { "id": "con4-8", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "If I had a car, I would drive there.", "options": ["If I had a car, I would drive there.", "If I have a car, I will drive there.", "If I had a car, I will drive there.", "If I have a car, I would drive there."], "answer": "If I had a car, I would drive there." },
+            { "id": "con4-9", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["If I was you, I would leave.", "If I were you, I would leave.", "If I am you, I will leave.", "If I had your job, I would be happy."], "answer": "If I am you, I will leave.", "explanation": "'If I am you' anlamsız; 'were/was' hayali bağlam ister." },
+            { "id": "con4-10", "type": "multiple_choice", "prompt": "Türkçedeki '-se/-sa' ekinin tek bir İngilizce karşılığı var mı?", "options": ["Evet, hep 'if + present'", "Evet, hep 'if + past'", "Hayır, üç farklı koşul tipi var", "Evet, hep 'would'"], "answer": "Hayır, üç farklı koşul tipi var" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-passive",
+      "title": "Edilgen Yapı (Passive Voice)",
+      "description": "be + V3 ile pasif cümle",
+      "theme": "grammar",
+      "guide": {
+        "intro": "Türkçedeki '-il/-ıl/-in' edilgen ekleri İngilizcede 'be + V3' kalıbına karşılık gelir. Türkçe edilgen yapıyı sıkça kullanır; İngilizce daha seçicidir. Pasif cümle, eylemi YAPANI önemsizleştirmek ya da gizlemek için kullanılır.",
+        "sections": [
+          { "kind": "heading", "text": "Yapı: be + V3" },
+          {
+            "kind": "table",
+            "headers": ["Zaman", "Yapı", "Örnek"],
+            "rows": [
+              ["Present simple", "am/is/are + V3", "English is spoken here."],
+              ["Past simple", "was/were + V3", "The letter was written yesterday."],
+              ["Present perfect", "have/has been + V3", "The book has been read."],
+              ["Future", "will be + V3", "The room will be cleaned."],
+              ["Modal", "modal + be + V3", "It must be done."]
+            ]
+          },
+          { "kind": "heading", "text": "Aktif → Pasif dönüşüm" },
+          { "kind": "paragraph", "text": "Aktiften pasife: aktifteki nesne pasifin öznesi olur; fiil 'be + V3' biçimine girer; eylemi yapan 'by + agent' ile gösterilir (zorunlu değil)." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "Active: Shakespeare wrote Hamlet.", "translation": "Shakespeare Hamlet'i yazdı." },
+              { "source": "Passive: Hamlet was written by Shakespeare.", "translation": "Hamlet Shakespeare tarafından yazıldı." },
+              { "source": "Active: They build houses.", "translation": "Onlar evler inşa ederler." },
+              { "source": "Passive: Houses are built (by them).", "translation": "Evler inşa edilir." }
+            ]
+          },
+          { "kind": "heading", "text": "Ne zaman pasif?" },
+          {
+            "kind": "list",
+            "items": [
+              "Eylemi yapan bilinmiyorsa: 'My phone was stolen.'",
+              "Eylemi yapan önemsizse: 'The road was repaired last week.'",
+              "Resmi/akademik dilde objektiflik için: 'The data was analyzed.'",
+              "Süreç tariflerinde: 'The coffee is roasted, ground, and served.'"
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "Türk öğrenenlerin sık hatası: Türkçedeki 'kahve içilir' tarzı genel ifadeleri İngilizcede de pasifle vermek. İngilizce konuşma dilinde aktif daha doğaldır: 'People drink coffee here' ya da 'We drink coffee here'."
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Pasifte fiilin 3. halini (V3) doğru bilmek şart. 'Was wrote' YANLIŞ; doğrusu 'was written'. 'Was eat' YANLIŞ; doğrusu 'was eaten'."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-passive-1",
+          "title": "Yapı ve aktif-pasif dönüşüm",
+          "description": "be + V3 temelleri",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "pas1-1", "type": "multiple_choice", "prompt": "'The window ___ (break) yesterday.' Pasif yapıya çevirin.", "options": ["broke", "was broken", "is broken", "has broken"], "answer": "was broken", "explanation": "Past passive: was/were + V3." },
+            { "id": "pas1-2", "type": "multiple_choice", "prompt": "'English ___ in many countries.' (konuşulur)", "options": ["speaks", "is speak", "is spoken", "spoken"], "answer": "is spoken", "explanation": "Present passive: is/are + V3." },
+            { "id": "pas1-3", "type": "fill_blank", "prompt": "'The cake ___ (eat — V3).'", "answer": "eaten", "acceptableAnswers": ["Eaten"], "explanation": "eat-ate-eaten." },
+            { "id": "pas1-4", "type": "fill_blank", "prompt": "Aktiften pasife: 'They build houses.' → 'Houses ___ ___ .' (iki kelime)", "answer": "are built", "acceptableAnswers": ["Are built"], "explanation": "are + built (V3)." },
+            { "id": "pas1-5", "type": "match_pairs", "prompt": "Aktif-pasif eşleme", "pairs": [
+              { "left": "She wrote the letter.", "right": "The letter was written by her." },
+              { "left": "They clean the room.", "right": "The room is cleaned by them." },
+              { "left": "He will fix it.", "right": "It will be fixed by him." },
+              { "left": "Someone has stolen my bike.", "right": "My bike has been stolen." }
+            ]},
+            { "id": "pas1-6", "type": "tap_words_in_order", "prompt": "Sırala: 'The book was written by an Englishman.'", "answer": "The book was written by an Englishman", "bank": ["The", "book", "was", "written", "by", "an", "Englishman", "wrote", "is", "are"] },
+            { "id": "pas1-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "The letter was sent yesterday.", "options": ["The letter was sent yesterday.", "The letter was send yesterday.", "The letter is sent yesterday.", "The letter has sent yesterday."], "answer": "The letter was sent yesterday." },
+            { "id": "pas1-8", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ pasiftir?", "options": ["The car was repaired.", "The car was repair.", "The car is being repaired.", "The car has been repaired."], "answer": "The car was repair.", "explanation": "Pasifte V3 gerekir: 'repaired'." },
+            { "id": "pas1-9", "type": "fill_blank", "prompt": "Pasif yapın: 'Someone stole my phone.' → 'My phone ___ ___.'", "answer": "was stolen", "acceptableAnswers": ["Was stolen"] },
+            { "id": "pas1-10", "type": "multiple_choice", "prompt": "Türkçedeki '-il/-ıl' eki İngilizce pasifte hangi yapıya karşılık gelir?", "options": ["do + V1", "be + V3", "have + V3", "will + V1"], "answer": "be + V3" }
+          ]
+        },
+        {
+          "id": "en-tr-passive-2",
+          "title": "Farklı zamanlarda pasif",
+          "description": "Past, present perfect ve future passive",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "pas2-1", "type": "multiple_choice", "prompt": "Present perfect passive: 'The work ___.'", "options": ["has done", "has been done", "is done", "was done"], "answer": "has been done", "explanation": "have/has + been + V3." },
+            { "id": "pas2-2", "type": "multiple_choice", "prompt": "Future passive: 'The room ___ tomorrow.'", "options": ["will clean", "will be cleaned", "is cleaned", "was cleaned"], "answer": "will be cleaned", "explanation": "will + be + V3." },
+            { "id": "pas2-3", "type": "fill_blank", "prompt": "'The bridge ___ (build) in 1950.' (past passive)", "answer": "was built", "acceptableAnswers": ["Was built"] },
+            { "id": "pas2-4", "type": "fill_blank", "prompt": "'The report ___ (finish — present perfect passive).'", "answer": "has been finished", "acceptableAnswers": ["Has been finished"] },
+            { "id": "pas2-5", "type": "match_pairs", "prompt": "Zaman-yapı eşleme", "pairs": [
+              { "left": "Present passive", "right": "is/are + V3" },
+              { "left": "Past passive", "right": "was/were + V3" },
+              { "left": "Future passive", "right": "will be + V3" },
+              { "left": "Modal passive", "right": "modal + be + V3" }
+            ]},
+            { "id": "pas2-6", "type": "tap_words_in_order", "prompt": "Sırala: 'The package will be delivered tomorrow.'", "answer": "The package will be delivered tomorrow", "bank": ["The", "package", "will", "be", "delivered", "tomorrow", "is", "deliver", "to"] },
+            { "id": "pas2-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "The decision has been made.", "options": ["The decision has been made.", "The decision has been make.", "The decision is been made.", "The decision was been made."], "answer": "The decision has been made." },
+            { "id": "pas2-8", "type": "multiple_choice", "prompt": "Modal pasif: 'It ___ done immediately.' (yapılmalı)", "options": ["must do", "must to be done", "must be done", "must been done"], "answer": "must be done", "explanation": "modal + be + V3." },
+            { "id": "pas2-9", "type": "fill_blank", "prompt": "'Cars ___ (make) in factories.' (genel gerçek, pasif)", "answer": "are made", "acceptableAnswers": ["Are made"] },
+            { "id": "pas2-10", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["The book has been read.", "The book has read.", "The book was read yesterday.", "The book will be read tomorrow."], "answer": "The book has read.", "explanation": "Pasifte 'been' düşmez: 'has been read'." }
+          ]
+        },
+        {
+          "id": "en-tr-passive-3",
+          "title": "Ne zaman pasif kullanmalı?",
+          "description": "Doğal aktif vs gerekli pasif",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "pas3-1", "type": "multiple_choice", "prompt": "Pasif EN UYGUN olan durumu seç:", "options": ["Telefonum çalındı (kim çaldı bilmiyorum).", "Annem akşam yemeği pişiriyor.", "Ben ödevimi yaptım.", "Köpek havlıyor."], "answer": "Telefonum çalındı (kim çaldı bilmiyorum).", "explanation": "Yapan bilinmiyor → pasif uygun." },
+            { "id": "pas3-2", "type": "multiple_choice", "prompt": "Hangi durumda pasif TERCİH EDİLMEZ?", "options": ["Bilimsel makale", "Suç haberi", "Günlük sohbet", "Resmi rapor"], "answer": "Günlük sohbet", "explanation": "Konuşma dilinde aktif daha doğal." },
+            { "id": "pas3-3", "type": "fill_blank", "prompt": "Doğal İngilizceye çevir: 'Burada Türkçe konuşulur.' → 'Turkish ___ ___ here.'", "answer": "is spoken", "acceptableAnswers": ["Is spoken"] },
+            { "id": "pas3-4", "type": "multiple_choice", "prompt": "'Birisi cüzdanımı çaldı.' İngilizcede en doğal ifade:", "options": ["Someone stole my wallet. / My wallet was stolen.", "My wallet stole.", "I stole my wallet.", "I am stolen my wallet."], "answer": "Someone stole my wallet. / My wallet was stolen.", "explanation": "İkisi de doğru; pasif yapanı önemsizleştirir." },
+            { "id": "pas3-5", "type": "match_pairs", "prompt": "Pasif kullanım nedenini eşle", "pairs": [
+              { "left": "My bike was stolen.", "right": "Yapan bilinmiyor" },
+              { "left": "The road was repaired.", "right": "Yapan önemsiz" },
+              { "left": "The data was analyzed.", "right": "Resmi / akademik" },
+              { "left": "Coffee is grown in Brazil.", "right": "Genel bilgi" }
+            ]},
+            { "id": "pas3-6", "type": "tap_words_in_order", "prompt": "Sırala: 'My car was stolen last night.'", "answer": "My car was stolen last night", "bank": ["My", "car", "was", "stolen", "last", "night", "is", "steal", "by"] },
+            { "id": "pas3-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Coffee is grown in Brazil.", "options": ["Coffee is grown in Brazil.", "Coffee is grow in Brazil.", "Coffee was grown in Brazil.", "Coffee grows in Brazil."], "answer": "Coffee is grown in Brazil." },
+            { "id": "pas3-8", "type": "multiple_choice", "prompt": "Hangi cümle TÜRKÇE ETKİSİYLE GEREKSİZ pasiftir?", "options": ["My passport was lost.", "I love coffee was drunk by me every morning.", "The window was broken by the wind.", "The book was written in 1850."], "answer": "I love coffee was drunk by me every morning.", "explanation": "Bu cümle anlamsız; günlük eylemler aktif kalır." },
+            { "id": "pas3-9", "type": "fill_blank", "prompt": "'The keys ___ (find) on the table.' (bulundu — yapan önemsiz)", "answer": "were found", "acceptableAnswers": ["Were found", "was found"] },
+            { "id": "pas3-10", "type": "multiple_choice", "prompt": "Akademik bir makale için en uygun yapı:", "options": ["I did the experiment.", "We did the experiment.", "The experiment was conducted.", "Someone did the experiment."], "answer": "The experiment was conducted.", "explanation": "Akademik dilde objektif pasif tercih edilir." }
+          ]
+        },
+        {
+          "id": "en-tr-passive-4",
+          "title": "Pasif — karışık alıştırma",
+          "description": "Tüm zamanlar ve kullanım",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "pas4-1", "type": "multiple_choice", "prompt": "Aktif: 'They have built a new bridge.' Pasif:", "options": ["A new bridge is built.", "A new bridge has been built.", "A new bridge was built.", "A new bridge has built."], "answer": "A new bridge has been built." },
+            { "id": "pas4-2", "type": "fill_blank", "prompt": "'The film ___ (direct) by Nuri Bilge Ceylan.'", "answer": "was directed", "acceptableAnswers": ["Was directed"] },
+            { "id": "pas4-3", "type": "multiple_choice", "prompt": "Hangisi DOĞRU pasif?", "options": ["The homework must do.", "The homework must be done.", "The homework must done.", "The homework must to be done."], "answer": "The homework must be done." },
+            { "id": "pas4-4", "type": "fill_blank", "prompt": "'My passport ___ (steal — present perfect passive).'", "answer": "has been stolen", "acceptableAnswers": ["Has been stolen"] },
+            { "id": "pas4-5", "type": "match_pairs", "prompt": "V3 hallerini eşle", "pairs": [
+              { "left": "write", "right": "written" },
+              { "left": "give", "right": "given" },
+              { "left": "speak", "right": "spoken" },
+              { "left": "build", "right": "built" }
+            ]},
+            { "id": "pas4-6", "type": "tap_words_in_order", "prompt": "Sırala: 'The room must be cleaned every day.'", "answer": "The room must be cleaned every day", "bank": ["The", "room", "must", "be", "cleaned", "every", "day", "clean", "is", "to"] },
+            { "id": "pas4-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "The new policy was announced today.", "options": ["The new policy was announced today.", "The new policy is announced today.", "The new policy has announced today.", "The new policy was announce today."], "answer": "The new policy was announced today." },
+            { "id": "pas4-8", "type": "multiple_choice", "prompt": "'Bu ev geçen yıl satıldı.' İngilizcede:", "options": ["This house sold last year.", "This house was sold last year.", "This house has been sold last year.", "This house is sold last year."], "answer": "This house was sold last year." },
+            { "id": "pas4-9", "type": "fill_blank", "prompt": "'English ___ (speak) all over the world.'", "answer": "is spoken", "acceptableAnswers": ["Is spoken"] },
+            { "id": "pas4-10", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["The cake was eaten.", "The cake was ate.", "The cake has been eaten.", "The cake will be eaten."], "answer": "The cake was ate.", "explanation": "Pasifte V3 gerekir: 'eaten'." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-phrasal",
+      "title": "Phrasal Verbs (Birleşik Fiiller)",
+      "description": "look up, give up, run into ve daha fazlası",
+      "theme": "vocabulary",
+      "guide": {
+        "intro": "Phrasal verb'ler İngilizcenin en büyük zorluklarından biridir çünkü Türkçede neredeyse hiç yoktur. 'Look up' (bakmak değil, ARAMAK), 'give up' (vermek değil, VAZGEÇMEK) gibi birleşim, fiilin tek başına anlamından bağımsız olabilir. Konuşma dilinde phrasal verb kullanmak daha doğaldır; resmi yazıda Latince kökenli karşılıkları (research, surrender) tercih edilir.",
+        "sections": [
+          { "kind": "heading", "text": "Yaygın phrasal verb'ler" },
+          {
+            "kind": "table",
+            "headers": ["Phrasal verb", "Anlamı", "Türkçe"],
+            "rows": [
+              ["look up (a word)", "araştırmak / sözlüğe bakmak", "araştırmak"],
+              ["give up", "vazgeçmek / pes etmek", "vazgeçmek"],
+              ["run into", "tesadüfen karşılaşmak", "denk gelmek"],
+              ["take off", "(uçak) havalanmak / (giysi) çıkarmak", "havalanmak / çıkarmak"],
+              ["break down", "bozulmak (makine) / sinir krizi geçirmek", "bozulmak"],
+              ["put off", "ertelemek", "ertelemek"],
+              ["pick up", "almak / öğrenmek (kazara)", "almak / kapmak"],
+              ["find out", "öğrenmek (gerçeği)", "öğrenmek"],
+              ["work out", "spor yapmak / çözmek / yolunda gitmek", "yolunda gitmek"],
+              ["get along (with)", "iyi geçinmek", "anlaşmak"]
+            ]
+          },
+          { "kind": "heading", "text": "Ayrılabilir mi, ayrılamaz mı?" },
+          { "kind": "paragraph", "text": "Bazı phrasal verb'ler nesneyle ARALARINA girebilir (ayrılabilir / separable). Bazıları AYRILMAZ (inseparable). Zamir nesne (it, him, them) ayrılabilirlerde ZORUNLU olarak araya girer." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "Ayrılabilir: I looked up the word. / I looked the word up.", "translation": "Kelimeye baktım." },
+              { "source": "Zamirle: I looked it up. (I looked up it. YANLIŞ)", "translation": "Ona baktım." },
+              { "source": "Ayrılamaz: I ran into John. (I ran John into. YANLIŞ)", "translation": "John'la karşılaştım." },
+              { "source": "Ayrılamaz: She gets along with her sister.", "translation": "Kız kardeşiyle iyi geçinir." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "İpucu: Phrasal verb'leri tek tek ezberleyin, ipuçlarına güvenmeyin. 'Look up' (araştır) ile 'look down on' (küçük görmek) arasında mantıksal bağ yok — sözlükten teyit edin."
+          },
+          { "kind": "heading", "text": "Konuşma dili vs resmi" },
+          {
+            "kind": "table",
+            "headers": ["Phrasal (konuşma)", "Tek kelime (resmi)", "Türkçe"],
+            "rows": [
+              ["find out", "discover", "öğrenmek / keşfetmek"],
+              ["give up", "surrender / abandon", "vazgeçmek"],
+              ["put off", "postpone", "ertelemek"],
+              ["look into", "investigate", "incelemek"],
+              ["go on", "continue", "devam etmek"]
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-phrasal-1",
+          "title": "En sık 10 phrasal verb",
+          "description": "look up, give up, run into ve diğerleri",
+          "theme": "vocabulary",
+          "xp": 12,
+          "exercises": [
+            { "id": "phr1-1", "type": "multiple_choice", "prompt": "'I'll ___ the word in the dictionary.' (araştırmak)", "options": ["look at", "look up", "look for", "look down"], "answer": "look up", "explanation": "'Look up' = sözlükte araştırmak." },
+            { "id": "phr1-2", "type": "multiple_choice", "prompt": "'Don't ___ on your dreams.' (vazgeçmek)", "options": ["give in", "give up", "give out", "give back"], "answer": "give up" },
+            { "id": "phr1-3", "type": "fill_blank", "prompt": "'I ___ ___ an old friend at the mall.' (tesadüfen karşılaştım)", "answer": "ran into", "acceptableAnswers": ["Ran into"] },
+            { "id": "phr1-4", "type": "fill_blank", "prompt": "'The plane will ___ ___ in 10 minutes.' (havalanacak)", "answer": "take off", "acceptableAnswers": ["Take off"] },
+            { "id": "phr1-5", "type": "match_pairs", "prompt": "Phrasal verb'ü Türkçesiyle eşle", "pairs": [
+              { "left": "give up", "right": "vazgeçmek" },
+              { "left": "look up", "right": "araştırmak" },
+              { "left": "run into", "right": "tesadüfen karşılaşmak" },
+              { "left": "find out", "right": "öğrenmek" }
+            ]},
+            { "id": "phr1-6", "type": "tap_words_in_order", "prompt": "Sırala: 'I picked up some Italian on holiday.'", "answer": "I picked up some Italian on holiday", "bank": ["I", "picked", "up", "some", "Italian", "on", "holiday", "down", "in", "to"] },
+            { "id": "phr1-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "My car broke down on the highway.", "options": ["My car broke down on the highway.", "My car broke up on the highway.", "My car break down on the highway.", "My car broke down on the highly."], "answer": "My car broke down on the highway." },
+            { "id": "phr1-8", "type": "multiple_choice", "prompt": "'work out' birden çok anlamı vardır. Hangisi YANLIŞTIR?", "options": ["Spor yapmak", "Çözüme kavuşmak", "Yolunda gitmek", "Çalışmamak"], "answer": "Çalışmamak", "explanation": "'Work out' tam tersi: yolunda gitmek." },
+            { "id": "phr1-9", "type": "fill_blank", "prompt": "'I ___ ___ that he was lying.' (gerçeği öğrendim)", "answer": "found out", "acceptableAnswers": ["Found out"] },
+            { "id": "phr1-10", "type": "multiple_choice", "prompt": "'Toplantıyı yarına erteledik.' İngilizcede:", "options": ["We put off the meeting to tomorrow.", "We put the meeting off until tomorrow.", "We put on the meeting tomorrow.", "We put up the meeting tomorrow."], "answer": "We put the meeting off until tomorrow.", "explanation": "'Put off' = ertelemek; ayrılabilir." }
+          ]
+        },
+        {
+          "id": "en-tr-phrasal-2",
+          "title": "Ayrılabilir vs Ayrılamaz",
+          "description": "Nesneyle araya girebilir mi?",
+          "theme": "vocabulary",
+          "xp": 12,
+          "exercises": [
+            { "id": "phr2-1", "type": "multiple_choice", "prompt": "Hangisi DOĞRU?", "options": ["I looked up it.", "I looked it up.", "I up looked it.", "I it looked up."], "answer": "I looked it up.", "explanation": "Ayrılabilir phrasal verb + zamir → arada olmak ZORUNDA." },
+            { "id": "phr2-2", "type": "multiple_choice", "prompt": "Hangisi YANLIŞ?", "options": ["I ran into John.", "I ran John into.", "I ran into him.", "She ran into a problem."], "answer": "I ran John into.", "explanation": "'Run into' AYRILAMAZ; nesne arasına giremez." },
+            { "id": "phr2-3", "type": "fill_blank", "prompt": "'She turned ___ the offer.' (reddetti — turn down)", "answer": "down", "acceptableAnswers": ["Down"] },
+            { "id": "phr2-4", "type": "multiple_choice", "prompt": "'turn down' (reddetmek): Hangisi DOĞRU?", "options": ["I turned down it.", "I turned it down.", "I turned the offer down. / I turned down the offer.", "I down turned the offer."], "answer": "I turned the offer down. / I turned down the offer.", "explanation": "Ayrılabilir: isim nesnesi her iki konumda olabilir." },
+            { "id": "phr2-5", "type": "match_pairs", "prompt": "Phrasal verb tipini eşle", "pairs": [
+              { "left": "look up (a word)", "right": "Ayrılabilir (look the word up)" },
+              { "left": "run into (someone)", "right": "Ayrılamaz (2 parçalı)" },
+              { "left": "get along with", "right": "Ayrılamaz (3 parçalı)" },
+              { "left": "turn off (the light)", "right": "Ayrılabilir (turn the light off)" }
+            ]},
+            { "id": "phr2-6", "type": "tap_words_in_order", "prompt": "Sırala: 'Please turn the music down.'", "answer": "Please turn the music down", "bank": ["Please", "turn", "the", "music", "down", "off", "up", "in"] },
+            { "id": "phr2-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Can you pick me up at eight?", "options": ["Can you pick me up at eight?", "Can you pick up me at eight?", "Can you pick me up at late?", "Can you pick me out at eight?"], "answer": "Can you pick me up at eight?" },
+            { "id": "phr2-8", "type": "multiple_choice", "prompt": "Üç parçalı phrasal verb (always inseparable) örneği:", "options": ["look up to", "turn off", "give up", "find out"], "answer": "look up to", "explanation": "'Look up to' = saygı duymak; 3 parçalı, ayrılamaz." },
+            { "id": "phr2-9", "type": "fill_blank", "prompt": "'I get along ___ my colleagues.' (anlaşırım)", "answer": "with", "acceptableAnswers": ["With"], "explanation": "'Get along with' = -ile iyi geçinmek." },
+            { "id": "phr2-10", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["She looks up to her father.", "She looks her father up to.", "I get along with her.", "Take off your shoes."], "answer": "She looks her father up to.", "explanation": "'Look up to' AYRILAMAZ." }
+          ]
+        },
+        {
+          "id": "en-tr-phrasal-3",
+          "title": "Anlam çoğulluğu",
+          "description": "take off, work out, pick up — birden fazla anlam",
+          "theme": "vocabulary",
+          "xp": 12,
+          "exercises": [
+            { "id": "phr3-1", "type": "multiple_choice", "prompt": "'The plane took off' cümlesinde 'take off' ne demek?", "options": ["Çıkarmak", "Havalanmak", "Başarılı olmak", "Almak"], "answer": "Havalanmak" },
+            { "id": "phr3-2", "type": "multiple_choice", "prompt": "'Take off your coat' cümlesinde 'take off' ne demek?", "options": ["Çıkarmak", "Havalanmak", "Almak", "Saklamak"], "answer": "Çıkarmak" },
+            { "id": "phr3-3", "type": "fill_blank", "prompt": "'I ___ ___ at the gym every morning.' (spor yapmak)", "answer": "work out", "acceptableAnswers": ["Work out"] },
+            { "id": "phr3-4", "type": "multiple_choice", "prompt": "'It will all work out in the end.' Burada 'work out' ne demek?", "options": ["Spor yapmak", "Yolunda gitmek / hallolmak", "Çalışmak", "Çözmek (matematik)"], "answer": "Yolunda gitmek / hallolmak" },
+            { "id": "phr3-5", "type": "match_pairs", "prompt": "'pick up' anlamlarını eşle", "pairs": [
+              { "left": "Pick up the phone.", "right": "Açmak / kaldırmak" },
+              { "left": "I'll pick you up at 8.", "right": "Almaya gelmek" },
+              { "left": "I picked up some Spanish.", "right": "Kazara öğrenmek" },
+              { "left": "Sales picked up.", "right": "Toparlandı / arttı" }
+            ]},
+            { "id": "phr3-6", "type": "tap_words_in_order", "prompt": "Sırala: 'My car broke down again last night.'", "answer": "My car broke down again last night", "bank": ["My", "car", "broke", "down", "again", "last", "night", "up", "off", "in"] },
+            { "id": "phr3-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "She broke down in tears.", "options": ["She broke down in tears.", "She broke up in tears.", "She break down in tears.", "She broke out in tears."], "answer": "She broke down in tears." },
+            { "id": "phr3-8", "type": "multiple_choice", "prompt": "'break down' hangi anlama GELMEZ?", "options": ["(Makine) bozulmak", "(Kişi) ağlama krizine girmek", "Detaylandırmak (analiz)", "Tatile çıkmak"], "answer": "Tatile çıkmak" },
+            { "id": "phr3-9", "type": "fill_blank", "prompt": "'Can you ___ me ___ at the airport?' (havaalanından alabilir misin?)", "answer": "pick up", "acceptableAnswers": ["pick / up", "Pick up"], "explanation": "Pick X up = X'i almaya gelmek." },
+            { "id": "phr3-10", "type": "multiple_choice", "prompt": "Aşağıdakilerden hangisi 'take off' için MÜMKÜN bir anlam DEĞİLDİR?", "options": ["Uçak havalandı.", "Ceketini çıkar.", "Ürün popülerleşti.", "Onu çağırdım."], "answer": "Onu çağırdım." }
+          ]
+        },
+        {
+          "id": "en-tr-phrasal-4",
+          "title": "Phrasal verb — karışık tekrar",
+          "description": "Tüm konuların birleşimi",
+          "theme": "vocabulary",
+          "xp": 12,
+          "exercises": [
+            { "id": "phr4-1", "type": "multiple_choice", "prompt": "'They get ___ very well.' (iyi geçiniyorlar)", "options": ["along", "up", "off", "into"], "answer": "along" },
+            { "id": "phr4-2", "type": "multiple_choice", "prompt": "'find out' = ?", "options": ["Bulmak (eşya)", "Öğrenmek (gerçek)", "Dışarı çıkmak", "Bitirmek"], "answer": "Öğrenmek (gerçek)" },
+            { "id": "phr4-3", "type": "fill_blank", "prompt": "'Don't ___ ___ trying!' (Vazgeçme!)", "answer": "give up", "acceptableAnswers": ["Give up"] },
+            { "id": "phr4-4", "type": "fill_blank", "prompt": "Resmi karşılığı yaz: 'put off' = ___", "answer": "postpone", "acceptableAnswers": ["Postpone", "delay"], "explanation": "'put off' (konuşma) = postpone (resmi)." },
+            { "id": "phr4-5", "type": "match_pairs", "prompt": "Phrasal verb'ü resmi karşılığıyla eşle", "pairs": [
+              { "left": "find out", "right": "discover" },
+              { "left": "give up", "right": "surrender" },
+              { "left": "put off", "right": "postpone" },
+              { "left": "look into", "right": "investigate" }
+            ]},
+            { "id": "phr4-6", "type": "tap_words_in_order", "prompt": "Sırala: 'I need to look this word up.'", "answer": "I need to look this word up", "bank": ["I", "need", "to", "look", "this", "word", "up", "down", "in", "out"] },
+            { "id": "phr4-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Let's put off the trip until next week.", "options": ["Let's put off the trip until next week.", "Let's put on the trip until next week.", "Let's put up the trip until next week.", "Let's put off the trick until next week."], "answer": "Let's put off the trip until next week." },
+            { "id": "phr4-8", "type": "multiple_choice", "prompt": "'Look into' ne demek?", "options": ["İçine bakmak (göz)", "Araştırmak / soruşturmak", "Saygı duymak", "Beklemek"], "answer": "Araştırmak / soruşturmak" },
+            { "id": "phr4-9", "type": "fill_blank", "prompt": "'I'll ___ ___ about it tomorrow.' (yarın araştıracağım — look into)", "answer": "look into", "acceptableAnswers": ["Look into"] },
+            { "id": "phr4-10", "type": "multiple_choice", "prompt": "Hangi phrasal verb 'tesadüfen karşılaşmak' anlamına gelir?", "options": ["look into", "run into", "give up", "take off"], "answer": "run into" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-false-friends",
+      "title": "Sahte Arkadaşlar (False Friends)",
+      "description": "Türkçeye geçmiş kelimelerin İngilizcedeki farklı anlamları",
+      "theme": "vocabulary",
+      "guide": {
+        "intro": "False friend (sahte arkadaş): iki dilde benzer görünen ama anlamı farklı olan kelime çiftleri. Türkçeye Fransızca/İtalyanca/İngilizce üzerinden geçmiş pek çok kelimenin İngilizcedeki anlamı bambaşka olabilir. Bu yanlışlar B1 öğrenenlerin en sık tuzağıdır çünkü 'kelimeyi biliyorum' yanılgısı yaratır.",
+        "sections": [
+          { "kind": "heading", "text": "Klasik tuzaklar" },
+          {
+            "kind": "table",
+            "headers": ["İngilizce kelime", "Gerçek anlamı", "Türkçedeki yanlış çağrışım"],
+            "rows": [
+              ["actual", "gerçek, asıl", "aktüel = güncel (YANLIŞ eşleme)"],
+              ["eventually", "sonunda, en nihayetinde", "eventüel = olası (YANLIŞ)"],
+              ["sympathetic", "anlayışlı, dert ortağı", "sempatik = sevimli, cana yakın (FARKLI)"],
+              ["magazine", "dergi", "magazin = magazin haberi (dar anlam)"],
+              ["library", "kütüphane", "kitapçı = bookstore"],
+              ["chef", "(şefin) baş aşçı", "şef = patron / lider (genel anlam YANLIŞ)"],
+              ["smoking", "sigara içme (gerund)", "smokin = tuxedo (giysi)"],
+              ["editor", "editör (içeriği düzenleyen)", "editör = sadece yayıncı (eksik)"],
+              ["realize", "fark etmek / hayata geçirmek", "realize etmek = yapmak (Tr. argo)"],
+              ["control", "yönetmek, kontrol altında tutmak", "kontrol etmek = check (FARKLI)"],
+              ["brief", "kısa / kısa açıklama", "brifing = sunum (Tr. dar anlam)"]
+            ]
+          },
+          { "kind": "heading", "text": "Doğru karşılıklar" },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "The actual cost is higher.", "translation": "Gerçek maliyet daha yüksek." },
+              { "source": "I'll check the report.", "translation": "Raporu kontrol edeceğim (gözden geçireceğim)." },
+              { "source": "Eventually, we found a solution.", "translation": "Sonunda bir çözüm bulduk." },
+              { "source": "She is friendly and likeable.", "translation": "O sevimli ve cana yakın." },
+              { "source": "I read a magazine on the plane.", "translation": "Uçakta bir dergi okudum." },
+              { "source": "There's a great library downtown.", "translation": "Şehir merkezinde harika bir kütüphane var." },
+              { "source": "The chef prepared a delicious meal.", "translation": "Aşçı muhteşem bir yemek hazırladı." },
+              { "source": "He wore a tuxedo to the wedding.", "translation": "Düğüne smokin giydi." }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "'Actual' KESİNLİKLE 'aktüel/güncel' demek değildir. 'Current news' = güncel haberler. 'Actual cost' = gerçek maliyet. Türkçe etkisiyle 'actual news' demek anlam çarpıtır."
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Bir kelimeyi sözlükten teyit etmeden cümlede kullanmayın — özellikle Türkçeye geçmiş 'modern' görünen kelimelerde."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-false-friends-1",
+          "title": "actual, eventually, sympathetic",
+          "description": "Klasik anlam kaymaları",
+          "theme": "vocabulary",
+          "xp": 12,
+          "exercises": [
+            { "id": "ff1-1", "type": "multiple_choice", "prompt": "'actual' İngilizcede ne demektir?", "options": ["Güncel (current)", "Gerçek, asıl", "Aktif", "Aktüalite"], "answer": "Gerçek, asıl", "explanation": "Türkçedeki 'aktüel' (güncel) ile karıştırılmamalıdır." },
+            { "id": "ff1-2", "type": "multiple_choice", "prompt": "'eventually' ne demektir?", "options": ["Olası", "Sonunda, en nihayetinde", "Olağanüstü", "Olaylı"], "answer": "Sonunda, en nihayetinde", "explanation": "Türkçedeki 'eventüel' (olası) ile karıştırılır; doğru karşılığı 'possibly'." },
+            { "id": "ff1-3", "type": "multiple_choice", "prompt": "İngilizce 'sympathetic' Türkçede ne demektir?", "options": ["Sempatik (sevimli)", "Anlayışlı, dert ortağı", "Sebepli", "Senpatik"], "answer": "Anlayışlı, dert ortağı", "explanation": "İngilizce 'sympathetic' duygu paylaşır; 'sevimli' = likeable / friendly." },
+            { "id": "ff1-4", "type": "fill_blank", "prompt": "'Bu projenin gerçek maliyeti nedir?' → 'What's the ___ cost of this project?'", "answer": "actual", "acceptableAnswers": ["Actual"], "explanation": "Türkçedeki 'aktüel' burada YANLIŞ. 'Actual' = gerçek." },
+            { "id": "ff1-5", "type": "match_pairs", "prompt": "Doğru karşılıkları eşle", "pairs": [
+              { "left": "güncel", "right": "current" },
+              { "left": "gerçek", "right": "actual" },
+              { "left": "olası", "right": "possible" },
+              { "left": "sonunda", "right": "eventually" }
+            ]},
+            { "id": "ff1-6", "type": "tap_words_in_order", "prompt": "Sırala: 'Eventually we found the answer.'", "answer": "Eventually we found the answer", "bank": ["Eventually", "we", "found", "the", "answer", "Actually", "actual", "the"] },
+            { "id": "ff1-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "She is very sympathetic to my situation.", "options": ["She is very sympathetic to my situation.", "She is very sympathetic for my situation.", "She is very symptomatic to my situation.", "She is very simply to my situation."], "answer": "She is very sympathetic to my situation." },
+            { "id": "ff1-8", "type": "multiple_choice", "prompt": "'O çok sevimli/cana yakın bir insan.' İngilizcede en doğru:", "options": ["She is very sympathetic.", "She is very likeable / friendly.", "She is very symbolic.", "She is very symptomatic."], "answer": "She is very likeable / friendly.", "explanation": "Türkçe 'sempatik' İngilizce 'likeable/friendly'dır." },
+            { "id": "ff1-9", "type": "fill_blank", "prompt": "'Sonunda gerçeği öğrendik.' → '___, we learned the truth.'", "answer": "Eventually", "acceptableAnswers": ["eventually", "Finally"] },
+            { "id": "ff1-10", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ kullanım içerir?", "options": ["The actual price is 100 TL.", "I read the actual news this morning.", "Eventually, I succeeded.", "She is sympathetic to refugees."], "answer": "I read the actual news this morning.", "explanation": "'Actual news' anlam karışıklığı yaratır; 'current news' kastediliyor." }
+          ]
+        },
+        {
+          "id": "en-tr-false-friends-2",
+          "title": "magazine, library, chef",
+          "description": "Yer ve meslek kelimelerinde tuzaklar",
+          "theme": "vocabulary",
+          "xp": 12,
+          "exercises": [
+            { "id": "ff2-1", "type": "multiple_choice", "prompt": "İngilizce 'magazine' ne demektir?", "options": ["Magazin haberi", "Dergi (genel)", "Mağaza", "Eğlence"], "answer": "Dergi (genel)", "explanation": "Türkçede 'magazin' dar anlamlı; İngilizcede her tür dergi." },
+            { "id": "ff2-2", "type": "multiple_choice", "prompt": "İngilizce 'library' ne demektir?", "options": ["Kitapçı (mağaza)", "Kütüphane", "Kütüphaneci", "Kitap rafı"], "answer": "Kütüphane", "explanation": "'Bookstore' = kitapçı (alışveriş yeri)." },
+            { "id": "ff2-3", "type": "multiple_choice", "prompt": "'Kitapçıdan kitap aldım.' İngilizcede:", "options": ["I bought a book from the library.", "I bought a book from the bookstore.", "I bought a book from the librarian.", "I bought a book from the magazine."], "answer": "I bought a book from the bookstore.", "explanation": "Library kütüphane; bookstore kitapçı." },
+            { "id": "ff2-4", "type": "fill_blank", "prompt": "'Aşçı muhteşem bir yemek pişirdi.' → 'The ___ cooked a wonderful meal.'", "answer": "chef", "acceptableAnswers": ["Chef"], "explanation": "İngilizce 'chef' = baş aşçı. Türkçe 'şef' (lider/patron) = boss/manager." },
+            { "id": "ff2-5", "type": "match_pairs", "prompt": "Doğru karşılıkları eşle", "pairs": [
+              { "left": "dergi", "right": "magazine" },
+              { "left": "kütüphane", "right": "library" },
+              { "left": "kitapçı (mağaza)", "right": "bookstore" },
+              { "left": "aşçı (baş)", "right": "chef" }
+            ]},
+            { "id": "ff2-6", "type": "tap_words_in_order", "prompt": "Sırala: 'I went to the library to study.'", "answer": "I went to the library to study", "bank": ["I", "went", "to", "the", "library", "to", "study", "bookstore", "magazine", "in"] },
+            { "id": "ff2-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "She works as a chef in a famous restaurant.", "options": ["She works as a chef in a famous restaurant.", "She works as a chief in a famous restaurant.", "She walks as a chef in a famous restaurant.", "She works as a cheap in a famous restaurant."], "answer": "She works as a chef in a famous restaurant." },
+            { "id": "ff2-8", "type": "multiple_choice", "prompt": "'Patronum bana bir görev verdi.' İngilizcede:", "options": ["My chef gave me a task.", "My boss gave me a task.", "My library gave me a task.", "My magazine gave me a task."], "answer": "My boss gave me a task.", "explanation": "Türkçe 'şef' (patron) İngilizcede 'boss/manager'dır; 'chef' sadece aşçı." },
+            { "id": "ff2-9", "type": "fill_blank", "prompt": "'Bu ay çıkan dergiyi okudun mu?' → 'Did you read this month's ___?'", "answer": "magazine", "acceptableAnswers": ["Magazine"] },
+            { "id": "ff2-10", "type": "multiple_choice", "prompt": "Hangi çeviri YANLIŞ?", "options": ["library = kütüphane", "bookstore = kitapçı", "chef = aşçı (baş)", "library = kitapçı"], "answer": "library = kitapçı", "explanation": "Library kütüphane, kitapçı bookstore." }
+          ]
+        },
+        {
+          "id": "en-tr-false-friends-3",
+          "title": "smoking, editor, realize",
+          "description": "Daha sinsi tuzaklar",
+          "theme": "vocabulary",
+          "xp": 12,
+          "exercises": [
+            { "id": "ff3-1", "type": "multiple_choice", "prompt": "İngilizce 'smoking' ne demektir?", "options": ["Smokin (giysi)", "Sigara içme (eylem)", "Yanan", "Yangın"], "answer": "Sigara içme (eylem)", "explanation": "Türkçe 'smokin' = İngilizce 'tuxedo'." },
+            { "id": "ff3-2", "type": "multiple_choice", "prompt": "'Düğüne smokin giydi.' İngilizcede:", "options": ["He wore a smoking to the wedding.", "He wore a tuxedo to the wedding.", "He wore smoking to the wedding.", "He smoked to the wedding."], "answer": "He wore a tuxedo to the wedding." },
+            { "id": "ff3-3", "type": "multiple_choice", "prompt": "İngilizce 'realize' ne demektir? (iki ana anlamı)", "options": ["Sadece yapmak", "Fark etmek / hayata geçirmek", "Gerçek olmak", "Yenilemek"], "answer": "Fark etmek / hayata geçirmek", "explanation": "Türkçe 'realize etmek' (yapmak) sadece argo; doğru kullanım 'fark etmek'." },
+            { "id": "ff3-4", "type": "fill_blank", "prompt": "'Hatamı fark ettim.' → 'I ___ my mistake.'", "answer": "realized", "acceptableAnswers": ["realised", "Realized"], "explanation": "'Realize' burada 'fark etmek'." },
+            { "id": "ff3-5", "type": "match_pairs", "prompt": "Türkçe → İngilizce eşle", "pairs": [
+              { "left": "smokin", "right": "tuxedo" },
+              { "left": "sigara içme", "right": "smoking" },
+              { "left": "fark etmek", "right": "realize" },
+              { "left": "editör (yazı düzenleyen)", "right": "editor" }
+            ]},
+            { "id": "ff3-6", "type": "tap_words_in_order", "prompt": "Sırala: 'I didn't realize how late it was.'", "answer": "I didn't realize how late it was", "bank": ["I", "didn't", "realize", "how", "late", "it", "was", "now", "do", "is"] },
+            { "id": "ff3-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Smoking is not allowed here.", "options": ["Smoking is not allowed here.", "Smoking are not allowed here.", "Smokin is not allowed here.", "Smoking is now allowed here."], "answer": "Smoking is not allowed here." },
+            { "id": "ff3-8", "type": "multiple_choice", "prompt": "İngilizce 'editor' tam olarak ne yapar?", "options": ["Sadece yayıncı", "Sadece yazar", "İçeriği düzenleyen, gözden geçiren", "Çevirmen"], "answer": "İçeriği düzenleyen, gözden geçiren", "explanation": "Türkçe 'editör' bazen sadece yayıncı sanılır; İngilizce 'editor' içeriği şekillendirir." },
+            { "id": "ff3-9", "type": "fill_blank", "prompt": "'Sigara içmek burada yasak.' → '___ is forbidden here.'", "answer": "Smoking", "acceptableAnswers": ["smoking"] },
+            { "id": "ff3-10", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["I realized my mistake.", "I realized the project last year (= built it).", "He wore a smoking to the gala.", "The editor revised my article."], "answer": "He wore a smoking to the gala.", "explanation": "'Smoking' giysi olarak kullanılmaz; 'tuxedo' doğru." }
+          ]
+        },
+        {
+          "id": "en-tr-false-friends-4",
+          "title": "control, brief — son tuzaklar",
+          "description": "Günlük hayatta sık kullanılan yanlışlar",
+          "theme": "vocabulary",
+          "xp": 12,
+          "exercises": [
+            { "id": "ff4-1", "type": "multiple_choice", "prompt": "İngilizce 'control' ne demektir?", "options": ["Kontrol etmek (gözden geçirmek)", "Yönetmek, kontrol altında tutmak", "Test etmek", "Sormak"], "answer": "Yönetmek, kontrol altında tutmak", "explanation": "Türkçe 'kontrol etmek' (gözden geçirmek) = İngilizce 'check'." },
+            { "id": "ff4-2", "type": "multiple_choice", "prompt": "'Cevaplarını kontrol et.' İngilizcede:", "options": ["Control your answers.", "Check your answers.", "Inspect your answers.", "Investigate your answers."], "answer": "Check your answers.", "explanation": "Burada 'kontrol et' = check." },
+            { "id": "ff4-3", "type": "multiple_choice", "prompt": "Hangi cümle DOĞRU 'control' kullanır?", "options": ["Let me control the document.", "The pilot controls the aircraft.", "I controlled my e-mail.", "Please control the spelling."], "answer": "The pilot controls the aircraft.", "explanation": "'Control' = yönetmek, idare etmek." },
+            { "id": "ff4-4", "type": "fill_blank", "prompt": "'Sunumdan önce kısa bir brifing verdi.' → 'She gave a ___ briefing before the presentation.'", "answer": "brief", "acceptableAnswers": ["Brief", "short"], "explanation": "'Brief' = kısa." },
+            { "id": "ff4-5", "type": "match_pairs", "prompt": "Doğru karşılıkları eşle", "pairs": [
+              { "left": "kontrol etmek (gözden geçirmek)", "right": "check" },
+              { "left": "kontrol altında tutmak", "right": "control" },
+              { "left": "kısa", "right": "brief" },
+              { "left": "brifing (toplantı)", "right": "briefing" }
+            ]},
+            { "id": "ff4-6", "type": "tap_words_in_order", "prompt": "Sırala: 'Please check your answers carefully.'", "answer": "Please check your answers carefully", "bank": ["Please", "check", "your", "answers", "carefully", "control", "the", "very"] },
+            { "id": "ff4-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "He gave a brief explanation.", "options": ["He gave a brief explanation.", "He gave a brave explanation.", "He gave a briefing explanation.", "He gave a brief exclamation."], "answer": "He gave a brief explanation." },
+            { "id": "ff4-8", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["Can you check this report?", "Can you control this report?", "Please check the spelling.", "He controls the company."], "answer": "Can you control this report?", "explanation": "Türkçe etkisiyle yapılan klasik hata; doğrusu 'check'." },
+            { "id": "ff4-9", "type": "fill_blank", "prompt": "'Be ___: explain in two minutes.' (kısa ol)", "answer": "brief", "acceptableAnswers": ["Brief", "short"] },
+            { "id": "ff4-10", "type": "multiple_choice", "prompt": "Türkçe 'biletini kontrol et' İngilizce:", "options": ["Control your ticket.", "Check your ticket.", "Watch your ticket.", "Look your ticket."], "answer": "Check your ticket." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-b1-review",
+      "title": "B1 Tekrar",
+      "description": "Tüm B1 konularını birleştiren karışık tekrar",
+      "theme": "review",
+      "guide": {
+        "intro": "B1 düzeyinin altı ana konusunu birleştiren tekrar bölümü: present perfect, modaller, koşul cümleleri, edilgen yapı, phrasal verb'ler ve sahte arkadaşlar. Bu derslerde her konudan en az bir alıştırma bulacaksın.",
+        "sections": [
+          { "kind": "heading", "text": "Hızlı hatırlatma" },
+          {
+            "kind": "list",
+            "items": [
+              "Present perfect: have/has + V3 — geçmişten şimdiye uzanan eylem.",
+              "Modaller: must (zorunluluk), should (tavsiye), can/could (yetenek/izin), may/might (olasılık).",
+              "Koşullar: zero (gerçek), first (muhtemel gelecek), second (hayali şimdi).",
+              "Pasif: be + V3 — yapan önemsiz/bilinmiyor.",
+              "Phrasal verb: fiil + edat → bütünleşik anlam (ezberle).",
+              "Sahte arkadaş: 'actual' = gerçek; 'library' = kütüphane; 'chef' = aşçı."
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "info",
+            "text": "Bu tekrar bölümünde 3 ders var, her biri farklı konuları karıştırır. Hatalarını not et — hangi konuda hâlâ takıldığını gösterir."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-b1-review-1",
+          "title": "Karışık alıştırma 1",
+          "description": "Present perfect, modaller, koşul",
+          "theme": "review",
+          "xp": 12,
+          "exercises": [
+            { "id": "rev1-1", "type": "multiple_choice", "prompt": "'I ___ in this city for ten years.' (hâlâ buradayım)", "options": ["live", "lived", "have lived", "am living"], "answer": "have lived" },
+            { "id": "rev1-2", "type": "multiple_choice", "prompt": "'You ___ wear a helmet on a motorbike.' (yasal zorunluluk)", "options": ["should", "have to", "may", "could"], "answer": "have to" },
+            { "id": "rev1-3", "type": "fill_blank", "prompt": "First conditional: 'If it ___ (rain), we will stay home.'", "answer": "rains", "acceptableAnswers": ["Rains"] },
+            { "id": "rev1-4", "type": "multiple_choice", "prompt": "'If I ___ you, I would apologize.' (hayali tavsiye)", "options": ["am", "was", "were", "be"], "answer": "were" },
+            { "id": "rev1-5", "type": "match_pairs", "prompt": "Modal-anlam eşleme", "pairs": [
+              { "left": "must", "right": "Güçlü zorunluluk" },
+              { "left": "should", "right": "Tavsiye" },
+              { "left": "might", "right": "Düşük olasılık" },
+              { "left": "can", "right": "Yetenek / izin" }
+            ]},
+            { "id": "rev1-6", "type": "tap_words_in_order", "prompt": "Sırala: 'I have never been to Japan.'", "answer": "I have never been to Japan", "bank": ["I", "have", "never", "been", "to", "Japan", "ever", "was", "in"] },
+            { "id": "rev1-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "If I had more time, I would learn Italian.", "options": ["If I had more time, I would learn Italian.", "If I have more time, I will learn Italian.", "If I had more time, I will learn Italian.", "If I have more time, I would learn Italian."], "answer": "If I had more time, I would learn Italian." },
+            { "id": "rev1-8", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["I have lived here since 2018.", "I have lived here for 5 years.", "I have lived here in 2018.", "I lived here in 2018."], "answer": "I have lived here in 2018.", "explanation": "'In 2018' belirli geçmiş → past simple gerekir." },
+            { "id": "rev1-9", "type": "fill_blank", "prompt": "'You ___ smoke in hospitals.' (yasak)", "answer": "mustn't", "acceptableAnswers": ["must not", "mustn't", "cannot", "can't"] },
+            { "id": "rev1-10", "type": "multiple_choice", "prompt": "'Yarın yağmur yağarsa evde kalırım.' İngilizcede:", "options": ["If it rains tomorrow, I stay at home.", "If it rains tomorrow, I will stay at home.", "If it will rain tomorrow, I will stay at home.", "If it rained tomorrow, I would stay at home."], "answer": "If it rains tomorrow, I will stay at home." }
+          ]
+        },
+        {
+          "id": "en-tr-b1-review-2",
+          "title": "Karışık alıştırma 2",
+          "description": "Pasif, phrasal verb, sahte arkadaşlar",
+          "theme": "review",
+          "xp": 12,
+          "exercises": [
+            { "id": "rev2-1", "type": "multiple_choice", "prompt": "'The book ___ in 1850.' (yazıldı)", "options": ["wrote", "was written", "is wrote", "has wrote"], "answer": "was written" },
+            { "id": "rev2-2", "type": "multiple_choice", "prompt": "'I'll ___ the word in the dictionary.' (araştırmak)", "options": ["look at", "look up", "look in", "look out"], "answer": "look up" },
+            { "id": "rev2-3", "type": "multiple_choice", "prompt": "İngilizce 'actual' Türkçede ne demektir?", "options": ["Güncel", "Gerçek", "Aktif", "Aktüel"], "answer": "Gerçek" },
+            { "id": "rev2-4", "type": "fill_blank", "prompt": "'My phone ___ ___ at the station.' (çalındı — past passive)", "answer": "was stolen", "acceptableAnswers": ["Was stolen"] },
+            { "id": "rev2-5", "type": "match_pairs", "prompt": "Phrasal verb-anlam", "pairs": [
+              { "left": "give up", "right": "vazgeçmek" },
+              { "left": "find out", "right": "öğrenmek" },
+              { "left": "take off", "right": "havalanmak" },
+              { "left": "put off", "right": "ertelemek" }
+            ]},
+            { "id": "rev2-6", "type": "tap_words_in_order", "prompt": "Sırala: 'The decision must be made today.'", "answer": "The decision must be made today", "bank": ["The", "decision", "must", "be", "made", "today", "make", "is", "to"] },
+            { "id": "rev2-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "I ran into an old friend yesterday.", "options": ["I ran into an old friend yesterday.", "I ran an old friend into yesterday.", "I ran in an old friend yesterday.", "I run into an old friend yesterday."], "answer": "I ran into an old friend yesterday." },
+            { "id": "rev2-8", "type": "multiple_choice", "prompt": "'Cevaplarını kontrol et.' İngilizcede:", "options": ["Control your answers.", "Check your answers.", "Inspect your answers.", "Watch your answers."], "answer": "Check your answers." },
+            { "id": "rev2-9", "type": "fill_blank", "prompt": "'I went to the ___ to borrow a book.' (kütüphane)", "answer": "library", "acceptableAnswers": ["Library"] },
+            { "id": "rev2-10", "type": "multiple_choice", "prompt": "Hangi cümle YANLIŞ?", "options": ["The cake was eaten.", "She gave up trying.", "I bought a book from the library.", "He wore a tuxedo."], "answer": "I bought a book from the library.", "explanation": "Library = kütüphane; kitapçı = bookstore." }
+          ]
+        },
+        {
+          "id": "en-tr-b1-review-3",
+          "title": "Karışık alıştırma 3 — büyük tekrar",
+          "description": "Tüm konuların kombinasyonu",
+          "theme": "review",
+          "xp": 12,
+          "exercises": [
+            { "id": "rev3-1", "type": "multiple_choice", "prompt": "'She ___ already ___ her homework.' (zaten bitirdi)", "options": ["has / finished", "have / finished", "is / finished", "had / finished"], "answer": "has / finished" },
+            { "id": "rev3-2", "type": "multiple_choice", "prompt": "'You ___ pay for the museum; entry is free.' (gerek yok)", "options": ["mustn't", "don't have to", "shouldn't", "can't"], "answer": "don't have to" },
+            { "id": "rev3-3", "type": "fill_blank", "prompt": "Second conditional: 'If I ___ (have) wings, I would fly.'", "answer": "had", "acceptableAnswers": ["Had"] },
+            { "id": "rev3-4", "type": "multiple_choice", "prompt": "Pasifte modal: 'It ___ done by tomorrow.' (yapılmalı)", "options": ["must do", "must be done", "must been done", "must to be done"], "answer": "must be done" },
+            { "id": "rev3-5", "type": "match_pairs", "prompt": "Türkçe-İngilizce karışık eşleme", "pairs": [
+              { "left": "vazgeçmek", "right": "give up" },
+              { "left": "kütüphane", "right": "library" },
+              { "left": "gerçek (asıl)", "right": "actual" },
+              { "left": "ertelemek", "right": "put off" }
+            ]},
+            { "id": "rev3-6", "type": "tap_words_in_order", "prompt": "Sırala: 'If I were rich I would travel the world.'", "answer": "If I were rich I would travel the world", "bank": ["If", "I", "were", "rich", "I", "would", "travel", "the", "world", "am", "will"] },
+            { "id": "rev3-7", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "The meeting has been postponed until Friday.", "options": ["The meeting has been postponed until Friday.", "The meeting has been postpone until Friday.", "The meeting was postponed until Friday.", "The meeting is postponed until Friday."], "answer": "The meeting has been postponed until Friday." },
+            { "id": "rev3-8", "type": "multiple_choice", "prompt": "Hangi cümle DOĞRU?", "options": ["I have seen him yesterday.", "I saw him yesterday.", "I have see him yesterday.", "I seen him yesterday."], "answer": "I saw him yesterday." },
+            { "id": "rev3-9", "type": "fill_blank", "prompt": "'Don't ___ ___ trying — you're almost there!' (vazgeçme)", "answer": "give up", "acceptableAnswers": ["Give up"] },
+            { "id": "rev3-10", "type": "multiple_choice", "prompt": "'Bu raporu kontrol edebilir misin?' İngilizcede:", "options": ["Can you control this report?", "Can you check this report?", "Can you control of this report?", "Can you make a control of this report?"], "answer": "Can you check this report?" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,649 @@
+{
+  "id": "c2",
+  "name": "C2 — Ustalık",
+  "description": "Edebî düzyazıyı okuyun, felsefe tartışın, register değiştirin. İngilizcenin en ince nüanslarını ve UK/US/Aus farklarını ustalıkla kullanın.",
+  "topics": [
+    {
+      "id": "en-tr-c2-literary",
+      "title": "Edebî Düzyazı",
+      "description": "Roman, deneme ve yüksek edebiyatta dil",
+      "theme": "literary",
+      "guide": {
+        "intro": "Edebî İngilizce yoğun, çok katmanlı ve genellikle Latin kökenli kelimeleri Germanik kökenlilerle dengeler. C2 düzeyinde yazarın kayıt seçimi (Latinate vs Germanic), cümle uzunluğu ve metafor kullanımı kasıtlı bir araç haline gelir.",
+        "sections": [
+          { "kind": "heading", "text": "Latinate vs Germanic" },
+          { "kind": "paragraph", "text": "İngilizcede aynı kavramı söylemenin iki yolu vardır: Anglosakson kökenli (kısa, somut) ve Latince/Fransızca kökenli (uzun, soyut). Edebî yazar bu seçimle metnin tonunu çevirir." },
+          {
+            "kind": "table",
+            "headers": ["Germanik", "Latince/Fransızca", "Türkçe"],
+            "rows": [
+              ["start", "commence", "başlamak"],
+              ["end", "conclude / terminate", "sona ermek"],
+              ["help", "assist / facilitate", "yardım etmek"],
+              ["ask", "inquire / interrogate", "sormak"],
+              ["come", "arrive", "gelmek"],
+              ["see", "perceive / discern", "görmek / sezmek"],
+              ["thought", "cognition / reflection", "düşünce"],
+              ["smell", "odour / fragrance", "koku"]
+            ]
+          },
+          { "kind": "heading", "text": "Anlatıcı sesi" },
+          { "kind": "paragraph", "text": "Düzyazıda anlatıcı seçimi (1. tekil, 3. tekil, serbest dolaylı, ikinci tekil) ton ve mesafe yaratır. 'Free indirect speech' (serbest dolaylı söyleyiş) İngilizcenin imzasıdır: karakterin düşüncesini doğrudan tırnaksız aktarır." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "She wondered if he had ever truly loved her. Probably not.", "translation": "Onu hiç gerçekten sevip sevmediğini merak etti. Muhtemelen hayır." },
+              { "source": "It was not, he reflected, the worst of all possible worlds.", "translation": "Bu, diye düşündü, mümkün dünyaların en kötüsü değildi." },
+              { "source": "The hour was late; the streets, deserted; the city, somnolent.", "translation": "Saat geçti; sokaklar boş; şehir uykulu." }
+            ]
+          },
+          { "kind": "callout", "tone": "tip", "text": "C2 okuru, virgülün noktalı virgül kadar dramatik kullanılabildiğini bilmelidir. Edebî üslupta noktalama çoğu zaman ritmin bir parçasıdır." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-c2-literary-1",
+          "title": "Latinate vs Germanic",
+          "description": "Kelime kökenine duyarlı seçim",
+          "theme": "literary",
+          "xp": 18,
+          "exercises": [
+            { "id": "lit1-1", "type": "match_pairs", "prompt": "Germanik — Latinate", "pairs": [
+              { "left": "start", "right": "commence" },
+              { "left": "end", "right": "terminate" },
+              { "left": "help", "right": "assist" },
+              { "left": "see", "right": "perceive" }
+            ]},
+            { "id": "lit1-2", "type": "multiple_choice", "prompt": "Hangi cümle daha edebî/Latince ağırlıklı?", "options": ["He came in and asked her name.", "He entered and inquired as to her identity.", "He went in and said hi.", "He walked in and said hey."], "answer": "He entered and inquired as to her identity." },
+            { "id": "lit1-3", "type": "fill_blank", "prompt": "'The ceremony will ___ at noon.' (Türkçe: 'Tören öğlen başlayacak.' — resmi/edebî)", "answer": "commence", "acceptableAnswers": ["commence"] },
+            { "id": "lit1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bir koku, hatırladığı bir kokuyu çağrıştırdı.'", "answer": "A fragrance evoked a scent he remembered", "bank": ["A", "fragrance", "evoked", "a", "scent", "he", "remembered", "smelled", "smelt", "the"] },
+            { "id": "lit1-5", "type": "multiple_choice", "prompt": "'discern' ne demek?", "options": ["dağıtmak", "ayırt etmek / sezmek", "kabul etmek", "ortadan kaldırmak"], "answer": "ayırt etmek / sezmek" },
+            { "id": "lit1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "He could discern, even in the gloom, the faint outline of the figure.", "options": ["He could discern, even in the gloom, the faint outline of the figure.", "He could discerned, even in the gloom, the faint outline of the figure.", "He could discern, even in the gloomy, the faint outline of the figure.", "He could discern, even in the gloom, a faint outlines of the figure."], "answer": "He could discern, even in the gloom, the faint outline of the figure." },
+            { "id": "lit1-7", "type": "fill_blank", "prompt": "'She ___ that the time had come.' (Türkçe: 'Vaktin geldiğini sezdi.' — edebî)", "answer": "perceived", "acceptableAnswers": ["perceived", "discerned"] },
+            { "id": "lit1-8", "type": "multiple_choice", "prompt": "Hangi kelime çifti aynı anlamı, farklı registerda taşır?", "options": ["help / hinder", "ask / interrogate", "go / arrive (basitten resmiye)", "smell / odour (basitten resmiye)"], "answer": "smell / odour (basitten resmiye)" },
+            { "id": "lit1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Geceyi alacakaranlığa benzer bir sessizlikte sona erdirdi.'", "answer": "She concluded the night in a twilight-like silence", "bank": ["She", "concluded", "the", "night", "in", "a", "twilight-like", "silence", "started", "the", "noisy"] },
+            { "id": "lit1-10", "type": "fill_blank", "prompt": "'A faint ___ of jasmine drifted through the room.' (Türkçe: 'Odaya hafif bir yasemin kokusu yayıldı.' — edebî)", "answer": "fragrance", "acceptableAnswers": ["fragrance", "odour", "scent"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-literary-2",
+          "title": "Anlatıcı sesi",
+          "description": "Bakış açısı ve serbest dolaylı söyleyiş",
+          "theme": "literary",
+          "xp": 18,
+          "exercises": [
+            { "id": "lit2-1", "type": "match_pairs", "prompt": "Bakış açısı — Tanım", "pairs": [
+              { "left": "First-person (I)", "right": "Birinci tekil anlatıcı" },
+              { "left": "Third-person omniscient", "right": "Her şeyi bilen üçüncü tekil" },
+              { "left": "Free indirect speech", "right": "Serbest dolaylı söyleyiş" },
+              { "left": "Second-person (you)", "right": "İkinci tekil anlatıcı" }
+            ]},
+            { "id": "lit2-2", "type": "multiple_choice", "prompt": "'Free indirect speech' nedir?", "options": ["Karakter düşüncesinin tırnaksız ve aracı fiilsiz aktarımı", "Serbest konuşma izni", "Doğrudan alıntı", "İlanlı konuşma"], "answer": "Karakter düşüncesinin tırnaksız ve aracı fiilsiz aktarımı" },
+            { "id": "lit2-3", "type": "fill_blank", "prompt": "'It was not, he ___, the worst of all possible worlds.' (Türkçe: 'Bu, diye düşündü, mümkün dünyaların en kötüsü değildi.')", "answer": "reflected", "acceptableAnswers": ["reflected", "thought", "mused"] },
+            { "id": "lit2-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Onu hiç gerçekten sevip sevmediğini merak etti.'", "answer": "She wondered if he had ever truly loved her", "bank": ["She", "wondered", "if", "he", "had", "ever", "truly", "loved", "her", "him", "she", "love"] },
+            { "id": "lit2-5", "type": "multiple_choice", "prompt": "Hangi cümle serbest dolaylıdır?", "options": ["He thought, 'I am tired.'", "He said he was tired.", "He was tired. So very tired. How long had he been on his feet?", "Tired, he was."], "answer": "He was tired. So very tired. How long had he been on his feet?", "explanation": "Karakterin sesi anlatıma sızıyor; tırnak ve raporlama fiili yok." },
+            { "id": "lit2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "The hour was late; the streets, deserted; the city, somnolent.", "options": ["The hour was late; the streets, deserted; the city, somnolent.", "The hour was late, the streets deserted, the city somnolent.", "The hour was late; the street, deserted; the cities, somnolent.", "The hour were late; the streets, desert; the city, sleep."], "answer": "The hour was late; the streets, deserted; the city, somnolent." },
+            { "id": "lit2-7", "type": "fill_blank", "prompt": "'___ her, the world had narrowed to a single thought.' (Türkçe: 'Onun için dünya tek bir düşünceye daralmıştı.')", "answer": "For", "acceptableAnswers": ["For"] },
+            { "id": "lit2-8", "type": "multiple_choice", "prompt": "İkinci tekil anlatıcının özelliği?", "options": ["Karakter ben dilini kullanır", "Okuyucuyu karaktere dönüştürür ('You walk into the room…')", "Sadece şiirsel", "Hiç edebi değildir"], "answer": "Okuyucuyu karaktere dönüştürür ('You walk into the room…')" },
+            { "id": "lit2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'O an, herhangi bir an gibi olabilirdi; sıradan, tarihsiz.'", "answer": "The moment could have been any moment ordinary undated", "bank": ["The", "moment", "could", "have", "been", "any", "moment", "ordinary", "undated", "extraordinary", "the", "and"] },
+            { "id": "lit2-10", "type": "fill_blank", "prompt": "'You can ___ feel the weight of his unspoken regret.' (Türkçe: 'Söylenmemiş pişmanlığının ağırlığını âdeta hissedebilirsiniz.')", "answer": "almost", "acceptableAnswers": ["almost"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-literary-3",
+          "title": "Mecaz ve teşbih",
+          "description": "Metafor, simile, imge",
+          "theme": "literary",
+          "xp": 18,
+          "exercises": [
+            { "id": "lit3-1", "type": "match_pairs", "prompt": "Edebi araç — Tanım", "pairs": [
+              { "left": "metaphor", "right": "metafor (doğrudan benzetme)" },
+              { "left": "simile", "right": "teşbih ('like'/'as' ile)" },
+              { "left": "personification", "right": "kişileştirme" },
+              { "left": "hyperbole", "right": "abartı" }
+            ]},
+            { "id": "lit3-2", "type": "multiple_choice", "prompt": "Hangi cümle SIMILE'dir?", "options": ["Time is a thief.", "Her smile was like sunlight on water.", "The wind whispered secrets.", "I've told you a million times."], "answer": "Her smile was like sunlight on water." },
+            { "id": "lit3-3", "type": "fill_blank", "prompt": "'The city was a ___ of glass and steel.' (Türkçe: 'Şehir bir cam ve çelik ormanıydı.' — metafor)", "answer": "forest", "acceptableAnswers": ["forest", "jungle"] },
+            { "id": "lit3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sessizlik kulaklarına çarpan ağır bir perdeydi.'", "answer": "Silence was a heavy curtain pressing against her ears", "bank": ["Silence", "was", "a", "heavy", "curtain", "pressing", "against", "her", "ears", "her", "the", "press"] },
+            { "id": "lit3-5", "type": "multiple_choice", "prompt": "'The wind whispered secrets' hangi araçtır?", "options": ["simile", "personification", "hyperbole", "alliteration"], "answer": "personification" },
+            { "id": "lit3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Time, that thief of dreams, had stolen another year.", "options": ["Time, that thief of dreams, had stolen another year.", "Time, that thief of dream, had stolen another years.", "Time, that thief of dreams, had steal another year.", "Times, that thief of dreams, had stolen another year."], "answer": "Time, that thief of dreams, had stolen another year." },
+            { "id": "lit3-7", "type": "fill_blank", "prompt": "'Her words cut like a ___' (Türkçe: 'Sözleri bıçak gibi kesti.')", "answer": "knife", "acceptableAnswers": ["knife", "blade"] },
+            { "id": "lit3-8", "type": "multiple_choice", "prompt": "'alliteration' nedir?", "options": ["Aynı sesle başlayan kelimelerin ardarda kullanımı (peter piper picked…)", "Sözcük tekrarı", "Aynı sözcük türü", "Çapraz kafiye"], "answer": "Aynı sesle başlayan kelimelerin ardarda kullanımı (peter piper picked…)" },
+            { "id": "lit3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Hayat tek bir mum, kısa bir aleve sahip.'", "answer": "Life is a single candle with a brief flame", "bank": ["Life", "is", "a", "single", "candle", "with", "a", "brief", "flame", "long", "the", "and"] },
+            { "id": "lit3-10", "type": "fill_blank", "prompt": "'The clock ___ the hours, indifferent to our grief.' (Türkçe: 'Saat, kederimize kayıtsız, saatleri sayıyordu.' — kişileştirme)", "answer": "counted", "acceptableAnswers": ["counted", "marked", "ticked"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-c2-rhetoric",
+      "title": "Retorik ve İkna",
+      "description": "Söylev, op-ed ve ikna sanatı",
+      "theme": "speaking",
+      "guide": {
+        "intro": "Retorik üç sütun üzerine kuruludur: ethos (karakter), pathos (duygu), logos (mantık). C2 konuşmacısı dinleyiciyi düşünmeye yönelten cümleler kurar; klasik ritorik figürlerini bilir.",
+        "sections": [
+          { "kind": "heading", "text": "Klasik figürler" },
+          {
+            "kind": "table",
+            "headers": ["Figür", "Tanım", "Örnek"],
+            "rows": [
+              ["anaphora", "Cümle başlarının tekrarı", "We shall fight on the beaches; we shall fight on the landing grounds…"],
+              ["epistrophe", "Cümle sonlarının tekrarı", "Government of the people, by the people, for the people."],
+              ["chiasmus", "Çapraz tekrar", "Ask not what your country can do for you; ask what you can do for your country."],
+              ["antithesis", "Karşıtlık", "It was the best of times, it was the worst of times."],
+              ["tricolon", "Üçlü yapı", "Veni, vidi, vici (I came, I saw, I conquered)."],
+              ["rhetorical question", "Yanıt beklenmeyen soru", "Are we to stand idle?"]
+            ]
+          },
+          { "kind": "heading", "text": "Op-ed üslubu" },
+          { "kind": "paragraph", "text": "Op-ed (köşe yazısı) İngilizcesi argümanı tezle açar, kanıtla destekler, karşı argümanı kabul edip çürütür ve çağrı ile kapatır. Cümleler kısa ve uzun arasında ritm değiştirir." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "Make no mistake: this policy will define a generation.", "translation": "Yanılmayın: bu politika bir kuşağı tanımlayacak." },
+              { "source": "To suggest otherwise is to ignore the evidence.", "translation": "Aksini ileri sürmek kanıtları görmezden gelmektir." },
+              { "source": "We owe it to ourselves — and to those who come after — to act now.", "translation": "Hem kendimize hem de gelecek nesle borçluyuz, şimdi harekete geçmek." }
+            ]
+          },
+          { "kind": "callout", "tone": "tip", "text": "Türkçedeki 'biz olarak' kalıbı İngilizce retorikte 'we, as a society' veya basitçe 'we' olur. 'As a society' tonu kibarlaştırır." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-c2-rhetoric-1",
+          "title": "Klasik retorik figürleri",
+          "description": "Anaphora, chiasmus, antithesis",
+          "theme": "speaking",
+          "xp": 18,
+          "exercises": [
+            { "id": "rh1-1", "type": "match_pairs", "prompt": "Figür — Türkçe", "pairs": [
+              { "left": "anaphora", "right": "anafora (başta tekrar)" },
+              { "left": "epistrophe", "right": "sonda tekrar" },
+              { "left": "chiasmus", "right": "çapraz tekrar" },
+              { "left": "antithesis", "right": "karşıtlık" }
+            ]},
+            { "id": "rh1-2", "type": "multiple_choice", "prompt": "'Ask not what your country can do for you; ask what you can do for your country' hangi figürdür?", "options": ["anaphora", "chiasmus", "epistrophe", "tricolon"], "answer": "chiasmus" },
+            { "id": "rh1-3", "type": "fill_blank", "prompt": "'It was the best of times, it was the ___ of times.' (Türkçe: 'En iyi zamanlardı, en kötü zamanlardı.')", "answer": "worst", "acceptableAnswers": ["worst"] },
+            { "id": "rh1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Geldim, gördüm, fethettim.'", "answer": "I came I saw I conquered", "bank": ["I", "came", "I", "saw", "I", "conquered", "lost", "won", "the"] },
+            { "id": "rh1-5", "type": "multiple_choice", "prompt": "'tricolon' nedir?", "options": ["İkili yapı", "Üçlü yapı", "Dörtlü yapı", "Tek söz"], "answer": "Üçlü yapı" },
+            { "id": "rh1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Government of the people, by the people, for the people.", "options": ["Government of the people, by the people, for the people.", "Government of the peoples, by the peoples, for the peoples.", "Government from the people, with the people, for the people.", "Government for the people, by the people, of the people."], "answer": "Government of the people, by the people, for the people." },
+            { "id": "rh1-7", "type": "fill_blank", "prompt": "'We shall fight on the beaches; ___ shall fight on the landing grounds.' (Türkçe: 'Sahillerde savaşacağız; iniş yerlerinde savaşacağız.')", "answer": "we", "acceptableAnswers": ["we"] },
+            { "id": "rh1-8", "type": "multiple_choice", "prompt": "'rhetorical question' nedir?", "options": ["Yanıt beklenmeyen soru", "Sınav sorusu", "Karşılıklı konuşma", "Anket"], "answer": "Yanıt beklenmeyen soru" },
+            { "id": "rh1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sessiz mi kalmalıyız? Hayır, hayır, asla.'", "answer": "Shall we stay silent No no never", "bank": ["Shall", "we", "stay", "silent", "No", "no", "never", "yes", "and", "the"] },
+            { "id": "rh1-10", "type": "fill_blank", "prompt": "'Make no ___: this is a turning point.' (Türkçe: 'Yanılmayın: bu bir dönüm noktası.')", "answer": "mistake", "acceptableAnswers": ["mistake"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-rhetoric-2",
+          "title": "Ethos, pathos, logos",
+          "description": "Üç ikna sütununu seçin",
+          "theme": "speaking",
+          "xp": 18,
+          "exercises": [
+            { "id": "rh2-1", "type": "multiple_choice", "prompt": "'pathos' hangi ikna sütunudur?", "options": ["Karakter", "Duygu", "Mantık", "Otorite"], "answer": "Duygu" },
+            { "id": "rh2-2", "type": "match_pairs", "prompt": "Sütun — Tanım", "pairs": [
+              { "left": "ethos", "right": "konuşmacının karakteri / güvenilirliği" },
+              { "left": "pathos", "right": "duygusal etki" },
+              { "left": "logos", "right": "mantıksal kanıt" },
+              { "left": "kairos", "right": "uygun an / zamanlama" }
+            ]},
+            { "id": "rh2-3", "type": "fill_blank", "prompt": "'I have spent thirty years in this field' — bu cümle hangi sütunu güçlendirir?", "answer": "ethos", "acceptableAnswers": ["ethos"] },
+            { "id": "rh2-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sayılar yalan söylemez.'", "answer": "The numbers do not lie", "bank": ["The", "numbers", "do", "not", "lie", "lies", "tell", "the"] },
+            { "id": "rh2-5", "type": "multiple_choice", "prompt": "Hangi cümle pathos ağırlıklıdır?", "options": ["Studies show a 23% reduction.", "Imagine never seeing your child smile again.", "The data is robust.", "I have a PhD in this field."], "answer": "Imagine never seeing your child smile again." },
+            { "id": "rh2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Imagine, for a moment, what this loss truly means.", "options": ["Imagine, for a moment, what this loss truly means.", "Imagine, for a moments, what this loss truly mean.", "Imagined, for a moment, what this loss truly means.", "Imagine, for a moment, what these loss truly means."], "answer": "Imagine, for a moment, what this loss truly means." },
+            { "id": "rh2-7", "type": "fill_blank", "prompt": "'The evidence is ___; the conclusion follows.' (Türkçe: 'Kanıt sağlam; sonuç açık.')", "answer": "robust", "acceptableAnswers": ["robust", "compelling"] },
+            { "id": "rh2-8", "type": "multiple_choice", "prompt": "'kairos' Türkçesi?", "options": ["büyüklük", "uygun an / zamanlama", "duygu", "kanıt"], "answer": "uygun an / zamanlama" },
+            { "id": "rh2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Şimdi harekete geçmek için doğru an.'", "answer": "Now is the right moment to act", "bank": ["Now", "is", "the", "right", "moment", "to", "act", "wrong", "the", "stop"] },
+            { "id": "rh2-10", "type": "fill_blank", "prompt": "'I speak as someone who has ___ this struggle firsthand.' (Türkçe: 'Bu mücadeleyi birinci elden yaşamış biri olarak konuşuyorum.')", "answer": "lived", "acceptableAnswers": ["lived", "experienced"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-rhetoric-3",
+          "title": "Op-ed kapanış",
+          "description": "Çağrı, dönüş, mühürleme",
+          "theme": "speaking",
+          "xp": 18,
+          "exercises": [
+            { "id": "rh3-1", "type": "match_pairs", "prompt": "Kapanış kalıbı — İşlev", "pairs": [
+              { "left": "Make no mistake:…", "right": "Vurgulu uyarı" },
+              { "left": "We owe it to…", "right": "Sorumluluk çağrısı" },
+              { "left": "The choice is ours.", "right": "Sorumluluk devri" },
+              { "left": "History will judge…", "right": "Tarihe atıf" }
+            ]},
+            { "id": "rh3-2", "type": "multiple_choice", "prompt": "'History will judge us' Türkçesi?", "options": ["Tarih bizi yargılayacak.", "Tarih bizi unuttu.", "Tarih kendini yargılar.", "Tarihi biz yargılarız."], "answer": "Tarih bizi yargılayacak." },
+            { "id": "rh3-3", "type": "fill_blank", "prompt": "'The choice ___ ours.' (Türkçe: 'Karar bizim.')", "answer": "is", "acceptableAnswers": ["is"] },
+            { "id": "rh3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Hem kendimize hem de gelecek nesle şimdi harekete geçmeyi borçluyuz.'", "answer": "We owe it to ourselves and to those who come after to act now", "bank": ["We", "owe", "it", "to", "ourselves", "and", "to", "those", "who", "come", "after", "to", "act", "now", "before", "the"] },
+            { "id": "rh3-5", "type": "multiple_choice", "prompt": "Hangi cümle çağrı (call to action) tonu taşır?", "options": ["The data is mixed.", "We must act, and we must act today.", "Nobody knows what to do.", "Time will tell."], "answer": "We must act, and we must act today." },
+            { "id": "rh3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "To remain silent now is to be complicit later.", "options": ["To remain silent now is to be complicit later.", "To remained silent now is to be complicit later.", "To remain silent now is to being complicit later.", "To remain silently now is to be complicit later."], "answer": "To remain silent now is to be complicit later." },
+            { "id": "rh3-7", "type": "fill_blank", "prompt": "'To suggest otherwise is to ___ the evidence.' (Türkçe: 'Aksini ileri sürmek kanıtları görmezden gelmektir.')", "answer": "ignore", "acceptableAnswers": ["ignore", "deny"] },
+            { "id": "rh3-8", "type": "multiple_choice", "prompt": "'complicit' ne anlama gelir?", "options": ["karmaşık", "suç ortağı", "tamamlanmış", "tam"], "answer": "suç ortağı" },
+            { "id": "rh3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yanılmayın: bu bir dönüm noktası.'", "answer": "Make no mistake this is a turning point", "bank": ["Make", "no", "mistake", "this", "is", "a", "turning", "point", "easy", "the", "and"] },
+            { "id": "rh3-10", "type": "fill_blank", "prompt": "'Let us ___ rise to the occasion.' (Türkçe: 'Bu vesileyle birlikte ayağa kalkalım.')", "answer": "together", "acceptableAnswers": ["together"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-c2-philosophy",
+      "title": "Felsefe ve Soyut Düşünce",
+      "description": "Metafiziksel kavramlar ve nüanslı argüman",
+      "theme": "academic",
+      "guide": {
+        "intro": "Felsefe metni İngilizcenin en yoğun nominalleştirilmiş formudur. 'Olmak' ve 'bilmek' gibi temel fiiller isim haline gelir: being, knowing, becoming, awareness. C2 okuru bu yoğunluğu çözebilmelidir.",
+        "sections": [
+          { "kind": "heading", "text": "Felsefe sözlüğü" },
+          {
+            "kind": "table",
+            "headers": ["İngilizce", "Türkçe"],
+            "rows": [
+              ["epistemology", "epistemoloji / bilgi kuramı"],
+              ["ontology", "ontoloji / varlık kuramı"],
+              ["consciousness", "bilinç"],
+              ["agency", "fail olma / iradi eylem yetisi"],
+              ["determinism", "determinizm"],
+              ["free will", "özgür irade"],
+              ["solipsism", "tekbencilik"],
+              ["a priori / a posteriori", "deneysel öncesi / sonrası"]
+            ]
+          },
+          { "kind": "heading", "text": "Modal nüanslar" },
+          { "kind": "paragraph", "text": "Felsefede modal seçimi argümanın gücünü değiştirir. 'Might have done', 'could have done', 'may have done' arasında ince fark vardır: 'might' = en zayıf olasılık, 'could' = yetenek/imkan, 'may' = izin/ihtimal." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "He might have known, but the evidence suggests otherwise.", "translation": "Bilmiş olabilir ama kanıt aksini düşündürüyor." },
+              { "source": "Such an act may be defensible on consequentialist grounds.", "translation": "Böyle bir eylem sonuçsalcı zeminde savunulabilir olabilir." },
+              { "source": "One ought not to assume that being entails knowing.", "translation": "Var olmanın bilmeyi içerdiği varsayılmamalı." }
+            ]
+          },
+          { "kind": "callout", "tone": "info", "text": "C2 sınavlarında felsefe metinleri sık kullanılır: yoğun nominalizasyon, hedge'lenmiş modal kullanımı ve uzun cümleli argüman yapısıdır." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-c2-philosophy-1",
+          "title": "Temel kavramlar",
+          "description": "Sözlüğü ezberleyin",
+          "theme": "academic",
+          "xp": 18,
+          "exercises": [
+            { "id": "ph1-1", "type": "match_pairs", "prompt": "Terim — Türkçe", "pairs": [
+              { "left": "epistemology", "right": "bilgi kuramı" },
+              { "left": "ontology", "right": "varlık kuramı" },
+              { "left": "free will", "right": "özgür irade" },
+              { "left": "consciousness", "right": "bilinç" }
+            ]},
+            { "id": "ph1-2", "type": "multiple_choice", "prompt": "'agency' (felsefede) ne anlama gelir?", "options": ["acente", "iradi eylem yetisi / fail olma", "şirket", "araç"], "answer": "iradi eylem yetisi / fail olma" },
+            { "id": "ph1-3", "type": "fill_blank", "prompt": "'The debate over ___ versus determinism is ancient.' (Türkçe: 'Özgür irade ve determinizm tartışması eskidir.')", "answer": "free will", "acceptableAnswers": ["free will"] },
+            { "id": "ph1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bilinç hâlâ tartışmalı bir kavramdır.'", "answer": "Consciousness remains a contested concept", "bank": ["Consciousness", "remains", "a", "contested", "concept", "settled", "remain", "the"] },
+            { "id": "ph1-5", "type": "multiple_choice", "prompt": "'a priori' Türkçesi?", "options": ["sonradan", "deneysel öncesi", "önyargılı", "rastgele"], "answer": "deneysel öncesi" },
+            { "id": "ph1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Solipsism holds that only one's own mind is sure to exist.", "options": ["Solipsism holds that only one's own mind is sure to exist.", "Solipsism hold that only one's own mind is sure to exist.", "Solipsism holds that only one own mind is sure to exist.", "Solipsism holds that only one's own minds is sure to exist."], "answer": "Solipsism holds that only one's own mind is sure to exist." },
+            { "id": "ph1-7", "type": "fill_blank", "prompt": "'Knowledge is justified true ___' (Türkçe: 'Bilgi, gerekçelendirilmiş gerçek inanıştır.')", "answer": "belief", "acceptableAnswers": ["belief"] },
+            { "id": "ph1-8", "type": "multiple_choice", "prompt": "'ontology' Türkçesi?", "options": ["bilgi kuramı", "varlık kuramı", "ahlak kuramı", "sayı kuramı"], "answer": "varlık kuramı" },
+            { "id": "ph1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bilen özne ile bilinen nesne arasındaki ayrım problematiktir.'", "answer": "The distinction between knower and known is problematic", "bank": ["The", "distinction", "between", "knower", "and", "known", "is", "problematic", "easy", "the", "the"] },
+            { "id": "ph1-10", "type": "fill_blank", "prompt": "'Determinism denies the existence of ___ free will.' (Türkçe: 'Determinizm gerçek anlamda özgür iradeyi reddeder.')", "answer": "genuine", "acceptableAnswers": ["genuine", "true", "real"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-philosophy-2",
+          "title": "Modal nüansları",
+          "description": "may, might, could, ought",
+          "theme": "academic",
+          "xp": 18,
+          "exercises": [
+            { "id": "ph2-1", "type": "multiple_choice", "prompt": "'might have done' tonu?", "options": ["Kesinlikle yapmıştır", "Yapmış olabilir (zayıf)", "Yapmadı", "Yapacaktır"], "answer": "Yapmış olabilir (zayıf)" },
+            { "id": "ph2-2", "type": "match_pairs", "prompt": "Modal — Türkçe", "pairs": [
+              { "left": "might have V3", "right": "yapmış olabilir (zayıf)" },
+              { "left": "could have V3", "right": "yapabilirdi" },
+              { "left": "must have V3", "right": "yapmış olmalı" },
+              { "left": "ought to have V3", "right": "yapmalıydı (ahlaki)" }
+            ]},
+            { "id": "ph2-3", "type": "fill_blank", "prompt": "'One ___ not assume that being entails knowing.' (Türkçe: 'Var olmanın bilmeyi içerdiği varsayılmamalı.')", "answer": "ought", "acceptableAnswers": ["ought", "should"] },
+            { "id": "ph2-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yapmış olabilir, ama bunu kanıtlamak güç.'", "answer": "He might have done it but proving so is difficult", "bank": ["He", "might", "have", "done", "it", "but", "proving", "so", "is", "difficult", "easy", "the", "could"] },
+            { "id": "ph2-5", "type": "multiple_choice", "prompt": "'may be defensible' yapısının anlamı?", "options": ["Savunulabilir olabilir.", "Savunamaz.", "Savunulmuştur.", "Savunulamaz."], "answer": "Savunulabilir olabilir." },
+            { "id": "ph2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Such an act may be defensible on consequentialist grounds.", "options": ["Such an act may be defensible on consequentialist grounds.", "Such an act maybe defensible on consequentialist grounds.", "Such an act may be defensive on consequentialist grounds.", "Such an act may be defensible on consequentialism grounds."], "answer": "Such an act may be defensible on consequentialist grounds." },
+            { "id": "ph2-7", "type": "fill_blank", "prompt": "'The agent ___ have acted otherwise.' (Türkçe: 'Fail farklı şekilde davranabilirdi.')", "answer": "could", "acceptableAnswers": ["could"] },
+            { "id": "ph2-8", "type": "multiple_choice", "prompt": "'must have V3' tahmin gücü açısından nedir?", "options": ["en güçlü", "orta", "en zayıf", "şüpheli"], "answer": "en güçlü" },
+            { "id": "ph2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Daha dikkatli olmalıydık.'", "answer": "We ought to have been more careful", "bank": ["We", "ought", "to", "have", "been", "more", "careful", "less", "the", "ought"] },
+            { "id": "ph2-10", "type": "fill_blank", "prompt": "'Such reasoning ___ be challenged.' (Türkçe: 'Böyle bir akıl yürütmeye karşı çıkılabilir.')", "answer": "may", "acceptableAnswers": ["may", "can"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-philosophy-3",
+          "title": "Argüman analizi",
+          "description": "Premise, conclusion, inference",
+          "theme": "academic",
+          "xp": 18,
+          "exercises": [
+            { "id": "ph3-1", "type": "match_pairs", "prompt": "Terim — Türkçe", "pairs": [
+              { "left": "premise", "right": "öncül" },
+              { "left": "conclusion", "right": "sonuç" },
+              { "left": "valid argument", "right": "geçerli argüman" },
+              { "left": "sound argument", "right": "sağlam argüman" }
+            ]},
+            { "id": "ph3-2", "type": "multiple_choice", "prompt": "'a sound argument' nedir?", "options": ["Geçerli ve öncülleri doğru olan argüman", "Sadece sesli argüman", "Sadece geçerli (öncüller doğru olmasa bile)", "Yanlış argüman"], "answer": "Geçerli ve öncülleri doğru olan argüman" },
+            { "id": "ph3-3", "type": "fill_blank", "prompt": "'The ___ does not follow from the premises.' (Türkçe: 'Sonuç öncüllerden çıkmıyor.')", "answer": "conclusion", "acceptableAnswers": ["conclusion"] },
+            { "id": "ph3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bu mantıksal olarak çıkarılan bir sonuç değildir.'", "answer": "This is not a logically inferred conclusion", "bank": ["This", "is", "not", "a", "logically", "inferred", "conclusion", "infer", "the", "premise"] },
+            { "id": "ph3-5", "type": "multiple_choice", "prompt": "'fallacy' Türkçesi?", "options": ["yanılgı / mantık hatası", "felaket", "yenilgi", "fal"], "answer": "yanılgı / mantık hatası" },
+            { "id": "ph3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "The argument commits a category mistake.", "options": ["The argument commits a category mistake.", "The argument commit a category mistake.", "The arguments commits a category mistake.", "The argument commits a categorical mistake."], "answer": "The argument commits a category mistake." },
+            { "id": "ph3-7", "type": "fill_blank", "prompt": "'This is a classic ___ fallacy.' (Türkçe: 'Bu klasik bir mantık hatası.')", "answer": "logical", "acceptableAnswers": ["logical"] },
+            { "id": "ph3-8", "type": "multiple_choice", "prompt": "'beg the question' deyiminin felsefedeki anlamı?", "options": ["Soru sormak", "Kanıtlanması gerekeni varsaymak (kısırdöngü)", "Soruları geçmek", "Yanıtsız bırakmak"], "answer": "Kanıtlanması gerekeni varsaymak (kısırdöngü)", "explanation": "Türkçedeki 'kısır döngü argümanı' karşılığıdır." },
+            { "id": "ph3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Argüman kanıtlanması gerekeni varsayıyor.'", "answer": "The argument begs the question", "bank": ["The", "argument", "begs", "the", "question", "answers", "the", "asks"] },
+            { "id": "ph3-10", "type": "fill_blank", "prompt": "'Correlation does not ___ causation.' (Türkçe: 'Korelasyon nedenselliği içermez.')", "answer": "imply", "acceptableAnswers": ["imply", "entail"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-c2-regional",
+      "title": "Bölgesel İngilizce: UK / US / Aus",
+      "description": "Aynı dil, üç farklı yüz",
+      "theme": "vocab",
+      "guide": {
+        "intro": "İngilizce küresel bir dil ama bölgesel farklar büyüktür. C2 düzeyinde UK, US ve Aus arasındaki kelime ve telaffuz farklarını tanımak gerek. Yanlış register yanlış izlenim verir: Amerikan bağlamında 'lift' demek tuhaf, İngiliz bağlamında 'elevator' kasti.",
+        "sections": [
+          { "kind": "heading", "text": "Kelime farkları" },
+          {
+            "kind": "table",
+            "headers": ["UK", "US", "Aus", "Türkçe"],
+            "rows": [
+              ["lift", "elevator", "lift", "asansör"],
+              ["lorry", "truck", "truck", "kamyon"],
+              ["boot (car)", "trunk", "boot", "bagaj"],
+              ["biscuit", "cookie", "biscuit", "kurabiye"],
+              ["chips", "fries", "chips", "patates kızartması"],
+              ["crisps", "chips", "chips", "cips"],
+              ["queue", "line", "queue", "sıra"],
+              ["holiday", "vacation", "holiday", "tatil"],
+              ["flat", "apartment", "unit", "daire"]
+            ]
+          },
+          { "kind": "heading", "text": "Yazım farkları" },
+          { "kind": "paragraph", "text": "UK: -our (colour), -ise (organise), -re (centre), -lled (travelled). US: -or (color), -ize (organize), -er (center), -led (traveled). Aus genelde UK'yi takip eder." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "UK: I queued for the lift to the flat.", "translation": "ABD: I waited in line for the elevator to the apartment." },
+              { "source": "US: He ate fries and a cookie.", "translation": "UK: He ate chips and a biscuit." },
+              { "source": "Aus: G'day mate, fancy a cuppa?", "translation": "Selam dostum, çay alır mısın?" }
+            ]
+          },
+          { "kind": "callout", "tone": "warning", "text": "Aus argosu güçlüdür: 'arvo' = afternoon, 'servo' = service station, 'brekkie' = breakfast. Resmi yazıda kullanılmaz." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-c2-regional-1",
+          "title": "UK vs US — kelime",
+          "description": "Asansör, bagaj, tatil",
+          "theme": "vocab",
+          "xp": 16,
+          "exercises": [
+            { "id": "rg1-1", "type": "match_pairs", "prompt": "UK — US", "pairs": [
+              { "left": "lift", "right": "elevator" },
+              { "left": "lorry", "right": "truck" },
+              { "left": "boot (car)", "right": "trunk" },
+              { "left": "queue", "right": "line" }
+            ]},
+            { "id": "rg1-2", "type": "multiple_choice", "prompt": "Amerikalı 'kurabiye' için ne der?", "options": ["biscuit", "cookie", "scone", "muffin"], "answer": "cookie" },
+            { "id": "rg1-3", "type": "fill_blank", "prompt": "'I'll take the ___ to the third floor.' (UK)", "answer": "lift", "acceptableAnswers": ["lift"] },
+            { "id": "rg1-4", "type": "multiple_choice", "prompt": "ABD: 'chips' nedir?", "options": ["patates kızartması", "cips", "kurabiye", "patates"], "answer": "cips", "explanation": "UK'de 'chips' = patates kızartması; US'te = cips!" },
+            { "id": "rg1-5", "type": "tap_words_in_order", "prompt": "UK cümlesini kurun: 'Sıraya girip asansörü bekledim.'", "answer": "I queued for the lift", "bank": ["I", "queued", "for", "the", "lift", "elevator", "line", "the"] },
+            { "id": "rg1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz US cümlesini seçin", "spokenText": "I'll take the elevator to my apartment.", "options": ["I'll take the elevator to my apartment.", "I'll take the lift to my flat.", "I'll take the elevator to my flat.", "I'll take the lifts to my apartment."], "answer": "I'll take the elevator to my apartment." },
+            { "id": "rg1-7", "type": "fill_blank", "prompt": "'Put it in the ___' (US: 'arabanın bagajına koy.')", "answer": "trunk", "acceptableAnswers": ["trunk"] },
+            { "id": "rg1-8", "type": "multiple_choice", "prompt": "UK: 'tatil' için ne kullanır?", "options": ["vacation", "holiday", "leave", "off"], "answer": "holiday" },
+            { "id": "rg1-9", "type": "tap_words_in_order", "prompt": "US cümlesini kurun: 'Patates kızartması ve kurabiye yedi.'", "answer": "He ate fries and a cookie", "bank": ["He", "ate", "fries", "and", "a", "cookie", "chips", "biscuit", "the"] },
+            { "id": "rg1-10", "type": "fill_blank", "prompt": "'They live in a small ___' (UK: 'Küçük bir dairede yaşıyorlar.')", "answer": "flat", "acceptableAnswers": ["flat"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-regional-2",
+          "title": "Yazım farkları",
+          "description": "-our/-or, -ise/-ize, -re/-er",
+          "theme": "vocab",
+          "xp": 16,
+          "exercises": [
+            { "id": "rg2-1", "type": "match_pairs", "prompt": "UK — US yazım", "pairs": [
+              { "left": "colour", "right": "color" },
+              { "left": "organise", "right": "organize" },
+              { "left": "centre", "right": "center" },
+              { "left": "travelled", "right": "traveled" }
+            ]},
+            { "id": "rg2-2", "type": "multiple_choice", "prompt": "ABD'de 'realise' nasıl yazılır?", "options": ["realise", "realize", "realeze", "realice"], "answer": "realize" },
+            { "id": "rg2-3", "type": "fill_blank", "prompt": "UK yazımı: 'The ___ of the city is beautiful.' (renkler)", "answer": "colour", "acceptableAnswers": ["colour"] },
+            { "id": "rg2-4", "type": "multiple_choice", "prompt": "Hangi yazım UK için tipiktir?", "options": ["theater", "theatre", "theatres", "theatery"], "answer": "theatre" },
+            { "id": "rg2-5", "type": "tap_words_in_order", "prompt": "US cümlesini kurun: 'Renk paleti renkli ve organize.'", "answer": "The color palette is colorful and organized", "bank": ["The", "color", "palette", "is", "colorful", "and", "organized", "colour", "organised", "the"] },
+            { "id": "rg2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "We've travelled extensively this year.", "options": ["We've travelled extensively this year.", "We've traveled extensively this year.", "We've traveling extensively this year.", "We've travel extensively this year."], "answer": "We've travelled extensively this year.", "explanation": "Bu UK yazımıdır; konuşan UK İngilizcesi kullanmıştır." },
+            { "id": "rg2-7", "type": "fill_blank", "prompt": "US yazımı: 'I ___ the importance.' (fark ettim)", "answer": "realized", "acceptableAnswers": ["realized"] },
+            { "id": "rg2-8", "type": "multiple_choice", "prompt": "Aus İngilizce yazımı genelde:", "options": ["US'i takip eder", "UK'yi takip eder", "Hiçbiri", "Karma"], "answer": "UK'yi takip eder" },
+            { "id": "rg2-9", "type": "tap_words_in_order", "prompt": "UK cümlesini kurun: 'Davranışı tuhaf görünüyordu.'", "answer": "His behaviour seemed strange", "bank": ["His", "behaviour", "seemed", "strange", "behavior", "seem", "the"] },
+            { "id": "rg2-10", "type": "fill_blank", "prompt": "UK yazımı: 'The ___ is open.' (merkez)", "answer": "centre", "acceptableAnswers": ["centre"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-regional-3",
+          "title": "Aus İngilizcesi ve argosu",
+          "description": "G'day, arvo, brekkie",
+          "theme": "vocab",
+          "xp": 16,
+          "exercises": [
+            { "id": "rg3-1", "type": "match_pairs", "prompt": "Aus argo — Türkçe", "pairs": [
+              { "left": "G'day", "right": "Selam (günaydın)" },
+              { "left": "arvo", "right": "öğleden sonra" },
+              { "left": "brekkie", "right": "kahvaltı" },
+              { "left": "servo", "right": "benzin istasyonu" }
+            ]},
+            { "id": "rg3-2", "type": "multiple_choice", "prompt": "'fair dinkum' Aus'ta ne demek?", "options": ["yalan", "gerçek / doğru", "kötü", "büyük"], "answer": "gerçek / doğru" },
+            { "id": "rg3-3", "type": "fill_blank", "prompt": "'Fancy a ___?' (Aus: 'Çay ister misin?')", "answer": "cuppa", "acceptableAnswers": ["cuppa"], "explanation": "'cuppa' = 'a cup of tea'." },
+            { "id": "rg3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Selam dostum, ne haber?'", "answer": "G'day mate how's it going", "bank": ["G'day", "mate", "how's", "it", "going", "Hi", "the", "and"] },
+            { "id": "rg3-5", "type": "multiple_choice", "prompt": "'mate' Aus'ta:", "options": ["sadece eş", "sadece çocuk", "samimi 'arkadaş'", "patron"], "answer": "samimi 'arkadaş'" },
+            { "id": "rg3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "See you this arvo at the servo.", "options": ["See you this arvo at the servo.", "See you this afternoon at the servos.", "See you this arvos at the servo.", "Sees you this arvo at the servo."], "answer": "See you this arvo at the servo." },
+            { "id": "rg3-7", "type": "fill_blank", "prompt": "'I'll have ___ before work.' (Aus: 'İşe gitmeden kahvaltı yapacağım.')", "answer": "brekkie", "acceptableAnswers": ["brekkie"] },
+            { "id": "rg3-8", "type": "multiple_choice", "prompt": "Aus argosunu resmi yazıda kullanmak:", "options": ["uygundur", "uygun değildir", "tercih edilir", "zorunludur"], "answer": "uygun değildir" },
+            { "id": "rg3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Pazar sabahı bir kahve içelim.'", "answer": "Let's grab a coffee Sunday morning", "bank": ["Let's", "grab", "a", "coffee", "Sunday", "morning", "monday", "the", "afternoon"] },
+            { "id": "rg3-10", "type": "fill_blank", "prompt": "'No ___' (Aus: 'Sorun değil.')", "answer": "worries", "acceptableAnswers": ["worries"], "explanation": "'No worries' = Aus için 'sorun değil/rica ederim'." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-c2-essay",
+      "title": "Akademik Deneme ve Eleştiri",
+      "description": "Tezi savunmak ve sınırlandırmak",
+      "theme": "writing",
+      "guide": {
+        "intro": "C2'de yazma, sadece dilbilgisi değil, mantıksal yapının ustaca kurulmasıdır. Tez cümlesi keskin, kanıt seçimi titiz, karşı argüman dürüstçe ele alınmış olmalıdır.",
+        "sections": [
+          { "kind": "heading", "text": "Deneme yapısı" },
+          {
+            "kind": "table",
+            "headers": ["Bölüm", "İşlevi"],
+            "rows": [
+              ["Hook", "Okuyucuyu çeken giriş"],
+              ["Background", "Bağlam ve önemini belirtme"],
+              ["Thesis", "Yazarın iddiası"],
+              ["Body — claim 1", "Birinci gerekçe + kanıt"],
+              ["Body — claim 2", "İkinci gerekçe + kanıt"],
+              ["Counterargument", "Karşı görüşü ele alma"],
+              ["Rebuttal", "Karşı görüşü çürütme"],
+              ["Conclusion", "Tezin yeniden ifadesi + bağlam genişletme"]
+            ]
+          },
+          { "kind": "heading", "text": "Eleştirel okuma" },
+          { "kind": "paragraph", "text": "Eleştirel deneme bir kitabı veya makaleyi sadece özetlemez; argümanını sınar, bağlamına yerleştirir ve katkısını değerlendirir." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "While the author makes a compelling case, the analysis overlooks…", "translation": "Yazar ikna edici bir iddia ortaya koyarken analiz şunu gözden kaçırmaktadır…" },
+              { "source": "This essay argues that, contrary to the prevailing view,…", "translation": "Bu deneme, hâkim görüşün aksine,… öne sürmektedir." },
+              { "source": "The text repays close reading.", "translation": "Metin yakın okumayı hak ediyor." }
+            ]
+          },
+          { "kind": "callout", "tone": "tip", "text": "İngilizce akademik denemede paragraflar tek bir iddia (claim) etrafında örülür. Türk öğrenciler kimi zaman tek paragrafta birden çok fikir kümesi oluşturur — bu C2 değerlendirmesinde puan kaybettirir." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-c2-essay-1",
+          "title": "Tez ve hook",
+          "description": "İlk paragrafı kuvvetlendirin",
+          "theme": "writing",
+          "xp": 18,
+          "exercises": [
+            { "id": "es1-1", "type": "match_pairs", "prompt": "Bölüm — İşlevi", "pairs": [
+              { "left": "Hook", "right": "Okuyucuyu çekme" },
+              { "left": "Thesis", "right": "Ana iddia" },
+              { "left": "Counterargument", "right": "Karşı görüş" },
+              { "left": "Rebuttal", "right": "Karşı görüşü çürütme" }
+            ]},
+            { "id": "es1-2", "type": "multiple_choice", "prompt": "İyi bir tez cümlesinin özelliği?", "options": ["Genel ve belirsiz olmalı", "Tartışılabilir, net ve odaklı olmalı", "Soru biçiminde olmalı", "İki sayfa uzunluğunda olmalı"], "answer": "Tartışılabilir, net ve odaklı olmalı" },
+            { "id": "es1-3", "type": "fill_blank", "prompt": "'This essay ___ that, contrary to the prevailing view, X is the case.' (Türkçe: 'Bu deneme, hâkim görüşün aksine, X'in geçerli olduğunu öne sürmektedir.')", "answer": "argues", "acceptableAnswers": ["argues", "contends", "posits"] },
+            { "id": "es1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bu çalışma uzun süredir kanıksanmış bir varsayımı sorgulamaktadır.'", "answer": "This study challenges a long-held assumption", "bank": ["This", "study", "challenges", "a", "long-held", "assumption", "supports", "the", "new"] },
+            { "id": "es1-5", "type": "multiple_choice", "prompt": "Hangi cümle bir hook olabilir?", "options": ["This is an essay about climate.", "Imagine a world where rain has become a luxury.", "I will write five paragraphs.", "Climate change is a topic."], "answer": "Imagine a world where rain has become a luxury." },
+            { "id": "es1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Imagine a world where rain has become a luxury.", "options": ["Imagine a world where rain has become a luxury.", "Imagine a world where rains has become a luxury.", "Imagine the world where rain has become a luxury.", "Imagine a world where rain become a luxury."], "answer": "Imagine a world where rain has become a luxury." },
+            { "id": "es1-7", "type": "fill_blank", "prompt": "'In what follows, I shall ___' (Türkçe: 'Aşağıda… öne süreceğim.')", "answer": "argue", "acceptableAnswers": ["argue", "contend"] },
+            { "id": "es1-8", "type": "multiple_choice", "prompt": "Hangi cümle ZAYIF tezdir?", "options": ["Mandatory voting could strengthen democratic engagement under specific conditions.", "Voting is important, I think.", "This essay claims that compulsory voting yields measurable participation gains.", "Compulsory voting, while contested, deserves a serious hearing."], "answer": "Voting is important, I think." },
+            { "id": "es1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bu makale konuya yeni bir bakış sunmayı amaçlar.'", "answer": "This paper aims to offer a fresh perspective on the issue", "bank": ["This", "paper", "aims", "to", "offer", "a", "fresh", "perspective", "on", "the", "issue", "old", "the", "and"] },
+            { "id": "es1-10", "type": "fill_blank", "prompt": "'The ___ of this essay is threefold.' (Türkçe: 'Bu denemenin amacı üç katlıdır.')", "answer": "purpose", "acceptableAnswers": ["purpose", "aim"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-essay-2",
+          "title": "Karşı argüman ve çürütme",
+          "description": "Dürüstçe ele alın, ustaca çürütün",
+          "theme": "writing",
+          "xp": 18,
+          "exercises": [
+            { "id": "es2-1", "type": "match_pairs", "prompt": "Kalıp — İşlevi", "pairs": [
+              { "left": "Critics may object that…", "right": "Karşı argüman tanıtma" },
+              { "left": "While this view has merit,…", "right": "Kabul + sınır" },
+              { "left": "However, this overlooks…", "right": "Çürütme açıcısı" },
+              { "left": "On closer inspection,…", "right": "Daha derin analiz" }
+            ]},
+            { "id": "es2-2", "type": "multiple_choice", "prompt": "'While this view has merit, it overlooks X' Türkçesi?", "options": ["Bu görüş haklıdır.", "Bu görüşün hakkı vardır ama X'i gözden kaçırır.", "Bu görüşün eksiği yok.", "X bu görüşün karşısındadır."], "answer": "Bu görüşün hakkı vardır ama X'i gözden kaçırır." },
+            { "id": "es2-3", "type": "fill_blank", "prompt": "'Critics ___ object that the data is limited.' (Türkçe: 'Eleştirmenler verinin sınırlı olduğunu öne sürebilir.')", "answer": "may", "acceptableAnswers": ["may", "might", "could"] },
+            { "id": "es2-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yakından bakıldığında bu argüman zayıflar.'", "answer": "On closer inspection this argument weakens", "bank": ["On", "closer", "inspection", "this", "argument", "weakens", "strengthens", "the", "and"] },
+            { "id": "es2-5", "type": "multiple_choice", "prompt": "İyi bir çürütme:", "options": ["Karşı argümanı çarpıtır.", "Karşı argümanı dürüstçe sunar, sonra eksiğini gösterir.", "Karşı argümanı yok sayar.", "Karşı argümana saldırır."], "answer": "Karşı argümanı dürüstçe sunar, sonra eksiğini gösterir." },
+            { "id": "es2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "While this view has merit, it overlooks the structural causes.", "options": ["While this view has merit, it overlooks the structural causes.", "While this view have merit, it overlooks the structural causes.", "While this view has merits, it overlooks the structural cause.", "While this view has merit, it overlook the structural causes."], "answer": "While this view has merit, it overlooks the structural causes." },
+            { "id": "es2-7", "type": "fill_blank", "prompt": "'However, this ___ a key consideration.' (Türkçe: 'Ne ki bu, önemli bir hususu gözden kaçırıyor.')", "answer": "overlooks", "acceptableAnswers": ["overlooks", "ignores", "misses"] },
+            { "id": "es2-8", "type": "multiple_choice", "prompt": "'Granted, X. However, Y' yapısının işlevi?", "options": ["İki argüman birleştirir.", "Karşı görüşü kabul eder, sonra reddeder.", "Sadece kabul eder.", "Sadece reddeder."], "answer": "Karşı görüşü kabul eder, sonra reddeder." },
+            { "id": "es2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bu öneri sağduyulu görünse de daha derin sorunları çözmüyor.'", "answer": "While the proposal seems sensible it fails to address deeper issues", "bank": ["While", "the", "proposal", "seems", "sensible", "it", "fails", "to", "address", "deeper", "issues", "shallow", "the", "and"] },
+            { "id": "es2-10", "type": "fill_blank", "prompt": "'This objection ___ unconvincing on closer scrutiny.' (Türkçe: 'Bu itiraz yakından bakıldığında ikna edici olmaktan çıkıyor.')", "answer": "appears", "acceptableAnswers": ["appears", "becomes", "proves"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-essay-3",
+          "title": "Kapanış ve genişletme",
+          "description": "Tezi yeniden ifade et, ufku aç",
+          "theme": "writing",
+          "xp": 18,
+          "exercises": [
+            { "id": "es3-1", "type": "multiple_choice", "prompt": "İyi bir kapanış paragrafı:", "options": ["Yeni bilgi ekler", "Tezi yineler ve geniş bağlamla kapatır", "Tek cümleliktir", "Sadece özet sunar"], "answer": "Tezi yineler ve geniş bağlamla kapatır" },
+            { "id": "es3-2", "type": "fill_blank", "prompt": "'In ___, the evidence supports the thesis.' (Türkçe: 'Sonuç olarak kanıtlar tezi destekliyor.')", "answer": "conclusion", "acceptableAnswers": ["conclusion", "sum"] },
+            { "id": "es3-3", "type": "match_pairs", "prompt": "Kalıp — İşlevi", "pairs": [
+              { "left": "In conclusion,", "right": "Sonuç başlatma" },
+              { "left": "Ultimately,", "right": "Nihayet" },
+              { "left": "The implications extend beyond…", "right": "Bağlam genişletme" },
+              { "left": "Further research should…", "right": "Gelecek yönü" }
+            ]},
+            { "id": "es3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sonuçların etkileri tek bir disiplini aşar.'", "answer": "The implications extend beyond a single discipline", "bank": ["The", "implications", "extend", "beyond", "a", "single", "discipline", "many", "the", "and"] },
+            { "id": "es3-5", "type": "multiple_choice", "prompt": "'Ultimately' Türkçesi?", "options": ["Hızlıca", "Nihayet / sonunda", "Önceden", "Eşitçe"], "answer": "Nihayet / sonunda" },
+            { "id": "es3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Ultimately, this question demands further empirical scrutiny.", "options": ["Ultimately, this question demands further empirical scrutiny.", "Ultimate, this question demands further empirical scrutiny.", "Ultimately, this questions demands further empirical scrutiny.", "Ultimately, this question demand further empirical scrutiny."], "answer": "Ultimately, this question demands further empirical scrutiny." },
+            { "id": "es3-7", "type": "fill_blank", "prompt": "'Future research should ___ this question further.' (Türkçe: 'Gelecek araştırma bu soruyu ileri ele almalı.')", "answer": "investigate", "acceptableAnswers": ["investigate", "examine", "explore", "address"] },
+            { "id": "es3-8", "type": "multiple_choice", "prompt": "Kapanış paragrafının kaçınılması gereken yanlışı?", "options": ["Tezi yinelemek", "Geniş bir vurgu yapmak", "Yeni argümanlar eklemek", "Etki/sonuç vurgulamak"], "answer": "Yeni argümanlar eklemek" },
+            { "id": "es3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bu mesele zamana karşı bir yarış olmaya devam ediyor.'", "answer": "The issue remains a race against time", "bank": ["The", "issue", "remains", "a", "race", "against", "time", "with", "the", "for"] },
+            { "id": "es3-10", "type": "fill_blank", "prompt": "'The case ___ for rethinking the framework.' (Türkçe: 'Çerçeveyi yeniden düşünmek için gerekçe var.')", "answer": "remains", "acceptableAnswers": ["remains", "stands"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-c2-review",
+      "title": "C2 — Genel Tekrar",
+      "description": "Edebiyat, retorik, felsefe, bölge ve deneme dilini birleştirir",
+      "theme": "review",
+      "guide": {
+        "intro": "Bu son bölüm C2'de işlenen tüm konuları kucaklar: edebî düzyazı, retorik figürler, felsefi argüman, bölgesel İngilizce ve akademik deneme.",
+        "sections": [
+          { "kind": "heading", "text": "Kontrol listesi" },
+          { "kind": "list", "items": ["Latinate ve Germanik kelime seçimini bilinçli yapabiliyorum.", "Serbest dolaylı söyleyişi tanıyabiliyorum.", "Klasik retorik figürlerini ezbere biliyorum.", "Felsefi sözlükte konfor sahibiyim.", "UK / US / Aus yazım ve kelime farklarına hâkimim.", "Akademik denemede tez, karşı argüman, çürütme ve kapanış kurabiliyorum."] }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-c2-review-1",
+          "title": "Karma 1 — edebiyat ve retorik",
+          "description": "Düzyazı ve hitap dili",
+          "theme": "review",
+          "xp": 18,
+          "exercises": [
+            { "id": "rv1-1", "type": "multiple_choice", "prompt": "'commence' yerine günlük dilde ne kullanılır?", "options": ["start", "stop", "stop start", "completed"], "answer": "start" },
+            { "id": "rv1-2", "type": "fill_blank", "prompt": "'A faint ___ of jasmine drifted through the room.' (Türkçe: 'Odaya hafif bir yasemin kokusu yayıldı.')", "answer": "fragrance", "acceptableAnswers": ["fragrance", "scent", "odour"] },
+            { "id": "rv1-3", "type": "match_pairs", "prompt": "Figür — Türkçe", "pairs": [
+              { "left": "anaphora", "right": "başta tekrar" },
+              { "left": "antithesis", "right": "karşıtlık" },
+              { "left": "chiasmus", "right": "çapraz tekrar" },
+              { "left": "tricolon", "right": "üçlü yapı" }
+            ]},
+            { "id": "rv1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Geldim, gördüm, fethettim.'", "answer": "I came I saw I conquered", "bank": ["I", "came", "I", "saw", "I", "conquered", "lost", "the", "and"] },
+            { "id": "rv1-5", "type": "multiple_choice", "prompt": "'Make no mistake' tonu?", "options": ["Şüpheci", "Vurgulu uyarı", "Belirsiz", "İlgisiz"], "answer": "Vurgulu uyarı" },
+            { "id": "rv1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "He could discern, even in the gloom, the faint outline of the figure.", "options": ["He could discern, even in the gloom, the faint outline of the figure.", "He could discerned, even in the gloom, the faint outline of the figure.", "He could discern, even in the gloomy, the faint outline of the figure.", "He could discern, even in the gloom, a faint outlines of the figure."], "answer": "He could discern, even in the gloom, the faint outline of the figure." },
+            { "id": "rv1-7", "type": "fill_blank", "prompt": "'It was the best of times, it was the ___ of times.' (Türkçe: 'En iyi zamanlardı, en kötü zamanlardı.')", "answer": "worst", "acceptableAnswers": ["worst"] },
+            { "id": "rv1-8", "type": "multiple_choice", "prompt": "Hangi cümle metafor içerir?", "options": ["She walked carefully.", "Time is a thief.", "He is tired.", "The book is on the table."], "answer": "Time is a thief." },
+            { "id": "rv1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sessizlik kulağına bastıran ağır bir perdeydi.'", "answer": "Silence was a heavy curtain pressing against her ears", "bank": ["Silence", "was", "a", "heavy", "curtain", "pressing", "against", "her", "ears", "the", "his", "press"] },
+            { "id": "rv1-10", "type": "fill_blank", "prompt": "'Government of the people, by the people, ___ the people.' (Türkçe: 'Halkın, halk tarafından, halk için yönetimi.')", "answer": "for", "acceptableAnswers": ["for"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-review-2",
+          "title": "Karma 2 — felsefe ve bölge",
+          "description": "Soyut argüman ve UK/US",
+          "theme": "review",
+          "xp": 18,
+          "exercises": [
+            { "id": "rv2-1", "type": "match_pairs", "prompt": "Eşleyin", "pairs": [
+              { "left": "free will", "right": "özgür irade" },
+              { "left": "epistemology", "right": "bilgi kuramı" },
+              { "left": "lift (UK)", "right": "elevator (US)" },
+              { "left": "boot (UK)", "right": "trunk (US)" }
+            ]},
+            { "id": "rv2-2", "type": "multiple_choice", "prompt": "'beg the question' Türkçesi?", "options": ["Sormak", "Kanıtlanması gereken şeyi varsaymak", "Soruları geçmek", "Cevapsız bırakmak"], "answer": "Kanıtlanması gereken şeyi varsaymak" },
+            { "id": "rv2-3", "type": "fill_blank", "prompt": "'Correlation does not ___ causation.' (Türkçe: 'Korelasyon nedenselliği içermez.')", "answer": "imply", "acceptableAnswers": ["imply", "entail"] },
+            { "id": "rv2-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Daha dikkatli olmalıydık.'", "answer": "We ought to have been more careful", "bank": ["We", "ought", "to", "have", "been", "more", "careful", "less", "the", "ought"] },
+            { "id": "rv2-5", "type": "listen_and_choose", "prompt": "Duyduğunuz US cümlesini seçin", "spokenText": "Put it in the trunk and we'll head home.", "options": ["Put it in the trunk and we'll head home.", "Put it in the boot and we'll head home.", "Put it in the trunks and we'll head home.", "Put it on the trunk and we'll head home."], "answer": "Put it in the trunk and we'll head home." },
+            { "id": "rv2-6", "type": "multiple_choice", "prompt": "Aus argosunda 'arvo' nedir?", "options": ["sabah", "öğleden sonra", "akşam", "gece"], "answer": "öğleden sonra" },
+            { "id": "rv2-7", "type": "fill_blank", "prompt": "'The argument ___ a category mistake.' (Türkçe: 'Argüman bir kategori hatası içeriyor.')", "answer": "commits", "acceptableAnswers": ["commits", "makes"] },
+            { "id": "rv2-8", "type": "multiple_choice", "prompt": "UK'de 'tatil' için ne kullanılır?", "options": ["vacation", "holiday", "leave", "off-day"], "answer": "holiday" },
+            { "id": "rv2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bilen özne ile bilinen nesne arasındaki ayrım problematiktir.'", "answer": "The distinction between knower and known is problematic", "bank": ["The", "distinction", "between", "knower", "and", "known", "is", "problematic", "easy", "the", "the"] },
+            { "id": "rv2-10", "type": "fill_blank", "prompt": "UK yazımı: 'The ___ of the campaign.' (renk)", "answer": "colour", "acceptableAnswers": ["colour"] }
+          ]
+        },
+        {
+          "id": "en-tr-c2-review-3",
+          "title": "Karma 3 — deneme dili",
+          "description": "Tez, karşı argüman, kapanış",
+          "theme": "review",
+          "xp": 18,
+          "exercises": [
+            { "id": "rv3-1", "type": "multiple_choice", "prompt": "Hangi cümle iyi bir tez cümlesi olarak çalışır?", "options": ["I think it's interesting.", "Compulsory voting strengthens democratic engagement under specific conditions.", "Voting is a topic.", "I will write about voting."], "answer": "Compulsory voting strengthens democratic engagement under specific conditions." },
+            { "id": "rv3-2", "type": "fill_blank", "prompt": "'While this view has ___, it overlooks structural causes.' (Türkçe: 'Bu görüşün hakkı vardır ama yapısal nedenleri gözden kaçırır.')", "answer": "merit", "acceptableAnswers": ["merit"] },
+            { "id": "rv3-3", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sonuçların etkileri tek bir disiplini aşar.'", "answer": "The implications extend beyond a single discipline", "bank": ["The", "implications", "extend", "beyond", "a", "single", "discipline", "many", "the", "and"] },
+            { "id": "rv3-4", "type": "match_pairs", "prompt": "Kalıp — İşlev", "pairs": [
+              { "left": "Critics may object that…", "right": "Karşı argüman tanıtma" },
+              { "left": "However, this overlooks…", "right": "Çürütme açıcısı" },
+              { "left": "In conclusion,", "right": "Sonuç başlatma" },
+              { "left": "Further research should…", "right": "Gelecek yönü" }
+            ]},
+            { "id": "rv3-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Ultimately, this question demands further empirical scrutiny.", "options": ["Ultimately, this question demands further empirical scrutiny.", "Ultimate, this question demands further empirical scrutiny.", "Ultimately, these questions demands further empirical scrutiny.", "Ultimately, this question demand further empirical scrutiny."], "answer": "Ultimately, this question demands further empirical scrutiny." },
+            { "id": "rv3-6", "type": "multiple_choice", "prompt": "'On closer inspection' anlamı?", "options": ["Yakından bakıldığında", "Müfettiş geldiğinde", "Yakın çekimde", "Görülmez biçimde"], "answer": "Yakından bakıldığında" },
+            { "id": "rv3-7", "type": "fill_blank", "prompt": "'Future research should ___ this question.' (Türkçe: 'Gelecek araştırma bu soruyu ileri ele almalı.')", "answer": "investigate", "acceptableAnswers": ["investigate", "examine", "address"] },
+            { "id": "rv3-8", "type": "multiple_choice", "prompt": "Hangi cümle bir KAPANIŞ kalıbıdır?", "options": ["Imagine a world where rain has become a luxury.", "In conclusion, the case is clear.", "This essay argues that…", "Critics may object that…"], "answer": "In conclusion, the case is clear." },
+            { "id": "rv3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bu araştırma uzun süredir kanıksanmış bir varsayımı sorgular.'", "answer": "This study challenges a long-held assumption", "bank": ["This", "study", "challenges", "a", "long-held", "assumption", "supports", "the", "new"] },
+            { "id": "rv3-10", "type": "fill_blank", "prompt": "'Make no ___: this policy will define a generation.' (Türkçe: 'Yanılmayın: bu politika bir kuşağı tanımlayacak.')", "answer": "mistake", "acceptableAnswers": ["mistake"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4301 @@
+{
+  "id": "a1",
+  "name": "A1 — Başlangıç",
+  "description": "İngilizceye ilk adımlar: alfabe, selamlaşma, zamirler, sayılar ve günlük fiiller.",
+  "topics": [
+    {
+      "id": "en-tr-alphabet",
+      "title": "Alfabe ve Sesler",
+      "description": "İngilizce harfler ve Türkçede olmayan sesler",
+      "theme": "alphabet",
+      "guide": {
+        "intro": "İngilizce alfabesi 26 harften oluşur — Türkçedeki ç, ğ, ı, ö, ş, ü harfleri yoktur; Q, W, X harfleri ise vardır. Asıl iş yazımda değil seslerde: bazı İngilizce sesler Türkçede hiç bulunmaz.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Türkçede Olmayan Sesler"
+          },
+          {
+            "kind": "table",
+            "headers": ["Ses", "Örnek", "Türkçeye en yakın"],
+            "rows": [
+              ["th (sessiz)", "think, three", "Yok — dilin ucu üst dişlere"],
+              ["th (sesli)", "this, the", "Yok — z değil, dil dişler arası"],
+              ["w", "water, we", "v değil, dudaklar yuvarlanır"],
+              ["æ", "cat, apple", "a ile e arası geniş ses"],
+              ["ng", "song, king", "n+g birleşik genizden"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "Türkçedeki en yaygın hata: 'think' kelimesini 'tink' veya 'sink' gibi söylemek. 'th' sesi için dilinizin ucunu hafifçe üst dişlerinizin arasına koyun ve hava üfleyin."
+          },
+          {
+            "kind": "heading",
+            "text": "W ve V Farkı"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Türkçede 'w' yoktur, 'v' vardır. İngilizcede ikisi farklı seslerdir ve karıştırılırsa anlam değişir: 'wine' (şarap) ve 'vine' (asma) farklı kelimelerdir. 'W' söylerken dudaklarınızı 'u' der gibi yuvarlayın."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "water", "translation": "su"},
+              {"source": "very", "translation": "çok"},
+              {"source": "thank", "translation": "teşekkür et-"},
+              {"source": "the", "translation": "(belirli artikel)"}
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Yeni Harfler: Q, W, X"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "Q: queen, quick — neredeyse her zaman 'qu' = 'kw' sesi",
+              "W: window, week — dudak yuvarlama",
+              "X: box, six — 'ks' sesi"
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-alphabet-1",
+          "title": "Yeni Harfler: Q, W, X",
+          "description": "Türkçede olmayan İngilizce harfler",
+          "theme": "alphabet",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "alp1-1",
+              "type": "multiple_choice",
+              "prompt": "İngilizcede 'quick' kelimesinin 'qu' kısmı hangi sese karşılık gelir?",
+              "options": ["k", "kv", "kw", "ku"],
+              "answer": "kw",
+              "explanation": "İngilizcede 'qu' neredeyse her zaman 'kw' sesi verir: queen = 'kwiin', quick = 'kwik'."
+            },
+            {
+              "id": "alp1-2",
+              "type": "multiple_choice",
+              "prompt": "Hangi kelime 'X' harfini 'ks' olarak okur?",
+              "options": ["box", "next", "six", "Hepsi"],
+              "answer": "Hepsi",
+              "explanation": "İngilizcede X harfi kelime sonunda ya da iki ünlü arasında 'ks' sesi verir."
+            },
+            {
+              "id": "alp1-3",
+              "type": "fill_blank",
+              "prompt": "Türkçede olmayıp İngilizcede olan ___ harfi 'su' kelimesini başlatır: water.",
+              "answer": "W",
+              "acceptableAnswers": ["w"],
+              "explanation": "'Water' kelimesi W ile başlar; Türkçede bu harf yoktur."
+            },
+            {
+              "id": "alp1-4",
+              "type": "match_pairs",
+              "prompt": "Harfi örnek kelimeyle eşleştir",
+              "pairs": [
+                {"left": "Q", "right": "queen"},
+                {"left": "W", "right": "week"},
+                {"left": "X", "right": "box"},
+                {"left": "Y", "right": "yellow"}
+              ]
+            },
+            {
+              "id": "alp1-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "queen",
+              "options": ["queen", "keen", "green", "clean"],
+              "answer": "queen"
+            },
+            {
+              "id": "alp1-6",
+              "type": "multiple_choice",
+              "prompt": "Türkçedeki hangi harfler İngilizce alfabesinde YOKTUR?",
+              "options": ["Ç, Ğ, I, Ö, Ş, Ü", "Q, W, X", "B, D, F", "K, L, M"],
+              "answer": "Ç, Ğ, I, Ö, Ş, Ü"
+            },
+            {
+              "id": "alp1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Q W X Y Z'",
+              "answer": "Q W X Y Z",
+              "bank": ["Q", "W", "X", "Y", "Z", "A"],
+              "explanation": "İngilizce alfabesinin son beş harfi."
+            },
+            {
+              "id": "alp1-8",
+              "type": "fill_blank",
+              "prompt": "'six' kelimesindeki X harfi ___ olarak okunur.",
+              "answer": "ks",
+              "acceptableAnswers": ["KS", "Ks"],
+              "explanation": "six = 'siks'."
+            },
+            {
+              "id": "alp1-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun harfi seç",
+              "spokenText": "W",
+              "options": ["W", "V", "U", "Y"],
+              "answer": "W",
+              "explanation": "W harfi 'dabıl yu' diye okunur — kelime başında dudaklar yuvarlanır."
+            },
+            {
+              "id": "alp1-10",
+              "type": "multiple_choice",
+              "prompt": "Hangi harfin adı İngilizcede 'dabıl yu' diye okunur?",
+              "options": ["V", "W", "U", "Y"],
+              "answer": "W"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-alphabet-2",
+          "title": "TH Sesleri",
+          "description": "Türkçede olmayan en zorlu ses",
+          "theme": "alphabet",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "alp2-1",
+              "type": "multiple_choice",
+              "prompt": "'Think' kelimesindeki 'th' sesini doğru çıkarmak için ne yapmalısın?",
+              "options": [
+                "Dilin ucunu üst dişlerin arasına koy ve hava üfle",
+                "S sesi gibi söyle",
+                "T sesi gibi söyle",
+                "F sesi gibi söyle"
+              ],
+              "answer": "Dilin ucunu üst dişlerin arasına koy ve hava üfle",
+              "explanation": "'th' sesi Türkçede yoktur; doğru çıkarmak için dil dişler arasında olmalıdır."
+            },
+            {
+              "id": "alp2-2",
+              "type": "fill_blank",
+              "prompt": "İngilizcede 'three' Türkçeye ___ olarak çevrilir.",
+              "answer": "üç",
+              "acceptableAnswers": ["Üç", "ÜÇ"],
+              "explanation": "three = üç. 'th' sesine dikkat: 'tıri' değil!"
+            },
+            {
+              "id": "alp2-3",
+              "type": "multiple_choice",
+              "prompt": "'this' kelimesindeki 'th' sesi nasıldır?",
+              "options": ["Sessiz (think gibi)", "Sesli (z'ye benzer ama dişler arası)", "T gibi", "S gibi"],
+              "answer": "Sesli (z'ye benzer ama dişler arası)",
+              "explanation": "İngilizcede iki farklı 'th' vardır: think (sessiz) ve this (sesli). İkisi de Türkçede yoktur."
+            },
+            {
+              "id": "alp2-4",
+              "type": "match_pairs",
+              "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştir",
+              "pairs": [
+                {"left": "think", "right": "düşünmek"},
+                {"left": "three", "right": "üç"},
+                {"left": "the", "right": "(belirli artikel)"},
+                {"left": "this", "right": "bu"}
+              ]
+            },
+            {
+              "id": "alp2-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "think",
+              "options": ["think", "sink", "tink", "ink"],
+              "answer": "think",
+              "explanation": "Türk öğrencilerin en sık karıştırdığı çift: think / sink. 'th' sesi 's' değildir."
+            },
+            {
+              "id": "alp2-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "this",
+              "options": ["this", "dis", "tis", "zis"],
+              "answer": "this"
+            },
+            {
+              "id": "alp2-7",
+              "type": "fill_blank",
+              "prompt": "'I think' = 'Ben ___' (Türkçe)",
+              "answer": "düşünüyorum",
+              "acceptableAnswers": ["Düşünüyorum"]
+            },
+            {
+              "id": "alp2-8",
+              "type": "multiple_choice",
+              "prompt": "Aşağıdakilerden hangisi sesli 'th' (this gibi) içerir?",
+              "options": ["think", "thank", "the", "three"],
+              "answer": "the",
+              "explanation": "the, this, that, they, them, mother, father — bunlar sesli 'th' içerir."
+            },
+            {
+              "id": "alp2-9",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I think this is good.'",
+              "answer": "I think this is good",
+              "bank": ["I", "think", "this", "is", "good", "the", "are"]
+            },
+            {
+              "id": "alp2-10",
+              "type": "multiple_choice",
+              "prompt": "Türk öğrenciler 'th' sesini en çok hangi sesle karıştırır?",
+              "options": ["F", "S veya T", "K", "P"],
+              "answer": "S veya T",
+              "explanation": "'think' yerine 'sink' veya 'tink' demek çok yaygın bir hatadır."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-alphabet-3",
+          "title": "W ve V Farkı",
+          "description": "İki sesi karıştırmamak",
+          "theme": "alphabet",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "alp3-1",
+              "type": "multiple_choice",
+              "prompt": "'wine' (şarap) ile 'vine' (asma) farklı kelimelerdir. Aralarındaki fark nedir?",
+              "options": ["W ve V sesi", "Ünlü harfler", "Vurgu", "Hiçbiri"],
+              "answer": "W ve V sesi"
+            },
+            {
+              "id": "alp3-2",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "we",
+              "options": ["we", "ve", "vee", "be"],
+              "answer": "we",
+              "explanation": "'we' (biz) — dudaklar yuvarlanır, V değildir."
+            },
+            {
+              "id": "alp3-3",
+              "type": "fill_blank",
+              "prompt": "'water' Türkçede ___ demektir.",
+              "answer": "su",
+              "acceptableAnswers": ["Su", "SU"]
+            },
+            {
+              "id": "alp3-4",
+              "type": "match_pairs",
+              "prompt": "Kelimeleri Türkçe karşılıklarıyla eşleştir",
+              "pairs": [
+                {"left": "water", "right": "su"},
+                {"left": "very", "right": "çok"},
+                {"left": "win", "right": "kazanmak"},
+                {"left": "van", "right": "minibüs"}
+              ]
+            },
+            {
+              "id": "alp3-5",
+              "type": "multiple_choice",
+              "prompt": "'W' sesini doğru çıkarmak için ne yapmalısın?",
+              "options": [
+                "Dudakları 'u' der gibi yuvarla",
+                "Üst dişleri alt dudağa koy",
+                "Dilin ucunu yukarı kaldır",
+                "Boğazdan ses çıkar"
+              ],
+              "answer": "Dudakları 'u' der gibi yuvarla",
+              "explanation": "'W' sesinde dudaklar 'u' der gibi yuvarlanır; 'V' sesinde üst dişler alt dudağa değer."
+            },
+            {
+              "id": "alp3-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "very",
+              "options": ["very", "wery", "berry", "merry"],
+              "answer": "very"
+            },
+            {
+              "id": "alp3-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I want water.'",
+              "answer": "I want water",
+              "bank": ["I", "want", "water", "very", "vine"]
+            },
+            {
+              "id": "alp3-8",
+              "type": "fill_blank",
+              "prompt": "Türkçede 'çok iyi' İngilizcede '___ good' olur.",
+              "answer": "very",
+              "acceptableAnswers": ["Very", "VERY"]
+            },
+            {
+              "id": "alp3-9",
+              "type": "multiple_choice",
+              "prompt": "Hangi kelime W ile başlar?",
+              "options": ["very", "vine", "week", "voice"],
+              "answer": "week"
+            },
+            {
+              "id": "alp3-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "wine",
+              "options": ["wine", "vine", "wind", "vain"],
+              "answer": "wine",
+              "explanation": "wine = şarap, vine = asma. W ve V karıştırılırsa anlam değişir."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-alphabet-4",
+          "title": "Æ Sesi: Cat, Apple",
+          "description": "A ile E arası geniş ses",
+          "theme": "alphabet",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "alp4-1",
+              "type": "multiple_choice",
+              "prompt": "'cat' kelimesindeki ünlü ses Türkçedeki hangi sese en yakındır?",
+              "options": ["Saf 'a'", "Saf 'e'", "'a' ile 'e' arası", "'ı'"],
+              "answer": "'a' ile 'e' arası",
+              "explanation": "İngilizce æ sesi Türkçedeki kısa 'a'dan daha açık, 'e'den daha geniştir."
+            },
+            {
+              "id": "alp4-2",
+              "type": "fill_blank",
+              "prompt": "'apple' Türkçede ___ demektir.",
+              "answer": "elma",
+              "acceptableAnswers": ["Elma", "ELMA"]
+            },
+            {
+              "id": "alp4-3",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "cat",
+              "options": ["cat", "cut", "cot", "kit"],
+              "answer": "cat"
+            },
+            {
+              "id": "alp4-4",
+              "type": "match_pairs",
+              "prompt": "Kelimeleri eşleştir",
+              "pairs": [
+                {"left": "cat", "right": "kedi"},
+                {"left": "apple", "right": "elma"},
+                {"left": "man", "right": "adam"},
+                {"left": "bag", "right": "çanta"}
+              ]
+            },
+            {
+              "id": "alp4-5",
+              "type": "multiple_choice",
+              "prompt": "Hangi kelime æ sesi içerir?",
+              "options": ["cat", "cut", "cot", "coat"],
+              "answer": "cat"
+            },
+            {
+              "id": "alp4-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "apple",
+              "options": ["apple", "uncle", "able", "awful"],
+              "answer": "apple"
+            },
+            {
+              "id": "alp4-7",
+              "type": "fill_blank",
+              "prompt": "'I have a ___' (Bir kedim var). Türkçedeki 'kedi' İngilizcede:",
+              "answer": "cat",
+              "acceptableAnswers": ["Cat", "CAT"]
+            },
+            {
+              "id": "alp4-8",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'The cat has an apple.'",
+              "answer": "The cat has an apple",
+              "bank": ["The", "cat", "has", "an", "apple", "a", "is"]
+            },
+            {
+              "id": "alp4-9",
+              "type": "multiple_choice",
+              "prompt": "'man' (adam) kelimesindeki ünlü ses 'men' (erkekler) ile aynı mı?",
+              "options": ["Evet, aynı", "Hayır — man = æ, men = e", "Bilmiyorum", "Sadece yazıda farklı"],
+              "answer": "Hayır — man = æ, men = e",
+              "explanation": "man /mæn/ ve men /men/ farklı seslerle söylenir; karıştırmak çoğul/tekil hatasına neden olur."
+            },
+            {
+              "id": "alp4-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "man",
+              "options": ["man", "men", "mean", "moon"],
+              "answer": "man"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-greetings",
+      "title": "Selamlaşma",
+      "description": "Merhaba, hoşça kal ve nasılsın",
+      "theme": "greetings",
+      "guide": {
+        "intro": "İngilizcede selamlaşma günün saatine ve ortamın resmiyetine göre değişir. Türkçede 'merhaba' her durumda kullanılırken İngilizcede birkaç seçenek öğrenmek gerekir.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Temel Selamlar"
+          },
+          {
+            "kind": "table",
+            "headers": ["İngilizce", "Türkçe", "Ne zaman?"],
+            "rows": [
+              ["Hello", "Merhaba", "Her zaman"],
+              ["Hi", "Selam", "Samimi"],
+              ["Good morning", "Günaydın", "Sabah (12:00 öncesi)"],
+              ["Good afternoon", "İyi günler", "Öğleden sonra"],
+              ["Good evening", "İyi akşamlar", "Akşam"],
+              ["Good night", "İyi geceler", "Yatmadan önce / vedalaşırken"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "info",
+            "text": "'Good night' Türkçedeki 'iyi geceler' gibi sadece yatmadan ya da gece vedalaşırken kullanılır — bir gece selamı değildir. Akşam karşılaşınca 'Good evening' demek gerekir."
+          },
+          {
+            "kind": "heading",
+            "text": "Nasılsın?"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "How are you?", "translation": "Nasılsın?"},
+              {"source": "I'm fine, thanks.", "translation": "İyiyim, teşekkürler."},
+              {"source": "Not bad.", "translation": "Fena değil."},
+              {"source": "How about you?", "translation": "Sen nasılsın?"}
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Türkçede 'Nasılsın?' soruluna 'iyiyim' yeterlidir; İngilizcede 'I'm fine, thanks. And you?' demek daha kibardır — karşılığı sormak âdettendir."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-greetings-1",
+          "title": "Hello ve Goodbye",
+          "description": "Temel selam ve veda",
+          "theme": "greetings",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "gr1-1",
+              "type": "multiple_choice",
+              "prompt": "İngilizcede 'Merhaba' nasıl söylenir?",
+              "options": ["Hello", "Goodbye", "Thanks", "Sorry"],
+              "answer": "Hello"
+            },
+            {
+              "id": "gr1-2",
+              "type": "multiple_choice",
+              "prompt": "'Goodbye' Türkçede ne demektir?",
+              "options": ["Merhaba", "Hoşça kal", "Lütfen", "Teşekkürler"],
+              "answer": "Hoşça kal"
+            },
+            {
+              "id": "gr1-3",
+              "type": "fill_blank",
+              "prompt": "Samimi ortamda 'Merhaba' yerine ___ da diyebilirsin.",
+              "answer": "Hi",
+              "acceptableAnswers": ["hi", "HI"],
+              "explanation": "'Hi' = Selam. Türkçedeki 'selam' kadar samimi."
+            },
+            {
+              "id": "gr1-4",
+              "type": "match_pairs",
+              "prompt": "Selam ve karşılığını eşleştir",
+              "pairs": [
+                {"left": "Hello", "right": "Merhaba"},
+                {"left": "Hi", "right": "Selam"},
+                {"left": "Bye", "right": "Hoşça kal"},
+                {"left": "See you", "right": "Görüşürüz"}
+              ]
+            },
+            {
+              "id": "gr1-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "Hello",
+              "options": ["Hello", "Hi", "Goodbye", "Thanks"],
+              "answer": "Hello"
+            },
+            {
+              "id": "gr1-6",
+              "type": "multiple_choice",
+              "prompt": "Birinden ayrılırken hangisini söylersin?",
+              "options": ["Hello", "Hi", "Goodbye", "Welcome"],
+              "answer": "Goodbye"
+            },
+            {
+              "id": "gr1-7",
+              "type": "fill_blank",
+              "prompt": "'See you ___' (yarın görüşürüz). Boşluğa ne gelir?",
+              "answer": "tomorrow",
+              "acceptableAnswers": ["Tomorrow", "TOMORROW"],
+              "explanation": "tomorrow = yarın."
+            },
+            {
+              "id": "gr1-8",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'See you tomorrow.'",
+              "answer": "See you tomorrow",
+              "bank": ["See", "you", "tomorrow", "today", "later"]
+            },
+            {
+              "id": "gr1-9",
+              "type": "multiple_choice",
+              "prompt": "Aşağıdakilerden hangisi vedalaşma DEĞİLDİR?",
+              "options": ["Goodbye", "Bye", "See you", "Hi"],
+              "answer": "Hi"
+            },
+            {
+              "id": "gr1-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "Goodbye",
+              "options": ["Goodbye", "Hello", "See you", "Welcome"],
+              "answer": "Goodbye"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-greetings-2",
+          "title": "Günün Saatine Göre Selam",
+          "description": "Good morning / afternoon / evening",
+          "theme": "greetings",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "gr2-1",
+              "type": "multiple_choice",
+              "prompt": "'Günaydın' İngilizcede nasıl söylenir?",
+              "options": ["Good night", "Good morning", "Good evening", "Good afternoon"],
+              "answer": "Good morning"
+            },
+            {
+              "id": "gr2-2",
+              "type": "multiple_choice",
+              "prompt": "Saat 20:00. Birine selam verirken ne dersin?",
+              "options": ["Good morning", "Good afternoon", "Good evening", "Good night"],
+              "answer": "Good evening",
+              "explanation": "'Good night' selam değildir — sadece vedalaşırken/yatmadan önce kullanılır."
+            },
+            {
+              "id": "gr2-3",
+              "type": "fill_blank",
+              "prompt": "'İyi geceler' (yatmadan önce) İngilizcede ___",
+              "answer": "Good night",
+              "acceptableAnswers": ["good night", "GOOD NIGHT"]
+            },
+            {
+              "id": "gr2-4",
+              "type": "match_pairs",
+              "prompt": "Saatle selamı eşleştir",
+              "pairs": [
+                {"left": "Good morning", "right": "Sabah"},
+                {"left": "Good afternoon", "right": "Öğleden sonra"},
+                {"left": "Good evening", "right": "Akşam"},
+                {"left": "Good night", "right": "Yatmadan önce"}
+              ]
+            },
+            {
+              "id": "gr2-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "Good morning",
+              "options": ["Good morning", "Good evening", "Good night", "Good afternoon"],
+              "answer": "Good morning"
+            },
+            {
+              "id": "gr2-6",
+              "type": "multiple_choice",
+              "prompt": "Türkçede 'iyi günler' deriz; İngilizcede günün saatine göre değişir. Saat 14:00'te ne denir?",
+              "options": ["Good morning", "Good afternoon", "Good evening", "Good day"],
+              "answer": "Good afternoon"
+            },
+            {
+              "id": "gr2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Good morning, Mrs. Yılmaz.'",
+              "answer": "Good morning Mrs Yılmaz",
+              "bank": ["Good", "morning", "Mrs", "Yılmaz", "evening", "night"]
+            },
+            {
+              "id": "gr2-8",
+              "type": "fill_blank",
+              "prompt": "Akşamleyin birine selam verirken 'Good ___' denir.",
+              "answer": "evening",
+              "acceptableAnswers": ["Evening", "EVENING"]
+            },
+            {
+              "id": "gr2-9",
+              "type": "multiple_choice",
+              "prompt": "'Good night' ne zaman kullanılır?",
+              "options": [
+                "Akşam karşılaşınca",
+                "Yatmadan önce / gece vedalaşırken",
+                "Sabah",
+                "Öğle"
+              ],
+              "answer": "Yatmadan önce / gece vedalaşırken",
+              "explanation": "Türkçedeki 'iyi geceler' gibi davranır — bir akşam selamı değildir."
+            },
+            {
+              "id": "gr2-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "Good evening",
+              "options": ["Good evening", "Good morning", "Good night", "Good afternoon"],
+              "answer": "Good evening"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-greetings-3",
+          "title": "Nasılsın?",
+          "description": "Hatır sormak ve cevap vermek",
+          "theme": "greetings",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "gr3-1",
+              "type": "multiple_choice",
+              "prompt": "'Nasılsın?' İngilizcede nasıl söylenir?",
+              "options": ["What's your name?", "How are you?", "Where are you?", "Who are you?"],
+              "answer": "How are you?"
+            },
+            {
+              "id": "gr3-2",
+              "type": "multiple_choice",
+              "prompt": "'I'm fine, thanks.' Türkçede ne demektir?",
+              "options": ["İyiyim, teşekkürler.", "İyi misin?", "Adım iyi.", "Teşekkür ederim."],
+              "answer": "İyiyim, teşekkürler."
+            },
+            {
+              "id": "gr3-3",
+              "type": "fill_blank",
+              "prompt": "Birine cevap verdikten sonra kibarca soruyu iade et: 'And ___?'",
+              "answer": "you",
+              "acceptableAnswers": ["You", "YOU"],
+              "explanation": "'And you?' = 'Sen?' anlamında. İngilizcede karşılığı sormak âdettendir."
+            },
+            {
+              "id": "gr3-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "How are you?", "right": "Nasılsın?"},
+                {"left": "I'm fine.", "right": "İyiyim."},
+                {"left": "Not bad.", "right": "Fena değil."},
+                {"left": "And you?", "right": "Sen?"}
+              ]
+            },
+            {
+              "id": "gr3-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "How are you?",
+              "options": ["How are you?", "Who are you?", "Where are you?", "What is it?"],
+              "answer": "How are you?"
+            },
+            {
+              "id": "gr3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I am fine, thanks.'",
+              "answer": "I am fine thanks",
+              "bank": ["I", "am", "fine", "thanks", "you", "are"]
+            },
+            {
+              "id": "gr3-7",
+              "type": "multiple_choice",
+              "prompt": "Türkçede sadece 'İyiyim' yeterlidir; İngilizcede en kibar cevap hangisidir?",
+              "options": [
+                "Fine.",
+                "I'm fine, thanks. And you?",
+                "Yes.",
+                "OK."
+              ],
+              "answer": "I'm fine, thanks. And you?",
+              "explanation": "İngilizcede teşekkür edip karşılığı sormak nezakettendir."
+            },
+            {
+              "id": "gr3-8",
+              "type": "fill_blank",
+              "prompt": "'Fena değil' İngilizcede ___",
+              "answer": "Not bad",
+              "acceptableAnswers": ["not bad", "NOT BAD"]
+            },
+            {
+              "id": "gr3-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "I'm fine",
+              "options": ["I'm fine", "I'm five", "I'm Fred", "I find"],
+              "answer": "I'm fine"
+            },
+            {
+              "id": "gr3-10",
+              "type": "multiple_choice",
+              "prompt": "'How about you?' ne demektir?",
+              "options": ["Sen nasılsın?", "Sen kimsin?", "Nereye gidiyorsun?", "Ne yapıyorsun?"],
+              "answer": "Sen nasılsın?"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-greetings-4",
+          "title": "Tanışma",
+          "description": "İsim sorma ve kendini tanıtma",
+          "theme": "greetings",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "gr4-1",
+              "type": "multiple_choice",
+              "prompt": "'Adın ne?' İngilizcede nasıl söylenir?",
+              "options": ["What is your name?", "How is your name?", "Who name you?", "Your name what?"],
+              "answer": "What is your name?"
+            },
+            {
+              "id": "gr4-2",
+              "type": "fill_blank",
+              "prompt": "Kendini tanıtırken: 'My ___ is Ayşe.' (Benim adım Ayşe.)",
+              "answer": "name",
+              "acceptableAnswers": ["Name", "NAME"]
+            },
+            {
+              "id": "gr4-3",
+              "type": "multiple_choice",
+              "prompt": "'Nice to meet you.' Türkçede ne demektir?",
+              "options": [
+                "Tanıştığımıza memnun oldum.",
+                "Seni iyi gördüm.",
+                "Görüşmek üzere.",
+                "Sonra konuşuruz."
+              ],
+              "answer": "Tanıştığımıza memnun oldum."
+            },
+            {
+              "id": "gr4-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "What's your name?", "right": "Adın ne?"},
+                {"left": "My name is...", "right": "Benim adım..."},
+                {"left": "Nice to meet you.", "right": "Tanıştığımıza memnun oldum."},
+                {"left": "Where are you from?", "right": "Nerelisin?"}
+              ]
+            },
+            {
+              "id": "gr4-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "What is your name?",
+              "options": [
+                "What is your name?",
+                "Where is your name?",
+                "Who is your name?",
+                "Why is your name?"
+              ],
+              "answer": "What is your name?"
+            },
+            {
+              "id": "gr4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'My name is Ahmet.'",
+              "answer": "My name is Ahmet",
+              "bank": ["My", "name", "is", "Ahmet", "are", "the"]
+            },
+            {
+              "id": "gr4-7",
+              "type": "fill_blank",
+              "prompt": "'Nerelisin?' = 'Where are you ___?'",
+              "answer": "from",
+              "acceptableAnswers": ["From", "FROM"]
+            },
+            {
+              "id": "gr4-8",
+              "type": "multiple_choice",
+              "prompt": "'I am from Turkey.' ne demektir?",
+              "options": [
+                "Türkiye'ye gidiyorum.",
+                "Ben Türkiye'denim.",
+                "Türkiye iyidir.",
+                "Türkiye'yim."
+              ],
+              "answer": "Ben Türkiye'denim.",
+              "explanation": "'from' = -den/-dan ekine karşılık gelir."
+            },
+            {
+              "id": "gr4-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "Nice to meet you",
+              "options": [
+                "Nice to meet you",
+                "Nice to see you",
+                "Nice to eat you",
+                "Need to meet you"
+              ],
+              "answer": "Nice to meet you"
+            },
+            {
+              "id": "gr4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I am from Istanbul.'",
+              "answer": "I am from Istanbul",
+              "bank": ["I", "am", "from", "Istanbul", "is", "are"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-pronouns",
+      "title": "Zamirler",
+      "description": "I, you, he, she, it ve cinsiyet ayrımı",
+      "theme": "pronouns",
+      "guide": {
+        "intro": "Türkçede 'o' kelimesi hem erkek hem kadın hem de cansız varlık için kullanılır. İngilizcede ise üç farklı zamir vardır: he (erkek), she (kadın), it (cansız/hayvan). Bu, Türk öğrencilerin en çok hata yaptığı konulardan biridir.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Özne Zamirleri"
+          },
+          {
+            "kind": "table",
+            "headers": ["İngilizce", "Türkçe", "Kullanım"],
+            "rows": [
+              ["I", "Ben", "Her zaman büyük yazılır"],
+              ["you", "Sen / Siz", "Tekil ve çoğul aynı"],
+              ["he", "O (erkek)", "Sadece erkekler için"],
+              ["she", "O (kadın)", "Sadece kadınlar için"],
+              ["it", "O (cansız/hayvan)", "Eşya, hayvan, soyut kavramlar"],
+              ["we", "Biz", ""],
+              ["they", "Onlar", "Cinsiyet farkı yok"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "Türkçede 'O bir doktor' cümlesi hem erkek hem kadın için kullanılır. İngilizcede önce erkek mi kadın mı belirlemelisin: 'He is a doctor.' / 'She is a doctor.' En sık hata: kadın için 'he' demek."
+          },
+          {
+            "kind": "heading",
+            "text": "Yes / No: I her zaman büyük"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Türkçede 'ben' küçük yazılır. İngilizcede ise tek harflik 'I' zamiri her zaman büyük harfle yazılır — cümlenin ortasında bile."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "I am a student.", "translation": "Ben öğrenciyim."},
+              {"source": "He is my brother.", "translation": "O (erkek) benim erkek kardeşim."},
+              {"source": "She is my sister.", "translation": "O (kadın) benim kız kardeşim."},
+              {"source": "It is a cat.", "translation": "O bir kedi."},
+              {"source": "They are my friends.", "translation": "Onlar benim arkadaşlarım."}
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-pronouns-1",
+          "title": "I, You, We",
+          "description": "Birinci ve ikinci şahıs zamirleri",
+          "theme": "pronouns",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "pr1-1",
+              "type": "multiple_choice",
+              "prompt": "'Ben' İngilizcede nasıl yazılır?",
+              "options": ["i", "I", "me", "my"],
+              "answer": "I",
+              "explanation": "İngilizcede 'I' her zaman büyük harfle yazılır."
+            },
+            {
+              "id": "pr1-2",
+              "type": "multiple_choice",
+              "prompt": "'You' Türkçede ne anlama gelir?",
+              "options": ["Ben", "Sen / Siz", "Biz", "Onlar"],
+              "answer": "Sen / Siz",
+              "explanation": "İngilizcede 'you' hem tekil 'sen' hem çoğul 'siz' anlamına gelir; ayrım yoktur."
+            },
+            {
+              "id": "pr1-3",
+              "type": "fill_blank",
+              "prompt": "'Biz öğrenciyiz.' = '___ are students.'",
+              "answer": "We",
+              "acceptableAnswers": ["we", "WE"]
+            },
+            {
+              "id": "pr1-4",
+              "type": "match_pairs",
+              "prompt": "Zamirleri eşleştir",
+              "pairs": [
+                {"left": "I", "right": "Ben"},
+                {"left": "you", "right": "Sen/Siz"},
+                {"left": "we", "right": "Biz"},
+                {"left": "they", "right": "Onlar"}
+              ]
+            },
+            {
+              "id": "pr1-5",
+              "type": "multiple_choice",
+              "prompt": "Aşağıdaki cümlede hata var: 'i am happy.' Hata nedir?",
+              "options": [
+                "Hata yok",
+                "'i' büyük 'I' olmalı",
+                "'am' yerine 'is' olmalı",
+                "'happy' yanlış yazılmış"
+              ],
+              "answer": "'i' büyük 'I' olmalı"
+            },
+            {
+              "id": "pr1-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun zamiri seç",
+              "spokenText": "we",
+              "options": ["we", "you", "they", "I"],
+              "answer": "we"
+            },
+            {
+              "id": "pr1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'You are my friend.'",
+              "answer": "You are my friend",
+              "bank": ["You", "are", "my", "friend", "is", "I"]
+            },
+            {
+              "id": "pr1-8",
+              "type": "fill_blank",
+              "prompt": "İngilizcede tek harflik zamir ___ her zaman büyük yazılır.",
+              "answer": "I",
+              "acceptableAnswers": ["i"]
+            },
+            {
+              "id": "pr1-9",
+              "type": "multiple_choice",
+              "prompt": "'Onlar mutlular.' = '___ are happy.'",
+              "options": ["We", "You", "They", "He"],
+              "answer": "They"
+            },
+            {
+              "id": "pr1-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun zamiri seç",
+              "spokenText": "they",
+              "options": ["they", "the", "them", "their"],
+              "answer": "they"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-pronouns-2",
+          "title": "He, She, It — Cinsiyet Zamirleri",
+          "description": "Türkçedeki tek 'o'yu üçe ayırmak",
+          "theme": "pronouns",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pr2-1",
+              "type": "multiple_choice",
+              "prompt": "'Ahmet bir öğretmendir.' İngilizcede nasıl olur?",
+              "options": [
+                "She is a teacher.",
+                "He is a teacher.",
+                "It is a teacher.",
+                "They are a teacher."
+              ],
+              "answer": "He is a teacher.",
+              "explanation": "Ahmet bir erkek ismi → 'he' kullanılır."
+            },
+            {
+              "id": "pr2-2",
+              "type": "multiple_choice",
+              "prompt": "'Ayşe bir doktordur.' İngilizcede nasıl olur?",
+              "options": [
+                "He is a doctor.",
+                "She is a doctor.",
+                "It is a doctor.",
+                "They is a doctor."
+              ],
+              "answer": "She is a doctor.",
+              "explanation": "Ayşe bir kadın ismi → 'she' kullanılır. Türk öğrenciler sıkça erkek için 'she' veya kadın için 'he' der."
+            },
+            {
+              "id": "pr2-3",
+              "type": "multiple_choice",
+              "prompt": "'O bir kedi.' (kedi cinsiyeti belli değil). İngilizcede nasıl olur?",
+              "options": [
+                "He is a cat.",
+                "She is a cat.",
+                "It is a cat.",
+                "They is a cat."
+              ],
+              "answer": "It is a cat.",
+              "explanation": "Cansız varlıklar ve genel hayvanlar için 'it' kullanılır."
+            },
+            {
+              "id": "pr2-4",
+              "type": "fill_blank",
+              "prompt": "'Mehmet bir sporcudur.' = '___ is an athlete.'",
+              "answer": "He",
+              "acceptableAnswers": ["he", "HE"]
+            },
+            {
+              "id": "pr2-5",
+              "type": "fill_blank",
+              "prompt": "'Fatma bir mühendistir.' = '___ is an engineer.'",
+              "answer": "She",
+              "acceptableAnswers": ["she", "SHE"]
+            },
+            {
+              "id": "pr2-6",
+              "type": "match_pairs",
+              "prompt": "Türkçe özneye göre doğru zamiri eşleştir",
+              "pairs": [
+                {"left": "Ali", "right": "he"},
+                {"left": "Zeynep", "right": "she"},
+                {"left": "köpek", "right": "it"},
+                {"left": "Ali ve Zeynep", "right": "they"}
+              ]
+            },
+            {
+              "id": "pr2-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun zamiri seç",
+              "spokenText": "she",
+              "options": ["she", "he", "it", "we"],
+              "answer": "she"
+            },
+            {
+              "id": "pr2-8",
+              "type": "multiple_choice",
+              "prompt": "Aşağıdaki cümlede hata var: 'My sister is a teacher. He is very nice.' Hata nedir?",
+              "options": [
+                "Hata yok",
+                "'sister' kadın olduğu için 'He' yerine 'She' olmalı",
+                "'teacher' yanlış",
+                "'nice' yanlış"
+              ],
+              "answer": "'sister' kadın olduğu için 'He' yerine 'She' olmalı",
+              "explanation": "Türkçede tek 'o' olduğu için bu hata yaygındır. 'Sister' kadındır → 'She'."
+            },
+            {
+              "id": "pr2-9",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'She is my mother.'",
+              "answer": "She is my mother",
+              "bank": ["She", "is", "my", "mother", "He", "are"]
+            },
+            {
+              "id": "pr2-10",
+              "type": "multiple_choice",
+              "prompt": "'Çay sıcak.' (Çay = nesne). 'Çay' yerine hangi zamir gelir?",
+              "options": ["he", "she", "it", "they"],
+              "answer": "it",
+              "explanation": "Cansız nesneler için her zaman 'it'."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-pronouns-3",
+          "title": "İyelik Zamirleri",
+          "description": "My, your, his, her, its, our, their",
+          "theme": "pronouns",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pr3-1",
+              "type": "multiple_choice",
+              "prompt": "'Benim arabam' İngilizcede nasıl olur?",
+              "options": ["I car", "Me car", "My car", "Mine car"],
+              "answer": "My car"
+            },
+            {
+              "id": "pr3-2",
+              "type": "multiple_choice",
+              "prompt": "'His book' Türkçede ne demektir?",
+              "options": ["Onun (erkek) kitabı", "Onun (kadın) kitabı", "Bizim kitabımız", "Senin kitabın"],
+              "answer": "Onun (erkek) kitabı"
+            },
+            {
+              "id": "pr3-3",
+              "type": "fill_blank",
+              "prompt": "'Ayşe'nin kalemi' = '___ pen' (Ayşe için zamir).",
+              "answer": "her",
+              "acceptableAnswers": ["Her", "HER"]
+            },
+            {
+              "id": "pr3-4",
+              "type": "match_pairs",
+              "prompt": "İyelik zamirini eşleştir",
+              "pairs": [
+                {"left": "my", "right": "benim"},
+                {"left": "your", "right": "senin"},
+                {"left": "his", "right": "onun (erkek)"},
+                {"left": "her", "right": "onun (kadın)"}
+              ]
+            },
+            {
+              "id": "pr3-5",
+              "type": "multiple_choice",
+              "prompt": "'Onların evi' İngilizcede nasıl olur?",
+              "options": ["Our house", "Your house", "Their house", "There house"],
+              "answer": "Their house"
+            },
+            {
+              "id": "pr3-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "her sister",
+              "options": ["her sister", "his sister", "your sister", "their sister"],
+              "answer": "her sister"
+            },
+            {
+              "id": "pr3-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'This is my brother.'",
+              "answer": "This is my brother",
+              "bank": ["This", "is", "my", "brother", "your", "his"]
+            },
+            {
+              "id": "pr3-8",
+              "type": "fill_blank",
+              "prompt": "'Bizim öğretmenimiz' = '___ teacher.'",
+              "answer": "our",
+              "acceptableAnswers": ["Our", "OUR"]
+            },
+            {
+              "id": "pr3-9",
+              "type": "multiple_choice",
+              "prompt": "Ali'nin köpeği için hangi cümle doğru?",
+              "options": [
+                "Her dog is cute.",
+                "His dog is cute.",
+                "Its dog is cute.",
+                "Their dog is cute."
+              ],
+              "answer": "His dog is cute.",
+              "explanation": "Ali erkek → 'his'."
+            },
+            {
+              "id": "pr3-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "their house",
+              "options": ["their house", "there house", "the house", "they house"],
+              "answer": "their house"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-pronouns-4",
+          "title": "Tekil ve Çoğul You",
+          "description": "Türkçedeki sen/siz İngilizcede tek 'you'",
+          "theme": "pronouns",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "pr4-1",
+              "type": "multiple_choice",
+              "prompt": "İngilizcede 'sen' ve 'siz' farklı mıdır?",
+              "options": [
+                "Evet, çok farklı",
+                "Hayır, ikisi de 'you'",
+                "'Siz' = 'yous'",
+                "'Sen' = 'thee'"
+              ],
+              "answer": "Hayır, ikisi de 'you'",
+              "explanation": "Modern İngilizcede 'you' hem tekil hem çoğul, hem samimi hem resmidir."
+            },
+            {
+              "id": "pr4-2",
+              "type": "multiple_choice",
+              "prompt": "'You are my friends.' (Birden fazla arkadaş) Türkçede ne olur?",
+              "options": [
+                "Sen benim arkadaşımsın.",
+                "Siz benim arkadaşlarımsınız.",
+                "O benim arkadaşım.",
+                "Onlar arkadaşlarım."
+              ],
+              "answer": "Siz benim arkadaşlarımsınız.",
+              "explanation": "Bağlamdan ve yüklemden çoğul olduğu anlaşılır: 'friends' çoğul."
+            },
+            {
+              "id": "pr4-3",
+              "type": "fill_blank",
+              "prompt": "Hem öğretmene hem arkadaşa İngilizcede ___ denir (resmiyet farkı yoktur).",
+              "answer": "you",
+              "acceptableAnswers": ["You", "YOU"]
+            },
+            {
+              "id": "pr4-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "you (tekil)", "right": "sen"},
+                {"left": "you (çoğul)", "right": "siz"},
+                {"left": "your", "right": "senin/sizin"},
+                {"left": "yours", "right": "seninki/sizinki"}
+              ]
+            },
+            {
+              "id": "pr4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'You are good students.'",
+              "answer": "You are good students",
+              "bank": ["You", "are", "good", "students", "is", "a"]
+            },
+            {
+              "id": "pr4-6",
+              "type": "multiple_choice",
+              "prompt": "Bir gruba seslenirken İngilizcede günlük olarak hangisi de kullanılır?",
+              "options": ["yous", "y'all", "yes", "yas"],
+              "answer": "y'all",
+              "explanation": "Özellikle Amerikan İngilizcesinde 'y'all' (you all) çoğul 'siz' yerine günlük dilde kullanılır."
+            },
+            {
+              "id": "pr4-7",
+              "type": "fill_blank",
+              "prompt": "'Sizin eviniz büyük.' = '___ house is big.'",
+              "answer": "Your",
+              "acceptableAnswers": ["your", "YOUR"]
+            },
+            {
+              "id": "pr4-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun zamiri seç",
+              "spokenText": "you",
+              "options": ["you", "your", "yours", "yes"],
+              "answer": "you"
+            },
+            {
+              "id": "pr4-9",
+              "type": "multiple_choice",
+              "prompt": "'Are you ready?' bir kişiye sorulduğunda anlamı:",
+              "options": ["Hazır mısın?", "Hazır mısınız?", "İkisi de olabilir", "Hazır mıyız?"],
+              "answer": "İkisi de olabilir",
+              "explanation": "'You' bağlama göre hem tekil hem çoğul olabilir."
+            },
+            {
+              "id": "pr4-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "Are you ready?",
+              "options": ["Are you ready?", "Are we ready?", "Are they ready?", "Is he ready?"],
+              "answer": "Are you ready?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-tobe",
+      "title": "To Be Fiili (am/is/are)",
+      "description": "Türkçedeki '-im, -sin, -dir' ekinin İngilizcedeki karşılığı",
+      "theme": "tobe",
+      "guide": {
+        "intro": "Türkçede 'Ben öğrenciyim' cümlesindeki '-im' eki, İngilizcede ayrı bir kelime olarak yazılır: 'I am a student.' İngilizcede 'to be' fiili özneye göre üç forma girer: am, is, are.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Özneye Göre To Be"
+          },
+          {
+            "kind": "table",
+            "headers": ["Özne", "To be", "Örnek", "Türkçesi"],
+            "rows": [
+              ["I", "am", "I am a doctor.", "Ben doktorum."],
+              ["You", "are", "You are tall.", "Sen uzunsun."],
+              ["He", "is", "He is happy.", "O (e) mutludur."],
+              ["She", "is", "She is happy.", "O (k) mutludur."],
+              ["It", "is", "It is hot.", "(O/Hava) sıcaktır."],
+              ["We", "are", "We are friends.", "Biz arkadaşız."],
+              ["They", "are", "They are tired.", "Onlar yorgunlar."]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Türkçede sıfat cümlesinde fiil yok gibi görünür: 'O mutlu.' İngilizcede ise 'to be' şart: 'He is happy.' — 'is/am/are' atlamak en sık hatadır."
+          },
+          {
+            "kind": "heading",
+            "text": "Kısaltmalar"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "I'm = I am", "translation": "Ben -im"},
+              {"source": "You're = You are", "translation": "Sen -sin"},
+              {"source": "He's = He is", "translation": "O -dir"},
+              {"source": "She's = She is", "translation": "O -dir"},
+              {"source": "It's = It is", "translation": "(O) -dir"},
+              {"source": "We're = We are", "translation": "Biz -iz"},
+              {"source": "They're = They are", "translation": "Onlar -ler"}
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Olumsuz ve Soru"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "I am not tired.", "translation": "Ben yorgun değilim."},
+              {"source": "She isn't a teacher.", "translation": "O öğretmen değil."},
+              {"source": "Are you ready?", "translation": "Hazır mısın?"},
+              {"source": "Is he Turkish?", "translation": "O Türk mü?"}
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-tobe-1",
+          "title": "Am, Is, Are",
+          "description": "Doğru formu seçmek",
+          "theme": "tobe",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "tb1-1",
+              "type": "multiple_choice",
+              "prompt": "'I ___ a student.' (Ben öğrenciyim.)",
+              "options": ["am", "is", "are", "be"],
+              "answer": "am"
+            },
+            {
+              "id": "tb1-2",
+              "type": "multiple_choice",
+              "prompt": "'She ___ tired.' (O yorgun.)",
+              "options": ["am", "is", "are", "be"],
+              "answer": "is"
+            },
+            {
+              "id": "tb1-3",
+              "type": "multiple_choice",
+              "prompt": "'They ___ doctors.' (Onlar doktorlar.)",
+              "options": ["am", "is", "are", "be"],
+              "answer": "are"
+            },
+            {
+              "id": "tb1-4",
+              "type": "fill_blank",
+              "prompt": "'We ___ Turkish.' (Biz Türküz.)",
+              "answer": "are",
+              "acceptableAnswers": ["Are", "ARE"]
+            },
+            {
+              "id": "tb1-5",
+              "type": "match_pairs",
+              "prompt": "Özne ile to be formunu eşleştir",
+              "pairs": [
+                {"left": "I", "right": "am"},
+                {"left": "He", "right": "is"},
+                {"left": "You", "right": "are"},
+                {"left": "It is not", "right": "isn't"}
+              ]
+            },
+            {
+              "id": "tb1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I am from Turkey.'",
+              "answer": "I am from Turkey",
+              "bank": ["I", "am", "from", "Turkey", "is", "are"]
+            },
+            {
+              "id": "tb1-7",
+              "type": "multiple_choice",
+              "prompt": "'My brother ___ a teacher.' (Erkek kardeşim öğretmen.)",
+              "options": ["am", "is", "are", "be"],
+              "answer": "is",
+              "explanation": "'My brother' = he olduğu için 'is'."
+            },
+            {
+              "id": "tb1-8",
+              "type": "fill_blank",
+              "prompt": "'Ali ve ben yoruluyoruz' = 'Ali and I ___ tired.'",
+              "answer": "are",
+              "acceptableAnswers": ["Are", "ARE"],
+              "explanation": "'Ali and I' = we → 'are'."
+            },
+            {
+              "id": "tb1-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "She is happy",
+              "options": [
+                "She is happy",
+                "He is happy",
+                "She is hungry",
+                "She is here"
+              ],
+              "answer": "She is happy"
+            },
+            {
+              "id": "tb1-10",
+              "type": "multiple_choice",
+              "prompt": "Aşağıdaki cümlede hata var: 'He are my father.' Doğrusu nedir?",
+              "options": [
+                "He is my father.",
+                "He am my father.",
+                "Hata yok",
+                "He my father."
+              ],
+              "answer": "He is my father.",
+              "explanation": "'He' + 'is'. Türkçede 'O babamdır' yapısında to be eki tek olduğu için karıştırılır."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-tobe-2",
+          "title": "Olumsuz Cümleler",
+          "description": "isn't, aren't, am not",
+          "theme": "tobe",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "tb2-1",
+              "type": "multiple_choice",
+              "prompt": "'I am not tired.' Türkçede ne demektir?",
+              "options": [
+                "Yorgunum.",
+                "Yorgun değilim.",
+                "Yorgun musun?",
+                "Yorgun olacağım."
+              ],
+              "answer": "Yorgun değilim."
+            },
+            {
+              "id": "tb2-2",
+              "type": "fill_blank",
+              "prompt": "'O öğretmen değildir.' = 'She is ___ a teacher.'",
+              "answer": "not",
+              "acceptableAnswers": ["Not", "NOT"]
+            },
+            {
+              "id": "tb2-3",
+              "type": "multiple_choice",
+              "prompt": "'Onlar evde değiller.' En doğru çeviri:",
+              "options": [
+                "They are home.",
+                "They aren't at home.",
+                "They isn't home.",
+                "They am not home."
+              ],
+              "answer": "They aren't at home."
+            },
+            {
+              "id": "tb2-4",
+              "type": "match_pairs",
+              "prompt": "Kısaltmaları eşleştir",
+              "pairs": [
+                {"left": "is not", "right": "isn't"},
+                {"left": "are not", "right": "aren't"},
+                {"left": "am not", "right": "'m not"},
+                {"left": "I am", "right": "I'm"}
+              ]
+            },
+            {
+              "id": "tb2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'He is not my friend.'",
+              "answer": "He is not my friend",
+              "bank": ["He", "is", "not", "my", "friend", "are", "am"]
+            },
+            {
+              "id": "tb2-6",
+              "type": "fill_blank",
+              "prompt": "'Aç değilim.' = 'I am ___ hungry.'",
+              "answer": "not",
+              "acceptableAnswers": ["Not", "NOT"]
+            },
+            {
+              "id": "tb2-7",
+              "type": "multiple_choice",
+              "prompt": "'I amn't' doğru bir kısaltma mıdır?",
+              "options": [
+                "Evet",
+                "Hayır — 'I'm not' doğru",
+                "Bazen",
+                "Sadece soru cümlesinde"
+              ],
+              "answer": "Hayır — 'I'm not' doğru",
+              "explanation": "İngilizcede 'amn't' yoktur; 'I'm not' kullanılır."
+            },
+            {
+              "id": "tb2-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "She isn't here",
+              "options": [
+                "She isn't here",
+                "She is here",
+                "She wasn't here",
+                "He isn't here"
+              ],
+              "answer": "She isn't here"
+            },
+            {
+              "id": "tb2-9",
+              "type": "multiple_choice",
+              "prompt": "'It is not cold.' = 'It ___ cold.' (kısaltma)",
+              "options": ["isn't", "aren't", "amn't", "don't"],
+              "answer": "isn't"
+            },
+            {
+              "id": "tb2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'We are not from Ankara.'",
+              "answer": "We are not from Ankara",
+              "bank": ["We", "are", "not", "from", "Ankara", "is", "am"]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-tobe-3",
+          "title": "Soru Cümleleri",
+          "description": "Are you...? Is he...?",
+          "theme": "tobe",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "tb3-1",
+              "type": "multiple_choice",
+              "prompt": "'Sen Türk müsün?' = '___ you Turkish?'",
+              "options": ["Am", "Is", "Are", "Do"],
+              "answer": "Are"
+            },
+            {
+              "id": "tb3-2",
+              "type": "multiple_choice",
+              "prompt": "'O mühendis mi?' (erkek için) en doğru:",
+              "options": [
+                "He is engineer?",
+                "Is he an engineer?",
+                "Does he engineer?",
+                "Are he engineer?"
+              ],
+              "answer": "Is he an engineer?",
+              "explanation": "Soru için 'is' başa gelir; 'engineer' sayılabilir → 'an'."
+            },
+            {
+              "id": "tb3-3",
+              "type": "fill_blank",
+              "prompt": "'Onlar evde mi?' = '___ they at home?'",
+              "answer": "Are",
+              "acceptableAnswers": ["are", "ARE"]
+            },
+            {
+              "id": "tb3-4",
+              "type": "match_pairs",
+              "prompt": "Soru ve cevabı eşleştir",
+              "pairs": [
+                {"left": "Are you tired?", "right": "Yorgun musun?"},
+                {"left": "Is she Turkish?", "right": "O (k) Türk mü?"},
+                {"left": "Am I right?", "right": "Haklı mıyım?"},
+                {"left": "Are they here?", "right": "Onlar burada mı?"}
+              ]
+            },
+            {
+              "id": "tb3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Are you a student?'",
+              "answer": "Are you a student",
+              "bank": ["Are", "you", "a", "student", "is", "the"]
+            },
+            {
+              "id": "tb3-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "Is he ready?",
+              "options": [
+                "Is he ready?",
+                "Are you ready?",
+                "Is she ready?",
+                "Was he ready?"
+              ],
+              "answer": "Is he ready?"
+            },
+            {
+              "id": "tb3-7",
+              "type": "multiple_choice",
+              "prompt": "'Yes, I am.' hangi soruya kısa cevap olabilir?",
+              "options": [
+                "Are you happy?",
+                "Is she happy?",
+                "Do you happy?",
+                "Have you happy?"
+              ],
+              "answer": "Are you happy?",
+              "explanation": "'Are you ...?' sorusuna kısa cevap 'Yes, I am.'"
+            },
+            {
+              "id": "tb3-8",
+              "type": "fill_blank",
+              "prompt": "Soru: 'Is he hungry?' Olumlu kısa cevap: 'Yes, he ___.'",
+              "answer": "is",
+              "acceptableAnswers": ["Is", "IS"]
+            },
+            {
+              "id": "tb3-9",
+              "type": "multiple_choice",
+              "prompt": "'Where ___ you from?' (Nerelisin?)",
+              "options": ["am", "is", "are", "do"],
+              "answer": "are"
+            },
+            {
+              "id": "tb3-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "Are you ready?",
+              "options": [
+                "Are you ready?",
+                "Are you Friday?",
+                "Are you happy?",
+                "Are you here?"
+              ],
+              "answer": "Are you ready?"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-tobe-4",
+          "title": "There is / There are",
+          "description": "'Var' ifadesi",
+          "theme": "tobe",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "tb4-1",
+              "type": "multiple_choice",
+              "prompt": "'Masada bir kitap var.' = '___ a book on the table.'",
+              "options": ["There is", "There are", "It is", "He is"],
+              "answer": "There is",
+              "explanation": "Tekil için 'there is', çoğul için 'there are'."
+            },
+            {
+              "id": "tb4-2",
+              "type": "multiple_choice",
+              "prompt": "'Odada üç sandalye var.' = '___ three chairs in the room.'",
+              "options": ["There is", "There are", "It are", "They is"],
+              "answer": "There are"
+            },
+            {
+              "id": "tb4-3",
+              "type": "fill_blank",
+              "prompt": "'Çantamda elma var.' = '___ an apple in my bag.'",
+              "answer": "There is",
+              "acceptableAnswers": ["there is", "THERE IS", "There's"]
+            },
+            {
+              "id": "tb4-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "There is a cat.", "right": "Bir kedi var."},
+                {"left": "There are cats.", "right": "Kediler var."},
+                {"left": "Is there milk?", "right": "Süt var mı?"},
+                {"left": "There isn't time.", "right": "Vakit yok."}
+              ]
+            },
+            {
+              "id": "tb4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'There is a cat in the garden.'",
+              "answer": "There is a cat in the garden",
+              "bank": ["There", "is", "a", "cat", "in", "the", "garden", "are"]
+            },
+            {
+              "id": "tb4-6",
+              "type": "multiple_choice",
+              "prompt": "Olumsuz: 'Kütüphanede kimse yok.' = '___ anyone in the library.'",
+              "options": [
+                "There isn't",
+                "There aren't",
+                "There is",
+                "It isn't"
+              ],
+              "answer": "There isn't"
+            },
+            {
+              "id": "tb4-7",
+              "type": "fill_blank",
+              "prompt": "Soru: 'Burada banka var mı?' = '___ there a bank here?'",
+              "answer": "Is",
+              "acceptableAnswers": ["is", "IS"]
+            },
+            {
+              "id": "tb4-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "There are five books",
+              "options": [
+                "There are five books",
+                "There is five books",
+                "They are five books",
+                "There were five books"
+              ],
+              "answer": "There are five books"
+            },
+            {
+              "id": "tb4-9",
+              "type": "multiple_choice",
+              "prompt": "Türkçede 'var' tek bir kelimedir. İngilizcede neye dikkat edilmelidir?",
+              "options": [
+                "Tekil/çoğul ayrımı",
+                "Cinsiyet",
+                "Saat",
+                "Yüzme"
+              ],
+              "answer": "Tekil/çoğul ayrımı",
+              "explanation": "Tekil → there is, çoğul → there are."
+            },
+            {
+              "id": "tb4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Are there any apples?'",
+              "answer": "Are there any apples",
+              "bank": ["Are", "there", "any", "apples", "is", "an"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-numbers",
+      "title": "Sayılar ve Saat",
+      "description": "0-100 arası sayılar ve saat söyleme",
+      "theme": "numbers",
+      "guide": {
+        "intro": "İngilizcede sayılar 1-12 arası özel adlara, 13-19 arası '-teen' eki, 20'den sonra '-ty' eki alır. Saat söylerken Türkçeden farklı yapılar vardır.",
+        "sections": [
+          {
+            "kind": "table",
+            "headers": ["Sayı", "İngilizce", "Sayı", "İngilizce"],
+            "rows": [
+              ["1", "one", "11", "eleven"],
+              ["2", "two", "12", "twelve"],
+              ["3", "three", "13", "thirteen"],
+              ["4", "four", "14", "fourteen"],
+              ["5", "five", "15", "fifteen"],
+              ["6", "six", "20", "twenty"],
+              ["7", "seven", "30", "thirty"],
+              ["8", "eight", "40", "forty"],
+              ["9", "nine", "50", "fifty"],
+              ["10", "ten", "100", "one hundred"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "Yazım tuzakları: 'forty' (kırk) — 'four' var ama 'u' YOK. 'fifteen' / 'fifty' farklı vurgu — fifTEEN sonda, FIFty başta."
+          },
+          {
+            "kind": "heading",
+            "text": "Saat Söyleme"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "It's three o'clock.", "translation": "Saat üç."},
+              {"source": "It's half past two.", "translation": "Saat iki buçuk."},
+              {"source": "It's a quarter past four.", "translation": "Saat dördü çeyrek geçiyor."},
+              {"source": "It's a quarter to five.", "translation": "Beşe çeyrek var."},
+              {"source": "It's seven thirty.", "translation": "Saat yedi otuz."}
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-numbers-1",
+          "title": "1-10 Sayılar",
+          "description": "Temel sayılar",
+          "theme": "numbers",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "nm1-1",
+              "type": "multiple_choice",
+              "prompt": "'three' Türkçede ne demektir?",
+              "options": ["iki", "üç", "dört", "beş"],
+              "answer": "üç"
+            },
+            {
+              "id": "nm1-2",
+              "type": "multiple_choice",
+              "prompt": "'beş' İngilizcede nasıl yazılır?",
+              "options": ["fife", "five", "fif", "phive"],
+              "answer": "five"
+            },
+            {
+              "id": "nm1-3",
+              "type": "fill_blank",
+              "prompt": "1 = ___ (İngilizce)",
+              "answer": "one",
+              "acceptableAnswers": ["One", "ONE"]
+            },
+            {
+              "id": "nm1-4",
+              "type": "match_pairs",
+              "prompt": "Sayıyı eşleştir",
+              "pairs": [
+                {"left": "one", "right": "1"},
+                {"left": "four", "right": "4"},
+                {"left": "seven", "right": "7"},
+                {"left": "ten", "right": "10"}
+              ]
+            },
+            {
+              "id": "nm1-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun sayıyı seç",
+              "spokenText": "eight",
+              "options": ["eight", "eat", "ate", "ate it"],
+              "answer": "eight"
+            },
+            {
+              "id": "nm1-6",
+              "type": "multiple_choice",
+              "prompt": "'nine' kaç eder?",
+              "options": ["7", "8", "9", "10"],
+              "answer": "9"
+            },
+            {
+              "id": "nm1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'one two three four five'",
+              "answer": "one two three four five",
+              "bank": ["one", "two", "three", "four", "five", "six"]
+            },
+            {
+              "id": "nm1-8",
+              "type": "fill_blank",
+              "prompt": "6 = ___",
+              "answer": "six",
+              "acceptableAnswers": ["Six", "SIX"]
+            },
+            {
+              "id": "nm1-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun sayıyı seç",
+              "spokenText": "two",
+              "options": ["two", "to", "too", "tow"],
+              "answer": "two"
+            },
+            {
+              "id": "nm1-10",
+              "type": "multiple_choice",
+              "prompt": "10 İngilizcede:",
+              "options": ["tan", "ten", "tin", "ton"],
+              "answer": "ten"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-numbers-2",
+          "title": "11-20 Sayılar",
+          "description": "-teen eki",
+          "theme": "numbers",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "nm2-1",
+              "type": "multiple_choice",
+              "prompt": "'thirteen' kaç eder?",
+              "options": ["3", "13", "30", "33"],
+              "answer": "13"
+            },
+            {
+              "id": "nm2-2",
+              "type": "multiple_choice",
+              "prompt": "20 İngilizcede:",
+              "options": ["twoty", "twenty", "twentee", "twen"],
+              "answer": "twenty"
+            },
+            {
+              "id": "nm2-3",
+              "type": "fill_blank",
+              "prompt": "12 = ___",
+              "answer": "twelve",
+              "acceptableAnswers": ["Twelve", "TWELVE"],
+              "explanation": "12 'twoteen' değil 'twelve' olarak özel bir kelimedir."
+            },
+            {
+              "id": "nm2-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "eleven", "right": "11"},
+                {"left": "fifteen", "right": "15"},
+                {"left": "eighteen", "right": "18"},
+                {"left": "twenty", "right": "20"}
+              ]
+            },
+            {
+              "id": "nm2-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun sayıyı seç",
+              "spokenText": "fifteen",
+              "options": ["fifteen", "fifty", "fourteen", "forty"],
+              "answer": "fifteen",
+              "explanation": "fifTEEN sondan vurgulu; FIFty baştan vurgulu — Türk öğrenciler için çok karıştırıcı."
+            },
+            {
+              "id": "nm2-6",
+              "type": "multiple_choice",
+              "prompt": "'fifteen' ile 'fifty' arasındaki fark nedir?",
+              "options": [
+                "Aynı şey",
+                "fifteen=15, fifty=50",
+                "fifteen=50, fifty=15",
+                "Yazım hatası"
+              ],
+              "answer": "fifteen=15, fifty=50"
+            },
+            {
+              "id": "nm2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'eleven twelve thirteen'",
+              "answer": "eleven twelve thirteen",
+              "bank": ["eleven", "twelve", "thirteen", "fourteen", "ten"]
+            },
+            {
+              "id": "nm2-8",
+              "type": "fill_blank",
+              "prompt": "16 = ___",
+              "answer": "sixteen",
+              "acceptableAnswers": ["Sixteen", "SIXTEEN"]
+            },
+            {
+              "id": "nm2-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun sayıyı seç",
+              "spokenText": "nineteen",
+              "options": ["nineteen", "ninety", "nine", "ninety-nine"],
+              "answer": "nineteen"
+            },
+            {
+              "id": "nm2-10",
+              "type": "multiple_choice",
+              "prompt": "13-19 arası sayılar hangi eki alır?",
+              "options": ["-ty", "-teen", "-th", "-ed"],
+              "answer": "-teen"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-numbers-3",
+          "title": "20-100 Sayılar",
+          "description": "-ty eki ve onlu sayılar",
+          "theme": "numbers",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "nm3-1",
+              "type": "multiple_choice",
+              "prompt": "'forty' kaç eder?",
+              "options": ["4", "14", "40", "44"],
+              "answer": "40"
+            },
+            {
+              "id": "nm3-2",
+              "type": "multiple_choice",
+              "prompt": "Hangisi YANLIŞ yazılmıştır?",
+              "options": ["fourty", "forty", "fifty", "thirty"],
+              "answer": "fourty",
+              "explanation": "40 = 'forty' — 'four' var ama 'u' YOK!"
+            },
+            {
+              "id": "nm3-3",
+              "type": "fill_blank",
+              "prompt": "21 = 'twenty-___'",
+              "answer": "one",
+              "acceptableAnswers": ["One", "ONE"],
+              "explanation": "İngilizcede çift basamaklı sayılar tire ile bağlanır: twenty-one, thirty-five."
+            },
+            {
+              "id": "nm3-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "twenty", "right": "20"},
+                {"left": "fifty", "right": "50"},
+                {"left": "seventy", "right": "70"},
+                {"left": "hundred", "right": "100"}
+              ]
+            },
+            {
+              "id": "nm3-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun sayıyı seç",
+              "spokenText": "thirty",
+              "options": ["thirty", "thirteen", "thirsty", "third"],
+              "answer": "thirty"
+            },
+            {
+              "id": "nm3-6",
+              "type": "multiple_choice",
+              "prompt": "Yaşımı söylüyorum: 'I am ___ years old.' (35 yaş)",
+              "options": [
+                "thirty-five",
+                "three-five",
+                "thirty five",
+                "three and five"
+              ],
+              "answer": "thirty-five"
+            },
+            {
+              "id": "nm3-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I have fifty books.'",
+              "answer": "I have fifty books",
+              "bank": ["I", "have", "fifty", "books", "fifteen", "the"]
+            },
+            {
+              "id": "nm3-8",
+              "type": "fill_blank",
+              "prompt": "100 = 'one ___'",
+              "answer": "hundred",
+              "acceptableAnswers": ["Hundred", "HUNDRED"]
+            },
+            {
+              "id": "nm3-9",
+              "type": "multiple_choice",
+              "prompt": "'eighty' kaç eder?",
+              "options": ["8", "18", "80", "88"],
+              "answer": "80"
+            },
+            {
+              "id": "nm3-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun sayıyı seç",
+              "spokenText": "forty",
+              "options": ["forty", "fourteen", "fourty", "four"],
+              "answer": "forty"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-numbers-4",
+          "title": "Saat Söyleme",
+          "description": "What time is it?",
+          "theme": "numbers",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "nm4-1",
+              "type": "multiple_choice",
+              "prompt": "'Saat kaç?' İngilizcede:",
+              "options": [
+                "What is the time?",
+                "What time is it?",
+                "How is the clock?",
+                "When is the time?"
+              ],
+              "answer": "What time is it?",
+              "explanation": "İkisi de doğrudur ama 'What time is it?' daha yaygındır."
+            },
+            {
+              "id": "nm4-2",
+              "type": "multiple_choice",
+              "prompt": "'Saat üç.' = 'It's three ___.'",
+              "options": ["o'clock", "hour", "time", "clocks"],
+              "answer": "o'clock",
+              "explanation": "'o'clock' sadece tam saatlerde kullanılır."
+            },
+            {
+              "id": "nm4-3",
+              "type": "multiple_choice",
+              "prompt": "'Saat iki buçuk.' = 'It's ___ past two.'",
+              "options": ["quarter", "half", "thirty", "all"],
+              "answer": "half",
+              "explanation": "'half past' = 'buçuk' (yarım geçiyor)."
+            },
+            {
+              "id": "nm4-4",
+              "type": "fill_blank",
+              "prompt": "'Saat dördü çeyrek geçiyor.' = 'It's a quarter ___ four.'",
+              "answer": "past",
+              "acceptableAnswers": ["Past", "PAST"]
+            },
+            {
+              "id": "nm4-5",
+              "type": "match_pairs",
+              "prompt": "Saat ifadesini eşleştir",
+              "pairs": [
+                {"left": "three o'clock", "right": "3:00"},
+                {"left": "half past five", "right": "5:30"},
+                {"left": "a quarter to seven", "right": "6:45"},
+                {"left": "ten past two", "right": "2:10"}
+              ]
+            },
+            {
+              "id": "nm4-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun saati seç",
+              "spokenText": "It's half past three",
+              "options": [
+                "It's half past three",
+                "It's a quarter past three",
+                "It's half past four",
+                "It's three o'clock"
+              ],
+              "answer": "It's half past three"
+            },
+            {
+              "id": "nm4-7",
+              "type": "multiple_choice",
+              "prompt": "'Beşe çeyrek var.' = 'It's a quarter ___ five.'",
+              "options": ["past", "to", "before", "after"],
+              "answer": "to",
+              "explanation": "'to' = '...e var', 'past' = '...i geçiyor'."
+            },
+            {
+              "id": "nm4-8",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'It is half past two.'",
+              "answer": "It is half past two",
+              "bank": ["It", "is", "half", "past", "two", "quarter", "four"]
+            },
+            {
+              "id": "nm4-9",
+              "type": "fill_blank",
+              "prompt": "Modern dijital tarz: 7:30 = 'seven ___'",
+              "answer": "thirty",
+              "acceptableAnswers": ["Thirty", "THIRTY"]
+            },
+            {
+              "id": "nm4-10",
+              "type": "multiple_choice",
+              "prompt": "'It's noon.' ne demektir?",
+              "options": ["Saat yedi.", "Öğlen 12:00.", "Gece yarısı.", "Sabah 6:00."],
+              "answer": "Öğlen 12:00.",
+              "explanation": "'noon' = öğlen, 'midnight' = gece yarısı."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-family",
+      "title": "Aile",
+      "description": "Aile bireyleri ve akrabalar",
+      "theme": "family",
+      "guide": {
+        "intro": "Türkçede 'amca' (babanın erkek kardeşi) ile 'dayı' (annenin erkek kardeşi) farklıdır; İngilizcede ikisi için de 'uncle' kullanılır. Türkçenin akraba çeşitliliği İngilizcede daralır.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Yakın Aile"
+          },
+          {
+            "kind": "table",
+            "headers": ["İngilizce", "Türkçe"],
+            "rows": [
+              ["mother / mom", "anne"],
+              ["father / dad", "baba"],
+              ["sister", "kız kardeş / abla"],
+              ["brother", "erkek kardeş / abi"],
+              ["son", "oğul"],
+              ["daughter", "kız (evlat)"],
+              ["husband", "koca / eş (erkek)"],
+              ["wife", "karı / eş (kadın)"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "info",
+            "text": "İngilizcede 'sister' hem 'kız kardeş' hem 'abla'dır; yaş farkı için 'older sister' (abla) ve 'younger sister' (kız kardeş) demek gerekir. Aynısı 'brother' için de geçerli."
+          },
+          {
+            "kind": "heading",
+            "text": "Geniş Aile"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "uncle", "translation": "amca / dayı / enişte"},
+              {"source": "aunt", "translation": "teyze / hala / yenge"},
+              {"source": "cousin", "translation": "kuzen (kız ya da erkek)"},
+              {"source": "grandfather / grandpa", "translation": "dede"},
+              {"source": "grandmother / grandma", "translation": "büyükanne / nine"},
+              {"source": "nephew", "translation": "yeğen (erkek)"},
+              {"source": "niece", "translation": "yeğen (kız)"}
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "Türkçedeki 'amca/dayı', 'hala/teyze' ayrımları İngilizcede yoktur. Hangisi olduğunu belirtmek için 'my uncle on my father's side' (babanın tarafından amca) demek gerekir."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-family-1",
+          "title": "Anne, Baba, Kardeş",
+          "description": "Yakın aile",
+          "theme": "family",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "fm1-1",
+              "type": "multiple_choice",
+              "prompt": "'mother' Türkçede ne demektir?",
+              "options": ["baba", "anne", "abla", "teyze"],
+              "answer": "anne"
+            },
+            {
+              "id": "fm1-2",
+              "type": "multiple_choice",
+              "prompt": "'baba' İngilizcede:",
+              "options": ["mother", "father", "brother", "uncle"],
+              "answer": "father"
+            },
+            {
+              "id": "fm1-3",
+              "type": "fill_blank",
+              "prompt": "'Erkek kardeşim' = 'my ___'",
+              "answer": "brother",
+              "acceptableAnswers": ["Brother", "BROTHER"]
+            },
+            {
+              "id": "fm1-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "mother", "right": "anne"},
+                {"left": "father", "right": "baba"},
+                {"left": "sister", "right": "kız kardeş"},
+                {"left": "brother", "right": "erkek kardeş"}
+              ]
+            },
+            {
+              "id": "fm1-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "mother",
+              "options": ["mother", "father", "brother", "another"],
+              "answer": "mother"
+            },
+            {
+              "id": "fm1-6",
+              "type": "multiple_choice",
+              "prompt": "'My older sister' Türkçede ne demektir?",
+              "options": ["Kız kardeşim", "Ablam", "Yengem", "Kuzenim"],
+              "answer": "Ablam",
+              "explanation": "İngilizcede tek kelime 'sister' var; abla için 'older sister', kız kardeş için 'younger sister' denir."
+            },
+            {
+              "id": "fm1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'My mother is a teacher.'",
+              "answer": "My mother is a teacher",
+              "bank": ["My", "mother", "is", "a", "teacher", "are", "the"]
+            },
+            {
+              "id": "fm1-8",
+              "type": "fill_blank",
+              "prompt": "'Annem ve babam' = 'my mother and my ___'",
+              "answer": "father",
+              "acceptableAnswers": ["Father", "FATHER", "dad", "Dad"]
+            },
+            {
+              "id": "fm1-9",
+              "type": "multiple_choice",
+              "prompt": "Konuşma dilinde 'baba' için samimi kelime hangisidir?",
+              "options": ["dad", "did", "dud", "deed"],
+              "answer": "dad"
+            },
+            {
+              "id": "fm1-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "brother",
+              "options": ["brother", "father", "mother", "another"],
+              "answer": "brother"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-family-2",
+          "title": "Geniş Aile",
+          "description": "Amca, dayı, hala, teyze",
+          "theme": "family",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "fm2-1",
+              "type": "multiple_choice",
+              "prompt": "Türkçedeki 'amca' ve 'dayı' İngilizcede tek bir kelimedir:",
+              "options": ["uncle", "aunt", "cousin", "nephew"],
+              "answer": "uncle"
+            },
+            {
+              "id": "fm2-2",
+              "type": "multiple_choice",
+              "prompt": "'aunt' Türkçede hangi anlamı taşır?",
+              "options": [
+                "Sadece teyze",
+                "Sadece hala",
+                "Sadece yenge",
+                "Hem teyze hem hala (hatta yenge)"
+              ],
+              "answer": "Hem teyze hem hala (hatta yenge)",
+              "explanation": "İngilizcede 'aunt' kadın akraba için tek kelimedir."
+            },
+            {
+              "id": "fm2-3",
+              "type": "fill_blank",
+              "prompt": "'Kuzenim (kız ya da erkek)' = 'my ___'",
+              "answer": "cousin",
+              "acceptableAnswers": ["Cousin", "COUSIN"]
+            },
+            {
+              "id": "fm2-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "uncle", "right": "amca/dayı"},
+                {"left": "aunt", "right": "hala/teyze"},
+                {"left": "cousin", "right": "kuzen"},
+                {"left": "grandfather", "right": "dede"}
+              ]
+            },
+            {
+              "id": "fm2-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "uncle",
+              "options": ["uncle", "ankle", "angle", "ugly"],
+              "answer": "uncle"
+            },
+            {
+              "id": "fm2-6",
+              "type": "multiple_choice",
+              "prompt": "'grandmother' Türkçede:",
+              "options": ["torun", "büyükanne", "dede", "yeğen"],
+              "answer": "büyükanne"
+            },
+            {
+              "id": "fm2-7",
+              "type": "multiple_choice",
+              "prompt": "'nephew' Türkçede:",
+              "options": ["Erkek yeğen", "Kız yeğen", "Kuzen", "Damat"],
+              "answer": "Erkek yeğen",
+              "explanation": "İngilizcede 'nephew' (erkek yeğen) ile 'niece' (kız yeğen) ayrılır — Türkçedeki tek 'yeğen' İngilizcede ikiye bölünür."
+            },
+            {
+              "id": "fm2-8",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'My grandmother is here.'",
+              "answer": "My grandmother is here",
+              "bank": ["My", "grandmother", "is", "here", "are", "grandfather"]
+            },
+            {
+              "id": "fm2-9",
+              "type": "fill_blank",
+              "prompt": "Babamın tarafından amca: 'my uncle on my ___'s side.'",
+              "answer": "father",
+              "acceptableAnswers": ["Father", "FATHER", "dad"]
+            },
+            {
+              "id": "fm2-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "cousin",
+              "options": ["cousin", "cosine", "cuisine", "cushion"],
+              "answer": "cousin"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-family-3",
+          "title": "Eş ve Çocuklar",
+          "description": "Husband, wife, son, daughter",
+          "theme": "family",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "fm3-1",
+              "type": "multiple_choice",
+              "prompt": "'koca' İngilizcede:",
+              "options": ["husband", "wife", "son", "uncle"],
+              "answer": "husband"
+            },
+            {
+              "id": "fm3-2",
+              "type": "multiple_choice",
+              "prompt": "'wife' Türkçede:",
+              "options": ["abla", "anne", "eş (kadın)", "kuzen"],
+              "answer": "eş (kadın)"
+            },
+            {
+              "id": "fm3-3",
+              "type": "fill_blank",
+              "prompt": "'oğul' = ___",
+              "answer": "son",
+              "acceptableAnswers": ["Son", "SON"]
+            },
+            {
+              "id": "fm3-4",
+              "type": "fill_blank",
+              "prompt": "'kız evlat' = ___",
+              "answer": "daughter",
+              "acceptableAnswers": ["Daughter", "DAUGHTER"]
+            },
+            {
+              "id": "fm3-5",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "husband", "right": "koca"},
+                {"left": "wife", "right": "eş (kadın)"},
+                {"left": "son", "right": "oğul"},
+                {"left": "daughter", "right": "kız evlat"}
+              ]
+            },
+            {
+              "id": "fm3-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "daughter",
+              "options": ["daughter", "doctor", "dotter", "darter"],
+              "answer": "daughter",
+              "explanation": "'daughter' yazımında 'gh' sessiz harftir — okunmaz: 'dotır' diye okunur."
+            },
+            {
+              "id": "fm3-7",
+              "type": "multiple_choice",
+              "prompt": "'children' ne demektir?",
+              "options": ["çocuk (tekil)", "çocuklar (çoğul)", "kuzen", "torun"],
+              "answer": "çocuklar (çoğul)",
+              "explanation": "child = çocuk (tekil), children = çocuklar (düzensiz çoğul)."
+            },
+            {
+              "id": "fm3-8",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'My wife is a doctor.'",
+              "answer": "My wife is a doctor",
+              "bank": ["My", "wife", "is", "a", "doctor", "husband", "the"]
+            },
+            {
+              "id": "fm3-9",
+              "type": "multiple_choice",
+              "prompt": "'I have two ___' (İki oğlum var.)",
+              "options": ["sons", "son", "sons'", "son's"],
+              "answer": "sons"
+            },
+            {
+              "id": "fm3-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "husband",
+              "options": ["husband", "hospital", "haven", "hubcap"],
+              "answer": "husband"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-family-4",
+          "title": "Aileyi Tanıtma",
+          "description": "This is my... cümleleri",
+          "theme": "family",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "fm4-1",
+              "type": "multiple_choice",
+              "prompt": "'Bu benim annem.' = 'This ___ my mother.'",
+              "options": ["am", "is", "are", "be"],
+              "answer": "is"
+            },
+            {
+              "id": "fm4-2",
+              "type": "multiple_choice",
+              "prompt": "'These are my parents.' Türkçede:",
+              "options": [
+                "Bu benim ebeveynim.",
+                "Bunlar benim ebeveynlerim.",
+                "Onlar benim ebeveynlerim.",
+                "Bu ebeveyn."
+              ],
+              "answer": "Bunlar benim ebeveynlerim.",
+              "explanation": "this (tekil) → these (çoğul); is → are."
+            },
+            {
+              "id": "fm4-3",
+              "type": "fill_blank",
+              "prompt": "'Bu benim erkek kardeşim Ali.' = 'This is my ___ Ali.'",
+              "answer": "brother",
+              "acceptableAnswers": ["Brother", "BROTHER"]
+            },
+            {
+              "id": "fm4-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "This is my mother.", "right": "Bu annem."},
+                {"left": "These are my parents.", "right": "Bunlar ebeveynlerim."},
+                {"left": "He is my uncle.", "right": "O amcamdır."},
+                {"left": "She is my aunt.", "right": "O teyzemdir."}
+              ]
+            },
+            {
+              "id": "fm4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'This is my younger sister.'",
+              "answer": "This is my younger sister",
+              "bank": ["This", "is", "my", "younger", "sister", "older", "brother"]
+            },
+            {
+              "id": "fm4-6",
+              "type": "multiple_choice",
+              "prompt": "'Kaç kardeşin var?' = 'How many ___ do you have?'",
+              "options": ["sibling", "siblings", "brothers", "family"],
+              "answer": "siblings",
+              "explanation": "'sibling' = kardeş (cinsiyet farketmez); çoğulu 'siblings'."
+            },
+            {
+              "id": "fm4-7",
+              "type": "fill_blank",
+              "prompt": "'İki kız kardeşim var.' = 'I ___ two sisters.'",
+              "answer": "have",
+              "acceptableAnswers": ["Have", "HAVE"]
+            },
+            {
+              "id": "fm4-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "This is my family",
+              "options": [
+                "This is my family",
+                "These are my family",
+                "This is my farmer",
+                "There is my family"
+              ],
+              "answer": "This is my family"
+            },
+            {
+              "id": "fm4-9",
+              "type": "multiple_choice",
+              "prompt": "'My parents are doctors.' ne demektir?",
+              "options": [
+                "Anne ve babam doktordur.",
+                "Annem doktordur.",
+                "Babam doktordur.",
+                "Kuzenim doktordur."
+              ],
+              "answer": "Anne ve babam doktordur.",
+              "explanation": "'parents' = anne ve baba birlikte."
+            },
+            {
+              "id": "fm4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I have a big family.'",
+              "answer": "I have a big family",
+              "bank": ["I", "have", "a", "big", "family", "small", "is"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-everyday-verbs",
+      "title": "Günlük Fiiller (Geniş Zaman)",
+      "description": "Simple Present ve özne uyumu",
+      "theme": "verbs",
+      "guide": {
+        "intro": "İngilizce geniş zaman, Türkçedeki '-ir/-er' ekine benzer ama bir tuzak vardır: 'he/she/it' özneleri için fiile -s eklenir. Türk öğrenciler en çok bu -s ekini unutur.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Geniş Zaman Yapısı"
+          },
+          {
+            "kind": "table",
+            "headers": ["Özne", "Fiil", "Örnek"],
+            "rows": [
+              ["I / You / We / They", "play (yalın)", "I play football."],
+              ["He / She / It", "plays (-s ekli)", "She plays football."],
+              ["I / You / We / They — soru", "do + yalın", "Do you play?"],
+              ["He / She / It — soru", "does + yalın", "Does she play?"],
+              ["He / She / It — olumsuz", "doesn't + yalın", "He doesn't play."]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "Çok sık hata: 'He go to school.' YANLIŞ. Doğrusu 'He goes to school.' — üçüncü tekil şahısta -s/-es atlanmaz. Soru ve olumsuzda -s 'does'a geçer: 'Does he go?' — fiil yalın haliyle gelir."
+          },
+          {
+            "kind": "heading",
+            "text": "Günlük Fiiller"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "go", "translation": "git-"},
+              {"source": "come", "translation": "gel-"},
+              {"source": "eat", "translation": "ye-"},
+              {"source": "drink", "translation": "iç-"},
+              {"source": "sleep", "translation": "uyu-"},
+              {"source": "work", "translation": "çalış-"},
+              {"source": "read", "translation": "oku-"},
+              {"source": "write", "translation": "yaz-"}
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-everyday-verbs-1",
+          "title": "Olumlu Cümleler",
+          "description": "I/you/we/they vs he/she/it",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "ev1-1",
+              "type": "multiple_choice",
+              "prompt": "'Ben her gün okula giderim.' = 'I ___ to school every day.'",
+              "options": ["go", "goes", "going", "went"],
+              "answer": "go"
+            },
+            {
+              "id": "ev1-2",
+              "type": "multiple_choice",
+              "prompt": "'O (kadın) her gün okula gider.' = 'She ___ to school every day.'",
+              "options": ["go", "goes", "going", "gos"],
+              "answer": "goes",
+              "explanation": "He/She/It özneleriyle fiile -s/-es eklenir. 'go' → 'goes'."
+            },
+            {
+              "id": "ev1-3",
+              "type": "fill_blank",
+              "prompt": "'My father ___ in a hospital.' (work)",
+              "answer": "works",
+              "acceptableAnswers": ["Works", "WORKS"],
+              "explanation": "'My father' = he → works."
+            },
+            {
+              "id": "ev1-4",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle DOĞRU?",
+              "options": [
+                "He go to work.",
+                "He goes to work.",
+                "He going to work.",
+                "He gone to work."
+              ],
+              "answer": "He goes to work.",
+              "explanation": "Üçüncü tekil şahısta -s zorunludur."
+            },
+            {
+              "id": "ev1-5",
+              "type": "match_pairs",
+              "prompt": "Doğru fiil formuyla eşleştir",
+              "pairs": [
+                {"left": "I", "right": "work"},
+                {"left": "She", "right": "works"},
+                {"left": "We", "right": "play"},
+                {"left": "He", "right": "goes"}
+              ]
+            },
+            {
+              "id": "ev1-6",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun cümleyi seç",
+              "spokenText": "She works in Istanbul",
+              "options": [
+                "She works in Istanbul",
+                "She work in Istanbul",
+                "She walks in Istanbul",
+                "He works in Istanbul"
+              ],
+              "answer": "She works in Istanbul"
+            },
+            {
+              "id": "ev1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'My brother eats apples.'",
+              "answer": "My brother eats apples",
+              "bank": ["My", "brother", "eats", "apples", "eat", "is"]
+            },
+            {
+              "id": "ev1-8",
+              "type": "fill_blank",
+              "prompt": "'They ___ English.' (study) — Onlar İngilizce çalışırlar.",
+              "answer": "study",
+              "acceptableAnswers": ["Study", "STUDY"],
+              "explanation": "'They' özne → fiil yalın."
+            },
+            {
+              "id": "ev1-9",
+              "type": "multiple_choice",
+              "prompt": "Aşağıdaki cümlede hata var: 'My sister go to gym.' Doğrusu:",
+              "options": [
+                "My sister goes to the gym.",
+                "My sister going to gym.",
+                "My sister gone to gym.",
+                "My sister go to the gym."
+              ],
+              "answer": "My sister goes to the gym.",
+              "explanation": "İki düzeltme: -s eki ('goes') ve 'the' artikeli."
+            },
+            {
+              "id": "ev1-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun cümleyi seç",
+              "spokenText": "He plays football",
+              "options": [
+                "He plays football",
+                "He play football",
+                "She plays football",
+                "He plays baseball"
+              ],
+              "answer": "He plays football"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-everyday-verbs-2",
+          "title": "Olumsuz Cümleler",
+          "description": "don't ve doesn't",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "ev2-1",
+              "type": "multiple_choice",
+              "prompt": "'Ben sigara içmem.' = 'I ___ smoke.'",
+              "options": ["don't", "doesn't", "isn't", "amn't"],
+              "answer": "don't"
+            },
+            {
+              "id": "ev2-2",
+              "type": "multiple_choice",
+              "prompt": "'O (erkek) çay içmez.' = 'He ___ drink tea.'",
+              "options": ["don't", "doesn't", "isn't", "not"],
+              "answer": "doesn't"
+            },
+            {
+              "id": "ev2-3",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle DOĞRU?",
+              "options": [
+                "She doesn't likes coffee.",
+                "She doesn't like coffee.",
+                "She don't like coffee.",
+                "She not likes coffee."
+              ],
+              "answer": "She doesn't like coffee.",
+              "explanation": "'doesn't' kullanılınca fiil yalın hâline döner — -s 'does'a geçti."
+            },
+            {
+              "id": "ev2-4",
+              "type": "fill_blank",
+              "prompt": "'They ___ work on Sundays.' (Pazar günleri çalışmazlar.)",
+              "answer": "don't",
+              "acceptableAnswers": ["do not", "Don't", "DON'T"]
+            },
+            {
+              "id": "ev2-5",
+              "type": "match_pairs",
+              "prompt": "Cümleyi doğru olumsuz yardımcı fiille eşleştir",
+              "pairs": [
+                {"left": "I ___ work on Sundays.", "right": "don't"},
+                {"left": "She ___ work on Sundays.", "right": "doesn't"},
+                {"left": "do not (formal)", "right": "do not"},
+                {"left": "does not (formal)", "right": "does not"}
+              ]
+            },
+            {
+              "id": "ev2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'My mother doesn't drink coffee.'",
+              "answer": "My mother doesn't drink coffee",
+              "bank": ["My", "mother", "doesn't", "drink", "coffee", "don't", "drinks"]
+            },
+            {
+              "id": "ev2-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "He doesn't speak French",
+              "options": [
+                "He doesn't speak French",
+                "He don't speak French",
+                "He doesn't speak fresh",
+                "She doesn't speak French"
+              ],
+              "answer": "He doesn't speak French"
+            },
+            {
+              "id": "ev2-8",
+              "type": "fill_blank",
+              "prompt": "'I don't ___ TV in the morning.' (watch)",
+              "answer": "watch",
+              "acceptableAnswers": ["Watch", "WATCH"]
+            },
+            {
+              "id": "ev2-9",
+              "type": "multiple_choice",
+              "prompt": "'It doesn't rain in summer here.' Türkçede:",
+              "options": [
+                "Yazın burada yağmur yağar.",
+                "Yazın burada yağmur yağmaz.",
+                "Yazın burada yağmur yağıyor.",
+                "Yazın burada yağmur yağdı."
+              ],
+              "answer": "Yazın burada yağmur yağmaz."
+            },
+            {
+              "id": "ev2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I do not eat meat.'",
+              "answer": "I do not eat meat",
+              "bank": ["I", "do", "not", "eat", "meat", "does", "ate"]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-everyday-verbs-3",
+          "title": "Soru Cümleleri",
+          "description": "Do you...? Does she...?",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "ev3-1",
+              "type": "multiple_choice",
+              "prompt": "'Sen futbol oynar mısın?' = '___ you play football?'",
+              "options": ["Do", "Does", "Are", "Is"],
+              "answer": "Do"
+            },
+            {
+              "id": "ev3-2",
+              "type": "multiple_choice",
+              "prompt": "'O (kadın) İngilizce konuşur mu?' = '___ she speak English?'",
+              "options": ["Do", "Does", "Are", "Is"],
+              "answer": "Does"
+            },
+            {
+              "id": "ev3-3",
+              "type": "multiple_choice",
+              "prompt": "Hangi soru DOĞRU?",
+              "options": [
+                "Does he plays tennis?",
+                "Does he play tennis?",
+                "Do he play tennis?",
+                "Is he plays tennis?"
+              ],
+              "answer": "Does he play tennis?",
+              "explanation": "'Does' soruda -s'i taşır, fiil yalın haliyle gelir."
+            },
+            {
+              "id": "ev3-4",
+              "type": "fill_blank",
+              "prompt": "'Onlar süt içer mi?' = '___ they drink milk?'",
+              "answer": "Do",
+              "acceptableAnswers": ["do", "DO"]
+            },
+            {
+              "id": "ev3-5",
+              "type": "match_pairs",
+              "prompt": "Soru-cevap eşleştirmesi",
+              "pairs": [
+                {"left": "Do you like tea?", "right": "Yes, I do."},
+                {"left": "Does she work here?", "right": "Yes, she does."},
+                {"left": "Do they play?", "right": "No, they don't."},
+                {"left": "Does he know?", "right": "No, he doesn't."}
+              ]
+            },
+            {
+              "id": "ev3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Does your mother work?'",
+              "answer": "Does your mother work",
+              "bank": ["Does", "your", "mother", "work", "Do", "works"]
+            },
+            {
+              "id": "ev3-7",
+              "type": "multiple_choice",
+              "prompt": "'Do you speak Turkish?' sorusuna olumlu kısa cevap:",
+              "options": [
+                "Yes, I am.",
+                "Yes, I do.",
+                "Yes, I have.",
+                "Yes, I speak."
+              ],
+              "answer": "Yes, I do."
+            },
+            {
+              "id": "ev3-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "Do you like coffee?",
+              "options": [
+                "Do you like coffee?",
+                "Does you like coffee?",
+                "Are you like coffee?",
+                "Did you like coffee?"
+              ],
+              "answer": "Do you like coffee?"
+            },
+            {
+              "id": "ev3-9",
+              "type": "fill_blank",
+              "prompt": "'Where ___ he live?' (Where: nerede)",
+              "answer": "does",
+              "acceptableAnswers": ["Does", "DOES"]
+            },
+            {
+              "id": "ev3-10",
+              "type": "multiple_choice",
+              "prompt": "'What time do you start work?' Türkçesi:",
+              "options": [
+                "Saat kaçta işe başlarsın?",
+                "İşin saatlik mi?",
+                "Saatin var mı?",
+                "Ne iş yapıyorsun?"
+              ],
+              "answer": "Saat kaçta işe başlarsın?"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-everyday-verbs-4",
+          "title": "Gündelik Rutin",
+          "description": "Sıklık zarflarıyla cümle kurma",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "ev4-1",
+              "type": "multiple_choice",
+              "prompt": "'always' Türkçede:",
+              "options": ["bazen", "her zaman", "asla", "genellikle"],
+              "answer": "her zaman"
+            },
+            {
+              "id": "ev4-2",
+              "type": "multiple_choice",
+              "prompt": "'never' Türkçede:",
+              "options": ["sık sık", "asla", "şimdi", "hep"],
+              "answer": "asla"
+            },
+            {
+              "id": "ev4-3",
+              "type": "fill_blank",
+              "prompt": "'Genellikle' = ___",
+              "answer": "usually",
+              "acceptableAnswers": ["Usually", "USUALLY"]
+            },
+            {
+              "id": "ev4-4",
+              "type": "match_pairs",
+              "prompt": "Sıklık zarfını eşleştir",
+              "pairs": [
+                {"left": "always", "right": "her zaman"},
+                {"left": "usually", "right": "genellikle"},
+                {"left": "sometimes", "right": "bazen"},
+                {"left": "never", "right": "asla"}
+              ]
+            },
+            {
+              "id": "ev4-5",
+              "type": "multiple_choice",
+              "prompt": "Sıklık zarfı cümlede nereye gelir?",
+              "options": [
+                "Cümlenin sonuna",
+                "Özne ile fiil arasına (to be hariç)",
+                "Cümlenin başına",
+                "Yardımcı fiil ile fiil arasına"
+              ],
+              "answer": "Özne ile fiil arasına (to be hariç)",
+              "explanation": "'I always drink tea.' — sıklık zarfı 'I' ile 'drink' arasında. To be ile: 'She is always late.'"
+            },
+            {
+              "id": "ev4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I always eat breakfast.'",
+              "answer": "I always eat breakfast",
+              "bank": ["I", "always", "eat", "breakfast", "never", "am"]
+            },
+            {
+              "id": "ev4-7",
+              "type": "fill_blank",
+              "prompt": "'Sabah saat 7'de uyanırım.' = 'I wake up ___ 7 in the morning.'",
+              "answer": "at",
+              "acceptableAnswers": ["At", "AT"],
+              "explanation": "Saat öncesi 'at': at 7, at noon."
+            },
+            {
+              "id": "ev4-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun cümleyi seç",
+              "spokenText": "She never drinks coffee",
+              "options": [
+                "She never drinks coffee",
+                "She always drinks coffee",
+                "She never drinks tea",
+                "He never drinks coffee"
+              ],
+              "answer": "She never drinks coffee"
+            },
+            {
+              "id": "ev4-9",
+              "type": "multiple_choice",
+              "prompt": "'How often do you go to the gym?' Türkçede:",
+              "options": [
+                "Spor salonuna ne sıklıkla gidersin?",
+                "Spor salonuna ne zaman gidersin?",
+                "Spor salonu nerede?",
+                "Spor salonuna kim gider?"
+              ],
+              "answer": "Spor salonuna ne sıklıkla gidersin?"
+            },
+            {
+              "id": "ev4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'He sometimes plays guitar.'",
+              "answer": "He sometimes plays guitar",
+              "bank": ["He", "sometimes", "plays", "guitar", "never", "play"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-articles-basics",
+      "title": "Artikellere Giriş: A / An / The",
+      "description": "Türkçede olmayan artikeller",
+      "theme": "grammar",
+      "guide": {
+        "intro": "Türkçede 'a/an/the' gibi artikeller yoktur. 'Bir kitap okudum' cümlesindeki 'bir' bazen artikele benzer. İngilizcede ise sayılabilir tekil isimden önce mutlaka 'a/an' veya 'the' gelmelidir.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "A vs An"
+          },
+          {
+            "kind": "table",
+            "headers": ["Kural", "Örnek"],
+            "rows": [
+              ["Sessiz harfle başlıyorsa: a", "a book, a car, a teacher"],
+              ["Sesli harfle başlıyorsa: an", "an apple, an egg, an umbrella"],
+              ["Sessiz 'h' ise: an", "an hour (saat), an honor"],
+              ["Sesli görünen 'u' = 'yu' ise: a", "a university, a useful tool"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Kural harfle değil sesle ilgilidir. 'an hour' diyoruz çünkü 'h' sessizdir, kelime sesli ile başlar. 'a university' çünkü 'u' burada 'yu' diye sesli okunur."
+          },
+          {
+            "kind": "heading",
+            "text": "A/An vs The"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {"source": "I see a cat.", "translation": "Bir kedi görüyorum. (Hangi kedi olduğu önemli değil.)"},
+              {"source": "I see the cat.", "translation": "Kediyi görüyorum. (Belirli bir kedi.)"},
+              {"source": "Open a window.", "translation": "Bir pencere aç. (Hangisi farketmez.)"},
+              {"source": "Open the window.", "translation": "Pencereyi aç. (Belirli bir pencere.)"}
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "info",
+            "text": "Türkçede belirtme eki -i/-ı/-u/-ü artikelin işini görür: 'kediyi gördüm' = 'the cat'. Belirtme eki yoksa çoğu zaman 'a/an' uygundur."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-articles-basics-1",
+          "title": "A ya da An?",
+          "description": "Sessiz/sesli ses kuralı",
+          "theme": "grammar",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "ar1-1",
+              "type": "multiple_choice",
+              "prompt": "Hangisi DOĞRU?",
+              "options": ["a apple", "an apple", "the apple", "ones apple"],
+              "answer": "an apple"
+            },
+            {
+              "id": "ar1-2",
+              "type": "multiple_choice",
+              "prompt": "Hangisi DOĞRU?",
+              "options": ["a book", "an book", "the book a", "ones book"],
+              "answer": "a book"
+            },
+            {
+              "id": "ar1-3",
+              "type": "fill_blank",
+              "prompt": "'___ orange' (sesli ile başlıyor)",
+              "answer": "an",
+              "acceptableAnswers": ["An", "AN"]
+            },
+            {
+              "id": "ar1-4",
+              "type": "fill_blank",
+              "prompt": "'___ car' (sessiz ile başlıyor)",
+              "answer": "a",
+              "acceptableAnswers": ["A", "an"]
+            },
+            {
+              "id": "ar1-5",
+              "type": "match_pairs",
+              "prompt": "Cümleyi doğru artikele eşleştir",
+              "pairs": [
+                {"left": "I see ___ egg", "right": "an"},
+                {"left": "I have ___ house", "right": "a"},
+                {"left": "Open ___ window", "right": "the"},
+                {"left": "I read ___ books", "right": "(no article)"}
+              ]
+            },
+            {
+              "id": "ar1-6",
+              "type": "multiple_choice",
+              "prompt": "Hangisi DOĞRU? (h sessiz)",
+              "options": ["a hour", "an hour", "the hour none", "any hour"],
+              "answer": "an hour",
+              "explanation": "'hour' kelimesinde 'h' okunmaz; kelime aslında sesli sesle başlar."
+            },
+            {
+              "id": "ar1-7",
+              "type": "multiple_choice",
+              "prompt": "Hangisi DOĞRU? (u 'yu' sesi)",
+              "options": ["an university", "a university", "the universities", "any universities"],
+              "answer": "a university",
+              "explanation": "'university' aslında 'yuniversiti' diye okunur; başında /y/ sessiz sesi vardır → 'a'."
+            },
+            {
+              "id": "ar1-8",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I have an idea.'",
+              "answer": "I have an idea",
+              "bank": ["I", "have", "an", "idea", "a", "the"]
+            },
+            {
+              "id": "ar1-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "an apple",
+              "options": ["an apple", "a apple", "the apple", "and apple"],
+              "answer": "an apple"
+            },
+            {
+              "id": "ar1-10",
+              "type": "fill_blank",
+              "prompt": "'I am ___ engineer.' (Mühendisim.)",
+              "answer": "an",
+              "acceptableAnswers": ["An", "AN"]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-articles-basics-2",
+          "title": "The (Belirli Artikel)",
+          "description": "Belirli isimler için",
+          "theme": "grammar",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "ar2-1",
+              "type": "multiple_choice",
+              "prompt": "'Pencereyi aç.' = 'Open ___ window.'",
+              "options": ["a", "an", "the", "(boş)"],
+              "answer": "the",
+              "explanation": "Belirli bir pencereden bahsediliyor → 'the'."
+            },
+            {
+              "id": "ar2-2",
+              "type": "multiple_choice",
+              "prompt": "'Bir pencere aç.' = 'Open ___ window.'",
+              "options": ["a", "an", "the", "(boş)"],
+              "answer": "a",
+              "explanation": "Hangi pencere olduğu önemli değil → 'a'."
+            },
+            {
+              "id": "ar2-3",
+              "type": "fill_blank",
+              "prompt": "'Güneş parlıyor.' = '___ sun is shining.'",
+              "answer": "The",
+              "acceptableAnswers": ["the", "THE"],
+              "explanation": "Güneş tek bir tane → her zaman 'the'."
+            },
+            {
+              "id": "ar2-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "the sun", "right": "güneş (tek)"},
+                {"left": "the moon", "right": "ay (tek)"},
+                {"left": "a book", "right": "bir kitap"},
+                {"left": "the book", "right": "(o) kitap"}
+              ]
+            },
+            {
+              "id": "ar2-5",
+              "type": "multiple_choice",
+              "prompt": "Türkçede '-i/-ı' belirtme eki İngilizcede genelde hangi artikele karşılık gelir?",
+              "options": ["a", "an", "the", "Hiçbiri"],
+              "answer": "the",
+              "explanation": "'kitabı (oku)' = 'read the book'; 'kitap (oku)' = 'read a book'."
+            },
+            {
+              "id": "ar2-6",
+              "type": "fill_blank",
+              "prompt": "'I see ___ moon.' (Ay'ı görüyorum.)",
+              "answer": "the",
+              "acceptableAnswers": ["The", "THE"]
+            },
+            {
+              "id": "ar2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Close the door, please.'",
+              "answer": "Close the door please",
+              "bank": ["Close", "the", "door", "please", "a", "an"]
+            },
+            {
+              "id": "ar2-8",
+              "type": "multiple_choice",
+              "prompt": "'I have a cat. ___ cat is black.' (Bir kedim var. Kedi siyah.)",
+              "options": ["A", "An", "The", "(boş)"],
+              "answer": "The",
+              "explanation": "İlk söylendiğinde 'a cat' (yeni bilgi); ikinci söylendiğinde 'the cat' (artık biliniyor)."
+            },
+            {
+              "id": "ar2-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "the book is here",
+              "options": [
+                "the book is here",
+                "a book is here",
+                "the books are here",
+                "they book is here"
+              ],
+              "answer": "the book is here"
+            },
+            {
+              "id": "ar2-10",
+              "type": "multiple_choice",
+              "prompt": "Genel olarak, ilk anılan isme ___ konur, sonra aynı isim tekrarlandığında ___ konur.",
+              "options": [
+                "the / a",
+                "a/an / the",
+                "the / the",
+                "(boş) / a"
+              ],
+              "answer": "a/an / the"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-articles-basics-3",
+          "title": "Artikel Yokluğu",
+          "description": "Çoğul ve sayılamayan isimler",
+          "theme": "grammar",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "ar3-1",
+              "type": "multiple_choice",
+              "prompt": "'I like ___' (Kahveyi severim — kahve genel olarak)",
+              "options": ["a coffee", "an coffee", "the coffee", "coffee"],
+              "answer": "coffee",
+              "explanation": "Sayılamayan isimle genel ifade için artikel YOK."
+            },
+            {
+              "id": "ar3-2",
+              "type": "multiple_choice",
+              "prompt": "'I have ___' (Kedilerim var — sayılabilir çoğul, genel)",
+              "options": ["a cats", "the cats", "cats", "an cats"],
+              "answer": "cats"
+            },
+            {
+              "id": "ar3-3",
+              "type": "fill_blank",
+              "prompt": "'I drink ___ every morning.' (Her sabah çay içerim.)",
+              "answer": "tea",
+              "acceptableAnswers": ["Tea", "TEA"],
+              "explanation": "Sayılamayan + genel = artikel yok."
+            },
+            {
+              "id": "ar3-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "I like music.", "right": "Müzik severim."},
+                {"left": "I like the music.", "right": "(O) müziği severim."},
+                {"left": "Books are good.", "right": "Kitaplar güzel."},
+                {"left": "The books are mine.", "right": "Kitaplar benim."}
+              ]
+            },
+            {
+              "id": "ar3-5",
+              "type": "multiple_choice",
+              "prompt": "'I love ___' (Müziği severim — genel olarak müzik)",
+              "options": ["a music", "the music", "music", "an music"],
+              "answer": "music"
+            },
+            {
+              "id": "ar3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'I like cats and dogs.'",
+              "answer": "I like cats and dogs",
+              "bank": ["I", "like", "cats", "and", "dogs", "the", "a"]
+            },
+            {
+              "id": "ar3-7",
+              "type": "fill_blank",
+              "prompt": "Genel anlam — sayılamayan isim. 'I drink ___' (Su içerim.)",
+              "answer": "water",
+              "acceptableAnswers": ["Water", "WATER"]
+            },
+            {
+              "id": "ar3-8",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle YANLIŞ?",
+              "options": [
+                "I like coffee.",
+                "I like a coffee.",
+                "I like the coffee in this café.",
+                "I like coffees from Brazil."
+              ],
+              "answer": "I like a coffee.",
+              "explanation": "Genel ifadede sayılamayanın önüne 'a' gelmez. (İstisna: Bir bardak kahve istemek için 'a coffee, please.')"
+            },
+            {
+              "id": "ar3-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun cümleyi seç",
+              "spokenText": "I like apples",
+              "options": [
+                "I like apples",
+                "I like the apples",
+                "I like an apple",
+                "I like apple"
+              ],
+              "answer": "I like apples"
+            },
+            {
+              "id": "ar3-10",
+              "type": "multiple_choice",
+              "prompt": "'Hayat güzeldir.' En doğru çeviri:",
+              "options": [
+                "A life is beautiful.",
+                "The life is beautiful.",
+                "Life is beautiful.",
+                "Lifes are beautiful."
+              ],
+              "answer": "Life is beautiful.",
+              "explanation": "'life' burada genel anlamda → artikel yok."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-articles-basics-4",
+          "title": "İş ve Meslek",
+          "description": "I am a teacher tarzı cümleler",
+          "theme": "grammar",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "ar4-1",
+              "type": "multiple_choice",
+              "prompt": "'Öğretmenim.' = 'I am ___ teacher.'",
+              "options": ["a", "an", "the", "(boş)"],
+              "answer": "a",
+              "explanation": "İngilizcede meslekten önce 'a/an' zorunludur — Türkçede yoktur. 'I am teacher' YANLIŞ."
+            },
+            {
+              "id": "ar4-2",
+              "type": "multiple_choice",
+              "prompt": "'Mühendisim.' = 'I am ___ engineer.'",
+              "options": ["a", "an", "the", "(boş)"],
+              "answer": "an"
+            },
+            {
+              "id": "ar4-3",
+              "type": "fill_blank",
+              "prompt": "'O bir doktor.' = 'She is ___ doctor.'",
+              "answer": "a",
+              "acceptableAnswers": ["A", "an"]
+            },
+            {
+              "id": "ar4-4",
+              "type": "match_pairs",
+              "prompt": "Cümleyi doğru artikele eşleştir",
+              "pairs": [
+                {"left": "She is ___ doctor.", "right": "a"},
+                {"left": "He is ___ engineer.", "right": "an"},
+                {"left": "Meet ___ teacher (the one we know).", "right": "the"},
+                {"left": "They are ___ doctors.", "right": "(no article)"}
+              ]
+            },
+            {
+              "id": "ar4-5",
+              "type": "multiple_choice",
+              "prompt": "Türkçedeki 'Öğrenciyim.' İngilizcede 'I am student' diye söylenebilir mi?",
+              "options": [
+                "Evet, doğru",
+                "Hayır — 'I am a student' olmalı",
+                "Bazen",
+                "Sadece soruda"
+              ],
+              "answer": "Hayır — 'I am a student' olmalı",
+              "explanation": "Tekil sayılabilir isimden önce mutlaka artikel gerekir. Bu Türk öğrencilerin en sık unuttuğu kuraldır."
+            },
+            {
+              "id": "ar4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'My mother is a doctor.'",
+              "answer": "My mother is a doctor",
+              "bank": ["My", "mother", "is", "a", "doctor", "the", "an"]
+            },
+            {
+              "id": "ar4-7",
+              "type": "fill_blank",
+              "prompt": "'Sanatçısın.' = 'You are ___ artist.'",
+              "answer": "an",
+              "acceptableAnswers": ["An", "AN"]
+            },
+            {
+              "id": "ar4-8",
+              "type": "multiple_choice",
+              "prompt": "'They are ___' (Onlar öğretmen.) Çoğulda artikel?",
+              "options": ["a teachers", "the teachers", "teachers", "an teachers"],
+              "answer": "teachers",
+              "explanation": "Çoğulda 'a/an' YOK; 'the' belirsiz olduğunda da yok."
+            },
+            {
+              "id": "ar4-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun cümleyi seç",
+              "spokenText": "I am a student",
+              "options": [
+                "I am a student",
+                "I am student",
+                "I am the student",
+                "I am students"
+              ],
+              "answer": "I am a student"
+            },
+            {
+              "id": "ar4-10",
+              "type": "multiple_choice",
+              "prompt": "Aşağıdaki cümlede hata var: 'My father is engineer.' Doğrusu:",
+              "options": [
+                "My father is an engineer.",
+                "My father is the engineer.",
+                "My father engineer.",
+                "My father is engineering."
+              ],
+              "answer": "My father is an engineer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-questions",
+      "title": "Soru Kelimeleri",
+      "description": "What, where, when, who, why, how",
+      "theme": "grammar",
+      "guide": {
+        "intro": "Türkçede soru ekleri (-mi/-mı/-mu/-mü) ya da soru kelimeleri (ne, kim, nerede) sona ya da fiilden önce gelir. İngilizcede ise soru kelimesi her zaman cümlenin BAŞINA gelir.",
+        "sections": [
+          {
+            "kind": "table",
+            "headers": ["İngilizce", "Türkçe", "Örnek"],
+            "rows": [
+              ["What", "Ne", "What is this? — Bu ne?"],
+              ["Where", "Nerede / Nereye", "Where is the bank?"],
+              ["When", "Ne zaman", "When is the meeting?"],
+              ["Who", "Kim", "Who is that?"],
+              ["Why", "Neden", "Why are you tired?"],
+              ["How", "Nasıl", "How are you?"],
+              ["Which", "Hangi", "Which one do you want?"],
+              ["Whose", "Kimin", "Whose book is this?"]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Yapı: SORU KELİMESİ + (do/does/is/are/was/were) + ÖZNE + ... ?  Örnek: 'Where do you live?' (Nerede yaşıyorsun?)"
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-questions-1",
+          "title": "What ve Who",
+          "description": "Ne ve kim",
+          "theme": "grammar",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "qu1-1",
+              "type": "multiple_choice",
+              "prompt": "'Bu ne?' = '___ is this?'",
+              "options": ["What", "Who", "Where", "When"],
+              "answer": "What"
+            },
+            {
+              "id": "qu1-2",
+              "type": "multiple_choice",
+              "prompt": "'O kim?' = '___ is he?'",
+              "options": ["What", "Who", "Where", "Why"],
+              "answer": "Who"
+            },
+            {
+              "id": "qu1-3",
+              "type": "fill_blank",
+              "prompt": "'Adın ne?' = '___ is your name?'",
+              "answer": "What",
+              "acceptableAnswers": ["what", "WHAT"]
+            },
+            {
+              "id": "qu1-4",
+              "type": "match_pairs",
+              "prompt": "Soruyu cevapla eşleştir",
+              "pairs": [
+                {"left": "What is this?", "right": "It is a book."},
+                {"left": "Who is she?", "right": "She is my sister."},
+                {"left": "What is your name?", "right": "My name is Ali."},
+                {"left": "Who are they?", "right": "They are friends."}
+              ]
+            },
+            {
+              "id": "qu1-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "What is your name?",
+              "options": [
+                "What is your name?",
+                "Who is your name?",
+                "Where is your name?",
+                "Why is your name?"
+              ],
+              "answer": "What is your name?"
+            },
+            {
+              "id": "qu1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Who is your teacher?'",
+              "answer": "Who is your teacher",
+              "bank": ["Who", "is", "your", "teacher", "What", "are"]
+            },
+            {
+              "id": "qu1-7",
+              "type": "multiple_choice",
+              "prompt": "'What do you do?' Türkçede:",
+              "options": [
+                "Ne yaparsın? (Mesleğin ne?)",
+                "Sen ne yaptın?",
+                "Sen kimsin?",
+                "Sen nerelisin?"
+              ],
+              "answer": "Ne yaparsın? (Mesleğin ne?)",
+              "explanation": "'What do you do?' deyimsel olarak meslek sorusudur."
+            },
+            {
+              "id": "qu1-8",
+              "type": "fill_blank",
+              "prompt": "'Bu kitap kimin?' = '___ book is this?'",
+              "answer": "Whose",
+              "acceptableAnswers": ["whose", "WHOSE"]
+            },
+            {
+              "id": "qu1-9",
+              "type": "multiple_choice",
+              "prompt": "Soru kelimesi ___ gelir.",
+              "options": [
+                "cümlenin sonuna",
+                "cümlenin başına",
+                "fiilden sonra",
+                "öznenin sonrasına"
+              ],
+              "answer": "cümlenin başına"
+            },
+            {
+              "id": "qu1-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "Who is that?",
+              "options": ["Who is that?", "What is that?", "Where is that?", "How is that?"],
+              "answer": "Who is that?"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-questions-2",
+          "title": "Where ve When",
+          "description": "Nerede ve ne zaman",
+          "theme": "grammar",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "qu2-1",
+              "type": "multiple_choice",
+              "prompt": "'Nerelisin?' = '___ are you from?'",
+              "options": ["Where", "When", "What", "Who"],
+              "answer": "Where"
+            },
+            {
+              "id": "qu2-2",
+              "type": "multiple_choice",
+              "prompt": "'Ne zaman geliyorsun?' = '___ are you coming?'",
+              "options": ["Where", "When", "What", "How"],
+              "answer": "When"
+            },
+            {
+              "id": "qu2-3",
+              "type": "fill_blank",
+              "prompt": "'Banka nerede?' = '___ is the bank?'",
+              "answer": "Where",
+              "acceptableAnswers": ["where", "WHERE"]
+            },
+            {
+              "id": "qu2-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "Where do you live?", "right": "Nerede yaşarsın?"},
+                {"left": "When is the party?", "right": "Parti ne zaman?"},
+                {"left": "Where is my book?", "right": "Kitabım nerede?"},
+                {"left": "When do you sleep?", "right": "Ne zaman uyursun?"}
+              ]
+            },
+            {
+              "id": "qu2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Where do you live?'",
+              "answer": "Where do you live",
+              "bank": ["Where", "do", "you", "live", "are", "is"]
+            },
+            {
+              "id": "qu2-6",
+              "type": "multiple_choice",
+              "prompt": "'When is your birthday?' Türkçede:",
+              "options": [
+                "Doğum günün ne zaman?",
+                "Doğum günün nerede?",
+                "Doğum günün nasıl?",
+                "Doğum günün kim?"
+              ],
+              "answer": "Doğum günün ne zaman?"
+            },
+            {
+              "id": "qu2-7",
+              "type": "fill_blank",
+              "prompt": "'Otobüs durağı nerede?' = '___ is the bus stop?'",
+              "answer": "Where",
+              "acceptableAnswers": ["where", "WHERE"]
+            },
+            {
+              "id": "qu2-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "When is the meeting?",
+              "options": [
+                "When is the meeting?",
+                "Where is the meeting?",
+                "What is the meeting?",
+                "Why is the meeting?"
+              ],
+              "answer": "When is the meeting?"
+            },
+            {
+              "id": "qu2-9",
+              "type": "multiple_choice",
+              "prompt": "Tatil için en iyi soru:",
+              "options": [
+                "Where do you go on holiday?",
+                "When do you go on holiday?",
+                "Both — depending on what you want to know",
+                "Who do you go on holiday?"
+              ],
+              "answer": "Both — depending on what you want to know"
+            },
+            {
+              "id": "qu2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'When do you wake up?'",
+              "answer": "When do you wake up",
+              "bank": ["When", "do", "you", "wake", "up", "where", "are"]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-questions-3",
+          "title": "Why ve How",
+          "description": "Neden ve nasıl",
+          "theme": "grammar",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "qu3-1",
+              "type": "multiple_choice",
+              "prompt": "'Neden yorgunsun?' = '___ are you tired?'",
+              "options": ["Where", "Why", "How", "Who"],
+              "answer": "Why"
+            },
+            {
+              "id": "qu3-2",
+              "type": "multiple_choice",
+              "prompt": "'Nasılsın?' = '___ are you?'",
+              "options": ["Where", "Why", "How", "What"],
+              "answer": "How"
+            },
+            {
+              "id": "qu3-3",
+              "type": "fill_blank",
+              "prompt": "Cevap: 'Because I'm sick.' Soru: '___ are you tired?'",
+              "answer": "Why",
+              "acceptableAnswers": ["why", "WHY"]
+            },
+            {
+              "id": "qu3-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "Why are you here?", "right": "Neden buradasın?"},
+                {"left": "How do you feel?", "right": "Nasıl hissediyorsun?"},
+                {"left": "How old are you?", "right": "Kaç yaşındasın?"},
+                {"left": "Why is it cold?", "right": "Neden soğuk?"}
+              ]
+            },
+            {
+              "id": "qu3-5",
+              "type": "multiple_choice",
+              "prompt": "'How old are you?' Türkçede:",
+              "options": [
+                "Kaç yaşındasın?",
+                "Nasıl yaşlıyım?",
+                "Eski misin?",
+                "Ne kadar eski?"
+              ],
+              "answer": "Kaç yaşındasın?",
+              "explanation": "Yaş için 'how old' kalıbı kullanılır — kelime kelime değil deyimsel."
+            },
+            {
+              "id": "qu3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'Why do you study English?'",
+              "answer": "Why do you study English",
+              "bank": ["Why", "do", "you", "study", "English", "How", "are"]
+            },
+            {
+              "id": "qu3-7",
+              "type": "fill_blank",
+              "prompt": "'How ___ are you?' (Kaç yaşındasın?)",
+              "answer": "old",
+              "acceptableAnswers": ["Old", "OLD"]
+            },
+            {
+              "id": "qu3-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "How are you?",
+              "options": ["How are you?", "Who are you?", "Why are you?", "Where are you?"],
+              "answer": "How are you?"
+            },
+            {
+              "id": "qu3-9",
+              "type": "multiple_choice",
+              "prompt": "'How much is this?' Türkçede:",
+              "options": ["Bu nedir?", "Bu ne kadar (fiyat)?", "Bu nerede?", "Bu kim?"],
+              "answer": "Bu ne kadar (fiyat)?"
+            },
+            {
+              "id": "qu3-10",
+              "type": "multiple_choice",
+              "prompt": "Türkçede 'Neden okula gidersin?' İngilizcede en doğru:",
+              "options": [
+                "Why you go to school?",
+                "Why do you go to school?",
+                "Why are you go to school?",
+                "Why is you go to school?"
+              ],
+              "answer": "Why do you go to school?",
+              "explanation": "Geniş zamanda soruda yardımcı fiil 'do/does' kullanılır."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-questions-4",
+          "title": "Karışık Sorular",
+          "description": "Tüm soru kelimeleri",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "qu4-1",
+              "type": "multiple_choice",
+              "prompt": "Cevap: 'It's red.' Soru: '___ color is it?'",
+              "options": ["What", "Why", "How", "Who"],
+              "answer": "What"
+            },
+            {
+              "id": "qu4-2",
+              "type": "multiple_choice",
+              "prompt": "Cevap: '7 o'clock.' Soru: '___ time is it?'",
+              "options": ["When", "What", "How", "Why"],
+              "answer": "What",
+              "explanation": "Saat sorulurken 'What time' kalıbı kullanılır — 'when' değil."
+            },
+            {
+              "id": "qu4-3",
+              "type": "match_pairs",
+              "prompt": "Soruyu cevapla eşleştir",
+              "pairs": [
+                {"left": "Where do you live?", "right": "In Istanbul."},
+                {"left": "When is your birthday?", "right": "In May."},
+                {"left": "How are you?", "right": "I'm fine."},
+                {"left": "Who is your teacher?", "right": "Mr. Ali."}
+              ]
+            },
+            {
+              "id": "qu4-4",
+              "type": "fill_blank",
+              "prompt": "'___ much does it cost?' (Bu ne kadar?)",
+              "answer": "How",
+              "acceptableAnswers": ["how", "HOW"]
+            },
+            {
+              "id": "qu4-5",
+              "type": "multiple_choice",
+              "prompt": "'Hangi araba senin?' = '___ car is yours?'",
+              "options": ["What", "Which", "Whose", "Why"],
+              "answer": "Which",
+              "explanation": "'Which' = hangi (sınırlı seçenekten); 'What' = ne (genel)."
+            },
+            {
+              "id": "qu4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'How many books do you have?'",
+              "answer": "How many books do you have",
+              "bank": ["How", "many", "books", "do", "you", "have", "much", "is"]
+            },
+            {
+              "id": "qu4-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "Whose pen is this?",
+              "options": [
+                "Whose pen is this?",
+                "Who is this pen?",
+                "Where is this pen?",
+                "Whose pan is this?"
+              ],
+              "answer": "Whose pen is this?"
+            },
+            {
+              "id": "qu4-8",
+              "type": "multiple_choice",
+              "prompt": "Sayılabilir isim için 'kaç tane' = ___",
+              "options": ["how much", "how many", "how old", "how often"],
+              "answer": "how many",
+              "explanation": "how many + sayılabilir; how much + sayılamayan."
+            },
+            {
+              "id": "qu4-9",
+              "type": "multiple_choice",
+              "prompt": "'Niye geç kaldın?' = '___ are you late?'",
+              "options": ["What", "Why", "How", "Who"],
+              "answer": "Why"
+            },
+            {
+              "id": "qu4-10",
+              "type": "fill_blank",
+              "prompt": "'___ much milk is there?' (Sayılamayan: ne kadar süt var?)",
+              "answer": "How",
+              "acceptableAnswers": ["how", "HOW"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-a1-review",
+      "title": "A1 Tekrar",
+      "description": "Tüm A1 konularının karışık tekrarı",
+      "theme": "review",
+      "guide": {
+        "intro": "Bu bölümde A1 boyunca öğrendiğin tüm konuları karışık olarak göreceksin: sesler, selamlaşma, zamirler, to be, sayılar, aile, fiiller, artikeller ve sorular.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "A1'de Öğrendiklerin"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "Türkçede olmayan İngilizce sesler: th, w, æ, ng",
+              "Selamlaşma ve günün saatine göre selam",
+              "Zamirler: he/she/it ayrımı (Türkçede tek 'o')",
+              "To be fiili: am/is/are özne uyumu",
+              "Sayılar 1-100 ve saat",
+              "Aile bireyleri (uncle/aunt geniş anlamlı)",
+              "Geniş zaman: he/she/it -s eki",
+              "Artikel: a/an/the (Türkçede yok)",
+              "Soru kelimeleri her zaman cümle başında"
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "info",
+            "text": "Bu son ünitede yeni kural yok — sadece bir önceki konuların karışık tekrarı. Hata yaparsan ilgili topiğe geri dönüp pekiştirebilirsin."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-a1-review-1",
+          "title": "Karışık Tekrar 1",
+          "description": "Selamlar, zamirler ve to be",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rv1-1",
+              "type": "multiple_choice",
+              "prompt": "'Günaydın' İngilizcede:",
+              "options": ["Good night", "Good morning", "Good evening", "Good afternoon"],
+              "answer": "Good morning"
+            },
+            {
+              "id": "rv1-2",
+              "type": "multiple_choice",
+              "prompt": "'O (kadın) bir sanatçıdır.' = ___",
+              "options": [
+                "He is an artist.",
+                "She is an artist.",
+                "It is an artist.",
+                "She is artist."
+              ],
+              "answer": "She is an artist."
+            },
+            {
+              "id": "rv1-3",
+              "type": "fill_blank",
+              "prompt": "'I ___ from Turkey.'",
+              "answer": "am",
+              "acceptableAnswers": ["Am", "AM"]
+            },
+            {
+              "id": "rv1-4",
+              "type": "match_pairs",
+              "prompt": "Eşleştir",
+              "pairs": [
+                {"left": "I", "right": "am"},
+                {"left": "She", "right": "is"},
+                {"left": "We", "right": "are"},
+                {"left": "It is not", "right": "isn't"}
+              ]
+            },
+            {
+              "id": "rv1-5",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun ifadeyi seç",
+              "spokenText": "Nice to meet you",
+              "options": [
+                "Nice to meet you",
+                "Nice to see you",
+                "Nice to beat you",
+                "Knife to meet you"
+              ],
+              "answer": "Nice to meet you"
+            },
+            {
+              "id": "rv1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'My name is Ahmet.'",
+              "answer": "My name is Ahmet",
+              "bank": ["My", "name", "is", "Ahmet", "are", "the"]
+            },
+            {
+              "id": "rv1-7",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle YANLIŞ?",
+              "options": [
+                "He is a doctor.",
+                "She is doctor.",
+                "I am a doctor.",
+                "They are doctors."
+              ],
+              "answer": "She is doctor.",
+              "explanation": "Tekil meslekten önce 'a/an' zorunlu."
+            },
+            {
+              "id": "rv1-8",
+              "type": "fill_blank",
+              "prompt": "'Onlar evde değiller.' = 'They ___ at home.'",
+              "answer": "aren't",
+              "acceptableAnswers": ["are not", "ARE NOT"]
+            },
+            {
+              "id": "rv1-9",
+              "type": "multiple_choice",
+              "prompt": "'Are you ready?' olumlu kısa cevap:",
+              "options": ["Yes, I do.", "Yes, I am.", "Yes, I have.", "Yes, are."],
+              "answer": "Yes, I am."
+            },
+            {
+              "id": "rv1-10",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun cümleyi seç",
+              "spokenText": "He is my brother",
+              "options": [
+                "He is my brother",
+                "She is my brother",
+                "He is my father",
+                "He is my mother"
+              ],
+              "answer": "He is my brother"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-a1-review-2",
+          "title": "Karışık Tekrar 2",
+          "description": "Sayılar, aile ve fiiller",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rv2-1",
+              "type": "multiple_choice",
+              "prompt": "40 İngilizcede:",
+              "options": ["fourty", "forty", "fortee", "fourteen"],
+              "answer": "forty"
+            },
+            {
+              "id": "rv2-2",
+              "type": "multiple_choice",
+              "prompt": "'fifteen' kaç eder?",
+              "options": ["5", "15", "50", "55"],
+              "answer": "15"
+            },
+            {
+              "id": "rv2-3",
+              "type": "fill_blank",
+              "prompt": "'Annem öğretmen.' = 'My ___ is a teacher.'",
+              "answer": "mother",
+              "acceptableAnswers": ["Mother", "MOTHER", "mom"]
+            },
+            {
+              "id": "rv2-4",
+              "type": "match_pairs",
+              "prompt": "Aile bireylerini eşleştir",
+              "pairs": [
+                {"left": "uncle", "right": "amca/dayı"},
+                {"left": "aunt", "right": "hala/teyze"},
+                {"left": "grandfather", "right": "dede"},
+                {"left": "cousin", "right": "kuzen"}
+              ]
+            },
+            {
+              "id": "rv2-5",
+              "type": "multiple_choice",
+              "prompt": "'O her gün futbol oynar.' (he özne) = ___",
+              "options": [
+                "He play football every day.",
+                "He plays football every day.",
+                "He playing football every day.",
+                "He played football every day."
+              ],
+              "answer": "He plays football every day."
+            },
+            {
+              "id": "rv2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'She doesn't drink coffee.'",
+              "answer": "She doesn't drink coffee",
+              "bank": ["She", "doesn't", "drink", "coffee", "drinks", "don't"]
+            },
+            {
+              "id": "rv2-7",
+              "type": "fill_blank",
+              "prompt": "Saat 5:30 = 'It's ___ past five.'",
+              "answer": "half",
+              "acceptableAnswers": ["Half", "HALF"]
+            },
+            {
+              "id": "rv2-8",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun cümleyi seç",
+              "spokenText": "She works in a bank",
+              "options": [
+                "She works in a bank",
+                "She walks in a bank",
+                "He works in a bank",
+                "She works in the bank"
+              ],
+              "answer": "She works in a bank"
+            },
+            {
+              "id": "rv2-9",
+              "type": "multiple_choice",
+              "prompt": "'I have two ___' (İki kız kardeşim var.)",
+              "options": ["sister", "sisters", "sister's", "sisters'"],
+              "answer": "sisters"
+            },
+            {
+              "id": "rv2-10",
+              "type": "multiple_choice",
+              "prompt": "'Does he like tea?' olumsuz kısa cevap:",
+              "options": [
+                "No, he doesn't.",
+                "No, he isn't.",
+                "No, he don't.",
+                "No, he hasn't."
+              ],
+              "answer": "No, he doesn't."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-a1-review-3",
+          "title": "Karışık Tekrar 3",
+          "description": "Artikeller ve sorular",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rv3-1",
+              "type": "multiple_choice",
+              "prompt": "'I see ___ apple.' (Bir elma görüyorum.)",
+              "options": ["a", "an", "the", "(boş)"],
+              "answer": "an"
+            },
+            {
+              "id": "rv3-2",
+              "type": "multiple_choice",
+              "prompt": "'Adın ne?' = ___",
+              "options": [
+                "What your name?",
+                "What is your name?",
+                "Who is your name?",
+                "Your name is what?"
+              ],
+              "answer": "What is your name?"
+            },
+            {
+              "id": "rv3-3",
+              "type": "fill_blank",
+              "prompt": "'Güneş parlıyor.' = '___ sun is shining.'",
+              "answer": "The",
+              "acceptableAnswers": ["the", "THE"]
+            },
+            {
+              "id": "rv3-4",
+              "type": "match_pairs",
+              "prompt": "Soru-cevap eşleştir",
+              "pairs": [
+                {"left": "Where do you live?", "right": "In Ankara."},
+                {"left": "How old are you?", "right": "I am 25."},
+                {"left": "What is your name?", "right": "My name is Zeynep."},
+                {"left": "Why are you here?", "right": "To learn English."}
+              ]
+            },
+            {
+              "id": "rv3-5",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle DOĞRU?",
+              "options": [
+                "I am student.",
+                "I am a student.",
+                "I am the student.",
+                "I student."
+              ],
+              "answer": "I am a student."
+            },
+            {
+              "id": "rv3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Sırala: 'How many brothers do you have?'",
+              "answer": "How many brothers do you have",
+              "bank": ["How", "many", "brothers", "do", "you", "have", "much", "is"]
+            },
+            {
+              "id": "rv3-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun soruyu seç",
+              "spokenText": "Where are you from?",
+              "options": [
+                "Where are you from?",
+                "Who are you from?",
+                "When are you from?",
+                "Why are you from?"
+              ],
+              "answer": "Where are you from?"
+            },
+            {
+              "id": "rv3-8",
+              "type": "fill_blank",
+              "prompt": "'I drink ___ every morning.' (Her sabah çay içerim — genel.)",
+              "answer": "tea",
+              "acceptableAnswers": ["Tea", "TEA"]
+            },
+            {
+              "id": "rv3-9",
+              "type": "multiple_choice",
+              "prompt": "'How much is this?' Türkçede:",
+              "options": [
+                "Bu ne kadar (fiyat)?",
+                "Bu nedir?",
+                "Bu nerede?",
+                "Bu nasıl?"
+              ],
+              "answer": "Bu ne kadar (fiyat)?"
+            },
+            {
+              "id": "rv3-10",
+              "type": "multiple_choice",
+              "prompt": "Aşağıdaki cümlede hata var: 'My sister go to school.' Doğrusu:",
+              "options": [
+                "My sister goes to school.",
+                "My sister going to school.",
+                "My sister is go to school.",
+                "My sister gone to school."
+              ],
+              "answer": "My sister goes to school."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

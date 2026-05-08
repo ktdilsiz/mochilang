@@ -1,0 +1,1097 @@
+{
+  "id": "b2",
+  "name": "B2 — Üst Orta",
+  "description": "Soyut konuları tartışın, görüş bildirin, haberleri okuyun ve iş yerinde İngilizce kullanın. Karmaşık zamanlar, koşul cümleleri ve register farkları üzerine yoğunlaşır.",
+  "topics": [
+    {
+      "id": "en-tr-opinions",
+      "title": "Görüş Bildirme ve Savunma",
+      "description": "Fikrinizi nasıl açıklarsınız, nasıl yumuşatırsınız, nasıl karşı çıkarsınız",
+      "theme": "speaking",
+      "guide": {
+        "intro": "B2 düzeyinde sadece 'I think' demek yetmez. İngilizce konuşurlar görüşlerini farklı yumuşatma (hedging) araçlarıyla ifade eder. Türkçedeki 'bence', 'bana kalırsa', 'sanırım' gibi nüansların İngilizcede karşılıkları vardır — ama bire bir çevrilmezler.",
+        "sections": [
+          { "kind": "heading", "text": "Görüş açma kalıpları" },
+          { "kind": "paragraph", "text": "İngilizcede görüş bildirirken tonun gücünü ayarlamak önemlidir. 'I think' nötrdür; 'I believe' biraz daha güçlüdür; 'I'd argue' tartışmacı bir tondur; 'It seems to me' dolaylıdır." },
+          {
+            "kind": "table",
+            "headers": ["İngilizce", "Türkçe karşılığı", "Ton"],
+            "rows": [
+              ["I think (that)…", "Bence…", "Nötr"],
+              ["I believe (that)…", "İnanıyorum ki…", "Daha güçlü"],
+              ["I'd argue (that)…", "Şunu söyleyebilirim ki…", "Tartışmacı"],
+              ["It seems to me (that)…", "Bana öyle geliyor ki…", "Yumuşak"],
+              ["If you ask me…", "Bana sorarsan…", "Samimi"],
+              ["From my perspective…", "Benim açımdan…", "Resmi"]
+            ]
+          },
+          { "kind": "heading", "text": "Yumuşatma (hedging)" },
+          { "kind": "paragraph", "text": "İngilizce konuşurlar fikirlerini sıklıkla yumuşatır. 'sort of', 'kind of', 'I guess' gibi ifadeler Türkçede tam karşılığı zor olan dolgu kelimelerdir. Bunlar düşüncesizliği değil, nezaketi gösterir." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "I sort of agree, but I have one concern.", "translation": "Bir nevi katılıyorum ama bir kaygım var." },
+              { "source": "It's kind of complicated, to be honest.", "translation": "Açıkçası biraz karmaşık." },
+              { "source": "I'd say it's more nuanced than that.", "translation": "Bence durum bundan daha incelikli." },
+              { "source": "I'm not entirely convinced.", "translation": "Tam olarak ikna olmadım." }
+            ]
+          },
+          { "kind": "heading", "text": "Karşı çıkma — kibar versiyonlar" },
+          { "kind": "paragraph", "text": "Doğrudan 'You are wrong' demek İngilizcede çok serttir. Bunun yerine 'I see your point, but…', 'I'm not sure I agree' veya 'I have to disagree' tercih edilir." },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Türkçede 'Katılmıyorum' net bir cümledir; ancak İngilizce iş ortamında bunu yumuşatmadan söylemek kabaca algılanır. 'I'd have to respectfully disagree' çok daha güvenli bir formdur."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "I see where you're coming from, but I'd push back on that.", "translation": "Ne demek istediğini anlıyorum ama buna itiraz ederim." },
+              { "source": "With all due respect, I don't quite agree.", "translation": "Saygısızlık etmek istemem ama tam olarak katılmıyorum." },
+              { "source": "That's a fair point, although I'd add that…", "translation": "Haklı bir nokta, yine de şunu eklerdim ki…" }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-opinions-1",
+          "title": "Fikrinizi açma",
+          "description": "Görüş bildirme kalıplarını öğrenin",
+          "theme": "speaking",
+          "xp": 14,
+          "exercises": [
+            { "id": "op1-1", "type": "multiple_choice", "prompt": "'It seems to me that…' ifadesinin Türkçe karşılığı nedir?", "options": ["Görünüşe göre…", "Bana öyle geliyor ki…", "Kesinlikle inanıyorum ki…", "Bilmiyorum ama…"], "answer": "Bana öyle geliyor ki…", "explanation": "'It seems to me' kişisel bir izlenimi yumuşak biçimde aktarır." },
+            { "id": "op1-2", "type": "multiple_choice", "prompt": "'Bence bu fikir mantıklı' cümlesinin en doğal İngilizce karşılığı hangisidir?", "options": ["By me, this idea makes logic.", "I think this idea makes sense.", "From me, this idea is logic.", "In my opinion this idea is logical for me."], "answer": "I think this idea makes sense.", "explanation": "'Make sense' = 'mantıklı gelmek'. 'Make logic' yanlış bir kalıptır." },
+            { "id": "op1-3", "type": "fill_blank", "prompt": "'___ argue that remote work boosts productivity.' (Türkçe: 'Şunu söyleyebilirim ki uzaktan çalışma verimliliği artırır.')", "answer": "I'd", "acceptableAnswers": ["I would", "I'd"], "explanation": "'I'd argue' tartışmacı bir görüş bildirir." },
+            { "id": "op1-4", "type": "match_pairs", "prompt": "İngilizce kalıbı Türkçe karşılığıyla eşleştirin", "pairs": [
+              { "left": "If you ask me", "right": "Bana sorarsan" },
+              { "left": "From my perspective", "right": "Benim açımdan" },
+              { "left": "As far as I'm concerned", "right": "Bana kalırsa" },
+              { "left": "To my mind", "right": "Bence (resmi)" }
+            ]},
+            { "id": "op1-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bana kalırsa bu plan gerçekçi değil.'", "answer": "As far as I'm concerned this plan is not realistic", "bank": ["As", "far", "as", "I'm", "concerned", "this", "plan", "is", "not", "realistic", "very", "from"], "explanation": "'As far as I'm concerned' Türkçedeki 'bana kalırsa' kalıbına yakındır." },
+            { "id": "op1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "I'd argue that the policy needs revision.", "options": ["I'd argue that the policy needs revision.", "I argue the policy needs vision.", "I'd agree that the policy needs revision.", "I argued the police need revision."], "answer": "I'd argue that the policy needs revision.", "explanation": "'I'd argue' = 'I would argue'; tartışmacı görüş açıcı." },
+            { "id": "op1-7", "type": "fill_blank", "prompt": "'___ my mind, the proposal lacks substance.' (Türkçe: 'Bence öneri yeterince derinlikli değil.')", "answer": "To", "acceptableAnswers": ["to", "To"], "explanation": "'To my mind' = 'bence' (resmi)." },
+            { "id": "op1-8", "type": "multiple_choice", "prompt": "Hangi cümle EN GÜÇLÜ görüş bildirir?", "options": ["I sort of think it's fine.", "I'm firmly convinced this is the right path.", "It seems to me this might work.", "I guess it's OK."], "answer": "I'm firmly convinced this is the right path.", "explanation": "'Firmly convinced' = 'kesin biçimde ikna olmuş'. Diğerleri yumuşatma içerir." },
+            { "id": "op1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Benim açımdan bu çözüm yetersiz.'", "answer": "From my perspective this solution is inadequate", "bank": ["From", "my", "perspective", "this", "solution", "is", "inadequate", "out", "the", "very"] },
+            { "id": "op1-10", "type": "fill_blank", "prompt": "'Honestly, I ___ convinced.' Boşluğu doldurun (Türkçe: 'Açıkçası tam ikna olmadım.')", "answer": "am not entirely", "acceptableAnswers": ["am not entirely", "'m not entirely", "am not fully"], "explanation": "'Not entirely convinced' yumuşak bir karşı çıkma kalıbıdır." }
+          ]
+        },
+        {
+          "id": "en-tr-opinions-2",
+          "title": "Yumuşatma (Hedging)",
+          "description": "Fikirleri kibarca dolaştırın",
+          "theme": "speaking",
+          "xp": 14,
+          "exercises": [
+            { "id": "op2-1", "type": "multiple_choice", "prompt": "'sort of' ne işe yarar?", "options": ["Cümleyi netleştirir", "Cümleyi yumuşatır, kesinlik azaltır", "Geçmiş zaman yapar", "Soru kalıbıdır"], "answer": "Cümleyi yumuşatır, kesinlik azaltır", "explanation": "'sort of' = 'bir nevi'; iddiayı yumuşatır." },
+            { "id": "op2-2", "type": "fill_blank", "prompt": "'It's ___ complicated.' (Türkçe: 'Biraz karmaşık.')", "answer": "kind of", "acceptableAnswers": ["kind of", "sort of", "kinda", "sorta"], "explanation": "'kind of' / 'sort of' = 'biraz, bir nevi'." },
+            { "id": "op2-3", "type": "match_pairs", "prompt": "Yumuşatma ifadesini Türkçe karşılığıyla eşleyin", "pairs": [
+              { "left": "I guess", "right": "Sanırım" },
+              { "left": "I suppose", "right": "Galiba" },
+              { "left": "more or less", "right": "Aşağı yukarı" },
+              { "left": "to some extent", "right": "Bir ölçüde" }
+            ]},
+            { "id": "op2-4", "type": "multiple_choice", "prompt": "Aşağıdakilerden hangisi en NAZİK karşı çıkma kalıbıdır?", "options": ["You are wrong.", "No way.", "I'm not sure I agree.", "That makes no sense."], "answer": "I'm not sure I agree.", "explanation": "İş ortamında doğrudan 'You are wrong' kabaca algılanır." },
+            { "id": "op2-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Tam olarak ikna olmadığımı söylemeliyim.'", "answer": "I have to say I'm not entirely convinced", "bank": ["I", "have", "to", "say", "I'm", "not", "entirely", "convinced", "very", "fully", "the"] },
+            { "id": "op2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "With all due respect, I have to disagree.", "options": ["With all due respect, I have to disagree.", "With all the respect, I had to disagree.", "Without due respect, I have to agree.", "With all my respect, I have disagree."], "answer": "With all due respect, I have to disagree.", "explanation": "'With all due respect' = 'Saygısızlık etmek istemem ama'." },
+            { "id": "op2-7", "type": "fill_blank", "prompt": "'I see your point, ___ I'd push back on that.' (Türkçe: 'Anlıyorum, ama buna itiraz ederim.')", "answer": "but", "acceptableAnswers": ["but", "however", "though"], "explanation": "Karşı çıkışı yumuşatmak için önce kabul, sonra zıtlık verilir." },
+            { "id": "op2-8", "type": "multiple_choice", "prompt": "Hangi cümlede en az kesinlik vardır?", "options": ["This is definitely the best option.", "I sort of think this might work.", "We must do this immediately.", "There's no doubt about it."], "answer": "I sort of think this might work.", "explanation": "'sort of' + 'might' = çift yumuşatma." },
+            { "id": "op2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Saygısızlık etmek istemem ama bu fikre tam katılmıyorum.'", "answer": "With all due respect I don't quite agree with this idea", "bank": ["With", "all", "due", "respect", "I", "don't", "quite", "agree", "with", "this", "idea", "very", "the"] },
+            { "id": "op2-10", "type": "fill_blank", "prompt": "'That's a ___ point, although I'd add that…' (Türkçe: 'Haklı bir nokta, yine de şunu eklerdim…')", "answer": "fair", "acceptableAnswers": ["fair", "valid", "good"], "explanation": "'fair point' = 'haklı bir nokta'." }
+          ]
+        },
+        {
+          "id": "en-tr-opinions-3",
+          "title": "Tartışma kalıpları",
+          "description": "Görüş çatışmasında dengeyi koruyun",
+          "theme": "speaking",
+          "xp": 14,
+          "exercises": [
+            { "id": "op3-1", "type": "multiple_choice", "prompt": "'on the one hand… on the other hand…' yapısının Türkçe karşılığı nedir?", "options": ["Eğer… ise…", "Bir yandan… öte yandan…", "Çünkü… bu yüzden…", "Hem… hem de…"], "answer": "Bir yandan… öte yandan…", "explanation": "Tartışmada iki tarafı dengelemek için kullanılır." },
+            { "id": "op3-2", "type": "fill_blank", "prompt": "'___ admit that the data is mixed.' (Türkçe: 'İtiraf etmeliyim ki veriler karışık.')", "answer": "I'll", "acceptableAnswers": ["I'll", "I will", "I have to", "I must"], "explanation": "'I'll admit' = 'itiraf etmeliyim'." },
+            { "id": "op3-3", "type": "match_pairs", "prompt": "Tartışma kalıbını Türkçe karşılığıyla eşleyin", "pairs": [
+              { "left": "Granted, that's true, but…", "right": "Kabul, doğru ama…" },
+              { "left": "On the contrary", "right": "Aksine" },
+              { "left": "Having said that", "right": "Buna rağmen" },
+              { "left": "All things considered", "right": "Her şey göz önüne alındığında" }
+            ]},
+            { "id": "op3-4", "type": "multiple_choice", "prompt": "'Having said that' ne anlama gelir?", "options": ["Söylediğim gibi", "Buna rağmen / yine de", "Bunu söyledikten sonra", "Söyleyecek bir şey yok"], "answer": "Buna rağmen / yine de", "explanation": "Önceki cümleye karşıt bir nokta eklemek için kullanılır." },
+            { "id": "op3-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Her şey göz önüne alındığında plan başarılı oldu.'", "answer": "All things considered the plan was successful", "bank": ["All", "things", "considered", "the", "plan", "was", "successful", "very", "every"] },
+            { "id": "op3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "On the contrary, the evidence suggests otherwise.", "options": ["On the contrary, the evidence suggests otherwise.", "In the contrary, the evidences suggest otherwise.", "On the country, the evidence suggested otherwise.", "On contrary the evidence suggest otherwise."], "answer": "On the contrary, the evidence suggests otherwise." },
+            { "id": "op3-7", "type": "fill_blank", "prompt": "'___ the contrary, costs went down.' (Türkçe: 'Aksine, maliyetler düştü.')", "answer": "On", "acceptableAnswers": ["on", "On"], "explanation": "'On the contrary' sabit bir kalıptır." },
+            { "id": "op3-8", "type": "multiple_choice", "prompt": "Aşağıdakilerden hangisi 'Granted' kelimesinin tartışmadaki anlamıdır?", "options": ["Verildi", "Kabul / itiraf ederim ki", "Garantili", "Hediye edildi"], "answer": "Kabul / itiraf ederim ki", "explanation": "'Granted, X, but Y' = 'Kabul, X doğru ama Y'." },
+            { "id": "op3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bir yandan ucuz, öte yandan kalitesiz.'", "answer": "On the one hand it's cheap on the other hand it's low quality", "bank": ["On", "the", "one", "hand", "it's", "cheap", "on", "the", "other", "hand", "it's", "low", "quality", "but", "and"] },
+            { "id": "op3-10", "type": "fill_blank", "prompt": "'I take your point, ___ I see things differently.' (Türkçe: 'Söylediğini anlıyorum ama ben farklı görüyorum.')", "answer": "but", "acceptableAnswers": ["but", "though", "however"], "explanation": "'I take your point' kibar bir kabul, ardından 'but' ile karşı çıkma." }
+          ]
+        },
+        {
+          "id": "en-tr-opinions-4",
+          "title": "Görüşler — Tekrar",
+          "description": "Görüş bildirme ve tartışma kalıplarını birleştirin",
+          "theme": "speaking",
+          "xp": 14,
+          "exercises": [
+            { "id": "op4-1", "type": "multiple_choice", "prompt": "Hangi cümle bir görüşü EN RESMİ şekilde sunar?", "options": ["I guess it's OK.", "From my perspective, the proposal merits further consideration.", "Honestly, who cares?", "Yeah, sure, whatever."], "answer": "From my perspective, the proposal merits further consideration." },
+            { "id": "op4-2", "type": "fill_blank", "prompt": "'I'm ___ convinced that this is the right approach.' (Türkçe: 'Bunun doğru yaklaşım olduğuna kesinlikle inanıyorum.')", "answer": "firmly", "acceptableAnswers": ["firmly", "fully", "absolutely"], "explanation": "'firmly convinced' güçlü bir görüş bildirir." },
+            { "id": "op4-3", "type": "match_pairs", "prompt": "Türkçe ifadeyi en doğal İngilizce karşılığıyla eşleyin", "pairs": [
+              { "left": "Bana sorarsan", "right": "If you ask me" },
+              { "left": "Aksine", "right": "On the contrary" },
+              { "left": "Buna rağmen", "right": "Having said that" },
+              { "left": "Bence (resmi)", "right": "To my mind" }
+            ]},
+            { "id": "op4-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Saygısızlık etmek istemem ama veriler size katılmıyor.'", "answer": "With all due respect the data doesn't agree with you", "bank": ["With", "all", "due", "respect", "the", "data", "doesn't", "agree", "with", "you", "very", "not"] },
+            { "id": "op4-5", "type": "multiple_choice", "prompt": "Karşı çıkmak için en NAZİK kalıp hangisidir?", "options": ["You're completely wrong.", "I'd have to respectfully disagree.", "That's nonsense.", "I don't believe a word of it."], "answer": "I'd have to respectfully disagree." },
+            { "id": "op4-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Granted, the cost is high, but the long-term gains outweigh it.", "options": ["Granted, the cost is high, but the long-term gains outweigh it.", "Granted, the cost is high, but the long-term gains outweigh them.", "Grand, the cost is high, but long-term gains overweigh it.", "Granted, the costs are high, but long-term gains weigh outside."], "answer": "Granted, the cost is high, but the long-term gains outweigh it." },
+            { "id": "op4-7", "type": "fill_blank", "prompt": "'All things ___, the trade-off seems worth it.' (Türkçe: 'Her şey göz önüne alındığında, denge buna değer gibi.')", "answer": "considered", "acceptableAnswers": ["considered"], "explanation": "'All things considered' = 'Her şey göz önüne alındığında'." },
+            { "id": "op4-8", "type": "multiple_choice", "prompt": "'It seems to me that…' ne tür bir kalıptır?", "options": ["Doğrudan iddia", "Yumuşatılmış kişisel görüş", "Soru sormak için", "Emir vermek için"], "answer": "Yumuşatılmış kişisel görüş" },
+            { "id": "op4-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bir yandan haklısın, öte yandan zaman daralıyor.'", "answer": "On the one hand you're right on the other hand time is running out", "bank": ["On", "the", "one", "hand", "you're", "right", "on", "the", "other", "hand", "time", "is", "running", "out", "very"] },
+            { "id": "op4-10", "type": "fill_blank", "prompt": "'I take your ___, but I see things differently.' (Türkçe: 'Söylediğini anlıyorum ama farklı görüyorum.')", "answer": "point", "acceptableAnswers": ["point"], "explanation": "'Take someone's point' = 'birinin söylediğini anlamak'." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-news",
+      "title": "Haberleri Anlamak",
+      "description": "Manşetleri çözün, haber metinlerini takip edin",
+      "theme": "media",
+      "guide": {
+        "intro": "İngilizce haber dili kendine özgüdür: kısa manşetler, pasif yapı, atıf fiilleri ve yüksek frekanslı kelime grupları. Türk öğrenenler için tehlike, Türkçedeki gazete dilinin (özellikle Latince kökenli kelimelerle) bire bir İngilizceye uymamasıdır. 'Aktüel' İngilizcede 'current' demek değil, 'actual' yani 'gerçek' demektir — bu klasik bir false friend (sahte arkadaş)tır.",
+        "sections": [
+          { "kind": "heading", "text": "Manşet dili" },
+          { "kind": "paragraph", "text": "İngilizce manşetler genelde present tense kullanır (geçmişteki olay için bile), 'a/the' artikellerini düşürür ve to-infinitive'i gelecek için kullanır." },
+          {
+            "kind": "table",
+            "headers": ["Manşet", "Tam haliyle", "Türkçe"],
+            "rows": [
+              ["PM resigns amid scandal", "The PM has resigned amid a scandal", "Başbakan skandal ortasında istifa etti"],
+              ["Tech firm to acquire rival", "A tech firm is going to acquire its rival", "Teknoloji firması rakibini satın alacak"],
+              ["Markets tumble on news", "Markets tumbled on the news", "Piyasalar haber üzerine düştü"],
+              ["3 dead in factory blast", "Three people are dead in a factory explosion", "Fabrika patlamasında 3 kişi öldü"]
+            ]
+          },
+          { "kind": "heading", "text": "Atıf fiilleri (reporting verbs)" },
+          { "kind": "paragraph", "text": "Habercilikte 'said' her cümlede tekrarlanmaz. Yerine 'claimed', 'stated', 'announced', 'reported', 'denied' gibi nüanslı fiiller kullanılır. Her birinin tonu farklıdır." },
+          {
+            "kind": "table",
+            "headers": ["Fiil", "Anlamı", "Ton"],
+            "rows": [
+              ["said", "söyledi", "nötr"],
+              ["claimed", "iddia etti", "şüpheli"],
+              ["stated", "açıkladı", "resmi"],
+              ["announced", "duyurdu", "resmi, yeni"],
+              ["denied", "inkâr etti", "olumsuz"],
+              ["alleged", "iddia etti (kanıtsız)", "hukuki"]
+            ]
+          },
+          { "kind": "callout", "tone": "warning", "text": "Türkçedeki 'iddia etti' her zaman 'claimed' değildir. Resmi açıklama için 'stated' veya 'announced' daha doğrudur. 'claimed' İngilizcede genelde şüphe imâ eder." },
+          { "kind": "heading", "text": "Haber pasifi" },
+          { "kind": "paragraph", "text": "Haber dilinde özne belirsiz veya önemsizse pasif tercih edilir: 'Three people were arrested', 'A new policy is being introduced'." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "The bill is expected to pass next week.", "translation": "Tasarının önümüzdeki hafta geçmesi bekleniyor." },
+              { "source": "Two suspects have been detained.", "translation": "İki şüpheli gözaltına alındı." },
+              { "source": "The minister was reported to have stepped down.", "translation": "Bakanın görevden ayrıldığı bildirildi." }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-news-1",
+          "title": "Manşetleri çözmek",
+          "description": "Manşetlerin gizli gramerini öğrenin",
+          "theme": "media",
+          "xp": 14,
+          "exercises": [
+            { "id": "n1-1", "type": "multiple_choice", "prompt": "'PM resigns amid scandal' manşetinin tam ve nötr karşılığı nedir?", "options": ["The PM will resign because of a scandal.", "The PM has resigned amid a scandal.", "The PM is resigning while scandal.", "The PM should resign."], "answer": "The PM has resigned amid a scandal." },
+            { "id": "n1-2", "type": "multiple_choice", "prompt": "Manşette 'to + fiil' yapısı genellikle ne anlama gelir?", "options": ["Geçmiş olay", "Gelecek/planlanan olay", "Sürekli durum", "Şart"], "answer": "Gelecek/planlanan olay", "explanation": "'Tech firm to acquire rival' = 'satın alacak'." },
+            { "id": "n1-3", "type": "fill_blank", "prompt": "'3 ___ in factory blast' (Türkçe: 'Fabrika patlamasında 3 ölü')", "answer": "dead", "acceptableAnswers": ["dead", "killed"], "explanation": "Manşet dili kısalık için 'are dead' yerine sadece 'dead' kullanır." },
+            { "id": "n1-4", "type": "match_pairs", "prompt": "Manşeti tam karşılığıyla eşleyin", "pairs": [
+              { "left": "Markets tumble on news", "right": "Piyasalar haber üzerine düştü" },
+              { "left": "Talks set to resume", "right": "Görüşmeler yeniden başlayacak" },
+              { "left": "Bill blocked in senate", "right": "Tasarı senatoda engellendi" },
+              { "left": "CEO under fire", "right": "CEO baskı altında" }
+            ]},
+            { "id": "n1-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Tasarının önümüzdeki hafta geçmesi bekleniyor.'", "answer": "The bill is expected to pass next week", "bank": ["The", "bill", "is", "expected", "to", "pass", "next", "week", "will", "expect", "the"] },
+            { "id": "n1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz manşeti seçin", "spokenText": "Two suspects have been detained.", "options": ["Two suspects have been detained.", "Two suspect have detained.", "Two suspects had been detain.", "Two suspect has been detained."], "answer": "Two suspects have been detained." },
+            { "id": "n1-7", "type": "multiple_choice", "prompt": "'Government to launch new program' nasıl çevrilir?", "options": ["Hükümet yeni programı başlattı.", "Hükümet yeni bir program başlatacak.", "Hükümet yeni bir program başlatmalı.", "Hükümet yeni programa başladı."], "answer": "Hükümet yeni bir program başlatacak." },
+            { "id": "n1-8", "type": "fill_blank", "prompt": "'CEO ___ fire over remarks.' (Türkçe: 'CEO açıklamaları nedeniyle baskı altında.')", "answer": "under", "acceptableAnswers": ["under"], "explanation": "'under fire' = 'eleştiri/baskı altında'." },
+            { "id": "n1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bakanın istifa ettiği bildirildi.'", "answer": "The minister was reported to have stepped down", "bank": ["The", "minister", "was", "reported", "to", "have", "stepped", "down", "is", "step", "downs"] },
+            { "id": "n1-10", "type": "multiple_choice", "prompt": "Hangisi standart manşet kısaltma yöntemidir?", "options": ["Long passive sentences", "Past tense always", "Present tense + dropped articles", "Future continuous"], "answer": "Present tense + dropped articles" }
+          ]
+        },
+        {
+          "id": "en-tr-news-2",
+          "title": "Atıf fiilleri",
+          "description": "Said'in nüanslı kuzenleri",
+          "theme": "media",
+          "xp": 14,
+          "exercises": [
+            { "id": "n2-1", "type": "multiple_choice", "prompt": "'claimed' fiili genellikle hangi tonu taşır?", "options": ["Resmi onay", "Şüphe imâsı", "Coşku", "Kesinlik"], "answer": "Şüphe imâsı", "explanation": "'claimed' iddiacının doğruluğundan emin olunmadığını imâ eder." },
+            { "id": "n2-2", "type": "match_pairs", "prompt": "Atıf fiilini Türkçe karşılığıyla eşleyin", "pairs": [
+              { "left": "stated", "right": "açıkladı" },
+              { "left": "announced", "right": "duyurdu" },
+              { "left": "denied", "right": "inkâr etti" },
+              { "left": "alleged", "right": "iddia etti (kanıtsız)" }
+            ]},
+            { "id": "n2-3", "type": "fill_blank", "prompt": "'The minister ___ the allegations.' (Türkçe: 'Bakan iddiaları reddetti.')", "answer": "denied", "acceptableAnswers": ["denied"], "explanation": "'denied' = 'reddetti / inkâr etti'." },
+            { "id": "n2-4", "type": "multiple_choice", "prompt": "Resmi bir basın açıklaması için en uygun fiil hangisidir?", "options": ["whispered", "stated", "muttered", "shouted"], "answer": "stated" },
+            { "id": "n2-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Şirket yeni bir CEO duyurdu.'", "answer": "The company announced a new CEO", "bank": ["The", "company", "announced", "a", "new", "CEO", "the", "claimed", "denied"] },
+            { "id": "n2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Officials alleged misconduct in the report.", "options": ["Officials alleged misconduct in the report.", "Officials allowed misconduct in the report.", "Official alleged miscount in the report.", "Officials alleged misconduct in the resort."], "answer": "Officials alleged misconduct in the report." },
+            { "id": "n2-7", "type": "multiple_choice", "prompt": "Türkçedeki 'iddia etti' her zaman 'claimed' midir?", "options": ["Evet, her zaman.", "Hayır — resmi açıklama için 'stated/announced' daha uygundur.", "Hayır — sadece 'said' kullanılır.", "Evet, ama yalnızca yazılı dilde."], "answer": "Hayır — resmi açıklama için 'stated/announced' daha uygundur.", "explanation": "'claimed' şüphe imâ eder; resmi durumda yanlış ton verir." },
+            { "id": "n2-8", "type": "fill_blank", "prompt": "'The witness ___ that he saw nothing.' (Türkçe: 'Tanık hiçbir şey görmediğini iddia etti.')", "answer": "claimed", "acceptableAnswers": ["claimed", "alleged"], "explanation": "Tanığın iddiası genelde 'claimed' ile bildirilir." },
+            { "id": "n2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Polis cinayet zanlısının yakalandığını duyurdu.'", "answer": "Police announced that the murder suspect had been caught", "bank": ["Police", "announced", "that", "the", "murder", "suspect", "had", "been", "caught", "say", "are"] },
+            { "id": "n2-10", "type": "multiple_choice", "prompt": "Hangi atıf fiili 'kesin onay' tonu taşır?", "options": ["alleged", "claimed", "confirmed", "suggested"], "answer": "confirmed", "explanation": "'confirmed' = 'doğruladı'; bilgiyi resmî biçimde teyit eder." }
+          ]
+        },
+        {
+          "id": "en-tr-news-3",
+          "title": "Haber pasifi ve tarafsız ton",
+          "description": "Pasif yapıyı ve tarafsız atıfı haberlerde kullanın",
+          "theme": "media",
+          "xp": 14,
+          "exercises": [
+            { "id": "n3-1", "type": "multiple_choice", "prompt": "Haber dilinde pasif neden tercih edilir?", "options": ["Daha kısa olduğu için", "Eylemi yapan önemli/bilinmediği veya gizlenmek istendiği için", "Sadece geçmiş olaylar için", "Özne her zaman pasif kullanır"], "answer": "Eylemi yapan önemli/bilinmediği veya gizlenmek istendiği için" },
+            { "id": "n3-2", "type": "fill_blank", "prompt": "'Three people ___ arrested last night.' (Türkçe: 'Dün gece üç kişi tutuklandı.')", "answer": "were", "acceptableAnswers": ["were", "have been"], "explanation": "Pasifte be-fiili + V3 yapısı." },
+            { "id": "n3-3", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yeni bir politika tanıtılmaktadır.'", "answer": "A new policy is being introduced", "bank": ["A", "new", "policy", "is", "being", "introduced", "was", "the", "introduce"] },
+            { "id": "n3-4", "type": "match_pairs", "prompt": "Pasif zaman + Türkçe", "pairs": [
+              { "left": "is being investigated", "right": "soruşturulmaktadır" },
+              { "left": "has been confirmed", "right": "teyit edildi" },
+              { "left": "was reported", "right": "bildirildi" },
+              { "left": "will be announced", "right": "duyurulacak" }
+            ]},
+            { "id": "n3-5", "type": "multiple_choice", "prompt": "'It is reported that…' kalıbının Türkçe karşılığı nedir?", "options": ["Bildirildiğine göre…", "Şu rapor…", "Bilgi verilmiyor…", "Raporlanmaktadır…"], "answer": "Bildirildiğine göre…", "explanation": "'It is reported that…' = 'Bildirildiğine göre…'." },
+            { "id": "n3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "The investigation is being conducted by federal agents.", "options": ["The investigation is being conducted by federal agents.", "The investigations is being conduct by federal agent.", "The investigation are being conducted by federal agent.", "The investigation has being conducted by federal agents."], "answer": "The investigation is being conducted by federal agents." },
+            { "id": "n3-7", "type": "fill_blank", "prompt": "'A breakthrough has ___ achieved.' (Türkçe: 'Bir atılım sağlandı.')", "answer": "been", "acceptableAnswers": ["been"], "explanation": "Present perfect passive: have been + V3." },
+            { "id": "n3-8", "type": "multiple_choice", "prompt": "Hangi cümle daha tarafsız bir habercilik tonu taşır?", "options": ["The crooked minister got booted out.", "The minister was dismissed from office.", "Some guy fired the minister.", "They kicked out the minister."], "answer": "The minister was dismissed from office.", "explanation": "Pasif + nötr fiil, haberci tonu üretir." },
+            { "id": "n3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sınır kapısının kapatılmış olduğu bildirildi.'", "answer": "The border crossing was reported to have been closed", "bank": ["The", "border", "crossing", "was", "reported", "to", "have", "been", "closed", "is", "are", "close"] },
+            { "id": "n3-10", "type": "fill_blank", "prompt": "'The bill ___ expected to pass.' (Türkçe: 'Tasarının geçmesi bekleniyor.')", "answer": "is", "acceptableAnswers": ["is"], "explanation": "'is expected to' kalıbında simple present passive." }
+          ]
+        },
+        {
+          "id": "en-tr-news-4",
+          "title": "Haber sözcükleri ve false friends",
+          "description": "Yanıltıcı kelime çiftlerine dikkat",
+          "theme": "media",
+          "xp": 14,
+          "exercises": [
+            { "id": "n4-1", "type": "multiple_choice", "prompt": "İngilizce 'actual' kelimesinin Türkçe karşılığı nedir?", "options": ["Güncel / aktüel", "Gerçek", "Aktif", "Aktör"], "answer": "Gerçek", "explanation": "'actual' = 'gerçek'. Türkçedeki 'aktüel' = 'current'. Klasik false friend." },
+            { "id": "n4-2", "type": "match_pairs", "prompt": "False friend çiftlerini eşleyin", "pairs": [
+              { "left": "actual", "right": "gerçek" },
+              { "left": "current", "right": "güncel" },
+              { "left": "sensible", "right": "mantıklı" },
+              { "left": "sensitive", "right": "hassas" }
+            ]},
+            { "id": "n4-3", "type": "fill_blank", "prompt": "'The ___ situation is unclear.' (Türkçe: 'Güncel durum belirsiz.')", "answer": "current", "acceptableAnswers": ["current"], "explanation": "'current' = 'güncel'; 'actual' yanlış olur." },
+            { "id": "n4-4", "type": "multiple_choice", "prompt": "Türkçedeki 'kontrol etmek' İngilizceye en doğru çevrilir:", "options": ["control", "check", "controlling", "controle"], "answer": "check", "explanation": "'control' İngilizcede 'hâkimiyet kurmak' demektir; gözden geçirmek için 'check' kullanılır." },
+            { "id": "n4-5", "type": "fill_blank", "prompt": "'Please ___ the documents.' (Türkçe: 'Lütfen belgeleri kontrol et / gözden geçir.')", "answer": "check", "acceptableAnswers": ["check", "review"], "explanation": "'control' burada uygunsuz olur." },
+            { "id": "n4-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "He's a sensible man with reasonable ideas.", "options": ["He's a sensible man with reasonable ideas.", "He's a sensitive man with reasonable ideas.", "He's a sensual man with reason ideas.", "He's a sense man with reasonable ideas."], "answer": "He's a sensible man with reasonable ideas." },
+            { "id": "n4-7", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Güncel olaylar fiyatları etkiliyor.'", "answer": "Current events are affecting prices", "bank": ["Current", "events", "are", "affecting", "prices", "actual", "the", "is"] },
+            { "id": "n4-8", "type": "multiple_choice", "prompt": "Aşağıdakilerden hangisi yanlış kullanımdır?", "options": ["The actual data shows growth.", "The current weather is cold.", "He is a sensible engineer.", "The actual weather report says rain (= güncel hava durumu)."], "answer": "The actual weather report says rain (= güncel hava durumu).", "explanation": "Burada 'current' olmalı; 'actual' = 'gerçek', anlamı bozar." },
+            { "id": "n4-9", "type": "fill_blank", "prompt": "'She is very ___ to criticism.' (Türkçe: 'Eleştiriye karşı çok hassas.')", "answer": "sensitive", "acceptableAnswers": ["sensitive"], "explanation": "Hassas = 'sensitive'; 'sensible' = 'mantıklı'." },
+            { "id": "n4-10", "type": "multiple_choice", "prompt": "'eventual' kelimesinin Türkçe karşılığı nedir?", "options": ["olası / nihayetinde gerçekleşecek olan", "olaylı", "olay", "evet"], "answer": "olası / nihayetinde gerçekleşecek olan", "explanation": "False friend! 'eventual' = 'sonunda gerçekleşecek olan'; Türkçedeki 'eventüel' (olası) ile karışır." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-environment",
+      "title": "Çevre ve İklim",
+      "description": "İklim değişikliği, sürdürülebilirlik ve doğal kaynaklar üzerine konuşun",
+      "theme": "topics",
+      "guide": {
+        "intro": "Çevre konusunda B2 seviyesinde tartışabilmek için collocations (kelime grupları) kritik. 'Take action' der, 'do action' demezsiniz; 'reduce emissions' der, 'lower emissions' bile mümkün ama 'shrink emissions' tuhaf kaçar.",
+        "sections": [
+          { "kind": "heading", "text": "Önemli kelime grupları" },
+          {
+            "kind": "table",
+            "headers": ["Kelime grubu", "Türkçe"],
+            "rows": [
+              ["climate change", "iklim değişikliği"],
+              ["greenhouse gas emissions", "sera gazı salımı"],
+              ["renewable energy", "yenilenebilir enerji"],
+              ["carbon footprint", "karbon ayak izi"],
+              ["sustainable development", "sürdürülebilir kalkınma"],
+              ["biodiversity loss", "biyoçeşitlilik kaybı"],
+              ["take action on…", "… konusunda harekete geçmek"],
+              ["reduce / cut emissions", "salımı azaltmak"]
+            ]
+          },
+          { "kind": "heading", "text": "Karmaşık modaller" },
+          { "kind": "paragraph", "text": "Çevre tartışmasında olasılık ve gereklilik çok geçer. 'must', 'should', 'ought to', 'might', 'could' farklı dereceler verir. 'We must cut emissions' güçlü zorunluluk; 'We could explore alternatives' yumuşak öneri." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "Governments must take immediate action on climate change.", "translation": "Hükümetler iklim değişikliğine karşı acil önlem almalıdır." },
+              { "source": "We could reduce our carbon footprint by switching to renewables.", "translation": "Yenilenebilirlere geçerek karbon ayak izimizi azaltabiliriz." },
+              { "source": "Without intervention, biodiversity loss is bound to accelerate.", "translation": "Müdahale olmadan biyoçeşitlilik kaybı kesinlikle hızlanacaktır." }
+            ]
+          },
+          { "kind": "callout", "tone": "info", "text": "'bound to' = 'kesinlikle olacak/olmuş', tahminin güçlü hali. Türkçede 'kaçınılmaz' ile aynı kuvvettedir." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-environment-1",
+          "title": "İklim sözcükleri",
+          "description": "Temel terimleri ezberleyin",
+          "theme": "topics",
+          "xp": 12,
+          "exercises": [
+            { "id": "env1-1", "type": "match_pairs", "prompt": "Terimi Türkçe karşılığıyla eşleyin", "pairs": [
+              { "left": "climate change", "right": "iklim değişikliği" },
+              { "left": "renewable energy", "right": "yenilenebilir enerji" },
+              { "left": "carbon footprint", "right": "karbon ayak izi" },
+              { "left": "biodiversity", "right": "biyoçeşitlilik" }
+            ]},
+            { "id": "env1-2", "type": "multiple_choice", "prompt": "'greenhouse gas emissions' nedir?", "options": ["Sera gazı salımı", "Yeşil ev gazları", "Sera bahçesi", "Gaz tesisatı"], "answer": "Sera gazı salımı" },
+            { "id": "env1-3", "type": "fill_blank", "prompt": "'We need to cut greenhouse gas ___.' (Türkçe: 'Sera gazı salımını azaltmalıyız.')", "answer": "emissions", "acceptableAnswers": ["emissions"] },
+            { "id": "env1-4", "type": "multiple_choice", "prompt": "Hangi cümle doğru collocation kullanır?", "options": ["We must do action on climate change.", "We must take action on climate change.", "We must make action on climate change.", "We must put action on climate change."], "answer": "We must take action on climate change.", "explanation": "'take action' sabit collocation'dur." },
+            { "id": "env1-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yenilenebilir enerji giderek daha uygun fiyatlı hale geliyor.'", "answer": "Renewable energy is becoming more affordable", "bank": ["Renewable", "energy", "is", "becoming", "more", "affordable", "the", "very", "expensive"] },
+            { "id": "env1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Carbon emissions are rising sharply.", "options": ["Carbon emissions are rising sharply.", "Carbon emission is rising sharp.", "Carbon admissions are rising sharply.", "Carbon emissions are raising sharply."], "answer": "Carbon emissions are rising sharply." },
+            { "id": "env1-7", "type": "fill_blank", "prompt": "'My ___ footprint is too large.' (Türkçe: 'Karbon ayak izim çok büyük.')", "answer": "carbon", "acceptableAnswers": ["carbon"] },
+            { "id": "env1-8", "type": "multiple_choice", "prompt": "'sustainable' kelimesinin Türkçe karşılığı nedir?", "options": ["sürdürülebilir", "sürekli", "destek", "saklanabilir"], "answer": "sürdürülebilir" },
+            { "id": "env1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Biyoçeşitlilik kaybı endişe verici bir hızla devam ediyor.'", "answer": "Biodiversity loss is continuing at an alarming rate", "bank": ["Biodiversity", "loss", "is", "continuing", "at", "an", "alarming", "rate", "the", "very", "speed"] },
+            { "id": "env1-10", "type": "fill_blank", "prompt": "'Many countries are investing in ___ energy.' (Türkçe: 'Birçok ülke yenilenebilir enerjiye yatırım yapıyor.')", "answer": "renewable", "acceptableAnswers": ["renewable"] }
+          ]
+        },
+        {
+          "id": "en-tr-environment-2",
+          "title": "Modallar ile öneri sunma",
+          "description": "Öneri ve zorunluluk derecelerini ayarlayın",
+          "theme": "topics",
+          "xp": 12,
+          "exercises": [
+            { "id": "env2-1", "type": "multiple_choice", "prompt": "Hangi cümle EN GÜÇLÜ zorunluluk bildirir?", "options": ["We could cut emissions.", "We might cut emissions.", "We must cut emissions.", "We may cut emissions."], "answer": "We must cut emissions." },
+            { "id": "env2-2", "type": "match_pairs", "prompt": "Modal — Türkçe", "pairs": [
+              { "left": "must", "right": "-meli (kesin)" },
+              { "left": "should", "right": "-meli (öneri)" },
+              { "left": "might", "right": "-ebilir (olasılık)" },
+              { "left": "ought to", "right": "-meli (ahlaki)" }
+            ]},
+            { "id": "env2-3", "type": "fill_blank", "prompt": "'We ___ explore alternative fuels.' (Türkçe: 'Alternatif yakıtları araştırabiliriz.')", "answer": "could", "acceptableAnswers": ["could", "might"] },
+            { "id": "env2-4", "type": "multiple_choice", "prompt": "'bound to' ne anlama gelir?", "options": ["Bağlanmak", "Sınırlanmak", "Kesinlikle olacak / kaçınılmaz", "İsteksiz"], "answer": "Kesinlikle olacak / kaçınılmaz" },
+            { "id": "env2-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Müdahale olmadan kayıp kaçınılmazdır.'", "answer": "Without intervention the loss is bound to occur", "bank": ["Without", "intervention", "the", "loss", "is", "bound", "to", "occur", "are", "happen", "no"] },
+            { "id": "env2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Governments ought to invest more in clean technology.", "options": ["Governments ought to invest more in clean technology.", "Governments out to invest more in clean technology.", "Governments ought invest more in clean technology.", "Governments oughta to invest in clean technology."], "answer": "Governments ought to invest more in clean technology." },
+            { "id": "env2-7", "type": "fill_blank", "prompt": "'Companies ___ disclose their emissions data.' (Türkçe: 'Şirketler salım verilerini açıklamalı.')", "answer": "should", "acceptableAnswers": ["should", "must", "ought to"] },
+            { "id": "env2-8", "type": "multiple_choice", "prompt": "Hangi modal en NAZİK öneri sunar?", "options": ["must", "have to", "might want to", "need to"], "answer": "might want to", "explanation": "'might want to' yumuşak, dolaylı bir öneridir." },
+            { "id": "env2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Politika yapıcılar yenilenebilirlere geçişi düşünmeli.'", "answer": "Policymakers should consider transitioning to renewables", "bank": ["Policymakers", "should", "consider", "transitioning", "to", "renewables", "must", "the", "renewable"] },
+            { "id": "env2-10", "type": "fill_blank", "prompt": "'Without action, the climate ___ continue to warm.' (Türkçe: 'Önlem alınmazsa iklim ısınmaya devam edecek.')", "answer": "will", "acceptableAnswers": ["will"] }
+          ]
+        },
+        {
+          "id": "en-tr-environment-3",
+          "title": "Sorun ve çözüm dili",
+          "description": "Çevre sorununu sunun, çözüm önerin",
+          "theme": "topics",
+          "xp": 12,
+          "exercises": [
+            { "id": "env3-1", "type": "match_pairs", "prompt": "Sorun-çözüm kalıbını eşleyin", "pairs": [
+              { "left": "tackle the problem", "right": "soruna el atmak" },
+              { "left": "address an issue", "right": "bir konuya değinmek" },
+              { "left": "come up with a solution", "right": "çözüm bulmak" },
+              { "left": "raise awareness", "right": "farkındalık yaratmak" }
+            ]},
+            { "id": "env3-2", "type": "multiple_choice", "prompt": "Hangi fiil 'çözüm bulmak' anlamına gelir?", "options": ["come up with", "come over", "come down", "come along"], "answer": "come up with" },
+            { "id": "env3-3", "type": "fill_blank", "prompt": "'We need to ___ awareness about plastic waste.' (Türkçe: 'Plastik atık konusunda farkındalık yaratmalıyız.')", "answer": "raise", "acceptableAnswers": ["raise"] },
+            { "id": "env3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Hepimizin sorumlu davranması gerekiyor.'", "answer": "All of us need to act responsibly", "bank": ["All", "of", "us", "need", "to", "act", "responsibly", "responsible", "every", "the"] },
+            { "id": "env3-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "We have to tackle plastic pollution head-on.", "options": ["We have to tackle plastic pollution head-on.", "We had to tackle plastic pollution head on.", "We have to tickle plastic pollution head on.", "We have to tack plastic pollution head-on."], "answer": "We have to tackle plastic pollution head-on." },
+            { "id": "env3-6", "type": "multiple_choice", "prompt": "'address an issue' ne demektir?", "options": ["Adres yazmak", "Bir konuya değinmek / ele almak", "Sorun çıkarmak", "Adres değiştirmek"], "answer": "Bir konuya değinmek / ele almak" },
+            { "id": "env3-7", "type": "fill_blank", "prompt": "'Cities are ___ to extreme weather.' (Türkçe: 'Şehirler aşırı havaya karşı kırılgan.')", "answer": "vulnerable", "acceptableAnswers": ["vulnerable"], "explanation": "'vulnerable to' = 'kırılgan / hassas'." },
+            { "id": "env3-8", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Su kıtlığı kalıcı bir sorun haline geliyor.'", "answer": "Water scarcity is becoming a persistent problem", "bank": ["Water", "scarcity", "is", "becoming", "a", "persistent", "problem", "the", "very", "issue"] },
+            { "id": "env3-9", "type": "multiple_choice", "prompt": "Hangi cümle çevre çözümünü VURGULAR?", "options": ["The problem is impossible to solve.", "Switching to electric vehicles offers a viable path forward.", "Things will probably get worse.", "Nobody cares anyway."], "answer": "Switching to electric vehicles offers a viable path forward." },
+            { "id": "env3-10", "type": "fill_blank", "prompt": "'Recycling alone ___ enough.' (Türkçe: 'Tek başına geri dönüşüm yeterli değil.')", "answer": "isn't", "acceptableAnswers": ["isn't", "is not"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-tech",
+      "title": "Teknoloji ve İş Dünyası",
+      "description": "Yapay zeka, dijital dönüşüm ve iş İngilizcesi",
+      "theme": "topics",
+      "guide": {
+        "intro": "Teknoloji İngilizcesi hızla evrilen bir alandır. Türkçeye çoğunluğu doğrudan girmiş kelimeler vardır (server, software) ama collocations'lar (run a meeting, scale up, ship a feature) ezber gerektirir.",
+        "sections": [
+          { "kind": "heading", "text": "İş yeri fiilleri" },
+          {
+            "kind": "table",
+            "headers": ["İngilizce", "Türkçe", "Örnek"],
+            "rows": [
+              ["run a meeting", "toplantı yönetmek", "She'll run the meeting."],
+              ["scale up", "büyütmek / ölçeklemek", "We need to scale up production."],
+              ["ship a feature", "özellik yayınlamak", "We shipped the new feature."],
+              ["roll out a product", "ürün piyasaya sürmek", "They rolled out the update."],
+              ["onboard a client", "müşteriyi sisteme almak", "I'll onboard the new client."],
+              ["follow up on…", "takip etmek", "I'll follow up on the email."]
+            ]
+          },
+          { "kind": "heading", "text": "Veri ve sayılar" },
+          { "kind": "paragraph", "text": "İş İngilizcesinde sayıları doğru ifade etmek kritik. 'A 20% increase' der, 'a 20 percentage increase' demezsiniz. 'A ballpark figure' yaklaşık tahmin demektir; 'rough estimate' ile aynıdır." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "Revenue grew by 15% year over year.", "translation": "Gelir yıllık bazda %15 büyüdü." },
+              { "source": "Can you give me a ballpark figure?", "translation": "Yaklaşık bir rakam verebilir misin?" },
+              { "source": "We're trending in the right direction.", "translation": "İyi yönde ilerliyoruz." }
+            ]
+          },
+          { "kind": "callout", "tone": "tip", "text": "Türkçedeki 'agresif satış' İngilizcede 'aggressive sales' olarak doğrudan kullanılır ama olumsuz çağrışımlıdır. Olumlu için 'driven', 'ambitious', 'proactive' tercih edin." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-tech-1",
+          "title": "İş yeri fiilleri",
+          "description": "Toplantı, ürün, müşteri",
+          "theme": "topics",
+          "xp": 12,
+          "exercises": [
+            { "id": "tch1-1", "type": "match_pairs", "prompt": "Phrasal verb — Türkçe", "pairs": [
+              { "left": "scale up", "right": "ölçeklemek" },
+              { "left": "roll out", "right": "piyasaya sürmek" },
+              { "left": "follow up", "right": "takip etmek" },
+              { "left": "ship", "right": "yayınlamak" }
+            ]},
+            { "id": "tch1-2", "type": "multiple_choice", "prompt": "'I'll follow up on the email' nasıl çevrilir?", "options": ["E-postayı yukarı taşıyacağım.", "E-postayı takip edeceğim.", "E-postayı yazacağım.", "E-postayı sileceğim."], "answer": "E-postayı takip edeceğim." },
+            { "id": "tch1-3", "type": "fill_blank", "prompt": "'We need to ___ up our infrastructure.' (Türkçe: 'Altyapımızı ölçeklemeliyiz.')", "answer": "scale", "acceptableAnswers": ["scale"] },
+            { "id": "tch1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yeni özelliği gelecek hafta yayınlıyoruz.'", "answer": "We are shipping the new feature next week", "bank": ["We", "are", "shipping", "the", "new", "feature", "next", "week", "ship", "is", "old"] },
+            { "id": "tch1-5", "type": "multiple_choice", "prompt": "'onboard a client' ne anlama gelir?", "options": ["Müşteriyi geri çevirmek", "Müşteriyi sisteme/sürece dahil etmek", "Müşteriyi gemiye almak", "Müşteriyle yemek yemek"], "answer": "Müşteriyi sisteme/sürece dahil etmek" },
+            { "id": "tch1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "We rolled out the update last Tuesday.", "options": ["We rolled out the update last Tuesday.", "We roll out the update last Tuesday.", "We rolled the update out last Thursday.", "We rolling out the update last Tuesday."], "answer": "We rolled out the update last Tuesday." },
+            { "id": "tch1-7", "type": "fill_blank", "prompt": "'Can you ___ up on that ticket?' (Türkçe: 'O bilet üzerinden takip edebilir misin?')", "answer": "follow", "acceptableAnswers": ["follow"] },
+            { "id": "tch1-8", "type": "multiple_choice", "prompt": "İş yerinde 'agresif' demek için en güvenli kelime?", "options": ["aggressive", "ambitious", "rude", "violent"], "answer": "ambitious", "explanation": "'aggressive' İngilizcede sıkça olumsuzdur; 'ambitious' veya 'driven' güvenlidir." },
+            { "id": "tch1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yeni müşteriyi yarın sisteme alacağım.'", "answer": "I'll onboard the new client tomorrow", "bank": ["I'll", "onboard", "the", "new", "client", "tomorrow", "yesterday", "the", "off"] },
+            { "id": "tch1-10", "type": "fill_blank", "prompt": "'She'll ___ the meeting at 10.' (Türkçe: 'Toplantıyı 10'da o yönetecek.')", "answer": "run", "acceptableAnswers": ["run", "lead", "chair"] }
+          ]
+        },
+        {
+          "id": "en-tr-tech-2",
+          "title": "Sayılar ve veriler",
+          "description": "Yüzdeler, eğilimler, tahminler",
+          "theme": "topics",
+          "xp": 12,
+          "exercises": [
+            { "id": "tch2-1", "type": "multiple_choice", "prompt": "'a ballpark figure' ne demektir?", "options": ["Stadyum rakamı", "Yaklaşık bir tahmin", "Kesin sayı", "Beysbol skoru"], "answer": "Yaklaşık bir tahmin" },
+            { "id": "tch2-2", "type": "fill_blank", "prompt": "'Revenue grew ___ 15% year over year.' (Türkçe: 'Gelir yıllık %15 büyüdü.')", "answer": "by", "acceptableAnswers": ["by"], "explanation": "'grow by + miktar' = 'kadar büyümek'." },
+            { "id": "tch2-3", "type": "match_pairs", "prompt": "Veri terimi — Türkçe", "pairs": [
+              { "left": "year over year", "right": "yıllık bazda" },
+              { "left": "rough estimate", "right": "kaba tahmin" },
+              { "left": "trending up", "right": "yükseliş eğiliminde" },
+              { "left": "flat", "right": "değişmemiş" }
+            ]},
+            { "id": "tch2-4", "type": "multiple_choice", "prompt": "'Our numbers are flat' ne anlama gelir?", "options": ["Sayılarımız düz / değişmedi", "Sayılarımız çok düşük", "Sayılarımız çok yüksek", "Sayılarımız ezildi"], "answer": "Sayılarımız düz / değişmedi" },
+            { "id": "tch2-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bana yaklaşık bir rakam verebilir misin?'", "answer": "Can you give me a ballpark figure", "bank": ["Can", "you", "give", "me", "a", "ballpark", "figure", "the", "exactly", "ball"] },
+            { "id": "tch2-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Sales are trending in the right direction.", "options": ["Sales are trending in the right direction.", "Sales is trending in the right direction.", "Sales are trended in the right direction.", "Sales are trends in right direction."], "answer": "Sales are trending in the right direction." },
+            { "id": "tch2-7", "type": "fill_blank", "prompt": "'Profit fell ___ 8% last quarter.' (Türkçe: 'Geçen çeyrek kâr %8 düştü.')", "answer": "by", "acceptableAnswers": ["by"] },
+            { "id": "tch2-8", "type": "multiple_choice", "prompt": "Hangi cümle iş İngilizcesinde nötrdür?", "options": ["The numbers absolutely tanked.", "Revenue declined by 5%.", "Sales are dead in the water.", "We crashed and burned."], "answer": "Revenue declined by 5%." },
+            { "id": "tch2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Müşteri kaybı %3 arttı.'", "answer": "Customer churn increased by 3 percent", "bank": ["Customer", "churn", "increased", "by", "3", "percent", "customers", "decrease", "the"] },
+            { "id": "tch2-10", "type": "fill_blank", "prompt": "'We expect a ___ growth next year.' (Türkçe: 'Önümüzdeki yıl makul bir büyüme bekliyoruz.')", "answer": "modest", "acceptableAnswers": ["modest", "moderate"], "explanation": "'modest growth' = 'mütevazı/makul büyüme'." }
+          ]
+        },
+        {
+          "id": "en-tr-tech-3",
+          "title": "Yapay zeka ve dijital dönüşüm",
+          "description": "Güncel teknoloji konularında konuşun",
+          "theme": "topics",
+          "xp": 12,
+          "exercises": [
+            { "id": "tch3-1", "type": "match_pairs", "prompt": "Terim — Türkçe", "pairs": [
+              { "left": "machine learning", "right": "makine öğrenmesi" },
+              { "left": "data-driven", "right": "veriye dayalı" },
+              { "left": "cloud computing", "right": "bulut bilişim" },
+              { "left": "automation", "right": "otomasyon" }
+            ]},
+            { "id": "tch3-2", "type": "multiple_choice", "prompt": "'data-driven decision' nedir?", "options": ["Verisiz karar", "Veriye dayalı karar", "Hızlı karar", "Sezgisel karar"], "answer": "Veriye dayalı karar" },
+            { "id": "tch3-3", "type": "fill_blank", "prompt": "'AI is ___ many industries.' (Türkçe: 'YZ birçok sektörü dönüştürüyor.')", "answer": "transforming", "acceptableAnswers": ["transforming", "reshaping", "changing"] },
+            { "id": "tch3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Otomasyon bazı işleri otomatik olarak yerine getiriyor.'", "answer": "Automation is performing some tasks automatically", "bank": ["Automation", "is", "performing", "some", "tasks", "automatically", "automate", "the", "tasked"] },
+            { "id": "tch3-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Cloud computing has become the industry standard.", "options": ["Cloud computing has become the industry standard.", "Cloud computer has become the industry standard.", "Cloud computing has becoming the industries standard.", "Cloud computer is become the industry standard."], "answer": "Cloud computing has become the industry standard." },
+            { "id": "tch3-6", "type": "multiple_choice", "prompt": "'disrupt an industry' ne demektir?", "options": ["Sektörü kapatmak", "Sektörü kökten değiştirmek", "Sektörle rekabet etmek", "Sektörden ayrılmak"], "answer": "Sektörü kökten değiştirmek" },
+            { "id": "tch3-7", "type": "fill_blank", "prompt": "'Many jobs are at ___ from automation.' (Türkçe: 'Birçok iş otomasyon nedeniyle risk altında.')", "answer": "risk", "acceptableAnswers": ["risk"], "explanation": "'at risk from' = 'risk altında'." },
+            { "id": "tch3-8", "type": "multiple_choice", "prompt": "Hangi cümle resmî bir teknoloji raporundan olabilir?", "options": ["AI's gonna take all our jobs lol.", "Recent advances in machine learning have led to significant productivity gains.", "Tech bros say robots win.", "Computers are getting smart, kind of."], "answer": "Recent advances in machine learning have led to significant productivity gains." },
+            { "id": "tch3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Algoritmalar büyük veri kümelerinden öğreniyor.'", "answer": "Algorithms learn from large datasets", "bank": ["Algorithms", "learn", "from", "large", "datasets", "algorithm", "small", "the"] },
+            { "id": "tch3-10", "type": "fill_blank", "prompt": "'We rely on ___ analytics to guide strategy.' (Türkçe: 'Stratejiyi yönlendirmek için veri analitiğine güveniyoruz.')", "answer": "data", "acceptableAnswers": ["data"] }
+          ]
+        },
+        {
+          "id": "en-tr-tech-4",
+          "title": "İş İngilizcesi mini-tekrar",
+          "description": "Toplantı, sayı ve teknoloji birleşimi",
+          "theme": "topics",
+          "xp": 12,
+          "exercises": [
+            { "id": "tch4-1", "type": "multiple_choice", "prompt": "Toplantıda 'şu konuya değinmek istiyorum' demek için en doğal kalıp?", "options": ["I want to address the following point.", "I will say one thing now.", "Let me come from this.", "I am opening this point."], "answer": "I want to address the following point." },
+            { "id": "tch4-2", "type": "fill_blank", "prompt": "'Let's circle ___ to that later.' (Türkçe: 'Buna sonra geri döneriz.')", "answer": "back", "acceptableAnswers": ["back"], "explanation": "'circle back' iş İngilizcesinde 'geri dönmek/tekrar bahsetmek'." },
+            { "id": "tch4-3", "type": "match_pairs", "prompt": "Toplantı kalıbı — Türkçe", "pairs": [
+              { "left": "circle back", "right": "geri dönmek" },
+              { "left": "deep dive", "right": "ayrıntılı incelemek" },
+              { "left": "table the discussion", "right": "tartışmayı ertelemek" },
+              { "left": "loop someone in", "right": "birini sürece dahil etmek" }
+            ]},
+            { "id": "tch4-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yeni özelliği üç ay içinde piyasaya sürdük.'", "answer": "We rolled out the new feature in three months", "bank": ["We", "rolled", "out", "the", "new", "feature", "in", "three", "months", "month", "old"] },
+            { "id": "tch4-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Let me loop you in on the latest update.", "options": ["Let me loop you in on the latest update.", "Let me loop you on the latest update.", "Let me loops you in on the latest update.", "Let me leap you in on the latest update."], "answer": "Let me loop you in on the latest update." },
+            { "id": "tch4-6", "type": "multiple_choice", "prompt": "'Let's table this discussion' ne anlama gelir? (US business English)", "options": ["Tartışmayı masaya yatıralım/yapalım", "Tartışmayı erteleyelim", "Tartışmayı sonuçlandıralım", "Tartışmayı yazalım"], "answer": "Tartışmayı erteleyelim", "explanation": "Dikkat: UK İngilizcesinde 'table' = 'sunmak'; US'te 'ertelemek'." },
+            { "id": "tch4-7", "type": "fill_blank", "prompt": "'We need a ___ dive into the metrics.' (Türkçe: 'Metriklere derinlemesine bakmamız gerek.')", "answer": "deep", "acceptableAnswers": ["deep"] },
+            { "id": "tch4-8", "type": "multiple_choice", "prompt": "Hangi cümle nötr bir KPI raporundan olabilir?", "options": ["Things look great I guess?", "Q3 metrics are tracking ahead of plan.", "Numbers are popping off!", "Everything's vibing."], "answer": "Q3 metrics are tracking ahead of plan." },
+            { "id": "tch4-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bütçe konusunu sonraya bırakalım.'", "answer": "Let's circle back to the budget later", "bank": ["Let's", "circle", "back", "to", "the", "budget", "later", "round", "earlier"] },
+            { "id": "tch4-10", "type": "fill_blank", "prompt": "'Sales are tracking ___ of plan.' (Türkçe: 'Satışlar plandan önde gidiyor.')", "answer": "ahead", "acceptableAnswers": ["ahead"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-relationships",
+      "title": "İlişkiler ve Duygular",
+      "description": "Duyguları, çatışmaları ve sosyal etkileşimleri ifade edin",
+      "theme": "feelings",
+      "guide": {
+        "intro": "Duygular evrensel ama dile her zaman aynı şekilde yansımaz. İngilizcede duygu için sıfat + 'feel' yapısı çok yaygındır: 'I feel overwhelmed', 'She felt let down'. Türkçede bu duygular fiil + isim ile ifade edilir: 'çok yüklendim', 'hayal kırıklığına uğradım'.",
+        "sections": [
+          { "kind": "heading", "text": "Duygu sıfatları" },
+          {
+            "kind": "table",
+            "headers": ["İngilizce", "Türkçe"],
+            "rows": [
+              ["overwhelmed", "boğulmuş, baş edemez"],
+              ["let down", "hayal kırıklığına uğramış"],
+              ["fed up (with)", "bıkmış"],
+              ["touched", "duygulanmış"],
+              ["devastated", "yıkılmış"],
+              ["thrilled", "çok heyecanlı"],
+              ["uneasy", "tedirgin"],
+              ["resentful", "kin tutmuş"]
+            ]
+          },
+          { "kind": "heading", "text": "İlişki fiilleri" },
+          { "kind": "paragraph", "text": "İngilizcede ilişki fiilleri özellikle preposition seçimine duyarlıdır: 'fall out with someone' (kavga etmek), 'make up with someone' (barışmak), 'put up with' (katlanmak), 'look up to' (saygı duymak)." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "I had a falling out with my brother last year.", "translation": "Geçen yıl ağabeyimle kavga ettim." },
+              { "source": "We made up after the argument.", "translation": "Tartışmadan sonra barıştık." },
+              { "source": "I can't put up with this any longer.", "translation": "Buna daha fazla katlanamam." },
+              { "source": "She really looks up to her mentor.", "translation": "Mentörüne gerçekten saygı duyuyor." }
+            ]
+          },
+          { "kind": "callout", "tone": "info", "text": "Türkçede 'kalbim kırıldı' dolaylı bir öznelliktir; İngilizcede 'My heart was broken' veya daha doğal 'I was heartbroken' kullanılır. 'Heart-broken' tek kelime gibi okunur." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-relationships-1",
+          "title": "Duygu sözcükleri",
+          "description": "Sıfatları nüansıyla öğrenin",
+          "theme": "feelings",
+          "xp": 12,
+          "exercises": [
+            { "id": "rel1-1", "type": "match_pairs", "prompt": "Sıfat — Türkçe", "pairs": [
+              { "left": "overwhelmed", "right": "boğulmuş" },
+              { "left": "let down", "right": "hayal kırıklığına uğramış" },
+              { "left": "thrilled", "right": "çok heyecanlı" },
+              { "left": "devastated", "right": "yıkılmış" }
+            ]},
+            { "id": "rel1-2", "type": "multiple_choice", "prompt": "'I feel overwhelmed' nasıl çevrilir?", "options": ["Bunalmış / boğulmuş hissediyorum.", "Üzgün hissediyorum.", "Mutluyum.", "Yorgunum."], "answer": "Bunalmış / boğulmuş hissediyorum." },
+            { "id": "rel1-3", "type": "fill_blank", "prompt": "'She was ___ when she heard the news.' (Türkçe: 'Haberi duyunca yıkıldı.')", "answer": "devastated", "acceptableAnswers": ["devastated"] },
+            { "id": "rel1-4", "type": "multiple_choice", "prompt": "'fed up with' ne anlama gelir?", "options": ["Doymak", "Bıkmak", "Beslemek", "Şişmanlamak"], "answer": "Bıkmak" },
+            { "id": "rel1-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sürekli erteleme yüzünden bıktım.'", "answer": "I'm fed up with the constant delays", "bank": ["I'm", "fed", "up", "with", "the", "constant", "delays", "are", "delay", "feed"] },
+            { "id": "rel1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "I felt deeply touched by her gesture.", "options": ["I felt deeply touched by her gesture.", "I felt deep touch by her gesture.", "I feel deeply touched by her gestures.", "I fell deeply touched by her gesture."], "answer": "I felt deeply touched by her gesture." },
+            { "id": "rel1-7", "type": "fill_blank", "prompt": "'I'm ___ to be invited!' (Türkçe: 'Davet edildiğim için çok heyecanlıyım!')", "answer": "thrilled", "acceptableAnswers": ["thrilled"] },
+            { "id": "rel1-8", "type": "multiple_choice", "prompt": "'uneasy' ne anlama gelir?", "options": ["Kolay", "Tedirgin / huzursuz", "Üzgün", "Sinirli"], "answer": "Tedirgin / huzursuz" },
+            { "id": "rel1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Söz tutulmadığı için hayal kırıklığına uğradım.'", "answer": "I felt let down by the broken promise", "bank": ["I", "felt", "let", "down", "by", "the", "broken", "promise", "feel", "the", "down"] },
+            { "id": "rel1-10", "type": "fill_blank", "prompt": "'He has been ___ ever since the argument.' (Türkçe: 'Tartışmadan beri kin tutuyor.')", "answer": "resentful", "acceptableAnswers": ["resentful"] }
+          ]
+        },
+        {
+          "id": "en-tr-relationships-2",
+          "title": "İlişki fiilleri",
+          "description": "Phrasal verbleri ezberleyin",
+          "theme": "feelings",
+          "xp": 12,
+          "exercises": [
+            { "id": "rel2-1", "type": "match_pairs", "prompt": "Phrasal verb — Türkçe", "pairs": [
+              { "left": "fall out with", "right": "kavga etmek" },
+              { "left": "make up with", "right": "barışmak" },
+              { "left": "put up with", "right": "katlanmak" },
+              { "left": "look up to", "right": "saygı duymak" }
+            ]},
+            { "id": "rel2-2", "type": "multiple_choice", "prompt": "'I look up to her' ne demektir?", "options": ["Ona bakıyorum.", "Ona saygı duyuyorum.", "Onu arıyorum.", "Onu özlüyorum."], "answer": "Ona saygı duyuyorum." },
+            { "id": "rel2-3", "type": "fill_blank", "prompt": "'They made ___ after the argument.' (Türkçe: 'Tartışmadan sonra barıştılar.')", "answer": "up", "acceptableAnswers": ["up"] },
+            { "id": "rel2-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Buna daha fazla katlanamam.'", "answer": "I can't put up with this any longer", "bank": ["I", "can't", "put", "up", "with", "this", "any", "longer", "long", "can", "to"] },
+            { "id": "rel2-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "I had a falling out with my best friend.", "options": ["I had a falling out with my best friend.", "I had a fall out with my best friends.", "I have a falling out with my best friend.", "I had a falling-out with my best friends."], "answer": "I had a falling out with my best friend." },
+            { "id": "rel2-6", "type": "multiple_choice", "prompt": "Hangi phrasal verb 'sırdaş olmak' anlamına yakındır?", "options": ["open up to", "close down with", "go off with", "look down on"], "answer": "open up to", "explanation": "'open up to someone' = 'içini dökmek / sırdaş olmak'." },
+            { "id": "rel2-7", "type": "fill_blank", "prompt": "'I can finally ___ up to her about my feelings.' (Türkçe: 'Sonunda ona duygularımı açabiliyorum.')", "answer": "open", "acceptableAnswers": ["open"] },
+            { "id": "rel2-8", "type": "multiple_choice", "prompt": "'fall out with' fiilinin Türkçe karşılığı nedir?", "options": ["Düşmek", "Birisiyle kavga etmek", "Çıkmak", "Bulmak"], "answer": "Birisiyle kavga etmek" },
+            { "id": "rel2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Mentörüne gerçekten saygı duyuyor.'", "answer": "She really looks up to her mentor", "bank": ["She", "really", "looks", "up", "to", "her", "mentor", "look", "down", "the"] },
+            { "id": "rel2-10", "type": "fill_blank", "prompt": "'I need to get ___ better with my colleagues.' (Türkçe: 'İş arkadaşlarımla daha iyi anlaşmam lazım.')", "answer": "along", "acceptableAnswers": ["along", "on"], "explanation": "'get along with' = 'iyi geçinmek'." }
+          ]
+        },
+        {
+          "id": "en-tr-relationships-3",
+          "title": "Çatışma ve uzlaşma",
+          "description": "Anlaşmazlıkta dil kullanımı",
+          "theme": "feelings",
+          "xp": 12,
+          "exercises": [
+            { "id": "rel3-1", "type": "multiple_choice", "prompt": "Bir tartışmada 'Sakin ol' demek için en doğal cümle?", "options": ["Be calm now.", "Calm down.", "Calm yourself please.", "Be silent."], "answer": "Calm down." },
+            { "id": "rel3-2", "type": "match_pairs", "prompt": "Çatışma ifadesi — Türkçe", "pairs": [
+              { "left": "lose your temper", "right": "kontrolünü kaybetmek" },
+              { "left": "take it personally", "right": "üstüne alınmak" },
+              { "left": "clear the air", "right": "ortamı yumuşatmak" },
+              { "left": "bury the hatchet", "right": "barışmak / küskünlüğü bırakmak" }
+            ]},
+            { "id": "rel3-3", "type": "fill_blank", "prompt": "'Let's clear ___ air about this.' (Türkçe: 'Bu konuda ortamı yumuşatalım.')", "answer": "the", "acceptableAnswers": ["the"] },
+            { "id": "rel3-4", "type": "multiple_choice", "prompt": "'take it personally' ne demektir?", "options": ["Kişisel almak / üstüne alınmak", "Kişisel yapmak", "Eve götürmek", "Tek başına almak"], "answer": "Kişisel almak / üstüne alınmak" },
+            { "id": "rel3-5", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Lütfen üstüne alınma.'", "answer": "Please don't take it personally", "bank": ["Please", "don't", "take", "it", "personally", "personal", "you", "this"] },
+            { "id": "rel3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "He lost his temper during the meeting.", "options": ["He lost his temper during the meeting.", "He lose his temper during the meeting.", "He lost his temple during the meeting.", "He lost his tempers during the meet."], "answer": "He lost his temper during the meeting." },
+            { "id": "rel3-7", "type": "fill_blank", "prompt": "'It's time we ___ the hatchet.' (Türkçe: 'Artık küskünlüğü bırakma zamanı.')", "answer": "buried", "acceptableAnswers": ["buried", "bury"] },
+            { "id": "rel3-8", "type": "multiple_choice", "prompt": "Hangi ifade öfkeyi kontrol etmeyi öğütler?", "options": ["Lose it.", "Keep your cool.", "Blow up.", "Snap back."], "answer": "Keep your cool.", "explanation": "'keep one's cool' = 'soğukkanlılığını korumak'." },
+            { "id": "rel3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Sakin kalmaya çalış.'", "answer": "Try to keep your cool", "bank": ["Try", "to", "keep", "your", "cool", "calm", "the", "your"] },
+            { "id": "rel3-10", "type": "fill_blank", "prompt": "'I owe you an ___ for what I said.' (Türkçe: 'Söylediklerim için sana özür borçluyum.')", "answer": "apology", "acceptableAnswers": ["apology"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-conditionals",
+      "title": "Koşullu Cümleler ve Karma Yapılar",
+      "description": "İkinci, üçüncü ve karma koşulları öğrenin",
+      "theme": "grammar",
+      "guide": {
+        "intro": "B2 düzeyinde koşullular sadece if-clause kuralları değil; spekülasyon, pişmanlık ve hipotetik düşüncenin aracıdır. Türkçedeki '-seydi… -ecekti' yapısı İngilizcedeki 3. tip koşullu (third conditional) ile çakışır ama tam aynı değildir.",
+        "sections": [
+          { "kind": "heading", "text": "Koşullu tipleri özet" },
+          {
+            "kind": "table",
+            "headers": ["Tip", "Yapı", "Anlam", "Türkçe"],
+            "rows": [
+              ["0", "If + present, present", "Genel doğru", "-(s)e ... -ir"],
+              ["1", "If + present, will", "Olası gelecek", "-(s)e ... -ecek"],
+              ["2", "If + past, would", "Hipotetik şimdi", "-se ... -irdi"],
+              ["3", "If + past perfect, would have", "Geçmişe pişmanlık", "-seydi ... -ecekti / -irdi"],
+              ["mixed", "If + past perfect, would (now)", "Geçmiş sebep, şimdi sonuç", "-seydi ... şu an -irdi"]
+            ]
+          },
+          { "kind": "heading", "text": "Karma (mixed) koşullu" },
+          { "kind": "paragraph", "text": "Eğer geçmişteki bir karar bugünkü duruma yansıyorsa karma kullanılır: 'If I had studied harder, I would have a better job now' = 'Daha çok çalışsaydım şu an daha iyi bir işim olurdu'." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "If I were you, I'd take the offer.", "translation": "Yerinde olsam teklifi kabul ederdim." },
+              { "source": "If she had left earlier, she'd be home by now.", "translation": "Daha erken çıksaydı şu an evde olurdu." },
+              { "source": "Had I known, I would have called.", "translation": "Bilseydim arardım." }
+            ]
+          },
+          { "kind": "callout", "tone": "tip", "text": "Resmi yazımda 'Had I known' gibi if'siz devrik (inversion) yapı çok şıktır. C1'de daha sık görürsünüz; B2'de tanımak yeterli." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-conditionals-1",
+          "title": "İkinci tip — hipotetik şimdi",
+          "description": "If + past, would yapısı",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "cn1-1", "type": "multiple_choice", "prompt": "'Yerinde olsam giderdim' İngilizcede hangisidir?", "options": ["If I am you, I will go.", "If I were you, I would go.", "If I am you, I went.", "If I were you, I will go."], "answer": "If I were you, I would go.", "explanation": "2. tip: If + were + would + V1." },
+            { "id": "cn1-2", "type": "fill_blank", "prompt": "'If I ___ rich, I would travel.' (Türkçe: 'Zengin olsam seyahat ederdim.')", "answer": "were", "acceptableAnswers": ["were", "was"], "explanation": "Resmi formda 'were'; konuşma dilinde 'was' da kabul." },
+            { "id": "cn1-3", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Vaktim olsa öğrenirdim.'", "answer": "If I had time I would learn", "bank": ["If", "I", "had", "time", "I", "would", "learn", "have", "will", "learn"] },
+            { "id": "cn1-4", "type": "match_pairs", "prompt": "Yapı — Anlam", "pairs": [
+              { "left": "If + past, would", "right": "Hipotetik şimdi" },
+              { "left": "If + past perfect, would have", "right": "Geçmişe pişmanlık" },
+              { "left": "If + present, will", "right": "Olası gelecek" },
+              { "left": "If + present, present", "right": "Genel doğru" }
+            ]},
+            { "id": "cn1-5", "type": "multiple_choice", "prompt": "Aşağıdakilerden hangisi yanlış?", "options": ["If she had a car, she would drive.", "If she has a car, she would drive.", "If she had a car, she'd drive.", "If she were rich, she'd buy one."], "answer": "If she has a car, she would drive.", "explanation": "2. tipte if + past kullanılmalı; 'has' + 'would' karışık tip değildir." },
+            { "id": "cn1-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "If I knew the answer, I'd tell you.", "options": ["If I knew the answer, I'd tell you.", "If I know the answer, I tell you.", "If I knew the answer, I'll tell you.", "If I knew the answers, I would tells you."], "answer": "If I knew the answer, I'd tell you." },
+            { "id": "cn1-7", "type": "fill_blank", "prompt": "'If she ___ here, she would help.' (Türkçe: 'Burada olsa yardım ederdi.')", "answer": "were", "acceptableAnswers": ["were", "was"] },
+            { "id": "cn1-8", "type": "multiple_choice", "prompt": "Bu hipotetik cümlenin Türkçesi: 'If we had more time, we could finish.'", "options": ["Daha fazla vaktimiz olursa bitirebiliriz.", "Daha fazla vaktimiz olsaydı bitirmiştik.", "Daha fazla vaktimiz olsa bitirebilirdik.", "Daha fazla vaktimiz olur, bitiriyoruz."], "answer": "Daha fazla vaktimiz olsa bitirebilirdik." },
+            { "id": "cn1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Daha az çalışsam daha mutlu olurdum.'", "answer": "If I worked less I would be happier", "bank": ["If", "I", "worked", "less", "I", "would", "be", "happier", "happy", "work", "more"] },
+            { "id": "cn1-10", "type": "fill_blank", "prompt": "'If I ___ a billionaire, I'd start a foundation.' (Türkçe: 'Milyarder olsam vakıf kurardım.')", "answer": "were", "acceptableAnswers": ["were", "was"] }
+          ]
+        },
+        {
+          "id": "en-tr-conditionals-2",
+          "title": "Üçüncü tip — geçmiş pişmanlık",
+          "description": "If + past perfect, would have",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "cn2-1", "type": "multiple_choice", "prompt": "'Bilseydim gelirdim' İngilizcede hangisidir?", "options": ["If I knew, I would come.", "If I had known, I would have come.", "If I have known, I would come.", "If I had known, I will come."], "answer": "If I had known, I would have come." },
+            { "id": "cn2-2", "type": "fill_blank", "prompt": "'If she ___ harder, she would have passed.' (Türkçe: 'Daha çok çalışsaydı geçerdi.')", "answer": "had studied", "acceptableAnswers": ["had studied"] },
+            { "id": "cn2-3", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Daha erken çıksaydık treni yakalardık.'", "answer": "If we had left earlier we would have caught the train", "bank": ["If", "we", "had", "left", "earlier", "we", "would", "have", "caught", "the", "train", "left", "catch"] },
+            { "id": "cn2-4", "type": "multiple_choice", "prompt": "'Had I known' yapısının açık karşılığı nedir?", "options": ["If I have known", "If I had known", "If I know", "Have I known"], "answer": "If I had known", "explanation": "İf'siz devrik (inversion) yapısı = 'Had I known' = 'If I had known'." },
+            { "id": "cn2-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "If they had warned us, we would have prepared.", "options": ["If they had warned us, we would have prepared.", "If they warn us, we will prepare.", "If they warned us, we would prepare.", "If they had warn us, we would have prepare."], "answer": "If they had warned us, we would have prepared." },
+            { "id": "cn2-6", "type": "fill_blank", "prompt": "'If you ___ told me, I could have helped.' (Türkçe: 'Bana söyleseydin yardım edebilirdim.')", "answer": "had", "acceptableAnswers": ["had"] },
+            { "id": "cn2-7", "type": "multiple_choice", "prompt": "Hangi cümle 3. tip koşulludur?", "options": ["If I had time, I'd help.", "If I had had time, I would have helped.", "If I have time, I'll help.", "When I have time, I help."], "answer": "If I had had time, I would have helped." },
+            { "id": "cn2-8", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bana sorsaydın hayır derdim.'", "answer": "If you had asked me I would have said no", "bank": ["If", "you", "had", "asked", "me", "I", "would", "have", "said", "no", "yes", "ask"] },
+            { "id": "cn2-9", "type": "fill_blank", "prompt": "'I ___ have called if I had your number.' (Türkçe: 'Numaran olsaydı arardım.')", "answer": "would", "acceptableAnswers": ["would"] },
+            { "id": "cn2-10", "type": "multiple_choice", "prompt": "'Had I been there' ifadesi neyin karşılığıdır?", "options": ["Orada olmuştum", "Orada olsaydım", "Oradaydım", "Orada olacağım"], "answer": "Orada olsaydım" }
+          ]
+        },
+        {
+          "id": "en-tr-conditionals-3",
+          "title": "Karma koşullu",
+          "description": "Geçmiş sebep + şimdiki sonuç",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "cn3-1", "type": "multiple_choice", "prompt": "'Daha çok çalışsaydım şu an daha iyi bir işim olurdu' İngilizcesi?", "options": ["If I had studied harder, I have a better job now.", "If I had studied harder, I would have a better job now.", "If I studied harder, I would have a better job now.", "If I studied harder, I have a better job."], "answer": "If I had studied harder, I would have a better job now." },
+            { "id": "cn3-2", "type": "fill_blank", "prompt": "'If you hadn't quit, you ___ a manager by now.' (Türkçe: 'İstifa etmeseydin şimdi yönetici olurdun.')", "answer": "would be", "acceptableAnswers": ["would be", "'d be"] },
+            { "id": "cn3-3", "type": "match_pairs", "prompt": "Cümle — Tip", "pairs": [
+              { "left": "If she were here, she'd help.", "right": "2. tip" },
+              { "left": "If he had called, I would have answered.", "right": "3. tip" },
+              { "left": "If I had taken that job, I'd be in London now.", "right": "Karma" },
+              { "left": "If it rains, we'll stay in.", "right": "1. tip" }
+            ]},
+            { "id": "cn3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Daha erken kalksaydım şu an aç olmazdım.'", "answer": "If I had woken up earlier I wouldn't be hungry now", "bank": ["If", "I", "had", "woken", "up", "earlier", "I", "wouldn't", "be", "hungry", "now", "wake", "I'm"] },
+            { "id": "cn3-5", "type": "multiple_choice", "prompt": "Karma koşullunun mantıksal kullanımı?", "options": ["İki şimdiki gerçek", "Geçmiş sebep, şimdi devam eden sonuç", "Hipotetik gelecek", "Genel kural"], "answer": "Geçmiş sebep, şimdi devam eden sonuç" },
+            { "id": "cn3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "If we hadn't missed the flight, we'd be in Tokyo right now.", "options": ["If we hadn't missed the flight, we'd be in Tokyo right now.", "If we hadn't miss the flight, we'd be in Tokyo right now.", "If we hadn't missed the flight, we'd been in Tokyo right now.", "If we hadn't miss flight we'd be in Tokyo."], "answer": "If we hadn't missed the flight, we'd be in Tokyo right now." },
+            { "id": "cn3-7", "type": "fill_blank", "prompt": "'If you had eaten breakfast, you ___ hungry now.' (Türkçe: 'Kahvaltı etseydin şimdi aç olmazdın.')", "answer": "wouldn't be", "acceptableAnswers": ["wouldn't be"] },
+            { "id": "cn3-8", "type": "multiple_choice", "prompt": "'Had he listened, he would not be in trouble' = ?", "options": ["Eğer dinleseydi, başı belada olmayacaktı.", "Eğer dinleseydi, başı şu an belada olmazdı.", "Eğer dinlerse, başı belada olmaz.", "Dinlemiştir, başı belada değildir."], "answer": "Eğer dinleseydi, başı şu an belada olmazdı.", "explanation": "Karma yapı: geçmiş sebep, şu anki sonuç." },
+            { "id": "cn3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Onu uyarsaydım şu an üzgün olmazdı.'", "answer": "If I had warned him he wouldn't be upset now", "bank": ["If", "I", "had", "warned", "him", "he", "wouldn't", "be", "upset", "now", "today", "warn"] },
+            { "id": "cn3-10", "type": "fill_blank", "prompt": "'If I hadn't moved cities, I ___ still working there.' (Türkçe: 'Şehir değiştirmeseydim hâlâ orada çalışıyor olurdum.')", "answer": "would be", "acceptableAnswers": ["would be", "'d be"] }
+          ]
+        },
+        {
+          "id": "en-tr-conditionals-4",
+          "title": "Wish ve If only",
+          "description": "Pişmanlık ve dilek ifadeleri",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "cn4-1", "type": "multiple_choice", "prompt": "'Keşke daha fazla zamanım olsa' İngilizcesi?", "options": ["I wish I have more time.", "I wish I had more time.", "I wish I will have more time.", "I wish I have had more time."], "answer": "I wish I had more time." },
+            { "id": "cn4-2", "type": "fill_blank", "prompt": "'I wish I ___ a doctor.' (Türkçe: 'Keşke doktor olsaydım — şu an pişmanım.')", "answer": "had become", "acceptableAnswers": ["had become"], "explanation": "Geçmiş pişmanlık için 'wish + past perfect' kullanılır." },
+            { "id": "cn4-3", "type": "match_pairs", "prompt": "Yapı — Anlam", "pairs": [
+              { "left": "I wish + past", "right": "Şimdiki dilek (mevcut değil)" },
+              { "left": "I wish + past perfect", "right": "Geçmişe pişmanlık" },
+              { "left": "I wish + would", "right": "Başka birinin davranışı için sıkıntı" },
+              { "left": "If only + past perfect", "right": "Güçlü geçmiş pişmanlığı" }
+            ]},
+            { "id": "cn4-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Keşke gerçeği söyleseydim.'", "answer": "I wish I had told the truth", "bank": ["I", "wish", "I", "had", "told", "the", "truth", "tell", "say", "lie"] },
+            { "id": "cn4-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "If only I had listened to my parents.", "options": ["If only I had listened to my parents.", "If only I have listened to my parents.", "If only I listen to my parents.", "If only I had listen to my parent."], "answer": "If only I had listened to my parents." },
+            { "id": "cn4-6", "type": "multiple_choice", "prompt": "'I wish you would stop interrupting' ne anlam taşır?", "options": ["Keşke duraklasan.", "Sözümü kesmeyi keseydin keşke.", "Keşke beni bekleyebilseydin.", "Sözünü kesmeyi keseceğini umuyorum."], "answer": "Sözümü kesmeyi keseydin keşke.", "explanation": "'wish + would' başkasının davranışına yönelik şikâyet bildirir." },
+            { "id": "cn4-7", "type": "fill_blank", "prompt": "'If only I ___ his number.' (Türkçe: 'Keşke numarası olsa.')", "answer": "had", "acceptableAnswers": ["had"] },
+            { "id": "cn4-8", "type": "multiple_choice", "prompt": "Hangi cümle GÜÇLÜ pişmanlığı vurgular?", "options": ["I wish I knew.", "If only I had known sooner.", "I wish to know.", "If I know."], "answer": "If only I had known sooner." },
+            { "id": "cn4-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Keşke şarkı söylemeyi öğrenebilsem.'", "answer": "I wish I could learn to sing", "bank": ["I", "wish", "I", "could", "learn", "to", "sing", "song", "can", "the"] },
+            { "id": "cn4-10", "type": "fill_blank", "prompt": "'I wish it ___ raining.' (Türkçe: 'Keşke yağmur yağmıyor olsa.')", "answer": "weren't", "acceptableAnswers": ["weren't", "wasn't"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-formal",
+      "title": "Resmi vs Gayri Resmi Register",
+      "description": "Aynı düşünceyi farklı tonlarda ifade edin",
+      "theme": "grammar",
+      "guide": {
+        "intro": "İngilizcede aynı düşünceyi konuşma ve resmi yazıda farklı söylersiniz. 'Get' günlük dilde her şey, ama resmi yazıda 'receive', 'obtain', 'become' gibi seçenekler tercih edilir.",
+        "sections": [
+          { "kind": "heading", "text": "Konuşma vs yazı" },
+          {
+            "kind": "table",
+            "headers": ["Günlük", "Resmi", "Anlam"],
+            "rows": [
+              ["get", "receive / obtain", "almak"],
+              ["get worse", "deteriorate", "kötüleşmek"],
+              ["go up", "increase / rise", "artmak"],
+              ["find out", "discover / ascertain", "öğrenmek"],
+              ["help", "assist", "yardım etmek"],
+              ["start", "commence / initiate", "başlamak"],
+              ["end", "conclude / terminate", "bitirmek"],
+              ["a lot of", "considerable / substantial", "çok"]
+            ]
+          },
+          { "kind": "heading", "text": "E-posta açılışı" },
+          { "kind": "paragraph", "text": "Tanımadığınız birine: 'Dear Mr/Ms [soyad]'. Tanıdık ama profesyonel: 'Hi [ad]'. İçeride: 'Hey [ad]' kabul edilebilir. Kapanış: 'Sincerely' (en resmi), 'Best regards' (standart), 'Best' / 'Cheers' (samimi)." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "I am writing to enquire about…", "translation": "… hakkında bilgi almak için yazıyorum." },
+              { "source": "Should you require any further information, please do not hesitate to contact me.", "translation": "Daha fazla bilgi gerekirse, çekinmeden bana ulaşın." },
+              { "source": "Hey, just a quick heads up — the file is ready.", "translation": "Selam, kısa bir bilgi — dosya hazır." }
+            ]
+          },
+          { "kind": "callout", "tone": "warning", "text": "Türkçedeki 'Saygılarımla' her zaman 'Sincerely' değildir. Resmi başvuru: 'Yours sincerely' (UK), 'Sincerely' (US). İş arkadaşına 'Best regards' yeterli." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-formal-1",
+          "title": "Kelime seçimi",
+          "description": "Günlük → resmi dönüşüm",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "fm1-1", "type": "match_pairs", "prompt": "Günlük → Resmi", "pairs": [
+              { "left": "get", "right": "receive" },
+              { "left": "go up", "right": "increase" },
+              { "left": "find out", "right": "discover" },
+              { "left": "start", "right": "commence" }
+            ]},
+            { "id": "fm1-2", "type": "multiple_choice", "prompt": "Resmi yazıda 'a lot of money' yerine ne kullanırsınız?", "options": ["lots of money", "a substantial amount of money", "tons of money", "loads of money"], "answer": "a substantial amount of money" },
+            { "id": "fm1-3", "type": "fill_blank", "prompt": "'The situation has ___' (Türkçe: 'Durum kötüleşti.' — resmi)", "answer": "deteriorated", "acceptableAnswers": ["deteriorated", "worsened"] },
+            { "id": "fm1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Ek bilgiye ihtiyaç duyduğumuzu bildiririz.' (resmi)", "answer": "We hereby request additional information", "bank": ["We", "hereby", "request", "additional", "information", "wanna", "more", "the"] },
+            { "id": "fm1-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Should you require further assistance, please contact us.", "options": ["Should you require further assistance, please contact us.", "Should you required further assistance, please contact us.", "Should you require farther assistance, please contact us.", "Should you require further assistant, please contact us."], "answer": "Should you require further assistance, please contact us." },
+            { "id": "fm1-6", "type": "multiple_choice", "prompt": "Hangi cümle EN RESMİ?", "options": ["Hey, can you help?", "Could you help me?", "I would be most grateful for your assistance.", "Please help."], "answer": "I would be most grateful for your assistance." },
+            { "id": "fm1-7", "type": "fill_blank", "prompt": "'Sales have ___ significantly this quarter.' (Türkçe: 'Satışlar bu çeyrekte önemli ölçüde arttı.' — resmi)", "answer": "increased", "acceptableAnswers": ["increased", "risen"] },
+            { "id": "fm1-8", "type": "multiple_choice", "prompt": "Resmi karşılığı hangisidir? 'find out'", "options": ["uncover / ascertain / discover", "find in", "find around", "find at"], "answer": "uncover / ascertain / discover" },
+            { "id": "fm1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Toplantı saat üçte sona erecek.' (resmi)", "answer": "The meeting will conclude at three o'clock", "bank": ["The", "meeting", "will", "conclude", "at", "three", "o'clock", "ended", "starts", "the"] },
+            { "id": "fm1-10", "type": "fill_blank", "prompt": "'Please ___ the attached document.' (Türkçe: 'Lütfen ekteki belgeyi bulunuz.' — resmi)", "answer": "find", "acceptableAnswers": ["find", "see"], "explanation": "'Please find attached' standart formdur." }
+          ]
+        },
+        {
+          "id": "en-tr-formal-2",
+          "title": "E-posta yazımı",
+          "description": "Açılış, gövde, kapanış",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "fm2-1", "type": "match_pairs", "prompt": "E-posta açılış — Bağlam", "pairs": [
+              { "left": "Dear Mr Smith,", "right": "Tanımadığın resmi alıcı" },
+              { "left": "Hi Sarah,", "right": "Tanıdık iş arkadaşı" },
+              { "left": "Dear Sir or Madam,", "right": "Adı bilinmeyen resmi alıcı" },
+              { "left": "Hey team,", "right": "İç ekip" }
+            ]},
+            { "id": "fm2-2", "type": "multiple_choice", "prompt": "Resmi e-postada hangi kapanış EN UYGUN?", "options": ["xoxo", "Yours sincerely", "Cheers mate", "TTYL"], "answer": "Yours sincerely" },
+            { "id": "fm2-3", "type": "fill_blank", "prompt": "'I am writing to ___ about the position.' (Türkçe: 'Pozisyon hakkında bilgi almak için yazıyorum.')", "answer": "enquire", "acceptableAnswers": ["enquire", "inquire", "ask"] },
+            { "id": "fm2-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Hızlı bir bilgi: dosya hazır.'", "answer": "Just a quick heads up the file is ready", "bank": ["Just", "a", "quick", "heads", "up", "the", "file", "is", "ready", "very", "you"] },
+            { "id": "fm2-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Please do not hesitate to contact me.", "options": ["Please do not hesitate to contact me.", "Please not hesitate to contacting me.", "Please don't hesitates to contact me.", "Please do hesitate not to contact me."], "answer": "Please do not hesitate to contact me." },
+            { "id": "fm2-6", "type": "multiple_choice", "prompt": "İş arkadaşına gönderilen samimi bir e-postanın kapanışı?", "options": ["Yours faithfully", "Best", "I remain your servant", "By the grace"], "answer": "Best" },
+            { "id": "fm2-7", "type": "fill_blank", "prompt": "'I look ___ to hearing from you.' (Türkçe: 'Sizden haber almayı dört gözle bekliyorum.')", "answer": "forward", "acceptableAnswers": ["forward"] },
+            { "id": "fm2-8", "type": "multiple_choice", "prompt": "Aşağıdakilerden hangisi UYGUNSUZ register karışıklığıdır?", "options": ["Dear Mr Smith, I'm writing to enquire about the role.", "Hey Tom, just a quick heads up — meeting moved.", "Dear Sir, sup mate, gonna be late.", "Hi Sarah, hope you're well — quick update below."], "answer": "Dear Sir, sup mate, gonna be late.", "explanation": "Resmi açılışla argo kapanış uyumsuzdur." },
+            { "id": "fm2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yardımınız için size minnettar olurum.'", "answer": "I would be grateful for your assistance", "bank": ["I", "would", "be", "grateful", "for", "your", "assistance", "thanks", "very"] },
+            { "id": "fm2-10", "type": "fill_blank", "prompt": "'Please find ___ the report.' (Türkçe: 'Ekte raporu bulabilirsiniz.')", "answer": "attached", "acceptableAnswers": ["attached"] }
+          ]
+        },
+        {
+          "id": "en-tr-formal-3",
+          "title": "Sunum dili",
+          "description": "Başlangıç, geçiş, kapanış kalıpları",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "fm3-1", "type": "match_pairs", "prompt": "Sunum aşaması — Kalıp", "pairs": [
+              { "left": "Açılış", "right": "Today I'd like to talk about…" },
+              { "left": "Geçiş", "right": "Moving on to…" },
+              { "left": "Vurgu", "right": "I'd like to highlight…" },
+              { "left": "Kapanış", "right": "To sum up…" }
+            ]},
+            { "id": "fm3-2", "type": "multiple_choice", "prompt": "'Sözü bağlayalım' demek için sunumda en doğal kalıp?", "options": ["I will end now.", "Let me wrap up.", "I am closing.", "Conclusion is here."], "answer": "Let me wrap up." },
+            { "id": "fm3-3", "type": "fill_blank", "prompt": "'Moving ___ to our next slide.' (Türkçe: 'Bir sonraki slayda geçiyoruz.')", "answer": "on", "acceptableAnswers": ["on"] },
+            { "id": "fm3-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Üç ana noktayı vurgulamak istiyorum.'", "answer": "I'd like to highlight three main points", "bank": ["I'd", "like", "to", "highlight", "three", "main", "points", "want", "thirty", "the"] },
+            { "id": "fm3-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "To sum up, our results exceeded expectations.", "options": ["To sum up, our results exceeded expectations.", "To some up, our results exceed expectations.", "To sum up, our result exceeded expectation.", "To some up, our results exceeded expectations."], "answer": "To sum up, our results exceeded expectations." },
+            { "id": "fm3-6", "type": "multiple_choice", "prompt": "Hangi kalıp bir sunumun tamamlanmasını duyurur?", "options": ["Let's get started.", "That brings me to the end.", "First of all,", "By the way,"], "answer": "That brings me to the end." },
+            { "id": "fm3-7", "type": "fill_blank", "prompt": "'Are there any ___ at this point?' (Türkçe: 'Bu noktada sorunuz var mı?')", "answer": "questions", "acceptableAnswers": ["questions"] },
+            { "id": "fm3-8", "type": "multiple_choice", "prompt": "'Let me elaborate on that' ne anlama gelir?", "options": ["Bunu kısaltayım.", "Bunu detaylandırayım.", "Bunu silelim.", "Bunu çevirelim."], "answer": "Bunu detaylandırayım." },
+            { "id": "fm3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Dinlediğiniz için teşekkür ederim.'", "answer": "Thank you for your attention", "bank": ["Thank", "you", "for", "your", "attention", "listening", "thanks", "the"] },
+            { "id": "fm3-10", "type": "fill_blank", "prompt": "'I'd like to ___ to my colleague for the next part.' (Türkçe: 'Bir sonraki bölüm için sözü meslektaşıma bırakıyorum.')", "answer": "hand over", "acceptableAnswers": ["hand over", "pass"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-passive",
+      "title": "Pasif ve Karmaşık Zamanlar",
+      "description": "Past perfect, future perfect, modal pasifler",
+      "theme": "grammar",
+      "guide": {
+        "intro": "B2'de zaman ekseni iyice incelir. Pasifin her zaman çekiminde nasıl yapıldığını ve modallarla nasıl birleştiğini öğrenirsiniz.",
+        "sections": [
+          { "kind": "heading", "text": "Pasif zaman tablosu" },
+          {
+            "kind": "table",
+            "headers": ["Zaman", "Aktif", "Pasif"],
+            "rows": [
+              ["Simple present", "writes", "is written"],
+              ["Present continuous", "is writing", "is being written"],
+              ["Simple past", "wrote", "was written"],
+              ["Past continuous", "was writing", "was being written"],
+              ["Present perfect", "has written", "has been written"],
+              ["Past perfect", "had written", "had been written"],
+              ["Future simple", "will write", "will be written"],
+              ["Future perfect", "will have written", "will have been written"],
+              ["Modal", "can write", "can be written"],
+              ["Modal perfect", "should have written", "should have been written"]
+            ]
+          },
+          { "kind": "heading", "text": "Past perfect — daha eski geçmiş" },
+          { "kind": "paragraph", "text": "Past perfect (had + V3) iki geçmiş olaydan daha eskisini belirtir: 'When I arrived, they had already left' = 'Ben vardığımda onlar çoktan ayrılmıştı'. Türkçedeki -mişti karşılığıdır." },
+          {
+            "kind": "examples",
+            "rows": [
+              { "source": "By the time we got there, the meeting had ended.", "translation": "Biz oraya vardığımızda toplantı bitmişti." },
+              { "source": "She had never seen such a sight before.", "translation": "Daha önce hiç böyle bir manzara görmemişti." },
+              { "source": "The report had been reviewed by the board.", "translation": "Rapor kurul tarafından gözden geçirilmişti." }
+            ]
+          },
+          { "kind": "callout", "tone": "info", "text": "Future perfect (will have + V3) bir gelecekte daha tamamlanmış olacak şeyi gösterir. 'By 2030, AI will have transformed many industries' = 'YZ 2030'a kadar pek çok sektörü dönüştürmüş olacak'." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-passive-1",
+          "title": "Pasif çekim turu",
+          "description": "Tüm zamanlarda pasif",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "ps1-1", "type": "match_pairs", "prompt": "Aktif → Pasif", "pairs": [
+              { "left": "writes", "right": "is written" },
+              { "left": "wrote", "right": "was written" },
+              { "left": "has written", "right": "has been written" },
+              { "left": "will write", "right": "will be written" }
+            ]},
+            { "id": "ps1-2", "type": "multiple_choice", "prompt": "'The book is being printed' Türkçesi?", "options": ["Kitap basıldı.", "Kitap basılıyor.", "Kitap basılacak.", "Kitap basılmıştı."], "answer": "Kitap basılıyor.", "explanation": "Present continuous passive: is/are being + V3." },
+            { "id": "ps1-3", "type": "fill_blank", "prompt": "'The package ___ delivered tomorrow.' (Türkçe: 'Paket yarın teslim edilecek.')", "answer": "will be", "acceptableAnswers": ["will be"] },
+            { "id": "ps1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Mektup henüz gönderilmedi.'", "answer": "The letter has not been sent yet", "bank": ["The", "letter", "has", "not", "been", "sent", "yet", "is", "send", "the"] },
+            { "id": "ps1-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "The decision had been made before the meeting.", "options": ["The decision had been made before the meeting.", "The decision had be made before the meeting.", "The decision has been made before the meeting.", "The decisions had been made before meeting."], "answer": "The decision had been made before the meeting." },
+            { "id": "ps1-6", "type": "multiple_choice", "prompt": "Pasif çekimin ana yapı taşı nedir?", "options": ["have + V1", "be + V3", "do + V1", "be + V1"], "answer": "be + V3" },
+            { "id": "ps1-7", "type": "fill_blank", "prompt": "'The form ___ being processed.' (Türkçe: 'Form işleniyor.')", "answer": "is", "acceptableAnswers": ["is"] },
+            { "id": "ps1-8", "type": "multiple_choice", "prompt": "Hangisi modal pasiftir?", "options": ["This must be done.", "This must do.", "This is must.", "This must doing."], "answer": "This must be done." },
+            { "id": "ps1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bu hata erken fark edilmeliydi.'", "answer": "This mistake should have been spotted earlier", "bank": ["This", "mistake", "should", "have", "been", "spotted", "earlier", "later", "be", "the"] },
+            { "id": "ps1-10", "type": "fill_blank", "prompt": "'By next year, the bridge ___ been completed.' (Türkçe: 'Gelecek yıla kadar köprü tamamlanmış olacak.')", "answer": "will have", "acceptableAnswers": ["will have"] }
+          ]
+        },
+        {
+          "id": "en-tr-passive-2",
+          "title": "Past perfect ile zaman ekseni",
+          "description": "İki geçmiş olayı sıralayın",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "ps2-1", "type": "multiple_choice", "prompt": "'Ben vardığımda toplantı bitmişti' İngilizcesi?", "options": ["When I arrived, the meeting ended.", "When I arrived, the meeting had ended.", "When I arrived, the meeting has ended.", "When I arrive, the meeting had ended."], "answer": "When I arrived, the meeting had ended." },
+            { "id": "ps2-2", "type": "fill_blank", "prompt": "'She ___ never seen such a sight before.' (Türkçe: 'Daha önce hiç böyle bir manzara görmemişti.')", "answer": "had", "acceptableAnswers": ["had", "'d"] },
+            { "id": "ps2-3", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Akşam yemeğine geldiğimde onlar yemek yemişti.'", "answer": "When I came for dinner they had already eaten", "bank": ["When", "I", "came", "for", "dinner", "they", "had", "already", "eaten", "ate", "have", "eat"] },
+            { "id": "ps2-4", "type": "match_pairs", "prompt": "Yapı — İşlevi", "pairs": [
+              { "left": "had + V3", "right": "Eski geçmiş" },
+              { "left": "have + V3", "right": "Şimdiye uzanan geçmiş" },
+              { "left": "will have + V3", "right": "Gelecekte tamamlanmış olacak" },
+              { "left": "had been + V-ing", "right": "Eski geçmiş süreklilik" }
+            ]},
+            { "id": "ps2-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "By the time we got there, the band had already left.", "options": ["By the time we got there, the band had already left.", "By the time we get there, the band had already left.", "By the time we got there, the band has already left.", "By the time we got there, the band had already leaved."], "answer": "By the time we got there, the band had already left." },
+            { "id": "ps2-6", "type": "multiple_choice", "prompt": "'I had been working there for five years when I quit' Türkçesi?", "options": ["İstifa ettiğimde beş yıldır orada çalışıyordum.", "İstifa ettiğimde beş yıl çalışacaktım.", "Beş yıldır çalışıyorum.", "İstifa ediyorum, beş yıldır çalışıyorum."], "answer": "İstifa ettiğimde beş yıldır orada çalışıyordum." },
+            { "id": "ps2-7", "type": "fill_blank", "prompt": "'After he ___ the report, he sent it.' (Türkçe: 'Raporu bitirdikten sonra gönderdi.')", "answer": "had finished", "acceptableAnswers": ["had finished"] },
+            { "id": "ps2-8", "type": "multiple_choice", "prompt": "Past perfect ne zaman gerekir?", "options": ["İki geçmiş olay arasındaki sırayı netleştirmek için", "Her geçmiş cümlede", "Sadece sorularda", "Sadece pasifte"], "answer": "İki geçmiş olay arasındaki sırayı netleştirmek için" },
+            { "id": "ps2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Tren biz vardığımızda çoktan kalkmıştı.'", "answer": "The train had already left when we arrived", "bank": ["The", "train", "had", "already", "left", "when", "we", "arrived", "leave", "arrive", "the"] },
+            { "id": "ps2-10", "type": "fill_blank", "prompt": "'They ___ been waiting for two hours when help arrived.' (Türkçe: 'Yardım geldiğinde iki saattir bekliyorlardı.')", "answer": "had", "acceptableAnswers": ["had", "'d"] }
+          ]
+        },
+        {
+          "id": "en-tr-passive-3",
+          "title": "Future perfect ve modal perfect",
+          "description": "Geleceği geçmişten geriye bakarak kurun",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            { "id": "ps3-1", "type": "multiple_choice", "prompt": "'2030'a kadar yapay zeka pek çok sektörü dönüştürmüş olacak' İngilizcesi?", "options": ["By 2030, AI will transform many industries.", "By 2030, AI will have transformed many industries.", "By 2030, AI has transformed many industries.", "By 2030, AI transforms many industries."], "answer": "By 2030, AI will have transformed many industries." },
+            { "id": "ps3-2", "type": "fill_blank", "prompt": "'I ___ have finished by Friday.' (Türkçe: 'Cumaya kadar bitirmiş olacağım.')", "answer": "will", "acceptableAnswers": ["will", "'ll"] },
+            { "id": "ps3-3", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Onu uyarmalıydın.'", "answer": "You should have warned him", "bank": ["You", "should", "have", "warned", "him", "warn", "her", "must"] },
+            { "id": "ps3-4", "type": "match_pairs", "prompt": "Modal perfect — Anlam", "pairs": [
+              { "left": "should have + V3", "right": "yapmalıydı (yapmadı)" },
+              { "left": "could have + V3", "right": "yapabilirdi (yapmadı)" },
+              { "left": "must have + V3", "right": "yapmış olmalı (kesin tahmin)" },
+              { "left": "might have + V3", "right": "yapmış olabilir (zayıf tahmin)" }
+            ]},
+            { "id": "ps3-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "She must have left already; her coat is gone.", "options": ["She must have left already; her coat is gone.", "She must has left already; her coat is gone.", "She must have leave already; her coat is gone.", "She must had left already; her coat is gone."], "answer": "She must have left already; her coat is gone." },
+            { "id": "ps3-6", "type": "multiple_choice", "prompt": "'You could have told me' Türkçesi?", "options": ["Bana söyleyebilirsin.", "Bana söyleyebilirdin.", "Bana söylemiştin.", "Bana söylemelisin."], "answer": "Bana söyleyebilirdin." },
+            { "id": "ps3-7", "type": "fill_blank", "prompt": "'By the time we leave, we ___ have packed.' (Türkçe: 'Çıkana kadar toplanmış olacağız.')", "answer": "will", "acceptableAnswers": ["will", "'ll"] },
+            { "id": "ps3-8", "type": "multiple_choice", "prompt": "Hangi cümle GEÇMİŞE pişmanlık ifade eder?", "options": ["I should have studied harder.", "I will study harder.", "I am studying.", "I would study."], "answer": "I should have studied harder." },
+            { "id": "ps3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yorgun olmalısın — saatlerdir çalışıyorsun.'", "answer": "You must be tired you've been working for hours", "bank": ["You", "must", "be", "tired", "you've", "been", "working", "for", "hours", "minute", "have"] },
+            { "id": "ps3-10", "type": "fill_blank", "prompt": "'They ___ have arrived by now.' (Türkçe: 'Şimdiye kadar varmış olmaları gerek.')", "answer": "should", "acceptableAnswers": ["should", "must"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "en-tr-b2-review",
+      "title": "B2 — Genel Tekrar",
+      "description": "Tüm B2 konularını birleştiren karma alıştırmalar",
+      "theme": "review",
+      "guide": {
+        "intro": "Bu konu B2'de işlenen tüm temaları kucaklayan bir tekrardır: görüş bildirme, haberler, çevre, teknoloji, ilişkiler, koşullular, register ve karmaşık zamanlar.",
+        "sections": [
+          { "kind": "heading", "text": "Hızlı kontrol listesi" },
+          { "kind": "list", "items": ["Yumuşatma kalıplarını kullanabiliyorum.", "Manşet dilini çözebiliyorum.", "İklim kelime gruplarını biliyorum.", "Phrasal verb karşılıklarını seçebiliyorum.", "2., 3. ve karma koşulluları kurabiliyorum.", "Resmi vs gayri resmi register'ı ayırt ediyorum.", "Past perfect ve future perfect ile zaman ekseni kurabiliyorum."] },
+          { "kind": "callout", "tone": "info", "text": "Bu bölümü yaparken yanlış olanları not edin ve ilgili konuya geri dönüp tekrar çalışın." }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "en-tr-b2-review-1",
+          "title": "Karma tekrar 1",
+          "description": "Görüş, haber ve çevre",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            { "id": "rv1-1", "type": "multiple_choice", "prompt": "'Bana kalırsa bu fikir mantıklı' İngilizcesi?", "options": ["For me this idea makes sense.", "As far as I'm concerned, this idea makes sense.", "By me, this idea makes sense.", "From me this idea makes logic."], "answer": "As far as I'm concerned, this idea makes sense." },
+            { "id": "rv1-2", "type": "fill_blank", "prompt": "'The bill ___ expected to pass next week.' (Türkçe: 'Tasarının önümüzdeki hafta geçmesi bekleniyor.')", "answer": "is", "acceptableAnswers": ["is"] },
+            { "id": "rv1-3", "type": "match_pairs", "prompt": "İngilizce — Türkçe", "pairs": [
+              { "left": "carbon footprint", "right": "karbon ayak izi" },
+              { "left": "renewable energy", "right": "yenilenebilir enerji" },
+              { "left": "biodiversity loss", "right": "biyoçeşitlilik kaybı" },
+              { "left": "greenhouse gas", "right": "sera gazı" }
+            ]},
+            { "id": "rv1-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yenilenebilir enerji daha uygun fiyatlı oluyor.'", "answer": "Renewable energy is becoming more affordable", "bank": ["Renewable", "energy", "is", "becoming", "more", "affordable", "the", "expensive", "very"] },
+            { "id": "rv1-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "I'd argue the policy needs revision.", "options": ["I'd argue the policy needs revision.", "I argue the police need revision.", "I'd agree the policy need revision.", "I argued the policy needs vision."], "answer": "I'd argue the policy needs revision." },
+            { "id": "rv1-6", "type": "multiple_choice", "prompt": "'claimed' fiili genelde hangi tonu taşır?", "options": ["Şüphe / kanıtsız iddia", "Kesin onay", "Mutluluk", "Resmi duyuru"], "answer": "Şüphe / kanıtsız iddia" },
+            { "id": "rv1-7", "type": "fill_blank", "prompt": "'We must take ___ on climate change.' (Türkçe: 'İklim değişikliği için harekete geçmeliyiz.')", "answer": "action", "acceptableAnswers": ["action"] },
+            { "id": "rv1-8", "type": "multiple_choice", "prompt": "'actual' Türkçeye çevrildiğinde:", "options": ["güncel", "gerçek", "aktif", "aktör"], "answer": "gerçek" },
+            { "id": "rv1-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Saygısızlık etmek istemem ama tam ikna olmadım.'", "answer": "With all due respect I'm not entirely convinced", "bank": ["With", "all", "due", "respect", "I'm", "not", "entirely", "convinced", "very", "much"] },
+            { "id": "rv1-10", "type": "fill_blank", "prompt": "'Two suspects ___ been detained.' (Türkçe: 'İki şüpheli gözaltına alındı.')", "answer": "have", "acceptableAnswers": ["have"] }
+          ]
+        },
+        {
+          "id": "en-tr-b2-review-2",
+          "title": "Karma tekrar 2",
+          "description": "Teknoloji, ilişkiler ve register",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            { "id": "rv2-1", "type": "multiple_choice", "prompt": "'roll out a product' nasıl çevrilir?", "options": ["Ürünü yuvarlamak", "Ürünü piyasaya sürmek", "Ürünü iade etmek", "Ürünü saklamak"], "answer": "Ürünü piyasaya sürmek" },
+            { "id": "rv2-2", "type": "fill_blank", "prompt": "'Let's ___ back to that later.' (Türkçe: 'Buna sonra geri döneriz.')", "answer": "circle", "acceptableAnswers": ["circle"] },
+            { "id": "rv2-3", "type": "match_pairs", "prompt": "Phrasal verb — Türkçe", "pairs": [
+              { "left": "fall out with", "right": "kavga etmek" },
+              { "left": "make up with", "right": "barışmak" },
+              { "left": "look up to", "right": "saygı duymak" },
+              { "left": "put up with", "right": "katlanmak" }
+            ]},
+            { "id": "rv2-4", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Mentörüne saygı duyuyor.'", "answer": "She looks up to her mentor", "bank": ["She", "looks", "up", "to", "her", "mentor", "look", "down", "the"] },
+            { "id": "rv2-5", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "Should you require further assistance, please contact me.", "options": ["Should you require further assistance, please contact me.", "Should you required further assistance, please contact me.", "Should you require farther assistance, please contact me.", "Should require you further assistance, please contact me."], "answer": "Should you require further assistance, please contact me." },
+            { "id": "rv2-6", "type": "multiple_choice", "prompt": "Resmi yazıda 'get worse' yerine ne kullanılır?", "options": ["become worser", "deteriorate", "go more bad", "down up"], "answer": "deteriorate" },
+            { "id": "rv2-7", "type": "fill_blank", "prompt": "'I'm fed ___ with the constant delays.' (Türkçe: 'Sürekli erteleme yüzünden bıktım.')", "answer": "up", "acceptableAnswers": ["up"] },
+            { "id": "rv2-8", "type": "multiple_choice", "prompt": "Hangi e-posta açılışı tanımadığın bir resmi alıcı için uygundur?", "options": ["Hey buddy,", "Dear Mr Smith,", "Yo!", "Hi everyone!"], "answer": "Dear Mr Smith," },
+            { "id": "rv2-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Yardımınız için minnettar olurum.'", "answer": "I would be grateful for your assistance", "bank": ["I", "would", "be", "grateful", "for", "your", "assistance", "thanks", "very"] },
+            { "id": "rv2-10", "type": "fill_blank", "prompt": "'I look ___ to hearing from you.' (Türkçe: 'Sizden haber almayı bekliyorum.')", "answer": "forward", "acceptableAnswers": ["forward"] }
+          ]
+        },
+        {
+          "id": "en-tr-b2-review-3",
+          "title": "Karma tekrar 3",
+          "description": "Koşullular ve karmaşık zamanlar",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            { "id": "rv3-1", "type": "multiple_choice", "prompt": "'Daha çok çalışsaydım şu an daha iyi bir işim olurdu' yapısı?", "options": ["1. tip", "2. tip", "3. tip", "Karma"], "answer": "Karma" },
+            { "id": "rv3-2", "type": "fill_blank", "prompt": "'If I ___ you, I'd take the offer.' (Türkçe: 'Yerinde olsam teklifi kabul ederdim.')", "answer": "were", "acceptableAnswers": ["were", "was"] },
+            { "id": "rv3-3", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Bilseydim arardım.'", "answer": "If I had known I would have called", "bank": ["If", "I", "had", "known", "I", "would", "have", "called", "know", "call", "will"] },
+            { "id": "rv3-4", "type": "match_pairs", "prompt": "Cümle — Tip", "pairs": [
+              { "left": "If I had time, I'd help.", "right": "2. tip" },
+              { "left": "If I had had time, I would have helped.", "right": "3. tip" },
+              { "left": "If I had taken that job, I'd be in London now.", "right": "Karma" },
+              { "left": "If it rains, we'll stay in.", "right": "1. tip" }
+            ]},
+            { "id": "rv3-5", "type": "multiple_choice", "prompt": "'Had I known' eşdeğeri?", "options": ["If I have known", "If I knew", "If I had known", "Have I known"], "answer": "If I had known" },
+            { "id": "rv3-6", "type": "listen_and_choose", "prompt": "Duyduğunuz cümleyi seçin", "spokenText": "By 2030, AI will have transformed many industries.", "options": ["By 2030, AI will have transformed many industries.", "By 2030, AI has transformed many industries.", "By 2030, AI will transform many industry.", "Buy 2030, AI will have transformed many industries."], "answer": "By 2030, AI will have transformed many industries." },
+            { "id": "rv3-7", "type": "fill_blank", "prompt": "'When I arrived, the meeting ___ already ended.' (Türkçe: 'Vardığımda toplantı çoktan bitmişti.')", "answer": "had", "acceptableAnswers": ["had", "'d"] },
+            { "id": "rv3-8", "type": "multiple_choice", "prompt": "'I wish I had told the truth' = ?", "options": ["Keşke gerçeği söyleseydim.", "Keşke gerçeği söylesem.", "Gerçeği söylüyorum.", "Gerçeği söyleyeceğim."], "answer": "Keşke gerçeği söyleseydim." },
+            { "id": "rv3-9", "type": "tap_words_in_order", "prompt": "Cümleyi kurun: 'Şehir değiştirmeseydim hâlâ orada çalışıyor olurdum.'", "answer": "If I hadn't moved cities I would still be working there", "bank": ["If", "I", "hadn't", "moved", "cities", "I", "would", "still", "be", "working", "there", "have", "city"] },
+            { "id": "rv3-10", "type": "fill_blank", "prompt": "'You ___ have warned me.' (Türkçe: 'Beni uyarmalıydın.')", "answer": "should", "acceptableAnswers": ["should", "could"] }
+          ]
+        }
+      ]
+    }
+  ]
+}
