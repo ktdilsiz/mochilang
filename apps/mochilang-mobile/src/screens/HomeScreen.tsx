@@ -1,6 +1,7 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import {
   ActivityIndicator,
+  Dimensions,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -21,17 +22,106 @@ interface Props {
 }
 
 /**
+ * Approximate height of the lesson popover card (eyebrow + title + body
+ * + meta pills + button). Used to decide flip-above vs flip-below and
+ * to pick a scroll offset that keeps the whole card on screen.
+ */
+const POPOVER_HEIGHT = 280
+const POPOVER_GAP = 8 // vertical gap between node and popover
+
+/**
  * HomeScreen — themed topic banners + winding lesson path with circular
  * nodes (sin-wave horizontal offset, matches web). Tapping a node opens
- * an inline popover card showing title, description, XP, exercise count,
- * and Start/Practice button.
+ * a popover card; we auto-scroll the path so the popover stays visible
+ * (and flip above when the node is near the screen bottom).
  */
 export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
   const progress = useProgress()
   const course = useCourse('zh-en')
   const [openLessonId, setOpenLessonId] = useState<string | null>(null)
+  const [popoverPlacement, setPopoverPlacement] = useState<'below' | 'above'>(
+    'below'
+  )
+
+  const scrollRef = useRef<ScrollView>(null)
+  // Each lesson row registers its View ref here so we can measure where
+  // it sits inside the ScrollView when a popover opens. Stored as a map
+  // (not state) since it only matters at press time.
+  const rowRefs = useRef<Record<string, View | null>>({})
 
   const isCompleted = (id: string) => !!progress.state.results[id]
+
+  function handleNodePress(lessonId: string) {
+    if (openLessonId === lessonId) {
+      setOpenLessonId(null)
+      return
+    }
+
+    const row = rowRefs.current[lessonId]
+    const sv = scrollRef.current
+    if (!row || !sv) {
+      // Fallback — open below without scrolling. Shouldn't happen since
+      // refs are wired in render, but keeps the UI usable if anything
+      // about the layout is mid-flight.
+      setPopoverPlacement('below')
+      setOpenLessonId(lessonId)
+      return
+    }
+
+    // measureInWindow gives us the node's y relative to the screen, so we
+    // can decide flip-above vs flip-below independently of how far down
+    // the ScrollView we are. We'll then scroll only if the popover would
+    // hang off the bottom or top.
+    row.measureInWindow((_x, pageY, _w, _h) => {
+      const screenH = Dimensions.get('window').height
+      // Reserve ~80px for the bottom tab bar + a little breathing room.
+      const safeBottom = screenH - 80
+
+      const nodeBottom = pageY + 88 /* node height */
+      const wouldFitBelow =
+        nodeBottom + POPOVER_GAP + POPOVER_HEIGHT < safeBottom
+
+      const placement: 'below' | 'above' = wouldFitBelow ? 'below' : 'above'
+      setPopoverPlacement(placement)
+      setOpenLessonId(lessonId)
+
+      // Decide if we should scroll to make the popover visible. Even
+      // when placing above, the popover top can be cut off near the
+      // top of the viewport; when placing below, the bottom can be cut
+      // off if the screen is short. Either way, we want the whole node
+      // + popover area to be within the safe area.
+      const popoverTop =
+        placement === 'below'
+          ? nodeBottom + POPOVER_GAP
+          : pageY - POPOVER_GAP - POPOVER_HEIGHT
+      const popoverBottom = popoverTop + POPOVER_HEIGHT
+      const safeTop = 80 // topbar + status
+
+      let dy = 0
+      if (popoverBottom > safeBottom) {
+        dy = popoverBottom - safeBottom + 16 // 16px padding past edge
+      } else if (popoverTop < safeTop) {
+        dy = popoverTop - safeTop - 16 // negative => scroll up
+      }
+
+      if (dy !== 0) {
+        // We don't have direct access to the current scrollY — but
+        // scrollTo with `y: <delta>` doesn't work. Use scrollResponder's
+        // legacy API isn't worth it; instead use a relative scrollBy via
+        // scrollTo + the captured currentScroll. We track current scroll
+        // via the scroll event below.
+        sv.scrollTo({
+          y: Math.max(0, currentScrollY.current + dy),
+          animated: true,
+        })
+      }
+    })
+  }
+
+  // Kept up to date by onScroll. Used by handleNodePress to compute a
+  // relative scroll target without needing measureLayout against the
+  // ScrollView (which is fiddlier and varies by RN version).
+  const currentScrollY = useRef(0)
 
   // Find the next-up lesson + the topic/level that contains it for the
   // hero card.
@@ -91,8 +181,14 @@ export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
 
   return (
     <ScrollView
+      ref={scrollRef}
       contentContainerStyle={styles.shell}
       onScrollBeginDrag={() => setOpenLessonId(null)}
+      onScroll={(e) => {
+        currentScrollY.current = e.nativeEvent.contentOffset.y
+      }}
+      // 60fps tracking is overkill — we only read the value on a tap.
+      scrollEventThrottle={64}
     >
       <View style={styles.topbar}>
         <Text style={styles.langName}>Chinese</Text>
@@ -123,9 +219,12 @@ export default function HomeScreen({ onSelectLesson, onOpenGuide }: Props) {
           isCompleted={isCompleted}
           nextId={nextId}
           openLessonId={openLessonId}
-          setOpenLessonId={setOpenLessonId}
+          popoverPlacement={popoverPlacement}
+          rowRefs={rowRefs}
           onSelectLesson={onSelectLesson}
           onOpenGuide={onOpenGuide}
+          onNodePress={handleNodePress}
+          onCloseLesson={() => setOpenLessonId(null)}
         />
       ))}
     </ScrollView>
@@ -146,9 +245,12 @@ interface SectionProps {
   isCompleted: (id: string) => boolean
   nextId: string | null
   openLessonId: string | null
-  setOpenLessonId: (v: string | null) => void
+  popoverPlacement: 'below' | 'above'
+  rowRefs: React.MutableRefObject<Record<string, View | null>>
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
+  onNodePress: (lessonId: string) => void
+  onCloseLesson: () => void
 }
 
 function LevelSection({
@@ -156,9 +258,12 @@ function LevelSection({
   isCompleted,
   nextId,
   openLessonId,
-  setOpenLessonId,
+  popoverPlacement,
+  rowRefs,
   onSelectLesson,
   onOpenGuide,
+  onNodePress,
+  onCloseLesson,
 }: SectionProps) {
   return (
     <View style={styles.level}>
@@ -175,9 +280,12 @@ function LevelSection({
           isCompleted={isCompleted}
           nextId={nextId}
           openLessonId={openLessonId}
-          setOpenLessonId={setOpenLessonId}
+          popoverPlacement={popoverPlacement}
+          rowRefs={rowRefs}
           onSelectLesson={onSelectLesson}
           onOpenGuide={onOpenGuide}
+          onNodePress={onNodePress}
+          onCloseLesson={onCloseLesson}
         />
       ))}
     </View>
@@ -190,9 +298,12 @@ interface TopicProps {
   isCompleted: (id: string) => boolean
   nextId: string | null
   openLessonId: string | null
-  setOpenLessonId: (v: string | null) => void
+  popoverPlacement: 'below' | 'above'
+  rowRefs: React.MutableRefObject<Record<string, View | null>>
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
+  onNodePress: (lessonId: string) => void
+  onCloseLesson: () => void
 }
 
 function TopicCard({
@@ -201,9 +312,12 @@ function TopicCard({
   isCompleted,
   nextId,
   openLessonId,
-  setOpenLessonId,
+  popoverPlacement,
+  rowRefs,
   onSelectLesson,
   onOpenGuide,
+  onNodePress,
+  onCloseLesson,
 }: TopicProps) {
   const tint = tintForTheme(topic.theme)
   const allDone = topic.lessons.every((l) => isCompleted(l.id))
@@ -269,6 +383,12 @@ function TopicCard({
           return (
             <View
               key={lesson.id}
+              // Row View ref is captured so we can `measureInWindow` from
+              // the press handler — that's how we decide flip-above vs
+              // flip-below and trigger an auto-scroll.
+              ref={(r) => {
+                rowRefs.current[lesson.id] = r
+              }}
               // The transform on every row creates a stacking context, so
               // the open popover would otherwise be buried behind later
               // siblings. Bump the open row's zIndex/elevation so the
@@ -283,15 +403,16 @@ function TopicCard({
                 lesson={lesson}
                 done={isCompleted(lesson.id)}
                 isNext={lesson.id === nextId}
-                onPress={() => setOpenLessonId(isOpen ? null : lesson.id)}
+                onPress={() => onNodePress(lesson.id)}
               />
               {isOpen && (
                 <LessonPopover
                   lesson={lesson}
                   done={isCompleted(lesson.id)}
                   isNext={lesson.id === nextId}
+                  placement={popoverPlacement}
                   onStart={() => {
-                    setOpenLessonId(null)
+                    onCloseLesson()
                     onSelectLesson(lesson)
                   }}
                   rowOffset={offset}
@@ -309,17 +430,25 @@ function LessonPopover({
   lesson,
   done,
   isNext,
+  placement,
   onStart,
   rowOffset,
 }: {
   lesson: Lesson
   done: boolean
   isNext: boolean
+  placement: 'below' | 'above'
   onStart: () => void
   rowOffset: number
 }) {
   return (
-    <View style={[styles.popover, { transform: [{ translateX: -rowOffset }] }]}>
+    <View
+      style={[
+        styles.popover,
+        placement === 'below' ? styles.popoverBelow : styles.popoverAbove,
+        { transform: [{ translateX: -rowOffset }] },
+      ]}
+    >
       <Text style={styles.popoverEyebrow}>
         {done ? 'Completed' : isNext ? 'Up next' : 'Locked-in path'}
       </Text>
@@ -530,9 +659,8 @@ const styles = StyleSheet.create({
 
   popover: {
     // Absolute so the card overlays subsequent rows instead of pushing
-    // them down. `top` clears the 88px node + a small gap.
+    // them down. The `top` / `bottom` offset is set per placement.
     position: 'absolute',
-    top: 96,
     width: 300,
     backgroundColor: colors.surface,
     borderWidth: 1,
@@ -544,6 +672,14 @@ const styles = StyleSheet.create({
     shadowRadius: 24,
     shadowOffset: { width: 0, height: 8 },
     elevation: 12,
+  },
+  popoverBelow: {
+    // 88px node + 8px gap.
+    top: 96,
+  },
+  popoverAbove: {
+    // Same gap above the node so the visual rhythm reads symmetrically.
+    bottom: 96,
   },
   popoverEyebrow: {
     fontSize: fontSizes.xs,
