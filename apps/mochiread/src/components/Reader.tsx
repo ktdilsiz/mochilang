@@ -536,6 +536,16 @@ const s = StyleSheet.create({
   navBtnDisabled: { opacity: 0.4 },
   navText: { fontSize: 14, fontWeight: '600' },
   selectionBar: {
+    // Float above the footer so showing/hiding the bar doesn't change
+    // the page area's height — that used to trigger an `onLayout`,
+    // which repaginated the text mid-tap and visibly jumped the screen
+    // on Expo Go (web's reflow was atomic so the bug never showed).
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    bottom: FOOTER_HEIGHT,
+    zIndex: 5,
+    elevation: 5,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
