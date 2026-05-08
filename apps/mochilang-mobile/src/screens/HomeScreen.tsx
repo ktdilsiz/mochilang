@@ -265,8 +265,15 @@ function LevelSection({
   onNodePress,
   onCloseLesson,
 }: SectionProps) {
+  // Same trick at the level: bump this level above its siblings when one
+  // of its lessons has the popover open, so the popover can overlay the
+  // next level's divider/topic banner.
+  const levelHasOpen =
+    openLessonId !== null &&
+    level.topics.some((t) => t.lessons.some((l) => l.id === openLessonId))
+
   return (
-    <View style={styles.level}>
+    <View style={[styles.level, levelHasOpen && styles.levelOpen]}>
       <View style={styles.levelDivider}>
         <View style={styles.dividerLine} />
         <Text style={styles.levelPill}>{level.name}</Text>
@@ -322,9 +329,15 @@ function TopicCard({
   const tint = tintForTheme(topic.theme)
   const allDone = topic.lessons.every((l) => isCompleted(l.id))
   const completed = topic.lessons.filter((l) => isCompleted(l.id)).length
+  // When a popover is open in this topic, bump the *whole topic* above
+  // sibling topics (and sibling level sections) so the card overlays the
+  // next topic's banner instead of being painted under it. zIndex only
+  // orders siblings within the same parent, so we have to bump at every
+  // level the popover wants to escape.
+  const topicHasOpen = openLessonId !== null && topic.lessons.some((l) => l.id === openLessonId)
 
   return (
-    <View style={styles.topic}>
+    <View style={[styles.topic, topicHasOpen && styles.topicOpen]}>
       <View
         style={[
           styles.topicHeader,
@@ -544,7 +557,8 @@ const styles = StyleSheet.create({
     fontFamily: 'Nunito_600SemiBold',
   },
 
-  level: { gap: space.md },
+  level: { gap: space.md, position: 'relative', zIndex: 1 },
+  levelOpen: { zIndex: 30, elevation: 30 },
   levelDivider: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -566,7 +580,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Nunito_900Black',
   },
 
-  topic: { gap: space.sm },
+  // `position: 'relative'` is required by RN-Web for zIndex to map to a
+  // CSS stacking context; native RN respects zIndex on plain Views, so
+  // it's a no-op there.
+  topic: { gap: space.sm, position: 'relative', zIndex: 1 },
+  topicOpen: { zIndex: 30, elevation: 30 },
   topicHeader: {
     borderWidth: 2,
     borderRadius: radius.md,
