@@ -177,11 +177,6 @@
               "prompt": "'I ___ seen that film.' Olumsuz cümleyi tamamlayın (Türkçe: 'O filmi görmedim.')",
               "answer": "haven't",
               "acceptableAnswers": [
-                "haven't",
-                "HAVE NOT",
-                "HAVEN'T",
-                "Have not",
-                "Haven't",
                 "have not"
               ],
               "explanation": "Olumsuz: have + not = haven't."
@@ -191,11 +186,7 @@
               "type": "fill_blank",
               "prompt": "'eat' fiilinin 3. hali: ___",
               "answer": "eaten",
-              "acceptableAnswers": [
-                "eaten",
-                "EATEN",
-                "Eaten"
-              ],
+              "acceptableAnswers": [],
               "explanation": "eat-ate-eaten."
             },
             {
@@ -268,11 +259,7 @@
               "type": "fill_blank",
               "prompt": "Soru kurun: '___ you ever been to Paris?'",
               "answer": "Have",
-              "acceptableAnswers": [
-                "Have",
-                "HAVE",
-                "have"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Soru: Have/Has + özne + V3?"
             },
             {
@@ -341,11 +328,7 @@
               "prompt": "'I ___ (live) here since 2018.'",
               "answer": "have lived",
               "acceptableAnswers": [
-                "have lived",
-                "'VE LIVED",
-                "'ve lived",
-                "HAVE LIVED",
-                "Have lived"
+                "'ve lived"
               ],
               "explanation": "since + present perfect."
             },
@@ -354,11 +337,7 @@
               "type": "fill_blank",
               "prompt": "'She ___ (visit) Rome last summer.'",
               "answer": "visited",
-              "acceptableAnswers": [
-                "visited",
-                "VISITED",
-                "Visited"
-              ],
+              "acceptableAnswers": [],
               "explanation": "'Last summer' belirli geçmiş → past simple."
             },
             {
@@ -432,11 +411,7 @@
               "type": "fill_blank",
               "prompt": "'When I was a child, I ___ (love) ice cream.'",
               "answer": "loved",
-              "acceptableAnswers": [
-                "loved",
-                "LOVED",
-                "Loved"
-              ],
+              "acceptableAnswers": [],
               "explanation": "'When I was a child' belirli geçmiş bağlamı → past simple."
             }
           ]
@@ -479,11 +454,7 @@
               "type": "fill_blank",
               "prompt": "'I have known her ___ five years.'",
               "answer": "for",
-              "acceptableAnswers": [
-                "for",
-                "FOR",
-                "For"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Süre → for."
             },
             {
@@ -491,11 +462,7 @@
               "type": "fill_blank",
               "prompt": "'He has worked here ___ Monday.'",
               "answer": "since",
-              "acceptableAnswers": [
-                "since",
-                "SINCE",
-                "Since"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Başlangıç noktası → since."
             },
             {
@@ -569,11 +536,7 @@
               "type": "fill_blank",
               "prompt": "'We haven't seen each other ___ a long time.'",
               "answer": "for",
-              "acceptableAnswers": [
-                "for",
-                "FOR",
-                "For"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pp3-10",
@@ -627,11 +590,7 @@
               "type": "fill_blank",
               "prompt": "'I have ___ been to Italy.' (hiç gitmedim — olumsuz anlamlı)",
               "answer": "never",
-              "acceptableAnswers": [
-                "never",
-                "NEVER",
-                "Never"
-              ],
+              "acceptableAnswers": [],
               "explanation": "'Never' tek başına olumsuzluk taşır."
             },
             {
@@ -639,11 +598,7 @@
               "type": "fill_blank",
               "prompt": "'Have you ___ tried sushi?' (hiç)",
               "answer": "ever",
-              "acceptableAnswers": [
-                "ever",
-                "EVER",
-                "Ever"
-              ],
+              "acceptableAnswers": [],
               "explanation": "'Ever' soru cümlelerinde 'hiç' anlamında."
             },
             {
@@ -717,11 +672,7 @@
               "type": "fill_blank",
               "prompt": "'They have ___ arrived.' (zaten geldiler)",
               "answer": "already",
-              "acceptableAnswers": [
-                "already",
-                "ALREADY",
-                "Already"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pp4-10",
@@ -775,11 +726,7 @@
               "type": "fill_blank",
               "prompt": "'She hasn't called me ___ .' (henüz)",
               "answer": "yet",
-              "acceptableAnswers": [
-                "yet",
-                "YET",
-                "Yet"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Olumsuz cümle sonunda 'yet' = henüz."
             },
             {
@@ -787,11 +734,7 @@
               "type": "fill_blank",
               "prompt": "'I have ___ seen that movie.' (zaten gordum)",
               "answer": "already",
-              "acceptableAnswers": [
-                "already",
-                "ALREADY",
-                "Already"
-              ],
+              "acceptableAnswers": [],
               "explanation": "'Already' = olumlu Cümlede 'zaten'."
             },
             {
@@ -869,11 +812,7 @@
               "type": "fill_blank",
               "prompt": "Soru kurun: 'Have you finished the report ___ ?' (henüz)",
               "answer": "yet",
-              "acceptableAnswers": [
-                "yet",
-                "YET",
-                "Yet"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Soru sonunda 'yet'."
             },
             {
@@ -956,11 +895,7 @@
               "type": "fill_blank",
               "prompt": "'It ___ been raining since morning.' Boşluğa: ___",
               "answer": "has",
-              "acceptableAnswers": [
-                "has",
-                "HAS",
-                "Has"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Üçüncü tekil -> has."
             },
             {
@@ -981,11 +916,7 @@
               "type": "fill_blank",
               "prompt": "'They ___ ___ ___ for three days.' (waiting) (yardimci + been + V-ing)",
               "answer": "have been waiting",
-              "acceptableAnswers": [
-                "have been waiting",
-                "HAVE BEEN WAITING",
-                "Have been waiting"
-              ],
+              "acceptableAnswers": [],
               "explanation": "have/has + been + V-ing."
             },
             {
@@ -1072,11 +1003,7 @@
               "type": "fill_blank",
               "prompt": "'My eyes are red because I ___ ___ ___ .' (have been crying)",
               "answer": "have been crying",
-              "acceptableAnswers": [
-                "have been crying",
-                "HAVE BEEN CRYING",
-                "Have been crying"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Sonuctan ziyade sureklilik vurgusu."
             },
             {
@@ -1298,12 +1225,7 @@
               "prompt": "Kibar istek: '___ you help me, please?'",
               "answer": "Could",
               "acceptableAnswers": [
-                "Could",
-                "CAN",
-                "COULD",
-                "Can",
-                "can",
-                "could"
+                "can"
               ],
               "explanation": "'Could' daha kibar; 'Can' de mümkündür."
             },
@@ -1379,13 +1301,6 @@
               "prompt": "Olumsuz: 'She ___ come tomorrow.' (gelemez)",
               "answer": "can't",
               "acceptableAnswers": [
-                "can't",
-                "CAN NOT",
-                "CAN'T",
-                "CANNOT",
-                "Can not",
-                "Can't",
-                "Cannot",
                 "can not",
                 "cannot"
               ],
@@ -1482,11 +1397,6 @@
               "prompt": "'She ___ work on Saturdays.' (çalışmak zorunda)",
               "answer": "has to",
               "acceptableAnswers": [
-                "has to",
-                "HAS TO",
-                "Has to",
-                "MUST",
-                "Must",
                 "must"
               ],
               "explanation": "Üçüncü tekil için 'has to'."
@@ -1564,11 +1474,6 @@
               "prompt": "'Saat 10'a kadar evde olmalıyım (kendi kararım): I ___ be home by 10.'",
               "answer": "must",
               "acceptableAnswers": [
-                "must",
-                "HAVE TO",
-                "Have to",
-                "MUST",
-                "Must",
                 "have to"
               ],
               "explanation": "Kişisel zorunluluk → must (have to da kabul)."
@@ -1599,11 +1504,7 @@
               "type": "fill_blank",
               "prompt": "Soru: '___ I bring a gift?'",
               "answer": "Should",
-              "acceptableAnswers": [
-                "Should",
-                "SHOULD",
-                "should"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Tavsiye sorusu → Should I…?"
             },
             {
@@ -1637,11 +1538,6 @@
               "prompt": "'He ___ drive so fast.' (sürmemeli)",
               "answer": "shouldn't",
               "acceptableAnswers": [
-                "shouldn't",
-                "SHOULD NOT",
-                "SHOULDN'T",
-                "Should not",
-                "Shouldn't",
                 "should not"
               ],
               "explanation": "should + not = shouldn't."
@@ -1717,11 +1613,6 @@
               "prompt": "'We ___ be more careful next time.' (olmalıyız)",
               "answer": "should",
               "acceptableAnswers": [
-                "should",
-                "MUST",
-                "Must",
-                "SHOULD",
-                "Should",
                 "must"
               ],
               "explanation": "Tavsiye → should."
@@ -1778,13 +1669,6 @@
               "prompt": "'They ___ be late because of traffic.' (gecikebilirler)",
               "answer": "may",
               "acceptableAnswers": [
-                "may",
-                "COULD",
-                "Could",
-                "MAY",
-                "MIGHT",
-                "May",
-                "Might",
                 "could",
                 "might"
               ]
@@ -1862,13 +1746,6 @@
               "prompt": "'You ___ be right; I'm not sure.' (haklı olabilirsin)",
               "answer": "might",
               "acceptableAnswers": [
-                "might",
-                "COULD",
-                "Could",
-                "MAY",
-                "MIGHT",
-                "May",
-                "Might",
                 "could",
                 "may"
               ]
@@ -1926,11 +1803,6 @@
               "prompt": "'Sigara içmek yasak.' = 'You ___ smoke.'",
               "answer": "mustn't",
               "acceptableAnswers": [
-                "mustn't",
-                "MUST NOT",
-                "MUSTN'T",
-                "Must not",
-                "Mustn't",
                 "must not"
               ],
               "explanation": "Yasak için 'mustn't'."
@@ -1941,11 +1813,6 @@
               "prompt": "'Erken kalkmak zorunda değilim.' = 'I ___ ___ ___ get up early.'",
               "answer": "don't have to",
               "acceptableAnswers": [
-                "don't have to",
-                "DO NOT HAVE TO",
-                "DON'T HAVE TO",
-                "Do not have to",
-                "Don't have to",
                 "do not have to"
               ],
               "explanation": "Mecburiyetsizlik -> don't have to."
@@ -2031,11 +1898,7 @@
               "type": "fill_blank",
               "prompt": "Geçmiş zorunluluk: 'I ___ ___ wake up early yesterday.' (had to)",
               "answer": "had to",
-              "acceptableAnswers": [
-                "had to",
-                "HAD TO",
-                "Had to"
-              ],
+              "acceptableAnswers": [],
               "explanation": "'must'in geçmişi yok -> 'had to'."
             },
             {
@@ -2114,11 +1977,6 @@
               "prompt": "'Geç kalmamalisin.' = 'You ___ ___ be late.'",
               "answer": "shouldn't",
               "acceptableAnswers": [
-                "shouldn't",
-                "SHOULD NOT",
-                "SHOULDN'T",
-                "Should not",
-                "Shouldn't",
                 "should not"
               ],
               "explanation": "Olumsuz tavsiye: shouldn't."
@@ -2129,11 +1987,7 @@
               "prompt": "'had better'in olumsuzu: 'You ___ ___ ___ be late.' (had better not)",
               "answer": "had better not",
               "acceptableAnswers": [
-                "had better not",
-                "'D BETTER NOT",
-                "'d better not",
-                "HAD BETTER NOT",
-                "Had better not"
+                "'d better not"
               ],
               "explanation": "had better + not (had better not)."
             },
@@ -2221,11 +2075,6 @@
               "prompt": "'should'in geçmişi: 'You ___ ___ called me.' (yapmadın ama Yapmalıydın)",
               "answer": "should have",
               "acceptableAnswers": [
-                "should have",
-                "SHOULD HAVE",
-                "SHOULD'VE",
-                "Should have",
-                "Should've",
                 "should've"
               ],
               "explanation": "Pismanlik: should + have + V3."
@@ -2405,11 +2254,7 @@
               "prompt": "'If I ___ (be) tired, I go to bed early.'",
               "answer": "am",
               "acceptableAnswers": [
-                "am",
-                "'M",
-                "'m",
-                "AM",
-                "Am"
+                "'m"
               ],
               "explanation": "Zero conditional, present simple."
             },
@@ -2430,11 +2275,7 @@
               "type": "fill_blank",
               "prompt": "'If it ___ (rain), the ground gets wet.' (genel gerçek)",
               "answer": "rains",
-              "acceptableAnswers": [
-                "rains",
-                "RAINS",
-                "Rains"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "con1-5",
@@ -2510,11 +2351,6 @@
               "prompt": "'If you ___ (not eat), you feel weak.'",
               "answer": "don't eat",
               "acceptableAnswers": [
-                "don't eat",
-                "DO NOT EAT",
-                "DON'T EAT",
-                "Do not eat",
-                "Don't eat",
                 "do not eat"
               ]
             },
@@ -2557,11 +2393,7 @@
               "type": "fill_blank",
               "prompt": "'If you ___ (study), you will pass the exam.'",
               "answer": "study",
-              "acceptableAnswers": [
-                "study",
-                "STUDY",
-                "Study"
-              ],
+              "acceptableAnswers": [],
               "explanation": "If'li kısımda present."
             },
             {
@@ -2583,11 +2415,7 @@
               "prompt": "'If we don't hurry, we ___ (miss) the train.'",
               "answer": "will miss",
               "acceptableAnswers": [
-                "will miss",
-                "'LL MISS",
-                "'ll miss",
-                "WILL MISS",
-                "Will miss"
+                "'ll miss"
               ]
             },
             {
@@ -2662,13 +2490,6 @@
               "prompt": "'If I ___ (find) your wallet, I'll let you know.'",
               "answer": "find",
               "acceptableAnswers": [
-                "find",
-                "DISCOVER",
-                "Discover",
-                "FIND",
-                "Find",
-                "LOCATE",
-                "Locate",
                 "discover",
                 "locate"
               ]
@@ -2713,11 +2534,7 @@
               "prompt": "'If I had more time, I ___ (read) more books.'",
               "answer": "would read",
               "acceptableAnswers": [
-                "would read",
-                "'D READ",
-                "'d read",
-                "WOULD READ",
-                "Would read"
+                "'d read"
               ]
             },
             {
@@ -2738,11 +2555,6 @@
               "prompt": "'If I ___ (be) you, I would apologize.'",
               "answer": "were",
               "acceptableAnswers": [
-                "were",
-                "WAS",
-                "WERE",
-                "Was",
-                "Were",
                 "was"
               ],
               "explanation": "Klasik kalıp: 'If I were you'."
@@ -2821,11 +2633,7 @@
               "type": "fill_blank",
               "prompt": "'If she ___ (know), she would help us.'",
               "answer": "knew",
-              "acceptableAnswers": [
-                "knew",
-                "KNEW",
-                "Knew"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "con3-10",
@@ -2892,11 +2700,7 @@
               "type": "fill_blank",
               "prompt": "'If she ___ (have) more confidence, she would speak up.'",
               "answer": "had",
-              "acceptableAnswers": [
-                "had",
-                "HAD",
-                "Had"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Hayali → second conditional."
             },
             {
@@ -2904,11 +2708,7 @@
               "type": "fill_blank",
               "prompt": "'If you ___ (heat) iron, it expands.'",
               "answer": "heat",
-              "acceptableAnswers": [
-                "heat",
-                "HEAT",
-                "Heat"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Bilimsel gerçek → zero."
             },
             {
@@ -3031,11 +2831,6 @@
               "prompt": "'If I ___ (be) taller, I would play basketball.' (gerçeğinde kısayım)",
               "answer": "were",
               "acceptableAnswers": [
-                "were",
-                "WAS",
-                "WERE",
-                "Was",
-                "Were",
                 "was"
               ],
               "explanation": "Type 2: were/was + would."
@@ -3046,11 +2841,7 @@
               "prompt": "Mixed: 'If she ___ (study) law, she would be a lawyer now.' (geçmiş eylem)",
               "answer": "had studied",
               "acceptableAnswers": [
-                "had studied",
-                "'D STUDIED",
-                "'d studied",
-                "HAD STUDIED",
-                "Had studied"
+                "'d studied"
               ],
               "explanation": "Geçmiş koşul: had + V3."
             },
@@ -3140,11 +2931,6 @@
               "prompt": "'If I ___ ___ that song, I wouldn't be sad now.' (hadn't heard)",
               "answer": "hadn't heard",
               "acceptableAnswers": [
-                "hadn't heard",
-                "HAD NOT HEARD",
-                "HADN'T HEARD",
-                "Had not heard",
-                "Hadn't heard",
                 "had not heard"
               ],
               "explanation": "Olumsuz geçmiş koşul."
@@ -3226,11 +3012,7 @@
               "prompt": "'Keşke seni dinleseydim.' = 'I wish I ___ ___ to you.' (had listened)",
               "answer": "had listened",
               "acceptableAnswers": [
-                "had listened",
-                "'D LISTENED",
-                "'d listened",
-                "HAD LISTENED",
-                "Had listened"
+                "'d listened"
               ],
               "explanation": "Geçmiş pismanlik: wish + had + V3."
             },
@@ -3239,11 +3021,7 @@
               "type": "fill_blank",
               "prompt": "'Yagmur durmasa.' = 'I wish it ___ stop raining.' (would)",
               "answer": "would",
-              "acceptableAnswers": [
-                "would",
-                "WOULD",
-                "Would"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Baskasinin davranisina dilek: wish + would."
             },
             {
@@ -3329,11 +3107,7 @@
               "type": "fill_blank",
               "prompt": "'If only I ___ (know) the answer!' (Şimdi bilmiyorum.) Boşluk: ___",
               "answer": "knew",
-              "acceptableAnswers": [
-                "knew",
-                "KNEW",
-                "Knew"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Şşşşimdiki dilek: past simple."
             },
             {
@@ -3516,11 +3290,7 @@
               "type": "fill_blank",
               "prompt": "'The cake ___ (eat — V3).'",
               "answer": "eaten",
-              "acceptableAnswers": [
-                "eaten",
-                "EATEN",
-                "Eaten"
-              ],
+              "acceptableAnswers": [],
               "explanation": "eat-ate-eaten."
             },
             {
@@ -3528,11 +3298,7 @@
               "type": "fill_blank",
               "prompt": "Aktiften pasife: 'They build houses.' → 'Houses ___ ___ .' (iki kelime)",
               "answer": "are built",
-              "acceptableAnswers": [
-                "are built",
-                "ARE BUILT",
-                "Are built"
-              ],
+              "acceptableAnswers": [],
               "explanation": "are + built (V3)."
             },
             {
@@ -3607,11 +3373,7 @@
               "type": "fill_blank",
               "prompt": "Pasif yapın: 'Someone stole my phone.' → 'My phone ___ ___.'",
               "answer": "was stolen",
-              "acceptableAnswers": [
-                "was stolen",
-                "WAS STOLEN",
-                "Was stolen"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pas1-10",
@@ -3665,22 +3427,14 @@
               "type": "fill_blank",
               "prompt": "'The bridge ___ (build) in 1950.' (past passive)",
               "answer": "was built",
-              "acceptableAnswers": [
-                "was built",
-                "WAS BUILT",
-                "Was built"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pas2-4",
               "type": "fill_blank",
               "prompt": "'The report ___ (finish — present perfect passive).'",
               "answer": "has been finished",
-              "acceptableAnswers": [
-                "has been finished",
-                "HAS BEEN FINISHED",
-                "Has been finished"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pas2-5",
@@ -3753,11 +3507,7 @@
               "type": "fill_blank",
               "prompt": "'Cars ___ (make) in factories.' (genel gerçek, pasif)",
               "answer": "are made",
-              "acceptableAnswers": [
-                "are made",
-                "ARE MADE",
-                "Are made"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pas2-10",
@@ -3812,11 +3562,7 @@
               "type": "fill_blank",
               "prompt": "Doğal İngilizceye çevir: 'Burada Türkçe konuşulur.' → 'Turkish ___ ___ here.'",
               "answer": "is spoken",
-              "acceptableAnswers": [
-                "is spoken",
-                "IS SPOKEN",
-                "Is spoken"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pas3-4",
@@ -3903,11 +3649,6 @@
               "prompt": "'The keys ___ (find) on the table.' (bulundu — yapan önemsiz)",
               "answer": "were found",
               "acceptableAnswers": [
-                "were found",
-                "WAS FOUND",
-                "WERE FOUND",
-                "Was found",
-                "Were found",
                 "was found"
               ]
             },
@@ -3950,11 +3691,7 @@
               "type": "fill_blank",
               "prompt": "'The film ___ (direct) by Nuri Bilge Ceylan.'",
               "answer": "was directed",
-              "acceptableAnswers": [
-                "was directed",
-                "WAS DIRECTED",
-                "Was directed"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pas4-3",
@@ -3973,11 +3710,7 @@
               "type": "fill_blank",
               "prompt": "'My passport ___ (steal — present perfect passive).'",
               "answer": "has been stolen",
-              "acceptableAnswers": [
-                "has been stolen",
-                "HAS BEEN STOLEN",
-                "Has been stolen"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pas4-5",
@@ -4050,11 +3783,7 @@
               "type": "fill_blank",
               "prompt": "'English ___ (speak) all over the world.'",
               "answer": "is spoken",
-              "acceptableAnswers": [
-                "is spoken",
-                "IS SPOKEN",
-                "Is spoken"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "pas4-10",
@@ -4109,11 +3838,7 @@
               "type": "fill_blank",
               "prompt": "Past continuous passive: 'The house ___ ___ ___ when I arrived.' (was being painted)",
               "answer": "was being painted",
-              "acceptableAnswers": [
-                "was being painted",
-                "WAS BEING PAINTED",
-                "Was being painted"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Past continuous passive: was/were + being + V3."
             },
             {
@@ -4121,11 +3846,7 @@
               "type": "fill_blank",
               "prompt": "Future passive: 'The report ___ ___ ___ tomorrow.' (will be sent)",
               "answer": "will be sent",
-              "acceptableAnswers": [
-                "will be sent",
-                "WILL BE SENT",
-                "Will be sent"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Future passive: will + be + V3."
             },
             {
@@ -4212,11 +3933,7 @@
               "type": "fill_blank",
               "prompt": "Aktiften pasife: 'They are repairing the road.' -> 'The road ___ ___ ___ .'",
               "answer": "is being repaired",
-              "acceptableAnswers": [
-                "is being repaired",
-                "IS BEING REPAIRED",
-                "Is being repaired"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Present continuous passive."
             },
             {
@@ -4295,11 +4012,7 @@
               "type": "fill_blank",
               "prompt": "'Mona Lisa ___ ___ ___ Da Vinci.' (was painted by)",
               "answer": "was painted by",
-              "acceptableAnswers": [
-                "was painted by",
-                "WAS PAINTED BY",
-                "Was painted by"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Past simple passive + by."
             },
             {
@@ -4308,11 +4021,6 @@
               "prompt": "Get-passive: 'My phone ___ ___ yesterday.' (got stolen)",
               "answer": "got stolen",
               "acceptableAnswers": [
-                "got stolen",
-                "GOT STOLEN",
-                "Got stolen",
-                "WAS STOLEN",
-                "Was stolen",
                 "was stolen"
               ],
               "explanation": "Get + V3 = günlük dilde edilgen."
@@ -4401,11 +4109,6 @@
               "prompt": "'I ___ ___ in traffic this morning.' (got stuck)",
               "answer": "got stuck",
               "acceptableAnswers": [
-                "got stuck",
-                "GOT STUCK",
-                "Got stuck",
-                "WAS STUCK",
-                "Was stuck",
                 "was stuck"
               ],
               "explanation": "Get-passive: ani durum."
@@ -4636,9 +4339,8 @@
               "prompt": "'I ___ ___ an old friend at the mall.' (tesadüfen karşılaştım)",
               "answer": "ran into",
               "acceptableAnswers": [
-                "ran into",
-                "RAN INTO",
-                "Ran into"
+                "bumped into",
+                "encountered"
               ]
             },
             {
@@ -4646,11 +4348,7 @@
               "type": "fill_blank",
               "prompt": "'The plane will ___ ___ in 10 minutes.' (havalanacak)",
               "answer": "take off",
-              "acceptableAnswers": [
-                "take off",
-                "TAKE OFF",
-                "Take off"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "phr1-5",
@@ -4725,9 +4423,8 @@
               "prompt": "'I ___ ___ that he was lying.' (gerçeği öğrendim)",
               "answer": "found out",
               "acceptableAnswers": [
-                "found out",
-                "FOUND OUT",
-                "Found out"
+                "discovered",
+                "learned"
               ]
             },
             {
@@ -4783,11 +4480,7 @@
               "type": "fill_blank",
               "prompt": "'She turned ___ the offer.' (reddetti — turn down)",
               "answer": "down",
-              "acceptableAnswers": [
-                "down",
-                "DOWN",
-                "Down"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "phr2-4",
@@ -4872,11 +4565,7 @@
               "type": "fill_blank",
               "prompt": "'I get along ___ my colleagues.' (anlaşırım)",
               "answer": "with",
-              "acceptableAnswers": [
-                "with",
-                "WITH",
-                "With"
-              ],
+              "acceptableAnswers": [],
               "explanation": "'Get along with' = -ile iyi geçinmek."
             },
             {
@@ -4930,11 +4619,7 @@
               "type": "fill_blank",
               "prompt": "'I ___ ___ at the gym every morning.' (spor yapmak)",
               "answer": "work out",
-              "acceptableAnswers": [
-                "work out",
-                "WORK OUT",
-                "Work out"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "phr3-4",
@@ -5020,11 +4705,6 @@
               "prompt": "'Can you ___ me ___ at the airport?' (havaalanından alabilir misin?)",
               "answer": "pick up",
               "acceptableAnswers": [
-                "pick up",
-                "PICK / UP",
-                "PICK UP",
-                "Pick / up",
-                "Pick up",
                 "pick / up"
               ],
               "explanation": "Pick X up = X'i almaya gelmek."
@@ -5080,9 +4760,8 @@
               "prompt": "'Don't ___ ___ trying!' (Vazgeçme!)",
               "answer": "give up",
               "acceptableAnswers": [
-                "give up",
-                "GIVE UP",
-                "Give up"
+                "quit",
+                "stop"
               ]
             },
             {
@@ -5091,12 +4770,8 @@
               "prompt": "Resmi karşılığı yaz: 'put off' = ___",
               "answer": "postpone",
               "acceptableAnswers": [
-                "postpone",
-                "DELAY",
-                "Delay",
-                "POSTPONE",
-                "Postpone",
-                "delay"
+                "delay",
+                "put off"
               ],
               "explanation": "'put off' (konuşma) = postpone (resmi)."
             },
@@ -5172,9 +4847,7 @@
               "prompt": "'I'll ___ ___ about it tomorrow.' (yarın araştıracağım — look into)",
               "answer": "look into",
               "acceptableAnswers": [
-                "look into",
-                "LOOK INTO",
-                "Look into"
+                "investigate"
               ]
             },
             {
@@ -5229,11 +4902,7 @@
               "type": "fill_blank",
               "prompt": "'I ___ ___ ___ my best friend yesterday.' (fell out with)",
               "answer": "fell out with",
-              "acceptableAnswers": [
-                "fell out with",
-                "FELL OUT WITH",
-                "Fell out with"
-              ],
+              "acceptableAnswers": [],
               "explanation": "fall out with = kavga etmek."
             },
             {
@@ -5242,9 +4911,7 @@
               "prompt": "'They want to ___ ___ in the countryside.' (settle down)",
               "answer": "settle down",
               "acceptableAnswers": [
-                "settle down",
-                "SETTLE DOWN",
-                "Settle down"
+                "settle"
               ],
               "explanation": "settle down = yerleşmek."
             },
@@ -5333,9 +5000,8 @@
               "prompt": "'I can't ___ ___ ___ his lies anymore.' (put up with)",
               "answer": "put up with",
               "acceptableAnswers": [
-                "put up with",
-                "PUT UP WITH",
-                "Put up with"
+                "tolerate",
+                "endure"
               ],
               "explanation": "Tahammül edememek."
             },
@@ -5415,11 +5081,7 @@
               "type": "fill_blank",
               "prompt": "'Pick up the kids.' -> pronoun ile: 'Pick ___ ___ .' (them up)",
               "answer": "them up",
-              "acceptableAnswers": [
-                "them up",
-                "THEM UP",
-                "Them up"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Pronoun ortaya."
             },
             {
@@ -5427,11 +5089,7 @@
               "type": "fill_blank",
               "prompt": "'look after' pronoun ile: 'I'll look ___ ___ .' (after them - ayrılamaz)",
               "answer": "after them",
-              "acceptableAnswers": [
-                "after them",
-                "AFTER THEM",
-                "After them"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Look after = ayrılamaz; pronoun bile araya giremez."
             },
             {
@@ -5516,11 +5174,7 @@
               "type": "fill_blank",
               "prompt": "'I came across an old letter.' Pronoun ile: 'I came ___ ___ .' (across it)",
               "answer": "across it",
-              "acceptableAnswers": [
-                "across it",
-                "ACROSS IT",
-                "Across it"
-              ],
+              "acceptableAnswers": [],
               "explanation": "come across = ayrılamaz."
             },
             {
@@ -5746,12 +5400,8 @@
               "prompt": "'Bu projenin gerçek maliyeti nedir?' → 'What's the ___ cost of this project?'",
               "answer": "actual",
               "acceptableAnswers": [
-                "actual",
-                "ACTUAL",
-                "Actual",
-                "REAL",
-                "Real",
-                "real"
+                "real",
+                "true"
               ],
               "explanation": "Türkçedeki 'aktüel' burada YANLIŞ. 'Actual' = gerçek."
             },
@@ -5826,12 +5476,8 @@
               "prompt": "'Sonunda gerçeği öğrendik.' → '___, we learned the truth.'",
               "answer": "Eventually",
               "acceptableAnswers": [
-                "Eventually",
-                "EVENTUALLY",
-                "FINALLY",
-                "Finally",
-                "eventually",
-                "finally"
+                "finally",
+                "In the end"
               ]
             },
             {
@@ -5901,11 +5547,6 @@
               "prompt": "'Aşçı muhteşem bir yemek pişirdi.' → 'The ___ cooked a wonderful meal.'",
               "answer": "chef",
               "acceptableAnswers": [
-                "chef",
-                "CHEF",
-                "COOK",
-                "Chef",
-                "Cook",
                 "cook"
               ],
               "explanation": "İngilizce 'chef' = baş aşçı. Türkçe 'şef' (lider/patron) = boss/manager."
@@ -5983,12 +5624,8 @@
               "prompt": "'Bu ay çıkan dergiyi okudun mu?' → 'Did you read this month's ___?'",
               "answer": "magazine",
               "acceptableAnswers": [
-                "magazine",
-                "JOURNAL",
-                "Journal",
-                "MAGAZINE",
-                "Magazine",
-                "journal"
+                "journal",
+                "periodical"
               ]
             },
             {
@@ -6057,11 +5694,6 @@
               "prompt": "'Hatamı fark ettim.' → 'I ___ my mistake.'",
               "answer": "realized",
               "acceptableAnswers": [
-                "realized",
-                "REALISED",
-                "REALIZED",
-                "Realised",
-                "Realized",
                 "realised"
               ],
               "explanation": "'Realize' burada 'fark etmek'."
@@ -6138,11 +5770,7 @@
               "type": "fill_blank",
               "prompt": "'Sigara içmek burada yasak.' → '___ is forbidden here.'",
               "answer": "Smoking",
-              "acceptableAnswers": [
-                "Smoking",
-                "SMOKING",
-                "smoking"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "ff3-10",
@@ -6211,12 +5839,8 @@
               "prompt": "'Sunumdan önce kısa bir brifing verdi.' → 'She gave a ___ briefing before the presentation.'",
               "answer": "brief",
               "acceptableAnswers": [
-                "brief",
-                "BRIEF",
-                "Brief",
-                "SHORT",
-                "Short",
-                "short"
+                "short",
+                "concise"
               ],
               "explanation": "'Brief' = kısa."
             },
@@ -6291,12 +5915,8 @@
               "prompt": "'Be ___: explain in two minutes.' (kısa ol)",
               "answer": "brief",
               "acceptableAnswers": [
-                "brief",
-                "BRIEF",
-                "Brief",
-                "SHORT",
-                "Short",
-                "short"
+                "short",
+                "concise"
               ]
             },
             {
@@ -6351,11 +5971,6 @@
               "prompt": "'Eventually' ne demek? ___ (sonunda / nihayetinde)",
               "answer": "sonunda",
               "acceptableAnswers": [
-                "sonunda",
-                "NIHAYETINDE",
-                "Nihayetinde",
-                "SONUNDA",
-                "Sonunda",
                 "nihayetinde"
               ],
               "explanation": "eventually != 'eventuel/olasi'."
@@ -6366,17 +5981,9 @@
               "prompt": "'sympathetic' ne demek? ___ (anlayışlı / şefkatli)",
               "answer": "anlayışlı",
               "acceptableAnswers": [
-                "anlayışlı",
-                "ANLAYISLI",
-                "ANLAYIŞLI",
-                "Anlayisli",
-                "Anlayışlı",
-                "SEFKATLI",
-                "Sefkatli",
                 "anlayisli",
+                "anlayişli",
                 "sefkatli",
-                "ŞEFKATLI",
-                "Şefkatli",
                 "şefkatli"
               ],
               "explanation": "sympathetic != 'sempatik'."
@@ -6464,12 +6071,6 @@
               "prompt": "'sensitive' ne demek? ___ (duyarlı / hassas)",
               "answer": "duyarlı",
               "acceptableAnswers": [
-                "duyarlı",
-                "DUYARLI",
-                "Duyarli",
-                "Duyarlı",
-                "HASSAS",
-                "Hassas",
                 "duyarli",
                 "hassas"
               ],
@@ -6552,11 +6153,6 @@
               "prompt": "'fabric' ne demek? ___ (kumaş)",
               "answer": "kumaş",
               "acceptableAnswers": [
-                "kumaş",
-                "KUMAS",
-                "KUMAŞ",
-                "Kumas",
-                "Kumaş",
                 "kumas"
               ],
               "explanation": "fabric != 'fabrika'. Fabrika = factory."
@@ -6567,12 +6163,6 @@
               "prompt": "'rest' ne demek (en yaygin)? ___ (dinlenme / kalanı)",
               "answer": "dinlenme",
               "acceptableAnswers": [
-                "dinlenme",
-                "DINLENME",
-                "Dinlenme",
-                "KALANI",
-                "Kalani",
-                "Kalanı",
                 "kalani",
                 "kalanı"
               ],
@@ -6662,11 +6252,7 @@
               "type": "fill_blank",
               "prompt": "'I need a rest.' Türkçesi: 'Bir ___ ihtiyacım var.' (dinlenmeye)",
               "answer": "dinlenmeye",
-              "acceptableAnswers": [
-                "dinlenmeye",
-                "DINLENMEYE",
-                "Dinlenmeye"
-              ],
+              "acceptableAnswers": [],
               "explanation": "I need a rest = Dinlenmeye ihtiyacım var."
             },
             {
@@ -6869,11 +6455,7 @@
               "type": "fill_blank",
               "prompt": "'Otobüs durağı' İngilizcede: ___ stop",
               "answer": "bus",
-              "acceptableAnswers": [
-                "bus",
-                "BUS",
-                "Bus"
-              ],
+              "acceptableAnswers": [],
               "explanation": "bus stop."
             },
             {
@@ -6881,11 +6463,7 @@
               "type": "fill_blank",
               "prompt": "'Tren istasyonu' İngilizcede: ___ ___",
               "answer": "train station",
-              "acceptableAnswers": [
-                "train station",
-                "TRAIN STATION",
-                "Train station"
-              ],
+              "acceptableAnswers": [],
               "explanation": "train station."
             },
             {
@@ -6973,11 +6551,6 @@
               "prompt": "'Taksi tutmak' = '___ a taxi'",
               "answer": "catch",
               "acceptableAnswers": [
-                "catch",
-                "CATCH",
-                "Catch",
-                "TAKE",
-                "Take",
                 "take"
               ],
               "explanation": "catch / take a taxi."
@@ -7056,11 +6629,7 @@
               "type": "fill_blank",
               "prompt": "'Kahvaltı dahil mi?' = 'Iş breakfast ___ ?' (included)",
               "answer": "included",
-              "acceptableAnswers": [
-                "included",
-                "INCLUDED",
-                "Included"
-              ],
+              "acceptableAnswers": [],
               "explanation": "included = dahil."
             },
             {
@@ -7068,11 +6637,7 @@
               "type": "fill_blank",
               "prompt": "'reservation' ne demek? ___ (rezervasyon)",
               "answer": "rezervasyon",
-              "acceptableAnswers": [
-                "rezervasyon",
-                "REZERVASYON",
-                "Rezervasyon"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "tr2-5",
@@ -7156,11 +6721,7 @@
               "type": "fill_blank",
               "prompt": "'Anahtarimi kaybettim.' = 'I've ___ my key.'",
               "answer": "lost",
-              "acceptableAnswers": [
-                "lost",
-                "LOST",
-                "Lost"
-              ],
+              "acceptableAnswers": [],
               "explanation": "lost = kaybetmek (V3)."
             },
             {
@@ -7239,9 +6800,7 @@
               "prompt": "'Duz git.' = 'Go ___ .'",
               "answer": "straight",
               "acceptableAnswers": [
-                "straight",
-                "STRAIGHT",
-                "Straight"
+                "ahead"
               ],
               "explanation": "go straight."
             },
@@ -7250,11 +6809,7 @@
               "type": "fill_blank",
               "prompt": "'Köşede.' = 'On the ___ .' (corner)",
               "answer": "corner",
-              "acceptableAnswers": [
-                "corner",
-                "CORNER",
-                "Corner"
-              ],
+              "acceptableAnswers": [],
               "explanation": "on the corner."
             },
             {
@@ -7340,11 +6895,6 @@
               "prompt": "'... ne kadar uzakta?' = 'How ___ İş...?'",
               "answer": "far",
               "acceptableAnswers": [
-                "far",
-                "DISTANT",
-                "Distant",
-                "FAR",
-                "Far",
                 "distant"
               ],
               "explanation": "How far is X?"
@@ -7425,11 +6975,7 @@
               "type": "fill_blank",
               "prompt": "'Bir sonraki durakta in.' = '___ off at the next stop.'",
               "answer": "Get",
-              "acceptableAnswers": [
-                "Get",
-                "GET",
-                "get"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Get off = inmek."
             },
             {
@@ -7437,11 +6983,7 @@
               "type": "fill_blank",
               "prompt": "'Otele giriş yapacağız.' = 'We'll ___ ___ at the hotel.' (check in)",
               "answer": "check in",
-              "acceptableAnswers": [
-                "check in",
-                "CHECK IN",
-                "Check in"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "tr4-5",
@@ -7526,11 +7068,7 @@
               "type": "fill_blank",
               "prompt": "'Yarin çıkış yapacağız.' = 'We'll ___ ___ tomorrow.' (check out)",
               "answer": "check out",
-              "acceptableAnswers": [
-                "check out",
-                "CHECK OUT",
-                "Check out"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "tr4-11",
@@ -7606,22 +7144,14 @@
               "type": "fill_blank",
               "prompt": "'Pasaportumu unuttum.' = 'I forgot my ___ .'",
               "answer": "passport",
-              "acceptableAnswers": [
-                "passport",
-                "PASSPORT",
-                "Passport"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "tr5-4",
               "type": "fill_blank",
               "prompt": "'Otel rezervasyonum var.' = 'I have a ___ at the hotel.'",
               "answer": "reservation",
-              "acceptableAnswers": [
-                "reservation",
-                "RESERVATION",
-                "Reservation"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "tr5-5",
@@ -7711,11 +7241,6 @@
               "prompt": "'Tren rotarli.' = 'The train Is ___ .' (delayed)",
               "answer": "delayed",
               "acceptableAnswers": [
-                "delayed",
-                "DELAYED",
-                "Delayed",
-                "LATE",
-                "Late",
                 "late"
               ]
             },
@@ -7890,11 +7415,7 @@
               "type": "fill_blank",
               "prompt": "'Toplanti' İngilizce: ___",
               "answer": "meeting",
-              "acceptableAnswers": [
-                "meeting",
-                "MEETING",
-                "Meeting"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "wk1-4",
@@ -7902,11 +7423,6 @@
               "prompt": "'Yonetici' İngilizce: ___",
               "answer": "manager",
               "acceptableAnswers": [
-                "manager",
-                "BOSS",
-                "Boss",
-                "MANAGER",
-                "Manager",
                 "boss"
               ]
             },
@@ -7994,9 +7510,7 @@
               "prompt": "'Stajyer' İngilizce: ___",
               "answer": "intern",
               "acceptableAnswers": [
-                "intern",
-                "INTERN",
-                "Intern"
+                "trainee"
               ]
             },
             {
@@ -8075,11 +7589,6 @@
               "prompt": "'I work ___ Google.'",
               "answer": "for",
               "acceptableAnswers": [
-                "for",
-                "AT",
-                "At",
-                "FOR",
-                "For",
                 "at"
               ],
               "explanation": "Şirket için 'work for' veya 'at'."
@@ -8089,11 +7598,7 @@
               "type": "fill_blank",
               "prompt": "'Ben bir öğretmenim.' = 'I'm ___ ___ .' (a teacher)",
               "answer": "a teacher",
-              "acceptableAnswers": [
-                "a teacher",
-                "A TEACHER",
-                "A teacher"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "wk2-5",
@@ -8178,11 +7683,7 @@
               "type": "fill_blank",
               "prompt": "Soru: 'What ___ you do?'",
               "answer": "do",
-              "acceptableAnswers": [
-                "do",
-                "DO",
-                "Do"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Meslek sormak için."
             },
             {
@@ -8258,11 +7759,7 @@
               "type": "fill_blank",
               "prompt": "'Sonradan takip edeceğim.' = 'I'll ___ ___ later.' (follow up)",
               "answer": "follow up",
-              "acceptableAnswers": [
-                "follow up",
-                "FOLLOW UP",
-                "Follow up"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "wk3-4",
@@ -8270,11 +7767,6 @@
               "prompt": "'Tamamen katılıyorum.' = 'I ___ completely.' (agree)",
               "answer": "agree",
               "acceptableAnswers": [
-                "agree",
-                "AGREE",
-                "Agree",
-                "CONCUR",
-                "Concur",
                 "concur"
               ]
             },
@@ -8364,14 +7856,8 @@
               "prompt": "'On the same page' deyimi: ___ (anlaşmış / hemfikir)",
               "answer": "anlaşmış",
               "acceptableAnswers": [
-                "anlaşmış",
-                "ANLASMIS",
-                "ANLAŞMIŞ",
-                "Anlasmis",
-                "Anlaşmış",
-                "HEMFIKIR",
-                "Hemfikir",
                 "anlasmis",
+                "anlaşmiş",
                 "hemfikir"
               ]
             },
@@ -8449,9 +7935,8 @@
               "prompt": "'Bu projeyi yönetiyorum.' = 'I ___ this project.' (manage)",
               "answer": "manage",
               "acceptableAnswers": [
-                "manage",
-                "MANAGE",
-                "Manage"
+                "run",
+                "lead"
               ]
             },
             {
@@ -8460,9 +7945,8 @@
               "prompt": "'Raporu zamaninda teslim edeceğim.' = 'I'll ___ the report on time.' (deliver)",
               "answer": "deliver",
               "acceptableAnswers": [
-                "deliver",
-                "DELIVER",
-                "Deliver"
+                "submit",
+                "hand in"
               ]
             },
             {
@@ -8550,11 +8034,7 @@
               "type": "fill_blank",
               "prompt": "'miss the deadline' ne demek? ___ ___ kaçırmak",
               "answer": "son tarihi",
-              "acceptableAnswers": [
-                "son tarihi",
-                "SON TARIHI",
-                "Son tarihi"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "wk4-11",
@@ -8633,11 +8113,6 @@
               "prompt": "'İşten ayrıldım.' = 'I ___ my job.' (quit)",
               "answer": "quit",
               "acceptableAnswers": [
-                "quit",
-                "LEFT",
-                "Left",
-                "QUIT",
-                "Quit",
                 "left"
               ]
             },
@@ -8647,11 +8122,6 @@
               "prompt": "'Bir sunum yapacagim.' = 'I'll ___ a presentation.' (give)",
               "answer": "give",
               "acceptableAnswers": [
-                "give",
-                "DO",
-                "Do",
-                "GIVE",
-                "Give",
                 "do"
               ]
             },
@@ -8738,11 +8208,7 @@
               "type": "fill_blank",
               "prompt": "'Izne cikmak' = 'take ___ ___' (a day off)",
               "answer": "a day off",
-              "acceptableAnswers": [
-                "a day off",
-                "A DAY OFF",
-                "A day off"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "wk5-11",
@@ -8915,11 +8381,7 @@
               "type": "fill_blank",
               "prompt": "'I ___ ___ (read) when she called.' (was reading)",
               "answer": "was reading",
-              "acceptableAnswers": [
-                "was reading",
-                "WAS READING",
-                "Was reading"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Devam eden = past continuous."
             },
             {
@@ -8927,11 +8389,7 @@
               "type": "fill_blank",
               "prompt": "'When I arrived, she ___ ___ (cook) dinner.' (was cooking)",
               "answer": "was cooking",
-              "acceptableAnswers": [
-                "was cooking",
-                "WAS COOKING",
-                "Was cooking"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "st1-5",
@@ -9017,11 +8475,7 @@
               "type": "fill_blank",
               "prompt": "'Ben okurken o yemek yapiyordu.' = 'While I ___ ___ , she was cooking.' (was reading)",
               "answer": "was reading",
-              "acceptableAnswers": [
-                "was reading",
-                "WAS READING",
-                "Was reading"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "st1-11",
@@ -9098,9 +8552,9 @@
               "prompt": "'Sonunda eve geldim.' = '___ , I got home.' (Finally)",
               "answer": "Finally",
               "acceptableAnswers": [
-                "Finally",
-                "FINALLY",
-                "finally"
+                "At last",
+                "Eventually",
+                "in the end"
               ]
             },
             {
@@ -9109,12 +8563,8 @@
               "prompt": "'Bu sırada' İngilizcede: ___",
               "answer": "meanwhile",
               "acceptableAnswers": [
-                "meanwhile",
-                "IN THE MEANTIME",
-                "In the meantime",
-                "MEANWHILE",
-                "Meanwhile",
-                "in the meantime"
+                "in the meantime",
+                "meantime"
               ]
             },
             {
@@ -9204,12 +8654,8 @@
               "prompt": "'Bu arada / Bu sırada' = ___ kelimesi",
               "answer": "meanwhile",
               "acceptableAnswers": [
-                "meanwhile",
-                "IN THE MEANTIME",
-                "In the meantime",
-                "MEANWHILE",
-                "Meanwhile",
-                "in the meantime"
+                "in the meantime",
+                "meantime"
               ]
             },
             {
@@ -9286,11 +8732,7 @@
               "type": "fill_blank",
               "prompt": "'Geliyormus.' (duyduk ki) = 'Apparently, ___ ___ ___ .' (he is coming)",
               "answer": "he is coming",
-              "acceptableAnswers": [
-                "he is coming",
-                "HE IS COMING",
-                "He is coming"
-              ],
+              "acceptableAnswers": [],
               "explanation": "apparently = anlaşılan."
             },
             {
@@ -9298,11 +8740,7 @@
               "type": "fill_blank",
               "prompt": "'Ali ile Ayşe ayrilmis.' = 'I ___ Ali and Ayşe broke up.' (heard)",
               "answer": "heard",
-              "acceptableAnswers": [
-                "heard",
-                "HEARD",
-                "Heard"
-              ],
+              "acceptableAnswers": [],
               "explanation": "I heard that ... = ... duydum."
             },
             {
@@ -9388,17 +8826,8 @@
               "prompt": "'O zenginmis.' = 'I heard ___ ___ rich.' (he was)",
               "answer": "he was",
               "acceptableAnswers": [
-                "he was",
-                "HE IS",
-                "HE WAS",
-                "HE İŞ",
-                "He is",
-                "He i̇ş",
-                "He was",
-                "he Is",
                 "he is",
-                "he i̇ş",
-                "he İş"
+                "he i̇ş"
               ],
               "explanation": "Aktarilan bilgi -> geçmiş zaman."
             },
@@ -9477,22 +8906,14 @@
               "type": "fill_blank",
               "prompt": "'Birkaç yıl once' = ___ ___ ___ ago (a few years)",
               "answer": "a few years",
-              "acceptableAnswers": [
-                "a few years",
-                "A FEW YEARS",
-                "A few years"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "st4-4",
               "type": "fill_blank",
               "prompt": "'Tatildeyken' = 'while I ___ ___ vacation' (was on)",
               "answer": "was on",
-              "acceptableAnswers": [
-                "was on",
-                "WAS ON",
-                "Was on"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "st4-5",
@@ -9579,11 +9000,6 @@
               "prompt": "'O sırada hiçbir şey bilmiyordum.' = 'At the time, I ___ ___ anything.' (didn't know)",
               "answer": "didn't know",
               "acceptableAnswers": [
-                "didn't know",
-                "DID NOT KNOW",
-                "DIDN'T KNOW",
-                "Did not know",
-                "Didn't know",
                 "did not know"
               ]
             },
@@ -9662,12 +9078,8 @@
               "prompt": "'Bu sırada' = ___ (meanwhile)",
               "answer": "meanwhile",
               "acceptableAnswers": [
-                "meanwhile",
-                "IN THE MEANTIME",
-                "In the meantime",
-                "MEANWHILE",
-                "Meanwhile",
-                "in the meantime"
+                "in the meantime",
+                "meantime"
               ]
             },
             {
@@ -9675,11 +9087,7 @@
               "type": "fill_blank",
               "prompt": "'Yıllar sonra ___' = 'Years later, ...'",
               "answer": "later",
-              "acceptableAnswers": [
-                "later",
-                "LATER",
-                "Later"
-              ],
+              "acceptableAnswers": [],
               "explanation": "Years later = yıllar sonra."
             },
             {
@@ -9766,11 +9174,7 @@
               "type": "fill_blank",
               "prompt": "'O gunden beri' = 'Since ___ ___' (that day)",
               "answer": "that day",
-              "acceptableAnswers": [
-                "that day",
-                "THAT DAY",
-                "That day"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "st5-11",
@@ -9955,11 +9359,6 @@
               "prompt": "'Bana sorarsan' İngilizcede: 'If you ___ me, ...' (ask)",
               "answer": "ask",
               "acceptableAnswers": [
-                "ask",
-                "ASK",
-                "Ask",
-                "REQUEST",
-                "Request",
                 "request"
               ]
             },
@@ -9969,16 +9368,9 @@
               "prompt": "'I believe (that) ...' Türkçesi: ___ ki ... (Inanıyorum)",
               "answer": "Inanıyorum",
               "acceptableAnswers": [
-                "Inanıyorum",
-                "INANIRIM",
-                "INANIYORUM",
-                "Inanirim",
-                "Inaniyorum",
-                "Inanırım",
                 "inanirim",
                 "inaniyorum",
-                "inanırım",
-                "inanıyorum"
+                "inanırım"
               ]
             },
             {
@@ -10064,11 +9456,7 @@
               "type": "fill_blank",
               "prompt": "'Bana gore' = '___ ___ , ...' (To me)",
               "answer": "To me",
-              "acceptableAnswers": [
-                "To me",
-                "TO ME",
-                "to me"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "op1-11",
@@ -10143,11 +9531,7 @@
               "type": "fill_blank",
               "prompt": "'Sana katılıyorum.' = 'I agree ___ you.'",
               "answer": "with",
-              "acceptableAnswers": [
-                "with",
-                "WITH",
-                "With"
-              ],
+              "acceptableAnswers": [],
               "explanation": "agree WITH someone."
             },
             {
@@ -10155,11 +9539,7 @@
               "type": "fill_blank",
               "prompt": "'Soylediklerine katılıyorum.' = 'I agree ___ what you said.'",
               "answer": "with",
-              "acceptableAnswers": [
-                "with",
-                "WITH",
-                "With"
-              ],
+              "acceptableAnswers": [],
               "explanation": "agree with."
             },
             {
@@ -10245,11 +9625,7 @@
               "type": "fill_blank",
               "prompt": "'Aynı fikirdeyim.' = 'I ___ the same way.' (feel)",
               "answer": "feel",
-              "acceptableAnswers": [
-                "feel",
-                "FEEL",
-                "Feel"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "op2-11",
@@ -10326,9 +9702,8 @@
               "prompt": "'Bu adil bir nokta, ama ...' = 'That's a ___ point, but ...' (fair)",
               "answer": "fair",
               "acceptableAnswers": [
-                "fair",
-                "FAIR",
-                "Fair"
+                "valid",
+                "good"
               ]
             },
             {
@@ -10337,11 +9712,6 @@
               "prompt": "'Anladigim kadariyla ...' = 'As ___ as I understand, ...' (far)",
               "answer": "far",
               "acceptableAnswers": [
-                "far",
-                "DISTANT",
-                "Distant",
-                "FAR",
-                "Far",
                 "distant"
               ]
             },
@@ -10432,11 +9802,6 @@
               "prompt": "'Buna katılmıyorum demem gerek.' = 'I'm afraid I have to ___ .' (disagree)",
               "answer": "disagree",
               "acceptableAnswers": [
-                "disagree",
-                "DIFFER",
-                "DISAGREE",
-                "Differ",
-                "Disagree",
                 "differ"
               ]
             },
@@ -10515,12 +9880,8 @@
               "prompt": "'Belki de yaniliyorum.' = '___ I'm wrong.' (Maybe)",
               "answer": "Maybe",
               "acceptableAnswers": [
-                "Maybe",
-                "MAYBE",
-                "PERHAPS",
-                "Perhaps",
-                "maybe",
-                "perhaps"
+                "perhaps",
+                "possibly"
               ]
             },
             {
@@ -10529,9 +9890,8 @@
               "prompt": "'Emin değilim ama ...' = 'I'm not ___ , but ...' (sure)",
               "answer": "sure",
               "acceptableAnswers": [
-                "sure",
-                "SURE",
-                "Sure"
+                "certain",
+                "confident"
               ]
             },
             {
@@ -10618,13 +9978,6 @@
               "prompt": "'Sanirim haklisin.' = 'I ___ you're right.' (think / suppose)",
               "answer": "think",
               "acceptableAnswers": [
-                "think",
-                "BELIEVE",
-                "Believe",
-                "SUPPOSE",
-                "Suppose",
-                "THINK",
-                "Think",
                 "believe",
                 "suppose"
               ]
@@ -10705,12 +10058,7 @@
               "prompt": "'Sen ne düşünüyorsun?' = '___ ___ you think?' (What do)",
               "answer": "What do",
               "acceptableAnswers": [
-                "What do",
-                "WHAT",
-                "WHAT DO",
-                "What",
-                "what",
-                "what do"
+                "what"
               ]
             },
             {
@@ -10718,11 +10066,7 @@
               "type": "fill_blank",
               "prompt": "'Bu konuda ne düşünüyorsun?' = 'What do you think ___ this?' (about)",
               "answer": "about",
-              "acceptableAnswers": [
-                "about",
-                "ABOUT",
-                "About"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "op5-5",
@@ -10807,11 +10151,7 @@
               "type": "fill_blank",
               "prompt": "'Bence öyle değil.' = 'I don't think ___ .' (so)",
               "answer": "so",
-              "acceptableAnswers": [
-                "so",
-                "SO",
-                "So"
-              ],
+              "acceptableAnswers": [],
               "explanation": "I don't think so = sanmiyorum."
             },
             {
@@ -10921,11 +10261,7 @@
               "type": "fill_blank",
               "prompt": "First conditional: 'If it ___ (rain), we will stay home.'",
               "answer": "rains",
-              "acceptableAnswers": [
-                "rains",
-                "RAINS",
-                "Rains"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "rev1-4",
@@ -11011,15 +10347,6 @@
               "prompt": "'You ___ smoke in hospitals.' (yasak)",
               "answer": "mustn't",
               "acceptableAnswers": [
-                "mustn't",
-                "CAN'T",
-                "CANNOT",
-                "Can't",
-                "Cannot",
-                "MUST NOT",
-                "MUSTN'T",
-                "Must not",
-                "Mustn't",
                 "can't",
                 "cannot",
                 "must not"
@@ -11087,11 +10414,7 @@
               "type": "fill_blank",
               "prompt": "'My phone ___ ___ at the station.' (çalındı — past passive)",
               "answer": "was stolen",
-              "acceptableAnswers": [
-                "was stolen",
-                "WAS STOLEN",
-                "Was stolen"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "rev2-5",
@@ -11162,12 +10485,7 @@
               "id": "rev2-9",
               "type": "fill_blank",
               "prompt": "'I went to the ___ to borrow a book.' (kütüphane)",
-              "answer": "library",
-              "acceptableAnswers": [
-                "library",
-                "LIBRARY",
-                "Library"
-              ]
+              "answer": "library"
             },
             {
               "id": "rev2-10",
@@ -11220,11 +10538,7 @@
               "type": "fill_blank",
               "prompt": "Second conditional: 'If I ___ (have) wings, I would fly.'",
               "answer": "had",
-              "acceptableAnswers": [
-                "had",
-                "HAD",
-                "Had"
-              ]
+              "acceptableAnswers": []
             },
             {
               "id": "rev3-4",
@@ -11311,9 +10625,8 @@
               "prompt": "'Don't ___ ___ trying — you're almost there!' (vazgeçme)",
               "answer": "give up",
               "acceptableAnswers": [
-                "give up",
-                "GIVE UP",
-                "Give up"
+                "quit",
+                "stop"
               ]
             },
             {
