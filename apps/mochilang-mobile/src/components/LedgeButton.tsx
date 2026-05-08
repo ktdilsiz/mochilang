@@ -1,11 +1,21 @@
-import { Pressable, StyleSheet, Text, View, type PressableProps } from 'react-native'
-import { colors, fontSizes, radius, space } from '../lib/theme'
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
+  type PressableProps,
+} from 'react-native'
+import { colors, fontSizes, radius, space } from './../lib/theme'
 
 /**
- * LedgeButton — RN port of the web `.ledge-button` primitive. Uses a
- * stacked View hierarchy to fake the "chunky bottom shadow" effect:
- * the outer View carries the shadow color, the inner Pressable is the
- * top surface that slides down on press.
+ * LedgeButton — RN port of the web `.ledge-button` primitive.
+ *
+ * Two stacked layers fake the CSS pseudo-element trick: the outer View
+ * carries the dark-edge color and sits 4-5 px below the button surface,
+ * giving the chunky bottom shadow that "compresses" on press when the
+ * inner Pressable shifts down. The radius of the shadow matches the
+ * surface's so the corners line up — at radius.md by default and
+ * radius.lg for `size="lg"`.
  */
 
 type Tone = 'primary' | 'success' | 'error' | 'neutral' | 'ghost'
@@ -36,9 +46,27 @@ export default function LedgeButton({
 }: Props) {
   const c = toneColors[tone]
   const isLg = size === 'lg'
+  const r = isLg ? radius.lg : radius.md
+  const ledgeDepth = isLg ? 5 : 4
+
   return (
-    <View style={[{ marginBottom: 4 }, disabled && { opacity: 0.45 }]}>
-      <View style={[styles.shadow, { backgroundColor: c.edge }]} />
+    <View
+      style={[
+        styles.outer,
+        { paddingBottom: ledgeDepth },
+        disabled && { opacity: 0.45 },
+      ]}
+    >
+      <View
+        style={[
+          styles.shadow,
+          {
+            backgroundColor: c.edge,
+            borderRadius: r,
+            top: ledgeDepth,
+          },
+        ]}
+      />
       <Pressable
         {...rest}
         disabled={disabled}
@@ -46,18 +74,26 @@ export default function LedgeButton({
           styles.btn,
           {
             backgroundColor: c.bg,
-            borderRadius: isLg ? radius.lg : radius.md,
+            borderRadius: r,
             paddingVertical: isLg ? 18 : 14,
             paddingHorizontal: isLg ? 28 : 22,
-            transform: [{ translateY: pressed ? 2 : 0 }],
+            transform: [{ translateY: pressed && !disabled ? ledgeDepth - 2 : 0 }],
           },
-          tone === 'neutral' && { borderWidth: 2, borderColor: colors.border },
+          tone === 'neutral' && {
+            borderWidth: 2,
+            borderColor: colors.border,
+            paddingVertical: isLg ? 16 : 12,
+            paddingHorizontal: isLg ? 26 : 20,
+          },
         ]}
       >
         <Text
           style={[
             styles.label,
-            { color: c.fg, fontSize: isLg ? fontSizes.lg : fontSizes.md },
+            {
+              color: c.fg,
+              fontSize: isLg ? fontSizes.lg : fontSizes.md,
+            },
           ]}
         >
           {label}
@@ -68,21 +104,22 @@ export default function LedgeButton({
 }
 
 const styles = StyleSheet.create({
+  outer: {
+    alignSelf: 'stretch',
+  },
   shadow: {
     position: 'absolute',
     left: 0,
     right: 0,
-    top: 4,
     bottom: 0,
-    borderRadius: radius.md,
   },
   btn: {
     alignItems: 'center',
     justifyContent: 'center',
   },
   label: {
-    fontWeight: '800',
-    letterSpacing: 0.5,
+    fontFamily: 'Nunito_900Black',
+    letterSpacing: 0.6,
     textTransform: 'uppercase',
   },
 })

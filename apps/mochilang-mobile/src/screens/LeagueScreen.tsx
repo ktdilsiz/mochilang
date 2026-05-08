@@ -6,6 +6,7 @@ import {
   Text,
   View,
 } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
 import {
   api,
   ApiError,
@@ -169,14 +170,14 @@ export default function LeagueScreen({
       )}
 
       <View style={styles.header}>
-        <View
-          style={[
-            styles.tierBadge,
-            { backgroundColor: tier.color, borderColor: tier.edge },
-          ]}
+        <LinearGradient
+          colors={[tier.color, tier.edge]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 0, y: 1 }}
+          style={[styles.tierBadge, { borderColor: tier.edge }]}
         >
           <Text style={styles.tierEmoji}>{tier.emoji}</Text>
-        </View>
+        </LinearGradient>
         <Text style={styles.tierName}>{tier.name} League</Text>
         <Text style={styles.tierSub}>
           {nextTier

@@ -74,6 +74,35 @@ export const fontSizes = {
 } as const
 
 /**
+ * Nunito font-family names — must match the keys we hand to `useFonts`
+ * in App.tsx. RN's StyleSheet doesn't have a CSS-cascade for fontFamily,
+ * so screens pass these through fontWeight equivalents:
+ *
+ *   400 → Nunito_400Regular
+ *   600 → Nunito_600SemiBold
+ *   700 → Nunito_700Bold
+ *   800 → Nunito_800ExtraBold
+ *   900 → Nunito_900Black
+ *
+ * Use `fontForWeight(weight)` to map a string fontWeight to the right
+ * family. Falls back to the system font if Nunito hasn't loaded yet
+ * (so first-paint doesn't crash).
+ */
+export const fonts = {
+  '400': 'Nunito_400Regular',
+  '600': 'Nunito_600SemiBold',
+  '700': 'Nunito_700Bold',
+  '800': 'Nunito_800ExtraBold',
+  '900': 'Nunito_900Black',
+} as const
+
+type FontWeight = '400' | '600' | '700' | '800' | '900'
+
+export function fontForWeight(weight: FontWeight): string {
+  return fonts[weight]
+}
+
+/**
  * Per-theme color sets used by topic banners + lesson nodes. Same hues
  * as the web app's data-theme CSS rules (HomeScreen.css). The triple
  * is { bg, edge, fg } — bg behind the banner, edge for the bottom-

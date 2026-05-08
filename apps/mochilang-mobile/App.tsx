@@ -8,7 +8,15 @@ import {
   type NativeStackScreenProps,
 } from '@react-navigation/native-stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Text, View } from 'react-native'
+import { Text, View, ActivityIndicator } from 'react-native'
+import {
+  useFonts,
+  Nunito_400Regular,
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+  Nunito_800ExtraBold,
+  Nunito_900Black,
+} from '@expo-google-fonts/nunito'
 import {
   configureApiBaseUrl,
   setOfflineMode,
@@ -57,8 +65,48 @@ type TabParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>()
 const Tabs = createBottomTabNavigator<TabParamList>()
 
+// Patch Text + TextInput so every node downstream uses Nunito by default.
+// React Native has no global font-family; this is the standard escape
+// hatch and is applied once at module load. We pair it with weight-aware
+// renderers in style maps below.
+import { TextInput } from 'react-native'
+
+// React Native's Text and TextInput accept arrays of style objects,
+// so the assignable type is broader than a single style record.
+interface DefaultProps {
+  defaultProps?: { style?: unknown }
+}
+
+const TextWithDefaults = Text as unknown as DefaultProps
+const InputWithDefaults = TextInput as unknown as DefaultProps
+TextWithDefaults.defaultProps = TextWithDefaults.defaultProps ?? {}
+TextWithDefaults.defaultProps.style = [
+  { fontFamily: 'Nunito_700Bold' },
+  TextWithDefaults.defaultProps.style,
+]
+InputWithDefaults.defaultProps = InputWithDefaults.defaultProps ?? {}
+InputWithDefaults.defaultProps.style = [
+  { fontFamily: 'Nunito_700Bold' },
+  InputWithDefaults.defaultProps.style,
+]
+
 export default function App() {
   const [signedIn, setSignedIn] = useState(false)
+  const [fontsLoaded] = useFonts({
+    Nunito_400Regular,
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_800ExtraBold,
+    Nunito_900Black,
+  })
+
+  if (!fontsLoaded) {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#fffbf2' }}>
+        <ActivityIndicator size="large" />
+      </View>
+    )
+  }
 
   if (!signedIn) {
     return (
