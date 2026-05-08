@@ -11,6 +11,7 @@ interface Props {
   level: Level
   onPass: () => void
   onBack: () => void
+  onWrongAnswer?: (exerciseId: string) => void
 }
 
 /**
@@ -19,7 +20,12 @@ interface Props {
  * dominate so the synthesis material decides whether the user actually
  * gets to skip the level. Pass at 85% (34/40).
  */
-export default function LevelExamScreen({ level, onPass, onBack }: Props) {
+export default function LevelExamScreen({
+  level,
+  onPass,
+  onBack,
+  onWrongAnswer,
+}: Props) {
   const requiredCorrect = Math.ceil(
     LEVEL_EXAM_PASS_THRESHOLD * LEVEL_EXAM_QUESTION_COUNT
   )
@@ -53,6 +59,7 @@ export default function LevelExamScreen({ level, onPass, onBack }: Props) {
       }}
       onPass={onPass}
       onBack={onBack}
+      onWrongAnswer={onWrongAnswer}
     />
   )
 }

@@ -14,6 +14,7 @@ import type {
   Lesson,
   Level,
   LevelExamsPassed,
+  MistakesState,
   Topic,
   TopicExamsPassed,
 } from '@mochilang/shared'
@@ -21,6 +22,9 @@ import {
   isLevelCleared,
   isTopicCleared,
   isTopicUnlocked,
+  mistakesForLesson,
+  mistakesForLevel,
+  mistakesForTopic,
   previousTopic,
 } from '@mochilang/shared'
 import { useProgress } from '../state/useProgress'
@@ -33,10 +37,14 @@ interface Props {
   courseId: string
   examsPassed: TopicExamsPassed
   levelExamsPassed: LevelExamsPassed
+  mistakes: MistakesState
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
   onTakeExam: (topic: Topic) => void
   onTakeLevelExam: (level: Level) => void
+  onPracticeLesson: (lesson: Lesson) => void
+  onPracticeTopic: (topic: Topic) => void
+  onPracticeLevel: (level: Level) => void
 }
 
 /**
@@ -57,10 +65,14 @@ export default function HomeScreen({
   courseId,
   examsPassed,
   levelExamsPassed,
+  mistakes,
   onSelectLesson,
   onOpenGuide,
   onTakeExam,
   onTakeLevelExam,
+  onPracticeLesson,
+  onPracticeTopic,
+  onPracticeLevel,
 }: Props) {
   const insets = useSafeAreaInsets()
   const progress = useProgress()
@@ -295,6 +307,7 @@ export default function HomeScreen({
             showLevelExam={showLevelExam}
             levelExamPassed={levelExamPassed}
             lessonStartIndices={lessonStartIndices}
+            mistakes={mistakes}
             isCompleted={isCompleted}
             nextId={nextId}
             openLessonId={openLessonId}
@@ -304,6 +317,9 @@ export default function HomeScreen({
             onOpenGuide={onOpenGuide}
             onTakeExam={onTakeExam}
             onTakeLevelExam={onTakeLevelExam}
+            onPracticeLesson={onPracticeLesson}
+            onPracticeTopic={onPracticeTopic}
+            onPracticeLevel={onPracticeLevel}
             onNodePress={handleNodePress}
             onCloseLesson={() => setOpenLessonId(null)}
           />
@@ -332,6 +348,7 @@ interface SectionProps {
   levelExamPassed: boolean
   /** Cumulative lesson index per topic id, scoped to this level. */
   lessonStartIndices: Map<string, number>
+  mistakes: MistakesState
   isCompleted: (id: string) => boolean
   nextId: string | null
   openLessonId: string | null
@@ -341,6 +358,9 @@ interface SectionProps {
   onOpenGuide: (topic: Topic) => void
   onTakeExam: (topic: Topic) => void
   onTakeLevelExam: (level: Level) => void
+  onPracticeLesson: (lesson: Lesson) => void
+  onPracticeTopic: (topic: Topic) => void
+  onPracticeLevel: (level: Level) => void
   onNodePress: (lessonId: string) => void
   onCloseLesson: () => void
 }
@@ -354,6 +374,7 @@ function LevelSection({
   showLevelExam,
   levelExamPassed,
   lessonStartIndices,
+  mistakes,
   isCompleted,
   nextId,
   openLessonId,
@@ -363,9 +384,13 @@ function LevelSection({
   onOpenGuide,
   onTakeExam,
   onTakeLevelExam,
+  onPracticeLesson,
+  onPracticeTopic,
+  onPracticeLevel,
   onNodePress,
   onCloseLesson,
 }: SectionProps) {
+  const levelMistakeCount = mistakesForLevel(level.id, mistakes).length
   // Same trick at the level: bump this level above its siblings when one
   // of its lessons has the popover open, so the popover can overlay the
   // next level's divider/topic banner.
@@ -393,6 +418,19 @@ function LevelSection({
           </Text>
         </Pressable>
       )}
+      {levelMistakeCount > 0 && (
+        <Pressable
+          onPress={() => onPracticeLevel(level)}
+          style={({ pressed }) => [
+            styles.levelPracticeBtn,
+            pressed && { transform: [{ translateY: 1 }] },
+          ]}
+        >
+          <Text style={styles.levelPracticeBtnText}>
+            🎯 Practice {level.id.toUpperCase()} mistakes ({levelMistakeCount})
+          </Text>
+        </Pressable>
+      )}
       {level.topics.map((topic, ti) => {
         const unlocked = isTopicUnlocked(
           allLevels,
@@ -414,6 +452,7 @@ function LevelSection({
             cleared={cleared}
             examPassed={examPassed}
             previousTopic={prev}
+            mistakes={mistakes}
             isCompleted={isCompleted}
             nextId={nextId}
             openLessonId={openLessonId}
@@ -422,6 +461,8 @@ function LevelSection({
             onSelectLesson={onSelectLesson}
             onOpenGuide={onOpenGuide}
             onTakeExam={onTakeExam}
+            onPracticeLesson={onPracticeLesson}
+            onPracticeTopic={onPracticeTopic}
             onNodePress={onNodePress}
             onCloseLesson={onCloseLesson}
           />
@@ -440,6 +481,7 @@ interface TopicProps {
   cleared: boolean
   examPassed: boolean
   previousTopic: Topic | null
+  mistakes: MistakesState
   isCompleted: (id: string) => boolean
   nextId: string | null
   openLessonId: string | null
@@ -448,6 +490,8 @@ interface TopicProps {
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
   onTakeExam: (topic: Topic) => void
+  onPracticeLesson: (lesson: Lesson) => void
+  onPracticeTopic: (topic: Topic) => void
   onNodePress: (lessonId: string) => void
   onCloseLesson: () => void
 }
@@ -460,6 +504,7 @@ function TopicCard({
   cleared,
   examPassed,
   previousTopic: prevTopic,
+  mistakes,
   isCompleted,
   nextId,
   openLessonId,
@@ -468,9 +513,12 @@ function TopicCard({
   onSelectLesson,
   onOpenGuide,
   onTakeExam,
+  onPracticeLesson,
+  onPracticeTopic,
   onNodePress,
   onCloseLesson,
 }: TopicProps) {
+  const topicMistakeCount = mistakesForTopic(topic.id, mistakes).length
   const tint = tintForTheme(topic.theme)
   const allDone = topic.lessons.every((l) => isCompleted(l.id))
   const completed = topic.lessons.filter((l) => isCompleted(l.id)).length
@@ -554,6 +602,20 @@ function TopicCard({
                 </Text>
               </Pressable>
             )}
+            {topicMistakeCount > 0 && (
+              <Pressable
+                onPress={() => onPracticeTopic(topic)}
+                style={({ pressed }) => [
+                  styles.notesBtn,
+                  styles.notesBtnDanger,
+                  pressed && { transform: [{ translateY: 1 }] },
+                ]}
+              >
+                <Text style={styles.notesBtnDangerText}>
+                  🎯 Mistakes ({topicMistakeCount})
+                </Text>
+              </Pressable>
+            )}
             <View style={styles.progressPill}>
               <Text style={styles.progressPillText}>
                 {completed} / {topic.lessons.length}
@@ -599,9 +661,14 @@ function TopicCard({
                   done={isCompleted(lesson.id)}
                   isNext={lesson.id === nextId}
                   placement={popoverPlacement}
+                  mistakeCount={mistakesForLesson(lesson.id, mistakes).length}
                   onStart={() => {
                     onCloseLesson()
                     onSelectLesson(lesson)
+                  }}
+                  onPracticeMistakes={() => {
+                    onCloseLesson()
+                    onPracticeLesson(lesson)
                   }}
                   rowOffset={offset}
                 />
@@ -619,14 +686,18 @@ function LessonPopover({
   done,
   isNext,
   placement,
+  mistakeCount,
   onStart,
+  onPracticeMistakes,
   rowOffset,
 }: {
   lesson: Lesson
   done: boolean
   isNext: boolean
   placement: 'below' | 'above'
+  mistakeCount: number
   onStart: () => void
+  onPracticeMistakes: () => void
   rowOffset: number
 }) {
   return (
@@ -648,13 +719,20 @@ function LessonPopover({
           {lesson.exercises.length} exercises
         </Text>
       </View>
-      <View style={{ marginTop: space.md }}>
+      <View style={{ marginTop: space.md, gap: space.sm }}>
         <LedgeButton
           label={done ? 'Practice again' : 'Start'}
           tone={done ? 'success' : 'primary'}
           size="lg"
           onPress={onStart}
         />
+        {mistakeCount > 0 && (
+          <LedgeButton
+            label={`🎯 Practice mistakes (${mistakeCount})`}
+            tone="neutral"
+            onPress={onPracticeMistakes}
+          />
+        )}
       </View>
     </View>
   )
@@ -770,6 +848,23 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.sm,
     fontFamily: 'Nunito_900Black',
   },
+  levelPracticeBtn: {
+    alignSelf: 'center',
+    backgroundColor: colors.error100,
+    borderColor: colors.error500,
+    borderWidth: 2,
+    borderBottomWidth: 4,
+    borderRadius: radius.pill,
+    paddingHorizontal: space.lg,
+    paddingVertical: 8,
+    marginTop: 4,
+    marginBottom: space.sm,
+  },
+  levelPracticeBtnText: {
+    color: colors.error700,
+    fontSize: fontSizes.sm,
+    fontFamily: 'Nunito_900Black',
+  },
 
   // `position: 'relative'` is required by RN-Web for zIndex to map to a
   // CSS stacking context; native RN respects zIndex on plain Views, so
@@ -856,6 +951,17 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     textTransform: 'uppercase',
     fontFamily: 'Nunito_900Black',
+  },
+  notesBtnDanger: {
+    backgroundColor: colors.error100,
+    borderColor: colors.error500,
+  },
+  notesBtnDangerText: {
+    fontSize: fontSizes.xs,
+    letterSpacing: 1,
+    textTransform: 'uppercase',
+    fontFamily: 'Nunito_900Black',
+    color: colors.error700,
   },
   progressPill: {
     backgroundColor: 'rgba(255, 255, 255, 0.6)',

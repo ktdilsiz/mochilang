@@ -33,6 +33,10 @@ interface Props {
   onPass: () => void
   /** Quit / back navigation. */
   onBack: () => void
+  /** Optional — fires per wrong answer for mistake tracking. */
+  onWrongAnswer?: (exerciseId: string) => void
+  /** Optional — fires per correct answer (used by Practice Mistakes). */
+  onCorrectAnswer?: (exerciseId: string) => void
 }
 
 type Feedback = 'idle' | 'correct' | 'wrong'
@@ -51,6 +55,8 @@ export default function ExamScreen({
   fail,
   onPass,
   onBack,
+  onWrongAnswer,
+  onCorrectAnswer,
 }: Props) {
   const insets = useSafeAreaInsets()
   const [seed, setSeed] = useState(0)
@@ -82,8 +88,10 @@ export default function ExamScreen({
     if (result.correct) {
       setCorrect((c) => c + 1)
       setFeedback('correct')
+      onCorrectAnswer?.(ex.id)
     } else {
       setFeedback('wrong')
+      onWrongAnswer?.(ex.id)
     }
   }
 
@@ -118,8 +126,10 @@ export default function ExamScreen({
     if (extraMistakes === 0) {
       setCorrect((c) => c + 1)
       setFeedback('correct')
+      onCorrectAnswer?.(ex.id)
     } else {
       setFeedback('wrong')
+      onWrongAnswer?.(ex.id)
     }
   }
 

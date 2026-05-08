@@ -190,6 +190,35 @@
   transform: translateY(1px);
 }
 
+.home-level-practice,
+.home-topic-practice {
+  appearance: none;
+  border: 2px solid var(--error-500, #ff4b4b);
+  background: var(--error-100, #ffe0e0);
+  color: var(--error-700, #c43232);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: var(--sans);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition:
+    background-color 100ms,
+    transform 80ms;
+}
+.home-level-practice:hover,
+.home-topic-practice:hover {
+  background: white;
+}
+.home-level-practice:active,
+.home-topic-practice:active {
+  transform: translateY(1px);
+}
+
 /* Topic section header */
 
 .home-topic {

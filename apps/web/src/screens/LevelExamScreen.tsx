@@ -10,6 +10,8 @@ interface Props {
   level: Level
   onPass: () => void
   onBack: () => void
+  /** Optional — fires per wrong answer so callers can track mistakes. */
+  onWrongAnswer?: (exerciseId: string) => void
 }
 
 /**
@@ -20,7 +22,12 @@ interface Props {
  * unlocks every topic inside this level so the learner can revisit
  * material they actually want without re-grinding to get there.
  */
-export default function LevelExamScreen({ level, onPass, onBack }: Props) {
+export default function LevelExamScreen({
+  level,
+  onPass,
+  onBack,
+  onWrongAnswer,
+}: Props) {
   const requiredCorrect = Math.ceil(
     LEVEL_EXAM_PASS_THRESHOLD * LEVEL_EXAM_QUESTION_COUNT
   )
@@ -55,6 +62,7 @@ export default function LevelExamScreen({ level, onPass, onBack }: Props) {
       }}
       onPass={onPass}
       onBack={onBack}
+      onWrongAnswer={onWrongAnswer}
     />
   )
 }

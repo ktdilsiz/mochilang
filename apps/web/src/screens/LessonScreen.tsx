@@ -14,6 +14,10 @@ interface Props {
   lesson: Lesson
   onComplete: (mistakes: number) => void
   onBack: () => void
+  /** Optional — fires per-exercise on wrong answers. Used by mistake-tracking. */
+  onWrongAnswer?: (exerciseId: string) => void
+  /** Optional — fires per-exercise on correct answers. */
+  onCorrectAnswer?: (exerciseId: string) => void
 }
 
 const STARTING_HEARTS = 3
@@ -23,7 +27,13 @@ type Feedback =
   | { kind: 'correct' }
   | { kind: 'wrong'; message?: string }
 
-export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
+export default function LessonScreen({
+  lesson,
+  onComplete,
+  onBack,
+  onWrongAnswer,
+  onCorrectAnswer,
+}: Props) {
   const [index, setIndex] = useState(0)
   const [hearts, setHearts] = useState(STARTING_HEARTS)
   const [mistakes, setMistakes] = useState(0)
@@ -46,11 +56,13 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
     if (result.correct) {
       playCorrect()
       setFeedback({ kind: 'correct' })
+      onCorrectAnswer?.(exercise.id)
     } else {
       playWrong()
       setHearts((h) => Math.max(0, h - 1))
       setMistakes((m) => m + 1)
       setFeedback({ kind: 'wrong' })
+      onWrongAnswer?.(exercise.id)
     }
   }
 
@@ -86,8 +98,11 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
     if (extraMistakes > 0) {
       setHearts((h) => Math.max(0, h - extraMistakes))
       setMistakes((m) => m + extraMistakes)
+      onWrongAnswer?.(exercise.id)
+    } else {
+      playCorrect()
+      onCorrectAnswer?.(exercise.id)
     }
-    if (extraMistakes === 0) playCorrect()
     setFeedback({ kind: extraMistakes === 0 ? 'correct' : 'wrong' })
   }
 

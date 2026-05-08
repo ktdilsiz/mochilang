@@ -21,6 +21,10 @@ interface Props {
   lesson: Lesson
   onComplete: (mistakes: number) => void
   onBack: () => void
+  /** Optional — fires per-exercise on wrong answers (mistake tracking). */
+  onWrongAnswer?: (exerciseId: string) => void
+  /** Optional — fires per-exercise on correct answers. */
+  onCorrectAnswer?: (exerciseId: string) => void
 }
 
 type Feedback = 'idle' | 'correct' | 'wrong'
@@ -30,7 +34,13 @@ type Feedback = 'idle' | 'correct' | 'wrong'
  * and grades on the unified inputs (mcSelected / fbValue / tapValue) +
  * the match_pairs auto-complete callback. Mirrors the web LessonScreen.
  */
-export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
+export default function LessonScreen({
+  lesson,
+  onComplete,
+  onBack,
+  onWrongAnswer,
+  onCorrectAnswer,
+}: Props) {
   const insets = useSafeAreaInsets()
   const [index, setIndex] = useState(0)
   const [mistakes, setMistakes] = useState(0)
@@ -53,9 +63,11 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
     if (!result) return
     if (result.correct) {
       setFeedback('correct')
+      onCorrectAnswer?.(ex.id)
     } else {
       setFeedback('wrong')
       setMistakes((m) => m + 1)
+      onWrongAnswer?.(ex.id)
     }
   }
 
@@ -92,8 +104,10 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
     if (extraMistakes > 0) {
       setMistakes((m) => m + extraMistakes)
       setFeedback('wrong')
+      onWrongAnswer?.(ex.id)
     } else {
       setFeedback('correct')
+      onCorrectAnswer?.(ex.id)
     }
   }
 

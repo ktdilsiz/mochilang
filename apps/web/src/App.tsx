@@ -14,6 +14,7 @@ import SettingsScreen from './screens/SettingsScreen'
 import TopicExamScreen from './screens/TopicExamScreen'
 import LevelExamScreen from './screens/LevelExamScreen'
 import LevelExamIntroScreen from './screens/LevelExamIntroScreen'
+import PracticeMistakesScreen from './screens/PracticeMistakesScreen'
 import BottomNav, { type Tab } from './components/BottomNav'
 import ProfileSetup from './components/ProfileSetup'
 import { useProgress } from './state'
@@ -21,6 +22,13 @@ import { useProfile } from './profile'
 import { useSettings } from './settings'
 import { useTopicExams } from './topicExams'
 import { useLevelExams } from './levelExams'
+import { useMistakes } from './mistakes'
+import {
+  locateExercise,
+  mistakesForLesson,
+  mistakesForLevel,
+  mistakesForTopic,
+} from '@mochilang/shared'
 import { api, ApiError, setOfflineMode } from '@mochilang/shared'
 
 /**
@@ -40,6 +48,14 @@ type Screen =
   | 'exam'
   | 'level-exam-intro'
   | 'level-exam'
+  | 'practice-mistakes'
+
+interface PracticeScope {
+  /** Display label for the practice screen eyebrow. */
+  label: string
+  /** Exercise ids to drill, captured at open time. */
+  ids: string[]
+}
 
 const SELECTED_COURSE_KEY = 'mochilang:selectedCourse'
 const LEGACY_SELECTED_LANG_KEY = 'mochilang:selectedLanguage'
@@ -166,6 +182,7 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
   const [activeTopic, setActiveTopic] = useState<Topic | null>(null)
   const [examTopic, setExamTopic] = useState<Topic | null>(null)
   const [examLevel, setExamLevel] = useState<Level | null>(null)
+  const [practiceScope, setPracticeScope] = useState<PracticeScope | null>(null)
   const progress = useProgress()
   const profile = useProfile()
   const exams = useTopicExams()
@@ -201,6 +218,7 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
   const activeCourseId = courseId ?? 'zh-en'
   const { levels } = useCourse(activeCourseId)
   const targetLang = findLanguage(parseCourseId(activeCourseId)?.target ?? 'zh') ?? null
+  const mistakes = useMistakes(activeCourseId)
 
   function handleLanguageSelect(id: string) {
     setCourseId(id)
@@ -231,6 +249,46 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
   function handleTakeLevelExam(level: Level) {
     setExamLevel(level)
     setScreen('level-exam-intro')
+  }
+
+  function startPractice(scope: PracticeScope) {
+    if (scope.ids.length === 0) return
+    setPracticeScope(scope)
+    setScreen('practice-mistakes')
+  }
+
+  function handlePracticeLesson(lesson: Lesson) {
+    startPractice({
+      label: lesson.title,
+      ids: mistakesForLesson(lesson.id, mistakes.state),
+    })
+  }
+
+  function handlePracticeTopic(topic: Topic) {
+    startPractice({
+      label: topic.title,
+      ids: mistakesForTopic(topic.id, mistakes.state),
+    })
+  }
+
+  function handlePracticeLevel(level: Level) {
+    startPractice({
+      label: level.name,
+      ids: mistakesForLevel(level.id, mistakes.state),
+    })
+  }
+
+  // Shared between LessonScreen and the exam wrappers — records a
+  // mistake against the right lesson/topic/level by walking the course
+  // for the failed exercise's home location.
+  function recordMistake(exerciseId: string) {
+    const found = locateExercise(levels, exerciseId)
+    if (!found) return
+    mistakes.record(exerciseId, {
+      lessonId: found.lesson.id,
+      topicId: found.topic.id,
+      levelId: found.level.id,
+    })
   }
 
   function handleLessonComplete(mistakes: number) {
@@ -267,6 +325,7 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
       localStorage.removeItem('mochilang:profile:v1')
       localStorage.removeItem('mochilang:topicExams:v1')
       localStorage.removeItem('mochilang:levelExams:v1')
+      localStorage.removeItem('mochilang:mistakes:v1')
     } catch {
       /* ignore */
     }
@@ -292,6 +351,7 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
         lesson={activeLesson}
         onComplete={handleLessonComplete}
         onBack={() => setScreen('tabs')}
+        onWrongAnswer={recordMistake}
       />
     )
   }
@@ -311,6 +371,7 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
         topic={examTopic}
         onPass={() => exams.pass(examTopic.id)}
         onBack={() => setScreen('tabs')}
+        onWrongAnswer={recordMistake}
       />
     )
   }
@@ -331,6 +392,20 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
         level={examLevel}
         onPass={() => levelExams.pass(examLevel.id)}
         onBack={() => setScreen('tabs')}
+        onWrongAnswer={recordMistake}
+      />
+    )
+  }
+
+  if (screen === 'practice-mistakes' && practiceScope) {
+    return (
+      <PracticeMistakesScreen
+        scopeLabel={practiceScope.label}
+        exerciseIds={practiceScope.ids}
+        levels={levels}
+        onResolve={mistakes.resolve}
+        onFail={(id, ctx) => mistakes.record(id, ctx)}
+        onBack={() => setScreen('tabs')}
       />
     )
   }
@@ -343,11 +418,15 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
           progress={progress.state}
           examsPassed={exams.state}
           levelExamsPassed={levelExams.state}
+          mistakes={mistakes.state}
           isCompleted={progress.isCompleted}
           onSelect={handleLessonSelect}
           onOpenGuide={handleOpenGuide}
           onTakeExam={handleTakeExam}
           onTakeLevelExam={handleTakeLevelExam}
+          onPracticeLesson={handlePracticeLesson}
+          onPracticeTopic={handlePracticeTopic}
+          onPracticeLevel={handlePracticeLevel}
           onSwitchLanguage={handleSwitchLanguage}
           language={targetLang}
           offline={offline}
@@ -374,6 +453,7 @@ function SignedInApp({ offline, onSignOut, onSwitchToLogin }: SignedInProps) {
             void progress.reset()
             exams.reset()
             levelExams.reset()
+            mistakes.resetCourse()
           }}
           onResetProfile={profile.reset}
           onSignOut={handleSignOut}

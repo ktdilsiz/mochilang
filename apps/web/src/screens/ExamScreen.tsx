@@ -26,6 +26,10 @@ interface Props {
   onPass: () => void
   /** Quit / back navigation. */
   onBack: () => void
+  /** Optional — fires when the user gets an exercise wrong. */
+  onWrongAnswer?: (exerciseId: string) => void
+  /** Optional — fires when the user gets an exercise right. */
+  onCorrectAnswer?: (exerciseId: string) => void
 }
 
 type Feedback =
@@ -52,6 +56,8 @@ export default function ExamScreen({
   fail,
   onPass,
   onBack,
+  onWrongAnswer,
+  onCorrectAnswer,
 }: Props) {
   // Re-roll seed bumps on retry so the second attempt isn't the same deck.
   const [seed, setSeed] = useState(0)
@@ -84,9 +90,11 @@ export default function ExamScreen({
       setCorrect((c) => c + 1)
       playCorrect()
       setFeedback({ kind: 'correct' })
+      onCorrectAnswer?.(exercise.id)
     } else {
       playWrong()
       setFeedback({ kind: 'wrong' })
+      onWrongAnswer?.(exercise.id)
     }
   }
 
@@ -123,9 +131,11 @@ export default function ExamScreen({
       setCorrect((c) => c + 1)
       playCorrect()
       setFeedback({ kind: 'correct' })
+      onCorrectAnswer?.(exercise.id)
     } else {
       playWrong()
       setFeedback({ kind: 'wrong' })
+      onWrongAnswer?.(exercise.id)
     }
   }
 

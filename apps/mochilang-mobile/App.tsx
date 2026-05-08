@@ -39,12 +39,20 @@ import SettingsScreen from './src/screens/SettingsScreen'
 import TopicExamScreen from './src/screens/TopicExamScreen'
 import LevelExamScreen from './src/screens/LevelExamScreen'
 import LevelExamIntroScreen from './src/screens/LevelExamIntroScreen'
+import PracticeMistakesScreen from './src/screens/PracticeMistakesScreen'
 import ProfileSetup from './src/components/ProfileSetup'
 import { useProgress } from './src/state/useProgress'
 import { useProfile } from './src/state/useProfile'
 import { useCourse } from './src/state/useCourse'
 import { useTopicExams } from './src/state/useTopicExams'
 import { useLevelExams } from './src/state/useLevelExams'
+import { useMistakes } from './src/state/useMistakes'
+import {
+  locateExercise,
+  mistakesForLesson,
+  mistakesForLevel,
+  mistakesForTopic,
+} from '@mochilang/shared'
 import { colors } from './src/lib/theme'
 
 const SELECTED_COURSE_KEY = 'mochilang:selectedCourse'
@@ -69,6 +77,7 @@ type RootStackParamList = {
   Exam: { topic: Topic }
   LevelExamIntro: { level: Level }
   LevelExam: { level: Level }
+  PracticeMistakes: { label: string; ids: string[] }
 }
 
 // Convenience alias used at the tab leaves to navigate the parent stack.
@@ -154,6 +163,9 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
   const exams = useTopicExams()
   const levelExams = useLevelExams()
   const [courseId, setCourseId] = useState<string | null>(null)
+  // Hook is created at the App level so it's stable across navigations,
+  // but it scopes by courseId so changing courses gives a fresh deck.
+  const mistakes = useMistakes(courseId ?? DEFAULT_COURSE_ID)
   // null while we read AsyncStorage; once known we either render the
   // picker (no stored course) or the tabs (have a course).
   const [hydrated, setHydrated] = useState(false)
@@ -182,6 +194,19 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
   function handleSelectCourse(id: string) {
     setCourseId(id)
     void AsyncStorage.setItem(SELECTED_COURSE_KEY, id).catch(() => {})
+  }
+
+  // Look up a failed exercise's lesson/topic/level, then record a
+  // mistake. Shared between LessonScreen and the exam screens — both
+  // forward their per-question wrong-answer events here.
+  function recordMistake(exerciseId: string) {
+    const found = locateExercise(course.levels, exerciseId)
+    if (!found) return
+    mistakes.record(exerciseId, {
+      lessonId: found.lesson.id,
+      topicId: found.topic.id,
+      levelId: found.level.id,
+    })
   }
 
   if (!hydrated) {
@@ -227,6 +252,7 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
               courseId={courseId ?? DEFAULT_COURSE_ID}
               exams={exams}
               levelExams={levelExams}
+              mistakes={mistakes}
               onSignOut={onSignOut}
               onSwitchLanguage={() =>
                 props.navigation.navigate('LanguageSelect', {
@@ -239,11 +265,41 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
               onTakeLevelExam={(level) =>
                 props.navigation.navigate('LevelExamIntro', { level })
               }
+              onPracticeLesson={(lesson) => {
+                const ids = mistakesForLesson(lesson.id, mistakes.state)
+                if (ids.length === 0) return
+                props.navigation.navigate('PracticeMistakes', {
+                  label: lesson.title,
+                  ids,
+                })
+              }}
+              onPracticeTopic={(topic) => {
+                const ids = mistakesForTopic(topic.id, mistakes.state)
+                if (ids.length === 0) return
+                props.navigation.navigate('PracticeMistakes', {
+                  label: topic.title,
+                  ids,
+                })
+              }}
+              onPracticeLevel={(level) => {
+                const ids = mistakesForLevel(level.id, mistakes.state)
+                if (ids.length === 0) return
+                props.navigation.navigate('PracticeMistakes', {
+                  label: level.name,
+                  ids,
+                })
+              }}
             />
           )}
         </Stack.Screen>
         <Stack.Screen name="Lesson" options={{ presentation: 'modal' }}>
-          {(props) => <LessonRoute progress={progress} {...props} />}
+          {(props) => (
+            <LessonRoute
+              progress={progress}
+              recordMistake={recordMistake}
+              {...props}
+            />
+          )}
         </Stack.Screen>
         <Stack.Screen name="Guide" options={{ presentation: 'modal' }}>
           {(props) => <GuideRoute {...props} />}
@@ -257,6 +313,7 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
               topic={props.route.params.topic}
               onPass={() => exams.pass(props.route.params.topic.id)}
               onBack={() => props.navigation.goBack()}
+              onWrongAnswer={recordMistake}
             />
           )}
         </Stack.Screen>
@@ -282,6 +339,22 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
               level={props.route.params.level}
               onPass={() => levelExams.pass(props.route.params.level.id)}
               onBack={() => props.navigation.goBack()}
+              onWrongAnswer={recordMistake}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen
+          name="PracticeMistakes"
+          options={{ presentation: 'modal' }}
+        >
+          {(props) => (
+            <PracticeMistakesScreen
+              scopeLabel={props.route.params.label}
+              exerciseIds={props.route.params.ids}
+              levels={course.levels}
+              onResolve={mistakes.resolve}
+              onFail={(id, ctx) => mistakes.record(id, ctx)}
+              onBack={() => props.navigation.goBack()}
             />
           )}
         </Stack.Screen>
@@ -303,11 +376,15 @@ interface SignedInTabsProps {
   courseId: string
   exams: ReturnType<typeof useTopicExams>
   levelExams: ReturnType<typeof useLevelExams>
+  mistakes: ReturnType<typeof useMistakes>
   onSignOut: () => void
   onSwitchLanguage: () => void
   onOpenSettings: () => void
   onTakeExam: (topic: Topic) => void
   onTakeLevelExam: (level: Level) => void
+  onPracticeLesson: (lesson: Lesson) => void
+  onPracticeTopic: (topic: Topic) => void
+  onPracticeLevel: (level: Level) => void
 }
 
 function SignedInTabs({
@@ -317,11 +394,15 @@ function SignedInTabs({
   courseId,
   exams,
   levelExams,
+  mistakes,
   onSignOut,
   onSwitchLanguage,
   onOpenSettings,
   onTakeExam,
   onTakeLevelExam,
+  onPracticeLesson,
+  onPracticeTopic,
+  onPracticeLevel,
 }: SignedInTabsProps) {
   return (
     <Tabs.Navigator
@@ -344,6 +425,7 @@ function SignedInTabs({
             courseId={courseId}
             examsPassed={exams.state}
             levelExamsPassed={levelExams.state}
+            mistakes={mistakes.state}
             onSelectLesson={(lesson) =>
               (props.navigation.getParent() as RootNav | undefined)?.navigate('Lesson', { lesson })
             }
@@ -355,6 +437,9 @@ function SignedInTabs({
             }
             onTakeExam={onTakeExam}
             onTakeLevelExam={onTakeLevelExam}
+            onPracticeLesson={onPracticeLesson}
+            onPracticeTopic={onPracticeTopic}
+            onPracticeLevel={onPracticeLevel}
           />
         )}
       </Tabs.Screen>
@@ -393,6 +478,7 @@ function SignedInTabs({
               void progress.reset()
               exams.reset()
               levelExams.reset()
+              mistakes.resetCourse()
             }}
             onResetProfile={() => void profile.reset()}
             onSignOut={onSignOut}
@@ -411,8 +497,10 @@ function LessonRoute({
   route,
   navigation,
   progress,
+  recordMistake,
 }: NativeStackScreenProps<RootStackParamList, 'Lesson'> & {
   progress: ReturnType<typeof useProgress>
+  recordMistake: (exerciseId: string) => void
 }) {
   const lesson = route.params.lesson
   return (
@@ -423,6 +511,7 @@ function LessonRoute({
         navigation.goBack()
       }}
       onBack={() => navigation.goBack()}
+      onWrongAnswer={recordMistake}
     />
   )
 }

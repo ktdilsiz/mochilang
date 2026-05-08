@@ -4,6 +4,7 @@ import type {
   Lesson,
   Level,
   LevelExamsPassed,
+  MistakesState,
   Topic,
   TopicExamsPassed,
 } from '@mochilang/shared'
@@ -11,6 +12,9 @@ import {
   isLevelCleared,
   isTopicCleared,
   isTopicUnlocked,
+  mistakesForLesson,
+  mistakesForLevel,
+  mistakesForTopic,
   previousTopic,
 } from '@mochilang/shared'
 import type { ProgressState } from '../state'
@@ -24,11 +28,15 @@ interface Props {
   progress: ProgressState
   examsPassed: TopicExamsPassed
   levelExamsPassed: LevelExamsPassed
+  mistakes: MistakesState
   isCompleted: (id: string) => boolean
   onSelect: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
   onTakeExam: (topic: Topic) => void
   onTakeLevelExam: (level: Level) => void
+  onPracticeLesson: (lesson: Lesson) => void
+  onPracticeTopic: (topic: Topic) => void
+  onPracticeLevel: (level: Level) => void
   onSwitchLanguage: () => void
   offline?: boolean
 }
@@ -39,11 +47,15 @@ export default function HomeScreen({
   progress,
   examsPassed,
   levelExamsPassed,
+  mistakes,
   isCompleted,
   onSelect,
   onOpenGuide,
   onTakeExam,
   onTakeLevelExam,
+  onPracticeLesson,
+  onPracticeTopic,
+  onPracticeLevel,
   onSwitchLanguage,
   offline,
 }: Props) {
@@ -192,7 +204,9 @@ export default function HomeScreen({
                 level={level}
                 showExam={showLevelExam}
                 examPassed={levelExamPassed}
+                mistakeCount={mistakesForLevel(level.id, mistakes).length}
                 onTakeExam={onTakeLevelExam}
+                onPracticeMistakes={onPracticeLevel}
               />
             )}
             {groups.map((group, gi) => (
@@ -230,9 +244,12 @@ export default function HomeScreen({
                       softLockReason={prereqReason}
                       cleared={cleared}
                       examPassed={examPassed}
+                      mistakes={mistakes}
                       onSelect={onSelect}
                       onOpenGuide={onOpenGuide}
                       onTakeExam={onTakeExam}
+                      onPracticeLesson={onPracticeLesson}
+                      onPracticeTopic={onPracticeTopic}
                     />
                   )
                 })}
@@ -353,12 +370,16 @@ function LevelDivider({
   level,
   showExam,
   examPassed,
+  mistakeCount,
   onTakeExam,
+  onPracticeMistakes,
 }: {
   level: Level
   showExam: boolean
   examPassed: boolean
+  mistakeCount: number
   onTakeExam: (level: Level) => void
+  onPracticeMistakes: (level: Level) => void
 }) {
   return (
     <div className="home-level-divider">
@@ -378,6 +399,16 @@ function LevelDivider({
           aria-label={`Take ${level.name} skip exam`}
         >
           📝 {examPassed ? 'Retake level exam' : 'Skip level exam'}
+        </button>
+      )}
+      {mistakeCount > 0 && (
+        <button
+          type="button"
+          className="home-level-practice"
+          onClick={() => onPracticeMistakes(level)}
+          aria-label={`Practice ${level.name} mistakes`}
+        >
+          🎯 Practice mistakes ({mistakeCount})
         </button>
       )}
     </div>
@@ -414,9 +445,13 @@ interface TopicSectionProps {
   cleared: boolean
   /** True when the user has passed this topic's skip exam. */
   examPassed: boolean
+  /** Whole-course mistake state — used to count per-lesson + per-topic. */
+  mistakes: MistakesState
   onSelect: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
   onTakeExam: (topic: Topic) => void
+  onPracticeLesson: (lesson: Lesson) => void
+  onPracticeTopic: (topic: Topic) => void
 }
 
 function TopicSection({
@@ -431,10 +466,14 @@ function TopicSection({
   softLockReason,
   cleared,
   examPassed,
+  mistakes,
   onSelect,
   onOpenGuide,
   onTakeExam,
+  onPracticeLesson,
+  onPracticeTopic,
 }: TopicSectionProps) {
+  const topicMistakeCount = mistakesForTopic(topic.id, mistakes).length
   const allDone = topic.lessons.every((l) => isCompleted(l.id))
   const isLocked = hardLockReason !== null
   const showExamButton = !isLocked && !allDone && topic.lessons.length >= 2
@@ -483,6 +522,16 @@ function TopicSection({
               aria-label={`Take ${topic.title} skip exam`}
             >
               📝 <span>{examPassed ? 'Retake exam' : 'Skip exam'}</span>
+            </button>
+          )}
+          {topicMistakeCount > 0 && (
+            <button
+              type="button"
+              className="home-topic-practice"
+              onClick={() => onPracticeTopic(topic)}
+              aria-label={`Practice ${topic.title} mistakes`}
+            >
+              🎯 <span>Mistakes ({topicMistakeCount})</span>
             </button>
           )}
           <div className="home-topic-progress">
@@ -558,6 +607,25 @@ function TopicSection({
                   >
                     {done ? 'Practice again' : 'Start'}
                   </button>
+                  {(() => {
+                    const lessonMistakes = mistakesForLesson(
+                      lesson.id,
+                      mistakes
+                    ).length
+                    if (lessonMistakes === 0) return null
+                    return (
+                      <button
+                        type="button"
+                        className="ledge-button tone-neutral home-pop-btn"
+                        onClick={() => {
+                          setOpenId(null)
+                          onPracticeLesson(lesson)
+                        }}
+                      >
+                        🎯 Practice mistakes ({lessonMistakes})
+                      </button>
+                    )
+                  })()}
                 </div>
               )}
             </div>

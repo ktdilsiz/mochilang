@@ -11,9 +11,15 @@ interface Props {
   topic: Topic
   onPass: () => void
   onBack: () => void
+  onWrongAnswer?: (exerciseId: string) => void
 }
 
-export default function TopicExamScreen({ topic, onPass, onBack }: Props) {
+export default function TopicExamScreen({
+  topic,
+  onPass,
+  onBack,
+  onWrongAnswer,
+}: Props) {
   const requiredCorrect = Math.ceil(EXAM_PASS_THRESHOLD * EXAM_QUESTION_COUNT)
   return (
     <ExamScreen
@@ -41,6 +47,7 @@ export default function TopicExamScreen({ topic, onPass, onBack }: Props) {
       }}
       onPass={onPass}
       onBack={onBack}
+      onWrongAnswer={onWrongAnswer}
     />
   )
 }

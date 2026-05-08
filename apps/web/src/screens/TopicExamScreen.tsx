@@ -10,6 +10,8 @@ interface Props {
   topic: Topic
   onPass: () => void
   onBack: () => void
+  /** Optional — fires per wrong answer so callers can track mistakes. */
+  onWrongAnswer?: (exerciseId: string) => void
 }
 
 /**
@@ -17,7 +19,12 @@ interface Props {
  * skip flow: 20 random questions across all lessons in the topic, 80%
  * to pass.
  */
-export default function TopicExamScreen({ topic, onPass, onBack }: Props) {
+export default function TopicExamScreen({
+  topic,
+  onPass,
+  onBack,
+  onWrongAnswer,
+}: Props) {
   const requiredCorrect = Math.ceil(EXAM_PASS_THRESHOLD * EXAM_QUESTION_COUNT)
   return (
     <ExamScreen
@@ -45,6 +52,7 @@ export default function TopicExamScreen({ topic, onPass, onBack }: Props) {
       }}
       onPass={onPass}
       onBack={onBack}
+      onWrongAnswer={onWrongAnswer}
     />
   )
 }
