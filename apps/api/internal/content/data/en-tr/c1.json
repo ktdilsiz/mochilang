@@ -137,8 +137,14 @@
               "answer": "taking the",
               "acceptableAnswers": [
                 "taking the",
-                "the",
-                "taking"
+                "TAKING",
+                "TAKING THE",
+                "THE",
+                "Taking",
+                "Taking the",
+                "The",
+                "taking",
+                "the"
               ],
               "explanation": "'taking the time to' = 'zaman ayırmak'."
             },
@@ -220,7 +226,9 @@
               "prompt": "'In light ___ recent developments, we'll add an item.' (Türkçe: 'Son gelişmeler ışığında bir madde ekleyeceğiz.')",
               "answer": "of",
               "acceptableAnswers": [
-                "of"
+                "of",
+                "OF",
+                "Of"
               ]
             },
             {
@@ -260,7 +268,9 @@
               "prompt": "'Today's session will run for ___ hour and a half.' (Türkçe: 'Bugünkü oturum bir buçuk saat sürecek.')",
               "answer": "an",
               "acceptableAnswers": [
-                "an"
+                "an",
+                "AN",
+                "An"
               ],
               "explanation": "'h' sessizdir; 'an hour' kullanılır."
             },
@@ -322,7 +332,9 @@
               "prompt": "'We may have ___ meeting that figure.' (Türkçe: 'Bu rakamı karşılamakta zorlanabiliriz.')",
               "answer": "difficulty",
               "acceptableAnswers": [
-                "difficulty"
+                "difficulty",
+                "DIFFICULTY",
+                "Difficulty"
               ]
             },
             {
@@ -399,6 +411,10 @@
               "answer": "halfway",
               "acceptableAnswers": [
                 "halfway",
+                "HALF-WAY",
+                "HALFWAY",
+                "Half-way",
+                "Halfway",
                 "half-way"
               ]
             },
@@ -440,7 +456,9 @@
               "prompt": "'Could we explore some ___ options?' (Türkçe: 'Alternatif seçenekleri inceleyebilir miyiz?')",
               "answer": "alternative",
               "acceptableAnswers": [
-                "alternative"
+                "alternative",
+                "ALTERNATIVE",
+                "Alternative"
               ]
             },
             {
@@ -502,7 +520,9 @@
               "prompt": "'Pursuant ___ our discussion…' (Türkçe: 'Görüşmemize istinaden…')",
               "answer": "to",
               "acceptableAnswers": [
-                "to"
+                "to",
+                "TO",
+                "To"
               ],
               "explanation": "'pursuant to' = 'istinaden' (resmi)."
             },
@@ -583,8 +603,20 @@
               "answer": "response",
               "acceptableAnswers": [
                 "response",
+                "ANSWER",
+                "Answer",
+                "REFERENCE",
+                "REGARD",
+                "REPLY",
+                "RESPONSE",
+                "Reference",
+                "Regard",
+                "Reply",
+                "Response",
+                "answer",
                 "reference",
-                "regard"
+                "regard",
+                "reply"
               ]
             },
             {
@@ -626,7 +658,9 @@
               "prompt": "'The contract shall be ___ effective upon signing.' (Türkçe: 'Sözleşme imza ile yürürlüğe girer.')",
               "answer": "deemed",
               "acceptableAnswers": [
-                "deemed"
+                "deemed",
+                "DEEMED",
+                "Deemed"
               ],
               "explanation": "'shall be deemed' sözleşme dili."
             },
@@ -717,6 +751,10 @@
               "answer": "edge",
               "acceptableAnswers": [
                 "edge",
+                "ADVANTAGE",
+                "Advantage",
+                "EDGE",
+                "Edge",
                 "advantage"
               ]
             },
@@ -770,7 +808,9 @@
               "prompt": "'The investment yields ___ returns at this scale.' (Türkçe: 'Bu ölçekte yatırım azalan getiri veriyor.')",
               "answer": "diminishing",
               "acceptableAnswers": [
-                "diminishing"
+                "diminishing",
+                "DIMINISHING",
+                "Diminishing"
               ]
             },
             {
@@ -808,6 +848,10 @@
               "answer": "win-win",
               "acceptableAnswers": [
                 "win-win",
+                "WIN WIN",
+                "WIN-WIN",
+                "Win win",
+                "Win-win",
                 "win win"
               ]
             }
@@ -839,7 +883,9 @@
               "prompt": "'Revenue grew 12% year-on-year, ___ by enterprise renewals.' (Türkçe: 'Gelir, kurumsal yenilemelerin etkisiyle yıllık %12 arttı.')",
               "answer": "driven",
               "acceptableAnswers": [
-                "driven"
+                "driven",
+                "DRIVEN",
+                "Driven"
               ],
               "explanation": "Yönetici özetinde 'driven by' kazanım nedenini belirtir."
             },
@@ -919,7 +965,9 @@
               "prompt": "'The proposal is, on ___, the most defensible option available.' (Türkçe: 'Öneri, genel olarak en savunulabilir seçenek.')",
               "answer": "balance",
               "acceptableAnswers": [
-                "balance"
+                "balance",
+                "BALANCE",
+                "Balance"
               ]
             },
             {
@@ -963,6 +1011,10 @@
               "answer": "endorse",
               "acceptableAnswers": [
                 "endorse",
+                "APPROVE",
+                "Approve",
+                "ENDORSE",
+                "Endorse",
                 "approve"
               ],
               "explanation": "'endorse' resmi onayda yaygın."
@@ -1026,7 +1078,12 @@
               "prompt": "'I am writing to ___ a meeting at your earliest convenience.' (Türkçe: 'Sizin için en uygun zamanda bir toplantı talep etmek için yazıyorum.')",
               "answer": "request",
               "acceptableAnswers": [
-                "request"
+                "request",
+                "ASK",
+                "Ask",
+                "REQUEST",
+                "Request",
+                "ask"
               ]
             },
             {
@@ -1101,7 +1158,12 @@
               "prompt": "'Apologies for the ___ in responding.' (Türkçe: 'Yanıttaki gecikme için özür dilerim.')",
               "answer": "delay",
               "acceptableAnswers": [
-                "delay"
+                "delay",
+                "DELAY",
+                "Delay",
+                "POSTPONE",
+                "Postpone",
+                "postpone"
               ]
             },
             {
@@ -1147,6 +1209,10 @@
               "answer": "attached",
               "acceptableAnswers": [
                 "attached",
+                "ATTACHED",
+                "Attached",
+                "ENCLOSED",
+                "Enclosed",
                 "enclosed"
               ]
             },
@@ -1325,7 +1391,9 @@
               "prompt": "'A growing ___ of evidence indicates climate sensitivity.' (Türkçe: 'Giderek artan kanıt iklim duyarlılığına işaret etmektedir.')",
               "answer": "body",
               "acceptableAnswers": [
-                "body"
+                "body",
+                "BODY",
+                "Body"
               ]
             },
             {
@@ -1378,6 +1446,10 @@
               "answer": "indicate",
               "acceptableAnswers": [
                 "indicate",
+                "INDICATE",
+                "Indicate",
+                "SUGGEST",
+                "Suggest",
                 "suggest"
               ]
             },
@@ -1419,7 +1491,9 @@
               "prompt": "'The phenomenon ___ to occur more frequently in summer.' (Türkçe: 'Olgu yazın daha sık görülme eğilimindedir.')",
               "answer": "tends",
               "acceptableAnswers": [
-                "tends"
+                "tends",
+                "TENDS",
+                "Tends"
               ]
             }
           ]
@@ -1450,6 +1524,12 @@
               "answer": "argues",
               "acceptableAnswers": [
                 "argues",
+                "ARGUES",
+                "Argues",
+                "CONTENDS",
+                "Contends",
+                "POSITS",
+                "Posits",
                 "contends",
                 "posits"
               ]
@@ -1526,7 +1606,9 @@
               "prompt": "'The findings have important ___ for policy.' (Türkçe: 'Bulguların politika açısından önemli sonuçları vardır.')",
               "answer": "implications",
               "acceptableAnswers": [
-                "implications"
+                "implications",
+                "IMPLICATIONS",
+                "Implications"
               ]
             },
             {
@@ -1566,7 +1648,9 @@
               "prompt": "'The limitations of this study ___ as follows.' (Türkçe: 'Bu çalışmanın sınırlılıkları şu şekildedir.')",
               "answer": "are",
               "acceptableAnswers": [
-                "are"
+                "are",
+                "ARE",
+                "Are"
               ]
             }
           ]
@@ -1620,6 +1704,12 @@
               "answer": "shown",
               "acceptableAnswers": [
                 "shown",
+                "DEPICTED",
+                "Depicted",
+                "ILLUSTRATED",
+                "Illustrated",
+                "SHOWN",
+                "Shown",
                 "depicted",
                 "illustrated"
               ]
@@ -1673,6 +1763,16 @@
               "answer": "however",
               "acceptableAnswers": [
                 "however",
+                "HOWEVER",
+                "However",
+                "NEVERTHELESS",
+                "NONETHELESS",
+                "Nevertheless",
+                "Nonetheless",
+                "THOUGH",
+                "Though",
+                "nevertheless",
+                "nonetheless",
                 "though"
               ]
             },
@@ -1712,8 +1812,14 @@
               "answer": "investigate",
               "acceptableAnswers": [
                 "investigate",
-                "explore",
-                "examine"
+                "EXAMINE",
+                "EXPLORE",
+                "Examine",
+                "Explore",
+                "INVESTIGATE",
+                "Investigate",
+                "examine",
+                "explore"
               ]
             }
           ]
@@ -1744,6 +1850,10 @@
               "answer": "to",
               "acceptableAnswers": [
                 "to",
+                "ACROSS",
+                "Across",
+                "TO",
+                "To",
                 "across"
               ]
             },
@@ -1821,7 +1931,10 @@
               "answer": "we",
               "acceptableAnswers": [
                 "we",
-                "I"
+                "I",
+                "WE",
+                "We",
+                "i"
               ]
             },
             {
@@ -1862,7 +1975,12 @@
               "prompt": "'The effect is statistically ___' (Türkçe: 'Etki istatistiksel olarak anlamlıdır.')",
               "answer": "significant",
               "acceptableAnswers": [
-                "significant"
+                "significant",
+                "IMPORTANT",
+                "Important",
+                "SIGNIFICANT",
+                "Significant",
+                "important"
               ]
             }
           ]
@@ -1894,6 +2012,10 @@
               "answer": "reaches",
               "acceptableAnswers": [
                 "reaches",
+                "DRAWS",
+                "Draws",
+                "REACHES",
+                "Reaches",
                 "draws"
               ],
               "explanation": "'reach a conclusion' / 'draw a conclusion' her ikisi de kabul."
@@ -1973,8 +2095,14 @@
               "answer": "address",
               "acceptableAnswers": [
                 "address",
-                "fill",
-                "bridge"
+                "ADDRESS",
+                "Address",
+                "BRIDGE",
+                "Bridge",
+                "FILL",
+                "Fill",
+                "bridge",
+                "fill"
               ]
             },
             {
@@ -2013,7 +2141,9 @@
               "prompt": "'Recent scholarship has called this assumption into ___' (Türkçe: 'Son çalışmalar bu varsayımı sorgulanır hale getirdi.')",
               "answer": "question",
               "acceptableAnswers": [
-                "question"
+                "question",
+                "QUESTION",
+                "Question"
               ],
               "explanation": "'call sth into question' = sorgulanır hale getirmek."
             },
@@ -2076,10 +2206,20 @@
               "answer": "examines",
               "acceptableAnswers": [
                 "examines",
-                "explores",
-                "investigates",
+                "ANALYSES",
+                "ANALYZES",
+                "Analyses",
+                "Analyzes",
+                "EXAMINES",
+                "EXPLORES",
+                "Examines",
+                "Explores",
+                "INVESTIGATES",
+                "Investigates",
                 "analyses",
-                "analyzes"
+                "analyzes",
+                "explores",
+                "investigates"
               ]
             },
             {
@@ -2156,6 +2296,10 @@
               "answer": "on",
               "acceptableAnswers": [
                 "on",
+                "ON",
+                "On",
+                "UPON",
+                "Upon",
                 "upon"
               ],
               "explanation": "'Drawing on / upon' = -e dayanarak."
@@ -2200,8 +2344,14 @@
               "answer": "shed",
               "acceptableAnswers": [
                 "shed",
-                "throw",
-                "cast"
+                "CAST",
+                "Cast",
+                "SHED",
+                "Shed",
+                "THROW",
+                "Throw",
+                "cast",
+                "throw"
               ],
               "explanation": "'shed/throw/cast light on' = ışık tutmak."
             },
@@ -2382,8 +2532,14 @@
               "answer": "legislature",
               "acceptableAnswers": [
                 "legislature",
-                "parliament",
-                "congress"
+                "CONGRESS",
+                "Congress",
+                "LEGISLATURE",
+                "Legislature",
+                "PARLIAMENT",
+                "Parliament",
+                "congress",
+                "parliament"
               ]
             },
             {
@@ -2437,7 +2593,9 @@
               "prompt": "'Voters in this ___ tend to favour reform.' (Türkçe: 'Bu seçim bölgesindeki seçmenler reformu desteklemeye eğilimlidir.')",
               "answer": "constituency",
               "acceptableAnswers": [
-                "constituency"
+                "constituency",
+                "CONSTITUENCY",
+                "Constituency"
               ]
             },
             {
@@ -2476,8 +2634,14 @@
               "answer": "duty",
               "acceptableAnswers": [
                 "duty",
-                "responsibility",
-                "obligation"
+                "DUTY",
+                "Duty",
+                "OBLIGATION",
+                "Obligation",
+                "RESPONSIBILITY",
+                "Responsibility",
+                "obligation",
+                "responsibility"
               ]
             }
           ]
@@ -2530,7 +2694,9 @@
               "prompt": "'Income ___ has widened over the past decade.' (Türkçe: 'Gelir eşitsizliği son on yılda derinleşti.')",
               "answer": "inequality",
               "acceptableAnswers": [
-                "inequality"
+                "inequality",
+                "INEQUALITY",
+                "Inequality"
               ]
             },
             {
@@ -2581,7 +2747,9 @@
               "prompt": "'Closing the wage ___ remains a priority.' (Türkçe: 'Ücret farkını kapatmak öncelik olmaya devam ediyor.')",
               "answer": "gap",
               "acceptableAnswers": [
-                "gap"
+                "gap",
+                "GAP",
+                "Gap"
               ]
             },
             {
@@ -2623,8 +2791,14 @@
               "answer": "dismantle",
               "acceptableAnswers": [
                 "dismantle",
-                "remove",
-                "address"
+                "ADDRESS",
+                "Address",
+                "DISMANTLE",
+                "Dismantle",
+                "REMOVE",
+                "Remove",
+                "address",
+                "remove"
               ]
             }
           ]
@@ -2654,7 +2828,9 @@
               "prompt": "'There is a strong ___ for reform.' (Türkçe: 'Reform için güçlü bir gerekçe var.')",
               "answer": "case",
               "acceptableAnswers": [
-                "case"
+                "case",
+                "CASE",
+                "Case"
               ]
             },
             {
@@ -2732,7 +2908,16 @@
               "answer": "claim",
               "acceptableAnswers": [
                 "claim",
+                "ARGUE",
+                "ASSERT",
+                "Argue",
+                "Assert",
+                "CLAIM",
+                "CONTEND",
+                "Claim",
+                "Contend",
                 "argue",
+                "assert",
                 "contend"
               ]
             },
@@ -2771,7 +2956,9 @@
               "prompt": "'A more ___ approach is required.' (Türkçe: 'Daha incelikli bir yaklaşım gerekiyor.')",
               "answer": "nuanced",
               "acceptableAnswers": [
-                "nuanced"
+                "nuanced",
+                "NUANCED",
+                "Nuanced"
               ]
             }
           ]
@@ -2825,6 +3012,10 @@
               "answer": "entrenching",
               "acceptableAnswers": [
                 "entrenching",
+                "DEEPENING",
+                "Deepening",
+                "ENTRENCHING",
+                "Entrenching",
                 "deepening"
               ],
               "explanation": "'entrench' = kemikleştirmek; 'entrench inequality' yaygın koligasyon."
@@ -2881,6 +3072,10 @@
               "answer": "gap",
               "acceptableAnswers": [
                 "gap",
+                "DIVIDE",
+                "Divide",
+                "GAP",
+                "Gap",
                 "divide"
               ]
             },
@@ -2924,7 +3119,9 @@
               "prompt": "'Means-___ benefits target the most vulnerable.' (Türkçe: 'Gelir testine bağlı yardımlar en kırılgan kesime yöneliktir.')",
               "answer": "tested",
               "acceptableAnswers": [
-                "tested"
+                "tested",
+                "TESTED",
+                "Tested"
               ],
               "explanation": "'Means-tested benefits' = gelir testine bağlı yardımlar."
             },
@@ -2988,7 +3185,12 @@
               "prompt": "'The argument is, at ___, incomplete.' (Türkçe: 'Argüman en iyi ihtimalle eksiktir.')",
               "answer": "best",
               "acceptableAnswers": [
-                "best"
+                "best",
+                "BEST",
+                "Best",
+                "GREATEST",
+                "Greatest",
+                "greatest"
               ],
               "explanation": "'at best' = en iyi ihtimalle (söylemde mesafe alma)."
             },
@@ -3068,7 +3270,9 @@
               "prompt": "'The claim is, to ___ a phrase, only half the story.' (Türkçe: 'Bir deyimle ifade etmek gerekirse iddia hikayenin yalnızca yarısı.')",
               "answer": "borrow",
               "acceptableAnswers": [
-                "borrow"
+                "borrow",
+                "BORROW",
+                "Borrow"
               ],
               "explanation": "'to borrow a phrase' kalıbı."
             },
@@ -3111,7 +3315,17 @@
               "answer": "though",
               "acceptableAnswers": [
                 "though",
-                "albeit"
+                "ALBEIT",
+                "ALTHOUGH",
+                "Albeit",
+                "Although",
+                "EVEN THOUGH",
+                "Even though",
+                "THOUGH",
+                "Though",
+                "albeit",
+                "although",
+                "even though"
               ],
               "explanation": "'though imperfect' = kusurlu olsa da."
             },
@@ -3298,7 +3512,9 @@
               "prompt": "'That project is ___ the back burner for now.' (Türkçe: 'O proje şimdilik askıda.')",
               "answer": "on",
               "acceptableAnswers": [
-                "on"
+                "on",
+                "ON",
+                "On"
               ]
             },
             {
@@ -3350,7 +3566,9 @@
               "prompt": "'The ___ line is, we need to ship by Friday.' (Türkçe: 'Asıl mesele, cumaya kadar yayınlamalıyız.')",
               "answer": "bottom",
               "acceptableAnswers": [
-                "bottom"
+                "bottom",
+                "BOTTOM",
+                "Bottom"
               ]
             },
             {
@@ -3390,7 +3608,9 @@
               "prompt": "'Off the ___ of my head, I'd say twenty thousand.' (Türkçe: 'Kafadan yirmi bin derdim.')",
               "answer": "top",
               "acceptableAnswers": [
-                "top"
+                "top",
+                "TOP",
+                "Top"
               ]
             },
             {
@@ -3471,7 +3691,9 @@
               "prompt": "'Don't make a ___ out of a molehill.' (Türkçe: 'Pireyi deve yapma.')",
               "answer": "mountain",
               "acceptableAnswers": [
-                "mountain"
+                "mountain",
+                "MOUNTAIN",
+                "Mountain"
               ]
             },
             {
@@ -3521,7 +3743,9 @@
               "prompt": "'I had to bite the ___ and tell the truth.' (Türkçe: 'Acı gerçeği kabullenip doğruyu söylemek zorundaydım.')",
               "answer": "bullet",
               "acceptableAnswers": [
-                "bullet"
+                "bullet",
+                "BULLET",
+                "Bullet"
               ]
             },
             {
@@ -3561,7 +3785,9 @@
               "prompt": "'Stop pulling my ___' (Türkçe: 'Benimle dalga geçmeyi bırak.')",
               "answer": "leg",
               "acceptableAnswers": [
-                "leg"
+                "leg",
+                "LEG",
+                "Leg"
               ]
             }
           ]
@@ -3614,7 +3840,12 @@
               "prompt": "'I read an interesting article in a science ___.' (Türkçe: 'Bir bilim dergisinde ilginç bir makale okudum.')",
               "answer": "magazine",
               "acceptableAnswers": [
-                "magazine"
+                "magazine",
+                "JOURNAL",
+                "Journal",
+                "MAGAZINE",
+                "Magazine",
+                "journal"
               ],
               "explanation": "False friend! Türkçedeki 'magazin' = celebrity/gossip dergisi; İngilizce 'magazine' herhangi bir süreli dergidir. 'Mağaza' = 'shop/store'."
             },
@@ -3665,7 +3896,12 @@
               "prompt": "'This is a ___ topic; he gets upset easily.' (Türkçe: 'Bu hassas bir konu; kolay üzülüyor.')",
               "answer": "sensitive",
               "acceptableAnswers": [
-                "sensitive"
+                "sensitive",
+                "DELICATE",
+                "Delicate",
+                "SENSITIVE",
+                "Sensitive",
+                "delicate"
               ]
             },
             {
@@ -3703,7 +3939,12 @@
               "prompt": "'The ___ cost was much higher than estimated.' (Türkçe: 'Gerçek maliyet tahminden çok daha yüksekti.')",
               "answer": "actual",
               "acceptableAnswers": [
-                "actual"
+                "actual",
+                "ACTUAL",
+                "Actual",
+                "REAL",
+                "Real",
+                "real"
               ]
             }
           ]
@@ -3757,7 +3998,9 @@
               "prompt": "'I need to ___ a phone call.' (Türkçe: 'Bir telefon görüşmesi yapmalıyım.')",
               "answer": "make",
               "acceptableAnswers": [
-                "make"
+                "make",
+                "MAKE",
+                "Make"
               ]
             },
             {
@@ -3811,6 +4054,10 @@
               "answer": "obey",
               "acceptableAnswers": [
                 "obey",
+                "FOLLOW",
+                "Follow",
+                "OBEY",
+                "Obey",
                 "follow"
               ]
             },
@@ -3850,7 +4097,9 @@
               "prompt": "'She made a strong ___ in her speech.' (Türkçe: 'Konuşmasında güçlü bir izlenim bıraktı.')",
               "answer": "impression",
               "acceptableAnswers": [
-                "impression"
+                "impression",
+                "IMPRESSION",
+                "Impression"
               ]
             }
           ]
@@ -3904,7 +4153,9 @@
               "prompt": "'Let's not boil the ___; let's start small.' (Türkçe: 'Her şeyi birden çözmeye çalışmayalım; küçük başlayalım.')",
               "answer": "ocean",
               "acceptableAnswers": [
-                "ocean"
+                "ocean",
+                "OCEAN",
+                "Ocean"
               ]
             },
             {
@@ -3958,7 +4209,9 @@
               "prompt": "'That decision is above my pay ___.' (Türkçe: 'Bu karar benim yetkimi aşıyor.')",
               "answer": "grade",
               "acceptableAnswers": [
-                "grade"
+                "grade",
+                "GRADE",
+                "Grade"
               ]
             },
             {
@@ -4000,7 +4253,9 @@
               "prompt": "'We need to get all our ducks in a ___ before the launch.' (Türkçe: 'Lansmandan önce her şeyi tıkır tıkır hazır etmemiz lazım.')",
               "answer": "row",
               "acceptableAnswers": [
-                "row"
+                "row",
+                "ROW",
+                "Row"
               ]
             },
             {
@@ -4088,7 +4343,15 @@
               "prompt": "'She is a very ___ person; she rarely overreacts.' (Türkçe: 'O çok mantıklı bir insan; nadiren aşırı tepki verir.')",
               "answer": "sensible",
               "acceptableAnswers": [
-                "sensible"
+                "sensible",
+                "REASONABLE",
+                "Reasonable",
+                "SENSIBLE",
+                "Sensible",
+                "WISE",
+                "Wise",
+                "reasonable",
+                "wise"
               ],
               "explanation": "'sensible' = mantıklı; 'sensitive' = hassas."
             },
@@ -4142,7 +4405,9 @@
               "prompt": "'The proposal is ___ (= savunulabilir), if not optimal.' (Türkçe: 'Öneri, en iyi olmasa da savunulabilir.')",
               "answer": "defensible",
               "acceptableAnswers": [
-                "defensible"
+                "defensible",
+                "DEFENSIBLE",
+                "Defensible"
               ]
             },
             {
@@ -4187,7 +4452,9 @@
               "prompt": "'I'd like to ___ (= itiraz etmek, nazik) on that timeline.' (Türkçe: 'Bu takvime nazikçe itiraz etmek isterim.')",
               "answer": "push back",
               "acceptableAnswers": [
-                "push back"
+                "push back",
+                "PUSH BACK",
+                "Push back"
               ]
             },
             {
@@ -4348,7 +4615,9 @@
               "prompt": "'Never before ___ I felt such pressure.' (Türkçe: 'Daha önce hiç böyle bir baskı hissetmemiştim.')",
               "answer": "had",
               "acceptableAnswers": [
-                "had"
+                "had",
+                "HAD",
+                "Had"
               ]
             },
             {
@@ -4425,7 +4694,9 @@
               "prompt": "'No sooner ___ I sat down than the phone rang.' (Türkçe: 'Oturur oturmaz telefon çaldı.')",
               "answer": "had",
               "acceptableAnswers": [
-                "had"
+                "had",
+                "HAD",
+                "Had"
               ]
             },
             {
@@ -4465,7 +4736,9 @@
               "prompt": "'Little ___ they realise the danger.' (Türkçe: 'Tehlikenin pek farkına varmadılar.')",
               "answer": "did",
               "acceptableAnswers": [
-                "did"
+                "did",
+                "DID",
+                "Did"
               ],
               "explanation": "'Little did they realise' deyimsel inversion."
             }
@@ -4496,7 +4769,9 @@
               "prompt": "'___ surprises me most is his silence.' (Türkçe: 'Beni en çok şaşırtan şey onun sessizliği.')",
               "answer": "What",
               "acceptableAnswers": [
-                "What"
+                "What",
+                "WHAT",
+                "what"
               ]
             },
             {
@@ -4571,6 +4846,10 @@
               "answer": "who",
               "acceptableAnswers": [
                 "who",
+                "THAT",
+                "That",
+                "WHO",
+                "Who",
                 "that"
               ]
             },
@@ -4614,7 +4893,12 @@
               "prompt": "'It was ___ here that we first met.' (Türkçe: 'İlk burada tanıştığımız yer burası.')",
               "answer": "right",
               "acceptableAnswers": [
-                "right"
+                "right",
+                "CORRECT",
+                "Correct",
+                "RIGHT",
+                "Right",
+                "correct"
               ]
             }
           ]
@@ -4644,7 +4928,9 @@
               "prompt": "'___ in haste, the report contained errors.' (Türkçe: 'Aceleyle yazılan rapor hatalar içeriyordu.')",
               "answer": "Written",
               "acceptableAnswers": [
-                "Written"
+                "Written",
+                "WRITTEN",
+                "written"
               ]
             },
             {
@@ -4720,7 +5006,11 @@
               "answer": "Having arrived",
               "acceptableAnswers": [
                 "Having arrived",
-                "Arriving"
+                "ARRIVING",
+                "Arriving",
+                "HAVING ARRIVED",
+                "arriving",
+                "having arrived"
               ]
             },
             {
@@ -4761,7 +5051,9 @@
               "prompt": "'___ ignored, the problem grew worse.' (Türkçe: 'Görmezden gelinince sorun daha da büyüdü.')",
               "answer": "Being",
               "acceptableAnswers": [
-                "Being"
+                "Being",
+                "BEING",
+                "being"
               ]
             }
           ]
@@ -4792,7 +5084,9 @@
               "prompt": "'___ I really want is a clear timeline.' (Türkçe: 'Gerçekten istediğim şey net bir takvim.') (wh-cleft)",
               "answer": "What",
               "acceptableAnswers": [
-                "What"
+                "What",
+                "WHAT",
+                "what"
               ],
               "explanation": "Wh-cleft: 'What I want is X.'"
             },
@@ -4870,7 +5164,9 @@
               "prompt": "'It ___ not until 2020 that we noticed the trend.' (Türkçe: 'Eğilimi 2020'ye kadar fark etmedik.') (it-cleft)",
               "answer": "was",
               "acceptableAnswers": [
-                "was"
+                "was",
+                "WAS",
+                "Was"
               ]
             },
             {
@@ -4911,7 +5207,9 @@
               "prompt": "'Only ___ examining the data did we identify the bias.' (Türkçe: 'Veriyi inceledikten sonra bias'ı fark ettik.') (fronting + inversion)",
               "answer": "after",
               "acceptableAnswers": [
-                "after"
+                "after",
+                "AFTER",
+                "After"
               ],
               "explanation": "'Only after V-ing… did we…'"
             },
@@ -4976,6 +5274,10 @@
               "answer": "selected",
               "acceptableAnswers": [
                 "selected",
+                "CHOSEN",
+                "Chosen",
+                "SELECTED",
+                "Selected",
                 "chosen"
               ]
             },
@@ -5052,7 +5354,9 @@
               "prompt": "'___ all things considered, the deal is fair.' (Türkçe: 'Her şey dikkate alındığında anlaşma adildir.')",
               "answer": "All",
               "acceptableAnswers": [
-                "All"
+                "All",
+                "ALL",
+                "all"
               ],
               "explanation": "Absolute participle: 'all things considered'."
             },
@@ -5094,7 +5398,9 @@
               "prompt": "'The author, ___ work has shaped the field, will keynote.' (Türkçe: 'Çalışması alanı şekillendiren yazar açılış konuşması yapacak.')",
               "answer": "whose",
               "acceptableAnswers": [
-                "whose"
+                "whose",
+                "WHOSE",
+                "Whose"
               ]
             },
             {
@@ -5259,7 +5565,9 @@
               "prompt": "'With ___, I must disagree.' (Türkçe: 'Saygıyla bilmem gerekir ki katılmıyorum.')",
               "answer": "respect",
               "acceptableAnswers": [
-                "respect"
+                "respect",
+                "RESPECT",
+                "Respect"
               ]
             },
             {
@@ -5311,7 +5619,9 @@
               "prompt": "'The reasoning is ___; it merely appears valid.' (Türkçe: 'Akıl yürütme aldatıcı; sadece geçerli görünüyor.')",
               "answer": "specious",
               "acceptableAnswers": [
-                "specious"
+                "specious",
+                "SPECIOUS",
+                "Specious"
               ]
             },
             {
@@ -5348,7 +5658,9 @@
               "prompt": "'I would ___ urge you to reconsider.' (Türkçe: 'Sizi yeniden düşünmeye davet ediyorum (saygıyla).')",
               "answer": "respectfully",
               "acceptableAnswers": [
-                "respectfully"
+                "respectfully",
+                "RESPECTFULLY",
+                "Respectfully"
               ]
             }
           ]
@@ -5401,7 +5713,12 @@
               "prompt": "'The implications are ___' (Türkçe: 'Sonuçlar derin etkili.')",
               "answer": "profound",
               "acceptableAnswers": [
-                "profound"
+                "profound",
+                "DEEP",
+                "Deep",
+                "PROFOUND",
+                "Profound",
+                "deep"
               ]
             },
             {
@@ -5452,7 +5769,9 @@
               "prompt": "'These accusations are ___' (Türkçe: 'Bu suçlamalar temelsizdir.')",
               "answer": "unfounded",
               "acceptableAnswers": [
-                "unfounded"
+                "unfounded",
+                "UNFOUNDED",
+                "Unfounded"
               ]
             },
             {
@@ -5492,7 +5811,9 @@
               "prompt": "'Their reasoning is ___ flawed.' (Türkçe: 'Akıl yürütmeleri temelden hatalı.')",
               "answer": "fundamentally",
               "acceptableAnswers": [
-                "fundamentally"
+                "fundamentally",
+                "FUNDAMENTALLY",
+                "Fundamentally"
               ]
             }
           ]
@@ -5546,7 +5867,11 @@
               "answer": "Notwithstanding",
               "acceptableAnswers": [
                 "Notwithstanding",
-                "Despite"
+                "DESPITE",
+                "Despite",
+                "NOTWITHSTANDING",
+                "despite",
+                "notwithstanding"
               ]
             },
             {
@@ -5601,6 +5926,12 @@
               "answer": "hence",
               "acceptableAnswers": [
                 "hence",
+                "HENCE",
+                "Hence",
+                "THEREFORE",
+                "THUS",
+                "Therefore",
+                "Thus",
                 "therefore",
                 "thus"
               ]
@@ -5644,7 +5975,14 @@
               "answer": "Despite",
               "acceptableAnswers": [
                 "Despite",
-                "Notwithstanding"
+                "DESPITE",
+                "IN SPITE OF",
+                "In spite of",
+                "NOTWITHSTANDING",
+                "Notwithstanding",
+                "despite",
+                "in spite of",
+                "notwithstanding"
               ]
             }
           ]
@@ -5675,6 +6013,10 @@
               "answer": "rests",
               "acceptableAnswers": [
                 "rests",
+                "HINGES",
+                "Hinges",
+                "RESTS",
+                "Rests",
                 "hinges"
               ],
               "explanation": "'rest on / hinge on' = -e dayanmak."
@@ -5752,7 +6094,9 @@
               "prompt": "'The conclusion does not ___ from the evidence presented.' (Türkçe: 'Sonuç sunulan kanıtlardan çıkmıyor.')",
               "answer": "follow",
               "acceptableAnswers": [
-                "follow"
+                "follow",
+                "FOLLOW",
+                "Follow"
               ]
             },
             {
@@ -5792,6 +6136,10 @@
               "answer": "when",
               "acceptableAnswers": [
                 "when",
+                "IF",
+                "If",
+                "WHEN",
+                "When",
                 "if"
               ],
               "explanation": "Reduced participle: 'when properly examined'."
@@ -5855,7 +6203,9 @@
               "prompt": "'There is ___ truth to that, but it overlooks the bigger picture.' (Türkçe: 'Bunda biraz doğruluk payı var ama büyük resmi gözden kaçırıyor.')",
               "answer": "some",
               "acceptableAnswers": [
-                "some"
+                "some",
+                "SOME",
+                "Some"
               ]
             },
             {
@@ -5936,8 +6286,14 @@
               "answer": "appreciate",
               "acceptableAnswers": [
                 "appreciate",
-                "understand",
-                "share"
+                "APPRECIATE",
+                "Appreciate",
+                "SHARE",
+                "Share",
+                "UNDERSTAND",
+                "Understand",
+                "share",
+                "understand"
               ],
               "explanation": "'appreciate one's concern' nazik kabul kalıbı."
             },
@@ -5980,7 +6336,9 @@
               "prompt": "'Be that ___ it may, the policy remains the most defensible option.' (Türkçe: 'Öyle bile olsa, politika en savunulabilir seçenek olmaya devam ediyor.')",
               "answer": "as",
               "acceptableAnswers": [
-                "as"
+                "as",
+                "AS",
+                "As"
               ]
             },
             {
@@ -6196,7 +6554,15 @@
               "prompt": "'The director's restraint makes the climax all the more ___.' (Türkçe: '… yönetmenin ölçülü tarzı doruk noktasını çok daha çağrışım uyandırıcı kılıyor.')",
               "answer": "evocative",
               "acceptableAnswers": [
-                "evocative"
+                "evocative",
+                "EVOCATIVE",
+                "EXPRESSIVE",
+                "Evocative",
+                "Expressive",
+                "SUGGESTIVE",
+                "Suggestive",
+                "expressive",
+                "suggestive"
               ]
             },
             {
@@ -6253,7 +6619,12 @@
               "prompt": "'The film is visually ___ but emotionally hollow.' (Türkçe: '… film görsel olarak cilalı ama duygusal olarak boş.')",
               "answer": "polished",
               "acceptableAnswers": [
-                "polished"
+                "polished",
+                "POLISHED",
+                "Polished",
+                "REFINED",
+                "Refined",
+                "refined"
               ]
             },
             {
@@ -6303,7 +6674,9 @@
               "prompt": "'The dialogue feels ___ in places, as if written for effect.' (Türkçe: 'Diyalog yer yer zoraki hissettiriyor, etki için yazılmış gibi.')",
               "answer": "contrived",
               "acceptableAnswers": [
-                "contrived"
+                "contrived",
+                "CONTRIVED",
+                "Contrived"
               ]
             },
             {
@@ -6352,7 +6725,9 @@
               "prompt": "'The performance falls ___ in the second half.' (Türkçe: 'Performans ikinci yarıda havasını kaybediyor.')",
               "answer": "flat",
               "acceptableAnswers": [
-                "flat"
+                "flat",
+                "FLAT",
+                "Flat"
               ]
             },
             {
@@ -6430,7 +6805,9 @@
               "prompt": "'A welcome ___ to form for the director.' (Türkçe: 'Yönetmen için eski formuna hoş bir dönüş.')",
               "answer": "return",
               "acceptableAnswers": [
-                "return"
+                "return",
+                "RETURN",
+                "Return"
               ]
             },
             {
@@ -6471,7 +6848,9 @@
               "prompt": "'A ___ of the genre, both daring and disciplined.' (Türkçe: 'Türünün başarısı; hem cesur hem disiplinli.')",
               "answer": "triumph",
               "acceptableAnswers": [
-                "triumph"
+                "triumph",
+                "TRIUMPH",
+                "Triumph"
               ]
             },
             {
@@ -6530,7 +6909,9 @@
               "prompt": "'The novel's ___ shifts unexpectedly in chapter three.' (Türkçe: 'Romanın anlatıcısı üçüncü bölümde beklenmedik biçimde değişiyor.')",
               "answer": "narrator",
               "acceptableAnswers": [
-                "narrator"
+                "narrator",
+                "NARRATOR",
+                "Narrator"
               ]
             },
             {
@@ -6607,6 +6988,10 @@
               "answer": "brushstrokes",
               "acceptableAnswers": [
                 "brushstrokes",
+                "BRUSH STROKES",
+                "BRUSHSTROKES",
+                "Brush strokes",
+                "Brushstrokes",
                 "brush strokes"
               ]
             },
@@ -6647,7 +7032,9 @@
               "prompt": "'The score complements the visuals without ___ them.' (Türkçe: 'Müzik, görüntüleri gölgede bırakmadan tamamlıyor.')",
               "answer": "overshadowing",
               "acceptableAnswers": [
-                "overshadowing"
+                "overshadowing",
+                "OVERSHADOWING",
+                "Overshadowing"
               ]
             },
             {
@@ -6709,7 +7096,9 @@
               "prompt": "'It's a slow ___, but the payoff is immense.' (Türkçe: 'Yavaş ilerleyen bir yapım ama karşılığını fazlasıyla veriyor.')",
               "answer": "burn",
               "acceptableAnswers": [
-                "burn"
+                "burn",
+                "BURN",
+                "Burn"
               ]
             },
             {
@@ -6784,7 +7173,9 @@
               "prompt": "'The story really ___ a chord with younger readers.' (Türkçe: 'Hikâye genç okuyucuların kalbine dokundu.')",
               "answer": "struck",
               "acceptableAnswers": [
-                "struck"
+                "struck",
+                "STRUCK",
+                "Struck"
               ]
             },
             {
@@ -6824,7 +7215,9 @@
               "prompt": "'It's an acquired ___, but worth the patience.' (Türkçe: 'Sonradan alınan bir tat ama sabra değer.')",
               "answer": "taste",
               "acceptableAnswers": [
-                "taste"
+                "taste",
+                "TASTE",
+                "Taste"
               ]
             },
             {
@@ -6898,7 +7291,9 @@
               "prompt": "'A polished if somewhat ___ debut.' (Türkçe: 'Cilalı ama biraz taklitçi bir ilk yapım.')",
               "answer": "derivative",
               "acceptableAnswers": [
-                "derivative"
+                "derivative",
+                "DERIVATIVE",
+                "Derivative"
               ]
             },
             {
@@ -6955,7 +7350,9 @@
               "prompt": "'The score is evocative, the script ___-handed.' (Türkçe: 'Müzik çağrışım uyandırıcı, senaryo kaba.')",
               "answer": "heavy",
               "acceptableAnswers": [
-                "heavy"
+                "heavy",
+                "HEAVY",
+                "Heavy"
               ]
             },
             {
@@ -6994,7 +7391,9 @@
               "prompt": "'Restrained, austere, and quietly ___.' (Türkçe: 'Ölçülü, yalın ve sessizce ustalıklı.')",
               "answer": "masterful",
               "acceptableAnswers": [
-                "masterful"
+                "masterful",
+                "MASTERFUL",
+                "Masterful"
               ]
             },
             {
@@ -7175,7 +7574,9 @@
               "prompt": "'What this ___ for the wider economy is unclear.' (Türkçe: 'Bunun geniş ekonomi için ne anlama geldiği belirsiz.') — analiz cümlesi",
               "answer": "means",
               "acceptableAnswers": [
-                "means"
+                "means",
+                "MEANS",
+                "Means"
               ]
             },
             {
@@ -7232,7 +7633,12 @@
               "prompt": "'Make no ___: this changes everything.' (Türkçe: 'Yanılmayın: bu her şeyi değiştirir.') — op-ed",
               "answer": "mistake",
               "acceptableAnswers": [
-                "mistake"
+                "mistake",
+                "ERROR",
+                "Error",
+                "MISTAKE",
+                "Mistake",
+                "error"
               ]
             },
             {
@@ -7274,7 +7680,15 @@
               "prompt": "'One could ___ that the policy has failed.' (Türkçe: 'Politikanın başarısız olduğu öne sürülebilir.') — op-ed",
               "answer": "argue",
               "acceptableAnswers": [
-                "argue"
+                "argue",
+                "ARGUE",
+                "Argue",
+                "CONTEND",
+                "Contend",
+                "MAINTAIN",
+                "Maintain",
+                "contend",
+                "maintain"
               ]
             },
             {
@@ -7333,7 +7747,12 @@
               "prompt": "'The minister ___ to comment on the allegations.' (Türkçe: 'Bakan iddialar hakkında yorum yapmayı reddetti.')",
               "answer": "declined",
               "acceptableAnswers": [
-                "declined"
+                "declined",
+                "DECLINED",
+                "Declined",
+                "REFUSED",
+                "Refused",
+                "refused"
               ]
             },
             {
@@ -7410,7 +7829,9 @@
               "prompt": "'Two ___ familiar with the talks confirmed the figure.' (Türkçe: 'Görüşmelere yakın iki kaynak rakamı doğruladı.')",
               "answer": "sources",
               "acceptableAnswers": [
-                "sources"
+                "sources",
+                "SOURCES",
+                "Sources"
               ]
             },
             {
@@ -7452,6 +7873,10 @@
               "answer": "not authorised",
               "acceptableAnswers": [
                 "not authorised",
+                "NOT AUTHORISED",
+                "NOT AUTHORIZED",
+                "Not authorised",
+                "Not authorized",
                 "not authorized"
               ]
             },
@@ -7514,6 +7939,7 @@
               "answer": "Rules",
               "acceptableAnswers": [
                 "Rules",
+                "RULES",
                 "rules"
               ]
             },
@@ -7588,9 +8014,11 @@
               "answer": "Surge",
               "acceptableAnswers": [
                 "Surge",
-                "surge",
+                "RISE",
                 "Rise",
-                "rise"
+                "SURGE",
+                "rise",
+                "surge"
               ]
             },
             {
@@ -7626,8 +8054,10 @@
               "answer": "Report",
               "acceptableAnswers": [
                 "Report",
-                "report",
+                "REPORT",
+                "SOURCES",
                 "Sources",
+                "report",
                 "sources"
               ]
             },
@@ -7685,7 +8115,15 @@
               "prompt": "'One could ___ that the system is broken.' (Türkçe: 'Sistemin bozuk olduğu öne sürülebilir.')",
               "answer": "argue",
               "acceptableAnswers": [
-                "argue"
+                "argue",
+                "ARGUE",
+                "Argue",
+                "CONTEND",
+                "Contend",
+                "MAINTAIN",
+                "Maintain",
+                "contend",
+                "maintain"
               ]
             },
             {
@@ -7762,7 +8200,9 @@
               "prompt": "'I, for ___, find the argument unconvincing.' (Türkçe: 'Bana kalırsa argüman ikna edici değil.')",
               "answer": "one",
               "acceptableAnswers": [
-                "one"
+                "one",
+                "ONE",
+                "One"
               ]
             },
             {
@@ -7802,7 +8242,9 @@
               "prompt": "'Far from being a ___, the policy is a partial fix.' (Türkçe: 'Her derde deva olmaktan öte, politika kısmi bir çözüm.')",
               "answer": "panacea",
               "acceptableAnswers": [
-                "panacea"
+                "panacea",
+                "PANACEA",
+                "Panacea"
               ]
             },
             {
@@ -7876,7 +8318,15 @@
               "prompt": "'The CEO ___ the allegations.' (Türkçe: 'CEO iddiaları reddetti.') — reporting",
               "answer": "denied",
               "acceptableAnswers": [
-                "denied"
+                "denied",
+                "DENIED",
+                "Denied",
+                "REFUSED",
+                "REJECTED",
+                "Refused",
+                "Rejected",
+                "refused",
+                "rejected"
               ]
             },
             {
@@ -7933,7 +8383,9 @@
               "prompt": "'The proposal is ___ a step forward, but far from sufficient.' (Türkçe: 'Öneri görünüşte bir adım ama yeterli olmaktan uzak.')",
               "answer": "ostensibly",
               "acceptableAnswers": [
-                "ostensibly"
+                "ostensibly",
+                "OSTENSIBLY",
+                "Ostensibly"
               ]
             },
             {
@@ -7973,7 +8425,12 @@
               "prompt": "'The firm ___ to comment when contacted.' (Türkçe: 'Şirket temasta bulunulduğunda yorum yapmaktan kaçındı.')",
               "answer": "declined",
               "acceptableAnswers": [
-                "declined"
+                "declined",
+                "DECLINED",
+                "Declined",
+                "REFUSED",
+                "Refused",
+                "refused"
               ]
             },
             {
@@ -8064,7 +8521,9 @@
               "prompt": "'A growing ___ of evidence indicates climate sensitivity.' (Türkçe: 'Giderek artan kanıt iklim duyarlılığına işaret ediyor.')",
               "answer": "body",
               "acceptableAnswers": [
-                "body"
+                "body",
+                "BODY",
+                "Body"
               ]
             },
             {
@@ -8139,7 +8598,9 @@
               "prompt": "'I'd like to push ___ on that timeline.' (Türkçe: 'Bu takvime itiraz etmek isterim.')",
               "answer": "back",
               "acceptableAnswers": [
-                "back"
+                "back",
+                "BACK",
+                "Back"
               ]
             },
             {
@@ -8179,8 +8640,14 @@
               "answer": "demonstrate",
               "acceptableAnswers": [
                 "demonstrate",
-                "show",
-                "indicate"
+                "DEMONSTRATE",
+                "Demonstrate",
+                "INDICATE",
+                "Indicate",
+                "SHOW",
+                "Show",
+                "indicate",
+                "show"
               ]
             }
           ]
@@ -8233,7 +8700,9 @@
               "prompt": "'There is a strong ___ for reform.' (Türkçe: 'Reform için güçlü gerekçe var.')",
               "answer": "case",
               "acceptableAnswers": [
-                "case"
+                "case",
+                "CASE",
+                "Case"
               ]
             },
             {
@@ -8287,7 +8756,9 @@
               "prompt": "'It's the ___ in the room.' (Türkçe: 'Görmezden gelinen büyük problem.')",
               "answer": "elephant",
               "acceptableAnswers": [
-                "elephant"
+                "elephant",
+                "ELEPHANT",
+                "Elephant"
               ]
             },
             {
@@ -8325,7 +8796,9 @@
               "prompt": "'Don't make a ___ out of a molehill.' (Türkçe: 'Pireyi deve yapma.')",
               "answer": "mountain",
               "acceptableAnswers": [
-                "mountain"
+                "mountain",
+                "MOUNTAIN",
+                "Mountain"
               ]
             }
           ]
@@ -8355,7 +8828,9 @@
               "prompt": "'No sooner ___ I sat down than the phone rang.' (Türkçe: 'Oturur oturmaz telefon çaldı.')",
               "answer": "had",
               "acceptableAnswers": [
-                "had"
+                "had",
+                "HAD",
+                "Had"
               ]
             },
             {
@@ -8432,6 +8907,10 @@
               "answer": "but",
               "acceptableAnswers": [
                 "but",
+                "BUT",
+                "But",
+                "HOWEVER",
+                "However",
                 "however"
               ]
             },
@@ -8471,7 +8950,9 @@
               "prompt": "'The reasoning, while seductive, is ___' (Türkçe: 'Akıl yürütme cazip ama aldatıcı.')",
               "answer": "specious",
               "acceptableAnswers": [
-                "specious"
+                "specious",
+                "SPECIOUS",
+                "Specious"
               ]
             }
           ]

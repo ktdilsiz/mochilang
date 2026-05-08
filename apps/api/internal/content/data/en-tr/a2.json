@@ -189,8 +189,9 @@
               "prompt": "'study' → ___ (geçmiş)",
               "answer": "studied",
               "acceptableAnswers": [
-                "Studied",
-                "STUDIED"
+                "studied",
+                "STUDIED",
+                "Studied"
               ],
               "explanation": "Sessizden sonra 'y' → 'ied'."
             },
@@ -200,8 +201,9 @@
               "prompt": "'stop' → ___ (geçmiş)",
               "answer": "stopped",
               "acceptableAnswers": [
-                "Stopped",
-                "STOPPED"
+                "stopped",
+                "STOPPED",
+                "Stopped"
               ],
               "explanation": "Tek hece, tek ünsüzle biten + ünsüz çiftleme: stopped."
             },
@@ -275,8 +277,9 @@
               "prompt": "'cook' → ___",
               "answer": "cooked",
               "acceptableAnswers": [
-                "Cooked",
-                "COOKED"
+                "cooked",
+                "COOKED",
+                "Cooked"
               ]
             },
             {
@@ -330,8 +333,9 @@
               "prompt": "'have' → ___ (geçmiş)",
               "answer": "had",
               "acceptableAnswers": [
-                "Had",
-                "HAD"
+                "had",
+                "HAD",
+                "Had"
               ]
             },
             {
@@ -340,8 +344,9 @@
               "prompt": "'eat' → ___ (geçmiş)",
               "answer": "ate",
               "acceptableAnswers": [
-                "Ate",
-                "ATE"
+                "ate",
+                "ATE",
+                "Ate"
               ]
             },
             {
@@ -427,8 +432,9 @@
               "prompt": "'write' → ___",
               "answer": "wrote",
               "acceptableAnswers": [
-                "Wrote",
-                "WROTE"
+                "wrote",
+                "WROTE",
+                "Wrote"
               ]
             }
           ]
@@ -471,8 +477,12 @@
               "prompt": "'O kitabı okumadım.' = 'I ___ read the book.'",
               "answer": "didn't",
               "acceptableAnswers": [
-                "did not",
-                "DIDN'T"
+                "didn't",
+                "DID NOT",
+                "DIDN'T",
+                "Did not",
+                "Didn't",
+                "did not"
               ]
             },
             {
@@ -532,8 +542,12 @@
               "prompt": "'They ___ eat dinner.' (Akşam yemeği yemediler.)",
               "answer": "didn't",
               "acceptableAnswers": [
-                "did not",
-                "DIDN'T"
+                "didn't",
+                "DID NOT",
+                "DIDN'T",
+                "Did not",
+                "Didn't",
+                "did not"
               ]
             },
             {
@@ -617,8 +631,9 @@
               "prompt": "'Akşam yemeği yedin mi?' = '___ you have dinner?'",
               "answer": "Did",
               "acceptableAnswers": [
-                "did",
-                "DID"
+                "Did",
+                "DID",
+                "did"
               ]
             },
             {
@@ -677,8 +692,9 @@
               "prompt": "Cevap: 'I went to Ankara.' Soru: '___ did you go?'",
               "answer": "Where",
               "acceptableAnswers": [
-                "where",
-                "WHERE"
+                "Where",
+                "WHERE",
+                "where"
               ]
             },
             {
@@ -769,8 +785,9 @@
               "prompt": "'find' → ___ (geçmiş)",
               "answer": "found",
               "acceptableAnswers": [
-                "Found",
-                "FOUND"
+                "found",
+                "FOUND",
+                "Found"
               ],
               "explanation": "Düzensiz: find/found/found."
             },
@@ -780,8 +797,9 @@
               "prompt": "'know' → ___ (geçmiş)",
               "answer": "knew",
               "acceptableAnswers": [
-                "Knew",
-                "KNEW"
+                "knew",
+                "KNEW",
+                "Knew"
               ],
               "explanation": "Düzensiz: know/knew/known."
             },
@@ -854,8 +872,15 @@
               "prompt": "'I ___ my keys yesterday.' (find)",
               "answer": "found",
               "acceptableAnswers": [
+                "found",
+                "DISCOVERED",
+                "Discovered",
+                "FOUND",
                 "Found",
-                "FOUND"
+                "LOCATED",
+                "Located",
+                "discovered",
+                "located"
               ]
             },
             {
@@ -935,8 +960,9 @@
               "prompt": "'We ___ happy.' (geçmiş)",
               "answer": "were",
               "acceptableAnswers": [
-                "Were",
-                "WERE"
+                "were",
+                "WERE",
+                "Were"
               ]
             },
             {
@@ -945,8 +971,9 @@
               "prompt": "'It ___ cold yesterday.' (geçmiş)",
               "answer": "was",
               "acceptableAnswers": [
-                "Was",
-                "WAS"
+                "was",
+                "WAS",
+                "Was"
               ]
             },
             {
@@ -1030,8 +1057,9 @@
               "prompt": "'___ they happy?' (Mutlu muydular?)",
               "answer": "Were",
               "acceptableAnswers": [
-                "were",
-                "WERE"
+                "Were",
+                "WERE",
+                "were"
               ]
             },
             {
@@ -1195,8 +1223,9 @@
               "prompt": "'They ___ playing football.'",
               "answer": "are",
               "acceptableAnswers": [
-                "Are",
-                "ARE"
+                "are",
+                "ARE",
+                "Are"
               ]
             },
             {
@@ -1281,8 +1310,9 @@
               "prompt": "'swim' → ___ (-ing)",
               "answer": "swimming",
               "acceptableAnswers": [
-                "Swimming",
-                "SWIMMING"
+                "swimming",
+                "SWIMMING",
+                "Swimming"
               ]
             },
             {
@@ -1336,8 +1366,12 @@
               "prompt": "'O (erkek) televizyon izlemiyor.' = 'He ___ watching TV.'",
               "answer": "isn't",
               "acceptableAnswers": [
-                "is not",
-                "IS NOT"
+                "isn't",
+                "IS NOT",
+                "ISN'T",
+                "Is not",
+                "Isn't",
+                "is not"
               ]
             },
             {
@@ -1396,8 +1430,9 @@
               "prompt": "Cevap: 'No, she isn't.' Soru: '___ she sleeping?'",
               "answer": "Is",
               "acceptableAnswers": [
-                "is",
-                "IS"
+                "Is",
+                "IS",
+                "is"
               ]
             },
             {
@@ -1481,8 +1516,9 @@
               "prompt": "'She ___ in Ankara.' (Ankara'da yaşar — alışkanlık)",
               "answer": "lives",
               "acceptableAnswers": [
-                "Lives",
-                "LIVES"
+                "lives",
+                "LIVES",
+                "Lives"
               ]
             },
             {
@@ -1540,7 +1576,9 @@
               "prompt": "'They ___ TV at the moment.' (watch — şu anda izliyorlar)",
               "answer": "are watching",
               "acceptableAnswers": [
-                "are watching"
+                "are watching",
+                "ARE WATCHING",
+                "Are watching"
               ]
             },
             {
@@ -1608,7 +1646,9 @@
               "prompt": "'Annem yemek pişiriyor.' = 'My mother ___ now.'",
               "answer": "is cooking",
               "acceptableAnswers": [
-                "is cooking"
+                "is cooking",
+                "IS COOKING",
+                "Is cooking"
               ]
             },
             {
@@ -1668,8 +1708,9 @@
               "prompt": "'It ___ snowing.' (Kar yağıyor.)",
               "answer": "is",
               "acceptableAnswers": [
-                "Is",
-                "IS"
+                "is",
+                "IS",
+                "Is"
               ]
             },
             {
@@ -1703,8 +1744,9 @@
               "prompt": "'lie' → ___ (-ing)",
               "answer": "lying",
               "acceptableAnswers": [
-                "Lying",
-                "LYING"
+                "lying",
+                "LYING",
+                "Lying"
               ],
               "explanation": "-ie → -ying (lying, dying, tying)."
             },
@@ -1775,8 +1817,9 @@
               "prompt": "'sit' + -ing = ___",
               "answer": "sitting",
               "acceptableAnswers": [
-                "Sitting",
-                "SITTING"
+                "sitting",
+                "SITTING",
+                "Sitting"
               ]
             },
             {
@@ -1785,8 +1828,9 @@
               "prompt": "'come' + -ing = ___",
               "answer": "coming",
               "acceptableAnswers": [
-                "Coming",
-                "COMING"
+                "coming",
+                "COMING",
+                "Coming"
               ]
             },
             {
@@ -1795,8 +1839,9 @@
               "prompt": "'die' + -ing = ___",
               "answer": "dying",
               "acceptableAnswers": [
-                "Dying",
-                "DYING"
+                "dying",
+                "DYING",
+                "Dying"
               ]
             },
             {
@@ -1868,8 +1913,9 @@
               "prompt": "'I am ___ a book.' (read)",
               "answer": "reading",
               "acceptableAnswers": [
-                "Reading",
-                "READING"
+                "reading",
+                "READING",
+                "Reading"
               ]
             },
             {
@@ -1924,8 +1970,9 @@
               "prompt": "'She is ___ in Istanbul this month.' (stay)",
               "answer": "staying",
               "acceptableAnswers": [
-                "Staying",
-                "STAYING"
+                "staying",
+                "STAYING",
+                "Staying"
               ]
             },
             {
@@ -1944,7 +1991,12 @@
               "id": "pc6-5",
               "type": "fill_blank",
               "prompt": "'They ___ a new house this year.' (build / be + -ing)",
-              "answer": "are building"
+              "answer": "are building",
+              "acceptableAnswers": [
+                "are building",
+                "ARE BUILDING",
+                "Are building"
+              ]
             },
             {
               "id": "pc6-6",
@@ -2014,7 +2066,12 @@
               "id": "pc6-10",
               "type": "fill_blank",
               "prompt": "'My brother ___ in London this year.' (live / be + -ing)",
-              "answer": "is living"
+              "answer": "is living",
+              "acceptableAnswers": [
+                "is living",
+                "IS LIVING",
+                "Is living"
+              ]
             },
             {
               "id": "pc6-11",
@@ -2201,8 +2258,9 @@
               "prompt": "'The cat is ___ the box.' (kutunun içinde)",
               "answer": "in",
               "acceptableAnswers": [
-                "In",
-                "IN"
+                "in",
+                "IN",
+                "In"
               ]
             },
             {
@@ -2250,8 +2308,9 @@
               "prompt": "'She is ___ school now.' (okulda)",
               "answer": "at",
               "acceptableAnswers": [
-                "At",
-                "AT"
+                "at",
+                "AT",
+                "At"
               ]
             },
             {
@@ -2342,8 +2401,9 @@
               "prompt": "'I work ___ the morning.' (sabahları)",
               "answer": "in",
               "acceptableAnswers": [
-                "In",
-                "IN"
+                "in",
+                "IN",
+                "In"
               ]
             },
             {
@@ -2352,8 +2412,9 @@
               "prompt": "'Doğum günüm ___ June 5.' (5 Haziran)",
               "answer": "on",
               "acceptableAnswers": [
-                "On",
-                "ON"
+                "on",
+                "ON",
+                "On"
               ]
             },
             {
@@ -2471,8 +2532,9 @@
               "prompt": "'She is going ___ the cinema.' (sinemaya)",
               "answer": "to",
               "acceptableAnswers": [
-                "To",
-                "TO"
+                "to",
+                "TO",
+                "To"
               ]
             },
             {
@@ -2531,8 +2593,9 @@
               "prompt": "'I came ___ Istanbul yesterday.' (-den)",
               "answer": "from",
               "acceptableAnswers": [
-                "From",
-                "FROM"
+                "from",
+                "FROM",
+                "From"
               ]
             },
             {
@@ -2588,8 +2651,9 @@
               "prompt": "'I live ___ Turkey.'",
               "answer": "in",
               "acceptableAnswers": [
-                "In",
-                "IN"
+                "in",
+                "IN",
+                "In"
               ]
             },
             {
@@ -2598,8 +2662,9 @@
               "prompt": "'The meeting is ___ 3 p.m.'",
               "answer": "at",
               "acceptableAnswers": [
-                "At",
-                "AT"
+                "at",
+                "AT",
+                "At"
               ]
             },
             {
@@ -2608,8 +2673,9 @@
               "prompt": "'I see you ___ Saturday.'",
               "answer": "on",
               "acceptableAnswers": [
-                "On",
-                "ON"
+                "on",
+                "ON",
+                "On"
               ]
             },
             {
@@ -2776,8 +2842,9 @@
               "prompt": "'The cat is ___ the box.' (Kutunun içinde)",
               "answer": "in",
               "acceptableAnswers": [
-                "In",
-                "IN"
+                "in",
+                "IN",
+                "In"
               ]
             },
             {
@@ -2786,8 +2853,9 @@
               "prompt": "'There is a tree ___ ___ the house.' (Evin önünde — üç kelime)",
               "answer": "in front of",
               "acceptableAnswers": [
-                "In front of",
-                "IN FRONT OF"
+                "in front of",
+                "IN FRONT OF",
+                "In front of"
               ]
             },
             {
@@ -2860,8 +2928,9 @@
               "prompt": "'My house is ___ the school.' (Karşısında)",
               "answer": "opposite",
               "acceptableAnswers": [
-                "Opposite",
-                "OPPOSITE"
+                "opposite",
+                "OPPOSITE",
+                "Opposite"
               ]
             },
             {
@@ -2944,8 +3013,9 @@
               "prompt": "'Trenle gidiyorum.' = 'I go ___ train.'",
               "answer": "by",
               "acceptableAnswers": [
-                "By",
-                "BY"
+                "by",
+                "BY",
+                "By"
               ]
             },
             {
@@ -2954,8 +3024,9 @@
               "prompt": "'I take a taxi ___ work.' (işe)",
               "answer": "to",
               "acceptableAnswers": [
-                "To",
-                "TO"
+                "to",
+                "TO",
+                "To"
               ]
             },
             {
@@ -3029,8 +3100,9 @@
               "prompt": "'Get ___ the bus, please!' (Otobüse bin)",
               "answer": "on",
               "acceptableAnswers": [
-                "On",
-                "ON"
+                "on",
+                "ON",
+                "On"
               ]
             },
             {
@@ -3183,8 +3255,11 @@
               "prompt": "'I need ___' (Tavsiyeye ihtiyacım var.)",
               "answer": "advice",
               "acceptableAnswers": [
-                "Advice",
+                "advice",
                 "ADVICE",
+                "Advice",
+                "SOME ADVICE",
+                "Some advice",
                 "some advice"
               ]
             },
@@ -3258,6 +3333,7 @@
               "answer": "some bread",
               "acceptableAnswers": [
                 "some bread",
+                "SOME BREAD",
                 "Some bread"
               ]
             },
@@ -3339,8 +3415,9 @@
               "prompt": "'I have ___ books.' (Birkaç kitabım var.)",
               "answer": "some",
               "acceptableAnswers": [
-                "Some",
-                "SOME"
+                "some",
+                "SOME",
+                "Some"
               ]
             },
             {
@@ -3412,8 +3489,9 @@
               "prompt": "'Do you have ___ siblings?' (kardeş — soru)",
               "answer": "any",
               "acceptableAnswers": [
-                "Any",
-                "ANY"
+                "any",
+                "ANY",
+                "Any"
               ]
             },
             {
@@ -3468,8 +3546,9 @@
               "prompt": "'I'm from ___' (Türkiye)",
               "answer": "Turkey",
               "acceptableAnswers": [
-                "turkey",
-                "TURKEY"
+                "Turkey",
+                "TURKEY",
+                "turkey"
               ]
             },
             {
@@ -3528,8 +3607,9 @@
               "prompt": "'I crossed ___ Bosphorus.' (Boğazı geçtim.)",
               "answer": "the",
               "acceptableAnswers": [
-                "The",
-                "THE"
+                "the",
+                "THE",
+                "The"
               ]
             },
             {
@@ -3610,8 +3690,9 @@
               "prompt": "'I'm at ___' (işte)",
               "answer": "work",
               "acceptableAnswers": [
-                "Work",
-                "WORK"
+                "work",
+                "WORK",
+                "Work"
               ]
             },
             {
@@ -3671,8 +3752,9 @@
               "prompt": "'She studies ___' (mühendislik — okul/branş)",
               "answer": "engineering",
               "acceptableAnswers": [
-                "Engineering",
-                "ENGINEERING"
+                "engineering",
+                "ENGINEERING",
+                "Engineering"
               ]
             },
             {
@@ -3754,7 +3836,7 @@
               "prompt": "'She has ___ book.' (ilk geçiş; kitap kelimesinin önüne hangi artikel?)",
               "answer": "a",
               "acceptableAnswers": [
-                "A",
+                "a",
                 "A"
               ],
               "explanation": "İlk geçiş 'a', ikinci 'the'."
@@ -3777,7 +3859,7 @@
               "prompt": "'There is ___ dog in the garden.' (yeni tanıtım)",
               "answer": "a",
               "acceptableAnswers": [
-                "A",
+                "a",
                 "A"
               ]
             },
@@ -3851,8 +3933,9 @@
               "prompt": "'Pass me ___ salt.' (masadaki tuz — belirli)",
               "answer": "the",
               "acceptableAnswers": [
-                "The",
-                "THE"
+                "the",
+                "THE",
+                "The"
               ]
             },
             {
@@ -3874,8 +3957,9 @@
               "prompt": "'The Earth goes around ___ Sun.'",
               "answer": "the",
               "acceptableAnswers": [
-                "The",
-                "THE"
+                "the",
+                "THE",
+                "The"
               ]
             }
           ]
@@ -3945,8 +4029,9 @@
               "prompt": "'He is ___ prison for stealing.' (mahkûm olarak)",
               "answer": "in",
               "acceptableAnswers": [
-                "In",
-                "IN"
+                "in",
+                "IN",
+                "In"
               ]
             },
             {
@@ -3990,8 +4075,9 @@
               "prompt": "'I go ___ work by bus.' (işe)",
               "answer": "to",
               "acceptableAnswers": [
-                "To",
-                "TO"
+                "to",
+                "TO",
+                "To"
               ]
             },
             {
@@ -4029,8 +4115,9 @@
               "prompt": "'My father is ___ home now.' (evde)",
               "answer": "at",
               "acceptableAnswers": [
-                "At",
-                "AT"
+                "at",
+                "AT",
+                "At"
               ]
             },
             {
@@ -4190,8 +4277,9 @@
               "prompt": "'happy' → ___ (-er)",
               "answer": "happier",
               "acceptableAnswers": [
-                "Happier",
-                "HAPPIER"
+                "happier",
+                "HAPPIER",
+                "Happier"
               ],
               "explanation": "y → ier."
             },
@@ -4253,8 +4341,9 @@
               "prompt": "'Bu daha kolay.' = 'This is ___'",
               "answer": "easier",
               "acceptableAnswers": [
-                "Easier",
-                "EASIER"
+                "easier",
+                "EASIER",
+                "Easier"
               ]
             },
             {
@@ -4322,8 +4411,9 @@
               "prompt": "'expensive' karşılaştırma: 'more ___'",
               "answer": "expensive",
               "acceptableAnswers": [
-                "Expensive",
-                "EXPENSIVE"
+                "expensive",
+                "EXPENSIVE",
+                "Expensive"
               ]
             },
             {
@@ -4409,7 +4499,9 @@
               "prompt": "'Hayat şehirde daha pahalı.' = 'Life is ___ in the city.'",
               "answer": "more expensive",
               "acceptableAnswers": [
-                "more expensive"
+                "more expensive",
+                "MORE EXPENSIVE",
+                "More expensive"
               ]
             },
             {
@@ -4481,7 +4573,9 @@
               "prompt": "'tall' → ___ (en üstün, the dahil)",
               "answer": "the tallest",
               "acceptableAnswers": [
-                "the tallest"
+                "the tallest",
+                "THE TALLEST",
+                "The tallest"
               ]
             },
             {
@@ -4541,8 +4635,9 @@
               "prompt": "'Bu sınıftaki en zeki öğrenci.' = 'The ___ student in this class.' (smart)",
               "answer": "smartest",
               "acceptableAnswers": [
-                "Smartest",
-                "SMARTEST"
+                "smartest",
+                "SMARTEST",
+                "Smartest"
               ]
             },
             {
@@ -4633,7 +4728,9 @@
               "prompt": "'bad' → ___ (en üstün, the ile)",
               "answer": "the worst",
               "acceptableAnswers": [
-                "the worst"
+                "the worst",
+                "THE WORST",
+                "The worst"
               ]
             },
             {
@@ -4692,8 +4789,12 @@
               "prompt": "'En iyi arkadaşım' = 'my ___ friend'",
               "answer": "best",
               "acceptableAnswers": [
+                "best",
+                "BEST",
                 "Best",
-                "BEST"
+                "GREATEST",
+                "Greatest",
+                "greatest"
               ]
             },
             {
@@ -4762,8 +4863,9 @@
               "prompt": "'Ali is ___ tall as Ayşe.' (ilk boşluk)",
               "answer": "as",
               "acceptableAnswers": [
-                "As",
-                "AS"
+                "as",
+                "AS",
+                "As"
               ],
               "explanation": "İlk 'as' sıfattan önce."
             },
@@ -4797,8 +4899,9 @@
               "prompt": "'This book is ___ interesting as that one.' (kadar — ilk boşluk)",
               "answer": "as",
               "acceptableAnswers": [
-                "As",
-                "AS"
+                "as",
+                "AS",
+                "As"
               ]
             },
             {
@@ -4859,8 +4962,9 @@
               "prompt": "'I am not ___ tired as you.' (kadar — ilk boşluk)",
               "answer": "as",
               "acceptableAnswers": [
-                "As",
-                "AS"
+                "as",
+                "AS",
+                "As"
               ]
             },
             {
@@ -4945,8 +5049,9 @@
               "prompt": "'My new phone is ___ better.' (çok daha — tek kelime)",
               "answer": "much",
               "acceptableAnswers": [
-                "Much",
-                "MUCH"
+                "much",
+                "MUCH",
+                "Much"
               ]
             },
             {
@@ -4955,8 +5060,9 @@
               "prompt": "'This is a ___ easier.' (biraz daha kolay — boşluğa tek kelime)",
               "answer": "little",
               "acceptableAnswers": [
-                "Little",
-                "LITTLE"
+                "little",
+                "LITTLE",
+                "Little"
               ]
             },
             {
@@ -5029,8 +5135,9 @@
               "prompt": "'Football is ___ more popular than cricket here.' (çok daha)",
               "answer": "much",
               "acceptableAnswers": [
-                "Much",
-                "MUCH"
+                "much",
+                "MUCH",
+                "Much"
               ]
             },
             {
@@ -5167,8 +5274,9 @@
               "prompt": "'My brother ___ a bike.' (Erkek kardeşimin bisikleti var.)",
               "answer": "has",
               "acceptableAnswers": [
-                "Has",
-                "HAS"
+                "has",
+                "HAS",
+                "Has"
               ]
             },
             {
@@ -5227,9 +5335,11 @@
               "prompt": "'Kız kardeşim var' = 'I ___ a sister.' (have got kullan, iki kelime)",
               "answer": "have got",
               "acceptableAnswers": [
-                "Have got",
+                "have got",
+                "'VE GOT",
+                "'ve got",
                 "HAVE GOT",
-                "'ve got"
+                "Have got"
               ],
               "explanation": "'have got' İngiliz İngilizcesinde sahip olmayı belirtir; 'I have a sister' de doğrudur."
             },
@@ -5312,8 +5422,9 @@
               "prompt": "'She ___ got a new bike.' (Yeni bir bisikleti var.)",
               "answer": "has",
               "acceptableAnswers": [
-                "Has",
-                "HAS"
+                "has",
+                "HAS",
+                "Has"
               ]
             },
             {
@@ -5385,8 +5496,9 @@
               "prompt": "Eşdeğer: 'I have a car.' = 'I've ___ a car.'",
               "answer": "got",
               "acceptableAnswers": [
-                "Got",
-                "GOT"
+                "got",
+                "GOT",
+                "Got"
               ]
             },
             {
@@ -5465,8 +5577,9 @@
               "prompt": "'O (erkek) bisikletin var mı?' = 'Has he ___ a bike?'",
               "answer": "got",
               "acceptableAnswers": [
-                "Got",
-                "GOT"
+                "got",
+                "GOT",
+                "Got"
               ]
             },
             {
@@ -5539,8 +5652,12 @@
               "prompt": "'Bizim çocuğumuz yok.' = 'We ___ have any children.'",
               "answer": "don't",
               "acceptableAnswers": [
-                "do not",
-                "DON'T"
+                "don't",
+                "DO NOT",
+                "DON'T",
+                "Do not",
+                "Don't",
+                "do not"
               ]
             },
             {
@@ -5595,8 +5712,9 @@
               "prompt": "'Iyi vakit geçirdik.' = 'We ___ a good time.'",
               "answer": "had",
               "acceptableAnswers": [
-                "Had",
-                "HAD"
+                "had",
+                "HAD",
+                "Had"
               ]
             },
             {
@@ -5682,8 +5800,9 @@
               "prompt": "'Harika bir tatil geçirdik.' = 'We ___ a great holiday.'",
               "answer": "had",
               "acceptableAnswers": [
-                "Had",
-                "HAD"
+                "had",
+                "HAD",
+                "Had"
               ]
             },
             {
@@ -5750,8 +5869,9 @@
               "prompt": "'They ___ three children.' (sahipler)",
               "answer": "have",
               "acceptableAnswers": [
-                "Have",
-                "HAVE"
+                "have",
+                "HAVE",
+                "Have"
               ]
             },
             {
@@ -5760,8 +5880,9 @@
               "prompt": "'My brother ___ a red bike.'",
               "answer": "has",
               "acceptableAnswers": [
-                "Has",
-                "HAS"
+                "has",
+                "HAS",
+                "Has"
               ]
             },
             {
@@ -5833,8 +5954,9 @@
               "prompt": "'My uncle ___ a big house.' (sahip)",
               "answer": "has",
               "acceptableAnswers": [
-                "Has",
-                "HAS"
+                "has",
+                "HAS",
+                "Has"
               ]
             },
             {
@@ -5912,8 +6034,9 @@
               "prompt": "'He ___ a toothache.' (diş ağrısı var)",
               "answer": "has",
               "acceptableAnswers": [
-                "Has",
-                "HAS"
+                "has",
+                "HAS",
+                "Has"
               ]
             },
             {
@@ -5922,8 +6045,9 @@
               "prompt": "'Do you ___ a problem?' (sorunun var mı)",
               "answer": "have",
               "acceptableAnswers": [
-                "Have",
-                "HAVE"
+                "have",
+                "HAVE",
+                "Have"
               ]
             },
             {
@@ -5996,8 +6120,9 @@
               "prompt": "'My son ___ a sore throat.' (boğazı ağrıyor)",
               "answer": "has",
               "acceptableAnswers": [
-                "Has",
-                "HAS"
+                "has",
+                "HAS",
+                "Has"
               ]
             },
             {
@@ -6163,8 +6288,9 @@
               "prompt": "'How ___ does it cost?' (Fiyat sorma)",
               "answer": "much",
               "acceptableAnswers": [
-                "Much",
-                "MUCH"
+                "much",
+                "MUCH",
+                "Much"
               ]
             },
             {
@@ -6237,8 +6363,9 @@
               "prompt": "'Bu kazaklar ne kadar?' = 'How much ___ these sweaters?'",
               "answer": "are",
               "acceptableAnswers": [
-                "Are",
-                "ARE"
+                "are",
+                "ARE",
+                "Are"
               ],
               "explanation": "'these' çoğul → are."
             },
@@ -6306,8 +6433,9 @@
               "prompt": "'mavi' = ___",
               "answer": "blue",
               "acceptableAnswers": [
-                "Blue",
-                "BLUE"
+                "blue",
+                "BLUE",
+                "Blue"
               ]
             },
             {
@@ -6367,8 +6495,9 @@
               "prompt": "'Bu çok büyük. Daha küçüğünüz var mı?' = 'Do you have a ___ one?'",
               "answer": "smaller",
               "acceptableAnswers": [
-                "Smaller",
-                "SMALLER"
+                "smaller",
+                "SMALLER",
+                "Smaller"
               ]
             },
             {
@@ -6450,8 +6579,9 @@
               "prompt": "'Bunu alıyorum.' = 'I'll ___ it.'",
               "answer": "take",
               "acceptableAnswers": [
-                "Take",
-                "TAKE"
+                "take",
+                "TAKE",
+                "Take"
               ]
             },
             {
@@ -6510,8 +6640,9 @@
               "prompt": "'Burada yiyelim mi yoksa götürelim mi?' İngilizcede 'For here or to ___?'",
               "answer": "go",
               "acceptableAnswers": [
-                "Go",
-                "GO"
+                "go",
+                "GO",
+                "Go"
               ],
               "explanation": "'to go' = paket olarak."
             },
@@ -6598,8 +6729,9 @@
               "prompt": "'Fişi alabilir miyim?' = 'Can I have the ___?'",
               "answer": "receipt",
               "acceptableAnswers": [
-                "Receipt",
-                "RECEIPT"
+                "receipt",
+                "RECEIPT",
+                "Receipt"
               ]
             },
             {
@@ -6658,8 +6790,11 @@
               "prompt": "'Sadece nakit kabul ediyoruz.' = 'We only ___ cash.'",
               "answer": "accept",
               "acceptableAnswers": [
-                "Accept",
+                "accept",
                 "ACCEPT",
+                "Accept",
+                "TAKE",
+                "Take",
                 "take"
               ]
             },
@@ -6752,8 +6887,9 @@
               "prompt": "'It is ___' (Bozuk)",
               "answer": "broken",
               "acceptableAnswers": [
-                "Broken",
-                "BROKEN"
+                "broken",
+                "BROKEN",
+                "Broken"
               ]
             },
             {
@@ -6838,8 +6974,9 @@
               "prompt": "'I'd like to ___ this for a smaller size.' (değiştir)",
               "answer": "exchange",
               "acceptableAnswers": [
-                "Exchange",
-                "EXCHANGE"
+                "exchange",
+                "EXCHANGE",
+                "Exchange"
               ]
             },
             {
@@ -6917,8 +7054,9 @@
               "prompt": "'It's 30% ___.' (indirimli)",
               "answer": "off",
               "acceptableAnswers": [
-                "Off",
-                "OFF"
+                "off",
+                "OFF",
+                "Off"
               ]
             },
             {
@@ -7002,8 +7140,9 @@
               "prompt": "'It's a great ___.' (anlaşma/fırsat)",
               "answer": "deal",
               "acceptableAnswers": [
-                "Deal",
-                "DEAL"
+                "deal",
+                "DEAL",
+                "Deal"
               ]
             },
             {
@@ -7198,8 +7337,9 @@
               "prompt": "'ekmek' = ___",
               "answer": "bread",
               "acceptableAnswers": [
-                "Bread",
-                "BREAD"
+                "bread",
+                "BREAD",
+                "Bread"
               ]
             },
             {
@@ -7272,8 +7412,9 @@
               "prompt": "'Et severim.' = 'I like ___'",
               "answer": "meat",
               "acceptableAnswers": [
-                "Meat",
-                "MEAT"
+                "meat",
+                "MEAT",
+                "Meat"
               ]
             },
             {
@@ -7340,8 +7481,9 @@
               "prompt": "'süt' = ___",
               "answer": "milk",
               "acceptableAnswers": [
-                "Milk",
-                "MILK"
+                "milk",
+                "MILK",
+                "Milk"
               ]
             },
             {
@@ -7402,8 +7544,9 @@
               "prompt": "'Soğuk su istiyorum.' = 'I'd like ___ water.' (cold)",
               "answer": "cold",
               "acceptableAnswers": [
-                "Cold",
-                "COLD"
+                "cold",
+                "COLD",
+                "Cold"
               ]
             },
             {
@@ -7484,8 +7627,11 @@
               "prompt": "'Hesap, lütfen.' = 'The ___, please.'",
               "answer": "bill",
               "acceptableAnswers": [
-                "Bill",
+                "bill",
                 "BILL",
+                "Bill",
+                "CHECK",
+                "Check",
                 "check"
               ]
             },
@@ -7547,8 +7693,9 @@
               "prompt": "'Menüyü görebilir miyim?' = 'Can I see the ___?'",
               "answer": "menu",
               "acceptableAnswers": [
-                "Menu",
-                "MENU"
+                "menu",
+                "MENU",
+                "Menu"
               ]
             },
             {
@@ -7632,8 +7779,9 @@
               "prompt": "'Bir kase çorba' = 'a ___ of soup'",
               "answer": "bowl",
               "acceptableAnswers": [
-                "Bowl",
-                "BOWL"
+                "bowl",
+                "BOWL",
+                "Bowl"
               ]
             },
             {
@@ -7693,8 +7841,9 @@
               "prompt": "'Biraz şeker ister misin?' = 'Would you like ___ sugar?'",
               "answer": "some",
               "acceptableAnswers": [
-                "Some",
-                "SOME"
+                "some",
+                "SOME",
+                "Some"
               ]
             },
             {
@@ -7799,8 +7948,9 @@
               "prompt": "'Coffee is ___ without sugar.' (acı)",
               "answer": "bitter",
               "acceptableAnswers": [
-                "Bitter",
-                "BITTER"
+                "bitter",
+                "BITTER",
+                "Bitter"
               ]
             },
             {
@@ -7872,8 +8022,9 @@
               "prompt": "'Chili is ___.' (acı / baharatlı)",
               "answer": "spicy",
               "acceptableAnswers": [
-                "Spicy",
-                "SPICY"
+                "spicy",
+                "SPICY",
+                "Spicy"
               ]
             },
             {
@@ -7952,8 +8103,9 @@
               "prompt": "'I don't ___ meat.' (et yemem)",
               "answer": "eat",
               "acceptableAnswers": [
-                "Eat",
-                "EAT"
+                "eat",
+                "EAT",
+                "Eat"
               ]
             },
             {
@@ -8037,8 +8189,9 @@
               "prompt": "'Are you ___ to seafood?' (alerjik)",
               "answer": "allergic",
               "acceptableAnswers": [
-                "Allergic",
-                "ALLERGIC"
+                "allergic",
+                "ALLERGIC",
+                "Allergic"
               ]
             },
             {
@@ -8234,8 +8387,9 @@
               "prompt": "'They ___ happy.' (mutlular)",
               "answer": "are",
               "acceptableAnswers": [
-                "Are",
-                "ARE"
+                "are",
+                "ARE",
+                "Are"
               ]
             },
             {
@@ -8244,8 +8398,12 @@
               "prompt": "'I am ___' (üzgünüm)",
               "answer": "sad",
               "acceptableAnswers": [
+                "sad",
+                "SAD",
                 "Sad",
-                "SAD"
+                "UNHAPPY",
+                "Unhappy",
+                "unhappy"
               ]
             },
             {
@@ -8318,8 +8476,9 @@
               "prompt": "'How ___ you?' (Nasılsın? — boşluk)",
               "answer": "are",
               "acceptableAnswers": [
-                "Are",
-                "ARE"
+                "are",
+                "ARE",
+                "Are"
               ]
             },
             {
@@ -8387,8 +8546,12 @@
               "prompt": "'Are you ___?' (Aç mısın?)",
               "answer": "hungry",
               "acceptableAnswers": [
+                "hungry",
+                "HUNGRY",
                 "Hungry",
-                "HUNGRY"
+                "STARVING",
+                "Starving",
+                "starving"
               ]
             },
             {
@@ -8397,8 +8560,12 @@
               "prompt": "'I'm very ___' (çok susamışım)",
               "answer": "thirsty",
               "acceptableAnswers": [
+                "thirsty",
+                "PARCHED",
+                "Parched",
+                "THIRSTY",
                 "Thirsty",
-                "THIRSTY"
+                "parched"
               ]
             },
             {
@@ -8482,8 +8649,9 @@
               "prompt": "'My brother ___ hungry.' (aç)",
               "answer": "is",
               "acceptableAnswers": [
-                "Is",
-                "IS"
+                "is",
+                "IS",
+                "Is"
               ]
             },
             {
@@ -8550,8 +8718,12 @@
               "prompt": "'Are you ___ about your trip?' (heyecanlı)",
               "answer": "excited",
               "acceptableAnswers": [
+                "excited",
+                "EXCITED",
                 "Excited",
-                "EXCITED"
+                "THRILLED",
+                "Thrilled",
+                "thrilled"
               ]
             },
             {
@@ -8560,8 +8732,15 @@
               "prompt": "'I'm ___ of spiders.' (örümceklerden korkuyorum)",
               "answer": "scared",
               "acceptableAnswers": [
+                "scared",
+                "AFRAID",
+                "Afraid",
+                "FRIGHTENED",
+                "Frightened",
+                "SCARED",
                 "Scared",
-                "SCARED"
+                "afraid",
+                "frightened"
               ]
             },
             {
@@ -8648,8 +8827,9 @@
               "prompt": "'The roller coaster was very ___.' (heyecan verici)",
               "answer": "exciting",
               "acceptableAnswers": [
-                "Exciting",
-                "EXCITING"
+                "exciting",
+                "EXCITING",
+                "Exciting"
               ]
             },
             {
@@ -8716,8 +8896,15 @@
               "prompt": "'This book is ___' (sıkıcı)",
               "answer": "boring",
               "acceptableAnswers": [
+                "boring",
+                "BORING",
                 "Boring",
-                "BORING"
+                "DULL",
+                "Dull",
+                "TEDIOUS",
+                "Tedious",
+                "dull",
+                "tedious"
               ]
             },
             {
@@ -8726,8 +8913,9 @@
               "prompt": "'I am ___' (sıkıldım)",
               "answer": "bored",
               "acceptableAnswers": [
-                "Bored",
-                "BORED"
+                "bored",
+                "BORED",
+                "Bored"
               ]
             },
             {
@@ -8813,8 +9001,15 @@
               "prompt": "'My teacher is ___ at me.' (kızgın)",
               "answer": "angry",
               "acceptableAnswers": [
+                "angry",
+                "ANGRY",
                 "Angry",
-                "ANGRY"
+                "FURIOUS",
+                "Furious",
+                "MAD",
+                "Mad",
+                "furious",
+                "mad"
               ]
             },
             {
@@ -8868,8 +9063,9 @@
               "prompt": "'How ___ you feel?' (Nasıl hissediyorsun?)",
               "answer": "do",
               "acceptableAnswers": [
-                "Do",
-                "DO"
+                "do",
+                "DO",
+                "Do"
               ]
             },
             {
@@ -8890,8 +9086,12 @@
               "prompt": "'I'm a bit ___' (biraz üzgün)",
               "answer": "sad",
               "acceptableAnswers": [
+                "sad",
+                "SAD",
                 "Sad",
-                "SAD"
+                "UNHAPPY",
+                "Unhappy",
+                "unhappy"
               ]
             },
             {
@@ -8963,8 +9163,15 @@
               "prompt": "'I'm ___ but happy.' (yorgun ama mutlu)",
               "answer": "tired",
               "acceptableAnswers": [
+                "tired",
+                "EXHAUSTED",
+                "Exhausted",
+                "TIRED",
                 "Tired",
-                "TIRED"
+                "WEARY",
+                "Weary",
+                "exhausted",
+                "weary"
               ]
             },
             {
@@ -9141,8 +9348,9 @@
               "prompt": "'I love ___' (yemek yapmayı)",
               "answer": "cooking",
               "acceptableAnswers": [
-                "Cooking",
-                "COOKING"
+                "cooking",
+                "COOKING",
+                "Cooking"
               ]
             },
             {
@@ -9151,8 +9359,9 @@
               "prompt": "'They like ___' (dans etmeyi)",
               "answer": "dancing",
               "acceptableAnswers": [
-                "Dancing",
-                "DANCING"
+                "dancing",
+                "DANCING",
+                "Dancing"
               ]
             },
             {
@@ -9224,8 +9433,9 @@
               "prompt": "'My sister loves ___' (resim yapmayı)",
               "answer": "painting",
               "acceptableAnswers": [
-                "Painting",
-                "PAINTING"
+                "painting",
+                "PAINTING",
+                "Painting"
               ]
             },
             {
@@ -9303,8 +9513,9 @@
               "prompt": "'I ___ tennis on Sundays.' (oynarım)",
               "answer": "play",
               "acceptableAnswers": [
-                "Play",
-                "PLAY"
+                "play",
+                "PLAY",
+                "Play"
               ]
             },
             {
@@ -9313,8 +9524,9 @@
               "prompt": "'They ___ shopping on Saturdays.' (alışverişe giderler)",
               "answer": "go",
               "acceptableAnswers": [
-                "Go",
-                "GO"
+                "go",
+                "GO",
+                "Go"
               ]
             },
             {
@@ -9387,8 +9599,9 @@
               "prompt": "'My brother ___ judo.' (yapar)",
               "answer": "does",
               "acceptableAnswers": [
-                "Does",
-                "DOES"
+                "does",
+                "DOES",
+                "Does"
               ]
             },
             {
@@ -9468,8 +9681,12 @@
               "prompt": "'She ___ plays tennis on weekends.' (sıklıkla)",
               "answer": "often",
               "acceptableAnswers": [
+                "often",
+                "FREQUENTLY",
+                "Frequently",
+                "OFTEN",
                 "Often",
-                "OFTEN"
+                "frequently"
               ]
             },
             {
@@ -9478,8 +9695,9 @@
               "prompt": "'I ___ go to the gym.' (her zaman)",
               "answer": "always",
               "acceptableAnswers": [
-                "Always",
-                "ALWAYS"
+                "always",
+                "ALWAYS",
+                "Always"
               ]
             },
             {
@@ -9553,8 +9771,12 @@
               "prompt": "'How ___ do you swim?' (Ne sıklıkta?)",
               "answer": "often",
               "acceptableAnswers": [
+                "often",
+                "FREQUENTLY",
+                "Frequently",
+                "OFTEN",
                 "Often",
-                "OFTEN"
+                "frequently"
               ]
             },
             {
@@ -9634,8 +9856,9 @@
               "prompt": "'She wants to ___ a new book.' (oku — yalın)",
               "answer": "read",
               "acceptableAnswers": [
-                "Read",
-                "READ"
+                "read",
+                "READ",
+                "Read"
               ]
             },
             {
@@ -9644,8 +9867,9 @@
               "prompt": "'I enjoy ___ the guitar.' (çalmayı)",
               "answer": "playing",
               "acceptableAnswers": [
-                "Playing",
-                "PLAYING"
+                "playing",
+                "PLAYING",
+                "Playing"
               ]
             },
             {
@@ -9719,8 +9943,9 @@
               "prompt": "'Do you want to ___ a film?' (izle — yalın)",
               "answer": "watch",
               "acceptableAnswers": [
-                "Watch",
-                "WATCH"
+                "watch",
+                "WATCH",
+                "Watch"
               ]
             },
             {
@@ -9788,8 +10013,9 @@
               "prompt": "'I usually read ___ home.' (evde)",
               "answer": "at",
               "acceptableAnswers": [
-                "At",
-                "AT"
+                "at",
+                "AT",
+                "At"
               ]
             },
             {
@@ -9811,8 +10037,9 @@
               "prompt": "'I ___ tennis with my friends.' (oynarım)",
               "answer": "play",
               "acceptableAnswers": [
-                "Play",
-                "PLAY"
+                "play",
+                "PLAY",
+                "Play"
               ]
             },
             {
@@ -9884,8 +10111,9 @@
               "prompt": "'Do you ___ swimming?' (sever misin)",
               "answer": "like",
               "acceptableAnswers": [
-                "Like",
-                "LIKE"
+                "like",
+                "LIKE",
+                "Like"
               ]
             },
             {
@@ -10066,8 +10294,9 @@
               "prompt": "'I ___ going to study tonight.' (am/is/are)",
               "answer": "am",
               "acceptableAnswers": [
-                "Am",
-                "AM"
+                "am",
+                "AM",
+                "Am"
               ]
             },
             {
@@ -10076,8 +10305,9 @@
               "prompt": "'We are ___ to buy a car.' (planlıyoruz — boşluğa tek kelime)",
               "answer": "going",
               "acceptableAnswers": [
-                "Going",
-                "GOING"
+                "going",
+                "GOING",
+                "Going"
               ]
             },
             {
@@ -10150,8 +10380,9 @@
               "prompt": "'They ___ going to play tennis.' (am/is/are)",
               "answer": "are",
               "acceptableAnswers": [
-                "Are",
-                "ARE"
+                "are",
+                "ARE",
+                "Are"
               ]
             },
             {
@@ -10243,8 +10474,9 @@
               "prompt": "'She ___ be here at 5.' (will / olacak)",
               "answer": "will",
               "acceptableAnswers": [
-                "Will",
-                "WILL"
+                "will",
+                "WILL",
+                "Will"
               ]
             },
             {
@@ -10253,8 +10485,9 @@
               "prompt": "'I ___ help you.' (will yerine yalın yaz)",
               "answer": "will",
               "acceptableAnswers": [
-                "Will",
-                "WILL"
+                "will",
+                "WILL",
+                "Will"
               ]
             },
             {
@@ -10410,8 +10643,9 @@
               "prompt": "'Look at those clouds! It ___ going to rain.' (kanıtlı tahmin — boşluğa tek kelime)",
               "answer": "is",
               "acceptableAnswers": [
-                "Is",
-                "IS"
+                "is",
+                "IS",
+                "Is"
               ]
             },
             {
@@ -10484,8 +10718,9 @@
               "prompt": "'I'm tired. I ___ go to bed.' (anlık karar)",
               "answer": "will",
               "acceptableAnswers": [
-                "Will",
-                "WILL"
+                "will",
+                "WILL",
+                "Will"
               ]
             },
             {
@@ -10564,8 +10799,9 @@
               "prompt": "'I will see you ___ Monday.' (Pazartesi)",
               "answer": "on",
               "acceptableAnswers": [
-                "On",
-                "ON"
+                "on",
+                "ON",
+                "On"
               ]
             },
             {
@@ -10574,8 +10810,9 @@
               "prompt": "'We are going to travel ___ summer.' (yazın)",
               "answer": "in",
               "acceptableAnswers": [
-                "In",
-                "IN"
+                "in",
+                "IN",
+                "In"
               ]
             },
             {
@@ -10648,8 +10885,9 @@
               "prompt": "'I'm going to start my new job ___ Monday.'",
               "answer": "on",
               "acceptableAnswers": [
-                "On",
-                "ON"
+                "on",
+                "ON",
+                "On"
               ]
             },
             {
@@ -10715,8 +10953,9 @@
               "prompt": "'It ___ rain tomorrow, I think.' (will/won't)",
               "answer": "will",
               "acceptableAnswers": [
-                "Will",
-                "WILL"
+                "will",
+                "WILL",
+                "Will"
               ]
             },
             {
@@ -10725,8 +10964,9 @@
               "prompt": "'We ___ going to visit Italy next summer.' (am/is/are)",
               "answer": "are",
               "acceptableAnswers": [
-                "Are",
-                "ARE"
+                "are",
+                "ARE",
+                "Are"
               ]
             },
             {
@@ -10812,8 +11052,9 @@
               "prompt": "'I think they ___ win the match.' (tahmin)",
               "answer": "will",
               "acceptableAnswers": [
-                "Will",
-                "WILL"
+                "will",
+                "WILL",
+                "Will"
               ]
             },
             {
@@ -10909,8 +11150,9 @@
               "prompt": "'study' geçmiş hâli:",
               "answer": "studied",
               "acceptableAnswers": [
-                "Studied",
-                "STUDIED"
+                "studied",
+                "STUDIED",
+                "Studied"
               ]
             },
             {
@@ -10969,6 +11211,11 @@
               "prompt": "'She ___ working now.' (-iyor değil)",
               "answer": "isn't",
               "acceptableAnswers": [
+                "isn't",
+                "IS NOT",
+                "ISN'T",
+                "Is not",
+                "Isn't",
                 "is not"
               ]
             },
@@ -11052,8 +11299,9 @@
               "prompt": "'Mayıs ayında.' = '___ May'",
               "answer": "in",
               "acceptableAnswers": [
-                "In",
-                "IN"
+                "in",
+                "IN",
+                "In"
               ]
             },
             {
@@ -11123,8 +11371,9 @@
               "prompt": "'Bu daha pahalı.' = 'This is ___ expensive.'",
               "answer": "more",
               "acceptableAnswers": [
-                "More",
-                "MORE"
+                "more",
+                "MORE",
+                "More"
               ]
             },
             {
@@ -11191,8 +11440,9 @@
               "prompt": "'Bir kahve alabilir miyim?' = 'Can I ___ a coffee?'",
               "answer": "have",
               "acceptableAnswers": [
-                "Have",
-                "HAVE"
+                "have",
+                "HAVE",
+                "Have"
               ]
             },
             {
@@ -11253,8 +11503,9 @@
               "prompt": "'Süt sayılamaz, çay sayılamaz. ___ milk = ne kadar süt'",
               "answer": "How much",
               "acceptableAnswers": [
-                "how much",
-                "HOW MUCH"
+                "How much",
+                "HOW MUCH",
+                "how much"
               ]
             },
             {
