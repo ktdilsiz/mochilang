@@ -1,4 +1,5 @@
 import type { FillBlankExercise } from '@mochilang/shared'
+import { matchesAnswer } from '@mochilang/shared'
 import './exercise.css'
 
 interface Props {
@@ -35,10 +36,12 @@ export default function FillBlank({ exercise, value, locked, onChange }: Props) 
   )
 }
 
+/**
+ * Re-exported from @mochilang/shared so existing call sites keep
+ * compiling. The shared implementation normalizes case, Unicode form,
+ * smart quotes, dash variants, and full-width Chinese punctuation
+ * before comparing — see packages/shared/src/answers.ts.
+ */
 export function checkAnswer(value: string, exercise: FillBlankExercise): boolean {
-  const normalized = value.trim().toLowerCase()
-  if (normalized === exercise.answer.trim().toLowerCase()) return true
-  return (exercise.acceptableAnswers ?? []).some(
-    (a) => normalized === a.trim().toLowerCase()
-  )
+  return matchesAnswer(value, exercise)
 }

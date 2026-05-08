@@ -2,6 +2,7 @@ import { useMemo, useState, type ReactNode } from 'react'
 import type { Exercise } from '@mochilang/shared'
 import MultipleChoice from '../components/exercises/MultipleChoice'
 import FillBlank, { checkAnswer as checkFillBlank } from '../components/exercises/FillBlank'
+import { matchesSequenceAnswer } from '@mochilang/shared'
 import MatchPairs from '../components/exercises/MatchPairs'
 import ListenAndChoose from '../components/exercises/ListenAndChoose'
 import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
@@ -391,7 +392,7 @@ function grade(
       return { correct: checkFillBlank(inputs.fbValue, exercise) }
     case 'tap_words_in_order':
       if (inputs.tapValue.length === 0) return null
-      return { correct: inputs.tapValue === exercise.answer }
+      return { correct: matchesSequenceAnswer(inputs.tapValue, exercise.answer) }
     case 'match_pairs':
       return null
   }

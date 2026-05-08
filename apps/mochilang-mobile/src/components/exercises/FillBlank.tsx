@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import type { FillBlankExercise } from '@mochilang/shared'
+import { matchesAnswer } from '@mochilang/shared'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -39,12 +40,12 @@ export default function FillBlank({ exercise, value, locked, onChange }: Props) 
   )
 }
 
+/**
+ * Re-exported from @mochilang/shared so existing call sites keep
+ * compiling. See packages/shared/src/answers.ts for the rules.
+ */
 export function checkAnswer(value: string, exercise: FillBlankExercise): boolean {
-  const normalized = value.trim().toLowerCase()
-  if (normalized === exercise.answer.trim().toLowerCase()) return true
-  return (exercise.acceptableAnswers ?? []).some(
-    (a) => normalized === a.trim().toLowerCase()
-  )
+  return matchesAnswer(value, exercise)
 }
 
 const styles = StyleSheet.create({

@@ -9,6 +9,7 @@ import {
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import type { Exercise } from '@mochilang/shared'
+import { matchesSequenceAnswer } from '@mochilang/shared'
 import LedgeButton from '../components/LedgeButton'
 import FillBlank, {
   checkAnswer as checkFillBlank,
@@ -361,7 +362,7 @@ function grade(
       return { correct: checkFillBlank(inputs.fbValue, exercise) }
     case 'tap_words_in_order':
       if (inputs.tapValue.length === 0) return null
-      return { correct: inputs.tapValue === exercise.answer }
+      return { correct: matchesSequenceAnswer(inputs.tapValue, exercise.answer) }
     case 'match_pairs':
       return null
   }
