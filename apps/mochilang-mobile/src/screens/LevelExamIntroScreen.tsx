@@ -6,6 +6,7 @@ import {
   Text,
   View,
 } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
   type Level,
   LEVEL_EXAM_PASS_THRESHOLD,
@@ -27,6 +28,7 @@ interface Props {
  * dismisses back to home.
  */
 export default function LevelExamIntroScreen({ level, onStart, onCancel }: Props) {
+  const insets = useSafeAreaInsets()
   const requiredCorrect = Math.ceil(
     LEVEL_EXAM_PASS_THRESHOLD * LEVEL_EXAM_QUESTION_COUNT
   )
@@ -85,7 +87,7 @@ export default function LevelExamIntroScreen({ level, onStart, onCancel }: Props
 
   return (
     <View style={styles.shell}>
-      <View style={styles.topbar}>
+      <View style={[styles.topbar, { paddingTop: insets.top + space.sm }]}>
         <Pressable onPress={onCancel} style={styles.x} hitSlop={12}>
           <Text style={styles.xText}>×</Text>
         </Pressable>
@@ -112,7 +114,12 @@ export default function LevelExamIntroScreen({ level, onStart, onCancel }: Props
         </View>
       </ScrollView>
 
-      <View style={styles.footer}>
+      <View
+        style={[
+          styles.footer,
+          { paddingBottom: Math.max(insets.bottom, space.lg) },
+        ]}
+      >
         <LedgeButton label="Start exam" tone="primary" size="lg" onPress={onStart} />
         <LedgeButton label="Maybe later" tone="neutral" onPress={onCancel} />
       </View>
@@ -124,7 +131,6 @@ const styles = StyleSheet.create({
   shell: { flex: 1, backgroundColor: colors.bg },
   topbar: {
     paddingHorizontal: space.md,
-    paddingTop: space.xl + space.lg,
     paddingBottom: space.sm,
   },
   x: {

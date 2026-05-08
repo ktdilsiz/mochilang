@@ -7,6 +7,7 @@ import {
   View,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
   api,
   ApiError,
@@ -59,6 +60,7 @@ export default function LeagueScreen({
   profile,
   setProfile,
 }: Props) {
+  const insets = useSafeAreaInsets()
   const [vm, setVM] = useState<ViewModel | null>(null)
   const [offline, setOffline] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -118,7 +120,12 @@ export default function LeagueScreen({
   const lastWeekRank = vm?.lastWeekRank ?? profile.lastWeekRank
 
   return (
-    <ScrollView contentContainerStyle={styles.shell}>
+    <ScrollView
+      contentContainerStyle={[
+        styles.shell,
+        { paddingTop: insets.top + space.md },
+      ]}
+    >
       {banner && (
         <View
           style={[

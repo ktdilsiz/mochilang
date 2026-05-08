@@ -9,6 +9,7 @@ import {
 } from '@react-navigation/native-stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Text, View, ActivityIndicator } from 'react-native'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import {
   useFonts,
   Nunito_400Regular,
@@ -126,16 +127,21 @@ export default function App() {
     )
   }
 
-  if (!signedIn) {
-    return (
-      <>
-        <StatusBar style="auto" />
-        <LoginScreen onContinueOffline={() => setSignedIn(true)} />
-      </>
-    )
-  }
-
-  return <SignedInApp onSignOut={() => setSignedIn(false)} />
+  // SafeAreaProvider has to wrap everything that calls useSafeAreaInsets,
+  // including LoginScreen — without it iOS notch padding lookups return
+  // zeros and the top of the screen sits under the status bar.
+  return (
+    <SafeAreaProvider>
+      {!signedIn ? (
+        <>
+          <StatusBar style="auto" />
+          <LoginScreen onContinueOffline={() => setSignedIn(true)} />
+        </>
+      ) : (
+        <SignedInApp onSignOut={() => setSignedIn(false)} />
+      )}
+    </SafeAreaProvider>
+  )
 }
 
 interface SignedInAppProps {

@@ -9,6 +9,7 @@ import {
   View,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import type {
   Lesson,
   Level,
@@ -61,6 +62,7 @@ export default function HomeScreen({
   onTakeExam,
   onTakeLevelExam,
 }: Props) {
+  const insets = useSafeAreaInsets()
   const progress = useProgress()
   const course = useCourse(courseId)
   const [openLessonId, setOpenLessonId] = useState<string | null>(null)
@@ -242,7 +244,7 @@ export default function HomeScreen({
       // 60fps tracking is overkill — we only read the value on a tap.
       scrollEventThrottle={64}
     >
-      <View style={styles.topbar}>
+      <View style={[styles.topbar, { paddingTop: insets.top + space.xs }]}>
         <Text style={styles.langName}>Chinese</Text>
         <View style={styles.stats}>
           <Stat label="🔥" value={String(progress.state.streak)} />
@@ -678,7 +680,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingTop: space.xs,
   },
   langName: {
     fontSize: fontSizes.lg,

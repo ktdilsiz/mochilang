@@ -1,4 +1,5 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import type { GuideExample, GuideSection, Topic } from '@mochilang/shared'
 import { speak } from '../lib/tts'
 import { colors, fontSizes, radius, space, tintForTheme } from '../lib/theme'
@@ -20,6 +21,7 @@ interface Props {
  * column.
  */
 export default function TopicGuideScreen({ topic, onBack }: Props) {
+  const insets = useSafeAreaInsets()
   if (!topic.guide) return null
   const { intro, sections } = topic.guide
   const tint = tintForTheme(topic.theme)
@@ -32,6 +34,7 @@ export default function TopicGuideScreen({ topic, onBack }: Props) {
           {
             backgroundColor: tint.bg,
             borderBottomColor: tint.edge,
+            paddingTop: insets.top + space.sm,
           },
         ]}
       >

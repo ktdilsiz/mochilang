@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
   type AppSettings,
   type SpeechRate,
@@ -30,10 +31,17 @@ const THEME_OPTIONS: ThemeMode[] = ['system', 'light', 'dark']
 const XP_GOAL_OPTIONS: AppSettings['dailyXpGoal'][] = [10, 20, 30, 50]
 
 export default function SettingsScreen({ onBack }: Props) {
+  const insets = useSafeAreaInsets()
   const { state, update, reset } = useSettings()
 
   return (
-    <ScrollView style={styles.shell} contentContainerStyle={styles.content}>
+    <ScrollView
+      style={styles.shell}
+      contentContainerStyle={[
+        styles.content,
+        { paddingTop: insets.top + space.md },
+      ]}
+    >
       <View style={styles.header}>
         <TouchableOpacity onPress={onBack} style={styles.backButton} hitSlop={16}>
           <Text style={styles.backText}>←</Text>

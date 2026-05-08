@@ -7,6 +7,7 @@ import {
   Text,
   View,
 } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { api, ApiError, type FriendResponse } from '@mochilang/shared'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
@@ -18,6 +19,7 @@ import { colors, fontSizes, radius, space } from '../lib/theme'
  * yet — offline state shows an empty message (Phase 2 mobile).
  */
 export default function FriendsScreen() {
+  const insets = useSafeAreaInsets()
   const [friends, setFriends] = useState<FriendResponse[]>([])
   const [daysIntoWeek, setDaysIntoWeek] = useState(0)
   const [offline, setOffline] = useState(false)
@@ -52,7 +54,12 @@ export default function FriendsScreen() {
   )
 
   return (
-    <ScrollView contentContainerStyle={styles.shell}>
+    <ScrollView
+      contentContainerStyle={[
+        styles.shell,
+        { paddingTop: insets.top + space.md },
+      ]}
+    >
       <View style={styles.header}>
         <Text style={styles.title}>Friends</Text>
         <Text style={styles.sub}>

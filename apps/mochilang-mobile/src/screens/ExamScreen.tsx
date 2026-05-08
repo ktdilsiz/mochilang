@@ -7,6 +7,7 @@ import {
   Text,
   View,
 } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import type { Exercise } from '@mochilang/shared'
 import LedgeButton from '../components/LedgeButton'
 import FillBlank, {
@@ -51,6 +52,7 @@ export default function ExamScreen({
   onPass,
   onBack,
 }: Props) {
+  const insets = useSafeAreaInsets()
   const [seed, setSeed] = useState(0)
   const questions = useMemo<Exercise[]>(
     () => getQuestions(),
@@ -135,7 +137,9 @@ export default function ExamScreen({
 
   if (total === 0) {
     return (
-      <View style={resultStyles.shell}>
+      <View
+        style={[resultStyles.shell, { paddingTop: insets.top + space.lg }]}
+      >
         <Text style={resultStyles.title}>Nothing to test yet</Text>
         <Text style={resultStyles.body}>
           This exam doesn't have any exercises bundled yet.
@@ -147,7 +151,12 @@ export default function ExamScreen({
 
   if (done) {
     return (
-      <ScrollView contentContainerStyle={resultStyles.shell}>
+      <ScrollView
+        contentContainerStyle={[
+          resultStyles.shell,
+          { paddingTop: insets.top + space.lg },
+        ]}
+      >
         <Image
           source={
             passed
@@ -185,7 +194,7 @@ export default function ExamScreen({
 
   return (
     <View style={styles.shell}>
-      <View style={styles.topbar}>
+      <View style={[styles.topbar, { paddingTop: insets.top + space.sm }]}>
         <Pressable onPress={onBack} style={styles.x}>
           <Text style={styles.xText}>×</Text>
         </Pressable>
@@ -369,8 +378,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: space.md,
     paddingHorizontal: space.md,
-    paddingVertical: space.sm,
-    paddingTop: space.xl + space.lg,
+    paddingBottom: space.sm,
   },
   x: {
     width: 36,
@@ -445,7 +453,6 @@ const resultStyles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: colors.bg,
     padding: space.xl,
-    paddingTop: space.xxl + space.lg,
     alignItems: 'center',
     gap: space.md,
   },

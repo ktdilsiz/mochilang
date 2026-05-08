@@ -1,4 +1,5 @@
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { setOfflineMode } from '@mochilang/shared'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
@@ -16,8 +17,14 @@ interface Props {
  * actually exercise the app on a phone.
  */
 export default function LoginScreen({ onContinueOffline }: Props) {
+  const insets = useSafeAreaInsets()
   return (
-    <ScrollView contentContainerStyle={styles.shell}>
+    <ScrollView
+      contentContainerStyle={[
+        styles.shell,
+        { paddingTop: insets.top + space.lg, paddingBottom: insets.bottom + space.lg },
+      ]}
+    >
       <View style={styles.card}>
         <Image
           source={require('../../assets/icon.png')}

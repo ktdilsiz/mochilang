@@ -15,6 +15,7 @@ import {
   parseCourseId,
   type CourseSummary,
 } from '@mochilang/shared'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { BUNDLED_COURSE_IDS } from '../data/courseBundles'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
@@ -36,6 +37,7 @@ export default function LanguageSelectScreen({
   onSelect,
   onCancel,
 }: Props) {
+  const insets = useSafeAreaInsets()
   const [courses, setCourses] = useState<CourseSummary[]>(() => fallbackCourses())
 
   useEffect(() => {
@@ -92,7 +94,13 @@ export default function LanguageSelectScreen({
   const courseId = canContinue ? buildCourseId(target, source) : null
 
   return (
-    <ScrollView style={styles.shell} contentContainerStyle={styles.content}>
+    <ScrollView
+      style={styles.shell}
+      contentContainerStyle={[
+        styles.content,
+        { paddingTop: insets.top + space.lg },
+      ]}
+    >
       <View style={styles.hero}>
         <Image source={require('../../assets/mochi-main-transparent.png')} style={styles.mochi} />
         <Text style={styles.title}>Welcome to MochiLang</Text>

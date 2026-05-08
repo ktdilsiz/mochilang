@@ -6,6 +6,7 @@ import {
   Text,
   View,
 } from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import type { Exercise, Lesson } from '@mochilang/shared'
 import LedgeButton from '../components/LedgeButton'
 import FillBlank, {
@@ -30,6 +31,7 @@ type Feedback = 'idle' | 'correct' | 'wrong'
  * the match_pairs auto-complete callback. Mirrors the web LessonScreen.
  */
 export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
+  const insets = useSafeAreaInsets()
   const [index, setIndex] = useState(0)
   const [mistakes, setMistakes] = useState(0)
   const [feedback, setFeedback] = useState<Feedback>('idle')
@@ -97,7 +99,7 @@ export default function LessonScreen({ lesson, onComplete, onBack }: Props) {
 
   return (
     <View style={styles.shell}>
-      <View style={styles.topbar}>
+      <View style={[styles.topbar, { paddingTop: insets.top + space.sm }]}>
         <Pressable onPress={onBack} style={styles.x}>
           <Text style={styles.xText}>×</Text>
         </Pressable>
@@ -291,8 +293,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: space.md,
     paddingHorizontal: space.md,
-    paddingVertical: space.sm,
-    paddingTop: space.xl + space.lg,
+    paddingBottom: space.sm,
   },
   x: {
     width: 36,

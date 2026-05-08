@@ -17,6 +17,7 @@ import type {
   ProgressState,
 } from '@mochilang/shared'
 import { pickReviewSuggestions, tierAt } from '@mochilang/shared'
+import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import LedgeButton from '../components/LedgeButton'
 import { AVATAR_OPTIONS, avatarById } from '../data/avatars'
 import { colors, fontSizes, radius, space } from '../lib/theme'
@@ -59,6 +60,7 @@ export default function ProfileScreen({
   onSwitchToLogin,
   onStartLesson,
 }: Props) {
+  const insets = useSafeAreaInsets()
   const [reviewOpen, setReviewOpen] = useState(false)
   const reviewSuggestions = useMemo(
     () => pickReviewSuggestions(levels, progress.results),
@@ -119,7 +121,12 @@ export default function ProfileScreen({
   }
 
   return (
-    <ScrollView contentContainerStyle={styles.shell}>
+    <ScrollView
+      contentContainerStyle={[
+        styles.shell,
+        { paddingTop: insets.top + space.md },
+      ]}
+    >
       {/* Header card */}
       <View style={styles.headCard}>
         <Image source={avatar.src} style={styles.headAvatar} resizeMode="contain" />
