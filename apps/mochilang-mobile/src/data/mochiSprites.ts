@@ -124,6 +124,8 @@ export const MOCHI_SPRITES: ImageSourcePropType[] = [
   require('../../assets/mochis/mochi-118.png'),
   require('../../assets/mochis/mochi-119.png'),
   require('../../assets/mochis/mochi-120.png'),
+  require('../../assets/mochis/mochi-121.png'),
+  require('../../assets/mochis/mochi-122.png'),
 ]
 
 export const MOCHI_SPRITE_COUNT = MOCHI_SPRITES.length
