@@ -105,7 +105,7 @@ export interface MochiSpec {
   unlockXp: number
 }
 
-export const MOCHI_ROSTER_SIZE = 60
+export const MOCHI_ROSTER_SIZE = 120
 
 /**
  * Order in which archetype themes get cycled through the roster.
@@ -130,11 +130,14 @@ const ARCHETYPE_CYCLE: LessonTheme[] = [
 ]
 
 /**
- * XP threshold for the n-th mochi (0-indexed). Mild polynomial curve:
- *   n=0:  ~10 XP   (immediate first reward)
- *   n=9:  ~250 XP  (first ten in the first session-ish)
- *   n=29: ~1,000 XP
- *   n=59: ~3,050 XP (full roster — long-term aspiration)
+ * XP threshold for the n-th mochi (0-indexed). Mild polynomial curve
+ * stretched to span 120 mochies without making the late-roster grind
+ * absurd:
+ *   n=0:   ~10 XP   (immediate first reward)
+ *   n=29:  ~455 XP  (first batch in a few sessions)
+ *   n=59:  ~1,130 XP
+ *   n=89:  ~1,960 XP
+ *   n=119: ~2,900 XP (full roster — long-term aspiration)
  *
  * Reachable for dedicated learners; aspirational for casuals. We can
  * tune the exponent later without changing the data model.
@@ -142,7 +145,7 @@ const ARCHETYPE_CYCLE: LessonTheme[] = [
 function unlockXpFor(n: number): number {
   // Round to friendly-looking numbers (multiples of 5) so the
   // milestones feel hand-picked rather than arbitrary.
-  const raw = 10 * Math.pow(n + 1, 1.4)
+  const raw = 10 * Math.pow(n / 2 + 1, 1.4)
   return Math.max(5, Math.round(raw / 5) * 5)
 }
 

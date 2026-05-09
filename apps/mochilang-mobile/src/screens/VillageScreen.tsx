@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import {
+  Image,
   ImageBackground,
   type LayoutChangeEvent,
   ScrollView,
@@ -9,6 +10,7 @@ import {
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
+  MOCHI_ROSTER,
   MOCHI_ROSTER_SIZE,
   countUnlockedMochis,
   nextMochi,
@@ -16,6 +18,7 @@ import {
 import { useCourse } from '../state/useCourse'
 import { useLevelExams } from '../state/useLevelExams'
 import { useProgress } from '../state/useProgress'
+import { MOCHI_SPRITES } from '../data/mochiSprites'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -24,18 +27,30 @@ interface Props {
 
 /**
  * Mochi Village — horizontal panorama showing the painted village
- * background (assets/village-bg.png, 3904x1088 ≈ 3.589:1 aspect).
+ * background (assets/village-bg.png) with 120 mochi sprites scattered
+ * across it. The painting is one wide image; mochis are positioned
+ * absolutely on top with deterministic-random placement so the layout
+ * is stable across renders but doesn't look gridded.
  *
- * The panorama scales to the available viewport height and gets a
- * width from that × the image aspect ratio, so the whole painting is
- * visible end-to-end as the user scrolls. Mochi characters are
- * intentionally omitted right now — placement on the painted scene
- * (huts, lily ponds, clearings) is a follow-up task.
- *
- * Level signs are still drawn at proportional positions along the
- * panorama so the user can see which stretch belongs to which level.
+ * Locked mochis render as silhouettes via Image tintColor — same
+ * sprite shape, single dark color. Unlocking flips the tint off.
  */
-const IMAGE_ASPECT = 3904 / 1088
+const IMAGE_ASPECT = 2172 / 724 // matches assets/village-bg.png
+
+/**
+ * Dev override — flip to false before shipping. While true, every
+ * mochi shows as unlocked regardless of total XP so the village art
+ * can be poked at without grinding lessons first.
+ */
+const DEV_UNLOCK_ALL = true
+
+const SPRITE_HEIGHT = 56
+/**
+ * Vertical band of the panorama where mochis can stand. Tuned to keep
+ * them on the painted ground area rather than floating in the sky.
+ */
+const GROUND_BAND_TOP = 0.42
+const GROUND_BAND_BOTTOM = 0.86
 
 export default function VillageScreen({ courseId }: Props) {
   const insets = useSafeAreaInsets()
@@ -90,11 +105,9 @@ export default function VillageScreen({ courseId }: Props) {
             <ImageBackground
               source={require('../../assets/village-bg.png')}
               resizeMode="cover"
-              style={{
-                width: panoramaWidth,
-                height: viewportHeight,
-              }}
+              style={{ width: panoramaWidth, height: viewportHeight }}
             >
+              {/* Level signs — markers along the top of the panorama. */}
               {course.levels.map((level, i) => {
                 const sliceWidth = panoramaWidth / course.levels.length
                 const offsetX = i * sliceWidth + 16
@@ -113,12 +126,69 @@ export default function VillageScreen({ courseId }: Props) {
                   </View>
                 )
               })}
+
+              {/* Mochis scattered across the panorama. Stable across
+                  renders because positions are seeded by index. */}
+              {MOCHI_ROSTER.map((mochi) => {
+                const unlocked =
+                  DEV_UNLOCK_ALL || totalXp >= mochi.unlockXp
+                const sprite = MOCHI_SPRITES[mochi.index]
+                if (!sprite) return null
+                const pos = placementFor(
+                  mochi.index,
+                  panoramaWidth,
+                  viewportHeight
+                )
+                return (
+                  <Image
+                    key={mochi.id}
+                    source={sprite}
+                    resizeMode="contain"
+                    style={[
+                      styles.sprite,
+                      {
+                        left: pos.x - SPRITE_HEIGHT / 2,
+                        top: pos.y - SPRITE_HEIGHT,
+                        width: SPRITE_HEIGHT,
+                        height: SPRITE_HEIGHT,
+                      },
+                      !unlocked && styles.spriteLocked,
+                    ]}
+                  />
+                )
+              })}
             </ImageBackground>
           </ScrollView>
         ) : null}
       </View>
     </View>
   )
+}
+
+/**
+ * Deterministic pseudo-random placement for the n-th mochi. Two
+ * independent linear-congruential streams keep x + y uncorrelated,
+ * and seeding by index makes the village look the same on every
+ * render (no jitter on re-mount) while still feeling scattered.
+ */
+function placementFor(
+  index: number,
+  panoramaWidth: number,
+  panoramaHeight: number
+): { x: number; y: number } {
+  const margin = 40
+  // PRNG #1 → x ∈ [0, 1)
+  const a = Math.abs(Math.sin(index * 12.9898) * 43758.5453)
+  const rx = a - Math.floor(a)
+  // PRNG #2 → y ∈ [0, 1)
+  const b = Math.abs(Math.sin(index * 78.233 + 7.13) * 43758.5453)
+  const ry = b - Math.floor(b)
+
+  const x = margin + rx * (panoramaWidth - margin * 2)
+  const yMin = panoramaHeight * GROUND_BAND_TOP
+  const yMax = panoramaHeight * GROUND_BAND_BOTTOM
+  const y = yMin + ry * (yMax - yMin)
+  return { x, y }
 }
 
 const styles = StyleSheet.create({
@@ -191,6 +261,14 @@ const styles = StyleSheet.create({
     fontFamily: 'Nunito_900Black',
     letterSpacing: 0.6,
     textTransform: 'uppercase',
+  },
+
+  sprite: {
+    position: 'absolute',
+  },
+  spriteLocked: {
+    opacity: 0.3,
+    tintColor: 'rgba(0,0,0,0.85)',
   },
 
   emptyShell: {
