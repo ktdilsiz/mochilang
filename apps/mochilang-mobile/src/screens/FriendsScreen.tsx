@@ -8,9 +8,19 @@ import {
   View,
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { api, ApiError, type FriendResponse } from '@mochilang/shared'
+import { api, ApiError, daysSinceMonday, type FriendResponse } from '@mochilang/shared'
+import friendsFallback from '../../assets/friends.json'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
+
+/**
+ * Offline source-of-truth for the friends roster. Same JSON the web
+ * app bundles, copied into mobile assets so the screen renders even
+ * with no network.
+ */
+const BUNDLED_FRIENDS: FriendResponse[] = (
+  friendsFallback as { friends: FriendResponse[] }
+).friends
 
 /**
  * RN port of the web FriendsScreen. Mirrors the web flow:
@@ -26,8 +36,10 @@ interface Props {
 export default function FriendsScreen({ nested }: Props = {}) {
   const insets = useSafeAreaInsets()
   const topInset = nested ? 0 : insets.top + space.md
-  const [friends, setFriends] = useState<FriendResponse[]>([])
-  const [daysIntoWeek, setDaysIntoWeek] = useState(0)
+  // Seed with the bundled roster so the screen renders something
+  // even before the API fetch resolves (or never does in offline).
+  const [friends, setFriends] = useState<FriendResponse[]>(BUNDLED_FRIENDS)
+  const [daysIntoWeek, setDaysIntoWeek] = useState<number>(() => daysSinceMonday())
   const [offline, setOffline] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const [selected, setSelected] = useState<FriendResponse | null>(null)
@@ -41,11 +53,9 @@ export default function FriendsScreen({ nested }: Props = {}) {
         setDaysIntoWeek(r.daysIntoWeek)
         setOffline(false)
       } catch (err) {
-        if (err instanceof ApiError) {
-          // 4xx/5xx from the server — leave list empty.
-          return
-        }
-        // Network error — flag offline. No bundled JSON for Phase 2 mobile.
+        if (err instanceof Error && err.name === 'AbortError') return
+        // ApiError or network — keep the bundled list. Mark offline
+        // so the UI can show a quiet indicator if it wants.
         setOffline(true)
       } finally {
         setLoaded(true)

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   ActivityIndicator,
   Modal,
@@ -8,6 +8,7 @@ import {
   type TextStyle,
   View,
 } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { lookup, tokenize as zhTokenize } from '@mochilang/dict'
 import { translate } from '@mochilang/translate'
 import { useWordTranslation } from '../lib/wordTranslation'
@@ -57,7 +58,18 @@ function tokenize(text: string): Token[] {
   return out
 }
 
+/**
+ * In-memory translation cache for the current session. Hydrated from
+ * AsyncStorage at app start so taps the user has already seen stay
+ * instant across restarts — the slowest part of the feature is the
+ * Lingva round-trip, so persisting it makes a huge offline difference.
+ */
 const lingvaCache = new Map<string, string>()
+const STORAGE_KEY = 'mochilang:lingvaCache:v1'
+let hydrated = false
+let hydratePromise: Promise<void> | null = null
+let saveTimer: ReturnType<typeof setTimeout> | null = null
+
 function lingvaKey(word: string, to: string): string {
   return `auto|${to}|${word.toLowerCase()}`
 }
@@ -66,10 +78,47 @@ function isEcho(input: string, output: string): boolean {
   return output.toLowerCase().trim() === input.toLowerCase().trim()
 }
 
+async function hydrateLingvaCache(): Promise<void> {
+  if (hydrated) return
+  if (hydratePromise) return hydratePromise
+  hydratePromise = (async () => {
+    try {
+      const raw = await AsyncStorage.getItem(STORAGE_KEY)
+      if (raw) {
+        const parsed = JSON.parse(raw) as Record<string, string>
+        for (const [k, v] of Object.entries(parsed)) {
+          if (typeof v === 'string' && v.length > 0) lingvaCache.set(k, v)
+        }
+      }
+    } catch {
+      /* ignore */
+    } finally {
+      hydrated = true
+    }
+  })()
+  return hydratePromise
+}
+
+/**
+ * Persist the cache lazily — coalesce many cache writes during a
+ * lesson into a single AsyncStorage write 1 second after the last
+ * one to avoid hammering disk.
+ */
+function schedulePersist(): void {
+  if (saveTimer) clearTimeout(saveTimer)
+  saveTimer = setTimeout(() => {
+    saveTimer = null
+    const obj: Record<string, string> = {}
+    for (const [k, v] of lingvaCache.entries()) obj[k] = v
+    void AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(obj)).catch(() => {})
+  }, 1000)
+}
+
 async function tryLingva(
   word: string,
   to: string
 ): Promise<string | null> {
+  await hydrateLingvaCache()
   const key = lingvaKey(word, to)
   const cached = lingvaCache.get(key)
   if (cached) return cached
@@ -77,6 +126,7 @@ async function tryLingva(
     const r = await translate(word, { from: 'auto', to })
     if (r?.translation && r.translation.length > 0) {
       lingvaCache.set(key, r.translation)
+      schedulePersist()
       return r.translation
     }
   } catch {
@@ -120,6 +170,13 @@ export default function TappableText({ text, style }: Props) {
   const ctx = useWordTranslation()
   const tokens = useMemo(() => tokenize(text), [text])
   const [active, setActive] = useState<ActiveLookup | null>(null)
+
+  // Warm the cache as soon as a tappable text mounts, so by the time
+  // the user actually taps a word the persisted dict is already in
+  // memory and the first lookup is instant.
+  useEffect(() => {
+    if (ctx.enabled) void hydrateLingvaCache()
+  }, [ctx.enabled])
 
   async function onWordTap(token: Token) {
     if (!ctx.enabled || !token.isWord) return

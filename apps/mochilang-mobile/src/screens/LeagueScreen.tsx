@@ -16,11 +16,14 @@ import {
   DEMOTE_RANK,
   tierAt,
   daysUntilMonday,
+  daysSinceMonday,
+  mondayOf,
   type LeagueResponse,
   type LeagueRow,
   type ProfileState,
   type ProgressState,
 } from '@mochilang/shared'
+import { COMPETITORS, botWeeklyXp } from '../data/competitors'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface OuterProps {
@@ -59,6 +62,44 @@ function viewFromAPI(r: LeagueResponse): ViewModel {
   }
 }
 
+/**
+ * Offline view: same shape the API would have returned, synthesized
+ * from bundled competitors + local progress/profile. Mirrors the web
+ * `buildOfflineView` exactly so both clients show the same standings
+ * with no server reachable.
+ */
+function buildOfflineView(progress: ProgressState, profile: ProfileState): ViewModel {
+  const weekStart = mondayOf()
+  const dayIdx = daysSinceMonday()
+  const userWeeklyXp = progress.weekStart === weekStart ? progress.weeklyXp : 0
+
+  const rows: LeagueRow[] = COMPETITORS.map((b) => ({
+    id: b.id,
+    name: b.name,
+    avatar: b.avatar,
+    flag: b.flag,
+    weeklyXp: botWeeklyXp(b, weekStart, dayIdx),
+    isUser: false,
+  }))
+  rows.push({
+    id: 'me',
+    name: profile.name ?? 'You',
+    avatar: 'user',
+    weeklyXp: userWeeklyXp,
+    isUser: true,
+  })
+  rows.sort((a, b) => b.weeklyXp - a.weeklyXp || a.id.localeCompare(b.id))
+  const userRank = rows.findIndex((r) => r.isUser) + 1
+
+  return {
+    rows,
+    userRank,
+    userTier: profile.leagueTier,
+    lastWeekRank: profile.lastWeekRank,
+    lastWeekChange: profile.lastWeekChange,
+  }
+}
+
 export default function LeagueScreen({
   progress,
   profile,
@@ -67,7 +108,11 @@ export default function LeagueScreen({
 }: Props) {
   const insets = useSafeAreaInsets()
   const topInset = nested ? 0 : insets.top + space.md
-  const [vm, setVM] = useState<ViewModel | null>(null)
+  // Seed with the offline view synchronously so the leaderboard
+  // renders something useful on first paint even before any fetch.
+  const [vm, setVM] = useState<ViewModel | null>(() =>
+    buildOfflineView(progress, profile)
+  )
   const [offline, setOffline] = useState(false)
   const [loading, setLoading] = useState(true)
 
@@ -92,15 +137,11 @@ export default function LeagueScreen({
         })
       } catch (err) {
         if (err instanceof Error && err.name === 'AbortError') return
-        if (!(err instanceof ApiError)) {
-          // Network error — surface offline state. Phase 1 has no
-          // bundled fallback for the mobile build.
-          setOffline(true)
-          setVM(null)
-          console.warn('LeagueScreen: API offline', err)
-        } else {
-          console.error('LeagueScreen: API error', err)
-        }
+        // Network error or short-circuited by offline mode — both
+        // resolve to bundled-JSON view. The synth standings are not
+        // authoritative; the server reconciles on the next live fetch.
+        setOffline(true)
+        setVM(buildOfflineView(progress, profile))
       } finally {
         setLoading(false)
       }
