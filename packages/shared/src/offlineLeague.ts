@@ -113,16 +113,32 @@ function shuffled<T>(items: readonly T[], rng: () => number): T[] {
 }
 
 /**
- * Generate a fresh 30-bot cohort for a given weekStart. The result is
- * deterministic per weekStart so reinstalls land on the same names.
- * `startingXp` is the floor for bot weeklyXp at generation time (use
- * 0 at week rollover; mid-week recovery scenarios might want a small
- * positive value, but that's the caller's call).
+ * Head start each bot gets at the top of a fresh week. The distribution
+ * is right-skewed via r^2 — most bots are easy targets near the floor,
+ * but a few sit hundreds of XP ahead, giving the user something to
+ * chase for the whole week.
+ *
+ *   bot starting XP ≈ MIN_BOT_STARTING_XP + r^2 * BOT_STARTING_XP_SPAN
+ *
+ * With the defaults below: 20 minimum, ~95 median, ~400 max. The
+ * user starts at 0 and works through the cohort as the week unfolds.
  */
-export function generateCohort(
-  weekStart: string,
-  startingXp = 0,
-): OfflineBot[] {
+export const MIN_BOT_STARTING_XP = 20
+export const BOT_STARTING_XP_SPAN = 380
+
+function botStartingXp(botId: string, weekStart: string): number {
+  const rng = seededRng(`${botId}|${weekStart}|start`)
+  const r = rng()
+  return Math.round(MIN_BOT_STARTING_XP + r * r * BOT_STARTING_XP_SPAN)
+}
+
+/**
+ * Generate a fresh 30-bot cohort for a given weekStart. The result is
+ * deterministic per weekStart so reinstalls land on the same names
+ * AND the same head-start XP distribution. The user starts at 0 each
+ * week and has to climb past everyone to win the week.
+ */
+export function generateCohort(weekStart: string): OfflineBot[] {
   const rng = seededRng(`offline-league|${weekStart}`)
   const names = shuffled(NAME_POOL, rng)
   const flags = shuffled(FLAG_POOL, rng)
@@ -130,14 +146,15 @@ export function generateCohort(
 
   const out: OfflineBot[] = []
   for (let i = 0; i < OFFLINE_COHORT_SIZE; i++) {
+    // Stable per-week ids; the rank-tracker uses id for tiebreaks
+    // when two bots have the same weekly XP.
+    const id = `ol-${weekStart}-${String(i + 1).padStart(2, '0')}`
     out.push({
-      // Stable per-week ids; the rank-tracker uses id for tiebreaks
-      // when two bots have the same weekly XP.
-      id: `ol-${weekStart}-${String(i + 1).padStart(2, '0')}`,
+      id,
       name: names[i % names.length],
       flag: flags[i % flags.length],
       avatar: avatars[i % avatars.length],
-      weeklyXp: startingXp,
+      weeklyXp: botStartingXp(id, weekStart),
     })
   }
   return out
