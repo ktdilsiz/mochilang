@@ -40,6 +40,14 @@ export interface AppSettings {
   /** Daily-XP target used by Profile + streak banners. */
   dailyXpGoal: 10 | 20 | 30 | 50
   theme: ThemeMode
+  /**
+   * Developer override. When true:
+   *   - every topic and lesson is reachable (skips the prev-cleared gate)
+   *   - every mochi in the village renders unlocked regardless of XP
+   * Off by default; flipping it on doesn't grant XP or complete anything,
+   * it just disables the gating so the whole content tree is browsable.
+   */
+  developerMode: boolean
 }
 
 export const SETTINGS_DEFAULT: AppSettings = {
@@ -52,6 +60,7 @@ export const SETTINGS_DEFAULT: AppSettings = {
   showPinyin: true,
   dailyXpGoal: 20,
   theme: 'system',
+  developerMode: false,
 }
 
 /** Storage key used by both apps so a future sync layer has one source. */
@@ -79,6 +88,8 @@ export function mergeSettings(stored: unknown): AppSettings {
     showPinyin: typeof s.showPinyin === 'boolean' ? s.showPinyin : SETTINGS_DEFAULT.showPinyin,
     dailyXpGoal: pick(s.dailyXpGoal, [10, 20, 30, 50], SETTINGS_DEFAULT.dailyXpGoal),
     theme: pick(s.theme, ['system', 'light', 'dark'], SETTINGS_DEFAULT.theme),
+    developerMode:
+      typeof s.developerMode === 'boolean' ? s.developerMode : SETTINGS_DEFAULT.developerMode,
   }
 }
 

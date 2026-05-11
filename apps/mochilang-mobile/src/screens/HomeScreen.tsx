@@ -29,6 +29,7 @@ import {
 } from '@mochilang/shared'
 import { useProgress } from '../state/useProgress'
 import { useCourse } from '../state/useCourse'
+import { useSettings } from '../state/useSettings'
 import LedgeButton from '../components/LedgeButton'
 import LessonNode from '../components/LessonNode'
 import { colors, fontSizes, radius, space, tintForTheme } from '../lib/theme'
@@ -77,6 +78,8 @@ export default function HomeScreen({
   const insets = useSafeAreaInsets()
   const progress = useProgress()
   const course = useCourse(courseId)
+  const { state: settings } = useSettings()
+  const devMode = settings.developerMode
   const [openLessonId, setOpenLessonId] = useState<string | null>(null)
   const [popoverPlacement, setPopoverPlacement] = useState<'below' | 'above'>(
     'below'
@@ -189,6 +192,7 @@ export default function HomeScreen({
       for (let t = 0; t < level.topics.length; t++) {
         const topic = level.topics[t]
         if (
+          !devMode &&
           !isTopicUnlocked(
             course.levels,
             topic.id,
@@ -220,7 +224,7 @@ export default function HomeScreen({
     }
     return { nextId, heroLevel, heroTopic, heroTopicIndex }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [course.levels, progress.state.results, examsPassed, levelExamsPassed])
+  }, [course.levels, progress.state.results, examsPassed, levelExamsPassed, devMode])
 
   if (course.loading && course.levels.length === 0) {
     return (
@@ -301,6 +305,7 @@ export default function HomeScreen({
             key={level.id}
             level={level}
             allLevels={course.levels}
+            devMode={devMode}
             progressResults={progress.state.results}
             examsPassed={examsPassed}
             levelExamsPassed={levelExamsPassed}
@@ -341,6 +346,8 @@ function Stat({ label, value }: { label: string; value: string }) {
 interface SectionProps {
   level: Level
   allLevels: Level[]
+  /** Developer override: when true, all topics render as unlocked. */
+  devMode: boolean
   progressResults: Record<string, unknown>
   examsPassed: TopicExamsPassed
   levelExamsPassed: LevelExamsPassed
@@ -368,6 +375,7 @@ interface SectionProps {
 function LevelSection({
   level,
   allLevels,
+  devMode,
   progressResults,
   examsPassed,
   levelExamsPassed,
@@ -432,13 +440,15 @@ function LevelSection({
         </Pressable>
       )}
       {level.topics.map((topic, ti) => {
-        const unlocked = isTopicUnlocked(
-          allLevels,
-          topic.id,
-          progressResults,
-          examsPassed,
-          levelExamsPassed
-        )
+        const unlocked =
+          devMode ||
+          isTopicUnlocked(
+            allLevels,
+            topic.id,
+            progressResults,
+            examsPassed,
+            levelExamsPassed
+          )
         const cleared = isTopicCleared(topic, progressResults, examsPassed)
         const examPassed = examsPassed[topic.id] === true
         const prev = unlocked ? null : previousTopic(allLevels, topic.id)

@@ -18,6 +18,7 @@ import {
 import { useCourse } from '../state/useCourse'
 import { useLevelExams } from '../state/useLevelExams'
 import { useProgress } from '../state/useProgress'
+import { useSettings } from '../state/useSettings'
 import { MOCHI_SPRITES } from '../data/mochiSprites'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
@@ -37,13 +38,6 @@ interface Props {
  */
 const IMAGE_ASPECT = 2172 / 724 // matches assets/village-bg.png
 
-/**
- * Dev override — flip to false before shipping. While true, every
- * mochi shows as unlocked regardless of total XP so the village art
- * can be poked at without grinding lessons first.
- */
-const DEV_UNLOCK_ALL = true
-
 const SPRITE_HEIGHT = 56
 /**
  * Vertical band of the panorama where mochis can stand. Tuned to keep
@@ -57,6 +51,8 @@ export default function VillageScreen({ courseId }: Props) {
   const course = useCourse(courseId)
   const levelExams = useLevelExams()
   const progress = useProgress()
+  const { state: settings } = useSettings()
+  const devMode = settings.developerMode
   const [viewportHeight, setViewportHeight] = useState(0)
 
   function handleLayout(e: LayoutChangeEvent) {
@@ -131,7 +127,7 @@ export default function VillageScreen({ courseId }: Props) {
                   renders because positions are seeded by index. */}
               {MOCHI_ROSTER.map((mochi) => {
                 const unlocked =
-                  DEV_UNLOCK_ALL || totalXp >= mochi.unlockXp
+                  devMode || totalXp >= mochi.unlockXp
                 const sprite = MOCHI_SPRITES[mochi.index]
                 if (!sprite) return null
                 const pos = placementFor(

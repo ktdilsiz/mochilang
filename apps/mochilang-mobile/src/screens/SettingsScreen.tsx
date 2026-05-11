@@ -120,6 +120,15 @@ export default function SettingsScreen({ onBack }: Props) {
         />
       </Section>
 
+      <Section title="Developer">
+        <Toggle
+          label="Unlock everything"
+          description="Reveals every mochi in the village and lets you open any lesson regardless of progress. Doesn't grant XP or mark anything complete — just disables the gating."
+          value={state.developerMode}
+          onChange={(v) => update('developerMode', v)}
+        />
+      </Section>
+
       <View style={{ alignItems: 'center', marginTop: space.lg }}>
         <LedgeButton
           label="Reset to defaults"
