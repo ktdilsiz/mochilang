@@ -372,18 +372,18 @@ function randInRange(rng: () => number, [lo, hi]: [number, number]): number {
 /**
  * Generate a fresh 30-bot cohort for a given weekStart. The result is
  * deterministic per weekStart so reinstalls land on the same names AND
- * the same archetype distribution. Bots that didn't appear in the
- * previous cohort get isNew=true; pass [] when there's no prior week.
+ * the same archetype distribution.
+ *
+ * `isNew` is NOT set here — the caller decides whether to mark bots as
+ * new (see `markNewBots`). At first-ever launch there's no prior week
+ * to compare against, so we'd rather leave the flag unset than badge
+ * the entire roster as "new".
  */
-export function generateCohort(
-  weekStart: string,
-  previousNames: string[] = [],
-): OfflineBot[] {
+export function generateCohort(weekStart: string): OfflineBot[] {
   const rng = seededRng(`offline-league|${weekStart}`)
   const pool = shuffled(NAME_FLAG_POOL, rng)
   const avatars = shuffled(AVATAR_POOL, rng)
   const archetypes = shuffled(ARCHETYPE_PROFILE, rng)
-  const prevSet = new Set(previousNames)
 
   const out: OfflineBot[] = []
   for (let i = 0; i < OFFLINE_COHORT_SIZE; i++) {
@@ -401,10 +401,23 @@ export function generateCohort(
       weeklyXp: 0,
       lifetimeXp: randInRange(detailRng, LIFETIME_RANGE[arch]),
       streak: randInRange(detailRng, STREAK_RANGE[arch]),
-      isNew: !prevSet.has(entry.name),
     })
   }
   return out
+}
+
+/**
+ * Annotate bots with `isNew = true` when their name didn't appear in
+ * `previousNames`. Call this only on week rollover — at first-ever
+ * generation there's no meaningful "previous", so skip and leave the
+ * flag unset.
+ */
+export function markNewBots(
+  cohort: OfflineBot[],
+  previousNames: string[],
+): OfflineBot[] {
+  const prev = new Set(previousNames)
+  return cohort.map((b) => ({ ...b, isNew: !prev.has(b.name) }))
 }
 
 // ---------- State shape ----------
@@ -427,14 +440,18 @@ export interface OfflineLeagueState {
   recentNames: string[]
 }
 
-/** Build a fresh state for week N from scratch. */
+/**
+ * Build a fresh state for week N from scratch. Used at first-ever
+ * install (no prior cohort exists). `markNewBots` is intentionally
+ * not called here — without a previous week to diff against, the
+ * "new" badge has no meaning, and badging everyone gives a noisy UI.
+ */
 export function freshState(
   weekStart: string,
   today: string,
   userTotalXp = 0,
-  previousNames: string[] = [],
 ): OfflineLeagueState {
-  const cohort = generateCohort(weekStart, previousNames)
+  const cohort = generateCohort(weekStart)
   return {
     weekStart,
     cohort,

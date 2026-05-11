@@ -17,6 +17,7 @@ import {
   DEMOTE_RANK,
   freshState,
   generateCohort,
+  markNewBots,
   mondayOf,
   PROMOTE_RANK,
   rankUserIn,
@@ -121,7 +122,7 @@ export function useOfflineLeague({
         lastWeekRank: prevRank,
         lastWeekChange: change,
       })
-      const fresh = generateCohort(currentWeek, next.recentNames)
+      const fresh = markNewBots(generateCohort(currentWeek), next.recentNames)
       // Seed one day of activity so the new cohort isn't a wall of zeros
       // when the user opens on Monday morning.
       const seeded = settleThrough(fresh, addDaysLocal(today, -1), today, 0)
