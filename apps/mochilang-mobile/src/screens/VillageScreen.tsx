@@ -1,10 +1,11 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import {
   FlatList,
   Image,
   ImageBackground,
   type LayoutChangeEvent,
   Modal,
+  PanResponder,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -88,13 +89,19 @@ export default function VillageScreen({ courseId }: Props) {
   const t = useT()
   const devMode = settings.developerMode
   const [viewportHeight, setViewportHeight] = useState(0)
-  // Index of the mochi whose action menu is open (-1 = closed).
   const [menuFor, setMenuFor] = useState<number | null>(null)
-  // Index of the mochi being placed; while set, panorama taps move
-  // this mochi to the tapped coordinate.
-  const [placingIndex, setPlacingIndex] = useState<number | null>(null)
   const [aboutFor, setAboutFor] = useState<number | null>(null)
   const [atlasOpen, setAtlasOpen] = useState(false)
+
+  // Drag-to-move state. While `draggingIndex` is set the sprite at
+  // that slot is rendered with a PanResponder; everything else dims
+  // and ScrollView scroll is frozen so the gesture stays under the
+  // finger. `dragAccum` is the cumulative pixel delta across gestures
+  // since drag mode opened (useful if the user lifts and drags again
+  // before confirming); `dragLive` is the in-flight gesture's delta.
+  const [draggingIndex, setDraggingIndex] = useState<number | null>(null)
+  const [dragAccum, setDragAccum] = useState({ x: 0, y: 0 })
+  const [dragLive, setDragLive] = useState({ x: 0, y: 0 })
 
   function handleLayout(e: LayoutChangeEvent) {
     const h = e.nativeEvent.layout.height
@@ -106,13 +113,61 @@ export default function VillageScreen({ courseId }: Props) {
   const unlockedCount = useMemo(() => countUnlockedMochis(totalXp), [totalXp])
   const next = useMemo(() => nextMochi(totalXp), [totalXp])
 
-  function handlePanoramaTap(panoramaX: number, panoramaY: number) {
-    if (placingIndex === null || panoramaWidth === 0 || viewportHeight === 0) return
-    const x = Math.max(0.02, Math.min(0.98, panoramaX / panoramaWidth))
-    const y = Math.max(0.05, Math.min(0.95, panoramaY / viewportHeight))
-    placements.move(placingIndex, x, y)
-    setPlacingIndex(null)
+  function startDragging(index: number) {
+    setDraggingIndex(index)
+    setDragAccum({ x: 0, y: 0 })
+    setDragLive({ x: 0, y: 0 })
   }
+
+  function cancelDragging() {
+    setDraggingIndex(null)
+    setDragAccum({ x: 0, y: 0 })
+    setDragLive({ x: 0, y: 0 })
+  }
+
+  function confirmDragging() {
+    if (draggingIndex === null) return
+    const base = resolvePosition(draggingIndex, placements.overrides)
+    if (!base || panoramaWidth === 0 || viewportHeight === 0) {
+      cancelDragging()
+      return
+    }
+    const totalDx = dragAccum.x + dragLive.x
+    const totalDy = dragAccum.y + dragLive.y
+    const newX = Math.max(
+      0.02,
+      Math.min(0.98, base.x + totalDx / panoramaWidth)
+    )
+    const newY = Math.max(
+      0.05,
+      Math.min(0.95, base.y + totalDy / viewportHeight)
+    )
+    placements.move(draggingIndex, newX, newY)
+    cancelDragging()
+  }
+
+  // PanResponder is recreated per drag session so its closure
+  // captures the right setState refs. Static across drag because
+  // the setState identities are stable.
+  const panResponder = useRef(
+    PanResponder.create({
+      onStartShouldSetPanResponder: () => true,
+      onMoveShouldSetPanResponder: () => true,
+      onPanResponderGrant: () => {
+        setDragLive({ x: 0, y: 0 })
+      },
+      onPanResponderMove: (_e, g) => {
+        setDragLive({ x: g.dx, y: g.dy })
+      },
+      onPanResponderRelease: (_e, g) => {
+        setDragAccum((prev) => ({ x: prev.x + g.dx, y: prev.y + g.dy }))
+        setDragLive({ x: 0, y: 0 })
+      },
+      onPanResponderTerminate: () => {
+        setDragLive({ x: 0, y: 0 })
+      },
+    })
+  ).current
 
   return (
     <View style={styles.shell}>
@@ -147,20 +202,31 @@ export default function VillageScreen({ courseId }: Props) {
         </Text>
       </View>
 
-      {placingIndex !== null && (
+      {draggingIndex !== null && (
         <View style={styles.placingBanner}>
           <Text style={styles.placingBannerText}>
-            Tap anywhere on the village to place mochi #{placingIndex + 1}.
+            Drag mochi #{draggingIndex + 1} to a new spot, then confirm.
           </Text>
-          <Pressable
-            onPress={() => setPlacingIndex(null)}
-            style={({ pressed }) => [
-              styles.placingCancel,
-              pressed && { opacity: 0.7 },
-            ]}
-          >
-            <Text style={styles.placingCancelText}>Cancel</Text>
-          </Pressable>
+          <View style={styles.placingButtons}>
+            <Pressable
+              onPress={cancelDragging}
+              style={({ pressed }) => [
+                styles.placingCancel,
+                pressed && { opacity: 0.7 },
+              ]}
+            >
+              <Text style={styles.placingCancelText}>Cancel</Text>
+            </Pressable>
+            <Pressable
+              onPress={confirmDragging}
+              style={({ pressed }) => [
+                styles.placingConfirm,
+                pressed && { opacity: 0.7 },
+              ]}
+            >
+              <Text style={styles.placingConfirmText}>✓ Confirm</Text>
+            </Pressable>
+          </View>
         </View>
       )}
 
@@ -176,70 +242,59 @@ export default function VillageScreen({ courseId }: Props) {
             horizontal
             showsHorizontalScrollIndicator={false}
             decelerationRate="fast"
-            // While placing, freeze scrolling so the tap-target stays
-            // stable under the user's finger.
-            scrollEnabled={placingIndex === null}
+            // Freeze horizontal scroll while a drag is in flight so the
+            // gesture isn't stolen mid-move.
+            scrollEnabled={draggingIndex === null}
           >
-            <Pressable
-              onPress={(e) =>
-                handlePanoramaTap(
-                  e.nativeEvent.locationX,
-                  e.nativeEvent.locationY
-                )
-              }
-              // Pressable only fires for taps it claims — so when
-              // placingIndex is null the inner mochi Pressables
-              // intercept first and the panorama press is inert.
+            <ImageBackground
+              source={require('../../assets/village-bg.png')}
+              resizeMode="cover"
+              style={{ width: panoramaWidth, height: viewportHeight }}
             >
-              <ImageBackground
-                source={require('../../assets/village-bg.png')}
-                resizeMode="cover"
-                style={{ width: panoramaWidth, height: viewportHeight }}
-              >
-                {/* Level signs along the top of the panorama. */}
-                {course.levels.map((level, i) => {
-                  const sliceWidth = panoramaWidth / course.levels.length
-                  const offsetX = i * sliceWidth + 16
-                  const examPassed =
-                    levelExams.state[level.id] === true
+              {/* Level signs along the top of the panorama. */}
+              {course.levels.map((level, i) => {
+                const sliceWidth = panoramaWidth / course.levels.length
+                const offsetX = i * sliceWidth + 16
+                const examPassed = levelExams.state[level.id] === true
+                return (
+                  <View
+                    key={`sign-${level.id}`}
+                    style={[styles.sign, { left: offsetX }]}
+                  >
+                    <Text style={styles.signTitle}>{level.name}</Text>
+                    {examPassed && (
+                      <View style={styles.signBadge}>
+                        <Text style={styles.signBadgeText}>
+                          Level exam ✓
+                        </Text>
+                      </View>
+                    )}
+                  </View>
+                )
+              })}
+
+              {MOCHI_ROSTER.map((mochi) => {
+                const unlocked = devMode || totalXp >= mochi.unlockXp
+                const sprite = MOCHI_SPRITES[mochi.index]
+                const resolved = resolvePosition(
+                  mochi.index,
+                  placements.overrides
+                )
+                if (!sprite || !resolved || resolved.hidden) return null
+                const isDragging = draggingIndex === mochi.index
+                const baseX = resolved.x * panoramaWidth
+                const baseY = resolved.y * viewportHeight
+                const dragDx = isDragging ? dragAccum.x + dragLive.x : 0
+                const dragDy = isDragging ? dragAccum.y + dragLive.y : 0
+                const x = baseX + dragDx
+                const y = baseY + dragDy
+                const dimmed = draggingIndex !== null && !isDragging
+
+                if (isDragging) {
                   return (
                     <View
-                      key={`sign-${level.id}`}
-                      style={[styles.sign, { left: offsetX }]}
-                    >
-                      <Text style={styles.signTitle}>{level.name}</Text>
-                      {examPassed && (
-                        <View style={styles.signBadge}>
-                          <Text style={styles.signBadgeText}>
-                            Level exam ✓
-                          </Text>
-                        </View>
-                      )}
-                    </View>
-                  )
-                })}
-
-                {MOCHI_ROSTER.map((mochi) => {
-                  const unlocked = devMode || totalXp >= mochi.unlockXp
-                  const sprite = MOCHI_SPRITES[mochi.index]
-                  const resolved = resolvePosition(
-                    mochi.index,
-                    placements.overrides
-                  )
-                  if (!sprite || !resolved || resolved.hidden) return null
-                  const x = resolved.x * panoramaWidth
-                  const y = resolved.y * viewportHeight
-                  const beingPlaced = placingIndex === mochi.index
-                  return (
-                    <Pressable
                       key={mochi.id}
-                      onPress={() => {
-                        if (placingIndex !== null) return
-                        setMenuFor(mochi.index)
-                      }}
-                      // Disable touch while placing so the panorama
-                      // tap-target wins.
-                      disabled={placingIndex !== null}
+                      {...panResponder.panHandlers}
                       style={[
                         styles.spriteWrap,
                         {
@@ -247,6 +302,8 @@ export default function VillageScreen({ courseId }: Props) {
                           top: y - SPRITE_HEIGHT,
                           width: SPRITE_HEIGHT,
                           height: SPRITE_HEIGHT,
+                          zIndex: 50,
+                          elevation: 50,
                         },
                       ]}
                     >
@@ -256,14 +313,44 @@ export default function VillageScreen({ courseId }: Props) {
                         style={[
                           styles.sprite,
                           !unlocked && styles.spriteLocked,
-                          beingPlaced && styles.spriteMoving,
+                          styles.spriteMoving,
                         ]}
                       />
-                    </Pressable>
+                    </View>
                   )
-                })}
-              </ImageBackground>
-            </Pressable>
+                }
+
+                return (
+                  <Pressable
+                    key={mochi.id}
+                    onPress={() => {
+                      if (draggingIndex !== null) return
+                      setMenuFor(mochi.index)
+                    }}
+                    disabled={draggingIndex !== null}
+                    style={[
+                      styles.spriteWrap,
+                      {
+                        left: x - SPRITE_HEIGHT / 2,
+                        top: y - SPRITE_HEIGHT,
+                        width: SPRITE_HEIGHT,
+                        height: SPRITE_HEIGHT,
+                      },
+                      dimmed && styles.spriteDimmed,
+                    ]}
+                  >
+                    <Image
+                      source={sprite}
+                      resizeMode="contain"
+                      style={[
+                        styles.sprite,
+                        !unlocked && styles.spriteLocked,
+                      ]}
+                    />
+                  </Pressable>
+                )
+              })}
+            </ImageBackground>
           </ScrollView>
         ) : null}
       </View>
@@ -277,7 +364,7 @@ export default function VillageScreen({ courseId }: Props) {
           }
           hidden={placements.overrides[menuFor]?.hidden === true}
           onMove={() => {
-            setPlacingIndex(menuFor)
+            startDragging(menuFor)
             setMenuFor(null)
           }}
           onToggleHide={() => {
@@ -684,13 +771,31 @@ const styles = StyleSheet.create({
     color: colors.primary700,
     fontFamily: 'Nunito_700Bold',
   },
+  placingButtons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.sm,
+  },
   placingCancel: {
-    backgroundColor: colors.primary500,
+    backgroundColor: colors.cream200,
+    paddingHorizontal: space.md,
+    paddingVertical: 4,
+    borderRadius: radius.pill,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  placingCancelText: {
+    color: colors.text,
+    fontSize: fontSizes.xs,
+    fontFamily: 'Nunito_900Black',
+  },
+  placingConfirm: {
+    backgroundColor: colors.success500,
     paddingHorizontal: space.md,
     paddingVertical: 4,
     borderRadius: radius.pill,
   },
-  placingCancelText: {
+  placingConfirmText: {
     color: '#fff',
     fontSize: fontSizes.xs,
     fontFamily: 'Nunito_900Black',
@@ -737,7 +842,10 @@ const styles = StyleSheet.create({
     tintColor: 'rgba(0,0,0,0.85)',
   },
   spriteMoving: {
-    opacity: 0.7,
+    opacity: 0.85,
+  },
+  spriteDimmed: {
+    opacity: 0.4,
   },
 
   emptyShell: {
