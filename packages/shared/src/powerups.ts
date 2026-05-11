@@ -13,7 +13,7 @@
  */
 
 export const DOUBLE_XP_DURATION_MS = 30 * 60 * 1000 // 30 minutes
-export const MAX_STREAK_FREEZES = 2
+export const MAX_STREAK_FREEZES = 10
 
 export interface PowerupsState {
   /** Unix ms when the active Double XP window ends. Null when off. */
