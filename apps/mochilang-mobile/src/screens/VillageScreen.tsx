@@ -146,13 +146,21 @@ export default function VillageScreen({ courseId }: Props) {
     cancelDragging()
   }
 
-  // PanResponder is recreated per drag session so its closure
-  // captures the right setState refs. Static across drag because
-  // the setState identities are stable.
+  // useRef + .current keeps a stable PanResponder across renders. The
+  // setState closures captured here are stable too. Termination paths
+  // must accumulate the gesture's dx — otherwise a parent responder
+  // hijacking the gesture mid-drag silently throws away the move and
+  // the sprite snaps back to its start.
   const panResponder = useRef(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onMoveShouldSetPanResponder: () => true,
+      onStartShouldSetPanResponderCapture: () => true,
+      onMoveShouldSetPanResponderCapture: () => true,
+      // Refuse to yield once we've claimed the gesture — keeps the
+      // ScrollView and others from stealing the drag.
+      onPanResponderTerminationRequest: () => false,
+      onShouldBlockNativeResponder: () => true,
       onPanResponderGrant: () => {
         setDragLive({ x: 0, y: 0 })
       },
@@ -163,7 +171,8 @@ export default function VillageScreen({ courseId }: Props) {
         setDragAccum((prev) => ({ x: prev.x + g.dx, y: prev.y + g.dy }))
         setDragLive({ x: 0, y: 0 })
       },
-      onPanResponderTerminate: () => {
+      onPanResponderTerminate: (_e, g) => {
+        setDragAccum((prev) => ({ x: prev.x + g.dx, y: prev.y + g.dy }))
         setDragLive({ x: 0, y: 0 })
       },
     })
