@@ -105,7 +105,7 @@ export interface MochiSpec {
   unlockXp: number
 }
 
-export const MOCHI_ROSTER_SIZE = 123
+export const MOCHI_ROSTER_SIZE = 118
 
 /**
  * Order in which archetype themes get cycled through the roster.
