@@ -96,12 +96,20 @@ export default function VillageScreen({ courseId }: Props) {
   // Drag-to-move state. While `draggingIndex` is set the sprite at
   // that slot is rendered with a PanResponder; everything else dims
   // and ScrollView scroll is frozen so the gesture stays under the
-  // finger. `dragAccum` is the cumulative pixel delta across gestures
-  // since drag mode opened (useful if the user lifts and drags again
-  // before confirming); `dragLive` is the in-flight gesture's delta.
+  // finger. `dragOffset` is the pixel delta from the sprite's base
+  // position, and is the single source of truth for the in-flight
+  // visual position. Confirm reads it; cancel clears it.
   const [draggingIndex, setDraggingIndex] = useState<number | null>(null)
-  const [dragAccum, setDragAccum] = useState({ x: 0, y: 0 })
-  const [dragLive, setDragLive] = useState({ x: 0, y: 0 })
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 })
+
+  // Refs keep the PanResponder's stable closure in sync with state.
+  // dragOffsetRef mirrors dragOffset so a fresh gesture can snapshot
+  // the current offset at grant time. gestureBaselineRef holds that
+  // snapshot so each move-event resets relative to where the gesture
+  // started — guarantees a clean drop, no race with React batching.
+  const dragOffsetRef = useRef(dragOffset)
+  dragOffsetRef.current = dragOffset
+  const gestureBaselineRef = useRef({ x: 0, y: 0 })
 
   function handleLayout(e: LayoutChangeEvent) {
     const h = e.nativeEvent.layout.height
@@ -115,14 +123,16 @@ export default function VillageScreen({ courseId }: Props) {
 
   function startDragging(index: number) {
     setDraggingIndex(index)
-    setDragAccum({ x: 0, y: 0 })
-    setDragLive({ x: 0, y: 0 })
+    setDragOffset({ x: 0, y: 0 })
+    dragOffsetRef.current = { x: 0, y: 0 }
+    gestureBaselineRef.current = { x: 0, y: 0 }
   }
 
   function cancelDragging() {
     setDraggingIndex(null)
-    setDragAccum({ x: 0, y: 0 })
-    setDragLive({ x: 0, y: 0 })
+    setDragOffset({ x: 0, y: 0 })
+    dragOffsetRef.current = { x: 0, y: 0 }
+    gestureBaselineRef.current = { x: 0, y: 0 }
   }
 
   function confirmDragging() {
@@ -132,48 +142,50 @@ export default function VillageScreen({ courseId }: Props) {
       cancelDragging()
       return
     }
-    const totalDx = dragAccum.x + dragLive.x
-    const totalDy = dragAccum.y + dragLive.y
     const newX = Math.max(
       0.02,
-      Math.min(0.98, base.x + totalDx / panoramaWidth)
+      Math.min(0.98, base.x + dragOffset.x / panoramaWidth)
     )
     const newY = Math.max(
       0.05,
-      Math.min(0.95, base.y + totalDy / viewportHeight)
+      Math.min(0.95, base.y + dragOffset.y / viewportHeight)
     )
     placements.move(draggingIndex, newX, newY)
     cancelDragging()
   }
 
-  // useRef + .current keeps a stable PanResponder across renders. The
-  // setState closures captured here are stable too. Termination paths
-  // must accumulate the gesture's dx — otherwise a parent responder
-  // hijacking the gesture mid-drag silently throws away the move and
-  // the sprite snaps back to its start.
+  // Stable PanResponder via useRef. Each gesture snapshots the current
+  // dragOffset into gestureBaselineRef on Grant, then every Move sets
+  // dragOffset = baseline + (g.dx, g.dy). Because the baseline is a
+  // ref read synchronously, there's no dependence on React's batched
+  // updates to keep position correct. On Release/Terminate, dragOffset
+  // already holds the final position; we just write it through to the
+  // mirror ref so the *next* gesture in this drag session resumes
+  // from the dropped point.
   const panResponder = useRef(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onMoveShouldSetPanResponder: () => true,
       onStartShouldSetPanResponderCapture: () => true,
       onMoveShouldSetPanResponderCapture: () => true,
-      // Refuse to yield once we've claimed the gesture — keeps the
-      // ScrollView and others from stealing the drag.
       onPanResponderTerminationRequest: () => false,
       onShouldBlockNativeResponder: () => true,
       onPanResponderGrant: () => {
-        setDragLive({ x: 0, y: 0 })
+        gestureBaselineRef.current = { ...dragOffsetRef.current }
       },
       onPanResponderMove: (_e, g) => {
-        setDragLive({ x: g.dx, y: g.dy })
+        const next = {
+          x: gestureBaselineRef.current.x + g.dx,
+          y: gestureBaselineRef.current.y + g.dy,
+        }
+        dragOffsetRef.current = next
+        setDragOffset(next)
       },
-      onPanResponderRelease: (_e, g) => {
-        setDragAccum((prev) => ({ x: prev.x + g.dx, y: prev.y + g.dy }))
-        setDragLive({ x: 0, y: 0 })
+      onPanResponderRelease: () => {
+        gestureBaselineRef.current = { ...dragOffsetRef.current }
       },
-      onPanResponderTerminate: (_e, g) => {
-        setDragAccum((prev) => ({ x: prev.x + g.dx, y: prev.y + g.dy }))
-        setDragLive({ x: 0, y: 0 })
+      onPanResponderTerminate: () => {
+        gestureBaselineRef.current = { ...dragOffsetRef.current }
       },
     })
   ).current
@@ -293,10 +305,8 @@ export default function VillageScreen({ courseId }: Props) {
                 const isDragging = draggingIndex === mochi.index
                 const baseX = resolved.x * panoramaWidth
                 const baseY = resolved.y * viewportHeight
-                const dragDx = isDragging ? dragAccum.x + dragLive.x : 0
-                const dragDy = isDragging ? dragAccum.y + dragLive.y : 0
-                const x = baseX + dragDx
-                const y = baseY + dragDy
+                const x = baseX + (isDragging ? dragOffset.x : 0)
+                const y = baseY + (isDragging ? dragOffset.y : 0)
                 const dimmed = draggingIndex !== null && !isDragging
 
                 if (isDragging) {
