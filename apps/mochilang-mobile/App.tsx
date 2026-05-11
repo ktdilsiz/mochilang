@@ -362,7 +362,12 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
           {(props) => <SettingsScreen onBack={() => props.navigation.goBack()} />}
         </Stack.Screen>
         <Stack.Screen name="Powerups">
-          {(props) => <PowerupsScreen onBack={() => props.navigation.goBack()} />}
+          {(props) => (
+            <PowerupsScreen
+              onBack={() => props.navigation.goBack()}
+              onAddDevXp={(amount) => void progress.addDevXp(amount)}
+            />
+          )}
         </Stack.Screen>
         <Stack.Screen name="Exam" options={{ presentation: 'modal' }}>
           {(props) => (

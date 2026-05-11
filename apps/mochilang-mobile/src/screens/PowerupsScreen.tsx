@@ -5,11 +5,18 @@ import {
   MAX_STREAK_FREEZES,
 } from '@mochilang/shared'
 import { usePowerups } from '../state/usePowerups'
+import { useSettings } from '../state/useSettings'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
   onBack: () => void
+  /**
+   * Dev-mode handler. When provided AND the developer-mode setting is on,
+   * a third card surfaces with a +10 XP button for testing XP-driven UI
+   * (streak, league, weekly totals) without grinding lessons.
+   */
+  onAddDevXp?: (amount: number) => void
 }
 
 /**
@@ -22,9 +29,11 @@ interface Props {
  * / Already claimed this week) so the user can read status at a glance,
  * then a single action button to claim/activate.
  */
-export default function PowerupsScreen({ onBack }: Props) {
+export default function PowerupsScreen({ onBack, onAddDevXp }: Props) {
   const insets = useSafeAreaInsets()
   const p = usePowerups()
+  const { state: settings } = useSettings()
+  const devMode = settings.developerMode
 
   const doubleXpStatus = p.doubleXpActive
     ? `Active — ${formatMs(p.doubleXpMsLeft)} left`
@@ -117,6 +126,26 @@ export default function PowerupsScreen({ onBack }: Props) {
         />
         <Text style={styles.footnote}>One claim per week, up to {MAX_STREAK_FREEZES} banked.</Text>
       </View>
+
+      {devMode && onAddDevXp && (
+        <View style={[styles.card, styles.devCard]}>
+          <View style={styles.cardHead}>
+            <Text style={styles.cardIcon}>🛠</Text>
+            <View style={styles.cardHeadText}>
+              <Text style={styles.cardTitle}>Dev: +10 XP</Text>
+              <Text style={styles.cardSub}>
+                Bumps total + weekly XP and refreshes streak. Doesn't touch
+                lesson completion state. Visible only with developer mode on.
+              </Text>
+            </View>
+          </View>
+          <LedgeButton
+            label="+10 XP"
+            tone="neutral"
+            onPress={() => onAddDevXp(10)}
+          />
+        </View>
+      )}
     </ScrollView>
   )
 }
@@ -147,6 +176,12 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     padding: space.md,
     gap: space.sm,
+  },
+  // Dev card visually distinct — dashed border to signal it's a hack/test
+  // affordance rather than a normal product feature.
+  devCard: {
+    borderStyle: 'dashed',
+    backgroundColor: colors.surfaceAlt,
   },
   cardHead: { flexDirection: 'row', alignItems: 'center', gap: space.md },
   cardIcon: { fontSize: 36 },

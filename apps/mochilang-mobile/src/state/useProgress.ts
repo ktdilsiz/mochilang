@@ -112,6 +112,38 @@ export function useProgress() {
     []
   )
 
+  /**
+   * Developer-mode helper: bump totalXp + weeklyXp + streak without
+   * touching the per-lesson results map. The server isn't involved —
+   * this is a local-only nudge used by the dev power-up button.
+   */
+  const addDevXp = useCallback(async (amount: number) => {
+    setState((prev) => {
+      const today = todayKey()
+      const yesterday = yesterdayKey()
+      const thisMonday = mondayOf()
+      const inSameWeek = prev.weekStart === thisMonday
+      let streak = prev.streak
+      if (prev.lastActiveDate === today) {
+        /* keep */
+      } else if (prev.lastActiveDate === yesterday) {
+        streak = prev.streak + 1
+      } else {
+        streak = 1
+      }
+      const next: ProgressState = {
+        ...prev,
+        totalXp: prev.totalXp + amount,
+        weeklyXp: (inSameWeek ? prev.weeklyXp : 0) + amount,
+        weekStart: thisMonday,
+        lastActiveDate: today,
+        streak,
+      }
+      void save(next)
+      return next
+    })
+  }, [])
+
   const reset = useCallback(async () => {
     try {
       const r = await api.resetProgress()
@@ -126,7 +158,7 @@ export function useProgress() {
 
   const isCompleted = (lessonId: string) => !!state.results[lessonId]
 
-  return { state, recordCompletion, reset, isCompleted }
+  return { state, recordCompletion, addDevXp, reset, isCompleted }
 }
 
 // Same offline-fallback math as the web hook + the Go backend, with a
