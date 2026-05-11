@@ -228,28 +228,33 @@ export default function CommunitySubmitScreen({ onBack, onPublished }: Props) {
   )
 }
 
+// Reference template — one lesson per supported exercise type so authors
+// can copy the JSON shape they need. Rename slug + title before publishing,
+// or strip out the lessons you don't want. Themes used: greetings, basics,
+// food, numbers, questions (full allowed set lives in the server's
+// internal/community/pack.go `allowedThemes`).
 const STARTER_TEMPLATE = `{
   "schemaVersion": 1,
-  "slug": "my-first-pack",
+  "slug": "rename-me-before-publishing",
   "sourceLang": "en",
   "targetLang": "tr",
-  "title": "My First Community Pack",
-  "description": "A short pack of greetings and basics.",
+  "title": "Exercise Types Demo",
+  "description": "Reference pack showing every exercise variant Mochilang supports. Rename the slug and title before publishing.",
   "level": {
-    "id": "starter",
-    "name": "Starter Level",
-    "description": "Warm-up lessons",
+    "id": "demo",
+    "name": "Exercise Showcase",
+    "description": "One lesson per exercise type — copy the JSON shape you need into your own pack.",
     "topics": [
       {
-        "id": "greetings",
-        "title": "Greetings",
-        "description": "Saying hello",
-        "theme": "greetings",
+        "id": "showcase",
+        "title": "Exercise Types",
+        "description": "Each lesson uses a different exercise variant",
+        "theme": "basics",
         "lessons": [
           {
-            "id": "hello",
-            "title": "Hello",
-            "description": "Most basic greetings",
+            "id": "multiple-choice",
+            "title": "Multiple choice",
+            "description": "Pick the right translation",
             "theme": "greetings",
             "xp": 10,
             "exercises": [
@@ -257,8 +262,78 @@ const STARTER_TEMPLATE = `{
                 "id": "ex1",
                 "type": "multiple_choice",
                 "prompt": "What does 'Merhaba' mean?",
-                "options": ["Hello", "Goodbye", "Thanks"],
-                "answer": "Hello"
+                "options": ["Hello", "Goodbye", "Thanks", "Sorry"],
+                "answer": "Hello",
+                "explanation": "Merhaba is the most common Turkish greeting."
+              }
+            ]
+          },
+          {
+            "id": "fill-blank",
+            "title": "Fill in the blank",
+            "description": "Type the missing word",
+            "theme": "basics",
+            "xp": 10,
+            "exercises": [
+              {
+                "id": "ex1",
+                "type": "fill_blank",
+                "prompt": "Type the Turkish word for 'cat': ___",
+                "answer": "kedi",
+                "acceptableAnswers": ["Kedi"]
+              }
+            ]
+          },
+          {
+            "id": "match-pairs",
+            "title": "Match pairs",
+            "description": "Connect each English word with its Turkish translation",
+            "theme": "food",
+            "xp": 10,
+            "exercises": [
+              {
+                "id": "ex1",
+                "type": "match_pairs",
+                "prompt": "Match each food word with its Turkish translation",
+                "pairs": [
+                  { "left": "bread", "right": "ekmek" },
+                  { "left": "water", "right": "su" },
+                  { "left": "apple", "right": "elma" }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "listen-and-choose",
+            "title": "Listen and choose",
+            "description": "Tap the word you hear",
+            "theme": "numbers",
+            "xp": 10,
+            "exercises": [
+              {
+                "id": "ex1",
+                "type": "listen_and_choose",
+                "prompt": "Which number did you hear?",
+                "spokenText": "üç",
+                "options": ["bir", "iki", "üç", "dört"],
+                "answer": "üç",
+                "explanation": "üç means three."
+              }
+            ]
+          },
+          {
+            "id": "tap-words-in-order",
+            "title": "Tap words in order",
+            "description": "Build the sentence by tapping the words in the right order",
+            "theme": "questions",
+            "xp": 10,
+            "exercises": [
+              {
+                "id": "ex1",
+                "type": "tap_words_in_order",
+                "prompt": "Translate: 'I am good'",
+                "answer": "Ben iyiyim",
+                "bank": ["Ben", "iyiyim", "kötüyüm", "sen"]
               }
             ]
           }
