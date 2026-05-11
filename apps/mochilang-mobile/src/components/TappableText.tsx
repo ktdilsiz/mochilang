@@ -58,20 +58,23 @@ function tokenize(text: string): Token[] {
 }
 
 const lingvaCache = new Map<string, string>()
-function lingvaKey(word: string, from: string, to: string): string {
-  return `${from}|${to}|${word.toLowerCase()}`
+function lingvaKey(word: string, to: string): string {
+  return `auto|${to}|${word.toLowerCase()}`
 }
 
-async function fetchLingva(
+function isEcho(input: string, output: string): boolean {
+  return output.toLowerCase().trim() === input.toLowerCase().trim()
+}
+
+async function tryLingva(
   word: string,
-  from: string,
   to: string
 ): Promise<string | null> {
-  const key = lingvaKey(word, from, to)
+  const key = lingvaKey(word, to)
   const cached = lingvaCache.get(key)
   if (cached) return cached
   try {
-    const r = await translate(word, { from, to })
+    const r = await translate(word, { from: 'auto', to })
     if (r?.translation && r.translation.length > 0) {
       lingvaCache.set(key, r.translation)
       return r.translation
@@ -80,6 +83,26 @@ async function fetchLingva(
     // Network or all endpoints failed.
   }
   return null
+}
+
+/**
+ * Smart-direction translate: prefer translating to the user's native
+ * (source) language, but if the tapped word is *already* in that
+ * language, Lingva's auto-detect would just echo it back. Retry with
+ * the target language as the destination so the user always gets a
+ * useful translation in the other direction.
+ */
+async function fetchLingva(
+  word: string,
+  sourceLang: string,
+  targetLang: string
+): Promise<string | null> {
+  if (sourceLang === targetLang) return tryLingva(word, sourceLang)
+  const a = await tryLingva(word, sourceLang)
+  if (a && !isEcho(word, a)) return a
+  const b = await tryLingva(word, targetLang)
+  if (b && !isEcho(word, b)) return b
+  return a ?? b
 }
 
 /**
@@ -129,7 +152,9 @@ export default function TappableText({ text, style }: Props) {
       }
     }
 
-    // 3. Lingva
+    // 3. Lingva (smart-direction: prefer source-lang translation,
+    // fall back to target if the input was already in source-lang
+    // and Lingva would otherwise echo it).
     setActive({
       word: token.word,
       pinyin: token.pinyin,
@@ -137,7 +162,7 @@ export default function TappableText({ text, style }: Props) {
       source: 'lingva',
       loading: true,
     })
-    const t = await fetchLingva(token.word, ctx.fromLang, ctx.toLang)
+    const t = await fetchLingva(token.word, ctx.sourceLang, ctx.targetLang)
     setActive((curr) =>
       curr && curr.word === token.word
         ? {

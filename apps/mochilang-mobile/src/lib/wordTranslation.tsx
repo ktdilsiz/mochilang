@@ -20,15 +20,17 @@ import { createContext, useContext } from 'react'
 
 export interface WordTranslationCtx {
   enabled: boolean
-  fromLang: string
-  toLang: string
+  /** The language being learned (course target — e.g. 'en' for en-tr). */
+  targetLang: string
+  /** The user's native language (course source — e.g. 'tr' for en-tr). */
+  sourceLang: string
   wordTranslations?: Record<string, string>
 }
 
 const DEFAULT: WordTranslationCtx = {
   enabled: false,
-  fromLang: 'auto',
-  toLang: 'en',
+  targetLang: 'en',
+  sourceLang: 'en',
 }
 
 const Ctx = createContext<WordTranslationCtx>(DEFAULT)

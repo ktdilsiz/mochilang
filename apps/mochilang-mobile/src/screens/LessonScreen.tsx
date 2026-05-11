@@ -117,19 +117,20 @@ export default function LessonScreen({
     }
   }
 
-  // Translation tap-target wiring. Course id `${target}-${source}`
-  // means the words in the lesson are predominantly in `target`,
-  // and the user wants translations into `source` (their native).
+  // Translation tap-target wiring. Course id is `${target}-${source}`
+  // where `target` is the language being learned and `source` is the
+  // user's native. The TappableText component handles auto-detect +
+  // smart direction internally, so we just hand it both codes.
   const parsed = parseCourseId(courseId)
-  const fromLang = parsed?.target ?? 'auto'
-  const toLang = parsed?.source ?? 'en'
+  const targetLang = parsed?.target ?? 'en'
+  const sourceLang = parsed?.source ?? 'en'
 
   return (
     <WordTranslationProvider
       value={{
         enabled: true,
-        fromLang,
-        toLang,
+        targetLang,
+        sourceLang,
         wordTranslations: lesson.wordTranslations,
       }}
     >
