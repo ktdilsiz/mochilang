@@ -39,6 +39,7 @@ import LanguageSelectScreen from './src/screens/LanguageSelectScreen'
 import CommunityListScreen from './src/screens/CommunityListScreen'
 import CommunityPackScreen from './src/screens/CommunityPackScreen'
 import CommunitySubmitScreen from './src/screens/CommunitySubmitScreen'
+import PowerupsScreen from './src/screens/PowerupsScreen'
 import SettingsScreen from './src/screens/SettingsScreen'
 import TopicExamScreen from './src/screens/TopicExamScreen'
 import LevelExamScreen from './src/screens/LevelExamScreen'
@@ -46,6 +47,7 @@ import LevelExamIntroScreen from './src/screens/LevelExamIntroScreen'
 import PracticeMistakesScreen from './src/screens/PracticeMistakesScreen'
 import ProfileSetup from './src/components/ProfileSetup'
 import { useProgress } from './src/state/useProgress'
+import { usePowerups } from './src/state/usePowerups'
 import { useProfile } from './src/state/useProfile'
 import { useCourse } from './src/state/useCourse'
 import { useTopicExams } from './src/state/useTopicExams'
@@ -85,6 +87,7 @@ type RootStackParamList = {
   CommunityList: undefined
   CommunityPack: { packId: string }
   CommunitySubmit: undefined
+  Powerups: undefined
 }
 
 // Convenience alias used at the tab leaves to navigate the parent stack.
@@ -169,6 +172,7 @@ interface SignedInAppProps {
 function SignedInApp({ onSignOut }: SignedInAppProps) {
   const progress = useProgress()
   const profile = useProfile()
+  const powerups = usePowerups()
   const exams = useTopicExams()
   const levelExams = useLevelExams()
   const [courseId, setCourseId] = useState<string | null>(null)
@@ -308,6 +312,7 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
                 })
               }
               onOpenSettings={() => props.navigation.navigate('Settings')}
+              onOpenPowerups={() => props.navigation.navigate('Powerups')}
               onTakeExam={(topic) => props.navigation.navigate('Exam', { topic })}
               onTakeLevelExam={(level) =>
                 props.navigation.navigate('LevelExamIntro', { level })
@@ -343,6 +348,7 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
           {(props) => (
             <LessonRoute
               progress={progress}
+              powerups={powerups}
               recordMistake={recordMistake}
               courseId={courseId ?? DEFAULT_COURSE_ID}
               {...props}
@@ -354,6 +360,9 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
         </Stack.Screen>
         <Stack.Screen name="Settings">
           {(props) => <SettingsScreen onBack={() => props.navigation.goBack()} />}
+        </Stack.Screen>
+        <Stack.Screen name="Powerups">
+          {(props) => <PowerupsScreen onBack={() => props.navigation.goBack()} />}
         </Stack.Screen>
         <Stack.Screen name="Exam" options={{ presentation: 'modal' }}>
           {(props) => (
@@ -428,6 +437,7 @@ interface SignedInTabsProps {
   onSignOut: () => void
   onSwitchLanguage: () => void
   onOpenSettings: () => void
+  onOpenPowerups: () => void
   onTakeExam: (topic: Topic) => void
   onTakeLevelExam: (level: Level) => void
   onPracticeLesson: (lesson: Lesson) => void
@@ -446,6 +456,7 @@ function SignedInTabs({
   onSignOut,
   onSwitchLanguage,
   onOpenSettings,
+  onOpenPowerups,
   onTakeExam,
   onTakeLevelExam,
   onPracticeLesson,
@@ -523,6 +534,7 @@ function SignedInTabs({
             levels={course.levels}
             onSwitchLanguage={onSwitchLanguage}
             onOpenSettings={onOpenSettings}
+            onOpenPowerups={onOpenPowerups}
             onResetProgress={() => {
               void progress.reset()
               exams.reset()
@@ -546,10 +558,12 @@ function LessonRoute({
   route,
   navigation,
   progress,
+  powerups,
   recordMistake,
   courseId,
 }: NativeStackScreenProps<RootStackParamList, 'Lesson'> & {
   progress: ReturnType<typeof useProgress>
+  powerups: ReturnType<typeof usePowerups>
   recordMistake: (exerciseId: string) => void
   courseId: string
 }) {
@@ -559,7 +573,18 @@ function LessonRoute({
       lesson={lesson}
       courseId={courseId}
       onComplete={(mistakes) => {
-        void progress.recordCompletion(lesson.id, mistakes, lesson.xp)
+        const lastActive = progress.state.lastActiveDate
+        const useFreeze = powerups.shouldUseStreakFreezeNow(lastActive)
+        void progress
+          .recordCompletion(lesson.id, mistakes, lesson.xp, {
+            xpMultiplier: powerups.xpMultiplier,
+            useStreakFreeze: useFreeze,
+          })
+          .then(() => {
+            // Bridge the missed day by spending one freeze — fire-and-
+            // forget; if the write fails we accept the in-memory drop.
+            if (useFreeze) void powerups.consumeStreakFreeze()
+          })
         navigation.goBack()
       }}
       onBack={() => navigation.goBack()}

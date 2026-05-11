@@ -75,9 +75,22 @@ export function useProgress() {
   }, [])
 
   const recordCompletion = useCallback(
-    async (lessonId: string, mistakes: number, baseXp: number) => {
+    async (
+      lessonId: string,
+      mistakes: number,
+      baseXp: number,
+      opts?: { xpMultiplier?: number; useStreakFreeze?: boolean },
+    ) => {
+      const multiplier = opts?.xpMultiplier ?? 1
       try {
-        const r = await api.recordCompletion({ lessonId, mistakes, baseXp })
+        // Pre-multiply baseXp so the server (which doesn't know about
+        // power-ups yet) credits the doubled amount. Server still
+        // applies the no-mistake 2× on top.
+        const r = await api.recordCompletion({
+          lessonId,
+          mistakes,
+          baseXp: baseXp * multiplier,
+        })
         const next: ProgressState = {
           totalXp: r.totalXp,
           streak: r.streak,
@@ -90,7 +103,7 @@ export function useProgress() {
         void save(next)
       } catch {
         setState((prev) => {
-          const next = optimisticCompletion(prev, lessonId, mistakes, baseXp)
+          const next = optimisticCompletion(prev, lessonId, mistakes, baseXp, opts)
           void save(next)
           return next
         })
@@ -116,26 +129,36 @@ export function useProgress() {
   return { state, recordCompletion, reset, isCompleted }
 }
 
-// Same offline-fallback math as the web hook + the Go backend.
+// Same offline-fallback math as the web hook + the Go backend, with a
+// small extension: optional xpMultiplier (Double XP power-up) and
+// useStreakFreeze (pretend the user played yesterday so the streak
+// gains +1 instead of resetting to 1).
 function optimisticCompletion(
   prev: ProgressState,
   lessonId: string,
   mistakes: number,
-  baseXp: number
+  baseXp: number,
+  opts?: { xpMultiplier?: number; useStreakFreeze?: boolean }
 ): ProgressState {
   const today = todayKey()
   const yesterday = yesterdayKey()
-  const xpEarned = mistakes === 0 ? baseXp * 2 : baseXp
+  const multiplier = opts?.xpMultiplier ?? 1
+  const xpEarned = (mistakes === 0 ? baseXp * 2 : baseXp) * multiplier
   const prevResult = prev.results[lessonId]
   const bestMistakes =
     prevResult === undefined
       ? mistakes
       : Math.min(prevResult.bestMistakes, mistakes)
 
+  // If a freeze is being burned, treat the gap as if yesterday was active.
+  const effectiveLastActive = opts?.useStreakFreeze
+    ? yesterday
+    : prev.lastActiveDate
+
   let streak = prev.streak
-  if (prev.lastActiveDate === today) {
+  if (effectiveLastActive === today) {
     /* keep */
-  } else if (prev.lastActiveDate === yesterday) {
+  } else if (effectiveLastActive === yesterday) {
     streak = prev.streak + 1
   } else {
     streak = 1

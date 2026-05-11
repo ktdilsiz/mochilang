@@ -20,6 +20,7 @@ import { pickReviewSuggestions, tierAt } from '@mochilang/shared'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import LedgeButton from '../components/LedgeButton'
 import { AVATAR_OPTIONS, avatarById } from '../data/avatars'
+import { usePowerups } from '../state/usePowerups'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -31,6 +32,7 @@ interface Props {
   levels: Level[]
   onSwitchLanguage: () => void
   onOpenSettings: () => void
+  onOpenPowerups: () => void
   onResetProgress: () => void
   onResetProfile: () => void
   onSignOut: () => void
@@ -54,6 +56,7 @@ export default function ProfileScreen({
   levels,
   onSwitchLanguage,
   onOpenSettings,
+  onOpenPowerups,
   onResetProgress,
   onResetProfile,
   onSignOut,
@@ -194,6 +197,12 @@ export default function ProfileScreen({
             review.
           </Text>
         )}
+      </View>
+
+      {/* Power-ups */}
+      <View style={styles.section}>
+        <Text style={styles.sectionHead}>Power-ups</Text>
+        <PowerupsSummary onOpen={onOpenPowerups} />
       </View>
 
       {/* Settings */}
@@ -395,6 +404,52 @@ function ActionButton({
   return <LedgeButton label={label} tone={tone} disabled={disabled} onPress={onPress} />
 }
 
+/**
+ * Compact summary row for the Profile screen — shows live Double XP +
+ * streak-freeze state next to a button into the full power-ups menu.
+ * Re-uses usePowerups so this card auto-ticks during the 30-min window.
+ */
+function PowerupsSummary({ onOpen }: { onOpen: () => void }) {
+  const p = usePowerups()
+  const doubleXpLine = p.doubleXpActive
+    ? `Active — ${formatPowerupMs(p.doubleXpMsLeft)} left`
+    : p.canActivateDoubleXp
+      ? 'Available'
+      : 'Used today'
+
+  return (
+    <View style={styles.powerupCard}>
+      <View style={styles.powerupRow}>
+        <Text style={styles.powerupIcon}>⚡</Text>
+        <View style={styles.powerupTextCol}>
+          <Text style={styles.powerupLabel}>Double XP</Text>
+          <Text style={styles.powerupValue}>{doubleXpLine}</Text>
+        </View>
+      </View>
+      <View style={styles.powerupRow}>
+        <Text style={styles.powerupIcon}>🥶</Text>
+        <View style={styles.powerupTextCol}>
+          <Text style={styles.powerupLabel}>Streak Freezes</Text>
+          <Text style={styles.powerupValue}>
+            {p.state.streakFreezeCount} banked
+            {p.canClaimStreakFreeze ? ' · 1 available' : ''}
+          </Text>
+        </View>
+      </View>
+      <View style={styles.powerupBtn}>
+        <LedgeButton label="View power-ups" tone="neutral" onPress={onOpen} />
+      </View>
+    </View>
+  )
+}
+
+function formatPowerupMs(ms: number): string {
+  const totalSec = Math.max(0, Math.floor(ms / 1000))
+  const m = Math.floor(totalSec / 60)
+  const s = totalSec % 60
+  return `${m}:${String(s).padStart(2, '0')}`
+}
+
 const styles = StyleSheet.create({
   shell: {
     padding: space.lg,
@@ -510,6 +565,32 @@ const styles = StyleSheet.create({
   actionsCol: {
     gap: space.sm,
   },
+  powerupCard: {
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radius.md,
+    padding: space.md,
+    gap: space.sm,
+  },
+  powerupRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.md,
+  },
+  powerupIcon: { fontSize: 24, width: 28, textAlign: 'center' },
+  powerupTextCol: { flex: 1, gap: 1 },
+  powerupLabel: {
+    fontSize: fontSizes.sm,
+    fontWeight: '900',
+    color: colors.text,
+  },
+  powerupValue: {
+    fontSize: fontSizes.xs,
+    color: colors.textMuted,
+    fontWeight: '700',
+  },
+  powerupBtn: { marginTop: space.xs },
   actionHint: {
     marginTop: space.sm,
     fontSize: fontSizes.sm,
