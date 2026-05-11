@@ -36,6 +36,9 @@ import VillageScreen from './src/screens/VillageScreen'
 import ProfileScreen from './src/screens/ProfileScreen'
 import TopicGuideScreen from './src/screens/TopicGuideScreen'
 import LanguageSelectScreen from './src/screens/LanguageSelectScreen'
+import CommunityListScreen from './src/screens/CommunityListScreen'
+import CommunityPackScreen from './src/screens/CommunityPackScreen'
+import CommunitySubmitScreen from './src/screens/CommunitySubmitScreen'
 import SettingsScreen from './src/screens/SettingsScreen'
 import TopicExamScreen from './src/screens/TopicExamScreen'
 import LevelExamScreen from './src/screens/LevelExamScreen'
@@ -79,6 +82,9 @@ type RootStackParamList = {
   LevelExamIntro: { level: Level }
   LevelExam: { level: Level }
   PracticeMistakes: { label: string; ids: string[] }
+  CommunityList: undefined
+  CommunityPack: { packId: string }
+  CommunitySubmit: undefined
 }
 
 // Convenience alias used at the tab leaves to navigate the parent stack.
@@ -177,7 +183,9 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
     void (async () => {
       try {
         const stored = await AsyncStorage.getItem(SELECTED_COURSE_KEY)
-        if (stored && parseCourseId(stored)) {
+        // Accept canonical xx-yy ids plus community:<packId> for users
+        // who were mid-study of a community pack when they closed.
+        if (stored && (parseCourseId(stored) || stored.startsWith('community:'))) {
           setCourseId(stored)
         }
       } catch {
@@ -242,6 +250,42 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
                 props.route.params?.allowCancel
                   ? () => props.navigation.goBack()
                   : undefined
+              }
+              onOpenCommunity={() => props.navigation.navigate('CommunityList')}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name="CommunityList">
+          {(props) => (
+            <CommunityListScreen
+              onBack={() => props.navigation.goBack()}
+              onOpenPack={(packId) =>
+                props.navigation.navigate('CommunityPack', { packId })
+              }
+              onSubmit={() => props.navigation.navigate('CommunitySubmit')}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name="CommunityPack">
+          {(props) => (
+            <CommunityPackScreen
+              packId={props.route.params.packId}
+              onBack={() => props.navigation.goBack()}
+              onStartPack={(packId) => {
+                // Switch the active course to this pack and surface the
+                // tabs/path UI the user already knows.
+                handleSelectCourse('community:' + packId)
+                props.navigation.reset({ index: 0, routes: [{ name: 'Tabs' }] })
+              }}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name="CommunitySubmit">
+          {(props) => (
+            <CommunitySubmitScreen
+              onBack={() => props.navigation.goBack()}
+              onPublished={(packId) =>
+                props.navigation.replace('CommunityPack', { packId })
               }
             />
           )}

@@ -24,6 +24,8 @@ interface Props {
   initialCourseId?: string | null
   onSelect: (courseId: string) => void
   onCancel?: () => void
+  /** Optional: tapping the Community Lessons card opens the browse screen. */
+  onOpenCommunity?: () => void
 }
 
 /**
@@ -36,6 +38,7 @@ export default function LanguageSelectScreen({
   initialCourseId,
   onSelect,
   onCancel,
+  onOpenCommunity,
 }: Props) {
   const insets = useSafeAreaInsets()
   const [courses, setCourses] = useState<CourseSummary[]>(() => fallbackCourses())
@@ -134,6 +137,23 @@ export default function LanguageSelectScreen({
           </TouchableOpacity>
         )}
       </View>
+
+      {onOpenCommunity && (
+        <TouchableOpacity
+          style={styles.communityCard}
+          onPress={onOpenCommunity}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.communityIcon}>🌍</Text>
+          <View style={styles.communityText}>
+            <Text style={styles.communityTitle}>Community Lessons</Text>
+            <Text style={styles.communitySub}>
+              Packs built by other learners. Browse, study, or publish your own.
+            </Text>
+          </View>
+          <Text style={styles.communityChevron}>›</Text>
+        </TouchableOpacity>
+      )}
     </ScrollView>
   )
 }
@@ -244,4 +264,20 @@ const styles = StyleSheet.create({
   },
   cancel: { paddingVertical: space.sm },
   cancelText: { color: colors.textMuted, fontWeight: '700', fontSize: fontSizes.md },
+  communityCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.md,
+    backgroundColor: colors.surface,
+    borderWidth: 2,
+    borderColor: colors.border,
+    borderBottomWidth: 4,
+    borderRadius: radius.md,
+    padding: space.md,
+  },
+  communityIcon: { fontSize: 28 },
+  communityText: { flex: 1, gap: 2 },
+  communityTitle: { fontSize: fontSizes.md, fontWeight: '900', color: colors.text },
+  communitySub: { fontSize: fontSizes.xs, color: colors.textMuted },
+  communityChevron: { fontSize: 28, color: colors.textSubtle, fontWeight: '900' },
 })

@@ -18,6 +18,7 @@ type User struct {
 	EmailVerified   int            `db:"email_verified" json:"-"`
 	GoogleSub       sql.NullString `db:"google_sub" json:"-"`
 	Picture         sql.NullString `db:"picture" json:"-"`
+	Handle          sql.NullString `db:"handle" json:"-"`
 	LeagueTier      int            `db:"league_tier" json:"leagueTier"`
 	LeagueWeekStart sql.NullString `db:"league_week_start" json:"-"`
 	LastWeekRank    sql.NullInt64  `db:"last_week_rank" json:"-"`

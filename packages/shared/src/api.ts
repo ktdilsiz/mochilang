@@ -1,3 +1,12 @@
+import type {
+  CommunityComment,
+  CommunityPack,
+  CommunityPackEnvelope,
+  CommunityPackSummary,
+  CommunityRating,
+  CommunityReportReason,
+} from './community'
+
 /**
  * Typed client for the mochilang API.
  *
@@ -266,4 +275,63 @@ export const api = {
     request<{ locales: string[] }>('/api/i18n/locales', { signal }),
   getLocale: (code: string, signal?: AbortSignal) =>
     request<Record<string, string>>(`/api/i18n/${encodeURIComponent(code)}`, { signal }),
+
+  // Community-authored packs (browse + detail are public; everything else
+  // requires a session cookie).
+  community: {
+    list: (
+      filter: { source?: string; target?: string; limit?: number } = {},
+      signal?: AbortSignal,
+    ) => {
+      const q = new URLSearchParams()
+      if (filter.source) q.set('source', filter.source)
+      if (filter.target) q.set('target', filter.target)
+      if (filter.limit) q.set('limit', String(filter.limit))
+      const qs = q.toString()
+      return request<{ packs: CommunityPackSummary[] }>(
+        `/api/community/packs${qs ? '?' + qs : ''}`,
+        { signal },
+      )
+    },
+    get: (id: string, signal?: AbortSignal) =>
+      request<CommunityPack>(
+        `/api/community/packs/${encodeURIComponent(id)}`,
+        { signal },
+      ),
+    listComments: (id: string, signal?: AbortSignal) =>
+      request<{ comments: CommunityComment[] }>(
+        `/api/community/packs/${encodeURIComponent(id)}/comments`,
+        { signal },
+      ),
+    setHandle: (handle: string) =>
+      request<{ handle: string }>('/api/community/handle', {
+        method: 'POST',
+        body: { handle },
+      }),
+    submit: (envelope: CommunityPackEnvelope) =>
+      request<{ id: string; slug: string; url: string }>(
+        '/api/community/packs',
+        { method: 'POST', body: envelope },
+      ),
+    delete: (id: string) =>
+      request<Record<string, never>>(
+        `/api/community/packs/${encodeURIComponent(id)}`,
+        { method: 'DELETE' },
+      ),
+    rate: (id: string, stars: number) =>
+      request<{ rating: CommunityRating; userRating: number }>(
+        `/api/community/packs/${encodeURIComponent(id)}/rate`,
+        { method: 'POST', body: { stars } },
+      ),
+    comment: (id: string, body: string) =>
+      request<{ id: number }>(
+        `/api/community/packs/${encodeURIComponent(id)}/comments`,
+        { method: 'POST', body: { body } },
+      ),
+    report: (id: string, reason: CommunityReportReason, notes?: string) =>
+      request<Record<string, never>>(
+        `/api/community/packs/${encodeURIComponent(id)}/report`,
+        { method: 'POST', body: { reason, notes } },
+      ),
+  },
 }

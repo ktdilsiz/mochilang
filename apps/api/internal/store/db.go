@@ -5,6 +5,17 @@
 // keeps the path to a future Postgres migration mechanical: the SQL strings
 // stay almost identical, only a few SQLite-specific bits (ON CONFLICT,
 // AUTOINCREMENT) need touching up.
+//
+// Two SQLite files back the store:
+//
+//   - main.db (DB)          — identity, sessions, profile, progress, seed
+//                             content, community_packs.
+//   - community.db (Community) — user-generated chatter: ratings, comments,
+//                                reports, moderation flags.
+//
+// Splitting them lets us wipe / back up / migrate UGC independently of
+// canonical content and identity data. Cross-DB joins aren't possible in
+// SQLite, so we join on user_id / pack_id in Go where the two need to mix.
 package store
 
 import (
@@ -24,41 +35,73 @@ import (
 //go:embed migrations/*.sql
 var migrationsFS embed.FS
 
+//go:embed migrations_community/*.sql
+var communityMigrationsFS embed.FS
+
 // ErrNotFound is returned by repos when a row is missing. Handlers map this
 // to HTTP 404.
 var ErrNotFound = errors.New("store: not found")
 
 type Store struct {
-	DB *sqlx.DB
+	DB        *sqlx.DB
+	Community *sqlx.DB
 }
 
-// Open creates the SQLite file if needed and applies any pending migrations.
-// Foreign keys are enabled per-connection — SQLite has them off by default.
-func Open(path string) (*Store, error) {
+// Open creates both SQLite files if needed and applies any pending migrations
+// to each. Foreign keys are enabled per-connection — SQLite has them off
+// by default.
+func Open(mainPath, communityPath string) (*Store, error) {
+	mainDB, err := openSQLite(mainPath)
+	if err != nil {
+		return nil, fmt.Errorf("open main: %w", err)
+	}
+	if err := migrate(mainDB, migrationsFS, "migrations"); err != nil {
+		_ = mainDB.Close()
+		return nil, fmt.Errorf("migrate main: %w", err)
+	}
+
+	commDB, err := openSQLite(communityPath)
+	if err != nil {
+		_ = mainDB.Close()
+		return nil, fmt.Errorf("open community: %w", err)
+	}
+	if err := migrate(commDB, communityMigrationsFS, "migrations_community"); err != nil {
+		_ = mainDB.Close()
+		_ = commDB.Close()
+		return nil, fmt.Errorf("migrate community: %w", err)
+	}
+
+	return &Store{DB: mainDB, Community: commDB}, nil
+}
+
+func openSQLite(path string) (*sqlx.DB, error) {
 	dsn := path + "?_pragma=foreign_keys(1)&_pragma=journal_mode(WAL)&_pragma=busy_timeout(5000)"
 	db, err := sqlx.Open("sqlite", dsn)
 	if err != nil {
-		return nil, fmt.Errorf("open sqlite: %w", err)
+		return nil, err
 	}
 	if err := db.Ping(); err != nil {
-		return nil, fmt.Errorf("ping sqlite: %w", err)
-	}
-	s := &Store{DB: db}
-	if err := s.migrate(); err != nil {
 		_ = db.Close()
-		return nil, fmt.Errorf("migrate: %w", err)
+		return nil, err
 	}
-	return s, nil
+	return db, nil
 }
 
-func (s *Store) Close() error { return s.DB.Close() }
+func (s *Store) Close() error {
+	err1 := s.DB.Close()
+	err2 := s.Community.Close()
+	if err1 != nil {
+		return err1
+	}
+	return err2
+}
 
 // migrate applies any embedded migrations whose name isn't already recorded
 // in `_migrations`. Migration files are applied in lexicographic order, so
 // the 4-digit prefix in their filename determines run order.
-func (s *Store) migrate() error {
+func migrate(db *sqlx.DB, migFS fs.FS, dir string) error {
 	ctx := context.Background()
-	if _, err := s.DB.ExecContext(ctx, `
+	if _, err := db.ExecContext(ctx, `
 		CREATE TABLE IF NOT EXISTS _migrations (
 			name TEXT PRIMARY KEY,
 			applied_at INTEGER NOT NULL
@@ -66,12 +109,12 @@ func (s *Store) migrate() error {
 		return err
 	}
 
-	applied, err := s.appliedMigrations(ctx)
+	applied, err := appliedMigrations(ctx, db)
 	if err != nil {
 		return err
 	}
 
-	files, err := fs.ReadDir(migrationsFS, "migrations")
+	files, err := fs.ReadDir(migFS, dir)
 	if err != nil {
 		return err
 	}
@@ -88,13 +131,13 @@ func (s *Store) migrate() error {
 		if _, ok := applied[name]; ok {
 			continue
 		}
-		body, err := fs.ReadFile(migrationsFS, "migrations/"+name)
+		body, err := fs.ReadFile(migFS, dir+"/"+name)
 		if err != nil {
 			return err
 		}
 		// Each migration runs in its own transaction. SQLite supports
 		// multi-statement Exec, so we don't need to split on `;`.
-		tx, err := s.DB.BeginTx(ctx, nil)
+		tx, err := db.BeginTx(ctx, nil)
 		if err != nil {
 			return err
 		}
@@ -116,8 +159,8 @@ func (s *Store) migrate() error {
 	return nil
 }
 
-func (s *Store) appliedMigrations(ctx context.Context) (map[string]struct{}, error) {
-	rows, err := s.DB.QueryContext(ctx, `SELECT name FROM _migrations`)
+func appliedMigrations(ctx context.Context, db *sqlx.DB) (map[string]struct{}, error) {
+	rows, err := db.QueryContext(ctx, `SELECT name FROM _migrations`)
 	if err != nil {
 		return nil, err
 	}
