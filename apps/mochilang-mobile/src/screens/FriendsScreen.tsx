@@ -8,19 +8,42 @@ import {
   View,
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { api, ApiError, daysSinceMonday, type FriendResponse } from '@mochilang/shared'
+import {
+  api,
+  ApiError,
+  daysSinceMonday,
+  friendWeekActivity,
+  mondayOf,
+  type FriendResponse,
+} from '@mochilang/shared'
 import friendsFallback from '../../assets/friends.json'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 /**
- * Offline source-of-truth for the friends roster. Same JSON the web
- * app bundles, copied into mobile assets so the screen renders even
- * with no network.
+ * Bundled seed for the friends roster — only the static fields are
+ * stored on disk (id, weekly, etc). thisWeek + daily get computed
+ * deterministically per render so the offline sparkline matches what
+ * the API would have returned bit-for-bit.
  */
-const BUNDLED_FRIENDS: FriendResponse[] = (
-  friendsFallback as { friends: FriendResponse[] }
+type BundledFriend = Omit<FriendResponse, 'thisWeek' | 'daily'>
+
+const BUNDLED_FRIENDS: BundledFriend[] = (
+  friendsFallback as { friends: BundledFriend[] }
 ).friends
+
+/**
+ * Apply friendWeekActivity to every seed row so consumers see a full
+ * FriendResponse shape. Same week-start / daysIntoWeek used by the
+ * server.
+ */
+function enrichBundled(daysIntoWeek: number): FriendResponse[] {
+  const weekStart = mondayOf()
+  return BUNDLED_FRIENDS.map((f) => {
+    const { daily, thisWeek } = friendWeekActivity(f.id, f.weekly, weekStart, daysIntoWeek)
+    return { ...f, daily, thisWeek }
+  })
+}
 
 /**
  * RN port of the web FriendsScreen. Mirrors the web flow:
@@ -38,8 +61,12 @@ export default function FriendsScreen({ nested }: Props = {}) {
   const topInset = nested ? 0 : insets.top + space.md
   // Seed with the bundled roster so the screen renders something
   // even before the API fetch resolves (or never does in offline).
-  const [friends, setFriends] = useState<FriendResponse[]>(BUNDLED_FRIENDS)
+  // Activity (daily/thisWeek) is computed from the local week — see
+  // enrichBundled — so the sparkline matches the server's output.
   const [daysIntoWeek, setDaysIntoWeek] = useState<number>(() => daysSinceMonday())
+  const [friends, setFriends] = useState<FriendResponse[]>(() =>
+    enrichBundled(daysSinceMonday()),
+  )
   const [offline, setOffline] = useState(false)
   const [loaded, setLoaded] = useState(false)
   const [selected, setSelected] = useState<FriendResponse | null>(null)
