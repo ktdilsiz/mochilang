@@ -10,6 +10,7 @@ import {
   Platform,
   Pressable,
   ScrollView,
+  Share,
   StyleSheet,
   Text,
   TextInput,
@@ -133,6 +134,40 @@ export default function VillageScreen({ courseId }: Props) {
   const totalXp = progress.state.totalXp
   const unlockedCount = useMemo(() => countUnlockedMochis(totalXp), [totalXp])
   const next = useMemo(() => nextMochi(totalXp), [totalXp])
+
+  // Dump the current x/y for every roster slot — overrides win,
+  // VILLAGE_POSITIONS is the fallback. Format mirrors VILLAGE_POSITIONS
+  // so the JSON can be pasted into the source array (after fixing
+  // up the surrounding type). Coordinates round to 4 decimals — that
+  // is ~0.1% of panorama width, plenty of precision and keeps the
+  // payload readable.
+  async function exportPlacements() {
+    const placementsOut = MOCHI_ROSTER.flatMap((m) => {
+      const base = VILLAGE_POSITIONS[m.index]
+      if (!base) return []
+      const o = placements.overrides[m.index]
+      return [
+        {
+          index: m.index,
+          x: Math.round((o?.x ?? base.x) * 10000) / 10000,
+          y: Math.round((o?.y ?? base.y) * 10000) / 10000,
+        },
+      ]
+    })
+    const payload = {
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      placements: placementsOut,
+    }
+    try {
+      await Share.share({
+        title: 'Mochi Village Placements',
+        message: JSON.stringify(payload, null, 2),
+      })
+    } catch {
+      /* user dismissed share sheet */
+    }
+  }
 
   function startDragging(index: number) {
     setDraggingIndex(index)
@@ -474,6 +509,7 @@ export default function VillageScreen({ courseId }: Props) {
         }}
         onInvite={(idx) => visits.invite(idx)}
         onResetAll={() => placements.resetAll()}
+        onExport={exportPlacements}
       />
     </View>
   )
@@ -764,6 +800,7 @@ interface AtlasModalProps {
   onAbout: (index: number) => void
   onInvite: (index: number) => void
   onResetAll: () => void
+  onExport: () => void
 }
 
 function AtlasModal({
@@ -778,6 +815,7 @@ function AtlasModal({
   onAbout,
   onInvite,
   onResetAll,
+  onExport,
 }: AtlasModalProps) {
   const insets = useSafeAreaInsets()
   return (
@@ -809,6 +847,15 @@ function AtlasModal({
             ]}
           >
             <Text style={styles.atlasResetText}>↺ Reset all placements</Text>
+          </Pressable>
+          <Pressable
+            onPress={onExport}
+            style={({ pressed }) => [
+              styles.atlasResetBtn,
+              pressed && { opacity: 0.7 },
+            ]}
+          >
+            <Text style={styles.atlasResetText}>📤 Export all placements</Text>
           </Pressable>
         </View>
         <FlatList
@@ -1253,6 +1300,9 @@ const styles = StyleSheet.create({
   },
   atlasCloseText: { fontSize: 20, color: colors.text },
   atlasToolbar: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: space.sm,
     paddingHorizontal: space.lg,
     paddingBottom: space.sm,
   },
