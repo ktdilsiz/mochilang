@@ -155,21 +155,16 @@ export default function VillageScreen({ courseId }: Props) {
   }
 
   // Stable PanResponder via useRef. Each gesture snapshots the current
-  // dragOffset into gestureBaselineRef on Grant, then every Move sets
+  // dragOffset into gestureBaselineRef on Grant; every Move writes
   // dragOffset = baseline + (g.dx, g.dy). Because the baseline is a
-  // ref read synchronously, there's no dependence on React's batched
-  // updates to keep position correct. On Release/Terminate, dragOffset
-  // already holds the final position; we just write it through to the
-  // mirror ref so the *next* gesture in this drag session resumes
-  // from the dropped point.
+  // ref read synchronously inside the move callback, the rendered
+  // position never depends on React's batched updates being applied
+  // in any particular order. Drop = Release = no-op; dragOffset is
+  // already correct.
   const panResponder = useRef(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
       onMoveShouldSetPanResponder: () => true,
-      onStartShouldSetPanResponderCapture: () => true,
-      onMoveShouldSetPanResponderCapture: () => true,
-      onPanResponderTerminationRequest: () => false,
-      onShouldBlockNativeResponder: () => true,
       onPanResponderGrant: () => {
         gestureBaselineRef.current = { ...dragOffsetRef.current }
       },
@@ -180,12 +175,6 @@ export default function VillageScreen({ courseId }: Props) {
         }
         dragOffsetRef.current = next
         setDragOffset(next)
-      },
-      onPanResponderRelease: () => {
-        gestureBaselineRef.current = { ...dragOffsetRef.current }
-      },
-      onPanResponderTerminate: () => {
-        gestureBaselineRef.current = { ...dragOffsetRef.current }
       },
     })
   ).current
