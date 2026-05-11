@@ -29,7 +29,17 @@
     },
     "extra": {
       "_comment": "Edit apiUrl to point at your hosted API (or LAN IP for dev). The Phase 1 build defaults to offline mode anyway, so this only matters once Phase 2 wires real API calls.",
-      "apiUrl": "http://localhost:8181"
+      "apiUrl": "http://localhost:8181",
+      "eas": {
+        "projectId": "ebfb910e-0d60-41f2-901c-65f85df23fc6"
+      }
+    },
+    "owner": "ktdilsiz",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ebfb910e-0d60-41f2-901c-65f85df23fc6"
     }
   }
 }
