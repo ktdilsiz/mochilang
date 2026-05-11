@@ -3,6 +3,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { ListenAndChooseExercise } from '@mochilang/shared'
 import { speak } from '../../lib/tts'
 import { useSettings } from '../../state/useSettings'
+import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -27,7 +28,7 @@ export default function ListenAndChoose({
 
   return (
     <View style={styles.root}>
-      <Text style={styles.prompt}>{exercise.prompt}</Text>
+      <TappableText text={exercise.prompt} style={styles.prompt} />
       <View style={styles.listenWrap}>
         <Pressable
           style={styles.listenBtn}

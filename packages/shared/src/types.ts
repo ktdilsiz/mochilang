@@ -94,6 +94,17 @@ export interface Lesson {
   /** Base XP awarded for completing the lesson; doubled on a no-mistake run. */
   xp: number
   exercises: Exercise[]
+  /**
+   * Optional pre-baked word translations. Keyed by the exact token
+   * the learner sees in the lesson; value is the translation in the
+   * learner's source language. When present, tapping a word in the
+   * lesson UI shows the translation instantly (offline). When absent
+   * for a given word, the UI falls back to Lingva (network).
+   *
+   * Authoring is optional — leave it off for cheap content, fill it
+   * in later via the genfallbacks build step for first-class lessons.
+   */
+  wordTranslations?: Record<string, string>
 }
 
 /**

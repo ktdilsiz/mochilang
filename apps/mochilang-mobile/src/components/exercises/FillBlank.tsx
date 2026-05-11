@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import type { FillBlankExercise } from '@mochilang/shared'
 import { matchesAnswer } from '@mochilang/shared'
+import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -15,7 +16,7 @@ export default function FillBlank({ exercise, value, locked, onChange }: Props) 
   const isWrong = locked && !isCorrect
   return (
     <View style={styles.root}>
-      <Text style={styles.prompt}>{exercise.prompt}</Text>
+      <TappableText text={exercise.prompt} style={styles.prompt} />
       <TextInput
         style={[
           styles.input,

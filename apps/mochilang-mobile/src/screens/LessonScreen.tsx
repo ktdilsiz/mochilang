@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import type { Exercise, Lesson } from '@mochilang/shared'
-import { matchesSequenceAnswer } from '@mochilang/shared'
+import { matchesSequenceAnswer, parseCourseId } from '@mochilang/shared'
 import LedgeButton from '../components/LedgeButton'
 import FillBlank, {
   checkAnswer as checkFillBlank,
@@ -16,10 +16,14 @@ import FillBlank, {
 import MatchPairs from '../components/exercises/MatchPairs'
 import ListenAndChoose from '../components/exercises/ListenAndChoose'
 import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
+import TappableText from '../components/TappableText'
+import { WordTranslationProvider } from '../lib/wordTranslation'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
   lesson: Lesson
+  /** Active courseId — used to derive Lingva from/to languages for word taps. */
+  courseId: string
   onComplete: (mistakes: number) => void
   onBack: () => void
   /** Optional — fires per-exercise on wrong answers (mistake tracking). */
@@ -37,6 +41,7 @@ type Feedback = 'idle' | 'correct' | 'wrong'
  */
 export default function LessonScreen({
   lesson,
+  courseId,
   onComplete,
   onBack,
   onWrongAnswer,
@@ -112,7 +117,22 @@ export default function LessonScreen({
     }
   }
 
+  // Translation tap-target wiring. Course id `${target}-${source}`
+  // means the words in the lesson are predominantly in `target`,
+  // and the user wants translations into `source` (their native).
+  const parsed = parseCourseId(courseId)
+  const fromLang = parsed?.target ?? 'auto'
+  const toLang = parsed?.source ?? 'en'
+
   return (
+    <WordTranslationProvider
+      value={{
+        enabled: true,
+        fromLang,
+        toLang,
+        wordTranslations: lesson.wordTranslations,
+      }}
+    >
     <View style={styles.shell}>
       <View style={[styles.topbar, { paddingTop: insets.top + space.sm }]}>
         <Pressable onPress={onBack} style={styles.x}>
@@ -174,6 +194,7 @@ export default function LessonScreen({
         )}
       </View>
     </View>
+    </WordTranslationProvider>
   )
 }
 
@@ -204,7 +225,7 @@ function ExerciseView({
     case 'multiple_choice':
       return (
         <View style={styles.exRoot}>
-          <Text style={styles.prompt}>{ex.prompt}</Text>
+          <TappableText text={ex.prompt} style={styles.prompt} />
           <View style={styles.options}>
             {ex.options.map((opt) => {
               const isSel = mcSelected === opt

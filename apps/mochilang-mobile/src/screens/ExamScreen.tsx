@@ -17,6 +17,7 @@ import FillBlank, {
 import MatchPairs from '../components/exercises/MatchPairs'
 import ListenAndChoose from '../components/exercises/ListenAndChoose'
 import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
+import TappableText from '../components/TappableText'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -292,7 +293,7 @@ function ExerciseView({
     case 'multiple_choice':
       return (
         <View style={styles.exRoot}>
-          <Text style={styles.prompt}>{ex.prompt}</Text>
+          <TappableText text={ex.prompt} style={styles.prompt} />
           <View style={styles.options}>
             {ex.options.map((opt) => {
               const isSel = mcSelected === opt

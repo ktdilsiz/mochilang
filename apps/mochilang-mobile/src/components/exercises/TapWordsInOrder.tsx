@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { TapWordsInOrderExercise } from '@mochilang/shared'
+import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -78,7 +79,7 @@ export default function TapWordsInOrder({
 
   return (
     <View style={styles.root}>
-      <Text style={styles.prompt}>{exercise.prompt}</Text>
+      <TappableText text={exercise.prompt} style={styles.prompt} />
       {showProgress && (
         <Text style={styles.progress}>
           {built.length} / {expectedTokenCount}

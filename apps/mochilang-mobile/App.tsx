@@ -297,6 +297,7 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
             <LessonRoute
               progress={progress}
               recordMistake={recordMistake}
+              courseId={courseId ?? DEFAULT_COURSE_ID}
               {...props}
             />
           )}
@@ -498,14 +499,17 @@ function LessonRoute({
   navigation,
   progress,
   recordMistake,
+  courseId,
 }: NativeStackScreenProps<RootStackParamList, 'Lesson'> & {
   progress: ReturnType<typeof useProgress>
   recordMistake: (exerciseId: string) => void
+  courseId: string
 }) {
   const lesson = route.params.lesson
   return (
     <LessonScreen
       lesson={lesson}
+      courseId={courseId}
       onComplete={(mistakes) => {
         void progress.recordCompletion(lesson.id, mistakes, lesson.xp)
         navigation.goBack()

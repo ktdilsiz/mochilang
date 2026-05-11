@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { MatchPairsExercise } from '@mochilang/shared'
+import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -147,7 +148,7 @@ export default function MatchPairs({
 
   return (
     <View style={styles.root}>
-      <Text style={styles.prompt}>{exercise.prompt}</Text>
+      <TappableText text={exercise.prompt} style={styles.prompt} />
       <View style={styles.pairs}>
         {renderColumn('left', lefts, 'l')}
         {renderColumn('right', rights, 'r')}
