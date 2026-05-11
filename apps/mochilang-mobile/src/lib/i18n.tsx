@@ -9,6 +9,7 @@ import {
 } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import {
+  BUNDLED_DICTS,
   EN_DICT,
   type I18nDict,
   type UiLocale,
@@ -39,7 +40,9 @@ interface I18nCtx {
 
 const STORAGE_PREFIX = 'mochilang:i18n:v1:'
 
-const dictCache: Partial<Record<UiLocale, I18nDict>> = { en: EN_DICT }
+// Seed every locale from the bundled dicts so a fresh install picks
+// up Turkish/Chinese instantly without any network call.
+const dictCache: Partial<Record<UiLocale, I18nDict>> = { ...BUNDLED_DICTS }
 
 function fillTemplate(s: string, params?: Record<string, string | number>): string {
   if (!params) return s
@@ -69,30 +72,39 @@ interface ProviderProps {
 export function I18nProvider({ children }: ProviderProps) {
   const { state: settings } = useSettings()
   const locale = settings.uiLocale
-  const [dict, setDict] = useState<I18nDict>(dictCache[locale] ?? EN_DICT)
+  // Seed from the bundled dict synchronously so the very first paint
+  // after a locale switch is already translated. The AsyncStorage
+  // cache + API fetch below only matter for picking up *fresh*
+  // strings published after the binary shipped.
+  const [dict, setDict] = useState<I18nDict>(
+    () => dictCache[locale] ?? BUNDLED_DICTS[locale] ?? EN_DICT
+  )
 
   useEffect(() => {
     let alive = true
-    const cached = dictCache[locale]
-    if (cached) {
-      setDict(cached)
-    } else {
-      // Hydrate from AsyncStorage cache first so swapping languages
-      // is instant on the second run.
-      ;(async () => {
-        try {
-          const raw = await AsyncStorage.getItem(STORAGE_PREFIX + locale)
-          if (!alive || !raw) return
-          const parsed = JSON.parse(raw) as I18nDict
-          dictCache[locale] = parsed
-          setDict(parsed)
-        } catch {
-          /* ignore */
-        }
-      })()
-    }
+    // Apply the bundled dict immediately on locale change so taps
+    // through the picker swap the UI right away even before any
+    // async work completes.
+    const bundled = dictCache[locale] ?? BUNDLED_DICTS[locale] ?? EN_DICT
+    setDict(bundled)
 
-    // Always re-fetch from API to pick up updated strings.
+    // Try the AsyncStorage copy next — that may be a slightly newer
+    // version pulled from the API on a previous run.
+    ;(async () => {
+      try {
+        const raw = await AsyncStorage.getItem(STORAGE_PREFIX + locale)
+        if (!alive || !raw) return
+        const parsed = JSON.parse(raw) as I18nDict
+        dictCache[locale] = parsed
+        setDict(parsed)
+      } catch {
+        /* ignore */
+      }
+    })()
+
+    // Finally re-fetch from API to pick up edits published since
+    // the binary shipped. Failures are silent — the bundled dict
+    // is already on screen.
     const ctrl = new AbortController()
     ;(async () => {
       try {
@@ -100,13 +112,14 @@ export function I18nProvider({ children }: ProviderProps) {
         if (!alive) return
         dictCache[locale] = fresh
         setDict(fresh)
-        await AsyncStorage.setItem(STORAGE_PREFIX + locale, JSON.stringify(fresh)).catch(
-          () => {}
-        )
+        await AsyncStorage.setItem(
+          STORAGE_PREFIX + locale,
+          JSON.stringify(fresh)
+        ).catch(() => {})
       } catch (err) {
         if (err instanceof DOMException && err.name === 'AbortError') return
-        if (err instanceof ApiError && err.status !== 0) return
-        // Network or non-API error — fall back to whatever we have.
+        if (err instanceof ApiError) return
+        // Network error or otherwise — bundled dict stays on screen.
       }
     })()
 
