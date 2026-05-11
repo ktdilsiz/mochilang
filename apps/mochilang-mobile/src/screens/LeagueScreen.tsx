@@ -16,14 +16,12 @@ import {
   DEMOTE_RANK,
   tierAt,
   daysUntilMonday,
-  daysSinceMonday,
-  mondayOf,
   type LeagueResponse,
   type LeagueRow,
   type ProfileState,
   type ProgressState,
 } from '@mochilang/shared'
-import { COMPETITORS, botWeeklyXp } from '../data/competitors'
+import { useOfflineLeague } from '../state/useOfflineLeague'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface OuterProps {
@@ -63,22 +61,24 @@ function viewFromAPI(r: LeagueResponse): ViewModel {
 }
 
 /**
- * Offline view: same shape the API would have returned, synthesized
- * from bundled competitors + local progress/profile. Mirrors the web
- * `buildOfflineView` exactly so both clients show the same standings
- * with no server reachable.
+ * Build the view-model from the offline-league hook output: glue the
+ * synthetic "me" row in next to the bots, sort, and figure out where
+ * the user landed. The cohort + bot XP comes from useOfflineLeague,
+ * which handles daily settlement (every day the bots earn a fraction
+ * of the user's earned XP) and weekly cohort regeneration.
  */
-function buildOfflineView(progress: ProgressState, profile: ProfileState): ViewModel {
-  const weekStart = mondayOf()
-  const dayIdx = daysSinceMonday()
-  const userWeeklyXp = progress.weekStart === weekStart ? progress.weeklyXp : 0
-
-  const rows: LeagueRow[] = COMPETITORS.map((b) => ({
+function buildOfflineView(
+  bots: { id: string; name: string; avatar: string; flag: string; weeklyXp: number }[],
+  progress: ProgressState,
+  profile: ProfileState,
+): ViewModel {
+  const userWeeklyXp = progress.weeklyXp
+  const rows: LeagueRow[] = bots.map((b) => ({
     id: b.id,
     name: b.name,
     avatar: b.avatar,
     flag: b.flag,
-    weeklyXp: botWeeklyXp(b, weekStart, dayIdx),
+    weeklyXp: b.weeklyXp,
     isUser: false,
   }))
   rows.push({
@@ -108,13 +108,30 @@ export default function LeagueScreen({
 }: Props) {
   const insets = useSafeAreaInsets()
   const topInset = nested ? 0 : insets.top + space.md
-  // Seed with the offline view synchronously so the leaderboard
-  // renders something useful on first paint even before any fetch.
-  const [vm, setVM] = useState<ViewModel | null>(() =>
-    buildOfflineView(progress, profile)
-  )
+  // The hook owns the offline cohort + daily settlement. Its `bots`
+  // array is what we render until/unless the API path lands.
+  const offlineLeague = useOfflineLeague({ progress, profile, setProfile })
+  const [vm, setVM] = useState<ViewModel | null>(null)
   const [offline, setOffline] = useState(false)
   const [loading, setLoading] = useState(true)
+
+  // Keep the offline view-model fresh whenever the hook's cohort
+  // mutates (settlement, rollover, hydration). The API effect below
+  // can still overwrite this when the server is reachable.
+  useEffect(() => {
+    if (offlineLeague.loading) return
+    if (offline) {
+      setVM(buildOfflineView(offlineLeague.bots, progress, profile))
+    } else if (!vm) {
+      // Seed with the offline view synchronously on first paint so the
+      // board renders something while the API fetch is in flight.
+      setVM(buildOfflineView(offlineLeague.bots, progress, profile))
+    }
+    // We only depend on the cohort + weeklyXp here; profile changes
+    // would loop through setProfile from the hook. The vm/offline
+    // pair drives whether we replace the view-model.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [offlineLeague.bots, progress.weeklyXp, offline])
 
   // Fetch on mount; re-fetch whenever weeklyXp changes (i.e. the user
   // finished a lesson and came back to this screen). The fetch is cheap
@@ -137,11 +154,10 @@ export default function LeagueScreen({
         })
       } catch (err) {
         if (err instanceof Error && err.name === 'AbortError') return
-        // Network error or short-circuited by offline mode — both
-        // resolve to bundled-JSON view. The synth standings are not
-        // authoritative; the server reconciles on the next live fetch.
+        // Network error or short-circuited by offline mode — flip
+        // into offline mode. The other effect drops the offline cohort
+        // into vm; we just need to flip the flag here.
         setOffline(true)
-        setVM(buildOfflineView(progress, profile))
       } finally {
         setLoading(false)
       }
@@ -234,7 +250,6 @@ export default function LeagueScreen({
           {nextTier
             ? `Top ${PROMOTE_RANK} promote to ${nextTier.name}`
             : 'Top of the ladder — defend your spot!'}
-          {offline ? '  ·  OFFLINE' : ''}
         </Text>
         <View style={styles.deadlinePill}>
           <Text style={styles.deadlineText}>
@@ -249,11 +264,9 @@ export default function LeagueScreen({
         <View style={styles.stateBox}>
           <Text style={styles.stateText}>Loading this week's standings…</Text>
         </View>
-      ) : offline || !vm ? (
+      ) : !vm ? (
         <View style={styles.stateBox}>
-          <Text style={styles.stateText}>
-            League is offline — connect to see this week's standings.
-          </Text>
+          <Text style={styles.stateText}>Setting up your league…</Text>
         </View>
       ) : (
         <View style={styles.board}>

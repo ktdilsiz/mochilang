@@ -2,7 +2,7 @@
  * League tier definitions + promotion/demotion thresholds.
  *
  * Each weekly cohort holds 31 spots (the user + 30 bots). At week's end:
- *   - rank 1..7  → promote one tier (capped at the top tier)
+ *   - rank 1..3  → promote one tier (capped at the top tier)
  *   - rank 26..31 → demote one tier (capped at Bronze)
  *   - everyone else stays put
  */
@@ -26,7 +26,7 @@ export const LEAGUE_TIERS: LeagueTier[] = [
   { id: 'diamond', name: 'Diamond', emoji: '💎', color: '#bff2ee', edge: '#2eb6a6' },
 ]
 
-export const PROMOTE_RANK = 7 // top 7 promote
+export const PROMOTE_RANK = 3 // top 3 promote
 export const DEMOTE_RANK = 26 // ranks 26..31 demote (out of 31)
 export const COHORT_SIZE = 31
 

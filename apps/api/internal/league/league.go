@@ -28,7 +28,7 @@ var Tiers = []Tier{
 }
 
 const (
-	PromoteRank = 7  // top 7 promote
+	PromoteRank = 3  // top 3 promote
 	DemoteRank  = 26 // ranks 26..31 demote
 	CohortSize  = 31 // 30 bots + the user
 )
