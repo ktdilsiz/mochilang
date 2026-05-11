@@ -1,8 +1,11 @@
 import { useMemo, useState } from 'react'
 import {
+  FlatList,
   Image,
   ImageBackground,
   type LayoutChangeEvent,
+  Modal,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -12,6 +15,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
   MOCHI_ROSTER,
   MOCHI_ROSTER_SIZE,
+  type MochiSpec,
   countUnlockedMochis,
   nextMochi,
 } from '@mochilang/shared'
@@ -19,6 +23,10 @@ import { useCourse } from '../state/useCourse'
 import { useLevelExams } from '../state/useLevelExams'
 import { useProgress } from '../state/useProgress'
 import { useSettings } from '../state/useSettings'
+import {
+  type PlacementOverrides,
+  useVillagePlacements,
+} from '../state/useVillagePlacements'
 import { useT } from '../lib/i18n'
 import { MOCHI_SPRITES } from '../data/mochiSprites'
 import { VILLAGE_POSITIONS } from '../data/villagePositions'
@@ -29,18 +37,46 @@ interface Props {
 }
 
 /**
- * Mochi Village — horizontal panorama showing the painted village
- * background (assets/village-bg.png) with 120 mochi sprites scattered
- * across it. The painting is one wide image; mochis are positioned
- * absolutely on top with deterministic-random placement so the layout
- * is stable across renders but doesn't look gridded.
+ * Mochi Village — horizontal panorama of the painted village with the
+ * mochi sprites laid on top.
  *
- * Locked mochis render as silhouettes via Image tintColor — same
- * sprite shape, single dark color. Unlocking flips the tint off.
+ * Default placement comes from VILLAGE_POSITIONS (hand-curated at
+ * landmarks). Each user can override per-mochi via the in-app menu:
+ *   - Tap a mochi → action sheet (Move / Hide / About).
+ *   - "Move" enters placement mode; tapping anywhere on the panorama
+ *     drops the mochi at that point.
+ *   - "Hide" removes the sprite from the panorama; it can be brought
+ *     back from the top-right Atlas button.
+ *   - "About" shows name / flavor / unlock XP / status.
+ * Top-right Atlas button shows the full 119-mochi roster with
+ * locked/visible/hidden state and unhide controls.
+ *
+ * Overrides persist in AsyncStorage (see useVillagePlacements). Server
+ * sync can be added later by swapping the hook's backing store.
  */
-const IMAGE_ASPECT = 2172 / 724 // matches assets/village-bg.png
-
+const IMAGE_ASPECT = 2172 / 724
 const SPRITE_HEIGHT = 56
+
+interface ResolvedPosition {
+  x: number
+  y: number
+  hidden: boolean
+}
+
+function resolvePosition(
+  index: number,
+  overrides: PlacementOverrides
+): ResolvedPosition | null {
+  const override = overrides[index]
+  if (override?.hidden) return { x: 0, y: 0, hidden: true }
+  const base = VILLAGE_POSITIONS[index]
+  if (!base) return null
+  return {
+    x: override?.x ?? base.x,
+    y: override?.y ?? base.y,
+    hidden: false,
+  }
+}
 
 export default function VillageScreen({ courseId }: Props) {
   const insets = useSafeAreaInsets()
@@ -48,9 +84,17 @@ export default function VillageScreen({ courseId }: Props) {
   const levelExams = useLevelExams()
   const progress = useProgress()
   const { state: settings } = useSettings()
+  const placements = useVillagePlacements()
   const t = useT()
   const devMode = settings.developerMode
   const [viewportHeight, setViewportHeight] = useState(0)
+  // Index of the mochi whose action menu is open (-1 = closed).
+  const [menuFor, setMenuFor] = useState<number | null>(null)
+  // Index of the mochi being placed; while set, panorama taps move
+  // this mochi to the tapped coordinate.
+  const [placingIndex, setPlacingIndex] = useState<number | null>(null)
+  const [aboutFor, setAboutFor] = useState<number | null>(null)
+  const [atlasOpen, setAtlasOpen] = useState(false)
 
   function handleLayout(e: LayoutChangeEvent) {
     const h = e.nativeEvent.layout.height
@@ -62,15 +106,35 @@ export default function VillageScreen({ courseId }: Props) {
   const unlockedCount = useMemo(() => countUnlockedMochis(totalXp), [totalXp])
   const next = useMemo(() => nextMochi(totalXp), [totalXp])
 
+  function handlePanoramaTap(panoramaX: number, panoramaY: number) {
+    if (placingIndex === null || panoramaWidth === 0 || viewportHeight === 0) return
+    const x = Math.max(0.02, Math.min(0.98, panoramaX / panoramaWidth))
+    const y = Math.max(0.05, Math.min(0.95, panoramaY / viewportHeight))
+    placements.move(placingIndex, x, y)
+    setPlacingIndex(null)
+  }
+
   return (
     <View style={styles.shell}>
       <View style={[styles.header, { paddingTop: insets.top + space.sm }]}>
         <View style={styles.headerInner}>
           <Text style={styles.title}>{t('village.title')}</Text>
-          <View style={styles.countPill}>
-            <Text style={styles.countPillText}>
-              {unlockedCount} / {MOCHI_ROSTER_SIZE}
-            </Text>
+          <View style={styles.headerRight}>
+            <View style={styles.countPill}>
+              <Text style={styles.countPillText}>
+                {unlockedCount} / {MOCHI_ROSTER_SIZE}
+              </Text>
+            </View>
+            <Pressable
+              accessibilityLabel="Open mochi atlas"
+              onPress={() => setAtlasOpen(true)}
+              style={({ pressed }) => [
+                styles.atlasButton,
+                pressed && { opacity: 0.7 },
+              ]}
+            >
+              <Text style={styles.atlasButtonText}>📜</Text>
+            </Pressable>
           </View>
         </View>
         <Text style={styles.subtitle}>
@@ -82,6 +146,23 @@ export default function VillageScreen({ courseId }: Props) {
             : t('village.subtitle.complete')}
         </Text>
       </View>
+
+      {placingIndex !== null && (
+        <View style={styles.placingBanner}>
+          <Text style={styles.placingBannerText}>
+            Tap anywhere on the village to place mochi #{placingIndex + 1}.
+          </Text>
+          <Pressable
+            onPress={() => setPlacingIndex(null)}
+            style={({ pressed }) => [
+              styles.placingCancel,
+              pressed && { opacity: 0.7 },
+            ]}
+          >
+            <Text style={styles.placingCancelText}>Cancel</Text>
+          </Pressable>
+        </View>
+      )}
 
       <View style={styles.scrollWrap} onLayout={handleLayout}>
         {course.levels.length === 0 ? (
@@ -95,83 +176,442 @@ export default function VillageScreen({ courseId }: Props) {
             horizontal
             showsHorizontalScrollIndicator={false}
             decelerationRate="fast"
+            // While placing, freeze scrolling so the tap-target stays
+            // stable under the user's finger.
+            scrollEnabled={placingIndex === null}
           >
-            <ImageBackground
-              source={require('../../assets/village-bg.png')}
-              resizeMode="cover"
-              style={{ width: panoramaWidth, height: viewportHeight }}
+            <Pressable
+              onPress={(e) =>
+                handlePanoramaTap(
+                  e.nativeEvent.locationX,
+                  e.nativeEvent.locationY
+                )
+              }
+              // Pressable only fires for taps it claims — so when
+              // placingIndex is null the inner mochi Pressables
+              // intercept first and the panorama press is inert.
             >
-              {/* Level signs — markers along the top of the panorama. */}
-              {course.levels.map((level, i) => {
-                const sliceWidth = panoramaWidth / course.levels.length
-                const offsetX = i * sliceWidth + 16
-                const examPassed = levelExams.state[level.id] === true
-                return (
-                  <View
-                    key={`sign-${level.id}`}
-                    style={[styles.sign, { left: offsetX }]}
-                  >
-                    <Text style={styles.signTitle}>{level.name}</Text>
-                    {examPassed && (
-                      <View style={styles.signBadge}>
-                        <Text style={styles.signBadgeText}>Level exam ✓</Text>
-                      </View>
-                    )}
-                  </View>
-                )
-              })}
+              <ImageBackground
+                source={require('../../assets/village-bg.png')}
+                resizeMode="cover"
+                style={{ width: panoramaWidth, height: viewportHeight }}
+              >
+                {/* Level signs along the top of the panorama. */}
+                {course.levels.map((level, i) => {
+                  const sliceWidth = panoramaWidth / course.levels.length
+                  const offsetX = i * sliceWidth + 16
+                  const examPassed =
+                    levelExams.state[level.id] === true
+                  return (
+                    <View
+                      key={`sign-${level.id}`}
+                      style={[styles.sign, { left: offsetX }]}
+                    >
+                      <Text style={styles.signTitle}>{level.name}</Text>
+                      {examPassed && (
+                        <View style={styles.signBadge}>
+                          <Text style={styles.signBadgeText}>
+                            Level exam ✓
+                          </Text>
+                        </View>
+                      )}
+                    </View>
+                  )
+                })}
 
-              {/* Mochis scattered across the panorama. Stable across
-                  renders because positions are seeded by index. */}
-              {MOCHI_ROSTER.map((mochi) => {
-                const unlocked = devMode || totalXp >= mochi.unlockXp
-                const sprite = MOCHI_SPRITES[mochi.index]
-                const pos = VILLAGE_POSITIONS[mochi.index]
-                if (!sprite || !pos) return null
-                const x = pos.x * panoramaWidth
-                const y = pos.y * viewportHeight
-                return (
-                  <Image
-                    key={mochi.id}
-                    source={sprite}
-                    resizeMode="contain"
-                    style={[
-                      styles.sprite,
-                      {
-                        left: x - SPRITE_HEIGHT / 2,
-                        top: y - SPRITE_HEIGHT,
-                        width: SPRITE_HEIGHT,
-                        height: SPRITE_HEIGHT,
-                      },
-                      !unlocked && styles.spriteLocked,
-                    ]}
-                  />
-                )
-              })}
-            </ImageBackground>
+                {MOCHI_ROSTER.map((mochi) => {
+                  const unlocked = devMode || totalXp >= mochi.unlockXp
+                  const sprite = MOCHI_SPRITES[mochi.index]
+                  const resolved = resolvePosition(
+                    mochi.index,
+                    placements.overrides
+                  )
+                  if (!sprite || !resolved || resolved.hidden) return null
+                  const x = resolved.x * panoramaWidth
+                  const y = resolved.y * viewportHeight
+                  const beingPlaced = placingIndex === mochi.index
+                  return (
+                    <Pressable
+                      key={mochi.id}
+                      onPress={() => {
+                        if (placingIndex !== null) return
+                        setMenuFor(mochi.index)
+                      }}
+                      // Disable touch while placing so the panorama
+                      // tap-target wins.
+                      disabled={placingIndex !== null}
+                      style={[
+                        styles.spriteWrap,
+                        {
+                          left: x - SPRITE_HEIGHT / 2,
+                          top: y - SPRITE_HEIGHT,
+                          width: SPRITE_HEIGHT,
+                          height: SPRITE_HEIGHT,
+                        },
+                      ]}
+                    >
+                      <Image
+                        source={sprite}
+                        resizeMode="contain"
+                        style={[
+                          styles.sprite,
+                          !unlocked && styles.spriteLocked,
+                          beingPlaced && styles.spriteMoving,
+                        ]}
+                      />
+                    </Pressable>
+                  )
+                })}
+              </ImageBackground>
+            </Pressable>
           </ScrollView>
         ) : null}
       </View>
+
+      {/* Action menu — opens when a mochi is tapped. */}
+      {menuFor !== null && (
+        <ActionSheet
+          mochi={MOCHI_ROSTER[menuFor]}
+          unlocked={
+            devMode || totalXp >= (MOCHI_ROSTER[menuFor]?.unlockXp ?? 0)
+          }
+          hidden={placements.overrides[menuFor]?.hidden === true}
+          onMove={() => {
+            setPlacingIndex(menuFor)
+            setMenuFor(null)
+          }}
+          onToggleHide={() => {
+            const idx = menuFor
+            const isHidden = placements.overrides[idx]?.hidden === true
+            if (isHidden) placements.unhide(idx)
+            else placements.hide(idx)
+            setMenuFor(null)
+          }}
+          onAbout={() => {
+            setAboutFor(menuFor)
+            setMenuFor(null)
+          }}
+          onResetPosition={() => {
+            placements.resetOne(menuFor)
+            setMenuFor(null)
+          }}
+          onClose={() => setMenuFor(null)}
+        />
+      )}
+
+      {/* About card */}
+      {aboutFor !== null && (
+        <AboutCard
+          mochi={MOCHI_ROSTER[aboutFor]}
+          unlocked={
+            devMode || totalXp >= (MOCHI_ROSTER[aboutFor]?.unlockXp ?? 0)
+          }
+          totalXp={totalXp}
+          onClose={() => setAboutFor(null)}
+        />
+      )}
+
+      {/* Atlas — full roster modal */}
+      <AtlasModal
+        visible={atlasOpen}
+        totalXp={totalXp}
+        devMode={devMode}
+        overrides={placements.overrides}
+        onClose={() => setAtlasOpen(false)}
+        onShow={(idx) => placements.unhide(idx)}
+        onHide={(idx) => placements.hide(idx)}
+        onAbout={(idx) => {
+          setAtlasOpen(false)
+          setAboutFor(idx)
+        }}
+        onResetAll={() => placements.resetAll()}
+      />
     </View>
   )
 }
 
-/**
- * Pixel placement for the n-th mochi comes from VILLAGE_POSITIONS
- * (hand-curated normalized coords). The function below is retained
- * only for any caller that imports it; current code reads positions
- * inline via VILLAGE_POSITIONS[mochi.index].
- */
-function placementFor(
-  index: number,
-  panoramaWidth: number,
-  panoramaHeight: number
-): { x: number; y: number } {
-  const pos = VILLAGE_POSITIONS[index]
-  if (!pos) return { x: panoramaWidth / 2, y: panoramaHeight * 0.7 }
-  const x = pos.x * panoramaWidth
-  const y = pos.y * panoramaHeight
-  return { x, y }
+interface ActionSheetProps {
+  mochi: MochiSpec | undefined
+  unlocked: boolean
+  hidden: boolean
+  onMove: () => void
+  onToggleHide: () => void
+  onAbout: () => void
+  onResetPosition: () => void
+  onClose: () => void
+}
+
+function ActionSheet({
+  mochi,
+  unlocked,
+  hidden,
+  onMove,
+  onToggleHide,
+  onAbout,
+  onResetPosition,
+  onClose,
+}: ActionSheetProps) {
+  if (!mochi) return null
+  return (
+    <Modal
+      transparent
+      animationType="fade"
+      visible
+      onRequestClose={onClose}
+    >
+      <Pressable style={styles.backdrop} onPress={onClose}>
+        <Pressable style={styles.sheet} onPress={(e) => e.stopPropagation()}>
+          <View style={styles.sheetHead}>
+            <Text style={styles.sheetGlyph}>{mochi.archetype.glyph}</Text>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.sheetTitle}>
+                Mochi the {mochi.archetype.role}
+              </Text>
+              <Text style={styles.sheetSubtitle}>#{mochi.index + 1}</Text>
+            </View>
+          </View>
+          <Pressable
+            style={({ pressed }) => [
+              styles.sheetAction,
+              pressed && styles.sheetActionPressed,
+            ]}
+            onPress={onMove}
+            disabled={!unlocked || hidden}
+          >
+            <Text
+              style={[
+                styles.sheetActionText,
+                (!unlocked || hidden) && styles.sheetActionDisabled,
+              ]}
+            >
+              📍 Move
+            </Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              styles.sheetAction,
+              pressed && styles.sheetActionPressed,
+            ]}
+            onPress={onToggleHide}
+            disabled={!unlocked}
+          >
+            <Text
+              style={[
+                styles.sheetActionText,
+                !unlocked && styles.sheetActionDisabled,
+              ]}
+            >
+              {hidden ? '👁 Show' : '🙈 Hide'}
+            </Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              styles.sheetAction,
+              pressed && styles.sheetActionPressed,
+            ]}
+            onPress={onResetPosition}
+            disabled={!unlocked}
+          >
+            <Text
+              style={[
+                styles.sheetActionText,
+                !unlocked && styles.sheetActionDisabled,
+              ]}
+            >
+              ↺ Reset position
+            </Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              styles.sheetAction,
+              pressed && styles.sheetActionPressed,
+            ]}
+            onPress={onAbout}
+          >
+            <Text style={styles.sheetActionText}>ℹ About</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              styles.sheetCancel,
+              pressed && { opacity: 0.7 },
+            ]}
+            onPress={onClose}
+          >
+            <Text style={styles.sheetCancelText}>Close</Text>
+          </Pressable>
+        </Pressable>
+      </Pressable>
+    </Modal>
+  )
+}
+
+interface AboutCardProps {
+  mochi: MochiSpec | undefined
+  unlocked: boolean
+  totalXp: number
+  onClose: () => void
+}
+
+function AboutCard({ mochi, unlocked, totalXp, onClose }: AboutCardProps) {
+  if (!mochi) return null
+  const sprite = MOCHI_SPRITES[mochi.index]
+  return (
+    <Modal transparent animationType="fade" visible onRequestClose={onClose}>
+      <Pressable style={styles.backdrop} onPress={onClose}>
+        <Pressable style={styles.aboutCard} onPress={(e) => e.stopPropagation()}>
+          <View style={styles.aboutSpriteWrap}>
+            {sprite && (
+              <Image source={sprite} resizeMode="contain" style={styles.aboutSprite} />
+            )}
+          </View>
+          <Text style={styles.aboutTitle}>
+            Mochi the {mochi.archetype.role}
+          </Text>
+          <Text style={styles.aboutSubtitle}>#{mochi.index + 1}</Text>
+          <Text style={styles.aboutFlavor}>{mochi.archetype.flavor}</Text>
+          <View style={styles.aboutStats}>
+            <Text style={styles.aboutStat}>
+              {unlocked ? '✓ Unlocked' : `Unlocks at ${mochi.unlockXp} XP`}
+            </Text>
+            {!unlocked && (
+              <Text style={styles.aboutStat}>
+                {mochi.unlockXp - totalXp} XP to go
+              </Text>
+            )}
+          </View>
+          <Pressable
+            style={({ pressed }) => [
+              styles.sheetCancel,
+              pressed && { opacity: 0.7 },
+            ]}
+            onPress={onClose}
+          >
+            <Text style={styles.sheetCancelText}>Close</Text>
+          </Pressable>
+        </Pressable>
+      </Pressable>
+    </Modal>
+  )
+}
+
+interface AtlasModalProps {
+  visible: boolean
+  totalXp: number
+  devMode: boolean
+  overrides: PlacementOverrides
+  onClose: () => void
+  onShow: (index: number) => void
+  onHide: (index: number) => void
+  onAbout: (index: number) => void
+  onResetAll: () => void
+}
+
+function AtlasModal({
+  visible,
+  totalXp,
+  devMode,
+  overrides,
+  onClose,
+  onShow,
+  onHide,
+  onAbout,
+  onResetAll,
+}: AtlasModalProps) {
+  const insets = useSafeAreaInsets()
+  return (
+    <Modal
+      transparent
+      animationType="slide"
+      visible={visible}
+      onRequestClose={onClose}
+    >
+      <View style={[styles.atlasShell, { paddingTop: insets.top + space.sm }]}>
+        <View style={styles.atlasHeader}>
+          <Text style={styles.atlasTitle}>Mochi Atlas</Text>
+          <Pressable
+            onPress={onClose}
+            style={({ pressed }) => [
+              styles.atlasClose,
+              pressed && { opacity: 0.7 },
+            ]}
+          >
+            <Text style={styles.atlasCloseText}>✕</Text>
+          </Pressable>
+        </View>
+        <View style={styles.atlasToolbar}>
+          <Pressable
+            onPress={onResetAll}
+            style={({ pressed }) => [
+              styles.atlasResetBtn,
+              pressed && { opacity: 0.7 },
+            ]}
+          >
+            <Text style={styles.atlasResetText}>↺ Reset all placements</Text>
+          </Pressable>
+        </View>
+        <FlatList
+          data={MOCHI_ROSTER}
+          keyExtractor={(m) => m.id}
+          numColumns={1}
+          contentContainerStyle={{ paddingBottom: insets.bottom + space.lg }}
+          renderItem={({ item }) => {
+            const unlocked = devMode || totalXp >= item.unlockXp
+            const hidden = overrides[item.index]?.hidden === true
+            const sprite = MOCHI_SPRITES[item.index]
+            return (
+              <View style={styles.atlasRow}>
+                <Pressable
+                  style={styles.atlasRowMain}
+                  onPress={() => onAbout(item.index)}
+                >
+                  <View style={styles.atlasThumb}>
+                    {sprite && (
+                      <Image
+                        source={sprite}
+                        resizeMode="contain"
+                        style={[
+                          styles.atlasThumbImg,
+                          !unlocked && styles.spriteLocked,
+                        ]}
+                      />
+                    )}
+                  </View>
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.atlasRowName}>
+                      Mochi the {item.archetype.role}
+                    </Text>
+                    <Text style={styles.atlasRowSub}>
+                      #{item.index + 1} ·{' '}
+                      {!unlocked
+                        ? `unlocks at ${item.unlockXp} XP`
+                        : hidden
+                          ? 'hidden'
+                          : 'in village'}
+                    </Text>
+                  </View>
+                </Pressable>
+                {unlocked && (
+                  <Pressable
+                    onPress={() =>
+                      hidden ? onShow(item.index) : onHide(item.index)
+                    }
+                    style={({ pressed }) => [
+                      styles.atlasToggleBtn,
+                      pressed && { opacity: 0.7 },
+                    ]}
+                  >
+                    <Text style={styles.atlasToggleText}>
+                      {hidden ? '👁 Show' : '🙈 Hide'}
+                    </Text>
+                  </Pressable>
+                )}
+              </View>
+            )
+          }}
+        />
+      </View>
+    </Modal>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -185,8 +625,13 @@ const styles = StyleSheet.create({
   },
   headerInner: {
     flexDirection: 'row',
-    alignItems: 'baseline',
+    alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.sm,
   },
   title: {
     fontSize: fontSizes.xl,
@@ -206,10 +651,49 @@ const styles = StyleSheet.create({
     color: colors.text,
     fontFamily: 'Nunito_900Black',
   },
+  atlasButton: {
+    width: 36,
+    height: 36,
+    borderRadius: radius.pill,
+    backgroundColor: colors.cream100,
+    borderWidth: 2,
+    borderColor: colors.border,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  atlasButtonText: { fontSize: 18 },
   subtitle: {
     fontSize: fontSizes.xs,
     color: colors.textMuted,
     marginTop: 2,
+  },
+
+  placingBanner: {
+    backgroundColor: colors.primary100,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.primary500,
+    paddingHorizontal: space.lg,
+    paddingVertical: space.sm,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.sm,
+  },
+  placingBannerText: {
+    flex: 1,
+    fontSize: fontSizes.sm,
+    color: colors.primary700,
+    fontFamily: 'Nunito_700Bold',
+  },
+  placingCancel: {
+    backgroundColor: colors.primary500,
+    paddingHorizontal: space.md,
+    paddingVertical: 4,
+    borderRadius: radius.pill,
+  },
+  placingCancelText: {
+    color: '#fff',
+    fontSize: fontSizes.xs,
+    fontFamily: 'Nunito_900Black',
   },
 
   scrollWrap: { flex: 1 },
@@ -246,12 +730,14 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
   },
 
-  sprite: {
-    position: 'absolute',
-  },
+  spriteWrap: { position: 'absolute' },
+  sprite: { width: '100%', height: '100%' },
   spriteLocked: {
     opacity: 0.3,
     tintColor: 'rgba(0,0,0,0.85)',
+  },
+  spriteMoving: {
+    opacity: 0.7,
   },
 
   emptyShell: {
@@ -264,5 +750,218 @@ const styles = StyleSheet.create({
     color: colors.textMuted,
     fontSize: fontSizes.sm,
     textAlign: 'center',
+  },
+
+  // Action sheet
+  backdrop: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.45)',
+    justifyContent: 'flex-end',
+  },
+  sheet: {
+    backgroundColor: colors.surface,
+    borderTopLeftRadius: radius.lg,
+    borderTopRightRadius: radius.lg,
+    padding: space.lg,
+    paddingBottom: space.xl,
+    gap: space.sm,
+    borderTopWidth: 4,
+    borderColor: colors.primary500,
+  },
+  sheetHead: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.md,
+    marginBottom: space.sm,
+  },
+  sheetGlyph: {
+    fontSize: 40,
+  },
+  sheetTitle: {
+    fontSize: fontSizes.xl,
+    color: colors.text,
+    fontFamily: 'Nunito_900Black',
+  },
+  sheetSubtitle: {
+    fontSize: fontSizes.xs,
+    color: colors.textSubtle,
+    fontFamily: 'Nunito_700Bold',
+  },
+  sheetAction: {
+    paddingVertical: space.md,
+    paddingHorizontal: space.md,
+    backgroundColor: colors.cream100,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  sheetActionPressed: {
+    backgroundColor: colors.cream200,
+  },
+  sheetActionText: {
+    fontSize: fontSizes.md,
+    color: colors.text,
+    fontFamily: 'Nunito_700Bold',
+  },
+  sheetActionDisabled: {
+    color: colors.textSubtle,
+  },
+  sheetCancel: {
+    marginTop: space.sm,
+    paddingVertical: space.md,
+    alignItems: 'center',
+  },
+  sheetCancelText: {
+    fontSize: fontSizes.md,
+    color: colors.textMuted,
+    fontFamily: 'Nunito_700Bold',
+  },
+
+  // About card
+  aboutCard: {
+    backgroundColor: colors.surface,
+    borderTopLeftRadius: radius.lg,
+    borderTopRightRadius: radius.lg,
+    padding: space.lg,
+    paddingBottom: space.xl,
+    alignItems: 'center',
+    gap: 6,
+    borderTopWidth: 4,
+    borderColor: colors.primary500,
+  },
+  aboutSpriteWrap: {
+    width: 120,
+    height: 120,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  aboutSprite: { width: '100%', height: '100%' },
+  aboutTitle: {
+    fontSize: fontSizes.xl,
+    color: colors.text,
+    fontFamily: 'Nunito_900Black',
+  },
+  aboutSubtitle: {
+    fontSize: fontSizes.xs,
+    color: colors.textSubtle,
+    fontFamily: 'Nunito_700Bold',
+  },
+  aboutFlavor: {
+    fontSize: fontSizes.md,
+    color: colors.textMuted,
+    fontFamily: 'Nunito_600SemiBold',
+    textAlign: 'center',
+    marginTop: space.sm,
+    marginHorizontal: space.lg,
+    lineHeight: fontSizes.md * 1.4,
+  },
+  aboutStats: {
+    flexDirection: 'row',
+    gap: space.md,
+    marginTop: space.sm,
+  },
+  aboutStat: {
+    fontSize: fontSizes.sm,
+    color: colors.text,
+    fontFamily: 'Nunito_700Bold',
+    backgroundColor: colors.cream100,
+    paddingHorizontal: space.md,
+    paddingVertical: 4,
+    borderRadius: radius.pill,
+  },
+
+  // Atlas modal
+  atlasShell: {
+    flex: 1,
+    backgroundColor: colors.bg,
+  },
+  atlasHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: space.lg,
+    paddingBottom: space.sm,
+  },
+  atlasTitle: {
+    fontSize: fontSizes.xxl,
+    color: colors.text,
+    fontFamily: 'Nunito_900Black',
+  },
+  atlasClose: {
+    width: 36,
+    height: 36,
+    borderRadius: radius.pill,
+    backgroundColor: colors.surface,
+    borderWidth: 1,
+    borderColor: colors.border,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  atlasCloseText: { fontSize: 20, color: colors.text },
+  atlasToolbar: {
+    paddingHorizontal: space.lg,
+    paddingBottom: space.sm,
+  },
+  atlasResetBtn: {
+    alignSelf: 'flex-start',
+    backgroundColor: colors.cream100,
+    borderWidth: 1,
+    borderColor: colors.border,
+    paddingHorizontal: space.md,
+    paddingVertical: 6,
+    borderRadius: radius.pill,
+  },
+  atlasResetText: {
+    fontSize: fontSizes.xs,
+    color: colors.textMuted,
+    fontFamily: 'Nunito_700Bold',
+  },
+  atlasRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.md,
+    paddingHorizontal: space.lg,
+    paddingVertical: space.sm,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border,
+  },
+  atlasRowMain: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.md,
+  },
+  atlasThumb: {
+    width: 56,
+    height: 56,
+    backgroundColor: colors.cream100,
+    borderRadius: radius.md,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  atlasThumbImg: { width: 48, height: 48 },
+  atlasRowName: {
+    fontSize: fontSizes.md,
+    color: colors.text,
+    fontFamily: 'Nunito_900Black',
+  },
+  atlasRowSub: {
+    fontSize: fontSizes.xs,
+    color: colors.textMuted,
+    fontFamily: 'Nunito_700Bold',
+    marginTop: 2,
+  },
+  atlasToggleBtn: {
+    backgroundColor: colors.cream100,
+    borderWidth: 1,
+    borderColor: colors.border,
+    paddingHorizontal: space.md,
+    paddingVertical: 6,
+    borderRadius: radius.pill,
+  },
+  atlasToggleText: {
+    fontSize: fontSizes.xs,
+    color: colors.text,
+    fontFamily: 'Nunito_900Black',
   },
 })
