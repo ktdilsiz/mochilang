@@ -12,12 +12,14 @@ import {
   type AppSettings,
   type SpeechRate,
   type ThemeMode,
+  type UiLocale,
   type VoiceGender,
+  LOCALE_LABELS,
   SPEECH_RATE_LABELS,
-  THEME_LABELS,
-  VOICE_LABELS,
+  SUPPORTED_LOCALES,
 } from '@mochilang/shared'
 import { useSettings } from '../state/useSettings'
+import { useT } from '../lib/i18n'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
@@ -33,6 +35,7 @@ const XP_GOAL_OPTIONS: AppSettings['dailyXpGoal'][] = [10, 20, 30, 50]
 export default function SettingsScreen({ onBack }: Props) {
   const insets = useSafeAreaInsets()
   const { state, update, reset } = useSettings()
+  const t = useT()
 
   return (
     <ScrollView
@@ -46,84 +49,95 @@ export default function SettingsScreen({ onBack }: Props) {
         <TouchableOpacity onPress={onBack} style={styles.backButton} hitSlop={16}>
           <Text style={styles.backText}>←</Text>
         </TouchableOpacity>
-        <Text style={styles.title}>Settings</Text>
+        <Text style={styles.title}>{t('settings.title')}</Text>
       </View>
 
-      <Section title="Audio">
+      <Section title={t('settings.language')}>
         <Segmented
-          label="Voice"
-          description="Voice used to read prompts in listening exercises."
+          label={t('settings.language.label')}
+          description={t('settings.language.description')}
+          options={SUPPORTED_LOCALES}
+          getLabel={(v) => LOCALE_LABELS[v as UiLocale]}
+          value={state.uiLocale}
+          onChange={(v) => update('uiLocale', v as UiLocale)}
+        />
+      </Section>
+
+      <Section title={t('settings.audio')}>
+        <Segmented
+          label={t('settings.voice.label')}
+          description={t('settings.voice.description')}
           options={VOICE_OPTIONS}
-          getLabel={(v) => VOICE_LABELS[v]}
+          getLabel={(v) => t(`settings.voice.${v}`)}
           value={state.voice}
           onChange={(v) => update('voice', v)}
         />
         <Segmented
-          label="Speech rate"
-          description="Slow down for new languages or speed up to challenge yourself."
+          label={t('settings.speech_rate.label')}
+          description={t('settings.speech_rate.description')}
           options={SPEECH_RATE_OPTIONS}
           getLabel={(v) => SPEECH_RATE_LABELS[v]}
           value={state.speechRate}
           onChange={(v) => update('speechRate', v)}
         />
         <Toggle
-          label="Sound effects"
-          description="Short cues on correct / incorrect answers."
+          label={t('settings.sound_effects.label')}
+          description={t('settings.sound_effects.description')}
           value={state.soundEffects}
           onChange={(v) => update('soundEffects', v)}
         />
         <Toggle
-          label="Auto-play audio"
-          description="Play the audio clip automatically when a listening exercise opens."
+          label={t('settings.auto_play.label')}
+          description={t('settings.auto_play.description')}
           value={state.autoPlayAudio}
           onChange={(v) => update('autoPlayAudio', v)}
         />
       </Section>
 
-      <Section title="Learning">
+      <Section title={t('settings.learning')}>
         <Segmented
-          label="Daily XP goal"
-          description="Target XP for a complete day. Drives the streak banner."
+          label={t('settings.daily_xp.label')}
+          description={t('settings.daily_xp.description')}
           options={XP_GOAL_OPTIONS}
-          getLabel={(v) => `${v} XP`}
+          getLabel={(v) => t('settings.daily_xp.suffix', { n: v })}
           value={state.dailyXpGoal}
           onChange={(v) => update('dailyXpGoal', v)}
         />
         <Toggle
-          label="Show pinyin"
-          description="Display pinyin under Chinese prompts in lessons and guides."
+          label={t('settings.show_pinyin.label')}
+          description={t('settings.show_pinyin.description')}
           value={state.showPinyin}
           onChange={(v) => update('showPinyin', v)}
         />
       </Section>
 
-      <Section title="Feel">
+      <Section title={t('settings.feel')}>
         <Segmented
-          label="Theme"
-          description="Light, dark, or follow your device."
+          label={t('settings.theme.label')}
+          description={t('settings.theme.description')}
           options={THEME_OPTIONS}
-          getLabel={(v) => THEME_LABELS[v]}
+          getLabel={(v) => t(`settings.theme.${v}`)}
           value={state.theme}
           onChange={(v) => update('theme', v)}
         />
         <Toggle
-          label="Animations"
-          description="Pulse rings, bounces, and other path animations."
+          label={t('settings.animations.label')}
+          description={t('settings.animations.description')}
           value={state.animations}
           onChange={(v) => update('animations', v)}
         />
         <Toggle
-          label="Haptics"
-          description="Vibration on correct / incorrect answers."
+          label={t('settings.haptics.label')}
+          description={t('settings.haptics.description')}
           value={state.haptics}
           onChange={(v) => update('haptics', v)}
         />
       </Section>
 
-      <Section title="Developer">
+      <Section title={t('settings.developer')}>
         <Toggle
-          label="Unlock everything"
-          description="Reveals every mochi in the village and lets you open any lesson regardless of progress. Doesn't grant XP or mark anything complete — just disables the gating."
+          label={t('settings.developer.unlock_all.label')}
+          description={t('settings.developer.unlock_all.description')}
           value={state.developerMode}
           onChange={(v) => update('developerMode', v)}
         />
@@ -131,13 +145,21 @@ export default function SettingsScreen({ onBack }: Props) {
 
       <View style={{ alignItems: 'center', marginTop: space.lg }}>
         <LedgeButton
-          label="Reset to defaults"
+          label={t('settings.reset')}
           tone="neutral"
           onPress={() => {
-            Alert.alert('Reset settings?', 'Restore all settings to their defaults.', [
-              { text: 'Cancel', style: 'cancel' },
-              { text: 'Reset', style: 'destructive', onPress: () => reset() },
-            ])
+            Alert.alert(
+              t('settings.reset.confirm.title'),
+              t('settings.reset.confirm.body'),
+              [
+                { text: t('settings.reset.confirm.cancel'), style: 'cancel' },
+                {
+                  text: t('settings.reset.confirm.confirm'),
+                  style: 'destructive',
+                  onPress: () => reset(),
+                },
+              ]
+            )
           }}
         />
       </View>

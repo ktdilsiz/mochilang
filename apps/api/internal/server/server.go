@@ -11,6 +11,7 @@ import (
 	"github.com/ktdilsiz/mochilang/api/internal/auth"
 	"github.com/ktdilsiz/mochilang/api/internal/config"
 	"github.com/ktdilsiz/mochilang/api/internal/content"
+	"github.com/ktdilsiz/mochilang/api/internal/i18n"
 	"github.com/ktdilsiz/mochilang/api/internal/store"
 )
 
@@ -26,15 +27,17 @@ type Server struct {
 	cfg          config.Config
 	store        *store.Store
 	content      *content.Loader
+	i18n         *i18n.Loader
 	now          func() time.Time
 	googleVerify *auth.GoogleVerifier
 }
 
-func New(cfg config.Config, s *store.Store, courses *content.Loader) *Server {
+func New(cfg config.Config, s *store.Store, courses *content.Loader, locales *i18n.Loader) *Server {
 	return &Server{
 		cfg:          cfg,
 		store:        s,
 		content:      courses,
+		i18n:         locales,
 		now:          time.Now,
 		googleVerify: auth.NewGoogleVerifier(cfg.GoogleClientID),
 	}
@@ -63,6 +66,22 @@ func (s *Server) Engine() *gin.Engine {
 	r.GET("/api/content/courses", s.handleListCourses)
 	r.GET("/api/content/courses/:id", s.handleGetCourse)
 
+	// UI localization. Public — same dictionary for every user, no
+	// per-account customization yet.
+	r.GET("/api/i18n/locales", s.handleListLocales)
+	r.GET("/api/i18n/:locale", s.handleGetLocale)
+
+	// Community browse + detail endpoints are public but session-aware:
+	// signed-in viewers get their own rating / unhidden access to their
+	// own pack surfaced; anonymous viewers still get the same data.
+	pub := r.Group("/api")
+	pub.Use(s.optionalSession())
+	{
+		pub.GET("/community/packs", s.handleListCommunityPacks)
+		pub.GET("/community/packs/:id", s.handleGetCommunityPack)
+		pub.GET("/community/packs/:id/comments", s.handleListPackComments)
+	}
+
 	api := r.Group("/api")
 	api.Use(s.requireSession())
 	{
@@ -77,12 +96,43 @@ func (s *Server) Engine() *gin.Engine {
 
 		api.GET("/friends", s.handleListFriends)
 		api.GET("/league", s.handleLeague)
+
+		// Community: write paths require auth.
+		api.POST("/community/handle", s.handleSetCommunityHandle)
+		api.POST("/community/packs", s.handleSubmitCommunityPack)
+		api.DELETE("/community/packs/:id", s.handleDeleteCommunityPack)
+		api.POST("/community/packs/:id/rate", s.handleRatePack)
+		api.POST("/community/packs/:id/comments", s.handleCommentOnPack)
+		api.POST("/community/packs/:id/report", s.handleReportPack)
 	}
 
 	return r
 }
 
 const userIDKey = "userId"
+
+// optionalSession is like requireSession but never 401s — it just
+// populates the user id if a valid session cookie is present, and
+// lets the request continue either way. Used by public endpoints
+// (community browse / detail) that want viewer-specific bits when
+// available but stay reachable for anonymous viewers.
+func (s *Server) optionalSession() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		raw, err := c.Cookie(SessionCookieName)
+		if err != nil || raw == "" {
+			c.Next()
+			return
+		}
+		sess, err := s.store.GetSession(c, auth.HashToken(raw))
+		if err != nil {
+			c.Next()
+			return
+		}
+		_ = s.store.TouchSession(c, sess.ID)
+		c.Set(userIDKey, sess.UserID)
+		c.Next()
+	}
+}
 
 // requireSession reads the session cookie, looks up the row, and stashes
 // the user_id into the gin context. Failed lookups → 401.

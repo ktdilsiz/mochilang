@@ -10,6 +10,7 @@ import {
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Text, View, ActivityIndicator } from 'react-native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { I18nProvider, useT } from './src/lib/i18n'
 import {
   useFonts,
   Nunito_400Regular,
@@ -141,14 +142,16 @@ export default function App() {
   // zeros and the top of the screen sits under the status bar.
   return (
     <SafeAreaProvider>
-      {!signedIn ? (
-        <>
-          <StatusBar style="auto" />
-          <LoginScreen onContinueOffline={() => setSignedIn(true)} />
-        </>
-      ) : (
-        <SignedInApp onSignOut={() => setSignedIn(false)} />
-      )}
+      <I18nProvider>
+        {!signedIn ? (
+          <>
+            <StatusBar style="auto" />
+            <LoginScreen onContinueOffline={() => setSignedIn(true)} />
+          </>
+        ) : (
+          <SignedInApp onSignOut={() => setSignedIn(false)} />
+        )}
+      </I18nProvider>
     </SafeAreaProvider>
   )
 }
@@ -405,6 +408,7 @@ function SignedInTabs({
   onPracticeTopic,
   onPracticeLevel,
 }: SignedInTabsProps) {
+  const t = useT()
   return (
     <Tabs.Navigator
       screenOptions={{
@@ -419,7 +423,7 @@ function SignedInTabs({
     >
       <Tabs.Screen
         name="Home"
-        options={{ tabBarLabel: 'Learn', tabBarIcon: tabIcon('🏠') }}
+        options={{ tabBarLabel: t('tabs.home'), tabBarIcon: tabIcon('🏠') }}
       >
         {(props) => (
           <HomeScreen
@@ -446,13 +450,13 @@ function SignedInTabs({
       </Tabs.Screen>
       <Tabs.Screen
         name="Village"
-        options={{ tabBarLabel: 'Village', tabBarIcon: tabIcon('🏡') }}
+        options={{ tabBarLabel: t('tabs.village'), tabBarIcon: tabIcon('🏡') }}
       >
         {() => <VillageScreen courseId={courseId} />}
       </Tabs.Screen>
       <Tabs.Screen
         name="Social"
-        options={{ tabBarLabel: 'Social', tabBarIcon: tabIcon('🏆') }}
+        options={{ tabBarLabel: t('tabs.social'), tabBarIcon: tabIcon('🏆') }}
       >
         {() => (
           <SocialScreen
@@ -464,7 +468,7 @@ function SignedInTabs({
       </Tabs.Screen>
       <Tabs.Screen
         name="Profile"
-        options={{ tabBarLabel: 'Profile', tabBarIcon: tabIcon('👤') }}
+        options={{ tabBarLabel: t('tabs.profile'), tabBarIcon: tabIcon('👤') }}
       >
         {(props) => (
           <ProfileScreen

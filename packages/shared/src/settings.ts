@@ -48,6 +48,12 @@ export interface AppSettings {
    * it just disables the gating so the whole content tree is browsable.
    */
   developerMode: boolean
+  /**
+   * UI language. Independent of the course the user is studying —
+   * a Turkish speaker learning English picks 'tr' here so the app
+   * chrome speaks Turkish, while their *lessons* still teach English.
+   */
+  uiLocale: 'en' | 'zh' | 'tr'
 }
 
 export const SETTINGS_DEFAULT: AppSettings = {
@@ -61,6 +67,7 @@ export const SETTINGS_DEFAULT: AppSettings = {
   dailyXpGoal: 20,
   theme: 'system',
   developerMode: false,
+  uiLocale: 'en',
 }
 
 /** Storage key used by both apps so a future sync layer has one source. */
@@ -90,6 +97,7 @@ export function mergeSettings(stored: unknown): AppSettings {
     theme: pick(s.theme, ['system', 'light', 'dark'], SETTINGS_DEFAULT.theme),
     developerMode:
       typeof s.developerMode === 'boolean' ? s.developerMode : SETTINGS_DEFAULT.developerMode,
+    uiLocale: pick(s.uiLocale, ['en', 'zh', 'tr'], SETTINGS_DEFAULT.uiLocale),
   }
 }
 

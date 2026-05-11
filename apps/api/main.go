@@ -18,6 +18,7 @@ import (
 
 	"github.com/ktdilsiz/mochilang/api/internal/config"
 	"github.com/ktdilsiz/mochilang/api/internal/content"
+	"github.com/ktdilsiz/mochilang/api/internal/i18n"
 	"github.com/ktdilsiz/mochilang/api/internal/seed"
 	"github.com/ktdilsiz/mochilang/api/internal/server"
 	"github.com/ktdilsiz/mochilang/api/internal/store"
@@ -26,7 +27,7 @@ import (
 func main() {
 	cfg := config.Load()
 
-	s, err := store.Open(cfg.DBPath)
+	s, err := store.Open(cfg.DBPath, cfg.CommunityDBPath)
 	if err != nil {
 		log.Fatalf("store: %v", err)
 	}
@@ -44,7 +45,12 @@ func main() {
 		log.Fatalf("content: %v", err)
 	}
 
-	srv := server.New(cfg, s, courses)
+	locales, err := i18n.NewLoader()
+	if err != nil {
+		log.Fatalf("i18n: %v", err)
+	}
+
+	srv := server.New(cfg, s, courses, locales)
 	httpServer := &http.Server{
 		Addr:              cfg.Addr,
 		Handler:           srv.Engine(),
@@ -52,7 +58,7 @@ func main() {
 	}
 
 	go func() {
-		log.Printf("mochilang api listening on %s (db: %s)", cfg.Addr, cfg.DBPath)
+		log.Printf("mochilang api listening on %s (db: %s, community db: %s)", cfg.Addr, cfg.DBPath, cfg.CommunityDBPath)
 		if err := httpServer.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 			log.Fatalf("listen: %v", err)
 		}

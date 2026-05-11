@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import type { ProfileState, ProgressState } from '@mochilang/shared'
 import LeagueScreen from './LeagueScreen'
 import FriendsScreen from './FriendsScreen'
+import { useT } from '../lib/i18n'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -23,6 +24,7 @@ type SegmentView = 'league' | 'friends'
  */
 export default function SocialScreen({ progress, profile, setProfile }: Props) {
   const insets = useSafeAreaInsets()
+  const t = useT()
   const [view, setView] = useState<SegmentView>('league')
 
   return (
@@ -35,12 +37,12 @@ export default function SocialScreen({ progress, profile, setProfile }: Props) {
       >
         <View style={styles.segments}>
           <Segment
-            label="🛡 League"
+            label={t('social.tab.league')}
             active={view === 'league'}
             onPress={() => setView('league')}
           />
           <Segment
-            label="👥 Friends"
+            label={t('social.tab.friends')}
             active={view === 'friends'}
             onPress={() => setView('friends')}
           />

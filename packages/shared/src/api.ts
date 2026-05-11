@@ -260,4 +260,10 @@ export const api = {
     request<CourseIndexResponse>('/api/content/courses', { signal }),
   getCourse: <T = unknown>(courseId: string, signal?: AbortSignal) =>
     request<T>(`/api/content/courses/${encodeURIComponent(courseId)}`, { signal }),
+
+  // UI localization (public)
+  listLocales: (signal?: AbortSignal) =>
+    request<{ locales: string[] }>('/api/i18n/locales', { signal }),
+  getLocale: (code: string, signal?: AbortSignal) =>
+    request<Record<string, string>>(`/api/i18n/${encodeURIComponent(code)}`, { signal }),
 }

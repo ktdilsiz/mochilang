@@ -19,6 +19,7 @@ import { useCourse } from '../state/useCourse'
 import { useLevelExams } from '../state/useLevelExams'
 import { useProgress } from '../state/useProgress'
 import { useSettings } from '../state/useSettings'
+import { useT } from '../lib/i18n'
 import { MOCHI_SPRITES } from '../data/mochiSprites'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
@@ -52,6 +53,7 @@ export default function VillageScreen({ courseId }: Props) {
   const levelExams = useLevelExams()
   const progress = useProgress()
   const { state: settings } = useSettings()
+  const t = useT()
   const devMode = settings.developerMode
   const [viewportHeight, setViewportHeight] = useState(0)
 
@@ -69,7 +71,7 @@ export default function VillageScreen({ courseId }: Props) {
     <View style={styles.shell}>
       <View style={[styles.header, { paddingTop: insets.top + space.sm }]}>
         <View style={styles.headerInner}>
-          <Text style={styles.title}>Mochi Village</Text>
+          <Text style={styles.title}>{t('village.title')}</Text>
           <View style={styles.countPill}>
             <Text style={styles.countPillText}>
               {unlockedCount} / {MOCHI_ROSTER_SIZE}
@@ -78,10 +80,11 @@ export default function VillageScreen({ courseId }: Props) {
         </View>
         <Text style={styles.subtitle}>
           {next
-            ? `Next mochi unlocks at ${next.unlockXp} XP — ${
-                next.unlockXp - totalXp
-              } to go.`
-            : 'You unlocked the entire village. ✨'}
+            ? t('village.subtitle.next', {
+                xp: next.unlockXp,
+                remaining: next.unlockXp - totalXp,
+              })
+            : t('village.subtitle.complete')}
         </Text>
       </View>
 
