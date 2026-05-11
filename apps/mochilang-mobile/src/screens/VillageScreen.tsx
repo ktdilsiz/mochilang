@@ -21,6 +21,7 @@ import { useProgress } from '../state/useProgress'
 import { useSettings } from '../state/useSettings'
 import { useT } from '../lib/i18n'
 import { MOCHI_SPRITES } from '../data/mochiSprites'
+import { VILLAGE_POSITIONS } from '../data/villagePositions'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -40,12 +41,6 @@ interface Props {
 const IMAGE_ASPECT = 2172 / 724 // matches assets/village-bg.png
 
 const SPRITE_HEIGHT = 56
-/**
- * Vertical band of the panorama where mochis can stand. Tuned to keep
- * them on the painted ground area rather than floating in the sky.
- */
-const GROUND_BAND_TOP = 0.42
-const GROUND_BAND_BOTTOM = 0.86
 
 export default function VillageScreen({ courseId }: Props) {
   const insets = useSafeAreaInsets()
@@ -129,15 +124,12 @@ export default function VillageScreen({ courseId }: Props) {
               {/* Mochis scattered across the panorama. Stable across
                   renders because positions are seeded by index. */}
               {MOCHI_ROSTER.map((mochi) => {
-                const unlocked =
-                  devMode || totalXp >= mochi.unlockXp
+                const unlocked = devMode || totalXp >= mochi.unlockXp
                 const sprite = MOCHI_SPRITES[mochi.index]
-                if (!sprite) return null
-                const pos = placementFor(
-                  mochi.index,
-                  panoramaWidth,
-                  viewportHeight
-                )
+                const pos = VILLAGE_POSITIONS[mochi.index]
+                if (!sprite || !pos) return null
+                const x = pos.x * panoramaWidth
+                const y = pos.y * viewportHeight
                 return (
                   <Image
                     key={mochi.id}
@@ -146,8 +138,8 @@ export default function VillageScreen({ courseId }: Props) {
                     style={[
                       styles.sprite,
                       {
-                        left: pos.x - SPRITE_HEIGHT / 2,
-                        top: pos.y - SPRITE_HEIGHT,
+                        left: x - SPRITE_HEIGHT / 2,
+                        top: y - SPRITE_HEIGHT,
                         width: SPRITE_HEIGHT,
                         height: SPRITE_HEIGHT,
                       },
@@ -165,28 +157,20 @@ export default function VillageScreen({ courseId }: Props) {
 }
 
 /**
- * Deterministic pseudo-random placement for the n-th mochi. Two
- * independent linear-congruential streams keep x + y uncorrelated,
- * and seeding by index makes the village look the same on every
- * render (no jitter on re-mount) while still feeling scattered.
+ * Pixel placement for the n-th mochi comes from VILLAGE_POSITIONS
+ * (hand-curated normalized coords). The function below is retained
+ * only for any caller that imports it; current code reads positions
+ * inline via VILLAGE_POSITIONS[mochi.index].
  */
 function placementFor(
   index: number,
   panoramaWidth: number,
   panoramaHeight: number
 ): { x: number; y: number } {
-  const margin = 40
-  // PRNG #1 → x ∈ [0, 1)
-  const a = Math.abs(Math.sin(index * 12.9898) * 43758.5453)
-  const rx = a - Math.floor(a)
-  // PRNG #2 → y ∈ [0, 1)
-  const b = Math.abs(Math.sin(index * 78.233 + 7.13) * 43758.5453)
-  const ry = b - Math.floor(b)
-
-  const x = margin + rx * (panoramaWidth - margin * 2)
-  const yMin = panoramaHeight * GROUND_BAND_TOP
-  const yMax = panoramaHeight * GROUND_BAND_BOTTOM
-  const y = yMin + ry * (yMax - yMin)
+  const pos = VILLAGE_POSITIONS[index]
+  if (!pos) return { x: panoramaWidth / 2, y: panoramaHeight * 0.7 }
+  const x = pos.x * panoramaWidth
+  const y = pos.y * panoramaHeight
   return { x, y }
 }
 
