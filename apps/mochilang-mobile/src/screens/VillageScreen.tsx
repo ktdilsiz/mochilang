@@ -307,8 +307,9 @@ export default function VillageScreen({ courseId }: Props) {
                 if (!sprite || !resolved || resolved.hidden) return null
                 // Mochies are visitors — only render those currently
                 // in the village (their daily window OR an active
-                // invitation). devMode bypasses for sprite art QA.
-                if (!devMode && (!unlocked || !visits.visiting.has(mochi.index))) {
+                // invitation). devMode only bypasses the XP unlock
+                // gate; visits still follow the schedule.
+                if (!unlocked || !visits.visiting.has(mochi.index)) {
                   return null
                 }
                 const isDragging = draggingIndex === mochi.index
