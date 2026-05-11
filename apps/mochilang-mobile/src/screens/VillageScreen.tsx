@@ -31,9 +31,11 @@ import {
   type PlacementOverrides,
   useVillagePlacements,
 } from '../state/useVillagePlacements'
+import { useVillageVisits } from '../state/useVillageVisits'
 import { useT } from '../lib/i18n'
 import { MOCHI_SPRITES } from '../data/mochiSprites'
 import { VILLAGE_POSITIONS } from '../data/villagePositions'
+import { formatVisitWindow, nextArrival } from '../data/villageSchedule'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -95,6 +97,7 @@ export default function VillageScreen({ courseId }: Props) {
   const progress = useProgress()
   const { state: settings } = useSettings()
   const placements = useVillagePlacements()
+  const visits = useVillageVisits()
   const t = useT()
   const devMode = settings.developerMode
   const [viewportHeight, setViewportHeight] = useState(0)
@@ -213,6 +216,7 @@ export default function VillageScreen({ courseId }: Props) {
           </View>
         </View>
         <Text style={styles.subtitle}>
+          {visits.visiting.size} visiting now ·{' '}
           {next
             ? t('village.subtitle.next', {
                 xp: next.unlockXp,
@@ -301,6 +305,12 @@ export default function VillageScreen({ courseId }: Props) {
                   placements.overrides
                 )
                 if (!sprite || !resolved || resolved.hidden) return null
+                // Mochies are visitors — only render those currently
+                // in the village (their daily window OR an active
+                // invitation). devMode bypasses for sprite art QA.
+                if (!devMode && (!unlocked || !visits.visiting.has(mochi.index))) {
+                  return null
+                }
                 const isDragging = draggingIndex === mochi.index
                 const baseX = resolved.x * panoramaWidth
                 const baseY = resolved.y * viewportHeight
@@ -453,6 +463,7 @@ export default function VillageScreen({ courseId }: Props) {
         totalXp={totalXp}
         devMode={devMode}
         overrides={placements.overrides}
+        visits={visits}
         onClose={() => setAtlasOpen(false)}
         onShow={(idx) => placements.unhide(idx)}
         onHide={(idx) => placements.hide(idx)}
@@ -460,6 +471,7 @@ export default function VillageScreen({ courseId }: Props) {
           setAtlasOpen(false)
           setAboutFor(idx)
         }}
+        onInvite={(idx) => visits.invite(idx)}
         onResetAll={() => placements.resetAll()}
       />
     </View>
@@ -744,10 +756,12 @@ interface AtlasModalProps {
   totalXp: number
   devMode: boolean
   overrides: PlacementOverrides
+  visits: ReturnType<typeof useVillageVisits>
   onClose: () => void
   onShow: (index: number) => void
   onHide: (index: number) => void
   onAbout: (index: number) => void
+  onInvite: (index: number) => void
   onResetAll: () => void
 }
 
@@ -756,10 +770,12 @@ function AtlasModal({
   totalXp,
   devMode,
   overrides,
+  visits,
   onClose,
   onShow,
   onHide,
   onAbout,
+  onInvite,
   onResetAll,
 }: AtlasModalProps) {
   const insets = useSafeAreaInsets()
@@ -797,12 +813,24 @@ function AtlasModal({
         <FlatList
           data={MOCHI_ROSTER}
           keyExtractor={(m) => m.id}
+          extraData={visits.now}
           numColumns={1}
           contentContainerStyle={{ paddingBottom: insets.bottom + space.lg }}
           renderItem={({ item }) => {
             const unlocked = devMode || totalXp >= item.unlockXp
             const hidden = overrides[item.index]?.hidden === true
+            const visiting = visits.visiting.has(item.index)
+            const inviteMs = visits.invitationMsRemaining(item.index)
             const sprite = MOCHI_SPRITES[item.index]
+            const status = !unlocked
+              ? `unlocks at ${item.unlockXp} XP`
+              : hidden
+                ? 'hidden'
+                : inviteMs !== null
+                  ? `invited · ${Math.ceil(inviteMs / 60_000)}m left`
+                  : visiting
+                    ? `visiting · ${formatVisitWindow(item.index)}`
+                    : `next visit ${formatTimeOfDay(nextArrival(item.index, new Date(visits.now)))}`
             return (
               <View style={styles.atlasRow}>
                 <Pressable
@@ -826,30 +854,38 @@ function AtlasModal({
                       {displayNameFor(item, overrides)}
                     </Text>
                     <Text style={styles.atlasRowSub}>
-                      #{item.index + 1} ·{' '}
-                      {!unlocked
-                        ? `unlocks at ${item.unlockXp} XP`
-                        : hidden
-                          ? 'hidden'
-                          : 'in village'}
+                      #{item.index + 1} · {status}
                     </Text>
                   </View>
                 </Pressable>
-                {unlocked && (
-                  <Pressable
-                    onPress={() =>
-                      hidden ? onShow(item.index) : onHide(item.index)
-                    }
-                    style={({ pressed }) => [
-                      styles.atlasToggleBtn,
-                      pressed && { opacity: 0.7 },
-                    ]}
-                  >
-                    <Text style={styles.atlasToggleText}>
-                      {hidden ? '👁 Show' : '🙈 Hide'}
-                    </Text>
-                  </Pressable>
-                )}
+                <View style={styles.atlasActions}>
+                  {unlocked && !hidden && !visiting && (
+                    <Pressable
+                      onPress={() => onInvite(item.index)}
+                      style={({ pressed }) => [
+                        styles.atlasInviteBtn,
+                        pressed && { opacity: 0.7 },
+                      ]}
+                    >
+                      <Text style={styles.atlasInviteText}>+ Invite</Text>
+                    </Pressable>
+                  )}
+                  {unlocked && (
+                    <Pressable
+                      onPress={() =>
+                        hidden ? onShow(item.index) : onHide(item.index)
+                      }
+                      style={({ pressed }) => [
+                        styles.atlasToggleBtn,
+                        pressed && { opacity: 0.7 },
+                      ]}
+                    >
+                      <Text style={styles.atlasToggleText}>
+                        {hidden ? '👁' : '🙈'}
+                      </Text>
+                    </Pressable>
+                  )}
+                </View>
               </View>
             )
           }}
@@ -857,6 +893,13 @@ function AtlasModal({
       </View>
     </Modal>
   )
+}
+
+function formatTimeOfDay(d: Date): string {
+  return `${d.getHours().toString().padStart(2, '0')}:${d
+    .getMinutes()
+    .toString()
+    .padStart(2, '0')}`
 }
 
 const styles = StyleSheet.create({
@@ -1260,6 +1303,22 @@ const styles = StyleSheet.create({
     color: colors.textMuted,
     fontFamily: 'Nunito_700Bold',
     marginTop: 2,
+  },
+  atlasActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.xs,
+  },
+  atlasInviteBtn: {
+    backgroundColor: colors.primary500,
+    paddingHorizontal: space.md,
+    paddingVertical: 6,
+    borderRadius: radius.pill,
+  },
+  atlasInviteText: {
+    fontSize: fontSizes.xs,
+    color: '#fff',
+    fontFamily: 'Nunito_900Black',
   },
   atlasToggleBtn: {
     backgroundColor: colors.cream100,
