@@ -16,8 +16,11 @@ import {
   DEMOTE_RANK,
   tierAt,
   daysUntilMonday,
+  lastActiveDaysAgo,
+  ymd,
   type LeagueResponse,
   type LeagueRow,
+  type OfflineBot,
   type ProfileState,
   type ProgressState,
 } from '@mochilang/shared'
@@ -35,15 +38,30 @@ interface Props extends OuterProps {
 }
 
 /**
- * View-model — same shape the web screen uses. The server already
- * returns this for /api/league; we just unwrap the parts we render.
- *
- * The mobile build is API-only by design (Phase 1), so when the fetch
- * fails we surface an offline message rather than synthesising a bot
- * leaderboard the way the web version does.
+ * Row shape rendered by the screen. Includes optional realism fields
+ * that only the offline path populates — streak, lifetime XP, "new
+ * this week" tag, rank change vs yesterday's settle, last-active label.
+ * The API path leaves them undefined and the renderer skips them.
  */
+interface RenderRow {
+  id: string
+  name: string
+  avatar: string
+  flag?: string
+  weeklyXp: number
+  isUser: boolean
+  // Optional offline-only realism extras
+  streak?: number
+  lifetimeXp?: number
+  isNew?: boolean
+  /** Positive: moved up by N ranks since last settle. Negative: down. */
+  rankDelta?: number
+  /** Friendly active label ("active today" / "2d ago" / etc). */
+  activeLabel?: string
+}
+
 interface ViewModel {
-  rows: LeagueRow[]
+  rows: RenderRow[]
   userRank: number
   userTier: number
   lastWeekRank: number | null
@@ -52,7 +70,7 @@ interface ViewModel {
 
 function viewFromAPI(r: LeagueResponse): ViewModel {
   return {
-    rows: r.rows,
+    rows: r.rows.map((row: LeagueRow) => ({ ...row })),
     userRank: r.userRank,
     userTier: r.userTier,
     lastWeekRank: r.lastWeekRank,
@@ -60,26 +78,39 @@ function viewFromAPI(r: LeagueResponse): ViewModel {
   }
 }
 
+function activeLabelFor(daysAgo: number | null): string {
+  if (daysAgo === null) return 'no activity yet'
+  if (daysAgo === 0) return 'active today'
+  if (daysAgo === 1) return 'yesterday'
+  return `${daysAgo}d ago`
+}
+
 /**
  * Build the view-model from the offline-league hook output: glue the
- * synthetic "me" row in next to the bots, sort, and figure out where
- * the user landed. The cohort + bot XP comes from useOfflineLeague,
- * which handles daily settlement (every day the bots earn a fraction
- * of the user's earned XP) and weekly cohort regeneration.
+ * synthetic "me" row in next to the bots, sort, attach realism fields
+ * (streak, rank delta, active label, "new" badge), and figure out where
+ * the user landed.
  */
 function buildOfflineView(
-  bots: { id: string; name: string; avatar: string; flag: string; weeklyXp: number }[],
+  bots: OfflineBot[],
+  prevRanks: Record<string, number>,
   progress: ProgressState,
   profile: ProfileState,
 ): ViewModel {
+  const today = ymd(new Date())
   const userWeeklyXp = progress.weeklyXp
-  const rows: LeagueRow[] = bots.map((b) => ({
+
+  const rows: RenderRow[] = bots.map((b) => ({
     id: b.id,
     name: b.name,
     avatar: b.avatar,
     flag: b.flag,
     weeklyXp: b.weeklyXp,
     isUser: false,
+    streak: b.streak,
+    lifetimeXp: b.lifetimeXp,
+    isNew: b.isNew,
+    activeLabel: activeLabelFor(lastActiveDaysAgo(b.id, b.archetype, today)),
   }))
   rows.push({
     id: 'me',
@@ -89,8 +120,17 @@ function buildOfflineView(
     isUser: true,
   })
   rows.sort((a, b) => b.weeklyXp - a.weeklyXp || a.id.localeCompare(b.id))
-  const userRank = rows.findIndex((r) => r.isUser) + 1
 
+  // Now that we have the new ranks, compute deltas vs the captured
+  // pre-settle ranks. The user's row has no prevRank so the delta
+  // stays undefined.
+  rows.forEach((row, idx) => {
+    const newRank = idx + 1
+    const prev = prevRanks[row.id]
+    if (typeof prev === 'number') row.rankDelta = prev - newRank
+  })
+
+  const userRank = rows.findIndex((r) => r.isUser) + 1
   return {
     rows,
     userRank,
@@ -121,17 +161,17 @@ export default function LeagueScreen({
   useEffect(() => {
     if (offlineLeague.loading) return
     if (offline) {
-      setVM(buildOfflineView(offlineLeague.bots, progress, profile))
+      setVM(buildOfflineView(offlineLeague.bots, offlineLeague.prevRanks, progress, profile))
     } else if (!vm) {
       // Seed with the offline view synchronously on first paint so the
       // board renders something while the API fetch is in flight.
-      setVM(buildOfflineView(offlineLeague.bots, progress, profile))
+      setVM(buildOfflineView(offlineLeague.bots, offlineLeague.prevRanks, progress, profile))
     }
     // We only depend on the cohort + weeklyXp here; profile changes
     // would loop through setProfile from the hook. The vm/offline
     // pair drives whether we replace the view-model.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [offlineLeague.bots, progress.weeklyXp, offline])
+  }, [offlineLeague.bots, offlineLeague.prevRanks, progress.weeklyXp, offline])
 
   // Fetch on mount; re-fetch whenever weeklyXp changes (i.e. the user
   // finished a lesson and came back to this screen). The fetch is cheap
@@ -299,17 +339,45 @@ export default function LeagueScreen({
                   </Text>
                 </View>
                 <View style={styles.nameWrap}>
-                  <Text
-                    style={[styles.name, r.isUser && styles.nameUser]}
-                    numberOfLines={1}
-                  >
-                    {r.name}
-                    {r.flag ? ` ${r.flag}` : ''}
-                  </Text>
+                  <View style={styles.nameLine}>
+                    <Text
+                      style={[styles.name, r.isUser && styles.nameUser]}
+                      numberOfLines={1}
+                    >
+                      {r.name}
+                      {r.flag ? ` ${r.flag}` : ''}
+                    </Text>
+                    {r.isNew && <Text style={styles.newBadge}>NEW</Text>}
+                  </View>
+                  {!r.isUser && (
+                    <View style={styles.metaLine}>
+                      {typeof r.streak === 'number' && (
+                        <Text style={styles.metaPiece}>🔥 {r.streak}</Text>
+                      )}
+                      {typeof r.lifetimeXp === 'number' && (
+                        <Text style={styles.metaPiece}>
+                          ⚡ {r.lifetimeXp.toLocaleString()}
+                        </Text>
+                      )}
+                      {r.activeLabel && (
+                        <Text style={styles.metaActive}>{r.activeLabel}</Text>
+                      )}
+                    </View>
+                  )}
                 </View>
-                <Text style={styles.xp}>
-                  {r.weeklyXp.toLocaleString()} XP
-                </Text>
+                <View style={styles.xpCol}>
+                  <Text style={styles.xp}>{r.weeklyXp.toLocaleString()} XP</Text>
+                  {typeof r.rankDelta === 'number' && r.rankDelta !== 0 && (
+                    <Text
+                      style={[
+                        styles.delta,
+                        r.rankDelta > 0 ? styles.deltaUp : styles.deltaDown,
+                      ]}
+                    >
+                      {r.rankDelta > 0 ? `▲${r.rankDelta}` : `▼${-r.rankDelta}`}
+                    </Text>
+                  )}
+                </View>
               </View>
             )
           })}
@@ -479,17 +547,57 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   avatarEmoji: { fontSize: 22, lineHeight: 26 },
-  nameWrap: { flex: 1 },
+  nameWrap: { flex: 1, gap: 2 },
+  nameLine: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 6,
+  },
   name: {
     fontSize: fontSizes.md,
     color: colors.text,
+    flexShrink: 1,
   },
   nameUser: { fontWeight: '800' },
+  newBadge: {
+    fontSize: 9,
+    fontWeight: '900',
+    letterSpacing: 0.5,
+    color: '#fff',
+    backgroundColor: colors.primary500,
+    paddingHorizontal: 5,
+    paddingVertical: 1,
+    borderRadius: 4,
+    overflow: 'hidden',
+  },
+  metaLine: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: space.sm,
+  },
+  metaPiece: {
+    fontSize: 11,
+    color: colors.textSubtle,
+    fontWeight: '700',
+  },
+  metaActive: {
+    fontSize: 10,
+    color: colors.textSubtle,
+    fontStyle: 'italic',
+  },
+  xpCol: { alignItems: 'flex-end', gap: 2, minWidth: 64 },
   xp: {
     fontWeight: '800',
     fontSize: fontSizes.sm,
     color: colors.xp700,
   },
+  delta: {
+    fontSize: 10,
+    fontWeight: '900',
+    letterSpacing: 0.4,
+  },
+  deltaUp: { color: colors.success700 },
+  deltaDown: { color: colors.error700 },
 
   // ---------- Footer / states ----------
   footer: {

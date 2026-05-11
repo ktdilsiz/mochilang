@@ -2,18 +2,12 @@
  * Offline league hook — owns AsyncStorage persistence, daily settlement,
  * and weekly rollover for the locally-generated bot cohort.
  *
- * Flow at hook mount + on user XP changes:
- *   1. Load stored state from AsyncStorage. If absent, generate fresh.
- *   2. If stored weekStart != mondayOf(today): finalize the prior week
- *      (snapshot the user's rank, apply tier promote/demote via the
- *      passed-in setProfile), then generate a fresh cohort starting at 0.
- *   3. If stored lastSettledDate < today: roll one settlement using the
- *      delta in the user's totalXp since the last settle. Update the
- *      snapshot so subsequent settlements don't double-count.
- *
- * Settlement uses lifetime totalXp so it stays correct across weekly XP
- * resets — the bot rewards are proportional to *new* XP earned regardless
- * of whether that XP was attributed to this week or last.
+ * Each calendar day that's elapsed since the last settle, every bot
+ * earns XP from its archetype (so the cohort moves even on user rest
+ * days). On top of that, the day we're currently settling on adds a
+ * small rank-decay bonus keyed off the user's totalXp delta since the
+ * last settle. Storage version bumps when the schema changes — older
+ * blobs get discarded.
  */
 
 import { useEffect, useRef, useState } from 'react'
@@ -26,7 +20,7 @@ import {
   mondayOf,
   PROMOTE_RANK,
   rankUserIn,
-  settleDay,
+  settleThrough,
   ymd,
   type OfflineBot,
   type OfflineLeagueState,
@@ -34,14 +28,16 @@ import {
   type ProgressState,
 } from '@mochilang/shared'
 
-const STORAGE_KEY = 'mochilang:offlineLeague:v1'
+// v2 is the archetype-aware schema. Older blobs are abandoned so the
+// regenerator can lay down the new shape without merging logic.
+const STORAGE_KEY = 'mochilang:offlineLeague:v2'
 
 export interface OfflineLeagueView {
-  /** Bot rows + a synthetic "me" row, unsorted; caller renders sorted. */
   bots: OfflineBot[]
-  /** Current week the cohort belongs to (YYYY-MM-DD Monday). */
   weekStart: string
-  /** True until the first AsyncStorage hydration completes. */
+  /** Rank by bot id BEFORE the most recent settle. Drives ↑/↓/— arrows. */
+  prevRanks: Record<string, number>
+  /** True until AsyncStorage hydration completes. */
   loading: boolean
 }
 
@@ -59,8 +55,6 @@ export function useOfflineLeague({
   const [state, setState] = useState<OfflineLeagueState | null>(null)
   const [loading, setLoading] = useState(true)
 
-  // setProfile is recreated on every parent render; cache the latest in
-  // a ref so the settlement effect can call it without re-running.
   const setProfileRef = useRef(setProfile)
   setProfileRef.current = setProfile
 
@@ -75,7 +69,7 @@ export function useOfflineLeague({
           setState(parsed)
         }
       } catch {
-        /* ignore — first run, or corrupted blob; we'll regenerate */
+        /* first run, or corrupt blob — we'll regenerate */
       } finally {
         if (alive) setLoading(false)
       }
@@ -85,23 +79,29 @@ export function useOfflineLeague({
     }
   }, [])
 
-  // The settlement effect runs whenever the user's lifetime XP advances
-  // OR when state hydrates. It owns three responsibilities: first-ever
-  // generation, weekly rollover, and daily settlement. The result is
-  // persisted before commit so a crash mid-render doesn't lose progress.
+  // Settlement / rollover effect. Runs when user XP advances OR on
+  // first hydration. The three branches are: first-ever generate,
+  // week rollover (finalize prior, regen, tier shift), daily settle.
   useEffect(() => {
     if (loading) return
     const today = ymd(new Date())
     const currentWeek = mondayOf()
 
-    // First-ever load — generate cleanly and bail. Baseline the XP
-    // snapshot to the user's current totalXp so we don't credit the
-    // bots for everything the user earned before the offline league
-    // existed.
+    // First-ever load — generate cleanly, baseline the XP snapshot to
+    // the user's current totalXp so bots aren't credited for everything
+    // earned before the offline league existed. Then seed one day of
+    // archetype activity (yesterday → today) so the cohort isn't a wall
+    // of zeros on first open.
     if (!state) {
-      const next = freshState(currentWeek, today, progress.totalXp)
-      void persist(next)
+      const fresh = freshState(currentWeek, today, progress.totalXp)
+      const seeded = settleThrough(fresh.cohort, addDaysLocal(today, -1), today, 0)
+      const next: OfflineLeagueState = {
+        ...fresh,
+        cohort: seeded.cohort,
+        prevRanks: seeded.prevRanks,
+      }
       setState(next)
+      void persist(next)
       return
     }
 
@@ -116,30 +116,41 @@ export function useOfflineLeague({
           : prevRank >= DEMOTE_RANK
             ? 'demoted'
             : 'held'
-      const nextTier = applyTierChange(profile.leagueTier, prevRank)
       setProfileRef.current({
-        leagueTier: nextTier,
+        leagueTier: applyTierChange(profile.leagueTier, prevRank),
         lastWeekRank: prevRank,
         lastWeekChange: change,
       })
+      const fresh = generateCohort(currentWeek, next.recentNames)
+      // Seed one day of activity so the new cohort isn't a wall of zeros
+      // when the user opens on Monday morning.
+      const seeded = settleThrough(fresh, addDaysLocal(today, -1), today, 0)
       next = {
         weekStart: currentWeek,
-        cohort: generateCohort(currentWeek),
+        cohort: seeded.cohort,
         lastSettledDate: today,
         userTotalXpAtLastSettle: progress.totalXp,
         userWeeklyXpAtLastSettle: 0,
+        prevRanks: seeded.prevRanks,
         prevWeekRank: prevRank,
+        recentNames: fresh.map((b) => b.name),
       }
     }
 
-    // Daily settlement — only fire when the date actually changes. Same
-    // day re-renders just refresh the snapshot of weeklyXp so the next
-    // settle has the right baseline.
+    // Daily settlement — only on date change. Same-day re-renders just
+    // refresh snapshots so tomorrow's settle has the right baseline.
     if (next.lastSettledDate !== today) {
-      const xpGained = Math.max(0, progress.totalXp - next.userTotalXpAtLastSettle)
+      const userDelta = Math.max(0, progress.totalXp - next.userTotalXpAtLastSettle)
+      const { cohort, prevRanks } = settleThrough(
+        next.cohort,
+        next.lastSettledDate,
+        today,
+        userDelta,
+      )
       next = {
         ...next,
-        cohort: settleDay(next.cohort, xpGained),
+        cohort,
+        prevRanks,
         lastSettledDate: today,
         userTotalXpAtLastSettle: progress.totalXp,
         userWeeklyXpAtLastSettle: progress.weeklyXp,
@@ -148,16 +159,14 @@ export function useOfflineLeague({
       next.userTotalXpAtLastSettle !== progress.totalXp ||
       next.userWeeklyXpAtLastSettle !== progress.weeklyXp
     ) {
-      // No date change but the user earned XP — store the snapshot so
-      // tomorrow's settlement starts from the right baseline.
+      // No date change but the user earned XP — refresh the snapshot.
       next = {
         ...next,
         userTotalXpAtLastSettle: progress.totalXp,
         userWeeklyXpAtLastSettle: progress.weeklyXp,
       }
     } else {
-      // Nothing changed — skip the AsyncStorage write to avoid churn.
-      return
+      return // nothing to do
     }
 
     setState(next)
@@ -171,6 +180,7 @@ export function useOfflineLeague({
   return {
     bots: state?.cohort ?? [],
     weekStart: state?.weekStart ?? mondayOf(),
+    prevRanks: state?.prevRanks ?? {},
     loading: loading || state === null,
   }
 }
@@ -182,3 +192,13 @@ async function persist(s: OfflineLeagueState) {
     /* in-memory state survives the session */
   }
 }
+
+// Local helper — same as the addDays in shared/offlineLeague, kept inline
+// to avoid an export round-trip.
+function addDaysLocal(dateYMD: string, delta: number): string {
+  const [y, m, d] = dateYMD.split('-').map(Number)
+  const dt = new Date(y, m - 1, d)
+  dt.setDate(dt.getDate() + delta)
+  return ymd(dt)
+}
+
