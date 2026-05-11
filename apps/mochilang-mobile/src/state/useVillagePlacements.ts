@@ -17,6 +17,14 @@ export interface PlacementOverride {
   y?: number
   /** When true, the sprite skips rendering on the panorama. */
   hidden?: boolean
+  /** User-chosen display name; falls back to the archetype label. */
+  name?: string
+}
+
+/** Trim + clip to a sensible cap so the UI doesn't blow up. */
+const MAX_NAME_LEN = 24
+function normalizeName(raw: string): string {
+  return raw.trim().slice(0, MAX_NAME_LEN)
 }
 
 export type PlacementOverrides = Record<number, PlacementOverride>
@@ -72,6 +80,20 @@ export function useVillagePlacements() {
     }))
   }, [])
 
+  const rename = useCallback((index: number, name: string) => {
+    const clean = normalizeName(name)
+    setOverrides((prev) => {
+      const current = prev[index] ?? {}
+      if (!clean) {
+        // Empty string clears the override back to the default name.
+        if (!('name' in current)) return prev
+        const { name: _drop, ...rest } = current
+        return { ...prev, [index]: rest }
+      }
+      return { ...prev, [index]: { ...current, name: clean } }
+    })
+  }, [])
+
   const resetOne = useCallback((index: number) => {
     setOverrides((prev) => {
       if (!(index in prev)) return prev
@@ -85,5 +107,5 @@ export function useVillagePlacements() {
     setOverrides({})
   }, [])
 
-  return { overrides, move, hide, unhide, resetOne, resetAll }
+  return { overrides, move, hide, unhide, rename, resetOne, resetAll }
 }

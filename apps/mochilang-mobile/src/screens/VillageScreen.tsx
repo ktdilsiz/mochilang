@@ -3,13 +3,16 @@ import {
   FlatList,
   Image,
   ImageBackground,
+  KeyboardAvoidingView,
   type LayoutChangeEvent,
   Modal,
   PanResponder,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -79,6 +82,12 @@ function resolvePosition(
   }
 }
 
+function displayNameFor(mochi: MochiSpec, overrides: PlacementOverrides): string {
+  const custom = overrides[mochi.index]?.name
+  if (custom && custom.length > 0) return custom
+  return `Mochi the ${mochi.archetype.role}`
+}
+
 export default function VillageScreen({ courseId }: Props) {
   const insets = useSafeAreaInsets()
   const course = useCourse(courseId)
@@ -91,6 +100,7 @@ export default function VillageScreen({ courseId }: Props) {
   const [viewportHeight, setViewportHeight] = useState(0)
   const [menuFor, setMenuFor] = useState<number | null>(null)
   const [aboutFor, setAboutFor] = useState<number | null>(null)
+  const [renameFor, setRenameFor] = useState<number | null>(null)
   const [atlasOpen, setAtlasOpen] = useState(false)
 
   // Drag-to-move state. While `draggingIndex` is set the sprite at
@@ -367,12 +377,21 @@ export default function VillageScreen({ courseId }: Props) {
       {menuFor !== null && (
         <ActionSheet
           mochi={MOCHI_ROSTER[menuFor]}
+          displayName={
+            MOCHI_ROSTER[menuFor]
+              ? displayNameFor(MOCHI_ROSTER[menuFor], placements.overrides)
+              : ''
+          }
           unlocked={
             devMode || totalXp >= (MOCHI_ROSTER[menuFor]?.unlockXp ?? 0)
           }
           hidden={placements.overrides[menuFor]?.hidden === true}
           onMove={() => {
             startDragging(menuFor)
+            setMenuFor(null)
+          }}
+          onRename={() => {
+            setRenameFor(menuFor)
             setMenuFor(null)
           }}
           onToggleHide={() => {
@@ -394,10 +413,32 @@ export default function VillageScreen({ courseId }: Props) {
         />
       )}
 
+      {/* Rename modal */}
+      {renameFor !== null && (
+        <RenameSheet
+          mochi={MOCHI_ROSTER[renameFor]}
+          currentName={placements.overrides[renameFor]?.name ?? ''}
+          onSave={(name) => {
+            placements.rename(renameFor, name)
+            setRenameFor(null)
+          }}
+          onResetName={() => {
+            placements.rename(renameFor, '')
+            setRenameFor(null)
+          }}
+          onClose={() => setRenameFor(null)}
+        />
+      )}
+
       {/* About card */}
       {aboutFor !== null && (
         <AboutCard
           mochi={MOCHI_ROSTER[aboutFor]}
+          displayName={
+            MOCHI_ROSTER[aboutFor]
+              ? displayNameFor(MOCHI_ROSTER[aboutFor], placements.overrides)
+              : ''
+          }
           unlocked={
             devMode || totalXp >= (MOCHI_ROSTER[aboutFor]?.unlockXp ?? 0)
           }
@@ -427,9 +468,11 @@ export default function VillageScreen({ courseId }: Props) {
 
 interface ActionSheetProps {
   mochi: MochiSpec | undefined
+  displayName: string
   unlocked: boolean
   hidden: boolean
   onMove: () => void
+  onRename: () => void
   onToggleHide: () => void
   onAbout: () => void
   onResetPosition: () => void
@@ -438,9 +481,11 @@ interface ActionSheetProps {
 
 function ActionSheet({
   mochi,
+  displayName,
   unlocked,
   hidden,
   onMove,
+  onRename,
   onToggleHide,
   onAbout,
   onResetPosition,
@@ -459,9 +504,7 @@ function ActionSheet({
           <View style={styles.sheetHead}>
             <Text style={styles.sheetGlyph}>{mochi.archetype.glyph}</Text>
             <View style={{ flex: 1 }}>
-              <Text style={styles.sheetTitle}>
-                Mochi the {mochi.archetype.role}
-              </Text>
+              <Text style={styles.sheetTitle}>{displayName}</Text>
               <Text style={styles.sheetSubtitle}>#{mochi.index + 1}</Text>
             </View>
           </View>
@@ -480,6 +523,23 @@ function ActionSheet({
               ]}
             >
               📍 Move
+            </Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              styles.sheetAction,
+              pressed && styles.sheetActionPressed,
+            ]}
+            onPress={onRename}
+            disabled={!unlocked}
+          >
+            <Text
+              style={[
+                styles.sheetActionText,
+                !unlocked && styles.sheetActionDisabled,
+              ]}
+            >
+              ✏️ Rename
             </Text>
           </Pressable>
           <Pressable
@@ -540,14 +600,106 @@ function ActionSheet({
   )
 }
 
+interface RenameSheetProps {
+  mochi: MochiSpec | undefined
+  currentName: string
+  onSave: (name: string) => void
+  onResetName: () => void
+  onClose: () => void
+}
+
+function RenameSheet({
+  mochi,
+  currentName,
+  onSave,
+  onResetName,
+  onClose,
+}: RenameSheetProps) {
+  const [draft, setDraft] = useState(currentName)
+  if (!mochi) return null
+  const defaultLabel = `Mochi the ${mochi.archetype.role}`
+  return (
+    <Modal transparent animationType="fade" visible onRequestClose={onClose}>
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      >
+        <Pressable style={styles.backdrop} onPress={onClose}>
+          <Pressable
+            style={styles.sheet}
+            onPress={(e) => e.stopPropagation()}
+          >
+            <View style={styles.sheetHead}>
+              <Text style={styles.sheetGlyph}>{mochi.archetype.glyph}</Text>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.sheetTitle}>Rename</Text>
+                <Text style={styles.sheetSubtitle}>
+                  default · {defaultLabel}
+                </Text>
+              </View>
+            </View>
+            <TextInput
+              autoFocus
+              value={draft}
+              onChangeText={setDraft}
+              placeholder={defaultLabel}
+              placeholderTextColor={colors.textSubtle}
+              maxLength={24}
+              returnKeyType="done"
+              onSubmitEditing={() => onSave(draft)}
+              style={styles.renameInput}
+            />
+            <View style={styles.renameButtons}>
+              <Pressable
+                style={({ pressed }) => [
+                  styles.renameSecondary,
+                  pressed && { opacity: 0.7 },
+                ]}
+                onPress={onResetName}
+              >
+                <Text style={styles.renameSecondaryText}>Reset</Text>
+              </Pressable>
+              <Pressable
+                style={({ pressed }) => [
+                  styles.renamePrimary,
+                  pressed && { opacity: 0.7 },
+                ]}
+                onPress={() => onSave(draft)}
+              >
+                <Text style={styles.renamePrimaryText}>Save</Text>
+              </Pressable>
+            </View>
+            <Pressable
+              style={({ pressed }) => [
+                styles.sheetCancel,
+                pressed && { opacity: 0.7 },
+              ]}
+              onPress={onClose}
+            >
+              <Text style={styles.sheetCancelText}>Cancel</Text>
+            </Pressable>
+          </Pressable>
+        </Pressable>
+      </KeyboardAvoidingView>
+    </Modal>
+  )
+}
+
 interface AboutCardProps {
   mochi: MochiSpec | undefined
+  displayName: string
   unlocked: boolean
   totalXp: number
   onClose: () => void
 }
 
-function AboutCard({ mochi, unlocked, totalXp, onClose }: AboutCardProps) {
+function AboutCard({
+  mochi,
+  displayName,
+  unlocked,
+  totalXp,
+  onClose,
+}: AboutCardProps) {
   if (!mochi) return null
   const sprite = MOCHI_SPRITES[mochi.index]
   return (
@@ -559,9 +711,7 @@ function AboutCard({ mochi, unlocked, totalXp, onClose }: AboutCardProps) {
               <Image source={sprite} resizeMode="contain" style={styles.aboutSprite} />
             )}
           </View>
-          <Text style={styles.aboutTitle}>
-            Mochi the {mochi.archetype.role}
-          </Text>
+          <Text style={styles.aboutTitle}>{displayName}</Text>
           <Text style={styles.aboutSubtitle}>#{mochi.index + 1}</Text>
           <Text style={styles.aboutFlavor}>{mochi.archetype.flavor}</Text>
           <View style={styles.aboutStats}>
@@ -673,7 +823,7 @@ function AtlasModal({
                   </View>
                   <View style={{ flex: 1 }}>
                     <Text style={styles.atlasRowName}>
-                      Mochi the {item.archetype.role}
+                      {displayNameFor(item, overrides)}
                     </Text>
                     <Text style={styles.atlasRowSub}>
                       #{item.index + 1} ·{' '}
@@ -931,6 +1081,50 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.md,
     color: colors.textMuted,
     fontFamily: 'Nunito_700Bold',
+  },
+
+  // Rename sheet
+  renameInput: {
+    borderWidth: 2,
+    borderColor: colors.border,
+    borderRadius: radius.md,
+    paddingHorizontal: space.md,
+    paddingVertical: space.sm,
+    fontSize: fontSizes.md,
+    color: colors.text,
+    fontFamily: 'Nunito_700Bold',
+    backgroundColor: colors.cream100,
+  },
+  renameButtons: {
+    flexDirection: 'row',
+    gap: space.sm,
+    marginTop: space.sm,
+  },
+  renameSecondary: {
+    flex: 1,
+    paddingVertical: space.md,
+    backgroundColor: colors.cream100,
+    borderRadius: radius.md,
+    borderWidth: 1,
+    borderColor: colors.border,
+    alignItems: 'center',
+  },
+  renameSecondaryText: {
+    fontSize: fontSizes.md,
+    color: colors.text,
+    fontFamily: 'Nunito_700Bold',
+  },
+  renamePrimary: {
+    flex: 2,
+    paddingVertical: space.md,
+    backgroundColor: colors.primary500,
+    borderRadius: radius.md,
+    alignItems: 'center',
+  },
+  renamePrimaryText: {
+    fontSize: fontSizes.md,
+    color: '#fff',
+    fontFamily: 'Nunito_900Black',
   },
 
   // About card
