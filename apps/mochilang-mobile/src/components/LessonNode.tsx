@@ -10,6 +10,14 @@ interface Props {
   onPress: () => void
   /** When true, render the node muted/disabled (topic gate). */
   locked?: boolean
+  /**
+   * Theme of the topic this lesson belongs to. When provided, drives
+   * the node color so every lesson on the same topic reads as one
+   * cohesive group regardless of per-lesson theme tags. Glyph still
+   * uses the lesson's own theme/dialogue signal so sub-flavors come
+   * through in the icon.
+   */
+  topicTheme?: string
 }
 
 /**
@@ -19,8 +27,15 @@ interface Props {
  * gets an animated pulse ring (`Animated.loop` driving scale + opacity)
  * to draw the eye, equivalent to the web's CSS `@keyframes home-pulse`.
  */
-export default function LessonNode({ lesson, done, isNext, onPress, locked }: Props) {
-  const tint = tintForTheme(lesson.theme)
+export default function LessonNode({
+  lesson,
+  done,
+  isNext,
+  onPress,
+  locked,
+  topicTheme,
+}: Props) {
+  const tint = tintForTheme(topicTheme ?? lesson.theme)
   const tone = done
     ? {
         bg: colors.success100,

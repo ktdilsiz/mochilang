@@ -660,6 +660,7 @@ function TopicCard({
             >
               <LessonNode
                 lesson={lesson}
+                topicTheme={topic.theme}
                 done={isCompleted(lesson.id)}
                 isNext={lesson.id === nextId}
                 onPress={() => unlocked && onNodePress(lesson.id)}
