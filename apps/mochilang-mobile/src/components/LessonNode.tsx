@@ -106,35 +106,47 @@ export default function LessonNode({ lesson, done, isNext, onPress, locked }: Pr
   )
 }
 
-function nodeGlyph(lesson: Lesson): string {
-  switch (lesson.theme) {
-    case 'greetings':
-      return '💬'
-    case 'numbers':
-      return '#'
-    case 'family':
-      return '👪'
-    case 'food':
-      return '🍜'
-    case 'verbs':
-      return '⚙️'
-    case 'location':
-    case 'directions':
-      return '📍'
-    case 'time':
-      return '⏰'
-    case 'questions':
-      return '?'
-    case 'colors':
-      return '🎨'
-    case 'weather':
-      return '☁️'
-    case 'review':
-      return '🔄'
-    case 'basics':
-    default:
-      return '★'
+// Glyph pools per theme — one element used to be hard-coded, now we
+// pick deterministically from a pool of related symbols based on the
+// lesson id so siblings on the path don't all read the same. Dialogue
+// lessons override the theme pool because the conversation framing is
+// more distinctive than the topic.
+const DIALOGUE_GLYPHS = ['💬', '🗣️', '🎭', '📣', '👋', '☎️', '🤝'] as const
+
+const THEME_GLYPHS: Record<string, readonly string[]> = {
+  greetings: ['👋', '🙋', '🤝', '😊', '👐', '🙌'],
+  numbers: ['#', '🔢', '1️⃣', '➕', '➗', '📊', '🧮'],
+  family: ['👪', '👨‍👩‍👧', '👵', '👶', '🏡', '🫂'],
+  food: ['🍜', '🍙', '🍱', '🍣', '🥢', '🍵', '🥟', '🍰', '🍡'],
+  verbs: ['⚙️', '🏃', '💃', '🤸', '🚶', '✍️', '🎬', '🛠️'],
+  location: ['📍', '🗺️', '🧭', '🏘️', '➡️', '🛣️'],
+  directions: ['🧭', '➡️', '⬅️', '↗️', '🗺️', '🚦'],
+  time: ['⏰', '🕐', '📅', '⏳', '🌙', '☀️', '🕰️'],
+  questions: ['?', '🤔', '❓', '🧐', '💭', '❔'],
+  colors: ['🎨', '🌈', '🖍️', '🎭', '🟥', '🟦'],
+  weather: ['☁️', '🌤️', '🌧️', '⛅', '❄️', '🌪️', '☀️', '🌈'],
+  review: ['🔄', '♻️', '🎯', '🏆', '⭐', '🔁'],
+  basics: ['★', '✨', '🌟', '💫', '🌸', '🪷', '🌱', '🍃'],
+}
+
+function hashString(s: string): number {
+  let h = 0
+  for (let i = 0; i < s.length; i++) {
+    h = (h * 31 + s.charCodeAt(i)) | 0
   }
+  return Math.abs(h)
+}
+
+function pickFrom<T>(arr: readonly T[], seed: string): T {
+  return arr[hashString(seed) % arr.length]
+}
+
+function nodeGlyph(lesson: Lesson): string {
+  if (lesson.exercises.some((e) => e.type === 'dialogue')) {
+    return pickFrom(DIALOGUE_GLYPHS, lesson.id)
+  }
+  const pool = THEME_GLYPHS[lesson.theme] ?? THEME_GLYPHS.basics
+  return pickFrom(pool, lesson.id)
 }
 
 const styles = StyleSheet.create({
