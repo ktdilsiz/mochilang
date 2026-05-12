@@ -112,11 +112,13 @@ export const themeTints: Record<
   string,
   { bg: string; edge: string; edgeDeep: string; fg: string }
 > = {
+  // Original Chinese-leaning palette.
   greetings: { bg: '#fff4d6', edge: '#ffd97a', edgeDeep: '#d9a93d', fg: '#b8772f' },
   numbers: { bg: '#e0ecff', edge: '#9cc1ff', edgeDeep: '#5a8be0', fg: '#335fa8' },
   basics: { bg: '#ece6db', edge: '#c4b89d', edgeDeep: '#8a7d65', fg: '#6b5d44' },
   family: { bg: '#ffe1ec', edge: '#ffa6c2', edgeDeep: '#e26e96', fg: '#b94a72' },
   verbs: { bg: '#ece1ff', edge: '#c1a6f5', edgeDeep: '#8d6cd6', fg: '#6b48b3' },
+  verb: { bg: '#ece1ff', edge: '#c1a6f5', edgeDeep: '#8d6cd6', fg: '#6b48b3' },
   food: { bg: '#ffe6d1', edge: '#ffb27a', edgeDeep: '#e07c3a', fg: '#b35a1f' },
   location: { bg: '#d8f0d4', edge: '#92cf86', edgeDeep: '#5da953', fg: '#3d7e36' },
   directions: { bg: '#d8f0d4', edge: '#92cf86', edgeDeep: '#5da953', fg: '#3d7e36' },
@@ -125,6 +127,34 @@ export const themeTints: Record<
   colors: { bg: '#ffe1f6', edge: '#ff9bdc', edgeDeep: '#d36ab1', fg: '#a23e88' },
   weather: { bg: '#d8eaff', edge: '#84baff', edgeDeep: '#4f8fdc', fg: '#2d629f' },
   review: { bg: '#fff0bd', edge: '#ffd84a', edgeDeep: '#d3a300', fg: '#8a6500' },
+
+  // en-tr course themes — most en-tr lessons tag with these. Without
+  // entries here they all fall back to the beige `basics` palette,
+  // making the whole path read as one bland color.
+  grammar: { bg: '#dfeed4', edge: '#9ec97d', edgeDeep: '#6b9a4d', fg: '#4a6e36' },
+  vocabulary: { bg: '#ece1ff', edge: '#bea1f0', edgeDeep: '#8b6cc5', fg: '#5e478f' },
+  vocab: { bg: '#ece1ff', edge: '#bea1f0', edgeDeep: '#8b6cc5', fg: '#5e478f' },
+  tense: { bg: '#fff3d4', edge: '#f0c84a', edgeDeep: '#c69a1c', fg: '#8a6b00' },
+  speaking: { bg: '#ffe3dc', edge: '#ffab9a', edgeDeep: '#dc7361', fg: '#a14a39' },
+  literary: { bg: '#e6dcf0', edge: '#a78bcf', edgeDeep: '#7459a5', fg: '#4f3c80' },
+  topics: { bg: '#dceffc', edge: '#86c2ee', edgeDeep: '#4a8bbf', fg: '#2c5a86' },
+  writing: { bg: '#dde6f3', edge: '#8aa6cf', edgeDeep: '#5878ac', fg: '#324f78' },
+  reading: { bg: '#d6ead6', edge: '#86b888', edgeDeep: '#558759', fg: '#3a5d3a' },
+  alphabet: { bg: '#fff0c2', edge: '#f0c84a', edgeDeep: '#c69a1c', fg: '#8a6b00' },
+  pronouns: { bg: '#ffe1ec', edge: '#f5a6c0', edgeDeep: '#cf6e93', fg: '#a04a70' },
+  shopping: { bg: '#d6f1d6', edge: '#7fce8e', edgeDeep: '#4f9a5a', fg: '#3a6e3e' },
+  tobe: { bg: '#ffe6d8', edge: '#ffa482', edgeDeep: '#d9714d', fg: '#9c4828' },
+  academic: { bg: '#dde2ed', edge: '#8b9bbe', edgeDeep: '#566a92', fg: '#324569' },
+  arts: { bg: '#f1ddf0', edge: '#c193c0', edgeDeep: '#8d5e90', fg: '#5e3e63' },
+  news: { bg: '#e2e2e0', edge: '#a4a49d', edgeDeep: '#727264', fg: '#4d4d44' },
+  places: { bg: '#e8eccc', edge: '#b4bf7a', edgeDeep: '#7e8a44', fg: '#56602f' },
+  media: { bg: '#f1d8e0', edge: '#cf809a', edgeDeep: '#9c526b', fg: '#6e394a' },
+  feelings: { bg: '#ffe5cc', edge: '#f5b378', edgeDeep: '#cb834a', fg: '#8c552f' },
+  phrasal: { bg: '#dadcef', edge: '#9293cf', edgeDeep: '#5f5ea3', fg: '#403e7a' },
+  articles: { bg: '#ebe7df', edge: '#bdb6a4', edgeDeep: '#83795e', fg: '#5a523e' },
+  conditional: { bg: '#e0d6ee', edge: '#a78bcf', edgeDeep: '#7459a5', fg: '#4f3c80' },
+  modal: { bg: '#dce0e8', edge: '#8993ab', edgeDeep: '#576280', fg: '#37405a' },
+  passive: { bg: '#e7e1d6', edge: '#b7a98e', edgeDeep: '#85795e', fg: '#5a503d' },
 }
 
 export function tintForTheme(theme: string) {

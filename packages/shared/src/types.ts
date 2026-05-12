@@ -177,6 +177,12 @@ export interface Lesson {
    * in later via the genfallbacks build step for first-class lessons.
    */
   wordTranslations?: Record<string, string>
+  /**
+   * Optional glyph (emoji or single char) the lesson node renders on the
+   * home path. Overrides the theme-derived glyph pool, so authors can
+   * pick a specific symbol when none of the theme's defaults fit.
+   */
+  glyph?: string
 }
 
 /**

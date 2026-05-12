@@ -99,7 +99,7 @@ export default function LessonNode({ lesson, done, isNext, onPress, locked }: Pr
         ]}
       >
         <Text style={[styles.icon, { color: tone.fg }]}>
-          {done ? '✓' : locked ? '🔒' : nodeGlyph(lesson)}
+          {done ? '✓' : locked ? '🔒' : lesson.glyph ?? nodeGlyph(lesson)}
         </Text>
       </Pressable>
     </View>
@@ -114,11 +114,13 @@ export default function LessonNode({ lesson, done, isNext, onPress, locked }: Pr
 const DIALOGUE_GLYPHS = ['💬', '🗣️', '🎭', '📣', '👋', '☎️', '🤝'] as const
 
 const THEME_GLYPHS: Record<string, readonly string[]> = {
+  // Original Chinese-leaning pools.
   greetings: ['👋', '🙋', '🤝', '😊', '👐', '🙌'],
   numbers: ['#', '🔢', '1️⃣', '➕', '➗', '📊', '🧮'],
   family: ['👪', '👨‍👩‍👧', '👵', '👶', '🏡', '🫂'],
   food: ['🍜', '🍙', '🍱', '🍣', '🥢', '🍵', '🥟', '🍰', '🍡'],
   verbs: ['⚙️', '🏃', '💃', '🤸', '🚶', '✍️', '🎬', '🛠️'],
+  verb: ['⚙️', '🏃', '💃', '🤸', '🚶', '✍️', '🎬', '🛠️'],
   location: ['📍', '🗺️', '🧭', '🏘️', '➡️', '🛣️'],
   directions: ['🧭', '➡️', '⬅️', '↗️', '🗺️', '🚦'],
   time: ['⏰', '🕐', '📅', '⏳', '🌙', '☀️', '🕰️'],
@@ -127,6 +129,32 @@ const THEME_GLYPHS: Record<string, readonly string[]> = {
   weather: ['☁️', '🌤️', '🌧️', '⛅', '❄️', '🌪️', '☀️', '🌈'],
   review: ['🔄', '♻️', '🎯', '🏆', '⭐', '🔁'],
   basics: ['★', '✨', '🌟', '💫', '🌸', '🪷', '🌱', '🍃'],
+
+  // en-tr-flavored pools — paired with the new tints in theme.ts.
+  grammar: ['📖', '📝', '🧩', '🔤', '✏️', '📚'],
+  vocabulary: ['📚', '📖', '🔤', '💡', '📝', '🆎'],
+  vocab: ['📚', '📖', '🔤', '💡', '📝', '🆎'],
+  tense: ['⏳', '⏱️', '⌛', '🕗', '📅'],
+  speaking: ['🎤', '🗨️', '💭', '👄', '🗣️'],
+  literary: ['📜', '✒️', '📖', '🪶', '🎭'],
+  topics: ['🗂️', '📂', '📑', '🏷️', '📋'],
+  writing: ['✍️', '✏️', '🖋️', '📝', '📃'],
+  reading: ['📖', '📕', '📗', '👓', '📰'],
+  alphabet: ['🔤', '🔡', '🅰️', '🆎'],
+  pronouns: ['🧑', '👤', '👥', '🙎', '🙋'],
+  shopping: ['🛒', '🏪', '💳', '🛍️', '🎁'],
+  tobe: ['🪞', '⚖️', '🌟', '✨'],
+  academic: ['🎓', '📜', '🏛️', '📐'],
+  arts: ['🎨', '🖌️', '🎭', '🖼️'],
+  news: ['📰', '📺', '📢', '📡'],
+  places: ['🌍', '🗺️', '🏙️', '🌆', '🏞️'],
+  media: ['📺', '🎬', '📻', '🎵'],
+  feelings: ['💗', '😊', '😢', '❤️', '💛'],
+  phrasal: ['🧷', '🔗', '🪢'],
+  articles: ['📑', '📰', '📄'],
+  conditional: ['🤔', '❓', '➡️', '🔀'],
+  modal: ['🚪', '🤷', '💡'],
+  passive: ['🪑', '⚓', '🧘'],
 }
 
 function hashString(s: string): number {
