@@ -363,10 +363,149 @@ func validateExercise(raw json.RawMessage, path string) (string, error) {
 			}
 		}
 
+	case "dialogue":
+		if err := validateDialogue(raw, path); err != nil {
+			return "", err
+		}
+
 	default:
 		return "", ValidationError{Path: path + ".type", Msg: "unknown exercise type " + probe.Type}
 	}
 	return probe.ID, nil
+}
+
+// validateDialogue checks the shape of a `dialogue` exercise: at
+// least two speakers, at least one turn, every turn references a
+// declared speaker, choice turns have their answer in options, fill
+// turns have a non-empty answer. Strict — unknown fields per turn
+// fail submit instead of rendering as a broken dialogue.
+func validateDialogue(raw json.RawMessage, path string) error {
+	type speaker struct {
+		ID   string `json:"id"`
+		Name string `json:"name"`
+	}
+	var env struct {
+		ID          string            `json:"id"`
+		Type        string            `json:"type"`
+		Prompt      string            `json:"prompt"`
+		Speakers    []speaker         `json:"speakers"`
+		Turns       []json.RawMessage `json:"turns"`
+		Explanation string            `json:"explanation,omitempty"`
+	}
+	dec := json.NewDecoder(strings.NewReader(string(raw)))
+	dec.DisallowUnknownFields()
+	if err := dec.Decode(&env); err != nil {
+		return ValidationError{Path: path, Msg: err.Error()}
+	}
+	if env.Prompt == "" {
+		return ValidationError{Path: path + ".prompt", Msg: "required"}
+	}
+	if len(env.Speakers) < 2 {
+		return ValidationError{Path: path + ".speakers", Msg: "need ≥2 speakers"}
+	}
+	speakerIDs := map[string]struct{}{}
+	for i, s := range env.Speakers {
+		spath := fmt.Sprintf("%s.speakers[%d]", path, i)
+		if s.ID == "" || s.Name == "" {
+			return ValidationError{Path: spath, Msg: "id and name are required"}
+		}
+		if _, dup := speakerIDs[s.ID]; dup {
+			return ValidationError{Path: spath + ".id", Msg: "duplicate speaker id"}
+		}
+		speakerIDs[s.ID] = struct{}{}
+	}
+	if len(env.Turns) == 0 {
+		return ValidationError{Path: path + ".turns", Msg: "need ≥1 turn"}
+	}
+	interactiveSeen := false
+	for i, raw := range env.Turns {
+		tpath := fmt.Sprintf("%s.turns[%d]", path, i)
+		if err := validateDialogueTurn(raw, tpath, speakerIDs, &interactiveSeen); err != nil {
+			return err
+		}
+	}
+	if !interactiveSeen {
+		return ValidationError{
+			Path: path + ".turns",
+			Msg:  "dialogue needs at least one interactive turn (choice or fill)",
+		}
+	}
+	return nil
+}
+
+func validateDialogueTurn(
+	raw json.RawMessage,
+	path string,
+	speakerIDs map[string]struct{},
+	interactiveSeen *bool,
+) error {
+	var probe struct {
+		Kind    string `json:"kind"`
+		Speaker string `json:"speaker"`
+	}
+	if err := json.Unmarshal(raw, &probe); err != nil {
+		return ValidationError{Path: path, Msg: err.Error()}
+	}
+	if _, ok := speakerIDs[probe.Speaker]; !ok {
+		return ValidationError{Path: path + ".speaker", Msg: "unknown speaker id " + probe.Speaker}
+	}
+
+	dec := json.NewDecoder(strings.NewReader(string(raw)))
+	dec.DisallowUnknownFields()
+
+	switch probe.Kind {
+	case "line":
+		var v struct {
+			Kind       string `json:"kind"`
+			Speaker    string `json:"speaker"`
+			Text       string `json:"text"`
+			SpokenText string `json:"spokenText,omitempty"`
+		}
+		if err := dec.Decode(&v); err != nil {
+			return ValidationError{Path: path, Msg: err.Error()}
+		}
+		if v.Text == "" {
+			return ValidationError{Path: path + ".text", Msg: "required"}
+		}
+	case "choice":
+		var v struct {
+			Kind    string   `json:"kind"`
+			Speaker string   `json:"speaker"`
+			Prompt  string   `json:"prompt,omitempty"`
+			Options []string `json:"options"`
+			Answer  string   `json:"answer"`
+		}
+		if err := dec.Decode(&v); err != nil {
+			return ValidationError{Path: path, Msg: err.Error()}
+		}
+		if len(v.Options) < 2 {
+			return ValidationError{Path: path + ".options", Msg: "need ≥2 options"}
+		}
+		if !slices.Contains(v.Options, v.Answer) {
+			return ValidationError{Path: path + ".answer", Msg: "answer must be one of the options"}
+		}
+		*interactiveSeen = true
+	case "fill":
+		var v struct {
+			Kind              string   `json:"kind"`
+			Speaker           string   `json:"speaker"`
+			Prompt            string   `json:"prompt,omitempty"`
+			Before            string   `json:"before"`
+			After             string   `json:"after"`
+			Answer            string   `json:"answer"`
+			AcceptableAnswers []string `json:"acceptableAnswers,omitempty"`
+		}
+		if err := dec.Decode(&v); err != nil {
+			return ValidationError{Path: path, Msg: err.Error()}
+		}
+		if v.Answer == "" {
+			return ValidationError{Path: path + ".answer", Msg: "required"}
+		}
+		*interactiveSeen = true
+	default:
+		return ValidationError{Path: path + ".kind", Msg: "unknown turn kind " + probe.Kind}
+	}
+	return nil
 }
 
 // IsValidationError reports whether err originated in this package's

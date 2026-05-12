@@ -92,6 +92,10 @@ export default function LessonScreen({
         return tapValue.length > 0
       case 'match_pairs':
         return false
+      case 'dialogue':
+        // Stub: no input gating on web; Check is enabled so the user can
+        // skip the placeholder.
+        return true
     }
   }
 
@@ -290,6 +294,21 @@ function ExerciseSwitch(props: {
           resetKey={resetKey}
         />
       )
+    case 'dialogue':
+      // Web port for dialogue lands later. For now show a friendly notice
+      // and treat as auto-pass via the same trick exams use on mobile —
+      // grade() returns { correct: true } below so the user can advance.
+      return (
+        <div className="dialogue-web-stub">
+          <p>
+            <strong>“{exercise.prompt}”</strong>
+          </p>
+          <p>
+            Dialogue exercises are only playable in the mobile app right now.
+            Tap Continue to skip — your XP credit isn't affected.
+          </p>
+        </div>
+      )
   }
 }
 
@@ -310,5 +329,8 @@ function grade(
       return { correct: matchesSequenceAnswer(inputs.tapValue, exercise.answer) }
     case 'match_pairs':
       return null
+    case 'dialogue':
+      // Web stub auto-passes; see ExerciseView's dialogue case.
+      return { correct: true }
   }
 }

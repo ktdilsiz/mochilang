@@ -45,30 +45,35 @@ function pickIdentifier(voices: Voice[], gender: VoiceGender): string | null {
   return pool[0]?.identifier ?? null
 }
 
-export function speak(text: string, opts: { rate?: number } = {}) {
+export function speak(
+  text: string,
+  opts: { rate?: number; language?: string; onDone?: () => void } = {},
+) {
   const settings = getSettings()
   const rate = opts.rate ?? settings.speechRate
+  // Default to Mandarin (matches the pre-existing zh focus). Callers
+  // can override with the active course's target language for non-zh
+  // content (e.g. Turkish dialogues).
+  const language = opts.language ?? 'zh-CN'
   Speech.stop()
 
+  const baseOpts = { language, rate, onDone: opts.onDone }
+
   if (settings.voice === 'auto') {
-    Speech.speak(text, { language: 'zh-CN', rate })
+    Speech.speak(text, baseOpts)
     return
   }
 
   const cached = voiceCache[settings.voice]
   if (cached !== undefined) {
-    Speech.speak(text, {
-      language: 'zh-CN',
-      rate,
-      voice: cached ?? undefined,
-    })
+    Speech.speak(text, { ...baseOpts, voice: cached ?? undefined })
     return
   }
 
   // Fire-and-forget voice resolution — first call spends a frame loading
   // the list. We still kick off the speech immediately with whatever
   // expo-speech defaults to, then cache for the next call.
-  Speech.speak(text, { language: 'zh-CN', rate })
+  Speech.speak(text, baseOpts)
   void ensureVoiceList().then((voices) => {
     voiceCache[settings.voice] = pickIdentifier(voices, settings.voice)
   })

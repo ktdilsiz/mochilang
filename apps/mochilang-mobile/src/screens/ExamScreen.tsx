@@ -121,6 +121,10 @@ export default function ExamScreen({
         return tapValue.length > 0
       case 'match_pairs':
         return false
+      case 'dialogue':
+        // Auto-passes; Check enabled so the user can advance past the
+        // "skipped in exam" notice without input.
+        return true
     }
   }
 
@@ -346,6 +350,17 @@ function ExerciseView({
           resetKey={resetKey}
         />
       )
+    case 'dialogue':
+      // Dialogues are long-form interactive scenes — not a fit for the
+      // timed exam format. If an author included one, render a notice
+      // and let canCheck/grade auto-pass so the exam moves on.
+      return (
+        <View>
+          <Text style={styles.dialogueSkip}>
+            “{ex.prompt}” — dialogue exercises aren't part of exams. Skipping.
+          </Text>
+        </View>
+      )
   }
 }
 
@@ -366,6 +381,9 @@ function grade(
       return { correct: matchesSequenceAnswer(inputs.tapValue, exercise.answer) }
     case 'match_pairs':
       return null
+    case 'dialogue':
+      // Auto-pass — content authors shouldn't put these in exams.
+      return { correct: true }
   }
 }
 
@@ -380,11 +398,20 @@ function wrongMessage(ex: Exercise): string {
       return `Correct: ${ex.answer}`
     case 'match_pairs':
       return 'Some pairs were missed.'
+    case 'dialogue':
+      return ''
   }
 }
 
 const styles = StyleSheet.create({
   shell: { flex: 1, backgroundColor: colors.bg },
+  dialogueSkip: {
+    fontSize: fontSizes.sm,
+    color: colors.textMuted,
+    textAlign: 'center',
+    fontStyle: 'italic',
+    paddingVertical: space.lg,
+  },
   topbar: {
     flexDirection: 'row',
     alignItems: 'center',

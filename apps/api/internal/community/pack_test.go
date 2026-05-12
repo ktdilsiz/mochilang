@@ -114,6 +114,43 @@ const starterTemplate = `{
                 "bank": ["Ben", "iyiyim", "kötüyüm", "sen"]
               }
             ]
+          },
+          {
+            "id": "dialogue",
+            "title": "Dialogue",
+            "description": "A short scripted conversation with two interactive prompts",
+            "theme": "greetings",
+            "xp": 10,
+            "exercises": [
+              {
+                "id": "ex1",
+                "type": "dialogue",
+                "prompt": "At the café",
+                "speakers": [
+                  { "id": "you", "name": "You" },
+                  { "id": "barista", "name": "Barista" }
+                ],
+                "turns": [
+                  { "kind": "line", "speaker": "barista", "text": "Merhaba! Ne istersiniz?" },
+                  {
+                    "kind": "choice",
+                    "speaker": "you",
+                    "prompt": "Order a coffee",
+                    "options": ["Bir kahve, lütfen.", "Bir çay, lütfen.", "Hoşçakal."],
+                    "answer": "Bir kahve, lütfen."
+                  },
+                  { "kind": "line", "speaker": "barista", "text": "Tabii ki, hemen geliyor." },
+                  {
+                    "kind": "fill",
+                    "speaker": "you",
+                    "prompt": "Ask the price",
+                    "before": "Ne kadar ",
+                    "after": "?",
+                    "answer": "tutar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -133,13 +170,13 @@ func TestStarterTemplateValidates(t *testing.T) {
 	if len(env.Level.Topics) != 1 {
 		t.Fatalf("expected 1 topic, got %d", len(env.Level.Topics))
 	}
-	if len(env.Level.Topics[0].Lessons) != 5 {
-		t.Fatalf("expected 5 lessons (one per exercise type), got %d",
+	if len(env.Level.Topics[0].Lessons) != 6 {
+		t.Fatalf("expected 6 lessons (one per exercise type), got %d",
 			len(env.Level.Topics[0].Lessons))
 	}
 	wantTypes := []string{
 		"multiple_choice", "fill_blank", "match_pairs",
-		"listen_and_choose", "tap_words_in_order",
+		"listen_and_choose", "tap_words_in_order", "dialogue",
 	}
 	for i, lesson := range env.Level.Topics[0].Lessons {
 		if len(lesson.Exercises) == 0 {
@@ -216,6 +253,21 @@ func TestValidateEnvelopeRejects(t *testing.T) {
 			name:       "tap_words_bank_missing_word",
 			body:       tapEnvelope(`"answer": "Ben iyiyim"`, `"bank": ["Ben", "kötüyüm"]`),
 			wantInPath: "exercises[0].bank",
+		},
+		{
+			name:       "dialogue_speaker_unknown",
+			body:       dialogueWithChoiceAnswer(`"a"`, `"barista_typo"`),
+			wantInPath: "speaker",
+		},
+		{
+			name:       "dialogue_no_interactive_turn",
+			body:       dialogueAllLines(),
+			wantInPath: "turns",
+		},
+		{
+			name:       "dialogue_choice_answer_not_in_options",
+			body:       dialogueWithChoiceAnswer(`"not in options"`, `"you"`),
+			wantInPath: "answer",
 		},
 	}
 	for _, tc := range cases {
@@ -338,5 +390,101 @@ func replaceFirstFieldValue(body, key, newFragment string) string {
 		}
 	}
 	return body[:idx] + newFragment + body[end:]
+}
+
+// dialogueWithChoiceAnswer builds a minimal-valid envelope whose
+// single dialogue exercise has one line + one choice turn; the
+// choice's `answer` and `speaker` are caller-supplied so the
+// negative tests can poke at them.
+func dialogueWithChoiceAnswer(answer, speaker string) string {
+	return `{
+  "schemaVersion": 1,
+  "slug": "dialogue-demo",
+  "sourceLang": "en",
+  "targetLang": "tr",
+  "title": "Dialogue Demo",
+  "description": "",
+  "level": {
+    "id": "lvl",
+    "name": "L1",
+    "description": "",
+    "topics": [{
+      "id": "t1",
+      "title": "T1",
+      "description": "",
+      "theme": "greetings",
+      "lessons": [{
+        "id": "l1",
+        "title": "L1",
+        "description": "",
+        "theme": "greetings",
+        "xp": 10,
+        "exercises": [{
+          "id": "ex1",
+          "type": "dialogue",
+          "prompt": "At the cafe",
+          "speakers": [
+            { "id": "barista", "name": "Barista" },
+            { "id": "you", "name": "You" }
+          ],
+          "turns": [
+            { "kind": "line", "speaker": "barista", "text": "Merhaba!" },
+            {
+              "kind": "choice",
+              "speaker": ` + speaker + `,
+              "options": ["a", "b"],
+              "answer": ` + answer + `
+            }
+          ]
+        }]
+      }]
+    }]
+  }
+}`
+}
+
+// dialogueAllLines builds an envelope whose dialogue exercise has only
+// passive `line` turns — the validator should reject it for having no
+// interactive turn.
+func dialogueAllLines() string {
+	return `{
+  "schemaVersion": 1,
+  "slug": "dialogue-quiet",
+  "sourceLang": "en",
+  "targetLang": "tr",
+  "title": "Quiet Dialogue",
+  "description": "",
+  "level": {
+    "id": "lvl",
+    "name": "L1",
+    "description": "",
+    "topics": [{
+      "id": "t1",
+      "title": "T1",
+      "description": "",
+      "theme": "greetings",
+      "lessons": [{
+        "id": "l1",
+        "title": "L1",
+        "description": "",
+        "theme": "greetings",
+        "xp": 10,
+        "exercises": [{
+          "id": "ex1",
+          "type": "dialogue",
+          "prompt": "At the cafe",
+          "speakers": [
+            { "id": "barista", "name": "Barista" },
+            { "id": "you", "name": "You" }
+          ],
+          "turns": [
+            { "kind": "line", "speaker": "barista", "text": "Merhaba!" },
+            { "kind": "line", "speaker": "you", "text": "Hello!" }
+          ]
+        }]
+      }]
+    }]
+  }
+}`
 }
 

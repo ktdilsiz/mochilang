@@ -16,6 +16,7 @@ import FillBlank, {
 import MatchPairs from '../components/exercises/MatchPairs'
 import ListenAndChoose from '../components/exercises/ListenAndChoose'
 import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
+import Dialogue from '../components/exercises/Dialogue'
 import TappableText from '../components/TappableText'
 import { WordTranslationProvider } from '../lib/wordTranslation'
 import { colors, fontSizes, radius, space } from '../lib/theme'
@@ -100,6 +101,7 @@ export default function LessonScreen({
       case 'tap_words_in_order':
         return tapValue.length > 0
       case 'match_pairs':
+      case 'dialogue':
         return false
     }
   }
@@ -155,6 +157,7 @@ export default function LessonScreen({
       <ScrollView contentContainerStyle={styles.body}>
         <ExerciseView
           ex={ex}
+          courseId={courseId}
           locked={locked}
           mcSelected={mcSelected}
           setMcSelected={setMcSelected}
@@ -184,6 +187,13 @@ export default function LessonScreen({
             size="lg"
             disabled
           />
+        ) : feedback === 'idle' && ex.type === 'dialogue' ? (
+          <LedgeButton
+            label="Play through the dialogue"
+            tone="neutral"
+            size="lg"
+            disabled
+          />
         ) : (
           <LedgeButton
             label={feedback === 'idle' ? 'Check' : isLast ? 'Finish' : 'Continue'}
@@ -201,18 +211,21 @@ export default function LessonScreen({
 
 interface ExerciseViewProps {
   ex: Exercise
+  courseId: string
   locked: boolean
   mcSelected: string | null
   setMcSelected: (v: string) => void
   fbValue: string
   setFbValue: (v: string) => void
   setTapValue: (v: string) => void
+  /** Reused for match_pairs AND dialogue — both report a final mistake count. */
   onMatchComplete: (mistakes: number) => void
   resetKey: number
 }
 
 function ExerciseView({
   ex,
+  courseId,
   locked,
   mcSelected,
   setMcSelected,
@@ -286,6 +299,16 @@ function ExerciseView({
           resetKey={resetKey}
         />
       )
+    case 'dialogue':
+      return (
+        <Dialogue
+          exercise={ex}
+          courseId={courseId}
+          locked={locked}
+          onComplete={onMatchComplete}
+          resetKey={resetKey}
+        />
+      )
   }
 }
 
@@ -305,6 +328,9 @@ function grade(
       if (inputs.tapValue.length === 0) return null
       return { correct: matchesSequenceAnswer(inputs.tapValue, exercise.answer) }
     case 'match_pairs':
+    case 'dialogue':
+      // Both are self-driving — the inner component reports its result
+      // via the onMatchComplete callback. There's no top-level Check.
       return null
   }
 }
@@ -320,6 +346,8 @@ function wrongMessage(ex: Exercise): string {
       return `Correct: ${ex.answer}`
     case 'match_pairs':
       return 'Some pairs were missed.'
+    case 'dialogue':
+      return 'You missed a turn or two — keep going!'
   }
 }
 

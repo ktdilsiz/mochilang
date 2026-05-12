@@ -12,6 +12,7 @@ export type ExerciseType =
   | 'match_pairs'
   | 'listen_and_choose'
   | 'tap_words_in_order'
+  | 'dialogue'
 
 export type LessonTheme =
   | 'greetings'
@@ -79,12 +80,83 @@ export interface TapWordsInOrderExercise extends ExerciseBase {
   bank: string[]
 }
 
+/**
+ * A back-and-forth dialogue between two or more speakers, with
+ * occasional interactive turns where the user picks or fills in the
+ * speaker's next line. Renders as a chat-screen — speech bubbles
+ * colored per speaker — with interactive turns gated until correct.
+ *
+ * Mistake counting: one per failed turn (regardless of how many wrong
+ * attempts on that turn). Lines that are not interactive don't count.
+ */
+export interface DialogueExercise extends ExerciseBase {
+  type: 'dialogue'
+  /** Scene title shown above the chat (e.g. "At the café"). */
+  prompt: string
+  /**
+   * Cast list. Two or more entries; the order here also sets bubble
+   * color assignment, so put the user-facing speaker first if you want
+   * predictable color across lessons.
+   */
+  speakers: DialogueSpeaker[]
+  /** The script — lines and interactive prompts in order. */
+  turns: DialogueTurn[]
+}
+
+export interface DialogueSpeaker {
+  /** Stable id referenced by each turn's `speaker` field. */
+  id: string
+  /** Display name shown above the speaker's first bubble. */
+  name: string
+}
+
+export type DialogueTurn = DialogueLineTurn | DialogueChoiceTurn | DialogueFillTurn
+
+interface DialogueTurnBase {
+  /** Id of the speaker (must exist in the parent's `speakers`). */
+  speaker: string
+}
+
+/** Narrative line — the speaker says `text`. No user input required. */
+export interface DialogueLineTurn extends DialogueTurnBase {
+  kind: 'line'
+  text: string
+  /** Optional override of the TTS text (e.g. when `text` carries pinyin annotations the engine should skip). */
+  spokenText?: string
+}
+
+/** Speaker has options; user picks the correct one. Same shape as MultipleChoiceExercise's choice. */
+export interface DialogueChoiceTurn extends DialogueTurnBase {
+  kind: 'choice'
+  /** Optional setup text shown above the options ("How do you order?"). */
+  prompt?: string
+  options: string[]
+  answer: string
+}
+
+/**
+ * Fill-in-the-blank inside a sentence. The full line is
+ * `${before}${blank}${after}`. User types into the blank.
+ */
+export interface DialogueFillTurn extends DialogueTurnBase {
+  kind: 'fill'
+  prompt?: string
+  /** Text shown before the blank. */
+  before: string
+  /** Text shown after the blank. */
+  after: string
+  answer: string
+  /** Optional alternates accepted (case-insensitive). */
+  acceptableAnswers?: string[]
+}
+
 export type Exercise =
   | MultipleChoiceExercise
   | FillBlankExercise
   | MatchPairsExercise
   | ListenAndChooseExercise
   | TapWordsInOrderExercise
+  | DialogueExercise
 
 export interface Lesson {
   id: string

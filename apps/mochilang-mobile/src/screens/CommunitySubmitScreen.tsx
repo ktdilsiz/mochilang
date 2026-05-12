@@ -336,6 +336,43 @@ const STARTER_TEMPLATE = `{
                 "bank": ["Ben", "iyiyim", "kötüyüm", "sen"]
               }
             ]
+          },
+          {
+            "id": "dialogue",
+            "title": "Dialogue",
+            "description": "A short scripted conversation with two interactive prompts",
+            "theme": "greetings",
+            "xp": 10,
+            "exercises": [
+              {
+                "id": "ex1",
+                "type": "dialogue",
+                "prompt": "At the café",
+                "speakers": [
+                  { "id": "you", "name": "You" },
+                  { "id": "barista", "name": "Barista" }
+                ],
+                "turns": [
+                  { "kind": "line", "speaker": "barista", "text": "Merhaba! Ne istersiniz?" },
+                  {
+                    "kind": "choice",
+                    "speaker": "you",
+                    "prompt": "Order a coffee",
+                    "options": ["Bir kahve, lütfen.", "Bir çay, lütfen.", "Hoşçakal."],
+                    "answer": "Bir kahve, lütfen."
+                  },
+                  { "kind": "line", "speaker": "barista", "text": "Tabii ki, hemen geliyor." },
+                  {
+                    "kind": "fill",
+                    "speaker": "you",
+                    "prompt": "Ask the price",
+                    "before": "Ne kadar ",
+                    "after": "?",
+                    "answer": "tutar"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
