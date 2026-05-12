@@ -771,6 +771,100 @@
               "explanation": "Mirror the greeting and add \"nice to meet you\" — that's the standard A1 introduction."
             }
           ]
+        },
+        {
+          "id": "zh-en-greetings-5",
+          "title": "Dialogue: First day at school",
+          "description": "Meet a new classmate and exchange greetings.",
+          "theme": "greetings",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "g5-1",
+              "type": "dialogue",
+              "prompt": "Meeting a classmate on your first day",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ming",
+                  "name": "Xiǎo Míng"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "ming",
+                  "text": "你好！(nǐ hǎo)",
+                  "spokenText": "你好！"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say hello back.",
+                  "options": [
+                    "你好！(nǐ hǎo)",
+                    "再见！(zài jiàn)",
+                    "谢谢！(xiè xie)"
+                  ],
+                  "answer": "你好！(nǐ hǎo)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ming",
+                  "text": "你好吗？(nǐ hǎo ma)",
+                  "spokenText": "你好吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you are very good.",
+                  "options": [
+                    "我很好。(wǒ hěn hǎo)",
+                    "你很好。(nǐ hěn hǎo)",
+                    "他很好。(tā hěn hǎo)"
+                  ],
+                  "answer": "我很好。(wǒ hěn hǎo)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ming",
+                  "text": "我叫小明。(wǒ jiào Xiǎo Míng)",
+                  "spokenText": "我叫小明。"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: I'm called Lì.",
+                  "before": "我",
+                  "after": "丽。",
+                  "answer": "叫",
+                  "acceptableAnswers": [
+                    "叫"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ming",
+                  "text": "认识你很高兴。(rèn shi nǐ hěn gāo xìng)",
+                  "spokenText": "认识你很高兴。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say goodbye.",
+                  "options": [
+                    "再见！(zài jiàn)",
+                    "你好！(nǐ hǎo)",
+                    "谢谢！(xiè xie)"
+                  ],
+                  "answer": "再见！(zài jiàn)"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1760,6 +1854,89 @@
               "answer": "二零二四年"
             }
           ]
+        },
+        {
+          "id": "zh-en-numbers-6",
+          "title": "Dialogue: At the fruit market",
+          "description": "Count fruit and ask how much things cost.",
+          "theme": "numbers",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "n6-1",
+              "type": "dialogue",
+              "prompt": "Buying apples at a market stand",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "seller",
+                  "name": "Lǎobǎn"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "seller",
+                  "text": "你好！(nǐ hǎo)",
+                  "spokenText": "你好！"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask how much (the apples cost).",
+                  "options": [
+                    "多少钱？(duō shao qián)",
+                    "几岁？(jǐ suì)",
+                    "你好吗？(nǐ hǎo ma)"
+                  ],
+                  "answer": "多少钱？(duō shao qián)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "seller",
+                  "text": "五块钱一个。(wǔ kuài qián yí ge)",
+                  "spokenText": "五块钱一个。"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in the measure word: I want three (apples).",
+                  "before": "我要三",
+                  "after": "苹果。",
+                  "answer": "个",
+                  "acceptableAnswers": [
+                    "个"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "seller",
+                  "text": "三个十五块。(sān ge shí wǔ kuài)",
+                  "spokenText": "三个十五块。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Hand over the money — say 'here you go'.",
+                  "options": [
+                    "给你。(gěi nǐ)",
+                    "再见。(zài jiàn)",
+                    "你好。(nǐ hǎo)"
+                  ],
+                  "answer": "给你。(gěi nǐ)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "seller",
+                  "text": "谢谢，再见！(xiè xie, zài jiàn)",
+                  "spokenText": "谢谢，再见！"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2579,6 +2756,89 @@
               ],
               "answer": "这个",
               "explanation": "这 (zhè) and 那 (nà) — both fourth tone. Distinguish by the 'zh' vs 'n' onset."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-basics-5",
+          "title": "Dialogue: Small talk",
+          "description": "Practice 'how are you' and 'thank you'.",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "b5-1",
+              "type": "dialogue",
+              "prompt": "Catching up with a friend",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "li",
+                  "name": "Xiǎo Lì"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "li",
+                  "text": "你好吗？(nǐ hǎo ma)",
+                  "spokenText": "你好吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you're fine, and ask about her.",
+                  "options": [
+                    "我很好，你呢？(wǒ hěn hǎo, nǐ ne)",
+                    "我叫丽。(wǒ jiào Lì)",
+                    "再见！(zài jiàn)"
+                  ],
+                  "answer": "我很好，你呢？(wǒ hěn hǎo, nǐ ne)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "li",
+                  "text": "我也很好。(wǒ yě hěn hǎo)",
+                  "spokenText": "我也很好。"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "li",
+                  "text": "谢谢你。(xiè xie nǐ)",
+                  "spokenText": "谢谢你。"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Reply: 'no need to thank me' — fill the negation.",
+                  "before": "",
+                  "after": "用谢。",
+                  "answer": "不",
+                  "acceptableAnswers": [
+                    "不"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "li",
+                  "text": "你忙吗？(nǐ máng ma)",
+                  "spokenText": "你忙吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you're not busy.",
+                  "options": [
+                    "我不忙。(wǒ bù máng)",
+                    "我很忙。(wǒ hěn máng)",
+                    "他很忙。(tā hěn máng)"
+                  ],
+                  "answer": "我不忙。(wǒ bù máng)"
+                }
+              ]
             }
           ]
         }
@@ -3416,6 +3676,89 @@
               ]
             }
           ]
+        },
+        {
+          "id": "zh-en-family-6",
+          "title": "Dialogue: Family photo",
+          "description": "Introduce your family members.",
+          "theme": "family",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fa6-1",
+              "type": "dialogue",
+              "prompt": "Showing a family photo at a gathering",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "wang",
+                  "name": "Xiǎo Wáng"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "wang",
+                  "text": "这是你家吗？(zhè shì nǐ jiā ma)",
+                  "spokenText": "这是你家吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Yes — say 'this is my family'.",
+                  "options": [
+                    "这是我家。(zhè shì wǒ jiā)",
+                    "那是他家。(nà shì tā jiā)",
+                    "我有家。(wǒ yǒu jiā)"
+                  ],
+                  "answer": "这是我家。(zhè shì wǒ jiā)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "wang",
+                  "text": "他是谁？(tā shì shéi)",
+                  "spokenText": "他是谁？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'He is my dad.'",
+                  "before": "他是我",
+                  "after": "爸。",
+                  "answer": "爸",
+                  "acceptableAnswers": [
+                    "爸"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "wang",
+                  "text": "你有姐姐吗？(nǐ yǒu jiě jie ma)",
+                  "spokenText": "你有姐姐吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you have one older sister.",
+                  "options": [
+                    "我有一个姐姐。(wǒ yǒu yí ge jiě jie)",
+                    "我没有姐姐。(wǒ méi yǒu jiě jie)",
+                    "她有姐姐。(tā yǒu jiě jie)"
+                  ],
+                  "answer": "我有一个姐姐。(wǒ yǒu yí ge jiě jie)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "wang",
+                  "text": "你家人很好。(nǐ jiā rén hěn hǎo)",
+                  "spokenText": "你家人很好。"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4236,6 +4579,95 @@
               "answer": "我喜欢吃面条"
             }
           ]
+        },
+        {
+          "id": "zh-en-food-6",
+          "title": "Dialogue: At the noodle stand",
+          "description": "Order a bowl of noodles and a drink.",
+          "theme": "food",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fo6-1",
+              "type": "dialogue",
+              "prompt": "Ordering at a small noodle shop",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "server",
+                  "name": "Fúwùyuán"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "你要什么？(nǐ yào shén me)",
+                  "spokenText": "你要什么？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you want a bowl of noodles.",
+                  "options": [
+                    "我要一碗面。(wǒ yào yì wǎn miàn)",
+                    "我有面。(wǒ yǒu miàn)",
+                    "他要一碗面。(tā yào yì wǎn miàn)"
+                  ],
+                  "answer": "我要一碗面。(wǒ yào yì wǎn miàn)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "你喝什么？(nǐ hē shén me)",
+                  "spokenText": "你喝什么？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'I drink tea.'",
+                  "before": "我喝",
+                  "after": "。",
+                  "answer": "茶",
+                  "acceptableAnswers": [
+                    "茶"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "好的。(hǎo de)",
+                  "spokenText": "好的。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask how much it costs.",
+                  "options": [
+                    "多少钱？(duō shao qián)",
+                    "几个？(jǐ ge)",
+                    "你好吗？(nǐ hǎo ma)"
+                  ],
+                  "answer": "多少钱？(duō shao qián)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "十块钱。(shí kuài qián)",
+                  "spokenText": "十块钱。"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "谢谢！(xiè xie)",
+                  "spokenText": "谢谢！"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5047,6 +5479,89 @@
               "explanation": "Mnemonic: 卖 has 十 stacked on 买 — the seller has more stuff. Helps separate the two characters."
             }
           ]
+        },
+        {
+          "id": "zh-en-verbs-5",
+          "title": "Dialogue: Morning routine",
+          "description": "Drink tea, eat breakfast, and go to work.",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "v5-1",
+              "type": "dialogue",
+              "prompt": "Chatting about your morning",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "zhang",
+                  "name": "Xiǎo Zhāng"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "zhang",
+                  "text": "你早上喝什么？(nǐ zǎo shang hē shén me)",
+                  "spokenText": "你早上喝什么？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you drink tea.",
+                  "options": [
+                    "我喝茶。(wǒ hē chá)",
+                    "我吃茶。(wǒ chī chá)",
+                    "他喝茶。(tā hē chá)"
+                  ],
+                  "answer": "我喝茶。(wǒ hē chá)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zhang",
+                  "text": "你吃早饭吗？(nǐ chī zǎo fàn ma)",
+                  "spokenText": "你吃早饭吗？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in the verb: 'I eat breakfast.'",
+                  "before": "我",
+                  "after": "早饭。",
+                  "answer": "吃",
+                  "acceptableAnswers": [
+                    "吃"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zhang",
+                  "text": "你去工作吗？(nǐ qù gōng zuò ma)",
+                  "spokenText": "你去工作吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Yes — say 'I go to work'.",
+                  "options": [
+                    "我去工作。(wǒ qù gōng zuò)",
+                    "我有工作。(wǒ yǒu gōng zuò)",
+                    "我看工作。(wǒ kàn gōng zuò)"
+                  ],
+                  "answer": "我去工作。(wǒ qù gōng zuò)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zhang",
+                  "text": "好，再见！(hǎo, zài jiàn)",
+                  "spokenText": "好，再见！"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5685,6 +6200,89 @@
                 "我家不近"
               ],
               "answer": "我家很近"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-places-5",
+          "title": "Dialogue: Where do you live?",
+          "description": "Ask a friend where they live and work.",
+          "theme": "location",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "p5-1",
+              "type": "dialogue",
+              "prompt": "Asking a friend about where they live",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "chen",
+                  "name": "Xiǎo Chén"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "chen",
+                  "text": "你好！(nǐ hǎo)",
+                  "spokenText": "你好！"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask 'Where do you live?'",
+                  "options": [
+                    "你住哪儿？(nǐ zhù nǎr)",
+                    "你叫什么？(nǐ jiào shén me)",
+                    "你几岁？(nǐ jǐ suì)"
+                  ],
+                  "answer": "你住哪儿？(nǐ zhù nǎr)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chen",
+                  "text": "我住北京。(wǒ zhù Běi jīng)",
+                  "spokenText": "我住北京。"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'I'm in Shanghai.'",
+                  "before": "我",
+                  "after": "上海。",
+                  "answer": "在",
+                  "acceptableAnswers": [
+                    "在"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chen",
+                  "text": "你在哪儿工作？(nǐ zài nǎr gōng zuò)",
+                  "spokenText": "你在哪儿工作？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you work at a school.",
+                  "options": [
+                    "我在学校工作。(wǒ zài xué xiào gōng zuò)",
+                    "我有学校。(wǒ yǒu xué xiào)",
+                    "他在学校。(tā zài xué xiào)"
+                  ],
+                  "answer": "我在学校工作。(wǒ zài xué xiào gōng zuò)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chen",
+                  "text": "很好！(hěn hǎo)",
+                  "spokenText": "很好！"
+                }
+              ]
             }
           ]
         }
@@ -6618,6 +7216,89 @@
               "answer": "晚上"
             }
           ]
+        },
+        {
+          "id": "zh-en-time-6",
+          "title": "Dialogue: What time is it?",
+          "description": "Ask the time and what day it is.",
+          "theme": "time",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "t6-1",
+              "type": "dialogue",
+              "prompt": "Checking the time with a friend",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "liu",
+                  "name": "Xiǎo Liú"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "liu",
+                  "text": "你好！(nǐ hǎo)",
+                  "spokenText": "你好！"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask 'What time is it now?'",
+                  "options": [
+                    "现在几点？(xiàn zài jǐ diǎn)",
+                    "今天星期几？(jīn tiān xīng qī jǐ)",
+                    "多少钱？(duō shao qián)"
+                  ],
+                  "answer": "现在几点？(xiàn zài jǐ diǎn)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "liu",
+                  "text": "现在三点。(xiàn zài sān diǎn)",
+                  "spokenText": "现在三点。"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Ask what day of the week it is — fill in.",
+                  "before": "今天星期",
+                  "after": "？",
+                  "answer": "几",
+                  "acceptableAnswers": [
+                    "几"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "liu",
+                  "text": "今天星期五。(jīn tiān xīng qī wǔ)",
+                  "spokenText": "今天星期五。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask what month it is.",
+                  "options": [
+                    "几月？(jǐ yuè)",
+                    "几点？(jǐ diǎn)",
+                    "几岁？(jǐ suì)"
+                  ],
+                  "answer": "几月？(jǐ yuè)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "liu",
+                  "text": "五月。(wǔ yuè)",
+                  "spokenText": "五月。"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -7410,6 +8091,89 @@
               "explanation": "Add 吗 at the end. Yes/no questions don't change word order."
             }
           ]
+        },
+        {
+          "id": "zh-en-questions-5",
+          "title": "Dialogue: Who, what, where",
+          "description": "Practice wh-questions with a new acquaintance.",
+          "theme": "questions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "q5-1",
+              "type": "dialogue",
+              "prompt": "Meeting someone and asking basic questions",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "zhao",
+                  "name": "Xiǎo Zhào"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "zhao",
+                  "text": "你好！(nǐ hǎo)",
+                  "spokenText": "你好！"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask 'What is your name?'",
+                  "options": [
+                    "你叫什么？(nǐ jiào shén me)",
+                    "你几岁？(nǐ jǐ suì)",
+                    "你好吗？(nǐ hǎo ma)"
+                  ],
+                  "answer": "你叫什么？(nǐ jiào shén me)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zhao",
+                  "text": "我叫小赵。(wǒ jiào Xiǎo Zhào)",
+                  "spokenText": "我叫小赵。"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Ask 'Who is he?' — fill the question word.",
+                  "before": "他是",
+                  "after": "？",
+                  "answer": "谁",
+                  "acceptableAnswers": [
+                    "谁"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zhao",
+                  "text": "他是我哥哥。(tā shì wǒ gē ge)",
+                  "spokenText": "他是我哥哥。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask 'Where is he?'",
+                  "options": [
+                    "他在哪儿？(tā zài nǎr)",
+                    "他是谁？(tā shì shéi)",
+                    "他几岁？(tā jǐ suì)"
+                  ],
+                  "answer": "他在哪儿？(tā zài nǎr)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zhao",
+                  "text": "他在家。(tā zài jiā)",
+                  "spokenText": "他在家。"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8073,6 +8837,89 @@
               "answer": "我坐地铁"
             }
           ]
+        },
+        {
+          "id": "zh-en-directions-5",
+          "title": "Dialogue: To the bus stop",
+          "description": "Ask a stranger for directions to the bus stop.",
+          "theme": "directions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "d5-1",
+              "type": "dialogue",
+              "prompt": "Asking how to get to the bus stop",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "stranger",
+                  "name": "Lùrén"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "stranger",
+                  "text": "你好！(nǐ hǎo)",
+                  "spokenText": "你好！"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask 'Where is the bus stop?'",
+                  "options": [
+                    "车站在哪儿？(chē zhàn zài nǎr)",
+                    "你叫什么？(nǐ jiào shén me)",
+                    "几点？(jǐ diǎn)"
+                  ],
+                  "answer": "车站在哪儿？(chē zhàn zài nǎr)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "stranger",
+                  "text": "在前面。(zài qián miàn)",
+                  "spokenText": "在前面。"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Ask 'Is it far?' — fill the negation for 'not far'.",
+                  "before": "远",
+                  "after": "远？",
+                  "answer": "不",
+                  "acceptableAnswers": [
+                    "不"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "stranger",
+                  "text": "不远，很近。(bù yuǎn, hěn jìn)",
+                  "spokenText": "不远，很近。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say thank you.",
+                  "options": [
+                    "谢谢！(xiè xie)",
+                    "再见！(zài jiàn)",
+                    "你好！(nǐ hǎo)"
+                  ],
+                  "answer": "谢谢！(xiè xie)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "stranger",
+                  "text": "不客气。(bú kè qi)",
+                  "spokenText": "不客气。"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8706,6 +9553,89 @@
                 "黑"
               ],
               "explanation": "头发 (tóu fa) = hair. 我奶奶的头发 = \"my grandma's hair.\""
+            }
+          ]
+        },
+        {
+          "id": "zh-en-colors-5",
+          "title": "Dialogue: Buying a shirt",
+          "description": "Ask what color a shirt is and pick one.",
+          "theme": "colors",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "c5-1",
+              "type": "dialogue",
+              "prompt": "Shopping for a shirt",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "shop",
+                  "name": "Diànyuán"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "shop",
+                  "text": "你好，你要什么？(nǐ hǎo, nǐ yào shén me)",
+                  "spokenText": "你好，你要什么？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you want a shirt.",
+                  "options": [
+                    "我要一件衬衫。(wǒ yào yí jiàn chèn shān)",
+                    "我有衬衫。(wǒ yǒu chèn shān)",
+                    "他要衬衫。(tā yào chèn shān)"
+                  ],
+                  "answer": "我要一件衬衫。(wǒ yào yí jiàn chèn shān)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "shop",
+                  "text": "你要什么颜色？(nǐ yào shén me yán sè)",
+                  "spokenText": "你要什么颜色？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'I want a red one.'",
+                  "before": "我要",
+                  "after": "色的。",
+                  "answer": "红",
+                  "acceptableAnswers": [
+                    "红"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "shop",
+                  "text": "这件红色的。(zhè jiàn hóng sè de)",
+                  "spokenText": "这件红色的。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask how much it costs.",
+                  "options": [
+                    "多少钱？(duō shao qián)",
+                    "几岁？(jǐ suì)",
+                    "你好吗？(nǐ hǎo ma)"
+                  ],
+                  "answer": "多少钱？(duō shao qián)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "shop",
+                  "text": "八十块。(bā shí kuài)",
+                  "spokenText": "八十块。"
+                }
+              ]
             }
           ]
         }
@@ -9349,6 +10279,89 @@
                 "明天刮风"
               ],
               "answer": "明天下雨"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-weather-5",
+          "title": "Dialogue: Today's weather",
+          "description": "Small talk about the weather with a friend.",
+          "theme": "weather",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "w5-1",
+              "type": "dialogue",
+              "prompt": "Chatting about today's weather",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "sun",
+                  "name": "Xiǎo Sūn"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "sun",
+                  "text": "今天天气怎么样？(jīn tiān tiān qì zěn me yàng)",
+                  "spokenText": "今天天气怎么样？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say it's very hot today.",
+                  "options": [
+                    "今天很热。(jīn tiān hěn rè)",
+                    "今天很冷。(jīn tiān hěn lěng)",
+                    "今天下雨。(jīn tiān xià yǔ)"
+                  ],
+                  "answer": "今天很热。(jīn tiān hěn rè)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sun",
+                  "text": "明天呢？(míng tiān ne)",
+                  "spokenText": "明天呢？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Say 'tomorrow has rain' — fill in the verb.",
+                  "before": "明天",
+                  "after": "雨。",
+                  "answer": "下",
+                  "acceptableAnswers": [
+                    "下"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sun",
+                  "text": "我不喜欢下雨。(wǒ bù xǐ huan xià yǔ)",
+                  "spokenText": "我不喜欢下雨。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you like sunny days.",
+                  "options": [
+                    "我喜欢晴天。(wǒ xǐ huan qíng tiān)",
+                    "我有晴天。(wǒ yǒu qíng tiān)",
+                    "他喜欢晴天。(tā xǐ huan qíng tiān)"
+                  ],
+                  "answer": "我喜欢晴天。(wǒ xǐ huan qíng tiān)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sun",
+                  "text": "我也是。(wǒ yě shì)",
+                  "spokenText": "我也是。"
+                }
+              ]
             }
           ]
         }
@@ -10013,6 +11026,101 @@
                 "请问银行在哪里"
               ],
               "answer": "请问洗手间在哪里"
+            }
+          ]
+        },
+        {
+          "id": "zh-en-review-5",
+          "title": "Dialogue: A day in town",
+          "description": "Mix greetings, numbers, food, and verbs in one scene.",
+          "theme": "review",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "r5-1",
+              "type": "dialogue",
+              "prompt": "Meeting a friend, then ordering food",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "friend",
+                  "name": "Xiǎo Hóng"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "你好！你好吗？(nǐ hǎo, nǐ hǎo ma)",
+                  "spokenText": "你好！你好吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say you're fine and ask her.",
+                  "options": [
+                    "我很好，你呢？(wǒ hěn hǎo, nǐ ne)",
+                    "我叫小红。(wǒ jiào Xiǎo Hóng)",
+                    "再见！(zài jiàn)"
+                  ],
+                  "answer": "我很好，你呢？(wǒ hěn hǎo, nǐ ne)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "我们去吃饭吧。(wǒ men qù chī fàn ba)",
+                  "spokenText": "我们去吃饭吧。"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Say you want two bowls of noodles — fill the number.",
+                  "before": "我要",
+                  "after": "碗面。",
+                  "answer": "两",
+                  "acceptableAnswers": [
+                    "两",
+                    "二"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "好，我也要面。(hǎo, wǒ yě yào miàn)",
+                  "spokenText": "好，我也要面。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Ask the price.",
+                  "options": [
+                    "多少钱？(duō shao qián)",
+                    "几点？(jǐ diǎn)",
+                    "你叫什么？(nǐ jiào shén me)"
+                  ],
+                  "answer": "多少钱？(duō shao qián)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "二十块。(èr shí kuài)",
+                  "spokenText": "二十块。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say goodbye to your friend.",
+                  "options": [
+                    "再见！(zài jiàn)",
+                    "你好！(nǐ hǎo)",
+                    "谢谢！(xiè xie)"
+                  ],
+                  "answer": "再见！(zài jiàn)"
+                }
+              ]
             }
           ]
         }
