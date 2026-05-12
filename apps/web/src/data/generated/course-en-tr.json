@@ -2004,6 +2004,96 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "en-tr-greetings-7",
+              "title": "Diyalog: Yeni Bir Arkadaş",
+              "description": "İlk gün okulda bir sınıf arkadaşıyla tanışma",
+              "theme": "greetings",
+              "xp": 14,
+              "exercises": [
+                {
+                  "id": "gr7-1",
+                  "type": "dialogue",
+                  "prompt": "İlk gün okulda — yeni bir sınıf arkadaşıyla tanışıyorsun",
+                  "speakers": [
+                    {
+                      "id": "you",
+                      "name": "You"
+                    },
+                    {
+                      "id": "alex",
+                      "name": "Alex"
+                    }
+                  ],
+                  "turns": [
+                    {
+                      "kind": "line",
+                      "speaker": "alex",
+                      "text": "Hi! Are you new here?"
+                    },
+                    {
+                      "kind": "choice",
+                      "speaker": "you",
+                      "prompt": "Selamına nasıl cevap verirsin?",
+                      "options": [
+                        "Hi! Yes, I am.",
+                        "Goodbye!",
+                        "I don't know."
+                      ],
+                      "answer": "Hi! Yes, I am."
+                    },
+                    {
+                      "kind": "line",
+                      "speaker": "alex",
+                      "text": "Nice to meet you. I'm Alex. What's your name?"
+                    },
+                    {
+                      "kind": "fill",
+                      "speaker": "you",
+                      "prompt": "Adını söylemek için eksik kelimeyi yaz",
+                      "before": "My name ",
+                      "after": " Ali.",
+                      "answer": "is",
+                      "acceptableAnswers": [
+                        "Is"
+                      ]
+                    },
+                    {
+                      "kind": "line",
+                      "speaker": "alex",
+                      "text": "Where are you from, Ali?"
+                    },
+                    {
+                      "kind": "choice",
+                      "speaker": "you",
+                      "prompt": "Hangisi doğru?",
+                      "options": [
+                        "I am from Turkey.",
+                        "I from Turkey.",
+                        "From Turkey I am."
+                      ],
+                      "answer": "I am from Turkey."
+                    },
+                    {
+                      "kind": "line",
+                      "speaker": "alex",
+                      "text": "Cool! See you in class."
+                    },
+                    {
+                      "kind": "choice",
+                      "speaker": "you",
+                      "prompt": "Vedalaşmak için en uygun cevap?",
+                      "options": [
+                        "See you!",
+                        "Hello!",
+                        "Sorry."
+                      ],
+                      "answer": "See you!"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },

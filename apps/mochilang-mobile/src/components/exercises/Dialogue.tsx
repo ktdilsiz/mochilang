@@ -327,12 +327,13 @@ interface BubbleProps {
 }
 
 function Bubble({ turn, speakerName, style, past, interactiveActive }: BubbleProps) {
-  // What's shown inside the bubble: line text for narration; the prompt
-  // text for interactive turns when the bubble is still "current" — the
-  // actual options/input live in the input area below the chat.
+  // What's shown inside the bubble: line text for narration; an ellipsis
+  // placeholder for interactive turns that are still "current" (the user
+  // hasn't answered yet — their bubble fills in with their pick after
+  // they advance); the chosen / filled-in text once the turn is past.
   const bubbleText = (() => {
     if (turn.kind === 'line') return turn.text
-    if (interactiveActive) return turn.prompt ?? '…'
+    if (interactiveActive) return '…'
     if (turn.kind === 'choice') return turn.answer
     return `${turn.before}${turn.answer}${turn.after}`
   })()
