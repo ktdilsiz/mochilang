@@ -1043,6 +1043,118 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-present-perfect-7",
+          "title": "Diyalog: Eski bir arkadaşla buluşma",
+          "description": "Yıllar sonra karşılaşan iki arkadaşın sohbeti — present perfect doğal ortamda",
+          "theme": "tense",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pp7-1",
+              "type": "dialogue",
+              "prompt": "Eski bir arkadaşla kafede karşılaşma",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "emma",
+                  "name": "Emma"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "emma",
+                  "text": "Oh my goodness, is that really you? I haven't seen you in ages!"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Emma! Wow, you look exactly the same. How long has it been?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Doğru zaman ifadesini seç",
+                  "options": [
+                    "We haven't met since university, I think.",
+                    "We didn't meet since university, I think.",
+                    "We don't meet since university, I think."
+                  ],
+                  "answer": "We haven't met since university, I think."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "emma",
+                  "text": "That's almost six years! So tell me everything. What have you been up to?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Boşluğu doğru yardımcı fiille doldur",
+                  "before": "Well, I",
+                  "after": "just moved to a new flat downtown.",
+                  "answer": "have",
+                  "acceptableAnswers": [
+                    "have",
+                    "'ve"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "emma",
+                  "text": "Downtown? That's lovely. I've always dreamed of living near the centre."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Süre belirten doğru edatı seç",
+                  "options": [
+                    "I've actually been there for three months now.",
+                    "I've actually been there since three months now.",
+                    "I've actually been there from three months now."
+                  ],
+                  "answer": "I've actually been there for three months now."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "emma",
+                  "text": "Have you visited that little Italian place on the corner? It's amazing."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Olumsuz yardımcı fiili tamamla",
+                  "before": "Actually, I",
+                  "after": "tried it yet, but I'll go this weekend.",
+                  "answer": "haven't",
+                  "acceptableAnswers": [
+                    "haven't",
+                    "have not"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "emma",
+                  "text": "You absolutely must. By the way, have you heard from anyone else from our class?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Only Tom. He's started a little business and seems really happy."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "emma",
+                  "text": "That's wonderful. We should all meet up properly, it's been too long."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2116,6 +2228,119 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-modals-7",
+          "title": "Diyalog: İş arkadaşından tavsiye",
+          "description": "Bir projeyle ilgili iş arkadaşından akıl almak — modal'lar doğal kullanım",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "mod7-1",
+              "type": "dialogue",
+              "prompt": "Ofiste bir iş arkadaşına proje konusunda danışma",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "raj",
+                  "name": "Raj"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Raj, do you have a minute? I could really use your advice on something."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "raj",
+                  "text": "Of course, sit down. You look a bit stressed. What's going on?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "I'm leading the new client project, but I'm not sure where to start."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "raj",
+                  "prompt": "Tavsiye için en uygun modal'ı seç",
+                  "options": [
+                    "Honestly, you should talk to Sarah first — she's done this before.",
+                    "Honestly, you must talk to Sarah first — she's done this before.",
+                    "Honestly, you can talk to Sarah first — she's done this before."
+                  ],
+                  "answer": "Honestly, you should talk to Sarah first — she's done this before."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "That's a great idea. Do you think she might have time today?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "raj",
+                  "prompt": "Yetenek belirten modal'ı tamamla",
+                  "before": "She",
+                  "after": "be free after lunch, but you'd better message her first.",
+                  "answer": "might",
+                  "acceptableAnswers": [
+                    "might",
+                    "may",
+                    "could"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Right. And what about the budget? I have no idea what's realistic."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "raj",
+                  "prompt": "Zorunluluk için doğru modal'ı seç",
+                  "options": [
+                    "You have to submit a proposal by Friday, no exceptions.",
+                    "You can submit a proposal by Friday, no exceptions.",
+                    "You should submit a proposal by Friday, no exceptions."
+                  ],
+                  "answer": "You have to submit a proposal by Friday, no exceptions."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Friday? That's tight. Can I ask the team to help me draft it?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "raj",
+                  "text": "Absolutely. You should delegate as much as possible — that's good leadership."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Olumsuz öneri için modal'ı tamamla",
+                  "before": "Thanks, Raj. I really",
+                  "after": "have done this without you.",
+                  "answer": "couldn't",
+                  "acceptableAnswers": [
+                    "couldn't",
+                    "could not"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "raj",
+                  "text": "Don't mention it. We all need a bit of guidance sometimes."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3147,6 +3372,117 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-conditionals-7",
+          "title": "Diyalog: Piyangoyu kazansaydım...",
+          "description": "Varsayımsal plan yapma — second conditional doğal kullanım",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "con7-1",
+              "type": "dialogue",
+              "prompt": "Arkadaşıyla piyango üzerine hayal kurma",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "leo",
+                  "name": "Leo"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "leo",
+                  "text": "Hey, did you see the lottery jackpot? It's twenty million this week!"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Twenty million? That's insane. Can you imagine actually winning that?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "leo",
+                  "prompt": "Second conditional için doğru yapıyı seç",
+                  "options": [
+                    "If I won that much, I'd quit my job tomorrow morning.",
+                    "If I win that much, I quit my job tomorrow morning.",
+                    "If I would win that much, I'd quit my job tomorrow morning."
+                  ],
+                  "answer": "If I won that much, I'd quit my job tomorrow morning."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Really? You'd just leave? I thought you loved your job."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "leo",
+                  "prompt": "Second conditional'da modal yardımcı fiili tamamla",
+                  "before": "If I had that money, I",
+                  "after": "travel for at least a year first.",
+                  "answer": "would",
+                  "acceptableAnswers": [
+                    "would",
+                    "'d"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Fair point. So what would you do after the travelling?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leo",
+                  "text": "Maybe open a little bookshop. Quiet, no boss, just books and coffee."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Varsayımsal 'olsaydım' için doğru fiili seç",
+                  "options": [
+                    "If I were you, I'd invest most of it instead.",
+                    "If I am you, I'd invest most of it instead.",
+                    "If I would be you, I'd invest most of it instead."
+                  ],
+                  "answer": "If I were you, I'd invest most of it instead."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leo",
+                  "text": "Invest? Boring! What's the point of money if you don't enjoy it?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Koşul cümlesinde geçmiş zamanı tamamla",
+                  "before": "Well, if I",
+                  "after": "the money, I'd buy a quiet house by the sea.",
+                  "answer": "had",
+                  "acceptableAnswers": [
+                    "had"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leo",
+                  "text": "Now that sounds nice. Okay, let's both buy a ticket tonight."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Deal. Although if we actually won, I'd probably faint on the spot."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4146,6 +4482,116 @@
                 {
                   "left": "by + agent yok",
                   "right": "Yapan bilinmiyorken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-passive-7",
+          "title": "Diyalog: Telefonum çalındı",
+          "description": "Polis karakolunda olayı bildirme — passive voice doğal kullanım",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pas7-1",
+              "type": "dialogue",
+              "prompt": "Karakolda telefon çalınma şikayeti",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "officer",
+                  "name": "Officer Brooks"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "officer",
+                  "text": "Good afternoon. How can I help you today?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Edilgen yapı ile olayı bildir",
+                  "options": [
+                    "Hello, officer. My phone was stolen about an hour ago.",
+                    "Hello, officer. My phone is stolen about an hour ago.",
+                    "Hello, officer. My phone has stole about an hour ago."
+                  ],
+                  "answer": "Hello, officer. My phone was stolen about an hour ago."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "officer",
+                  "text": "I'm sorry to hear that. Can you tell me exactly where it happened?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "On the metro, between Central and Park Station. It was very crowded."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "officer",
+                  "prompt": "Edilgen yapıdaki yardımcı fiili tamamla",
+                  "before": "I see. And",
+                  "after": "anything else taken from your bag?",
+                  "answer": "was",
+                  "acceptableAnswers": [
+                    "was"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "No, just the phone. My wallet and keys were still there afterwards."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "officer",
+                  "prompt": "Doğru edilgen geçmiş zaman yapısını seç",
+                  "options": [
+                    "Have any cameras been installed in that station?",
+                    "Have any cameras installed in that station?",
+                    "Has any cameras been installed in that station?"
+                  ],
+                  "answer": "Have any cameras been installed in that station?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Yes, I noticed several near the ticket machines and the escalators."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "officer",
+                  "prompt": "Present perfect passive yapısını tamamla",
+                  "before": "Good. A report",
+                  "after": "been opened, and we'll request the footage today.",
+                  "answer": "has",
+                  "acceptableAnswers": [
+                    "has"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Thank you. Will I be contacted if you find anything?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "officer",
+                  "text": "Of course. You'll be informed within forty-eight hours either way."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "I really appreciate your help. Hopefully it can be recovered."
                 }
               ]
             }
@@ -5210,6 +5656,116 @@
                 {
                   "left": "hand in (separable)",
                   "right": "Hand it in."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-phrasal-7",
+          "title": "Diyalog: Bilgisayarım çalışmıyor",
+          "description": "IT desteğiyle telefon konuşması — phrasal verb'ler doğal kullanım",
+          "theme": "vocabulary",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "phr7-1",
+              "type": "dialogue",
+              "prompt": "IT destek hattıyla bilgisayar sorunu",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "tech",
+                  "name": "Mia (IT)"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "tech",
+                  "text": "IT support, Mia speaking. What seems to be the trouble?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Hi Mia, my laptop just shut down by itself and won't start again."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "tech",
+                  "prompt": "Doğru phrasal verb'ü seç",
+                  "options": [
+                    "Okay, let's try a few things. Can you plug it in and try again?",
+                    "Okay, let's try a few things. Can you plug it on and try again?",
+                    "Okay, let's try a few things. Can you plug it at and try again?"
+                  ],
+                  "answer": "Okay, let's try a few things. Can you plug it in and try again?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "It's already plugged in. The light is on, but nothing happens when I press power."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "tech",
+                  "prompt": "Phrasal verb partikülünü tamamla",
+                  "before": "Right. Hold the power button",
+                  "after": "for thirty seconds to force a reset.",
+                  "answer": "down",
+                  "acceptableAnswers": [
+                    "down"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Okay, holding it now... still nothing. Should I try unplugging it?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "tech",
+                  "prompt": "Doğru phrasal verb partikülünü seç",
+                  "options": [
+                    "Yes, take the battery out if you can, then wait a minute.",
+                    "Yes, take the battery in if you can, then wait a minute.",
+                    "Yes, take the battery up if you can, then wait a minute."
+                  ],
+                  "answer": "Yes, take the battery out if you can, then wait a minute."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Done. I'll put it back and try to turn it on again."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Phrasal verb partikülünü tamamla",
+                  "before": "Wait, the screen is lighting",
+                  "after": "now! I can see the logo.",
+                  "answer": "up",
+                  "acceptableAnswers": [
+                    "up"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "tech",
+                  "text": "Excellent. Let it boot fully before you open any programs."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "You've really helped me out. I thought I'd lost everything!"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "tech",
+                  "text": "Glad I could sort it out. Back up your files tonight, just in case."
                 }
               ]
             }
@@ -6292,6 +6848,123 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-false-friends-7",
+          "title": "Diyalog: Yanlış anlaşılan kelimeler",
+          "description": "Türkçe etkisiyle yanlış kullanılan İngilizce kelimeleri düzeltme",
+          "theme": "vocabulary",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "ff7-1",
+              "type": "dialogue",
+              "prompt": "Bir Türk arkadaşın İngilizcesini düzeltme",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ali",
+                  "name": "Ali"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "ali",
+                  "text": "I went to the bank yesterday to pay my bills, and the cassier was so rude."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Doğru kelimeyi seç",
+                  "options": [
+                    "I think you mean 'cashier' — the person at the counter.",
+                    "I think you mean 'casserole' — the person at the counter.",
+                    "I think you mean 'cassette' — the person at the counter."
+                  ],
+                  "answer": "I think you mean 'cashier' — the person at the counter."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ali",
+                  "text": "Oh, cashier! Right. Anyway, after that I went to a restaurant with my collegues."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Doğru kelimeyi yaz: iş arkadaşları",
+                  "before": "Quick note: in English we say",
+                  "after": "with two L's, not 'collegues'.",
+                  "answer": "colleagues",
+                  "acceptableAnswers": [
+                    "colleagues",
+                    "colleague"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ali",
+                  "text": "Got it. So we ate at a Turkish place and the food was really actual."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "'Güncel' anlamında doğru kelimeyi seç",
+                  "options": [
+                    "Careful — 'actual' means 'real'. You probably mean 'current' or 'trendy'.",
+                    "Careful — 'actual' means 'fake'. You probably mean 'current' or 'trendy'.",
+                    "Careful — 'actual' means 'old'. You probably mean 'current' or 'trendy'."
+                  ],
+                  "answer": "Careful — 'actual' means 'real'. You probably mean 'current' or 'trendy'."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ali",
+                  "text": "Ah okay, the place was trendy then. Are you sensible about these mistakes?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "'Hassas' için doğru kelimeyi yaz",
+                  "before": "Another false friend! 'Sensible' means logical; you want",
+                  "after": "for emotional or touchy.",
+                  "answer": "sensitive",
+                  "acceptableAnswers": [
+                    "sensitive"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ali",
+                  "text": "Sensitive. Okay. My brain is making confusion with all these words."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Doğru ifadeyi seç",
+                  "options": [
+                    "We don't 'make' confusion in English — we 'get confused'.",
+                    "We don't 'make' confusion in English — we 'do confused'.",
+                    "We don't 'make' confusion in English — we 'have confused'."
+                  ],
+                  "answer": "We don't 'make' confusion in English — we 'get confused'."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ali",
+                  "text": "Okay, I get confused easily. Thanks — this is really useful feedback."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Anytime. You're improving fast. These tiny mistakes are totally normal."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -7281,6 +7954,118 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-travel-6",
+          "title": "Diyalog: Otele varış",
+          "description": "Otelde check-in yaparken yaşanan diyalog",
+          "theme": "vocabulary",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "tr6-1",
+              "type": "dialogue",
+              "prompt": "Otel resepsiyonunda check-in",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "clerk",
+                  "name": "Receptionist"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Good evening and welcome to the Riverside Hotel. Do you have a reservation?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Rezervasyon onayı için doğru ifadeyi seç",
+                  "options": [
+                    "Yes, I have a booking under the name Demir for three nights.",
+                    "Yes, I do a booking under the name Demir for three nights.",
+                    "Yes, I make a booking under the name Demir for three nights."
+                  ],
+                  "answer": "Yes, I have a booking under the name Demir for three nights."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Let me check... yes, here it is. A double room with a river view."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "clerk",
+                  "prompt": "Otel hizmeti ile ilgili kelimeyi tamamla",
+                  "before": "Could I please see your",
+                  "after": "and a credit card for incidentals?",
+                  "answer": "passport",
+                  "acceptableAnswers": [
+                    "passport",
+                    "ID",
+                    "id"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Sure, here you go. By the way, is breakfast included in the rate?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Yes, it's served from seven to ten on the second floor."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Bilgi sorusu için doğru ifadeyi seç",
+                  "options": [
+                    "Could you tell me what time check-out is, please?",
+                    "Could you tell me what time the check-out, please?",
+                    "Could you tell me when is check-out time, please?"
+                  ],
+                  "answer": "Could you tell me what time check-out is, please?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Check-out is by eleven, but late check-out can be arranged for a fee."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Konum sormak için doğru kelimeyi yaz",
+                  "before": "Perfect. Also, do you know",
+                  "after": "the nearest metro station is?",
+                  "answer": "where",
+                  "acceptableAnswers": [
+                    "where"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "It's just a five-minute walk to the left when you exit the hotel."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Great. One last thing — is there free Wi-Fi in the rooms?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Absolutely. The password is on your key card. Enjoy your stay!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8247,6 +9032,119 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-work-6",
+          "title": "Diyalog: Yöneticiyle günlük durum toplantısı",
+          "description": "İş yerinde kısa bir standup toplantısı — iş İngilizcesi",
+          "theme": "vocabulary",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "wk6-1",
+              "type": "dialogue",
+              "prompt": "Yöneticiyle haftalık ilerleme görüşmesi",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "manager",
+                  "name": "Diana"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "manager",
+                  "text": "Morning. Quick standup — what did you get done yesterday?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Tamamlanan iş için doğru zamanı seç",
+                  "options": [
+                    "I've finished the client report and sent it for review.",
+                    "I'm finishing the client report and sent it for review.",
+                    "I finish the client report and sent it for review."
+                  ],
+                  "answer": "I've finished the client report and sent it for review."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "manager",
+                  "text": "Great, fast work. Any blockers or issues I should know about?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Marketing hasn't sent the final logo yet. It's holding up the design."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "manager",
+                  "prompt": "Modal yardımcı fiili tamamla",
+                  "before": "Okay, I",
+                  "after": "follow up with them today. What's on your plate now?",
+                  "answer": "will",
+                  "acceptableAnswers": [
+                    "will",
+                    "'ll",
+                    "can",
+                    "could"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "I'm working on the slides for next week's all-hands meeting."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Yardım isteği için doğru ifadeyi seç",
+                  "options": [
+                    "Would you mind reviewing the draft before I share it?",
+                    "Would you mind to review the draft before I share it?",
+                    "Would you mind for reviewing the draft before I share it?"
+                  ],
+                  "answer": "Would you mind reviewing the draft before I share it?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "manager",
+                  "text": "Of course. Send it by Wednesday and I'll give you my feedback Thursday."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Süre belirten edatı tamamla",
+                  "before": "Perfect. I'll have everything ready",
+                  "after": "Tuesday evening at the latest.",
+                  "answer": "by",
+                  "acceptableAnswers": [
+                    "by"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "manager",
+                  "text": "Sounds good. By the way, the team has been doing excellent work this sprint."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Thank you. I'll pass that on — everyone's been pulling their weight."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "manager",
+                  "text": "Perfect. Let's catch up again on Friday. Have a productive day."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -9209,6 +10107,117 @@
                 {
                   "left": "Looking back",
                   "right": "Geriye donup bakinca"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-storytelling-6",
+          "title": "Diyalog: Çocukluk anısı",
+          "description": "Akşam yemeğinde çocukluk anısı anlatma — past tenses karışımı",
+          "theme": "tense",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "st6-1",
+              "type": "dialogue",
+              "prompt": "Aile yemeğinde eski bir anının paylaşımı",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "nadia",
+                  "name": "Nadia"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "nadia",
+                  "text": "So, tell me a funny story from when you were little. Anything memorable?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Oh, there's a classic one about my grandfather's farm. Want to hear it?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Hikaye başlatma için doğru zamanı seç",
+                  "options": [
+                    "When I was about seven, my brother and I were playing near the barn.",
+                    "When I was about seven, my brother and I have played near the barn.",
+                    "When I am about seven, my brother and I played near the barn."
+                  ],
+                  "answer": "When I was about seven, my brother and I were playing near the barn."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "nadia",
+                  "text": "Okay, near the barn. And what happened? Don't keep me waiting!"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Geçmiş zamanı tamamla",
+                  "before": "Suddenly, a chicken",
+                  "after": "out of nowhere and chased my brother around.",
+                  "answer": "appeared",
+                  "acceptableAnswers": [
+                    "appeared",
+                    "came"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "nadia",
+                  "text": "A chicken chased him? That's hilarious. Was he actually scared?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Terrified! He screamed so loudly that my grandmother came running out."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Past continuous için doğru yapıyı seç",
+                  "options": [
+                    "Meanwhile, I was laughing so hard that I fell into the mud.",
+                    "Meanwhile, I am laughing so hard that I fell into the mud.",
+                    "Meanwhile, I have laughed so hard that I fell into the mud."
+                  ],
+                  "answer": "Meanwhile, I was laughing so hard that I fell into the mud."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "nadia",
+                  "text": "Oh no! What did your grandmother say when she saw you both?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Geçmiş zaman fiilini tamamla",
+                  "before": "She just",
+                  "after": "her head and told us to wash up before dinner.",
+                  "answer": "shook",
+                  "acceptableAnswers": [
+                    "shook"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "We still talk about that chicken at every family dinner, twenty years later."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "nadia",
+                  "text": "That's such a sweet memory. Childhood stories are always the best."
                 }
               ]
             }
@@ -10191,6 +11200,117 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-opinions-6",
+          "title": "Diyalog: Bir film hakkında tartışma",
+          "description": "Bir film hakkında kibarca farklı düşünme — fikir bildirme dili",
+          "theme": "vocabulary",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "op6-1",
+              "type": "dialogue",
+              "prompt": "Sinema çıkışı bir film hakkında konuşma",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "mark",
+                  "name": "Mark"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "mark",
+                  "text": "Wow, that was incredible! Easily one of the best films I've seen this year."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Really? I had a completely different reaction, to be honest."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Kibarca itiraz için doğru ifadeyi seç",
+                  "options": [
+                    "I see your point, but I felt the pacing was really slow.",
+                    "I see your point, however I felt the pacing was really slow.",
+                    "I see your point, although I felt the pacing was really slow."
+                  ],
+                  "answer": "I see your point, but I felt the pacing was really slow."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mark",
+                  "text": "Slow? I thought it was deliberately atmospheric. The visuals were stunning."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fikir belirten kalıbı tamamla",
+                  "before": "I",
+                  "after": "the visuals were beautiful, but the story felt thin.",
+                  "answer": "agree",
+                  "acceptableAnswers": [
+                    "agree",
+                    "admit"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mark",
+                  "text": "Thin? Did we watch the same film? The character development was deep."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Kısmi anlaşma için doğru ifadeyi seç",
+                  "options": [
+                    "I partly agree — the lead was great, but the others felt flat.",
+                    "I part agree — the lead was great, but the others felt flat.",
+                    "I am partly agree — the lead was great, but the others felt flat."
+                  ],
+                  "answer": "I partly agree — the lead was great, but the others felt flat."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mark",
+                  "text": "Hmm, fair point about the side characters. But the ending was perfect, right?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fikir bildirme kalıbını tamamla",
+                  "before": "Honestly, in",
+                  "after": "opinion the ending was too predictable.",
+                  "answer": "my",
+                  "acceptableAnswers": [
+                    "my"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mark",
+                  "text": "Predictable? I didn't see that twist coming at all!"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "We clearly experienced this completely differently. That's the magic of cinema!"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mark",
+                  "text": "True. Next time you choose the film — I'm curious what you'd pick."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -10640,6 +11760,123 @@
                 "Can you make a control of this report?"
               ],
               "answer": "Can you check this report?"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-b1-review-4",
+          "title": "Diyalog: Seyahatten dönen arkadaş",
+          "description": "Uzun bir seyahatten dönen arkadaşıyla buluşma — B1 yapıları karışık",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rev4-1",
+              "type": "dialogue",
+              "prompt": "Bir aylık Asya turundan dönen arkadaşıyla kahvede sohbet",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "zara",
+                  "name": "Zara"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "zara",
+                  "text": "I'm finally back! Honestly, that was the trip of a lifetime."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Welcome home! You look so relaxed. So, where exactly have you been?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "zara",
+                  "prompt": "Present perfect doğru kullanımını seç",
+                  "options": [
+                    "I've travelled across Thailand, Vietnam, and Japan over four weeks.",
+                    "I travelled across Thailand, Vietnam, and Japan since four weeks.",
+                    "I have travel across Thailand, Vietnam, and Japan since four weeks."
+                  ],
+                  "answer": "I've travelled across Thailand, Vietnam, and Japan over four weeks."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Three countries in a month? That's intense. What was the highlight?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "zara",
+                  "prompt": "Conditional yapıyı tamamla",
+                  "before": "If you ever go to Kyoto, you",
+                  "after": "absolutely visit the bamboo forest.",
+                  "answer": "should",
+                  "acceptableAnswers": [
+                    "should",
+                    "must",
+                    "have to"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zara",
+                  "text": "Oh, and one funny thing — my wallet was stolen on day three in Bangkok."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "What? That's awful. How did you manage the rest of the trip?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "zara",
+                  "prompt": "Phrasal verb için doğru partikülü seç",
+                  "options": [
+                    "Luckily, my friend helped me out until my new card arrived.",
+                    "Luckily, my friend helped me on until my new card arrived.",
+                    "Luckily, my friend helped me in until my new card arrived."
+                  ],
+                  "answer": "Luckily, my friend helped me out until my new card arrived."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Thank goodness for friends. Honestly, if I were you, I'd have panicked."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Second conditional için doğru fiili tamamla",
+                  "before": "If I",
+                  "after": "more time off, I'd love to do a trip like that.",
+                  "answer": "had",
+                  "acceptableAnswers": [
+                    "had"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zara",
+                  "text": "You absolutely should. Even two weeks would change your perspective."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Maybe next year. Right now I'm just happy you're back in one piece!"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "zara",
+                  "text": "Me too. Let's plan dinner this weekend — I've brought you a little gift."
+                }
+              ]
             }
           ]
         }

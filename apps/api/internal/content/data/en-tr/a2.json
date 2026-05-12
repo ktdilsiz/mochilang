@@ -1006,6 +1006,112 @@
               "answer": "was"
             }
           ]
+        },
+        {
+          "id": "en-tr-past-simple-7",
+          "title": "Diyalog: Hafta sonunu anlatma",
+          "description": "Bir arkadaşına hafta sonunda yaptıklarını anlatıyorsun.",
+          "theme": "tense",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "ps7-1",
+              "type": "dialogue",
+              "prompt": "Hafta sonu sohbeti — Past Simple",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "sam",
+                  "name": "Sam"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Hi! How was your weekend?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "It was great, thanks!",
+                    "It is great, thanks!",
+                    "It were great, thanks!"
+                  ],
+                  "answer": "It was great, thanks!",
+                  "prompt": "Geçmiş zaman ile cevap ver."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Nice! What did you do on Saturday?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "I ",
+                  "after": " a movie at home.",
+                  "answer": "watched",
+                  "acceptableAnswers": [
+                    "Watched"
+                  ],
+                  "prompt": "Düzenli fiilin doğru geçmiş halini yaz."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Cool. Did you go out on Sunday?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Yes, I went to the park.",
+                    "Yes, I goed to the park.",
+                    "Yes, I go to the park."
+                  ],
+                  "answer": "Yes, I went to the park.",
+                  "prompt": "'go' fiilinin doğru geçmiş hali?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Who did you meet there?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "I ",
+                  "after": " my old friend Mark.",
+                  "answer": "saw",
+                  "acceptableAnswers": [
+                    "Saw"
+                  ],
+                  "prompt": "'see' fiilinin geçmiş halini yaz."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Sounds fun! Tell me more tomorrow."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Sure, see you then!",
+                    "No, I am tired.",
+                    "I don't know yesterday."
+                  ],
+                  "answer": "Sure, see you then!",
+                  "prompt": "Nazik bir kapanış seç."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1968,6 +2074,106 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-present-cont-7",
+          "title": "Diyalog: Telefonda 'Ne yapıyorsun?'",
+          "description": "Bir arkadaşını arıyorsun ve şu an ne yaptığını soruyorsun.",
+          "theme": "tense",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pc7-1",
+              "type": "dialogue",
+              "prompt": "Telefon görüşmesi — Present Continuous",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "leyla",
+                  "name": "Leyla"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "leyla",
+                  "text": "Hello? Who is this?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Hi Leyla, it's me. What are you doing?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leyla",
+                  "text": "I'm cooking dinner right now."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Are you making pasta?",
+                    "Are you make pasta?",
+                    "Do you making pasta?"
+                  ],
+                  "answer": "Are you making pasta?",
+                  "prompt": "Hangisi doğru -ing formu?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leyla",
+                  "text": "Yes! And my sister is helping me."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "What ",
+                  "after": " she doing now?",
+                  "answer": "is",
+                  "acceptableAnswers": [
+                    "Is",
+                    "'s"
+                  ],
+                  "prompt": "Şimdiki zaman yardımcı fiili."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leyla",
+                  "text": "She is cutting the tomatoes."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "I am watching TV at home.",
+                    "I watch TV at home now.",
+                    "I watching TV at home."
+                  ],
+                  "answer": "I am watching TV at home.",
+                  "prompt": "Şu an ne yaptığını söyle."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leyla",
+                  "text": "Okay, call me later, please."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Sure, talk to you soon!",
+                    "No, I cooking now.",
+                    "Yes, I am go."
+                  ],
+                  "answer": "Sure, talk to you soon!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2922,6 +3128,111 @@
                 "with"
               ],
               "answer": "by"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-prepositions-7",
+          "title": "Diyalog: Buluşma yeri tarifi",
+          "description": "Bir arkadaşına buluşma yerini at/in/on edatlarıyla anlatıyorsun.",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pp7-1",
+              "type": "dialogue",
+              "prompt": "Buluşma yeri tarif etme — edatlar",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "mert",
+                  "name": "Mert"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "mert",
+                  "text": "Hi! Where should we meet today?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Let's meet in Istanbul.",
+                    "Let's meet on Istanbul.",
+                    "Let's meet at Istanbul."
+                  ],
+                  "answer": "Let's meet in Istanbul.",
+                  "prompt": "Şehir adı için doğru edat?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mert",
+                  "text": "Great. Which café?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "The small café ",
+                  "after": " Green Street.",
+                  "answer": "on",
+                  "acceptableAnswers": [
+                    "On"
+                  ],
+                  "prompt": "Sokak adı için doğru edat."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mert",
+                  "text": "Okay. What time is good for you?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Let's meet at six o'clock.",
+                    "Let's meet in six o'clock.",
+                    "Let's meet on six o'clock."
+                  ],
+                  "answer": "Let's meet at six o'clock.",
+                  "prompt": "Saat ile hangi edat?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mert",
+                  "text": "Perfect. See you on Friday."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "See you again ",
+                  "after": " June, too!",
+                  "answer": "in",
+                  "acceptableAnswers": [
+                    "In"
+                  ],
+                  "prompt": "Ay adı için doğru edat."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mert",
+                  "text": "Sounds good. Bye!"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Bye! See you at the café.",
+                    "Bye! See you in the café table.",
+                    "Bye! See you on Istanbul."
+                  ],
+                  "answer": "Bye! See you at the café."
+                }
+              ]
             }
           ]
         }
@@ -3879,6 +4190,111 @@
               ],
               "answer": "after",
               "explanation": "Yemek isimleri artikelsiz: 'have dinner', 'after dinner'."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-articles-7",
+          "title": "Diyalog: Kafede sipariş — a / the",
+          "description": "Bir kafede a / an / the kullanarak sipariş veriyorsun.",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "ar7-1",
+              "type": "dialogue",
+              "prompt": "Kafede sipariş — articles",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "barista",
+                  "name": "Barista"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "barista",
+                  "text": "Hi! What can I get you today?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Can I have a coffee, please?",
+                    "Can I have the coffee, please?",
+                    "Can I have coffee a, please?"
+                  ],
+                  "answer": "Can I have a coffee, please?",
+                  "prompt": "İlk kez bahsediyorsun — doğru artikel?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "barista",
+                  "text": "Sure. Anything to eat?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "I'd like ",
+                  "after": " apple, please.",
+                  "answer": "an",
+                  "acceptableAnswers": [
+                    "An"
+                  ],
+                  "prompt": "Sesli harfle başlayan kelime — a/an?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "barista",
+                  "text": "Okay. Big or small coffee?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "The big one, please.",
+                    "A big one, please. The small one too.",
+                    "Big one, please."
+                  ],
+                  "answer": "The big one, please.",
+                  "prompt": "Belirli bir şey — hangi artikel?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "barista",
+                  "text": "Got it. Anything else?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "And ",
+                  "after": " cake on the shelf looks great.",
+                  "answer": "the",
+                  "acceptableAnswers": [
+                    "The"
+                  ],
+                  "prompt": "Belirli, raftan gösterilen kek."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "barista",
+                  "text": "All right, your total is five lira."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Here you are. Thank you!",
+                    "Here you are. The thank!",
+                    "Here you are. A thanks!"
+                  ],
+                  "answer": "Here you are. Thank you!"
+                }
+              ]
             }
           ]
         }
@@ -4858,6 +5274,111 @@
               "answer": "a little"
             }
           ]
+        },
+        {
+          "id": "en-tr-comparatives-7",
+          "title": "Diyalog: İki telefonu karşılaştırma",
+          "description": "Bir arkadaşınla iki telefonu kıyaslıyorsun.",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cm7-1",
+              "type": "dialogue",
+              "prompt": "İki telefonu kıyaslama — comparatives",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "deniz",
+                  "name": "Deniz"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "deniz",
+                  "text": "Look at these phones. Which is better?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "This one is cheaper than that one.",
+                    "This one is more cheap than that one.",
+                    "This one is cheapest than that one."
+                  ],
+                  "answer": "This one is cheaper than that one.",
+                  "prompt": "Kısa sıfat — doğru karşılaştırma?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "deniz",
+                  "text": "Hmm. But the camera?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "The camera here is ",
+                  "after": " than the other one.",
+                  "answer": "better",
+                  "acceptableAnswers": [
+                    "Better"
+                  ],
+                  "prompt": "'good' sıfatının karşılaştırma hali."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "deniz",
+                  "text": "What about the battery life?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "It is more powerful than the old phone.",
+                    "It is powerfuler than the old phone.",
+                    "It is more powerfuler than the old phone."
+                  ],
+                  "answer": "It is more powerful than the old phone.",
+                  "prompt": "Uzun sıfat için doğru kalıp?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "deniz",
+                  "text": "Nice. And the size?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "This phone is ",
+                  "after": " than my old one.",
+                  "answer": "bigger",
+                  "acceptableAnswers": [
+                    "Bigger"
+                  ],
+                  "prompt": "'big' karşılaştırma hali."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "deniz",
+                  "text": "Okay, I will buy it!"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Good choice — it's the best deal.",
+                    "Good choice — it's the most best deal.",
+                    "Good choice — it's more best deal."
+                  ],
+                  "answer": "Good choice — it's the best deal."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5784,6 +6305,113 @@
                 "Is / have"
               ],
               "answer": "Do / have"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-have-got-7",
+          "title": "Diyalog: Aile sohbeti — have got",
+          "description": "Yeni bir arkadaşınla aileni ve eşyalarını konuşuyorsun.",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "hg7-1",
+              "type": "dialogue",
+              "prompt": "Aile ve eşyalar — have got",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "anna",
+                  "name": "Anna"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "anna",
+                  "text": "Tell me about your family."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "I've got two sisters and a brother.",
+                    "I's got two sisters and a brother.",
+                    "I has got two sisters and a brother."
+                  ],
+                  "answer": "I've got two sisters and a brother.",
+                  "prompt": "'I' öznesi için doğru form?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "anna",
+                  "text": "Wow. How old are your sisters?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "They are ten and fifteen."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "anna",
+                  "text": "Has your brother got a pet?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "Yes, he ",
+                  "after": " got a small dog.",
+                  "answer": "has",
+                  "acceptableAnswers": [
+                    "Has",
+                    "'s"
+                  ],
+                  "prompt": "'he' öznesi için yardımcı fiil."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "anna",
+                  "text": "Cute! Have you got pets too?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "No, I haven't got any pets.",
+                    "No, I don't got any pets.",
+                    "No, I not have got any pets."
+                  ],
+                  "answer": "No, I haven't got any pets.",
+                  "prompt": "Olumsuz cevap — doğru form?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "anna",
+                  "text": "Have your parents got a big house?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "Yes, they ",
+                  "after": " got a nice garden too.",
+                  "answer": "have",
+                  "acceptableAnswers": [
+                    "Have",
+                    "'ve"
+                  ],
+                  "prompt": "'they' için doğru fiil."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "anna",
+                  "text": "Sounds lovely!"
+                }
+              ]
             }
           ]
         }
@@ -6755,6 +7383,125 @@
                 "old"
               ],
               "answer": "cheap"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-shopping-7",
+          "title": "Diyalog: Mağazada kıyafet alma",
+          "description": "Bir mağazada beden ve fiyat soruyorsun.",
+          "theme": "shopping",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "sh7-1",
+              "type": "dialogue",
+              "prompt": "Mağazada alışveriş",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "clerk",
+                  "name": "Shop assistant"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Hello! Can I help you with something?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Yes, I'd like to try this shirt.",
+                    "Yes, I want shirt this.",
+                    "Yes, give me shirt."
+                  ],
+                  "answer": "Yes, I'd like to try this shirt.",
+                  "prompt": "Nazik bir istek seç."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Sure. What size do you need?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "A ",
+                  "after": " please — that's my size.",
+                  "answer": "medium",
+                  "acceptableAnswers": [
+                    "Medium",
+                    "small",
+                    "Small",
+                    "large",
+                    "Large"
+                  ],
+                  "prompt": "Bedenini yaz."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Here you are. The fitting room is over there."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "Thanks. It feels a bit tight."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Would you like a bigger size?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Yes, can I have a larger one?",
+                    "Yes, give me more big size.",
+                    "Yes, I have a more big size."
+                  ],
+                  "answer": "Yes, can I have a larger one?",
+                  "prompt": "Daha büyük beden iste."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Of course. How does this one feel?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "It's perfect. How ",
+                  "after": " is it?",
+                  "answer": "much",
+                  "acceptableAnswers": [
+                    "Much"
+                  ],
+                  "prompt": "Fiyatı sor."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "It's two hundred lira."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Great, I'll take it!",
+                    "Great, I take he!",
+                    "Great, I'm take it!"
+                  ],
+                  "answer": "Great, I'll take it!"
+                }
+              ]
             }
           ]
         }
@@ -7762,6 +8509,115 @@
               "answer": "doesn't"
             }
           ]
+        },
+        {
+          "id": "en-tr-food-7",
+          "title": "Diyalog: Restoranda sipariş",
+          "description": "Bir restoranda yemek ve içecek sipariş ediyorsun.",
+          "theme": "food",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fd7-1",
+              "type": "dialogue",
+              "prompt": "Restoran siparişi",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "waiter",
+                  "name": "Waiter"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "waiter",
+                  "text": "Good evening. Are you ready to order?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Yes, I'd like the chicken, please.",
+                    "Yes, I want chicken now.",
+                    "Yes, give chicken to me."
+                  ],
+                  "answer": "Yes, I'd like the chicken, please.",
+                  "prompt": "Nazik sipariş seç."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "waiter",
+                  "text": "Great choice. With rice or potatoes?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "With ",
+                  "after": ", please.",
+                  "answer": "rice",
+                  "acceptableAnswers": [
+                    "Rice",
+                    "potatoes",
+                    "Potatoes"
+                  ],
+                  "prompt": "Tercihini yaz."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "waiter",
+                  "text": "Anything to drink?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "A glass of water, please.",
+                    "A water glass, please give.",
+                    "Water glass one, please."
+                  ],
+                  "answer": "A glass of water, please.",
+                  "prompt": "Su istemek için en doğru cümle?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "waiter",
+                  "text": "Do you have any allergies?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "Yes, I can't ",
+                  "after": " nuts, please.",
+                  "answer": "eat",
+                  "acceptableAnswers": [
+                    "Eat",
+                    "have",
+                    "Have"
+                  ],
+                  "prompt": "Boşluğu uygun fiille doldur."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "waiter",
+                  "text": "Got it. I'll bring your order soon."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Thank you very much!",
+                    "Thank you very many!",
+                    "Thanks you very much!"
+                  ],
+                  "answer": "Thank you very much!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8667,6 +9523,115 @@
               "answer": "because"
             }
           ]
+        },
+        {
+          "id": "en-tr-feelings-6",
+          "title": "Diyalog: Yorgun arkadaşı teselli etme",
+          "description": "Üzgün ve yorgun bir arkadaşına destek oluyorsun.",
+          "theme": "vocabulary",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fl6-1",
+              "type": "dialogue",
+              "prompt": "Arkadaşı teselli etme",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ece",
+                  "name": "Ece"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "ece",
+                  "text": "Hi. I'm really tired today."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Oh no. Are you okay?",
+                    "Oh no. You happy?",
+                    "Oh no. Why are you happy?"
+                  ],
+                  "answer": "Oh no. Are you okay?",
+                  "prompt": "Empati gösteren bir cevap seç."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ece",
+                  "text": "I had a long day at work."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "I'm sorry to hear that."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ece",
+                  "text": "I also feel a bit sad."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "It's okay to feel ",
+                  "after": " sometimes.",
+                  "answer": "sad",
+                  "acceptableAnswers": [
+                    "Sad",
+                    "tired",
+                    "Tired"
+                  ],
+                  "prompt": "Boşluğu duyguyu anlatan kelimeyle tamamla."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ece",
+                  "text": "Thanks. You're a good friend."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Let's get some tea together.",
+                    "Let's get some sad together.",
+                    "Let's tea some get."
+                  ],
+                  "answer": "Let's get some tea together.",
+                  "prompt": "Nazik bir öneri seç."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ece",
+                  "text": "That's a great idea."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "I'm ",
+                  "after": " you said yes.",
+                  "answer": "happy",
+                  "acceptableAnswers": [
+                    "Happy",
+                    "glad",
+                    "Glad"
+                  ],
+                  "prompt": "'happy' kelimesini kullan."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ece",
+                  "text": "Me too. Thank you."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -9548,6 +10513,113 @@
               ],
               "answer": "any",
               "explanation": "Olumsuz: 'any'."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-hobbies-6",
+          "title": "Diyalog: Spor salonunda tanışma",
+          "description": "Yeni bir spor arkadaşıyla hobiler hakkında konuşuyorsun.",
+          "theme": "vocabulary",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "hb6-1",
+              "type": "dialogue",
+              "prompt": "Spor salonunda küçük sohbet",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "jay",
+                  "name": "Jay"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "jay",
+                  "text": "Hi! I haven't seen you here before."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Hi! Yes, I'm new here.",
+                    "Hi! Yes, I am old here.",
+                    "Hi! No, I never come."
+                  ],
+                  "answer": "Hi! Yes, I'm new here.",
+                  "prompt": "Nazik bir cevap seç."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "jay",
+                  "text": "Cool. What sports do you like?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "I love ",
+                  "after": " — and you?",
+                  "answer": "running",
+                  "acceptableAnswers": [
+                    "Running",
+                    "swimming",
+                    "Swimming"
+                  ],
+                  "prompt": "-ing formunu kullan."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "jay",
+                  "text": "I play basketball every weekend."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "I go to the gym three times a week.",
+                    "I go gym three a week times.",
+                    "I three times go gym a week."
+                  ],
+                  "answer": "I go to the gym three times a week.",
+                  "prompt": "Sıklık ifadesi ile cevap ver."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "jay",
+                  "text": "Nice. Do you have other hobbies?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "Yes, I also like ",
+                  "after": " books.",
+                  "answer": "reading",
+                  "acceptableAnswers": [
+                    "Reading"
+                  ],
+                  "prompt": "Bir hobi yaz."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "jay",
+                  "text": "Great! Maybe we can train together."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Sure, that sounds fun!",
+                    "Sure, that sounds tired!",
+                    "No, sport is bad."
+                  ],
+                  "answer": "Sure, that sounds fun!"
+                }
+              ]
             }
           ]
         }
@@ -10438,6 +11510,112 @@
               "answer": "duruma göre will VE/YA going to"
             }
           ]
+        },
+        {
+          "id": "en-tr-future-plans-6",
+          "title": "Diyalog: Hafta sonu planları",
+          "description": "Bir arkadaşınla hafta sonu planlarını konuşuyorsun.",
+          "theme": "tense",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fp6-1",
+              "type": "dialogue",
+              "prompt": "Hafta sonu planları — going to / will",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "noah",
+                  "name": "Noah"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "noah",
+                  "text": "Hey! Any plans for the weekend?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Yes, I'm going to visit my family.",
+                    "Yes, I will visit my family.",
+                    "Yes, I visit my family."
+                  ],
+                  "answer": "Yes, I'm going to visit my family.",
+                  "prompt": "Önceden yapılmış plan — hangi yapı?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "noah",
+                  "text": "Nice! Where do they live?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "They live in Ankara."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "noah",
+                  "text": "Cool. How will you travel?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "I'm ",
+                  "after": " to take the train on Saturday.",
+                  "answer": "going",
+                  "acceptableAnswers": [
+                    "Going"
+                  ],
+                  "prompt": "'going to' yapısını tamamla."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "noah",
+                  "text": "Train is nice. Are you coming back Sunday?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "I think I'll come back on Sunday night.",
+                    "I think I go back on Sunday night.",
+                    "I think I am back on Sunday night."
+                  ],
+                  "answer": "I think I'll come back on Sunday night.",
+                  "prompt": "Anlık karar — hangi yapı?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "noah",
+                  "text": "Cool. Will you be free next week?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "Yes, I ",
+                  "after": " call you on Monday.",
+                  "answer": "will",
+                  "acceptableAnswers": [
+                    "Will",
+                    "'ll"
+                  ],
+                  "prompt": "'will' ile cevap ver."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "noah",
+                  "text": "Great. Have a safe trip!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -10875,6 +12053,120 @@
                 "Para istiyorum."
               ],
               "answer": "Param yok."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-a2-review-4",
+          "title": "Diyalog: Karma zaman tekrarı",
+          "description": "Geçmiş, şimdiki ve gelecek zamanı bir arada kullanan bir sohbet.",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rev4-1",
+              "type": "dialogue",
+              "prompt": "Karma zaman sohbeti",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "rita",
+                  "name": "Rita"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "rita",
+                  "text": "Hi! What did you do yesterday?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "I visited my grandmother.",
+                    "I visit my grandmother yesterday.",
+                    "I am visiting my grandmother."
+                  ],
+                  "answer": "I visited my grandmother.",
+                  "prompt": "Geçmiş zaman — doğru form?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rita",
+                  "text": "Nice. What are you doing right now?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "I'm ",
+                  "after": " a cup of tea.",
+                  "answer": "drinking",
+                  "acceptableAnswers": [
+                    "Drinking",
+                    "making",
+                    "Making"
+                  ],
+                  "prompt": "Şimdiki zaman -ing yapısı."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rita",
+                  "text": "Cool. Are you free tomorrow?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "I'm going to study English tomorrow.",
+                    "I study English tomorrow now.",
+                    "I studied English tomorrow."
+                  ],
+                  "answer": "I'm going to study English tomorrow.",
+                  "prompt": "Önceden planlanmış gelecek?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rita",
+                  "text": "Great. Will you join my class on Friday?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "before": "Yes, I ",
+                  "after": " come at six.",
+                  "answer": "will",
+                  "acceptableAnswers": [
+                    "Will",
+                    "'ll"
+                  ],
+                  "prompt": "'will' ile cevap ver."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rita",
+                  "text": "Awesome. By the way, who called me earlier?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "options": [
+                    "Sorry, I called you this morning.",
+                    "Sorry, I call you this morning.",
+                    "Sorry, I am calling you this morning."
+                  ],
+                  "answer": "Sorry, I called you this morning.",
+                  "prompt": "Geçmiş zaman cevabı."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rita",
+                  "text": "Got it! See you Friday."
+                }
+              ]
             }
           ]
         }

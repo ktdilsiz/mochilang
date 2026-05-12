@@ -1118,6 +1118,101 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-opinions-7",
+          "title": "Diyalog: Kafede Film Yorumu",
+          "description": "Bir arkadaşınla yeni izlediğin filmi tartışıyorsun, görüşlerini yumuşatarak ifade ediyorsun",
+          "theme": "speaking",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "op7-1",
+              "type": "dialogue",
+              "prompt": "Kafede arkadaşınla filmi tartışırken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "mia",
+                  "name": "Mia"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "mia",
+                  "text": "So, what did you think of the film? Honestly, I found it a bit overrated."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Görüşünü yumuşatarak söyle (hedging)",
+                  "options": [
+                    "It seems to me the ending was rushed, but the acting saved it.",
+                    "I say absolutely the ending was rushed totally.",
+                    "The ending it rushed was, but acting saved."
+                  ],
+                  "answer": "It seems to me the ending was rushed, but the acting saved it."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mia",
+                  "text": "Yeah, the pacing was off. I'd argue the director could have cut twenty minutes."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Yarı katıldığını söyle (sort of)",
+                  "options": [
+                    "I sort of agree, though I think those scenes built the atmosphere.",
+                    "I full agreement, however the scenes the atmosphere built.",
+                    "Agree I sort of, the scenes atmosphere did building."
+                  ],
+                  "answer": "I sort of agree, though I think those scenes built the atmosphere."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mia",
+                  "text": "Fair point. From my perspective, the soundtrack was the strongest element."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Yumuşak görüş kalıbını tamamla — 'Bana öyle geliyor ki…'",
+                  "before": "It ",
+                  "after": " to me the soundtrack carried the emotional weight throughout.",
+                  "answer": "seems",
+                  "acceptableAnswers": [
+                    "Seems"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mia",
+                  "text": "Exactly. Would you recommend it to someone who hasn't seen it yet?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Çekinceli tavsiye — modal perfect kullan",
+                  "options": [
+                    "I'd recommend it, but they should have read the book first for context.",
+                    "I recommend, but they must read the book firstly for context.",
+                    "Recommend would I, but the book they reading should."
+                  ],
+                  "answer": "I'd recommend it, but they should have read the book first for context."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mia",
+                  "text": "Good call. Let's grab another coffee and pick the next one to watch."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2232,6 +2327,103 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-news-7",
+          "title": "Diyalog: Haber Başlığına Tepki",
+          "description": "Bir iş arkadaşınla sabah haberlerini konuşuyorsun ve dolaylı anlatım kullanıyorsun",
+          "theme": "media",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "n7-1",
+              "type": "dialogue",
+              "prompt": "Ofiste sabah haberi hakkında konuşurken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ben",
+                  "name": "Ben"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "ben",
+                  "text": "Did you hear about the transit strike? It's all over the news this morning."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Pasif raporlama yapısıyla cevap ver",
+                  "options": [
+                    "Yes, the unions are said to be demanding a fifteen percent raise.",
+                    "Yes, the unions saying fifteen percent raise demand they.",
+                    "Yes, unions said they are demand fifteen percent raise."
+                  ],
+                  "answer": "Yes, the unions are said to be demanding a fifteen percent raise."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ben",
+                  "text": "Apparently negotiations broke down at midnight. The mayor sounded furious."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Pasif raporlama — 'Söylendiğine göre…'",
+                  "before": "It ",
+                  "after": " that the talks will resume later this afternoon.",
+                  "answer": "is reported",
+                  "acceptableAnswers": [
+                    "Is reported",
+                    "is said",
+                    "Is said"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ben",
+                  "text": "If they don't reach a deal, my commute is going to be a nightmare tomorrow."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Karışık koşul cümlesi seç",
+                  "options": [
+                    "If the city had invested in alternative routes, we wouldn't be stuck now.",
+                    "If the city invested alternative routes, we wouldn't been stuck.",
+                    "If city alternative routes invest, now we not stuck."
+                  ],
+                  "answer": "If the city had invested in alternative routes, we wouldn't be stuck now."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ben",
+                  "text": "True. The whole infrastructure has been neglected for years, hasn't it?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Edilgen perfect ile katıl",
+                  "options": [
+                    "Definitely. Funding has been cut repeatedly since the last election.",
+                    "Definitely. Funding cut has been repeatedly since the election last.",
+                    "Definitely. Funding cutting since election last repeatedly."
+                  ],
+                  "answer": "Definitely. Funding has been cut repeatedly since the last election."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ben",
+                  "text": "Let's hope something changes soon. I'll check the updates at lunch."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3136,6 +3328,103 @@
                 "the",
                 "by",
                 "from"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-environment-6",
+          "title": "Diyalog: Ofiste Sürdürülebilirlik Sohbeti",
+          "description": "Geri dönüşüm ve tek kullanımlık plastikler hakkında bir iş arkadaşınla konuşuyorsun",
+          "theme": "topics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "env6-1",
+              "type": "dialogue",
+              "prompt": "Ofis mutfağında sürdürülebilirlik hakkında",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "lara",
+                  "name": "Lara"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "lara",
+                  "text": "I noticed we still use disposable cups every day. Shouldn't we switch to reusable ones?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Modal perfect ile katıl",
+                  "options": [
+                    "Honestly, we should have made that change a long time ago.",
+                    "Honestly, we must make that change long time ago.",
+                    "Honest, we change that should make a longest time."
+                  ],
+                  "answer": "Honestly, we should have made that change a long time ago."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lara",
+                  "text": "Single-use plastics are banned in the city centre now. Did you know that?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Pasif raporlama kullan",
+                  "options": [
+                    "Yes, the new policy is said to reduce plastic waste by thirty percent.",
+                    "Yes, new policy is say reduce plastic waste percent thirty.",
+                    "Yes, policy new says reduce plastic by thirty waste."
+                  ],
+                  "answer": "Yes, the new policy is said to reduce plastic waste by thirty percent."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lara",
+                  "text": "That's encouraging. We could ask HR to install a proper recycling station."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Pişmanlık ifade et — 'organize etmiş olmalıydık'",
+                  "before": "We ",
+                  "after": " organised this initiative months ago, to be honest.",
+                  "answer": "should have",
+                  "acceptableAnswers": [
+                    "Should have",
+                    "could have",
+                    "Could have"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lara",
+                  "text": "True. Better late than never. Want to draft a proposal together this week?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi kabul cevabı seç",
+                  "options": [
+                    "I'd be happy to. Let's aim for something concrete by Friday afternoon.",
+                    "I'd be happily. Let's aim something concrete by Friday afternoon.",
+                    "Happy I be. Concrete something Friday aim we."
+                  ],
+                  "answer": "I'd be happy to. Let's aim for something concrete by Friday afternoon."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lara",
+                  "text": "Perfect. I'll send a meeting invite for Thursday. Thanks for jumping in."
+                }
               ]
             }
           ]
@@ -4180,6 +4469,103 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-tech-7",
+          "title": "Diyalog: Akıllı Cihaz Destek Hattı",
+          "description": "Müşteri hizmetlerini arayıp akıllı bir cihazla yaşadığın sorunu çözmeye çalışıyorsun",
+          "theme": "topics",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "tch7-1",
+              "type": "dialogue",
+              "prompt": "Akıllı ev cihazı için müşteri desteğini ararken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "agent",
+                  "name": "Agent"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "agent",
+                  "text": "Thank you for calling SmartHome support. How can I assist you today?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi şikayet aç — present perfect continuous",
+                  "options": [
+                    "Hi, my thermostat has been disconnecting from the network since yesterday.",
+                    "Hi, my thermostat disconnecting from the network since yesterday is.",
+                    "Hi, thermostat my disconnect from network yesterday since being."
+                  ],
+                  "answer": "Hi, my thermostat has been disconnecting from the network since yesterday."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "agent",
+                  "text": "I'm sorry to hear that. Have you tried restarting both the device and the router?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Modal perfect ile cevap ver",
+                  "options": [
+                    "Yes, twice. I might have missed a firmware update, though.",
+                    "Yes, twice. I might miss the firmware updating, though.",
+                    "Yes, twice. Maybe I a firmware update miss."
+                  ],
+                  "answer": "Yes, twice. I might have missed a firmware update, though."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "agent",
+                  "text": "Good observation. The latest update was rolled out three days ago, in fact."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Edilgen — 'tarafımdan kurulmamış olabilir'",
+                  "before": "So the update ",
+                  "after": " installed automatically on my unit then.",
+                  "answer": "might not have been",
+                  "acceptableAnswers": [
+                    "Might not have been",
+                    "may not have been",
+                    "May not have been"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "agent",
+                  "text": "Exactly. Let me walk you through the manual update process. Do you have a minute?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi kabul kalıbı",
+                  "options": [
+                    "Of course, go ahead. I'd appreciate any guidance you can offer.",
+                    "Of course, go ahead. I appreciation any guidance you can offering.",
+                    "Course of, ahead go. Appreciate guidance offer you can."
+                  ],
+                  "answer": "Of course, go ahead. I'd appreciate any guidance you can offer."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "agent",
+                  "text": "Great. Open the companion app and tap 'Device Settings' in the top right corner."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5086,6 +5472,101 @@
                 "by",
                 "from",
                 "the"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-relationships-6",
+          "title": "Diyalog: Ayrılıktan Sonra Tavsiye",
+          "description": "Arkadaşın ayrılığın ardından tavsiye istiyor, sen ona empatiyle yaklaşıyorsun",
+          "theme": "feelings",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "rel6-1",
+              "type": "dialogue",
+              "prompt": "Arkadaşına ayrılık sonrası tavsiye verirken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "sam",
+                  "name": "Sam"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "I just don't know what to do anymore. I keep replaying every conversation in my head."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Empatik açılış cümlesi seç",
+                  "options": [
+                    "That sounds exhausting. It's completely understandable that you feel this way.",
+                    "That sound exhausting. It completely understanding that you feeling this way.",
+                    "Exhausting sound. Understandable feels you complete way this."
+                  ],
+                  "answer": "That sounds exhausting. It's completely understandable that you feel this way."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Maybe if I had spoken up earlier, things would have turned out differently."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Karışık koşul cümlesi — 'şu an daha mutlu olurdun'",
+                  "before": "Even if you ",
+                  "after": " spoken up, you wouldn't necessarily be happier right now.",
+                  "answer": "had",
+                  "acceptableAnswers": [
+                    "Had"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Do you really think so? It feels like I missed every warning sign."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Modal perfect ile yumuşat",
+                  "options": [
+                    "You couldn't have known how things would unfold. Don't blame yourself.",
+                    "You couldn't knew how things will unfold. Don't blame yourself.",
+                    "Known you couldn't how unfold things. Blame not yourself."
+                  ],
+                  "answer": "You couldn't have known how things would unfold. Don't blame yourself."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Thanks. I think I just need time before I'm ready to date again."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Destekleyici cevap — hedging",
+                  "options": [
+                    "That's a healthy approach. Take as long as you need; there's no rush.",
+                    "That's healthy approach. Take as long you need; no there rush.",
+                    "Healthy approach. Long take you need rush no there."
+                  ],
+                  "answer": "That's a healthy approach. Take as long as you need; there's no rush."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "I appreciate it. Let's grab dinner this weekend and talk about something lighter."
+                }
               ]
             }
           ]
@@ -6138,6 +6619,103 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-conditionals-7",
+          "title": "Diyalog: Proje Retrospektifi",
+          "description": "Bir proje sonrası ekiple neyin yanlış gidebileceğini tartışıyorsunuz — modal perfect ve mixed conditionals",
+          "theme": "grammar",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "cn7-1",
+              "type": "dialogue",
+              "prompt": "Proje sonrası ekip değerlendirmesinde",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "lead",
+                  "name": "Lead"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "lead",
+                  "text": "Let's walk through the retro. What could we have done differently last sprint?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Modal perfect ile cevap ver",
+                  "options": [
+                    "We should have flagged the API risk during planning instead of mid-sprint.",
+                    "We should flag the API risk during planning instead mid-sprint.",
+                    "Flagged we should the risk API planning mid-sprint."
+                  ],
+                  "answer": "We should have flagged the API risk during planning instead of mid-sprint."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lead",
+                  "text": "Agreed. If we had escalated earlier, would we have hit the deadline?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Karışık koşul cümlesi seç",
+                  "options": [
+                    "If we had escalated sooner, we'd still be on track today.",
+                    "If we escalated sooner, we still on track will be today.",
+                    "Escalated sooner we, today still on track we."
+                  ],
+                  "answer": "If we had escalated sooner, we'd still be on track today."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lead",
+                  "text": "Right. And the QA bottleneck — could that have been prevented?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Modal perfect edilgen — 'önlenebilirdi'",
+                  "before": "It ",
+                  "after": " prevented if we had assigned a dedicated tester from day one.",
+                  "answer": "could have been",
+                  "acceptableAnswers": [
+                    "Could have been",
+                    "should have been",
+                    "Should have been"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lead",
+                  "text": "Solid analysis. What would you suggest we change for the next sprint?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Öneri sun — 'I'd suggest'",
+                  "options": [
+                    "I'd suggest carving out time for risk review on day one of every sprint.",
+                    "I suggest carving time for risk review on day one every sprint.",
+                    "Suggest I'd time carving for risk review on day every sprint."
+                  ],
+                  "answer": "I'd suggest carving out time for risk review on day one of every sprint."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lead",
+                  "text": "Great recommendation. Let's add that to the team agreement before Monday."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -7049,6 +7627,104 @@
                 "very",
                 "by",
                 "the"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-formal-6",
+          "title": "Diyalog: Resmi Daveti Nazikçe Reddetme",
+          "description": "Bir konferansa daveti telefonla nazikçe geri çeviriyorsun — register ve hedging odaklı",
+          "theme": "grammar",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "fm6-1",
+              "type": "dialogue",
+              "prompt": "Resmi bir daveti telefonla reddederken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "host",
+                  "name": "Host"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "Good morning. I'm calling to confirm your attendance at our annual gala next Saturday."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi açılış seç",
+                  "options": [
+                    "Good morning. Thank you so much for the kind invitation; I appreciate it greatly.",
+                    "Good morning. Thanks lots for the kindly invitation; appreciate greatly I.",
+                    "Morning good. The kindly invitation thanks for; greatly appreciate."
+                  ],
+                  "answer": "Good morning. Thank you so much for the kind invitation; I appreciate it greatly."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "It's our pleasure. We were hoping you'd join the panel as a featured speaker."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Resmi reddetme — 'maalesef katılamayacağım'",
+                  "before": "I'm afraid I ",
+                  "after": " be able to attend due to a prior commitment that weekend.",
+                  "answer": "won't",
+                  "acceptableAnswers": [
+                    "Won't",
+                    "will not",
+                    "Will not",
+                    "shall not"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "That's a real shame. Is there any way we could reschedule around your availability?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi şekilde tekrar reddet",
+                  "options": [
+                    "Unfortunately, my schedule is fully booked through the end of next month.",
+                    "Unfortunate, my schedule fully booking through end of next month.",
+                    "My schedule unfortunate fully book end of next month through."
+                  ],
+                  "answer": "Unfortunately, my schedule is fully booked through the end of next month."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "Understood. Would you be open to contributing remotely, perhaps a recorded message?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi alternatif kabul seç",
+                  "options": [
+                    "I'd be delighted to record a short message; please send the details by email.",
+                    "I delighted record a short message; send the details by email please.",
+                    "Delighted I be record message short; details by email send."
+                  ],
+                  "answer": "I'd be delighted to record a short message; please send the details by email."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "Wonderful. I'll have my assistant follow up later today. Thank you for your time."
+                }
               ]
             }
           ]
@@ -7974,6 +8650,101 @@
                 "two",
                 "companies",
                 "very"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-passive-6",
+          "title": "Diyalog: Gazeteci Röportajı",
+          "description": "Bir gazeteci olarak şirket sözcüsüyle röportaj yapıyorsun — edilgen yapılar ve raporlama",
+          "theme": "grammar",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "ps6-1",
+              "type": "dialogue",
+              "prompt": "Şirket sözcüsüyle röportaj yaparken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "spox",
+                  "name": "Spokesperson"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "spox",
+                  "text": "Welcome. I understand you have questions about last week's restructuring announcement."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Edilgen soru seç — 'karar kim tarafından verildi?'",
+                  "options": [
+                    "Yes. Could you clarify by whom the final decision was made?",
+                    "Yes. Could you clarify who by the final decision making was?",
+                    "Yes. Clarify could you by whom decision the making finally?"
+                  ],
+                  "answer": "Yes. Could you clarify by whom the final decision was made?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "spox",
+                  "text": "The decision was approved unanimously by the board after a six-month review."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Pasif raporlama — söylendiğine göre",
+                  "options": [
+                    "It is said that two hundred positions will be affected. Can you confirm?",
+                    "It said that two hundred positions affecting will be. Confirm can you?",
+                    "Say it is that positions two hundred affect will. Can confirm you?"
+                  ],
+                  "answer": "It is said that two hundred positions will be affected. Can you confirm?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "spox",
+                  "text": "I can confirm the figure, though severance packages have been negotiated generously."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Pasif perfect — 'çalışanlar bilgilendirildi mi?'",
+                  "before": "Have the affected employees ",
+                  "after": " informed about the timeline yet?",
+                  "answer": "been",
+                  "acceptableAnswers": [
+                    "Been"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "spox",
+                  "text": "Yes, every affected employee was personally notified before the press release went out."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Edilgen gelecek — 'iş güvencesi ne zaman sağlanacak?'",
+                  "options": [
+                    "When will replacement roles be offered to those who wish to stay?",
+                    "When will offered replacement roles to those who staying wish?",
+                    "Replacement roles when offer to those wishing stay will?"
+                  ],
+                  "answer": "When will replacement roles be offered to those who wish to stay?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "spox",
+                  "text": "Interviews will be scheduled over the next two weeks. We're committed to a fair process."
+                }
               ]
             }
           ]
@@ -9051,6 +9822,103 @@
                 "the",
                 "much",
                 "by"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-b2-education-6",
+          "title": "Diyalog: Veli-Öğretmen Görüşmesi",
+          "description": "Çocuğunun gelişimi hakkında öğretmenle görüşüyorsun — hedging ve register karışık",
+          "theme": "reading",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "ed6-1",
+              "type": "dialogue",
+              "prompt": "Veli-öğretmen toplantısında",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "teacher",
+                  "name": "Teacher"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "Thank you for coming in. Overall, your daughter has been making solid progress this term."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Nazik soru seç — endişeyi yumuşat",
+                  "options": [
+                    "That's reassuring to hear. Are there any areas where she could improve further?",
+                    "That's reassure to hearing. There any areas where she could improve more?",
+                    "Reassuring hear that. Where any areas she could improving further?"
+                  ],
+                  "answer": "That's reassuring to hear. Are there any areas where she could improve further?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "Her writing is excellent, but she seems hesitant to participate in group discussions."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Yumuşak görüş — 'bana öyle geliyor ki'",
+                  "before": "It ",
+                  "after": " to me that she's been a bit shy in social settings recently.",
+                  "answer": "seems",
+                  "acceptableAnswers": [
+                    "Seems",
+                    "appears",
+                    "Appears"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "That matches what I've noticed. Have there been changes at home that might affect her?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Karışık koşul — 'taşınmasaydık daha rahat olurdu'",
+                  "options": [
+                    "If we hadn't moved last summer, she'd probably be more settled by now.",
+                    "If we not moved last summer, she probably more settled by now.",
+                    "We hadn't moved if last summer, settled probably more by now."
+                  ],
+                  "answer": "If we hadn't moved last summer, she'd probably be more settled by now."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "That makes sense. Would you be open to a brief check-in with the school counsellor?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi kabul seç",
+                  "options": [
+                    "Absolutely. I'd appreciate any support the school can offer at this stage.",
+                    "Absolutely. I appreciation any support the school offering can at stage this.",
+                    "Absolute. Appreciate support any school offer stage this can at."
+                  ],
+                  "answer": "Absolutely. I'd appreciate any support the school can offer at this stage."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "Wonderful. I'll arrange an introduction next week. Thanks for being so engaged."
+                }
               ]
             }
           ]
@@ -10144,6 +11012,101 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-b2-debate-6",
+          "title": "Diyalog: Konferans Paneli — Nazikçe Karşı Çıkma",
+          "description": "Bir panelde diğer konuşmacıyla nazikçe ters düşüyorsun — resmi register ve hedging",
+          "theme": "speaking",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "db6-1",
+              "type": "dialogue",
+              "prompt": "Konferans panelinde nazikçe karşı çıkarken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "co",
+                  "name": "Co-panelist"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "co",
+                  "text": "I firmly believe remote work has permanently damaged team cohesion across the industry."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Nazik karşı çıkış seç — 'with respect'",
+                  "options": [
+                    "With all due respect, I'd argue the evidence on that point is far from conclusive.",
+                    "With all due respect, I'd argue the evidence on that point far from concluding.",
+                    "Respect due with all, I argue the evidence point that conclusive far from."
+                  ],
+                  "answer": "With all due respect, I'd argue the evidence on that point is far from conclusive."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "co",
+                  "text": "Numerous studies have shown a decline in spontaneous collaboration, though. Surely you agree?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Kısmen kabul, sonra karşı argüman",
+                  "options": [
+                    "I partly agree, but I think the same studies overlook gains in deep-focus output.",
+                    "I partial agree, but the same studies overlooking gains in deep-focus output.",
+                    "Agree partly, but same the studies overlook the deep-focus gains output."
+                  ],
+                  "answer": "I partly agree, but I think the same studies overlook gains in deep-focus output."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "co",
+                  "text": "Perhaps, but spontaneous innovation rarely happens over a video call, does it?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Pasif raporlama — 'iddia ediliyor ki'",
+                  "before": "It ",
+                  "after": " often claimed that, yet hybrid models consistently outperform fully in-person ones.",
+                  "answer": "is",
+                  "acceptableAnswers": [
+                    "Is"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "co",
+                  "text": "Fair point. Would you concede that leadership styles must evolve to make hybrid work?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Modal perfect ile katıl",
+                  "options": [
+                    "Absolutely. Managers should have adapted their playbooks years before the pandemic.",
+                    "Absolutely. Managers should adapt their playbooks years before the pandemic.",
+                    "Absolute. Managers adapt should playbooks the years before pandemic."
+                  ],
+                  "answer": "Absolutely. Managers should have adapted their playbooks years before the pandemic."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "co",
+                  "text": "On that, we agree completely. Perhaps the takeaway is investment in modern leadership training."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -10596,6 +11559,103 @@
               "answer": "should",
               "acceptableAnswers": [
                 "could"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-b2-review-4",
+          "title": "Diyalog: Karışık Tekrar — Resmi Toplantı",
+          "description": "Bir paydaş toplantısında görüş bildirme, edilgen yapılar ve register karışık ele alınır",
+          "theme": "review",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "rv4-1",
+              "type": "dialogue",
+              "prompt": "Paydaş toplantısında karışık B2 yapıları",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "chair",
+                  "name": "Chair"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "chair",
+                  "text": "Let's open the floor. What's your overall take on the proposed budget cuts?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi görüş açılışı seç",
+                  "options": [
+                    "From my perspective, the cuts are necessary but the timing should be reconsidered.",
+                    "From my perspective, the cuts necessary but the timing should reconsider.",
+                    "My perspective from, cuts the necessary timing reconsider should."
+                  ],
+                  "answer": "From my perspective, the cuts are necessary but the timing should be reconsidered."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chair",
+                  "text": "Interesting. Could you elaborate on why the timing concerns you specifically?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Karışık koşul cümlesi seç",
+                  "options": [
+                    "If we had announced this last quarter, morale wouldn't be so fragile right now.",
+                    "If we announced this last quarter, morale wouldn't been so fragile right now.",
+                    "Announced if we last quarter, morale fragile so right now wouldn't."
+                  ],
+                  "answer": "If we had announced this last quarter, morale wouldn't be so fragile right now."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chair",
+                  "text": "Fair point. It's been reported that several teams may resign if cuts proceed as planned."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Pasif raporlama — 'önlenebilirdi'",
+                  "before": "That risk ",
+                  "after": " mitigated if leadership had communicated more transparently from the start.",
+                  "answer": "could have been",
+                  "acceptableAnswers": [
+                    "Could have been",
+                    "should have been",
+                    "Should have been"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chair",
+                  "text": "Noted. Would you support a phased rollout instead of an immediate freeze?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Resmi kabul ile öneri",
+                  "options": [
+                    "I'd strongly support a phased approach, provided staff are consulted at every stage.",
+                    "I strong support a phased approach, provided staff consulting at every stage.",
+                    "Strongly support I'd phased the approach, every stage staff at consult."
+                  ],
+                  "answer": "I'd strongly support a phased approach, provided staff are consulted at every stage."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chair",
+                  "text": "Thank you for the constructive input. Let's draft a revised proposal by Friday."
+                }
               ]
             }
           ]

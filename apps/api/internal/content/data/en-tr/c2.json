@@ -864,6 +864,117 @@
               "answer": "Anlatımı zenginleştirir, bilgili okurla suç ortaklığı kurar"
             }
           ]
+        },
+        {
+          "id": "en-tr-c2-literary-6",
+          "title": "Diyalog: Edebiyat kulübünde roman tartışması",
+          "description": "Bir kitap kulübünde anlatıcı sesi ve düzyazı stilini tartışın.",
+          "theme": "literary",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "lit6-1",
+              "type": "dialogue",
+              "prompt": "Edebiyat kulübünde roman tartışması",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "host",
+                  "name": "Host"
+                },
+                {
+                  "id": "mara",
+                  "name": "Mara"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "So, what struck you about the prose? The narrator slips into free indirect speech without warning — did anyone find that disorienting?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mara",
+                  "text": "I rather liked it. The boundary between her thoughts and the narration dissolves, and we're suddenly complicit in her self-deception."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Anlatıcı sesini C2 düzeyinde, edebî bir kayıtla yorumla",
+                  "options": [
+                    "What I found most arresting was how the Latinate register surfaces precisely when she most needs to obscure her own motives.",
+                    "The Latin words are good when she is hiding what she really wants to do.",
+                    "Yeah, the fancy words come out when she's lying to herself, which is cool."
+                  ],
+                  "answer": "What I found most arresting was how the Latinate register surfaces precisely when she most needs to obscure her own motives."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "Beautifully put. And the recurring image of the shuttered window — were you reading it as straightforwardly symbolic, or working harder than that?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Edebî yorumda yaygın bir hedging ifadesi",
+                  "before": "It functions less as symbol than as motif, ",
+                  "after": " — gathering meaning with each iteration rather than announcing it.",
+                  "answer": "I'd argue",
+                  "acceptableAnswers": [
+                    "I would argue",
+                    "I'd suggest",
+                    "I would suggest"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mara",
+                  "text": "That's exactly the distinction I was groping for. A symbol declares itself; a motif accrues weight."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Bir karşıt görüşü zarif bir şekilde ifade et",
+                  "options": [
+                    "I take the point, though I'd hesitate to draw the line quite so cleanly — the shutter does, at moments, behave symbolically.",
+                    "No, you are wrong about that, it is clearly a symbol every time.",
+                    "I take the point, but the shutter is, like, totally a symbol, you know?"
+                  ],
+                  "answer": "I take the point, though I'd hesitate to draw the line quite so cleanly — the shutter does, at moments, behave symbolically."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "Lovely tension to leave on. Shall we turn to the ending? Earned, or contrived?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Edebî bir yargıyı çekinerek dile getir",
+                  "options": [
+                    "Earned, on balance — though the final paragraph teeters on the edge of sentimentality without quite tipping over.",
+                    "It is earned, completely and without any question whatsoever.",
+                    "Contrived, no doubt about it, total cop-out."
+                  ],
+                  "answer": "Earned, on balance — though the final paragraph teeters on the edge of sentimentality without quite tipping over."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "mara",
+                  "text": "Teeters is generous. I think she falls."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "And on that delicious disagreement, let's break for wine."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1684,6 +1795,118 @@
                 "Soyut kelime sevmez."
               ],
               "answer": "Hatırlanır, alıntılanır, taşınır."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-c2-rhetoric-6",
+          "title": "Diyalog: Köşe yazısını editörle revize ederken",
+          "description": "Bir gazetede köşe yazınızı editörle birlikte üzerinde çalışın — retorik figürler ve hedging.",
+          "theme": "speaking",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "rh6-1",
+              "type": "dialogue",
+              "prompt": "Köşe yazısını editörle revize ederken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "editor",
+                  "name": "Editor"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "editor",
+                  "text": "The argument's solid, but the lede is doing too much heavy lifting. You're asserting where you should be insinuating. Soften the verbs."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Editörün hedging önerisini kabul et",
+                  "options": [
+                    "Fair point — I'll recast 'proves' as 'suggests' and let the reader do the arithmetic.",
+                    "OK, I will make the words less strong, that is a fair point.",
+                    "Sure, I'll dial down the rhetoric so it's not so in-your-face, totally."
+                  ],
+                  "answer": "Fair point — I'll recast 'proves' as 'suggests' and let the reader do the arithmetic."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "editor",
+                  "text": "Better. Now, paragraph three — that tricolon. It's clean, but it lands as glib. Either earn it or cut it."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Retorik bir fiil — bir figürün hakkını vermek",
+                  "before": "I take your point — let me see whether the tricolon ",
+                  "after": " its keep before I sacrifice it.",
+                  "answer": "earns",
+                  "acceptableAnswers": [
+                    "is earning"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "editor",
+                  "text": "Good. And the kicker — you're hedging there in a way that reads as cowardice rather than nuance. Pick a side, or commit to your ambivalence."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Editörün eleştirisine yanıt verirken belirsizliği savun",
+                  "options": [
+                    "I'd push back, gently — the ambivalence isn't a hedge, it's the argument. To resolve it would be to misrepresent the evidence.",
+                    "I disagree with you, the not-deciding is the actual point of the piece.",
+                    "Nah, that's me sitting on the fence on purpose, it's literally the whole point."
+                  ],
+                  "answer": "I'd push back, gently — the ambivalence isn't a hedge, it's the argument. To resolve it would be to misrepresent the evidence."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "editor",
+                  "text": "Fair — though if that's the move, the kicker has to signal it. As written, it reads as flinching."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Retorik bir figürle yanıt — antithesis öner",
+                  "options": [
+                    "Then let me rebuild it with an antithesis — 'not certainty, but the courage of uncertainty' — something to that effect.",
+                    "I will make the ending have two opposite words to make it stronger.",
+                    "I'll throw in some literary device, you know, like 'A but not A' or whatever."
+                  ],
+                  "answer": "Then let me rebuild it with an antithesis — 'not certainty, but the courage of uncertainty' — something to that effect."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "editor",
+                  "text": "And the headline — it's serviceable, but it doesn't earn the piece beneath it. Can you give me something that whispers rather than shouts?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Hedging için yumuşak bir modal",
+                  "before": "Let me try — something like 'Why the certainty is the symptom' — that ",
+                  "after": " do the work without overselling.",
+                  "answer": "might",
+                  "acceptableAnswers": [
+                    "may",
+                    "could"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "editor",
+                  "text": "Now you're cooking. Send me a fresh draft by six and we'll run it tomorrow."
+                }
+              ]
             }
           ]
         }
@@ -2518,6 +2741,116 @@
               "answer": "Bilincin maddenin temel bir özelliği olduğu görüşü"
             }
           ]
+        },
+        {
+          "id": "en-tr-c2-philosophy-6",
+          "title": "Diyalog: Felsefe seminerinde kavram tartışması",
+          "description": "Doktora seminerinde 'özgürlük' kavramını tanımlamayı tartışın — modal nüans yoğun.",
+          "theme": "academic",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "ph6-1",
+              "type": "dialogue",
+              "prompt": "Felsefe seminerinde özgürlük kavramı",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "prof",
+                  "name": "Professor"
+                },
+                {
+                  "id": "rina",
+                  "name": "Rina"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "prof",
+                  "text": "Let's begin from a deceptively simple question: when we say an agent could have done otherwise, what is the modal force of that 'could'?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rina",
+                  "text": "I'd read it as nomological possibility — consistent with the laws of nature, given the actual state of the world."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Modal nüansla bir karşı pozisyon öner",
+                  "options": [
+                    "I'd want to distinguish that from a weaker reading on which 'could' tracks merely epistemic possibility — what, for all we know, might have obtained.",
+                    "I think we should say 'could' just means we don't know what could happen.",
+                    "Yeah but maybe 'could' just means like, anything could happen, you know?"
+                  ],
+                  "answer": "I'd want to distinguish that from a weaker reading on which 'could' tracks merely epistemic possibility — what, for all we know, might have obtained."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "prof",
+                  "text": "Good. And on the nomological reading, are we already conceding too much to the compatibilist? Rina?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rina",
+                  "text": "Possibly, yes — though I'd want to hear the counter-move before I commit."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Felsefi tartışmada modal bir yardımcı fiil",
+                  "before": "Not necessarily — one ",
+                  "after": " grant the laws-plus-state reading while denying that this exhausts what we mean by 'could'.",
+                  "answer": "could",
+                  "acceptableAnswers": [
+                    "might",
+                    "may"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "prof",
+                  "text": "Now you're making the move I was hoping someone would make. Press on it."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Argümanı C2 düzeyinde geliştir",
+                  "options": [
+                    "The thought is that 'could have done otherwise' tracks something agential — a capacity exercised — and capacities aren't reducible to the modal profile of physical states.",
+                    "The idea is that doing things is about the person, not about science laws and stuff.",
+                    "Like, 'could have' is about you, not physics, capisce?"
+                  ],
+                  "answer": "The thought is that 'could have done otherwise' tracks something agential — a capacity exercised — and capacities aren't reducible to the modal profile of physical states."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rina",
+                  "text": "But now you owe us an account of capacity that doesn't smuggle modality back in through the side door."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Filozofça bir kabul ifade et",
+                  "options": [
+                    "I'll concede that's the genuine difficulty — though I'd resist the suggestion that the regress is vicious rather than merely uncomfortable.",
+                    "OK that is a problem but maybe it is not a real problem.",
+                    "Touché — but, like, the loop isn't bad-bad, just awkward-bad."
+                  ],
+                  "answer": "I'll concede that's the genuine difficulty — though I'd resist the suggestion that the regress is vicious rather than merely uncomfortable."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "prof",
+                  "text": "Excellent. We'll return to whether 'merely uncomfortable' will do, next week."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3347,6 +3680,125 @@
                 "Aşırı samimi"
               ],
               "answer": "Yanlış sosyal okuma — 'tone-deaf' izlenimi"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-c2-regional-6",
+          "title": "Diyalog: Yurt dışında akşam yemeği — UK/US/Aus varyasyonu",
+          "description": "Karışık masada İngilizcenin farklı varyantlarını anlık tanıyın.",
+          "theme": "vocab",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "rg6-1",
+              "type": "dialogue",
+              "prompt": "Yurt dışında akşam yemeği — UK/US/Aus varyasyonu",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "olive",
+                  "name": "Olive (UK)"
+                },
+                {
+                  "id": "chad",
+                  "name": "Chad (US)"
+                },
+                {
+                  "id": "kyle",
+                  "name": "Kyle (Aus)"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "olive",
+                  "text": "Right, shall we get the bill? I'm absolutely knackered and I've an early start tomorrow."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chad",
+                  "text": "Wait, did she just say she's exhausted? My brain heard 'broken.' You Brits — half the lexicon is a private joke."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Üç varyantı tanıdığını göster — uygun çevirilerle yanıt ver",
+                  "options": [
+                    "Knackered's just British for shattered — or 'beat,' if you prefer your American, or 'wrecked' if Kyle's translating into Strine.",
+                    "Knackered means broken, that is what she said exactly.",
+                    "Yeah she said her body is broke, lol."
+                  ],
+                  "answer": "Knackered's just British for shattered — or 'beat,' if you prefer your American, or 'wrecked' if Kyle's translating into Strine."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "kyle",
+                  "text": "Oi, fair dinkum — though up our way, 'wrecked' usually means you've had one too many at the bottle-o."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Avustralya 'bottle-o' için ABD karşılığı",
+                  "before": "Ah — so the bottle-o's what we'd call the ",
+                  "after": " back home.",
+                  "answer": "liquor store",
+                  "acceptableAnswers": [
+                    "liquor-store",
+                    "package store"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chad",
+                  "text": "Or 'package store' if you're in Massachusetts — God help you."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "olive",
+                  "text": "And in Scotland, an off-licence. We do enjoy a euphemism for buying drink."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "UK 'off-licence' kavramını doğru parafraze et",
+                  "options": [
+                    "Because the licence is to sell drink off the premises rather than to consume it on them — which is properly genteel of you.",
+                    "It is called off-licence because the licence is off when you go.",
+                    "Off-licence, that's where they sell booze when the pub's, like, off."
+                  ],
+                  "answer": "Because the licence is to sell drink off the premises rather than to consume it on them — which is properly genteel of you."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "kyle",
+                  "text": "Mate, you've done your homework. Most Yanks I've met think 'arvo' is a vegetable."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Kyle'ın 'arvo' deyişine doğru yanıt ver",
+                  "options": [
+                    "Afternoon, surely — though I'll admit it took me a fortnight in Sydney to stop hearing it as a salad ingredient.",
+                    "Arvo is the word for tomorrow in your language, right?",
+                    "Yeah arvo means avocado, I knew that one for sure."
+                  ],
+                  "answer": "Afternoon, surely — though I'll admit it took me a fortnight in Sydney to stop hearing it as a salad ingredient."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "olive",
+                  "text": "Fortnight! At last, someone who hasn't surrendered to 'two weeks.'"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "chad",
+                  "text": "Fine, fine — I'll bring the cheque. Or the check. Or whatever Kyle calls it."
+                }
+              ]
             }
           ]
         }
@@ -4203,6 +4655,117 @@
               "answer": "Yavaş ama gerilimi giderek artan anlatı"
             }
           ]
+        },
+        {
+          "id": "en-tr-c2-essay-6",
+          "title": "Diyalog: Yüksek lisans deneme atölyesi",
+          "description": "Bir deneme atölyesinde birbirinizin metnini yapısal olarak gözden geçirin.",
+          "theme": "writing",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "es6-1",
+              "type": "dialogue",
+              "prompt": "Yüksek lisans deneme atölyesi",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "sam",
+                  "name": "Sam"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "I've read it twice and the argument's there, but it's diffuse. Your thesis surfaces in paragraph four, gets restated in seven, and dissolves by nine."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Yapısal eleştiriyi kabul et — akademik kayıtta",
+                  "options": [
+                    "That's a fair diagnosis — the through-line frays each time I introduce a counter-argument and don't quite recover the thread.",
+                    "Yes, you are right that the argument is going in too many places.",
+                    "Yeah, I'm kind of all over the map with this one, fair call."
+                  ],
+                  "answer": "That's a fair diagnosis — the through-line frays each time I introduce a counter-argument and don't quite recover the thread."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Exactly. And the counter-arguments themselves are too generous — you're steel-manning to the point where the reader forgets which side you're on."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Akademik denemede 'kabul-itiraz' bağlacı (edat)",
+                  "before": "Granted — though I'd resist collapsing the steel-manning entirely; it earns the eventual rejection ",
+                  "after": " a way a strawman never could.",
+                  "answer": "in",
+                  "acceptableAnswers": [
+                    "In"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Earned rejection, yes — but only if the rejection arrives. As it stands, the essay ends in a shrug."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Eleştiriyi kabul et ve revizyon planı sun",
+                  "options": [
+                    "Point taken. I'll restructure so the thesis lands in paragraph two, then let the counter-arguments do their work, and close with a kicker that resolves rather than equivocates.",
+                    "OK I will move things around to fix the problem you said.",
+                    "Got it, I'll just shuffle the paragraphs and beef up the ending, easy."
+                  ],
+                  "answer": "Point taken. I'll restructure so the thesis lands in paragraph two, then let the counter-arguments do their work, and close with a kicker that resolves rather than equivocates."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Better. One more thing — paragraph six relies on a quotation you don't unpack. It's doing rhetorical work without doing intellectual work."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Bir alıntının işlevini akademik düzeyde savun ya da kabul et",
+                  "options": [
+                    "Guilty as charged — I was leaning on the authority of the source rather than engaging with it. I'll either gloss it properly or cut it.",
+                    "OK yes I will look at that part again because you are right.",
+                    "Fair, I was kind of name-dropping there, my bad."
+                  ],
+                  "answer": "Guilty as charged — I was leaning on the authority of the source rather than engaging with it. I'll either gloss it properly or cut it."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "And the title — between us, it's doing the essay no favours. Reads like a working title that overstayed its welcome."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Başlık eleştirisini akademik öz-farkındalıkla kabul et",
+                  "options": [
+                    "Caught fair — I've grown so attached to it I'd stopped reading it. I'll workshop three alternatives and send them with the revision.",
+                    "OK I will change the title because you do not like it.",
+                    "Yeah, the title's a bit naff, I'll think of something else."
+                  ],
+                  "answer": "Caught fair — I've grown so attached to it I'd stopped reading it. I'll workshop three alternatives and send them with the revision."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Right. Send me the revision by Friday and I'll do a closer line-edit before submission."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4949,6 +5512,110 @@
               "answer": "Saygıyla bağdaşmayan samimi/zayıflık imleyen ifade"
             }
           ]
+        },
+        {
+          "id": "en-tr-c2-idioms-5",
+          "title": "Diyalog: İş çıkışı içkide deyimleri yakalamak",
+          "description": "Anadili konuşanlarla içerken deyimleri bağlamda tanıyın.",
+          "theme": "vocab",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "id5-1",
+              "type": "dialogue",
+              "prompt": "İş çıkışı içkide deyimleri yakalamak",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "jen",
+                  "name": "Jen"
+                },
+                {
+                  "id": "tom",
+                  "name": "Tom"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "jen",
+                  "text": "Honestly, the whole reorg's been a curate's egg — bits of it are excellent, but the rest you wouldn't touch with a barge pole."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "'Curate's egg' deyimini doğru anladığını göster",
+                  "options": [
+                    "So good in parts, you mean — though calling something a curate's egg is itself a polite way of saying mostly bad, isn't it?",
+                    "You like the eggs at the new place, right?",
+                    "Wait, is the curate's egg a good thing or what?"
+                  ],
+                  "answer": "So good in parts, you mean — though calling something a curate's egg is itself a polite way of saying mostly bad, isn't it?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "tom",
+                  "text": "Exactly the trap of the phrase. People reach for it thinking they're being balanced when really they're damning with faint praise."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "'Övgüden çok kınama' deyimi",
+                  "before": "Right — it's almost the textbook case of ",
+                  "after": " with faint praise.",
+                  "answer": "damning",
+                  "acceptableAnswers": [
+                    "damnation"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "jen",
+                  "text": "And the new VP — between you and me, he's all hat and no cattle. Big on PowerPoint, light on delivery."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Deyime doğru tepki — başka bir deyimle uygun şekilde devam et",
+                  "options": [
+                    "Sounds like he talks a good game but couldn't organise a piss-up in a brewery, then.",
+                    "He has a hat but no cows, that is strange.",
+                    "Oh, like, the guy has the gear but no idea?"
+                  ],
+                  "answer": "Sounds like he talks a good game but couldn't organise a piss-up in a brewery, then."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "tom",
+                  "text": "Ha — you're more native than you let on. Where'd you pick that one up?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "İltifatı zarif şekilde geri ver",
+                  "options": [
+                    "Three years in Glasgow will do that to you — though I still get caught out on the regional ones, especially anything north of Watford.",
+                    "I learned this from a book about English idioms.",
+                    "I just pick stuff up, you know, vibe-based."
+                  ],
+                  "answer": "Three years in Glasgow will do that to you — though I still get caught out on the regional ones, especially anything north of Watford."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "jen",
+                  "text": "North of Watford! Listen to him — he's practically queuing for a knighthood."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "tom",
+                  "text": "Another round, then? My shout."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5645,6 +6312,122 @@
                 "Soru işareti"
               ],
               "answer": "Bağlamı ve niyet işaretini açıkça koymak"
+            }
+          ]
+        },
+        {
+          "id": "en-tr-c2-irony-5",
+          "title": "Diyalog: Hiciv yazarları toplantısında başlık pitch",
+          "description": "Bir hiciv dergisinde ironik başlıklar önerip değerlendirin.",
+          "theme": "literary",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "irn5-1",
+              "type": "dialogue",
+              "prompt": "Hiciv yazarları toplantısında başlık pitch",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "rae",
+                  "name": "Rae"
+                },
+                {
+                  "id": "dev",
+                  "name": "Dev"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "rae",
+                  "text": "Pitch me something on the new productivity-app craze. I want irony so dry the page burns — none of that wink-wink stuff."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Kuru, deadpan ironide bir başlık öner",
+                  "options": [
+                    "'Local Man Achieves Inbox Zero, Loses Will to Live': straight reportage tone, no editorial signposting.",
+                    "'Funny Thing About Apps: They Are Bad, Right?': make sure people know it's a joke.",
+                    "'Productivity Apps Suck, LOL': just say what we mean."
+                  ],
+                  "answer": "'Local Man Achieves Inbox Zero, Loses Will to Live': straight reportage tone, no editorial signposting."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "dev",
+                  "text": "Better than mine. I had 'Five Apps That Will Solve Your Existential Crisis' — but it's signposting the irony from a mile off."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "İronide 'çok belli' anlamında bir deyim",
+                  "before": "Yeah, the irony's flagged ",
+                  "after": ".",
+                  "answer": "from a mile off",
+                  "acceptableAnswers": [
+                    "from a mile away",
+                    "a mile off"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rae",
+                  "text": "Right. Irony has to mean what it doesn't say and say what it doesn't mean — but never wink. The moment you wink, you've lost."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "İroninin teknik prensibini açıklayarak yanıt ver",
+                  "options": [
+                    "Which is why the deadpan register matters so much — the syntax has to behave as though the sentence believes itself.",
+                    "Yes, irony is when you say one thing but mean another thing, this is true.",
+                    "Yeah, basically don't be cringe about it, just commit to the bit."
+                  ],
+                  "answer": "Which is why the deadpan register matters so much — the syntax has to behave as though the sentence believes itself."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "dev",
+                  "text": "I might steal that for the style guide. 'The syntax has to behave as though the sentence believes itself.'"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "İltifatı ironik bir şekilde geri ver — toplantı tonuna uygun",
+                  "options": [
+                    "By all means — though if it shows up in the style guide unattributed, I shall be devastated in a manner indistinguishable from indifference.",
+                    "OK, you can use it because I do not mind at all.",
+                    "Lol, knock yourself out, just don't pretend you came up with it."
+                  ],
+                  "answer": "By all means — though if it shows up in the style guide unattributed, I shall be devastated in a manner indistinguishable from indifference."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "dev",
+                  "text": "What about angles? I've been pitching a piece on the wellness industry, but I keep landing somewhere between earnest and smug."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Hicvin tonunu pratik bir tavsiyeyle yönlendir",
+                  "options": [
+                    "Pitch it as a profile of a single, sincere convert — and let the seams of the worldview do the satirical work without ever raising your voice.",
+                    "Just make sure people know it is a joke when you write it about wellness.",
+                    "Yeah, just lean into the cringe, that's where the comedy is, fam."
+                  ],
+                  "answer": "Pitch it as a profile of a single, sincere convert — and let the seams of the worldview do the satirical work without ever raising your voice."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "rae",
+                  "text": "Now THAT goes on the wall. Right — back to the productivity beat. I want three more deadpan ledes by Thursday."
+                }
+              ]
             }
           ]
         }
@@ -6397,6 +7180,121 @@
               "answer": "Tonu okumak: dini atıf yerine ve zamana uygun mu?"
             }
           ]
+        },
+        {
+          "id": "en-tr-c2-poetry-5",
+          "title": "Diyalog: Şiir okumasından sonra soru-cevap",
+          "description": "Bir şiir okumasından sonra ölçü, ima ve imge tartışın.",
+          "theme": "literary",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "po5-1",
+              "type": "dialogue",
+              "prompt": "Şiir okumasından sonra soru-cevap",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "poet",
+                  "name": "Poet"
+                },
+                {
+                  "id": "host",
+                  "name": "Host"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "We've time for a few questions. Yes — the gentleman in the third row, you've had your hand up since the second poem."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Şaire ölçü hakkında C2 düzeyinde bir soru sor",
+                  "options": [
+                    "I was struck by how the iambic spine survives even where you fracture the line — was that a deliberate counterweight to the imagery, or something the ear arrived at?",
+                    "Your poems have a rhythm, where did this rhythm come from in your mind?",
+                    "Loved the beat, like, did you mean to do the da-DUM thing or did it just happen?"
+                  ],
+                  "answer": "I was struck by how the iambic spine survives even where you fracture the line — was that a deliberate counterweight to the imagery, or something the ear arrived at?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "poet",
+                  "text": "The ear arrived at it first, I think, and the intellect ratified after the fact. I'm wary of metre that congratulates itself."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "Lovely answer. And the allusions — there's a moment in the fourth poem that I read as a glance at Hopkins. Intentional?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "poet",
+                  "text": "Caught me — yes. Though I'd hoped the glance was sidelong enough to feel like coincidence."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "İma tartışmasına C2 düzeyinde katıl",
+                  "options": [
+                    "What I found canny was that the Hopkins-glance never tips into pastiche — the sprung rhythm flickers and then withdraws, almost shyly.",
+                    "The other poet is also good and you are like him a little.",
+                    "Yeah, I clocked the Hopkins vibe, very nicely done."
+                  ],
+                  "answer": "What I found canny was that the Hopkins-glance never tips into pastiche — the sprung rhythm flickers and then withdraws, almost shyly."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "poet",
+                  "text": "Shyly — yes. That's the word. Pastiche would be the failure of the gesture. The allusion has to bow, not pose."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "İmgenin görsel yoğunluğunu C2 düzeyinde tarif et (fiil)",
+                  "before": "And the recurring image of the burning orchard — it ",
+                  "after": " into a Yeatsian gyre at one point without ever quite settling into it.",
+                  "answer": "shades",
+                  "acceptableAnswers": [
+                    "edges",
+                    "tips"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "poet",
+                  "text": "I'll take that as a compliment, though my editor would say I should have let it settle."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Şaire son bir soru — şiirin nasıl tamamlandığını sor",
+                  "options": [
+                    "May I ask one last thing — how do you know when a poem is finished, as opposed to merely abandoned?",
+                    "I want to know about how do you finish a poem in your mind, please.",
+                    "Quick one — when's a poem, like, done done?"
+                  ],
+                  "answer": "May I ask one last thing — how do you know when a poem is finished, as opposed to merely abandoned?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "poet",
+                  "text": "When the next revision would be a different poem rather than a better one. Valéry said it before me, of course."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "host",
+                  "text": "On which note of productive disagreement — please join me in thanking our poet."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -6859,6 +7757,117 @@
               "answer": "mistake",
               "acceptableAnswers": [
                 "error"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-c2-review-4",
+          "title": "Diyalog: Yayın editörü yazarla müsvedde üzerinde",
+          "description": "Bir edebî editör, yazarla müsvedde üzerinden geçer — yapı, ses, sahne.",
+          "theme": "review",
+          "xp": 18,
+          "exercises": [
+            {
+              "id": "rv4-1",
+              "type": "dialogue",
+              "prompt": "Yayın editörü yazarla müsvedde üzerinde",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ed",
+                  "name": "Editor"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "ed",
+                  "text": "Right, the manuscript's strong — stronger than the second draft suggested. But there are three things I'd like us to look at, and the first is structural."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Editörün yapısal eleştirisini açık şekilde davet et",
+                  "options": [
+                    "Please — I'd rather have it bluntly. The pacing's been nagging at me since I finished, but I couldn't quite locate the problem.",
+                    "OK, you can tell me about the structure thing now.",
+                    "Sure, lay it on me, I can take it."
+                  ],
+                  "answer": "Please — I'd rather have it bluntly. The pacing's been nagging at me since I finished, but I couldn't quite locate the problem."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ed",
+                  "text": "Chapters four through seven. The middle sags because you're protecting the protagonist from the consequences you've already set up. The reader senses the flinching."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Edebî bir öz-eleştiri fiili",
+                  "before": "I think you've put your finger on something I've been ",
+                  "after": " around for months.",
+                  "answer": "circling",
+                  "acceptableAnswers": [
+                    "dancing"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ed",
+                  "text": "And the voice — it wavers in the dinner scene. You drop from your established register into something almost workshop-clean. Was that deliberate?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Editörün ses eleştirisine dürüstçe yanıt ver — C2 öz-farkındalığıyla",
+                  "options": [
+                    "Honestly? No. That scene gave me trouble — I rewrote it eleven times and I think the eleventh draft is where the voice gave up.",
+                    "Yes I did this on purpose because the scene is different.",
+                    "Nah, I just kinda gave up on that bit, fair cop."
+                  ],
+                  "answer": "Honestly? No. That scene gave me trouble — I rewrote it eleven times and I think the eleventh draft is where the voice gave up."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ed",
+                  "text": "Then let's rebuild it from the first draft. Trust the voice that got you here — the workshop instinct is the enemy."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Editörün son notuna profesyonel bir kabul ver",
+                  "options": [
+                    "Understood. Give me three weeks for the structural and another two for the dinner scene — I'd rather come back with something cleaner than rush a half-fix.",
+                    "OK I will fix everything in three weeks for sure.",
+                    "Cool, I'll bash through it and ping you when it's done."
+                  ],
+                  "answer": "Understood. Give me three weeks for the structural and another two for the dinner scene — I'd rather come back with something cleaner than rush a half-fix."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ed",
+                  "text": "One last thing — the epilogue. Drop it. The novel ends two pages earlier, on the image of the empty platform. The epilogue is you reassuring yourself."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Editörün epilog tavsiyesine yazar olarak yanıt ver",
+                  "options": [
+                    "That stings — and you're right. I wrote it for me, not for the book. Consider it cut, though I'll mourn it briefly.",
+                    "OK I will remove the last part of the book because you said so.",
+                    "Aw man, but I liked that bit — fine, fine, it's gone."
+                  ],
+                  "answer": "That stings — and you're right. I wrote it for me, not for the book. Consider it cut, though I'll mourn it briefly."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ed",
+                  "text": "Five weeks it is. And — for what it's worth — this is a real book. The rest is craft, and you've got that."
+                }
               ]
             }
           ]

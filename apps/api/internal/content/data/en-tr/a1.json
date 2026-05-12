@@ -1007,6 +1007,96 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-alphabet-7",
+          "title": "Diyalog: Otelde İsmini Hecele",
+          "description": "Otel resepsiyonunda ismini harf harf söylüyorsun",
+          "theme": "alphabet",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "alp7-1",
+              "type": "dialogue",
+              "prompt": "Otel resepsiyonunda ismini hecelerken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "clerk",
+                  "name": "Clerk"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Good evening. Your name, please?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "İsmini nasıl söylersin?",
+                  "options": [
+                    "My name is Ali.",
+                    "Name me Ali.",
+                    "I Ali am."
+                  ],
+                  "answer": "My name is Ali."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Can you spell it for me?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "A-L-I'yi doğru hecele",
+                  "options": [
+                    "A, L, I.",
+                    "A, R, I.",
+                    "E, L, I."
+                  ],
+                  "answer": "A, L, I."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "And your last name?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Soyadını söyle",
+                  "before": "My last name ",
+                  "after": " Yilmaz.",
+                  "answer": "is",
+                  "acceptableAnswers": [
+                    "Is"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Thank you. Here is your key."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Nazik bir cevap",
+                  "options": [
+                    "Thank you!",
+                    "Sorry!",
+                    "Hello!"
+                  ],
+                  "answer": "Thank you!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3094,6 +3184,96 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-pronouns-7",
+          "title": "Diyalog: Ailemi Tanıtıyorum",
+          "description": "Okulda ailenden bahsediyorsun (he/she/they)",
+          "theme": "pronouns",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pr7-1",
+              "type": "dialogue",
+              "prompt": "Okulda aileni tanıtırken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "teacher",
+                  "name": "Teacher"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "Tell me about your family."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Annen için doğru zamir?",
+                  "options": [
+                    "She is my mother.",
+                    "He is my mother.",
+                    "It is my mother."
+                  ],
+                  "answer": "She is my mother."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "And your father?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Baban için doğru zamir",
+                  "before": "",
+                  "after": " is my father.",
+                  "answer": "He",
+                  "acceptableAnswers": [
+                    "he"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "Do you have brothers or sisters?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "İki kardeş için doğru zamir?",
+                  "options": [
+                    "They are my brothers.",
+                    "He are my brothers.",
+                    "She is my brothers."
+                  ],
+                  "answer": "They are my brothers."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "Do you have a pet?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Kedi için doğru zamir?",
+                  "options": [
+                    "It is a cat.",
+                    "She is a cat.",
+                    "He is a cat."
+                  ],
+                  "answer": "It is a cat."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4125,6 +4305,96 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-tobe-7",
+          "title": "Diyalog: Kendini Tanıt",
+          "description": "Yeni biriyle tanışırken (am/is/are)",
+          "theme": "tobe",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "tb7-1",
+              "type": "dialogue",
+              "prompt": "Bir partide yeni biriyle tanışırken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "maya",
+                  "name": "Maya"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "maya",
+                  "text": "Hi! I'm Maya. And you?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Kendini tanıt",
+                  "before": "I ",
+                  "after": " Ali.",
+                  "answer": "am",
+                  "acceptableAnswers": [
+                    "Am"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "maya",
+                  "text": "Nice to meet you. Where are you from?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Hangisi doğru?",
+                  "options": [
+                    "I am from Turkey.",
+                    "I from Turkey.",
+                    "I is from Turkey."
+                  ],
+                  "answer": "I am from Turkey."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "maya",
+                  "text": "Cool. Is this your first time here?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Kısa olumlu cevap",
+                  "options": [
+                    "Yes, it is.",
+                    "Yes, I are.",
+                    "Yes, am."
+                  ],
+                  "answer": "Yes, it is."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "maya",
+                  "text": "Are your friends here too?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Arkadaşların burada",
+                  "before": "They ",
+                  "after": " here too.",
+                  "answer": "are",
+                  "acceptableAnswers": [
+                    "Are"
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5147,6 +5417,97 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-numbers-7",
+          "title": "Diyalog: Telefon Numarası ve Fiyat",
+          "description": "Telefon numarası veriyor ve fiyat soruyorsun",
+          "theme": "numbers",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "nm7-1",
+              "type": "dialogue",
+              "prompt": "Bir dükkanda — fiyat ve numara",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "seller",
+                  "name": "Seller"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "seller",
+                  "text": "Hello! How can I help you?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Fiyat sor",
+                  "options": [
+                    "How much is this?",
+                    "How many this?",
+                    "What this price?"
+                  ],
+                  "answer": "How much is this?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "seller",
+                  "text": "It is fifteen dollars."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "İki tane istediğini söyle",
+                  "options": [
+                    "I want two, please.",
+                    "I want too, please.",
+                    "Me two, please."
+                  ],
+                  "answer": "I want two, please."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "seller",
+                  "text": "Sure. Your phone number, please?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Numaranı söyle",
+                  "before": "My number is five, ",
+                  "after": ", three.",
+                  "answer": "seven",
+                  "acceptableAnswers": [
+                    "Seven",
+                    "7"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "seller",
+                  "text": "Got it. Total is thirty dollars."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Teşekkür et",
+                  "options": [
+                    "Thank you!",
+                    "Sorry!",
+                    "Goodbye now!"
+                  ],
+                  "answer": "Thank you!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -6163,6 +6524,98 @@
               "explanation": "'family' tekildir; 'is' alır."
             }
           ]
+        },
+        {
+          "id": "en-tr-family-7",
+          "title": "Diyalog: Aile Fotoğrafı",
+          "description": "Arkadaşına aile fotoğrafını gösteriyorsun",
+          "theme": "family",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "fm7-1",
+              "type": "dialogue",
+              "prompt": "Aile fotoğrafını gösterirken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "sam",
+                  "name": "Sam"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Is this your family? Who is she?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Annen",
+                  "before": "She is my ",
+                  "after": ".",
+                  "answer": "mother",
+                  "acceptableAnswers": [
+                    "mom",
+                    "Mom",
+                    "Mother"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "And the man next to her?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Babanı tanıt",
+                  "options": [
+                    "He is my father.",
+                    "She is my father.",
+                    "It my father."
+                  ],
+                  "answer": "He is my father."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Who are the kids?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Erkek ve kız kardeşin",
+                  "options": [
+                    "They are my brother and sister.",
+                    "He is my brother and sister.",
+                    "We are my brother."
+                  ],
+                  "answer": "They are my brother and sister."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sam",
+                  "text": "Your family is nice!"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Nazik bir cevap",
+                  "options": [
+                    "Thank you!",
+                    "Sorry!",
+                    "Goodbye!"
+                  ],
+                  "answer": "Thank you!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -7173,6 +7626,96 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-everyday-verbs-7",
+          "title": "Diyalog: Sabah Rutini",
+          "description": "Arkadaşınla sabah rutininden bahsediyorsun",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "ev7-1",
+              "type": "dialogue",
+              "prompt": "Kahvaltıda sabah rutininden konuşurken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "leo",
+                  "name": "Leo"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "leo",
+                  "text": "What do you do in the morning?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Sabah kahve içmek",
+                  "options": [
+                    "I drink coffee.",
+                    "I drinks coffee.",
+                    "Me drink coffee."
+                  ],
+                  "answer": "I drink coffee."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leo",
+                  "text": "Nice. Do you eat breakfast?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Olumlu cevap ver",
+                  "before": "Yes, I ",
+                  "after": " breakfast at home.",
+                  "answer": "eat",
+                  "acceptableAnswers": [
+                    "Eat"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leo",
+                  "text": "What about your sister?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Üçüncü tekil — kız kardeş",
+                  "options": [
+                    "She works at a bank.",
+                    "She work at a bank.",
+                    "She is work at bank."
+                  ],
+                  "answer": "She works at a bank."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "leo",
+                  "text": "And after work?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Akşamları evde",
+                  "options": [
+                    "We watch TV at home.",
+                    "We watches TV at home.",
+                    "We watching TV home."
+                  ],
+                  "answer": "We watch TV at home."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -8160,6 +8703,96 @@
               "explanation": "Hem 'school' hem 'bus' burada genel anlamda artikelsizdir."
             }
           ]
+        },
+        {
+          "id": "en-tr-articles-basics-7",
+          "title": "Diyalog: Büfede Sipariş",
+          "description": "Bir büfede 'a' ve 'an' kullanarak sipariş veriyorsun",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "ar7-1",
+              "type": "dialogue",
+              "prompt": "Büfede sipariş verirken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "vendor",
+                  "name": "Vendor"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "vendor",
+                  "text": "Hi! What would you like?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Bir elma iste",
+                  "options": [
+                    "I want an apple.",
+                    "I want a apple.",
+                    "I want apple."
+                  ],
+                  "answer": "I want an apple."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "vendor",
+                  "text": "Sure. Anything else?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Bir sandviç (sessiz harf)",
+                  "before": "I want ",
+                  "after": " sandwich, please.",
+                  "answer": "a",
+                  "acceptableAnswers": [
+                    "A"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "vendor",
+                  "text": "Great. Do you want a drink?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Portakal suyu iste",
+                  "options": [
+                    "An orange juice, please.",
+                    "A orange juice, please.",
+                    "Orange juice an, please."
+                  ],
+                  "answer": "An orange juice, please."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "vendor",
+                  "text": "Here you go. That is five dollars."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Teşekkür et",
+                  "options": [
+                    "Thank you!",
+                    "Sorry!",
+                    "Hello!"
+                  ],
+                  "answer": "Thank you!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -9134,6 +9767,96 @@
                 "open",
                 "a",
                 "?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-questions-7",
+          "title": "Diyalog: Küçük Bir Sohbet",
+          "description": "Wh- sorularıyla küçük bir sohbet",
+          "theme": "grammar",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "qu7-1",
+              "type": "dialogue",
+              "prompt": "Yeni bir komşuyla küçük sohbet",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "neighbor",
+                  "name": "Neighbor"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "neighbor",
+                  "text": "Hi! I am your new neighbor."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "İsmini sor",
+                  "options": [
+                    "What is your name?",
+                    "Who is your name?",
+                    "Where is your name?"
+                  ],
+                  "answer": "What is your name?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "neighbor",
+                  "text": "I am Anna. Nice to meet you."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Nereli olduğunu sor",
+                  "options": [
+                    "Where are you from?",
+                    "What are you from?",
+                    "Who are you from?"
+                  ],
+                  "answer": "Where are you from?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "neighbor",
+                  "text": "I am from Spain."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "İşini sor",
+                  "before": "",
+                  "after": " do you do?",
+                  "answer": "What",
+                  "acceptableAnswers": [
+                    "what"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "neighbor",
+                  "text": "I am a teacher. And you?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Öğrenci olduğunu söyle",
+                  "options": [
+                    "I am a student.",
+                    "I student am.",
+                    "Me a student."
+                  ],
+                  "answer": "I am a student."
+                }
               ]
             }
           ]
@@ -10136,6 +10859,96 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-colors-6",
+          "title": "Diyalog: Tişört Alışverişi",
+          "description": "Mağazada renkli bir tişört arıyorsun",
+          "theme": "colors",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "col6-1",
+              "type": "dialogue",
+              "prompt": "Mağazada tişört seçerken",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "clerk",
+                  "name": "Clerk"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Hello! Can I help you?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Tişört aradığını söyle",
+                  "options": [
+                    "I am looking for a shirt.",
+                    "I looking a shirt.",
+                    "I look for shirt."
+                  ],
+                  "answer": "I am looking for a shirt."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "What color do you like?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Mavi renk",
+                  "before": "I like ",
+                  "after": ".",
+                  "answer": "blue",
+                  "acceptableAnswers": [
+                    "Blue"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "We have blue and green. Which one?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Mavi olanı iste",
+                  "options": [
+                    "The blue one, please.",
+                    "Blue the one, please.",
+                    "One blue the, please."
+                  ],
+                  "answer": "The blue one, please."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "Great choice! It is twenty dollars."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Satın al",
+                  "options": [
+                    "I will take it.",
+                    "I take will it.",
+                    "It I will take."
+                  ],
+                  "answer": "I will take it."
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -11129,6 +11942,98 @@
                 "windy",
                 "summer",
                 "."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-weather-6",
+          "title": "Diyalog: Bugünkü Hava",
+          "description": "Bir arkadaşınla bugünkü havayı konuşuyorsun",
+          "theme": "weather",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "wt6-1",
+              "type": "dialogue",
+              "prompt": "Dışarı çıkmadan önce hava sohbeti",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "kim",
+                  "name": "Kim"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "kim",
+                  "text": "Good morning! How is the weather?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Bugün güneşli",
+                  "options": [
+                    "It is sunny today.",
+                    "Today is sun.",
+                    "It sunny today is."
+                  ],
+                  "answer": "It is sunny today."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "kim",
+                  "text": "Nice! Is it warm or cold?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Sıcak",
+                  "before": "It is ",
+                  "after": " today.",
+                  "answer": "warm",
+                  "acceptableAnswers": [
+                    "Warm",
+                    "hot",
+                    "Hot"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "kim",
+                  "text": "Will it rain later?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Yağmur yok",
+                  "options": [
+                    "No, it will not rain.",
+                    "No, it rains not.",
+                    "Not, will it rain."
+                  ],
+                  "answer": "No, it will not rain."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "kim",
+                  "text": "Great. Let's go to the park!"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Kabul et",
+                  "options": [
+                    "Yes, let's go!",
+                    "Yes, go we!",
+                    "Go yes let's!"
+                  ],
+                  "answer": "Yes, let's go!"
+                }
               ]
             }
           ]
@@ -12132,6 +13037,96 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-places-6",
+          "title": "Diyalog: Banka Nerede?",
+          "description": "Sokakta birine banka yolunu soruyorsun",
+          "theme": "places",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pl6-1",
+              "type": "dialogue",
+              "prompt": "Yol tarifi sorma",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "stranger",
+                  "name": "Stranger"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "stranger",
+                  "text": "Hi, can I help you?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Banka sor",
+                  "options": [
+                    "Where is the bank?",
+                    "Where the bank is?",
+                    "Bank is where?"
+                  ],
+                  "answer": "Where is the bank?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "stranger",
+                  "text": "Go straight. It is near the park."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Park yakında mı?",
+                  "before": "Is the park ",
+                  "after": " here?",
+                  "answer": "near",
+                  "acceptableAnswers": [
+                    "Near"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "stranger",
+                  "text": "Yes, it is very close."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Sağ ya da sol",
+                  "options": [
+                    "Left or right?",
+                    "Left right or?",
+                    "Or left right?"
+                  ],
+                  "answer": "Left or right?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "stranger",
+                  "text": "Turn right at the corner."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Teşekkür et",
+                  "options": [
+                    "Thank you very much!",
+                    "Sorry very much!",
+                    "Hello very much!"
+                  ],
+                  "answer": "Thank you very much!"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -12574,6 +13569,96 @@
                 "My sister gone to school."
               ],
               "answer": "My sister goes to school."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-a1-review-4",
+          "title": "Diyalog: Karma Tekrar",
+          "description": "Selamlaşma, sayılar, to be ve fiiller karma diyalog",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rv4-1",
+              "type": "dialogue",
+              "prompt": "Yeni bir arkadaşla karma sohbet",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "lina",
+                  "name": "Lina"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "lina",
+                  "text": "Hi! I am Lina. And you?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Kendini tanıt",
+                  "before": "I ",
+                  "after": " Ali.",
+                  "answer": "am",
+                  "acceptableAnswers": [
+                    "Am"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lina",
+                  "text": "Nice. How old are you?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Yaşını söyle",
+                  "options": [
+                    "I am twenty years old.",
+                    "I twenty years old.",
+                    "Me twenty years."
+                  ],
+                  "answer": "I am twenty years old."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lina",
+                  "text": "Cool! What do you do?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Öğrenciyim",
+                  "options": [
+                    "I am a student.",
+                    "I am student a.",
+                    "I student am."
+                  ],
+                  "answer": "I am a student."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lina",
+                  "text": "Do you live near here?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Yakın oturuyorum",
+                  "options": [
+                    "Yes, I live near the park.",
+                    "Yes, I live the park near.",
+                    "Yes, I am live near."
+                  ],
+                  "answer": "Yes, I live near the park."
+                }
+              ]
             }
           ]
         }
