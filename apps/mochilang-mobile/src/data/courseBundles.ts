@@ -1,5 +1,6 @@
 import type { Level } from '@mochilang/shared'
 import courseEnTr from '../../assets/course-en-tr.json'
+import courseEnZh from '../../assets/course-en-zh.json'
 import courseZhEn from '../../assets/course-zh-en.json'
 
 /**
@@ -16,6 +17,7 @@ export interface CourseEnvelope {
 
 export const COURSE_BUNDLES: Record<string, CourseEnvelope> = {
   'en-tr': courseEnTr as unknown as CourseEnvelope,
+  'en-zh': courseEnZh as unknown as CourseEnvelope,
   'zh-en': courseZhEn as unknown as CourseEnvelope,
 }
 
