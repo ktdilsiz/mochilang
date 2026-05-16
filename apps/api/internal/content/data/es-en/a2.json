@@ -8122,6 +8122,3460 @@
       ]
     },
     {
+      "id": "es-en-personal-a",
+      "title": "The personal 'a'",
+      "description": "When Spanish requires the little word 'a' before a person: 'Veo a María', not 'Veo María'.",
+      "theme": "verbs",
+      "guide": {
+        "intro": "Spanish does something English never does: it puts the preposition 'a' before a direct object when that object is a specific person (or beloved animal). 'Veo a María' literally feels like 'I see to María', but it's just how Spanish marks animate, identifiable direct objects.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "The core rule"
+          },
+          {
+            "kind": "paragraph",
+            "text": "If your direct object is a specific, animate being — a named person, a family member, a friend, your pet — insert 'a' right before it. If the object is a thing, no 'a'."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Veo a María.",
+                "translation": "I see María."
+              },
+              {
+                "source": "Veo la película.",
+                "translation": "I see the movie."
+              },
+              {
+                "source": "Llamo a mi madre.",
+                "translation": "I call my mother."
+              },
+              {
+                "source": "Llamo un taxi.",
+                "translation": "I call a taxi."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Pets and beloved animals"
+          },
+          {
+            "kind": "paragraph",
+            "text": "If you treat the animal as an individual (your dog, the family cat), use 'a'. Anonymous animals or animals in general usually skip it."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Paseo a mi perro todos los días.",
+                "translation": "I walk my dog every day."
+              },
+              {
+                "source": "En el zoológico vimos elefantes.",
+                "translation": "At the zoo we saw elephants."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "The 'tener' exception"
+          },
+          {
+            "kind": "paragraph",
+            "text": "With 'tener' (to have) you usually drop the 'a', even with people. 'Tengo dos hermanos' — no 'a'. Same with indefinite, unspecified humans introduced by 'un/una': 'Necesito un médico' (any doctor)."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Tengo dos hijos.",
+                "translation": "I have two children."
+              },
+              {
+                "source": "Necesito un electricista.",
+                "translation": "I need an electrician (any one)."
+              },
+              {
+                "source": "Busco a mi hermana.",
+                "translation": "I'm looking for my sister (specific)."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Questions and relative clauses"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Keep the 'a' even when it travels to the front of a question or sits before 'quien' in a relative clause."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "¿A quién viste ayer?",
+                "translation": "Whom did you see yesterday?"
+              },
+              {
+                "source": "El hombre a quien conozco vive aquí.",
+                "translation": "The man whom I know lives here."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Quick check: is the object a specific person or beloved pet? Add 'a'. A thing? No 'a'. Counting people with 'tener'? No 'a'."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "es-en-personal-a-1",
+          "title": "Animate vs inanimate objects",
+          "description": "When the direct object is a person, add 'a'. When it's a thing, don't.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "pa1-1",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is correct: 'I see María'?",
+              "options": [
+                "Veo María.",
+                "Veo a María.",
+                "Veo en María.",
+                "Veo la María."
+              ],
+              "answer": "Veo a María."
+            },
+            {
+              "id": "pa1-2",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is correct: 'I see the movie'?",
+              "options": [
+                "Veo a la película.",
+                "Veo la película.",
+                "Veo en la película.",
+                "Veo de la película."
+              ],
+              "answer": "Veo la película."
+            },
+            {
+              "id": "pa1-3",
+              "type": "fill_blank",
+              "prompt": "Fill the blank (use 'a' if needed): 'I call Pedro.' Llamo ___ Pedro.",
+              "answer": "a"
+            },
+            {
+              "id": "pa1-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I call a taxi.' Llamo ___ taxi.",
+              "answer": "un"
+            },
+            {
+              "id": "pa1-5",
+              "type": "match_pairs",
+              "prompt": "Match each Spanish sentence to its English meaning",
+              "pairs": [
+                {
+                  "left": "Veo a Juan.",
+                  "right": "I see Juan."
+                },
+                {
+                  "left": "Veo la casa.",
+                  "right": "I see the house."
+                },
+                {
+                  "left": "Escucho a mi madre.",
+                  "right": "I listen to my mother."
+                },
+                {
+                  "left": "Escucho la música.",
+                  "right": "I listen to the music."
+                }
+              ]
+            },
+            {
+              "id": "pa1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I see María at the park.'",
+              "answer": "Veo a María en el parque",
+              "bank": [
+                "Veo",
+                "a",
+                "María",
+                "en",
+                "el",
+                "parque",
+                "la"
+              ]
+            },
+            {
+              "id": "pa1-7",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'I'm waiting for the bus'?",
+              "options": [
+                "Espero al autobús.",
+                "Espero el autobús.",
+                "Espero a autobús.",
+                "Espero en autobús."
+              ],
+              "answer": "Espero el autobús."
+            },
+            {
+              "id": "pa1-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Veo a mi amigo en la calle",
+              "options": [
+                "Veo a mi amigo en la calle",
+                "Veo mi amigo en la calle",
+                "Veo a mi amiga en la calle",
+                "Vi a mi amigo en la calle"
+              ],
+              "answer": "Veo a mi amigo en la calle"
+            },
+            {
+              "id": "pa1-9",
+              "type": "fill_blank",
+              "prompt": "Translate to Spanish (with or without 'a'): 'I read the book.' Leo ___ libro.",
+              "answer": "el"
+            },
+            {
+              "id": "pa1-10",
+              "type": "multiple_choice",
+              "prompt": "Why does 'Veo a María' use 'a'?",
+              "options": [
+                "Because 'ver' always uses 'a'.",
+                "Because María is a specific person (animate direct object).",
+                "Because the verb is in the present tense.",
+                "Because 'a' replaces the article."
+              ],
+              "answer": "Because María is a specific person (animate direct object)."
+            }
+          ]
+        },
+        {
+          "id": "es-en-personal-a-2",
+          "title": "Family and friends always take 'a'",
+          "description": "Named people and people you know always get the personal 'a'.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "pa2-1",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I visit my grandmother.' Visito ___ mi abuela.",
+              "answer": "a"
+            },
+            {
+              "id": "pa2-2",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'They invited Carlos.' Invitaron ___ Carlos.",
+              "answer": "a"
+            },
+            {
+              "id": "pa2-3",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'I'm bringing my brother'?",
+              "options": [
+                "Traigo mi hermano.",
+                "Traigo a mi hermano.",
+                "Traigo en mi hermano.",
+                "Traigo de mi hermano."
+              ],
+              "answer": "Traigo a mi hermano."
+            },
+            {
+              "id": "pa2-4",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'We visit our friends every Sunday.'",
+              "answer": "Visitamos a nuestros amigos todos los domingos",
+              "bank": [
+                "Visitamos",
+                "a",
+                "nuestros",
+                "amigos",
+                "todos",
+                "los",
+                "domingos",
+                "nuestro"
+              ]
+            },
+            {
+              "id": "pa2-5",
+              "type": "match_pairs",
+              "prompt": "Match the English to its correct Spanish version",
+              "pairs": [
+                {
+                  "left": "I help my father.",
+                  "right": "Ayudo a mi padre."
+                },
+                {
+                  "left": "They love their children.",
+                  "right": "Quieren a sus hijos."
+                },
+                {
+                  "left": "I miss my sister.",
+                  "right": "Extraño a mi hermana."
+                },
+                {
+                  "left": "We greet the teacher.",
+                  "right": "Saludamos a la maestra."
+                }
+              ]
+            },
+            {
+              "id": "pa2-6",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'She loves her husband.' Quiere ___ su esposo.",
+              "answer": "a"
+            },
+            {
+              "id": "pa2-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct sentence: 'I miss my parents'.",
+              "options": [
+                "Extraño mis padres.",
+                "Extraño a mis padres.",
+                "Extraño en mis padres.",
+                "Extraño con mis padres."
+              ],
+              "answer": "Extraño a mis padres."
+            },
+            {
+              "id": "pa2-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Llamé a mi hermana ayer",
+              "options": [
+                "Llamé a mi hermana ayer",
+                "Llamo a mi hermana ayer",
+                "Llamé mi hermana ayer",
+                "Llamé a mi hermano ayer"
+              ],
+              "answer": "Llamé a mi hermana ayer"
+            },
+            {
+              "id": "pa2-9",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I'm looking for Ana.' Busco ___ Ana.",
+              "answer": "a"
+            },
+            {
+              "id": "pa2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I love my mother very much.'",
+              "answer": "Quiero mucho a mi madre",
+              "bank": [
+                "Quiero",
+                "mucho",
+                "a",
+                "mi",
+                "madre",
+                "muy",
+                "padre"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-personal-a-3",
+          "title": "Pets take 'a'; anonymous animals usually don't",
+          "description": "Use 'a' when the animal is your beloved pet; drop it for generic or unknown animals.",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pa3-1",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'I walk my dog'?",
+              "options": [
+                "Paseo mi perro.",
+                "Paseo a mi perro.",
+                "Paseo en mi perro.",
+                "Paseo el perro."
+              ],
+              "answer": "Paseo a mi perro."
+            },
+            {
+              "id": "pa3-2",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'At the zoo we saw elephants'?",
+              "options": [
+                "En el zoológico vimos a elefantes.",
+                "En el zoológico vimos elefantes.",
+                "En el zoológico vimos los elefantes.",
+                "En el zoológico vimos en elefantes."
+              ],
+              "answer": "En el zoológico vimos elefantes."
+            },
+            {
+              "id": "pa3-3",
+              "type": "fill_blank",
+              "prompt": "Fill the blank ('a' or nothing): 'I love my cat.' Quiero mucho ___ mi gato.",
+              "answer": "a"
+            },
+            {
+              "id": "pa3-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'In the field we saw cows.' En el campo vimos ___ vacas.",
+              "answer": "unas"
+            },
+            {
+              "id": "pa3-5",
+              "type": "match_pairs",
+              "prompt": "Match the sentence to its correct version",
+              "pairs": [
+                {
+                  "left": "I bathe my dog.",
+                  "right": "Baño a mi perro."
+                },
+                {
+                  "left": "I'm watching the fish.",
+                  "right": "Miro los peces."
+                },
+                {
+                  "left": "We adore our cat.",
+                  "right": "Adoramos a nuestro gato."
+                },
+                {
+                  "left": "I hear the birds.",
+                  "right": "Oigo los pájaros."
+                }
+              ]
+            },
+            {
+              "id": "pa3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I'm feeding my dog.'",
+              "answer": "Estoy alimentando a mi perro",
+              "bank": [
+                "Estoy",
+                "alimentando",
+                "a",
+                "mi",
+                "perro",
+                "el",
+                "los"
+              ]
+            },
+            {
+              "id": "pa3-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Quiero mucho a mi gato",
+              "options": [
+                "Quiero mucho a mi gato",
+                "Quiero a mi gato mucho",
+                "Quiero mucho el gato",
+                "Quiero mucho mi gato"
+              ],
+              "answer": "Quiero mucho a mi gato"
+            },
+            {
+              "id": "pa3-8",
+              "type": "multiple_choice",
+              "prompt": "Which sentence drops the 'a' correctly?",
+              "options": [
+                "Vi a un león en el zoológico.",
+                "Vi un león en el zoológico.",
+                "Vi al león en el zoológico (specific one I know).",
+                "Vi en león en el zoológico."
+              ],
+              "answer": "Vi un león en el zoológico."
+            },
+            {
+              "id": "pa3-9",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I'm taking my cat to the vet.' Llevo ___ mi gato al veterinario.",
+              "answer": "a"
+            },
+            {
+              "id": "pa3-10",
+              "type": "multiple_choice",
+              "prompt": "Why use 'a' in 'Paseo a mi perro'?",
+              "options": [
+                "Because all animals require 'a'.",
+                "Because the dog is a beloved, individualized pet.",
+                "Because 'pasear' is reflexive.",
+                "Because 'perro' is plural."
+              ],
+              "answer": "Because the dog is a beloved, individualized pet."
+            }
+          ]
+        },
+        {
+          "id": "es-en-personal-a-4",
+          "title": "'Tener' and indefinite humans skip the 'a'",
+          "description": "With 'tener' and unspecified people ('a doctor', 'a friend'), the personal 'a' usually drops.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "pa4-1",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'I have two brothers'?",
+              "options": [
+                "Tengo a dos hermanos.",
+                "Tengo dos hermanos.",
+                "Tengo en dos hermanos.",
+                "Tengo con dos hermanos."
+              ],
+              "answer": "Tengo dos hermanos."
+            },
+            {
+              "id": "pa4-2",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'I need a doctor' (any one)?",
+              "options": [
+                "Necesito médico.",
+                "Necesito un médico.",
+                "Necesito a un médico.",
+                "Necesito al médico."
+              ],
+              "answer": "Necesito un médico."
+            },
+            {
+              "id": "pa4-3",
+              "type": "fill_blank",
+              "prompt": "Fill the blank (insert 'a' if needed, else 'X'): 'I have a friend in Madrid.' Tengo ___ un amigo en Madrid.",
+              "answer": "X"
+            },
+            {
+              "id": "pa4-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I'm looking for my friend Pablo' (specific). Busco ___ mi amigo Pablo.",
+              "answer": "a"
+            },
+            {
+              "id": "pa4-5",
+              "type": "match_pairs",
+              "prompt": "Match each English sentence to its Spanish equivalent",
+              "pairs": [
+                {
+                  "left": "I have three sisters.",
+                  "right": "Tengo tres hermanas."
+                },
+                {
+                  "left": "I need an electrician.",
+                  "right": "Necesito un electricista."
+                },
+                {
+                  "left": "I'm looking for my sister.",
+                  "right": "Busco a mi hermana."
+                },
+                {
+                  "left": "I have a friend who speaks Chinese.",
+                  "right": "Tengo un amigo que habla chino."
+                }
+              ]
+            },
+            {
+              "id": "pa4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I have two children and a dog.'",
+              "answer": "Tengo dos hijos y un perro",
+              "bank": [
+                "Tengo",
+                "dos",
+                "hijos",
+                "y",
+                "un",
+                "perro",
+                "a",
+                "el"
+              ]
+            },
+            {
+              "id": "pa4-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Necesito un abogado bueno",
+              "options": [
+                "Necesito un abogado bueno",
+                "Necesito a un abogado bueno",
+                "Necesito al abogado bueno",
+                "Necesité un abogado bueno"
+              ],
+              "answer": "Necesito un abogado bueno"
+            },
+            {
+              "id": "pa4-8",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I need to call the doctor' (specific). Necesito llamar ___ doctor.",
+              "answer": "al"
+            },
+            {
+              "id": "pa4-9",
+              "type": "multiple_choice",
+              "prompt": "Why does 'Tengo dos hermanos' skip the 'a'?",
+              "options": [
+                "Because 'tener' is irregular.",
+                "Because with 'tener' the people are usually treated as quantities, not as specific individuals.",
+                "Because 'hermanos' is masculine.",
+                "Because the sentence is in the present."
+              ],
+              "answer": "Because with 'tener' the people are usually treated as quantities, not as specific individuals."
+            },
+            {
+              "id": "pa4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I need a babysitter for tonight.'",
+              "answer": "Necesito una niñera para esta noche",
+              "bank": [
+                "Necesito",
+                "una",
+                "niñera",
+                "para",
+                "esta",
+                "noche",
+                "a",
+                "el"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-personal-a-5",
+          "title": "'A quién' in questions and relatives",
+          "description": "Keep the personal 'a' in questions and before 'quien' in relative clauses.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "pa5-1",
+              "type": "multiple_choice",
+              "prompt": "Which is the correct translation of 'Whom did you see?'",
+              "options": [
+                "¿Quién viste?",
+                "¿A quién viste?",
+                "¿Con quién viste?",
+                "¿De quién viste?"
+              ],
+              "answer": "¿A quién viste?"
+            },
+            {
+              "id": "pa5-2",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: '___ quién llamaste anoche?' (Whom did you call last night?)",
+              "answer": "A"
+            },
+            {
+              "id": "pa5-3",
+              "type": "match_pairs",
+              "prompt": "Match the English question to its Spanish version",
+              "pairs": [
+                {
+                  "left": "Whom are you waiting for?",
+                  "right": "¿A quién esperas?"
+                },
+                {
+                  "left": "Whom did they invite?",
+                  "right": "¿A quién invitaron?"
+                },
+                {
+                  "left": "Who called?",
+                  "right": "¿Quién llamó?"
+                },
+                {
+                  "left": "Whom do you love?",
+                  "right": "¿A quién quieres?"
+                }
+              ]
+            },
+            {
+              "id": "pa5-4",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Whom did you see at the party?'",
+              "answer": "¿A quién viste en la fiesta?",
+              "bank": [
+                "¿A",
+                "quién",
+                "viste",
+                "en",
+                "la",
+                "fiesta?",
+                "Quién",
+                "con"
+              ]
+            },
+            {
+              "id": "pa5-5",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'The man whom I know lives here'?",
+              "options": [
+                "El hombre quien conozco vive aquí.",
+                "El hombre a quien conozco vive aquí.",
+                "El hombre que conozco a vive aquí.",
+                "El hombre de quien conozco vive aquí."
+              ],
+              "answer": "El hombre a quien conozco vive aquí."
+            },
+            {
+              "id": "pa5-6",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'The girl whom I love.' La chica ___ quien quiero.",
+              "answer": "a"
+            },
+            {
+              "id": "pa5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "¿A quién buscas tú?",
+              "options": [
+                "¿A quién buscas tú?",
+                "¿Quién buscas tú?",
+                "¿Con quién buscas tú?",
+                "¿A quién busca tú?"
+              ],
+              "answer": "¿A quién buscas tú?"
+            },
+            {
+              "id": "pa5-8",
+              "type": "multiple_choice",
+              "prompt": "Choose the correct relative clause: 'The friend whom I'm visiting tomorrow…'",
+              "options": [
+                "El amigo que visito mañana…",
+                "El amigo a quien visito mañana…",
+                "El amigo con quien visito mañana…",
+                "El amigo de quien visito mañana…"
+              ],
+              "answer": "El amigo a quien visito mañana…"
+            },
+            {
+              "id": "pa5-9",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Whom are you talking about?'",
+              "answer": "¿De quién hablas?",
+              "bank": [
+                "¿De",
+                "quién",
+                "hablas?",
+                "A",
+                "con"
+              ]
+            },
+            {
+              "id": "pa5-10",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: '___ quién esperas?' (Whom are you waiting for?)",
+              "answer": "A"
+            }
+          ]
+        },
+        {
+          "id": "es-en-personal-a-6",
+          "title": "Meeting your friend's family",
+          "description": "Practice the personal 'a' in a real conversation about people.",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pa6-1",
+              "type": "dialogue",
+              "prompt": "Catch up with Lucía about her family",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "lucia",
+                  "name": "Lucía"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "¡Hola! ¿Conoces a mi hermana Marta?",
+                  "spokenText": "¡Hola! ¿Conoces a mi hermana Marta?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say: 'No, I don't know her, but I saw your father yesterday.'",
+                  "options": [
+                    "No, no la conozco, pero vi a tu padre ayer.",
+                    "No, no conozco, pero vi tu padre ayer.",
+                    "No, no la conozco, pero vi tu padre ayer."
+                  ],
+                  "answer": "No, no la conozco, pero vi a tu padre ayer."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "¡Qué bien! ¿Y dónde lo viste?",
+                  "spokenText": "¡Qué bien! ¿Y dónde lo viste?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill the blank: 'I saw your father at the supermarket.' Vi ___ tu padre en el supermercado.",
+                  "before": "Vi ",
+                  "after": " tu padre en el supermercado.",
+                  "answer": "a"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "Ah, sí. Él va allí los sábados. ¿Tienes hermanos tú?",
+                  "spokenText": "Ah, sí. Él va allí los sábados. ¿Tienes hermanos tú?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say: 'Yes, I have two brothers and a sister.'",
+                  "options": [
+                    "Sí, tengo a dos hermanos y una hermana.",
+                    "Sí, tengo dos hermanos y una hermana.",
+                    "Sí, tengo dos hermanos y a una hermana."
+                  ],
+                  "answer": "Sí, tengo dos hermanos y una hermana."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "¡Qué bonito! ¿Y los visitas a menudo?",
+                  "spokenText": "¡Qué bonito! ¿Y los visitas a menudo?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill the blank: 'I visit my brothers every weekend.' Visito ___ mis hermanos todos los fines de semana.",
+                  "before": "Visito ",
+                  "after": " mis hermanos todos los fines de semana.",
+                  "answer": "a"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "¿Y tienes mascotas?",
+                  "spokenText": "¿Y tienes mascotas?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Reply: 'Yes, I have a dog and I love my dog very much.'",
+                  "options": [
+                    "Sí, tengo a un perro y quiero mucho mi perro.",
+                    "Sí, tengo un perro y quiero mucho a mi perro.",
+                    "Sí, tengo un perro y quiero mucho el perro."
+                  ],
+                  "answer": "Sí, tengo un perro y quiero mucho a mi perro."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-en-se-unintentional",
+      "title": "The 'se' of unintentional action",
+      "description": "'Se me cayó el vaso' — I dropped the glass... but Spanish makes it sound like the glass dropped itself.",
+      "theme": "verbs",
+      "guide": {
+        "intro": "When something goes wrong by accident, Spanish loves to deflect blame. Instead of 'I dropped the glass', a Spanish speaker often says 'Se me cayó el vaso' — literally 'the glass fell on me'. The accident has a victim (me, you, her…), not a culprit.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "The structure"
+          },
+          {
+            "kind": "paragraph",
+            "text": "The formula is: 'se + indirect-object pronoun + verb + subject'. The verb agrees with the thing that happened (the subject), not with the person to whom it happened."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Se me cayó el vaso.",
+                "translation": "I dropped the glass. (lit. 'the glass fell on me')"
+              },
+              {
+                "source": "Se me olvidó el cumpleaños.",
+                "translation": "I forgot the birthday. (lit. 'the birthday slipped my mind')"
+              },
+              {
+                "source": "Se le rompió el teléfono.",
+                "translation": "He/she broke the phone. (lit. 'the phone broke on him/her')"
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Plural subjects"
+          },
+          {
+            "kind": "paragraph",
+            "text": "When more than one thing did the dropping/breaking/getting-lost, the verb goes plural. The indirect pronoun stays the same."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Se me cayeron los libros.",
+                "translation": "I dropped the books."
+              },
+              {
+                "source": "Se nos olvidaron las llaves.",
+                "translation": "We forgot the keys."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "All the indirect pronouns"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Swap 'me' for 'te / le / nos / os / les' to change whose accident it is."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Se te olvidó la cita.",
+                "translation": "You forgot the appointment."
+              },
+              {
+                "source": "Se le perdió el pasaporte.",
+                "translation": "He/she lost the passport."
+              },
+              {
+                "source": "Se les quemó la cena.",
+                "translation": "They burned the dinner."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Common verbs in this pattern"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Caer (to fall/drop), olvidar (to forget), romper (to break), perder (to lose), quemar (to burn), escapar (to escape), ocurrir (to occur)."
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Use 'Se me cayó' when it was an accident. If you smashed it on purpose, use the active voice: 'Rompí el vaso'."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "es-en-se-unintentional-1",
+          "title": "Se me cayó / olvidó / rompió",
+          "description": "Build the basic 'se me + verb' pattern for accidents.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "su1-1",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'I dropped the glass.' (unintentional)",
+              "options": [
+                "Caí el vaso.",
+                "Se me cayó el vaso.",
+                "Yo cayó el vaso.",
+                "Me cayó el vaso."
+              ],
+              "answer": "Se me cayó el vaso."
+            },
+            {
+              "id": "su1-2",
+              "type": "multiple_choice",
+              "prompt": "Which best translates 'I forgot your name' with the unintentional flavor?",
+              "options": [
+                "Olvidé tu nombre.",
+                "Se me olvidó tu nombre.",
+                "Me olvido tu nombre.",
+                "Yo olvidé tu nombre a mí."
+              ],
+              "answer": "Se me olvidó tu nombre."
+            },
+            {
+              "id": "su1-3",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I broke the cup.' Se ___ rompió la taza.",
+              "answer": "me"
+            },
+            {
+              "id": "su1-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I lost the key.' Se me ___ la llave.",
+              "answer": "perdió"
+            },
+            {
+              "id": "su1-5",
+              "type": "match_pairs",
+              "prompt": "Match Spanish to English",
+              "pairs": [
+                {
+                  "left": "Se me cayó.",
+                  "right": "I dropped it."
+                },
+                {
+                  "left": "Se me olvidó.",
+                  "right": "I forgot it."
+                },
+                {
+                  "left": "Se me rompió.",
+                  "right": "It broke on me."
+                },
+                {
+                  "left": "Se me perdió.",
+                  "right": "I lost it."
+                }
+              ]
+            },
+            {
+              "id": "su1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I dropped the glass.'",
+              "answer": "Se me cayó el vaso",
+              "bank": [
+                "Se",
+                "me",
+                "cayó",
+                "el",
+                "vaso",
+                "te",
+                "le"
+              ]
+            },
+            {
+              "id": "su1-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Se me olvidó el cumpleaños de mi madre",
+              "options": [
+                "Se me olvidó el cumpleaños de mi madre",
+                "Me olvidó el cumpleaños de mi madre",
+                "Se me olvida el cumpleaños de mi madre",
+                "Se te olvidó el cumpleaños de mi madre"
+              ],
+              "answer": "Se me olvidó el cumpleaños de mi madre"
+            },
+            {
+              "id": "su1-8",
+              "type": "multiple_choice",
+              "prompt": "What does 'Se me rompió el teléfono' literally mean?",
+              "options": [
+                "I broke the phone on purpose.",
+                "The phone broke on me (accidentally).",
+                "My phone is broken in general.",
+                "I'm breaking the phone right now."
+              ],
+              "answer": "The phone broke on me (accidentally)."
+            },
+            {
+              "id": "su1-9",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I lost my passport.' Se me ___ el pasaporte.",
+              "answer": "perdió"
+            },
+            {
+              "id": "su1-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I forgot the keys.'",
+              "answer": "Se me olvidaron las llaves",
+              "bank": [
+                "Se",
+                "me",
+                "olvidaron",
+                "las",
+                "llaves",
+                "olvidó",
+                "los"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-se-unintentional-2",
+          "title": "Plural subjects — agreement",
+          "description": "When several things fall, break or get lost, the verb goes plural.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "su2-1",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'I dropped the books.'",
+              "options": [
+                "Se me cayó los libros.",
+                "Se me cayeron los libros.",
+                "Me caí los libros.",
+                "Caí los libros."
+              ],
+              "answer": "Se me cayeron los libros."
+            },
+            {
+              "id": "su2-2",
+              "type": "fill_blank",
+              "prompt": "Fill in the verb: 'I forgot the keys.' Se me ___ las llaves.",
+              "answer": "olvidaron"
+            },
+            {
+              "id": "su2-3",
+              "type": "fill_blank",
+              "prompt": "Fill in the verb: 'I broke the glasses.' Se me ___ los vasos.",
+              "answer": "rompieron"
+            },
+            {
+              "id": "su2-4",
+              "type": "match_pairs",
+              "prompt": "Match the Spanish with its correct subject form",
+              "pairs": [
+                {
+                  "left": "Se me cayó el plato.",
+                  "right": "I dropped the plate."
+                },
+                {
+                  "left": "Se me cayeron los platos.",
+                  "right": "I dropped the plates."
+                },
+                {
+                  "left": "Se me rompió el espejo.",
+                  "right": "I broke the mirror."
+                },
+                {
+                  "left": "Se me rompieron los espejos.",
+                  "right": "I broke the mirrors."
+                }
+              ]
+            },
+            {
+              "id": "su2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I lost the documents.'",
+              "answer": "Se me perdieron los documentos",
+              "bank": [
+                "Se",
+                "me",
+                "perdieron",
+                "los",
+                "documentos",
+                "perdió",
+                "el"
+              ]
+            },
+            {
+              "id": "su2-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Se me cayeron los huevos al suelo",
+              "options": [
+                "Se me cayeron los huevos al suelo",
+                "Se me cayó los huevos al suelo",
+                "Se me cayeron las huevas al suelo",
+                "Me cayeron los huevos al suelo"
+              ],
+              "answer": "Se me cayeron los huevos al suelo"
+            },
+            {
+              "id": "su2-7",
+              "type": "multiple_choice",
+              "prompt": "Why is it 'cayeron' and not 'cayó' in 'Se me cayeron los libros'?",
+              "options": [
+                "Because 'me' is plural.",
+                "Because the subject ('los libros') is plural and the verb agrees with it.",
+                "Because 'se' is plural.",
+                "Because the speaker is plural."
+              ],
+              "answer": "Because the subject ('los libros') is plural and the verb agrees with it."
+            },
+            {
+              "id": "su2-8",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'I burned the cookies.' Se me ___ las galletas.",
+              "answer": "quemaron"
+            },
+            {
+              "id": "su2-9",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I broke two cups.'",
+              "answer": "Se me rompieron dos tazas",
+              "bank": [
+                "Se",
+                "me",
+                "rompieron",
+                "dos",
+                "tazas",
+                "rompió",
+                "una"
+              ]
+            },
+            {
+              "id": "su2-10",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'I lost my glasses' (plural)?",
+              "options": [
+                "Se me perdió las gafas.",
+                "Se me perdieron las gafas.",
+                "Me perdió las gafas.",
+                "Perdí me las gafas."
+              ],
+              "answer": "Se me perdieron las gafas."
+            }
+          ]
+        },
+        {
+          "id": "es-en-se-unintentional-3",
+          "title": "Whose accident? — te, le, nos, les",
+          "description": "Swap the indirect pronoun to change who the accident happened to.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "su3-1",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'You (tú) forgot the meeting.'",
+              "options": [
+                "Se me olvidó la reunión.",
+                "Se te olvidó la reunión.",
+                "Se le olvidó la reunión.",
+                "Se nos olvidó la reunión."
+              ],
+              "answer": "Se te olvidó la reunión."
+            },
+            {
+              "id": "su3-2",
+              "type": "fill_blank",
+              "prompt": "Fill the pronoun: 'He lost his phone.' Se ___ perdió el teléfono.",
+              "answer": "le"
+            },
+            {
+              "id": "su3-3",
+              "type": "fill_blank",
+              "prompt": "Fill the pronoun: 'We forgot the address.' Se ___ olvidó la dirección.",
+              "answer": "nos"
+            },
+            {
+              "id": "su3-4",
+              "type": "match_pairs",
+              "prompt": "Match each Spanish to its English",
+              "pairs": [
+                {
+                  "left": "Se te cayó.",
+                  "right": "You dropped it."
+                },
+                {
+                  "left": "Se le cayó.",
+                  "right": "He/she dropped it."
+                },
+                {
+                  "left": "Se nos cayó.",
+                  "right": "We dropped it."
+                },
+                {
+                  "left": "Se les cayó.",
+                  "right": "They dropped it."
+                }
+              ]
+            },
+            {
+              "id": "su3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'They burned the dinner.'",
+              "answer": "Se les quemó la cena",
+              "bank": [
+                "Se",
+                "les",
+                "quemó",
+                "la",
+                "cena",
+                "me",
+                "le"
+              ]
+            },
+            {
+              "id": "su3-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Se nos perdió el perro en el parque",
+              "options": [
+                "Se nos perdió el perro en el parque",
+                "Se me perdió el perro en el parque",
+                "Se le perdió el perro en el parque",
+                "Se nos perdieron los perros en el parque"
+              ],
+              "answer": "Se nos perdió el perro en el parque"
+            },
+            {
+              "id": "su3-7",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'They forgot the tickets.'",
+              "options": [
+                "Se les olvidó los boletos.",
+                "Se les olvidaron los boletos.",
+                "Se nos olvidaron los boletos.",
+                "Se le olvidaron los boletos."
+              ],
+              "answer": "Se les olvidaron los boletos."
+            },
+            {
+              "id": "su3-8",
+              "type": "fill_blank",
+              "prompt": "Fill the pronoun: 'My grandmother broke her cup.' A mi abuela se ___ rompió la taza.",
+              "answer": "le"
+            },
+            {
+              "id": "su3-9",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'You (tú) lost the keys.'",
+              "answer": "Se te perdieron las llaves",
+              "bank": [
+                "Se",
+                "te",
+                "perdieron",
+                "las",
+                "llaves",
+                "me",
+                "le"
+              ]
+            },
+            {
+              "id": "su3-10",
+              "type": "multiple_choice",
+              "prompt": "What's the difference between 'Se me olvidó' and 'Se le olvidó'?",
+              "options": [
+                "Tense (present vs past).",
+                "Number (singular vs plural).",
+                "Person — 'me' = it happened to me; 'le' = it happened to him/her.",
+                "Mood (indicative vs subjunctive)."
+              ],
+              "answer": "Person — 'me' = it happened to me; 'le' = it happened to him/her."
+            }
+          ]
+        },
+        {
+          "id": "es-en-se-unintentional-4",
+          "title": "Accident vs on purpose",
+          "description": "When to use unintentional 'se' (accident) vs active voice (deliberate).",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "su4-1",
+              "type": "multiple_choice",
+              "prompt": "You knocked the glass over by accident. How do you say it?",
+              "options": [
+                "Rompí el vaso.",
+                "Se me rompió el vaso.",
+                "Rompió el vaso.",
+                "El vaso rompió."
+              ],
+              "answer": "Se me rompió el vaso."
+            },
+            {
+              "id": "su4-2",
+              "type": "multiple_choice",
+              "prompt": "You smashed the window on purpose. How do you say 'I broke the window'?",
+              "options": [
+                "Rompí la ventana.",
+                "Se me rompió la ventana.",
+                "Me rompió la ventana.",
+                "Se rompió la ventana sola."
+              ],
+              "answer": "Rompí la ventana."
+            },
+            {
+              "id": "su4-3",
+              "type": "fill_blank",
+              "prompt": "Translate (accident): 'Sorry, I forgot.' Lo siento, se me ___.",
+              "answer": "olvidó"
+            },
+            {
+              "id": "su4-4",
+              "type": "match_pairs",
+              "prompt": "Match each scenario to the better sentence",
+              "pairs": [
+                {
+                  "left": "You accidentally drop your phone.",
+                  "right": "Se me cayó el teléfono."
+                },
+                {
+                  "left": "You deliberately throw your phone.",
+                  "right": "Tiré el teléfono."
+                },
+                {
+                  "left": "You accidentally forget an appointment.",
+                  "right": "Se me olvidó la cita."
+                },
+                {
+                  "left": "You deliberately ignored an appointment.",
+                  "right": "Ignoré la cita."
+                }
+              ]
+            },
+            {
+              "id": "su4-5",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I'm sorry, I forgot your name.' (unintentional)",
+              "answer": "Lo siento, se me olvidó tu nombre",
+              "bank": [
+                "Lo",
+                "siento,",
+                "se",
+                "me",
+                "olvidó",
+                "tu",
+                "nombre",
+                "olvidé"
+              ]
+            },
+            {
+              "id": "su4-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Se me rompió sin querer",
+              "options": [
+                "Se me rompió sin querer",
+                "Me rompió sin querer",
+                "Lo rompí sin querer",
+                "Se rompió sin querer"
+              ],
+              "answer": "Se me rompió sin querer"
+            },
+            {
+              "id": "su4-7",
+              "type": "multiple_choice",
+              "prompt": "Why would a speaker choose 'Se me cayó' over 'Lo dejé caer'?",
+              "options": [
+                "They sound exactly the same.",
+                "'Se me cayó' frames it as an accident; 'Lo dejé caer' sounds more deliberate.",
+                "'Se me cayó' is formal; 'Lo dejé caer' is informal.",
+                "'Lo dejé caer' is grammatically wrong."
+              ],
+              "answer": "'Se me cayó' frames it as an accident; 'Lo dejé caer' sounds more deliberate."
+            },
+            {
+              "id": "su4-8",
+              "type": "fill_blank",
+              "prompt": "Cultural framing: avoid blame. Fill the blank with the unintentional form: 'The cake burned on me.' Se me ___ el pastel.",
+              "answer": "quemó"
+            },
+            {
+              "id": "su4-9",
+              "type": "multiple_choice",
+              "prompt": "Pick the most natural reply when you arrive late: 'Sorry, I forgot.'",
+              "options": [
+                "Perdón, olvidé.",
+                "Perdón, se me olvidó.",
+                "Perdón, me olvidó.",
+                "Perdón, olvidaste."
+              ],
+              "answer": "Perdón, se me olvidó."
+            },
+            {
+              "id": "su4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I dropped it by accident.'",
+              "answer": "Se me cayó sin querer",
+              "bank": [
+                "Se",
+                "me",
+                "cayó",
+                "sin",
+                "querer",
+                "lo",
+                "caí"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-se-unintentional-5",
+          "title": "Everyday accident verbs",
+          "description": "Caer, olvidar, romper, perder, quemar, escapar, ocurrir.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "su5-1",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'A great idea occurred to me.'",
+              "options": [
+                "Se me ocurrió una idea genial.",
+                "Yo ocurrió una idea genial.",
+                "Me ocurro una idea genial.",
+                "Tengo una idea ocurrió."
+              ],
+              "answer": "Se me ocurrió una idea genial."
+            },
+            {
+              "id": "su5-2",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'The dog escaped from me.'",
+              "options": [
+                "Me escapó el perro.",
+                "Se me escapó el perro.",
+                "Escapé el perro.",
+                "El perro me escapó."
+              ],
+              "answer": "Se me escapó el perro."
+            },
+            {
+              "id": "su5-3",
+              "type": "fill_blank",
+              "prompt": "Fill the verb: 'The dinner burned (on us).' Se nos ___ la cena.",
+              "answer": "quemó"
+            },
+            {
+              "id": "su5-4",
+              "type": "fill_blank",
+              "prompt": "Fill the verb: 'A name escaped me.' Se me ___ un nombre.",
+              "answer": "escapó"
+            },
+            {
+              "id": "su5-5",
+              "type": "match_pairs",
+              "prompt": "Match the verb pattern to its meaning",
+              "pairs": [
+                {
+                  "left": "Se me ocurrió...",
+                  "right": "It occurred to me…"
+                },
+                {
+                  "left": "Se me escapó...",
+                  "right": "It slipped out / escaped me…"
+                },
+                {
+                  "left": "Se me quemó...",
+                  "right": "It burned on me…"
+                },
+                {
+                  "left": "Se me perdió...",
+                  "right": "I lost it…"
+                }
+              ]
+            },
+            {
+              "id": "su5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'A great idea occurred to me.'",
+              "answer": "Se me ocurrió una idea genial",
+              "bank": [
+                "Se",
+                "me",
+                "ocurrió",
+                "una",
+                "idea",
+                "genial",
+                "ocurre",
+                "el"
+              ]
+            },
+            {
+              "id": "su5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Se le escapó el secreto",
+              "options": [
+                "Se le escapó el secreto",
+                "Se me escapó el secreto",
+                "Se les escapó el secreto",
+                "Le escapó el secreto"
+              ],
+              "answer": "Se le escapó el secreto"
+            },
+            {
+              "id": "su5-8",
+              "type": "multiple_choice",
+              "prompt": "Which sentence emphasizes the accidental flavor of losing a shoe?",
+              "options": [
+                "Perdí un zapato.",
+                "Se me perdió un zapato.",
+                "Me perdí un zapato.",
+                "Yo perdí mi zapato."
+              ],
+              "answer": "Se me perdió un zapato."
+            },
+            {
+              "id": "su5-9",
+              "type": "fill_blank",
+              "prompt": "Fill the verb: 'My patience ran out.' Se me ___ la paciencia.",
+              "answer": "acabó"
+            },
+            {
+              "id": "su5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'The cat escaped from us.'",
+              "answer": "Se nos escapó el gato",
+              "bank": [
+                "Se",
+                "nos",
+                "escapó",
+                "el",
+                "gato",
+                "me",
+                "perro"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-se-unintentional-6",
+          "title": "Apology for being late",
+          "description": "Dialogue: your friend is sorry — keys, time, everything went wrong.",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "su6-1",
+              "type": "dialogue",
+              "prompt": "Diego shows up late and full of excuses",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "diego",
+                  "name": "Diego"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "diego",
+                  "text": "¡Perdón por llegar tarde! Se me hizo tarde.",
+                  "spokenText": "¡Perdón por llegar tarde! Se me hizo tarde."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Reply: 'No problem. What happened?'",
+                  "options": [
+                    "No pasa nada. ¿Qué pasó?",
+                    "Sí pasa. ¿Qué hiciste?",
+                    "No pasa nada. ¿Qué hace tú?"
+                  ],
+                  "answer": "No pasa nada. ¿Qué pasó?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "diego",
+                  "text": "Es que se me olvidaron las llaves en casa.",
+                  "spokenText": "Es que se me olvidaron las llaves en casa."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Express empathy: 'How annoying! It happens to me too.' ¡Qué fastidio! A mí también ___ pasa.",
+                  "before": "¡Qué fastidio! A mí también ",
+                  "after": " pasa.",
+                  "answer": "me"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "diego",
+                  "text": "Y para colmo se me cayó el café en la camisa.",
+                  "spokenText": "Y para colmo se me cayó el café en la camisa."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say: 'Oh no! Did the shirt get ruined?'",
+                  "options": [
+                    "¡Ay no! ¿Se te arruinó la camisa?",
+                    "¡Ay no! ¿Te arruinó la camisa?",
+                    "¡Ay no! ¿Arruinaste la camisa tú?"
+                  ],
+                  "answer": "¡Ay no! ¿Se te arruinó la camisa?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "diego",
+                  "text": "Un poco. Y además se me perdió el celular en el autobús.",
+                  "spokenText": "Un poco. Y además se me perdió el celular en el autobús."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'Did you find it already?' ¿___ lo encontraste?",
+                  "before": "¿",
+                  "after": " lo encontraste?",
+                  "answer": "Ya"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "diego",
+                  "text": "Sí, por suerte. Hoy se me han caído como mil cosas.",
+                  "spokenText": "Sí, por suerte. Hoy se me han caído como mil cosas."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Reply: 'Don't worry. Tomorrow will be better.'",
+                  "options": [
+                    "No te preocupes. Mañana va a ser mejor.",
+                    "Te preocupas. Mañana va a ser peor.",
+                    "No me preocupes. Mañana sea mejor."
+                  ],
+                  "answer": "No te preocupes. Mañana va a ser mejor."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-en-reflexive-emphatic",
+      "title": "Reflexive verbs that aren't reflexive",
+      "description": "Why 'me voy' isn't 'I go to myself' — when 'se' adds emphasis, not reflection.",
+      "theme": "verbs",
+      "guide": {
+        "intro": "Many Spanish verbs come in two flavors: a plain form and a 'se' form. The reflexive pronoun isn't always about doing something to yourself — sometimes it just emphasizes completion, surprise, or a change of state. Knowing the difference is what separates beginners from intermediate speakers.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "ir vs irse"
+          },
+          {
+            "kind": "paragraph",
+            "text": "'Ir' is about destination ('I'm going to the bank'). 'Irse' is about leaving where you are ('I'm leaving / I'm out of here')."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Voy al banco.",
+                "translation": "I'm going to the bank. (destination)"
+              },
+              {
+                "source": "Me voy.",
+                "translation": "I'm leaving / I'm off."
+              },
+              {
+                "source": "¡Vámonos!",
+                "translation": "Let's get out of here!"
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "dormir vs dormirse"
+          },
+          {
+            "kind": "paragraph",
+            "text": "'Dormir' is to sleep (a state). 'Dormirse' is to fall asleep (the moment you cross over)."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Dormí ocho horas.",
+                "translation": "I slept eight hours."
+              },
+              {
+                "source": "Me dormí en el sofá.",
+                "translation": "I fell asleep on the couch."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "comer vs comerse"
+          },
+          {
+            "kind": "paragraph",
+            "text": "'Comer' is to eat. Adding 'se' adds emphasis: ate it all up, ate the whole thing."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Comí pizza.",
+                "translation": "I ate pizza."
+              },
+              {
+                "source": "Me comí toda la pizza.",
+                "translation": "I ate the whole pizza (all of it)."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "morir vs morirse"
+          },
+          {
+            "kind": "paragraph",
+            "text": "'Morir' tends to be neutral/formal (deaths in news, in battle). 'Morirse' carries emotional weight or accidental flavor — often used figuratively ('Me muero de risa' = I'm dying of laughter)."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Cervantes murió en 1616.",
+                "translation": "Cervantes died in 1616."
+              },
+              {
+                "source": "Se murió mi abuelo el año pasado.",
+                "translation": "My grandfather died last year. (emotional)"
+              },
+              {
+                "source": "Me muero de hambre.",
+                "translation": "I'm starving / dying of hunger."
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Quick test: if you can mentally add 'right up / all of it / fully' to the English, the Spanish probably wants 'se'."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "es-en-reflexive-emphatic-1",
+          "title": "ir vs irse — destination vs departure",
+          "description": "'Voy al banco' (going to the bank) vs 'Me voy' (I'm leaving).",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "re1-1",
+              "type": "multiple_choice",
+              "prompt": "Which is the natural translation of 'I'm leaving now' (no destination mentioned)?",
+              "options": [
+                "Voy ahora.",
+                "Me voy ahora.",
+                "Iré ahora.",
+                "Yo ahora."
+              ],
+              "answer": "Me voy ahora."
+            },
+            {
+              "id": "re1-2",
+              "type": "multiple_choice",
+              "prompt": "Which is correct: 'I'm going to the bank'?",
+              "options": [
+                "Me voy al banco.",
+                "Voy al banco.",
+                "Yo al banco.",
+                "Voy en el banco."
+              ],
+              "answer": "Voy al banco."
+            },
+            {
+              "id": "re1-3",
+              "type": "fill_blank",
+              "prompt": "Fill the blank ('voy' or 'me voy'): 'I'm out of here, see you later!' ¡___, hasta luego!",
+              "answer": "Me voy"
+            },
+            {
+              "id": "re1-4",
+              "type": "fill_blank",
+              "prompt": "Fill the blank: 'I'm going to the supermarket.' ___ al supermercado.",
+              "answer": "Voy"
+            },
+            {
+              "id": "re1-5",
+              "type": "match_pairs",
+              "prompt": "Match each Spanish to its English",
+              "pairs": [
+                {
+                  "left": "Voy a casa.",
+                  "right": "I'm going home."
+                },
+                {
+                  "left": "Me voy a casa.",
+                  "right": "I'm leaving (heading home)."
+                },
+                {
+                  "left": "¡Vámonos!",
+                  "right": "Let's get out of here!"
+                },
+                {
+                  "left": "Vamos.",
+                  "right": "Let's go."
+                }
+              ]
+            },
+            {
+              "id": "re1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I'm leaving, see you tomorrow.'",
+              "answer": "Me voy, hasta mañana",
+              "bank": [
+                "Me",
+                "voy,",
+                "hasta",
+                "mañana",
+                "Voy",
+                "después"
+              ]
+            },
+            {
+              "id": "re1-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Ya me voy a la oficina",
+              "options": [
+                "Ya me voy a la oficina",
+                "Ya voy a la oficina",
+                "Ya me voy de la oficina",
+                "Ya te vas a la oficina"
+              ],
+              "answer": "Ya me voy a la oficina"
+            },
+            {
+              "id": "re1-8",
+              "type": "multiple_choice",
+              "prompt": "What's the nuance of 'Ya me voy' vs 'Ya voy'?",
+              "options": [
+                "Identical meaning.",
+                "'Ya me voy' = I'm leaving now. 'Ya voy' = I'm on my way (coming).",
+                "'Ya me voy' is formal; 'Ya voy' is informal.",
+                "'Ya me voy' is past tense."
+              ],
+              "answer": "'Ya me voy' = I'm leaving now. 'Ya voy' = I'm on my way (coming)."
+            },
+            {
+              "id": "re1-9",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'We're leaving the party.' ___ de la fiesta.",
+              "answer": "Nos vamos"
+            },
+            {
+              "id": "re1-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I'm going to Madrid tomorrow.'",
+              "answer": "Voy a Madrid mañana",
+              "bank": [
+                "Voy",
+                "a",
+                "Madrid",
+                "mañana",
+                "Me",
+                "hoy"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-reflexive-emphatic-2",
+          "title": "dormir vs dormirse — state vs onset",
+          "description": "'Dormí bien' (I slept well) vs 'Me dormí en el sofá' (I fell asleep on the couch).",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "re2-1",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'I slept eight hours last night.'",
+              "options": [
+                "Me dormí ocho horas anoche.",
+                "Dormí ocho horas anoche.",
+                "Dormo ocho horas anoche.",
+                "Estoy durmiendo ocho horas."
+              ],
+              "answer": "Dormí ocho horas anoche."
+            },
+            {
+              "id": "re2-2",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'I fell asleep on the couch.'",
+              "options": [
+                "Dormí en el sofá.",
+                "Me dormí en el sofá.",
+                "Estoy dormido en el sofá.",
+                "Duermo el sofá."
+              ],
+              "answer": "Me dormí en el sofá."
+            },
+            {
+              "id": "re2-3",
+              "type": "fill_blank",
+              "prompt": "Fill in (dormí / me dormí): 'I fell asleep during the movie.' ___ durante la película.",
+              "answer": "Me dormí"
+            },
+            {
+              "id": "re2-4",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'The baby sleeps a lot.' El bebé ___ mucho.",
+              "answer": "duerme"
+            },
+            {
+              "id": "re2-5",
+              "type": "match_pairs",
+              "prompt": "Match each meaning",
+              "pairs": [
+                {
+                  "left": "Dormir",
+                  "right": "to sleep (state)"
+                },
+                {
+                  "left": "Dormirse",
+                  "right": "to fall asleep (onset)"
+                },
+                {
+                  "left": "Duermo bien.",
+                  "right": "I sleep well."
+                },
+                {
+                  "left": "Me dormí rápido.",
+                  "right": "I fell asleep quickly."
+                }
+              ]
+            },
+            {
+              "id": "re2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'The baby fell asleep in the car.'",
+              "answer": "El bebé se durmió en el coche",
+              "bank": [
+                "El",
+                "bebé",
+                "se",
+                "durmió",
+                "en",
+                "el",
+                "coche",
+                "durmió"
+              ]
+            },
+            {
+              "id": "re2-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Anoche me dormí muy tarde",
+              "options": [
+                "Anoche me dormí muy tarde",
+                "Anoche dormí muy tarde",
+                "Anoche me duermo muy tarde",
+                "Anoche te dormiste muy tarde"
+              ],
+              "answer": "Anoche me dormí muy tarde"
+            },
+            {
+              "id": "re2-8",
+              "type": "multiple_choice",
+              "prompt": "Choose the better Spanish: 'I'm tired because I fell asleep late.'",
+              "options": [
+                "Estoy cansado porque dormí tarde.",
+                "Estoy cansado porque me dormí tarde.",
+                "Estoy cansado porque dormirme tarde.",
+                "Estoy cansado porque caí tarde."
+              ],
+              "answer": "Estoy cansado porque me dormí tarde."
+            },
+            {
+              "id": "re2-9",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'I never fall asleep in class.' Nunca me ___ en clase.",
+              "answer": "duermo"
+            },
+            {
+              "id": "re2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I usually sleep eight hours.'",
+              "answer": "Normalmente duermo ocho horas",
+              "bank": [
+                "Normalmente",
+                "duermo",
+                "ocho",
+                "horas",
+                "me",
+                "duermes"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-reflexive-emphatic-3",
+          "title": "comerse / beberse — eat up, drink up",
+          "description": "'Comí pizza' (I ate pizza) vs 'Me comí toda la pizza' (I ate the WHOLE pizza).",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "re3-1",
+              "type": "multiple_choice",
+              "prompt": "Which sentence emphasizes that I ate the WHOLE pizza?",
+              "options": [
+                "Comí pizza.",
+                "Me comí toda la pizza.",
+                "Como pizza.",
+                "Comerme la pizza."
+              ],
+              "answer": "Me comí toda la pizza."
+            },
+            {
+              "id": "re3-2",
+              "type": "multiple_choice",
+              "prompt": "What does 'Me bebí toda la botella' emphasize compared to 'Bebí la botella'?",
+              "options": [
+                "Nothing — they're identical.",
+                "That you drank it all up, totally.",
+                "That you drank slowly.",
+                "That you didn't finish it."
+              ],
+              "answer": "That you drank it all up, totally."
+            },
+            {
+              "id": "re3-3",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'The kids ate up all the candy.' Los niños se ___ todos los dulces.",
+              "answer": "comieron"
+            },
+            {
+              "id": "re3-4",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'I drank up the entire glass of water.' Me ___ todo el vaso de agua.",
+              "answer": "bebí"
+            },
+            {
+              "id": "re3-5",
+              "type": "match_pairs",
+              "prompt": "Match the verb to the emphasis",
+              "pairs": [
+                {
+                  "left": "Comí.",
+                  "right": "I ate. (neutral)"
+                },
+                {
+                  "left": "Me comí todo.",
+                  "right": "I ate everything up."
+                },
+                {
+                  "left": "Bebí agua.",
+                  "right": "I drank water. (neutral)"
+                },
+                {
+                  "left": "Me bebí el café.",
+                  "right": "I drank the coffee up."
+                }
+              ]
+            },
+            {
+              "id": "re3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I ate the whole cake.'",
+              "answer": "Me comí todo el pastel",
+              "bank": [
+                "Me",
+                "comí",
+                "todo",
+                "el",
+                "pastel",
+                "comer",
+                "la"
+              ]
+            },
+            {
+              "id": "re3-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Mi hermano se comió mi sándwich",
+              "options": [
+                "Mi hermano se comió mi sándwich",
+                "Mi hermano comió mi sándwich",
+                "Mi hermana se comió mi sándwich",
+                "Mi hermano se come mi sándwich"
+              ],
+              "answer": "Mi hermano se comió mi sándwich"
+            },
+            {
+              "id": "re3-8",
+              "type": "multiple_choice",
+              "prompt": "Why use 'se comió' instead of just 'comió' in 'Mi hermano se comió mi sándwich'?",
+              "options": [
+                "Because the brother ate himself.",
+                "Because the brother ate it up (the whole thing, completely).",
+                "Because 'comer' must always be reflexive.",
+                "Because 'se' makes it past tense."
+              ],
+              "answer": "Because the brother ate it up (the whole thing, completely)."
+            },
+            {
+              "id": "re3-9",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'We drank up all the wine.' Nos ___ todo el vino.",
+              "answer": "bebimos"
+            },
+            {
+              "id": "re3-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'You ate up all the cookies!'",
+              "answer": "¡Te comiste todas las galletas!",
+              "bank": [
+                "¡Te",
+                "comiste",
+                "todas",
+                "las",
+                "galletas!",
+                "comió",
+                "los"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-reflexive-emphatic-4",
+          "title": "morir vs morirse — neutral vs emotional",
+          "description": "'Cervantes murió' (formal) vs 'Se murió mi abuelo' (emotional) vs 'Me muero de risa' (figurative).",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "re4-1",
+              "type": "multiple_choice",
+              "prompt": "Translate (historical, neutral): 'Cervantes died in 1616.'",
+              "options": [
+                "Cervantes se murió en 1616.",
+                "Cervantes murió en 1616.",
+                "Cervantes muere en 1616.",
+                "Cervantes muerto en 1616."
+              ],
+              "answer": "Cervantes murió en 1616."
+            },
+            {
+              "id": "re4-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the version that sounds the most personal/emotional: 'My grandfather died last year.'",
+              "options": [
+                "Mi abuelo murió el año pasado.",
+                "Mi abuelo se murió el año pasado.",
+                "Mi abuelo muere el año pasado.",
+                "Mi abuelo está muerto el año pasado."
+              ],
+              "answer": "Mi abuelo se murió el año pasado."
+            },
+            {
+              "id": "re4-3",
+              "type": "multiple_choice",
+              "prompt": "Translate (figurative): 'I'm dying of laughter.'",
+              "options": [
+                "Muero de risa.",
+                "Me muero de risa.",
+                "Estoy muriendo de risa.",
+                "Mato de risa."
+              ],
+              "answer": "Me muero de risa."
+            },
+            {
+              "id": "re4-4",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'I'm starving.' Me ___ de hambre.",
+              "answer": "muero"
+            },
+            {
+              "id": "re4-5",
+              "type": "match_pairs",
+              "prompt": "Match the Spanish to the meaning",
+              "pairs": [
+                {
+                  "left": "Murió en la guerra.",
+                  "right": "He died in the war. (neutral)"
+                },
+                {
+                  "left": "Se murió de viejo.",
+                  "right": "He died of old age. (personal flavor)"
+                },
+                {
+                  "left": "Me muero de calor.",
+                  "right": "I'm dying of heat. (figurative)"
+                },
+                {
+                  "left": "Me muero de ganas.",
+                  "right": "I'm dying to (do something)."
+                }
+              ]
+            },
+            {
+              "id": "re4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I'm dying of hunger!'",
+              "answer": "¡Me muero de hambre!",
+              "bank": [
+                "¡Me",
+                "muero",
+                "de",
+                "hambre!",
+                "Muero",
+                "tengo"
+              ]
+            },
+            {
+              "id": "re4-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Se murió mi gato la semana pasada",
+              "options": [
+                "Se murió mi gato la semana pasada",
+                "Murió mi gato la semana pasada",
+                "Se murió mi perro la semana pasada",
+                "Se muere mi gato la semana pasada"
+              ],
+              "answer": "Se murió mi gato la semana pasada"
+            },
+            {
+              "id": "re4-8",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'I'm dying to see you.' Me muero de ___ de verte.",
+              "answer": "ganas"
+            },
+            {
+              "id": "re4-9",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 'morirse' figuratively?",
+              "options": [
+                "Mi tío se murió ayer.",
+                "Me muero de aburrimiento en clase.",
+                "Cervantes murió en 1616.",
+                "Murió un soldado en la batalla."
+              ],
+              "answer": "Me muero de aburrimiento en clase."
+            },
+            {
+              "id": "re4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'They're dying of cold.'",
+              "answer": "Se mueren de frío",
+              "bank": [
+                "Se",
+                "mueren",
+                "de",
+                "frío",
+                "muere",
+                "calor"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-reflexive-emphatic-5",
+          "title": "tomarse, caerse, llevarse — more patterns",
+          "description": "Other common 'se' verbs that add emphasis or change meaning.",
+          "theme": "verbs",
+          "xp": 13,
+          "exercises": [
+            {
+              "id": "re5-1",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'I drank up my coffee in two minutes.'",
+              "options": [
+                "Tomé mi café en dos minutos.",
+                "Me tomé mi café en dos minutos.",
+                "Tomar mi café en dos minutos.",
+                "Bebo mi café en dos minutos."
+              ],
+              "answer": "Me tomé mi café en dos minutos."
+            },
+            {
+              "id": "re5-2",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'The leaves are falling' (neutral, general).",
+              "options": [
+                "Las hojas se caen.",
+                "Las hojas caen.",
+                "Las hojas son caídas.",
+                "Las hojas cayéndose."
+              ],
+              "answer": "Las hojas caen."
+            },
+            {
+              "id": "re5-3",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'I fell down on the street' (sudden, personal).",
+              "options": [
+                "Caí en la calle.",
+                "Me caí en la calle.",
+                "Yo cayendo en la calle.",
+                "Caigo en la calle."
+              ],
+              "answer": "Me caí en la calle."
+            },
+            {
+              "id": "re5-4",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'I'm taking the whole pill.' Me ___ toda la pastilla.",
+              "answer": "tomo"
+            },
+            {
+              "id": "re5-5",
+              "type": "match_pairs",
+              "prompt": "Match each verb pair",
+              "pairs": [
+                {
+                  "left": "Caer",
+                  "right": "to fall (general)"
+                },
+                {
+                  "left": "Caerse",
+                  "right": "to fall down (sudden, personal)"
+                },
+                {
+                  "left": "Llevar",
+                  "right": "to carry / take to"
+                },
+                {
+                  "left": "Llevarse",
+                  "right": "to take away / get along with"
+                }
+              ]
+            },
+            {
+              "id": "re5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'The child fell down in the park.'",
+              "answer": "El niño se cayó en el parque",
+              "bank": [
+                "El",
+                "niño",
+                "se",
+                "cayó",
+                "en",
+                "el",
+                "parque",
+                "la"
+              ]
+            },
+            {
+              "id": "re5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Me llevo muy bien con mi hermana",
+              "options": [
+                "Me llevo muy bien con mi hermana",
+                "Llevo muy bien con mi hermana",
+                "Me llevo muy bien con mi hermano",
+                "Te llevas muy bien con mi hermana"
+              ],
+              "answer": "Me llevo muy bien con mi hermana"
+            },
+            {
+              "id": "re5-8",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'They take away the chairs after the party.' Se ___ las sillas después de la fiesta.",
+              "answer": "llevan"
+            },
+            {
+              "id": "re5-9",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 'llevarse' to mean 'get along'?",
+              "options": [
+                "Me llevo la mochila al trabajo.",
+                "Me llevo muy bien con mis colegas.",
+                "Llevo dos años aquí.",
+                "Llevo el almuerzo cada día."
+              ],
+              "answer": "Me llevo muy bien con mis colegas."
+            },
+            {
+              "id": "re5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'I drink my coffee black.'",
+              "answer": "Me tomo el café negro",
+              "bank": [
+                "Me",
+                "tomo",
+                "el",
+                "café",
+                "negro",
+                "tomar",
+                "blanco"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-reflexive-emphatic-6",
+          "title": "Recap of a wild party",
+          "description": "Dialogue: your friend tells you everything that happened at the party.",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "re6-1",
+              "type": "dialogue",
+              "prompt": "Marina tells you about last night's party",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "marina",
+                  "name": "Marina"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "marina",
+                  "text": "Ay, qué noche. Pablo se durmió en el sofá a las once.",
+                  "spokenText": "Ay, qué noche. Pablo se durmió en el sofá a las once."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Reply: 'Ha! And what about you?'",
+                  "options": [
+                    "¡Ja! ¿Y tú qué?",
+                    "¡Ja! ¿Y tú quién?",
+                    "¡Ja! ¿Y te qué?"
+                  ],
+                  "answer": "¡Ja! ¿Y tú qué?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "marina",
+                  "text": "Yo me comí toda la pizza, no quedó nada.",
+                  "spokenText": "Yo me comí toda la pizza, no quedó nada."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'I'm dying of laughter.' Me ___ de risa.",
+                  "before": "Me ",
+                  "after": " de risa.",
+                  "answer": "muero"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "marina",
+                  "text": "Y al final, a las dos, ya me fui a dormir.",
+                  "spokenText": "Y al final, a las dos, ya me fui a dormir."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say: 'I left at midnight, I was tired.'",
+                  "options": [
+                    "Yo me fui a medianoche, estaba cansado.",
+                    "Yo fui a medianoche, estaba cansado.",
+                    "Yo me iba a medianoche, estaba cansado."
+                  ],
+                  "answer": "Yo me fui a medianoche, estaba cansado."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "marina",
+                  "text": "¿Y te llevaste bien con Carlos?",
+                  "spokenText": "¿Y te llevaste bien con Carlos?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'Yes, we get along great.' Sí, ___ llevamos genial.",
+                  "before": "Sí, ",
+                  "after": " llevamos genial.",
+                  "answer": "nos"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "marina",
+                  "text": "Bueno, ya me voy, tengo clase. ¡Hablamos!",
+                  "spokenText": "Bueno, ya me voy, tengo clase. ¡Hablamos!"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Reply: 'OK, I'm leaving too. See you later!'",
+                  "options": [
+                    "Vale, yo también me voy. ¡Hasta luego!",
+                    "Vale, yo también voy. ¡Hasta luego!",
+                    "Vale, yo también me fui. ¡Hasta luego!"
+                  ],
+                  "answer": "Vale, yo también me voy. ¡Hasta luego!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-en-pragmatic-basics",
+      "title": "Discourse particles — sounding natural",
+      "description": "'Pues', 'bueno', 'vale', 'oye', 'mira', 'claro' — the little words that glue Spanish conversation.",
+      "theme": "basics",
+      "guide": {
+        "intro": "Listen to two Spanish speakers and you'll hear 'pues', 'bueno', 'vale', 'oye', 'mira' every few seconds. These tiny words don't really mean anything — they manage the conversation. Skip them and you sound like a textbook. Use them and you sound like a person.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "pues — well…"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Use 'pues' to soften a response, fill a thinking gap, or open a sentence. Think of it as English 'well…' or 'so…'."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "—¿Vienes? —Pues sí.",
+                "translation": "—Are you coming? —Well, yeah."
+              },
+              {
+                "source": "Pues yo creo que sí.",
+                "translation": "Well, I think so."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "bueno — alright, OK"
+          },
+          {
+            "kind": "paragraph",
+            "text": "'Bueno' agrees, wraps up, or moves the conversation on. It's flexible: 'OK then', 'alright', 'so anyway'."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Bueno, hablamos luego.",
+                "translation": "Alright, we'll talk later."
+              },
+              {
+                "source": "—¿Vamos? —Bueno.",
+                "translation": "—Shall we go? —OK."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "vale (Spain) / está bien (LatAm) — OK, got it"
+          },
+          {
+            "kind": "paragraph",
+            "text": "In Spain, 'vale' is the all-purpose 'OK'. In Latin America, you'll hear 'está bien', 'dale' (Argentina), 'órale' (Mexico) instead. Pick the one for your region."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "—Te veo a las cinco. —Vale.",
+                "translation": "—See you at five. —OK."
+              },
+              {
+                "source": "—¿Quieres café? —Sí, vale.",
+                "translation": "—Want coffee? —Yes, sure."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "oye / mira — hey, look"
+          },
+          {
+            "kind": "paragraph",
+            "text": "'Oye' (listen) and 'mira' (look) grab attention and soften requests or interruptions. Friendly, casual."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Oye, ¿tienes un minuto?",
+                "translation": "Hey, got a minute?"
+              },
+              {
+                "source": "Mira, te quería decir algo.",
+                "translation": "Look, I wanted to tell you something."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "vamos / claro — come on, of course"
+          },
+          {
+            "kind": "paragraph",
+            "text": "'Vamos' can mean 'let's go' but also 'come on, you know what I mean'. 'Claro' = of course, naturally, sure."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Vamos, no es tan difícil.",
+                "translation": "Come on, it's not that hard."
+              },
+              {
+                "source": "—¿Vienes? —¡Claro!",
+                "translation": "—Are you coming? —Of course!"
+              }
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Don't overdo it — sprinkle these like salt. Two or three per minute makes you sound native. Twelve makes you sound nervous."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "es-en-pragmatic-basics-1",
+          "title": "pues — 'well…'",
+          "description": "The all-purpose filler / response opener / softener.",
+          "theme": "basics",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pg1-1",
+              "type": "multiple_choice",
+              "prompt": "Best English translation of 'Pues, no sé.'",
+              "options": [
+                "No, I know.",
+                "Well, I don't know.",
+                "After, I don't know.",
+                "Because, I don't know."
+              ],
+              "answer": "Well, I don't know."
+            },
+            {
+              "id": "pg1-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the most natural reply to '¿Te gusta?': you like it OK.",
+              "options": [
+                "Pues sí, está bien.",
+                "Sí gusta.",
+                "Lo gusta a mí.",
+                "Que sí."
+              ],
+              "answer": "Pues sí, está bien."
+            },
+            {
+              "id": "pg1-3",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'Well, I think so.' ___ yo creo que sí.",
+              "answer": "Pues"
+            },
+            {
+              "id": "pg1-4",
+              "type": "match_pairs",
+              "prompt": "Match Spanish to English",
+              "pairs": [
+                {
+                  "left": "Pues sí.",
+                  "right": "Well, yes."
+                },
+                {
+                  "left": "Pues no.",
+                  "right": "Well, no."
+                },
+                {
+                  "left": "Pues nada.",
+                  "right": "Anyway, nothing."
+                },
+                {
+                  "left": "Pues claro.",
+                  "right": "Well, of course."
+                }
+              ]
+            },
+            {
+              "id": "pg1-5",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Well, I don't really know.'",
+              "answer": "Pues no sé muy bien",
+              "bank": [
+                "Pues",
+                "no",
+                "sé",
+                "muy",
+                "bien",
+                "es",
+                "sí"
+              ]
+            },
+            {
+              "id": "pg1-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Pues a mí me gusta mucho",
+              "options": [
+                "Pues a mí me gusta mucho",
+                "Pero a mí me gusta mucho",
+                "Pues a ti te gusta mucho",
+                "Pues a mí no me gusta mucho"
+              ],
+              "answer": "Pues a mí me gusta mucho"
+            },
+            {
+              "id": "pg1-7",
+              "type": "multiple_choice",
+              "prompt": "Which function is 'pues' performing in 'Pues no sé…'?",
+              "options": [
+                "Causal connector ('because').",
+                "Soft filler / hesitation while thinking.",
+                "Negation.",
+                "Question marker."
+              ],
+              "answer": "Soft filler / hesitation while thinking."
+            },
+            {
+              "id": "pg1-8",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'Well, that depends.' ___ depende.",
+              "answer": "Pues"
+            },
+            {
+              "id": "pg1-9",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Well, I prefer the other one.'",
+              "answer": "Pues yo prefiero el otro",
+              "bank": [
+                "Pues",
+                "yo",
+                "prefiero",
+                "el",
+                "otro",
+                "ella",
+                "una"
+              ]
+            },
+            {
+              "id": "pg1-10",
+              "type": "multiple_choice",
+              "prompt": "Which version sounds more conversational when answering 'How old are you?'",
+              "options": [
+                "—¿Cuántos años tienes? —Veinticinco años punto.",
+                "—¿Cuántos años tienes? —Pues, veinticinco.",
+                "—¿Cuántos años tienes? —Es años veinticinco.",
+                "—¿Cuántos años tienes? —Estoy veinticinco."
+              ],
+              "answer": "—¿Cuántos años tienes? —Pues, veinticinco."
+            }
+          ]
+        },
+        {
+          "id": "es-en-pragmatic-basics-2",
+          "title": "bueno — 'alright, OK'",
+          "description": "Agreement, wrap-up, transition — the Swiss army knife of Spanish conversation.",
+          "theme": "basics",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pg2-1",
+              "type": "multiple_choice",
+              "prompt": "Best English for 'Bueno, hablamos luego.'",
+              "options": [
+                "Good, we speak later.",
+                "Alright, we'll talk later.",
+                "Well, hello later.",
+                "Fine, speak now."
+              ],
+              "answer": "Alright, we'll talk later."
+            },
+            {
+              "id": "pg2-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the most natural Spanish to end a chat: 'OK then, see you later.'",
+              "options": [
+                "Bueno, hasta luego.",
+                "Bien, hasta luego.",
+                "Pues, hasta luego.",
+                "Bueno hasta luego ya."
+              ],
+              "answer": "Bueno, hasta luego."
+            },
+            {
+              "id": "pg2-3",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'OK, let's start.' ___, vamos a empezar.",
+              "answer": "Bueno"
+            },
+            {
+              "id": "pg2-4",
+              "type": "match_pairs",
+              "prompt": "Match each use of 'bueno'",
+              "pairs": [
+                {
+                  "left": "Bueno, sigamos.",
+                  "right": "OK, let's continue."
+                },
+                {
+                  "left": "Bueno, no importa.",
+                  "right": "Alright, it doesn't matter."
+                },
+                {
+                  "left": "—¿Vienes? —Bueno.",
+                  "right": "—Coming? —OK."
+                },
+                {
+                  "left": "Bueno, era mi idea.",
+                  "right": "Well, it was my idea."
+                }
+              ]
+            },
+            {
+              "id": "pg2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Alright, see you tomorrow.'",
+              "answer": "Bueno, hasta mañana",
+              "bank": [
+                "Bueno,",
+                "hasta",
+                "mañana",
+                "Bien",
+                "hoy"
+              ]
+            },
+            {
+              "id": "pg2-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Bueno, ya está, vamos",
+              "options": [
+                "Bueno, ya está, vamos",
+                "Pues, ya está, vamos",
+                "Bueno, ya estás, vamos",
+                "Bueno, ya está, vámonos"
+              ],
+              "answer": "Bueno, ya está, vamos"
+            },
+            {
+              "id": "pg2-7",
+              "type": "multiple_choice",
+              "prompt": "What is 'bueno' doing in 'Bueno, sigamos'?",
+              "options": [
+                "It means the food is good.",
+                "It signals a transition / a move on to the next thing.",
+                "It's a literal adjective.",
+                "It's a verb."
+              ],
+              "answer": "It signals a transition / a move on to the next thing."
+            },
+            {
+              "id": "pg2-8",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'Alright, let's see what happens.' ___, a ver qué pasa.",
+              "answer": "Bueno"
+            },
+            {
+              "id": "pg2-9",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'OK, that's enough for today.'",
+              "answer": "Bueno, ya basta por hoy",
+              "bank": [
+                "Bueno,",
+                "ya",
+                "basta",
+                "por",
+                "hoy",
+                "no",
+                "mañana"
+              ]
+            },
+            {
+              "id": "pg2-10",
+              "type": "multiple_choice",
+              "prompt": "In Mexico, 'bueno' is also used to answer the phone. What does '¿Bueno?' mean there?",
+              "options": [
+                "Good morning.",
+                "Hello? (answering the phone)",
+                "Who are you?",
+                "I'm fine."
+              ],
+              "answer": "Hello? (answering the phone)"
+            }
+          ]
+        },
+        {
+          "id": "es-en-pragmatic-basics-3",
+          "title": "vale / está bien — 'OK, got it'",
+          "description": "Regional 'OK': vale in Spain, está bien / dale / órale in Latin America.",
+          "theme": "basics",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pg3-1",
+              "type": "multiple_choice",
+              "prompt": "In Spain, what's the most common way to say 'OK'?",
+              "options": [
+                "Bien.",
+                "Vale.",
+                "Sí.",
+                "Mucho."
+              ],
+              "answer": "Vale."
+            },
+            {
+              "id": "pg3-2",
+              "type": "multiple_choice",
+              "prompt": "Which is a common Argentinian equivalent of Spain's 'vale'?",
+              "options": [
+                "Está bien.",
+                "Bueno.",
+                "Dale.",
+                "Pues."
+              ],
+              "answer": "Dale."
+            },
+            {
+              "id": "pg3-3",
+              "type": "fill_blank",
+              "prompt": "Fill in (Spain-style): 'See you at five.' '___.' (=OK)",
+              "answer": "Vale"
+            },
+            {
+              "id": "pg3-4",
+              "type": "fill_blank",
+              "prompt": "Fill in (LatAm-style): 'Want coffee?' 'Sí, ___ bien.'",
+              "answer": "está"
+            },
+            {
+              "id": "pg3-5",
+              "type": "match_pairs",
+              "prompt": "Match each region to its 'OK' word",
+              "pairs": [
+                {
+                  "left": "Spain",
+                  "right": "Vale"
+                },
+                {
+                  "left": "Argentina",
+                  "right": "Dale"
+                },
+                {
+                  "left": "Mexico",
+                  "right": "Órale"
+                },
+                {
+                  "left": "Most LatAm (neutral)",
+                  "right": "Está bien"
+                }
+              ]
+            },
+            {
+              "id": "pg3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'OK, I'll wait for you here.' (Spain)",
+              "answer": "Vale, te espero aquí",
+              "bank": [
+                "Vale,",
+                "te",
+                "espero",
+                "aquí",
+                "Te",
+                "allí"
+              ]
+            },
+            {
+              "id": "pg3-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Vale, nos vemos a las cinco",
+              "options": [
+                "Vale, nos vemos a las cinco",
+                "Bale, nos vemos a las cinco",
+                "Vale, nos vamos a las cinco",
+                "Vale, los vemos a las cinco"
+              ],
+              "answer": "Vale, nos vemos a las cinco"
+            },
+            {
+              "id": "pg3-8",
+              "type": "multiple_choice",
+              "prompt": "If you're in Buenos Aires, what's the most local-sounding way to say 'OK, sounds good'?",
+              "options": [
+                "Vale, suena bien.",
+                "Dale, suena bien.",
+                "Bien, suena bien.",
+                "Pues, suena bien."
+              ],
+              "answer": "Dale, suena bien."
+            },
+            {
+              "id": "pg3-9",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'OK then, see you tomorrow.' ___, hasta mañana.",
+              "answer": "Vale"
+            },
+            {
+              "id": "pg3-10",
+              "type": "multiple_choice",
+              "prompt": "Why does 'vale' sound odd in some Latin American countries?",
+              "options": [
+                "Because it's slang for something rude.",
+                "Because it's strongly associated with Spain and not commonly used locally.",
+                "Because it's archaic and only used in writing.",
+                "Because it means something different (e.g. 'it's worth')."
+              ],
+              "answer": "Because it's strongly associated with Spain and not commonly used locally."
+            }
+          ]
+        },
+        {
+          "id": "es-en-pragmatic-basics-4",
+          "title": "oye / mira — 'hey, look'",
+          "description": "Attention-getters that soften interruptions and requests.",
+          "theme": "basics",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pg4-1",
+              "type": "multiple_choice",
+              "prompt": "Pick the most casual translation of 'Hey, do you have a minute?'",
+              "options": [
+                "Oye, ¿tienes un minuto?",
+                "Escucha bien, ¿tienes un minuto?",
+                "Atención, ¿tienes un minuto?",
+                "Disculpe usted, ¿tiene un minuto?"
+              ],
+              "answer": "Oye, ¿tienes un minuto?"
+            },
+            {
+              "id": "pg4-2",
+              "type": "multiple_choice",
+              "prompt": "What does 'mira' literally mean and how is it used as a particle?",
+              "options": [
+                "It means 'look' literally; as a particle it means 'look here / I'll tell you'.",
+                "It means 'mirror'; same as a particle.",
+                "It means 'wait'; same as a particle.",
+                "It means 'smile'; same as a particle."
+              ],
+              "answer": "It means 'look' literally; as a particle it means 'look here / I'll tell you'."
+            },
+            {
+              "id": "pg4-3",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'Hey, what time is it?' ___, ¿qué hora es?",
+              "answer": "Oye"
+            },
+            {
+              "id": "pg4-4",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'Look, I wanted to tell you something.' ___, te quería decir algo.",
+              "answer": "Mira"
+            },
+            {
+              "id": "pg4-5",
+              "type": "match_pairs",
+              "prompt": "Match Spanish to English",
+              "pairs": [
+                {
+                  "left": "Oye, ¿tienes fuego?",
+                  "right": "Hey, got a light?"
+                },
+                {
+                  "left": "Mira, no es así.",
+                  "right": "Look, it's not like that."
+                },
+                {
+                  "left": "Oye, una pregunta…",
+                  "right": "Hey, a question…"
+                },
+                {
+                  "left": "Mira lo que hice.",
+                  "right": "Look at what I did."
+                }
+              ]
+            },
+            {
+              "id": "pg4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Hey, do you know where the bathroom is?'",
+              "answer": "Oye, ¿sabes dónde está el baño?",
+              "bank": [
+                "Oye,",
+                "¿sabes",
+                "dónde",
+                "está",
+                "el",
+                "baño?",
+                "Mira,",
+                "es"
+              ]
+            },
+            {
+              "id": "pg4-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Mira, no me parece buena idea",
+              "options": [
+                "Mira, no me parece buena idea",
+                "Mira, no me parece mala idea",
+                "Mira, no te parece buena idea",
+                "Mire, no me parece buena idea"
+              ],
+              "answer": "Mira, no me parece buena idea"
+            },
+            {
+              "id": "pg4-8",
+              "type": "multiple_choice",
+              "prompt": "In a formal situation with a stranger, you'd say:",
+              "options": [
+                "Oye, perdone…",
+                "Oiga, perdone…",
+                "Mira, perdone…",
+                "Tú, perdone…"
+              ],
+              "answer": "Oiga, perdone…"
+            },
+            {
+              "id": "pg4-9",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Look, I'll explain it to you.'",
+              "answer": "Mira, te lo explico",
+              "bank": [
+                "Mira,",
+                "te",
+                "lo",
+                "explico",
+                "le",
+                "explica"
+              ]
+            },
+            {
+              "id": "pg4-10",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'Hey, listen to this song.' ___, escucha esta canción.",
+              "answer": "Oye"
+            }
+          ]
+        },
+        {
+          "id": "es-en-pragmatic-basics-5",
+          "title": "vamos / claro — 'come on, of course'",
+          "description": "'Vamos' as 'let's go' and 'come on, you know what I mean'; 'claro' as 'of course'.",
+          "theme": "basics",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pg5-1",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'Of course!' (Yes obviously.)",
+              "options": [
+                "¡Claro!",
+                "¡Vale!",
+                "¡Bueno!",
+                "¡Mira!"
+              ],
+              "answer": "¡Claro!"
+            },
+            {
+              "id": "pg5-2",
+              "type": "multiple_choice",
+              "prompt": "What does 'vamos' mean in 'Vamos, no es tan difícil'?",
+              "options": [
+                "Let's go (physical motion).",
+                "Come on / look, it's not that hard. (encouragement)",
+                "We were.",
+                "We see."
+              ],
+              "answer": "Come on / look, it's not that hard. (encouragement)"
+            },
+            {
+              "id": "pg5-3",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'Of course I'm coming.' ___ que voy.",
+              "answer": "Claro"
+            },
+            {
+              "id": "pg5-4",
+              "type": "fill_blank",
+              "prompt": "Fill in: 'Come on, try it!' ¡___, pruébalo!",
+              "answer": "Vamos"
+            },
+            {
+              "id": "pg5-5",
+              "type": "match_pairs",
+              "prompt": "Match each Spanish particle to its English",
+              "pairs": [
+                {
+                  "left": "¡Claro!",
+                  "right": "Of course!"
+                },
+                {
+                  "left": "Claro que sí.",
+                  "right": "Of course yes."
+                },
+                {
+                  "left": "Vamos a ver.",
+                  "right": "Let's see."
+                },
+                {
+                  "left": "Vamos, anímate.",
+                  "right": "Come on, cheer up."
+                }
+              ]
+            },
+            {
+              "id": "pg5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Come on, you can do it.'",
+              "answer": "Vamos, tú puedes",
+              "bank": [
+                "Vamos,",
+                "tú",
+                "puedes",
+                "no",
+                "podemos"
+              ]
+            },
+            {
+              "id": "pg5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "Claro que te ayudo",
+              "options": [
+                "Claro que te ayudo",
+                "Claro que te ayudé",
+                "Claro que se ayudo",
+                "Claro que te ayude"
+              ],
+              "answer": "Claro que te ayudo"
+            },
+            {
+              "id": "pg5-8",
+              "type": "multiple_choice",
+              "prompt": "Which sentence best translates 'Come on, hurry up!'",
+              "options": [
+                "¡Vamos, date prisa!",
+                "¡Claro, date prisa!",
+                "¡Vamos, dame prisa!",
+                "¡Vamos, da prisa!"
+              ],
+              "answer": "¡Vamos, date prisa!"
+            },
+            {
+              "id": "pg5-9",
+              "type": "fill_blank",
+              "prompt": "Fill in: '—Are you helping me? —Of course!' —¿Me ayudas? —¡___!",
+              "answer": "Claro"
+            },
+            {
+              "id": "pg5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Order: 'Of course, no problem.'",
+              "answer": "Claro, no hay problema",
+              "bank": [
+                "Claro,",
+                "no",
+                "hay",
+                "problema",
+                "sí",
+                "tengo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-pragmatic-basics-6",
+          "title": "Phone chat with a friend",
+          "description": "Casual call peppered with pues, bueno, vale, oye, mira and claro.",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pg6-1",
+              "type": "dialogue",
+              "prompt": "Pick up the phone — your friend Sara is calling",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "sara",
+                  "name": "Sara"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "sara",
+                  "text": "¡Oye! ¿Tienes un minuto?",
+                  "spokenText": "¡Oye! ¿Tienes un minuto?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Reply: 'Of course, what's up?'",
+                  "options": [
+                    "¡Claro! ¿Qué pasa?",
+                    "¡Vale! ¿Qué pasa?",
+                    "¡Bueno! ¿Qué pasa?"
+                  ],
+                  "answer": "¡Claro! ¿Qué pasa?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sara",
+                  "text": "Pues, te quería preguntar algo sobre el sábado.",
+                  "spokenText": "Pues, te quería preguntar algo sobre el sábado."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'Look, tell me.' ___, dime.",
+                  "before": "",
+                  "after": ", dime.",
+                  "answer": "Mira"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sara",
+                  "text": "¿Quieres venir al cine a las ocho?",
+                  "spokenText": "¿Quieres venir al cine a las ocho?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Reply (Spain-style): 'OK, sounds great.'",
+                  "options": [
+                    "Vale, suena genial.",
+                    "Bueno, suena genial.",
+                    "Pues, suena genial."
+                  ],
+                  "answer": "Vale, suena genial."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sara",
+                  "text": "Genial. Bueno, te llamo después con los detalles.",
+                  "spokenText": "Genial. Bueno, te llamo después con los detalles."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Fill in: 'Alright then, see you later.' ___, hasta luego.",
+                  "before": "",
+                  "after": ", hasta luego.",
+                  "answer": "Bueno"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "sara",
+                  "text": "Oye, una cosa más — ¿puedes traer las palomitas?",
+                  "spokenText": "Oye, una cosa más — ¿puedes traer las palomitas?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Reply: 'Of course, no problem!'",
+                  "options": [
+                    "¡Claro, no hay problema!",
+                    "¡Vamos, no hay problema!",
+                    "¡Pues, no hay problema!"
+                  ],
+                  "answer": "¡Claro, no hay problema!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "es-en-a2-review",
       "title": "A2 review — mixed practice",
       "description": "Pretérito + imperfecto, pronouns, gustar, going-to future. Everything together.",

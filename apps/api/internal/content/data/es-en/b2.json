@@ -9706,6 +9706,2169 @@
       ]
     },
     {
+      "id": "es-en-mood-conjunctions",
+      "title": "Indicative vs subjunctive with conjunctions",
+      "description": "Mood as meaning — aunque, cuando, donde, como, and porque swap moods to swap message",
+      "theme": "verbs",
+      "guide": {
+        "intro": "B2 is where Spanish mood stops being about triggers and starts being about meaning. The same conjunction (aunque, cuando, donde, como, porque) takes indicative or subjunctive depending on whether the event is real/known or hypothetical/unknown. Swapping the mood swaps the message.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "aunque — although vs even if"
+          },
+          {
+            "kind": "paragraph",
+            "text": "aunque + indicative = factual concession (the speaker treats the obstacle as real). aunque + subjunctive = hypothetical concession (the obstacle may or may not be real)."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Aunque llueve, voy a salir.",
+                "translation": "Although it's raining (and it IS), I'm going out."
+              },
+              {
+                "source": "Aunque llueva, voy a salir.",
+                "translation": "Even if it rains, I'm going out."
+              },
+              {
+                "source": "Aunque era caro, lo compramos.",
+                "translation": "Although it was expensive (and it was), we bought it."
+              },
+              {
+                "source": "Aunque fuera caro, lo compraríamos.",
+                "translation": "Even if it were expensive, we'd buy it."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "cuando — habit, past, future-unknown"
+          },
+          {
+            "kind": "paragraph",
+            "text": "cuando + indicative = habit (present) or completed past. cuando + subjunctive = future event whose exact timing is unknown."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Cuando llega, cenamos.",
+                "translation": "When he arrives (every night), we have dinner."
+              },
+              {
+                "source": "Cuando llegue, cenaremos.",
+                "translation": "When he arrives (tonight), we'll have dinner."
+              },
+              {
+                "source": "Cuando llegó ayer, cenamos.",
+                "translation": "When he arrived yesterday, we had dinner."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "donde / como — definite vs indefinite"
+          },
+          {
+            "kind": "paragraph",
+            "text": "donde and como with indicative point to a known place or specific manner. With subjunctive they mean 'wherever' or 'however' — indefinite."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Vivo donde naciste.",
+                "translation": "I live where you were born. (specific known place)"
+              },
+              {
+                "source": "Vive donde quieras.",
+                "translation": "Live wherever you want."
+              },
+              {
+                "source": "Hazlo como te enseñé.",
+                "translation": "Do it the way I taught you."
+              },
+              {
+                "source": "Hazlo como puedas.",
+                "translation": "Do it however you can."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "porque and no porque"
+          },
+          {
+            "kind": "paragraph",
+            "text": "porque + indicative = real cause. no porque + subjunctive = denied cause, usually paired with 'sino porque + indicative' for the real one."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Me quedo porque quiero.",
+                "translation": "I'm staying because I want to."
+              },
+              {
+                "source": "No me quedo porque sea fácil, sino porque me importa.",
+                "translation": "I'm not staying because it's easy, but because I care."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Rule of thumb"
+          },
+          {
+            "kind": "paragraph",
+            "text": "If the speaker is asserting that the event happens (or happened, or always happens), use indicative. If the event is conditional, unknown, hypothetical, or being denied as a reason, use subjunctive."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "es-en-mood-conjunctions-1",
+          "title": "aunque — fact vs hypothesis",
+          "description": "Indicative for known facts, subjunctive for 'even if' hypotheticals",
+          "theme": "verbs",
+          "xp": 15,
+          "exercises": [
+            {
+              "id": "mc1-1",
+              "type": "match_pairs",
+              "prompt": "Match the conjunction to its mood-meaning split",
+              "pairs": [
+                {
+                  "left": "aunque + indicativo",
+                  "right": "although (a known fact)"
+                },
+                {
+                  "left": "aunque + subjuntivo",
+                  "right": "even if (hypothetical)"
+                },
+                {
+                  "left": "cuando + indicativo",
+                  "right": "when (habitual/past)"
+                },
+                {
+                  "left": "cuando + subjuntivo",
+                  "right": "when (future/unknown)"
+                },
+                {
+                  "left": "no porque + subjuntivo",
+                  "right": "not because (denied cause)"
+                }
+              ]
+            },
+            {
+              "id": "mc1-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the factual concession: 'Although it IS raining, I'm going out.'",
+              "options": [
+                "Aunque llueva, voy a salir.",
+                "Aunque llueve, voy a salir.",
+                "Aunque lloviera, voy a salir.",
+                "Aunque lloviese, salgo."
+              ],
+              "answer": "Aunque llueve, voy a salir.",
+              "explanation": "Indicative ('llueve') signals the rain is a known fact."
+            },
+            {
+              "id": "mc1-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the hypothetical concession: 'Even IF it rains, I'm going out.'",
+              "options": [
+                "Aunque llueve, voy a salir.",
+                "Aunque está lloviendo, salgo.",
+                "Aunque llueva, voy a salir.",
+                "Aunque lloverá, salgo."
+              ],
+              "answer": "Aunque llueva, voy a salir.",
+              "explanation": "Subjunctive ('llueva') = hypothetical/uncertain."
+            },
+            {
+              "id": "mc1-4",
+              "type": "fill_blank",
+              "prompt": "Fact: 'Although he's tired, he keeps studying.' → 'Aunque ___ cansado, sigue estudiando.'",
+              "answer": "está",
+              "explanation": "Indicative — observed fact."
+            },
+            {
+              "id": "mc1-5",
+              "type": "fill_blank",
+              "prompt": "Hypothetical: 'Even if he were tired, he'd keep studying.' → 'Aunque ___ cansado, seguiría estudiando.'",
+              "answer": "estuviera",
+              "acceptableAnswers": [
+                "estuviese"
+              ],
+              "explanation": "Imperfect subjunctive — past/conditional hypothetical."
+            },
+            {
+              "id": "mc1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (factual): 'Although she knows the truth, she stays quiet.'",
+              "answer": "Aunque sabe la verdad , se calla .",
+              "bank": [
+                "Aunque",
+                "sabe",
+                "la",
+                "verdad",
+                ",",
+                "se",
+                "calla",
+                "."
+              ]
+            },
+            {
+              "id": "mc1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (hypothetical): 'Even if she knew the truth, she would stay quiet.'",
+              "answer": "Aunque supiera la verdad , se callaría .",
+              "bank": [
+                "Aunque",
+                "supiera",
+                "la",
+                "verdad",
+                ",",
+                "se",
+                "callaría",
+                "."
+              ]
+            },
+            {
+              "id": "mc1-8",
+              "type": "multiple_choice",
+              "prompt": "Which sentence implies the cost is CONFIRMED to be high?",
+              "options": [
+                "Aunque el viaje sea caro, lo haré.",
+                "Aunque el viaje es caro, lo haré.",
+                "Aunque el viaje fuera caro, lo haría.",
+                "Aunque el viaje fuese caro, lo hacía."
+              ],
+              "answer": "Aunque el viaje es caro, lo haré.",
+              "explanation": "Indicative 'es' confirms the price is real."
+            },
+            {
+              "id": "mc1-9",
+              "type": "fill_blank",
+              "prompt": "Translate 'Even if you ask me, I won't tell you.'",
+              "answer": "Aunque me lo pidas, no te lo diré.",
+              "acceptableAnswers": [
+                "Aunque me lo pidas no te lo diré."
+              ],
+              "explanation": "Future hypothetical → present subjunctive 'pidas'."
+            },
+            {
+              "id": "mc1-10",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "Aunque llueva mañana, iremos al campo.",
+              "options": [
+                "Aunque llueve mañana, iremos al campo.",
+                "Aunque llueva mañana, iremos al campo.",
+                "Aunque lloviera mañana, iríamos al campo.",
+                "Aunque lloverá mañana, iremos al campo."
+              ],
+              "answer": "Aunque llueva mañana, iremos al campo.",
+              "explanation": "Future-unknown → subjunctive 'llueva'."
+            },
+            {
+              "id": "mc1-11",
+              "type": "multiple_choice",
+              "prompt": "Choose the best translation: 'Although it was expensive (and it was), we bought it.'",
+              "options": [
+                "Aunque fuera caro, lo compramos.",
+                "Aunque era caro, lo compramos.",
+                "Aunque sea caro, lo compramos.",
+                "Aunque fuese caro, lo compraríamos."
+              ],
+              "answer": "Aunque era caro, lo compramos.",
+              "explanation": "Past indicative 'era' = observed history."
+            },
+            {
+              "id": "mc1-12",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'Even if I had the money, I wouldn't buy that car.'",
+              "answer": "Aunque tuviera el dinero , no compraría ese coche .",
+              "bank": [
+                "Aunque",
+                "tuviera",
+                "el",
+                "dinero",
+                ",",
+                "no",
+                "compraría",
+                "ese",
+                "coche",
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-mood-conjunctions-2",
+          "title": "cuando — habit, past, future-unknown",
+          "description": "Indicative for habits and completed past, subjunctive for unknown future",
+          "theme": "verbs",
+          "xp": 15,
+          "exercises": [
+            {
+              "id": "mc2-1",
+              "type": "match_pairs",
+              "prompt": "Match the cuando + mood combo",
+              "pairs": [
+                {
+                  "left": "Cuando llega, comemos.",
+                  "right": "When he arrives (habit), we eat."
+                },
+                {
+                  "left": "Cuando llegó, comimos.",
+                  "right": "When he arrived (past), we ate."
+                },
+                {
+                  "left": "Cuando llegue, comeremos.",
+                  "right": "When he arrives (future), we'll eat."
+                },
+                {
+                  "left": "Cuando llegara, comíamos.",
+                  "right": "Whenever he arrived (past habit), we'd eat."
+                }
+              ]
+            },
+            {
+              "id": "mc2-2",
+              "type": "multiple_choice",
+              "prompt": "Habit (every day): 'When the alarm rings, I get up.'",
+              "options": [
+                "Cuando suene la alarma, me levanto.",
+                "Cuando sonara la alarma, me levanto.",
+                "Cuando suena la alarma, me levanto.",
+                "Cuando sonó la alarma, me levanto."
+              ],
+              "answer": "Cuando suena la alarma, me levanto.",
+              "explanation": "Habitual present → indicative."
+            },
+            {
+              "id": "mc2-3",
+              "type": "multiple_choice",
+              "prompt": "Future: 'When the alarm rings (tomorrow), I'll get up.'",
+              "options": [
+                "Cuando suena la alarma, me levantaré.",
+                "Cuando suene la alarma, me levantaré.",
+                "Cuando sonará la alarma, me levantaré.",
+                "Cuando sonó la alarma, me levantaré."
+              ],
+              "answer": "Cuando suene la alarma, me levantaré.",
+              "explanation": "Future-unknown trigger → present subjunctive."
+            },
+            {
+              "id": "mc2-4",
+              "type": "fill_blank",
+              "prompt": "Future plan: 'When I finish university, I'll travel.' → 'Cuando ___ la universidad, viajaré.'",
+              "answer": "termine",
+              "acceptableAnswers": [
+                "acabe"
+              ]
+            },
+            {
+              "id": "mc2-5",
+              "type": "fill_blank",
+              "prompt": "Past habit: 'When I lived in Madrid, I went out every weekend.' → 'Cuando ___ en Madrid, salía cada fin de semana.'",
+              "answer": "vivía",
+              "explanation": "Past habitual → imperfect indicative."
+            },
+            {
+              "id": "mc2-6",
+              "type": "fill_blank",
+              "prompt": "One-off past: 'When she called me yesterday, I didn't answer.' → 'Cuando me ___ ayer, no contesté.'",
+              "answer": "llamó",
+              "explanation": "One-shot past → preterite."
+            },
+            {
+              "id": "mc2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (future): 'When you arrive in Madrid, call me.'",
+              "answer": "Cuando llegues a Madrid , llámame .",
+              "bank": [
+                "Cuando",
+                "llegues",
+                "a",
+                "Madrid",
+                ",",
+                "llámame",
+                "."
+              ]
+            },
+            {
+              "id": "mc2-8",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (habit): 'When she arrives at work, she drinks coffee.'",
+              "answer": "Cuando llega al trabajo , toma café .",
+              "bank": [
+                "Cuando",
+                "llega",
+                "al",
+                "trabajo",
+                ",",
+                "toma",
+                "café",
+                "."
+              ]
+            },
+            {
+              "id": "mc2-9",
+              "type": "multiple_choice",
+              "prompt": "Pick the one that talks about a SPECIFIC past moment (not a habit):",
+              "options": [
+                "Cuando era pequeño, jugaba mucho.",
+                "Cuando vivíamos allí, salíamos cada día.",
+                "Cuando me llamó anoche, ya dormía.",
+                "Cuando hablábamos, siempre reíamos."
+              ],
+              "answer": "Cuando me llamó anoche, ya dormía.",
+              "explanation": "Preterite 'llamó' anchors a specific past moment."
+            },
+            {
+              "id": "mc2-10",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "Cuando puedas, avísame.",
+              "options": [
+                "Cuando puedes, avísame.",
+                "Cuando puedas, avísame.",
+                "Cuando pudieras, avísame.",
+                "Cuando podrás, avísame."
+              ],
+              "answer": "Cuando puedas, avísame.",
+              "explanation": "'Whenever you can' → subjunctive 'puedas'."
+            },
+            {
+              "id": "mc2-11",
+              "type": "fill_blank",
+              "prompt": "Past hypothetical habit: 'Whenever she called (we never knew when), we'd answer.' → 'Cuando ___ , contestábamos.'",
+              "answer": "llamara",
+              "acceptableAnswers": [
+                "llamase"
+              ]
+            },
+            {
+              "id": "mc2-12",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'When we have time, we'll visit you.'",
+              "answer": "Cuando tengamos tiempo , te visitaremos .",
+              "bank": [
+                "Cuando",
+                "tengamos",
+                "tiempo",
+                ",",
+                "te",
+                "visitaremos",
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-mood-conjunctions-3",
+          "title": "donde / como — definite vs indefinite",
+          "description": "Real, known place/manner stays indicative; 'wherever/however' takes subjunctive",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "mc3-1",
+              "type": "match_pairs",
+              "prompt": "Match the donde/como pairing",
+              "pairs": [
+                {
+                  "left": "Vivo donde naciste.",
+                  "right": "I live where you were born. (known place)"
+                },
+                {
+                  "left": "Vive donde quieras.",
+                  "right": "Live wherever you want. (any place)"
+                },
+                {
+                  "left": "Lo hago como tú dices.",
+                  "right": "I do it as you say. (specified manner)"
+                },
+                {
+                  "left": "Hazlo como puedas.",
+                  "right": "Do it however you can. (any manner)"
+                }
+              ]
+            },
+            {
+              "id": "mc3-2",
+              "type": "multiple_choice",
+              "prompt": "Known place: 'I'll meet you where we met yesterday.'",
+              "options": [
+                "Te veré donde nos veamos ayer.",
+                "Te veré donde nos vimos ayer.",
+                "Te veré donde nos veríamos ayer.",
+                "Te veré donde nos viéramos ayer."
+              ],
+              "answer": "Te veré donde nos vimos ayer.",
+              "explanation": "Specific past place → indicative."
+            },
+            {
+              "id": "mc3-3",
+              "type": "multiple_choice",
+              "prompt": "Indefinite place: 'Sit wherever you want.'",
+              "options": [
+                "Siéntate donde quieres.",
+                "Siéntate donde quieras.",
+                "Siéntate donde querrás.",
+                "Siéntate donde quisieras."
+              ],
+              "answer": "Siéntate donde quieras.",
+              "explanation": "'Wherever' = indefinite → subjunctive."
+            },
+            {
+              "id": "mc3-4",
+              "type": "fill_blank",
+              "prompt": "Specified manner: 'Cook it the way Grandma taught me.' → 'Cocínalo como me ___ la abuela.'",
+              "answer": "enseñó"
+            },
+            {
+              "id": "mc3-5",
+              "type": "fill_blank",
+              "prompt": "Open manner: 'Cook it however you want.' → 'Cocínalo como ___ .'",
+              "answer": "quieras"
+            },
+            {
+              "id": "mc3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (definite): 'I work where I studied.'",
+              "answer": "Trabajo donde estudié .",
+              "bank": [
+                "Trabajo",
+                "donde",
+                "estudié",
+                "."
+              ]
+            },
+            {
+              "id": "mc3-7",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (indefinite): 'I'll work wherever they hire me.'",
+              "answer": "Trabajaré donde me contraten .",
+              "bank": [
+                "Trabajaré",
+                "donde",
+                "me",
+                "contraten",
+                "."
+              ]
+            },
+            {
+              "id": "mc3-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the sentence meaning 'in whatever way is necessary':",
+              "options": [
+                "Lo resolveremos como sea necesario.",
+                "Lo resolveremos como es necesario.",
+                "Lo resolvemos como sería necesario.",
+                "Lo resolveremos como fue necesario."
+              ],
+              "answer": "Lo resolveremos como sea necesario.",
+              "explanation": "'Whatever way' → subjunctive 'sea'."
+            },
+            {
+              "id": "mc3-9",
+              "type": "fill_blank",
+              "prompt": "Translate: 'Put it wherever you find space.' → 'Ponlo donde ___ sitio.'",
+              "answer": "encuentres",
+              "acceptableAnswers": [
+                "halles"
+              ]
+            },
+            {
+              "id": "mc3-10",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "Vive como puede, no como quiere.",
+              "options": [
+                "Vive como pueda, no como quiera.",
+                "Vive como puede, no como quiere.",
+                "Vive como pudo, no como quiso.",
+                "Vivirá como pueda, no como quiera."
+              ],
+              "answer": "Vive como puede, no como quiere.",
+              "explanation": "Indicative twice — describing the man's actual life, not hypotheticals."
+            },
+            {
+              "id": "mc3-11",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'Do it however you prefer.'",
+              "answer": "Hazlo como prefieras .",
+              "bank": [
+                "Hazlo",
+                "como",
+                "prefieras",
+                "."
+              ]
+            },
+            {
+              "id": "mc3-12",
+              "type": "fill_blank",
+              "prompt": "Known location: 'The restaurant is where the old church used to be.' → 'El restaurante está donde ___ la iglesia vieja.'",
+              "answer": "estaba"
+            }
+          ]
+        },
+        {
+          "id": "es-en-mood-conjunctions-4",
+          "title": "porque and negated cause",
+          "description": "Asserting a cause stays indicative; denying one demands subjunctive",
+          "theme": "verbs",
+          "xp": 15,
+          "exercises": [
+            {
+              "id": "mc4-1",
+              "type": "match_pairs",
+              "prompt": "Match the cause structure",
+              "pairs": [
+                {
+                  "left": "porque + indicativo",
+                  "right": "because (real cause)"
+                },
+                {
+                  "left": "no porque + subjuntivo, sino porque + indicativo",
+                  "right": "not because X, but because Y"
+                },
+                {
+                  "left": "ya que + indicativo",
+                  "right": "since (real cause)"
+                },
+                {
+                  "left": "puesto que + indicativo",
+                  "right": "given that (real cause)"
+                }
+              ]
+            },
+            {
+              "id": "mc4-2",
+              "type": "multiple_choice",
+              "prompt": "Standard cause: 'I'm not going because I'm tired.'",
+              "options": [
+                "No voy porque esté cansado.",
+                "No voy porque estoy cansado.",
+                "No voy porque estaría cansado.",
+                "No voy porque estuviera cansado."
+              ],
+              "answer": "No voy porque estoy cansado.",
+              "explanation": "Affirmed cause → indicative; negation is on 'voy', not the cause."
+            },
+            {
+              "id": "mc4-3",
+              "type": "multiple_choice",
+              "prompt": "Denied cause: 'I'm not staying because it's hard, but because I want to.'",
+              "options": [
+                "No me quedo porque es difícil, sino porque quiero.",
+                "No me quedo porque sea difícil, sino porque quiero.",
+                "No me quedo porque sería difícil, sino porque quiero.",
+                "No me quedo porque fuera difícil, sino porque quiero."
+              ],
+              "answer": "No me quedo porque sea difícil, sino porque quiero.",
+              "explanation": "'No porque + subj, sino porque + indic' — classic shape."
+            },
+            {
+              "id": "mc4-4",
+              "type": "fill_blank",
+              "prompt": "Denied cause: 'She called me, not because she missed me, but because she needed help.' → 'Me llamó, no porque me ___ , sino porque necesitaba ayuda.'",
+              "answer": "echara de menos",
+              "acceptableAnswers": [
+                "echase de menos",
+                "extrañara",
+                "extrañase"
+              ]
+            },
+            {
+              "id": "mc4-5",
+              "type": "fill_blank",
+              "prompt": "Real cause: 'He came because he wanted to.' → 'Vino porque ___ .'",
+              "answer": "quiso",
+              "acceptableAnswers": [
+                "quería"
+              ]
+            },
+            {
+              "id": "mc4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'I'm telling you not because I want to hurt you, but because you should know.'",
+              "answer": "Te lo digo no porque quiera hacerte daño , sino porque debes saberlo .",
+              "bank": [
+                "Te",
+                "lo",
+                "digo",
+                "no",
+                "porque",
+                "quiera",
+                "hacerte",
+                "daño",
+                ",",
+                "sino",
+                "porque",
+                "debes",
+                "saberlo",
+                "."
+              ]
+            },
+            {
+              "id": "mc4-7",
+              "type": "multiple_choice",
+              "prompt": "Which signals 'just because' rejecting a wrong assumption?",
+              "options": [
+                "Lo digo porque es verdad.",
+                "No lo digo porque sea verdad, lo digo porque me preocupo.",
+                "Lo digo porque tú lo dijiste.",
+                "Lo digo porque sea bonito."
+              ],
+              "answer": "No lo digo porque sea verdad, lo digo porque me preocupo.",
+              "explanation": "Denies the assumed cause and offers the real one."
+            },
+            {
+              "id": "mc4-8",
+              "type": "fill_blank",
+              "prompt": "Real reason: 'Since it's late, we'll continue tomorrow.' → 'Ya que ___ tarde, seguiremos mañana.'",
+              "answer": "es"
+            },
+            {
+              "id": "mc4-9",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "No protesto porque me guste, sino porque es injusto.",
+              "options": [
+                "No protesto porque me gusta, sino porque es injusto.",
+                "No protesto porque me guste, sino porque es injusto.",
+                "Protesto porque me guste y es injusto.",
+                "No protestaba porque me gustara, sino porque era injusto."
+              ],
+              "answer": "No protesto porque me guste, sino porque es injusto.",
+              "explanation": "Denied cause (subj) + real cause (indic)."
+            },
+            {
+              "id": "mc4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'He didn't quit because he was lazy, but because he was exhausted.'",
+              "answer": "No renunció porque fuera perezoso , sino porque estaba agotado .",
+              "bank": [
+                "No",
+                "renunció",
+                "porque",
+                "fuera",
+                "perezoso",
+                ",",
+                "sino",
+                "porque",
+                "estaba",
+                "agotado",
+                "."
+              ]
+            },
+            {
+              "id": "mc4-11",
+              "type": "fill_blank",
+              "prompt": "Real cause, past: 'They left because it was raining.' → 'Se fueron porque ___ .'",
+              "answer": "llovía",
+              "acceptableAnswers": [
+                "estaba lloviendo"
+              ]
+            },
+            {
+              "id": "mc4-12",
+              "type": "multiple_choice",
+              "prompt": "Choose the most natural denial-of-cause:",
+              "options": [
+                "No te lo presto porque seas mi amigo; te lo presto porque lo necesitas.",
+                "No te lo presto porque eres mi amigo; te lo presto porque lo necesitas.",
+                "No te lo prestaría porque fueras mi amigo; te lo presto porque lo necesitas.",
+                "No prestar amigo, prestar necesitas."
+              ],
+              "answer": "No te lo presto porque seas mi amigo; te lo presto porque lo necesitas.",
+              "explanation": "Rejected cause → subj; real cause → indic."
+            }
+          ]
+        },
+        {
+          "id": "es-en-mood-conjunctions-5",
+          "title": "Mixed mood — rewriting and shifting meaning",
+          "description": "Move the same sentence between fact, habit, future, and hypothesis",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "mc5-1",
+              "type": "multiple_choice",
+              "prompt": "Shift to hypothetical: 'Aunque tengo dinero, no compro nada.' → 'Even IF I had money...'",
+              "options": [
+                "Aunque tenga dinero, no compraría nada.",
+                "Aunque tuviera dinero, no compraría nada.",
+                "Aunque tengo dinero, no compraría nada.",
+                "Aunque tendría dinero, no compraría nada."
+              ],
+              "answer": "Aunque tuviera dinero, no compraría nada.",
+              "explanation": "Past hypothetical 'even if I had' → imperfect subj + conditional."
+            },
+            {
+              "id": "mc5-2",
+              "type": "multiple_choice",
+              "prompt": "Shift to future-unknown: 'Cuando llegamos, te aviso.' → 'When we arrive (future)...'",
+              "options": [
+                "Cuando llegamos, te aviso.",
+                "Cuando llegaremos, te avisaré.",
+                "Cuando lleguemos, te aviso.",
+                "Cuando llegáramos, te avisaría."
+              ],
+              "answer": "Cuando lleguemos, te aviso.",
+              "explanation": "Future-unknown → subjunctive 'lleguemos'."
+            },
+            {
+              "id": "mc5-3",
+              "type": "fill_blank",
+              "prompt": "Habit: 'Cuando ___ a casa, ceno.' (every day)",
+              "answer": "llego"
+            },
+            {
+              "id": "mc5-4",
+              "type": "fill_blank",
+              "prompt": "Future: 'Cuando ___ a casa, cenaré.' (tonight)",
+              "answer": "llegue"
+            },
+            {
+              "id": "mc5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Translate (hypothetical concession): 'Even if you said sorry, she wouldn't forgive you.'",
+              "answer": "Aunque le pidieras perdón , no te perdonaría .",
+              "bank": [
+                "Aunque",
+                "le",
+                "pidieras",
+                "perdón",
+                ",",
+                "no",
+                "te",
+                "perdonaría",
+                "."
+              ]
+            },
+            {
+              "id": "mc5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Translate (factual concession): 'Although he says sorry every day, she doesn't forgive him.'",
+              "answer": "Aunque le pide perdón cada día , no lo perdona .",
+              "bank": [
+                "Aunque",
+                "le",
+                "pide",
+                "perdón",
+                "cada",
+                "día",
+                ",",
+                "no",
+                "lo",
+                "perdona",
+                "."
+              ]
+            },
+            {
+              "id": "mc5-7",
+              "type": "multiple_choice",
+              "prompt": "Identify the sentence that DENIES a cause:",
+              "options": [
+                "Lo hice porque me lo pediste.",
+                "No lo hice porque me lo pidieras, lo hice por mí.",
+                "Aunque me lo pidas, no lo hago.",
+                "Cuando me lo pidas, lo haré."
+              ],
+              "answer": "No lo hice porque me lo pidieras, lo hice por mí.",
+              "explanation": "'No porque + subj' = denied cause."
+            },
+            {
+              "id": "mc5-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural translation of 'I'll go wherever you go.'",
+              "options": [
+                "Iré donde vas.",
+                "Iré donde vayas.",
+                "Voy donde irás.",
+                "Iría donde fueras."
+              ],
+              "answer": "Iré donde vayas.",
+              "explanation": "Indefinite future place → present subjunctive."
+            },
+            {
+              "id": "mc5-9",
+              "type": "fill_blank",
+              "prompt": "Open manner: 'Lo arreglo como ___ .' (however needed)",
+              "answer": "haga falta",
+              "acceptableAnswers": [
+                "sea necesario"
+              ]
+            },
+            {
+              "id": "mc5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Translate: 'Although she's right, no one listens to her.'",
+              "answer": "Aunque tiene razón , nadie la escucha .",
+              "bank": [
+                "Aunque",
+                "tiene",
+                "razón",
+                ",",
+                "nadie",
+                "la",
+                "escucha",
+                "."
+              ]
+            },
+            {
+              "id": "mc5-11",
+              "type": "tap_words_in_order",
+              "prompt": "Translate: 'Even if she were right, no one would listen to her.'",
+              "answer": "Aunque tuviera razón , nadie la escucharía .",
+              "bank": [
+                "Aunque",
+                "tuviera",
+                "razón",
+                ",",
+                "nadie",
+                "la",
+                "escucharía",
+                "."
+              ]
+            },
+            {
+              "id": "mc5-12",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "Cuando puedan, vengan a vernos donde queramos quedar.",
+              "options": [
+                "Cuando pueden, vienen a vernos donde queremos quedar.",
+                "Cuando puedan, vengan a vernos donde queramos quedar.",
+                "Cuando pudieron, vinieron a vernos donde quisieron quedar.",
+                "Cuando podrán, vendrán a vernos donde querremos quedar."
+              ],
+              "answer": "Cuando puedan, vengan a vernos donde queramos quedar.",
+              "explanation": "Future-unknown cuando + indefinite donde — both subjunctive."
+            }
+          ]
+        },
+        {
+          "id": "es-en-mood-conjunctions-6",
+          "title": "Dialogue: Planning a trip to Madrid",
+          "description": "Mix future-cuando with past indicative and concession aunque",
+          "theme": "verbs",
+          "xp": 15,
+          "exercises": [
+            {
+              "id": "es-en-mood-conjunctions-6-d1",
+              "type": "dialogue",
+              "prompt": "You're planning a Madrid trip with your friend Lucía",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "lucia",
+                  "name": "Lucía"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "Oye, ¿cuándo crees que llegaremos a Madrid?",
+                  "spokenText": "Oye, ¿cuándo crees que llegaremos a Madrid?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Future-unknown: 'When we arrive in Madrid, I'll call my cousin.'",
+                  "options": [
+                    "Cuando llegamos a Madrid, llamo a mi primo.",
+                    "Cuando lleguemos a Madrid, llamaré a mi primo.",
+                    "Cuando llegaremos a Madrid, llamo a mi primo.",
+                    "Cuando llegáramos a Madrid, llamaría a mi primo."
+                  ],
+                  "answer": "Cuando lleguemos a Madrid, llamaré a mi primo."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "Perfecto. ¿Te acuerdas de la última vez que estuvimos allí?",
+                  "spokenText": "Perfecto. ¿Te acuerdas de la última vez que estuvimos allí?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Past one-shot: 'When we arrived last year, we called him right away.'",
+                  "options": [
+                    "Cuando llegáramos el año pasado, lo llamamos en seguida.",
+                    "Cuando lleguemos el año pasado, lo llamaremos en seguida.",
+                    "Cuando llegamos el año pasado, lo llamamos en seguida.",
+                    "Cuando llegábamos el año pasado, lo llamábamos."
+                  ],
+                  "answer": "Cuando llegamos el año pasado, lo llamamos en seguida."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "Cierto. Oye, dicen que va a llover toda la semana.",
+                  "spokenText": "Cierto. Oye, dicen que va a llover toda la semana."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Hypothetical concession — 'Even if it rains, we'll go to the Prado.'",
+                  "before": "Aunque ",
+                  "after": ", iremos al Prado igual.",
+                  "answer": "llueva",
+                  "acceptableAnswers": [
+                    "esté lloviendo"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "Eso espero. ¿Y dónde nos quedamos? ¿Cerca del centro?",
+                  "spokenText": "Eso espero. ¿Y dónde nos quedamos? ¿Cerca del centro?"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Indefinite place: 'Wherever there's a good price, that's fine.'",
+                  "options": [
+                    "Donde hay buen precio está bien.",
+                    "Donde haya buen precio está bien.",
+                    "Donde habría buen precio estaría bien.",
+                    "Donde hubiera buen precio está bien."
+                  ],
+                  "answer": "Donde haya buen precio está bien."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "Tengo una amiga que conoce un hotel en Lavapiés. ¿Qué te parece?",
+                  "spokenText": "Tengo una amiga que conoce un hotel en Lavapiés. ¿Qué te parece?"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Future-unknown: 'When she sends the address, I'll book.'",
+                  "before": "Cuando ",
+                  "after": " la dirección, reservaré.",
+                  "answer": "mande",
+                  "acceptableAnswers": [
+                    "envíe",
+                    "pase"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "Genial. Aunque es un poco caro, vale la pena.",
+                  "spokenText": "Genial. Aunque es un poco caro, vale la pena."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Denied cause: 'I'm going not because it's cheap, but because it's central.'",
+                  "options": [
+                    "Voy porque sea barato, no porque sea céntrico.",
+                    "No voy porque es barato, sino porque es céntrico.",
+                    "No voy porque sea barato, sino porque es céntrico.",
+                    "Voy porque es barato y sea céntrico."
+                  ],
+                  "answer": "No voy porque sea barato, sino porque es céntrico."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "lucia",
+                  "text": "Totalmente de acuerdo. ¡Nos vemos el viernes en la estación!",
+                  "spokenText": "Totalmente de acuerdo. ¡Nos vemos el viernes en la estación!"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es-en-conditional-hearsay",
+      "title": "Conditional — politeness, hypothesis, hearsay",
+      "description": "One conjugation, three signals — court verbs, if-clause results, and Spanish news 'allegedly'",
+      "theme": "verbs",
+      "guide": {
+        "intro": "The Spanish conditional (-ría endings) is the same form for three completely different jobs. Recognizing which job is active is mostly a context skill — what's the sentence trying to do?",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "1. Politeness — softening requests, suggestions, opinions"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Swap the present indicative for the conditional and your sentence loses its edge. 'Quiero un café' becomes 'Querría un café' (or even softer, 'Me gustaría un café'). Modal verbs (poder, deber, querer) and verbs of opinion (decir, pensar) take this softening especially well."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "¿Podrías ayudarme un momento?",
+                "translation": "Could you help me for a moment?"
+              },
+              {
+                "source": "Deberíamos llamar al médico.",
+                "translation": "We should call the doctor."
+              },
+              {
+                "source": "Yo diría que es buena idea.",
+                "translation": "I'd say it's a good idea."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "2. Hypothetical — second-conditional result"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Si + imperfect subjunctive in the if-clause, conditional in the main clause. Pure hypothetical: 'If I had X, I'd do Y.' Spanish never uses 'si + condicional' for this — that's a common mistake."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "Si tuviera tiempo, viajaría más.",
+                "translation": "If I had time, I'd travel more."
+              },
+              {
+                "source": "¿Qué harías si fueras yo?",
+                "translation": "What would you do if you were me?"
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "3. Hearsay — Spanish news Spanish for 'allegedly'"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Spanish journalism uses the conditional (often the conditional perfect 'habría + participle') to flag unconfirmed information. English needs 'allegedly' or 'reportedly'. Spot it by the news topic plus a source attribution like 'según fuentes', 'al parecer', 'fuentes indican'."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "El presidente habría declarado su apoyo.",
+                "translation": "The president allegedly declared his support."
+              },
+              {
+                "source": "Según fuentes, los acusados habrían huido.",
+                "translation": "According to sources, the defendants allegedly fled."
+              },
+              {
+                "source": "El alcalde estaría negociando un acuerdo.",
+                "translation": "The mayor is reportedly negotiating a deal. (present hearsay)"
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "How to tell them apart"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Look at the surrounding clue: a polite phrase + modal verb? Politeness. A 'si + imperfect subjunctive' clause? Hypothesis. A news topic + 'según/al parecer/fuentes'? Hearsay. The conditional form is the same — context disambiguates."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "es-en-conditional-hearsay-1",
+          "title": "Conditional as softener",
+          "description": "Polite requests, suggestions, and hedged opinions",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "ch1-1",
+              "type": "match_pairs",
+              "prompt": "Match the polite conditional to its blunt version",
+              "pairs": [
+                {
+                  "left": "Querría un café.",
+                  "right": "Quiero un café. (I want a coffee.)"
+                },
+                {
+                  "left": "¿Podrías ayudarme?",
+                  "right": "¿Puedes ayudarme? (Can you help me?)"
+                },
+                {
+                  "left": "Debería irme.",
+                  "right": "Debo irme. (I must leave.)"
+                },
+                {
+                  "left": "Me gustaría saber...",
+                  "right": "Quiero saber... (I want to know...)"
+                }
+              ]
+            },
+            {
+              "id": "ch1-2",
+              "type": "multiple_choice",
+              "prompt": "Politest way to order coffee in a café:",
+              "options": [
+                "Quiero un café.",
+                "Dame un café.",
+                "Querría un café, por favor.",
+                "Café."
+              ],
+              "answer": "Querría un café, por favor.",
+              "explanation": "Conditional 'querría' softens to 'I would like'."
+            },
+            {
+              "id": "ch1-3",
+              "type": "multiple_choice",
+              "prompt": "Soften the request: 'Can you (formal) close the door?'",
+              "options": [
+                "¿Puedes cerrar la puerta?",
+                "¿Cierra la puerta!",
+                "¿Podría cerrar la puerta?",
+                "¿Cerrará la puerta?"
+              ],
+              "answer": "¿Podría cerrar la puerta?",
+              "explanation": "'Podría' (usted) — polite formal request."
+            },
+            {
+              "id": "ch1-4",
+              "type": "fill_blank",
+              "prompt": "Polite suggestion: 'You should rest a little.' → 'Tú ___ descansar un poco.'",
+              "answer": "deberías"
+            },
+            {
+              "id": "ch1-5",
+              "type": "fill_blank",
+              "prompt": "Polite opinion: 'I would say it's a good idea.' → 'Yo ___ que es buena idea.'",
+              "answer": "diría"
+            },
+            {
+              "id": "ch1-6",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'I would like to reserve a table for four.'",
+              "answer": "Me gustaría reservar una mesa para cuatro .",
+              "bank": [
+                "Me",
+                "gustaría",
+                "reservar",
+                "una",
+                "mesa",
+                "para",
+                "cuatro",
+                "."
+              ]
+            },
+            {
+              "id": "ch1-7",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'Could you tell me where the station is?'",
+              "answer": "¿ Podrías decirme dónde está la estación ?",
+              "bank": [
+                "¿",
+                "Podrías",
+                "decirme",
+                "dónde",
+                "está",
+                "la",
+                "estación",
+                "?"
+              ]
+            },
+            {
+              "id": "ch1-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the softest version of 'Lend me ten euros.'",
+              "options": [
+                "Préstame diez euros.",
+                "¿Me prestas diez euros?",
+                "¿Me prestarías diez euros?",
+                "Quiero diez euros."
+              ],
+              "answer": "¿Me prestarías diez euros?"
+            },
+            {
+              "id": "ch1-9",
+              "type": "fill_blank",
+              "prompt": "Polite advice: 'I would do it differently.' → 'Yo lo ___ diferente.'",
+              "answer": "haría"
+            },
+            {
+              "id": "ch1-10",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "Querría hablar con el gerente, por favor.",
+              "options": [
+                "Quiero hablar con el gerente, por favor.",
+                "Quería hablar con el gerente, por favor.",
+                "Querría hablar con el gerente, por favor.",
+                "Querré hablar con el gerente, por favor."
+              ],
+              "answer": "Querría hablar con el gerente, por favor.",
+              "explanation": "Conditional 'querría' — politest 'I would like'."
+            },
+            {
+              "id": "ch1-11",
+              "type": "multiple_choice",
+              "prompt": "Which is the most professional email opener?",
+              "options": [
+                "Quiero saber el precio.",
+                "Me gustaría conocer el precio.",
+                "Dime el precio.",
+                "Sabré el precio."
+              ],
+              "answer": "Me gustaría conocer el precio."
+            },
+            {
+              "id": "ch1-12",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'You ought to talk to him.'",
+              "answer": "Deberías hablar con él .",
+              "bank": [
+                "Deberías",
+                "hablar",
+                "con",
+                "él",
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-conditional-hearsay-2",
+          "title": "Conditional in hypothetical if-clauses",
+          "description": "Imperfect subjunctive + conditional — the second-conditional workhorse",
+          "theme": "verbs",
+          "xp": 15,
+          "exercises": [
+            {
+              "id": "ch2-1",
+              "type": "match_pairs",
+              "prompt": "Match the if-clause shape",
+              "pairs": [
+                {
+                  "left": "Si tengo tiempo, te llamo.",
+                  "right": "If I have time, I'll call you. (1st conditional)"
+                },
+                {
+                  "left": "Si tuviera tiempo, te llamaría.",
+                  "right": "If I had time, I'd call you. (2nd conditional)"
+                },
+                {
+                  "left": "Si hubiera tenido tiempo, te habría llamado.",
+                  "right": "If I'd had time, I'd have called you. (3rd)"
+                }
+              ]
+            },
+            {
+              "id": "ch2-2",
+              "type": "multiple_choice",
+              "prompt": "Second conditional: 'If I won the lottery, I would travel the world.'",
+              "options": [
+                "Si gano la lotería, viajaría por el mundo.",
+                "Si ganara la lotería, viajaría por el mundo.",
+                "Si ganaría la lotería, viajaría por el mundo.",
+                "Si ganaba la lotería, viajaba por el mundo."
+              ],
+              "answer": "Si ganara la lotería, viajaría por el mundo."
+            },
+            {
+              "id": "ch2-3",
+              "type": "multiple_choice",
+              "prompt": "Pure hypothetical: 'If you came earlier, we would have more time.'",
+              "options": [
+                "Si vienes antes, tendremos más tiempo.",
+                "Si vinieras antes, tendríamos más tiempo.",
+                "Si vendrías antes, tendrías más tiempo.",
+                "Si venías antes, teníamos más tiempo."
+              ],
+              "answer": "Si vinieras antes, tendríamos más tiempo."
+            },
+            {
+              "id": "ch2-4",
+              "type": "fill_blank",
+              "prompt": "Complete: 'Si yo ___ tú, aceptaría el trabajo.' (If I were you...)",
+              "answer": "fuera",
+              "acceptableAnswers": [
+                "fuese"
+              ]
+            },
+            {
+              "id": "ch2-5",
+              "type": "fill_blank",
+              "prompt": "Complete: 'Si hablara francés, ___ a París.' (If I spoke French, I'd move to Paris.)",
+              "answer": "me mudaría",
+              "acceptableAnswers": [
+                "iría"
+              ]
+            },
+            {
+              "id": "ch2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'If you studied more, you would understand it.'",
+              "answer": "Si estudiaras más , lo entenderías .",
+              "bank": [
+                "Si",
+                "estudiaras",
+                "más",
+                ",",
+                "lo",
+                "entenderías",
+                "."
+              ]
+            },
+            {
+              "id": "ch2-7",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'I would tell you if I knew the answer.'",
+              "answer": "Te lo diría si supiera la respuesta .",
+              "bank": [
+                "Te",
+                "lo",
+                "diría",
+                "si",
+                "supiera",
+                "la",
+                "respuesta",
+                "."
+              ]
+            },
+            {
+              "id": "ch2-8",
+              "type": "multiple_choice",
+              "prompt": "Which is wrong (you can't use conditional after 'si' for hypotheticals)?",
+              "options": [
+                "Si tuviera dinero, lo compraría.",
+                "Si tendría dinero, lo compraría.",
+                "Si tuviese dinero, lo compraría.",
+                "Lo compraría si tuviera dinero."
+              ],
+              "answer": "Si tendría dinero, lo compraría.",
+              "explanation": "Spanish rejects 'si + condicional' for hypotheticals."
+            },
+            {
+              "id": "ch2-9",
+              "type": "fill_blank",
+              "prompt": "Complete: 'Si pudiera elegir, ___ otra carrera.'",
+              "answer": "estudiaría"
+            },
+            {
+              "id": "ch2-10",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "Si tuviéramos más tiempo, viajaríamos a Japón este verano.",
+              "options": [
+                "Si tenemos más tiempo, viajamos a Japón este verano.",
+                "Si tuviéramos más tiempo, viajaríamos a Japón este verano.",
+                "Si tendríamos más tiempo, viajaríamos a Japón este verano.",
+                "Si tuviéramos más tiempo, viajábamos a Japón."
+              ],
+              "answer": "Si tuviéramos más tiempo, viajaríamos a Japón este verano."
+            },
+            {
+              "id": "ch2-11",
+              "type": "multiple_choice",
+              "prompt": "Translate: 'What would you do if you were in my place?'",
+              "options": [
+                "¿Qué harías si eres yo?",
+                "¿Qué harías si fueras yo?",
+                "¿Qué harías si serías yo?",
+                "¿Qué hicieras si fueras yo?"
+              ],
+              "answer": "¿Qué harías si fueras yo?"
+            },
+            {
+              "id": "ch2-12",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'If we lived closer, we would see each other more.'",
+              "answer": "Si viviéramos más cerca , nos veríamos más .",
+              "bank": [
+                "Si",
+                "viviéramos",
+                "más",
+                "cerca",
+                ",",
+                "nos",
+                "veríamos",
+                "más",
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-conditional-hearsay-3",
+          "title": "Conditional perfect — past hypothetical and hearsay",
+          "description": "habría + participle for 'would have done' AND for 'allegedly did'",
+          "theme": "verbs",
+          "xp": 15,
+          "exercises": [
+            {
+              "id": "ch3-1",
+              "type": "match_pairs",
+              "prompt": "Match the conditional perfect form",
+              "pairs": [
+                {
+                  "left": "habría hablado",
+                  "right": "would have spoken"
+                },
+                {
+                  "left": "habrías comido",
+                  "right": "you would have eaten"
+                },
+                {
+                  "left": "habría vivido",
+                  "right": "would have lived / allegedly lived"
+                },
+                {
+                  "left": "habríamos ido",
+                  "right": "we would have gone"
+                }
+              ]
+            },
+            {
+              "id": "ch3-2",
+              "type": "multiple_choice",
+              "prompt": "Past hypothetical: 'If I had known, I would have called you.'",
+              "options": [
+                "Si supiera, te llamaría.",
+                "Si hubiera sabido, te habría llamado.",
+                "Si sabía, te llamaría.",
+                "Si hubiese sabido, te llamo."
+              ],
+              "answer": "Si hubiera sabido, te habría llamado.",
+              "explanation": "3rd conditional: pluperfect subj + conditional perfect."
+            },
+            {
+              "id": "ch3-3",
+              "type": "multiple_choice",
+              "prompt": "News register: 'The minister allegedly resigned yesterday.'",
+              "options": [
+                "El ministro renunciaría ayer.",
+                "El ministro habría renunciado ayer.",
+                "El ministro renuncia ayer.",
+                "El ministro habrá renunciado ayer."
+              ],
+              "answer": "El ministro habría renunciado ayer.",
+              "explanation": "Conditional perfect 'habría renunciado' = unconfirmed past report."
+            },
+            {
+              "id": "ch3-4",
+              "type": "fill_blank",
+              "prompt": "Complete: 'Si hubiera estudiado más, ___ el examen.'",
+              "answer": "habría aprobado",
+              "acceptableAnswers": [
+                "hubiera aprobado",
+                "hubiese aprobado"
+              ]
+            },
+            {
+              "id": "ch3-5",
+              "type": "fill_blank",
+              "prompt": "News: 'According to sources, the suspect allegedly fled the country.' → 'Según fuentes, el sospechoso ___ del país.'",
+              "answer": "habría huido",
+              "acceptableAnswers": [
+                "habría escapado"
+              ]
+            },
+            {
+              "id": "ch3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'If you had told me, I would have come.'",
+              "answer": "Si me lo hubieras dicho , habría venido .",
+              "bank": [
+                "Si",
+                "me",
+                "lo",
+                "hubieras",
+                "dicho",
+                ",",
+                "habría",
+                "venido",
+                "."
+              ]
+            },
+            {
+              "id": "ch3-7",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (news): 'The president allegedly accepted the offer.'",
+              "answer": "El presidente habría aceptado la oferta .",
+              "bank": [
+                "El",
+                "presidente",
+                "habría",
+                "aceptado",
+                "la",
+                "oferta",
+                "."
+              ]
+            },
+            {
+              "id": "ch3-8",
+              "type": "multiple_choice",
+              "prompt": "Which sentence reports an UNCONFIRMED past event?",
+              "options": [
+                "El cantante ha cancelado el concierto.",
+                "El cantante canceló el concierto.",
+                "El cantante habría cancelado el concierto, según el diario.",
+                "El cantante cancelará el concierto."
+              ],
+              "answer": "El cantante habría cancelado el concierto, según el diario."
+            },
+            {
+              "id": "ch3-9",
+              "type": "fill_blank",
+              "prompt": "Past regret: 'I would have said something, but I didn't dare.' → 'Yo ___ algo, pero no me atreví.'",
+              "answer": "habría dicho"
+            },
+            {
+              "id": "ch3-10",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "Según testigos, los ladrones habrían entrado por la ventana.",
+              "options": [
+                "Según testigos, los ladrones entraron por la ventana.",
+                "Según testigos, los ladrones habrían entrado por la ventana.",
+                "Según testigos, los ladrones habrán entrado por la ventana.",
+                "Según testigos, los ladrones entrarían por la ventana."
+              ],
+              "answer": "Según testigos, los ladrones habrían entrado por la ventana."
+            },
+            {
+              "id": "ch3-11",
+              "type": "multiple_choice",
+              "prompt": "Translate the news line: 'The CEO allegedly knew about the fraud.'",
+              "options": [
+                "El director sabría del fraude.",
+                "El director sabe del fraude.",
+                "El director habría sabido del fraude.",
+                "El director supo del fraude."
+              ],
+              "answer": "El director habría sabido del fraude."
+            },
+            {
+              "id": "ch3-12",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'If she had come, we would have eaten together.'",
+              "answer": "Si ella hubiera venido , habríamos comido juntos .",
+              "bank": [
+                "Si",
+                "ella",
+                "hubiera",
+                "venido",
+                ",",
+                "habríamos",
+                "comido",
+                "juntos",
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-conditional-hearsay-4",
+          "title": "Conditional as news hearsay",
+          "description": "Parsing 'habría' + participle in Spanish journalism — 'allegedly' / 'reportedly'",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "ch4-1",
+              "type": "match_pairs",
+              "prompt": "Match the journalistic phrase to its meaning",
+              "pairs": [
+                {
+                  "left": "según fuentes",
+                  "right": "according to sources"
+                },
+                {
+                  "left": "al parecer",
+                  "right": "apparently"
+                },
+                {
+                  "left": "supuestamente",
+                  "right": "allegedly"
+                },
+                {
+                  "left": "se rumorea que",
+                  "right": "it's rumored that"
+                },
+                {
+                  "left": "fuentes indican",
+                  "right": "sources indicate"
+                }
+              ]
+            },
+            {
+              "id": "ch4-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the most natural news headline pattern:",
+              "options": [
+                "El acusado escapará anoche, según fuentes.",
+                "El acusado habría escapado anoche, según fuentes.",
+                "El acusado escapó anoche, según fuentes.",
+                "El acusado escaparía anoche, según fuentes."
+              ],
+              "answer": "El acusado habría escapado anoche, según fuentes.",
+              "explanation": "Standard news Spanish: 'habría' + participle."
+            },
+            {
+              "id": "ch4-3",
+              "type": "multiple_choice",
+              "prompt": "Parse the headline: 'El gobierno habría aprobado la ley en secreto.'",
+              "options": [
+                "The government will approve the law in secret.",
+                "The government would approve the law in secret.",
+                "The government allegedly approved the law in secret.",
+                "The government had approved the law in secret."
+              ],
+              "answer": "The government allegedly approved the law in secret.",
+              "explanation": "Conditional perfect in news = unconfirmed past action."
+            },
+            {
+              "id": "ch4-4",
+              "type": "fill_blank",
+              "prompt": "Translate: 'According to police, the man allegedly attacked the agent.' → 'Según la policía, el hombre ___ al agente.'",
+              "answer": "habría atacado",
+              "acceptableAnswers": [
+                "habría agredido"
+              ]
+            },
+            {
+              "id": "ch4-5",
+              "type": "fill_blank",
+              "prompt": "Hearsay present: 'The team is reportedly negotiating a contract.' → 'El equipo ___ un contrato.'",
+              "answer": "negociaría"
+            },
+            {
+              "id": "ch4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'According to sources, the leader allegedly resigned this morning.'",
+              "answer": "Según fuentes , el líder habría dimitido esta mañana .",
+              "bank": [
+                "Según",
+                "fuentes",
+                ",",
+                "el",
+                "líder",
+                "habría",
+                "dimitido",
+                "esta",
+                "mañana",
+                "."
+              ]
+            },
+            {
+              "id": "ch4-7",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'It is rumored that the company allegedly hid the data.'",
+              "answer": "Se rumorea que la empresa habría ocultado los datos .",
+              "bank": [
+                "Se",
+                "rumorea",
+                "que",
+                "la",
+                "empresa",
+                "habría",
+                "ocultado",
+                "los",
+                "datos",
+                "."
+              ]
+            },
+            {
+              "id": "ch4-8",
+              "type": "multiple_choice",
+              "prompt": "Which headline DOESN'T use the hearsay conditional?",
+              "options": [
+                "El presidente habría aceptado el pacto.",
+                "Los expertos habrían advertido del riesgo.",
+                "Las empresas firmaron el acuerdo ayer.",
+                "El equipo habría negociado en secreto."
+              ],
+              "answer": "Las empresas firmaron el acuerdo ayer.",
+              "explanation": "Preterite 'firmaron' = confirmed event."
+            },
+            {
+              "id": "ch4-9",
+              "type": "fill_blank",
+              "prompt": "Complete: 'Allegedly, the suspect was at the scene.' → 'Al parecer, el sospechoso ___ en el lugar.'",
+              "answer": "habría estado",
+              "acceptableAnswers": [
+                "estaría"
+              ]
+            },
+            {
+              "id": "ch4-10",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "El alcalde habría firmado el contrato sin consultar al consejo.",
+              "options": [
+                "El alcalde firmó el contrato sin consultar al consejo.",
+                "El alcalde firmará el contrato sin consultar al consejo.",
+                "El alcalde habría firmado el contrato sin consultar al consejo.",
+                "El alcalde firmaría el contrato sin consultar al consejo."
+              ],
+              "answer": "El alcalde habría firmado el contrato sin consultar al consejo."
+            },
+            {
+              "id": "ch4-11",
+              "type": "multiple_choice",
+              "prompt": "Translate to news Spanish: 'The bank reportedly lost millions last year.'",
+              "options": [
+                "El banco perdió millones el año pasado.",
+                "El banco perdería millones el año pasado.",
+                "El banco habría perdido millones el año pasado.",
+                "El banco habrá perdido millones el año pasado."
+              ],
+              "answer": "El banco habría perdido millones el año pasado."
+            },
+            {
+              "id": "ch4-12",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder: 'Sources indicate that the deal would allegedly close on Friday.'",
+              "answer": "Fuentes indican que el acuerdo se cerraría el viernes .",
+              "bank": [
+                "Fuentes",
+                "indican",
+                "que",
+                "el",
+                "acuerdo",
+                "se",
+                "cerraría",
+                "el",
+                "viernes",
+                "."
+              ]
+            }
+          ]
+        },
+        {
+          "id": "es-en-conditional-hearsay-5",
+          "title": "Same form, three signals",
+          "description": "Tell politeness, hypothesis, and hearsay apart in context",
+          "theme": "verbs",
+          "xp": 16,
+          "exercises": [
+            {
+              "id": "ch5-1",
+              "type": "match_pairs",
+              "prompt": "Match the function to the example",
+              "pairs": [
+                {
+                  "left": "Querría un té.",
+                  "right": "politeness"
+                },
+                {
+                  "left": "Si tuviera tiempo, leería más.",
+                  "right": "hypothetical"
+                },
+                {
+                  "left": "El acusado habría mentido al juez.",
+                  "right": "hearsay"
+                },
+                {
+                  "left": "Deberías llamarlo.",
+                  "right": "softened advice"
+                }
+              ]
+            },
+            {
+              "id": "ch5-2",
+              "type": "multiple_choice",
+              "prompt": "Identify the function: 'El ministro habría aceptado un soborno.'",
+              "options": [
+                "politeness",
+                "hypothetical (if-clause)",
+                "hearsay / news",
+                "past habit"
+              ],
+              "answer": "hearsay / news",
+              "explanation": "Conditional perfect + news topic = unconfirmed allegation."
+            },
+            {
+              "id": "ch5-3",
+              "type": "multiple_choice",
+              "prompt": "Identify the function: '¿Podrías pasarme la sal?'",
+              "options": [
+                "politeness",
+                "hypothetical",
+                "hearsay",
+                "future plan"
+              ],
+              "answer": "politeness"
+            },
+            {
+              "id": "ch5-4",
+              "type": "multiple_choice",
+              "prompt": "Identify the function: 'Si fuera rico, viviría en la playa.'",
+              "options": [
+                "politeness",
+                "hypothetical (2nd conditional)",
+                "hearsay",
+                "habit"
+              ],
+              "answer": "hypothetical (2nd conditional)"
+            },
+            {
+              "id": "ch5-5",
+              "type": "fill_blank",
+              "prompt": "Rephrase politely with conditional: 'Quiero ver el menú.' → '___ ver el menú, por favor.'",
+              "answer": "Querría",
+              "acceptableAnswers": [
+                "Me gustaría",
+                "Quisiera"
+              ]
+            },
+            {
+              "id": "ch5-6",
+              "type": "fill_blank",
+              "prompt": "News hearsay: 'They reportedly fled abroad.' → 'Ellos ___ al extranjero.'",
+              "answer": "habrían huido",
+              "acceptableAnswers": [
+                "habrían escapado"
+              ]
+            },
+            {
+              "id": "ch5-7",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (hypothetical): 'If I knew her, I would invite her.'",
+              "answer": "Si la conociera , la invitaría .",
+              "bank": [
+                "Si",
+                "la",
+                "conociera",
+                ",",
+                "la",
+                "invitaría",
+                "."
+              ]
+            },
+            {
+              "id": "ch5-8",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (politeness): 'Could you repeat that more slowly, please?'",
+              "answer": "¿ Podrías repetirlo más despacio , por favor ?",
+              "bank": [
+                "¿",
+                "Podrías",
+                "repetirlo",
+                "más",
+                "despacio",
+                ",",
+                "por",
+                "favor",
+                "?"
+              ]
+            },
+            {
+              "id": "ch5-9",
+              "type": "tap_words_in_order",
+              "prompt": "Reorder (hearsay): 'The minister allegedly lied to the press.'",
+              "answer": "El ministro habría mentido a la prensa .",
+              "bank": [
+                "El",
+                "ministro",
+                "habría",
+                "mentido",
+                "a",
+                "la",
+                "prensa",
+                "."
+              ]
+            },
+            {
+              "id": "ch5-10",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses the conditional for hearsay (NOT politeness or hypothesis)?",
+              "options": [
+                "Me gustaría conocer al autor.",
+                "Si tuviera tiempo, lo conocería.",
+                "El autor habría plagiado parte del libro.",
+                "¿Podrías presentármelo?"
+              ],
+              "answer": "El autor habría plagiado parte del libro."
+            },
+            {
+              "id": "ch5-11",
+              "type": "listen_and_choose",
+              "prompt": "Pick what you hear",
+              "spokenText": "Querríamos saber si el director habría aprobado el plan.",
+              "options": [
+                "Queríamos saber si el director había aprobado el plan.",
+                "Querríamos saber si el director habría aprobado el plan.",
+                "Querremos saber si el director habrá aprobado el plan.",
+                "Querríamos saber si el director aprobaría el plan."
+              ],
+              "answer": "Querríamos saber si el director habría aprobado el plan.",
+              "explanation": "Double conditional: 'querríamos' (polite) + 'habría aprobado' (hearsay)."
+            },
+            {
+              "id": "ch5-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the sentence that mixes BOTH politeness and hearsay:",
+              "options": [
+                "Si fuera tú, lo haría.",
+                "Querría confirmar si el premio se habría retirado.",
+                "El acusado habría mentido al juez.",
+                "Me gustaría un café."
+              ],
+              "answer": "Querría confirmar si el premio se habría retirado.",
+              "explanation": "'Querría' = polite; 'se habría retirado' = hearsay."
+            }
+          ]
+        },
+        {
+          "id": "es-en-conditional-hearsay-6",
+          "title": "Dialogue: Interviewing a politician",
+          "description": "Polite conditionals, hypotheticals, and hearsay in one conversation",
+          "theme": "verbs",
+          "xp": 15,
+          "exercises": [
+            {
+              "id": "es-en-conditional-hearsay-6-d1",
+              "type": "dialogue",
+              "prompt": "You're a journalist interviewing Senator Ramírez",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ramirez",
+                  "name": "Sen. Ramírez"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "ramirez",
+                  "text": "Buenas tardes. Tienen cinco minutos, así que sean directos.",
+                  "spokenText": "Buenas tardes. Tienen cinco minutos, así que sean directos."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Open politely — 'Could you comment on yesterday's vote?'",
+                  "options": [
+                    "¿Puede comentar la votación de ayer?",
+                    "Comente la votación de ayer.",
+                    "¿Podría comentar la votación de ayer?",
+                    "¿Comentará la votación de ayer?"
+                  ],
+                  "answer": "¿Podría comentar la votación de ayer?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ramirez",
+                  "text": "Por supuesto. Fue un resultado esperado, pero importante.",
+                  "spokenText": "Por supuesto. Fue un resultado esperado, pero importante."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Hearsay challenge — 'Sources indicate that you allegedly accepted a private offer.'",
+                  "before": "Fuentes indican que usted ",
+                  "after": " una oferta privada. ¿Es cierto?",
+                  "answer": "habría aceptado",
+                  "acceptableAnswers": [
+                    "habría recibido"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ramirez",
+                  "text": "Esos rumores son falsos. No he recibido ninguna oferta.",
+                  "spokenText": "Esos rumores son falsos. No he recibido ninguna oferta."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Hypothetical: 'If such an offer existed, would you accept it?'",
+                  "options": [
+                    "Si tal oferta existe, ¿la aceptas?",
+                    "Si tal oferta existiera, ¿la aceptaría?",
+                    "Si tal oferta existiría, ¿la aceptaría?",
+                    "Si tal oferta hubiera existido, ¿la aceptas?"
+                  ],
+                  "answer": "Si tal oferta existiera, ¿la aceptaría?"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ramirez",
+                  "text": "Jamás. Mi compromiso es con la transparencia.",
+                  "spokenText": "Jamás. Mi compromiso es con la transparencia."
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Polite follow-up — 'I would like to know your opinion on the audit.'",
+                  "before": "Me ",
+                  "after": " saber su opinión sobre la auditoría.",
+                  "answer": "gustaría"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ramirez",
+                  "text": "La auditoría es necesaria. Apoyo cualquier investigación.",
+                  "spokenText": "La auditoría es necesaria. Apoyo cualquier investigación."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Cite a report — 'According to the paper, your office allegedly destroyed documents.'",
+                  "options": [
+                    "Según el diario, su oficina destruyó documentos.",
+                    "Según el diario, su oficina habría destruido documentos.",
+                    "Según el diario, su oficina destruiría documentos.",
+                    "Según el diario, su oficina destruirá documentos."
+                  ],
+                  "answer": "Según el diario, su oficina habría destruido documentos."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ramirez",
+                  "text": "Eso es una calumnia. No hay tal cosa.",
+                  "spokenText": "Eso es una calumnia. No hay tal cosa."
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Close politely — 'It would be ideal if you could clarify this in a press release.'",
+                  "options": [
+                    "Sería ideal si pudiera aclarar esto en un comunicado.",
+                    "Es ideal si puede aclarar esto en un comunicado.",
+                    "Será ideal si podrá aclarar esto en un comunicado.",
+                    "Habría sido ideal si pudo aclarar esto."
+                  ],
+                  "answer": "Sería ideal si pudiera aclarar esto en un comunicado."
+                },
+                {
+                  "kind": "line",
+                  "speaker": "ramirez",
+                  "text": "Lo emitiremos esta tarde. Gracias por su tiempo.",
+                  "spokenText": "Lo emitiremos esta tarde. Gracias por su tiempo."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "es-en-b2-review",
       "title": "B2 mixed review",
       "description": "All B2 structures in mixed practice — synthesis and stamina",
