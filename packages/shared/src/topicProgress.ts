@@ -149,7 +149,14 @@ export function pickExamQuestions(
   count: number = EXAM_QUESTION_COUNT,
   rng: () => number = Math.random
 ): Exercise[] {
-  const all: Exercise[] = topic.lessons.flatMap((l) => l.exercises)
+  // Dialogue exercises are long-form chat scenes — not a fit for the
+  // timed-exam format, so they're excluded from the source pool.
+  // ExamScreen has a defensive auto-pass placeholder if one slips
+  // through; this filter prevents that placeholder from firing in
+  // normal play.
+  const all: Exercise[] = topic.lessons
+    .flatMap((l) => l.exercises)
+    .filter((e) => e.type !== 'dialogue')
   if (all.length === 0) return []
   const shuffled = shuffle(all, rng)
   if (shuffled.length >= count) return shuffled.slice(0, count)
@@ -214,10 +221,22 @@ export function pickLevelExamQuestions(
   const out: Exercise[] = []
   for (let i = 0; i < topics.length; i++) {
     const topic = topics[i]
-    const lastLesson = topic.lessons[topic.lessons.length - 1]
-    if (!lastLesson) continue
+    // Walk backwards from the last lesson to find the most recent
+    // "synthesis" lesson — i.e. one that has gradable exercises.
+    // Dialogue lessons (typically appended at the tail) get skipped
+    // since they hold a single long-form chat scene, not a quiz pool.
+    let synthesisLesson = null
+    for (let j = topic.lessons.length - 1; j >= 0; j--) {
+      const candidate = topic.lessons[j]
+      const gradable = candidate.exercises.filter((e) => e.type !== 'dialogue')
+      if (gradable.length > 0) {
+        synthesisLesson = { lesson: candidate, gradable }
+        break
+      }
+    }
+    if (!synthesisLesson) continue
     const want = Math.max(0, budgets[i])
-    const pool = lastLesson.exercises
+    const pool = synthesisLesson.gradable
     if (pool.length === 0 || want === 0) continue
     const shuffled = shuffle(pool, rng)
     if (shuffled.length >= want) {
