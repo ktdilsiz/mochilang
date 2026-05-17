@@ -9,12 +9,10 @@ interface Props {
 }
 
 /**
- * RN LoginScreen — Phase 1 ships offline-only.
- *
- * Google sign-in requires `expo-auth-session` and a different OAuth
- * flow than the web's GIS button; that lands in Phase 2. For now the
- * primary action is "Continue without an account" so the user can
- * actually exercise the app on a phone.
+ * Welcome screen for the offline-only release. No account, no sign-in —
+ * everything is local to the device. The screen + the Google OAuth code
+ * paths in the API client stay shipped so re-enabling auth later doesn't
+ * need new code; the UI just hides the option for now.
  */
 export default function LoginScreen({ onContinueOffline }: Props) {
   const insets = useSafeAreaInsets()
@@ -38,7 +36,7 @@ export default function LoginScreen({ onContinueOffline }: Props) {
 
         <View style={styles.cta}>
           <LedgeButton
-            label="Continue without an account"
+            label="Start learning"
             tone="primary"
             size="lg"
             onPress={() => {
@@ -49,8 +47,7 @@ export default function LoginScreen({ onContinueOffline }: Props) {
         </View>
 
         <Text style={styles.fineprint}>
-          Google sign-in is coming in Phase 2. For now your progress lives on
-          this device only.
+          Your progress is saved on this device.
         </Text>
       </View>
     </ScrollView>

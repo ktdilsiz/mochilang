@@ -229,13 +229,11 @@ export default function ProfileScreen({
             tone="neutral"
             onPress={confirmResetProfile}
           />
-          {offline ? (
-            <ActionButton
-              label="Sign in with Google"
-              tone="primary"
-              onPress={onSwitchToLogin}
-            />
-          ) : (
+          {/* Offline-only release: no Google sign-in surface. The
+              onSwitchToLogin / onSignOut props stay wired (App.tsx
+              still routes them) so re-enabling cloud sync later is a
+              one-liner here. */}
+          {!offline && (
             <ActionButton label="Sign out" tone="neutral" onPress={confirmSignOut} />
           )}
         </View>

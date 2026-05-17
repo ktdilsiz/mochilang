@@ -1,0 +1,35 @@
+{
+  "cli": {
+    "version": ">= 13.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "main"
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "main",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "production": {
+      "channel": "main",
+      "autoIncrement": true,
+      "android": {
+        "buildType": "app-bundle"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "track": "internal",
+        "releaseStatus": "draft"
+      }
+    }
+  }
+}
