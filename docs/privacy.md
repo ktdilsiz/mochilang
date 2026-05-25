@@ -1,6 +1,5 @@
 ---
 title: Mochilang — Privacy Policy
-permalink: /privacy/
 ---
 
 # Mochilang Privacy Policy
