@@ -28,7 +28,6 @@ import {
   type Topic,
 } from '@mochilang/shared'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import LoginScreen from './src/screens/LoginScreen'
 import HomeScreen from './src/screens/HomeScreen'
 import LessonScreen from './src/screens/LessonScreen'
 import SocialScreen from './src/screens/SocialScreen'
@@ -129,7 +128,6 @@ InputWithDefaults.defaultProps.style = [
 ]
 
 export default function App() {
-  const [signedIn, setSignedIn] = useState(false)
   const [fontsLoaded] = useFonts({
     Nunito_400Regular,
     Nunito_600SemiBold,
@@ -146,20 +144,14 @@ export default function App() {
     )
   }
 
-  // SafeAreaProvider has to wrap everything that calls useSafeAreaInsets,
-  // including LoginScreen — without it iOS notch padding lookups return
-  // zeros and the top of the screen sits under the status bar.
+  // First-release scope: offline-only, no auth surface. Login flow is
+  // kept in the tree (LoginScreen, ProfileScreen's sign-in path) so we
+  // can wire it back up when cloud sync lands — App.tsx is the only
+  // place that decides to skip it for now.
   return (
     <SafeAreaProvider>
       <I18nProvider>
-        {!signedIn ? (
-          <>
-            <StatusBar style="auto" />
-            <LoginScreen onContinueOffline={() => setSignedIn(true)} />
-          </>
-        ) : (
-          <SignedInApp onSignOut={() => setSignedIn(false)} />
-        )}
+        <SignedInApp onSignOut={() => {}} />
       </I18nProvider>
     </SafeAreaProvider>
   )
