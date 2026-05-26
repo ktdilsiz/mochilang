@@ -180,16 +180,35 @@ export default function Dialogue({
     })
   }
 
+  /**
+   * Speak the user's line in the target language, then advance once
+   * it finishes. If we just advanced synchronously, the next turn's
+   * effect cleanup would call stopSpeaking() and cut the line off
+   * mid-word. onDone fires when TTS completes; a length-scaled safety
+   * timer covers the case where the engine never reports completion.
+   */
+  function advanceAfterSpeak(text: string) {
+    const advanceOnce = (() => {
+      let fired = false
+      return () => {
+        if (fired) return
+        fired = true
+        advance()
+      }
+    })()
+    speak(text, {
+      language: ttsLangFor(targetLang),
+      onDone: advanceOnce,
+    })
+    const fallbackMs = Math.min(5000, Math.max(1800, text.length * 90))
+    setTimeout(advanceOnce, fallbackMs)
+  }
+
   function submitChoice() {
     if (!turn || turn.kind !== 'choice' || !choicePick) return
     if (choicePick === turn.answer) {
       sfx.correct()
-      // Speak the user's correct line in the target language before
-      // advancing — same reinforcement we give for fill_blank and
-      // tap_words_in_order. The next line's auto-play will queue up
-      // after this one finishes (Speech.stop in the effect cleanup).
-      speak(turn.answer, { language: ttsLangFor(targetLang) })
-      advance()
+      advanceAfterSpeak(turn.answer)
     } else {
       markFailure()
       sfx.wrong()
@@ -208,9 +227,7 @@ export default function Dialogue({
       sfx.correct()
       // Speak the full completed line ("$before$answer$after") so
       // the learner hears their fill in context.
-      const full = `${turn.before}${turn.answer}${turn.after}`
-      speak(full, { language: ttsLangFor(targetLang) })
-      advance()
+      advanceAfterSpeak(`${turn.before}${turn.answer}${turn.after}`)
     } else {
       markFailure()
       sfx.wrong()
