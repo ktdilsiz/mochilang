@@ -4,6 +4,7 @@ import courseEnTr from '../../assets/course-en-tr.json'
 import courseEnZh from '../../assets/course-en-zh.json'
 import courseEsEn from '../../assets/course-es-en.json'
 import courseZhEn from '../../assets/course-zh-en.json'
+import courseZhTwEn from '../../assets/course-zh-tw-en.json'
 
 /**
  * Bundled course payloads inlined by Metro at build time.
@@ -23,6 +24,7 @@ export const COURSE_BUNDLES: Record<string, CourseEnvelope> = {
   'en-zh': courseEnZh as unknown as CourseEnvelope,
   'es-en': courseEsEn as unknown as CourseEnvelope,
   'zh-en': courseZhEn as unknown as CourseEnvelope,
+  'zh-tw-en': courseZhTwEn as unknown as CourseEnvelope,
 }
 
 /** Course ids the app can serve fully offline. */

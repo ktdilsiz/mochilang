@@ -28,6 +28,7 @@ export interface LanguageInfo {
 export const LANGUAGES_REGISTRY: LanguageInfo[] = [
   { code: 'en', name: 'English', nativeName: 'English', flag: '🇺🇸' },
   { code: 'zh', name: 'Chinese', nativeName: '中文', flag: '🇨🇳' },
+  { code: 'zh-tw', name: 'Chinese (Traditional)', nativeName: '繁體中文', flag: '🇹🇼' },
   { code: 'tr', name: 'Turkish', nativeName: 'Türkçe', flag: '🇹🇷' },
   { code: 'es', name: 'Spanish', nativeName: 'Español', flag: '🇪🇸' },
   { code: 'fr', name: 'French', nativeName: 'Français', flag: '🇫🇷' },
@@ -52,13 +53,25 @@ export function buildCourseId(target: string, source: string): string {
 }
 
 /**
- * Parse a course id like `zh-en` back into `{ target: 'zh', source: 'en' }`.
- * Returns null if the format isn't `<2letter>-<2letter>`.
+ * Parse a course id back into its parts. Two shapes supported:
+ *   - `xx-yy`        — target + source, e.g. `zh-en`.
+ *   - `xx-rr-yy`     — target with region + source, e.g. `zh-tw-en`
+ *                       for Traditional Chinese (Taiwan) for English
+ *                       speakers.
+ *
+ * The optional region is folded into `target` (so `target` is `zh-tw`
+ * when the id is `zh-tw-en`). The picker, registry, and TTS locale
+ * lookup all key off `target`, so they handle variants without
+ * special-casing. `region` is also exposed separately for callers
+ * that need just the region tag.
  */
 export function parseCourseId(
   id: string
-): { target: string; source: string } | null {
-  const m = /^([a-z]{2})-([a-z]{2})$/i.exec(id)
+): { target: string; source: string; region?: string } | null {
+  const m = /^([a-z]{2}(?:-[a-z]{2})?)-([a-z]{2})$/i.exec(id)
   if (!m) return null
-  return { target: m[1].toLowerCase(), source: m[2].toLowerCase() }
+  const target = m[1].toLowerCase()
+  const source = m[2].toLowerCase()
+  const region = target.includes('-') ? target.split('-')[1] : undefined
+  return { target, source, region }
 }

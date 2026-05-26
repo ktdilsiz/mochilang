@@ -10,6 +10,7 @@ import { getSettings } from '../state/useSettings'
  */
 const LOCALE_BY_LANG: Record<string, string> = {
   zh: 'zh-CN',
+  'zh-tw': 'zh-TW', // Traditional / Taiwanese Mandarin
   en: 'en-US',
   tr: 'tr-TR',
   es: 'es-ES',
@@ -34,6 +35,8 @@ export function targetLocaleForCourse(courseId: string | null | undefined): stri
   if (!courseId) return 'zh-CN'
   const parsed = parseCourseId(courseId)
   if (!parsed) return 'zh-CN'
+  // `target` already carries the variant (e.g., `zh-tw`); the map
+  // covers both bare and regioned forms.
   return LOCALE_BY_LANG[parsed.target] ?? parsed.target
 }
 
