@@ -23,18 +23,65 @@ import { localeForOption, speak, targetLocaleForCourse } from '../lib/tts'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 /**
+ * Try to pull the target-language sentence out of a fill-blank prompt.
+ *
+ * Convention: target-language fragments in en-tr/en-zh/en-es etc.
+ * lessons are wrapped in quotes inside source-language instructions.
+ * Example: "Birine cevap verdikten sonra: 'And ___?'"
+ *
+ * We scan for any quoted segment containing the blank `___` and treat
+ * its inner contents as the target sentence. If no such segment exists
+ * (older zh-en lessons often used a bare-prompt format), returns null
+ * and the caller should fall back to just speaking the answer alone.
+ */
+function extractTargetSegment(prompt: string): string | null {
+  // Each pair: [open quote, close quote]. ASCII first, then Unicode curls.
+  const pairs: Array<[string, string]> = [
+    ["'", "'"],
+    ['"', '"'],
+    ['‘', '’'],
+    ['“', '”'],
+  ]
+  for (const [open, close] of pairs) {
+    let cursor = 0
+    while (cursor < prompt.length) {
+      const start = prompt.indexOf(open, cursor)
+      if (start < 0) break
+      const end = prompt.indexOf(close, start + 1)
+      if (end < 0) break
+      const inner = prompt.slice(start + 1, end)
+      if (/_+/.test(inner)) return inner
+      cursor = end + 1
+    }
+  }
+  return null
+}
+
+/**
  * Render a fill-blank prompt with the learner's answer slotted in,
  * stripped of quotes and parenthetical hints so the TTS reads cleanly.
+ * Returns null when we can't isolate a target-language sentence — the
+ * caller should then speak the answer alone instead of mangling the
+ * whole prompt (which often contains source-language instructions).
  *
- *   "In ___, it is hot." (yaz)   +  "summer"
+ *   "Birine cevap verdikten sonra: 'And ___?'"   +  "you"
+ *     → "And you?"
+ *   "In ___, it is hot." (yaz)                    +  "summer"
  *     → "In summer, it is hot."
  */
-function fillSentence(prompt: string, answer: string): string {
-  let s = prompt
-  s = s.replace(/\s*\([^)]*\)\s*$/, '') // drop trailing parenthetical hint
-  s = s.replace(/^['"]|['"]$/g, '') // strip outer quotes
-  s = s.replace(/_+/g, answer.trim()) // fill the blank
-  return s.trim()
+function fillSentence(prompt: string, answer: string): string | null {
+  const extracted = extractTargetSegment(prompt)
+  if (extracted) {
+    return extracted.replace(/_+/g, answer.trim()).trim()
+  }
+  // No quoted blank. Try the bare-prompt format as a last resort —
+  // legacy zh-en exercises sometimes have the blank directly in the
+  // prompt with no quoting.
+  const trimmed = prompt
+    .replace(/\s*\([^)]*\)\s*$/, '')
+    .replace(/^['"]|['"]$/g, '')
+  if (!trimmed.includes('___') && !/_/.test(trimmed)) return null
+  return trimmed.replace(/_+/g, answer.trim()).trim()
 }
 
 interface Props {
@@ -106,12 +153,18 @@ export default function LessonScreen({
       setFeedback('correct')
       onCorrectAnswer?.(ex.id)
       // Play the completed target-language sentence so the learner
-      // hears the answer in context. fill_blank reads as the prompt
-      // with their answer slotted in; tap_words_in_order reads as the
-      // sentence they assembled.
+      // hears the answer in context. fill_blank tries to extract the
+      // quoted target sentence (so we don't read the Turkish/Chinese
+      // instruction aloud as English); tap_words_in_order's built
+      // string is already pure target language.
       const locale = targetLocaleForCourse(courseId)
       if (ex.type === 'fill_blank') {
-        speak(fillSentence(ex.prompt, fbValue), { language: locale })
+        const sentence = fillSentence(ex.prompt, fbValue)
+        // If we couldn't pull a target-language sentence out of the
+        // prompt, speak just the answer — keeps reinforcement value
+        // without reading source-language instructions as if they
+        // were target.
+        speak(sentence ?? fbValue, { language: locale })
       } else if (ex.type === 'tap_words_in_order') {
         speak(tapValue, { language: locale })
       }
