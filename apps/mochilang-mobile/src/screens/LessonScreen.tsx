@@ -19,6 +19,7 @@ import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
 import Dialogue from '../components/exercises/Dialogue'
 import TappableText from '../components/TappableText'
 import { WordTranslationProvider } from '../lib/wordTranslation'
+import { speak, targetLocaleForCourse } from '../lib/tts'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -235,6 +236,10 @@ function ExerciseView({
   onMatchComplete,
   resetKey,
 }: ExerciseViewProps) {
+  // Target-language locale for the lesson; used to TTS option taps so
+  // tapping a Chinese option in zh-en speaks it as Chinese, a Turkish
+  // option in en-tr speaks Turkish, etc.
+  const targetLocale = targetLocaleForCourse(courseId)
   switch (ex.type) {
     case 'multiple_choice':
       return (
@@ -248,7 +253,11 @@ function ExerciseView({
               return (
                 <Pressable
                   key={opt}
-                  onPress={() => !locked && setMcSelected(opt)}
+                  onPress={() => {
+                    if (locked) return
+                    setMcSelected(opt)
+                    speak(opt, { language: targetLocale })
+                  }}
                   style={[
                     styles.option,
                     isSel && !locked && styles.optionSelected,
@@ -285,6 +294,7 @@ function ExerciseView({
       return (
         <ListenAndChoose
           exercise={ex}
+          courseId={courseId}
           selected={mcSelected}
           locked={locked}
           onSelect={setMcSelected}
@@ -294,6 +304,7 @@ function ExerciseView({
       return (
         <TapWordsInOrder
           exercise={ex}
+          courseId={courseId}
           locked={locked}
           onChange={setTapValue}
           resetKey={resetKey}

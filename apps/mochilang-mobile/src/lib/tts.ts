@@ -1,7 +1,41 @@
 import * as Speech from 'expo-speech'
 import type { Voice } from 'expo-speech'
-import type { VoiceGender } from '@mochilang/shared'
+import { parseCourseId, type VoiceGender } from '@mochilang/shared'
 import { getSettings } from '../state/useSettings'
+
+/**
+ * Map a 2-letter language code to a BCP-47 locale expo-speech understands.
+ * The platform TTS engines pick a voice based on the locale, so passing
+ * just "zh" or "tr" doesn't always work — the regioned form does.
+ */
+const LOCALE_BY_LANG: Record<string, string> = {
+  zh: 'zh-CN',
+  en: 'en-US',
+  tr: 'tr-TR',
+  es: 'es-ES',
+  fr: 'fr-FR',
+  ja: 'ja-JP',
+  ko: 'ko-KR',
+  de: 'de-DE',
+  it: 'it-IT',
+  pt: 'pt-PT',
+  ru: 'ru-RU',
+  ar: 'ar-SA',
+  hi: 'hi-IN',
+}
+
+/**
+ * Returns the BCP-47 locale of a course's *target* language — i.e., the
+ * language the learner is studying. zh-en → zh-CN, en-tr → tr-TR, etc.
+ * Falls back to zh-CN so the existing zh-en path keeps working when a
+ * caller forgets to thread the course id through.
+ */
+export function targetLocaleForCourse(courseId: string | null | undefined): string {
+  if (!courseId) return 'zh-CN'
+  const parsed = parseCourseId(courseId)
+  if (!parsed) return 'zh-CN'
+  return LOCALE_BY_LANG[parsed.target] ?? parsed.target
+}
 
 /**
  * Mobile TTS wrapper. Honors the user's settings for voice gender and

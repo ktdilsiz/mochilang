@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { ListenAndChooseExercise } from '@mochilang/shared'
-import { speak } from '../../lib/tts'
+import { speak, targetLocaleForCourse } from '../../lib/tts'
 import { useSettings } from '../../state/useSettings'
 import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
@@ -10,6 +10,7 @@ interface Props {
   exercise: ListenAndChooseExercise
   selected: string | null
   locked: boolean
+  courseId?: string
   onSelect: (value: string) => void
 }
 
@@ -17,14 +18,16 @@ export default function ListenAndChoose({
   exercise,
   selected,
   locked,
+  courseId,
   onSelect,
 }: Props) {
   const { state: settings } = useSettings()
+  const targetLocale = targetLocaleForCourse(courseId)
 
   // Auto-play once on mount, when the user has opted in.
   useEffect(() => {
-    if (settings.autoPlayAudio) speak(exercise.spokenText)
-  }, [exercise.spokenText, settings.autoPlayAudio])
+    if (settings.autoPlayAudio) speak(exercise.spokenText, { language: targetLocale })
+  }, [exercise.spokenText, settings.autoPlayAudio, targetLocale])
 
   return (
     <View style={styles.root}>
@@ -32,7 +35,7 @@ export default function ListenAndChoose({
       <View style={styles.listenWrap}>
         <Pressable
           style={styles.listenBtn}
-          onPress={() => speak(exercise.spokenText)}
+          onPress={() => speak(exercise.spokenText, { language: targetLocale })}
           accessibilityLabel="Play audio"
         >
           <Text style={styles.listenText}>🔊 Play again</Text>
@@ -57,7 +60,7 @@ export default function ListenAndChoose({
                 // Speak the tapped option so the learner can compare it
                 // to the prompt audio. Drills tone-pair distinctions
                 // (买/卖, 行 háng/行 xíng) without per-option audio assets.
-                speak(opt)
+                speak(opt, { language: targetLocale })
                 onSelect(opt)
               }}
             >

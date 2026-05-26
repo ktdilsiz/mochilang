@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { TapWordsInOrderExercise } from '@mochilang/shared'
 import TappableText from '../TappableText'
+import { speak, targetLocaleForCourse } from '../../lib/tts'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
   /** Reports the currently-built sentence so the parent can grade. */
   onChange: (built: string) => void
   resetKey: number
+  courseId?: string
 }
 
 interface Chip {
@@ -31,7 +33,9 @@ export default function TapWordsInOrder({
   locked,
   onChange,
   resetKey,
+  courseId,
 }: Props) {
+  const targetLocale = targetLocaleForCourse(courseId)
   const initialBank = useMemo<Chip[]>(
     () => shuffle(exercise.bank).map((w, i) => ({ word: w, key: `${i}-${w}` })),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -54,6 +58,10 @@ export default function TapWordsInOrder({
     setBank((prev) => {
       const next = [...prev]
       const [item] = next.splice(idx, 1)
+      // Speak the token as it lands in the build area — same intent as
+      // the multiple-choice path: hear the target-language word the
+      // moment you tap it.
+      speak(item.word, { language: targetLocale })
       setBuilt((b) => [...b, item])
       return next
     })
