@@ -222,11 +222,19 @@ export default function TappableText({ text, style }: Props) {
       }
     }
 
-    // 2b. Bilingual offline dict for the active course pair. Direction
-    // is sourceLang→targetLang because lessons show target-language
-    // content and the user wants translations into their native source
-    // language. zh-en / en-tr / es-en / en-es / en-zh are bundled.
-    const bil = lookupBilingual(token.word, ctx.targetLang, ctx.sourceLang)
+    // 2b. Bilingual offline dict. Try both directions so a tap works
+    // whether the user grabbed a target-language word (most common —
+    // they want it in their native source) or a source-language word
+    // in a hint/instruction (they want to know what the target form
+    // is). For zh-tw, the en→zh dict is Simplified-keyed but most
+    // characters overlap with Traditional, so it's still useful.
+    const bil =
+      lookupBilingual(token.word, ctx.targetLang, ctx.sourceLang) ??
+      lookupBilingual(token.word, ctx.sourceLang, ctx.targetLang) ??
+      // Last-resort: zh-tw doesn't have en→zh-tw, but en→zh covers it.
+      (ctx.targetLang === 'zh-tw'
+        ? lookupBilingual(token.word, ctx.sourceLang, 'zh')
+        : null)
     if (bil) {
       setActive({
         word: token.word,
