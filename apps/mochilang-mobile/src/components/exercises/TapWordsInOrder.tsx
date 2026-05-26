@@ -69,7 +69,7 @@ export default function TapWordsInOrder({
       speak(item.word, {
         language: localeForOption(
           item.word,
-          [exercise.prompt, exercise.answer, ...exercise.bank],
+          [exercise.prompt ?? '', exercise.answer, ...exercise.bank],
           courseId,
         ),
       })
@@ -98,7 +98,9 @@ export default function TapWordsInOrder({
 
   return (
     <View style={styles.root}>
-      <TappableText text={exercise.prompt} style={styles.prompt} />
+      {exercise.prompt ? (
+        <TappableText text={exercise.prompt} style={styles.prompt} />
+      ) : null}
       {showProgress && (
         <Text style={styles.progress}>
           {built.length} / {expectedTokenCount}

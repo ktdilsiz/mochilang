@@ -36,10 +36,16 @@ interface ExerciseBase {
   explanation?: string
 }
 
-/** "What does X mean?" — pick one of N options. */
+/**
+ * "What does X mean?" — pick one of N options.
+ *
+ * `prompt` is optional now that the UI renders per-type instruction
+ * headers. Carry the actual question text (e.g. "What does 喜欢
+ * mean?") when present; omit when the options speak for themselves.
+ */
 export interface MultipleChoiceExercise extends ExerciseBase {
   type: 'multiple_choice'
-  prompt: string
+  prompt?: string
   options: string[]
   answer: string
 }
@@ -47,7 +53,7 @@ export interface MultipleChoiceExercise extends ExerciseBase {
 /** Fill-in-the-blank — typed answer matched against `answer`. */
 export interface FillBlankExercise extends ExerciseBase {
   type: 'fill_blank'
-  prompt: string
+  prompt?: string
   answer: string
   /** Optional alternate accepted answers (case-insensitive). */
   acceptableAnswers?: string[]
@@ -56,7 +62,7 @@ export interface FillBlankExercise extends ExerciseBase {
 /** Match a list of left items to a list of right items; tap pairs. */
 export interface MatchPairsExercise extends ExerciseBase {
   type: 'match_pairs'
-  prompt: string
+  prompt?: string
   /** Pairs the user must connect. Order is shuffled in the UI. */
   pairs: { left: string; right: string }[]
 }
@@ -64,7 +70,7 @@ export interface MatchPairsExercise extends ExerciseBase {
 /** Hear an audio clip (TTS), then pick the correct character/word from N options. */
 export interface ListenAndChooseExercise extends ExerciseBase {
   type: 'listen_and_choose'
-  prompt: string
+  prompt?: string
   /** Text the TTS engine speaks aloud (Chinese). */
   spokenText: string
   options: string[]
@@ -105,7 +111,7 @@ export interface TranslateExercise extends ExerciseBase {
 /** Reorder a scrambled set of words (or characters) to form a sentence. */
 export interface TapWordsInOrderExercise extends ExerciseBase {
   type: 'tap_words_in_order'
-  prompt: string
+  prompt?: string
   /** The full correct sentence; will be split by spaces in display. */
   answer: string
   /** The set of words to choose from, including distractors. */

@@ -38,7 +38,9 @@ export default function ListenAndChoose({
 
   return (
     <View style={styles.root}>
-      <TappableText text={exercise.prompt} style={styles.prompt} />
+      {exercise.prompt ? (
+        <TappableText text={exercise.prompt} style={styles.prompt} />
+      ) : null}
       <View style={styles.listenWrap}>
         <Pressable
           style={styles.listenBtn}
@@ -72,7 +74,7 @@ export default function ListenAndChoose({
                 speak(opt, {
                   language: localeForOption(
                     opt,
-                    [exercise.prompt, exercise.spokenText, ...exercise.options],
+                    [exercise.prompt ?? '', exercise.spokenText, ...exercise.options],
                     courseId,
                   ),
                 })

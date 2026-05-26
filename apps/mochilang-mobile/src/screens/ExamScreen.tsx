@@ -301,7 +301,9 @@ function ExerciseView({
     case 'multiple_choice':
       return (
         <View style={styles.exRoot}>
-          <TappableText text={ex.prompt} style={styles.prompt} />
+          {ex.prompt ? (
+            <TappableText text={ex.prompt} style={styles.prompt} />
+          ) : null}
           <View style={styles.options}>
             {ex.options.map((opt) => {
               const isSel = mcSelected === opt

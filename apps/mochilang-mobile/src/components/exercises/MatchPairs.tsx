@@ -46,7 +46,7 @@ export default function MatchPairs({
   // Latin-only.
   const allTileTexts = useMemo(
     () => [
-      exercise.prompt,
+      exercise.prompt ?? '',
       ...exercise.pairs.flatMap((p) => [p.left, p.right]),
     ],
     [exercise],
@@ -164,7 +164,9 @@ export default function MatchPairs({
 
   return (
     <View style={styles.root}>
-      <TappableText text={exercise.prompt} style={styles.prompt} />
+      {exercise.prompt ? (
+        <TappableText text={exercise.prompt} style={styles.prompt} />
+      ) : null}
       <View style={styles.pairs}>
         {renderColumn('left', lefts, 'l')}
         {renderColumn('right', rights, 'r')}

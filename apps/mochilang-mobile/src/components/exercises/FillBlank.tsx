@@ -25,7 +25,9 @@ export default function FillBlank({ exercise, value, locked, onChange }: Props) 
   const [altsOpen, setAltsOpen] = useState(false)
   return (
     <View style={styles.root}>
-      <TappableText text={exercise.prompt} style={styles.prompt} />
+      {exercise.prompt ? (
+        <TappableText text={exercise.prompt} style={styles.prompt} />
+      ) : null}
       <TextInput
         style={[
           styles.input,

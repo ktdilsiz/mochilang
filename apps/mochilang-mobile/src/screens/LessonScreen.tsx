@@ -165,7 +165,7 @@ export default function LessonScreen({
       // tap_words_in_order's built string is already pure target.
       const targetLoc = targetLocaleForCourse(courseId)
       if (ex.type === 'fill_blank') {
-        const sentence = fillSentence(ex.prompt, fbValue)
+        const sentence = ex.prompt ? fillSentence(ex.prompt, fbValue) : null
         speak(sentence ?? fbValue, { language: targetLoc })
       } else if (ex.type === 'tap_words_in_order') {
         speak(tapValue, { language: targetLoc })
@@ -355,7 +355,9 @@ function ExerciseView({
     case 'multiple_choice':
       return (
         <View style={styles.exRoot}>
-          <TappableText text={ex.prompt} style={styles.prompt} />
+          {ex.prompt ? (
+            <TappableText text={ex.prompt} style={styles.prompt} />
+          ) : null}
           <View style={styles.options}>
             {ex.options.map((opt) => {
               const isSel = mcSelected === opt
@@ -370,7 +372,7 @@ function ExerciseView({
                     speak(opt, {
                       language: localeForOption(
                         opt,
-                        [ex.prompt, ...ex.options],
+                        [ex.prompt ?? '', ...ex.options],
                         courseId,
                       ),
                     })
