@@ -166,7 +166,7 @@
             {
               "id": "ims1-3",
               "type": "fill_blank",
-              "prompt": "Complete: 'tener' → ellos preterite is 'tuvieron'. The imperfect subjunctive yo form is ___",
+              "prompt": "'tener' → ellos preterite is 'tuvieron'. The imperfect subjunctive yo form is ___",
               "answer": "tuviera",
               "acceptableAnswers": [
                 "tuviese"
@@ -176,7 +176,7 @@
             {
               "id": "ims1-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I wanted him to come'",
+              "prompt": "I wanted him to come",
               "answer": "Quería que él viniera",
               "bank": [
                 "Quería",
@@ -213,7 +213,7 @@
             {
               "id": "ims1-7",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'She asked us to wait'",
+              "prompt": "She asked us to wait",
               "answer": "Nos pidió que esperáramos",
               "bank": [
                 "Nos",
@@ -268,7 +268,7 @@
             {
               "id": "ims1-10",
               "type": "fill_blank",
-              "prompt": "'Era necesario que ___ (estudiar, nosotros) más.'",
+              "prompt": "Era necesario que ___ (estudiar, nosotros) más.",
               "answer": "estudiáramos",
               "acceptableAnswers": [
                 "estudiásemos"
@@ -348,7 +348,7 @@
             {
               "id": "ims2-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'They asked us to be quiet'",
+              "prompt": "They asked us to be quiet",
               "answer": "Nos pidieron que nos calláramos",
               "bank": [
                 "Nos",
@@ -364,7 +364,7 @@
             {
               "id": "ims2-3",
               "type": "fill_blank",
-              "prompt": "'Mi madre me dijo que ___ (hacer) la tarea.'",
+              "prompt": "Mi madre me dijo que ___ (hacer) la tarea.",
               "answer": "hiciera",
               "acceptableAnswers": [
                 "hiciese"
@@ -387,7 +387,7 @@
             {
               "id": "ims2-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'They wanted me to stay'",
+              "prompt": "They wanted me to stay",
               "answer": "Querían que me quedara",
               "bank": [
                 "Querían",
@@ -403,7 +403,7 @@
             {
               "id": "ims2-6",
               "type": "fill_blank",
-              "prompt": "'Le rogué que no se ___ (ir).'",
+              "prompt": "Le rogué que no se ___ (ir).",
               "answer": "fuera",
               "acceptableAnswers": [
                 "fuese"
@@ -426,7 +426,7 @@
             {
               "id": "ims2-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The teacher insisted that we arrive on time'",
+              "prompt": "The teacher insisted that we arrive on time",
               "answer": "El profesor insistió en que llegáramos a tiempo",
               "bank": [
                 "El",
@@ -443,8 +443,9 @@
             },
             {
               "id": "ims2-9",
-              "type": "fill_blank",
-              "prompt": "Translate to English: 'Mi jefe quería que trabajáramos el sábado.'",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "Mi jefe quería que trabajáramos el sábado.",
               "answer": "My boss wanted us to work on Saturday",
               "acceptableAnswers": [
                 "My boss wanted us to work Saturday",
@@ -467,7 +468,7 @@
             {
               "id": "ims2-11",
               "type": "fill_blank",
-              "prompt": "'Mis padres no querían que yo ___ (salir) tarde.'",
+              "prompt": "Mis padres no querían que yo ___ (salir) tarde.",
               "answer": "saliera",
               "acceptableAnswers": [
                 "saliese"
@@ -489,7 +490,7 @@
             {
               "id": "ims2-13",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I hoped that you would write to me'",
+              "prompt": "I hoped that you would write to me",
               "answer": "Esperaba que me escribieras",
               "bank": [
                 "Esperaba",
@@ -504,7 +505,7 @@
             {
               "id": "ims2-14",
               "type": "fill_blank",
-              "prompt": "'Nos dijo que ___ (volver, nosotros) pronto.'",
+              "prompt": "Nos dijo que ___ (volver, nosotros) pronto.",
               "answer": "volviéramos",
               "acceptableAnswers": [
                 "volviésemos"
@@ -535,7 +536,7 @@
             {
               "id": "ims3-2",
               "type": "tap_words_in_order",
-              "prompt": "Build politely: 'I'd like to reserve a table for two'",
+              "prompt": "'I'd like to reserve a table for two'",
               "answer": "Quisiera reservar una mesa para dos",
               "bank": [
                 "Quisiera",
@@ -550,8 +551,9 @@
             },
             {
               "id": "ims3-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'We'd like to see the menu, please.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "We'd like to see the menu, please.",
               "answer": "Quisiéramos ver el menú, por favor",
               "acceptableAnswers": [
                 "Quisiéramos ver la carta, por favor"
@@ -573,7 +575,7 @@
             {
               "id": "ims3-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I'd like to know if there's wi-fi'",
+              "prompt": "'I'd like to know if there's wi-fi'",
               "answer": "Quisiera saber si hay wifi",
               "bank": [
                 "Quisiera",
@@ -610,7 +612,7 @@
             {
               "id": "ims3-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I'd like to ask you a question'",
+              "prompt": "'I'd like to ask you a question'",
               "answer": "Quisiera hacerle una pregunta",
               "bank": [
                 "Quisiera",
@@ -624,8 +626,9 @@
             },
             {
               "id": "ims3-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Quisiera hablar con el gerente.'",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "Quisiera hablar con el gerente.",
               "answer": "I'd like to speak with the manager",
               "acceptableAnswers": [
                 "I would like to talk to the manager"
@@ -660,7 +663,7 @@
             {
               "id": "ims3-12",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I'd like to change my room'",
+              "prompt": "'I'd like to change my room'",
               "answer": "Quisiera cambiar de habitación",
               "bank": [
                 "Quisiera",
@@ -674,9 +677,11 @@
             },
             {
               "id": "ims3-13",
-              "type": "fill_blank",
-              "prompt": "Translate (polite): 'I'd like a glass of water, please.'",
-              "answer": "Quisiera un vaso de agua, por favor"
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I'd like a glass of water, please.",
+              "answer": "Quisiera un vaso de agua, por favor",
+              "acceptableAnswers": []
             }
           ]
         },
@@ -703,7 +708,7 @@
             {
               "id": "ims4-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'If we lived in Spain, we would speak Spanish every day'",
+              "prompt": "If we lived in Spain, we would speak Spanish every day",
               "answer": "Si viviéramos en España , hablaríamos español todos los días",
               "bank": [
                 "Si",
@@ -723,7 +728,7 @@
             {
               "id": "ims4-3",
               "type": "fill_blank",
-              "prompt": "'Si ___ (ser, yo) tú, no lo haría.'",
+              "prompt": "Si ___ (ser, yo) tú, no lo haría.",
               "answer": "fuera",
               "acceptableAnswers": [
                 "fuese"
@@ -746,7 +751,7 @@
             {
               "id": "ims4-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'If you studied more, you'd pass'",
+              "prompt": "'If you studied more, you'd pass'",
               "answer": "Si estudiaras más , aprobarías",
               "bank": [
                 "Si",
@@ -762,7 +767,7 @@
             {
               "id": "ims4-6",
               "type": "fill_blank",
-              "prompt": "'Si yo ___ (poder), te lo daría.'",
+              "prompt": "Si yo ___ (poder), te lo daría.",
               "answer": "pudiera",
               "acceptableAnswers": [
                 "pudiese"
@@ -784,7 +789,7 @@
             {
               "id": "ims4-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'If they had more time, they'd visit us'",
+              "prompt": "'If they had more time, they'd visit us'",
               "answer": "Si tuvieran más tiempo , nos visitarían",
               "bank": [
                 "Si",
@@ -801,8 +806,9 @@
             },
             {
               "id": "ims4-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'If I were rich, I'd buy a house in Madrid.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "If I were rich, I'd buy a house in Madrid.",
               "answer": "Si fuera rico, compraría una casa en Madrid",
               "acceptableAnswers": [
                 "Si fuese rico, compraría una casa en Madrid",
@@ -824,7 +830,7 @@
             {
               "id": "ims4-11",
               "type": "fill_blank",
-              "prompt": "'Si ___ (hacer) buen tiempo, iríamos a la playa.'",
+              "prompt": "Si ___ (hacer) buen tiempo, iríamos a la playa.",
               "answer": "hiciera",
               "acceptableAnswers": [
                 "hiciese"
@@ -846,7 +852,7 @@
             {
               "id": "ims4-13",
               "type": "fill_blank",
-              "prompt": "'Si ella ___ (saber) la respuesta, te lo diría.'",
+              "prompt": "Si ella ___ (saber) la respuesta, te lo diría.",
               "answer": "supiera",
               "acceptableAnswers": [
                 "supiese"
@@ -1121,7 +1127,7 @@
             {
               "id": "cp1-3",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I would have called you'",
+              "prompt": "I would have called you",
               "answer": "Te habría llamado",
               "bank": [
                 "Te",
@@ -1147,8 +1153,9 @@
             },
             {
               "id": "cp1-5",
-              "type": "fill_blank",
-              "prompt": "Translate 'He would have come.' to Spanish.",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He would have come.",
               "answer": "Habría venido",
               "acceptableAnswers": [
                 "Él habría venido"
@@ -1157,7 +1164,7 @@
             {
               "id": "cp1-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'We would have seen the film'",
+              "prompt": "We would have seen the film",
               "answer": "Habríamos visto la película",
               "bank": [
                 "Habríamos",
@@ -1194,7 +1201,7 @@
             {
               "id": "cp1-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'You would have done it better'",
+              "prompt": "You would have done it better",
               "answer": "Lo habrías hecho mejor",
               "bank": [
                 "Lo",
@@ -1220,9 +1227,11 @@
             },
             {
               "id": "cp1-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They would have opened the door.'",
-              "answer": "Habrían abierto la puerta"
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They would have opened the door.",
+              "answer": "Habrían abierto la puerta",
+              "acceptableAnswers": []
             },
             {
               "id": "cp1-12",
@@ -1280,7 +1289,7 @@
             {
               "id": "cp2-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'We would have gone to the beach, but it rained'",
+              "prompt": "We would have gone to the beach, but it rained",
               "answer": "Habríamos ido a la playa , pero llovió",
               "bank": [
                 "Habríamos",
@@ -1298,7 +1307,7 @@
             {
               "id": "cp2-3",
               "type": "fill_blank",
-              "prompt": "'___ (Yo, ir) a la reunión, pero estaba enfermo.'",
+              "prompt": "___ (Yo, ir) a la reunión, pero estaba enfermo.",
               "answer": "Habría ido",
               "acceptableAnswers": [
                 "Yo habría ido"
@@ -1319,7 +1328,7 @@
             {
               "id": "cp2-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I would have helped you, but I was busy'",
+              "prompt": "I would have helped you, but I was busy",
               "answer": "Te habría ayudado , pero estaba ocupado",
               "bank": [
                 "Te",
@@ -1336,8 +1345,9 @@
             },
             {
               "id": "cp2-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'He would have come, but he didn't have the time.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He would have come, but he didn't have the time.",
               "answer": "Habría venido, pero no tenía tiempo",
               "acceptableAnswers": [
                 "Él habría venido, pero no tenía tiempo"
@@ -1359,7 +1369,7 @@
             {
               "id": "cp2-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I would have eaten more, but I was already full'",
+              "prompt": "I would have eaten more, but I was already full",
               "answer": "Habría comido más , pero ya estaba lleno",
               "bank": [
                 "Habría",
@@ -1376,8 +1386,9 @@
             },
             {
               "id": "cp2-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They would have bought the house, but it was too expensive.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They would have bought the house, but it was too expensive.",
               "answer": "Habrían comprado la casa, pero era demasiado cara",
               "acceptableAnswers": [
                 "Habrían comprado la casa, pero era muy cara"
@@ -1399,7 +1410,7 @@
             {
               "id": "cp2-11",
               "type": "fill_blank",
-              "prompt": "'Nosotros ___ (decir) la verdad, pero no nos preguntaron.'",
+              "prompt": "Nosotros ___ (decir) la verdad, pero no nos preguntaron.",
               "answer": "habríamos dicho"
             },
             {
@@ -1418,7 +1429,7 @@
             {
               "id": "cp2-13",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I would have answered, but I was in a meeting'",
+              "prompt": "I would have answered, but I was in a meeting",
               "answer": "Habría contestado , pero estaba en una reunión",
               "bank": [
                 "Habría",
@@ -1435,8 +1446,9 @@
             },
             {
               "id": "cp2-14",
-              "type": "fill_blank",
-              "prompt": "Translate: 'She would have liked to come.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "She would have liked to come.",
               "answer": "Le habría gustado venir",
               "acceptableAnswers": [
                 "A ella le habría gustado venir"
@@ -1467,7 +1479,7 @@
             {
               "id": "cp3-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'If you had told me, I would have helped you'",
+              "prompt": "If you had told me, I would have helped you",
               "answer": "Si me lo hubieras dicho , te habría ayudado",
               "bank": [
                 "Si",
@@ -1486,7 +1498,7 @@
             {
               "id": "cp3-3",
               "type": "fill_blank",
-              "prompt": "'Si ___ (estudiar) más, habrías aprobado.'",
+              "prompt": "Si ___ (estudiar) más, habrías aprobado.",
               "answer": "hubieras estudiado",
               "acceptableAnswers": [
                 "hubieses estudiado"
@@ -1508,7 +1520,7 @@
             {
               "id": "cp3-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'If we hadn't missed the train, we would have arrived earlier'",
+              "prompt": "'If we hadn't missed the train, we would have arrived earlier'",
               "answer": "Si no hubiéramos perdido el tren , habríamos llegado antes",
               "bank": [
                 "Si",
@@ -1528,7 +1540,7 @@
             {
               "id": "cp3-6",
               "type": "fill_blank",
-              "prompt": "'Si yo ___ (saber) la verdad, te lo habría dicho.'",
+              "prompt": "Si yo ___ (saber) la verdad, te lo habría dicho.",
               "answer": "hubiera sabido",
               "acceptableAnswers": [
                 "hubiese sabido"
@@ -1549,7 +1561,7 @@
             {
               "id": "cp3-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'If they had called us, we would have known'",
+              "prompt": "If they had called us, we would have known",
               "answer": "Si nos hubieran llamado , lo habríamos sabido",
               "bank": [
                 "Si",
@@ -1566,8 +1578,9 @@
             },
             {
               "id": "cp3-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'If she had come, we would have had more fun.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "If she had come, we would have had more fun.",
               "answer": "Si ella hubiera venido, nos habríamos divertido más",
               "acceptableAnswers": [
                 "Si hubiera venido, nos habríamos divertido más",
@@ -1590,7 +1603,7 @@
             {
               "id": "cp3-11",
               "type": "fill_blank",
-              "prompt": "'Si ___ (irse, ellos) antes, habrían evitado el tráfico.'",
+              "prompt": "Si ___ (irse, ellos) antes, habrían evitado el tráfico.",
               "answer": "se hubieran ido",
               "acceptableAnswers": [
                 "se hubiesen ido"
@@ -1612,7 +1625,7 @@
             {
               "id": "cp3-13",
               "type": "fill_blank",
-              "prompt": "'Si tú me ___ (avisar), habría llegado a tiempo.'",
+              "prompt": "Si tú me ___ (avisar), habría llegado a tiempo.",
               "answer": "hubieras avisado",
               "acceptableAnswers": [
                 "hubieses avisado"
@@ -1621,7 +1634,7 @@
             {
               "id": "cp3-14",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'If they had practiced more, they would have won'",
+              "prompt": "If they had practiced more, they would have won",
               "answer": "Si hubieran practicado más , habrían ganado",
               "bank": [
                 "Si",
@@ -1659,7 +1672,7 @@
             {
               "id": "cp4-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'They would have arrived on time if they had left earlier'",
+              "prompt": "They would have arrived on time if they had left earlier",
               "answer": "Habrían llegado a tiempo si hubieran salido antes",
               "bank": [
                 "Habrían",
@@ -1676,8 +1689,9 @@
             },
             {
               "id": "cp4-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I would have done it differently.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I would have done it differently.",
               "answer": "Lo habría hecho de otra manera",
               "acceptableAnswers": [
                 "Lo habría hecho diferente",
@@ -1700,7 +1714,7 @@
             {
               "id": "cp4-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I would have been happier in another city'",
+              "prompt": "I would have been happier in another city",
               "answer": "Habría sido más feliz en otra ciudad",
               "bank": [
                 "Habría",
@@ -1737,7 +1751,7 @@
             {
               "id": "cp4-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I would have already left by then'",
+              "prompt": "I would have already left by then",
               "answer": "Yo ya me habría ido para entonces",
               "bank": [
                 "Yo",
@@ -1753,8 +1767,9 @@
             },
             {
               "id": "cp4-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'You shouldn't have said that.' (hint: deber)",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "You shouldn't have said that.",
               "answer": "No deberías haberlo dicho",
               "acceptableAnswers": [
                 "No deberías haber dicho eso",
@@ -1776,9 +1791,11 @@
             },
             {
               "id": "cp4-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'We would have invited you, but we didn't have your number.'",
-              "answer": "Te habríamos invitado, pero no teníamos tu número"
+              "type": "translate",
+              "direction": "to_target",
+              "source": "We would have invited you, but we didn't have your number.",
+              "answer": "Te habríamos invitado, pero no teníamos tu número",
+              "acceptableAnswers": []
             },
             {
               "id": "cp4-12",
@@ -1795,8 +1812,9 @@
             },
             {
               "id": "cp4-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I would have preferred to stay home.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I would have preferred to stay home.",
               "answer": "Habría preferido quedarme en casa",
               "acceptableAnswers": [
                 "Habría preferido quedarme en casa.",
@@ -2047,7 +2065,7 @@
             {
               "id": "pp1-3",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'We had already left'",
+              "prompt": "We had already left",
               "answer": "Ya nos habíamos ido",
               "bank": [
                 "Ya",
@@ -2073,8 +2091,9 @@
             },
             {
               "id": "pp1-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They had said.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They had said.",
               "answer": "Habían dicho",
               "acceptableAnswers": [
                 "Ellos habían dicho"
@@ -2083,7 +2102,7 @@
             {
               "id": "pp1-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Had you ever been to Argentina?'",
+              "prompt": "Had you ever been to Argentina?",
               "answer": "¿ Habías estado alguna vez en Argentina ?",
               "bank": [
                 "¿",
@@ -2120,7 +2139,7 @@
             {
               "id": "pp1-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'She had broken her arm'",
+              "prompt": "She had broken her arm",
               "answer": "Se había roto el brazo",
               "bank": [
                 "Se",
@@ -2148,7 +2167,7 @@
             {
               "id": "pp1-11",
               "type": "fill_blank",
-              "prompt": "'Cuando llamaste, yo ya ___ (cenar).'",
+              "prompt": "Cuando llamaste, yo ya ___ (cenar).",
               "answer": "había cenado"
             },
             {
@@ -2206,7 +2225,7 @@
             {
               "id": "pp2-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'He arrived late because he had missed the bus'",
+              "prompt": "He arrived late because he had missed the bus",
               "answer": "Llegó tarde porque había perdido el autobús",
               "bank": [
                 "Llegó",
@@ -2224,7 +2243,7 @@
             {
               "id": "pp2-3",
               "type": "fill_blank",
-              "prompt": "'Ella no quería comer; ya ___ (cenar).'",
+              "prompt": "Ella no quería comer; ya ___ (cenar).",
               "answer": "había cenado"
             },
             {
@@ -2242,7 +2261,7 @@
             {
               "id": "pp2-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Before going to bed, I had already washed the dishes'",
+              "prompt": "Before going to bed, I had already washed the dishes",
               "answer": "Antes de acostarme , ya había lavado los platos",
               "bank": [
                 "Antes",
@@ -2260,8 +2279,9 @@
             },
             {
               "id": "pp2-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They told me they had seen her.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They told me they had seen her.",
               "answer": "Me dijeron que la habían visto",
               "acceptableAnswers": [
                 "Ellos me dijeron que la habían visto"
@@ -2283,7 +2303,7 @@
             {
               "id": "pp2-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'We didn't go to the museum because we had been there many times'",
+              "prompt": "'We didn't go to the museum because we had been there many times'",
               "answer": "No fuimos al museo porque habíamos ido muchas veces",
               "bank": [
                 "No",
@@ -2302,7 +2322,7 @@
             {
               "id": "pp2-9",
               "type": "fill_blank",
-              "prompt": "'Cuando me lo contó, yo ya lo ___ (saber/oír).'",
+              "prompt": "Cuando me lo contó, yo ya lo ___ (saber/oír).",
               "answer": "había sabido",
               "acceptableAnswers": [
                 "había oído"
@@ -2323,8 +2343,9 @@
             },
             {
               "id": "pp2-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'He hadn't slept all night.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He hadn't slept all night.",
               "answer": "No había dormido en toda la noche",
               "acceptableAnswers": [
                 "Él no había dormido en toda la noche"
@@ -2346,13 +2367,13 @@
             {
               "id": "pp2-13",
               "type": "fill_blank",
-              "prompt": "'Antes de cumplir 18, ya ___ (viajar) por toda Europa.'",
+              "prompt": "Antes de cumplir 18, ya ___ (viajar) por toda Europa.",
               "answer": "había viajado"
             },
             {
               "id": "pp2-14",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'We hadn't seen each other in years'",
+              "prompt": "'We hadn't seen each other in years'",
               "answer": "No nos habíamos visto en años",
               "bank": [
                 "No",
@@ -2425,7 +2446,7 @@
             {
               "id": "pp3-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'They told us they had already arrived'",
+              "prompt": "They told us they had already arrived",
               "answer": "Nos dijeron que ya habían llegado",
               "bank": [
                 "Nos",
@@ -2441,8 +2462,9 @@
             },
             {
               "id": "pp3-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I realized I had forgotten my keys.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I realized I had forgotten my keys.",
               "answer": "Me di cuenta de que había olvidado las llaves",
               "acceptableAnswers": [
                 "Me di cuenta de que me había olvidado las llaves"
@@ -2464,7 +2486,7 @@
             {
               "id": "pp3-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'We hadn't expected so much rain'",
+              "prompt": "'We hadn't expected so much rain'",
               "answer": "No habíamos esperado tanta lluvia",
               "bank": [
                 "No",
@@ -2499,7 +2521,7 @@
             {
               "id": "pp3-11",
               "type": "fill_blank",
-              "prompt": "'Antes de llegar a México, yo nunca ___ (probar) tacos.'",
+              "prompt": "Antes de llegar a México, yo nunca ___ (probar) tacos.",
               "answer": "había probado"
             },
             {
@@ -2546,7 +2568,7 @@
             {
               "id": "pp4-1",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'When I got home, my brother had already cooked dinner'",
+              "prompt": "When I got home, my brother had already cooked dinner",
               "answer": "Cuando llegué a casa , mi hermano ya había cocinado la cena",
               "bank": [
                 "Cuando",
@@ -2579,13 +2601,13 @@
             {
               "id": "pp4-3",
               "type": "fill_blank",
-              "prompt": "'Ella estaba triste porque su novio la ___ (dejar).'",
+              "prompt": "Ella estaba triste porque su novio la ___ (dejar).",
               "answer": "había dejado"
             },
             {
               "id": "pp4-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'No one had told me about the meeting'",
+              "prompt": "No one had told me about the meeting",
               "answer": "Nadie me había dicho nada de la reunión",
               "bank": [
                 "Nadie",
@@ -2603,8 +2625,9 @@
             },
             {
               "id": "pp4-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'When she retired, she had worked there for 30 years.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "When she retired, she had worked there for 30 years.",
               "answer": "Cuando se jubiló, había trabajado allí 30 años",
               "acceptableAnswers": [
                 "Cuando se jubiló, había trabajado allí treinta años",
@@ -2626,7 +2649,7 @@
             {
               "id": "pp4-7",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'She didn't recognize me because I had cut my hair'",
+              "prompt": "'She didn't recognize me because I had cut my hair'",
               "answer": "No me reconoció porque me había cortado el pelo",
               "bank": [
                 "No",
@@ -2645,7 +2668,7 @@
             {
               "id": "pp4-8",
               "type": "fill_blank",
-              "prompt": "'Cuando se dio cuenta del error, ya ___ (enviar) el correo.'",
+              "prompt": "Cuando se dio cuenta del error, ya ___ (enviar) el correo.",
               "answer": "había enviado"
             },
             {
@@ -2664,7 +2687,7 @@
             {
               "id": "pp4-10",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'By the time he was 25, he had already published two books'",
+              "prompt": "By the time he was 25, he had already published two books",
               "answer": "A los 25 años ya había publicado dos libros",
               "bank": [
                 "A",
@@ -2683,8 +2706,9 @@
             },
             {
               "id": "pp4-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I asked him if he had seen the new film.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I asked him if he had seen the new film.",
               "answer": "Le pregunté si había visto la nueva película",
               "acceptableAnswers": [
                 "Le pregunté si había visto la película nueva"
@@ -2705,8 +2729,9 @@
             },
             {
               "id": "pp4-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They had been waiting for hours.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They had been waiting for hours.",
               "answer": "Habían estado esperando durante horas",
               "acceptableAnswers": [
                 "Llevaban horas esperando",
@@ -2716,7 +2741,7 @@
             {
               "id": "pp4-14",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'When I met her, she had already written three books'",
+              "prompt": "When I met her, she had already written three books",
               "answer": "Cuando la conocí , ya había escrito tres libros",
               "bank": [
                 "Cuando",
@@ -2982,7 +3007,7 @@
             {
               "id": "ps1-3",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The houses were built in 1920'",
+              "prompt": "The houses were built in 1920",
               "answer": "Las casas fueron construidas en 1920",
               "bank": [
                 "Las",
@@ -3011,14 +3036,16 @@
             },
             {
               "id": "ps1-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The contract will be signed tomorrow.'",
-              "answer": "El contrato será firmado mañana"
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The contract will be signed tomorrow.",
+              "answer": "El contrato será firmado mañana",
+              "acceptableAnswers": []
             },
             {
               "id": "ps1-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The film was directed by Almodóvar'",
+              "prompt": "The film was directed by Almodóvar",
               "answer": "La película fue dirigida por Almodóvar",
               "bank": [
                 "La",
@@ -3057,7 +3084,7 @@
             {
               "id": "ps1-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The decision has been made'",
+              "prompt": "The decision has been made",
               "answer": "La decisión ha sido tomada",
               "bank": [
                 "La",
@@ -3084,9 +3111,11 @@
             },
             {
               "id": "ps1-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The new law was approved by Parliament.'",
-              "answer": "La nueva ley fue aprobada por el Parlamento"
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The new law was approved by Parliament.",
+              "answer": "La nueva ley fue aprobada por el Parlamento",
+              "acceptableAnswers": []
             },
             {
               "id": "ps1-12",
@@ -3103,8 +3132,9 @@
             },
             {
               "id": "ps1-13",
-              "type": "fill_blank",
-              "prompt": "Translate (ser-passive): 'The students were evaluated by the committee.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The students were evaluated by the committee.",
               "answer": "Los estudiantes fueron evaluados por el comité",
               "acceptableAnswers": [
                 "Las estudiantes fueron evaluadas por el comité"
@@ -3147,7 +3177,7 @@
             {
               "id": "ps2-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Used cars are sold'",
+              "prompt": "Used cars are sold",
               "answer": "Se venden coches usados",
               "bank": [
                 "Se",
@@ -3162,8 +3192,9 @@
             },
             {
               "id": "ps2-3",
-              "type": "fill_blank",
-              "prompt": "Translate the sign: 'Se alquila piso.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Se alquila piso.",
               "answer": "Flat for rent",
               "acceptableAnswers": [
                 "Apartment for rent",
@@ -3186,7 +3217,7 @@
             {
               "id": "ps2-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'A lot of wine is consumed in Spain'",
+              "prompt": "A lot of wine is consumed in Spain",
               "answer": "Se consume mucho vino en España",
               "bank": [
                 "Se",
@@ -3222,7 +3253,7 @@
             {
               "id": "ps2-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Many books are read in this house'",
+              "prompt": "Many books are read in this house",
               "answer": "Se leen muchos libros en esta casa",
               "bank": [
                 "Se",
@@ -3239,8 +3270,9 @@
             },
             {
               "id": "ps2-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'A waiter is wanted.' (job ad)",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "A waiter is wanted.",
               "answer": "Se busca camarero",
               "acceptableAnswers": [
                 "Se busca un camarero",
@@ -3262,8 +3294,9 @@
             },
             {
               "id": "ps2-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They speak French here.' (using se)",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They speak French here.",
               "answer": "Se habla francés aquí",
               "acceptableAnswers": [
                 "Aquí se habla francés"
@@ -3285,7 +3318,7 @@
             {
               "id": "ps2-13",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'A lot of olive oil is produced in Spain'",
+              "prompt": "A lot of olive oil is produced in Spain",
               "answer": "Se produce mucho aceite de oliva en España",
               "bank": [
                 "Se",
@@ -3331,7 +3364,7 @@
             {
               "id": "ps3-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'One lives well in Spain'",
+              "prompt": "One lives well in Spain",
               "answer": "Se vive bien en España",
               "bank": [
                 "Se",
@@ -3346,8 +3379,9 @@
             },
             {
               "id": "ps3-3",
-              "type": "fill_blank",
-              "prompt": "Translate the sign: 'Se prohíbe fumar.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Se prohíbe fumar.",
               "answer": "No smoking",
               "acceptableAnswers": [
                 "Smoking is prohibited",
@@ -3369,7 +3403,7 @@
             {
               "id": "ps3-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Here one eats very well'",
+              "prompt": "Here one eats very well",
               "answer": "Aquí se come muy bien",
               "bank": [
                 "Aquí",
@@ -3384,9 +3418,11 @@
             },
             {
               "id": "ps3-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Silence is requested.' (formal sign)",
-              "answer": "Se ruega silencio"
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Silence is requested.",
+              "answer": "Se ruega silencio",
+              "acceptableAnswers": []
             },
             {
               "id": "ps3-7",
@@ -3404,7 +3440,7 @@
             {
               "id": "ps3-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'How does one get to the station?'",
+              "prompt": "How does one get to the station?",
               "answer": "¿ Cómo se llega a la estación ?",
               "bank": [
                 "¿",
@@ -3423,7 +3459,7 @@
             {
               "id": "ps3-9",
               "type": "fill_blank",
-              "prompt": "'En España ___ (cenar) muy tarde.'",
+              "prompt": "En España ___ (cenar) muy tarde.",
               "answer": "se cena",
               "acceptableAnswers": [
                 "se cena tarde",
@@ -3446,8 +3482,9 @@
             },
             {
               "id": "ps3-11",
-              "type": "fill_blank",
-              "prompt": "Translate the sign: 'Se ruega no tocar.'",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "Se ruega no tocar.",
               "answer": "Please do not touch",
               "acceptableAnswers": [
                 "Do not touch please",
@@ -3469,8 +3506,9 @@
             },
             {
               "id": "ps3-13",
-              "type": "fill_blank",
-              "prompt": "Translate the sign: 'Se prohíbe el paso.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Se prohíbe el paso.",
               "answer": "No entry",
               "acceptableAnswers": [
                 "Entry forbidden",
@@ -3514,7 +3552,7 @@
             {
               "id": "ps4-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It is believed that he is guilty'",
+              "prompt": "It is believed that he is guilty",
               "answer": "Se cree que es culpable",
               "bank": [
                 "Se",
@@ -3550,7 +3588,7 @@
             {
               "id": "ps4-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It is said that he's leaving'",
+              "prompt": "'It is said that he's leaving'",
               "answer": "Se dice que se va",
               "bank": [
                 "Se",
@@ -3565,8 +3603,9 @@
             },
             {
               "id": "ps4-6",
-              "type": "fill_blank",
-              "prompt": "Translate the headline: 'New law approved.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "New law approved.",
               "answer": "Aprobada nueva ley",
               "acceptableAnswers": [
                 "Nueva ley aprobada",
@@ -3589,7 +3628,7 @@
             {
               "id": "ps4-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'A solution was found quickly'",
+              "prompt": "A solution was found quickly",
               "answer": "Se encontró una solución rápidamente",
               "bank": [
                 "Se",
@@ -3604,8 +3643,9 @@
             },
             {
               "id": "ps4-9",
-              "type": "fill_blank",
-              "prompt": "Translate (formal news): 'The president was elected last year.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The president was elected last year.",
               "answer": "El presidente fue elegido el año pasado",
               "acceptableAnswers": [
                 "Se eligió al presidente el año pasado"
@@ -3626,8 +3666,9 @@
             },
             {
               "id": "ps4-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'These cars are made in Germany.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "These cars are made in Germany.",
               "answer": "Estos coches se fabrican en Alemania",
               "acceptableAnswers": [
                 "Estos coches son fabricados en Alemania",
@@ -3650,7 +3691,7 @@
             {
               "id": "ps4-13",
               "type": "tap_words_in_order",
-              "prompt": "Build (news): 'Five people were rescued from the fire'",
+              "prompt": "Five people were rescued from the fire",
               "answer": "Cinco personas fueron rescatadas del incendio",
               "bank": [
                 "Cinco",
@@ -3938,13 +3979,13 @@
             {
               "id": "op1-3",
               "type": "fill_blank",
-              "prompt": "'Dudo que ___ (venir) mañana.'",
+              "prompt": "Dudo que ___ (venir) mañana.",
               "answer": "venga"
             },
             {
               "id": "op1-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I don't believe he's telling the truth'",
+              "prompt": "'I don't believe he's telling the truth'",
               "answer": "No creo que esté diciendo la verdad",
               "bank": [
                 "No",
@@ -3975,13 +4016,13 @@
             {
               "id": "op1-6",
               "type": "fill_blank",
-              "prompt": "'Pienso que ___ (ser) un buen plan.'",
+              "prompt": "Pienso que ___ (ser) un buen plan.",
               "answer": "es"
             },
             {
               "id": "op1-7",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It's possible that they have left'",
+              "prompt": "'It's possible that they have left'",
               "answer": "Es posible que se hayan ido",
               "bank": [
                 "Es",
@@ -4012,13 +4053,13 @@
             {
               "id": "op1-9",
               "type": "fill_blank",
-              "prompt": "'Es probable que ___ (llover) esta noche.'",
+              "prompt": "Es probable que ___ (llover) esta noche.",
               "answer": "llueva"
             },
             {
               "id": "op1-10",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I doubt that they will arrive on time'",
+              "prompt": "I doubt that they will arrive on time",
               "answer": "Dudo que lleguen a tiempo",
               "bank": [
                 "Dudo",
@@ -4060,7 +4101,7 @@
             {
               "id": "op1-13",
               "type": "fill_blank",
-              "prompt": "'Es evidente que ___ (ser) un buen plan.'",
+              "prompt": "Es evidente que ___ (ser) un buen plan.",
               "answer": "es",
               "explanation": "Certainty trigger → indicative."
             },
@@ -4126,8 +4167,9 @@
             },
             {
               "id": "op2-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'In my opinion, it's a serious problem.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "In my opinion, it's a serious problem.",
               "answer": "En mi opinión, es un problema grave",
               "acceptableAnswers": [
                 "A mi parecer, es un problema grave",
@@ -4137,7 +4179,7 @@
             {
               "id": "op2-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'From my point of view, it's an error'",
+              "prompt": "'From my point of view, it's an error'",
               "answer": "Desde mi punto de vista , es un error",
               "bank": [
                 "Desde",
@@ -4180,7 +4222,7 @@
             {
               "id": "op2-7",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'In conclusion, it's an issue we should consider'",
+              "prompt": "'In conclusion, it's an issue we should consider'",
               "answer": "En conclusión , es un tema que deberíamos considerar",
               "bank": [
                 "En",
@@ -4198,8 +4240,9 @@
             },
             {
               "id": "op2-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'On the one hand X, on the other hand Y.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "On the one hand X, on the other hand Y.",
               "answer": "Por un lado X, por otro lado Y",
               "acceptableAnswers": [
                 "Por una parte X, por otra parte Y"
@@ -4220,7 +4263,7 @@
             {
               "id": "op2-10",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'On the contrary, I think the opposite'",
+              "prompt": "On the contrary, I think the opposite",
               "answer": "Al contrario , yo pienso lo contrario",
               "bank": [
                 "Al",
@@ -4237,8 +4280,9 @@
             },
             {
               "id": "op2-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'In short, the situation is complicated.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "In short, the situation is complicated.",
               "answer": "En resumen, la situación es complicada",
               "acceptableAnswers": [
                 "En definitiva, la situación es complicada"
@@ -4260,7 +4304,7 @@
             {
               "id": "op2-13",
               "type": "tap_words_in_order",
-              "prompt": "Build (essay): 'On the one hand, the data are clear; on the other, the analysis is debatable'",
+              "prompt": "On the one hand, the data are clear; on the other, the analysis is debatable",
               "answer": "Por un lado , los datos son claros ; por otro , el análisis es discutible",
               "bank": [
                 "Por",
@@ -4283,8 +4327,9 @@
             },
             {
               "id": "op2-14",
-              "type": "fill_blank",
-              "prompt": "Translate (formal closer): 'In conclusion, more research is needed.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "In conclusion, more research is needed.",
               "answer": "En conclusión, se necesita más investigación",
               "acceptableAnswers": [
                 "En conclusión, hace falta más investigación"
@@ -4315,13 +4360,13 @@
             {
               "id": "op3-2",
               "type": "fill_blank",
-              "prompt": "'Es necesario que ___ (estudiar, tú) más.'",
+              "prompt": "Es necesario que ___ (estudiar, tú) más.",
               "answer": "estudies"
             },
             {
               "id": "op3-3",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It's important that we arrive on time'",
+              "prompt": "'It's important that we arrive on time'",
               "answer": "Es importante que lleguemos a tiempo",
               "bank": [
                 "Es",
@@ -4351,13 +4396,13 @@
             {
               "id": "op3-5",
               "type": "fill_blank",
-              "prompt": "'Es bueno que ___ (hacer, ustedes) ejercicio.'",
+              "prompt": "Es bueno que ___ (hacer, ustedes) ejercicio.",
               "answer": "hagan"
             },
             {
               "id": "op3-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It's a shame that they didn't come'",
+              "prompt": "'It's a shame that they didn't come'",
               "answer": "Es una pena que no vinieran",
               "bank": [
                 "Es",
@@ -4387,7 +4432,7 @@
             {
               "id": "op3-8",
               "type": "fill_blank",
-              "prompt": "'Es probable que ___ (haber) tráfico.'",
+              "prompt": "Es probable que ___ (haber) tráfico.",
               "answer": "haya",
               "acceptableAnswers": [
                 "haya tráfico"
@@ -4396,7 +4441,7 @@
             {
               "id": "op3-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It's strange that he hasn't called'",
+              "prompt": "'It's strange that he hasn't called'",
               "answer": "Es extraño que no haya llamado",
               "bank": [
                 "Es",
@@ -4425,8 +4470,9 @@
             },
             {
               "id": "op3-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'It's impossible that he's lying.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "It's impossible that he's lying.",
               "answer": "Es imposible que esté mintiendo",
               "acceptableAnswers": [
                 "Es imposible que mienta"
@@ -4448,7 +4494,7 @@
             {
               "id": "op3-13",
               "type": "fill_blank",
-              "prompt": "'Es una lástima que no ___ (poder, ellos) venir.'",
+              "prompt": "Es una lástima que no ___ (poder, ellos) venir.",
               "answer": "puedan"
             },
             {
@@ -4500,8 +4546,9 @@
             },
             {
               "id": "op4-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Maybe he's lying.' (tal vez, subjunctive)",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Maybe he's lying.",
               "answer": "Tal vez esté mintiendo",
               "acceptableAnswers": [
                 "Tal vez mienta"
@@ -4510,7 +4557,7 @@
             {
               "id": "op4-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Maybe it will rain this afternoon'",
+              "prompt": "Maybe it will rain this afternoon",
               "answer": "Quizá llueva esta tarde",
               "bank": [
                 "Quizá",
@@ -4538,8 +4585,9 @@
             },
             {
               "id": "op4-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Maybe she doesn't know.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Maybe she doesn't know.",
               "answer": "A lo mejor no sabe",
               "acceptableAnswers": [
                 "Quizá no sepa",
@@ -4549,7 +4597,7 @@
             {
               "id": "op4-7",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Perhaps you're right'",
+              "prompt": "'Perhaps you're right'",
               "answer": "Tal vez tengas razón",
               "bank": [
                 "Tal",
@@ -4576,8 +4624,9 @@
             },
             {
               "id": "op4-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I might be wrong.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I might be wrong.",
               "answer": "Podría estar equivocado",
               "acceptableAnswers": [
                 "Quizá esté equivocado",
@@ -4588,7 +4637,7 @@
             {
               "id": "op4-10",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It could be that he doesn't want to come'",
+              "prompt": "'It could be that he doesn't want to come'",
               "answer": "Puede que no quiera venir",
               "bank": [
                 "Puede",
@@ -4603,8 +4652,9 @@
             },
             {
               "id": "op4-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I'm not sure he understood.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I'm not sure he understood.",
               "answer": "No estoy seguro de que entendiera",
               "acceptableAnswers": [
                 "No estoy seguro de que haya entendido",
@@ -4627,14 +4677,14 @@
             {
               "id": "op4-13",
               "type": "fill_blank",
-              "prompt": "'A lo mejor ___ (llover) esta tarde.'",
+              "prompt": "A lo mejor ___ (llover) esta tarde.",
               "answer": "llueve",
               "explanation": "'A lo mejor' always takes indicative."
             },
             {
               "id": "op4-14",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It could be that the meeting was cancelled'",
+              "prompt": "It could be that the meeting was cancelled",
               "answer": "Puede que se haya cancelado la reunión",
               "bank": [
                 "Puede",
@@ -4965,8 +5015,9 @@
             },
             {
               "id": "nw1-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'foreign correspondent'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "foreign correspondent",
               "answer": "corresponsal extranjero",
               "acceptableAnswers": [
                 "corresponsal en el extranjero",
@@ -4987,8 +5038,9 @@
             },
             {
               "id": "nw1-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'live coverage'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "live coverage",
               "answer": "cobertura en vivo",
               "acceptableAnswers": [
                 "cobertura en directo",
@@ -5010,7 +5062,7 @@
             {
               "id": "nw1-10",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'the front page of today's newspaper'",
+              "prompt": "'the front page of today's newspaper'",
               "answer": "la portada del periódico de hoy",
               "bank": [
                 "la",
@@ -5026,8 +5078,9 @@
             },
             {
               "id": "nw1-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'press conference'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "press conference",
               "answer": "rueda de prensa",
               "acceptableAnswers": [
                 "conferencia de prensa"
@@ -5048,8 +5101,9 @@
             },
             {
               "id": "nw1-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'a daily newspaper'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "a daily newspaper",
               "answer": "un periódico diario",
               "acceptableAnswers": [
                 "un diario"
@@ -5092,7 +5146,7 @@
             {
               "id": "nw2-2",
               "type": "tap_words_in_order",
-              "prompt": "Build headline: 'Two arrested in robbery'",
+              "prompt": "Two arrested in robbery",
               "answer": "Detenidos dos en el robo",
               "bank": [
                 "Detenidos",
@@ -5130,8 +5184,9 @@
             },
             {
               "id": "nw2-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Three injured in fire'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Three injured in fire",
               "answer": "Tres heridos en incendio",
               "acceptableAnswers": [
                 "Tres heridos en un incendio"
@@ -5140,7 +5195,7 @@
             {
               "id": "nw2-6",
               "type": "tap_words_in_order",
-              "prompt": "Build headline: 'New president elected'",
+              "prompt": "New president elected",
               "answer": "Elegido nuevo presidente",
               "bank": [
                 "Elegido",
@@ -5165,8 +5220,9 @@
             },
             {
               "id": "nw2-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Inflation rises in May'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Inflation rises in May",
               "answer": "Sube la inflación en mayo",
               "acceptableAnswers": [
                 "Aumenta la inflación en mayo",
@@ -5176,7 +5232,7 @@
             {
               "id": "nw2-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Investigation opened into the accident'",
+              "prompt": "Investigation opened into the accident",
               "answer": "Abierta investigación sobre el accidente",
               "bank": [
                 "Abierta",
@@ -5238,7 +5294,7 @@
             {
               "id": "nw2-14",
               "type": "tap_words_in_order",
-              "prompt": "Build headline: 'Drought hits the south'",
+              "prompt": "Drought hits the south",
               "answer": "La sequía golpea el sur",
               "bank": [
                 "La",
@@ -5275,7 +5331,7 @@
             {
               "id": "nw3-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Apparently, he resigned this morning'",
+              "prompt": "Apparently, he resigned this morning",
               "answer": "Al parecer , dimitió esta mañana",
               "bank": [
                 "Al",
@@ -5291,8 +5347,9 @@
             },
             {
               "id": "nw3-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'It is rumored that he will leave the team.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "It is rumored that he will leave the team.",
               "answer": "Se rumorea que dejará el equipo",
               "acceptableAnswers": [
                 "Se rumora que dejará el equipo",
@@ -5314,8 +5371,9 @@
             },
             {
               "id": "nw3-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The president declared that the situation is under control.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The president declared that the situation is under control.",
               "answer": "El presidente declaró que la situación está controlada",
               "acceptableAnswers": [
                 "El presidente declaró que la situación está bajo control"
@@ -5324,7 +5382,7 @@
             {
               "id": "nw3-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'According to the witness, the suspect fled'",
+              "prompt": "According to the witness, the suspect fled",
               "answer": "Según el testigo , el sospechoso huyó",
               "bank": [
                 "Según",
@@ -5354,7 +5412,7 @@
             {
               "id": "nw3-8",
               "type": "fill_blank",
-              "prompt": "'Se cree que ___ (haber) más detenidos.'",
+              "prompt": "Se cree que ___ (haber) más detenidos.",
               "answer": "habrá",
               "acceptableAnswers": [
                 "hay",
@@ -5364,7 +5422,7 @@
             {
               "id": "nw3-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The minister insisted that the law would pass'",
+              "prompt": "The minister insisted that the law would pass",
               "answer": "El ministro insistió en que la ley se aprobaría",
               "bank": [
                 "El",
@@ -5409,8 +5467,9 @@
             },
             {
               "id": "nw3-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Sources close to the case stated that…'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Sources close to the case stated that…",
               "answer": "Fuentes cercanas al caso afirmaron que",
               "acceptableAnswers": [
                 "Fuentes próximas al caso afirmaron que"
@@ -5432,7 +5491,7 @@
             {
               "id": "nw3-13",
               "type": "fill_blank",
-              "prompt": "'Trascendió que ___ (haber) negociaciones secretas.'",
+              "prompt": "Trascendió que ___ (haber) negociaciones secretas.",
               "answer": "había",
               "explanation": "'Trascender que' takes indicative (it's a verb of revelation)."
             },
@@ -5498,14 +5557,16 @@
             },
             {
               "id": "nw4-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'general strike'",
-              "answer": "huelga general"
+              "type": "translate",
+              "direction": "to_target",
+              "source": "general strike",
+              "answer": "huelga general",
+              "acceptableAnswers": []
             },
             {
               "id": "nw4-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The crisis affected thousands of families'",
+              "prompt": "The crisis affected thousands of families",
               "answer": "La crisis afectó a miles de familias",
               "bank": [
                 "La",
@@ -5535,8 +5596,9 @@
             },
             {
               "id": "nw4-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The hurricane caused considerable damage.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The hurricane caused considerable damage.",
               "answer": "El huracán causó daños considerables",
               "acceptableAnswers": [
                 "El huracán provocó daños considerables",
@@ -5546,7 +5608,7 @@
             {
               "id": "nw4-7",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Inflation has reached 5%'",
+              "prompt": "Inflation has reached 5%",
               "answer": "La inflación ha alcanzado el 5%",
               "bank": [
                 "La",
@@ -5585,8 +5647,9 @@
             },
             {
               "id": "nw4-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They are demanding higher wages.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They are demanding higher wages.",
               "answer": "Exigen salarios más altos",
               "acceptableAnswers": [
                 "Reclaman salarios más altos",
@@ -5607,8 +5670,9 @@
             },
             {
               "id": "nw4-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The economy grew 2% last year.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The economy grew 2% last year.",
               "answer": "La economía creció un 2% el año pasado",
               "acceptableAnswers": [
                 "La economía creció el 2% el año pasado"
@@ -5629,8 +5693,9 @@
             },
             {
               "id": "nw4-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Inflation fell by 1% in April.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Inflation fell by 1% in April.",
               "answer": "La inflación cayó un 1% en abril",
               "acceptableAnswers": [
                 "La inflación bajó un 1% en abril"
@@ -5639,7 +5704,7 @@
             {
               "id": "nw4-14",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The protest paralyzed the city'",
+              "prompt": "The protest paralyzed the city",
               "answer": "La manifestación paralizó la ciudad",
               "bank": [
                 "La",
@@ -5906,8 +5971,9 @@
             },
             {
               "id": "fm1-2",
-              "type": "fill_blank",
-              "prompt": "Translate (formal): 'How can I help you?'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "How can I help you?",
               "answer": "¿En qué puedo ayudarle?",
               "acceptableAnswers": [
                 "¿En qué le puedo ayudar?",
@@ -5917,7 +5983,7 @@
             {
               "id": "fm1-3",
               "type": "tap_words_in_order",
-              "prompt": "Build (formal): 'I will send you the document this afternoon'",
+              "prompt": "I will send you the document this afternoon",
               "answer": "Le enviaré el documento esta tarde",
               "bank": [
                 "Le",
@@ -5968,7 +6034,7 @@
             {
               "id": "fm1-7",
               "type": "tap_words_in_order",
-              "prompt": "Build (formal): 'Could you confirm your address?'",
+              "prompt": "Could you confirm your address?",
               "answer": "¿ Podría confirmar su dirección ?",
               "bank": [
                 "¿",
@@ -6007,7 +6073,7 @@
             {
               "id": "fm1-10",
               "type": "tap_words_in_order",
-              "prompt": "Build (formal): 'Welcome, please follow me'",
+              "prompt": "Welcome, please follow me",
               "answer": "Bienvenido , por favor , sígame",
               "bank": [
                 "Bienvenido",
@@ -6023,8 +6089,9 @@
             },
             {
               "id": "fm1-11",
-              "type": "fill_blank",
-              "prompt": "Translate (formal): 'I would appreciate your response.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I would appreciate your response.",
               "answer": "Le agradecería su respuesta",
               "acceptableAnswers": [
                 "Agradezco su respuesta",
@@ -6111,8 +6178,9 @@
             },
             {
               "id": "fm2-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Dear Mrs. López:'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Dear Mrs. López:",
               "answer": "Estimada Sra. López:",
               "acceptableAnswers": [
                 "Apreciada Sra. López:",
@@ -6122,7 +6190,7 @@
             {
               "id": "fm2-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I'm writing to request information about…'",
+              "prompt": "'I'm writing to request information about…'",
               "answer": "Le escribo para solicitar información sobre…",
               "bank": [
                 "Le",
@@ -6150,8 +6218,9 @@
             },
             {
               "id": "fm2-6",
-              "type": "fill_blank",
-              "prompt": "Translate the closing: 'Sincerely,'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Sincerely,",
               "answer": "Atentamente,",
               "acceptableAnswers": [
                 "Cordialmente,",
@@ -6161,7 +6230,7 @@
             {
               "id": "fm2-7",
               "type": "tap_words_in_order",
-              "prompt": "Build email opening: 'In response to your message of the 5th of May'",
+              "prompt": "In response to your message of the 5th of May",
               "answer": "En respuesta a su mensaje del 5 de mayo",
               "bank": [
                 "En",
@@ -6179,8 +6248,9 @@
             },
             {
               "id": "fm2-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I look forward to your reply.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I look forward to your reply.",
               "answer": "Quedo a la espera de su respuesta",
               "acceptableAnswers": [
                 "Espero su respuesta",
@@ -6203,7 +6273,7 @@
             {
               "id": "fm2-10",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I attach the document for your review'",
+              "prompt": "I attach the document for your review",
               "answer": "Le adjunto el documento para su revisión",
               "bank": [
                 "Le",
@@ -6220,8 +6290,9 @@
             },
             {
               "id": "fm2-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Thank you in advance for your attention.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Thank you in advance for your attention.",
               "answer": "Le agradezco de antemano su atención",
               "acceptableAnswers": [
                 "Gracias de antemano por su atención",
@@ -6243,8 +6314,9 @@
             },
             {
               "id": "fm2-13",
-              "type": "fill_blank",
-              "prompt": "Translate (formal letter): 'I am writing to apply for the position.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I am writing to apply for the position.",
               "answer": "Le escribo para solicitar el puesto",
               "acceptableAnswers": [
                 "Me dirijo a usted para solicitar el puesto"
@@ -6285,8 +6357,9 @@
             },
             {
               "id": "fm3-2",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Would you be so kind as to call me back?'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Would you be so kind as to call me back?",
               "answer": "¿Sería tan amable de devolverme la llamada?",
               "acceptableAnswers": [
                 "¿Tendría la amabilidad de devolverme la llamada?"
@@ -6295,7 +6368,7 @@
             {
               "id": "fm3-3",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I would be grateful if you could reply by Friday'",
+              "prompt": "I would be grateful if you could reply by Friday",
               "answer": "Le agradecería que respondiera antes del viernes",
               "bank": [
                 "Le",
@@ -6336,7 +6409,7 @@
             {
               "id": "fm3-6",
               "type": "tap_words_in_order",
-              "prompt": "Build complaint: 'I'm writing to report a problem with your service'",
+              "prompt": "'I'm writing to report a problem with your service'",
               "answer": "Le escribo para informarle de un problema con su servicio",
               "bank": [
                 "Le",
@@ -6355,8 +6428,9 @@
             },
             {
               "id": "fm3-7",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I must regretfully cancel the meeting.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I must regretfully cancel the meeting.",
               "answer": "Lamento tener que cancelar la reunión",
               "acceptableAnswers": [
                 "Lamento informarle que debo cancelar la reunión",
@@ -6378,7 +6452,7 @@
             {
               "id": "fm3-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I require an urgent response'",
+              "prompt": "I require an urgent response",
               "answer": "Necesito una respuesta urgente",
               "bank": [
                 "Necesito",
@@ -6392,8 +6466,9 @@
             },
             {
               "id": "fm3-10",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I trust this matter will be resolved soon.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I trust this matter will be resolved soon.",
               "answer": "Confío en que este asunto se resuelva pronto",
               "acceptableAnswers": [
                 "Espero que este asunto se resuelva pronto",
@@ -6428,7 +6503,7 @@
             {
               "id": "fm3-13",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Could you please clarify this point?'",
+              "prompt": "Could you please clarify this point?",
               "answer": "¿ Podría aclarar este punto , por favor ?",
               "bank": [
                 "¿",
@@ -6447,8 +6522,9 @@
             },
             {
               "id": "fm3-14",
-              "type": "fill_blank",
-              "prompt": "Translate (very polite): 'Would you be so kind as to send me the document?'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Would you be so kind as to send me the document?",
               "answer": "¿Sería tan amable de enviarme el documento?",
               "acceptableAnswers": [
                 "¿Tendría la amabilidad de enviarme el documento?"
@@ -6505,8 +6581,9 @@
             },
             {
               "id": "fm4-3",
-              "type": "fill_blank",
-              "prompt": "Translate (formal): 'However, we will need more time.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "However, we will need more time.",
               "answer": "No obstante, necesitaremos más tiempo",
               "acceptableAnswers": [
                 "Sin embargo, necesitaremos más tiempo"
@@ -6515,7 +6592,7 @@
             {
               "id": "fm4-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'As for the budget, we propose a 5% reduction'",
+              "prompt": "As for the budget, we propose a 5% reduction",
               "answer": "En cuanto al presupuesto , proponemos una reducción del 5%",
               "bank": [
                 "En",
@@ -6547,8 +6624,9 @@
             },
             {
               "id": "fm4-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'It is worth noting that the report contains several errors.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "It is worth noting that the report contains several errors.",
               "answer": "Cabe señalar que el informe contiene varios errores",
               "acceptableAnswers": [
                 "Cabe destacar que el informe contiene varios errores",
@@ -6558,7 +6636,7 @@
             {
               "id": "fm4-7",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Given that the deadline has passed, we will reschedule'",
+              "prompt": "Given that the deadline has passed, we will reschedule",
               "answer": "Dado que el plazo ha vencido , lo reprogramaremos",
               "bank": [
                 "Dado",
@@ -6577,8 +6655,9 @@
             },
             {
               "id": "fm4-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'In addition to / besides…'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "In addition to / besides…",
               "answer": "Además de",
               "acceptableAnswers": [
                 "A su vez",
@@ -6601,7 +6680,7 @@
             {
               "id": "fm4-10",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'In conclusion, we recommend approving the proposal'",
+              "prompt": "In conclusion, we recommend approving the proposal",
               "answer": "En conclusión , recomendamos aprobar la propuesta",
               "bank": [
                 "En",
@@ -6618,8 +6697,9 @@
             },
             {
               "id": "fm4-11",
-              "type": "fill_blank",
-              "prompt": "Translate (formal): 'On the contrary, the results are excellent.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "On the contrary, the results are excellent.",
               "answer": "Por el contrario, los resultados son excelentes",
               "acceptableAnswers": [
                 "Al contrario, los resultados son excelentes"
@@ -6640,8 +6720,9 @@
             },
             {
               "id": "fm4-13",
-              "type": "fill_blank",
-              "prompt": "Translate (formal): 'It should be noted that…'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "It should be noted that…",
               "answer": "Cabe señalar que",
               "acceptableAnswers": [
                 "Cabe destacar que",
@@ -6921,7 +7002,7 @@
             {
               "id": "rc1-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The girl who lives upstairs is my friend'",
+              "prompt": "The girl who lives upstairs is my friend",
               "answer": "La chica que vive arriba es mi amiga",
               "bank": [
                 "La",
@@ -6939,7 +7020,7 @@
             {
               "id": "rc1-3",
               "type": "fill_blank",
-              "prompt": "Complete: 'Esa es la casa ___ vendieron el mes pasado.'",
+              "prompt": "Esa es la casa ___ vendieron el mes pasado.",
               "answer": "que"
             },
             {
@@ -6957,8 +7038,9 @@
             },
             {
               "id": "rc1-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The man who works here is very kind.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The man who works here is very kind.",
               "answer": "El hombre que trabaja aquí es muy amable",
               "acceptableAnswers": [
                 "El señor que trabaja aquí es muy amable"
@@ -6967,7 +7049,7 @@
             {
               "id": "rc1-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The restaurant we went to was excellent'",
+              "prompt": "The restaurant we went to was excellent",
               "answer": "El restaurante al que fuimos era excelente",
               "bank": [
                 "El",
@@ -6998,13 +7080,13 @@
             {
               "id": "rc1-8",
               "type": "fill_blank",
-              "prompt": "Complete: 'La persona ___ me ayudó es muy amable.'",
+              "prompt": "La persona ___ me ayudó es muy amable.",
               "answer": "que"
             },
             {
               "id": "rc1-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The film I saw last night was scary'",
+              "prompt": "The film I saw last night was scary",
               "answer": "La película que vi anoche fue de miedo",
               "bank": [
                 "La",
@@ -7034,8 +7116,9 @@
             },
             {
               "id": "rc1-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The pen I gave you is on the table.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The pen I gave you is on the table.",
               "answer": "El bolígrafo que te di está en la mesa",
               "acceptableAnswers": [
                 "La pluma que te di está en la mesa"
@@ -7057,7 +7140,7 @@
             {
               "id": "rc1-13",
               "type": "fill_blank",
-              "prompt": "Complete: 'La empresa ___ trabajo es muy grande.'",
+              "prompt": "La empresa ___ trabajo es muy grande.",
               "answer": "en la que",
               "acceptableAnswers": [
                 "donde",
@@ -7098,8 +7181,9 @@
             },
             {
               "id": "rc2-2",
-              "type": "fill_blank",
-              "prompt": "Translate: 'My sister, who's a doctor, called me.' (you have only one sister)",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "My sister, who's a doctor, called me.",
               "answer": "Mi hermana, que es médica, me llamó",
               "acceptableAnswers": [
                 "Mi hermana, que es doctora, me llamó"
@@ -7108,7 +7192,7 @@
             {
               "id": "rc2-3",
               "type": "tap_words_in_order",
-              "prompt": "Build SPECIFYING (no commas): 'The students who study pass'",
+              "prompt": "The students who study pass",
               "answer": "Los estudiantes que estudian aprueban",
               "bank": [
                 "Los",
@@ -7146,7 +7230,7 @@
             {
               "id": "rc2-6",
               "type": "tap_words_in_order",
-              "prompt": "Build EXPLANATORY: 'My car, which is new, broke down'",
+              "prompt": "My car, which is new, broke down",
               "answer": "Mi coche , que es nuevo , se averió",
               "bank": [
                 "Mi",
@@ -7177,8 +7261,9 @@
             },
             {
               "id": "rc2-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'My grandparents, who live in the countryside, are very healthy.' (only set of grandparents you have)",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "My grandparents, who live in the countryside, are very healthy.",
               "answer": "Mis abuelos, que viven en el campo, están muy sanos",
               "acceptableAnswers": [
                 "Mis abuelos, que viven en el campo, son muy sanos"
@@ -7199,8 +7284,9 @@
             },
             {
               "id": "rc2-10",
-              "type": "fill_blank",
-              "prompt": "Translate (explanatory): 'My boss, who's from Argentina, speaks four languages.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "My boss, who's from Argentina, speaks four languages.",
               "answer": "Mi jefe, que es de Argentina, habla cuatro idiomas",
               "acceptableAnswers": [
                 "Mi jefa, que es de Argentina, habla cuatro idiomas"
@@ -7209,7 +7295,7 @@
             {
               "id": "rc2-11",
               "type": "tap_words_in_order",
-              "prompt": "Build SPECIFYING: 'The dish that he ordered was the best'",
+              "prompt": "The dish that he ordered was the best",
               "answer": "El plato que pidió era el mejor",
               "bank": [
                 "El",
@@ -7249,7 +7335,7 @@
             {
               "id": "rc2-14",
               "type": "tap_words_in_order",
-              "prompt": "Build EXPLANATORY (with commas): 'My job, which I love, is demanding'",
+              "prompt": "My job, which I love, is demanding",
               "answer": "Mi trabajo , que me encanta , es exigente",
               "bank": [
                 "Mi",
@@ -7289,7 +7375,7 @@
             {
               "id": "rc3-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The topic about which we spoke was interesting'",
+              "prompt": "The topic about which we spoke was interesting",
               "answer": "El tema del que hablamos era interesante",
               "bank": [
                 "El",
@@ -7307,7 +7393,7 @@
             {
               "id": "rc3-3",
               "type": "fill_blank",
-              "prompt": "Complete: 'La casa en ___ vivo es vieja.' (in which I live)",
+              "prompt": "'La casa en ___ vivo es vieja.' (in which I live)",
               "answer": "la que",
               "acceptableAnswers": [
                 "la cual"
@@ -7327,8 +7413,9 @@
             },
             {
               "id": "rc3-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'It's my mother who taught me to cook.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "It's my mother who taught me to cook.",
               "answer": "Es mi madre quien me enseñó a cocinar",
               "acceptableAnswers": [
                 "Es mi mamá quien me enseñó a cocinar"
@@ -7337,7 +7424,7 @@
             {
               "id": "rc3-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The book on which the film is based'",
+              "prompt": "The book on which the film is based",
               "answer": "El libro en el que se basa la película",
               "bank": [
                 "El",
@@ -7380,7 +7467,7 @@
             {
               "id": "rc3-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The doctor with whom I spoke was very kind'",
+              "prompt": "The doctor with whom I spoke was very kind",
               "answer": "El médico con el que hablé fue muy amable",
               "bank": [
                 "El",
@@ -7412,8 +7499,9 @@
             },
             {
               "id": "rc3-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I have many friends, some of whom live abroad.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I have many friends, some of whom live abroad.",
               "answer": "Tengo muchos amigos, algunos de los cuales viven en el extranjero",
               "acceptableAnswers": [
                 "Tengo muchos amigos, algunos de los que viven en el extranjero"
@@ -7435,7 +7523,7 @@
             {
               "id": "rc3-13",
               "type": "fill_blank",
-              "prompt": "Complete: 'El proyecto sobre ___ (which) hablamos sigue en pausa.'",
+              "prompt": "El proyecto sobre ___ (which) hablamos sigue en pausa.",
               "answer": "el que",
               "acceptableAnswers": [
                 "el cual"
@@ -7478,7 +7566,7 @@
             {
               "id": "rc4-2",
               "type": "fill_blank",
-              "prompt": "Complete: 'La mujer ___ hijos son tus amigos.' (whose kids)",
+              "prompt": "'La mujer ___ hijos son tus amigos.' (whose kids)",
               "answer": "cuyos",
               "acceptableAnswers": [
                 "cuyas (if 'hijas')"
@@ -7487,7 +7575,7 @@
             {
               "id": "rc4-3",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The city where I was born is small'",
+              "prompt": "The city where I was born is small",
               "answer": "La ciudad donde nací es pequeña",
               "bank": [
                 "La",
@@ -7517,8 +7605,9 @@
             },
             {
               "id": "rc4-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I don't understand what you're saying.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I don't understand what you're saying.",
               "answer": "No entiendo lo que dices",
               "acceptableAnswers": [
                 "No comprendo lo que dices"
@@ -7527,7 +7616,7 @@
             {
               "id": "rc4-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The teacher whose class I attend is great'",
+              "prompt": "The teacher whose class I attend is great",
               "answer": "El profesor a cuya clase asisto es genial",
               "bank": [
                 "El",
@@ -7558,8 +7647,9 @@
             },
             {
               "id": "rc4-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The park where we used to play is closed.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The park where we used to play is closed.",
               "answer": "El parque donde jugábamos está cerrado",
               "acceptableAnswers": [
                 "El parque en el que jugábamos está cerrado"
@@ -7568,7 +7658,7 @@
             {
               "id": "rc4-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'What surprises me is the silence'",
+              "prompt": "What surprises me is the silence",
               "answer": "Lo que me sorprende es el silencio",
               "bank": [
                 "Lo",
@@ -7598,8 +7688,9 @@
             },
             {
               "id": "rc4-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I'll do what you want.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I'll do what you want.",
               "answer": "Haré lo que quieras",
               "acceptableAnswers": [
                 "Voy a hacer lo que quieras",
@@ -7621,8 +7712,9 @@
             },
             {
               "id": "rc4-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The library where I study is open until 11.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The library where I study is open until 11.",
               "answer": "La biblioteca donde estudio está abierta hasta las 11",
               "acceptableAnswers": [
                 "La biblioteca en la que estudio está abierta hasta las 11"
@@ -7886,7 +7978,7 @@
             {
               "id": "mp1-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'You shouldn't have told her'",
+              "prompt": "'You shouldn't have told her'",
               "answer": "No deberías habérselo dicho",
               "bank": [
                 "No",
@@ -7901,8 +7993,9 @@
             },
             {
               "id": "mp1-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'We should have left earlier.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "We should have left earlier.",
               "answer": "Deberíamos haber salido antes",
               "acceptableAnswers": [
                 "Tendríamos que haber salido antes"
@@ -7933,7 +8026,7 @@
             {
               "id": "mp1-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'She should have called us'",
+              "prompt": "She should have called us",
               "answer": "Debería habernos llamado",
               "bank": [
                 "Debería",
@@ -7947,8 +8040,9 @@
             },
             {
               "id": "mp1-7",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I shouldn't have eaten so much.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I shouldn't have eaten so much.",
               "answer": "No debería haber comido tanto",
               "acceptableAnswers": [
                 "No tendría que haber comido tanto"
@@ -7970,7 +8064,7 @@
             {
               "id": "mp1-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'They should have apologized'",
+              "prompt": "They should have apologized",
               "answer": "Deberían haber pedido perdón",
               "bank": [
                 "Deberían",
@@ -7985,8 +8079,9 @@
             },
             {
               "id": "mp1-10",
-              "type": "fill_blank",
-              "prompt": "Translate: 'You should have warned me.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "You should have warned me.",
               "answer": "Deberías haberme avisado",
               "acceptableAnswers": [
                 "Me deberías haber avisado",
@@ -8020,8 +8115,9 @@
             },
             {
               "id": "mp1-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'We should have left earlier.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "We should have left earlier.",
               "answer": "Deberíamos haber salido antes",
               "acceptableAnswers": [
                 "Tendríamos que haber salido antes"
@@ -8063,7 +8159,7 @@
             {
               "id": "mp2-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'You could have told me'",
+              "prompt": "You could have told me",
               "answer": "Podrías habérmelo dicho",
               "bank": [
                 "Podrías",
@@ -8078,8 +8174,9 @@
             },
             {
               "id": "mp2-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They could have helped us.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They could have helped us.",
               "answer": "Podrían habernos ayudado",
               "acceptableAnswers": [
                 "Nos podrían haber ayudado"
@@ -8111,7 +8208,7 @@
             {
               "id": "mp2-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I could have gone, but I didn't want to'",
+              "prompt": "'I could have gone, but I didn't want to'",
               "answer": "Podría haber ido , pero no quería",
               "bank": [
                 "Podría",
@@ -8141,8 +8238,9 @@
             },
             {
               "id": "mp2-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'We could have done more.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "We could have done more.",
               "answer": "Podríamos haber hecho más",
               "acceptableAnswers": [
                 "Habríamos podido hacer más"
@@ -8151,7 +8249,7 @@
             {
               "id": "mp2-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I could have been a contender'",
+              "prompt": "I could have been a contender",
               "answer": "Podría haber sido un contrincante",
               "bank": [
                 "Podría",
@@ -8179,8 +8277,9 @@
             },
             {
               "id": "mp2-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'It could have been worse.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "It could have been worse.",
               "answer": "Podría haber sido peor",
               "acceptableAnswers": [
                 "Podía haber sido peor"
@@ -8201,8 +8300,9 @@
             },
             {
               "id": "mp2-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I could have done more.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I could have done more.",
               "answer": "Podría haber hecho más",
               "acceptableAnswers": [
                 "Habría podido hacer más"
@@ -8211,7 +8311,7 @@
             {
               "id": "mp2-14",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'You could have warned me, you know'",
+              "prompt": "You could have warned me, you know",
               "answer": "Me podrías haber avisado , ¿ sabes ?",
               "bank": [
                 "Me",
@@ -8252,7 +8352,7 @@
             {
               "id": "mp3-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'They must have gotten lost'",
+              "prompt": "They must have gotten lost",
               "answer": "Deben de haberse perdido",
               "bank": [
                 "Deben",
@@ -8267,8 +8367,9 @@
             },
             {
               "id": "mp3-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'It must have been a mistake.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "It must have been a mistake.",
               "answer": "Debe de haber sido un error",
               "acceptableAnswers": [
                 "Habrá sido un error",
@@ -8300,7 +8401,7 @@
             {
               "id": "mp3-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It must be about to rain'",
+              "prompt": "It must be about to rain",
               "answer": "Está a punto de llover",
               "bank": [
                 "Está",
@@ -8328,8 +8429,9 @@
             },
             {
               "id": "mp3-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'She may have forgotten.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "She may have forgotten.",
               "answer": "Puede que se haya olvidado",
               "acceptableAnswers": [
                 "Quizá se haya olvidado",
@@ -8340,7 +8442,7 @@
             {
               "id": "mp3-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It must have cost a fortune'",
+              "prompt": "It must have cost a fortune",
               "answer": "Debe de haber costado una fortuna",
               "bank": [
                 "Debe",
@@ -8369,8 +8471,9 @@
             },
             {
               "id": "mp3-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They must not have known.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They must not have known.",
               "answer": "No deben de haberlo sabido",
               "acceptableAnswers": [
                 "No lo deben de haber sabido",
@@ -8392,8 +8495,9 @@
             },
             {
               "id": "mp3-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'He must have forgotten.' (using 'deber de')",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He must have forgotten.",
               "answer": "Debe de haberse olvidado",
               "acceptableAnswers": [
                 "Debe de haber olvidado",
@@ -8437,7 +8541,7 @@
             {
               "id": "mp4-2",
               "type": "tap_words_in_order",
-              "prompt": "Build retro: 'I should have noticed the bug sooner'",
+              "prompt": "I should have noticed the bug sooner",
               "answer": "Debería haber notado el error antes",
               "bank": [
                 "Debería",
@@ -8453,8 +8557,9 @@
             },
             {
               "id": "mp4-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'They could have warned us.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "They could have warned us.",
               "answer": "Podrían habernos avisado",
               "acceptableAnswers": [
                 "Nos podrían haber avisado"
@@ -8475,7 +8580,7 @@
             {
               "id": "mp4-5",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'You should have asked for help'",
+              "prompt": "You should have asked for help",
               "answer": "Deberías haber pedido ayuda",
               "bank": [
                 "Deberías",
@@ -8489,8 +8594,9 @@
             },
             {
               "id": "mp4-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The deploy must have failed.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The deploy must have failed.",
               "answer": "El despliegue debe de haber fallado",
               "acceptableAnswers": [
                 "El deploy debe de haber fallado",
@@ -8513,7 +8619,7 @@
             {
               "id": "mp4-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'They might have missed the deadline'",
+              "prompt": "They might have missed the deadline",
               "answer": "Puede que hayan perdido la fecha límite",
               "bank": [
                 "Puede",
@@ -8530,8 +8636,9 @@
             },
             {
               "id": "mp4-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'We could have avoided this if we had tested it.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "We could have avoided this if we had tested it.",
               "answer": "Podríamos haber evitado esto si lo hubiéramos probado",
               "acceptableAnswers": [
                 "Habríamos podido evitar esto si lo hubiésemos probado"
@@ -8552,8 +8659,9 @@
             },
             {
               "id": "mp4-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I might have left it in the car.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I might have left it in the car.",
               "answer": "Puede que lo haya dejado en el coche",
               "acceptableAnswers": [
                 "Quizá lo haya dejado en el coche",
@@ -8576,7 +8684,7 @@
             {
               "id": "mp4-13",
               "type": "tap_words_in_order",
-              "prompt": "Build (retro): 'We could have communicated better'",
+              "prompt": "We could have communicated better",
               "answer": "Podríamos haber comunicado mejor",
               "bank": [
                 "Podríamos",
@@ -8590,8 +8698,9 @@
             },
             {
               "id": "mp4-14",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I shouldn't have promised that.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I shouldn't have promised that.",
               "answer": "No debería haber prometido eso",
               "acceptableAnswers": [
                 "No tendría que haber prometido eso"
@@ -8840,8 +8949,9 @@
             },
             {
               "id": "db1-2",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Allow me to disagree.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Allow me to disagree.",
               "answer": "Permítame discrepar",
               "acceptableAnswers": [
                 "Permítaseme discrepar",
@@ -8851,7 +8961,7 @@
             {
               "id": "db1-3",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I understand your point of view, but I don't share it'",
+              "prompt": "'I understand your point of view, but I don't share it'",
               "answer": "Entiendo su punto de vista , pero no lo comparto",
               "bank": [
                 "Entiendo",
@@ -8883,8 +8993,9 @@
             },
             {
               "id": "db1-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I'm not entirely convinced.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I'm not entirely convinced.",
               "answer": "No estoy del todo convencido",
               "acceptableAnswers": [
                 "No me convence del todo",
@@ -8894,7 +9005,7 @@
             {
               "id": "db1-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'With all due respect, I have to disagree'",
+              "prompt": "With all due respect, I have to disagree",
               "answer": "Con todo respeto , tengo que discrepar",
               "bank": [
                 "Con",
@@ -8923,8 +9034,9 @@
             },
             {
               "id": "db1-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'That's true to some extent.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "That's true to some extent.",
               "answer": "Eso es cierto en cierta medida",
               "acceptableAnswers": [
                 "Eso es verdad hasta cierto punto",
@@ -8934,7 +9046,7 @@
             {
               "id": "db1-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I agree on that, but I have reservations about…'",
+              "prompt": "I agree on that, but I have reservations about…",
               "answer": "Estoy de acuerdo en eso , pero tengo reservas sobre…",
               "bank": [
                 "Estoy",
@@ -8965,8 +9077,9 @@
             },
             {
               "id": "db1-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I see what you mean, but…'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I see what you mean, but…",
               "answer": "Entiendo lo que quiere decir, pero…",
               "acceptableAnswers": [
                 "Entiendo lo que dice, pero…",
@@ -8988,8 +9101,9 @@
             },
             {
               "id": "db1-13",
-              "type": "fill_blank",
-              "prompt": "Translate (formal): 'I don't share your view.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I don't share your view.",
               "answer": "No comparto su opinión",
               "acceptableAnswers": [
                 "No comparto su punto de vista"
@@ -9057,8 +9171,9 @@
             },
             {
               "id": "db2-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'On the one hand X, on the other Y.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "On the one hand X, on the other Y.",
               "answer": "Por un lado X, por otro Y",
               "acceptableAnswers": [
                 "Por una parte X, por otra Y",
@@ -9068,7 +9183,7 @@
             {
               "id": "db2-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'In conclusion, the proposal needs to be reviewed'",
+              "prompt": "In conclusion, the proposal needs to be reviewed",
               "answer": "En conclusión , la propuesta debe revisarse",
               "bank": [
                 "En",
@@ -9097,8 +9212,9 @@
             },
             {
               "id": "db2-6",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Furthermore, the evidence is clear.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Furthermore, the evidence is clear.",
               "answer": "Además, la evidencia es clara",
               "acceptableAnswers": [
                 "Asimismo, la evidencia es clara"
@@ -9107,7 +9223,7 @@
             {
               "id": "db2-7",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It must be pointed out that there are exceptions'",
+              "prompt": "It must be pointed out that there are exceptions",
               "answer": "Es preciso señalar que hay excepciones",
               "bank": [
                 "Es",
@@ -9135,8 +9251,9 @@
             },
             {
               "id": "db2-9",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Let me give an example.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Let me give an example.",
               "answer": "Permítame dar un ejemplo",
               "acceptableAnswers": [
                 "Le doy un ejemplo",
@@ -9146,7 +9263,7 @@
             {
               "id": "db2-10",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'To begin with, we must consider the facts'",
+              "prompt": "To begin with, we must consider the facts",
               "answer": "Para empezar , debemos considerar los hechos",
               "bank": [
                 "Para",
@@ -9163,8 +9280,9 @@
             },
             {
               "id": "db2-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'That said, I have reservations.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "That said, I have reservations.",
               "answer": "Dicho esto, tengo reservas",
               "acceptableAnswers": [
                 "Habiendo dicho eso, tengo reservas"
@@ -9186,7 +9304,7 @@
             {
               "id": "db2-13",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Secondly, we must consider the costs'",
+              "prompt": "Secondly, we must consider the costs",
               "answer": "En segundo lugar , debemos considerar los costes",
               "bank": [
                 "En",
@@ -9204,8 +9322,9 @@
             },
             {
               "id": "db2-14",
-              "type": "fill_blank",
-              "prompt": "Translate: 'To summarize…'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "To summarize…",
               "answer": "En resumen",
               "acceptableAnswers": [
                 "Para resumir",
@@ -9237,7 +9356,7 @@
             {
               "id": "db3-2",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'However much you insist, you won't convince me'",
+              "prompt": "'However much you insist, you won't convince me'",
               "answer": "Por más que insistas , no me convencerás",
               "bank": [
                 "Por",
@@ -9278,8 +9397,9 @@
             },
             {
               "id": "db3-5",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Although it has its merits, the proposal has flaws.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Although it has its merits, the proposal has flaws.",
               "answer": "Aunque tenga sus méritos, la propuesta tiene defectos",
               "acceptableAnswers": [
                 "Si bien tiene sus méritos, la propuesta tiene defectos"
@@ -9288,7 +9408,7 @@
             {
               "id": "db3-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Whatever the cost, we must continue'",
+              "prompt": "Whatever the cost, we must continue",
               "answer": "Cueste lo que cueste , debemos continuar",
               "bank": [
                 "Cueste",
@@ -9317,8 +9437,9 @@
             },
             {
               "id": "db3-8",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I'll grant that, but…'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I'll grant that, but…",
               "answer": "Concedo eso, pero…",
               "acceptableAnswers": [
                 "Le concedo eso, pero…",
@@ -9328,7 +9449,7 @@
             {
               "id": "db3-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Even so, I still have doubts'",
+              "prompt": "Even so, I still have doubts",
               "answer": "Aun así , sigo teniendo dudas",
               "bank": [
                 "Aun",
@@ -9356,8 +9477,9 @@
             },
             {
               "id": "db3-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I see your point. However, I disagree.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I see your point. However, I disagree.",
               "answer": "Entiendo su punto. No obstante, no estoy de acuerdo",
               "acceptableAnswers": [
                 "Entiendo su punto. Sin embargo, discrepo."
@@ -9418,8 +9540,9 @@
             },
             {
               "id": "db4-2",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Don't you think?'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Don't you think?",
               "answer": "¿No le parece?",
               "acceptableAnswers": [
                 "¿No te parece?",
@@ -9430,7 +9553,7 @@
             {
               "id": "db4-3",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'How can you say that?'",
+              "prompt": "How can you say that?",
               "answer": "¿ Cómo puede decir eso ?",
               "bank": [
                 "¿",
@@ -9458,8 +9581,9 @@
             },
             {
               "id": "db4-5",
-              "type": "fill_blank",
-              "prompt": "Translate (emphasizing): 'What I'm trying to say is…'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "What I'm trying to say is…",
               "answer": "Lo que quiero decir es…",
               "acceptableAnswers": [
                 "Lo que intento decir es…",
@@ -9469,7 +9593,7 @@
             {
               "id": "db4-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I'd like to draw attention to this point'",
+              "prompt": "'I'd like to draw attention to this point'",
               "answer": "Quisiera llamar la atención sobre este punto",
               "bank": [
                 "Quisiera",
@@ -9498,8 +9622,9 @@
             },
             {
               "id": "db4-8",
-              "type": "fill_blank",
-              "prompt": "Translate (emphasis): 'This is precisely the issue.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "This is precisely the issue.",
               "answer": "Este es precisamente el problema",
               "acceptableAnswers": [
                 "Eso es justo el problema",
@@ -9509,7 +9634,7 @@
             {
               "id": "db4-9",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I want to insist on this point'",
+              "prompt": "I want to insist on this point",
               "answer": "Quiero insistir en este punto",
               "bank": [
                 "Quiero",
@@ -9537,8 +9662,9 @@
             },
             {
               "id": "db4-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Far from it.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Far from it.",
               "answer": "Ni mucho menos",
               "acceptableAnswers": [
                 "Lejos de eso",
@@ -9561,7 +9687,7 @@
             {
               "id": "db4-13",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I want to emphasize this aspect'",
+              "prompt": "I want to emphasize this aspect",
               "answer": "Quiero subrayar este aspecto",
               "bank": [
                 "Quiero",
@@ -9575,8 +9701,9 @@
             },
             {
               "id": "db4-14",
-              "type": "fill_blank",
-              "prompt": "Translate: 'On the contrary, it makes things worse.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "On the contrary, it makes things worse.",
               "answer": "Al contrario, empeora las cosas",
               "acceptableAnswers": [
                 "Por el contrario, empeora las cosas",
@@ -9908,7 +10035,7 @@
             {
               "id": "mc1-6",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (factual): 'Although she knows the truth, she stays quiet.'",
+              "prompt": "Although she knows the truth, she stays quiet.",
               "answer": "Aunque sabe la verdad , se calla .",
               "bank": [
                 "Aunque",
@@ -9924,7 +10051,7 @@
             {
               "id": "mc1-7",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (hypothetical): 'Even if she knew the truth, she would stay quiet.'",
+              "prompt": "Even if she knew the truth, she would stay quiet.",
               "answer": "Aunque supiera la verdad , se callaría .",
               "bank": [
                 "Aunque",
@@ -9952,8 +10079,9 @@
             },
             {
               "id": "mc1-9",
-              "type": "fill_blank",
-              "prompt": "Translate 'Even if you ask me, I won't tell you.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Even if you ask me, I won't tell you.",
               "answer": "Aunque me lo pidas, no te lo diré.",
               "acceptableAnswers": [
                 "Aunque me lo pidas no te lo diré."
@@ -9990,7 +10118,7 @@
             {
               "id": "mc1-12",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'Even if I had the money, I wouldn't buy that car.'",
+              "prompt": "'Even if I had the money, I wouldn't buy that car.'",
               "answer": "Aunque tuviera el dinero , no compraría ese coche .",
               "bank": [
                 "Aunque",
@@ -10089,7 +10217,7 @@
             {
               "id": "mc2-7",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (future): 'When you arrive in Madrid, call me.'",
+              "prompt": "When you arrive in Madrid, call me.",
               "answer": "Cuando llegues a Madrid , llámame .",
               "bank": [
                 "Cuando",
@@ -10104,7 +10232,7 @@
             {
               "id": "mc2-8",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (habit): 'When she arrives at work, she drinks coffee.'",
+              "prompt": "When she arrives at work, she drinks coffee.",
               "answer": "Cuando llega al trabajo , toma café .",
               "bank": [
                 "Cuando",
@@ -10156,7 +10284,7 @@
             {
               "id": "mc2-12",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'When we have time, we'll visit you.'",
+              "prompt": "'When we have time, we'll visit you.'",
               "answer": "Cuando tengamos tiempo , te visitaremos .",
               "bank": [
                 "Cuando",
@@ -10241,7 +10369,7 @@
             {
               "id": "mc3-6",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (definite): 'I work where I studied.'",
+              "prompt": "I work where I studied.",
               "answer": "Trabajo donde estudié .",
               "bank": [
                 "Trabajo",
@@ -10253,7 +10381,7 @@
             {
               "id": "mc3-7",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (indefinite): 'I'll work wherever they hire me.'",
+              "prompt": "'I'll work wherever they hire me.'",
               "answer": "Trabajaré donde me contraten .",
               "bank": [
                 "Trabajaré",
@@ -10302,7 +10430,7 @@
             {
               "id": "mc3-11",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'Do it however you prefer.'",
+              "prompt": "Do it however you prefer.",
               "answer": "Hazlo como prefieras .",
               "bank": [
                 "Hazlo",
@@ -10398,7 +10526,7 @@
             {
               "id": "mc4-6",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'I'm telling you not because I want to hurt you, but because you should know.'",
+              "prompt": "'I'm telling you not because I want to hurt you, but because you should know.'",
               "answer": "Te lo digo no porque quiera hacerte daño , sino porque debes saberlo .",
               "bank": [
                 "Te",
@@ -10453,7 +10581,7 @@
             {
               "id": "mc4-10",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'He didn't quit because he was lazy, but because he was exhausted.'",
+              "prompt": "'He didn't quit because he was lazy, but because he was exhausted.'",
               "answer": "No renunció porque fuera perezoso , sino porque estaba agotado .",
               "bank": [
                 "No",
@@ -10959,7 +11087,7 @@
             {
               "id": "ch1-6",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'I would like to reserve a table for four.'",
+              "prompt": "I would like to reserve a table for four.",
               "answer": "Me gustaría reservar una mesa para cuatro .",
               "bank": [
                 "Me",
@@ -10975,7 +11103,7 @@
             {
               "id": "ch1-7",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'Could you tell me where the station is?'",
+              "prompt": "Could you tell me where the station is?",
               "answer": "¿ Podrías decirme dónde está la estación ?",
               "bank": [
                 "¿",
@@ -11035,7 +11163,7 @@
             {
               "id": "ch1-12",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'You ought to talk to him.'",
+              "prompt": "You ought to talk to him.",
               "answer": "Deberías hablar con él .",
               "bank": [
                 "Deberías",
@@ -11100,7 +11228,7 @@
             {
               "id": "ch2-4",
               "type": "fill_blank",
-              "prompt": "Complete: 'Si yo ___ tú, aceptaría el trabajo.' (If I were you...)",
+              "prompt": "'Si yo ___ tú, aceptaría el trabajo.' (If I were you...)",
               "answer": "fuera",
               "acceptableAnswers": [
                 "fuese"
@@ -11109,7 +11237,7 @@
             {
               "id": "ch2-5",
               "type": "fill_blank",
-              "prompt": "Complete: 'Si hablara francés, ___ a París.' (If I spoke French, I'd move to Paris.)",
+              "prompt": "'Si hablara francés, ___ a París.' (If I spoke French, I'd move to Paris.)",
               "answer": "me mudaría",
               "acceptableAnswers": [
                 "iría"
@@ -11118,7 +11246,7 @@
             {
               "id": "ch2-6",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'If you studied more, you would understand it.'",
+              "prompt": "If you studied more, you would understand it.",
               "answer": "Si estudiaras más , lo entenderías .",
               "bank": [
                 "Si",
@@ -11133,7 +11261,7 @@
             {
               "id": "ch2-7",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'I would tell you if I knew the answer.'",
+              "prompt": "I would tell you if I knew the answer.",
               "answer": "Te lo diría si supiera la respuesta .",
               "bank": [
                 "Te",
@@ -11162,7 +11290,7 @@
             {
               "id": "ch2-9",
               "type": "fill_blank",
-              "prompt": "Complete: 'Si pudiera elegir, ___ otra carrera.'",
+              "prompt": "Si pudiera elegir, ___ otra carrera.",
               "answer": "estudiaría"
             },
             {
@@ -11193,7 +11321,7 @@
             {
               "id": "ch2-12",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'If we lived closer, we would see each other more.'",
+              "prompt": "If we lived closer, we would see each other more.",
               "answer": "Si viviéramos más cerca , nos veríamos más .",
               "bank": [
                 "Si",
@@ -11268,7 +11396,7 @@
             {
               "id": "ch3-4",
               "type": "fill_blank",
-              "prompt": "Complete: 'Si hubiera estudiado más, ___ el examen.'",
+              "prompt": "Si hubiera estudiado más, ___ el examen.",
               "answer": "habría aprobado",
               "acceptableAnswers": [
                 "hubiera aprobado",
@@ -11287,7 +11415,7 @@
             {
               "id": "ch3-6",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'If you had told me, I would have come.'",
+              "prompt": "If you had told me, I would have come.",
               "answer": "Si me lo hubieras dicho , habría venido .",
               "bank": [
                 "Si",
@@ -11304,7 +11432,7 @@
             {
               "id": "ch3-7",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (news): 'The president allegedly accepted the offer.'",
+              "prompt": "The president allegedly accepted the offer.",
               "answer": "El presidente habría aceptado la oferta .",
               "bank": [
                 "El",
@@ -11362,7 +11490,7 @@
             {
               "id": "ch3-12",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'If she had come, we would have eaten together.'",
+              "prompt": "If she had come, we would have eaten together.",
               "answer": "Si ella hubiera venido , habríamos comido juntos .",
               "bank": [
                 "Si",
@@ -11456,7 +11584,7 @@
             {
               "id": "ch4-6",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'According to sources, the leader allegedly resigned this morning.'",
+              "prompt": "According to sources, the leader allegedly resigned this morning.",
               "answer": "Según fuentes , el líder habría dimitido esta mañana .",
               "bank": [
                 "Según",
@@ -11474,7 +11602,7 @@
             {
               "id": "ch4-7",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'It is rumored that the company allegedly hid the data.'",
+              "prompt": "It is rumored that the company allegedly hid the data.",
               "answer": "Se rumorea que la empresa habría ocultado los datos .",
               "bank": [
                 "Se",
@@ -11505,7 +11633,7 @@
             {
               "id": "ch4-9",
               "type": "fill_blank",
-              "prompt": "Complete: 'Allegedly, the suspect was at the scene.' → 'Al parecer, el sospechoso ___ en el lugar.'",
+              "prompt": "'Allegedly, the suspect was at the scene.' → 'Al parecer, el sospechoso ___ en el lugar.'",
               "answer": "habría estado",
               "acceptableAnswers": [
                 "estaría"
@@ -11539,7 +11667,7 @@
             {
               "id": "ch4-12",
               "type": "tap_words_in_order",
-              "prompt": "Reorder: 'Sources indicate that the deal would allegedly close on Friday.'",
+              "prompt": "Sources indicate that the deal would allegedly close on Friday.",
               "answer": "Fuentes indican que el acuerdo se cerraría el viernes .",
               "bank": [
                 "Fuentes",
@@ -11645,7 +11773,7 @@
             {
               "id": "ch5-7",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (hypothetical): 'If I knew her, I would invite her.'",
+              "prompt": "If I knew her, I would invite her.",
               "answer": "Si la conociera , la invitaría .",
               "bank": [
                 "Si",
@@ -11660,7 +11788,7 @@
             {
               "id": "ch5-8",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (politeness): 'Could you repeat that more slowly, please?'",
+              "prompt": "Could you repeat that more slowly, please?",
               "answer": "¿ Podrías repetirlo más despacio , por favor ?",
               "bank": [
                 "¿",
@@ -11677,7 +11805,7 @@
             {
               "id": "ch5-9",
               "type": "tap_words_in_order",
-              "prompt": "Reorder (hearsay): 'The minister allegedly lied to the press.'",
+              "prompt": "The minister allegedly lied to the press.",
               "answer": "El ministro habría mentido a la prensa .",
               "bank": [
                 "El",
@@ -12031,7 +12159,7 @@
             {
               "id": "rv1-9",
               "type": "tap_words_in_order",
-              "prompt": "Build (2nd cond.): 'If I were you, I'd take the job'",
+              "prompt": "'If I were you, I'd take the job'",
               "answer": "Si yo fuera tú , aceptaría el trabajo",
               "bank": [
                 "Si",
@@ -12061,8 +12189,9 @@
             },
             {
               "id": "rv1-11",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I doubt he has arrived.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I doubt he has arrived.",
               "answer": "Dudo que haya llegado",
               "acceptableAnswers": [
                 "Dudo que haya llegado ya"
@@ -12151,7 +12280,7 @@
             {
               "id": "rv2-4",
               "type": "tap_words_in_order",
-              "prompt": "Build (3rd cond.): 'If we had known, we would have come'",
+              "prompt": "If we had known, we would have come",
               "answer": "Si hubiéramos sabido , habríamos venido",
               "bank": [
                 "Si",
@@ -12177,7 +12306,7 @@
             {
               "id": "rv2-6",
               "type": "tap_words_in_order",
-              "prompt": "Build (1st cond.): 'If you come, I'll be happy'",
+              "prompt": "'If you come, I'll be happy'",
               "answer": "Si vienes , estaré contento",
               "bank": [
                 "Si",
@@ -12215,7 +12344,7 @@
             {
               "id": "rv2-9",
               "type": "tap_words_in_order",
-              "prompt": "Build (mixed): 'If you had studied, you wouldn't be so worried now'",
+              "prompt": "'If you had studied, you wouldn't be so worried now'",
               "answer": "Si hubieras estudiado , no estarías tan preocupado ahora",
               "bank": [
                 "Si",
@@ -12233,8 +12362,9 @@
             },
             {
               "id": "rv2-10",
-              "type": "fill_blank",
-              "prompt": "Translate (2nd cond.): 'If she called me, I'd be happy.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "If she called me, I'd be happy.",
               "answer": "Si me llamara, estaría contento",
               "acceptableAnswers": [
                 "Si me llamase, estaría contento",
@@ -12277,7 +12407,7 @@
             {
               "id": "rv2-14",
               "type": "tap_words_in_order",
-              "prompt": "Build (1st cond.): 'If it rains tomorrow, we'll stay home'",
+              "prompt": "'If it rains tomorrow, we'll stay home'",
               "answer": "Si llueve mañana , nos quedamos en casa",
               "bank": [
                 "Si",
@@ -12343,7 +12473,7 @@
             {
               "id": "rv3-4",
               "type": "fill_blank",
-              "prompt": "'Es cierto que ___ (llover) mucho.'",
+              "prompt": "Es cierto que ___ (llover) mucho.",
               "answer": "llueve"
             },
             {
@@ -12361,7 +12491,7 @@
             {
               "id": "rv3-6",
               "type": "fill_blank",
-              "prompt": "'Quería que ___ (venir, ella) ayer.'",
+              "prompt": "Quería que ___ (venir, ella) ayer.",
               "answer": "viniera",
               "acceptableAnswers": [
                 "viniese"
@@ -12382,7 +12512,7 @@
             {
               "id": "rv3-8",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'I'm glad you came'",
+              "prompt": "'I'm glad you came'",
               "answer": "Me alegro de que hayas venido",
               "bank": [
                 "Me",
@@ -12399,7 +12529,7 @@
             {
               "id": "rv3-9",
               "type": "fill_blank",
-              "prompt": "'Para que tú ___ (entender), te lo explico despacio.'",
+              "prompt": "Para que tú ___ (entender), te lo explico despacio.",
               "answer": "entiendas"
             },
             {
@@ -12441,7 +12571,7 @@
             {
               "id": "rv3-13",
               "type": "fill_blank",
-              "prompt": "'Cuando ___ (ver, tú) a María, dile que llamé.'",
+              "prompt": "Cuando ___ (ver, tú) a María, dile que llamé.",
               "answer": "veas"
             },
             {
@@ -12469,7 +12599,7 @@
             {
               "id": "rv4-1",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'Spanish is spoken in 20 countries'",
+              "prompt": "Spanish is spoken in 20 countries",
               "answer": "Se habla español en 20 países",
               "bank": [
                 "Se",
@@ -12497,8 +12627,9 @@
             },
             {
               "id": "rv4-3",
-              "type": "fill_blank",
-              "prompt": "Translate: 'I should have called her.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I should have called her.",
               "answer": "Debería haberla llamado",
               "acceptableAnswers": [
                 "La debería haber llamado",
@@ -12508,7 +12639,7 @@
             {
               "id": "rv4-4",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'The film was directed by Almodóvar'",
+              "prompt": "The film was directed by Almodóvar",
               "answer": "La película fue dirigida por Almodóvar",
               "bank": [
                 "La",
@@ -12538,7 +12669,7 @@
             {
               "id": "rv4-6",
               "type": "tap_words_in_order",
-              "prompt": "Build: 'It's said that he resigned'",
+              "prompt": "'It's said that he resigned'",
               "answer": "Se dice que dimitió",
               "bank": [
                 "Se",
@@ -12553,8 +12684,9 @@
             },
             {
               "id": "rv4-7",
-              "type": "fill_blank",
-              "prompt": "Translate: 'The city where I grew up has changed.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The city where I grew up has changed.",
               "answer": "La ciudad donde crecí ha cambiado",
               "acceptableAnswers": [
                 "La ciudad en la que crecí ha cambiado"
@@ -12592,8 +12724,9 @@
             },
             {
               "id": "rv4-10",
-              "type": "fill_blank",
-              "prompt": "Translate: 'If they had told me, I would have helped.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "If they had told me, I would have helped.",
               "answer": "Si me lo hubieran dicho, habría ayudado",
               "acceptableAnswers": [
                 "Si me lo hubieran dicho, los habría ayudado",
@@ -12627,8 +12760,9 @@
             },
             {
               "id": "rv4-13",
-              "type": "fill_blank",
-              "prompt": "Translate: 'Whatever happens, we'll be ready.'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Whatever happens, we'll be ready.",
               "answer": "Pase lo que pase, estaremos listos",
               "acceptableAnswers": [
                 "Suceda lo que suceda, estaremos listos"

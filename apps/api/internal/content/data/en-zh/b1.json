@@ -179,7 +179,7 @@
             {
               "id": "pp1-3",
               "type": "fill_blank",
-              "prompt": "「I ___ seen that film.」完成这个否定句(中文:「我没看过那部电影。」)",
+              "prompt": "I ___ seen that film.",
               "answer": "haven't",
               "acceptableAnswers": [
                 "have not"
@@ -220,7 +220,7 @@
             {
               "id": "pp1-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「他们完成了那个项目(现在已结束)」",
+              "prompt": "「他们完成了那个项目(现在已结束)」",
               "answer": "They have finished the project",
               "bank": [
                 "They",
@@ -262,7 +262,7 @@
             {
               "id": "pp1-9",
               "type": "fill_blank",
-              "prompt": "构造疑问句:「___ you ever been to Paris?」",
+              "prompt": "___ you ever been to Paris?",
               "answer": "Have",
               "acceptableAnswers": [],
               "explanation": "疑问句:Have/Has + 主语 + V3?中文「你去过……吗」用「吗」结尾,英语用 have 提前。"
@@ -331,7 +331,7 @@
             {
               "id": "pp2-4",
               "type": "fill_blank",
-              "prompt": "「I ___ (live) here since 2018.」",
+              "prompt": "I ___ (live) here since 2018.",
               "answer": "have lived",
               "acceptableAnswers": [
                 "'ve lived"
@@ -341,7 +341,7 @@
             {
               "id": "pp2-5",
               "type": "fill_blank",
-              "prompt": "「She ___ (visit) Rome last summer.」",
+              "prompt": "She ___ (visit) Rome last summer.",
               "answer": "visited",
               "acceptableAnswers": [],
               "explanation": "「last summer」是明确过去 → 一般过去时。"
@@ -372,7 +372,7 @@
             {
               "id": "pp2-7",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「她从一月起就在这里工作(到现在仍在)」",
+              "prompt": "「她从一月起就在这里工作(到现在仍在)」",
               "answer": "She has worked here since January",
               "bank": [
                 "She",
@@ -415,7 +415,7 @@
             {
               "id": "pp2-10",
               "type": "fill_blank",
-              "prompt": "「When I was a child, I ___ (love) ice cream.」",
+              "prompt": "When I was a child, I ___ (love) ice cream.",
               "answer": "loved",
               "acceptableAnswers": [],
               "explanation": "「when I was a child」是明确过去语境 → 一般过去时。"
@@ -458,7 +458,7 @@
             {
               "id": "pp3-3",
               "type": "fill_blank",
-              "prompt": "「I have known her ___ five years.」",
+              "prompt": "I have known her ___ five years.",
               "answer": "for",
               "acceptableAnswers": [],
               "explanation": "时长 → for。"
@@ -466,7 +466,7 @@
             {
               "id": "pp3-4",
               "type": "fill_blank",
-              "prompt": "「He has worked here ___ Monday.」",
+              "prompt": "He has worked here ___ Monday.",
               "answer": "since",
               "acceptableAnswers": [],
               "explanation": "Monday 是起点 → since。"
@@ -497,7 +497,7 @@
             {
               "id": "pp3-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「我学英语学了两年了(到现在还在学)」",
+              "prompt": "「我学英语学了两年了(到现在还在学)」",
               "answer": "I have studied English for two years",
               "bank": [
                 "I",
@@ -540,7 +540,7 @@
             {
               "id": "pp3-9",
               "type": "fill_blank",
-              "prompt": "「We haven't seen each other ___ a long time.」",
+              "prompt": "We haven't seen each other ___ a long time.",
               "answer": "for",
               "acceptableAnswers": []
             },
@@ -595,7 +595,7 @@
             {
               "id": "pp4-3",
               "type": "fill_blank",
-              "prompt": "「I have ___ been to Italy.」(从来没去过)",
+              "prompt": "I have ___ been to Italy.",
               "answer": "never",
               "acceptableAnswers": [],
               "explanation": "「never」本身就是否定意义,不需要再加 not。"
@@ -603,7 +603,7 @@
             {
               "id": "pp4-4",
               "type": "fill_blank",
-              "prompt": "「Have you ___ tried sushi?」(曾经)",
+              "prompt": "Have you ___ tried sushi?",
               "answer": "ever",
               "acceptableAnswers": [],
               "explanation": "「ever」= 曾经,用于疑问句。"
@@ -634,7 +634,7 @@
             {
               "id": "pp4-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「她已经离开了」",
+              "prompt": "「她已经离开了」",
               "answer": "She has already left",
               "bank": [
                 "She",
@@ -676,7 +676,7 @@
             {
               "id": "pp4-9",
               "type": "fill_blank",
-              "prompt": "「The train has ___ arrived.」(刚到)",
+              "prompt": "The train has ___ arrived.",
               "answer": "just",
               "acceptableAnswers": []
             },
@@ -731,14 +731,14 @@
             {
               "id": "pp5-3",
               "type": "fill_blank",
-              "prompt": "「I have ___ finished my report.」(刚刚)",
+              "prompt": "I have ___ finished my report.",
               "answer": "just",
               "acceptableAnswers": []
             },
             {
               "id": "pp5-4",
               "type": "fill_blank",
-              "prompt": "「She hasn't called me ___.」(还没)",
+              "prompt": "She hasn't called me ___.",
               "answer": "yet",
               "acceptableAnswers": []
             },
@@ -768,7 +768,7 @@
             {
               "id": "pp5-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「他从来没看过那部电影」",
+              "prompt": "「他从来没看过那部电影」",
               "answer": "He has never seen that film",
               "bank": [
                 "He",
@@ -824,7 +824,7 @@
             {
               "id": "pp5-10",
               "type": "fill_blank",
-              "prompt": "「The bus has ___ left.」(已经)",
+              "prompt": "The bus has ___ left.",
               "answer": "already",
               "acceptableAnswers": []
             },
@@ -889,7 +889,7 @@
             {
               "id": "pp6-2",
               "type": "fill_blank",
-              "prompt": "「She ___ ___ ___ (study) all morning.」(她整个上午一直在学习)",
+              "prompt": "She ___ ___ ___ (study) all morning.",
               "answer": "has been studying",
               "acceptableAnswers": [
                 "'s been studying"
@@ -912,7 +912,7 @@
             {
               "id": "pp6-4",
               "type": "fill_blank",
-              "prompt": "「They ___ ___ ___ (work) on this project since June.」",
+              "prompt": "They ___ ___ ___ (work) on this project since June.",
               "answer": "have been working",
               "acceptableAnswers": [
                 "'ve been working"
@@ -945,7 +945,7 @@
             {
               "id": "pp6-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「我学了三年英语了(仍在学)」",
+              "prompt": "「我学了三年英语了(仍在学)」",
               "answer": "I have been studying English for three years",
               "bank": [
                 "I",
@@ -1002,7 +1002,7 @@
             {
               "id": "pp6-10",
               "type": "fill_blank",
-              "prompt": "「How long ___ ___ ___ (learn) English?」(到目前为止学了多久了)",
+              "prompt": "How long ___ ___ ___ (learn) English?",
               "answer": "have you been learning",
               "acceptableAnswers": [],
               "explanation": "问「持续多久」用现在完成进行时。"
@@ -1306,7 +1306,7 @@
             {
               "id": "mod1-3",
               "type": "fill_blank",
-              "prompt": "「When I was young, I ___ run very fast.」(过去能力)",
+              "prompt": "When I was young, I ___ run very fast.",
               "answer": "could",
               "acceptableAnswers": [],
               "explanation": "「过去能够做某事」用 could。"
@@ -1350,7 +1350,7 @@
             {
               "id": "mod1-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「他不会开车」",
+              "prompt": "「他不会开车」",
               "answer": "He cannot drive a car",
               "bank": [
                 "He",
@@ -1380,7 +1380,7 @@
             {
               "id": "mod1-8",
               "type": "fill_blank",
-              "prompt": "「___ I borrow your pen?」(可以借你的笔吗?礼貌请求)",
+              "prompt": "___ I borrow your pen?",
               "answer": "Could",
               "acceptableAnswers": [
                 "May",
@@ -1478,7 +1478,7 @@
             {
               "id": "mod2-5",
               "type": "fill_blank",
-              "prompt": "「You ___ ___ (wear) a helmet on this site.」(规则要求)",
+              "prompt": "You ___ ___ (wear) a helmet on this site.",
               "answer": "have to wear",
               "acceptableAnswers": [
                 "must wear"
@@ -1511,7 +1511,7 @@
             {
               "id": "mod2-7",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「我必须早起」",
+              "prompt": "「我必须早起」",
               "answer": "I have to get up early",
               "bank": [
                 "I",
@@ -1554,7 +1554,7 @@
             {
               "id": "mod2-10",
               "type": "fill_blank",
-              "prompt": "「Children ___ ___ wear school uniforms.」(必须 — 规定)",
+              "prompt": "Children ___ ___ wear school uniforms.",
               "answer": "have to",
               "acceptableAnswers": [
                 "must"
@@ -1586,7 +1586,7 @@
             {
               "id": "mod3-2",
               "type": "fill_blank",
-              "prompt": "「You ___ ___ (see) a doctor.」(建议)",
+              "prompt": "You ___ ___ (see) a doctor.",
               "answer": "should see",
               "acceptableAnswers": [],
               "explanation": "should + 原形 see,不要写成 to see 或 saw。"
@@ -1620,7 +1620,7 @@
             {
               "id": "mod3-5",
               "type": "fill_blank",
-              "prompt": "「She doesn't feel well. She ___ rest.」(应该)",
+              "prompt": "She doesn't feel well. She ___ rest.",
               "answer": "should",
               "acceptableAnswers": [],
               "explanation": "should 是建议。"
@@ -1651,7 +1651,7 @@
             {
               "id": "mod3-7",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「你应该多锻炼」",
+              "prompt": "「你应该多锻炼」",
               "answer": "You should exercise more",
               "bank": [
                 "You",
@@ -1693,7 +1693,7 @@
             {
               "id": "mod3-10",
               "type": "fill_blank",
-              "prompt": "「I think you ___ apologise to her.」(应该)",
+              "prompt": "I think you ___ apologise to her.",
               "answer": "should",
               "acceptableAnswers": [],
               "explanation": "建议用 should。"
@@ -1749,7 +1749,7 @@
             {
               "id": "mod4-4",
               "type": "fill_blank",
-              "prompt": "「She ___ ___ (come) later, but I'm not sure.」(可能 — 不确定)",
+              "prompt": "She ___ ___ (come) later, but I'm not sure.",
               "answer": "might come",
               "acceptableAnswers": [
                 "may come"
@@ -1782,7 +1782,7 @@
             {
               "id": "mod4-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「他可能晚到」",
+              "prompt": "「他可能晚到」",
               "answer": "He may be late",
               "bank": [
                 "He",
@@ -1824,7 +1824,7 @@
             {
               "id": "mod4-9",
               "type": "fill_blank",
-              "prompt": "「She left an hour ago. She ___ be at the airport by now.」(强烈推断 — 一定)",
+              "prompt": "She left an hour ago. She ___ be at the airport by now.",
               "answer": "must",
               "acceptableAnswers": [],
               "explanation": "must 表示「肯定、一定」。"
@@ -1880,7 +1880,7 @@
             {
               "id": "mod5-3",
               "type": "fill_blank",
-              "prompt": "「Passengers ___ ___ (fasten) their seatbelts.」(规则 — 必须)",
+              "prompt": "Passengers ___ ___ (fasten) their seatbelts.",
               "answer": "must fasten",
               "acceptableAnswers": [
                 "have to fasten"
@@ -1889,7 +1889,7 @@
             {
               "id": "mod5-4",
               "type": "fill_blank",
-              "prompt": "「Tomorrow is Sunday. I ___ ___ ___ (work).」(不必)",
+              "prompt": "Tomorrow is Sunday. I ___ ___ ___ (work).",
               "answer": "don't have to work",
               "acceptableAnswers": [],
               "explanation": "「不必」用 don't have to,不是 mustn't。"
@@ -1920,7 +1920,7 @@
             {
               "id": "mod5-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「你不能这么跟我说话」",
+              "prompt": "「你不能这么跟我说话」",
               "answer": "You mustn't talk to me like that",
               "bank": [
                 "You",
@@ -1976,7 +1976,7 @@
             {
               "id": "mod5-10",
               "type": "fill_blank",
-              "prompt": "「She ___ ___ stay late at the office last night.」(过去 — 必须)",
+              "prompt": "She ___ ___ stay late at the office last night.",
               "answer": "had to",
               "acceptableAnswers": [],
               "explanation": "过去的「必须」用 had to。"
@@ -2055,7 +2055,7 @@
             {
               "id": "mod6-3",
               "type": "fill_blank",
-              "prompt": "「You ___ ___ (apologise) for being late.」(应该 — ought to)",
+              "prompt": "You ___ ___ (apologise) for being late.",
               "answer": "ought to apologise",
               "acceptableAnswers": [],
               "explanation": "ought + to + 原形。"
@@ -2063,7 +2063,7 @@
             {
               "id": "mod6-4",
               "type": "fill_blank",
-              "prompt": "「We ___ ___ leave before the storm.」(最好做某事 — 两个词)",
+              "prompt": "We ___ ___ leave before the storm.",
               "answer": "had better",
               "acceptableAnswers": [],
               "explanation": "had better + 动词原形,不带 to。"
@@ -2094,7 +2094,7 @@
             {
               "id": "mod6-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「你最好关上窗户」",
+              "prompt": "「你最好关上窗户」",
               "answer": "You had better close the window",
               "bank": [
                 "You",
@@ -2150,7 +2150,7 @@
             {
               "id": "mod6-10",
               "type": "fill_blank",
-              "prompt": "「You ___ ___ ___ touch that wire — it's dangerous.」(最好不要)",
+              "prompt": "You ___ ___ ___ touch that wire — it's dangerous.",
               "answer": "had better not",
               "acceptableAnswers": []
             },
@@ -2445,7 +2445,7 @@
             {
               "id": "con1-2",
               "type": "fill_blank",
-              "prompt": "「If I ___ (be) tired, I ___ (drink) coffee.」(0 型 — 习惯)",
+              "prompt": "If I ___ (be) tired, I ___ (drink) coffee.",
               "answer": "am / drink",
               "acceptableAnswers": [
                 "am, drink"
@@ -2468,7 +2468,7 @@
             {
               "id": "con1-4",
               "type": "fill_blank",
-              "prompt": "「If you ___ (mix) red and blue, you ___ (get) purple.」",
+              "prompt": "If you ___ (mix) red and blue, you ___ (get) purple.",
               "answer": "mix / get",
               "acceptableAnswers": [
                 "mix, get"
@@ -2500,7 +2500,7 @@
             {
               "id": "con1-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「我累的时候就喝咖啡」",
+              "prompt": "「我累的时候就喝咖啡」",
               "answer": "If I am tired I drink coffee",
               "bank": [
                 "If",
@@ -2544,7 +2544,7 @@
             {
               "id": "con1-9",
               "type": "fill_blank",
-              "prompt": "「If it ___ (be) sunny, kids ___ (play) outside.」(0 型)",
+              "prompt": "If it ___ (be) sunny, kids ___ (play) outside.",
               "answer": "is / play",
               "acceptableAnswers": [
                 "is, play"
@@ -2588,7 +2588,7 @@
             {
               "id": "con2-2",
               "type": "fill_blank",
-              "prompt": "「If I ___ (have) time tomorrow, I ___ (call) you.」(1 型)",
+              "prompt": "If I ___ (have) time tomorrow, I ___ (call) you.",
               "answer": "have / will call",
               "acceptableAnswers": [
                 "have, will call"
@@ -2611,7 +2611,7 @@
             {
               "id": "con2-4",
               "type": "fill_blank",
-              "prompt": "「If you ___ (eat) too much, you ___ (feel) sick later.」(1 型 — 警告)",
+              "prompt": "If you ___ (eat) too much, you ___ (feel) sick later.",
               "answer": "eat / will feel",
               "acceptableAnswers": [
                 "eat, will feel"
@@ -2643,7 +2643,7 @@
             {
               "id": "con2-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「如果我有空我就来」",
+              "prompt": "「如果我有空我就来」",
               "answer": "If I am free I will come",
               "bank": [
                 "If",
@@ -2686,7 +2686,7 @@
             {
               "id": "con2-9",
               "type": "fill_blank",
-              "prompt": "「If she ___ (call), I ___ (tell) her the news.」(1 型)",
+              "prompt": "If she ___ (call), I ___ (tell) her the news.",
               "answer": "calls / will tell",
               "acceptableAnswers": [
                 "calls, will tell"
@@ -2730,7 +2730,7 @@
             {
               "id": "con3-2",
               "type": "fill_blank",
-              "prompt": "「If I ___ (be) you, I ___ (apologise).」(2 型 — 我不是你)",
+              "prompt": "If I ___ (be) you, I ___ (apologise).",
               "answer": "were / would apologise",
               "acceptableAnswers": [
                 "were, would apologise",
@@ -2754,7 +2754,7 @@
             {
               "id": "con3-4",
               "type": "fill_blank",
-              "prompt": "「If she ___ (know) the truth, she ___ (be) angry.」(2 型)",
+              "prompt": "If she ___ (know) the truth, she ___ (be) angry.",
               "answer": "knew / would be",
               "acceptableAnswers": [
                 "knew, would be"
@@ -2786,7 +2786,7 @@
             {
               "id": "con3-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「如果我有钱我就买」",
+              "prompt": "「如果我有钱我就买」",
               "answer": "If I had money I would buy it",
               "bank": [
                 "If",
@@ -2830,7 +2830,7 @@
             {
               "id": "con3-9",
               "type": "fill_blank",
-              "prompt": "「If I ___ (win) the lottery, I ___ (travel) around the world.」(2 型)",
+              "prompt": "If I ___ (win) the lottery, I ___ (travel) around the world.",
               "answer": "won / would travel",
               "acceptableAnswers": [
                 "won, would travel"
@@ -2900,7 +2900,7 @@
             {
               "id": "con4-4",
               "type": "fill_blank",
-              "prompt": "「If I ___ (be) rich, I ___ (help) the poor.」(2 型 — 假设)",
+              "prompt": "If I ___ (be) rich, I ___ (help) the poor.",
               "answer": "were / would help",
               "acceptableAnswers": [
                 "were, would help"
@@ -2909,7 +2909,7 @@
             {
               "id": "con4-5",
               "type": "fill_blank",
-              "prompt": "「If you ___ (study), you ___ (pass) the exam next week.」(1 型 — 真实将来)",
+              "prompt": "If you ___ (study), you ___ (pass) the exam next week.",
               "answer": "study / will pass",
               "acceptableAnswers": [
                 "study, will pass"
@@ -2941,7 +2941,7 @@
             {
               "id": "con4-7",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「如果我是你,我就道歉(我不是你)」",
+              "prompt": "「如果我是你,我就道歉(我不是你)」",
               "answer": "If I were you I would apologise",
               "bank": [
                 "If",
@@ -3033,7 +3033,7 @@
             {
               "id": "con5-3",
               "type": "fill_blank",
-              "prompt": "「If I ___ ___ ___ (know) earlier, I ___ ___ ___ (help) you.」(3 型 — 当时不知)",
+              "prompt": "If I ___ ___ ___ (know) earlier, I ___ ___ ___ (help) you.",
               "answer": "had known / would have helped",
               "acceptableAnswers": [
                 "had known, would have helped"
@@ -3042,7 +3042,7 @@
             {
               "id": "con5-4",
               "type": "fill_blank",
-              "prompt": "「If she ___ ___ ___ (take) the bus, she ___ ___ ___ ___ (be) here by now.」(混合 — 过去对现在)",
+              "prompt": "If she ___ ___ ___ (take) the bus, she ___ ___ ___ ___ (be) here by now.",
               "answer": "had taken / would be",
               "acceptableAnswers": [
                 "had taken, would be"
@@ -3074,7 +3074,7 @@
             {
               "id": "con5-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「我要是当时知道我就告诉你了」",
+              "prompt": "「我要是当时知道我就告诉你了」",
               "answer": "If I had known I would have told you",
               "bank": [
                 "If",
@@ -3132,7 +3132,7 @@
             {
               "id": "con5-10",
               "type": "fill_blank",
-              "prompt": "「If I ___ ___ ___ (sleep) more, I ___ ___ ___ ___ (feel) better today.」(混合)",
+              "prompt": "If I ___ ___ ___ (sleep) more, I ___ ___ ___ ___ (feel) better today.",
               "answer": "had slept / would feel",
               "acceptableAnswers": [
                 "had slept, would feel"
@@ -3212,7 +3212,7 @@
             {
               "id": "con6-3",
               "type": "fill_blank",
-              "prompt": "「I wish I ___ (be) taller.」(现在愿望)",
+              "prompt": "I wish I ___ (be) taller.",
               "answer": "were",
               "acceptableAnswers": [
                 "was"
@@ -3222,7 +3222,7 @@
             {
               "id": "con6-4",
               "type": "fill_blank",
-              "prompt": "「You won't pass ___ you study.」(除非)",
+              "prompt": "You won't pass ___ you study.",
               "answer": "unless",
               "acceptableAnswers": [],
               "explanation": "unless = if not,「除非」。"
@@ -3253,7 +3253,7 @@
             {
               "id": "con6-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「除非下雨,否则我们就去野餐」",
+              "prompt": "「除非下雨,否则我们就去野餐」",
               "answer": "We will go on a picnic unless it rains",
               "bank": [
                 "We",
@@ -3311,7 +3311,7 @@
             {
               "id": "con6-10",
               "type": "fill_blank",
-              "prompt": "「She won't talk to me ___ I apologise.」(除非)",
+              "prompt": "She won't talk to me ___ I apologise.",
               "answer": "unless",
               "acceptableAnswers": []
             },
@@ -3594,7 +3594,7 @@
             {
               "id": "pas1-3",
               "type": "fill_blank",
-              "prompt": "「The window ___ ___ (break) yesterday.」(过去被动)",
+              "prompt": "The window ___ ___ (break) yesterday.",
               "answer": "was broken",
               "acceptableAnswers": [],
               "explanation": "was + V3 (broken)。"
@@ -3602,7 +3602,7 @@
             {
               "id": "pas1-4",
               "type": "fill_blank",
-              "prompt": "「English ___ ___ (speak) all over the world.」(现在被动)",
+              "prompt": "English ___ ___ (speak) all over the world.",
               "answer": "is spoken",
               "acceptableAnswers": [],
               "explanation": "is + V3 (spoken)。"
@@ -3633,7 +3633,7 @@
             {
               "id": "pas1-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确被动句:「蛋糕是妈妈做的」",
+              "prompt": "「蛋糕是妈妈做的」",
               "answer": "The cake was made by mum",
               "bank": [
                 "The",
@@ -3689,7 +3689,7 @@
             {
               "id": "pas1-10",
               "type": "fill_blank",
-              "prompt": "「The cake ___ ___ (eat) by the children.」(过去被动)",
+              "prompt": "The cake ___ ___ (eat) by the children.",
               "answer": "was eaten",
               "acceptableAnswers": [],
               "explanation": "was + eaten(eat 的 V3)。"
@@ -3732,7 +3732,7 @@
             {
               "id": "pas2-3",
               "type": "fill_blank",
-              "prompt": "「The bridge ___ ___ ___ (build) by next year.」(将来完成被动)",
+              "prompt": "The bridge ___ ___ ___ (build) by next year.",
               "answer": "will have been built",
               "acceptableAnswers": [],
               "explanation": "将来完成被动 = will + have + been + V3。"
@@ -3740,7 +3740,7 @@
             {
               "id": "pas2-4",
               "type": "fill_blank",
-              "prompt": "「Dinner ___ ___ ___ (prepare) when I came home.」(过去进行被动)",
+              "prompt": "Dinner ___ ___ ___ (prepare) when I came home.",
               "answer": "was being prepared",
               "acceptableAnswers": [],
               "explanation": "过去进行被动 = was/were + being + V3。"
@@ -3771,7 +3771,7 @@
             {
               "id": "pas2-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「这部电影会被很多人观看」",
+              "prompt": "「这部电影会被很多人观看」",
               "answer": "The film will be watched by many people",
               "bank": [
                 "The",
@@ -3829,7 +3829,7 @@
             {
               "id": "pas2-10",
               "type": "fill_blank",
-              "prompt": "「The package ___ ___ (deliver) tomorrow.」(将来被动)",
+              "prompt": "The package ___ ___ (deliver) tomorrow.",
               "answer": "will be delivered",
               "acceptableAnswers": [],
               "explanation": "将来被动 = will + be + V3。"
@@ -3872,14 +3872,14 @@
             {
               "id": "pas3-3",
               "type": "fill_blank",
-              "prompt": "「Penicillin ___ ___ (discover) in 1928.」(科学/历史 — 常用被动)",
+              "prompt": "Penicillin ___ ___ (discover) in 1928.",
               "answer": "was discovered",
               "acceptableAnswers": []
             },
             {
               "id": "pas3-4",
               "type": "fill_blank",
-              "prompt": "「My phone ___ ___ (steal) last night.」(被偷,不知是谁)",
+              "prompt": "My phone ___ ___ (steal) last night.",
               "answer": "was stolen",
               "acceptableAnswers": [],
               "explanation": "steal-stole-stolen。"
@@ -3910,7 +3910,7 @@
             {
               "id": "pas3-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「这首歌是 1965 年录制的」",
+              "prompt": "「这首歌是 1965 年录制的」",
               "answer": "This song was recorded in 1965",
               "bank": [
                 "This",
@@ -3966,7 +3966,7 @@
             {
               "id": "pas3-10",
               "type": "fill_blank",
-              "prompt": "「This temple ___ ___ (build) over 500 years ago.」(历史事实)",
+              "prompt": "This temple ___ ___ (build) over 500 years ago.",
               "answer": "was built",
               "acceptableAnswers": []
             }
@@ -4021,14 +4021,14 @@
             {
               "id": "pas4-4",
               "type": "fill_blank",
-              "prompt": "「The window ___ ___ (clean) every Monday.」(现在时被动 — 习惯)",
+              "prompt": "The window ___ ___ (clean) every Monday.",
               "answer": "is cleaned",
               "acceptableAnswers": []
             },
             {
               "id": "pas4-5",
               "type": "fill_blank",
-              "prompt": "「The thieves ___ ___ (catch) last night.」(过去被动)",
+              "prompt": "The thieves ___ ___ (catch) last night.",
               "answer": "were caught",
               "acceptableAnswers": [],
               "explanation": "catch-caught-caught。复数主语 thieves → were。"
@@ -4059,7 +4059,7 @@
             {
               "id": "pas4-7",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「这部小说被翻译成 30 种语言」",
+              "prompt": "「这部小说被翻译成 30 种语言」",
               "answer": "The novel has been translated into 30 languages",
               "bank": [
                 "The",
@@ -4151,14 +4151,14 @@
             {
               "id": "pas5-3",
               "type": "fill_blank",
-              "prompt": "「The work ___ ___ (complete) next week.」(将来被动)",
+              "prompt": "The work ___ ___ (complete) next week.",
               "answer": "will be completed",
               "acceptableAnswers": []
             },
             {
               "id": "pas5-4",
               "type": "fill_blank",
-              "prompt": "「The cake ___ ___ ___ (cut) when we arrived.」(过去进行被动)",
+              "prompt": "The cake ___ ___ ___ (cut) when we arrived.",
               "answer": "was being cut",
               "acceptableAnswers": []
             },
@@ -4188,7 +4188,7 @@
             {
               "id": "pas5-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「问题已经解决了」",
+              "prompt": "「问题已经解决了」",
               "answer": "The problem has been solved",
               "bank": [
                 "The",
@@ -4243,7 +4243,7 @@
             {
               "id": "pas5-10",
               "type": "fill_blank",
-              "prompt": "「This film ___ ___ ___ (release) yet.」(现在完成被动 — 否定)",
+              "prompt": "This film ___ ___ ___ (release) yet.",
               "answer": "has not been released",
               "acceptableAnswers": [
                 "hasn't been released"
@@ -4323,14 +4323,14 @@
             {
               "id": "pas6-3",
               "type": "fill_blank",
-              "prompt": "「He ___ ___ (hurt) in the accident.」(get 被动 — 不幸的事)",
+              "prompt": "He ___ ___ (hurt) in the accident.",
               "answer": "got hurt",
               "acceptableAnswers": []
             },
             {
               "id": "pas6-4",
               "type": "fill_blank",
-              "prompt": "「The window was broken ___ a stone.」(用 — 工具)",
+              "prompt": "The window was broken ___ a stone.",
               "answer": "by",
               "acceptableAnswers": [
                 "with"
@@ -4363,7 +4363,7 @@
             {
               "id": "pas6-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「他在比赛中受伤了」(get 被动)",
+              "prompt": "「他在比赛中受伤了」(get 被动)",
               "answer": "He got injured in the match",
               "bank": [
                 "He",
@@ -4419,7 +4419,7 @@
             {
               "id": "pas6-10",
               "type": "fill_blank",
-              "prompt": "「She ___ ___ (fire) last month.」(get 被动 — 被解雇)",
+              "prompt": "She ___ ___ (fire) last month.",
               "answer": "got fired",
               "acceptableAnswers": []
             },
@@ -4739,7 +4739,7 @@
             {
               "id": "phr1-3",
               "type": "fill_blank",
-              "prompt": "「I ___ ___ an old friend at the supermarket.」(偶遇)",
+              "prompt": "I ___ ___ an old friend at the supermarket.",
               "answer": "ran into",
               "acceptableAnswers": [],
               "explanation": "run into = 偶遇,撞见。"
@@ -4747,7 +4747,7 @@
             {
               "id": "phr1-4",
               "type": "fill_blank",
-              "prompt": "「Please ___ ___ the lights when you leave.」(关闭)",
+              "prompt": "Please ___ ___ the lights when you leave.",
               "answer": "turn off",
               "acceptableAnswers": []
             },
@@ -4777,7 +4777,7 @@
             {
               "id": "phr1-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「我七点来接你」",
+              "prompt": "「我七点来接你」",
               "answer": "I will pick you up at seven",
               "bank": [
                 "I",
@@ -4833,7 +4833,7 @@
             {
               "id": "phr1-10",
               "type": "fill_blank",
-              "prompt": "「The plane ___ ___ at 6:30.」(起飞)",
+              "prompt": "The plane ___ ___ at 6:30.",
               "answer": "took off",
               "acceptableAnswers": [],
               "explanation": "take off = 起飞(也可以是脱下衣物)。"
@@ -4876,14 +4876,14 @@
             {
               "id": "phr2-3",
               "type": "fill_blank",
-              "prompt": "「I picked ___ the keys from the floor.」(可分离 — 名词宾语)",
+              "prompt": "I picked ___ the keys from the floor.",
               "answer": "up",
               "acceptableAnswers": []
             },
             {
               "id": "phr2-4",
               "type": "fill_blank",
-              "prompt": "「I'll look ___ ___ tomorrow.」(给一个代词宾语:them)",
+              "prompt": "I'll look ___ ___ tomorrow.",
               "answer": "them up",
               "acceptableAnswers": [],
               "explanation": "look + them + up(代词必须中间)。"
@@ -4914,7 +4914,7 @@
             {
               "id": "phr2-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「我撞见他了(偶遇)」",
+              "prompt": "「我撞见他了(偶遇)」",
               "answer": "I ran into him yesterday",
               "bank": [
                 "I",
@@ -4968,7 +4968,7 @@
             {
               "id": "phr2-10",
               "type": "fill_blank",
-              "prompt": "「Can you take ___ ___ ___ ___ tomorrow?」(填:我妹妹 — 名词宾语,带 my sister 短语)",
+              "prompt": "Can you take ___ ___ ___ ___ tomorrow?",
               "answer": "care of my sister",
               "acceptableAnswers": [
                 "my sister out",
@@ -5014,7 +5014,7 @@
             {
               "id": "phr3-3",
               "type": "fill_blank",
-              "prompt": "「I ___ ___ at the gym every morning.」(锻炼)",
+              "prompt": "I ___ ___ at the gym every morning.",
               "answer": "work out",
               "acceptableAnswers": [],
               "explanation": "work out = 锻炼(也可以是「解决/算出」)。"
@@ -5022,7 +5022,7 @@
             {
               "id": "phr3-4",
               "type": "fill_blank",
-              "prompt": "「Let me ___ ___ how much this costs.」(算出来)",
+              "prompt": "Let me ___ ___ how much this costs.",
               "answer": "work out",
               "acceptableAnswers": []
             },
@@ -5052,7 +5052,7 @@
             {
               "id": "phr3-6",
               "type": "tap_words_in_order",
-              "prompt": "把单词排成正确句子:「我每周锻炼三次」",
+              "prompt": "「我每周锻炼三次」",
               "answer": "I work out three times a week",
               "bank": [
                 "I",
@@ -5108,7 +5108,7 @@
             {
               "id": "phr3-10",
               "type": "fill_blank",
-              "prompt": "「Can you ___ me ___ at 6 p.m.?」(开车接我)",
+              "prompt": "Can you ___ me ___ at 6 p.m.?",
               "answer": "pick / up",
               "acceptableAnswers": [
                 "pick, up",
@@ -5153,7 +5153,7 @@
             {
               "id": "phr4-3",
               "type": "fill_blank",
-              "prompt": "填空：「Don't ___ ___ trying!」（不要放弃尝试！）",
+              "prompt": "Don't ___ ___ trying!",
               "answer": "give up",
               "explanation": "give up = 放弃。后面接 V-ing：give up trying / give up smoking。给力一点：never give up = 永不放弃。"
             },
@@ -5190,7 +5190,7 @@
             {
               "id": "phr4-6",
               "type": "tap_words_in_order",
-              "prompt": "按正确顺序排列：「我得在词典里查一下这个词。」",
+              "prompt": "「我得在词典里查一下这个词。」",
               "answer": "I need to look this word up",
               "explanation": "look up 是可分离短语动词，代词或名词宾语都可放在中间：look it up / look this word up。也可以说 look up this word（名词宾语在后），但代词宾语必须在中间（look it up，不能 look up it）。"
             },
@@ -5223,7 +5223,7 @@
             {
               "id": "phr4-9",
               "type": "fill_blank",
-              "prompt": "填空：「I'll ___ ___ it tomorrow.」（明天我会调查 / 研究一下）",
+              "prompt": "I'll ___ ___ it tomorrow.",
               "answer": "look into",
               "explanation": "look into = 调查、研究（问题）。注意 look into 后面直接跟宾语，不需要 at / on。"
             },
@@ -5278,7 +5278,7 @@
             {
               "id": "phr5-3",
               "type": "fill_blank",
-              "prompt": "填空：「I ___ ___ ___ my best friend yesterday.」（昨天我和最好的朋友吵架了）",
+              "prompt": "I ___ ___ ___ my best friend yesterday.",
               "answer": "fell out with",
               "explanation": "fall out with someone = 与某人闹翻 / 吵架。过去式 fell out with。比 argue with 更强调关系破裂。"
             },
@@ -5321,7 +5321,7 @@
             {
               "id": "phr5-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Kardeşimle iyi geçiniyorum」",
+              "prompt": "「Kardeşimle iyi geçiniyorum」",
               "answer": "I get along well with my brother",
               "bank": [
                 "I",
@@ -5377,7 +5377,7 @@
             {
               "id": "phr5-10",
               "type": "fill_blank",
-              "prompt": "「I can't ___ ___ ___ his lies anymore.」(忍受 — 三个词的短语动词)",
+              "prompt": "I can't ___ ___ ___ his lies anymore.",
               "answer": "put up with",
               "acceptableAnswers": [
                 "tolerate",
@@ -5459,14 +5459,14 @@
             {
               "id": "phr6-3",
               "type": "fill_blank",
-              "prompt": "改写：「Pick up the kids.」用代词替换 the kids：「Pick ___ ___ .」",
+              "prompt": "Pick ___ ___ .",
               "answer": "them up",
               "explanation": "代词宾语（them）放在 pick 和 up 之间。pick the kids up 和 pick up the kids 都对，但 pick up them 是错的。"
             },
             {
               "id": "phr6-4",
               "type": "fill_blank",
-              "prompt": "填空：「I'll look ___ ___ .」（我会照顾他们 — look after 不可分离）",
+              "prompt": "I'll look ___ ___ .",
               "answer": "after them",
               "explanation": "look after = 照顾（不可分离短语动词）。代词宾语也只能放在 after 之后：look after them (√)  look them after (×)。和可分离的 turn off / pick up 不同。"
             },
@@ -5496,7 +5496,7 @@
             {
               "id": "phr6-6",
               "type": "tap_words_in_order",
-              "prompt": "按正确顺序排列：「请把它关掉。」",
+              "prompt": "「请把它关掉。」",
               "answer": "Please turn it off",
               "explanation": "turn off 可分离；代词 it 必须放在中间。Please turn off it（×）。中文「把它关掉」中的「它」对应代词 it，提示要分离。"
             },
@@ -5542,7 +5542,7 @@
             {
               "id": "phr6-10",
               "type": "fill_blank",
-              "prompt": "改写：「I came across an old letter.」用代词替换：「I came ___ ___ .」",
+              "prompt": "I came ___ ___ .",
               "answer": "across it",
               "explanation": "come across = 偶然发现，不可分离。代词宾语也跟在 across 后面：came across it (√) / came it across (×)。"
             },
@@ -5910,7 +5910,7 @@
             {
               "id": "ff1-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Sonunda cevabı bulduk」",
+              "prompt": "「Sonunda cevabı bulduk」",
               "answer": "Eventually we found the answer",
               "bank": [
                 "Eventually",
@@ -5952,7 +5952,7 @@
             {
               "id": "ff1-9",
               "type": "fill_blank",
-              "prompt": "「Sonunda gerçeği öğrendik.」 → 「___, we learned the truth.」",
+              "prompt": "___, we learned the truth.",
               "answer": "Eventually",
               "acceptableAnswers": [
                 "finally",
@@ -6023,7 +6023,7 @@
             {
               "id": "ff2-4",
               "type": "fill_blank",
-              "prompt": "「Aşçı muhteşem bir yemek pişirdi.」 → 「The ___ cooked a wonderful meal.」",
+              "prompt": "The ___ cooked a wonderful meal.",
               "answer": "chef",
               "acceptableAnswers": [
                 "cook"
@@ -6056,7 +6056,7 @@
             {
               "id": "ff2-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Ders çalışmaya kütüphaneye gittim」",
+              "prompt": "「Ders çalışmaya kütüphaneye gittim」",
               "answer": "I went to the library to study",
               "bank": [
                 "I",
@@ -6170,7 +6170,7 @@
             {
               "id": "ff3-4",
               "type": "fill_blank",
-              "prompt": "「Hatamı fark ettim.」 → 「I ___ my mistake.」",
+              "prompt": "I ___ my mistake.",
               "answer": "realized",
               "acceptableAnswers": [
                 "realised"
@@ -6203,7 +6203,7 @@
             {
               "id": "ff3-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Saatin ne kadar geç olduğunu fark etmemiştim」",
+              "prompt": "「Saatin ne kadar geç olduğunu fark etmemiştim」",
               "answer": "I didn't realize how late it was",
               "bank": [
                 "I",
@@ -6247,7 +6247,7 @@
             {
               "id": "ff3-9",
               "type": "fill_blank",
-              "prompt": "「Sigara içmek burada yasak.」 → 「___ is forbidden here.」",
+              "prompt": "___ is forbidden here.",
               "answer": "Smoking",
               "acceptableAnswers": []
             },
@@ -6315,7 +6315,7 @@
             {
               "id": "ff4-4",
               "type": "fill_blank",
-              "prompt": "「她在演讲前做了一个简短的开场介绍。」 → 「She gave a ___ talk before the presentation.」",
+              "prompt": "She gave a ___ talk before the presentation.",
               "answer": "brief",
               "acceptableAnswers": [
                 "short",
@@ -6349,7 +6349,7 @@
             {
               "id": "ff4-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Lütfen cevaplarını dikkatlice kontrol et」",
+              "prompt": "「Lütfen cevaplarını dikkatlice kontrol et」",
               "answer": "Please check your answers carefully",
               "bank": [
                 "Please",
@@ -6391,7 +6391,7 @@
             {
               "id": "ff4-9",
               "type": "fill_blank",
-              "prompt": "「Be ___: explain in two minutes.」 (kısa ol)",
+              "prompt": "Be ___: explain in two minutes.",
               "answer": "brief",
               "acceptableAnswers": [
                 "short",
@@ -6446,8 +6446,9 @@
             },
             {
               "id": "ff5-3",
-              "type": "fill_blank",
-              "prompt": "「Eventually」 的中文意思是? ___ (最终 / 终于)",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "Eventually",
               "answer": "sonunda",
               "acceptableAnswers": [
                 "nihayetinde"
@@ -6456,8 +6457,9 @@
             },
             {
               "id": "ff5-4",
-              "type": "fill_blank",
-              "prompt": "「sympathetic」 的中文意思是? ___ (有同情心的 / 体谅的)",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "sympathetic",
               "answer": "anlayışlı",
               "acceptableAnswers": [
                 "anlayisli",
@@ -6493,7 +6495,7 @@
             {
               "id": "ff5-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Aslında bilmiyorum」",
+              "prompt": "「Aslında bilmiyorum」",
               "answer": "Actually I don't know",
               "bank": [
                 "Actually",
@@ -6546,8 +6548,9 @@
             },
             {
               "id": "ff5-10",
-              "type": "fill_blank",
-              "prompt": "「sensitive」 的中文意思是? ___ (敏感的 / 易动感情的)",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "sensitive",
               "answer": "duyarlı",
               "acceptableAnswers": [
                 "duyarli",
@@ -6628,8 +6631,9 @@
             },
             {
               "id": "ff6-3",
-              "type": "fill_blank",
-              "prompt": "「fabric」 的中文意思是? ___ (布料)",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "fabric",
               "answer": "kumaş",
               "acceptableAnswers": [
                 "kumas"
@@ -6638,8 +6642,9 @@
             },
             {
               "id": "ff6-4",
-              "type": "fill_blank",
-              "prompt": "「rest」 的中文意思是 (最常用)? ___ (休息 / 剩余部分)",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "rest",
               "answer": "dinlenme",
               "acceptableAnswers": [
                 "kalani",
@@ -6673,7 +6678,7 @@
             {
               "id": "ff6-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Pazardan kumaş aldım」",
+              "prompt": "「Pazardan kumaş aldım」",
               "answer": "I bought fabric at the market",
               "bank": [
                 "I",
@@ -7048,16 +7053,18 @@
             },
             {
               "id": "tr1-3",
-              "type": "fill_blank",
-              "prompt": "「Otobüs durağı」 用英语: ___ stop",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Otobüs durağı",
               "answer": "bus",
               "acceptableAnswers": [],
               "explanation": "公交站。"
             },
             {
               "id": "tr1-4",
-              "type": "fill_blank",
-              "prompt": "「Tren istasyonu」 用英语: ___ ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Tren istasyonu",
               "answer": "train station",
               "acceptableAnswers": [],
               "explanation": "火车站。"
@@ -7088,7 +7095,7 @@
             {
               "id": "tr1-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Tek yön bilet alabilir miyim lütfen?」",
+              "prompt": "「Tek yön bilet alabilir miyim lütfen?」",
               "answer": "I'd like a one-way ticket please",
               "bank": [
                 "I'd",
@@ -7144,7 +7151,7 @@
             {
               "id": "tr1-10",
               "type": "fill_blank",
-              "prompt": "'Taksi tutmak' = '___ a taxi'",
+              "prompt": "___ a taxi",
               "answer": "catch",
               "acceptableAnswers": [
                 "take"
@@ -7223,15 +7230,16 @@
             {
               "id": "tr2-3",
               "type": "fill_blank",
-              "prompt": "「早餐包括吗?」 = 「Is breakfast ___ ?」 (包含 — 动词的过去分词)",
+              "prompt": "Is breakfast ___ ?",
               "answer": "included",
               "acceptableAnswers": [],
               "explanation": "included = 包含。"
             },
             {
               "id": "tr2-4",
-              "type": "fill_blank",
-              "prompt": "「reservation」 的中文意思是? ___ (酒店住宿的预订)",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "reservation",
               "answer": "rezervasyon",
               "acceptableAnswers": []
             },
@@ -7261,7 +7269,7 @@
             {
               "id": "tr2-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Smith adına rezervasyonum var」",
+              "prompt": "「Smith adına rezervasyonum var」",
               "answer": "I have a reservation under Smith",
               "bank": [
                 "I",
@@ -7315,7 +7323,7 @@
             {
               "id": "tr2-10",
               "type": "fill_blank",
-              "prompt": "'Anahtarimi kaybettim.' = 'I've ___ my key.'",
+              "prompt": "ve ___ my key.",
               "answer": "lost",
               "acceptableAnswers": [],
               "explanation": "lost = 丢失 (V3)。"
@@ -7393,7 +7401,7 @@
             {
               "id": "tr3-3",
               "type": "fill_blank",
-              "prompt": "'Duz git.' = 'Go ___ .'",
+              "prompt": "Go ___ .",
               "answer": "straight",
               "acceptableAnswers": [
                 "ahead"
@@ -7403,7 +7411,7 @@
             {
               "id": "tr3-4",
               "type": "fill_blank",
-              "prompt": "「在拐角处。」 = 「On the ___ .」 (路口拐角)",
+              "prompt": "On the ___ .",
               "answer": "corner",
               "acceptableAnswers": [],
               "explanation": "在拐角处。"
@@ -7434,7 +7442,7 @@
             {
               "id": "tr3-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Düz git ve sağa dön」",
+              "prompt": "「Düz git ve sağa dön」",
               "answer": "Go straight and turn right",
               "bank": [
                 "Go",
@@ -7488,7 +7496,7 @@
             {
               "id": "tr3-10",
               "type": "fill_blank",
-              "prompt": "「... ne kadar uzakta?」 = 「How ___ İş...?」",
+              "prompt": "How ___ İş...?",
               "answer": "far",
               "acceptableAnswers": [
                 "distant"
@@ -7569,7 +7577,7 @@
             {
               "id": "tr4-3",
               "type": "fill_blank",
-              "prompt": "'Bir sonraki durakta in.' = '___ off at the next stop.'",
+              "prompt": "___ off at the next stop.",
               "answer": "Get",
               "acceptableAnswers": [],
               "explanation": "Get off = 下车。"
@@ -7577,7 +7585,7 @@
             {
               "id": "tr4-4",
               "type": "fill_blank",
-              "prompt": "「我们要在酒店办理入住。」 = 「We'll ___ ___ at the hotel.」 (入住 — 两个词的短语动词)",
+              "prompt": "We'll ___ ___ at the hotel.",
               "answer": "check in",
               "acceptableAnswers": []
             },
@@ -7607,7 +7615,7 @@
             {
               "id": "tr4-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Sabah erkenden yola çıktık」",
+              "prompt": "「Sabah erkenden yola çıktık」",
               "answer": "We set off early in the morning",
               "bank": [
                 "We",
@@ -7662,7 +7670,7 @@
             {
               "id": "tr4-10",
               "type": "fill_blank",
-              "prompt": "「我们明天退房。」 = 「We'll ___ ___ tomorrow.」 (退房 — 两个词的短语动词)",
+              "prompt": "We'll ___ ___ tomorrow.",
               "answer": "check out",
               "acceptableAnswers": []
             },
@@ -7738,14 +7746,14 @@
             {
               "id": "tr5-3",
               "type": "fill_blank",
-              "prompt": "'Pasaportumu unuttum.' = 'I forgot my ___ .'",
+              "prompt": "I forgot my ___ .",
               "answer": "passport",
               "acceptableAnswers": []
             },
             {
               "id": "tr5-4",
               "type": "fill_blank",
-              "prompt": "'Otel rezervasyonum var.' = 'I have a ___ at the hotel.'",
+              "prompt": "I have a ___ at the hotel.",
               "answer": "reservation",
               "acceptableAnswers": []
             },
@@ -7775,7 +7783,7 @@
             {
               "id": "tr5-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「İstasyona nasıl gideceğimi söyleyebilir misiniz?」",
+              "prompt": "「İstasyona nasıl gideceğimi söyleyebilir misiniz?」",
               "answer": "Could you tell me how to get to the station",
               "bank": [
                 "Could",
@@ -7834,7 +7842,7 @@
             {
               "id": "tr5-10",
               "type": "fill_blank",
-              "prompt": "「火车晚点了。」 = 「The train is ___ .」 (延误的)",
+              "prompt": "The train is ___ .",
               "answer": "delayed",
               "acceptableAnswers": [
                 "late"
@@ -8120,15 +8128,17 @@
             },
             {
               "id": "wk1-3",
-              "type": "fill_blank",
-              "prompt": "「Toplanti」 英语: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Toplanti",
               "answer": "meeting",
               "acceptableAnswers": []
             },
             {
               "id": "wk1-4",
-              "type": "fill_blank",
-              "prompt": "「Yonetici」 英语: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Yonetici",
               "answer": "manager",
               "acceptableAnswers": [
                 "boss"
@@ -8160,7 +8170,7 @@
             {
               "id": "wk1-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Saat 3'te bir toplantım var」",
+              "prompt": "「Saat 3'te bir toplantım var」",
               "answer": "I have a meeting at 3 PM",
               "bank": [
                 "I",
@@ -8214,8 +8224,9 @@
             },
             {
               "id": "wk1-10",
-              "type": "fill_blank",
-              "prompt": "「Stajyer」 英语: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Stajyer",
               "answer": "intern",
               "acceptableAnswers": [
                 "trainee"
@@ -8294,7 +8305,7 @@
             {
               "id": "wk2-3",
               "type": "fill_blank",
-              "prompt": "'I work ___ Google.'",
+              "prompt": "I work ___ Google.",
               "answer": "for",
               "acceptableAnswers": [
                 "at"
@@ -8304,7 +8315,7 @@
             {
               "id": "wk2-4",
               "type": "fill_blank",
-              "prompt": "「我是一位老师。」 = 「I'm ___ ___ .」 (两个词)",
+              "prompt": "I'm ___ ___ .",
               "answer": "a teacher",
               "acceptableAnswers": []
             },
@@ -8334,7 +8345,7 @@
             {
               "id": "wk2-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Yazılım geliştirici olarak çalışıyorum」",
+              "prompt": "「Yazılım geliştirici olarak çalışıyorum」",
               "answer": "I work as a software developer",
               "bank": [
                 "I",
@@ -8389,7 +8400,7 @@
             {
               "id": "wk2-10",
               "type": "fill_blank",
-              "prompt": "Soru: 'What ___ you do?'",
+              "prompt": "What ___ you do?",
               "answer": "do",
               "acceptableAnswers": [],
               "explanation": "用于询问职业。"
@@ -8465,14 +8476,14 @@
             {
               "id": "wk3-3",
               "type": "fill_blank",
-              "prompt": "「我稍后会跟进。」 = 「I'll ___ ___ later.」 (跟进 — 两个词的短语动词)",
+              "prompt": "I'll ___ ___ later.",
               "answer": "follow up",
               "acceptableAnswers": []
             },
             {
               "id": "wk3-4",
               "type": "fill_blank",
-              "prompt": "「我完全同意。」 = 「I ___ completely.」 (同意)",
+              "prompt": "I ___ completely.",
               "answer": "agree",
               "acceptableAnswers": [
                 "concur"
@@ -8504,7 +8515,7 @@
             {
               "id": "wk3-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Bunu toplantıda konuşabilir miyiz?」",
+              "prompt": "「Bunu toplantıda konuşabilir miyiz?」",
               "answer": "Could we discuss this in the meeting",
               "bank": [
                 "Could",
@@ -8560,8 +8571,9 @@
             },
             {
               "id": "wk3-10",
-              "type": "fill_blank",
-              "prompt": "「On the same page」 这个习语的中文意思是? ___ (达成共识)",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "On the same page",
               "answer": "anlaşmış",
               "acceptableAnswers": [
                 "anlasmis",
@@ -8640,7 +8652,7 @@
             {
               "id": "wk4-3",
               "type": "fill_blank",
-              "prompt": "「我管理这个项目。」 = 「I ___ this project.」 (管理)",
+              "prompt": "I ___ this project.",
               "answer": "manage",
               "acceptableAnswers": [
                 "run",
@@ -8650,7 +8662,7 @@
             {
               "id": "wk4-4",
               "type": "fill_blank",
-              "prompt": "「我会按时提交报告。」 = 「I'll ___ the report on time.」 (交付 / 提交)",
+              "prompt": "I'll ___ the report on time.",
               "answer": "deliver",
               "acceptableAnswers": [
                 "submit",
@@ -8683,7 +8695,7 @@
             {
               "id": "wk4-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Yarın müşteriyle tekrar görüşeceğim」",
+              "prompt": "「Yarın müşteriyle tekrar görüşeceğim」",
               "answer": "I'll follow up with the client tomorrow",
               "bank": [
                 "I'll",
@@ -8739,8 +8751,9 @@
             },
             {
               "id": "wk4-10",
-              "type": "fill_blank",
-              "prompt": "「miss the deadline」 什么 demek? ___ ___ kaçırmak",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "miss the deadline",
               "answer": "son tarihi",
               "acceptableAnswers": []
             },
@@ -8818,7 +8831,7 @@
             {
               "id": "wk5-3",
               "type": "fill_blank",
-              "prompt": "「我辞职了。」 = 「I ___ my job.」 (辞职)",
+              "prompt": "I ___ my job.",
               "answer": "quit",
               "acceptableAnswers": [
                 "left"
@@ -8827,7 +8840,7 @@
             {
               "id": "wk5-4",
               "type": "fill_blank",
-              "prompt": "「我要做一个演讲。」 = 「I'll ___ a presentation.」 (动词,作演讲用)",
+              "prompt": "I'll ___ a presentation.",
               "answer": "give",
               "acceptableAnswers": [
                 "do"
@@ -8859,7 +8872,7 @@
             {
               "id": "wk5-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Yeni bir proje üzerinde çalışıyorum」",
+              "prompt": "「Yeni bir proje üzerinde çalışıyorum」",
               "answer": "I'm working on a new project",
               "bank": [
                 "I'm",
@@ -8914,7 +8927,7 @@
             {
               "id": "wk5-10",
               "type": "fill_blank",
-              "prompt": "「请假一天」 = 「take ___ ___」 (三个词的名词短语)",
+              "prompt": "take ___ ___",
               "answer": "a day off",
               "acceptableAnswers": []
             },
@@ -9200,7 +9213,7 @@
             {
               "id": "st1-3",
               "type": "fill_blank",
-              "prompt": "「I ___ ___ (read) when she called.」 (过去进行时)",
+              "prompt": "I ___ ___ (read) when she called.",
               "answer": "was reading",
               "acceptableAnswers": [],
               "explanation": "持续动作 = 过去进行时。"
@@ -9208,7 +9221,7 @@
             {
               "id": "st1-4",
               "type": "fill_blank",
-              "prompt": "「When I arrived, she ___ ___ (cook) dinner.」 (过去进行时)",
+              "prompt": "When I arrived, she ___ ___ (cook) dinner.",
               "answer": "was cooking",
               "acceptableAnswers": []
             },
@@ -9238,7 +9251,7 @@
             {
               "id": "st1-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Telefon çaldığında kitap okuyordum」",
+              "prompt": "「Telefon çaldığında kitap okuyordum」",
               "answer": "I was reading when the phone rang",
               "bank": [
                 "I",
@@ -9294,7 +9307,7 @@
             {
               "id": "st1-10",
               "type": "fill_blank",
-              "prompt": "「我看书时,她在做饭。」 = 「While I ___ ___ , she was cooking.」 (过去进行时)",
+              "prompt": "While I ___ ___ , she was cooking.",
               "answer": "was reading",
               "acceptableAnswers": []
             },
@@ -9370,7 +9383,7 @@
             {
               "id": "st2-3",
               "type": "fill_blank",
-              "prompt": "「我终于到家了。」 = 「___ , I got home.」 (最终)",
+              "prompt": "___ , I got home.",
               "answer": "Finally",
               "acceptableAnswers": [
                 "At last",
@@ -9380,8 +9393,9 @@
             },
             {
               "id": "st2-4",
-              "type": "fill_blank",
-              "prompt": "「Bu sırada」 用英语: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Bu sırada",
               "answer": "meanwhile",
               "acceptableAnswers": [
                 "in the meantime",
@@ -9414,7 +9428,7 @@
             {
               "id": "st2-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Önce kahvaltı yaptım sonra işe gittim」",
+              "prompt": "「Önce kahvaltı yaptım sonra işe gittim」",
               "answer": "First I had breakfast then I went to work",
               "bank": [
                 "First",
@@ -9471,8 +9485,9 @@
             },
             {
               "id": "st2-10",
-              "type": "fill_blank",
-              "prompt": "「Bu arada / Bu sırada」 = ___ kelimesi",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "Bu arada / Bu sırada",
               "answer": "meanwhile",
               "acceptableAnswers": [
                 "in the meantime",
@@ -9551,7 +9566,7 @@
             {
               "id": "st3-3",
               "type": "fill_blank",
-              "prompt": "「(听说)他要来。」 = 「Apparently, ___ ___ ___ .」 (三个词的主语+现在进行时)",
+              "prompt": "Apparently, ___ ___ ___ .",
               "answer": "he is coming",
               "acceptableAnswers": [],
               "explanation": "apparently = 看来。"
@@ -9559,7 +9574,7 @@
             {
               "id": "st3-4",
               "type": "fill_blank",
-              "prompt": "「我听说阿里和阿伊舍分手了。」 = 「I ___ Ali and Ayşe broke up.」 (听说 — hear 的过去式)",
+              "prompt": "I ___ Ali and Ayşe broke up.",
               "answer": "heard",
               "acceptableAnswers": [],
               "explanation": "I heard that ... = 我听说……。"
@@ -9590,7 +9605,7 @@
             {
               "id": "st3-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Evlendiklerini duydum」",
+              "prompt": "「Evlendiklerini duydum」",
               "answer": "I heard that they got married",
               "bank": [
                 "I",
@@ -9644,7 +9659,7 @@
             {
               "id": "st3-10",
               "type": "fill_blank",
-              "prompt": "「听说他很有钱。」 = 「I heard ___ ___ rich.」 (两个词:主语+系动词过去式)",
+              "prompt": "I heard ___ ___ rich.",
               "answer": "he was",
               "acceptableAnswers": [
                 "he is",
@@ -9732,7 +9747,7 @@
             {
               "id": "st4-4",
               "type": "fill_blank",
-              "prompt": "「在度假时」 = 「while I ___ ___ vacation」 (be 动词过去式 + 介词)",
+              "prompt": "while I ___ ___ vacation",
               "answer": "was on",
               "acceptableAnswers": []
             },
@@ -9762,7 +9777,7 @@
             {
               "id": "st4-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Her şey güneşli bir sabah başladı」",
+              "prompt": "「Her şey güneşli bir sabah başladı」",
               "answer": "It all started on a sunny morning",
               "bank": [
                 "It",
@@ -9818,7 +9833,7 @@
             {
               "id": "st4-10",
               "type": "fill_blank",
-              "prompt": "「那时我什么都不知道。」 = 「At the time, I ___ ___ anything.」 (一般过去时否定)",
+              "prompt": "At the time, I ___ ___ anything.",
               "answer": "didn't know",
               "acceptableAnswers": [
                 "did not know"
@@ -9895,8 +9910,9 @@
             },
             {
               "id": "st5-3",
-              "type": "fill_blank",
-              "prompt": "「与此同时」 用哪个英语副词? ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "与此同时",
               "answer": "meanwhile",
               "acceptableAnswers": [
                 "in the meantime",
@@ -9906,7 +9922,7 @@
             {
               "id": "st5-4",
               "type": "fill_blank",
-              "prompt": "「Years ___ , ...」 (多年之后)",
+              "prompt": "Years ___ , ...",
               "answer": "later",
               "acceptableAnswers": [],
               "explanation": "Years later = 多年后。"
@@ -9937,7 +9953,7 @@
             {
               "id": "st5-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Uzun bir süre sonra nihayet vardık」",
+              "prompt": "「Uzun bir süre sonra nihayet vardık」",
               "answer": "After a long time we finally arrived",
               "bank": [
                 "After",
@@ -9993,7 +10009,7 @@
             {
               "id": "st5-10",
               "type": "fill_blank",
-              "prompt": "「从那天起」 = 「Since ___ ___」 (两个词:指示词+名词)",
+              "prompt": "Since ___ ___",
               "answer": "that day",
               "acceptableAnswers": []
             },
@@ -10288,7 +10304,7 @@
             {
               "id": "op1-3",
               "type": "fill_blank",
-              "prompt": "「Bana sorarsan」 用英语: 「If you ___ me, ...」 (ask)",
+              "prompt": "If you ___ me, ...",
               "answer": "ask",
               "acceptableAnswers": [
                 "request"
@@ -10296,8 +10312,9 @@
             },
             {
               "id": "op1-4",
-              "type": "fill_blank",
-              "prompt": "「I believe (that) ...」 中文是: ___ ki ...",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "I believe (that) ...",
               "answer": "Inanıyorum",
               "acceptableAnswers": [
                 "inanirim",
@@ -10331,7 +10348,7 @@
             {
               "id": "op1-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Bence bu yanlış」",
+              "prompt": "「Bence bu yanlış」",
               "answer": "In my opinion this is wrong",
               "bank": [
                 "In",
@@ -10386,7 +10403,7 @@
             {
               "id": "op1-10",
               "type": "fill_blank",
-              "prompt": "「在我看来」 = 「___ ___ , ...」 (两个词)",
+              "prompt": "___ ___ , ...",
               "answer": "To me",
               "acceptableAnswers": []
             },
@@ -10461,7 +10478,7 @@
             {
               "id": "op2-3",
               "type": "fill_blank",
-              "prompt": "「Sana katılıyorum.」 = 「I agree ___ you.」",
+              "prompt": "I agree ___ you.",
               "answer": "with",
               "acceptableAnswers": [],
               "explanation": "agree WITH someone。"
@@ -10469,7 +10486,7 @@
             {
               "id": "op2-4",
               "type": "fill_blank",
-              "prompt": "「Soylediklerine katılıyorum.」 = 「I agree ___ what you said.」",
+              "prompt": "I agree ___ what you said.",
               "answer": "with",
               "acceptableAnswers": [],
               "explanation": "agree with。"
@@ -10500,7 +10517,7 @@
             {
               "id": "op2-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Sana tamamen katılıyorum」",
+              "prompt": "「Sana tamamen katılıyorum」",
               "answer": "I couldn't agree more",
               "bank": [
                 "I",
@@ -10555,7 +10572,7 @@
             {
               "id": "op2-10",
               "type": "fill_blank",
-              "prompt": "「我有同感。」 = 「I ___ the same way.」 (感觉)",
+              "prompt": "I ___ the same way.",
               "answer": "feel",
               "acceptableAnswers": []
             },
@@ -10631,7 +10648,7 @@
             {
               "id": "op3-3",
               "type": "fill_blank",
-              "prompt": "「这是一个公正的观点,但 ...」 = 「That's a ___ point, but ...」 (公正的)",
+              "prompt": "That's a ___ point, but ...",
               "answer": "fair",
               "acceptableAnswers": [
                 "valid",
@@ -10641,7 +10658,7 @@
             {
               "id": "op3-4",
               "type": "fill_blank",
-              "prompt": "'Anladigim kadariyla ...' = 'As ___ as I understand, ...' (far)",
+              "prompt": "As ___ as I understand, ...",
               "answer": "far",
               "acceptableAnswers": [
                 "distant"
@@ -10673,7 +10690,7 @@
             {
               "id": "op3-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Ne demek istediğini anlıyorum ama katılmıyorum」",
+              "prompt": "「Ne demek istediğini anlıyorum ama katılmıyorum」",
               "answer": "I see what you mean but I disagree",
               "bank": [
                 "I",
@@ -10731,7 +10748,7 @@
             {
               "id": "op3-10",
               "type": "fill_blank",
-              "prompt": "「我恐怕得表示不同意。」 = 「I'm afraid I have to ___ .」 (不同意)",
+              "prompt": "I'm afraid I have to ___ .",
               "answer": "disagree",
               "acceptableAnswers": [
                 "differ"
@@ -10809,7 +10826,7 @@
             {
               "id": "op4-3",
               "type": "fill_blank",
-              "prompt": "「也许我错了。」 = 「___ I'm wrong.」 (也许)",
+              "prompt": "___ I'm wrong.",
               "answer": "Maybe",
               "acceptableAnswers": [
                 "perhaps",
@@ -10819,7 +10836,7 @@
             {
               "id": "op4-4",
               "type": "fill_blank",
-              "prompt": "「我不确定,但是 ...」 = 「I'm not ___ , but ...」 (确定的)",
+              "prompt": "I'm not ___ , but ...",
               "answer": "sure",
               "acceptableAnswers": [
                 "certain",
@@ -10852,7 +10869,7 @@
             {
               "id": "op4-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Bu iyi bir fikir olabilir」",
+              "prompt": "「Bu iyi bir fikir olabilir」",
               "answer": "It might be a good idea",
               "bank": [
                 "It",
@@ -10907,7 +10924,7 @@
             {
               "id": "op4-10",
               "type": "fill_blank",
-              "prompt": "「我想你是对的。」 = 「I ___ you're right.」 (认为)",
+              "prompt": "I ___ you're right.",
               "answer": "think",
               "acceptableAnswers": [
                 "believe",
@@ -10987,7 +11004,7 @@
             {
               "id": "op5-3",
               "type": "fill_blank",
-              "prompt": "「你怎么想?」 = 「___ ___ you think?」 (两个词)",
+              "prompt": "___ ___ you think?",
               "answer": "What do",
               "acceptableAnswers": [
                 "what"
@@ -10996,7 +11013,7 @@
             {
               "id": "op5-4",
               "type": "fill_blank",
-              "prompt": "「你对此怎么看?」 = 「What do you think ___ this?」 (介词)",
+              "prompt": "What do you think ___ this?",
               "answer": "about",
               "acceptableAnswers": []
             },
@@ -11026,7 +11043,7 @@
             {
               "id": "op5-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Bu fikir hakkında ne düşünüyorsun?」",
+              "prompt": "「Bu fikir hakkında ne düşünüyorsun?」",
               "answer": "What do you think about this idea",
               "bank": [
                 "What",
@@ -11302,7 +11319,7 @@
             {
               "id": "rev1-3",
               "type": "fill_blank",
-              "prompt": "First conditional: 'If it ___ (rain), we will stay home.'",
+              "prompt": "If it ___ (rain), we will stay home.",
               "answer": "rains",
               "acceptableAnswers": []
             },
@@ -11344,7 +11361,7 @@
             {
               "id": "rev1-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Hiç Japonya'ya gitmedim」",
+              "prompt": "「Hiç Japonya'ya gitmedim」",
               "answer": "I have never been to Japan",
               "bank": [
                 "I",
@@ -11387,7 +11404,7 @@
             {
               "id": "rev1-9",
               "type": "fill_blank",
-              "prompt": "'You ___ smoke in hospitals.' (yasak)",
+              "prompt": "You ___ smoke in hospitals.",
               "answer": "mustn't",
               "acceptableAnswers": [
                 "can't",
@@ -11457,7 +11474,7 @@
             {
               "id": "rev2-4",
               "type": "fill_blank",
-              "prompt": "「My phone ___ ___ at the station.」 (çalındı — past passive)",
+              "prompt": "My phone ___ ___ at the station.",
               "answer": "was stolen",
               "acceptableAnswers": []
             },
@@ -11487,7 +11504,7 @@
             {
               "id": "rev2-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Karar bugün verilmeli」",
+              "prompt": "「Karar bugün verilmeli」",
               "answer": "The decision must be made today",
               "bank": [
                 "The",
@@ -11530,7 +11547,7 @@
             {
               "id": "rev2-9",
               "type": "fill_blank",
-              "prompt": "填空：「I went to the ___ to borrow a book.」（图书馆，借书的地方）",
+              "prompt": "I went to the ___ to borrow a book.",
               "answer": "library",
               "explanation": "library = 图书馆（借书 / 看书的地方）。bookstore = 书店（买书的地方）。中文「书店 / 图书馆」对应英语两个不同词，不要混。"
             },
@@ -11583,7 +11600,7 @@
             {
               "id": "rev3-3",
               "type": "fill_blank",
-              "prompt": "Second conditional: 'If I ___ (have) wings, I would fly.'",
+              "prompt": "If I ___ (have) wings, I would fly.",
               "answer": "had",
               "acceptableAnswers": []
             },
@@ -11625,7 +11642,7 @@
             {
               "id": "rev3-6",
               "type": "tap_words_in_order",
-              "prompt": "排列:「Zengin olsaydım dünyayı gezerdim」",
+              "prompt": "「Zengin olsaydım dünyayı gezerdim」",
               "answer": "If I were rich I would travel the world",
               "bank": [
                 "If",
@@ -11701,7 +11718,7 @@
             {
               "id": "rev4-1",
               "type": "tap_words_in_order",
-              "prompt": "按正确顺序排列：「我认识那个会说五种语言的女人。」",
+              "prompt": "「我认识那个会说五种语言的女人。」",
               "answer": "I know the woman who speaks five languages",
               "explanation": "中文「会说五种语言的女人」修饰语在前；英语反过来：the woman + who speaks five languages（关系代词 who 引导，从句放名词后面）。人用 who / that，物用 which / that。"
             }

@@ -119,10 +119,22 @@
               "type": "match_pairs",
               "prompt": "Germánico — Latinate",
               "pairs": [
-                { "left": "start", "right": "commence" },
-                { "left": "end", "right": "terminate" },
-                { "left": "help", "right": "assist" },
-                { "left": "see", "right": "perceive" }
+                {
+                  "left": "start",
+                  "right": "commence"
+                },
+                {
+                  "left": "end",
+                  "right": "terminate"
+                },
+                {
+                  "left": "help",
+                  "right": "assist"
+                },
+                {
+                  "left": "see",
+                  "right": "perceive"
+                }
               ]
             },
             {
@@ -140,16 +152,30 @@
             {
               "id": "lit1-3",
               "type": "fill_blank",
-              "prompt": "'The ceremony will ___ at noon.' (Español: 'La ceremonia comenzará al mediodía.' — formal / literario)",
+              "prompt": "The ceremony will ___ at noon. (Español: 'La ceremonia comenzará al mediodía.' — formal / literario)",
               "answer": "commence",
-              "acceptableAnswers": ["begin", "start"]
+              "acceptableAnswers": [
+                "begin",
+                "start"
+              ]
             },
             {
               "id": "lit1-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Una fragancia evocó un aroma que él recordaba.'",
+              "prompt": "Una fragancia evocó un aroma que él recordaba.",
               "answer": "A fragrance evoked a scent he remembered",
-              "bank": ["A", "fragrance", "evoked", "a", "scent", "he", "remembered", "smelled", "smelt", "the"]
+              "bank": [
+                "A",
+                "fragrance",
+                "evoked",
+                "a",
+                "scent",
+                "he",
+                "remembered",
+                "smelled",
+                "smelt",
+                "the"
+              ]
             },
             {
               "id": "lit1-5",
@@ -179,9 +205,13 @@
             {
               "id": "lit1-7",
               "type": "fill_blank",
-              "prompt": "'She ___ that the time had come.' (Español: 'Percibió que había llegado el momento.' — literario)",
+              "prompt": "She ___ that the time had come. (Español: 'Percibió que había llegado el momento.' — literario)",
               "answer": "perceived",
-              "acceptableAnswers": ["discerned", "noticed", "sensed"]
+              "acceptableAnswers": [
+                "discerned",
+                "noticed",
+                "sensed"
+              ]
             },
             {
               "id": "lit1-8",
@@ -198,16 +228,33 @@
             {
               "id": "lit1-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Concluyó la noche en un silencio de aire crepuscular.'",
+              "prompt": "Concluyó la noche en un silencio de aire crepuscular.",
               "answer": "She concluded the night in a twilight-like silence",
-              "bank": ["She", "concluded", "the", "night", "in", "a", "twilight-like", "silence", "started", "the", "noisy"]
+              "bank": [
+                "She",
+                "concluded",
+                "the",
+                "night",
+                "in",
+                "a",
+                "twilight-like",
+                "silence",
+                "started",
+                "the",
+                "noisy"
+              ]
             },
             {
               "id": "lit1-10",
               "type": "fill_blank",
-              "prompt": "'A faint ___ of jasmine drifted through the room.' (Español: 'Una leve fragancia de jazmín flotaba por la habitación.' — literario)",
+              "prompt": "A faint ___ of jasmine drifted through the room. (Español: 'Una leve fragancia de jazmín flotaba por la habitación.' — literario)",
               "answer": "fragrance",
-              "acceptableAnswers": ["aroma", "odour", "scent", "odor"]
+              "acceptableAnswers": [
+                "aroma",
+                "odour",
+                "scent",
+                "odor"
+              ]
             }
           ]
         },
@@ -223,10 +270,22 @@
               "type": "match_pairs",
               "prompt": "Punto de vista — Definición",
               "pairs": [
-                { "left": "First-person (I)", "right": "primera persona del singular" },
-                { "left": "Third-person omniscient", "right": "tercera persona omnisciente" },
-                { "left": "Free indirect speech", "right": "estilo indirecto libre" },
-                { "left": "Second-person (you)", "right": "segunda persona" }
+                {
+                  "left": "First-person (I)",
+                  "right": "primera persona del singular"
+                },
+                {
+                  "left": "Third-person omniscient",
+                  "right": "tercera persona omnisciente"
+                },
+                {
+                  "left": "Free indirect speech",
+                  "right": "estilo indirecto libre"
+                },
+                {
+                  "left": "Second-person (you)",
+                  "right": "segunda persona"
+                }
               ]
             },
             {
@@ -244,16 +303,32 @@
             {
               "id": "lit2-3",
               "type": "fill_blank",
-              "prompt": "'It was not, he ___, the worst of all possible worlds.' (Español: 'No era, reflexionó, el peor de los mundos posibles.')",
+              "prompt": "It was not, he ___, the worst of all possible worlds. (Español: 'No era, reflexionó, el peor de los mundos posibles.')",
               "answer": "reflected",
-              "acceptableAnswers": ["mused", "thought"]
+              "acceptableAnswers": [
+                "mused",
+                "thought"
+              ]
             },
             {
               "id": "lit2-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Se preguntó si él alguna vez la había amado realmente.'",
+              "prompt": "Se preguntó si él alguna vez la había amado realmente.",
               "answer": "She wondered if he had ever truly loved her",
-              "bank": ["She", "wondered", "if", "he", "had", "ever", "truly", "loved", "her", "him", "she", "love"]
+              "bank": [
+                "She",
+                "wondered",
+                "if",
+                "he",
+                "had",
+                "ever",
+                "truly",
+                "loved",
+                "her",
+                "him",
+                "she",
+                "love"
+              ]
             },
             {
               "id": "lit2-5",
@@ -284,7 +359,7 @@
             {
               "id": "lit2-7",
               "type": "fill_blank",
-              "prompt": "'___ her, the world had narrowed to a single thought.' (Español: 'Para ella, el mundo se había reducido a un solo pensamiento.')",
+              "prompt": "___ her, the world had narrowed to a single thought. (Español: 'Para ella, el mundo se había reducido a un solo pensamiento.')",
               "answer": "For",
               "acceptableAnswers": []
             },
@@ -303,16 +378,31 @@
             {
               "id": "lit2-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Aquel momento podría haber sido cualquier momento; ordinario, sin fecha.'",
+              "prompt": "Aquel momento podría haber sido cualquier momento; ordinario, sin fecha.",
               "answer": "The moment could have been any moment ordinary undated",
-              "bank": ["The", "moment", "could", "have", "been", "any", "moment", "ordinary", "undated", "extraordinary", "the", "and"]
+              "bank": [
+                "The",
+                "moment",
+                "could",
+                "have",
+                "been",
+                "any",
+                "moment",
+                "ordinary",
+                "undated",
+                "extraordinary",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "lit2-10",
               "type": "fill_blank",
-              "prompt": "'You can ___ feel the weight of his unspoken regret.' (Español: 'Casi puedes sentir el peso de su arrepentimiento no dicho.')",
+              "prompt": "You can ___ feel the weight of his unspoken regret. (Español: 'Casi puedes sentir el peso de su arrepentimiento no dicho.')",
               "answer": "almost",
-              "acceptableAnswers": ["nearly"]
+              "acceptableAnswers": [
+                "nearly"
+              ]
             }
           ]
         },
@@ -328,10 +418,22 @@
               "type": "match_pairs",
               "prompt": "Recurso literario — Definición",
               "pairs": [
-                { "left": "metaphor", "right": "metáfora (comparación directa)" },
-                { "left": "simile", "right": "símil (con 'like' / 'as')" },
-                { "left": "personification", "right": "personificación" },
-                { "left": "hyperbole", "right": "hipérbole / exageración" }
+                {
+                  "left": "metaphor",
+                  "right": "metáfora (comparación directa)"
+                },
+                {
+                  "left": "simile",
+                  "right": "símil (con 'like' / 'as')"
+                },
+                {
+                  "left": "personification",
+                  "right": "personificación"
+                },
+                {
+                  "left": "hyperbole",
+                  "right": "hipérbole / exageración"
+                }
               ]
             },
             {
@@ -349,22 +451,42 @@
             {
               "id": "lit3-3",
               "type": "fill_blank",
-              "prompt": "'The city was a ___ of glass and steel.' (Español: 'La ciudad era una selva de cristal y acero.' — metáfora)",
+              "prompt": "The city was a ___ of glass and steel. (Español: 'La ciudad era una selva de cristal y acero.' — metáfora)",
               "answer": "forest",
-              "acceptableAnswers": ["jungle"]
+              "acceptableAnswers": [
+                "jungle"
+              ]
             },
             {
               "id": "lit3-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'El silencio era una pesada cortina apretándole los oídos.'",
+              "prompt": "El silencio era una pesada cortina apretándole los oídos.",
               "answer": "Silence was a heavy curtain pressing against her ears",
-              "bank": ["Silence", "was", "a", "heavy", "curtain", "pressing", "against", "her", "ears", "her", "the", "press"]
+              "bank": [
+                "Silence",
+                "was",
+                "a",
+                "heavy",
+                "curtain",
+                "pressing",
+                "against",
+                "her",
+                "ears",
+                "her",
+                "the",
+                "press"
+              ]
             },
             {
               "id": "lit3-5",
               "type": "multiple_choice",
               "prompt": "'The wind whispered secrets' es ¿qué recurso?",
-              "options": ["simile", "personification", "hyperbole", "alliteration"],
+              "options": [
+                "simile",
+                "personification",
+                "hyperbole",
+                "alliteration"
+              ],
               "answer": "personification"
             },
             {
@@ -383,9 +505,11 @@
             {
               "id": "lit3-7",
               "type": "fill_blank",
-              "prompt": "'Her words cut like a ___' (Español: 'Sus palabras cortaron como un cuchillo.')",
+              "prompt": "Her words cut like a ___ (Español: 'Sus palabras cortaron como un cuchillo.')",
               "answer": "knife",
-              "acceptableAnswers": ["blade"]
+              "acceptableAnswers": [
+                "blade"
+              ]
             },
             {
               "id": "lit3-8",
@@ -402,16 +526,32 @@
             {
               "id": "lit3-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'La vida es una sola vela con una llama breve.'",
+              "prompt": "La vida es una sola vela con una llama breve.",
               "answer": "Life is a single candle with a brief flame",
-              "bank": ["Life", "is", "a", "single", "candle", "with", "a", "brief", "flame", "long", "the", "and"]
+              "bank": [
+                "Life",
+                "is",
+                "a",
+                "single",
+                "candle",
+                "with",
+                "a",
+                "brief",
+                "flame",
+                "long",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "lit3-10",
               "type": "fill_blank",
-              "prompt": "'The clock ___ the hours, indifferent to our grief.' (Español: 'El reloj iba marcando las horas, indiferente a nuestro dolor.' — personificación)",
+              "prompt": "The clock ___ the hours, indifferent to our grief. (Español: 'El reloj iba marcando las horas, indiferente a nuestro dolor.' — personificación)",
               "answer": "counted",
-              "acceptableAnswers": ["marked", "ticked"]
+              "acceptableAnswers": [
+                "marked",
+                "ticked"
+              ]
             }
           ]
         },
@@ -427,32 +567,61 @@
               "type": "match_pairs",
               "prompt": "Técnica modernista — Definición",
               "pairs": [
-                { "left": "stream of consciousness", "right": "flujo de conciencia" },
-                { "left": "interior monologue", "right": "monólogo interior" },
-                { "left": "epiphany", "right": "epifanía / revelación súbita" },
-                { "left": "fragmented syntax", "right": "sintaxis fragmentada" }
+                {
+                  "left": "stream of consciousness",
+                  "right": "flujo de conciencia"
+                },
+                {
+                  "left": "interior monologue",
+                  "right": "monólogo interior"
+                },
+                {
+                  "left": "epiphany",
+                  "right": "epifanía / revelación súbita"
+                },
+                {
+                  "left": "fragmented syntax",
+                  "right": "sintaxis fragmentada"
+                }
               ]
             },
             {
               "id": "lit4-2",
               "type": "multiple_choice",
               "prompt": "'Yes I said yes I will Yes' ilustra ¿qué técnica?",
-              "options": ["epigram", "stream of consciousness", "antithesis", "alliteration"],
+              "options": [
+                "epigram",
+                "stream of consciousness",
+                "antithesis",
+                "alliteration"
+              ],
               "answer": "stream of consciousness"
             },
             {
               "id": "lit4-3",
               "type": "fill_blank",
-              "prompt": "'A sudden moment of insight is called an ___' (Español: 'Un momento súbito de revelación se llama una epifanía.')",
+              "prompt": "A sudden moment of insight is called an ___ (Español: 'Un momento súbito de revelación se llama una epifanía.')",
               "answer": "epiphany",
-              "acceptableAnswers": ["revelation"]
+              "acceptableAnswers": [
+                "revelation"
+              ]
             },
             {
               "id": "lit4-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Sus pensamientos se desbordaban sin puntuación, sin permiso.'",
+              "prompt": "Sus pensamientos se desbordaban sin puntuación, sin permiso.",
               "answer": "Her thoughts spilled out unpunctuated unpermitted",
-              "bank": ["Her", "thoughts", "spilled", "out", "unpunctuated", "unpermitted", "stopped", "the", "and"]
+              "bank": [
+                "Her",
+                "thoughts",
+                "spilled",
+                "out",
+                "unpunctuated",
+                "unpermitted",
+                "stopped",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "lit4-5",
@@ -482,9 +651,12 @@
             {
               "id": "lit4-7",
               "type": "fill_blank",
-              "prompt": "'Time ___ inward, folding past into present.' (Español: 'El tiempo se plegaba hacia dentro, doblando el pasado en el presente.')",
+              "prompt": "Time ___ inward, folding past into present. (Español: 'El tiempo se plegaba hacia dentro, doblando el pasado en el presente.')",
               "answer": "folded",
-              "acceptableAnswers": ["bent", "collapsed"]
+              "acceptableAnswers": [
+                "bent",
+                "collapsed"
+              ]
             },
             {
               "id": "lit4-8",
@@ -501,16 +673,30 @@
             {
               "id": "lit4-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'El tiempo se plegó; el presente sangró en el pasado.'",
+              "prompt": "El tiempo se plegó; el presente sangró en el pasado.",
               "answer": "Time folded the present bled into the past",
-              "bank": ["Time", "folded", "the", "present", "bled", "into", "the", "past", "future", "stopped", "and"]
+              "bank": [
+                "Time",
+                "folded",
+                "the",
+                "present",
+                "bled",
+                "into",
+                "the",
+                "past",
+                "future",
+                "stopped",
+                "and"
+              ]
             },
             {
               "id": "lit4-10",
               "type": "fill_blank",
               "prompt": "Sustantivo poético para un instante breve en el tiempo: 'In one instant, all the years collapsed into a single ___.'",
               "answer": "moment",
-              "acceptableAnswers": ["instant"]
+              "acceptableAnswers": [
+                "instant"
+              ]
             }
           ]
         },
@@ -526,9 +712,18 @@
               "type": "dialogue",
               "prompt": "Club de lectura discutiendo una novela",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "host", "name": "Host" },
-                { "id": "mara", "name": "Mara" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "host",
+                  "name": "Host"
+                },
+                {
+                  "id": "mara",
+                  "name": "Mara"
+                }
               ],
               "turns": [
                 {
@@ -564,7 +759,11 @@
                   "before": "It functions less as symbol than as motif, ",
                   "after": " — gathering meaning with each iteration rather than announcing it.",
                   "answer": "I'd argue",
-                  "acceptableAnswers": ["I would argue", "I'd suggest", "I would suggest"]
+                  "acceptableAnswers": [
+                    "I would argue",
+                    "I'd suggest",
+                    "I would suggest"
+                  ]
                 },
                 {
                   "kind": "line",
@@ -628,14 +827,42 @@
           },
           {
             "kind": "table",
-            "headers": ["Figura", "Definición", "Ejemplo"],
+            "headers": [
+              "Figura",
+              "Definición",
+              "Ejemplo"
+            ],
             "rows": [
-              ["anaphora", "Repetición al inicio de oraciones", "We shall fight on the beaches; we shall fight on the landing grounds…"],
-              ["epistrophe", "Repetición al final de oraciones", "Government of the people, by the people, for the people."],
-              ["chiasmus", "Repetición cruzada (A-B-B-A)", "Ask not what your country can do for you; ask what you can do for your country."],
-              ["antithesis", "Contraste / oposición", "It was the best of times, it was the worst of times."],
-              ["tricolon", "Estructura triple", "Veni, vidi, vici (I came, I saw, I conquered)."],
-              ["rhetorical question", "Pregunta que no espera respuesta", "Are we to stand idle?"]
+              [
+                "anaphora",
+                "Repetición al inicio de oraciones",
+                "We shall fight on the beaches; we shall fight on the landing grounds…"
+              ],
+              [
+                "epistrophe",
+                "Repetición al final de oraciones",
+                "Government of the people, by the people, for the people."
+              ],
+              [
+                "chiasmus",
+                "Repetición cruzada (A-B-B-A)",
+                "Ask not what your country can do for you; ask what you can do for your country."
+              ],
+              [
+                "antithesis",
+                "Contraste / oposición",
+                "It was the best of times, it was the worst of times."
+              ],
+              [
+                "tricolon",
+                "Estructura triple",
+                "Veni, vidi, vici (I came, I saw, I conquered)."
+              ],
+              [
+                "rhetorical question",
+                "Pregunta que no espera respuesta",
+                "Are we to stand idle?"
+              ]
             ]
           },
           {
@@ -649,9 +876,18 @@
           {
             "kind": "examples",
             "rows": [
-              { "source": "Make no mistake: this policy will define a generation.", "translation": "No se equivoquen: esta política definirá a una generación." },
-              { "source": "To suggest otherwise is to ignore the evidence.", "translation": "Sugerir lo contrario es ignorar la evidencia." },
-              { "source": "We can — and we must — do better.", "translation": "Podemos — y debemos — hacerlo mejor." }
+              {
+                "source": "Make no mistake: this policy will define a generation.",
+                "translation": "No se equivoquen: esta política definirá a una generación."
+              },
+              {
+                "source": "To suggest otherwise is to ignore the evidence.",
+                "translation": "Sugerir lo contrario es ignorar la evidencia."
+              },
+              {
+                "source": "We can — and we must — do better.",
+                "translation": "Podemos — y debemos — hacerlo mejor."
+              }
             ]
           },
           {
@@ -674,38 +910,70 @@
               "type": "match_pairs",
               "prompt": "Figura — Definición",
               "pairs": [
-                { "left": "anaphora", "right": "repetición al inicio" },
-                { "left": "epistrophe", "right": "repetición al final" },
-                { "left": "chiasmus", "right": "repetición cruzada" },
-                { "left": "antithesis", "right": "contraste / oposición" }
+                {
+                  "left": "anaphora",
+                  "right": "repetición al inicio"
+                },
+                {
+                  "left": "epistrophe",
+                  "right": "repetición al final"
+                },
+                {
+                  "left": "chiasmus",
+                  "right": "repetición cruzada"
+                },
+                {
+                  "left": "antithesis",
+                  "right": "contraste / oposición"
+                }
               ]
             },
             {
               "id": "rh1-2",
               "type": "multiple_choice",
               "prompt": "'Ask not what your country can do for you; ask what you can do for your country' es ¿qué figura?",
-              "options": ["anaphora", "chiasmus", "tricolon", "hyperbole"],
+              "options": [
+                "anaphora",
+                "chiasmus",
+                "tricolon",
+                "hyperbole"
+              ],
               "answer": "chiasmus"
             },
             {
               "id": "rh1-3",
               "type": "fill_blank",
-              "prompt": "'It was the best of times, it was the ___ of times.' (Español: 'Era el mejor de los tiempos, era el peor de los tiempos.')",
+              "prompt": "It was the best of times, it was the ___ of times. (Español: 'Era el mejor de los tiempos, era el peor de los tiempos.')",
               "answer": "worst",
               "acceptableAnswers": []
             },
             {
               "id": "rh1-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Vine, vi, vencí.'",
+              "prompt": "Vine, vi, vencí.",
               "answer": "I came I saw I conquered",
-              "bank": ["I", "came", "I", "saw", "I", "conquered", "lost", "the", "and"]
+              "bank": [
+                "I",
+                "came",
+                "I",
+                "saw",
+                "I",
+                "conquered",
+                "lost",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "rh1-5",
               "type": "multiple_choice",
               "prompt": "'Government of the people, by the people, for the people' ilustra...",
-              "options": ["anaphora", "epistrophe", "antithesis", "hyperbole"],
+              "options": [
+                "anaphora",
+                "epistrophe",
+                "antithesis",
+                "hyperbole"
+              ],
               "answer": "epistrophe"
             },
             {
@@ -724,9 +992,11 @@
             {
               "id": "rh1-7",
               "type": "fill_blank",
-              "prompt": "'Are we to stand ___?' (Español: 'pregunta retórica: ¿Vamos a quedarnos cruzados de brazos?')",
+              "prompt": "Are we to stand ___? (Español: 'pregunta retórica: ¿Vamos a quedarnos cruzados de brazos?')",
               "answer": "idle",
-              "acceptableAnswers": ["silent"]
+              "acceptableAnswers": [
+                "silent"
+              ]
             },
             {
               "id": "rh1-8",
@@ -745,14 +1015,31 @@
               "type": "tap_words_in_order",
               "prompt": "Forma la oración (anáfora): 'Tenemos una opción. Tenemos una voz. Tenemos un futuro.'",
               "answer": "We have a choice we have a voice we have a future",
-              "bank": ["We", "have", "a", "choice", "we", "have", "a", "voice", "we", "have", "a", "future", "the", "and"]
+              "bank": [
+                "We",
+                "have",
+                "a",
+                "choice",
+                "we",
+                "have",
+                "a",
+                "voice",
+                "we",
+                "have",
+                "a",
+                "future",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "rh1-10",
               "type": "fill_blank",
-              "prompt": "'Life, ___, and the pursuit of happiness.' (Español: 'Vida, libertad y la búsqueda de la felicidad.')",
+              "prompt": "Life, ___, and the pursuit of happiness. (Español: 'Vida, libertad y la búsqueda de la felicidad.')",
               "answer": "liberty",
-              "acceptableAnswers": ["freedom"]
+              "acceptableAnswers": [
+                "freedom"
+              ]
             }
           ]
         },
@@ -768,38 +1055,76 @@
               "type": "match_pairs",
               "prompt": "Modo retórico — Apela a",
               "pairs": [
-                { "left": "ethos", "right": "credibilidad / carácter del orador" },
-                { "left": "pathos", "right": "emoción del oyente" },
-                { "left": "logos", "right": "razón y evidencia" },
-                { "left": "kairos", "right": "el momento oportuno" }
+                {
+                  "left": "ethos",
+                  "right": "credibilidad / carácter del orador"
+                },
+                {
+                  "left": "pathos",
+                  "right": "emoción del oyente"
+                },
+                {
+                  "left": "logos",
+                  "right": "razón y evidencia"
+                },
+                {
+                  "left": "kairos",
+                  "right": "el momento oportuno"
+                }
               ]
             },
             {
               "id": "rh2-2",
               "type": "multiple_choice",
               "prompt": "'As someone who has worked in healthcare for thirty years…' apela a ¿qué?",
-              "options": ["pathos", "logos", "ethos", "kairos"],
+              "options": [
+                "pathos",
+                "logos",
+                "ethos",
+                "kairos"
+              ],
               "answer": "ethos"
             },
             {
               "id": "rh2-3",
               "type": "fill_blank",
-              "prompt": "'The data ___ for itself.' (Español: 'Los datos hablan por sí mismos.' — apelación a logos)",
+              "prompt": "The data ___ for itself. (Español: 'Los datos hablan por sí mismos.' — apelación a logos)",
               "answer": "speaks",
-              "acceptableAnswers": ["speak"]
+              "acceptableAnswers": [
+                "speak"
+              ]
             },
             {
               "id": "rh2-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Piensa en los niños que despertarán mañana en este mundo.'",
+              "prompt": "Piensa en los niños que despertarán mañana en este mundo.",
               "answer": "Think of the children who will wake tomorrow in this world",
-              "bank": ["Think", "of", "the", "children", "who", "will", "wake", "tomorrow", "in", "this", "world", "the", "yesterday"]
+              "bank": [
+                "Think",
+                "of",
+                "the",
+                "children",
+                "who",
+                "will",
+                "wake",
+                "tomorrow",
+                "in",
+                "this",
+                "world",
+                "the",
+                "yesterday"
+              ]
             },
             {
               "id": "rh2-5",
               "type": "multiple_choice",
               "prompt": "'Think of the children who will inherit this world' apela a ¿qué?",
-              "options": ["pathos", "logos", "ethos", "ninguno"],
+              "options": [
+                "pathos",
+                "logos",
+                "ethos",
+                "ninguno"
+              ],
               "answer": "pathos"
             },
             {
@@ -818,9 +1143,11 @@
             {
               "id": "rh2-7",
               "type": "fill_blank",
-              "prompt": "'Make no ___: the cost of inaction is greater.' (Español: 'No se equivoquen: el costo de la inacción es mayor.')",
+              "prompt": "Make no ___: the cost of inaction is greater. (Español: 'No se equivoquen: el costo de la inacción es mayor.')",
               "answer": "mistake",
-              "acceptableAnswers": ["error"]
+              "acceptableAnswers": [
+                "error"
+              ]
             },
             {
               "id": "rh2-8",
@@ -837,16 +1164,30 @@
             {
               "id": "rh2-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'La evidencia, abrumadora, apunta en una sola dirección.'",
+              "prompt": "La evidencia, abrumadora, apunta en una sola dirección.",
               "answer": "The evidence overwhelming points in a single direction",
-              "bank": ["The", "evidence", "overwhelming", "points", "in", "a", "single", "direction", "many", "the", "and"]
+              "bank": [
+                "The",
+                "evidence",
+                "overwhelming",
+                "points",
+                "in",
+                "a",
+                "single",
+                "direction",
+                "many",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "rh2-10",
               "type": "fill_blank",
               "prompt": "Completa los dos huecos: número aproximado de años + el modo retórico (de los tres clásicos griegos) al que apela citar la experiencia personal. 'I have spent ___ years studying this problem' apela a ___.",
               "answer": "ethos",
-              "acceptableAnswers": ["credibility"]
+              "acceptableAnswers": [
+                "credibility"
+              ]
             }
           ]
         },
@@ -862,10 +1203,22 @@
               "type": "match_pairs",
               "prompt": "Frase — Función",
               "pairs": [
-                { "left": "Make no mistake:", "right": "advertencia enfática" },
-                { "left": "To suggest otherwise is to…", "right": "preempt al contra-argumento" },
-                { "left": "We can — and we must —", "right": "llamada a la acción" },
-                { "left": "It is, in short,", "right": "resumen sintetizador" }
+                {
+                  "left": "Make no mistake:",
+                  "right": "advertencia enfática"
+                },
+                {
+                  "left": "To suggest otherwise is to…",
+                  "right": "preempt al contra-argumento"
+                },
+                {
+                  "left": "We can — and we must —",
+                  "right": "llamada a la acción"
+                },
+                {
+                  "left": "It is, in short,",
+                  "right": "resumen sintetizador"
+                }
               ]
             },
             {
@@ -883,16 +1236,30 @@
             {
               "id": "rh3-3",
               "type": "fill_blank",
-              "prompt": "'We can — and we ___ — do better.' (Español: 'Podemos — y debemos — hacerlo mejor.')",
+              "prompt": "We can — and we ___ — do better. (Español: 'Podemos — y debemos — hacerlo mejor.')",
               "answer": "must",
-              "acceptableAnswers": ["should"]
+              "acceptableAnswers": [
+                "should"
+              ]
             },
             {
               "id": "rh3-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Sugerir lo contrario es ignorar la evidencia.'",
+              "prompt": "Sugerir lo contrario es ignorar la evidencia.",
               "answer": "To suggest otherwise is to ignore the evidence",
-              "bank": ["To", "suggest", "otherwise", "is", "to", "ignore", "the", "evidence", "see", "the", "and"]
+              "bank": [
+                "To",
+                "suggest",
+                "otherwise",
+                "is",
+                "to",
+                "ignore",
+                "the",
+                "evidence",
+                "see",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "rh3-5",
@@ -922,9 +1289,12 @@
             {
               "id": "rh3-7",
               "type": "fill_blank",
-              "prompt": "'Critics will ___ that this is too costly. They miss the larger point.' (Español: 'Los críticos objetarán que esto es demasiado costoso. No ven el panorama mayor.')",
+              "prompt": "Critics will ___ that this is too costly. They miss the larger point. (Español: 'Los críticos objetarán que esto es demasiado costoso. No ven el panorama mayor.')",
               "answer": "object",
-              "acceptableAnswers": ["argue", "claim"]
+              "acceptableAnswers": [
+                "argue",
+                "claim"
+              ]
             },
             {
               "id": "rh3-8",
@@ -941,16 +1311,33 @@
             {
               "id": "rh3-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'El tiempo de actuar es ahora — antes de que el costo se acumule más.'",
+              "prompt": "El tiempo de actuar es ahora — antes de que el costo se acumule más.",
               "answer": "The time to act is now before the cost compounds further",
-              "bank": ["The", "time", "to", "act", "is", "now", "before", "the", "cost", "compounds", "further", "later", "the"]
+              "bank": [
+                "The",
+                "time",
+                "to",
+                "act",
+                "is",
+                "now",
+                "before",
+                "the",
+                "cost",
+                "compounds",
+                "further",
+                "later",
+                "the"
+              ]
             },
             {
               "id": "rh3-10",
               "type": "fill_blank",
-              "prompt": "'It is, in ___, a question of priorities.' (Español: 'Es, en pocas palabras, una cuestión de prioridades.')",
+              "prompt": "It is, in ___, a question of priorities. (Español: 'Es, en pocas palabras, una cuestión de prioridades.')",
               "answer": "short",
-              "acceptableAnswers": ["essence", "sum"]
+              "acceptableAnswers": [
+                "essence",
+                "sum"
+              ]
             }
           ]
         },
@@ -966,8 +1353,14 @@
               "type": "dialogue",
               "prompt": "Revisión de op-ed con editor",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "ed", "name": "Editor" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ed",
+                  "name": "Editor"
+                }
               ],
               "turns": [
                 {
@@ -998,7 +1391,10 @@
                   "before": "I'd rather ",
                   "after": " the figure — it's earning the weight I'm asking it to carry.",
                   "answer": "keep",
-                  "acceptableAnswers": ["retain", "preserve"]
+                  "acceptableAnswers": [
+                    "retain",
+                    "preserve"
+                  ]
                 },
                 {
                   "kind": "line",
@@ -1057,14 +1453,42 @@
           },
           {
             "kind": "table",
-            "headers": ["Inglés", "Matiz", "Español aproximado"],
+            "headers": [
+              "Inglés",
+              "Matiz",
+              "Español aproximado"
+            ],
             "rows": [
-              ["could have been otherwise", "posibilidad real y contrafáctica", "podría haber sido de otra manera"],
-              ["might have been the case", "posibilidad especulativa, menor certeza", "podría haber sido el caso (incierto)"],
-              ["may have been correct", "posibilidad epistémica, neutral", "puede que haya sido correcto"],
-              ["would have followed", "implicación condicional", "habría seguido / se habría seguido"],
-              ["should have entailed", "obligación lógica retrospectiva", "tendría que haber implicado"],
-              ["must have presupposed", "deducción necesaria", "debe de haber presupuesto"]
+              [
+                "could have been otherwise",
+                "posibilidad real y contrafáctica",
+                "podría haber sido de otra manera"
+              ],
+              [
+                "might have been the case",
+                "posibilidad especulativa, menor certeza",
+                "podría haber sido el caso (incierto)"
+              ],
+              [
+                "may have been correct",
+                "posibilidad epistémica, neutral",
+                "puede que haya sido correcto"
+              ],
+              [
+                "would have followed",
+                "implicación condicional",
+                "habría seguido / se habría seguido"
+              ],
+              [
+                "should have entailed",
+                "obligación lógica retrospectiva",
+                "tendría que haber implicado"
+              ],
+              [
+                "must have presupposed",
+                "deducción necesaria",
+                "debe de haber presupuesto"
+              ]
             ]
           },
           {
@@ -1074,13 +1498,34 @@
           {
             "kind": "examples",
             "rows": [
-              { "source": "free will / determinism", "translation": "libre albedrío / determinismo" },
-              { "source": "epistemology", "translation": "epistemología (teoría del conocimiento)" },
-              { "source": "ontology", "translation": "ontología (teoría del ser)" },
-              { "source": "a priori / a posteriori", "translation": "a priori / a posteriori" },
-              { "source": "necessary and sufficient conditions", "translation": "condiciones necesarias y suficientes" },
-              { "source": "to beg the question", "translation": "incurrir en petición de principio (no 'hacer la pregunta')" },
-              { "source": "category mistake", "translation": "error categorial" }
+              {
+                "source": "free will / determinism",
+                "translation": "libre albedrío / determinismo"
+              },
+              {
+                "source": "epistemology",
+                "translation": "epistemología (teoría del conocimiento)"
+              },
+              {
+                "source": "ontology",
+                "translation": "ontología (teoría del ser)"
+              },
+              {
+                "source": "a priori / a posteriori",
+                "translation": "a priori / a posteriori"
+              },
+              {
+                "source": "necessary and sufficient conditions",
+                "translation": "condiciones necesarias y suficientes"
+              },
+              {
+                "source": "to beg the question",
+                "translation": "incurrir en petición de principio (no 'hacer la pregunta')"
+              },
+              {
+                "source": "category mistake",
+                "translation": "error categorial"
+              }
             ]
           },
           {
@@ -1103,10 +1548,22 @@
               "type": "match_pairs",
               "prompt": "Modal perfecto — Matiz",
               "pairs": [
-                { "left": "could have been", "right": "posibilidad real / contrafáctica" },
-                { "left": "might have been", "right": "posibilidad especulativa" },
-                { "left": "must have been", "right": "deducción necesaria" },
-                { "left": "should have been", "right": "obligación retrospectiva" }
+                {
+                  "left": "could have been",
+                  "right": "posibilidad real / contrafáctica"
+                },
+                {
+                  "left": "might have been",
+                  "right": "posibilidad especulativa"
+                },
+                {
+                  "left": "must have been",
+                  "right": "deducción necesaria"
+                },
+                {
+                  "left": "should have been",
+                  "right": "obligación retrospectiva"
+                }
               ]
             },
             {
@@ -1124,16 +1581,29 @@
             {
               "id": "ph1-3",
               "type": "fill_blank",
-              "prompt": "'The outcome ___ been otherwise.' (Español: 'El resultado podría haber sido de otra manera — afirmación contrafáctica.')",
+              "prompt": "The outcome ___ been otherwise. (Español: 'El resultado podría haber sido de otra manera — afirmación contrafáctica.')",
               "answer": "could have",
-              "acceptableAnswers": ["might have"]
+              "acceptableAnswers": [
+                "might have"
+              ]
             },
             {
               "id": "ph1-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Tendríamos que haber sido más cuidadosos.'",
+              "prompt": "Tendríamos que haber sido más cuidadosos.",
               "answer": "We ought to have been more careful",
-              "bank": ["We", "ought", "to", "have", "been", "more", "careful", "less", "the", "ought"]
+              "bank": [
+                "We",
+                "ought",
+                "to",
+                "have",
+                "been",
+                "more",
+                "careful",
+                "less",
+                "the",
+                "ought"
+              ]
             },
             {
               "id": "ph1-5",
@@ -1163,7 +1633,7 @@
             {
               "id": "ph1-7",
               "type": "fill_blank",
-              "prompt": "'She ___ have known; the evidence was on her desk.' (Español: 'Tuvo que haberlo sabido — la evidencia estaba en su escritorio.')",
+              "prompt": "She ___ have known; the evidence was on her desk. (Español: 'Tuvo que haberlo sabido — la evidencia estaba en su escritorio.')",
               "answer": "must",
               "acceptableAnswers": []
             },
@@ -1182,16 +1652,30 @@
             {
               "id": "ph1-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Si hubiera sabido, habría actuado de otra manera.'",
+              "prompt": "Si hubiera sabido, habría actuado de otra manera.",
               "answer": "Had I known I would have acted differently",
-              "bank": ["Had", "I", "known", "I", "would", "have", "acted", "differently", "the", "same", "had"]
+              "bank": [
+                "Had",
+                "I",
+                "known",
+                "I",
+                "would",
+                "have",
+                "acted",
+                "differently",
+                "the",
+                "same",
+                "had"
+              ]
             },
             {
               "id": "ph1-10",
               "type": "fill_blank",
-              "prompt": "'The argument ___ have been clearer.' (Español: 'El argumento podría haber sido más claro — crítica suave.')",
+              "prompt": "The argument ___ have been clearer. (Español: 'El argumento podría haber sido más claro — crítica suave.')",
               "answer": "could",
-              "acceptableAnswers": ["might"]
+              "acceptableAnswers": [
+                "might"
+              ]
             }
           ]
         },
@@ -1207,10 +1691,22 @@
               "type": "match_pairs",
               "prompt": "Término — Significado",
               "pairs": [
-                { "left": "epistemology", "right": "teoría del conocimiento" },
-                { "left": "ontology", "right": "teoría del ser" },
-                { "left": "free will", "right": "libre albedrío" },
-                { "left": "determinism", "right": "determinismo" }
+                {
+                  "left": "epistemology",
+                  "right": "teoría del conocimiento"
+                },
+                {
+                  "left": "ontology",
+                  "right": "teoría del ser"
+                },
+                {
+                  "left": "free will",
+                  "right": "libre albedrío"
+                },
+                {
+                  "left": "determinism",
+                  "right": "determinismo"
+                }
               ]
             },
             {
@@ -1228,16 +1724,32 @@
             {
               "id": "ph2-3",
               "type": "fill_blank",
-              "prompt": "'Correlation does not ___ causation.' (Español: 'Correlación no implica causalidad.')",
+              "prompt": "Correlation does not ___ causation. (Español: 'Correlación no implica causalidad.')",
               "answer": "imply",
-              "acceptableAnswers": ["entail", "suggest", "indicate"]
+              "acceptableAnswers": [
+                "entail",
+                "suggest",
+                "indicate"
+              ]
             },
             {
               "id": "ph2-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'La distinción entre el sujeto que conoce y el objeto conocido es problemática.'",
+              "prompt": "La distinción entre el sujeto que conoce y el objeto conocido es problemática.",
               "answer": "The distinction between knower and known is problematic",
-              "bank": ["The", "distinction", "between", "knower", "and", "known", "is", "problematic", "easy", "the", "the"]
+              "bank": [
+                "The",
+                "distinction",
+                "between",
+                "knower",
+                "and",
+                "known",
+                "is",
+                "problematic",
+                "easy",
+                "the",
+                "the"
+              ]
             },
             {
               "id": "ph2-5",
@@ -1267,7 +1779,7 @@
             {
               "id": "ph2-7",
               "type": "fill_blank",
-              "prompt": "'A ___ mistake is treating one type of thing as if it were another.' (Español: 'Un error categorial trata un tipo de cosa como si fuera otro.')",
+              "prompt": "A ___ mistake is treating one type of thing as if it were another. (Español: 'Un error categorial trata un tipo de cosa como si fuera otro.')",
               "answer": "category",
               "acceptableAnswers": []
             },
@@ -1286,16 +1798,27 @@
             {
               "id": "ph2-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'El argumento incurre en una petición de principio.'",
+              "prompt": "El argumento incurre en una petición de principio.",
               "answer": "The argument begs the question",
-              "bank": ["The", "argument", "begs", "the", "question", "answer", "asks", "and"]
+              "bank": [
+                "The",
+                "argument",
+                "begs",
+                "the",
+                "question",
+                "answer",
+                "asks",
+                "and"
+              ]
             },
             {
               "id": "ph2-10",
               "type": "fill_blank",
-              "prompt": "'The conditions are necessary but not ___.' (Español: 'Las condiciones son necesarias pero no suficientes.')",
+              "prompt": "The conditions are necessary but not ___. (Español: 'Las condiciones son necesarias pero no suficientes.')",
               "answer": "sufficient",
-              "acceptableAnswers": ["enough"]
+              "acceptableAnswers": [
+                "enough"
+              ]
             }
           ]
         },
@@ -1311,10 +1834,22 @@
               "type": "match_pairs",
               "prompt": "Pieza de argumento — Función",
               "pairs": [
-                { "left": "premise", "right": "premisa (punto de partida)" },
-                { "left": "inference", "right": "inferencia (paso lógico)" },
-                { "left": "conclusion", "right": "conclusión" },
-                { "left": "counterexample", "right": "contraejemplo" }
+                {
+                  "left": "premise",
+                  "right": "premisa (punto de partida)"
+                },
+                {
+                  "left": "inference",
+                  "right": "inferencia (paso lógico)"
+                },
+                {
+                  "left": "conclusion",
+                  "right": "conclusión"
+                },
+                {
+                  "left": "counterexample",
+                  "right": "contraejemplo"
+                }
               ]
             },
             {
@@ -1332,16 +1867,29 @@
             {
               "id": "ph3-3",
               "type": "fill_blank",
-              "prompt": "'It ___ from this that…' (Español: 'De esto se sigue que…')",
+              "prompt": "It ___ from this that… (Español: 'De esto se sigue que…')",
               "answer": "follows",
               "acceptableAnswers": []
             },
             {
               "id": "ph3-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'La conclusión no se sigue necesariamente de las premisas.'",
+              "prompt": "La conclusión no se sigue necesariamente de las premisas.",
               "answer": "The conclusion does not necessarily follow from the premises",
-              "bank": ["The", "conclusion", "does", "not", "necessarily", "follow", "from", "the", "premises", "must", "the", "and"]
+              "bank": [
+                "The",
+                "conclusion",
+                "does",
+                "not",
+                "necessarily",
+                "follow",
+                "from",
+                "the",
+                "premises",
+                "must",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "ph3-5",
@@ -1373,7 +1921,9 @@
               "type": "fill_blank",
               "prompt": "Adjetivo lógico para un argumento de forma válida pero con premisa falsa (lo contrario de 'sound'): 'This is a ___ argument: valid form but false premise.'",
               "answer": "unsound",
-              "acceptableAnswers": ["invalid"]
+              "acceptableAnswers": [
+                "invalid"
+              ]
             },
             {
               "id": "ph3-8",
@@ -1390,16 +1940,29 @@
             {
               "id": "ph3-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Consideremos un contraejemplo que socava la regla.'",
+              "prompt": "Consideremos un contraejemplo que socava la regla.",
               "answer": "Consider a counterexample that undermines the rule",
-              "bank": ["Consider", "a", "counterexample", "that", "undermines", "the", "rule", "supports", "the", "and"]
+              "bank": [
+                "Consider",
+                "a",
+                "counterexample",
+                "that",
+                "undermines",
+                "the",
+                "rule",
+                "supports",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "ph3-10",
               "type": "fill_blank",
-              "prompt": "'This ___ presupposes what it sets out to prove.' (Español: 'Esto presupone lo que pretende probar — petición de principio.')",
+              "prompt": "This ___ presupposes what it sets out to prove. (Español: 'Esto presupone lo que pretende probar — petición de principio.')",
               "answer": "argument",
-              "acceptableAnswers": ["claim"]
+              "acceptableAnswers": [
+                "claim"
+              ]
             }
           ]
         },
@@ -1415,9 +1978,18 @@
               "type": "dialogue",
               "prompt": "Seminario sobre libre albedrío",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "prof", "name": "Professor" },
-                { "id": "ana", "name": "Ana" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "prof",
+                  "name": "Professor"
+                },
+                {
+                  "id": "ana",
+                  "name": "Ana"
+                }
               ],
               "turns": [
                 {
@@ -1453,7 +2025,10 @@
                   "before": "I'd ",
                   "after": " between the question of whether the agent literally could have done otherwise, and the question of whether ascribing responsibility to her is justified.",
                   "answer": "distinguish",
-                  "acceptableAnswers": ["differentiate", "separate"]
+                  "acceptableAnswers": [
+                    "differentiate",
+                    "separate"
+                  ]
                 },
                 {
                   "kind": "line",
@@ -1512,22 +2087,82 @@
           },
           {
             "kind": "table",
-            "headers": ["UK", "US", "Español"],
+            "headers": [
+              "UK",
+              "US",
+              "Español"
+            ],
             "rows": [
-              ["lift", "elevator", "ascensor"],
-              ["boot (of car)", "trunk", "maletero"],
-              ["bonnet", "hood", "capó"],
-              ["biscuit", "cookie", "galleta"],
-              ["chips", "fries", "patatas fritas"],
-              ["crisps", "chips", "patatas de bolsa"],
-              ["flat", "apartment", "piso / apartamento"],
-              ["holiday", "vacation", "vacaciones"],
-              ["queue", "line", "cola / fila"],
-              ["lorry", "truck", "camión"],
-              ["nappy", "diaper", "pañal"],
-              ["jumper", "sweater", "jersey / suéter"],
-              ["trousers", "pants", "pantalones"],
-              ["pants (UK)", "underwear", "calzoncillos / ropa interior"]
+              [
+                "lift",
+                "elevator",
+                "ascensor"
+              ],
+              [
+                "boot (of car)",
+                "trunk",
+                "maletero"
+              ],
+              [
+                "bonnet",
+                "hood",
+                "capó"
+              ],
+              [
+                "biscuit",
+                "cookie",
+                "galleta"
+              ],
+              [
+                "chips",
+                "fries",
+                "patatas fritas"
+              ],
+              [
+                "crisps",
+                "chips",
+                "patatas de bolsa"
+              ],
+              [
+                "flat",
+                "apartment",
+                "piso / apartamento"
+              ],
+              [
+                "holiday",
+                "vacation",
+                "vacaciones"
+              ],
+              [
+                "queue",
+                "line",
+                "cola / fila"
+              ],
+              [
+                "lorry",
+                "truck",
+                "camión"
+              ],
+              [
+                "nappy",
+                "diaper",
+                "pañal"
+              ],
+              [
+                "jumper",
+                "sweater",
+                "jersey / suéter"
+              ],
+              [
+                "trousers",
+                "pants",
+                "pantalones"
+              ],
+              [
+                "pants (UK)",
+                "underwear",
+                "calzoncillos / ropa interior"
+              ]
             ]
           },
           {
@@ -1541,13 +2176,37 @@
           },
           {
             "kind": "table",
-            "headers": ["UK", "US", "Ejemplo"],
+            "headers": [
+              "UK",
+              "US",
+              "Ejemplo"
+            ],
             "rows": [
-              ["-our", "-or", "colour / color"],
-              ["-re", "-er", "centre / center"],
-              ["-ise", "-ize", "organise / organize"],
-              ["-ence", "-ense", "defence / defense"],
-              ["-ogue", "-og", "catalogue / catalog"]
+              [
+                "-our",
+                "-or",
+                "colour / color"
+              ],
+              [
+                "-re",
+                "-er",
+                "centre / center"
+              ],
+              [
+                "-ise",
+                "-ize",
+                "organise / organize"
+              ],
+              [
+                "-ence",
+                "-ense",
+                "defence / defense"
+              ],
+              [
+                "-ogue",
+                "-og",
+                "catalogue / catalog"
+              ]
             ]
           },
           {
@@ -1557,11 +2216,26 @@
           {
             "kind": "examples",
             "rows": [
-              { "source": "arvo (Aus)", "translation": "tarde (afternoon)" },
-              { "source": "brekkie (Aus)", "translation": "desayuno" },
-              { "source": "no worries (Aus)", "translation": "no hay problema / de nada" },
-              { "source": "How's the craic? (Irl)", "translation": "¿Qué tal? / ¿Hay buen ambiente?" },
-              { "source": "yer man / yer one (Irl)", "translation": "ese tipo / esa tipa (genérico)" }
+              {
+                "source": "arvo (Aus)",
+                "translation": "tarde (afternoon)"
+              },
+              {
+                "source": "brekkie (Aus)",
+                "translation": "desayuno"
+              },
+              {
+                "source": "no worries (Aus)",
+                "translation": "no hay problema / de nada"
+              },
+              {
+                "source": "How's the craic? (Irl)",
+                "translation": "¿Qué tal? / ¿Hay buen ambiente?"
+              },
+              {
+                "source": "yer man / yer one (Irl)",
+                "translation": "ese tipo / esa tipa (genérico)"
+              }
             ]
           }
         ]
@@ -1579,10 +2253,22 @@
               "type": "match_pairs",
               "prompt": "UK — US",
               "pairs": [
-                { "left": "lift", "right": "elevator" },
-                { "left": "boot", "right": "trunk" },
-                { "left": "biscuit", "right": "cookie" },
-                { "left": "lorry", "right": "truck" }
+                {
+                  "left": "lift",
+                  "right": "elevator"
+                },
+                {
+                  "left": "boot",
+                  "right": "trunk"
+                },
+                {
+                  "left": "biscuit",
+                  "right": "cookie"
+                },
+                {
+                  "left": "lorry",
+                  "right": "truck"
+                }
               ]
             },
             {
@@ -1609,13 +2295,28 @@
               "type": "tap_words_in_order",
               "prompt": "Forma la oración (UK): 'Tomaré té con galletas.'",
               "answer": "I'll have tea with biscuits",
-              "bank": ["I'll", "have", "tea", "with", "biscuits", "cookies", "the", "and", "of"]
+              "bank": [
+                "I'll",
+                "have",
+                "tea",
+                "with",
+                "biscuits",
+                "cookies",
+                "the",
+                "and",
+                "of"
+              ]
             },
             {
               "id": "rg1-5",
               "type": "multiple_choice",
               "prompt": "En UK, 'pants' significa:",
-              "options": ["pantalones", "ropa interior", "zapatos", "calcetines"],
+              "options": [
+                "pantalones",
+                "ropa interior",
+                "zapatos",
+                "calcetines"
+              ],
               "answer": "ropa interior"
             },
             {
@@ -1636,13 +2337,20 @@
               "type": "fill_blank",
               "prompt": "UK: 'I'm going on ___ next week.' (Español: 'vacaciones')",
               "answer": "holiday",
-              "acceptableAnswers": ["holidays"]
+              "acceptableAnswers": [
+                "holidays"
+              ]
             },
             {
               "id": "rg1-8",
               "type": "multiple_choice",
               "prompt": "'Crisps' (UK) = ?",
-              "options": ["patatas fritas calientes", "patatas de bolsa", "tostadas", "cereales crujientes"],
+              "options": [
+                "patatas fritas calientes",
+                "patatas de bolsa",
+                "tostadas",
+                "cereales crujientes"
+              ],
               "answer": "patatas de bolsa"
             },
             {
@@ -1650,14 +2358,28 @@
               "type": "tap_words_in_order",
               "prompt": "Forma la oración (US): 'Tomaré el ascensor hasta el quinto piso.'",
               "answer": "I'll take the elevator to the fifth floor",
-              "bank": ["I'll", "take", "the", "elevator", "lift", "to", "the", "fifth", "floor", "first", "and"]
+              "bank": [
+                "I'll",
+                "take",
+                "the",
+                "elevator",
+                "lift",
+                "to",
+                "the",
+                "fifth",
+                "floor",
+                "first",
+                "and"
+              ]
             },
             {
               "id": "rg1-10",
               "type": "fill_blank",
               "prompt": "UK: 'There's a long ___ at the post office.' (Español: 'cola / fila')",
               "answer": "queue",
-              "acceptableAnswers": ["line"]
+              "acceptableAnswers": [
+                "line"
+              ]
             }
           ]
         },
@@ -1673,17 +2395,34 @@
               "type": "match_pairs",
               "prompt": "UK — US",
               "pairs": [
-                { "left": "colour", "right": "color" },
-                { "left": "centre", "right": "center" },
-                { "left": "organise", "right": "organize" },
-                { "left": "defence", "right": "defense" }
+                {
+                  "left": "colour",
+                  "right": "color"
+                },
+                {
+                  "left": "centre",
+                  "right": "center"
+                },
+                {
+                  "left": "organise",
+                  "right": "organize"
+                },
+                {
+                  "left": "defence",
+                  "right": "defense"
+                }
               ]
             },
             {
               "id": "rg2-2",
               "type": "multiple_choice",
               "prompt": "¿Qué ortografía es británica?",
-              "options": ["theater", "theatre", "theator", "theathre"],
+              "options": [
+                "theater",
+                "theatre",
+                "theator",
+                "theathre"
+              ],
               "answer": "theatre"
             },
             {
@@ -1698,7 +2437,19 @@
               "type": "tap_words_in_order",
               "prompt": "Forma la oración (UK): 'Vamos a organizar el catálogo del centro.'",
               "answer": "We'll organise the catalogue of the centre",
-              "bank": ["We'll", "organise", "the", "catalogue", "of", "the", "centre", "organize", "catalog", "center", "and"]
+              "bank": [
+                "We'll",
+                "organise",
+                "the",
+                "catalogue",
+                "of",
+                "the",
+                "centre",
+                "organize",
+                "catalog",
+                "center",
+                "and"
+              ]
             },
             {
               "id": "rg2-5",
@@ -1730,13 +2481,20 @@
               "type": "fill_blank",
               "prompt": "US: 'Where's the ___?' (Español: 'centro' — ortografía americana)",
               "answer": "center",
-              "acceptableAnswers": ["centre"]
+              "acceptableAnswers": [
+                "centre"
+              ]
             },
             {
               "id": "rg2-8",
               "type": "multiple_choice",
               "prompt": "¿Cuál NO es ortografía británica?",
-              "options": ["organise", "colour", "favorite", "centre"],
+              "options": [
+                "organise",
+                "colour",
+                "favorite",
+                "centre"
+              ],
               "answer": "favorite"
             },
             {
@@ -1744,14 +2502,27 @@
               "type": "tap_words_in_order",
               "prompt": "Forma la oración (US): 'Mi color favorito es el gris.'",
               "answer": "My favorite color is gray",
-              "bank": ["My", "favorite", "color", "is", "gray", "favourite", "colour", "grey", "the", "and"]
+              "bank": [
+                "My",
+                "favorite",
+                "color",
+                "is",
+                "gray",
+                "favourite",
+                "colour",
+                "grey",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "rg2-10",
               "type": "fill_blank",
               "prompt": "UK: 'gris' se escribe ___' (Español: 'la variante británica del color gris')",
               "answer": "grey",
-              "acceptableAnswers": ["gray"]
+              "acceptableAnswers": [
+                "gray"
+              ]
             }
           ]
         },
@@ -1767,17 +2538,34 @@
               "type": "match_pairs",
               "prompt": "Aus / Irl — Significado",
               "pairs": [
-                { "left": "arvo (Aus)", "right": "tarde / afternoon" },
-                { "left": "brekkie (Aus)", "right": "desayuno" },
-                { "left": "no worries (Aus)", "right": "no hay problema" },
-                { "left": "the craic (Irl)", "right": "buen ambiente / diversión" }
+                {
+                  "left": "arvo (Aus)",
+                  "right": "tarde / afternoon"
+                },
+                {
+                  "left": "brekkie (Aus)",
+                  "right": "desayuno"
+                },
+                {
+                  "left": "no worries (Aus)",
+                  "right": "no hay problema"
+                },
+                {
+                  "left": "the craic (Irl)",
+                  "right": "buen ambiente / diversión"
+                }
               ]
             },
             {
               "id": "rg3-2",
               "type": "multiple_choice",
               "prompt": "Aus: 'See you this arvo' significa...",
-              "options": ["Nos vemos mañana", "Nos vemos esta tarde", "Nos vemos la próxima semana", "Nos vemos por la mañana"],
+              "options": [
+                "Nos vemos mañana",
+                "Nos vemos esta tarde",
+                "Nos vemos la próxima semana",
+                "Nos vemos por la mañana"
+              ],
               "answer": "Nos vemos esta tarde"
             },
             {
@@ -1785,14 +2573,28 @@
               "type": "fill_blank",
               "prompt": "Irl: 'How's the ___?' (Español: '¿Qué tal? / ¿Cómo va el ambiente?')",
               "answer": "craic",
-              "acceptableAnswers": ["crack"]
+              "acceptableAnswers": [
+                "crack"
+              ]
             },
             {
               "id": "rg3-4",
               "type": "tap_words_in_order",
               "prompt": "Forma la oración (Aus): 'Sin problema, compañero, te veo esta tarde.'",
               "answer": "No worries mate I'll see you this arvo",
-              "bank": ["No", "worries", "mate", "I'll", "see", "you", "this", "arvo", "evening", "morning", "the"]
+              "bank": [
+                "No",
+                "worries",
+                "mate",
+                "I'll",
+                "see",
+                "you",
+                "this",
+                "arvo",
+                "evening",
+                "morning",
+                "the"
+              ]
             },
             {
               "id": "rg3-5",
@@ -1824,7 +2626,9 @@
               "type": "fill_blank",
               "prompt": "Aus: 'Pop it in the ___' (Español: 'maletero — Aus comparte la palabra con UK')",
               "answer": "boot",
-              "acceptableAnswers": ["trunk"]
+              "acceptableAnswers": [
+                "trunk"
+              ]
             },
             {
               "id": "rg3-8",
@@ -1843,14 +2647,26 @@
               "type": "tap_words_in_order",
               "prompt": "Forma la oración (Irl): 'Acabo de terminar mi té, gracias.'",
               "answer": "I'm after finishing my tea thanks",
-              "bank": ["I'm", "after", "finishing", "my", "tea", "thanks", "finished", "the", "and"]
+              "bank": [
+                "I'm",
+                "after",
+                "finishing",
+                "my",
+                "tea",
+                "thanks",
+                "finished",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "rg3-10",
               "type": "fill_blank",
               "prompt": "Aus saludo: '___, mate!' (Español: '¡Buen día!')",
               "answer": "G'day",
-              "acceptableAnswers": ["Good day"]
+              "acceptableAnswers": [
+                "Good day"
+              ]
             }
           ]
         },
@@ -1866,10 +2682,22 @@
               "type": "dialogue",
               "prompt": "Cena con anfitriones de UK, US y Aus",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "emma", "name": "Emma (UK)" },
-                { "id": "jake", "name": "Jake (US)" },
-                { "id": "kira", "name": "Kira (Aus)" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "emma",
+                  "name": "Emma (UK)"
+                },
+                {
+                  "id": "jake",
+                  "name": "Jake (US)"
+                },
+                {
+                  "id": "kira",
+                  "name": "Kira (Aus)"
+                }
               ],
               "turns": [
                 {
@@ -1905,7 +2733,9 @@
                   "before": "Speaking of pinching from both sides — Kira, when you say you want ",
                   "after": " in the morning, you mean breakfast, right?",
                   "answer": "brekkie",
-                  "acceptableAnswers": ["brekky"]
+                  "acceptableAnswers": [
+                    "brekky"
+                  ]
                 },
                 {
                   "kind": "line",
@@ -1980,12 +2810,30 @@
           {
             "kind": "examples",
             "rows": [
-              { "source": "This essay argues that…", "translation": "Este ensayo sostiene que…" },
-              { "source": "The evidence suggests, however, that…", "translation": "La evidencia sugiere, no obstante, que…" },
-              { "source": "Critics may object that…", "translation": "Los críticos objetarán que…" },
-              { "source": "While this view has merit, it overlooks…", "translation": "Aunque esta perspectiva tiene mérito, pasa por alto…" },
-              { "source": "Ultimately, the question demands…", "translation": "En última instancia, la cuestión exige…" },
-              { "source": "Further research should examine…", "translation": "La investigación futura debe examinar…" }
+              {
+                "source": "This essay argues that…",
+                "translation": "Este ensayo sostiene que…"
+              },
+              {
+                "source": "The evidence suggests, however, that…",
+                "translation": "La evidencia sugiere, no obstante, que…"
+              },
+              {
+                "source": "Critics may object that…",
+                "translation": "Los críticos objetarán que…"
+              },
+              {
+                "source": "While this view has merit, it overlooks…",
+                "translation": "Aunque esta perspectiva tiene mérito, pasa por alto…"
+              },
+              {
+                "source": "Ultimately, the question demands…",
+                "translation": "En última instancia, la cuestión exige…"
+              },
+              {
+                "source": "Further research should examine…",
+                "translation": "La investigación futura debe examinar…"
+              }
             ]
           },
           {
@@ -2020,25 +2868,52 @@
               "type": "match_pairs",
               "prompt": "Característica — Buena tesis tiene...",
               "pairs": [
-                { "left": "Specific", "right": "específica" },
-                { "left": "Arguable", "right": "discutible (alguien podría disentir)" },
-                { "left": "Single sentence", "right": "una sola oración" },
-                { "left": "Forward-looking", "right": "anuncia lo que sigue" }
+                {
+                  "left": "Specific",
+                  "right": "específica"
+                },
+                {
+                  "left": "Arguable",
+                  "right": "discutible (alguien podría disentir)"
+                },
+                {
+                  "left": "Single sentence",
+                  "right": "una sola oración"
+                },
+                {
+                  "left": "Forward-looking",
+                  "right": "anuncia lo que sigue"
+                }
               ]
             },
             {
               "id": "es1-3",
               "type": "fill_blank",
-              "prompt": "'This essay ___ that compulsory voting strengthens democracy.' (Español: 'Este ensayo sostiene que el voto obligatorio fortalece la democracia.')",
+              "prompt": "This essay ___ that compulsory voting strengthens democracy. (Español: 'Este ensayo sostiene que el voto obligatorio fortalece la democracia.')",
               "answer": "argues",
-              "acceptableAnswers": ["contends", "claims", "maintains"]
+              "acceptableAnswers": [
+                "contends",
+                "claims",
+                "maintains"
+              ]
             },
             {
               "id": "es1-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Este estudio cuestiona una suposición arraigada hace mucho.'",
+              "prompt": "Este estudio cuestiona una suposición arraigada hace mucho.",
               "answer": "This study challenges a long-held assumption",
-              "bank": ["This", "study", "challenges", "a", "long-held", "assumption", "supports", "the", "new", "and"]
+              "bank": [
+                "This",
+                "study",
+                "challenges",
+                "a",
+                "long-held",
+                "assumption",
+                "supports",
+                "the",
+                "new",
+                "and"
+              ]
             },
             {
               "id": "es1-5",
@@ -2068,9 +2943,12 @@
             {
               "id": "es1-7",
               "type": "fill_blank",
-              "prompt": "'I would ___ that the conventional reading is mistaken.' (Español: 'Yo sostendría que la lectura convencional es errónea.')",
+              "prompt": "I would ___ that the conventional reading is mistaken. (Español: 'Yo sostendría que la lectura convencional es errónea.')",
               "answer": "argue",
-              "acceptableAnswers": ["contend", "maintain"]
+              "acceptableAnswers": [
+                "contend",
+                "maintain"
+              ]
             },
             {
               "id": "es1-8",
@@ -2087,16 +2965,36 @@
             {
               "id": "es1-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'En este ensayo sostengo que la suposición convencional pasa por alto un factor estructural.'",
+              "prompt": "En este ensayo sostengo que la suposición convencional pasa por alto un factor estructural.",
               "answer": "In this essay I argue that the conventional assumption overlooks a structural factor",
-              "bank": ["In", "this", "essay", "I", "argue", "that", "the", "conventional", "assumption", "overlooks", "a", "structural", "factor", "supports", "and", "the"]
+              "bank": [
+                "In",
+                "this",
+                "essay",
+                "I",
+                "argue",
+                "that",
+                "the",
+                "conventional",
+                "assumption",
+                "overlooks",
+                "a",
+                "structural",
+                "factor",
+                "supports",
+                "and",
+                "the"
+              ]
             },
             {
               "id": "es1-10",
               "type": "fill_blank",
               "prompt": "Hedging adecuado: 'The evidence ___ that…' (Español: 'La evidencia sugiere que…')",
               "answer": "suggests",
-              "acceptableAnswers": ["indicates", "implies"]
+              "acceptableAnswers": [
+                "indicates",
+                "implies"
+              ]
             }
           ]
         },
@@ -2112,10 +3010,22 @@
               "type": "match_pairs",
               "prompt": "Verbo introductorio — Tono",
               "pairs": [
-                { "left": "argues", "right": "afirmación fuerte / sostiene" },
-                { "left": "suggests", "right": "matiz cauteloso" },
-                { "left": "claims", "right": "implica posible duda del autor" },
-                { "left": "demonstrates", "right": "implica prueba sólida" }
+                {
+                  "left": "argues",
+                  "right": "afirmación fuerte / sostiene"
+                },
+                {
+                  "left": "suggests",
+                  "right": "matiz cauteloso"
+                },
+                {
+                  "left": "claims",
+                  "right": "implica posible duda del autor"
+                },
+                {
+                  "left": "demonstrates",
+                  "right": "implica prueba sólida"
+                }
               ]
             },
             {
@@ -2133,16 +3043,34 @@
             {
               "id": "es2-3",
               "type": "fill_blank",
-              "prompt": "'According to ___, this trend began in the 1990s.' (Español: 'Según — atribución típica')",
+              "prompt": "According to ___, this trend began in the 1990s. (Español: 'Según — atribución típica')",
               "answer": "Smith",
-              "acceptableAnswers": ["the author", "the report"]
+              "acceptableAnswers": [
+                "the author",
+                "the report"
+              ]
             },
             {
               "id": "es2-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'La evidencia, considerada en conjunto, apunta en una sola dirección.'",
+              "prompt": "La evidencia, considerada en conjunto, apunta en una sola dirección.",
               "answer": "The evidence taken as a whole points in a single direction",
-              "bank": ["The", "evidence", "taken", "as", "a", "whole", "points", "in", "a", "single", "direction", "many", "the", "and"]
+              "bank": [
+                "The",
+                "evidence",
+                "taken",
+                "as",
+                "a",
+                "whole",
+                "points",
+                "in",
+                "a",
+                "single",
+                "direction",
+                "many",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "es2-5",
@@ -2172,30 +3100,54 @@
             {
               "id": "es2-7",
               "type": "fill_blank",
-              "prompt": "'These ___ corroborate the hypothesis.' (Español: 'Estos hallazgos corroboran la hipótesis.')",
+              "prompt": "These ___ corroborate the hypothesis. (Español: 'Estos hallazgos corroboran la hipótesis.')",
               "answer": "findings",
-              "acceptableAnswers": ["results", "data"]
+              "acceptableAnswers": [
+                "results",
+                "data"
+              ]
             },
             {
               "id": "es2-8",
               "type": "multiple_choice",
               "prompt": "'demonstrates' implica que la evidencia es:",
-              "options": ["débil", "fuerte / probatoria", "anecdótica", "irrelevante"],
+              "options": [
+                "débil",
+                "fuerte / probatoria",
+                "anecdótica",
+                "irrelevante"
+              ],
               "answer": "fuerte / probatoria"
             },
             {
               "id": "es2-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'García (2021) demuestra que la correlación se mantiene a través de las regiones.'",
+              "prompt": "García (2021) demuestra que la correlación se mantiene a través de las regiones.",
               "answer": "García 2021 demonstrates that the correlation holds across regions",
-              "bank": ["García", "2021", "demonstrates", "that", "the", "correlation", "holds", "across", "regions", "fails", "the", "and"]
+              "bank": [
+                "García",
+                "2021",
+                "demonstrates",
+                "that",
+                "the",
+                "correlation",
+                "holds",
+                "across",
+                "regions",
+                "fails",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "es2-10",
               "type": "fill_blank",
-              "prompt": "'These data ___ the reverse view.' (Español: 'Estos datos contradicen la visión opuesta.')",
+              "prompt": "These data ___ the reverse view. (Español: 'Estos datos contradicen la visión opuesta.')",
               "answer": "contradict",
-              "acceptableAnswers": ["challenge", "undermine"]
+              "acceptableAnswers": [
+                "challenge",
+                "undermine"
+              ]
             }
           ]
         },
@@ -2211,10 +3163,22 @@
               "type": "match_pairs",
               "prompt": "Fórmula — Función",
               "pairs": [
-                { "left": "Critics may object that…", "right": "introducir contra-argumento" },
-                { "left": "While this view has merit,…", "right": "concesión antes de refutar" },
-                { "left": "However, this overlooks…", "right": "refutación" },
-                { "left": "In conclusion,", "right": "iniciar conclusión" }
+                {
+                  "left": "Critics may object that…",
+                  "right": "introducir contra-argumento"
+                },
+                {
+                  "left": "While this view has merit,…",
+                  "right": "concesión antes de refutar"
+                },
+                {
+                  "left": "However, this overlooks…",
+                  "right": "refutación"
+                },
+                {
+                  "left": "In conclusion,",
+                  "right": "iniciar conclusión"
+                }
               ]
             },
             {
@@ -2232,16 +3196,32 @@
             {
               "id": "es3-3",
               "type": "fill_blank",
-              "prompt": "'While this view has ___, it overlooks structural causes.' (Español: 'Aunque esta perspectiva tiene mérito, ignora las causas estructurales.')",
+              "prompt": "While this view has ___, it overlooks structural causes. (Español: 'Aunque esta perspectiva tiene mérito, ignora las causas estructurales.')",
               "answer": "merit",
-              "acceptableAnswers": ["worth", "value"]
+              "acceptableAnswers": [
+                "worth",
+                "value"
+              ]
             },
             {
               "id": "es3-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Los críticos objetarán que el coste prohíbe la implementación generalizada.'",
+              "prompt": "Los críticos objetarán que el coste prohíbe la implementación generalizada.",
               "answer": "Critics may object that the cost prohibits widespread implementation",
-              "bank": ["Critics", "may", "object", "that", "the", "cost", "prohibits", "widespread", "implementation", "allows", "the", "and"]
+              "bank": [
+                "Critics",
+                "may",
+                "object",
+                "that",
+                "the",
+                "cost",
+                "prohibits",
+                "widespread",
+                "implementation",
+                "allows",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "es3-5",
@@ -2271,9 +3251,11 @@
             {
               "id": "es3-7",
               "type": "fill_blank",
-              "prompt": "'On ___ inspection, the analogy breaks down.' (Español: 'Al examen más detenido, la analogía se rompe.')",
+              "prompt": "On ___ inspection, the analogy breaks down. (Español: 'Al examen más detenido, la analogía se rompe.')",
               "answer": "closer",
-              "acceptableAnswers": ["close"]
+              "acceptableAnswers": [
+                "close"
+              ]
             },
             {
               "id": "es3-8",
@@ -2290,16 +3272,31 @@
             {
               "id": "es3-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Aun concediendo el punto, la conclusión sigue siendo en gran medida intacta.'",
+              "prompt": "Aun concediendo el punto, la conclusión sigue siendo en gran medida intacta.",
               "answer": "Even granting the point the conclusion remains largely intact",
-              "bank": ["Even", "granting", "the", "point", "the", "conclusion", "remains", "largely", "intact", "broken", "and"]
+              "bank": [
+                "Even",
+                "granting",
+                "the",
+                "point",
+                "the",
+                "conclusion",
+                "remains",
+                "largely",
+                "intact",
+                "broken",
+                "and"
+              ]
             },
             {
               "id": "es3-10",
               "type": "fill_blank",
-              "prompt": "'However, this view ___ key structural factors.' (Español: 'Sin embargo, esta visión pasa por alto factores estructurales clave.')",
+              "prompt": "However, this view ___ key structural factors. (Español: 'Sin embargo, esta visión pasa por alto factores estructurales clave.')",
               "answer": "overlooks",
-              "acceptableAnswers": ["ignores", "neglects"]
+              "acceptableAnswers": [
+                "ignores",
+                "neglects"
+              ]
             }
           ]
         },
@@ -2315,10 +3312,22 @@
               "type": "match_pairs",
               "prompt": "Fórmula — Posición en ensayo",
               "pairs": [
-                { "left": "This essay argues that…", "right": "tesis (apertura)" },
-                { "left": "Critics may object that…", "right": "contra-argumento" },
-                { "left": "In conclusion,", "right": "cierre" },
-                { "left": "Further research should…", "right": "proyección futura" }
+                {
+                  "left": "This essay argues that…",
+                  "right": "tesis (apertura)"
+                },
+                {
+                  "left": "Critics may object that…",
+                  "right": "contra-argumento"
+                },
+                {
+                  "left": "In conclusion,",
+                  "right": "cierre"
+                },
+                {
+                  "left": "Further research should…",
+                  "right": "proyección futura"
+                }
               ]
             },
             {
@@ -2336,16 +3345,31 @@
             {
               "id": "es4-3",
               "type": "fill_blank",
-              "prompt": "'Future research should ___ this question.' (Español: 'La investigación futura debería examinar esta cuestión.')",
+              "prompt": "Future research should ___ this question. (Español: 'La investigación futura debería examinar esta cuestión.')",
               "answer": "investigate",
-              "acceptableAnswers": ["address", "examine", "explore"]
+              "acceptableAnswers": [
+                "address",
+                "examine",
+                "explore"
+              ]
             },
             {
               "id": "es4-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Las implicaciones se extienden más allá de una sola disciplina.'",
+              "prompt": "Las implicaciones se extienden más allá de una sola disciplina.",
               "answer": "The implications extend beyond a single discipline",
-              "bank": ["The", "implications", "extend", "beyond", "a", "single", "discipline", "many", "the", "and"]
+              "bank": [
+                "The",
+                "implications",
+                "extend",
+                "beyond",
+                "a",
+                "single",
+                "discipline",
+                "many",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "es4-5",
@@ -2375,9 +3399,12 @@
             {
               "id": "es4-7",
               "type": "fill_blank",
-              "prompt": "'These findings ___ a long-standing debate.' (Español: 'Estos hallazgos replantean un debate largamente sostenido.')",
+              "prompt": "These findings ___ a long-standing debate. (Español: 'Estos hallazgos replantean un debate largamente sostenido.')",
               "answer": "reframe",
-              "acceptableAnswers": ["recast", "reshape"]
+              "acceptableAnswers": [
+                "recast",
+                "reshape"
+              ]
             },
             {
               "id": "es4-8",
@@ -2394,16 +3421,28 @@
             {
               "id": "es4-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Estos resultados invitan a una indagación más profunda.'",
+              "prompt": "Estos resultados invitan a una indagación más profunda.",
               "answer": "These results invite further inquiry",
-              "bank": ["These", "results", "invite", "further", "inquiry", "the", "and", "preclude"]
+              "bank": [
+                "These",
+                "results",
+                "invite",
+                "further",
+                "inquiry",
+                "the",
+                "and",
+                "preclude"
+              ]
             },
             {
               "id": "es4-10",
               "type": "fill_blank",
-              "prompt": "'In ___, the case is clear.' (Español: 'En suma, el caso es claro.')",
+              "prompt": "In ___, the case is clear. (Español: 'En suma, el caso es claro.')",
               "answer": "sum",
-              "acceptableAnswers": ["short", "conclusion"]
+              "acceptableAnswers": [
+                "short",
+                "conclusion"
+              ]
             }
           ]
         },
@@ -2419,8 +3458,14 @@
               "type": "dialogue",
               "prompt": "Taller de posgrado revisando borrador",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "advisor", "name": "Advisor" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "advisor",
+                  "name": "Advisor"
+                }
               ],
               "turns": [
                 {
@@ -2451,7 +3496,10 @@
                   "before": "Right — I should ",
                   "after": " the strongest form of the objection rather than the one most convenient to dispatch.",
                   "answer": "engage",
-                  "acceptableAnswers": ["address", "tackle"]
+                  "acceptableAnswers": [
+                    "address",
+                    "tackle"
+                  ]
                 },
                 {
                   "kind": "line",
@@ -2510,16 +3558,52 @@
           },
           {
             "kind": "table",
-            "headers": ["Modismo", "Significado", "Español aproximado"],
+            "headers": [
+              "Modismo",
+              "Significado",
+              "Español aproximado"
+            ],
             "rows": [
-              ["a curate's egg", "algo con partes buenas y malas", "una mezcla / mitad y mitad"],
-              ["damning with faint praise", "elogiar tan tibiamente que parece crítica", "criticar elogiando débilmente"],
-              ["to throw in the towel", "rendirse", "tirar la toalla"],
-              ["to take the wind out of someone's sails", "desinflar el ímpetu de alguien", "bajarle los humos a alguien"],
-              ["a Pyrrhic victory", "victoria con coste inaceptable", "victoria pírrica"],
-              ["to bury the hatchet", "hacer las paces", "enterrar el hacha de guerra"],
-              ["the elephant in the room", "el tema obvio que nadie nombra", "el elefante en la habitación"],
-              ["to hedge one's bets", "no comprometerse del todo", "cubrirse las espaldas"]
+              [
+                "a curate's egg",
+                "algo con partes buenas y malas",
+                "una mezcla / mitad y mitad"
+              ],
+              [
+                "damning with faint praise",
+                "elogiar tan tibiamente que parece crítica",
+                "criticar elogiando débilmente"
+              ],
+              [
+                "to throw in the towel",
+                "rendirse",
+                "tirar la toalla"
+              ],
+              [
+                "to take the wind out of someone's sails",
+                "desinflar el ímpetu de alguien",
+                "bajarle los humos a alguien"
+              ],
+              [
+                "a Pyrrhic victory",
+                "victoria con coste inaceptable",
+                "victoria pírrica"
+              ],
+              [
+                "to bury the hatchet",
+                "hacer las paces",
+                "enterrar el hacha de guerra"
+              ],
+              [
+                "the elephant in the room",
+                "el tema obvio que nadie nombra",
+                "el elefante en la habitación"
+              ],
+              [
+                "to hedge one's bets",
+                "no comprometerse del todo",
+                "cubrirse las espaldas"
+              ]
             ]
           },
           {
@@ -2529,11 +3613,26 @@
           {
             "kind": "examples",
             "rows": [
-              { "source": "to gloss over a problem", "translation": "pasar por encima de un problema (minimizándolo)" },
-              { "source": "to talk past each other", "translation": "hablar sin escucharse mutuamente" },
-              { "source": "to square with the facts", "translation": "ser consistente con los hechos" },
-              { "source": "to hold forth on a topic", "translation": "perorar sobre un tema" },
-              { "source": "to bring something into sharp relief", "translation": "destacar algo claramente" }
+              {
+                "source": "to gloss over a problem",
+                "translation": "pasar por encima de un problema (minimizándolo)"
+              },
+              {
+                "source": "to talk past each other",
+                "translation": "hablar sin escucharse mutuamente"
+              },
+              {
+                "source": "to square with the facts",
+                "translation": "ser consistente con los hechos"
+              },
+              {
+                "source": "to hold forth on a topic",
+                "translation": "perorar sobre un tema"
+              },
+              {
+                "source": "to bring something into sharp relief",
+                "translation": "destacar algo claramente"
+              }
             ]
           },
           {
@@ -2556,10 +3655,22 @@
               "type": "match_pairs",
               "prompt": "Modismo — Significado",
               "pairs": [
-                { "left": "a curate's egg", "right": "mezcla de bueno y malo" },
-                { "left": "damning with faint praise", "right": "elogiar tibiamente como crítica" },
-                { "left": "a Pyrrhic victory", "right": "victoria con coste prohibitivo" },
-                { "left": "the elephant in the room", "right": "tema obvio que nadie nombra" }
+                {
+                  "left": "a curate's egg",
+                  "right": "mezcla de bueno y malo"
+                },
+                {
+                  "left": "damning with faint praise",
+                  "right": "elogiar tibiamente como crítica"
+                },
+                {
+                  "left": "a Pyrrhic victory",
+                  "right": "victoria con coste prohibitivo"
+                },
+                {
+                  "left": "the elephant in the room",
+                  "right": "tema obvio que nadie nombra"
+                }
               ]
             },
             {
@@ -2577,16 +3688,30 @@
             {
               "id": "id1-3",
               "type": "fill_blank",
-              "prompt": "'He won the case, but at the cost of his reputation — a ___ victory.' (Español: 'una victoria pírrica')",
+              "prompt": "He won the case, but at the cost of his reputation — a ___ victory. (Español: 'una victoria pírrica')",
               "answer": "Pyrrhic",
-              "acceptableAnswers": ["pyrrhic"]
+              "acceptableAnswers": [
+                "pyrrhic"
+              ]
             },
             {
               "id": "id1-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'El crítico elogió la novela tan tibiamente que la condenó al fracaso.'",
+              "prompt": "El crítico elogió la novela tan tibiamente que la condenó al fracaso.",
               "answer": "The critic damned the novel with faint praise",
-              "bank": ["The", "critic", "damned", "the", "novel", "with", "faint", "praise", "loud", "the", "and"]
+              "bank": [
+                "The",
+                "critic",
+                "damned",
+                "the",
+                "novel",
+                "with",
+                "faint",
+                "praise",
+                "loud",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "id1-5",
@@ -2616,7 +3741,7 @@
             {
               "id": "id1-7",
               "type": "fill_blank",
-              "prompt": "'He threw in the ___ after three rounds.' (Español: 'tiró la toalla')",
+              "prompt": "He threw in the ___ after three rounds. (Español: 'tiró la toalla')",
               "answer": "towel",
               "acceptableAnswers": []
             },
@@ -2635,16 +3760,33 @@
             {
               "id": "id1-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Su comentario le bajó los humos rápidamente.'",
+              "prompt": "Su comentario le bajó los humos rápidamente.",
               "answer": "Her comment took the wind out of his sails quickly",
-              "bank": ["Her", "comment", "took", "the", "wind", "out", "of", "his", "sails", "quickly", "slowly", "the", "and"]
+              "bank": [
+                "Her",
+                "comment",
+                "took",
+                "the",
+                "wind",
+                "out",
+                "of",
+                "his",
+                "sails",
+                "quickly",
+                "slowly",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "id1-10",
               "type": "fill_blank",
-              "prompt": "'The reviewer ___ damned the book with faint praise.' (Español: 'El crítico básicamente lo condenó con elogios tibios.')",
+              "prompt": "The reviewer ___ damned the book with faint praise. (Español: 'El crítico básicamente lo condenó con elogios tibios.')",
               "answer": "essentially",
-              "acceptableAnswers": ["basically", "effectively"]
+              "acceptableAnswers": [
+                "basically",
+                "effectively"
+              ]
             }
           ]
         },
@@ -2660,10 +3802,22 @@
               "type": "match_pairs",
               "prompt": "Phrasal verb — Significado",
               "pairs": [
-                { "left": "to gloss over", "right": "pasar de largo / minimizar" },
-                { "left": "to talk past", "right": "no escucharse mutuamente" },
-                { "left": "to square with", "right": "ser coherente con / encajar" },
-                { "left": "to hold forth", "right": "perorar largamente" }
+                {
+                  "left": "to gloss over",
+                  "right": "pasar de largo / minimizar"
+                },
+                {
+                  "left": "to talk past",
+                  "right": "no escucharse mutuamente"
+                },
+                {
+                  "left": "to square with",
+                  "right": "ser coherente con / encajar"
+                },
+                {
+                  "left": "to hold forth",
+                  "right": "perorar largamente"
+                }
               ]
             },
             {
@@ -2681,16 +3835,31 @@
             {
               "id": "id2-3",
               "type": "fill_blank",
-              "prompt": "'The report ___ over the most serious finding.' (Español: 'El informe pasó por alto el hallazgo más serio.')",
+              "prompt": "The report ___ over the most serious finding. (Español: 'El informe pasó por alto el hallazgo más serio.')",
               "answer": "glossed",
-              "acceptableAnswers": ["glides", "skated"]
+              "acceptableAnswers": [
+                "glides",
+                "skated"
+              ]
             },
             {
               "id": "id2-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Su versión no encaja con los hechos.'",
+              "prompt": "Su versión no encaja con los hechos.",
               "answer": "His version does not square with the facts",
-              "bank": ["His", "version", "does", "not", "square", "with", "the", "facts", "does", "lies", "and"]
+              "bank": [
+                "His",
+                "version",
+                "does",
+                "not",
+                "square",
+                "with",
+                "the",
+                "facts",
+                "does",
+                "lies",
+                "and"
+              ]
             },
             {
               "id": "id2-5",
@@ -2722,7 +3891,10 @@
               "type": "fill_blank",
               "prompt": "'The data don't ___ with his theory.' (Español: 'Los datos no encajan con su teoría.')",
               "answer": "square",
-              "acceptableAnswers": ["accord", "tally"]
+              "acceptableAnswers": [
+                "accord",
+                "tally"
+              ]
             },
             {
               "id": "id2-8",
@@ -2739,16 +3911,33 @@
             {
               "id": "id2-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'El primer ministro peroró sobre la economía durante una hora.'",
+              "prompt": "El primer ministro peroró sobre la economía durante una hora.",
               "answer": "The Prime Minister held forth on the economy for an hour",
-              "bank": ["The", "Prime", "Minister", "held", "forth", "on", "the", "economy", "for", "an", "hour", "in", "and"]
+              "bank": [
+                "The",
+                "Prime",
+                "Minister",
+                "held",
+                "forth",
+                "on",
+                "the",
+                "economy",
+                "for",
+                "an",
+                "hour",
+                "in",
+                "and"
+              ]
             },
             {
               "id": "id2-10",
               "type": "fill_blank",
-              "prompt": "'She ___ over the inconvenient detail.' (Español: 'Pasó por alto el detalle incómodo.')",
+              "prompt": "She ___ over the inconvenient detail. (Español: 'Pasó por alto el detalle incómodo.')",
               "answer": "glossed",
-              "acceptableAnswers": ["skated", "slid"]
+              "acceptableAnswers": [
+                "skated",
+                "slid"
+              ]
             }
           ]
         },
@@ -2764,10 +3953,22 @@
               "type": "match_pairs",
               "prompt": "Modismo — Significado",
               "pairs": [
-                { "left": "to hedge one's bets", "right": "no comprometerse al 100%" },
-                { "left": "to sit on the fence", "right": "no tomar partido" },
-                { "left": "to cover one's bases", "right": "asegurarse de todas las posibilidades" },
-                { "left": "to play devil's advocate", "right": "argumentar la posición contraria por ejercicio" }
+                {
+                  "left": "to hedge one's bets",
+                  "right": "no comprometerse al 100%"
+                },
+                {
+                  "left": "to sit on the fence",
+                  "right": "no tomar partido"
+                },
+                {
+                  "left": "to cover one's bases",
+                  "right": "asegurarse de todas las posibilidades"
+                },
+                {
+                  "left": "to play devil's advocate",
+                  "right": "argumentar la posición contraria por ejercicio"
+                }
               ]
             },
             {
@@ -2785,22 +3986,41 @@
             {
               "id": "id3-3",
               "type": "fill_blank",
-              "prompt": "'Stop ___ the fence and pick a side.' (Español: 'Deja de no decidirte y elige un lado.')",
+              "prompt": "Stop ___ the fence and pick a side. (Español: 'Deja de no decidirte y elige un lado.')",
               "answer": "sitting on",
-              "acceptableAnswers": ["sat on"]
+              "acceptableAnswers": [
+                "sat on"
+              ]
             },
             {
               "id": "id3-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Voy a hacer de abogado del diablo por un momento.'",
+              "prompt": "Voy a hacer de abogado del diablo por un momento.",
               "answer": "Let me play devil's advocate for a moment",
-              "bank": ["Let", "me", "play", "devil's", "advocate", "for", "a", "moment", "saint's", "the", "and"]
+              "bank": [
+                "Let",
+                "me",
+                "play",
+                "devil's",
+                "advocate",
+                "for",
+                "a",
+                "moment",
+                "saint's",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "id3-5",
               "type": "multiple_choice",
               "prompt": "'To cover one's bases' viene del:",
-              "options": ["béisbol", "ajedrez", "tenis", "fútbol"],
+              "options": [
+                "béisbol",
+                "ajedrez",
+                "tenis",
+                "fútbol"
+              ],
               "answer": "béisbol"
             },
             {
@@ -2819,7 +4039,7 @@
             {
               "id": "id3-7",
               "type": "fill_blank",
-              "prompt": "'I want to ___ all my bases before launching.' (Español: 'Quiero cubrir todas mis bases antes de lanzar.')",
+              "prompt": "I want to ___ all my bases before launching. (Español: 'Quiero cubrir todas mis bases antes de lanzar.')",
               "answer": "cover",
               "acceptableAnswers": []
             },
@@ -2838,16 +4058,28 @@
             {
               "id": "id3-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Cubre tus bases antes de comprometerte públicamente.'",
+              "prompt": "Cubre tus bases antes de comprometerte públicamente.",
               "answer": "Cover your bases before committing publicly",
-              "bank": ["Cover", "your", "bases", "before", "committing", "publicly", "after", "the", "and"]
+              "bank": [
+                "Cover",
+                "your",
+                "bases",
+                "before",
+                "committing",
+                "publicly",
+                "after",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "id3-10",
               "type": "fill_blank",
               "prompt": "'I'm not ___ — I genuinely don't know yet.' (Español: 'No estoy esquivando — de verdad aún no sé.')",
               "answer": "hedging",
-              "acceptableAnswers": ["dodging"]
+              "acceptableAnswers": [
+                "dodging"
+              ]
             }
           ]
         },
@@ -2863,9 +4095,18 @@
               "type": "dialogue",
               "prompt": "Copas en un pub con dos amigos británicos",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "tom", "name": "Tom" },
-                { "id": "ruth", "name": "Ruth" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "tom",
+                  "name": "Tom"
+                },
+                {
+                  "id": "ruth",
+                  "name": "Ruth"
+                }
               ],
               "turns": [
                 {
@@ -2901,7 +4142,9 @@
                   "before": "True. So it was a bit of a ",
                   "after": " — bright in places, muddy in others.",
                   "answer": "curate's egg",
-                  "acceptableAnswers": ["mixed bag"]
+                  "acceptableAnswers": [
+                    "mixed bag"
+                  ]
                 },
                 {
                   "kind": "line",
@@ -2960,14 +4203,42 @@
           },
           {
             "kind": "table",
-            "headers": ["Lo que dicen", "Lo que significa", "Lo que cree el extranjero"],
+            "headers": [
+              "Lo que dicen",
+              "Lo que significa",
+              "Lo que cree el extranjero"
+            ],
             "rows": [
-              ["'That's not bad'", "Está muy bien", "Mediocre"],
-              ["'A bit of a problem'", "Problema serio", "Problemilla pequeño"],
-              ["'I'm slightly concerned'", "Estoy muy preocupado", "Ligera preocupación"],
-              ["'Quite good'", "(UK) bueno pero no genial; (US) muy bueno", "Variable"],
-              ["'With the greatest respect'", "Vas a oír exactamente lo opuesto al respeto", "Respeto sincero"],
-              ["'Interesting'", "Discrepo / no me gusta", "Me parece interesante"]
+              [
+                "'That's not bad'",
+                "Está muy bien",
+                "Mediocre"
+              ],
+              [
+                "'A bit of a problem'",
+                "Problema serio",
+                "Problemilla pequeño"
+              ],
+              [
+                "'I'm slightly concerned'",
+                "Estoy muy preocupado",
+                "Ligera preocupación"
+              ],
+              [
+                "'Quite good'",
+                "(UK) bueno pero no genial; (US) muy bueno",
+                "Variable"
+              ],
+              [
+                "'With the greatest respect'",
+                "Vas a oír exactamente lo opuesto al respeto",
+                "Respeto sincero"
+              ],
+              [
+                "'Interesting'",
+                "Discrepo / no me gusta",
+                "Me parece interesante"
+              ]
             ]
           },
           {
@@ -2977,10 +4248,22 @@
           {
             "kind": "examples",
             "rows": [
-              { "source": "Well, that went swimmingly. (when something failed)", "translation": "Bueno, eso salió de maravilla. (cuando fue un desastre)" },
-              { "source": "Oh, brilliant. Just what we needed.", "translation": "Ay, qué maravilla. Justo lo que necesitábamos." },
-              { "source": "I'm sure that'll work out perfectly.", "translation": "Seguro que sale a la perfección. (sarcástico)" },
-              { "source": "Famous last words.", "translation": "Las últimas palabras famosas (= eso quisieras)." }
+              {
+                "source": "Well, that went swimmingly. (when something failed)",
+                "translation": "Bueno, eso salió de maravilla. (cuando fue un desastre)"
+              },
+              {
+                "source": "Oh, brilliant. Just what we needed.",
+                "translation": "Ay, qué maravilla. Justo lo que necesitábamos."
+              },
+              {
+                "source": "I'm sure that'll work out perfectly.",
+                "translation": "Seguro que sale a la perfección. (sarcástico)"
+              },
+              {
+                "source": "Famous last words.",
+                "translation": "Las últimas palabras famosas (= eso quisieras)."
+              }
             ]
           },
           {
@@ -3003,10 +4286,22 @@
               "type": "match_pairs",
               "prompt": "Lo que dicen — Lo que significa",
               "pairs": [
-                { "left": "not bad", "right": "muy bien (UK)" },
-                { "left": "a bit of a problem", "right": "problema serio" },
-                { "left": "slightly concerned", "right": "muy preocupado" },
-                { "left": "with the greatest respect", "right": "voy a contradecirte" }
+                {
+                  "left": "not bad",
+                  "right": "muy bien (UK)"
+                },
+                {
+                  "left": "a bit of a problem",
+                  "right": "problema serio"
+                },
+                {
+                  "left": "slightly concerned",
+                  "right": "muy preocupado"
+                },
+                {
+                  "left": "with the greatest respect",
+                  "right": "voy a contradecirte"
+                }
               ]
             },
             {
@@ -3026,14 +4321,31 @@
               "type": "fill_blank",
               "prompt": "'We're ___ of a problem here.' (Español: 'Tenemos un problema serio, dicho con understatement.')",
               "answer": "having a bit",
-              "acceptableAnswers": ["having a touch", "having something"]
+              "acceptableAnswers": [
+                "having a touch",
+                "having something"
+              ]
             },
             {
               "id": "ir1-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Diría que es interesante — lo cual, en UK, significa que discrepo.'",
+              "prompt": "Diría que es interesante — lo cual, en UK, significa que discrepo.",
               "answer": "I'd say it's interesting which in the UK means I disagree",
-              "bank": ["I'd", "say", "it's", "interesting", "which", "in", "the", "UK", "means", "I", "disagree", "agree", "and"]
+              "bank": [
+                "I'd",
+                "say",
+                "it's",
+                "interesting",
+                "which",
+                "in",
+                "the",
+                "UK",
+                "means",
+                "I",
+                "disagree",
+                "agree",
+                "and"
+              ]
             },
             {
               "id": "ir1-5",
@@ -3065,7 +4377,9 @@
               "type": "fill_blank",
               "prompt": "'I'd be ___ in disagreeing.' (Español: 'Me veo obligado a discrepar — fórmula educadísima.')",
               "answer": "minded",
-              "acceptableAnswers": ["inclined"]
+              "acceptableAnswers": [
+                "inclined"
+              ]
             },
             {
               "id": "ir1-8",
@@ -3082,16 +4396,29 @@
             {
               "id": "ir1-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Eso quizás haya sido un poco desafortunado.'",
+              "prompt": "Eso quizás haya sido un poco desafortunado.",
               "answer": "That may have been somewhat unfortunate",
-              "bank": ["That", "may", "have", "been", "somewhat", "unfortunate", "very", "the", "and"]
+              "bank": [
+                "That",
+                "may",
+                "have",
+                "been",
+                "somewhat",
+                "unfortunate",
+                "very",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "ir1-10",
               "type": "fill_blank",
               "prompt": "'Quite ___' (UK) de tu jefe significa 'bueno pero no genial'. ¿Adjetivo común?",
               "answer": "good",
-              "acceptableAnswers": ["nice", "alright"]
+              "acceptableAnswers": [
+                "nice",
+                "alright"
+              ]
             }
           ]
         },
@@ -3107,10 +4434,22 @@
               "type": "match_pairs",
               "prompt": "Frase — Subtexto",
               "pairs": [
-                { "left": "Oh, brilliant.", "right": "qué desastre" },
-                { "left": "Just what we needed.", "right": "lo último que queríamos" },
-                { "left": "I'm sure that'll work.", "right": "no va a funcionar" },
-                { "left": "Famous last words.", "right": "te vas a equivocar" }
+                {
+                  "left": "Oh, brilliant.",
+                  "right": "qué desastre"
+                },
+                {
+                  "left": "Just what we needed.",
+                  "right": "lo último que queríamos"
+                },
+                {
+                  "left": "I'm sure that'll work.",
+                  "right": "no va a funcionar"
+                },
+                {
+                  "left": "Famous last words.",
+                  "right": "te vas a equivocar"
+                }
               ]
             },
             {
@@ -3128,16 +4467,33 @@
             {
               "id": "ir2-3",
               "type": "fill_blank",
-              "prompt": "'Oh, ___. Just what we needed.' (Español: 'sarcasmo: irónico elogio')",
+              "prompt": "Oh, ___. Just what we needed. (Español: 'sarcasmo: irónico elogio')",
               "answer": "brilliant",
-              "acceptableAnswers": ["lovely", "wonderful", "great"]
+              "acceptableAnswers": [
+                "lovely",
+                "wonderful",
+                "great"
+              ]
             },
             {
               "id": "ir2-4",
               "type": "tap_words_in_order",
               "prompt": "Forma la oración sarcástica: 'Seguro que esto resulta exactamente como planeamos.'",
               "answer": "I'm sure this will turn out exactly as planned",
-              "bank": ["I'm", "sure", "this", "will", "turn", "out", "exactly", "as", "planned", "differently", "the", "and"]
+              "bank": [
+                "I'm",
+                "sure",
+                "this",
+                "will",
+                "turn",
+                "out",
+                "exactly",
+                "as",
+                "planned",
+                "differently",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "ir2-5",
@@ -3169,7 +4525,10 @@
               "type": "fill_blank",
               "prompt": "Después de tropezarte: 'Well, that was ___' (Español: 'sarcasmo: 'eso fue elegante', dicho irónicamente')",
               "answer": "graceful",
-              "acceptableAnswers": ["elegant", "smooth"]
+              "acceptableAnswers": [
+                "elegant",
+                "smooth"
+              ]
             },
             {
               "id": "ir2-8",
@@ -3188,14 +4547,28 @@
               "type": "tap_words_in_order",
               "prompt": "Forma la oración sarcástica: 'Bueno, esto está saliendo de maravilla.'",
               "answer": "Well this is going swimmingly",
-              "bank": ["Well", "this", "is", "going", "swimmingly", "badly", "the", "and"]
+              "bank": [
+                "Well",
+                "this",
+                "is",
+                "going",
+                "swimmingly",
+                "badly",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "ir2-10",
               "type": "fill_blank",
-              "prompt": "'Oh, ___, more emails.' (Español: '¡qué alegría! — sarcasmo)",
+              "prompt": "Oh, ___, more emails. (Español: '¡qué alegría! — sarcasmo)",
               "answer": "wonderful",
-              "acceptableAnswers": ["brilliant", "lovely", "great", "joy"]
+              "acceptableAnswers": [
+                "brilliant",
+                "lovely",
+                "great",
+                "joy"
+              ]
             }
           ]
         },
@@ -3211,10 +4584,22 @@
               "type": "match_pairs",
               "prompt": "Eufemismo — Sentido directo",
               "pairs": [
-                { "left": "let go (from a job)", "right": "despedido" },
-                { "left": "passed away", "right": "murió" },
-                { "left": "between jobs", "right": "desempleado" },
-                { "left": "economical with the truth", "right": "mintió" }
+                {
+                  "left": "let go (from a job)",
+                  "right": "despedido"
+                },
+                {
+                  "left": "passed away",
+                  "right": "murió"
+                },
+                {
+                  "left": "between jobs",
+                  "right": "desempleado"
+                },
+                {
+                  "left": "economical with the truth",
+                  "right": "mintió"
+                }
               ]
             },
             {
@@ -3232,16 +4617,29 @@
             {
               "id": "ir3-3",
               "type": "fill_blank",
-              "prompt": "'My grandmother ___ away last spring.' (Español: 'falleció — eufemismo común')",
+              "prompt": "My grandmother ___ away last spring. (Español: 'falleció — eufemismo común')",
               "answer": "passed",
               "acceptableAnswers": []
             },
             {
               "id": "ir3-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'El ministro fue, digamos, económico con la verdad.'",
+              "prompt": "El ministro fue, digamos, económico con la verdad.",
               "answer": "The minister was let us say economical with the truth",
-              "bank": ["The", "minister", "was", "let", "us", "say", "economical", "with", "the", "truth", "honest", "and"]
+              "bank": [
+                "The",
+                "minister",
+                "was",
+                "let",
+                "us",
+                "say",
+                "economical",
+                "with",
+                "the",
+                "truth",
+                "honest",
+                "and"
+              ]
             },
             {
               "id": "ir3-5",
@@ -3290,9 +4688,22 @@
             {
               "id": "ir3-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'La empresa anunció una reorganización estratégica de la plantilla.'",
+              "prompt": "La empresa anunció una reorganización estratégica de la plantilla.",
               "answer": "The company announced a strategic restructuring of the workforce",
-              "bank": ["The", "company", "announced", "a", "strategic", "restructuring", "of", "the", "workforce", "growth", "the", "and"]
+              "bank": [
+                "The",
+                "company",
+                "announced",
+                "a",
+                "strategic",
+                "restructuring",
+                "of",
+                "the",
+                "workforce",
+                "growth",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "ir3-10",
@@ -3315,9 +4726,18 @@
               "type": "dialogue",
               "prompt": "Sala de guion de un programa satírico",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "ben", "name": "Ben (head writer)" },
-                { "id": "leah", "name": "Leah" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ben",
+                  "name": "Ben (head writer)"
+                },
+                {
+                  "id": "leah",
+                  "name": "Leah"
+                }
               ],
               "turns": [
                 {
@@ -3353,7 +4773,10 @@
                   "before": "Exactly. The reading needs to be utterly ",
                   "after": " — like she genuinely believes what she's saying.",
                   "answer": "deadpan",
-                  "acceptableAnswers": ["straight", "flat"]
+                  "acceptableAnswers": [
+                    "straight",
+                    "flat"
+                  ]
                 },
                 {
                   "kind": "line",
@@ -3412,13 +4835,37 @@
           },
           {
             "kind": "table",
-            "headers": ["Forma", "Definición", "Ejemplo"],
+            "headers": [
+              "Forma",
+              "Definición",
+              "Ejemplo"
+            ],
             "rows": [
-              ["sonnet", "14 versos, métrica regular", "Shakespeare's sonnets"],
-              ["iambic pentameter", "5 pies de 2 sílabas (átona-tónica)", "'Shall I compare thee to a summer's day?'"],
-              ["free verse", "sin métrica regular ni rima", "Whitman, Eliot's later work"],
-              ["haiku", "3 versos: 5-7-5 sílabas", "(forma japonesa, importada al inglés)"],
-              ["rhyme scheme", "patrón de rimas finales", "ABAB / AABB / ABBA"]
+              [
+                "sonnet",
+                "14 versos, métrica regular",
+                "Shakespeare's sonnets"
+              ],
+              [
+                "iambic pentameter",
+                "5 pies de 2 sílabas (átona-tónica)",
+                "'Shall I compare thee to a summer's day?'"
+              ],
+              [
+                "free verse",
+                "sin métrica regular ni rima",
+                "Whitman, Eliot's later work"
+              ],
+              [
+                "haiku",
+                "3 versos: 5-7-5 sílabas",
+                "(forma japonesa, importada al inglés)"
+              ],
+              [
+                "rhyme scheme",
+                "patrón de rimas finales",
+                "ABAB / AABB / ABBA"
+              ]
             ]
           },
           {
@@ -3428,13 +4875,34 @@
           {
             "kind": "examples",
             "rows": [
-              { "source": "to be or not to be (Shakespeare)", "translation": "ser o no ser — duda existencial" },
-              { "source": "the writing on the wall (Bible, Daniel)", "translation": "señal evidente de desgracia inminente" },
-              { "source": "Pandora's box (Greek myth)", "translation": "caja de Pandora — desencadenar problemas irreversibles" },
-              { "source": "an Achilles' heel (Greek myth)", "translation": "talón de Aquiles — punto débil" },
-              { "source": "a Pyrrhic victory (Greek history)", "translation": "victoria pírrica" },
-              { "source": "to cross the Rubicon (Roman history)", "translation": "cruzar el Rubicón — punto de no retorno" },
-              { "source": "the prodigal son (Bible)", "translation": "el hijo pródigo" }
+              {
+                "source": "to be or not to be (Shakespeare)",
+                "translation": "ser o no ser — duda existencial"
+              },
+              {
+                "source": "the writing on the wall (Bible, Daniel)",
+                "translation": "señal evidente de desgracia inminente"
+              },
+              {
+                "source": "Pandora's box (Greek myth)",
+                "translation": "caja de Pandora — desencadenar problemas irreversibles"
+              },
+              {
+                "source": "an Achilles' heel (Greek myth)",
+                "translation": "talón de Aquiles — punto débil"
+              },
+              {
+                "source": "a Pyrrhic victory (Greek history)",
+                "translation": "victoria pírrica"
+              },
+              {
+                "source": "to cross the Rubicon (Roman history)",
+                "translation": "cruzar el Rubicón — punto de no retorno"
+              },
+              {
+                "source": "the prodigal son (Bible)",
+                "translation": "el hijo pródigo"
+              }
             ]
           },
           {
@@ -3457,10 +4925,22 @@
               "type": "match_pairs",
               "prompt": "Forma — Definición",
               "pairs": [
-                { "left": "sonnet", "right": "14 versos" },
-                { "left": "iambic pentameter", "right": "5 pies átona-tónica" },
-                { "left": "free verse", "right": "sin métrica regular" },
-                { "left": "haiku", "right": "5-7-5 sílabas" }
+                {
+                  "left": "sonnet",
+                  "right": "14 versos"
+                },
+                {
+                  "left": "iambic pentameter",
+                  "right": "5 pies átona-tónica"
+                },
+                {
+                  "left": "free verse",
+                  "right": "sin métrica regular"
+                },
+                {
+                  "left": "haiku",
+                  "right": "5-7-5 sílabas"
+                }
               ]
             },
             {
@@ -3478,16 +4958,30 @@
             {
               "id": "po1-3",
               "type": "fill_blank",
-              "prompt": "'A sonnet has ___ lines.' (Español: 'un soneto tiene catorce versos.')",
+              "prompt": "A sonnet has ___ lines. (Español: 'un soneto tiene catorce versos.')",
               "answer": "fourteen",
-              "acceptableAnswers": ["14"]
+              "acceptableAnswers": [
+                "14"
+              ]
             },
             {
               "id": "po1-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: '¿Te compararé a un día de verano?'",
+              "prompt": "¿Te compararé a un día de verano?",
               "answer": "Shall I compare thee to a summer's day",
-              "bank": ["Shall", "I", "compare", "thee", "to", "a", "summer's", "day", "night", "the", "and"]
+              "bank": [
+                "Shall",
+                "I",
+                "compare",
+                "thee",
+                "to",
+                "a",
+                "summer's",
+                "day",
+                "night",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "po1-5",
@@ -3517,7 +5011,7 @@
             {
               "id": "po1-7",
               "type": "fill_blank",
-              "prompt": "'The Shakespearean sonnet ends with a rhymed ___.' (Español: 'pareado / dos versos finales rimados')",
+              "prompt": "The Shakespearean sonnet ends with a rhymed ___. (Español: 'pareado / dos versos finales rimados')",
               "answer": "couplet",
               "acceptableAnswers": []
             },
@@ -3538,12 +5032,24 @@
               "type": "tap_words_in_order",
               "prompt": "Forma el verso: 'Y eso ha marcado toda la diferencia.'",
               "answer": "And that has made all the difference",
-              "bank": ["And", "that", "has", "made", "all", "the", "difference", "different", "the", "had", "and"]
+              "bank": [
+                "And",
+                "that",
+                "has",
+                "made",
+                "all",
+                "the",
+                "difference",
+                "different",
+                "the",
+                "had",
+                "and"
+              ]
             },
             {
               "id": "po1-10",
               "type": "fill_blank",
-              "prompt": "'Whose woods these are I think I ___.' (Español: 'Frost: 'creo saber de quién son estos bosques'.)",
+              "prompt": "Whose woods these are I think I ___. (Español: 'Frost: 'creo saber de quién son estos bosques'.)",
               "answer": "know",
               "acceptableAnswers": []
             }
@@ -3561,10 +5067,22 @@
               "type": "match_pairs",
               "prompt": "Frase — Origen",
               "pairs": [
-                { "left": "to be or not to be", "right": "Hamlet (existencia)" },
-                { "left": "star-crossed lovers", "right": "Romeo and Juliet" },
-                { "left": "out, damned spot", "right": "Macbeth (culpa)" },
-                { "left": "the lady doth protest too much", "right": "Hamlet (sospechosamente)" }
+                {
+                  "left": "to be or not to be",
+                  "right": "Hamlet (existencia)"
+                },
+                {
+                  "left": "star-crossed lovers",
+                  "right": "Romeo and Juliet"
+                },
+                {
+                  "left": "out, damned spot",
+                  "right": "Macbeth (culpa)"
+                },
+                {
+                  "left": "the lady doth protest too much",
+                  "right": "Hamlet (sospechosamente)"
+                }
               ]
             },
             {
@@ -3582,16 +5100,23 @@
             {
               "id": "po2-3",
               "type": "fill_blank",
-              "prompt": "'To be or not to be, that is the ___.' (Español: 'Hamlet: 'esa es la cuestión'.)",
+              "prompt": "To be or not to be, that is the ___. (Español: 'Hamlet: 'esa es la cuestión'.)",
               "answer": "question",
               "acceptableAnswers": []
             },
             {
               "id": "po2-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: '¡Vete, mancha maldita!'",
+              "prompt": "¡Vete, mancha maldita!",
               "answer": "Out damned spot",
-              "bank": ["Out", "damned", "spot", "out", "the", "and"]
+              "bank": [
+                "Out",
+                "damned",
+                "spot",
+                "out",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "po2-5",
@@ -3640,9 +5165,21 @@
             {
               "id": "po2-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Es un cuento contado por un idiota.'",
+              "prompt": "Es un cuento contado por un idiota.",
               "answer": "It is a tale told by an idiot",
-              "bank": ["It", "is", "a", "tale", "told", "by", "an", "idiot", "wise", "the", "and"]
+              "bank": [
+                "It",
+                "is",
+                "a",
+                "tale",
+                "told",
+                "by",
+                "an",
+                "idiot",
+                "wise",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "po2-10",
@@ -3665,10 +5202,22 @@
               "type": "match_pairs",
               "prompt": "Alusión — Origen",
               "pairs": [
-                { "left": "the writing on the wall", "right": "Biblia (Daniel)" },
-                { "left": "Pandora's box", "right": "Mito griego" },
-                { "left": "an Achilles' heel", "right": "Mito griego (Aquiles)" },
-                { "left": "to cross the Rubicon", "right": "Historia romana (César)" }
+                {
+                  "left": "the writing on the wall",
+                  "right": "Biblia (Daniel)"
+                },
+                {
+                  "left": "Pandora's box",
+                  "right": "Mito griego"
+                },
+                {
+                  "left": "an Achilles' heel",
+                  "right": "Mito griego (Aquiles)"
+                },
+                {
+                  "left": "to cross the Rubicon",
+                  "right": "Historia romana (César)"
+                }
               ]
             },
             {
@@ -3686,16 +5235,28 @@
             {
               "id": "po3-3",
               "type": "fill_blank",
-              "prompt": "'an ___ heel' (Español: 'talón de Aquiles — punto débil')",
+              "prompt": "an ___ heel (Español: 'talón de Aquiles — punto débil')",
               "answer": "Achilles",
               "acceptableAnswers": []
             },
             {
               "id": "po3-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Cruzaron el Rubicón al firmar el acuerdo.'",
+              "prompt": "Cruzaron el Rubicón al firmar el acuerdo.",
               "answer": "They crossed the Rubicon by signing the agreement",
-              "bank": ["They", "crossed", "the", "Rubicon", "by", "signing", "the", "agreement", "river", "the", "and"]
+              "bank": [
+                "They",
+                "crossed",
+                "the",
+                "Rubicon",
+                "by",
+                "signing",
+                "the",
+                "agreement",
+                "river",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "po3-5",
@@ -3725,7 +5286,7 @@
             {
               "id": "po3-7",
               "type": "fill_blank",
-              "prompt": "'feet of ___' (Español: 'pies de barro — fragilidad oculta')",
+              "prompt": "feet of ___ (Español: 'pies de barro — fragilidad oculta')",
               "answer": "clay",
               "acceptableAnswers": []
             },
@@ -3744,16 +5305,32 @@
             {
               "id": "po3-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Su retorno fue celebrado como el del hijo pródigo.'",
+              "prompt": "Su retorno fue celebrado como el del hijo pródigo.",
               "answer": "His return was hailed as that of the prodigal son",
-              "bank": ["His", "return", "was", "hailed", "as", "that", "of", "the", "prodigal", "son", "lost", "the", "and"]
+              "bank": [
+                "His",
+                "return",
+                "was",
+                "hailed",
+                "as",
+                "that",
+                "of",
+                "the",
+                "prodigal",
+                "son",
+                "lost",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "po3-10",
               "type": "fill_blank",
-              "prompt": "'a thorn in my ___' (Español: 'espina en mi costado — molestia persistente, de la Biblia')",
+              "prompt": "a thorn in my ___ (Español: 'espina en mi costado — molestia persistente, de la Biblia')",
               "answer": "side",
-              "acceptableAnswers": ["flesh"]
+              "acceptableAnswers": [
+                "flesh"
+              ]
             }
           ]
         },
@@ -3769,9 +5346,18 @@
               "type": "dialogue",
               "prompt": "Lectura de poesía y Q&A con la autora",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "poet", "name": "Poet" },
-                { "id": "host", "name": "Host" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "poet",
+                  "name": "Poet"
+                },
+                {
+                  "id": "host",
+                  "name": "Host"
+                }
               ],
               "turns": [
                 {
@@ -3807,7 +5393,10 @@
                   "before": "That makes sense — the line carries the weight of the original without ",
                   "after": " its theology.",
                   "answer": "endorsing",
-                  "acceptableAnswers": ["claiming", "asserting"]
+                  "acceptableAnswers": [
+                    "claiming",
+                    "asserting"
+                  ]
                 },
                 {
                   "kind": "line",
@@ -3892,39 +5481,76 @@
               "id": "rv1-1",
               "type": "multiple_choice",
               "prompt": "¿Qué se usa en el habla cotidiana en lugar de 'commence'?",
-              "options": ["start", "stop", "stop start", "completed"],
+              "options": [
+                "start",
+                "stop",
+                "stop start",
+                "completed"
+              ],
               "answer": "start"
             },
             {
               "id": "rv1-2",
               "type": "fill_blank",
-              "prompt": "'A faint ___ of jasmine drifted through the room.' (Español: 'Una leve fragancia de jazmín flotaba por la habitación.')",
+              "prompt": "A faint ___ of jasmine drifted through the room. (Español: 'Una leve fragancia de jazmín flotaba por la habitación.')",
               "answer": "fragrance",
-              "acceptableAnswers": ["aroma", "odour", "scent", "odor"]
+              "acceptableAnswers": [
+                "aroma",
+                "odour",
+                "scent",
+                "odor"
+              ]
             },
             {
               "id": "rv1-3",
               "type": "match_pairs",
               "prompt": "Figura — Español",
               "pairs": [
-                { "left": "anaphora", "right": "repetición al inicio" },
-                { "left": "antithesis", "right": "contraste / oposición" },
-                { "left": "chiasmus", "right": "repetición cruzada" },
-                { "left": "tricolon", "right": "estructura triple" }
+                {
+                  "left": "anaphora",
+                  "right": "repetición al inicio"
+                },
+                {
+                  "left": "antithesis",
+                  "right": "contraste / oposición"
+                },
+                {
+                  "left": "chiasmus",
+                  "right": "repetición cruzada"
+                },
+                {
+                  "left": "tricolon",
+                  "right": "estructura triple"
+                }
               ]
             },
             {
               "id": "rv1-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Vine, vi, vencí.'",
+              "prompt": "Vine, vi, vencí.",
               "answer": "I came I saw I conquered",
-              "bank": ["I", "came", "I", "saw", "I", "conquered", "lost", "the", "and"]
+              "bank": [
+                "I",
+                "came",
+                "I",
+                "saw",
+                "I",
+                "conquered",
+                "lost",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "rv1-5",
               "type": "multiple_choice",
               "prompt": "Tono de 'Make no mistake':",
-              "options": ["escéptico", "advertencia enfática", "ambiguo", "indiferente"],
+              "options": [
+                "escéptico",
+                "advertencia enfática",
+                "ambiguo",
+                "indiferente"
+              ],
               "answer": "advertencia enfática"
             },
             {
@@ -3943,7 +5569,7 @@
             {
               "id": "rv1-7",
               "type": "fill_blank",
-              "prompt": "'It was the best of times, it was the ___ of times.' (Español: 'antithesis clásico')",
+              "prompt": "It was the best of times, it was the ___ of times. (Español: 'antithesis clásico')",
               "answer": "worst",
               "acceptableAnswers": []
             },
@@ -3962,14 +5588,27 @@
             {
               "id": "rv1-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'El silencio era una pesada cortina apretándole los oídos.'",
+              "prompt": "El silencio era una pesada cortina apretándole los oídos.",
               "answer": "Silence was a heavy curtain pressing against her ears",
-              "bank": ["Silence", "was", "a", "heavy", "curtain", "pressing", "against", "her", "ears", "the", "his", "press"]
+              "bank": [
+                "Silence",
+                "was",
+                "a",
+                "heavy",
+                "curtain",
+                "pressing",
+                "against",
+                "her",
+                "ears",
+                "the",
+                "his",
+                "press"
+              ]
             },
             {
               "id": "rv1-10",
               "type": "fill_blank",
-              "prompt": "'Government of the people, by the people, ___ the people.' (Español: 'epistrophe + Gettysburg.')",
+              "prompt": "Government of the people, by the people, ___ the people. (Español: 'epistrophe + Gettysburg.')",
               "answer": "for",
               "acceptableAnswers": []
             }
@@ -3987,10 +5626,22 @@
               "type": "match_pairs",
               "prompt": "Empareja",
               "pairs": [
-                { "left": "free will", "right": "libre albedrío" },
-                { "left": "epistemology", "right": "teoría del conocimiento" },
-                { "left": "lift (UK)", "right": "elevator (US)" },
-                { "left": "boot (UK)", "right": "trunk (US)" }
+                {
+                  "left": "free will",
+                  "right": "libre albedrío"
+                },
+                {
+                  "left": "epistemology",
+                  "right": "teoría del conocimiento"
+                },
+                {
+                  "left": "lift (UK)",
+                  "right": "elevator (US)"
+                },
+                {
+                  "left": "boot (UK)",
+                  "right": "trunk (US)"
+                }
               ]
             },
             {
@@ -4008,16 +5659,31 @@
             {
               "id": "rv2-3",
               "type": "fill_blank",
-              "prompt": "'Correlation does not ___ causation.' (Español: 'Correlación no implica causalidad.')",
+              "prompt": "Correlation does not ___ causation. (Español: 'Correlación no implica causalidad.')",
               "answer": "imply",
-              "acceptableAnswers": ["entail", "suggest", "indicate"]
+              "acceptableAnswers": [
+                "entail",
+                "suggest",
+                "indicate"
+              ]
             },
             {
               "id": "rv2-4",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Tendríamos que haber sido más cuidadosos.'",
+              "prompt": "Tendríamos que haber sido más cuidadosos.",
               "answer": "We ought to have been more careful",
-              "bank": ["We", "ought", "to", "have", "been", "more", "careful", "less", "the", "ought"]
+              "bank": [
+                "We",
+                "ought",
+                "to",
+                "have",
+                "been",
+                "more",
+                "careful",
+                "less",
+                "the",
+                "ought"
+              ]
             },
             {
               "id": "rv2-5",
@@ -4036,36 +5702,62 @@
               "id": "rv2-6",
               "type": "multiple_choice",
               "prompt": "En slang australiano, 'arvo' es:",
-              "options": ["mañana", "tarde / afternoon", "noche", "amanecer"],
+              "options": [
+                "mañana",
+                "tarde / afternoon",
+                "noche",
+                "amanecer"
+              ],
               "answer": "tarde / afternoon"
             },
             {
               "id": "rv2-7",
               "type": "fill_blank",
-              "prompt": "'The argument ___ a category mistake.' (Español: 'El argumento comete un error categorial.')",
+              "prompt": "The argument ___ a category mistake. (Español: 'El argumento comete un error categorial.')",
               "answer": "commits",
-              "acceptableAnswers": ["makes"]
+              "acceptableAnswers": [
+                "makes"
+              ]
             },
             {
               "id": "rv2-8",
               "type": "multiple_choice",
               "prompt": "En UK, 'vacaciones' se dice:",
-              "options": ["vacation", "holiday", "leave", "off-day"],
+              "options": [
+                "vacation",
+                "holiday",
+                "leave",
+                "off-day"
+              ],
               "answer": "holiday"
             },
             {
               "id": "rv2-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'La distinción entre el sujeto que conoce y el objeto conocido es problemática.'",
+              "prompt": "La distinción entre el sujeto que conoce y el objeto conocido es problemática.",
               "answer": "The distinction between knower and known is problematic",
-              "bank": ["The", "distinction", "between", "knower", "and", "known", "is", "problematic", "easy", "the", "the"]
+              "bank": [
+                "The",
+                "distinction",
+                "between",
+                "knower",
+                "and",
+                "known",
+                "is",
+                "problematic",
+                "easy",
+                "the",
+                "the"
+              ]
             },
             {
               "id": "rv2-10",
               "type": "fill_blank",
               "prompt": "Ortografía UK: 'The ___ of the campaign.' (Español: 'color')",
               "answer": "colour",
-              "acceptableAnswers": ["color"]
+              "acceptableAnswers": [
+                "color"
+              ]
             }
           ]
         },
@@ -4091,26 +5783,46 @@
             {
               "id": "rv3-2",
               "type": "fill_blank",
-              "prompt": "'While this view has ___, it overlooks structural causes.' (Español: 'mérito')",
+              "prompt": "While this view has ___, it overlooks structural causes. (Español: 'mérito')",
               "answer": "merit",
-              "acceptableAnswers": ["worth", "value"]
+              "acceptableAnswers": [
+                "worth",
+                "value"
+              ]
             },
             {
               "id": "rv3-3",
               "type": "match_pairs",
               "prompt": "Modismo — Significado",
               "pairs": [
-                { "left": "a curate's egg", "right": "mezcla de bueno y malo" },
-                { "left": "Pyrrhic victory", "right": "victoria muy costosa" },
-                { "left": "the elephant in the room", "right": "tema obvio que nadie nombra" },
-                { "left": "to throw in the towel", "right": "rendirse" }
+                {
+                  "left": "a curate's egg",
+                  "right": "mezcla de bueno y malo"
+                },
+                {
+                  "left": "Pyrrhic victory",
+                  "right": "victoria muy costosa"
+                },
+                {
+                  "left": "the elephant in the room",
+                  "right": "tema obvio que nadie nombra"
+                },
+                {
+                  "left": "to throw in the towel",
+                  "right": "rendirse"
+                }
               ]
             },
             {
               "id": "rv3-4",
               "type": "multiple_choice",
               "prompt": "Un británico dice 'not bad'. Probablemente significa:",
-              "options": ["mediocre", "muy bien", "malo", "no opina"],
+              "options": [
+                "mediocre",
+                "muy bien",
+                "malo",
+                "no opina"
+              ],
               "answer": "muy bien"
             },
             {
@@ -4129,7 +5841,7 @@
             {
               "id": "rv3-6",
               "type": "fill_blank",
-              "prompt": "'an ___ heel' (Español: 'talón de Aquiles')",
+              "prompt": "an ___ heel (Español: 'talón de Aquiles')",
               "answer": "Achilles",
               "acceptableAnswers": []
             },
@@ -4148,23 +5860,40 @@
             {
               "id": "rv3-8",
               "type": "fill_blank",
-              "prompt": "'Future research should ___ this question.' (Español: 'examinar / investigar')",
+              "prompt": "Future research should ___ this question. (Español: 'examinar / investigar')",
               "answer": "investigate",
-              "acceptableAnswers": ["address", "examine", "explore"]
+              "acceptableAnswers": [
+                "address",
+                "examine",
+                "explore"
+              ]
             },
             {
               "id": "rv3-9",
               "type": "tap_words_in_order",
-              "prompt": "Forma la oración: 'Las implicaciones se extienden más allá de una sola disciplina.'",
+              "prompt": "Las implicaciones se extienden más allá de una sola disciplina.",
               "answer": "The implications extend beyond a single discipline",
-              "bank": ["The", "implications", "extend", "beyond", "a", "single", "discipline", "many", "the", "and"]
+              "bank": [
+                "The",
+                "implications",
+                "extend",
+                "beyond",
+                "a",
+                "single",
+                "discipline",
+                "many",
+                "the",
+                "and"
+              ]
             },
             {
               "id": "rv3-10",
               "type": "fill_blank",
-              "prompt": "'Make no ___: this policy will define a generation.' (Español: 'No se equivoquen — apertura op-ed.')",
+              "prompt": "Make no ___: this policy will define a generation. (Español: 'No se equivoquen — apertura op-ed.')",
               "answer": "mistake",
-              "acceptableAnswers": ["error"]
+              "acceptableAnswers": [
+                "error"
+              ]
             }
           ]
         },
@@ -4180,8 +5909,14 @@
               "type": "dialogue",
               "prompt": "Editor literario revisando manuscrito",
               "speakers": [
-                { "id": "you", "name": "You" },
-                { "id": "ed", "name": "Editor" }
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "ed",
+                  "name": "Editor"
+                }
               ],
               "turns": [
                 {
@@ -4212,7 +5947,9 @@
                   "before": "I think you've put your finger on something I've been ",
                   "after": " around for months.",
                   "answer": "circling",
-                  "acceptableAnswers": ["dancing"]
+                  "acceptableAnswers": [
+                    "dancing"
+                  ]
                 },
                 {
                   "kind": "line",

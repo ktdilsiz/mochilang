@@ -293,8 +293,9 @@
             },
             {
               "id": "alp2-3",
-              "type": "fill_blank",
-              "prompt": "'house' significa ___ en español.",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "house",
               "answer": "casa",
               "acceptableAnswers": [
                 "hogar"
@@ -371,7 +372,7 @@
             {
               "id": "alp2-9",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Tengo una mano.' (literalmente 'Yo tengo una mano')",
+              "prompt": "Tengo una mano. (literalmente 'Yo tengo una mano')",
               "answer": "I have a hand",
               "bank": [
                 "I",
@@ -446,8 +447,9 @@
             },
             {
               "id": "alp3-3",
-              "type": "fill_blank",
-              "prompt": "'very' significa ___ en español.",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "very",
               "answer": "muy",
               "acceptableAnswers": []
             },
@@ -502,7 +504,7 @@
             {
               "id": "alp3-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Es muy bueno.'",
+              "prompt": "Es muy bueno.",
               "answer": "It is very good",
               "bank": [
                 "It",
@@ -578,8 +580,9 @@
             },
             {
               "id": "alp4-2",
-              "type": "fill_blank",
-              "prompt": "'three' significa ___ en español.",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "three",
               "answer": "tres",
               "acceptableAnswers": []
             },
@@ -671,7 +674,7 @@
             {
               "id": "alp4-9",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Pienso que esto es bueno.'",
+              "prompt": "Pienso que esto es bueno.",
               "answer": "I think this is good",
               "bank": [
                 "I",
@@ -804,7 +807,7 @@
             {
               "id": "alp5-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena la pregunta: '¿Cómo se deletrea?'",
+              "prompt": "¿Cómo se deletrea?",
               "answer": "How do you spell it",
               "bank": [
                 "How",
@@ -1161,7 +1164,7 @@
             {
               "id": "grt1-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Hola, mi nombre es Ana.'",
+              "prompt": "Hola, mi nombre es Ana.",
               "answer": "Hello my name is Ana",
               "bank": [
                 "Hello",
@@ -1306,7 +1309,7 @@
             {
               "id": "grt2-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¡Buenos días, profesor!'",
+              "prompt": "¡Buenos días, profesor!",
               "answer": "Good morning teacher",
               "bank": [
                 "Good",
@@ -1458,7 +1461,7 @@
             {
               "id": "grt3-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Estoy muy bien, gracias.'",
+              "prompt": "Estoy muy bien, gracias.",
               "answer": "I am very well thanks",
               "bank": [
                 "I",
@@ -1544,8 +1547,9 @@
             },
             {
               "id": "grt4-3",
-              "type": "fill_blank",
-              "prompt": "'Lo siento' en inglés: '___'",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Lo siento",
               "answer": "Sorry",
               "acceptableAnswers": [
                 "sorry",
@@ -1603,7 +1607,7 @@
             {
               "id": "grt4-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Gracias, por favor.' (en inglés)",
+              "prompt": "Gracias, por favor. (en inglés)",
               "answer": "Thank you please",
               "bank": [
                 "Thank",
@@ -1733,7 +1737,7 @@
             {
               "id": "grt5-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¡Nos vemos el lunes!'",
+              "prompt": "¡Nos vemos el lunes!",
               "answer": "See you on Monday",
               "bank": [
                 "See",
@@ -2076,7 +2080,7 @@
             {
               "id": "pro1-5",
               "type": "fill_blank",
-              "prompt": "Completa: '___ am Maria.' (Soy María)",
+              "prompt": "___ am Maria. (Soy María)",
               "answer": "I",
               "acceptableAnswers": []
             },
@@ -2117,7 +2121,7 @@
             {
               "id": "pro1-9",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Yo soy profesor.'",
+              "prompt": "Yo soy profesor.",
               "answer": "I am a teacher",
               "bank": [
                 "I",
@@ -2248,7 +2252,7 @@
             {
               "id": "pro2-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Somos hermanos.'",
+              "prompt": "Somos hermanos.",
               "answer": "We are brothers",
               "bank": [
                 "We",
@@ -2394,7 +2398,7 @@
             {
               "id": "pro3-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Hace frío.' (con sujeto inglés obligatorio)",
+              "prompt": "Hace frío. (con sujeto inglés obligatorio)",
               "answer": "It is cold",
               "bank": [
                 "It",
@@ -2549,7 +2553,7 @@
             {
               "id": "pro4-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Es un gato.'",
+              "prompt": "Es un gato.",
               "answer": "It is a cat",
               "bank": [
                 "It",
@@ -2670,7 +2674,7 @@
             {
               "id": "pro5-5",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Es él profesor?'",
+              "prompt": "¿Es él profesor?",
               "answer": "Is he a teacher",
               "bank": [
                 "Is",
@@ -2744,7 +2748,7 @@
             {
               "id": "pro5-11",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Está lloviendo?'",
+              "prompt": "¿Está lloviendo?",
               "answer": "Is it raining",
               "bank": [
                 "Is",
@@ -3105,7 +3109,7 @@
             {
               "id": "tob1-9",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Soy estudiante.'",
+              "prompt": "Soy estudiante.",
               "answer": "I am a student",
               "bank": [
                 "I",
@@ -3228,7 +3232,7 @@
             {
               "id": "tob2-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Soy de España.'",
+              "prompt": "Soy de España.",
               "answer": "I am from Spain",
               "bank": [
                 "I",
@@ -3361,7 +3365,7 @@
             {
               "id": "tob3-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Ella es bonita.'",
+              "prompt": "Ella es bonita.",
               "answer": "She is pretty",
               "bank": [
                 "She",
@@ -3413,7 +3417,7 @@
             {
               "id": "tob3-11",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Soy de México.'",
+              "prompt": "Soy de México.",
               "answer": "I am from Mexico",
               "bank": [
                 "I",
@@ -3504,7 +3508,7 @@
             {
               "id": "tob4-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Tengo seis años.'",
+              "prompt": "Tengo seis años.",
               "answer": "I am six years old",
               "bank": [
                 "I",
@@ -3671,7 +3675,7 @@
             {
               "id": "tob5-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'No tengo hambre.'",
+              "prompt": "No tengo hambre.",
               "answer": "I am not hungry",
               "bank": [
                 "I",
@@ -4064,7 +4068,7 @@
             {
               "id": "num1-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: uno, dos, tres.",
+              "prompt": "uno, dos, tres.",
               "answer": "one two three",
               "bank": [
                 "one",
@@ -4217,7 +4221,7 @@
             {
               "id": "num2-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Tengo trece años.'",
+              "prompt": "Tengo trece años.",
               "answer": "I am thirteen years old",
               "bank": [
                 "I",
@@ -4361,7 +4365,7 @@
             {
               "id": "num3-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'cuarenta y cinco' (en inglés)",
+              "prompt": "cuarenta y cinco (en inglés)",
               "answer": "forty-five",
               "bank": [
                 "forty-five",
@@ -4469,7 +4473,7 @@
             {
               "id": "num4-5",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Mi hermana tiene veinte años.'",
+              "prompt": "Mi hermana tiene veinte años.",
               "answer": "My sister is twenty years old",
               "bank": [
                 "My",
@@ -4658,7 +4662,7 @@
             {
               "id": "num5-9",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Cuánto cuesta el café?'",
+              "prompt": "¿Cuánto cuesta el café?",
               "answer": "How much is the coffee",
               "bank": [
                 "How",
@@ -5053,7 +5057,7 @@
             {
               "id": "fam1-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Tengo dos hermanos.'",
+              "prompt": "Tengo dos hermanos.",
               "answer": "I have two brothers",
               "bank": [
                 "I",
@@ -5198,7 +5202,7 @@
             {
               "id": "fam2-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Mi abuelo tiene 80 años.'",
+              "prompt": "Mi abuelo tiene 80 años.",
               "answer": "My grandfather is eighty years old",
               "bank": [
                 "My",
@@ -5329,7 +5333,7 @@
             {
               "id": "fam3-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Es mi madre.'",
+              "prompt": "Es mi madre.",
               "answer": "She is my mother",
               "bank": [
                 "She",
@@ -5472,7 +5476,7 @@
             {
               "id": "fam4-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Su madre (de él) es doctora.'",
+              "prompt": "Su madre (de él) es doctora.",
               "answer": "His mother is a doctor",
               "bank": [
                 "His",
@@ -5594,7 +5598,7 @@
             {
               "id": "fam5-5",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Mi padre es profesor.'",
+              "prompt": "Mi padre es profesor.",
               "answer": "My father is a teacher",
               "bank": [
                 "My",
@@ -5651,7 +5655,7 @@
             {
               "id": "fam5-10",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Mis abuelos viven en México.'",
+              "prompt": "Mis abuelos viven en México.",
               "answer": "My grandparents live in Mexico",
               "bank": [
                 "My",
@@ -6020,7 +6024,7 @@
             {
               "id": "vrb1-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Yo como pizza.'",
+              "prompt": "Yo como pizza.",
               "answer": "I eat pizza",
               "bank": [
                 "I",
@@ -6163,7 +6167,7 @@
             {
               "id": "vrb2-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Mi hermano juega fútbol.'",
+              "prompt": "Mi hermano juega fútbol.",
               "answer": "My brother plays soccer",
               "bank": [
                 "My",
@@ -6302,7 +6306,7 @@
             {
               "id": "vrb3-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Él tiene un coche.'",
+              "prompt": "Él tiene un coche.",
               "answer": "He has a car",
               "bank": [
                 "He",
@@ -6444,7 +6448,7 @@
             {
               "id": "vrb4-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Yo no hablo inglés.'",
+              "prompt": "Yo no hablo inglés.",
               "answer": "I don't speak English",
               "bank": [
                 "I",
@@ -6578,7 +6582,7 @@
             {
               "id": "vrb5-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Habla él español?'",
+              "prompt": "¿Habla él español?",
               "answer": "Does he speak Spanish",
               "bank": [
                 "Does",
@@ -6891,14 +6895,14 @@
             {
               "id": "art1-3",
               "type": "fill_blank",
-              "prompt": "Completa: '___ orange' (una naranja)",
+              "prompt": "___ orange (una naranja)",
               "answer": "an",
               "acceptableAnswers": []
             },
             {
               "id": "art1-4",
               "type": "fill_blank",
-              "prompt": "Completa: '___ book'",
+              "prompt": "___ book",
               "answer": "a",
               "acceptableAnswers": []
             },
@@ -6953,7 +6957,7 @@
             {
               "id": "art1-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Tengo una manzana.'",
+              "prompt": "Tengo una manzana.",
               "answer": "I have an apple",
               "bank": [
                 "I",
@@ -6980,7 +6984,7 @@
             {
               "id": "art1-10",
               "type": "fill_blank",
-              "prompt": "'___ university' (una universidad)",
+              "prompt": "___ university (una universidad)",
               "answer": "a",
               "acceptableAnswers": [],
               "explanation": "'University' suena 'iuniversiti' — empieza con sonido /j/, no vocal. Por eso 'a'."
@@ -7079,7 +7083,7 @@
             {
               "id": "art2-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'El gato es negro.'",
+              "prompt": "El gato es negro.",
               "answer": "The cat is black",
               "bank": [
                 "The",
@@ -7257,7 +7261,7 @@
             {
               "id": "art3-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Juego baloncesto.'",
+              "prompt": "Juego baloncesto.",
               "answer": "I play basketball",
               "bank": [
                 "I",
@@ -7374,7 +7378,7 @@
             {
               "id": "art4-5",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Me gustan los perros.'",
+              "prompt": "Me gustan los perros.",
               "answer": "I like dogs",
               "bank": [
                 "I",
@@ -7535,7 +7539,7 @@
             {
               "id": "art5-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Mi mamá es enfermera.'",
+              "prompt": "Mi mamá es enfermera.",
               "answer": "My mother is a nurse",
               "bank": [
                 "My",
@@ -7910,7 +7914,7 @@
             {
               "id": "que1-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Cómo te llamas?' (lit: ¿Cuál es tu nombre?)",
+              "prompt": "¿Cómo te llamas? (lit: ¿Cuál es tu nombre?)",
               "answer": "What is your name",
               "bank": [
                 "What",
@@ -8046,7 +8050,7 @@
             {
               "id": "que2-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Dónde está el libro?'",
+              "prompt": "¿Dónde está el libro?",
               "answer": "Where is the book",
               "bank": [
                 "Where",
@@ -8107,7 +8111,7 @@
             {
               "id": "que2-11",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿De dónde eres?'",
+              "prompt": "¿De dónde eres?",
               "answer": "Where are you from",
               "bank": [
                 "Where",
@@ -8209,7 +8213,7 @@
             {
               "id": "que3-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Te gusta el café?'",
+              "prompt": "¿Te gusta el café?",
               "answer": "Do you like coffee",
               "bank": [
                 "Do",
@@ -8341,7 +8345,7 @@
             {
               "id": "que4-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Qué quieres?'",
+              "prompt": "¿Qué quieres?",
               "answer": "What do you want",
               "bank": [
                 "What",
@@ -8401,7 +8405,7 @@
             {
               "id": "que4-11",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Dónde trabaja él?'",
+              "prompt": "¿Dónde trabaja él?",
               "answer": "Where does he work",
               "bank": [
                 "Where",
@@ -8497,7 +8501,7 @@
             {
               "id": "que5-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Cuántos años tienes?'",
+              "prompt": "¿Cuántos años tienes?",
               "answer": "How old are you",
               "bank": [
                 "How",
@@ -9071,7 +9075,7 @@
             {
               "id": "col2-11",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'rosa y blanco'",
+              "prompt": "rosa y blanco",
               "answer": "pink and white",
               "bank": [
                 "pink",
@@ -9167,7 +9171,7 @@
             {
               "id": "col3-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Tengo una pelota azul.'",
+              "prompt": "Tengo una pelota azul.",
               "answer": "I have a blue ball",
               "bank": [
                 "I",
@@ -9215,7 +9219,7 @@
             {
               "id": "col3-11",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'flores amarillas'",
+              "prompt": "flores amarillas",
               "answer": "yellow flowers",
               "bank": [
                 "yellow",
@@ -9303,7 +9307,7 @@
             {
               "id": "col4-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'gatos negros'",
+              "prompt": "gatos negros",
               "answer": "black cats",
               "bank": [
                 "black",
@@ -9430,7 +9434,7 @@
             {
               "id": "col5-5",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿De qué color es tu carro?'",
+              "prompt": "¿De qué color es tu carro?",
               "answer": "What color is your car",
               "bank": [
                 "What",
@@ -9813,7 +9817,7 @@
             {
               "id": "wth1-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Hace mucho calor hoy.'",
+              "prompt": "Hace mucho calor hoy.",
               "answer": "It is very hot today",
               "bank": [
                 "It",
@@ -9951,7 +9955,7 @@
             {
               "id": "wth2-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Está nevando ahora.'",
+              "prompt": "Está nevando ahora.",
               "answer": "It is snowing now",
               "bank": [
                 "It",
@@ -10115,7 +10119,7 @@
             {
               "id": "wth3-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Hace calor en verano.'",
+              "prompt": "Hace calor en verano.",
               "answer": "It is hot in summer",
               "bank": [
                 "It",
@@ -10226,7 +10230,7 @@
             {
               "id": "wth4-5",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿Está lloviendo?'",
+              "prompt": "¿Está lloviendo?",
               "answer": "Is it raining",
               "bank": [
                 "Is",
@@ -10388,7 +10392,7 @@
             {
               "id": "wth5-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Llevo un abrigo.'",
+              "prompt": "Llevo un abrigo.",
               "answer": "I wear a coat",
               "bank": [
                 "I",
@@ -10794,7 +10798,7 @@
             {
               "id": "plc1-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Voy a la escuela.'",
+              "prompt": "Voy a la escuela.",
               "answer": "I go to school",
               "bank": [
                 "I",
@@ -10912,7 +10916,7 @@
             {
               "id": "plc2-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Ella está en el trabajo.'",
+              "prompt": "Ella está en el trabajo.",
               "answer": "She is at work",
               "bank": [
                 "She",
@@ -11055,7 +11059,7 @@
             {
               "id": "plc3-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Mi madre está en la cocina.'",
+              "prompt": "Mi madre está en la cocina.",
               "answer": "My mother is in the kitchen",
               "bank": [
                 "My",
@@ -11214,7 +11218,7 @@
             {
               "id": "plc4-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'El teléfono está sobre la cama.'",
+              "prompt": "El teléfono está sobre la cama.",
               "answer": "The phone is on the bed",
               "bank": [
                 "The",
@@ -11355,7 +11359,7 @@
             {
               "id": "plc5-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Vivo en una casa en Madrid.'",
+              "prompt": "Vivo en una casa en Madrid.",
               "answer": "I live in a house in Madrid",
               "bank": [
                 "I",
@@ -11680,7 +11684,7 @@
             {
               "id": "rev1-6",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Buenos días, soy profesor.'",
+              "prompt": "Buenos días, soy profesor.",
               "answer": "Good morning I am a teacher",
               "bank": [
                 "Good",
@@ -11753,7 +11757,7 @@
             {
               "id": "rev1-12",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Hola, tengo 20 años.'",
+              "prompt": "Hola, tengo 20 años.",
               "answer": "Hi I am twenty years old",
               "bank": [
                 "Hi",
@@ -11851,7 +11855,7 @@
             {
               "id": "rev2-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Mi hermano es alto.'",
+              "prompt": "Mi hermano es alto.",
               "answer": "My brother is tall",
               "bank": [
                 "My",
@@ -12019,7 +12023,7 @@
             {
               "id": "rev3-8",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Él trabaja en la oficina.'",
+              "prompt": "Él trabaja en la oficina.",
               "answer": "He works in the office",
               "bank": [
                 "He",
@@ -12165,7 +12169,7 @@
             {
               "id": "rev4-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: 'Hace frío en invierno.'",
+              "prompt": "Hace frío en invierno.",
               "answer": "It is cold in winter",
               "bank": [
                 "It",
@@ -12321,7 +12325,7 @@
             {
               "id": "rev5-7",
               "type": "tap_words_in_order",
-              "prompt": "Ordena: '¿De dónde eres?'",
+              "prompt": "¿De dónde eres?",
               "answer": "Where are you from",
               "bank": [
                 "Where",

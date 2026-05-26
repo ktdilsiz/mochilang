@@ -133,7 +133,7 @@
             {
               "id": "biz1-2",
               "type": "fill_blank",
-              "prompt": "'Thank you all for ___ time to attend.' (Türkçe: 'Katılım için zaman ayırdığınız için hepinize teşekkürler.')",
+              "prompt": "Thank you all for ___ time to attend.",
               "answer": "taking the",
               "acceptableAnswers": [
                 "taking",
@@ -167,7 +167,7 @@
             {
               "id": "biz1-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Şirket adına hepinize sıcak bir hoş geldiniz diyorum.'",
+              "prompt": "Şirket adına hepinize sıcak bir hoş geldiniz diyorum.",
               "answer": "On behalf of the company I extend a warm welcome to everyone",
               "bank": [
                 "On",
@@ -216,7 +216,7 @@
             {
               "id": "biz1-7",
               "type": "fill_blank",
-              "prompt": "'In light ___ recent developments, we'll add an item.' (Türkçe: 'Son gelişmeler ışığında bir madde ekleyeceğiz.')",
+              "prompt": "In light ___ recent developments, we",
               "answer": "of",
               "acceptableAnswers": []
             },
@@ -235,7 +235,7 @@
             {
               "id": "biz1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sınırlı zaman göz önünde bulundurulduğunda kısa konuşalım.'",
+              "prompt": "Sınırlı zaman göz önünde bulundurulduğunda kısa konuşalım.",
               "answer": "Given the limited time let's keep it brief",
               "bank": [
                 "Given",
@@ -254,7 +254,7 @@
             {
               "id": "biz1-10",
               "type": "fill_blank",
-              "prompt": "'Today's session will run for ___ hour and a half.' (Türkçe: 'Bugünkü oturum bir buçuk saat sürecek.')",
+              "prompt": "Today's session will run for ___ hour and a half.",
               "answer": "an",
               "acceptableAnswers": [],
               "explanation": "'h' sessizdir; 'an hour' kullanılır."
@@ -274,7 +274,7 @@
             {
               "id": "biz1-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu noktada sözü meslektaşıma bırakıyorum.'",
+              "prompt": "Bu noktada sözü meslektaşıma bırakıyorum.",
               "answer": "At this point I'll hand over to my colleague",
               "bank": [
                 "At",
@@ -314,7 +314,7 @@
             {
               "id": "biz2-2",
               "type": "fill_blank",
-              "prompt": "'We may have ___ meeting that figure.' (Türkçe: 'Bu rakamı karşılamakta zorlanabiliriz.')",
+              "prompt": "We may have ___ meeting that figure.",
               "answer": "difficulty",
               "acceptableAnswers": [
                 "trouble",
@@ -348,7 +348,7 @@
             {
               "id": "biz2-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu takvime itiraz etmek isterim.'",
+              "prompt": "Bu takvime itiraz etmek isterim.",
               "answer": "I'd like to push back on that timeline",
               "bank": [
                 "I'd",
@@ -392,7 +392,7 @@
             {
               "id": "biz2-7",
               "type": "fill_blank",
-              "prompt": "'We can meet you ___' (Türkçe: 'Yarı yolda buluşabiliriz.')",
+              "prompt": "We can meet you ___",
               "answer": "halfway",
               "acceptableAnswers": [
                 "half-way"
@@ -413,7 +413,7 @@
             {
               "id": "biz2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bunu ekibimle danıştıktan sonra geri döneceğim.'",
+              "prompt": "Bunu ekibimle danıştıktan sonra geri döneceğim.",
               "answer": "I'll get back to you after consulting my team",
               "bank": [
                 "I'll",
@@ -433,7 +433,7 @@
             {
               "id": "biz2-10",
               "type": "fill_blank",
-              "prompt": "'Could we explore some ___ options?' (Türkçe: 'Alternatif seçenekleri inceleyebilir miyiz?')",
+              "prompt": "Could we explore some ___ options?",
               "answer": "alternative",
               "acceptableAnswers": [
                 "other"
@@ -455,7 +455,7 @@
             {
               "id": "biz2-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu fiyat noktasında ilerleyemeyiz.'",
+              "prompt": "Bu fiyat noktasında ilerleyemeyiz.",
               "answer": "We can't move forward at this price point",
               "bank": [
                 "We",
@@ -495,7 +495,7 @@
             {
               "id": "biz3-2",
               "type": "fill_blank",
-              "prompt": "'Pursuant ___ our discussion…' (Türkçe: 'Görüşmemize istinaden…')",
+              "prompt": "Pursuant ___ our discussion…",
               "answer": "to",
               "acceptableAnswers": [],
               "explanation": "'pursuant to' = 'istinaden' (resmi)."
@@ -526,7 +526,7 @@
             {
               "id": "biz3-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sorularınız olursa çekinmeden ulaşın.'",
+              "prompt": "Sorularınız olursa çekinmeden ulaşın.",
               "answer": "Should you have any queries please do not hesitate to reach out",
               "bank": [
                 "Should",
@@ -573,7 +573,7 @@
             {
               "id": "biz3-7",
               "type": "fill_blank",
-              "prompt": "'I am writing in ___ to your inquiry.' (Türkçe: 'Sorgunuza istinaden yazıyorum.')",
+              "prompt": "I am writing in ___ to your inquiry.",
               "answer": "response",
               "acceptableAnswers": [
                 "answer",
@@ -597,7 +597,7 @@
             {
               "id": "biz3-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Önerimizi gözden geçirdikten sonra geri dönmenizi rica ederiz.'",
+              "prompt": "Önerimizi gözden geçirdikten sonra geri dönmenizi rica ederiz.",
               "answer": "We kindly ask that you revert after reviewing our proposal",
               "bank": [
                 "We",
@@ -618,7 +618,7 @@
             {
               "id": "biz3-10",
               "type": "fill_blank",
-              "prompt": "'The contract shall be ___ effective upon signing.' (Türkçe: 'Sözleşme imza ile yürürlüğe girer.')",
+              "prompt": "The contract shall be ___ effective upon signing.",
               "answer": "deemed",
               "acceptableAnswers": [],
               "explanation": "'shall be deemed' sözleşme dili."
@@ -638,7 +638,7 @@
             {
               "id": "biz3-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Maalesef başvurunuzun bu defa ilerlemediğini bildirmek isteriz.'",
+              "prompt": "Maalesef başvurunuzun bu defa ilerlemediğini bildirmek isteriz.",
               "answer": "We regret to inform you that your application will not be progressing this time",
               "bank": [
                 "We",
@@ -706,7 +706,7 @@
             {
               "id": "biz4-3",
               "type": "fill_blank",
-              "prompt": "'This initiative gives us a competitive ___' (Türkçe: 'Bu girişim bize rekabet avantajı sağlıyor.')",
+              "prompt": "This initiative gives us a competitive ___",
               "answer": "edge",
               "acceptableAnswers": [
                 "advantage"
@@ -715,7 +715,7 @@
             {
               "id": "biz4-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Riski azaltmak için kaynakları çeşitlendirmeliyiz.'",
+              "prompt": "Riski azaltmak için kaynakları çeşitlendirmeliyiz.",
               "answer": "We need to diversify resources to mitigate risk",
               "bank": [
                 "We",
@@ -759,7 +759,7 @@
             {
               "id": "biz4-7",
               "type": "fill_blank",
-              "prompt": "'The investment yields ___ returns at this scale.' (Türkçe: 'Bu ölçekte yatırım azalan getiri veriyor.')",
+              "prompt": "The investment yields ___ returns at this scale.",
               "answer": "diminishing",
               "acceptableAnswers": []
             },
@@ -778,7 +778,7 @@
             {
               "id": "biz4-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Şirket B2B'ye yöneldi.'",
+              "prompt": "'Şirket B2B'ye yöneldi.'",
               "answer": "The company pivoted to B2B",
               "bank": [
                 "The",
@@ -794,7 +794,7 @@
             {
               "id": "biz4-10",
               "type": "fill_blank",
-              "prompt": "'It's a ___ proposition for both sides.' (Türkçe: 'İki taraf için de kazançlı bir teklif.')",
+              "prompt": "It's a ___ proposition for both sides.",
               "answer": "win-win",
               "acceptableAnswers": [
                 "win win"
@@ -825,7 +825,7 @@
             {
               "id": "biz5-2",
               "type": "fill_blank",
-              "prompt": "'Revenue grew 12% year-on-year, ___ by enterprise renewals.' (Türkçe: 'Gelir, kurumsal yenilemelerin etkisiyle yıllık %12 arttı.')",
+              "prompt": "Revenue grew 12% year-on-year, ___ by enterprise renewals.",
               "answer": "driven",
               "acceptableAnswers": [],
               "explanation": "Yönetici özetinde 'driven by' kazanım nedenini belirtir."
@@ -856,7 +856,7 @@
             {
               "id": "biz5-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Önerimiz, kaynakları üst segmente yeniden tahsis etmektir.'",
+              "prompt": "Önerimiz, kaynakları üst segmente yeniden tahsis etmektir.",
               "answer": "Our recommendation is to reallocate resources to the upper segment",
               "bank": [
                 "Our",
@@ -903,7 +903,7 @@
             {
               "id": "biz5-7",
               "type": "fill_blank",
-              "prompt": "'The proposal is, on ___, the most defensible option available.' (Türkçe: 'Öneri, genel olarak en savunulabilir seçenek.')",
+              "prompt": "The proposal is, on ___, the most defensible option available.",
               "answer": "balance",
               "acceptableAnswers": []
             },
@@ -923,7 +923,7 @@
             {
               "id": "biz5-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Kâr, beklenenin altında kalsa da nakit akışı sağlam kaldı.'",
+              "prompt": "Kâr, beklenenin altında kalsa da nakit akışı sağlam kaldı.",
               "answer": "While profit fell short of expectations cash flow remained robust",
               "bank": [
                 "While",
@@ -944,7 +944,7 @@
             {
               "id": "biz5-10",
               "type": "fill_blank",
-              "prompt": "'The board is asked to ___ the proposed reallocation.' (Türkçe: 'Yönetim kurulundan önerilen yeniden tahsisi onaylaması istenmektedir.')",
+              "prompt": "The board is asked to ___ the proposed reallocation.",
               "answer": "endorse",
               "acceptableAnswers": [
                 "approve",
@@ -968,7 +968,7 @@
             {
               "id": "biz5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Risk, kontrol edilebilir görünmekle birlikte yakından takip edilmelidir.'",
+              "prompt": "Risk, kontrol edilebilir görünmekle birlikte yakından takip edilmelidir.",
               "answer": "The risk appears manageable but warrants close monitoring",
               "bank": [
                 "The",
@@ -1009,7 +1009,7 @@
             {
               "id": "biz6-2",
               "type": "fill_blank",
-              "prompt": "'I am writing to ___ a meeting at your earliest convenience.' (Türkçe: 'Sizin için en uygun zamanda bir toplantı talep etmek için yazıyorum.')",
+              "prompt": "I am writing to ___ a meeting at your earliest convenience.",
               "answer": "request",
               "acceptableAnswers": [
                 "ask"
@@ -1041,7 +1041,7 @@
             {
               "id": "biz6-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Geri dönüşünüz için şimdiden teşekkür ederim.'",
+              "prompt": "Geri dönüşünüz için şimdiden teşekkür ederim.",
               "answer": "Thank you in advance for your reply",
               "bank": [
                 "Thank",
@@ -1084,7 +1084,7 @@
             {
               "id": "biz6-7",
               "type": "fill_blank",
-              "prompt": "'Apologies for the ___ in responding.' (Türkçe: 'Yanıttaki gecikme için özür dilerim.')",
+              "prompt": "Apologies for the ___ in responding.",
               "answer": "delay",
               "acceptableAnswers": [
                 "postpone"
@@ -1106,7 +1106,7 @@
             {
               "id": "biz6-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Konunun aciliyetinin farkındayız ve gereken özeni göstereceğiz.'",
+              "prompt": "Konunun aciliyetinin farkındayız ve gereken özeni göstereceğiz.",
               "answer": "We appreciate the urgency of the matter and will give it due care",
               "bank": [
                 "We",
@@ -1129,7 +1129,7 @@
             {
               "id": "biz6-10",
               "type": "fill_blank",
-              "prompt": "'Please find ___ the revised proposal.' (Türkçe: 'Ekte revize edilmiş öneriyi bulabilirsiniz.')",
+              "prompt": "Please find ___ the revised proposal.",
               "answer": "attached",
               "acceptableAnswers": [
                 "enclosed"
@@ -1150,7 +1150,7 @@
             {
               "id": "biz6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu konuda haftaya tekrar bilgilendirmek üzere kendimi notlayacağım.'",
+              "prompt": "Bu konuda haftaya tekrar bilgilendirmek üzere kendimi notlayacağım.",
               "answer": "I will make a note to follow up on this next week",
               "bank": [
                 "I",
@@ -1428,7 +1428,7 @@
             {
               "id": "ac1-3",
               "type": "fill_blank",
-              "prompt": "'A growing ___ of evidence indicates climate sensitivity.' (Türkçe: 'Giderek artan kanıt iklim duyarlılığına işaret etmektedir.')",
+              "prompt": "A growing ___ of evidence indicates climate sensitivity.",
               "answer": "body",
               "acceptableAnswers": [
                 "amount"
@@ -1437,7 +1437,7 @@
             {
               "id": "ac1-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu çalışma söz konusu boşluğu doldurmayı amaçlamaktadır.'",
+              "prompt": "Bu çalışma söz konusu boşluğu doldurmayı amaçlamaktadır.",
               "answer": "This study seeks to address that gap",
               "bank": [
                 "This",
@@ -1480,7 +1480,7 @@
             {
               "id": "ac1-7",
               "type": "fill_blank",
-              "prompt": "'These results ___ that further investigation is warranted.' (Türkçe: 'Sonuçlar ileri araştırmanın gerekli olduğunu göstermektedir.')",
+              "prompt": "These results ___ that further investigation is warranted.",
               "answer": "indicate",
               "acceptableAnswers": [
                 "suggest",
@@ -1503,7 +1503,7 @@
             {
               "id": "ac1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Veri, hipotezin reddedilemeyeceğini düşündürmektedir.'",
+              "prompt": "Veri, hipotezin reddedilemeyeceğini düşündürmektedir.",
               "answer": "The data suggest that the hypothesis cannot be rejected",
               "bank": [
                 "The",
@@ -1523,7 +1523,7 @@
             {
               "id": "ac1-10",
               "type": "fill_blank",
-              "prompt": "'The phenomenon ___ to occur more frequently in summer.' (Türkçe: 'Olgu yazın daha sık görülme eğilimindedir.')",
+              "prompt": "The phenomenon ___ to occur more frequently in summer.",
               "answer": "tends",
               "acceptableAnswers": [
                 "is inclined"
@@ -1553,7 +1553,7 @@
             {
               "id": "ac2-2",
               "type": "fill_blank",
-              "prompt": "'This paper ___ that…' (Türkçe: 'Bu makale şunu öne sürer:')",
+              "prompt": "This paper ___ that…",
               "answer": "argues",
               "acceptableAnswers": [
                 "contends",
@@ -1589,7 +1589,7 @@
             {
               "id": "ac2-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu çalışma yeni bir kuramsal çerçeve önermektedir.'",
+              "prompt": "Bu çalışma yeni bir kuramsal çerçeve önermektedir.",
               "answer": "This study proposes a novel theoretical framework",
               "bank": [
                 "This",
@@ -1632,7 +1632,7 @@
             {
               "id": "ac2-7",
               "type": "fill_blank",
-              "prompt": "'The findings have important ___ for policy.' (Türkçe: 'Bulguların politika açısından önemli sonuçları vardır.')",
+              "prompt": "The findings have important ___ for policy.",
               "answer": "implications",
               "acceptableAnswers": [
                 "consequences",
@@ -1654,7 +1654,7 @@
             {
               "id": "ac2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bulgular, mevcut kuramın eksik kaldığını göstermektedir.'",
+              "prompt": "Bulgular, mevcut kuramın eksik kaldığını göstermektedir.",
               "answer": "The findings indicate that existing theory falls short",
               "bank": [
                 "The",
@@ -1673,7 +1673,7 @@
             {
               "id": "ac2-10",
               "type": "fill_blank",
-              "prompt": "'The limitations of this study ___ as follows.' (Türkçe: 'Bu çalışmanın sınırlılıkları şu şekildedir.')",
+              "prompt": "The limitations of this study ___ as follows.",
               "answer": "are",
               "acceptableAnswers": []
             }
@@ -1724,7 +1724,7 @@
             {
               "id": "ac3-3",
               "type": "fill_blank",
-              "prompt": "'As ___ in Table 2…' (Türkçe: 'Tablo 2'de gösterildiği gibi…')",
+              "prompt": "As ___ in Table 2…",
               "answer": "shown",
               "acceptableAnswers": [
                 "depicted",
@@ -1734,7 +1734,7 @@
             {
               "id": "ac3-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Etki cinsiyetler arasında benzerdir.'",
+              "prompt": "Etki cinsiyetler arasında benzerdir.",
               "answer": "The effect is similar across genders",
               "bank": [
                 "The",
@@ -1776,7 +1776,7 @@
             {
               "id": "ac3-7",
               "type": "fill_blank",
-              "prompt": "'The sample is ___ relatively small.' (Türkçe: 'Örneklem görece küçüktür.')",
+              "prompt": "The sample is ___ relatively small.",
               "answer": "however",
               "acceptableAnswers": [
                 "nevertheless",
@@ -1799,7 +1799,7 @@
             {
               "id": "ac3-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Etki büyüklüğü zamanla artmaktadır.'",
+              "prompt": "Etki büyüklüğü zamanla artmaktadır.",
               "answer": "The effect size increases over time",
               "bank": [
                 "The",
@@ -1816,7 +1816,7 @@
             {
               "id": "ac3-10",
               "type": "fill_blank",
-              "prompt": "'Future research should ___ this question further.' (Türkçe: 'Gelecek araştırma bu soruyu daha ileri incelemelidir.')",
+              "prompt": "Future research should ___ this question further.",
               "answer": "investigate",
               "acceptableAnswers": [
                 "examine",
@@ -1847,7 +1847,7 @@
             {
               "id": "ac4-2",
               "type": "fill_blank",
-              "prompt": "'The results are robust ___ a number of specifications.' (Türkçe: 'Sonuçlar farklı modellere karşı sağlamdır.')",
+              "prompt": "The results are robust ___ a number of specifications.",
               "answer": "to",
               "acceptableAnswers": [
                 "across"
@@ -1856,7 +1856,7 @@
             {
               "id": "ac4-3",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu makalede yeni bir mekanizma önerdik.'",
+              "prompt": "Bu makalede yeni bir mekanizma önerdik.",
               "answer": "In this paper we proposed a novel mechanism",
               "bank": [
                 "In",
@@ -1923,7 +1923,7 @@
             {
               "id": "ac4-7",
               "type": "fill_blank",
-              "prompt": "'Conversely, ___ found no such effect.' (Türkçe: 'Tersine, hiç böyle bir etki bulunmadı.')",
+              "prompt": "Conversely, ___ found no such effect.",
               "answer": "we",
               "acceptableAnswers": [
                 "i"
@@ -1944,7 +1944,7 @@
             {
               "id": "ac4-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bulgular literatüre üç şekilde katkı sağlamaktadır.'",
+              "prompt": "Bulgular literatüre üç şekilde katkı sağlamaktadır.",
               "answer": "The findings contribute to the literature in three ways",
               "bank": [
                 "The",
@@ -1964,7 +1964,7 @@
             {
               "id": "ac4-10",
               "type": "fill_blank",
-              "prompt": "'The effect is statistically ___' (Türkçe: 'Etki istatistiksel olarak anlamlıdır.')",
+              "prompt": "The effect is statistically ___",
               "answer": "significant",
               "acceptableAnswers": [
                 "important"
@@ -1995,7 +1995,7 @@
             {
               "id": "ac5-2",
               "type": "fill_blank",
-              "prompt": "'Smith (2021) ___ a similar conclusion in a different setting.' (Türkçe: 'Smith farklı bir bağlamda benzer bir sonuca ulaştı.')",
+              "prompt": "Smith (2021) ___ a similar conclusion in a different setting.",
               "answer": "reaches",
               "acceptableAnswers": [
                 "draws"
@@ -2028,7 +2028,7 @@
             {
               "id": "ac5-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Mevcut literatür bu mekanizma konusunda büyük ölçüde sessizdir.'",
+              "prompt": "Mevcut literatür bu mekanizma konusunda büyük ölçüde sessizdir.",
               "answer": "The existing literature is largely silent on this mechanism",
               "bank": [
                 "The",
@@ -2073,7 +2073,7 @@
             {
               "id": "ac5-7",
               "type": "fill_blank",
-              "prompt": "'This study seeks to ___ that gap in the literature.' (Türkçe: 'Bu çalışma literatürdeki o boşluğu doldurmayı amaçlar.')",
+              "prompt": "This study seeks to ___ that gap in the literature.",
               "answer": "address",
               "acceptableAnswers": [
                 "bridge",
@@ -2098,7 +2098,7 @@
             {
               "id": "ac5-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bulgular önceki sonuçları kısmen çürütmektedir.'",
+              "prompt": "Bulgular önceki sonuçları kısmen çürütmektedir.",
               "answer": "The findings partially refute earlier results",
               "bank": [
                 "The",
@@ -2115,7 +2115,7 @@
             {
               "id": "ac5-10",
               "type": "fill_blank",
-              "prompt": "'Recent scholarship has called this assumption into ___' (Türkçe: 'Son çalışmalar bu varsayımı sorgulanır hale getirdi.')",
+              "prompt": "Recent scholarship has called this assumption into ___",
               "answer": "question",
               "acceptableAnswers": [],
               "explanation": "'call sth into question' = sorgulanır hale getirmek."
@@ -2135,7 +2135,7 @@
             {
               "id": "ac5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Konu üzerinde fikir birliği henüz oluşmamıştır.'",
+              "prompt": "Konu üzerinde fikir birliği henüz oluşmamıştır.",
               "answer": "No consensus has yet emerged on the subject",
               "bank": [
                 "No",
@@ -2175,7 +2175,7 @@
             {
               "id": "ac6-2",
               "type": "fill_blank",
-              "prompt": "'This paper ___ the relationship between X and Y.' (Türkçe: 'Bu makale X ile Y arasındaki ilişkiyi inceliyor.')",
+              "prompt": "This paper ___ the relationship between X and Y.",
               "answer": "examines",
               "acceptableAnswers": [
                 "analyses",
@@ -2211,7 +2211,7 @@
             {
               "id": "ac6-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu çalışma karma bir yöntem yaklaşımı benimsemektedir.'",
+              "prompt": "Bu çalışma karma bir yöntem yaklaşımı benimsemektedir.",
               "answer": "This study adopts a mixed methods approach",
               "bank": [
                 "This",
@@ -2255,7 +2255,7 @@
             {
               "id": "ac6-7",
               "type": "fill_blank",
-              "prompt": "'Drawing ___ a sample of 240 firms, the analysis reveals…' (Türkçe: '240 firmadan oluşan örneklemden hareketle analiz şunu ortaya koyuyor…')",
+              "prompt": "Drawing ___ a sample of 240 firms, the analysis reveals…",
               "answer": "on",
               "acceptableAnswers": [
                 "upon"
@@ -2277,7 +2277,7 @@
             {
               "id": "ac6-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sonuçlar nedensel bir yorum için sağlam bir temel oluşturmaktadır.'",
+              "prompt": "Sonuçlar nedensel bir yorum için sağlam bir temel oluşturmaktadır.",
               "answer": "The results provide a robust basis for a causal interpretation",
               "bank": [
                 "The",
@@ -2298,7 +2298,7 @@
             {
               "id": "ac6-10",
               "type": "fill_blank",
-              "prompt": "'These findings ___ light on a long-standing debate.' (Türkçe: 'Bu bulgular uzun süredir devam eden bir tartışmaya ışık tutuyor.')",
+              "prompt": "These findings ___ light on a long-standing debate.",
               "answer": "shed",
               "acceptableAnswers": [
                 "cast",
@@ -2322,7 +2322,7 @@
             {
               "id": "ac6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sonuçlar, küçük örneklem dikkate alınarak yorumlanmalıdır.'",
+              "prompt": "Sonuçlar, küçük örneklem dikkate alınarak yorumlanmalıdır.",
               "answer": "The results should be interpreted with caution given the small sample",
               "bank": [
                 "The",
@@ -2600,7 +2600,7 @@
             {
               "id": "soc1-3",
               "type": "fill_blank",
-              "prompt": "'The ___ passed the bill last week.' (Türkçe: 'Yasama tasarıyı geçen hafta geçirdi.')",
+              "prompt": "The ___ passed the bill last week.",
               "answer": "legislature",
               "acceptableAnswers": [
                 "congress",
@@ -2610,7 +2610,7 @@
             {
               "id": "soc1-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sivil toplum bu reformda kritik bir rol oynadı.'",
+              "prompt": "Sivil toplum bu reformda kritik bir rol oynadı.",
               "answer": "Civil society played a critical role in this reform",
               "bank": [
                 "Civil",
@@ -2655,7 +2655,7 @@
             {
               "id": "soc1-7",
               "type": "fill_blank",
-              "prompt": "'Voters in this ___ tend to favour reform.' (Türkçe: 'Bu seçim bölgesindeki seçmenler reformu desteklemeye eğilimlidir.')",
+              "prompt": "Voters in this ___ tend to favour reform.",
               "answer": "constituency",
               "acceptableAnswers": []
             },
@@ -2674,7 +2674,7 @@
             {
               "id": "soc1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Hükümet yeni bir yasayı uygulamaya koydu.'",
+              "prompt": "Hükümet yeni bir yasayı uygulamaya koydu.",
               "answer": "The government enacted a new law",
               "bank": [
                 "The",
@@ -2691,7 +2691,7 @@
             {
               "id": "soc1-10",
               "type": "fill_blank",
-              "prompt": "'The state has a ___ to protect citizens.' (Türkçe: 'Devletin vatandaşları koruma görevi vardır.')",
+              "prompt": "The state has a ___ to protect citizens.",
               "answer": "duty",
               "acceptableAnswers": [
                 "obligation",
@@ -2745,7 +2745,7 @@
             {
               "id": "soc2-3",
               "type": "fill_blank",
-              "prompt": "'Income ___ has widened over the past decade.' (Türkçe: 'Gelir eşitsizliği son on yılda derinleşti.')",
+              "prompt": "Income ___ has widened over the past decade.",
               "answer": "inequality",
               "acceptableAnswers": [
                 "disparity"
@@ -2754,7 +2754,7 @@
             {
               "id": "soc2-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Reform en yoksul kesimleri orantısız biçimde etkiliyor.'",
+              "prompt": "Reform en yoksul kesimleri orantısız biçimde etkiliyor.",
               "answer": "The reform disproportionately affects the poorest",
               "bank": [
                 "The",
@@ -2796,7 +2796,7 @@
             {
               "id": "soc2-7",
               "type": "fill_blank",
-              "prompt": "'Closing the wage ___ remains a priority.' (Türkçe: 'Ücret farkını kapatmak öncelik olmaya devam ediyor.')",
+              "prompt": "Closing the wage ___ remains a priority.",
               "answer": "gap",
               "acceptableAnswers": [
                 "divide"
@@ -2817,7 +2817,7 @@
             {
               "id": "soc2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Yoksulluk düzeyi son on yılda az değişti.'",
+              "prompt": "Yoksulluk düzeyi son on yılda az değişti.",
               "answer": "Poverty levels have changed little over the past decade",
               "bank": [
                 "Poverty",
@@ -2837,7 +2837,7 @@
             {
               "id": "soc2-10",
               "type": "fill_blank",
-              "prompt": "'The proposal aims to ___ structural barriers.' (Türkçe: 'Öneri yapısal engelleri kaldırmayı amaçlıyor.')",
+              "prompt": "The proposal aims to ___ structural barriers.",
               "answer": "dismantle",
               "acceptableAnswers": [
                 "address",
@@ -2869,7 +2869,7 @@
             {
               "id": "soc3-2",
               "type": "fill_blank",
-              "prompt": "'There is a strong ___ for reform.' (Türkçe: 'Reform için güçlü bir gerekçe var.')",
+              "prompt": "There is a strong ___ for reform.",
               "answer": "case",
               "acceptableAnswers": [
                 "argument",
@@ -2902,7 +2902,7 @@
             {
               "id": "soc3-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Yaygın olarak sistemin elden geçirilmesi gerektiği kabul edilir.'",
+              "prompt": "Yaygın olarak sistemin elden geçirilmesi gerektiği kabul edilir.",
               "answer": "It is widely acknowledged that the system needs an overhaul",
               "bank": [
                 "It",
@@ -2947,7 +2947,7 @@
             {
               "id": "soc3-7",
               "type": "fill_blank",
-              "prompt": "'Proponents ___ that the law protects vulnerable groups.' (Türkçe: 'Savunucular yasanın kırılgan grupları koruduğunu öne sürmektedir.')",
+              "prompt": "Proponents ___ that the law protects vulnerable groups.",
               "answer": "claim",
               "acceptableAnswers": [
                 "argue",
@@ -2970,7 +2970,7 @@
             {
               "id": "soc3-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Tartışma birden fazla incelikli görüşü içerir.'",
+              "prompt": "Tartışma birden fazla incelikli görüşü içerir.",
               "answer": "The debate involves multiple nuanced perspectives",
               "bank": [
                 "The",
@@ -2987,7 +2987,7 @@
             {
               "id": "soc3-10",
               "type": "fill_blank",
-              "prompt": "'A more ___ approach is required.' (Türkçe: 'Daha incelikli bir yaklaşım gerekiyor.')",
+              "prompt": "A more ___ approach is required.",
               "answer": "nuanced",
               "acceptableAnswers": [
                 "subtle",
@@ -3041,7 +3041,7 @@
             {
               "id": "soc4-3",
               "type": "fill_blank",
-              "prompt": "'The reform risks ___ existing disparities.' (Türkçe: 'Reform mevcut eşitsizlikleri derinleştirme riskini taşıyor.')",
+              "prompt": "The reform risks ___ existing disparities.",
               "answer": "entrenching",
               "acceptableAnswers": [
                 "deepening",
@@ -3052,7 +3052,7 @@
             {
               "id": "soc4-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sonuçlar, mevcut anlatıyı çürüten kanıtlar sunmaktadır.'",
+              "prompt": "Sonuçlar, mevcut anlatıyı çürüten kanıtlar sunmaktadır.",
               "answer": "The findings offer evidence that undermines the prevailing narrative",
               "bank": [
                 "The",
@@ -3097,7 +3097,7 @@
             {
               "id": "soc4-7",
               "type": "fill_blank",
-              "prompt": "'The wealth ___ has widened in the past two decades.' (Türkçe: 'Servet uçurumu son yirmi yılda derinleşti.')",
+              "prompt": "The wealth ___ has widened in the past two decades.",
               "answer": "gap",
               "acceptableAnswers": [
                 "divide"
@@ -3119,7 +3119,7 @@
             {
               "id": "soc4-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Politika tartışması yapısal nedenlere değil, semptomlara odaklanma eğilimindedir.'",
+              "prompt": "Politika tartışması yapısal nedenlere değil, semptomlara odaklanma eğilimindedir.",
               "answer": "Policy debate tends to focus on symptoms rather than structural causes",
               "bank": [
                 "Policy",
@@ -3140,7 +3140,7 @@
             {
               "id": "soc4-10",
               "type": "fill_blank",
-              "prompt": "'Means-___ benefits target the most vulnerable.' (Türkçe: 'Gelir testine bağlı yardımlar en kırılgan kesime yöneliktir.')",
+              "prompt": "Means-___ benefits target the most vulnerable.",
               "answer": "tested",
               "acceptableAnswers": [],
               "explanation": "'Means-tested benefits' = gelir testine bağlı yardımlar."
@@ -3160,7 +3160,7 @@
             {
               "id": "soc4-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Belirli grupları orantısız etkileyen önlemler özel bir gerekçe gerektirir.'",
+              "prompt": "Belirli grupları orantısız etkileyen önlemler özel bir gerekçe gerektirir.",
               "answer": "Measures that disproportionately affect specific groups require particular justification",
               "bank": [
                 "Measures",
@@ -3202,7 +3202,7 @@
             {
               "id": "soc5-2",
               "type": "fill_blank",
-              "prompt": "'The argument is, at ___, incomplete.' (Türkçe: 'Argüman en iyi ihtimalle eksiktir.')",
+              "prompt": "The argument is, at ___, incomplete.",
               "answer": "best",
               "acceptableAnswers": [
                 "greatest"
@@ -3235,7 +3235,7 @@
             {
               "id": "soc5-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Argümanın değerli yönleri olsa da kanıt temeli zayıftır.'",
+              "prompt": "Argümanın değerli yönleri olsa da kanıt temeli zayıftır.",
               "answer": "While the argument has merit its evidentiary basis is thin",
               "bank": [
                 "While",
@@ -3282,7 +3282,7 @@
             {
               "id": "soc5-7",
               "type": "fill_blank",
-              "prompt": "'The claim is, to ___ a phrase, only half the story.' (Türkçe: 'Bir deyimle ifade etmek gerekirse iddia hikayenin yalnızca yarısı.')",
+              "prompt": "The claim is, to ___ a phrase, only half the story.",
               "answer": "borrow",
               "acceptableAnswers": [],
               "explanation": "'to borrow a phrase' kalıbı."
@@ -3302,7 +3302,7 @@
             {
               "id": "soc5-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Önemli olan, sorunu yanlış kategoriye yerleştirmemizdir.'",
+              "prompt": "Önemli olan, sorunu yanlış kategoriye yerleştirmemizdir.",
               "answer": "What matters is that we have miscategorised the problem",
               "bank": [
                 "What",
@@ -3322,7 +3322,7 @@
             {
               "id": "soc5-10",
               "type": "fill_blank",
-              "prompt": "'The data, ___ imperfect, point in the same direction.' (Türkçe: 'Veriler, kusurlu olsalar da aynı yönü işaret ediyor.')",
+              "prompt": "The data, ___ imperfect, point in the same direction.",
               "answer": "though",
               "acceptableAnswers": [
                 "albeit",
@@ -3346,7 +3346,7 @@
             {
               "id": "soc5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Dikkatli okunduğunda, kanıtın aksini söylediği görülür.'",
+              "prompt": "Dikkatli okunduğunda, kanıtın aksini söylediği görülür.",
               "answer": "On a careful reading the evidence says the opposite",
               "bank": [
                 "On",
@@ -3632,14 +3632,14 @@
             {
               "id": "id1-3",
               "type": "fill_blank",
-              "prompt": "'That project is ___ the back burner for now.' (Türkçe: 'O proje şimdilik askıda.')",
+              "prompt": "That project is ___ the back burner for now.",
               "answer": "on",
               "acceptableAnswers": []
             },
             {
               "id": "id1-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Çıtayı geçen yıldan beri yükselttik.'",
+              "prompt": "Çıtayı geçen yıldan beri yükselttik.",
               "answer": "We've raised the bar since last year",
               "bank": [
                 "We've",
@@ -3682,7 +3682,7 @@
             {
               "id": "id1-7",
               "type": "fill_blank",
-              "prompt": "'The ___ line is, we need to ship by Friday.' (Türkçe: 'Asıl mesele, cumaya kadar yayınlamalıyız.')",
+              "prompt": "The ___ line is, we need to ship by Friday.",
               "answer": "bottom",
               "acceptableAnswers": []
             },
@@ -3701,7 +3701,7 @@
             {
               "id": "id1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu konuda hepimiz aynı gemideyiz.'",
+              "prompt": "Bu konuda hepimiz aynı gemideyiz.",
               "answer": "We're all in the same boat on this",
               "bank": [
                 "We're",
@@ -3720,7 +3720,7 @@
             {
               "id": "id1-10",
               "type": "fill_blank",
-              "prompt": "'Off the ___ of my head, I'd say twenty thousand.' (Türkçe: 'Kafadan yirmi bin derdim.')",
+              "prompt": "Off the ___ of my head, I",
               "answer": "top",
               "acceptableAnswers": []
             },
@@ -3739,7 +3739,7 @@
             {
               "id": "id1-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Lafı dolandırmadan sadede gelelim.'",
+              "prompt": "Lafı dolandırmadan sadede gelelim.",
               "answer": "Let's cut to the chase",
               "bank": [
                 "Let's",
@@ -3799,14 +3799,14 @@
             {
               "id": "id2-3",
               "type": "fill_blank",
-              "prompt": "'Don't make a ___ out of a molehill.' (Türkçe: 'Pireyi deve yapma.')",
+              "prompt": "Don't make a ___ out of a molehill.",
               "answer": "mountain",
               "acceptableAnswers": []
             },
             {
               "id": "id2-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Ya artık o acı gerçeği kabul edelim.'",
+              "prompt": "Ya artık o acı gerçeği kabul edelim.",
               "answer": "Let's just bite the bullet",
               "bank": [
                 "Let's",
@@ -3847,7 +3847,7 @@
             {
               "id": "id2-7",
               "type": "fill_blank",
-              "prompt": "'I had to bite the ___ and tell the truth.' (Türkçe: 'Acı gerçeği kabullenip doğruyu söylemek zorundaydım.')",
+              "prompt": "I had to bite the ___ and tell the truth.",
               "answer": "bullet",
               "acceptableAnswers": []
             },
@@ -3866,7 +3866,7 @@
             {
               "id": "id2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Görmezden gelinen büyük problemden bahsedelim.'",
+              "prompt": "Görmezden gelinen büyük problemden bahsedelim.",
               "answer": "Let's talk about the elephant in the room",
               "bank": [
                 "Let's",
@@ -3885,7 +3885,7 @@
             {
               "id": "id2-10",
               "type": "fill_blank",
-              "prompt": "'Stop pulling my ___' (Türkçe: 'Benimle dalga geçmeyi bırak.')",
+              "prompt": "Stop pulling my ___",
               "answer": "leg",
               "acceptableAnswers": []
             }
@@ -3936,7 +3936,7 @@
             {
               "id": "id3-3",
               "type": "fill_blank",
-              "prompt": "'I read an interesting article in a science ___.' (Türkçe: 'Bir bilim dergisinde ilginç bir makale okudum.')",
+              "prompt": "I read an interesting article in a science ___.",
               "answer": "magazine",
               "acceptableAnswers": [
                 "journal"
@@ -3959,7 +3959,7 @@
             {
               "id": "id3-5",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Kontrol etmeden konuşma.'",
+              "prompt": "Kontrol etmeden konuşma.",
               "answer": "Don't speak without checking",
               "bank": [
                 "Don't",
@@ -3987,7 +3987,7 @@
             {
               "id": "id3-7",
               "type": "fill_blank",
-              "prompt": "'This is a ___ topic; he gets upset easily.' (Türkçe: 'Bu hassas bir konu; kolay üzülüyor.')",
+              "prompt": "This is a ___ topic; he gets upset easily.",
               "answer": "sensitive",
               "acceptableAnswers": [
                 "delicate"
@@ -4009,7 +4009,7 @@
             {
               "id": "id3-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sonunda hatamı fark ettim.'",
+              "prompt": "Sonunda hatamı fark ettim.",
               "answer": "I eventually realized my mistake",
               "bank": [
                 "I",
@@ -4025,7 +4025,7 @@
             {
               "id": "id3-10",
               "type": "fill_blank",
-              "prompt": "'The ___ cost was much higher than estimated.' (Türkçe: 'Gerçek maliyet tahminden çok daha yüksekti.')",
+              "prompt": "The ___ cost was much higher than estimated.",
               "answer": "actual",
               "acceptableAnswers": [
                 "real",
@@ -4080,14 +4080,14 @@
             {
               "id": "id4-3",
               "type": "fill_blank",
-              "prompt": "'I need to ___ a phone call.' (Türkçe: 'Bir telefon görüşmesi yapmalıyım.')",
+              "prompt": "I need to ___ a phone call.",
               "answer": "make",
               "acceptableAnswers": []
             },
             {
               "id": "id4-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Risk almaya hazırız.'",
+              "prompt": "Risk almaya hazırız.",
               "answer": "We are willing to take the risk",
               "bank": [
                 "We",
@@ -4131,7 +4131,7 @@
             {
               "id": "id4-7",
               "type": "fill_blank",
-              "prompt": "'Please ___ the law.' (Türkçe: 'Lütfen yasalara uyun.')",
+              "prompt": "Please ___ the law.",
               "answer": "obey",
               "acceptableAnswers": [
                 "follow"
@@ -4152,7 +4152,7 @@
             {
               "id": "id4-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sınava girmeden önce derin bir nefes al.'",
+              "prompt": "Sınava girmeden önce derin bir nefes al.",
               "answer": "Take a deep breath before the exam",
               "bank": [
                 "Take",
@@ -4170,7 +4170,7 @@
             {
               "id": "id4-10",
               "type": "fill_blank",
-              "prompt": "'She made a strong ___ in her speech.' (Türkçe: 'Konuşmasında güçlü bir izlenim bıraktı.')",
+              "prompt": "She made a strong ___ in her speech.",
               "answer": "impression",
               "acceptableAnswers": []
             }
@@ -4222,14 +4222,14 @@
             {
               "id": "id5-3",
               "type": "fill_blank",
-              "prompt": "'Let's not boil the ___; let's start small.' (Türkçe: 'Her şeyi birden çözmeye çalışmayalım; küçük başlayalım.')",
+              "prompt": "Let's not boil the ___; let's start small.",
               "answer": "ocean",
               "acceptableAnswers": []
             },
             {
               "id": "id5-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu rakam gerçekten gelirde fark yaratabilir.'",
+              "prompt": "Bu rakam gerçekten gelirde fark yaratabilir.",
               "answer": "This figure could really move the needle on revenue",
               "bank": [
                 "This",
@@ -4274,7 +4274,7 @@
             {
               "id": "id5-7",
               "type": "fill_blank",
-              "prompt": "'That decision is above my pay ___.' (Türkçe: 'Bu karar benim yetkimi aşıyor.')",
+              "prompt": "That decision is above my pay ___.",
               "answer": "grade",
               "acceptableAnswers": []
             },
@@ -4293,7 +4293,7 @@
             {
               "id": "id5-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu kararı yetkim aşıyor; üst yönetime taşıyalım.'",
+              "prompt": "Bu kararı yetkim aşıyor; üst yönetime taşıyalım.",
               "answer": "This decision is above my pay grade let's escalate it",
               "bank": [
                 "This",
@@ -4314,7 +4314,7 @@
             {
               "id": "id5-10",
               "type": "fill_blank",
-              "prompt": "'We need to get all our ducks in a ___ before the launch.' (Türkçe: 'Lansmandan önce her şeyi tıkır tıkır hazır etmemiz lazım.')",
+              "prompt": "We need to get all our ducks in a ___ before the launch.",
               "answer": "row",
               "acceptableAnswers": []
             },
@@ -4333,7 +4333,7 @@
             {
               "id": "id5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Önce kolay olanı yapıp sonra zor olana geçelim.'",
+              "prompt": "Önce kolay olanı yapıp sonra zor olana geçelim.",
               "answer": "Let's pick the low-hanging fruit first then tackle the hard problems",
               "bank": [
                 "Let's",
@@ -4400,7 +4400,7 @@
             {
               "id": "id6-3",
               "type": "fill_blank",
-              "prompt": "'She is a very ___ person; she rarely overreacts.' (Türkçe: 'O çok mantıklı bir insan; nadiren aşırı tepki verir.')",
+              "prompt": "She is a very ___ person; she rarely overreacts.",
               "answer": "sensible",
               "acceptableAnswers": [
                 "reasonable",
@@ -4411,7 +4411,7 @@
             {
               "id": "id6-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Aslında, bunu yıllar önce çözmeliydik.'",
+              "prompt": "Aslında, bunu yıllar önce çözmeliydik.",
               "answer": "Actually we should have solved this years ago",
               "bank": [
                 "Actually",
@@ -4455,7 +4455,7 @@
             {
               "id": "id6-7",
               "type": "fill_blank",
-              "prompt": "'The proposal is ___ (= savunulabilir), if not optimal.' (Türkçe: 'Öneri, en iyi olmasa da savunulabilir.')",
+              "prompt": "The proposal is ___ (= savunulabilir), if not optimal.",
               "answer": "defensible",
               "acceptableAnswers": [
                 "justifiable"
@@ -4476,7 +4476,7 @@
             {
               "id": "id6-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Daha az kelimeyle aynı şeyi söylemenin yolunu aramalıyız.'",
+              "prompt": "Daha az kelimeyle aynı şeyi söylemenin yolunu aramalıyız.",
               "answer": "We should look for a way to say the same thing in fewer words",
               "bank": [
                 "We",
@@ -4500,7 +4500,7 @@
             {
               "id": "id6-10",
               "type": "fill_blank",
-              "prompt": "'I'd like to ___ (= itiraz etmek, nazik) on that timeline.' (Türkçe: 'Bu takvime nazikçe itiraz etmek isterim.')",
+              "prompt": "I'd like to ___ (= itiraz etmek, nazik) on that timeline.",
               "answer": "push back",
               "acceptableAnswers": [
                 "object"
@@ -4521,7 +4521,7 @@
             {
               "id": "id6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Son olarak, fiyatlandırmaya bir noktada itiraz etmek istiyorum.'",
+              "prompt": "Son olarak, fiyatlandırmaya bir noktada itiraz etmek istiyorum.",
               "answer": "Finally I would like to push back on the pricing at one point",
               "bank": [
                 "Finally",
@@ -4782,14 +4782,14 @@
             {
               "id": "gr1-2",
               "type": "fill_blank",
-              "prompt": "'Never before ___ I felt such pressure.' (Türkçe: 'Daha önce hiç böyle bir baskı hissetmemiştim.')",
+              "prompt": "Never before ___ I felt such pressure.",
               "answer": "had",
               "acceptableAnswers": []
             },
             {
               "id": "gr1-3",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sadece reddetmekle kalmadı, ayrıca odadan çıktı.'",
+              "prompt": "Sadece reddetmekle kalmadı, ayrıca odadan çıktı.",
               "answer": "Not only did he refuse but he also walked out",
               "bank": [
                 "Not",
@@ -4857,7 +4857,7 @@
             {
               "id": "gr1-7",
               "type": "fill_blank",
-              "prompt": "'No sooner ___ I sat down than the phone rang.' (Türkçe: 'Oturur oturmaz telefon çaldı.')",
+              "prompt": "No sooner ___ I sat down than the phone rang.",
               "answer": "had",
               "acceptableAnswers": []
             },
@@ -4876,7 +4876,7 @@
             {
               "id": "gr1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Hiçbir koşulda kapı açık bırakılmamalıdır.'",
+              "prompt": "Hiçbir koşulda kapı açık bırakılmamalıdır.",
               "answer": "Under no circumstances should the door be left open",
               "bank": [
                 "Under",
@@ -4895,7 +4895,7 @@
             {
               "id": "gr1-10",
               "type": "fill_blank",
-              "prompt": "'Little ___ they realise the danger.' (Türkçe: 'Tehlikenin pek farkına varmadılar.')",
+              "prompt": "Little ___ they realise the danger.",
               "answer": "did",
               "acceptableAnswers": [],
               "explanation": "'Little did they realise' deyimsel inversion."
@@ -4924,14 +4924,14 @@
             {
               "id": "gr2-2",
               "type": "fill_blank",
-              "prompt": "'___ surprises me most is his silence.' (Türkçe: 'Beni en çok şaşırtan şey onun sessizliği.')",
+              "prompt": "___ surprises me most is his silence.",
               "answer": "What",
               "acceptableAnswers": []
             },
             {
               "id": "gr2-3",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Asıl ihtiyacım olan zaman.'",
+              "prompt": "Asıl ihtiyacım olan zaman.",
               "answer": "What I really need is time",
               "bank": [
                 "What",
@@ -4996,7 +4996,7 @@
             {
               "id": "gr2-7",
               "type": "fill_blank",
-              "prompt": "'It is the patient ___ deserves our attention.' (Türkçe: 'Dikkatimizi hak eden hastadır.')",
+              "prompt": "It is the patient ___ deserves our attention.",
               "answer": "who",
               "acceptableAnswers": [
                 "that"
@@ -5017,7 +5017,7 @@
             {
               "id": "gr2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Kararı veren komiteydi, kişi değil.'",
+              "prompt": "Kararı veren komiteydi, kişi değil.",
               "answer": "It was the committee that made the decision not an individual",
               "bank": [
                 "It",
@@ -5039,7 +5039,7 @@
             {
               "id": "gr2-10",
               "type": "fill_blank",
-              "prompt": "'It was ___ here that we first met.' (Türkçe: 'İlk burada tanıştığımız yer burası.')",
+              "prompt": "It was ___ here that we first met.",
               "answer": "right",
               "acceptableAnswers": [
                 "correct"
@@ -5069,14 +5069,14 @@
             {
               "id": "gr3-2",
               "type": "fill_blank",
-              "prompt": "'___ in haste, the report contained errors.' (Türkçe: 'Aceleyle yazılan rapor hatalar içeriyordu.')",
+              "prompt": "___ in haste, the report contained errors.",
               "answer": "Written",
               "acceptableAnswers": []
             },
             {
               "id": "gr3-3",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Yorgun olduğu için erken yattı.'",
+              "prompt": "Yorgun olduğu için erken yattı.",
               "answer": "Feeling tired she went to bed early",
               "bank": [
                 "Feeling",
@@ -5142,7 +5142,7 @@
             {
               "id": "gr3-7",
               "type": "fill_blank",
-              "prompt": "'___ at the airport, we headed to the hotel.' (Türkçe: 'Havalimanına vardıktan sonra otele yöneldik.')",
+              "prompt": "___ at the airport, we headed to the hotel.",
               "answer": "Having arrived",
               "acceptableAnswers": [
                 "arriving"
@@ -5164,7 +5164,7 @@
             {
               "id": "gr3-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Kurul tarafından gözden geçirilmiş olan plan onaylandı.'",
+              "prompt": "Kurul tarafından gözden geçirilmiş olan plan onaylandı.",
               "answer": "Reviewed by the board the plan was approved",
               "bank": [
                 "Reviewed",
@@ -5183,7 +5183,7 @@
             {
               "id": "gr3-10",
               "type": "fill_blank",
-              "prompt": "'___ ignored, the problem grew worse.' (Türkçe: 'Görmezden gelinince sorun daha da büyüdü.')",
+              "prompt": "___ ignored, the problem grew worse.",
               "answer": "Being",
               "acceptableAnswers": []
             }
@@ -5212,7 +5212,7 @@
             {
               "id": "gr4-2",
               "type": "fill_blank",
-              "prompt": "'___ I really want is a clear timeline.' (Türkçe: 'Gerçekten istediğim şey net bir takvim.') (wh-cleft)",
+              "prompt": "___ I really want is a clear timeline.",
               "answer": "What",
               "acceptableAnswers": [],
               "explanation": "Wh-cleft: 'What I want is X.'"
@@ -5243,7 +5243,7 @@
             {
               "id": "gr4-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Gerçekten ihtiyacımız olan şey daha net bir brief.'",
+              "prompt": "Gerçekten ihtiyacımız olan şey daha net bir brief.",
               "answer": "What we really need is a clearer brief",
               "bank": [
                 "What",
@@ -5288,7 +5288,7 @@
             {
               "id": "gr4-7",
               "type": "fill_blank",
-              "prompt": "'It ___ not until 2020 that we noticed the trend.' (Türkçe: 'Eğilimi 2020'ye kadar fark etmedik.') (it-cleft)",
+              "prompt": "It ___ not until 2020 that we noticed the trend.",
               "answer": "was",
               "acceptableAnswers": []
             },
@@ -5307,7 +5307,7 @@
             {
               "id": "gr4-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Beni gerçekten rahatsız eden şey, eksik şeffaflıktı.'",
+              "prompt": "Beni gerçekten rahatsız eden şey, eksik şeffaflıktı.",
               "answer": "What really troubled me was the lack of transparency",
               "bank": [
                 "What",
@@ -5327,7 +5327,7 @@
             {
               "id": "gr4-10",
               "type": "fill_blank",
-              "prompt": "'Only ___ examining the data did we identify the bias.' (Türkçe: 'Veriyi inceledikten sonra bias'ı fark ettik.') (fronting + inversion)",
+              "prompt": "Only ___ examining the data did we identify the bias.",
               "answer": "after",
               "acceptableAnswers": [],
               "explanation": "'Only after V-ing… did we…'"
@@ -5347,7 +5347,7 @@
             {
               "id": "gr4-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Hiçbir koşulda anlaşmaya geri dönmeyeceğiz.'",
+              "prompt": "Hiçbir koşulda anlaşmaya geri dönmeyeceğiz.",
               "answer": "Under no circumstances will we revert to the agreement",
               "bank": [
                 "Under",
@@ -5389,7 +5389,7 @@
             {
               "id": "gr5-2",
               "type": "fill_blank",
-              "prompt": "'The candidate ___ for the role has fifteen years of experience.' (Türkçe: 'Bu rol için seçilen aday on beş yıl deneyime sahip.') (participle)",
+              "prompt": "The candidate ___ for the role has fifteen years of experience.",
               "answer": "selected",
               "acceptableAnswers": [
                 "chosen"
@@ -5421,7 +5421,7 @@
             {
               "id": "gr5-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Müzakereye liderlik eden danışman bugün rapor sunacak.'",
+              "prompt": "Müzakereye liderlik eden danışman bugün rapor sunacak.",
               "answer": "The consultant leading the negotiation will report today",
               "bank": [
                 "The",
@@ -5465,7 +5465,7 @@
             {
               "id": "gr5-7",
               "type": "fill_blank",
-              "prompt": "'___ all things considered, the deal is fair.' (Türkçe: 'Her şey dikkate alındığında anlaşma adildir.')",
+              "prompt": "___ all things considered, the deal is fair.",
               "answer": "All",
               "acceptableAnswers": [],
               "explanation": "Absolute participle: 'all things considered'."
@@ -5486,7 +5486,7 @@
             {
               "id": "gr5-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Yapılan analiz dikkate alındığında, sonuç savunulabilirdir.'",
+              "prompt": "Yapılan analiz dikkate alındığında, sonuç savunulabilirdir.",
               "answer": "Given the analysis conducted the conclusion is defensible",
               "bank": [
                 "Given",
@@ -5505,7 +5505,7 @@
             {
               "id": "gr5-10",
               "type": "fill_blank",
-              "prompt": "'The author, ___ work has shaped the field, will keynote.' (Türkçe: 'Çalışması alanı şekillendiren yazar açılış konuşması yapacak.')",
+              "prompt": "The author, ___ work has shaped the field, will keynote.",
               "answer": "whose",
               "acceptableAnswers": []
             },
@@ -5525,7 +5525,7 @@
             {
               "id": "gr5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Hava müsaade ederse açılış yarın yapılacak.'",
+              "prompt": "Hava müsaade ederse açılış yarın yapılacak.",
               "answer": "Weather permitting the opening will take place tomorrow",
               "bank": [
                 "Weather",
@@ -5785,14 +5785,14 @@
             {
               "id": "db1-3",
               "type": "fill_blank",
-              "prompt": "'With ___, I must disagree.' (Türkçe: 'Saygıyla bilmem gerekir ki katılmıyorum.')",
+              "prompt": "With ___, I must disagree.",
               "answer": "respect",
               "acceptableAnswers": []
             },
             {
               "id": "db1-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Daha derin baktığımızda argüman çöker.'",
+              "prompt": "Daha derin baktığımızda argüman çöker.",
               "answer": "The argument falls apart on closer inspection",
               "bank": [
                 "The",
@@ -5835,7 +5835,7 @@
             {
               "id": "db1-7",
               "type": "fill_blank",
-              "prompt": "'The reasoning is ___; it merely appears valid.' (Türkçe: 'Akıl yürütme aldatıcı; sadece geçerli görünüyor.')",
+              "prompt": "The reasoning is ___; it merely appears valid.",
               "answer": "specious",
               "acceptableAnswers": [
                 "misleading",
@@ -5858,7 +5858,7 @@
             {
               "id": "db1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sonuç olarak iddia başarısız.'",
+              "prompt": "Sonuç olarak iddia başarısız.",
               "answer": "In conclusion the case fails",
               "bank": [
                 "In",
@@ -5874,7 +5874,7 @@
             {
               "id": "db1-10",
               "type": "fill_blank",
-              "prompt": "'I would ___ urge you to reconsider.' (Türkçe: 'Sizi yeniden düşünmeye davet ediyorum (saygıyla).')",
+              "prompt": "I would ___ urge you to reconsider.",
               "answer": "respectfully",
               "acceptableAnswers": []
             }
@@ -5925,7 +5925,7 @@
             {
               "id": "db2-3",
               "type": "fill_blank",
-              "prompt": "'The implications are ___' (Türkçe: 'Sonuçlar derin etkili.')",
+              "prompt": "The implications are ___",
               "answer": "profound",
               "acceptableAnswers": [
                 "deep"
@@ -5934,7 +5934,7 @@
             {
               "id": "db2-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Argüman cazip ama temelsiz.'",
+              "prompt": "Argüman cazip ama temelsiz.",
               "answer": "The argument is seductive but unfounded",
               "bank": [
                 "The",
@@ -5976,7 +5976,7 @@
             {
               "id": "db2-7",
               "type": "fill_blank",
-              "prompt": "'These accusations are ___' (Türkçe: 'Bu suçlamalar temelsizdir.')",
+              "prompt": "These accusations are ___",
               "answer": "unfounded",
               "acceptableAnswers": [
                 "baseless",
@@ -5998,7 +5998,7 @@
             {
               "id": "db2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu, sıkı bir analiz değil, sadece spekülasyon.'",
+              "prompt": "Bu, sıkı bir analiz değil, sadece spekülasyon.",
               "answer": "This is not rigorous analysis but mere speculation",
               "bank": [
                 "This",
@@ -6017,7 +6017,7 @@
             {
               "id": "db2-10",
               "type": "fill_blank",
-              "prompt": "'Their reasoning is ___ flawed.' (Türkçe: 'Akıl yürütmeleri temelden hatalı.')",
+              "prompt": "Their reasoning is ___ flawed.",
               "answer": "fundamentally",
               "acceptableAnswers": [
                 "essentially",
@@ -6071,7 +6071,7 @@
             {
               "id": "db3-3",
               "type": "fill_blank",
-              "prompt": "'___ his concerns, the project went ahead.' (Türkçe: 'Endişelerine rağmen proje ilerledi.')",
+              "prompt": "___ his concerns, the project went ahead.",
               "answer": "Notwithstanding",
               "acceptableAnswers": [
                 "despite",
@@ -6081,7 +6081,7 @@
             {
               "id": "db3-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Kabul, fikir cazip; ne ki uygulanabilir değil.'",
+              "prompt": "Kabul, fikir cazip; ne ki uygulanabilir değil.",
               "answer": "Granted the idea is appealing however it is not feasible",
               "bank": [
                 "Granted",
@@ -6126,7 +6126,7 @@
             {
               "id": "db3-7",
               "type": "fill_blank",
-              "prompt": "'The market has shifted; ___, our strategy must adapt.' (Türkçe: 'Pazar değişti; dolayısıyla stratejimiz uyum sağlamalı.')",
+              "prompt": "The market has shifted; ___, our strategy must adapt.",
               "answer": "hence",
               "acceptableAnswers": [
                 "therefore",
@@ -6148,7 +6148,7 @@
             {
               "id": "db3-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Tersine, küçük ölçekli analiz farklı eğilim gösteriyor.'",
+              "prompt": "Tersine, küçük ölçekli analiz farklı eğilim gösteriyor.",
               "answer": "Conversely the smaller scale analysis shows a different trend",
               "bank": [
                 "Conversely",
@@ -6168,7 +6168,7 @@
             {
               "id": "db3-10",
               "type": "fill_blank",
-              "prompt": "'___ the criticism, the policy stands.' (Türkçe: 'Eleştirilere rağmen politika geçerliliğini koruyor.')",
+              "prompt": "___ the criticism, the policy stands.",
               "answer": "Despite",
               "acceptableAnswers": [
                 "in spite of",
@@ -6199,7 +6199,7 @@
             {
               "id": "db4-2",
               "type": "fill_blank",
-              "prompt": "'The argument ___ on a questionable assumption.' (Türkçe: 'Argüman tartışmalı bir varsayıma dayanıyor.')",
+              "prompt": "The argument ___ on a questionable assumption.",
               "answer": "rests",
               "acceptableAnswers": [
                 "hinges"
@@ -6232,7 +6232,7 @@
             {
               "id": "db4-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Argüman, yapısal nedenlerle bireysel seçimleri karıştırıyor.'",
+              "prompt": "Argüman, yapısal nedenlerle bireysel seçimleri karıştırıyor.",
               "answer": "The argument conflates structural causes with individual choices",
               "bank": [
                 "The",
@@ -6276,7 +6276,7 @@
             {
               "id": "db4-7",
               "type": "fill_blank",
-              "prompt": "'The conclusion does not ___ from the evidence presented.' (Türkçe: 'Sonuç sunulan kanıtlardan çıkmıyor.')",
+              "prompt": "The conclusion does not ___ from the evidence presented.",
               "answer": "follow",
               "acceptableAnswers": []
             },
@@ -6296,7 +6296,7 @@
             {
               "id": "db4-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu argüman bir korelasyonu nedensellikle karıştırıyor.'",
+              "prompt": "Bu argüman bir korelasyonu nedensellikle karıştırıyor.",
               "answer": "This argument confuses correlation with causation",
               "bank": [
                 "This",
@@ -6313,7 +6313,7 @@
             {
               "id": "db4-10",
               "type": "fill_blank",
-              "prompt": "'The data, ___ properly examined, suggest the opposite.' (Türkçe: 'Veri uygun şekilde incelendiğinde tam tersini gösteriyor.')",
+              "prompt": "The data, ___ properly examined, suggest the opposite.",
               "answer": "when",
               "acceptableAnswers": [
                 "if"
@@ -6335,7 +6335,7 @@
             {
               "id": "db4-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Argüman dayandığı varsayım reddedildiğinde çöker.'",
+              "prompt": "Argüman dayandığı varsayım reddedildiğinde çöker.",
               "answer": "The argument collapses once its underlying assumption is rejected",
               "bank": [
                 "The",
@@ -6376,7 +6376,7 @@
             {
               "id": "db5-2",
               "type": "fill_blank",
-              "prompt": "'There is ___ truth to that, but it overlooks the bigger picture.' (Türkçe: 'Bunda biraz doğruluk payı var ama büyük resmi gözden kaçırıyor.')",
+              "prompt": "There is ___ truth to that, but it overlooks the bigger picture.",
               "answer": "some",
               "acceptableAnswers": []
             },
@@ -6406,7 +6406,7 @@
             {
               "id": "db5-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Maliyet konusunda haklısınız; bununla beraber önlem maliyetli olmamayı zorlaştırıyor.'",
+              "prompt": "Maliyet konusunda haklısınız; bununla beraber önlem maliyetli olmamayı zorlaştırıyor.",
               "answer": "You are right about the cost yet inaction is more expensive still",
               "bank": [
                 "You",
@@ -6454,7 +6454,7 @@
             {
               "id": "db5-7",
               "type": "fill_blank",
-              "prompt": "'I ___ your concern, but the data still favour the proposal.' (Türkçe: 'Kaygınızı anlıyorum ama veriler hâlâ öneriden yana.')",
+              "prompt": "I ___ your concern, but the data still favour the proposal.",
               "answer": "appreciate",
               "acceptableAnswers": [
                 "share",
@@ -6477,7 +6477,7 @@
             {
               "id": "db5-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Eleştiri yerinde; ancak çözüm birim öneri olarak yetersiz.'",
+              "prompt": "Eleştiri yerinde; ancak çözüm birim öneri olarak yetersiz.",
               "answer": "The criticism is fair yet the proposed solution falls short",
               "bank": [
                 "The",
@@ -6498,7 +6498,7 @@
             {
               "id": "db5-10",
               "type": "fill_blank",
-              "prompt": "'Be that ___ it may, the policy remains the most defensible option.' (Türkçe: 'Öyle bile olsa, politika en savunulabilir seçenek olmaya devam ediyor.')",
+              "prompt": "Be that ___ it may, the policy remains the most defensible option.",
               "answer": "as",
               "acceptableAnswers": []
             },
@@ -6517,7 +6517,7 @@
             {
               "id": "db5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu noktayı kabul etmeme rağmen, sonuç hâlâ değişmiyor.'",
+              "prompt": "Bu noktayı kabul etmeme rağmen, sonuç hâlâ değişmiyor.",
               "answer": "While I concede that point the conclusion still does not change",
               "bank": [
                 "While",
@@ -6835,7 +6835,7 @@
             {
               "id": "art1-3",
               "type": "fill_blank",
-              "prompt": "'The director's restraint makes the climax all the more ___.' (Türkçe: '… yönetmenin ölçülü tarzı doruk noktasını çok daha çağrışım uyandırıcı kılıyor.')",
+              "prompt": "The director's restraint makes the climax all the more ___.",
               "answer": "evocative",
               "acceptableAnswers": [
                 "expressive",
@@ -6893,7 +6893,7 @@
             {
               "id": "art1-7",
               "type": "fill_blank",
-              "prompt": "'The film is visually ___ but emotionally hollow.' (Türkçe: '… film görsel olarak cilalı ama duygusal olarak boş.')",
+              "prompt": "The film is visually ___ but emotionally hollow.",
               "answer": "polished",
               "acceptableAnswers": [
                 "refined",
@@ -6915,7 +6915,7 @@
             {
               "id": "art1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Yönetmen ham bir dürüstlüğe ulaşıyor.'",
+              "prompt": "Yönetmen ham bir dürüstlüğe ulaşıyor.",
               "answer": "The director achieves a raw honesty",
               "bank": [
                 "The",
@@ -6944,7 +6944,7 @@
             {
               "id": "art1-11",
               "type": "fill_blank",
-              "prompt": "'The dialogue feels ___ in places, as if written for effect.' (Türkçe: 'Diyalog yer yer zoraki hissettiriyor, etki için yazılmış gibi.')",
+              "prompt": "The dialogue feels ___ in places, as if written for effect.",
               "answer": "contrived",
               "acceptableAnswers": [
                 "forced",
@@ -6955,7 +6955,7 @@
             {
               "id": "art1-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sahne tasarımı yalın ama çağrışım uyandırıcı.'",
+              "prompt": "Sahne tasarımı yalın ama çağrışım uyandırıcı.",
               "answer": "The set design is austere yet evocative",
               "bank": [
                 "The",
@@ -6995,7 +6995,7 @@
             {
               "id": "art2-2",
               "type": "fill_blank",
-              "prompt": "'The performance falls ___ in the second half.' (Türkçe: 'Performans ikinci yarıda havasını kaybediyor.')",
+              "prompt": "The performance falls ___ in the second half.",
               "answer": "flat",
               "acceptableAnswers": []
             },
@@ -7025,7 +7025,7 @@
             {
               "id": "art2-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu, son on yılın en iddialı yapımlarından biri.'",
+              "prompt": "Bu, son on yılın en iddialı yapımlarından biri.",
               "answer": "This is one of the most ambitious works of the past decade",
               "bank": [
                 "This",
@@ -7071,7 +7071,7 @@
             {
               "id": "art2-7",
               "type": "fill_blank",
-              "prompt": "'A welcome ___ to form for the director.' (Türkçe: 'Yönetmen için eski formuna hoş bir dönüş.')",
+              "prompt": "A welcome ___ to form for the director.",
               "answer": "return",
               "acceptableAnswers": []
             },
@@ -7090,7 +7090,7 @@
             {
               "id": "art2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Vaadini yerine getirmiyor ve unutulup gidiyor.'",
+              "prompt": "Vaadini yerine getirmiyor ve unutulup gidiyor.",
               "answer": "It fails to deliver and quickly fades from memory",
               "bank": [
                 "It",
@@ -7110,7 +7110,7 @@
             {
               "id": "art2-10",
               "type": "fill_blank",
-              "prompt": "'A ___ of the genre, both daring and disciplined.' (Türkçe: 'Türünün başarısı; hem cesur hem disiplinli.')",
+              "prompt": "A ___ of the genre, both daring and disciplined.",
               "answer": "triumph",
               "acceptableAnswers": [
                 "success"
@@ -7131,7 +7131,7 @@
             {
               "id": "art2-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Eleştirmenler oybirliğiyle övdü.'",
+              "prompt": "Eleştirmenler oybirliğiyle övdü.",
               "answer": "Critics have praised it almost unanimously",
               "bank": [
                 "Critics",
@@ -7169,7 +7169,7 @@
             {
               "id": "art3-2",
               "type": "fill_blank",
-              "prompt": "'The novel's ___ shifts unexpectedly in chapter three.' (Türkçe: 'Romanın anlatıcısı üçüncü bölümde beklenmedik biçimde değişiyor.')",
+              "prompt": "The novel's ___ shifts unexpectedly in chapter three.",
               "answer": "narrator",
               "acceptableAnswers": [
                 "voice"
@@ -7213,7 +7213,7 @@
             {
               "id": "art3-5",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Düzyazı üslubu ölçülü ama duygu yüklü.'",
+              "prompt": "Düzyazı üslubu ölçülü ama duygu yüklü.",
               "answer": "The prose style is restrained yet emotionally charged",
               "bank": [
                 "The",
@@ -7245,7 +7245,7 @@
             {
               "id": "art3-7",
               "type": "fill_blank",
-              "prompt": "Galeri yazısında: 'Her ___ are bold and gestural.' (Türkçe: 'Fırça vuruşları cesur ve hareketli.')",
+              "prompt": "Her ___ are bold and gestural.",
               "answer": "brushstrokes",
               "acceptableAnswers": [
                 "brush strokes"
@@ -7266,7 +7266,7 @@
             {
               "id": "art3-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sergi, kürator seçimleriyle dikkat çekiyor.'",
+              "prompt": "Sergi, kürator seçimleriyle dikkat çekiyor.",
               "answer": "The exhibition stands out for its curatorial choices",
               "bank": [
                 "The",
@@ -7285,7 +7285,7 @@
             {
               "id": "art3-10",
               "type": "fill_blank",
-              "prompt": "'The score complements the visuals without ___ them.' (Türkçe: 'Müzik, görüntüleri gölgede bırakmadan tamamlıyor.')",
+              "prompt": "The score complements the visuals without ___ them.",
               "answer": "overshadowing",
               "acceptableAnswers": []
             },
@@ -7304,7 +7304,7 @@
             {
               "id": "art3-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Yazarın sesi sayfada hemen tanınıyor.'",
+              "prompt": "Yazarın sesi sayfada hemen tanınıyor.",
               "answer": "The author's voice is immediately recognisable on the page",
               "bank": [
                 "The",
@@ -7345,7 +7345,7 @@
             {
               "id": "art4-2",
               "type": "fill_blank",
-              "prompt": "'It's a slow ___, but the payoff is immense.' (Türkçe: 'Yavaş ilerleyen bir yapım ama karşılığını fazlasıyla veriyor.')",
+              "prompt": "It's a slow ___, but the payoff is immense.",
               "answer": "burn",
               "acceptableAnswers": []
             },
@@ -7375,7 +7375,7 @@
             {
               "id": "art4-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu albüm zamanının ötesindeydi.'",
+              "prompt": "Bu albüm zamanının ötesindeydi.",
               "answer": "The album was ahead of its time",
               "bank": [
                 "The",
@@ -7418,7 +7418,7 @@
             {
               "id": "art4-7",
               "type": "fill_blank",
-              "prompt": "'The story really ___ a chord with younger readers.' (Türkçe: 'Hikâye genç okuyucuların kalbine dokundu.')",
+              "prompt": "The story really ___ a chord with younger readers.",
               "answer": "struck",
               "acceptableAnswers": []
             },
@@ -7437,7 +7437,7 @@
             {
               "id": "art4-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Roman son perdede havasını kaybediyor.'",
+              "prompt": "Roman son perdede havasını kaybediyor.",
               "answer": "The novel falls flat in the final act",
               "bank": [
                 "The",
@@ -7456,7 +7456,7 @@
             {
               "id": "art4-10",
               "type": "fill_blank",
-              "prompt": "'It's an acquired ___, but worth the patience.' (Türkçe: 'Sonradan alınan bir tat ama sabra değer.')",
+              "prompt": "It's an acquired ___, but worth the patience.",
               "answer": "taste",
               "acceptableAnswers": []
             },
@@ -7475,7 +7475,7 @@
             {
               "id": "art4-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu film benim için tam bir gizli zevk.'",
+              "prompt": "Bu film benim için tam bir gizli zevk.",
               "answer": "This film is something of a guilty pleasure for me",
               "bank": [
                 "This",
@@ -7528,7 +7528,7 @@
             {
               "id": "art5-3",
               "type": "fill_blank",
-              "prompt": "'A polished if somewhat ___ debut.' (Türkçe: 'Cilalı ama biraz taklitçi bir ilk yapım.')",
+              "prompt": "A polished if somewhat ___ debut.",
               "answer": "derivative",
               "acceptableAnswers": [
                 "unoriginal",
@@ -7586,7 +7586,7 @@
             {
               "id": "art5-7",
               "type": "fill_blank",
-              "prompt": "'The score is evocative, the script ___-handed.' (Türkçe: 'Müzik çağrışım uyandırıcı, senaryo kaba.')",
+              "prompt": "The score is evocative, the script ___-handed.",
               "answer": "heavy",
               "acceptableAnswers": []
             },
@@ -7605,7 +7605,7 @@
             {
               "id": "art5-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Eleştirmen tarafını net biçimde belli ediyor.'",
+              "prompt": "Eleştirmen tarafını net biçimde belli ediyor.",
               "answer": "The critic makes their position unmistakably clear",
               "bank": [
                 "The",
@@ -7623,7 +7623,7 @@
             {
               "id": "art5-10",
               "type": "fill_blank",
-              "prompt": "'Restrained, austere, and quietly ___.' (Türkçe: 'Ölçülü, yalın ve sessizce ustalıklı.')",
+              "prompt": "Restrained, austere, and quietly ___.",
               "answer": "masterful",
               "acceptableAnswers": [
                 "accomplished",
@@ -7645,7 +7645,7 @@
             {
               "id": "art5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sonuçta yıllarca akıldan çıkmayacak yavaş bir yapım.'",
+              "prompt": "Sonuçta yıllarca akıldan çıkmayacak yavaş bir yapım.",
               "answer": "Ultimately a slow burn that will linger for years",
               "bank": [
                 "Ultimately",
@@ -7922,7 +7922,7 @@
             {
               "id": "nws1-3",
               "type": "fill_blank",
-              "prompt": "'What this ___ for the wider economy is unclear.' (Türkçe: 'Bunun geniş ekonomi için ne anlama geldiği belirsiz.') — analiz cümlesi",
+              "prompt": "What this ___ for the wider economy is unclear.",
               "answer": "means",
               "acceptableAnswers": []
             },
@@ -7977,7 +7977,7 @@
             {
               "id": "nws1-7",
               "type": "fill_blank",
-              "prompt": "'Make no ___: this changes everything.' (Türkçe: 'Yanılmayın: bu her şeyi değiştirir.') — op-ed",
+              "prompt": "Make no ___: this changes everything.",
               "answer": "mistake",
               "acceptableAnswers": [
                 "error"
@@ -7998,7 +7998,7 @@
             {
               "id": "nws1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu kararın çıkarımları henüz değerlendirilmiş değil.'",
+              "prompt": "Bu kararın çıkarımları henüz değerlendirilmiş değil.",
               "answer": "The implications of the decision are yet to be assessed",
               "bank": [
                 "The",
@@ -8019,7 +8019,7 @@
             {
               "id": "nws1-10",
               "type": "fill_blank",
-              "prompt": "'One could ___ that the policy has failed.' (Türkçe: 'Politikanın başarısız olduğu öne sürülebilir.') — op-ed",
+              "prompt": "One could ___ that the policy has failed.",
               "answer": "argue",
               "acceptableAnswers": [
                 "contend",
@@ -8043,7 +8043,7 @@
             {
               "id": "nws1-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Düz haber, kaynaklı ve tarafsızdır.'",
+              "prompt": "Düz haber, kaynaklı ve tarafsızdır.",
               "answer": "Straight reporting is sourced and impartial",
               "bank": [
                 "Straight",
@@ -8081,7 +8081,7 @@
             {
               "id": "nws2-2",
               "type": "fill_blank",
-              "prompt": "'The minister ___ to comment on the allegations.' (Türkçe: 'Bakan iddialar hakkında yorum yapmayı reddetti.')",
+              "prompt": "The minister ___ to comment on the allegations.",
               "answer": "declined",
               "acceptableAnswers": [
                 "refused"
@@ -8113,7 +8113,7 @@
             {
               "id": "nws2-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Şirket yorum talebimize yanıt vermedi.'",
+              "prompt": "Şirket yorum talebimize yanıt vermedi.",
               "answer": "The company did not respond to our request for comment",
               "bank": [
                 "The",
@@ -8158,7 +8158,7 @@
             {
               "id": "nws2-7",
               "type": "fill_blank",
-              "prompt": "'Two ___ familiar with the talks confirmed the figure.' (Türkçe: 'Görüşmelere yakın iki kaynak rakamı doğruladı.')",
+              "prompt": "Two ___ familiar with the talks confirmed the figure.",
               "answer": "sources",
               "acceptableAnswers": []
             },
@@ -8178,7 +8178,7 @@
             {
               "id": "nws2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Hükümet hâlâ bir karar vermediğini söylüyor.'",
+              "prompt": "Hükümet hâlâ bir karar vermediğini söylüyor.",
               "answer": "The government says no decision has yet been made",
               "bank": [
                 "The",
@@ -8197,7 +8197,7 @@
             {
               "id": "nws2-10",
               "type": "fill_blank",
-              "prompt": "'Three insiders, ___ to speak on the record, described the meeting.' (Türkçe: 'Kayıt altında konuşmaya yetkili olmayan üç içeriden toplantıyı anlattı.')",
+              "prompt": "Three insiders, ___ to speak on the record, described the meeting.",
               "answer": "not authorised",
               "acceptableAnswers": [
                 "not authorized"
@@ -8218,7 +8218,7 @@
             {
               "id": "nws2-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Ofis konuyla ilgili yorum yapmaktan kaçındı.'",
+              "prompt": "Ofis konuyla ilgili yorum yapmaktan kaçındı.",
               "answer": "The office declined to comment on the matter",
               "bank": [
                 "The",
@@ -8258,7 +8258,7 @@
             {
               "id": "nws3-2",
               "type": "fill_blank",
-              "prompt": "Manşet: 'Court ___ Against Agency' (geçmiş olay için present tense)",
+              "prompt": "Court ___ Against Agency",
               "answer": "Rules",
               "acceptableAnswers": []
             },
@@ -8288,7 +8288,7 @@
             {
               "id": "nws3-4",
               "type": "tap_words_in_order",
-              "prompt": "Manşeti kurun: 'Başkan Yeni Yasayı İmzaladı'",
+              "prompt": "Başkan Yeni Yasayı İmzaladı",
               "answer": "President Signs New Law",
               "bank": [
                 "President",
@@ -8329,7 +8329,7 @@
             {
               "id": "nws3-7",
               "type": "fill_blank",
-              "prompt": "Manşet: 'Markets ___ on Tariff News' (yükselmek anlamında, kısa)",
+              "prompt": "Markets ___ on Tariff News",
               "answer": "Surge",
               "acceptableAnswers": [
                 "rise",
@@ -8352,7 +8352,7 @@
             {
               "id": "nws3-9",
               "type": "tap_words_in_order",
-              "prompt": "Manşeti kurun: 'Görüşmeler Tıkandı: Kaynak'",
+              "prompt": "Görüşmeler Tıkandı: Kaynak",
               "answer": "Talks Stall: Source",
               "bank": [
                 "Talks",
@@ -8387,7 +8387,7 @@
             {
               "id": "nws3-12",
               "type": "tap_words_in_order",
-              "prompt": "Manşeti kurun: 'Yargıç Yasayı İptal Etti'",
+              "prompt": "Yargıç Yasayı İptal Etti",
               "answer": "Judge Strikes Down Law",
               "bank": [
                 "Judge",
@@ -8423,7 +8423,7 @@
             {
               "id": "nws4-2",
               "type": "fill_blank",
-              "prompt": "'One could ___ that the system is broken.' (Türkçe: 'Sistemin bozuk olduğu öne sürülebilir.')",
+              "prompt": "One could ___ that the system is broken.",
               "answer": "argue",
               "acceptableAnswers": [
                 "contend",
@@ -8458,7 +8458,7 @@
             {
               "id": "nws4-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Yanılmayın: bu, bir döngünün sonudur.'",
+              "prompt": "Yanılmayın: bu, bir döngünün sonudur.",
               "answer": "Make no mistake this is the end of an era",
               "bank": [
                 "Make",
@@ -8503,7 +8503,7 @@
             {
               "id": "nws4-7",
               "type": "fill_blank",
-              "prompt": "'I, for ___, find the argument unconvincing.' (Türkçe: 'Bana kalırsa argüman ikna edici değil.')",
+              "prompt": "I, for ___, find the argument unconvincing.",
               "answer": "one",
               "acceptableAnswers": []
             },
@@ -8522,7 +8522,7 @@
             {
               "id": "nws4-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu yüzden çağrımız nettir: harekete geçilmeli.'",
+              "prompt": "Bu yüzden çağrımız nettir: harekete geçilmeli.",
               "answer": "Our call is therefore clear action must be taken",
               "bank": [
                 "Our",
@@ -8541,7 +8541,7 @@
             {
               "id": "nws4-10",
               "type": "fill_blank",
-              "prompt": "'Far from being a ___, the policy is a partial fix.' (Türkçe: 'Her derde deva olmaktan öte, politika kısmi bir çözüm.')",
+              "prompt": "Far from being a ___, the policy is a partial fix.",
               "answer": "panacea",
               "acceptableAnswers": [
                 "cure-all",
@@ -8564,7 +8564,7 @@
             {
               "id": "nws4-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu, basit bir düzenleme meselesi değildir.'",
+              "prompt": "Bu, basit bir düzenleme meselesi değildir.",
               "answer": "This is not merely a question of regulation",
               "bank": [
                 "This",
@@ -8616,7 +8616,7 @@
             {
               "id": "nws5-3",
               "type": "fill_blank",
-              "prompt": "'The CEO ___ the allegations.' (Türkçe: 'CEO iddiaları reddetti.') — reporting",
+              "prompt": "The CEO ___ the allegations.",
               "answer": "denied",
               "acceptableAnswers": [
                 "refused",
@@ -8676,7 +8676,7 @@
             {
               "id": "nws5-7",
               "type": "fill_blank",
-              "prompt": "'The proposal is ___ a step forward, but far from sufficient.' (Türkçe: 'Öneri görünüşte bir adım ama yeterli olmaktan uzak.')",
+              "prompt": "The proposal is ___ a step forward, but far from sufficient.",
               "answer": "ostensibly",
               "acceptableAnswers": [
                 "apparently",
@@ -8699,7 +8699,7 @@
             {
               "id": "nws5-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Kaynaklar bir karara henüz varılmadığını bildiriyor.'",
+              "prompt": "Kaynaklar bir karara henüz varılmadığını bildiriyor.",
               "answer": "Sources indicate that no decision has yet been reached",
               "bank": [
                 "Sources",
@@ -8718,7 +8718,7 @@
             {
               "id": "nws5-10",
               "type": "fill_blank",
-              "prompt": "'The firm ___ to comment when contacted.' (Türkçe: 'Şirket temasta bulunulduğunda yorum yapmaktan kaçındı.')",
+              "prompt": "The firm ___ to comment when contacted.",
               "answer": "declined",
               "acceptableAnswers": [
                 "refused"
@@ -8739,7 +8739,7 @@
             {
               "id": "nws5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Sözcü hemen yorum talebimize yanıt vermedi.'",
+              "prompt": "Sözcü hemen yorum talebimize yanıt vermedi.",
               "answer": "The spokesperson did not immediately respond to our request for comment",
               "bank": [
                 "The",
@@ -8933,7 +8933,7 @@
             {
               "id": "rv1-2",
               "type": "fill_blank",
-              "prompt": "'A growing ___ of evidence indicates climate sensitivity.' (Türkçe: 'Giderek artan kanıt iklim duyarlılığına işaret ediyor.')",
+              "prompt": "A growing ___ of evidence indicates climate sensitivity.",
               "answer": "body",
               "acceptableAnswers": [
                 "amount"
@@ -8965,7 +8965,7 @@
             {
               "id": "rv1-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu rakamı karşılamakta zorlanabiliriz.'",
+              "prompt": "Bu rakamı karşılamakta zorlanabiliriz.",
               "answer": "We may have difficulty meeting that figure",
               "bank": [
                 "We",
@@ -9008,7 +9008,7 @@
             {
               "id": "rv1-7",
               "type": "fill_blank",
-              "prompt": "'I'd like to push ___ on that timeline.' (Türkçe: 'Bu takvime itiraz etmek isterim.')",
+              "prompt": "I'd like to push ___ on that timeline.",
               "answer": "back",
               "acceptableAnswers": []
             },
@@ -9027,7 +9027,7 @@
             {
               "id": "rv1-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Bu çalışma yeni bir kuramsal çerçeve önerir.'",
+              "prompt": "Bu çalışma yeni bir kuramsal çerçeve önerir.",
               "answer": "This study proposes a novel theoretical framework",
               "bank": [
                 "This",
@@ -9045,7 +9045,7 @@
             {
               "id": "rv1-10",
               "type": "fill_blank",
-              "prompt": "'These results ___ a robust effect.' (Türkçe: 'Sonuçlar sağlam bir etki ortaya koymaktadır.')",
+              "prompt": "These results ___ a robust effect.",
               "answer": "demonstrate",
               "acceptableAnswers": [
                 "indicate",
@@ -9099,7 +9099,7 @@
             {
               "id": "rv2-3",
               "type": "fill_blank",
-              "prompt": "'There is a strong ___ for reform.' (Türkçe: 'Reform için güçlü gerekçe var.')",
+              "prompt": "There is a strong ___ for reform.",
               "answer": "case",
               "acceptableAnswers": [
                 "argument",
@@ -9109,7 +9109,7 @@
             {
               "id": "rv2-4",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Görmezden gelinen büyük probleme değinmeliyiz.'",
+              "prompt": "Görmezden gelinen büyük probleme değinmeliyiz.",
               "answer": "We must address the elephant in the room",
               "bank": [
                 "We",
@@ -9154,7 +9154,7 @@
             {
               "id": "rv2-7",
               "type": "fill_blank",
-              "prompt": "'It's the ___ in the room.' (Türkçe: 'Görmezden gelinen büyük problem.')",
+              "prompt": "It's the ___ in the room.",
               "answer": "elephant",
               "acceptableAnswers": []
             },
@@ -9173,7 +9173,7 @@
             {
               "id": "rv2-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Daha incelikli bir yaklaşım gerekiyor.'",
+              "prompt": "Daha incelikli bir yaklaşım gerekiyor.",
               "answer": "A more nuanced approach is required",
               "bank": [
                 "A",
@@ -9190,7 +9190,7 @@
             {
               "id": "rv2-10",
               "type": "fill_blank",
-              "prompt": "'Don't make a ___ out of a molehill.' (Türkçe: 'Pireyi deve yapma.')",
+              "prompt": "Don't make a ___ out of a molehill.",
               "answer": "mountain",
               "acceptableAnswers": []
             }
@@ -9218,14 +9218,14 @@
             {
               "id": "rv3-2",
               "type": "fill_blank",
-              "prompt": "'No sooner ___ I sat down than the phone rang.' (Türkçe: 'Oturur oturmaz telefon çaldı.')",
+              "prompt": "No sooner ___ I sat down than the phone rang.",
               "answer": "had",
               "acceptableAnswers": []
             },
             {
               "id": "rv3-3",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Hatayı ilk fark eden Sarah'ydı.'",
+              "prompt": "'Hatayı ilk fark eden Sarah'ydı.'",
               "answer": "It was Sarah who first noticed the error",
               "bank": [
                 "It",
@@ -9292,7 +9292,7 @@
             {
               "id": "rv3-7",
               "type": "fill_blank",
-              "prompt": "'Granted, the cost is high, ___ the long-term gains outweigh it.' (Türkçe: 'Kabul, maliyet yüksek; ne ki uzun vadeli kazançlar bunu aşıyor.')",
+              "prompt": "Granted, the cost is high, ___ the long-term gains outweigh it.",
               "answer": "but",
               "acceptableAnswers": [
                 "however"
@@ -9313,7 +9313,7 @@
             {
               "id": "rv3-9",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi kurun: 'Endişelerine rağmen proje ilerledi.'",
+              "prompt": "Endişelerine rağmen proje ilerledi.",
               "answer": "Notwithstanding his concerns the project went ahead",
               "bank": [
                 "Notwithstanding",
@@ -9331,7 +9331,7 @@
             {
               "id": "rv3-10",
               "type": "fill_blank",
-              "prompt": "'The reasoning, while seductive, is ___' (Türkçe: 'Akıl yürütme cazip ama aldatıcı.')",
+              "prompt": "The reasoning, while seductive, is ___",
               "answer": "specious",
               "acceptableAnswers": [
                 "misleading",

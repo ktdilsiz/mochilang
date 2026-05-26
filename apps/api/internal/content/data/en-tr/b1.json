@@ -174,7 +174,7 @@
             {
               "id": "pp1-3",
               "type": "fill_blank",
-              "prompt": "'I ___ seen that film.' Olumsuz cümleyi tamamlayın (Türkçe: 'O filmi görmedim.')",
+              "prompt": "I ___ seen that film.",
               "answer": "haven't",
               "acceptableAnswers": [
                 "have not"
@@ -215,7 +215,7 @@
             {
               "id": "pp1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Projeyi bitirdiler.'",
+              "prompt": "Projeyi bitirdiler.",
               "answer": "They have finished the project",
               "bank": [
                 "They",
@@ -325,7 +325,7 @@
             {
               "id": "pp2-4",
               "type": "fill_blank",
-              "prompt": "'I ___ (live) here since 2018.'",
+              "prompt": "I ___ (live) here since 2018.",
               "answer": "have lived",
               "acceptableAnswers": [
                 "'ve lived"
@@ -335,7 +335,7 @@
             {
               "id": "pp2-5",
               "type": "fill_blank",
-              "prompt": "'She ___ (visit) Rome last summer.'",
+              "prompt": "She ___ (visit) Rome last summer.",
               "answer": "visited",
               "acceptableAnswers": [],
               "explanation": "'Last summer' belirli geçmiş → past simple."
@@ -366,7 +366,7 @@
             {
               "id": "pp2-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ocak'tan beri burada çalışıyor.'",
+              "prompt": "'Ocak'tan beri burada çalışıyor.'",
               "answer": "She has worked here since January",
               "bank": [
                 "She",
@@ -409,7 +409,7 @@
             {
               "id": "pp2-10",
               "type": "fill_blank",
-              "prompt": "'When I was a child, I ___ (love) ice cream.'",
+              "prompt": "When I was a child, I ___ (love) ice cream.",
               "answer": "loved",
               "acceptableAnswers": [],
               "explanation": "'When I was a child' belirli geçmiş bağlamı → past simple."
@@ -452,7 +452,7 @@
             {
               "id": "pp3-3",
               "type": "fill_blank",
-              "prompt": "'I have known her ___ five years.'",
+              "prompt": "I have known her ___ five years.",
               "answer": "for",
               "acceptableAnswers": [],
               "explanation": "Süre → for."
@@ -460,7 +460,7 @@
             {
               "id": "pp3-4",
               "type": "fill_blank",
-              "prompt": "'He has worked here ___ Monday.'",
+              "prompt": "He has worked here ___ Monday.",
               "answer": "since",
               "acceptableAnswers": [],
               "explanation": "Başlangıç noktası → since."
@@ -491,7 +491,7 @@
             {
               "id": "pp3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'İki yıldır İngilizce çalışıyorum.'",
+              "prompt": "İki yıldır İngilizce çalışıyorum.",
               "answer": "I have studied English for two years",
               "bank": [
                 "I",
@@ -588,7 +588,7 @@
             {
               "id": "pp4-3",
               "type": "fill_blank",
-              "prompt": "'I have ___ been to Italy.' (hiç gitmedim — olumsuz anlamlı)",
+              "prompt": "I have ___ been to Italy.",
               "answer": "never",
               "acceptableAnswers": [],
               "explanation": "'Never' tek başına olumsuzluk taşır."
@@ -596,7 +596,7 @@
             {
               "id": "pp4-4",
               "type": "fill_blank",
-              "prompt": "'Have you ___ tried sushi?' (hiç)",
+              "prompt": "Have you ___ tried sushi?",
               "answer": "ever",
               "acceptableAnswers": [],
               "explanation": "'Ever' soru cümlelerinde 'hiç' anlamında."
@@ -627,7 +627,7 @@
             {
               "id": "pp4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ofisten çoktan ayrıldı.'",
+              "prompt": "Ofisten çoktan ayrıldı.",
               "answer": "She has already left the office",
               "bank": [
                 "She",
@@ -767,7 +767,7 @@
             {
               "id": "pp5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Hiç Londra'ya gittin mi?'",
+              "prompt": "'Hiç Londra'ya gittin mi?'",
               "answer": "Have you ever been to London",
               "bank": [
                 "Have",
@@ -854,7 +854,7 @@
             {
               "id": "pp5-12",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Hiç Türk kahvesi içmemiş.'",
+              "prompt": "Hiç Türk kahvesi içmemiş.",
               "answer": "She has never tried Türkçe coffee",
               "bank": [
                 "She",
@@ -893,7 +893,7 @@
             {
               "id": "pp6-2",
               "type": "fill_blank",
-              "prompt": "'It ___ been raining since morning.' Boşluğa: ___",
+              "prompt": "It ___ been raining since morning.",
               "answer": "has",
               "acceptableAnswers": [],
               "explanation": "Üçüncü tekil -> has."
@@ -945,7 +945,7 @@
             {
               "id": "pp6-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Saatlerdir ders çalışıyor.'",
+              "prompt": "Saatlerdir ders çalışıyor.",
               "answer": "He has been studying for hours",
               "bank": [
                 "He",
@@ -1001,7 +1001,7 @@
             {
               "id": "pp6-10",
               "type": "fill_blank",
-              "prompt": "'My eyes are red because I ___ ___ ___ .'",
+              "prompt": "My eyes are red because I ___ ___ ___ .",
               "answer": "have been crying",
               "acceptableAnswers": [],
               "explanation": "Sonuctan ziyade sureklilik vurgusu."
@@ -1380,7 +1380,7 @@
             {
               "id": "mod1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Pencereyi açar mısın lütfen?'",
+              "prompt": "Pencereyi açar mısın lütfen?",
               "answer": "Could you open the window please",
               "bank": [
                 "Could",
@@ -1506,7 +1506,7 @@
             {
               "id": "mod2-5",
               "type": "fill_blank",
-              "prompt": "'She ___ work on Saturdays.' (çalışmak zorunda)",
+              "prompt": "She ___ work on Saturdays.",
               "answer": "has to",
               "acceptableAnswers": [
                 "must"
@@ -1539,7 +1539,7 @@
             {
               "id": "mod2-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Yorgunsan gelmek zorunda değilsin.'",
+              "prompt": "Yorgunsan gelmek zorunda değilsin.",
               "answer": "You don't have to come if you're tired",
               "bank": [
                 "You",
@@ -1647,7 +1647,7 @@
             {
               "id": "mod3-5",
               "type": "fill_blank",
-              "prompt": "'He ___ drive so fast.' (sürmemeli)",
+              "prompt": "He ___ drive so fast.",
               "answer": "shouldn't",
               "acceptableAnswers": [
                 "should not"
@@ -1680,7 +1680,7 @@
             {
               "id": "mod3-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Daha fazla su içmelisin.'",
+              "prompt": "Daha fazla su içmelisin.",
               "answer": "You should drink more water",
               "bank": [
                 "You",
@@ -1722,7 +1722,7 @@
             {
               "id": "mod3-10",
               "type": "fill_blank",
-              "prompt": "'We ___ be more careful next time.' (olmalıyız)",
+              "prompt": "We ___ be more careful next time.",
               "answer": "should",
               "acceptableAnswers": [
                 "must"
@@ -1811,7 +1811,7 @@
             {
               "id": "mod4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bu akşam sinemaya gidebilirim.'",
+              "prompt": "Bu akşam sinemaya gidebilirim.",
               "answer": "I might go to the cinema tonight",
               "bank": [
                 "I",
@@ -1912,7 +1912,7 @@
             {
               "id": "mod5-3",
               "type": "fill_blank",
-              "prompt": "'Sigara içmek yasak.' = 'You ___ smoke.'",
+              "prompt": "You ___ smoke.",
               "answer": "mustn't",
               "acceptableAnswers": [
                 "must not"
@@ -1922,7 +1922,7 @@
             {
               "id": "mod5-4",
               "type": "fill_blank",
-              "prompt": "'Erken kalkmak zorunda değilim.' = 'I ___ ___ ___ get up early.'",
+              "prompt": "I ___ ___ ___ get up early.",
               "answer": "don't have to",
               "acceptableAnswers": [
                 "do not have to"
@@ -1955,7 +1955,7 @@
             {
               "id": "mod5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Beklemek zorunda değilsin.'",
+              "prompt": "Beklemek zorunda değilsin.",
               "answer": "You don't have to wait",
               "bank": [
                 "You",
@@ -2008,7 +2008,7 @@
             {
               "id": "mod5-10",
               "type": "fill_blank",
-              "prompt": "Geçmiş zorunluluk: 'I ___ ___ wake up early yesterday.'",
+              "prompt": "I ___ ___ wake up early yesterday.",
               "answer": "had to",
               "acceptableAnswers": [],
               "explanation": "'must'in geçmişi yok -> 'had to'."
@@ -2086,7 +2086,7 @@
             {
               "id": "mod6-3",
               "type": "fill_blank",
-              "prompt": "'Geç kalmamalisin.' = 'You ___ ___ be late.'",
+              "prompt": "You ___ ___ be late.",
               "answer": "shouldn't",
               "acceptableAnswers": [
                 "should not"
@@ -2129,7 +2129,7 @@
             {
               "id": "mod6-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Daha fazla su içmelisin.'",
+              "prompt": "Daha fazla su içmelisin.",
               "answer": "You should drink more water",
               "bank": [
                 "You",
@@ -2476,7 +2476,7 @@
             {
               "id": "con1-2",
               "type": "fill_blank",
-              "prompt": "'If I ___ (be) tired, I go to bed early.'",
+              "prompt": "If I ___ (be) tired, I go to bed early.",
               "answer": "am",
               "acceptableAnswers": [
                 "'m"
@@ -2498,7 +2498,7 @@
             {
               "id": "con1-4",
               "type": "fill_blank",
-              "prompt": "'If it ___ (rain), the ground gets wet.' (genel gerçek)",
+              "prompt": "If it ___ (rain), the ground gets wet.",
               "answer": "rains",
               "acceptableAnswers": []
             },
@@ -2528,7 +2528,7 @@
             {
               "id": "con1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Kırmızı ve maviyi karıştırırsan mor elde edersin.'",
+              "prompt": "Kırmızı ve maviyi karıştırırsan mor elde edersin.",
               "answer": "If you mix red and blue you get purple",
               "bank": [
                 "If",
@@ -2573,7 +2573,7 @@
             {
               "id": "con1-9",
               "type": "fill_blank",
-              "prompt": "'If you ___ (not eat), you feel weak.'",
+              "prompt": "If you ___ (not eat), you feel weak.",
               "answer": "don't eat",
               "acceptableAnswers": [
                 "do not eat"
@@ -2616,7 +2616,7 @@
             {
               "id": "con2-2",
               "type": "fill_blank",
-              "prompt": "'If you ___, you will pass the exam.' (Türkçe: 'Çalışırsan, sınavı geçeceksin.')",
+              "prompt": "If you ___, you will pass the exam.",
               "answer": "study",
               "acceptableAnswers": [],
               "explanation": "If'li kısımda present."
@@ -2669,7 +2669,7 @@
             {
               "id": "con2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Beni ararsan hemen gelirim.'",
+              "prompt": "Beni ararsan hemen gelirim.",
               "answer": "If you call me I will come immediately",
               "bank": [
                 "If",
@@ -2712,7 +2712,7 @@
             {
               "id": "con2-9",
               "type": "fill_blank",
-              "prompt": "'If I ___ your wallet, I'll let you know.' (Türkçe: 'Cüzdanını bulursam, sana haber veririm.')",
+              "prompt": "If I ___ your wallet, I",
               "answer": "find",
               "acceptableAnswers": [
                 "discover",
@@ -2756,7 +2756,7 @@
             {
               "id": "con3-2",
               "type": "fill_blank",
-              "prompt": "'If I had more time, I ___ (read) more books.'",
+              "prompt": "If I had more time, I ___ (read) more books.",
               "answer": "would read",
               "acceptableAnswers": [
                 "'d read"
@@ -2777,7 +2777,7 @@
             {
               "id": "con3-4",
               "type": "fill_blank",
-              "prompt": "'If I ___ (be) you, I would apologize.'",
+              "prompt": "If I ___ (be) you, I would apologize.",
               "answer": "were",
               "acceptableAnswers": [
                 "was"
@@ -2810,7 +2810,7 @@
             {
               "id": "con3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Daha çok param olsaydı bir ev alırdım.'",
+              "prompt": "Daha çok param olsaydı bir ev alırdım.",
               "answer": "If I had more money I would buy a house",
               "bank": [
                 "If",
@@ -2856,7 +2856,7 @@
             {
               "id": "con3-9",
               "type": "fill_blank",
-              "prompt": "'If she ___ (know), she would help us.'",
+              "prompt": "If she ___ (know), she would help us.",
               "answer": "knew",
               "acceptableAnswers": []
             },
@@ -2923,7 +2923,7 @@
             {
               "id": "con4-4",
               "type": "fill_blank",
-              "prompt": "'If she ___ (have) more confidence, she would speak up.'",
+              "prompt": "If she ___ (have) more confidence, she would speak up.",
               "answer": "had",
               "acceptableAnswers": [],
               "explanation": "Hayali → second conditional."
@@ -2931,7 +2931,7 @@
             {
               "id": "con4-5",
               "type": "fill_blank",
-              "prompt": "'If you ___ iron, it expands.' (Türkçe: 'Demiri ısıtırsanız, genleşir.')",
+              "prompt": "If you ___ iron, it expands.",
               "answer": "heat",
               "acceptableAnswers": [],
               "explanation": "Bilimsel gerçek → zero."
@@ -2962,7 +2962,7 @@
             {
               "id": "con4-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Yerinde olsam endişelenmezdim.'",
+              "prompt": "Yerinde olsam endişelenmezdim.",
               "answer": "If I were you I would not worry",
               "bank": [
                 "If",
@@ -3053,7 +3053,7 @@
             {
               "id": "con5-3",
               "type": "fill_blank",
-              "prompt": "'If I ___ (be) taller, I would play basketball.' (gerçeğinde kısayım)",
+              "prompt": "If I ___ (be) taller, I would play basketball.",
               "answer": "were",
               "acceptableAnswers": [
                 "was"
@@ -3096,7 +3096,7 @@
             {
               "id": "con5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: Uyumuş olsaydım, şimdi daha iyi hissederdim.",
+              "prompt": "Uyumuş olsaydım, şimdi daha iyi hissederdim.",
               "answer": "If I had slept I would feel better now",
               "bank": [
                 "If",
@@ -3234,7 +3234,7 @@
             {
               "id": "con6-3",
               "type": "fill_blank",
-              "prompt": "'Keşke seni dinleseydim.' = 'I wish I ___ ___ to you.'",
+              "prompt": "I wish I ___ ___ to you.",
               "answer": "had listened",
               "acceptableAnswers": [
                 "'d listened"
@@ -3275,7 +3275,7 @@
             {
               "id": "con6-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Keşke uçabilseydim.'",
+              "prompt": "Keşke uçabilseydim.",
               "answer": "I wish I could fly",
               "bank": [
                 "I",
@@ -3330,7 +3330,7 @@
             {
               "id": "con6-10",
               "type": "fill_blank",
-              "prompt": "'If only I ___ (know) the answer!' (Şimdi bilmiyorum.) Boşluk: ___",
+              "prompt": "If only I ___ (know) the answer!",
               "answer": "knew",
               "acceptableAnswers": [],
               "explanation": "Şşşşimdiki dilek: past simple."
@@ -3624,7 +3624,7 @@
             {
               "id": "pas1-3",
               "type": "fill_blank",
-              "prompt": "'The cake ___ (eat — V3).'",
+              "prompt": "The cake ___ (eat — V3).",
               "answer": "eaten",
               "acceptableAnswers": [],
               "explanation": "eat-ate-eaten."
@@ -3663,7 +3663,7 @@
             {
               "id": "pas1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Kitap bir İngiliz tarafından yazıldı.'",
+              "prompt": "Kitap bir İngiliz tarafından yazıldı.",
               "answer": "The book was written by an Englishman",
               "bank": [
                 "The",
@@ -3707,7 +3707,7 @@
             {
               "id": "pas1-9",
               "type": "fill_blank",
-              "prompt": "Pasif yapın: 'Someone stole my phone.' → 'My phone ___ ___.'",
+              "prompt": "Someone stole my phone.' → 'My phone ___ ___.",
               "answer": "was stolen",
               "acceptableAnswers": []
             },
@@ -3768,7 +3768,7 @@
             {
               "id": "pas2-4",
               "type": "fill_blank",
-              "prompt": "'The report ___ (finish — present perfect passive).'",
+              "prompt": "The report ___ (finish — present perfect passive).",
               "answer": "has been finished",
               "acceptableAnswers": []
             },
@@ -3798,7 +3798,7 @@
             {
               "id": "pas2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Paket yarın teslim edilecek.'",
+              "prompt": "Paket yarın teslim edilecek.",
               "answer": "The package will be delivered tomorrow",
               "bank": [
                 "The",
@@ -3841,7 +3841,7 @@
             {
               "id": "pas2-9",
               "type": "fill_blank",
-              "prompt": "'Cars ___ (make) in factories.' (genel gerçek, pasif)",
+              "prompt": "Cars ___ (make) in factories.",
               "answer": "are made",
               "acceptableAnswers": []
             },
@@ -3939,7 +3939,7 @@
             {
               "id": "pas3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Arabam dün gece çalındı.'",
+              "prompt": "Arabam dün gece çalındı.",
               "answer": "My car was stolen last night",
               "bank": [
                 "My",
@@ -3982,7 +3982,7 @@
             {
               "id": "pas3-9",
               "type": "fill_blank",
-              "prompt": "'The keys ___ (find) on the table.' (bulundu — yapan önemsiz)",
+              "prompt": "The keys ___ (find) on the table.",
               "answer": "were found",
               "acceptableAnswers": [
                 "was found"
@@ -4025,7 +4025,7 @@
             {
               "id": "pas4-2",
               "type": "fill_blank",
-              "prompt": "'The film ___ (direct) by Nuri Bilge Ceylan.'",
+              "prompt": "The film ___ (direct) by Nuri Bilge Ceylan.",
               "answer": "was directed",
               "acceptableAnswers": []
             },
@@ -4044,7 +4044,7 @@
             {
               "id": "pas4-4",
               "type": "fill_blank",
-              "prompt": "'My passport ___ (steal — present perfect passive).'",
+              "prompt": "My passport ___ (steal — present perfect passive).",
               "answer": "has been stolen",
               "acceptableAnswers": []
             },
@@ -4074,7 +4074,7 @@
             {
               "id": "pas4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Oda her gün temizlenmeli.'",
+              "prompt": "Oda her gün temizlenmeli.",
               "answer": "The room must be cleaned every day",
               "bank": [
                 "The",
@@ -4117,7 +4117,7 @@
             {
               "id": "pas4-9",
               "type": "fill_blank",
-              "prompt": "'English ___ (speak) all over the world.'",
+              "prompt": "English ___ (speak) all over the world.",
               "answer": "is spoken",
               "acceptableAnswers": []
             },
@@ -4211,7 +4211,7 @@
             {
               "id": "pas5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Oda şu anda temizleniyor.'",
+              "prompt": "Oda şu anda temizleniyor.",
               "answer": "The room is being cleaned now",
               "bank": [
                 "The",
@@ -4346,7 +4346,7 @@
             {
               "id": "pas6-3",
               "type": "fill_blank",
-              "prompt": "'Mona Lisa ___ ___ ___ Da Vinci.'",
+              "prompt": "Mona Lisa ___ ___ ___ Da Vinci.",
               "answer": "was painted by",
               "acceptableAnswers": [],
               "explanation": "Past simple passive + by."
@@ -4387,7 +4387,7 @@
             {
               "id": "pas6-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Mektup John tarafından yazıldı.'",
+              "prompt": "Mektup John tarafından yazıldı.",
               "answer": "The letter was written by John",
               "bank": [
                 "The",
@@ -4442,7 +4442,7 @@
             {
               "id": "pas6-10",
               "type": "fill_blank",
-              "prompt": "'I ___ ___ in traffic this morning.'",
+              "prompt": "I ___ ___ in traffic this morning.",
               "answer": "got stuck",
               "acceptableAnswers": [
                 "was stuck"
@@ -4782,7 +4782,7 @@
             {
               "id": "phr1-3",
               "type": "fill_blank",
-              "prompt": "'I ___ ___ an old friend at the mall.' (tesadüfen karşılaştım)",
+              "prompt": "I ___ ___ an old friend at the mall.",
               "answer": "ran into",
               "acceptableAnswers": [
                 "bumped into",
@@ -4822,7 +4822,7 @@
             {
               "id": "phr1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Tatilde biraz İtalyanca kaptım.'",
+              "prompt": "Tatilde biraz İtalyanca kaptım.",
               "answer": "I picked up some Italian on holiday",
               "bank": [
                 "I",
@@ -4866,7 +4866,7 @@
             {
               "id": "phr1-9",
               "type": "fill_blank",
-              "prompt": "'I ___ ___ that he was lying.' (gerçeği öğrendim)",
+              "prompt": "I ___ ___ that he was lying.",
               "answer": "found out",
               "acceptableAnswers": [
                 "discovered",
@@ -4924,7 +4924,7 @@
             {
               "id": "phr2-3",
               "type": "fill_blank",
-              "prompt": "'She turned ___ the offer.'",
+              "prompt": "She turned ___ the offer.",
               "answer": "down",
               "acceptableAnswers": []
             },
@@ -4967,7 +4967,7 @@
             {
               "id": "phr2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Lütfen müziğin sesini kıs.'",
+              "prompt": "Lütfen müziğin sesini kıs.",
               "answer": "Please turn the music down",
               "bank": [
                 "Please",
@@ -5009,7 +5009,7 @@
             {
               "id": "phr2-9",
               "type": "fill_blank",
-              "prompt": "'I get along ___ my colleagues.' (anlaşırım)",
+              "prompt": "I get along ___ my colleagues.",
               "answer": "with",
               "acceptableAnswers": [],
               "explanation": "'Get along with' = -ile iyi geçinmek."
@@ -5105,7 +5105,7 @@
             {
               "id": "phr3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Arabam dün gece yine bozuldu.'",
+              "prompt": "Arabam dün gece yine bozuldu.",
               "answer": "My car broke down again last night",
               "bank": [
                 "My",
@@ -5148,7 +5148,7 @@
             {
               "id": "phr3-9",
               "type": "fill_blank",
-              "prompt": "'Can you ___ me ___ at the airport?' (havaalanından alabilir misin?)",
+              "prompt": "Can you ___ me ___ at the airport?",
               "answer": "pick up",
               "acceptableAnswers": [
                 "pick / up"
@@ -5247,7 +5247,7 @@
             {
               "id": "phr4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bu kelimeyi sözlükten bakmam gerek.'",
+              "prompt": "Bu kelimeyi sözlükten bakmam gerek.",
               "answer": "I need to look this word up",
               "bank": [
                 "I",
@@ -5346,7 +5346,7 @@
             {
               "id": "phr5-3",
               "type": "fill_blank",
-              "prompt": "'I ___ ___ ___ my best friend yesterday.'",
+              "prompt": "I ___ ___ ___ my best friend yesterday.",
               "answer": "fell out with",
               "acceptableAnswers": [],
               "explanation": "fall out with = kavga etmek."
@@ -5354,7 +5354,7 @@
             {
               "id": "phr5-4",
               "type": "fill_blank",
-              "prompt": "'They want to ___ ___ in the countryside.'",
+              "prompt": "They want to ___ ___ in the countryside.",
               "answer": "settle down",
               "acceptableAnswers": [
                 "settle"
@@ -5387,7 +5387,7 @@
             {
               "id": "phr5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Kardeşimle iyi geçiniyorum.'",
+              "prompt": "Kardeşimle iyi geçiniyorum.",
               "answer": "I get along well with my brother",
               "bank": [
                 "I",
@@ -5564,7 +5564,7 @@
             {
               "id": "phr6-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Lütfen onu kapat.'",
+              "prompt": "Lütfen onu kapat.",
               "answer": "Please turn it off",
               "bank": [
                 "Please",
@@ -5987,7 +5987,7 @@
             {
               "id": "ff1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Sonunda cevabı bulduk.'",
+              "prompt": "Sonunda cevabı bulduk.",
               "answer": "Eventually we found the answer",
               "bank": [
                 "Eventually",
@@ -6133,7 +6133,7 @@
             {
               "id": "ff2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ders çalışmaya kütüphaneye gittim.'",
+              "prompt": "Ders çalışmaya kütüphaneye gittim.",
               "answer": "I went to the library to study",
               "bank": [
                 "I",
@@ -6280,7 +6280,7 @@
             {
               "id": "ff3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Saatin ne kadar geç olduğunu fark etmemiştim.'",
+              "prompt": "Saatin ne kadar geç olduğunu fark etmemiştim.",
               "answer": "I didn't realize how late it was",
               "bank": [
                 "I",
@@ -6426,7 +6426,7 @@
             {
               "id": "ff4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Lütfen cevaplarını dikkatlice kontrol et.'",
+              "prompt": "Lütfen cevaplarını dikkatlice kontrol et.",
               "answer": "Please check your answers carefully",
               "bank": [
                 "Please",
@@ -6468,7 +6468,7 @@
             {
               "id": "ff4-9",
               "type": "fill_blank",
-              "prompt": "'Be ___: explain in two minutes.' (kısa ol)",
+              "prompt": "Be ___: explain in two minutes.",
               "answer": "brief",
               "acceptableAnswers": [
                 "short",
@@ -6570,7 +6570,7 @@
             {
               "id": "ff5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Aslında bilmiyorum.'",
+              "prompt": "Aslında bilmiyorum.",
               "answer": "Actually I don't know",
               "bank": [
                 "Actually",
@@ -6750,7 +6750,7 @@
             {
               "id": "ff6-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Pazardan kumaş aldım.'",
+              "prompt": "Pazardan kumaş aldım.",
               "answer": "I bought fabric at the market",
               "bank": [
                 "I",
@@ -7165,7 +7165,7 @@
             {
               "id": "tr1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Tek yön bilet alabilir miyim lütfen?'",
+              "prompt": "Tek yön bilet alabilir miyim lütfen?",
               "answer": "I'd like a one-way ticket please",
               "bank": [
                 "I'd",
@@ -7338,7 +7338,7 @@
             {
               "id": "tr2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Smith adına rezervasyonum var.'",
+              "prompt": "Smith adına rezervasyonum var.",
               "answer": "I have a reservation under Smith",
               "bank": [
                 "I",
@@ -7480,7 +7480,7 @@
             {
               "id": "tr3-4",
               "type": "fill_blank",
-              "prompt": "'Köşede.' = 'On the ___ .'",
+              "prompt": "On the ___ .",
               "answer": "corner",
               "acceptableAnswers": [],
               "explanation": "on the corner."
@@ -7511,7 +7511,7 @@
             {
               "id": "tr3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Düz git ve sağa dön.'",
+              "prompt": "Düz git ve sağa dön.",
               "answer": "Go straight and turn right",
               "bank": [
                 "Go",
@@ -7684,7 +7684,7 @@
             {
               "id": "tr4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Sabah erkenden yola çıktık.'",
+              "prompt": "Sabah erkenden yola çıktık.",
               "answer": "We set off early in the morning",
               "bank": [
                 "We",
@@ -7852,7 +7852,7 @@
             {
               "id": "tr5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'İstasyona nasıl gideceğimi söyleyebilir misiniz?'",
+              "prompt": "İstasyona nasıl gideceğimi söyleyebilir misiniz?",
               "answer": "Could you tell me how to get to the station",
               "bank": [
                 "Could",
@@ -8237,7 +8237,7 @@
             {
               "id": "wk1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Saat 3'te bir toplantım var.'",
+              "prompt": "'Saat 3'te bir toplantım var.'",
               "answer": "I have a meeting at 3 PM",
               "bank": [
                 "I",
@@ -8371,7 +8371,7 @@
             {
               "id": "wk2-3",
               "type": "fill_blank",
-              "prompt": "'I work ___ Google.'",
+              "prompt": "I work ___ Google.",
               "answer": "for",
               "acceptableAnswers": [
                 "at"
@@ -8411,7 +8411,7 @@
             {
               "id": "wk2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Yazılım geliştirici olarak çalışıyorum.'",
+              "prompt": "Yazılım geliştirici olarak çalışıyorum.",
               "answer": "I work as a software developer",
               "bank": [
                 "I",
@@ -8549,7 +8549,7 @@
             {
               "id": "wk3-4",
               "type": "fill_blank",
-              "prompt": "'Tamamen katılıyorum.' = 'I ___ completely.'",
+              "prompt": "I ___ completely.",
               "answer": "agree",
               "acceptableAnswers": [
                 "concur"
@@ -8581,7 +8581,7 @@
             {
               "id": "wk3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bunu toplantıda konuşabilir miyiz?'",
+              "prompt": "Bunu toplantıda konuşabilir miyiz?",
               "answer": "Could we discuss this in the meeting",
               "bank": [
                 "Could",
@@ -8717,7 +8717,7 @@
             {
               "id": "wk4-3",
               "type": "fill_blank",
-              "prompt": "'Bu projeyi yönetiyorum.' = 'I ___ this project.'",
+              "prompt": "I ___ this project.",
               "answer": "manage",
               "acceptableAnswers": [
                 "run",
@@ -8760,7 +8760,7 @@
             {
               "id": "wk4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Yarın müşteriyle tekrar görüşeceğim.'",
+              "prompt": "Yarın müşteriyle tekrar görüşeceğim.",
               "answer": "I'll follow up with the client tomorrow",
               "bank": [
                 "I'll",
@@ -8895,7 +8895,7 @@
             {
               "id": "wk5-3",
               "type": "fill_blank",
-              "prompt": "'İşten ayrıldım.' = 'I ___ my job.'",
+              "prompt": "I ___ my job.",
               "answer": "quit",
               "acceptableAnswers": [
                 "left"
@@ -8936,7 +8936,7 @@
             {
               "id": "wk5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Yeni bir proje üzerinde çalışıyorum.'",
+              "prompt": "Yeni bir proje üzerinde çalışıyorum.",
               "answer": "I'm working on a new project",
               "bank": [
                 "I'm",
@@ -9277,7 +9277,7 @@
             {
               "id": "st1-3",
               "type": "fill_blank",
-              "prompt": "'I ___ ___ (read) when she called.'",
+              "prompt": "I ___ ___ (read) when she called.",
               "answer": "was reading",
               "acceptableAnswers": [],
               "explanation": "Devam eden = past continuous."
@@ -9285,7 +9285,7 @@
             {
               "id": "st1-4",
               "type": "fill_blank",
-              "prompt": "'When I arrived, she ___ ___ (cook) dinner.'",
+              "prompt": "When I arrived, she ___ ___ (cook) dinner.",
               "answer": "was cooking",
               "acceptableAnswers": []
             },
@@ -9315,7 +9315,7 @@
             {
               "id": "st1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Telefon çaldığında kitap okuyordum.'",
+              "prompt": "Telefon çaldığında kitap okuyordum.",
               "answer": "I was reading when the phone rang",
               "bank": [
                 "I",
@@ -9371,7 +9371,7 @@
             {
               "id": "st1-10",
               "type": "fill_blank",
-              "prompt": "'Ben okurken o yemek yapiyordu.' = 'While I ___ ___ , she was cooking.'",
+              "prompt": "While I ___ ___ , she was cooking.",
               "answer": "was reading",
               "acceptableAnswers": []
             },
@@ -9491,7 +9491,7 @@
             {
               "id": "st2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Önce kahvaltı yaptım sonra işe gittim.'",
+              "prompt": "Önce kahvaltı yaptım sonra işe gittim.",
               "answer": "First I had breakfast then I went to work",
               "bank": [
                 "First",
@@ -9667,7 +9667,7 @@
             {
               "id": "st3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Evlendiklerini duydum.'",
+              "prompt": "Evlendiklerini duydum.",
               "answer": "I heard that they got married",
               "bank": [
                 "I",
@@ -9839,7 +9839,7 @@
             {
               "id": "st4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Her şey güneşli bir sabah başladı.'",
+              "prompt": "Her şey güneşli bir sabah başladı.",
               "answer": "It all started on a sunny morning",
               "bank": [
                 "It",
@@ -9895,7 +9895,7 @@
             {
               "id": "st4-10",
               "type": "fill_blank",
-              "prompt": "'O sırada hiçbir şey bilmiyordum.' = 'At the time, I ___ ___ anything.'",
+              "prompt": "At the time, I ___ ___ anything.",
               "answer": "didn't know",
               "acceptableAnswers": [
                 "did not know"
@@ -9972,13 +9972,14 @@
             },
             {
               "id": "st5-3",
-              "type": "fill_blank",
-              "prompt": "'Bu sırada' = ___",
+              "type": "translate",
               "answer": "meanwhile",
               "acceptableAnswers": [
                 "in the meantime",
                 "meantime"
-              ]
+              ],
+              "source": "Bu sırada",
+              "direction": "to_target"
             },
             {
               "id": "st5-4",
@@ -10014,7 +10015,7 @@
             {
               "id": "st5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Uzun bir süre sonra nihayet vardık.'",
+              "prompt": "Uzun bir süre sonra nihayet vardık.",
               "answer": "After a long time we finally arrived",
               "bank": [
                 "After",
@@ -10408,7 +10409,7 @@
             {
               "id": "op1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bence bu yanlış.'",
+              "prompt": "Bence bu yanlış.",
               "answer": "In my opinion this is wrong",
               "bank": [
                 "In",
@@ -10463,7 +10464,7 @@
             {
               "id": "op1-10",
               "type": "fill_blank",
-              "prompt": "'Bana gore' = '___ ___ , ...'",
+              "prompt": "___ ___ , ...",
               "answer": "To me",
               "acceptableAnswers": []
             },
@@ -10538,7 +10539,7 @@
             {
               "id": "op2-3",
               "type": "fill_blank",
-              "prompt": "'Sana katılıyorum.' = 'I agree ___ you.'",
+              "prompt": "I agree ___ you.",
               "answer": "with",
               "acceptableAnswers": [],
               "explanation": "agree WITH someone."
@@ -10546,7 +10547,7 @@
             {
               "id": "op2-4",
               "type": "fill_blank",
-              "prompt": "'Soylediklerine katılıyorum.' = 'I agree ___ what you said.'",
+              "prompt": "I agree ___ what you said.",
               "answer": "with",
               "acceptableAnswers": [],
               "explanation": "agree with."
@@ -10577,7 +10578,7 @@
             {
               "id": "op2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Sana tamamen katılıyorum.'",
+              "prompt": "Sana tamamen katılıyorum.",
               "answer": "I couldn't agree more",
               "bank": [
                 "I",
@@ -10632,7 +10633,7 @@
             {
               "id": "op2-10",
               "type": "fill_blank",
-              "prompt": "'Aynı fikirdeyim.' = 'I ___ the same way.'",
+              "prompt": "I ___ the same way.",
               "answer": "feel",
               "acceptableAnswers": []
             },
@@ -10750,7 +10751,7 @@
             {
               "id": "op3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ne demek istediğini anlıyorum ama katılmıyorum.'",
+              "prompt": "Ne demek istediğini anlıyorum ama katılmıyorum.",
               "answer": "I see what you mean but I disagree",
               "bank": [
                 "I",
@@ -10929,7 +10930,7 @@
             {
               "id": "op4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bu iyi bir fikir olabilir.'",
+              "prompt": "Bu iyi bir fikir olabilir.",
               "answer": "It might be a good idea",
               "bank": [
                 "It",
@@ -11064,7 +11065,7 @@
             {
               "id": "op5-3",
               "type": "fill_blank",
-              "prompt": "'Sen ne düşünüyorsun?' = '___ ___ you think?'",
+              "prompt": "___ ___ you think?",
               "answer": "What do",
               "acceptableAnswers": [
                 "what"
@@ -11073,7 +11074,7 @@
             {
               "id": "op5-4",
               "type": "fill_blank",
-              "prompt": "'Bu konuda ne düşünüyorsun?' = 'What do you think ___ this?'",
+              "prompt": "What do you think ___ this?",
               "answer": "about",
               "acceptableAnswers": []
             },
@@ -11103,7 +11104,7 @@
             {
               "id": "op5-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bu fikir hakkında ne düşünüyorsun?'",
+              "prompt": "Bu fikir hakkında ne düşünüyorsun?",
               "answer": "What do you think about this idea",
               "bank": [
                 "What",
@@ -11421,7 +11422,7 @@
             {
               "id": "rev1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Hiç Japonya'ya gitmedim.'",
+              "prompt": "'Hiç Japonya'ya gitmedim.'",
               "answer": "I have never been to Japan",
               "bank": [
                 "I",
@@ -11532,7 +11533,7 @@
             {
               "id": "rev2-4",
               "type": "fill_blank",
-              "prompt": "'My phone ___ ___ at the station.' (çalındı — past passive)",
+              "prompt": "My phone ___ ___ at the station.",
               "answer": "was stolen",
               "acceptableAnswers": []
             },
@@ -11562,7 +11563,7 @@
             {
               "id": "rev2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Karar bugün verilmeli.'",
+              "prompt": "Karar bugün verilmeli.",
               "answer": "The decision must be made today",
               "bank": [
                 "The",
@@ -11604,7 +11605,7 @@
             {
               "id": "rev2-9",
               "type": "fill_blank",
-              "prompt": "'I went to the ___ to borrow a book.' (kütüphane)",
+              "prompt": "I went to the ___ to borrow a book.",
               "answer": "library"
             },
             {
@@ -11698,7 +11699,7 @@
             {
               "id": "rev3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Zengin olsaydım dünyayı gezerdim.'",
+              "prompt": "Zengin olsaydım dünyayı gezerdim.",
               "answer": "If I were rich I would travel the world",
               "bank": [
                 "If",

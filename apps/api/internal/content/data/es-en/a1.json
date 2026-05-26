@@ -577,7 +577,7 @@
             {
               "id": "alp2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'My dog is small.'",
+              "prompt": "My dog is small.",
               "answer": "Mi perro es pequeño",
               "bank": [
                 "Mi",
@@ -723,8 +723,9 @@
             },
             {
               "id": "alp3-9",
-              "type": "fill_blank",
-              "prompt": "'Hello' in Spanish is ___.",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Hello",
               "answer": "hola",
               "acceptableAnswers": [
                 "Hola",
@@ -736,7 +737,7 @@
             {
               "id": "alp3-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The boss is at home.'",
+              "prompt": "The boss is at home.",
               "answer": "El jefe está en casa",
               "bank": [
                 "El",
@@ -885,8 +886,9 @@
             },
             {
               "id": "alp4-8",
-              "type": "fill_blank",
-              "prompt": "'Yes' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Yes",
               "answer": "sí",
               "acceptableAnswers": [
                 "Sí",
@@ -923,7 +925,7 @@
             {
               "id": "alp4-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I want more, please.'",
+              "prompt": "I want more, please.",
               "answer": "Quiero más por favor",
               "bank": [
                 "Quiero",
@@ -1068,7 +1070,7 @@
             {
               "id": "alp5-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Where do you live?'",
+              "prompt": "Where do you live?",
               "answer": "¿Dónde vives?",
               "bank": [
                 "¿Dónde",
@@ -1531,7 +1533,7 @@
             {
               "id": "gr1-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Good morning, Mr. García.'",
+              "prompt": "Good morning, Mr. García.",
               "answer": "Buenos días señor García",
               "bank": [
                 "Buenos",
@@ -1685,7 +1687,7 @@
             {
               "id": "gr2-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'How are you?' (informal)",
+              "prompt": "'How are you?' (informal)",
               "answer": "¿Cómo estás?",
               "bank": [
                 "¿Cómo",
@@ -1698,7 +1700,7 @@
             {
               "id": "gr2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Very well, thank you.'",
+              "prompt": "Very well, thank you.",
               "answer": "Muy bien gracias",
               "bank": [
                 "Muy",
@@ -1863,7 +1865,7 @@
             {
               "id": "gr3-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Thank you very much, ma'am.'",
+              "prompt": "'Thank you very much, ma'am.'",
               "answer": "Muchas gracias señora",
               "bank": [
                 "Muchas",
@@ -2032,7 +2034,7 @@
             {
               "id": "gr4-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'How are you, Mrs. López?' (formal)",
+              "prompt": "'How are you, Mrs. López?' (formal)",
               "answer": "¿Cómo está usted señora López?",
               "bank": [
                 "¿Cómo",
@@ -2187,7 +2189,7 @@
             {
               "id": "gr5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Hi! My name is Pablo.'",
+              "prompt": "Hi! My name is Pablo.",
               "answer": "¡Hola! Me llamo Pablo",
               "bank": [
                 "¡Hola!",
@@ -2201,7 +2203,7 @@
             {
               "id": "gr5-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Nice to meet you, ma'am.'",
+              "prompt": "'Nice to meet you, ma'am.'",
               "answer": "Mucho gusto señora",
               "bank": [
                 "Mucho",
@@ -2782,7 +2784,7 @@
             {
               "id": "pr2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'They (women) are doctors.'",
+              "prompt": "They (women) are doctors.",
               "answer": "Ellas son médicas",
               "bank": [
                 "Ellas",
@@ -2938,7 +2940,7 @@
             {
               "id": "pr3-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I speak Spanish.' (natural, no yo)",
+              "prompt": "'I speak Spanish.' (natural, no yo)",
               "answer": "Hablo español",
               "bank": [
                 "Hablo",
@@ -3106,7 +3108,7 @@
             {
               "id": "pr4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Do you speak English?' (informal, no extra words)",
+              "prompt": "'Do you speak English?' (informal, no extra words)",
               "answer": "¿Hablas inglés?",
               "bank": [
                 "¿Hablas",
@@ -3525,7 +3527,7 @@
             {
               "id": "se1-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I am a doctor.'",
+              "prompt": "I am a doctor.",
               "answer": "Soy médico",
               "bank": [
                 "Soy",
@@ -3681,7 +3683,7 @@
             {
               "id": "se2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I am happy.'",
+              "prompt": "I am happy.",
               "answer": "Estoy contento",
               "bank": [
                 "Estoy",
@@ -3781,7 +3783,7 @@
             {
               "id": "se3-6",
               "type": "multiple_choice",
-              "prompt": "Choose: 'María ___ inteligente.' (intelligent — trait)",
+              "prompt": "'María ___ inteligente.' (intelligent — trait)",
               "options": [
                 "es",
                 "está",
@@ -3844,7 +3846,7 @@
             {
               "id": "se3-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I am from Argentina.'",
+              "prompt": "I am from Argentina.",
               "answer": "Soy de Argentina",
               "bank": [
                 "Soy",
@@ -3931,7 +3933,7 @@
             {
               "id": "se4-5",
               "type": "multiple_choice",
-              "prompt": "Choose: 'Los libros ___ en la mesa.'",
+              "prompt": "Los libros ___ en la mesa.",
               "options": [
                 "son",
                 "están",
@@ -3944,7 +3946,7 @@
             {
               "id": "se4-6",
               "type": "multiple_choice",
-              "prompt": "Choose: '¿Cómo ___ tú?' (How are you?)",
+              "prompt": "'¿Cómo ___ tú?' (How are you?)",
               "options": [
                 "eres",
                 "estás",
@@ -4009,7 +4011,7 @@
             {
               "id": "se4-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The book is on the table.'",
+              "prompt": "The book is on the table.",
               "answer": "El libro está en la mesa",
               "bank": [
                 "El",
@@ -4185,7 +4187,7 @@
             {
               "id": "se5-12",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'She is a doctor and is in the hospital.'",
+              "prompt": "She is a doctor and is in the hospital.",
               "answer": "Ella es médica y está en el hospital",
               "bank": [
                 "Ella",
@@ -4650,8 +4652,9 @@
             },
             {
               "id": "nu1-7",
-              "type": "fill_blank",
-              "prompt": "'9' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "9",
               "answer": "nueve",
               "acceptableAnswers": [
                 "Nueve"
@@ -4659,8 +4662,9 @@
             },
             {
               "id": "nu1-8",
-              "type": "fill_blank",
-              "prompt": "'4' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "4",
               "answer": "cuatro",
               "acceptableAnswers": [
                 "Cuatro"
@@ -4813,8 +4817,9 @@
             },
             {
               "id": "nu2-7",
-              "type": "fill_blank",
-              "prompt": "'14' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "14",
               "answer": "catorce",
               "acceptableAnswers": [
                 "Catorce"
@@ -4822,8 +4827,9 @@
             },
             {
               "id": "nu2-8",
-              "type": "fill_blank",
-              "prompt": "'18' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "18",
               "answer": "dieciocho",
               "acceptableAnswers": [
                 "Dieciocho"
@@ -4831,8 +4837,9 @@
             },
             {
               "id": "nu2-9",
-              "type": "fill_blank",
-              "prompt": "'20' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "20",
               "answer": "veinte",
               "acceptableAnswers": [
                 "Veinte"
@@ -4854,7 +4861,7 @@
             {
               "id": "nu2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 11, 12, 13, 14 in Spanish",
+              "prompt": "11, 12, 13, 14 in Spanish",
               "answer": "once doce trece catorce",
               "bank": [
                 "once",
@@ -4985,8 +4992,9 @@
             },
             {
               "id": "nu3-8",
-              "type": "fill_blank",
-              "prompt": "'40' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "40",
               "answer": "cuarenta",
               "acceptableAnswers": [
                 "Cuarenta"
@@ -4994,8 +5002,9 @@
             },
             {
               "id": "nu3-9",
-              "type": "fill_blank",
-              "prompt": "'60' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "60",
               "answer": "sesenta",
               "acceptableAnswers": [
                 "Sesenta"
@@ -5003,8 +5012,9 @@
             },
             {
               "id": "nu3-10",
-              "type": "fill_blank",
-              "prompt": "'80' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "80",
               "answer": "ochenta",
               "acceptableAnswers": [
                 "Ochenta"
@@ -5013,7 +5023,7 @@
             {
               "id": "nu3-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'thirty-five' (3 words)",
+              "prompt": "'thirty-five' (3 words)",
               "answer": "treinta y cinco",
               "bank": [
                 "treinta",
@@ -5026,7 +5036,7 @@
             {
               "id": "nu3-12",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'seventy-two' (3 words)",
+              "prompt": "'seventy-two' (3 words)",
               "answer": "setenta y dos",
               "bank": [
                 "setenta",
@@ -5153,7 +5163,7 @@
             {
               "id": "nu4-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'How old are you?' (informal)",
+              "prompt": "'How old are you?' (informal)",
               "answer": "¿Cuántos años tienes?",
               "bank": [
                 "¿Cuántos",
@@ -5166,7 +5176,7 @@
             {
               "id": "nu4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I am twenty-one years old.'",
+              "prompt": "I am twenty-one years old.",
               "answer": "Tengo veintiún años",
               "bank": [
                 "Tengo",
@@ -5316,7 +5326,7 @@
             {
               "id": "nu5-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'How much does the book cost?'",
+              "prompt": "How much does the book cost?",
               "answer": "¿Cuánto cuesta el libro?",
               "bank": [
                 "¿Cuánto",
@@ -5330,7 +5340,7 @@
             {
               "id": "nu5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'It costs thirty pesos.'",
+              "prompt": "It costs thirty pesos.",
               "answer": "Cuesta treinta pesos",
               "bank": [
                 "Cuesta",
@@ -5785,7 +5795,7 @@
             {
               "id": "fa1-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'My father is a teacher.'",
+              "prompt": "My father is a teacher.",
               "answer": "Mi padre es profesor",
               "bank": [
                 "Mi",
@@ -5961,7 +5971,7 @@
             {
               "id": "fa2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'My cousin is twelve years old.' (female)",
+              "prompt": "'My cousin is twelve years old.' (female)",
               "answer": "Mi prima tiene doce años",
               "bank": [
                 "Mi",
@@ -6122,7 +6132,7 @@
             {
               "id": "fa3-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'My grandfather lives in Spain.'",
+              "prompt": "My grandfather lives in Spain.",
               "answer": "Mi abuelo vive en España",
               "bank": [
                 "Mi",
@@ -6276,7 +6286,7 @@
             {
               "id": "fa4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Your (inf.) brothers are tall.'",
+              "prompt": "Your (inf.) brothers are tall.",
               "answer": "Tus hermanos son altos",
               "bank": [
                 "Tus",
@@ -6290,7 +6300,7 @@
             {
               "id": "fa4-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Our parents are at home.'",
+              "prompt": "Our parents are at home.",
               "answer": "Nuestros padres están en casa",
               "bank": [
                 "Nuestros",
@@ -6432,7 +6442,7 @@
             {
               "id": "fa5-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I have one brother and two sisters.'",
+              "prompt": "I have one brother and two sisters.",
               "answer": "Tengo un hermano y dos hermanas",
               "bank": [
                 "Tengo",
@@ -6448,7 +6458,7 @@
             {
               "id": "fa5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'My family lives in Mexico.'",
+              "prompt": "My family lives in Mexico.",
               "answer": "Mi familia vive en México",
               "bank": [
                 "Mi",
@@ -6973,7 +6983,7 @@
             {
               "id": "ve1-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'We speak Spanish.'",
+              "prompt": "We speak Spanish.",
               "answer": "Hablamos español",
               "bank": [
                 "Hablamos",
@@ -6986,7 +6996,7 @@
             {
               "id": "ve1-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'They work in Madrid.'",
+              "prompt": "They work in Madrid.",
               "answer": "Trabajan en Madrid",
               "bank": [
                 "Trabajan",
@@ -7143,7 +7153,7 @@
             {
               "id": "ve2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'They eat at home.'",
+              "prompt": "They eat at home.",
               "answer": "Comen en casa",
               "bank": [
                 "Comen",
@@ -7301,7 +7311,7 @@
             {
               "id": "ve3-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'They open the door.'",
+              "prompt": "They open the door.",
               "answer": "Abren la puerta",
               "bank": [
                 "Abren",
@@ -7440,7 +7450,7 @@
             {
               "id": "ve4-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I'm going to the office.'",
+              "prompt": "'I'm going to the office.'",
               "answer": "Voy a la oficina",
               "bank": [
                 "Voy",
@@ -7454,7 +7464,7 @@
             {
               "id": "ve4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'We go to the restaurant.'",
+              "prompt": "We go to the restaurant.",
               "answer": "Vamos al restaurante",
               "bank": [
                 "Vamos",
@@ -7632,7 +7642,7 @@
             {
               "id": "ve5-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I am hungry and thirsty.'",
+              "prompt": "I am hungry and thirsty.",
               "answer": "Tengo hambre y sed",
               "bank": [
                 "Tengo",
@@ -8065,7 +8075,7 @@
             {
               "id": "ag1-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The book is on the table.'",
+              "prompt": "The book is on the table.",
               "answer": "El libro está en la mesa",
               "bank": [
                 "El",
@@ -8226,7 +8236,7 @@
             {
               "id": "ag2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The song is beautiful.'",
+              "prompt": "The song is beautiful.",
               "answer": "La canción es bonita",
               "bank": [
                 "La",
@@ -8390,7 +8400,7 @@
             {
               "id": "ag3-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The day is beautiful.'",
+              "prompt": "The day is beautiful.",
               "answer": "El día es bonito",
               "bank": [
                 "El",
@@ -8527,7 +8537,7 @@
             {
               "id": "ag4-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I have a dog.'",
+              "prompt": "I have a dog.",
               "answer": "Tengo un perro",
               "bank": [
                 "Tengo",
@@ -8554,7 +8564,7 @@
             {
               "id": "ag4-11",
               "type": "multiple_choice",
-              "prompt": "Choose: 'There are ___ books on the table.'",
+              "prompt": "There are ___ books on the table.",
               "options": [
                 "un",
                 "una",
@@ -8706,7 +8716,7 @@
             {
               "id": "ag5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The cars are big.'",
+              "prompt": "The cars are big.",
               "answer": "Los carros son grandes",
               "bank": [
                 "Los",
@@ -9156,7 +9166,7 @@
             {
               "id": "qu1-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Who is your teacher?'",
+              "prompt": "Who is your teacher?",
               "answer": "¿Quién es tu profesor?",
               "bank": [
                 "¿Quién",
@@ -9317,7 +9327,7 @@
             {
               "id": "qu2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Why do you study Spanish?'",
+              "prompt": "Why do you study Spanish?",
               "answer": "¿Por qué estudias español?",
               "bank": [
                 "¿Por",
@@ -9462,7 +9472,7 @@
             {
               "id": "qu3-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'How many books do you have?'",
+              "prompt": "How many books do you have?",
               "answer": "¿Cuántos libros tienes?",
               "bank": [
                 "¿Cuántos",
@@ -9476,7 +9486,7 @@
             {
               "id": "qu3-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'How much does the coffee cost?'",
+              "prompt": "How much does the coffee cost?",
               "answer": "¿Cuánto cuesta el café?",
               "bank": [
                 "¿Cuánto",
@@ -9648,7 +9658,7 @@
             {
               "id": "qu4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'What is your email?'",
+              "prompt": "What is your email?",
               "answer": "¿Cuál es tu correo?",
               "bank": [
                 "¿Cuál",
@@ -9805,7 +9815,7 @@
             {
               "id": "qu5-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Do you speak Spanish?'",
+              "prompt": "Do you speak Spanish?",
               "answer": "¿Hablas español?",
               "bank": [
                 "¿Hablas",
@@ -9818,7 +9828,7 @@
             {
               "id": "qu5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Is the coffee hot?'",
+              "prompt": "Is the coffee hot?",
               "answer": "¿Está caliente el café?",
               "bank": [
                 "¿Está",
@@ -10293,7 +10303,7 @@
             {
               "id": "co1-12",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'red, blue, green'",
+              "prompt": "red, blue, green",
               "answer": "rojo azul verde",
               "bank": [
                 "rojo",
@@ -10444,7 +10454,7 @@
             {
               "id": "co2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'pink, grey, brown'",
+              "prompt": "pink, grey, brown",
               "answer": "rosa gris marrón",
               "bank": [
                 "rosa",
@@ -10604,7 +10614,7 @@
             {
               "id": "co3-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I have a black dog.'",
+              "prompt": "I have a black dog.",
               "answer": "Tengo un perro negro",
               "bank": [
                 "Tengo",
@@ -10619,7 +10629,7 @@
             {
               "id": "co3-12",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The houses are white.'",
+              "prompt": "The houses are white.",
               "answer": "Las casas son blancas",
               "bank": [
                 "Las",
@@ -10762,7 +10772,7 @@
             {
               "id": "co4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I want the red book.'",
+              "prompt": "I want the red book.",
               "answer": "Quiero el libro rojo",
               "bank": [
                 "Quiero",
@@ -10777,7 +10787,7 @@
             {
               "id": "co4-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I have blue eyes.'",
+              "prompt": "I have blue eyes.",
               "answer": "Tengo los ojos azules",
               "bank": [
                 "Tengo",
@@ -10921,7 +10931,7 @@
             {
               "id": "co5-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'My house is yellow and small.'",
+              "prompt": "My house is yellow and small.",
               "answer": "Mi casa es amarilla y pequeña",
               "bank": [
                 "Mi",
@@ -10937,7 +10947,7 @@
             {
               "id": "co5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I have blue eyes and black hair.'",
+              "prompt": "I have blue eyes and black hair.",
               "answer": "Tengo los ojos azules y el pelo negro",
               "bank": [
                 "Tengo",
@@ -11385,7 +11395,7 @@
             {
               "id": "we1-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'It's hot in Madrid.'",
+              "prompt": "'It's hot in Madrid.'",
               "answer": "Hace calor en Madrid",
               "bank": [
                 "Hace",
@@ -11550,7 +11560,7 @@
             {
               "id": "we2-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'It rains a lot in Galicia.'",
+              "prompt": "It rains a lot in Galicia.",
               "answer": "Llueve mucho en Galicia",
               "bank": [
                 "Llueve",
@@ -11564,7 +11574,7 @@
             {
               "id": "we2-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'It snows in the mountains.'",
+              "prompt": "It snows in the mountains.",
               "answer": "Nieva en las montañas",
               "bank": [
                 "Nieva",
@@ -11716,7 +11726,7 @@
             {
               "id": "we3-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Today it's cloudy and humid.'",
+              "prompt": "'Today it's cloudy and humid.'",
               "answer": "Hoy está nublado y húmedo",
               "bank": [
                 "Hoy",
@@ -11890,7 +11900,7 @@
             {
               "id": "we4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I'm cold and I'm hungry.'",
+              "prompt": "'I'm cold and I'm hungry.'",
               "answer": "Tengo frío y tengo hambre",
               "bank": [
                 "Tengo",
@@ -12041,7 +12051,7 @@
             {
               "id": "we5-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'In summer I go to the beach.'",
+              "prompt": "In summer I go to the beach.",
               "answer": "En verano voy a la playa",
               "bank": [
                 "En",
@@ -12057,7 +12067,7 @@
             {
               "id": "we5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'In winter it's very cold.'",
+              "prompt": "'In winter it's very cold.'",
               "answer": "En invierno hace mucho frío",
               "bank": [
                 "En",
@@ -12581,7 +12591,7 @@
             {
               "id": "pl1-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I work in an office.'",
+              "prompt": "I work in an office.",
               "answer": "Trabajo en una oficina",
               "bank": [
                 "Trabajo",
@@ -12728,7 +12738,7 @@
             {
               "id": "pl2-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'My family is at the park.'",
+              "prompt": "My family is at the park.",
               "answer": "Mi familia está en el parque",
               "bank": [
                 "Mi",
@@ -12744,7 +12754,7 @@
             {
               "id": "pl2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The cat is on the bed.'",
+              "prompt": "The cat is on the bed.",
               "answer": "El gato está en la cama",
               "bank": [
                 "El",
@@ -12896,7 +12906,7 @@
             {
               "id": "pl3-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'We're going to the restaurant.'",
+              "prompt": "'We're going to the restaurant.'",
               "answer": "Vamos al restaurante",
               "bank": [
                 "Vamos",
@@ -13061,7 +13071,7 @@
             {
               "id": "pl4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'Where is the hospital?'",
+              "prompt": "Where is the hospital?",
               "answer": "¿Dónde está el hospital?",
               "bank": [
                 "¿Dónde",
@@ -13075,7 +13085,7 @@
             {
               "id": "pl4-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The store is next to the bank.'",
+              "prompt": "The store is next to the bank.",
               "answer": "La tienda está al lado del banco",
               "bank": [
                 "La",
@@ -13232,7 +13242,7 @@
             {
               "id": "pl5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'There are five chairs in the room.'",
+              "prompt": "There are five chairs in the room.",
               "answer": "Hay cinco sillas en el cuarto",
               "bank": [
                 "Hay",
@@ -13662,7 +13672,7 @@
             {
               "id": "rv1-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I am a teacher and I am in Madrid.'",
+              "prompt": "I am a teacher and I am in Madrid.",
               "answer": "Soy profesor y estoy en Madrid",
               "bank": [
                 "Soy",
@@ -13826,7 +13836,7 @@
             {
               "id": "rv2-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'The girls are tall.'",
+              "prompt": "The girls are tall.",
               "answer": "Las chicas son altas",
               "bank": [
                 "Las",
@@ -13985,7 +13995,7 @@
             {
               "id": "rv3-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'We live in Spain and work in Madrid.'",
+              "prompt": "We live in Spain and work in Madrid.",
               "answer": "Vivimos en España y trabajamos en Madrid",
               "bank": [
                 "Vivimos",
@@ -14096,8 +14106,9 @@
             },
             {
               "id": "rv4-7",
-              "type": "fill_blank",
-              "prompt": "'45' in Spanish: ___",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "45",
               "answer": "cuarenta y cinco",
               "acceptableAnswers": [
                 "Cuarenta y cinco"
@@ -14117,7 +14128,7 @@
             {
               "id": "rv4-9",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'My brother is 17 years old.'",
+              "prompt": "My brother is 17 years old.",
               "answer": "Mi hermano tiene diecisiete años",
               "bank": [
                 "Mi",
@@ -14132,7 +14143,7 @@
             {
               "id": "rv4-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'It costs thirty pesos.'",
+              "prompt": "It costs thirty pesos.",
               "answer": "Cuesta treinta pesos",
               "bank": [
                 "Cuesta",
@@ -14255,7 +14266,7 @@
             {
               "id": "rv5-7",
               "type": "fill_blank",
-              "prompt": "Complete: 'I am American and I speak English.' → ___ americano y ___ inglés.",
+              "prompt": "'I am American and I speak English.' → ___ americano y ___ inglés.",
               "answer": "Soy hablo",
               "acceptableAnswers": [
                 "soy hablo",
@@ -14297,7 +14308,7 @@
             {
               "id": "rv5-10",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'I have a dog and my dog is small.'",
+              "prompt": "I have a dog and my dog is small.",
               "answer": "Tengo un perro y mi perro es pequeño",
               "bank": [
                 "Tengo",
@@ -14315,7 +14326,7 @@
             {
               "id": "rv5-11",
               "type": "tap_words_in_order",
-              "prompt": "Order: 'In summer it's hot and I go to the beach.'",
+              "prompt": "'In summer it's hot and I go to the beach.'",
               "answer": "En verano hace calor y voy a la playa",
               "bank": [
                 "En",

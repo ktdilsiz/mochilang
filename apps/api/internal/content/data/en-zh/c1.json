@@ -133,7 +133,7 @@
             {
               "id": "biz1-2",
               "type": "fill_blank",
-              "prompt": "「Thank you all for ___ time to attend.」(中文:「感谢大家抽出时间出席。」)",
+              "prompt": "Thank you all for ___ time to attend.",
               "answer": "taking the",
               "acceptableAnswers": [
                 "taking",
@@ -167,7 +167,7 @@
             {
               "id": "biz1-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我谨代表公司向各位致以热烈的欢迎。」",
+              "prompt": "「我谨代表公司向各位致以热烈的欢迎。」",
               "answer": "On behalf of the company I extend a warm welcome to everyone",
               "bank": [
                 "On",
@@ -216,7 +216,7 @@
             {
               "id": "biz1-7",
               "type": "fill_blank",
-              "prompt": "「In light ___ recent developments, we'll add an item.」(中文:「鉴于最近的进展,我们将增加一项议题。」)",
+              "prompt": "In light ___ recent developments, we'll add an item.",
               "answer": "of",
               "acceptableAnswers": []
             },
@@ -236,7 +236,7 @@
             {
               "id": "biz1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「考虑到时间有限,我们简短地谈一谈。」",
+              "prompt": "「考虑到时间有限,我们简短地谈一谈。」",
               "answer": "Given the limited time let's keep it brief",
               "bank": [
                 "Given",
@@ -255,7 +255,7 @@
             {
               "id": "biz1-10",
               "type": "fill_blank",
-              "prompt": "「Today's session will run for ___ hour and a half.」(中文:「今天的会议将持续一个半小时。」)",
+              "prompt": "Today's session will run for ___ hour and a half.",
               "answer": "an",
               "acceptableAnswers": [],
               "explanation": "此处 「h」 不发音,故用 「an hour」。"
@@ -276,7 +276,7 @@
             {
               "id": "biz1-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「此刻我把发言权交给我的同事。」",
+              "prompt": "「此刻我把发言权交给我的同事。」",
               "answer": "At this point I'll hand over to my colleague",
               "bank": [
                 "At",
@@ -316,7 +316,7 @@
             {
               "id": "biz2-2",
               "type": "fill_blank",
-              "prompt": "「We may have ___ meeting that figure.」(中文:「我们可能难以达到这个数字。」)",
+              "prompt": "We may have ___ meeting that figure.",
               "answer": "difficulty",
               "acceptableAnswers": [
                 "trouble",
@@ -350,7 +350,7 @@
             {
               "id": "biz2-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我想对这一时间表提出异议。」",
+              "prompt": "「我想对这一时间表提出异议。」",
               "answer": "I'd like to push back on that timeline",
               "bank": [
                 "I'd",
@@ -395,7 +395,7 @@
             {
               "id": "biz2-7",
               "type": "fill_blank",
-              "prompt": "「We can meet you ___」(中文:「我们可以各退一步。」)",
+              "prompt": "We can meet you ___",
               "answer": "halfway",
               "acceptableAnswers": [
                 "half-way"
@@ -416,7 +416,7 @@
             {
               "id": "biz2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我与团队商议后再回复你。」",
+              "prompt": "「我与团队商议后再回复你。」",
               "answer": "I'll get back to you after consulting my team",
               "bank": [
                 "I'll",
@@ -436,7 +436,7 @@
             {
               "id": "biz2-10",
               "type": "fill_blank",
-              "prompt": "「Could we explore some ___ options?」(中文:「我们能否探讨一些替代方案?」)",
+              "prompt": "Could we explore some ___ options?",
               "answer": "alternative",
               "acceptableAnswers": [
                 "other"
@@ -458,7 +458,7 @@
             {
               "id": "biz2-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「按这个价位我们无法继续推进。」",
+              "prompt": "「按这个价位我们无法继续推进。」",
               "answer": "We can't move forward at this price point",
               "bank": [
                 "We",
@@ -498,7 +498,7 @@
             {
               "id": "biz3-2",
               "type": "fill_blank",
-              "prompt": "「Pursuant ___ our discussion…」(中文:「根据我们的讨论……」)",
+              "prompt": "Pursuant ___ our discussion…",
               "answer": "to",
               "acceptableAnswers": [],
               "explanation": "「pursuant to」 = 「依据/据此」(正式)。"
@@ -529,7 +529,7 @@
             {
               "id": "biz3-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「如有疑问,请不要犹豫,随时联系我们。」",
+              "prompt": "「如有疑问,请不要犹豫,随时联系我们。」",
               "answer": "Should you have any queries please do not hesitate to reach out",
               "bank": [
                 "Should",
@@ -577,7 +577,7 @@
             {
               "id": "biz3-7",
               "type": "fill_blank",
-              "prompt": "「I am writing in ___ to your inquiry.」(中文:「现就您的询问做出回复。」)",
+              "prompt": "I am writing in ___ to your inquiry.",
               "answer": "response",
               "acceptableAnswers": [
                 "answer",
@@ -601,7 +601,7 @@
             {
               "id": "biz3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「请您审阅我们的提案后再回复,十分感激。」",
+              "prompt": "「请您审阅我们的提案后再回复,十分感激。」",
               "answer": "We kindly ask that you revert after reviewing our proposal",
               "bank": [
                 "We",
@@ -622,7 +622,7 @@
             {
               "id": "biz3-10",
               "type": "fill_blank",
-              "prompt": "「The contract shall be ___ effective upon signing.」(中文:「本合同自签署之日起生效。」)",
+              "prompt": "The contract shall be ___ effective upon signing.",
               "answer": "deemed",
               "acceptableAnswers": [],
               "explanation": "「shall be deemed」 属于合同用语。"
@@ -643,7 +643,7 @@
             {
               "id": "biz3-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们遗憾地通知您,您此次的申请将不会继续推进。」",
+              "prompt": "「我们遗憾地通知您,您此次的申请将不会继续推进。」",
               "answer": "We regret to inform you that your application will not be progressing this time",
               "bank": [
                 "We",
@@ -712,7 +712,7 @@
             {
               "id": "biz4-3",
               "type": "fill_blank",
-              "prompt": "「This initiative gives us a competitive ___」(中文:「这项举措带给我们竞争优势。」)",
+              "prompt": "This initiative gives us a competitive ___",
               "answer": "edge",
               "acceptableAnswers": [
                 "advantage"
@@ -721,7 +721,7 @@
             {
               "id": "biz4-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「为降低风险,我们必须使资源多元化。」",
+              "prompt": "「为降低风险,我们必须使资源多元化。」",
               "answer": "We need to diversify resources to mitigate risk",
               "bank": [
                 "We",
@@ -766,7 +766,7 @@
             {
               "id": "biz4-7",
               "type": "fill_blank",
-              "prompt": "「The investment yields ___ returns at this scale.」(中文:「在这一规模下,这项投资呈现出收益递减的现象。」)",
+              "prompt": "The investment yields ___ returns at this scale.",
               "answer": "diminishing",
               "acceptableAnswers": []
             },
@@ -786,7 +786,7 @@
             {
               "id": "biz4-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「该公司转向了 B2B 业务。」",
+              "prompt": "「该公司转向了 B2B 业务。」",
               "answer": "The company pivoted to B2B",
               "bank": [
                 "The",
@@ -802,7 +802,7 @@
             {
               "id": "biz4-10",
               "type": "fill_blank",
-              "prompt": "「It's a ___ proposition for both sides.」(中文:「这对双方而言都是一份共赢的提议。」)",
+              "prompt": "It's a ___ proposition for both sides.",
               "answer": "win-win",
               "acceptableAnswers": [
                 "win win"
@@ -869,7 +869,7 @@
             {
               "id": "biz5-2",
               "type": "fill_blank",
-              "prompt": "「Revenue grew 12% year-on-year, ___ by enterprise renewals.」(中文:「在企业客户续约的推动下,营收同比增长 12%。」)",
+              "prompt": "Revenue grew 12% year-on-year, ___ by enterprise renewals.",
               "answer": "driven",
               "acceptableAnswers": [],
               "explanation": "在高管摘要中,「driven by」 用于说明增长的原因。"
@@ -900,7 +900,7 @@
             {
               "id": "biz5-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们的建议是将资源重新分配到上层细分市场。」",
+              "prompt": "「我们的建议是将资源重新分配到上层细分市场。」",
               "answer": "Our recommendation is to reallocate resources to the upper segment",
               "bank": [
                 "Our",
@@ -947,7 +947,7 @@
             {
               "id": "biz5-7",
               "type": "fill_blank",
-              "prompt": "「The proposal is, on ___, the most defensible option available.」(中文:「总体而言,该提案是目前最具说服力的选择。」)",
+              "prompt": "The proposal is, on ___, the most defensible option available.",
               "answer": "balance",
               "acceptableAnswers": []
             },
@@ -967,7 +967,7 @@
             {
               "id": "biz5-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「尽管利润不及预期,现金流仍然稳健。」",
+              "prompt": "「尽管利润不及预期,现金流仍然稳健。」",
               "answer": "While profit fell short of expectations cash flow remained robust",
               "bank": [
                 "While",
@@ -988,7 +988,7 @@
             {
               "id": "biz5-10",
               "type": "fill_blank",
-              "prompt": "「The board is asked to ___ the proposed reallocation.」(中文:「现请董事会批准所提出的资源再分配方案。」)",
+              "prompt": "The board is asked to ___ the proposed reallocation.",
               "answer": "endorse",
               "acceptableAnswers": [
                 "approve",
@@ -1013,7 +1013,7 @@
             {
               "id": "biz5-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「该风险看似可控,但仍需密切监控。」",
+              "prompt": "「该风险看似可控,但仍需密切监控。」",
               "answer": "The risk appears manageable but warrants close monitoring",
               "bank": [
                 "The",
@@ -1054,7 +1054,7 @@
             {
               "id": "biz6-2",
               "type": "fill_blank",
-              "prompt": "「I am writing to ___ a meeting at your earliest convenience.」(中文:「我写信来希望在您方便时安排一次会议。」)",
+              "prompt": "I am writing to ___ a meeting at your earliest convenience.",
               "answer": "request",
               "acceptableAnswers": [
                 "ask"
@@ -1086,7 +1086,7 @@
             {
               "id": "biz6-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「事先感谢您的回复。」",
+              "prompt": "「事先感谢您的回复。」",
               "answer": "Thank you in advance for your reply",
               "bank": [
                 "Thank",
@@ -1129,7 +1129,7 @@
             {
               "id": "biz6-7",
               "type": "fill_blank",
-              "prompt": "「Apologies for the ___ in responding.」(中文:「对于回复的延迟深表歉意。」)",
+              "prompt": "Apologies for the ___ in responding.",
               "answer": "delay",
               "acceptableAnswers": [
                 "postpone"
@@ -1151,7 +1151,7 @@
             {
               "id": "biz6-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们清楚此事的紧迫性,会给予应有的重视。」",
+              "prompt": "「我们清楚此事的紧迫性,会给予应有的重视。」",
               "answer": "We appreciate the urgency of the matter and will give it due care",
               "bank": [
                 "We",
@@ -1174,7 +1174,7 @@
             {
               "id": "biz6-10",
               "type": "fill_blank",
-              "prompt": "「Please find ___ the revised proposal.」(中文:「请查收附件中修订后的提案。」)",
+              "prompt": "Please find ___ the revised proposal.",
               "answer": "attached",
               "acceptableAnswers": [
                 "enclosed"
@@ -1196,7 +1196,7 @@
             {
               "id": "biz6-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我会记下此事,下周再来跟进。」",
+              "prompt": "「我会记下此事,下周再来跟进。」",
               "answer": "I will make a note to follow up on this next week",
               "bank": [
                 "I",
@@ -1474,7 +1474,7 @@
             {
               "id": "ac1-3",
               "type": "fill_blank",
-              "prompt": "「A growing ___ of evidence indicates climate sensitivity.」(中文:「越来越多的证据表明气候敏感性。」)",
+              "prompt": "A growing ___ of evidence indicates climate sensitivity.",
               "answer": "body",
               "acceptableAnswers": [
                 "amount"
@@ -1483,7 +1483,7 @@
             {
               "id": "ac1-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「本研究旨在填补这一空白。」",
+              "prompt": "「本研究旨在填补这一空白。」",
               "answer": "This study seeks to address that gap",
               "bank": [
                 "This",
@@ -1527,7 +1527,7 @@
             {
               "id": "ac1-7",
               "type": "fill_blank",
-              "prompt": "「These results ___ that further investigation is warranted.」(中文:「这些结果表明,有必要进行进一步研究。」)",
+              "prompt": "These results ___ that further investigation is warranted.",
               "answer": "indicate",
               "acceptableAnswers": [
                 "suggest",
@@ -1550,7 +1550,7 @@
             {
               "id": "ac1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「数据表明,该假设无法被拒绝。」",
+              "prompt": "「数据表明,该假设无法被拒绝。」",
               "answer": "The data suggest that the hypothesis cannot be rejected",
               "bank": [
                 "The",
@@ -1570,7 +1570,7 @@
             {
               "id": "ac1-10",
               "type": "fill_blank",
-              "prompt": "「The phenomenon ___ to occur more frequently in summer.」(中文:「这一现象倾向于在夏季更频繁地出现。」)",
+              "prompt": "The phenomenon ___ to occur more frequently in summer.",
               "answer": "tends",
               "acceptableAnswers": [
                 "is inclined"
@@ -1601,7 +1601,7 @@
             {
               "id": "ac2-2",
               "type": "fill_blank",
-              "prompt": "「This paper ___ that…」(中文:「本文主张:」)",
+              "prompt": "This paper ___ that…",
               "answer": "argues",
               "acceptableAnswers": [
                 "contends",
@@ -1637,7 +1637,7 @@
             {
               "id": "ac2-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「本研究提出了一个新的理论框架。」",
+              "prompt": "「本研究提出了一个新的理论框架。」",
               "answer": "This study proposes a novel theoretical framework",
               "bank": [
                 "This",
@@ -1681,7 +1681,7 @@
             {
               "id": "ac2-7",
               "type": "fill_blank",
-              "prompt": "「The findings have important ___ for policy.」(中文:「这些发现对政策具有重要的意义。」)",
+              "prompt": "The findings have important ___ for policy.",
               "answer": "implications",
               "acceptableAnswers": [
                 "consequences",
@@ -1704,7 +1704,7 @@
             {
               "id": "ac2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「研究结果表明,现有理论存在不足。」",
+              "prompt": "「研究结果表明,现有理论存在不足。」",
               "answer": "The findings indicate that existing theory falls short",
               "bank": [
                 "The",
@@ -1723,7 +1723,7 @@
             {
               "id": "ac2-10",
               "type": "fill_blank",
-              "prompt": "「The limitations of this study ___ as follows.」(中文:「本研究的局限性如下所述。」)",
+              "prompt": "The limitations of this study ___ as follows.",
               "answer": "are",
               "acceptableAnswers": []
             }
@@ -1775,7 +1775,7 @@
             {
               "id": "ac3-3",
               "type": "fill_blank",
-              "prompt": "「As ___ in Table 2…」(中文:「如表 2 所示……」)",
+              "prompt": "As ___ in Table 2…",
               "answer": "shown",
               "acceptableAnswers": [
                 "depicted",
@@ -1785,7 +1785,7 @@
             {
               "id": "ac3-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这一效应在不同性别之间相似。」",
+              "prompt": "「这一效应在不同性别之间相似。」",
               "answer": "The effect is similar across genders",
               "bank": [
                 "The",
@@ -1828,7 +1828,7 @@
             {
               "id": "ac3-7",
               "type": "fill_blank",
-              "prompt": "「The sample is ___ relatively small.」(中文:「然而,样本量相对较小。」)",
+              "prompt": "The sample is ___ relatively small.",
               "answer": "however",
               "acceptableAnswers": [
                 "nevertheless",
@@ -1852,7 +1852,7 @@
             {
               "id": "ac3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「效应大小随时间推移而增大。」",
+              "prompt": "「效应大小随时间推移而增大。」",
               "answer": "The effect size increases over time",
               "bank": [
                 "The",
@@ -1869,7 +1869,7 @@
             {
               "id": "ac3-10",
               "type": "fill_blank",
-              "prompt": "「Future research should ___ this question further.」(中文:「未来的研究应进一步探讨这一问题。」)",
+              "prompt": "Future research should ___ this question further.",
               "answer": "investigate",
               "acceptableAnswers": [
                 "examine",
@@ -1901,7 +1901,7 @@
             {
               "id": "ac4-2",
               "type": "fill_blank",
-              "prompt": "「The results are robust ___ a number of specifications.」(中文:「在多种模型设定下,结果均稳健。」)",
+              "prompt": "The results are robust ___ a number of specifications.",
               "answer": "to",
               "acceptableAnswers": [
                 "across"
@@ -1910,7 +1910,7 @@
             {
               "id": "ac4-3",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们在本文中提出了一种新的机制。」",
+              "prompt": "「我们在本文中提出了一种新的机制。」",
               "answer": "In this paper we proposed a novel mechanism",
               "bank": [
                 "In",
@@ -1977,7 +1977,7 @@
             {
               "id": "ac4-7",
               "type": "fill_blank",
-              "prompt": "「Conversely, ___ found no such effect.」(中文:「相反,我们并未发现此类效应。」)",
+              "prompt": "Conversely, ___ found no such effect.",
               "answer": "we",
               "acceptableAnswers": [
                 "i"
@@ -1999,7 +1999,7 @@
             {
               "id": "ac4-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这些发现以三种方式为相关文献做出贡献。」",
+              "prompt": "「这些发现以三种方式为相关文献做出贡献。」",
               "answer": "The findings contribute to the literature in three ways",
               "bank": [
                 "The",
@@ -2019,7 +2019,7 @@
             {
               "id": "ac4-10",
               "type": "fill_blank",
-              "prompt": "「The effect is statistically ___」(中文:「该效应在统计学上是显著的。」)",
+              "prompt": "The effect is statistically ___",
               "answer": "significant",
               "acceptableAnswers": [
                 "important"
@@ -2050,7 +2050,7 @@
             {
               "id": "ac5-2",
               "type": "fill_blank",
-              "prompt": "「Smith (2021) ___ a similar conclusion in a different setting.」(中文:「Smith 在另一情境下得出类似结论。」)",
+              "prompt": "Smith (2021) ___ a similar conclusion in a different setting.",
               "answer": "reaches",
               "acceptableAnswers": [
                 "draws"
@@ -2083,7 +2083,7 @@
             {
               "id": "ac5-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「现有文献对这一机制基本保持沉默。」",
+              "prompt": "「现有文献对这一机制基本保持沉默。」",
               "answer": "The existing literature is largely silent on this mechanism",
               "bank": [
                 "The",
@@ -2129,7 +2129,7 @@
             {
               "id": "ac5-7",
               "type": "fill_blank",
-              "prompt": "「This study seeks to ___ that gap in the literature.」(中文:「本研究旨在填补文献中的这一空白。」)",
+              "prompt": "This study seeks to ___ that gap in the literature.",
               "answer": "address",
               "acceptableAnswers": [
                 "bridge",
@@ -2154,7 +2154,7 @@
             {
               "id": "ac5-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「研究结果在一定程度上反驳了先前的结论。」",
+              "prompt": "「研究结果在一定程度上反驳了先前的结论。」",
               "answer": "The findings partially refute earlier results",
               "bank": [
                 "The",
@@ -2171,7 +2171,7 @@
             {
               "id": "ac5-10",
               "type": "fill_blank",
-              "prompt": "「Recent scholarship has called this assumption into ___」(中文:「近期学界对这一假设提出了质疑。」)",
+              "prompt": "Recent scholarship has called this assumption into ___",
               "answer": "question",
               "acceptableAnswers": [],
               "explanation": "「call sth into question」 = 使……受到质疑。"
@@ -2191,7 +2191,7 @@
             {
               "id": "ac5-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「围绕该议题尚未形成共识。」",
+              "prompt": "「围绕该议题尚未形成共识。」",
               "answer": "No consensus has yet emerged on the subject",
               "bank": [
                 "No",
@@ -2232,7 +2232,7 @@
             {
               "id": "ac6-2",
               "type": "fill_blank",
-              "prompt": "「This paper ___ the relationship between X and Y.」(中文:「本文研究 X 与 Y 之间的关系。」)",
+              "prompt": "This paper ___ the relationship between X and Y.",
               "answer": "examines",
               "acceptableAnswers": [
                 "analyses",
@@ -2268,7 +2268,7 @@
             {
               "id": "ac6-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「本研究采用了混合方法的研究路径。」",
+              "prompt": "「本研究采用了混合方法的研究路径。」",
               "answer": "This study adopts a mixed methods approach",
               "bank": [
                 "This",
@@ -2312,7 +2312,7 @@
             {
               "id": "ac6-7",
               "type": "fill_blank",
-              "prompt": "「Drawing ___ a sample of 240 firms, the analysis reveals…」(中文:「基于由 240 家公司组成的样本,分析揭示……」)",
+              "prompt": "Drawing ___ a sample of 240 firms, the analysis reveals…",
               "answer": "on",
               "acceptableAnswers": [
                 "upon"
@@ -2335,7 +2335,7 @@
             {
               "id": "ac6-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这些结果为因果性阐释提供了稳健的基础。」",
+              "prompt": "「这些结果为因果性阐释提供了稳健的基础。」",
               "answer": "The results provide a robust basis for a causal interpretation",
               "bank": [
                 "The",
@@ -2356,7 +2356,7 @@
             {
               "id": "ac6-10",
               "type": "fill_blank",
-              "prompt": "「These findings ___ light on a long-standing debate.」(中文:「这些发现为一场长期存在的争论带来了启示。」)",
+              "prompt": "These findings ___ light on a long-standing debate.",
               "answer": "shed",
               "acceptableAnswers": [
                 "cast",
@@ -2380,7 +2380,7 @@
             {
               "id": "ac6-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这些结果应在考虑到样本较小的情况下加以解读。」",
+              "prompt": "「这些结果应在考虑到样本较小的情况下加以解读。」",
               "answer": "The results should be interpreted with caution given the small sample",
               "bank": [
                 "The",
@@ -2659,7 +2659,7 @@
             {
               "id": "soc1-3",
               "type": "fill_blank",
-              "prompt": "「The ___ passed the bill last week.」(中文:「立法机关上周通过了该法案。」)",
+              "prompt": "The ___ passed the bill last week.",
               "answer": "legislature",
               "acceptableAnswers": [
                 "congress",
@@ -2669,7 +2669,7 @@
             {
               "id": "soc1-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「公民社会在此次改革中扮演了至关重要的角色。」",
+              "prompt": "「公民社会在此次改革中扮演了至关重要的角色。」",
               "answer": "Civil society played a critical role in this reform",
               "bank": [
                 "Civil",
@@ -2715,7 +2715,7 @@
             {
               "id": "soc1-7",
               "type": "fill_blank",
-              "prompt": "「Voters in this ___ tend to favour reform.」(中文:「这一选区的选民倾向于支持改革。」)",
+              "prompt": "Voters in this ___ tend to favour reform.",
               "answer": "constituency",
               "acceptableAnswers": []
             },
@@ -2734,7 +2734,7 @@
             {
               "id": "soc1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「政府颁布了一项新法律。」",
+              "prompt": "「政府颁布了一项新法律。」",
               "answer": "The government enacted a new law",
               "bank": [
                 "The",
@@ -2751,7 +2751,7 @@
             {
               "id": "soc1-10",
               "type": "fill_blank",
-              "prompt": "「The state has a ___ to protect citizens.」(中文:「国家有保护公民的义务。」)",
+              "prompt": "The state has a ___ to protect citizens.",
               "answer": "duty",
               "acceptableAnswers": [
                 "obligation",
@@ -2806,7 +2806,7 @@
             {
               "id": "soc2-3",
               "type": "fill_blank",
-              "prompt": "「Income ___ has widened over the past decade.」(中文:「过去十年间,收入不平等不断加剧。」)",
+              "prompt": "Income ___ has widened over the past decade.",
               "answer": "inequality",
               "acceptableAnswers": [
                 "disparity"
@@ -2815,7 +2815,7 @@
             {
               "id": "soc2-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这一改革对最贫困群体产生了不成比例的影响。」",
+              "prompt": "「这一改革对最贫困群体产生了不成比例的影响。」",
               "answer": "The reform disproportionately affects the poorest",
               "bank": [
                 "The",
@@ -2858,7 +2858,7 @@
             {
               "id": "soc2-7",
               "type": "fill_blank",
-              "prompt": "「Closing the wage ___ remains a priority.」(中文:「缩小薪酬差距仍是当务之急。」)",
+              "prompt": "Closing the wage ___ remains a priority.",
               "answer": "gap",
               "acceptableAnswers": [
                 "divide"
@@ -2880,7 +2880,7 @@
             {
               "id": "soc2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「过去十年间贫困水平变化甚微。」",
+              "prompt": "「过去十年间贫困水平变化甚微。」",
               "answer": "Poverty levels have changed little over the past decade",
               "bank": [
                 "Poverty",
@@ -2900,7 +2900,7 @@
             {
               "id": "soc2-10",
               "type": "fill_blank",
-              "prompt": "「The proposal aims to ___ structural barriers.」(中文:「该提案旨在拆除结构性障碍。」)",
+              "prompt": "The proposal aims to ___ structural barriers.",
               "answer": "dismantle",
               "acceptableAnswers": [
                 "address",
@@ -2933,7 +2933,7 @@
             {
               "id": "soc3-2",
               "type": "fill_blank",
-              "prompt": "「There is a strong ___ for reform.」(中文:「推行改革有充分的理由。」)",
+              "prompt": "There is a strong ___ for reform.",
               "answer": "case",
               "acceptableAnswers": [
                 "argument",
@@ -2966,7 +2966,7 @@
             {
               "id": "soc3-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「人们普遍承认这一体系需要彻底改造。」",
+              "prompt": "「人们普遍承认这一体系需要彻底改造。」",
               "answer": "It is widely acknowledged that the system needs an overhaul",
               "bank": [
                 "It",
@@ -3012,7 +3012,7 @@
             {
               "id": "soc3-7",
               "type": "fill_blank",
-              "prompt": "「Proponents ___ that the law protects vulnerable groups.」(中文:「支持者主张该法律保护了脆弱群体。」)",
+              "prompt": "Proponents ___ that the law protects vulnerable groups.",
               "answer": "claim",
               "acceptableAnswers": [
                 "argue",
@@ -3036,7 +3036,7 @@
             {
               "id": "soc3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这场讨论涉及多种细腻的视角。」",
+              "prompt": "「这场讨论涉及多种细腻的视角。」",
               "answer": "The debate involves multiple nuanced perspectives",
               "bank": [
                 "The",
@@ -3053,7 +3053,7 @@
             {
               "id": "soc3-10",
               "type": "fill_blank",
-              "prompt": "「A more ___ approach is required.」(中文:「需要一种更具细腻度的处理方式。」)",
+              "prompt": "A more ___ approach is required.",
               "answer": "nuanced",
               "acceptableAnswers": [
                 "subtle",
@@ -3108,7 +3108,7 @@
             {
               "id": "soc4-3",
               "type": "fill_blank",
-              "prompt": "「The reform risks ___ existing disparities.」(中文:「该改革有加深现有不平等的风险。」)",
+              "prompt": "The reform risks ___ existing disparities.",
               "answer": "entrenching",
               "acceptableAnswers": [
                 "deepening",
@@ -3119,7 +3119,7 @@
             {
               "id": "soc4-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「研究结果提供了反驳主流叙事的证据。」",
+              "prompt": "「研究结果提供了反驳主流叙事的证据。」",
               "answer": "The findings offer evidence that undermines the prevailing narrative",
               "bank": [
                 "The",
@@ -3165,7 +3165,7 @@
             {
               "id": "soc4-7",
               "type": "fill_blank",
-              "prompt": "「The wealth ___ has widened in the past two decades.」(中文:「过去二十年间,财富鸿沟不断扩大。」)",
+              "prompt": "The wealth ___ has widened in the past two decades.",
               "answer": "gap",
               "acceptableAnswers": [
                 "divide"
@@ -3187,7 +3187,7 @@
             {
               "id": "soc4-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「政策讨论倾向于关注表象,而非结构性原因。」",
+              "prompt": "「政策讨论倾向于关注表象,而非结构性原因。」",
               "answer": "Policy debate tends to focus on symptoms rather than structural causes",
               "bank": [
                 "Policy",
@@ -3208,7 +3208,7 @@
             {
               "id": "soc4-10",
               "type": "fill_blank",
-              "prompt": "「Means-___ benefits target the most vulnerable.」(中文:「与收入审查挂钩的福利针对最脆弱的群体。」)",
+              "prompt": "Means-___ benefits target the most vulnerable.",
               "answer": "tested",
               "acceptableAnswers": [],
               "explanation": "「Means-tested benefits」 = 以收入审查为条件的福利。"
@@ -3229,7 +3229,7 @@
             {
               "id": "soc4-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「对特定群体产生不成比例影响的措施,需要特别的正当性论证。」",
+              "prompt": "「对特定群体产生不成比例影响的措施,需要特别的正当性论证。」",
               "answer": "Measures that disproportionately affect specific groups require particular justification",
               "bank": [
                 "Measures",
@@ -3271,7 +3271,7 @@
             {
               "id": "soc5-2",
               "type": "fill_blank",
-              "prompt": "「The argument is, at ___, incomplete.」(中文:「这一论证充其量是不完整的。」)",
+              "prompt": "The argument is, at ___, incomplete.",
               "answer": "best",
               "acceptableAnswers": [
                 "greatest"
@@ -3304,7 +3304,7 @@
             {
               "id": "soc5-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「该论证虽有可取之处,但证据基础较为薄弱。」",
+              "prompt": "「该论证虽有可取之处,但证据基础较为薄弱。」",
               "answer": "While the argument has merit its evidentiary basis is thin",
               "bank": [
                 "While",
@@ -3352,7 +3352,7 @@
             {
               "id": "soc5-7",
               "type": "fill_blank",
-              "prompt": "「The claim is, to ___ a phrase, only half the story.」(中文:「借用一句话来说,这一说法只讲了故事的一半。」)",
+              "prompt": "The claim is, to ___ a phrase, only half the story.",
               "answer": "borrow",
               "acceptableAnswers": [],
               "explanation": "「to borrow a phrase」 是固定表达。"
@@ -3372,7 +3372,7 @@
             {
               "id": "soc5-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「关键在于我们错误地将这一问题归入了某一类别。」",
+              "prompt": "「关键在于我们错误地将这一问题归入了某一类别。」",
               "answer": "What matters is that we have miscategorised the problem",
               "bank": [
                 "What",
@@ -3392,7 +3392,7 @@
             {
               "id": "soc5-10",
               "type": "fill_blank",
-              "prompt": "「The data, ___ imperfect, point in the same direction.」(中文:「数据尽管并不完美,但都指向同一方向。」)",
+              "prompt": "The data, ___ imperfect, point in the same direction.",
               "answer": "though",
               "acceptableAnswers": [
                 "albeit",
@@ -3417,7 +3417,7 @@
             {
               "id": "soc5-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「仔细阅读后,可以看出证据其实指向相反的结论。」",
+              "prompt": "「仔细阅读后,可以看出证据其实指向相反的结论。」",
               "answer": "On a careful reading the evidence says the opposite",
               "bank": [
                 "On",
@@ -3704,14 +3704,14 @@
             {
               "id": "id1-3",
               "type": "fill_blank",
-              "prompt": "「That project is ___ the back burner for now.」(中文:「那个项目目前先搁置一下。」)",
+              "prompt": "That project is ___ the back burner for now.",
               "answer": "on",
               "acceptableAnswers": []
             },
             {
               "id": "id1-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们从去年起就一直在提高标准。」",
+              "prompt": "「我们从去年起就一直在提高标准。」",
               "answer": "We've raised the bar since last year",
               "bank": [
                 "We've",
@@ -3755,7 +3755,7 @@
             {
               "id": "id1-7",
               "type": "fill_blank",
-              "prompt": "「The ___ line is, we need to ship by Friday.」(中文:「关键是,我们必须在周五之前交付。」)",
+              "prompt": "The ___ line is, we need to ship by Friday.",
               "answer": "bottom",
               "acceptableAnswers": []
             },
@@ -3775,7 +3775,7 @@
             {
               "id": "id1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「在这件事上,我们都同舟共济。」",
+              "prompt": "「在这件事上,我们都同舟共济。」",
               "answer": "We're all in the same boat on this",
               "bank": [
                 "We're",
@@ -3794,7 +3794,7 @@
             {
               "id": "id1-10",
               "type": "fill_blank",
-              "prompt": "「Off the ___ of my head, I'd say twenty thousand.」(中文:「凭脑子粗略估,我会说两万。」)",
+              "prompt": "Off the ___ of my head, I'd say twenty thousand.",
               "answer": "top",
               "acceptableAnswers": []
             },
@@ -3814,7 +3814,7 @@
             {
               "id": "id1-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们别绕弯子,直奔主题吧。」",
+              "prompt": "「我们别绕弯子,直奔主题吧。」",
               "answer": "Let's cut to the chase",
               "bank": [
                 "Let's",
@@ -3875,14 +3875,14 @@
             {
               "id": "id2-3",
               "type": "fill_blank",
-              "prompt": "「Don't make a ___ out of a molehill.」(中文:「别小题大做。」)",
+              "prompt": "Don't make a ___ out of a molehill.",
               "answer": "mountain",
               "acceptableAnswers": []
             },
             {
               "id": "id2-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们就咬牙接受这个事实吧。」",
+              "prompt": "「我们就咬牙接受这个事实吧。」",
               "answer": "Let's just bite the bullet",
               "bank": [
                 "Let's",
@@ -3924,7 +3924,7 @@
             {
               "id": "id2-7",
               "type": "fill_blank",
-              "prompt": "「I had to bite the ___ and tell the truth.」(中文:「我只好硬着头皮说出真相。」)",
+              "prompt": "I had to bite the ___ and tell the truth.",
               "answer": "bullet",
               "acceptableAnswers": []
             },
@@ -3943,7 +3943,7 @@
             {
               "id": "id2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们来谈谈那个大家都避而不谈的大问题吧。」",
+              "prompt": "「我们来谈谈那个大家都避而不谈的大问题吧。」",
               "answer": "Let's talk about the elephant in the room",
               "bank": [
                 "Let's",
@@ -3962,7 +3962,7 @@
             {
               "id": "id2-10",
               "type": "fill_blank",
-              "prompt": "「Stop pulling my ___」(中文:「别再拿我开玩笑了。」)",
+              "prompt": "Stop pulling my ___",
               "answer": "leg",
               "acceptableAnswers": []
             }
@@ -4014,7 +4014,7 @@
             {
               "id": "id3-3",
               "type": "fill_blank",
-              "prompt": "「I read an interesting article in a science ___.」(中文:「我在一本科学期刊上读到一篇有趣的文章。」)",
+              "prompt": "I read an interesting article in a science ___.",
               "answer": "magazine",
               "acceptableAnswers": [
                 "journal"
@@ -4037,7 +4037,7 @@
             {
               "id": "id3-5",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「没确认之前不要发言。」",
+              "prompt": "「没确认之前不要发言。」",
               "answer": "Don't speak without checking",
               "bank": [
                 "Don't",
@@ -4065,7 +4065,7 @@
             {
               "id": "id3-7",
               "type": "fill_blank",
-              "prompt": "「This is a ___ topic; he gets upset easily.」(中文:「这是个敏感话题,他容易因此心烦。」)",
+              "prompt": "This is a ___ topic; he gets upset easily.",
               "answer": "sensitive",
               "acceptableAnswers": [
                 "delicate"
@@ -4087,7 +4087,7 @@
             {
               "id": "id3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我最终意识到了自己的错误。」",
+              "prompt": "「我最终意识到了自己的错误。」",
               "answer": "I eventually realized my mistake",
               "bank": [
                 "I",
@@ -4103,7 +4103,7 @@
             {
               "id": "id3-10",
               "type": "fill_blank",
-              "prompt": "「The ___ cost was much higher than estimated.」(中文:「实际成本远高于预估。」)",
+              "prompt": "The ___ cost was much higher than estimated.",
               "answer": "actual",
               "acceptableAnswers": [
                 "real",
@@ -4158,14 +4158,14 @@
             {
               "id": "id4-3",
               "type": "fill_blank",
-              "prompt": "「I need to ___ a phone call.」(中文:「我需要打个电话。」)",
+              "prompt": "I need to ___ a phone call.",
               "answer": "make",
               "acceptableAnswers": []
             },
             {
               "id": "id4-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们愿意承担这一风险。」",
+              "prompt": "「我们愿意承担这一风险。」",
               "answer": "We are willing to take the risk",
               "bank": [
                 "We",
@@ -4209,7 +4209,7 @@
             {
               "id": "id4-7",
               "type": "fill_blank",
-              "prompt": "「Please ___ the law.」(中文:「请遵守法律。」)",
+              "prompt": "Please ___ the law.",
               "answer": "obey",
               "acceptableAnswers": [
                 "follow"
@@ -4230,7 +4230,7 @@
             {
               "id": "id4-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「考试前深深地吸一口气。」",
+              "prompt": "「考试前深深地吸一口气。」",
               "answer": "Take a deep breath before the exam",
               "bank": [
                 "Take",
@@ -4248,7 +4248,7 @@
             {
               "id": "id4-10",
               "type": "fill_blank",
-              "prompt": "「She made a strong ___ in her speech.」(中文:「她的讲话给人留下了深刻的印象。」)",
+              "prompt": "She made a strong ___ in her speech.",
               "answer": "impression",
               "acceptableAnswers": []
             }
@@ -4300,14 +4300,14 @@
             {
               "id": "id5-3",
               "type": "fill_blank",
-              "prompt": "「Let's not boil the ___; let's start small.」(中文:「我们别试图一口吞下所有问题,先小步开始。」)",
+              "prompt": "Let's not boil the ___; let's start small.",
               "answer": "ocean",
               "acceptableAnswers": []
             },
             {
               "id": "id5-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这个数字真有可能让收入指针明显移动。」",
+              "prompt": "「这个数字真有可能让收入指针明显移动。」",
               "answer": "This figure could really move the needle on revenue",
               "bank": [
                 "This",
@@ -4353,7 +4353,7 @@
             {
               "id": "id5-7",
               "type": "fill_blank",
-              "prompt": "「That decision is above my pay ___.」(中文:「这个决定超出了我的职权范围。」)",
+              "prompt": "That decision is above my pay ___.",
               "answer": "grade",
               "acceptableAnswers": []
             },
@@ -4373,7 +4373,7 @@
             {
               "id": "id5-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这个决定超出我的职权,我们把它上升到更高层级。」",
+              "prompt": "「这个决定超出我的职权,我们把它上升到更高层级。」",
               "answer": "This decision is above my pay grade let's escalate it",
               "bank": [
                 "This",
@@ -4394,7 +4394,7 @@
             {
               "id": "id5-10",
               "type": "fill_blank",
-              "prompt": "「We need to get all our ducks in a ___ before the launch.」(中文:「发布之前我们必须把每件事都安排妥当。」)",
+              "prompt": "We need to get all our ducks in a ___ before the launch.",
               "answer": "row",
               "acceptableAnswers": []
             },
@@ -4414,7 +4414,7 @@
             {
               "id": "id5-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「先摘容易摘的果实,再去处理难题。」",
+              "prompt": "「先摘容易摘的果实,再去处理难题。」",
               "answer": "Let's pick the low-hanging fruit first then tackle the hard problems",
               "bank": [
                 "Let's",
@@ -4481,7 +4481,7 @@
             {
               "id": "id6-3",
               "type": "fill_blank",
-              "prompt": "「She is a very ___ person; she rarely overreacts.」(中文:「她是个非常明智的人,很少反应过度。」)",
+              "prompt": "She is a very ___ person; she rarely overreacts.",
               "answer": "sensible",
               "acceptableAnswers": [
                 "reasonable",
@@ -4492,7 +4492,7 @@
             {
               "id": "id6-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「其实我们多年前就该解决这件事了。」",
+              "prompt": "「其实我们多年前就该解决这件事了。」",
               "answer": "Actually we should have solved this years ago",
               "bank": [
                 "Actually",
@@ -4537,7 +4537,7 @@
             {
               "id": "id6-7",
               "type": "fill_blank",
-              "prompt": "「The proposal is ___(意为可被辩护的),if not optimal.」(中文:「这一提议即便不是最优方案,也是可以被辩护的。」)",
+              "prompt": "The proposal is ___,if not optimal.",
               "answer": "defensible",
               "acceptableAnswers": [
                 "justifiable"
@@ -4559,7 +4559,7 @@
             {
               "id": "id6-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们应当寻找用更少词语表达同样意思的方式。」",
+              "prompt": "「我们应当寻找用更少词语表达同样意思的方式。」",
               "answer": "We should look for a way to say the same thing in fewer words",
               "bank": [
                 "We",
@@ -4583,7 +4583,7 @@
             {
               "id": "id6-10",
               "type": "fill_blank",
-              "prompt": "「I'd like to ___(意为礼貌地表示反对)on that timeline.」(中文:「我想对这一时间表礼貌地提出异议。」)",
+              "prompt": "I'd like to ___on that timeline.",
               "answer": "push back",
               "acceptableAnswers": [
                 "object"
@@ -4605,7 +4605,7 @@
             {
               "id": "id6-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「最后,我想就定价方面再提一点异议。」",
+              "prompt": "「最后,我想就定价方面再提一点异议。」",
               "answer": "Finally I would like to push back on the pricing at one point",
               "bank": [
                 "Finally",
@@ -4866,14 +4866,14 @@
             {
               "id": "gr1-2",
               "type": "fill_blank",
-              "prompt": "「Never before ___ I felt such pressure.」(中文:「我此前从未感受过这样的压力。」)",
+              "prompt": "Never before ___ I felt such pressure.",
               "answer": "had",
               "acceptableAnswers": []
             },
             {
               "id": "gr1-3",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「他不仅拒绝,还离开了房间。」",
+              "prompt": "「他不仅拒绝,还离开了房间。」",
               "answer": "Not only did he refuse but he also walked out",
               "bank": [
                 "Not",
@@ -4941,7 +4941,7 @@
             {
               "id": "gr1-7",
               "type": "fill_blank",
-              "prompt": "「No sooner ___ I sat down than the phone rang.」(中文:「我刚坐下电话就响了。」)",
+              "prompt": "No sooner ___ I sat down than the phone rang.",
               "answer": "had",
               "acceptableAnswers": []
             },
@@ -4961,7 +4961,7 @@
             {
               "id": "gr1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「在任何情况下都不应让门保持敞开。」",
+              "prompt": "「在任何情况下都不应让门保持敞开。」",
               "answer": "Under no circumstances should the door be left open",
               "bank": [
                 "Under",
@@ -4980,7 +4980,7 @@
             {
               "id": "gr1-10",
               "type": "fill_blank",
-              "prompt": "「Little ___ they realise the danger.」(中文:「他们对那危险几乎毫无察觉。」)",
+              "prompt": "Little ___ they realise the danger.",
               "answer": "did",
               "acceptableAnswers": [],
               "explanation": "「Little did they realise」 是惯用的倒装表达。"
@@ -5009,14 +5009,14 @@
             {
               "id": "gr2-2",
               "type": "fill_blank",
-              "prompt": "「___ surprises me most is his silence.」(中文:「最让我惊讶的是他的沉默。」)",
+              "prompt": "___ surprises me most is his silence.",
               "answer": "What",
               "acceptableAnswers": []
             },
             {
               "id": "gr2-3",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我真正需要的是时间。」",
+              "prompt": "「我真正需要的是时间。」",
               "answer": "What I really need is time",
               "bank": [
                 "What",
@@ -5082,7 +5082,7 @@
             {
               "id": "gr2-7",
               "type": "fill_blank",
-              "prompt": "「It is the patient ___ deserves our attention.」(中文:「最值得我们关注的是病人。」)",
+              "prompt": "It is the patient ___ deserves our attention.",
               "answer": "who",
               "acceptableAnswers": [
                 "that"
@@ -5104,7 +5104,7 @@
             {
               "id": "gr2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「做出决定的是委员会,而不是某个个人。」",
+              "prompt": "「做出决定的是委员会,而不是某个个人。」",
               "answer": "It was the committee that made the decision not an individual",
               "bank": [
                 "It",
@@ -5126,7 +5126,7 @@
             {
               "id": "gr2-10",
               "type": "fill_blank",
-              "prompt": "「It was ___ here that we first met.」(中文:「我们当年正是在这里第一次相遇。」)",
+              "prompt": "It was ___ here that we first met.",
               "answer": "right",
               "acceptableAnswers": [
                 "correct"
@@ -5156,14 +5156,14 @@
             {
               "id": "gr3-2",
               "type": "fill_blank",
-              "prompt": "「___ in haste, the report contained errors.」(中文:「这份报告因写得仓促,含有错误。」)",
+              "prompt": "___ in haste, the report contained errors.",
               "answer": "Written",
               "acceptableAnswers": []
             },
             {
               "id": "gr3-3",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「她因为感到疲倦,早早就上床睡觉了。」",
+              "prompt": "「她因为感到疲倦,早早就上床睡觉了。」",
               "answer": "Feeling tired she went to bed early",
               "bank": [
                 "Feeling",
@@ -5230,7 +5230,7 @@
             {
               "id": "gr3-7",
               "type": "fill_blank",
-              "prompt": "「___ at the airport, we headed to the hotel.」(中文:「到达机场之后,我们前往了酒店。」)",
+              "prompt": "___ at the airport, we headed to the hotel.",
               "answer": "Having arrived",
               "acceptableAnswers": [
                 "arriving"
@@ -5252,7 +5252,7 @@
             {
               "id": "gr3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这一被董事会审阅过的方案已获批准。」",
+              "prompt": "「这一被董事会审阅过的方案已获批准。」",
               "answer": "Reviewed by the board the plan was approved",
               "bank": [
                 "Reviewed",
@@ -5271,7 +5271,7 @@
             {
               "id": "gr3-10",
               "type": "fill_blank",
-              "prompt": "「___ ignored, the problem grew worse.」(中文:「问题在被忽视的过程中变得更加严重。」)",
+              "prompt": "___ ignored, the problem grew worse.",
               "answer": "Being",
               "acceptableAnswers": []
             }
@@ -5300,7 +5300,7 @@
             {
               "id": "gr4-2",
               "type": "fill_blank",
-              "prompt": "「___ I really want is a clear timeline.」(中文:「我真正想要的是一份清晰的时间表。」)(wh-cleft)",
+              "prompt": "___ I really want is a clear timeline.",
               "answer": "What",
               "acceptableAnswers": [],
               "explanation": "Wh-分裂句:「What I want is X.」"
@@ -5331,7 +5331,7 @@
             {
               "id": "gr4-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们真正需要的是一份更清晰的简报。」",
+              "prompt": "「我们真正需要的是一份更清晰的简报。」",
               "answer": "What we really need is a clearer brief",
               "bank": [
                 "What",
@@ -5376,7 +5376,7 @@
             {
               "id": "gr4-7",
               "type": "fill_blank",
-              "prompt": "「It ___ not until 2020 that we noticed the trend.」(中文:「直到 2020 年我们才注意到这一趋势。」)(it-cleft)",
+              "prompt": "It ___ not until 2020 that we noticed the trend.",
               "answer": "was",
               "acceptableAnswers": []
             },
@@ -5395,7 +5395,7 @@
             {
               "id": "gr4-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「真正让我感到困扰的是透明度的缺乏。」",
+              "prompt": "「真正让我感到困扰的是透明度的缺乏。」",
               "answer": "What really troubled me was the lack of transparency",
               "bank": [
                 "What",
@@ -5415,7 +5415,7 @@
             {
               "id": "gr4-10",
               "type": "fill_blank",
-              "prompt": "「Only ___ examining the data did we identify the bias.」(中文:「直到检查完数据后,我们才识别出偏差。」)(前置 + 倒装)",
+              "prompt": "Only ___ examining the data did we identify the bias.",
               "answer": "after",
               "acceptableAnswers": [],
               "explanation": "即 「Only after V-ing… did we…」 的结构。"
@@ -5436,7 +5436,7 @@
             {
               "id": "gr4-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「在任何情况下我们都不会重回原协议。」",
+              "prompt": "「在任何情况下我们都不会重回原协议。」",
               "answer": "Under no circumstances will we revert to the agreement",
               "bank": [
                 "Under",
@@ -5478,7 +5478,7 @@
             {
               "id": "gr5-2",
               "type": "fill_blank",
-              "prompt": "「The candidate ___ for the role has fifteen years of experience.」(中文:「被选中担任这一职位的候选人具有十五年的经验。」)(分词)",
+              "prompt": "The candidate ___ for the role has fifteen years of experience.",
               "answer": "selected",
               "acceptableAnswers": [
                 "chosen"
@@ -5510,7 +5510,7 @@
             {
               "id": "gr5-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「主导谈判的顾问今天将做汇报。」",
+              "prompt": "「主导谈判的顾问今天将做汇报。」",
               "answer": "The consultant leading the negotiation will report today",
               "bank": [
                 "The",
@@ -5555,7 +5555,7 @@
             {
               "id": "gr5-7",
               "type": "fill_blank",
-              "prompt": "「___ all things considered, the deal is fair.」(中文:「综合考虑一切因素,这笔交易是公平的。」)",
+              "prompt": "___ all things considered, the deal is fair.",
               "answer": "All",
               "acceptableAnswers": [],
               "explanation": "独立分词结构:「all things considered」。"
@@ -5576,7 +5576,7 @@
             {
               "id": "gr5-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「考虑到所做的分析,这一结论是站得住脚的。」",
+              "prompt": "「考虑到所做的分析,这一结论是站得住脚的。」",
               "answer": "Given the analysis conducted the conclusion is defensible",
               "bank": [
                 "Given",
@@ -5595,7 +5595,7 @@
             {
               "id": "gr5-10",
               "type": "fill_blank",
-              "prompt": "「The author, ___ work has shaped the field, will keynote.」(中文:「这位作品塑造了该领域的作者将担任主题演讲嘉宾。」)",
+              "prompt": "The author, ___ work has shaped the field, will keynote.",
               "answer": "whose",
               "acceptableAnswers": []
             },
@@ -5615,7 +5615,7 @@
             {
               "id": "gr5-12",
               "type": "tap_words_in_order",
-              "prompt": "组句：很荣幸认识你。",
+              "prompt": "很荣幸认识你。",
               "answer": "Weather permitting the opening will take place tomorrow",
               "bank": [
                 "Weather",
@@ -5876,14 +5876,14 @@
             {
               "id": "db1-3",
               "type": "fill_blank",
-              "prompt": "「With ___, I must disagree.」(中文:「恕我直言,我必须表示不同意。」)",
+              "prompt": "With ___, I must disagree.",
               "answer": "respect",
               "acceptableAnswers": []
             },
             {
               "id": "db1-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「在更深入审视后,这一论证便站不住脚了。」",
+              "prompt": "「在更深入审视后,这一论证便站不住脚了。」",
               "answer": "The argument falls apart on closer inspection",
               "bank": [
                 "The",
@@ -5926,7 +5926,7 @@
             {
               "id": "db1-7",
               "type": "fill_blank",
-              "prompt": "「The reasoning is ___; it merely appears valid.」(中文:「这一论证看似成立,实则似是而非。」)",
+              "prompt": "The reasoning is ___; it merely appears valid.",
               "answer": "specious",
               "acceptableAnswers": [
                 "misleading",
@@ -5950,7 +5950,7 @@
             {
               "id": "db1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「总而言之,该主张是站不住脚的。」",
+              "prompt": "「总而言之,该主张是站不住脚的。」",
               "answer": "In conclusion the case fails",
               "bank": [
                 "In",
@@ -5966,7 +5966,7 @@
             {
               "id": "db1-10",
               "type": "fill_blank",
-              "prompt": "「I would ___ urge you to reconsider.」(中文:「我谨以敬意请您重新考虑。」)",
+              "prompt": "I would ___ urge you to reconsider.",
               "answer": "respectfully",
               "acceptableAnswers": []
             }
@@ -6018,7 +6018,7 @@
             {
               "id": "db2-3",
               "type": "fill_blank",
-              "prompt": "「The implications are ___」(中文:「其后果意味深远。」)",
+              "prompt": "The implications are ___",
               "answer": "profound",
               "acceptableAnswers": [
                 "deep"
@@ -6027,7 +6027,7 @@
             {
               "id": "db2-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这个论证看似诱人,实则毫无根据。」",
+              "prompt": "「这个论证看似诱人,实则毫无根据。」",
               "answer": "The argument is seductive but unfounded",
               "bank": [
                 "The",
@@ -6069,7 +6069,7 @@
             {
               "id": "db2-7",
               "type": "fill_blank",
-              "prompt": "「These accusations are ___」(中文:「这些指控毫无根据。」)",
+              "prompt": "These accusations are ___",
               "answer": "unfounded",
               "acceptableAnswers": [
                 "baseless",
@@ -6092,7 +6092,7 @@
             {
               "id": "db2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这不是严谨的分析,只是空泛的揣测。」",
+              "prompt": "「这不是严谨的分析,只是空泛的揣测。」",
               "answer": "This is not rigorous analysis but mere speculation",
               "bank": [
                 "This",
@@ -6111,7 +6111,7 @@
             {
               "id": "db2-10",
               "type": "fill_blank",
-              "prompt": "「Their reasoning is ___ flawed.」(中文:「他们的论证从根本上就是错误的。」)",
+              "prompt": "Their reasoning is ___ flawed.",
               "answer": "fundamentally",
               "acceptableAnswers": [
                 "essentially",
@@ -6166,7 +6166,7 @@
             {
               "id": "db3-3",
               "type": "fill_blank",
-              "prompt": "「___ his concerns, the project went ahead.」(中文:「尽管他有所担忧,项目仍然向前推进。」)",
+              "prompt": "___ his concerns, the project went ahead.",
               "answer": "Notwithstanding",
               "acceptableAnswers": [
                 "despite",
@@ -6176,7 +6176,7 @@
             {
               "id": "db3-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「诚然,这个想法很诱人,然而它并不可行。」",
+              "prompt": "「诚然,这个想法很诱人,然而它并不可行。」",
               "answer": "Granted the idea is appealing however it is not feasible",
               "bank": [
                 "Granted",
@@ -6222,7 +6222,7 @@
             {
               "id": "db3-7",
               "type": "fill_blank",
-              "prompt": "「The market has shifted; ___, our strategy must adapt.」(中文:「市场已经发生变化,因此我们的战略必须随之调整。」)",
+              "prompt": "The market has shifted; ___, our strategy must adapt.",
               "answer": "hence",
               "acceptableAnswers": [
                 "therefore",
@@ -6244,7 +6244,7 @@
             {
               "id": "db3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「相反,在小规模分析中呈现出不同的趋势。」",
+              "prompt": "「相反,在小规模分析中呈现出不同的趋势。」",
               "answer": "Conversely the smaller scale analysis shows a different trend",
               "bank": [
                 "Conversely",
@@ -6264,7 +6264,7 @@
             {
               "id": "db3-10",
               "type": "fill_blank",
-              "prompt": "「___ the criticism, the policy stands.」(中文:「尽管面临批评,该政策依然有效。」)",
+              "prompt": "___ the criticism, the policy stands.",
               "answer": "Despite",
               "acceptableAnswers": [
                 "in spite of",
@@ -6295,7 +6295,7 @@
             {
               "id": "db4-2",
               "type": "fill_blank",
-              "prompt": "「The argument ___ on a questionable assumption.」(中文:「这一论证依赖于一个值得商榷的假设。」)",
+              "prompt": "The argument ___ on a questionable assumption.",
               "answer": "rests",
               "acceptableAnswers": [
                 "hinges"
@@ -6328,7 +6328,7 @@
             {
               "id": "db4-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「该论证将结构性原因与个人选择混为一谈。」",
+              "prompt": "「该论证将结构性原因与个人选择混为一谈。」",
               "answer": "The argument conflates structural causes with individual choices",
               "bank": [
                 "The",
@@ -6373,7 +6373,7 @@
             {
               "id": "db4-7",
               "type": "fill_blank",
-              "prompt": "「The conclusion does not ___ from the evidence presented.」(中文:「这一结论无法从所呈现的证据中推导出来。」)",
+              "prompt": "The conclusion does not ___ from the evidence presented.",
               "answer": "follow",
               "acceptableAnswers": []
             },
@@ -6393,7 +6393,7 @@
             {
               "id": "db4-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这一论证将相关性与因果性混为一谈。」",
+              "prompt": "「这一论证将相关性与因果性混为一谈。」",
               "answer": "This argument confuses correlation with causation",
               "bank": [
                 "This",
@@ -6410,7 +6410,7 @@
             {
               "id": "db4-10",
               "type": "fill_blank",
-              "prompt": "「The data, ___ properly examined, suggest the opposite.」(中文:「如经过妥当审视,数据反而支持相反的结论。」)",
+              "prompt": "The data, ___ properly examined, suggest the opposite.",
               "answer": "when",
               "acceptableAnswers": [
                 "if"
@@ -6433,7 +6433,7 @@
             {
               "id": "db4-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「一旦其所依赖的假设被推翻,这一论证就会瓦解。」",
+              "prompt": "「一旦其所依赖的假设被推翻,这一论证就会瓦解。」",
               "answer": "The argument collapses once its underlying assumption is rejected",
               "bank": [
                 "The",
@@ -6488,7 +6488,7 @@
             {
               "id": "db5-2",
               "type": "fill_blank",
-              "prompt": "「There is ___ truth to that, but it overlooks the bigger picture.」(中文:「这话有几分道理,但忽视了更宏观的全貌。」)",
+              "prompt": "There is ___ truth to that, but it overlooks the bigger picture.",
               "answer": "some",
               "acceptableAnswers": []
             },
@@ -6518,7 +6518,7 @@
             {
               "id": "db5-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「你在成本问题上是对的,但不作为的代价更高。」",
+              "prompt": "「你在成本问题上是对的,但不作为的代价更高。」",
               "answer": "You are right about the cost yet inaction is more expensive still",
               "bank": [
                 "You",
@@ -6567,7 +6567,7 @@
             {
               "id": "db5-7",
               "type": "fill_blank",
-              "prompt": "「I ___ your concern, but the data still favour the proposal.」(中文:「我理解您的顾虑,但数据仍然支持这一提案。」)",
+              "prompt": "I ___ your concern, but the data still favour the proposal.",
               "answer": "appreciate",
               "acceptableAnswers": [
                 "share",
@@ -6591,7 +6591,7 @@
             {
               "id": "db5-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这一批评是中肯的,但所提出的解决方案仍显不足。」",
+              "prompt": "「这一批评是中肯的,但所提出的解决方案仍显不足。」",
               "answer": "The criticism is fair yet the proposed solution falls short",
               "bank": [
                 "The",
@@ -6612,7 +6612,7 @@
             {
               "id": "db5-10",
               "type": "fill_blank",
-              "prompt": "「Be that ___ it may, the policy remains the most defensible option.」(中文:「即便如此,该政策仍然是最具说服力的选择。」)",
+              "prompt": "Be that ___ it may, the policy remains the most defensible option.",
               "answer": "as",
               "acceptableAnswers": []
             },
@@ -6631,7 +6631,7 @@
             {
               "id": "db5-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「即便我接受这一点,结论依然不变。」",
+              "prompt": "「即便我接受这一点,结论依然不变。」",
               "answer": "While I concede that point the conclusion still does not change",
               "bank": [
                 "While",
@@ -6949,7 +6949,7 @@
             {
               "id": "art1-3",
               "type": "fill_blank",
-              "prompt": "「The director's restraint makes the climax all the more ___.」(中文:「导演的克制使高潮更加富有联想力。」)",
+              "prompt": "The director's restraint makes the climax all the more ___.",
               "answer": "evocative",
               "acceptableAnswers": [
                 "expressive",
@@ -7008,7 +7008,7 @@
             {
               "id": "art1-7",
               "type": "fill_blank",
-              "prompt": "「The film is visually ___ but emotionally hollow.」(中文:「这部电影在视觉上精雕细琢,但在情感上空洞无物。」)",
+              "prompt": "The film is visually ___ but emotionally hollow.",
               "answer": "polished",
               "acceptableAnswers": [
                 "refined",
@@ -7031,7 +7031,7 @@
             {
               "id": "art1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「导演达到了一种原始而生猛的真诚。」",
+              "prompt": "「导演达到了一种原始而生猛的真诚。」",
               "answer": "The director achieves a raw honesty",
               "bank": [
                 "The",
@@ -7060,7 +7060,7 @@
             {
               "id": "art1-11",
               "type": "fill_blank",
-              "prompt": "「The dialogue feels ___ in places, as if written for effect.」(中文:「对话在某些段落显得刻意,仿佛是为了效果而写。」)",
+              "prompt": "The dialogue feels ___ in places, as if written for effect.",
               "answer": "contrived",
               "acceptableAnswers": [
                 "forced",
@@ -7071,7 +7071,7 @@
             {
               "id": "art1-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「舞台设计简素朴拙,却充满联想力。」",
+              "prompt": "「舞台设计简素朴拙,却充满联想力。」",
               "answer": "The set design is austere yet evocative",
               "bank": [
                 "The",
@@ -7111,7 +7111,7 @@
             {
               "id": "art2-2",
               "type": "fill_blank",
-              "prompt": "「The performance falls ___ in the second half.」(中文:「这场演出在下半场失去了张力。」)",
+              "prompt": "The performance falls ___ in the second half.",
               "answer": "flat",
               "acceptableAnswers": []
             },
@@ -7141,7 +7141,7 @@
             {
               "id": "art2-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这是过去十年最具野心的作品之一。」",
+              "prompt": "「这是过去十年最具野心的作品之一。」",
               "answer": "This is one of the most ambitious works of the past decade",
               "bank": [
                 "This",
@@ -7187,7 +7187,7 @@
             {
               "id": "art2-7",
               "type": "fill_blank",
-              "prompt": "「A welcome ___ to form for the director.」(中文:「这位导演令人欣喜地回到了巅峰状态。」)",
+              "prompt": "A welcome ___ to form for the director.",
               "answer": "return",
               "acceptableAnswers": []
             },
@@ -7207,7 +7207,7 @@
             {
               "id": "art2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「它没能兑现自己的承诺,很快从人们的记忆中消散。」",
+              "prompt": "「它没能兑现自己的承诺,很快从人们的记忆中消散。」",
               "answer": "It fails to deliver and quickly fades from memory",
               "bank": [
                 "It",
@@ -7227,7 +7227,7 @@
             {
               "id": "art2-10",
               "type": "fill_blank",
-              "prompt": "「A ___ of the genre, both daring and disciplined.」(中文:「该类型中的一座高峰 —— 既大胆又自律。」)",
+              "prompt": "A ___ of the genre, both daring and disciplined.",
               "answer": "triumph",
               "acceptableAnswers": [
                 "success"
@@ -7249,7 +7249,7 @@
             {
               "id": "art2-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「评论界几乎一致赞誉。」",
+              "prompt": "「评论界几乎一致赞誉。」",
               "answer": "Critics have praised it almost unanimously",
               "bank": [
                 "Critics",
@@ -7288,7 +7288,7 @@
             {
               "id": "art3-2",
               "type": "fill_blank",
-              "prompt": "「The novel's ___ shifts unexpectedly in chapter three.」(中文:「小说的叙述者在第三章里出人意料地发生了变化。」)",
+              "prompt": "The novel's ___ shifts unexpectedly in chapter three.",
               "answer": "narrator",
               "acceptableAnswers": [
                 "voice"
@@ -7333,7 +7333,7 @@
             {
               "id": "art3-5",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「散文的笔调克制,却充满情感张力。」",
+              "prompt": "「散文的笔调克制,却充满情感张力。」",
               "answer": "The prose style is restrained yet emotionally charged",
               "bank": [
                 "The",
@@ -7365,7 +7365,7 @@
             {
               "id": "art3-7",
               "type": "fill_blank",
-              "prompt": "在画廊文章中:「Her ___ are bold and gestural.」(中文:「她的笔触大胆而富有动感。」)",
+              "prompt": "Her ___ are bold and gestural.",
               "answer": "brushstrokes",
               "acceptableAnswers": [
                 "brush strokes"
@@ -7387,7 +7387,7 @@
             {
               "id": "art3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这次展览因策展人的选择而尤为引人注目。」",
+              "prompt": "「这次展览因策展人的选择而尤为引人注目。」",
               "answer": "The exhibition stands out for its curatorial choices",
               "bank": [
                 "The",
@@ -7406,7 +7406,7 @@
             {
               "id": "art3-10",
               "type": "fill_blank",
-              "prompt": "「The score complements the visuals without ___ them.」(中文:「配乐与影像相得益彰,而不喧宾夺主。」)",
+              "prompt": "The score complements the visuals without ___ them.",
               "answer": "overshadowing",
               "acceptableAnswers": []
             },
@@ -7425,7 +7425,7 @@
             {
               "id": "art3-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「在书页上,作者的声音立刻可被辨认。」",
+              "prompt": "「在书页上,作者的声音立刻可被辨认。」",
               "answer": "The author's voice is immediately recognisable on the page",
               "bank": [
                 "The",
@@ -7467,7 +7467,7 @@
             {
               "id": "art4-2",
               "type": "fill_blank",
-              "prompt": "「It's a slow ___, but the payoff is immense.」(中文:「这是一部慢热的作品,但回报极为丰厚。」)",
+              "prompt": "It's a slow ___, but the payoff is immense.",
               "answer": "burn",
               "acceptableAnswers": []
             },
@@ -7497,7 +7497,7 @@
             {
               "id": "art4-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这张专辑超越了它所处的时代。」",
+              "prompt": "「这张专辑超越了它所处的时代。」",
               "answer": "The album was ahead of its time",
               "bank": [
                 "The",
@@ -7541,7 +7541,7 @@
             {
               "id": "art4-7",
               "type": "fill_blank",
-              "prompt": "「The story really ___ a chord with younger readers.」(中文:「这个故事打动了年轻读者的心弦。」)",
+              "prompt": "The story really ___ a chord with younger readers.",
               "answer": "struck",
               "acceptableAnswers": []
             },
@@ -7560,7 +7560,7 @@
             {
               "id": "art4-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「小说在最后一幕里失去了张力。」",
+              "prompt": "「小说在最后一幕里失去了张力。」",
               "answer": "The novel falls flat in the final act",
               "bank": [
                 "The",
@@ -7579,7 +7579,7 @@
             {
               "id": "art4-10",
               "type": "fill_blank",
-              "prompt": "「It's an acquired ___, but worth the patience.」(中文:「这是需要慢慢品出来的味道,但值得耐心。」)",
+              "prompt": "It's an acquired ___, but worth the patience.",
               "answer": "taste",
               "acceptableAnswers": []
             },
@@ -7599,7 +7599,7 @@
             {
               "id": "art4-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这部电影对我来说,简直是一种难以承认的喜爱。」",
+              "prompt": "「这部电影对我来说,简直是一种难以承认的喜爱。」",
               "answer": "This film is something of a guilty pleasure for me",
               "bank": [
                 "This",
@@ -7654,7 +7654,7 @@
             {
               "id": "art5-3",
               "type": "fill_blank",
-              "prompt": "「A polished if somewhat ___ debut.」(中文:「一部打磨精细但略显模仿的处女作。」)",
+              "prompt": "A polished if somewhat ___ debut.",
               "answer": "derivative",
               "acceptableAnswers": [
                 "unoriginal",
@@ -7713,7 +7713,7 @@
             {
               "id": "art5-7",
               "type": "fill_blank",
-              "prompt": "「The score is evocative, the script ___-handed.」(中文:「配乐充满联想力,剧本却显得粗笨。」)",
+              "prompt": "The score is evocative, the script ___-handed.",
               "answer": "heavy",
               "acceptableAnswers": []
             },
@@ -7733,7 +7733,7 @@
             {
               "id": "art5-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「评论者明确无误地亮出了自己的立场。」",
+              "prompt": "「评论者明确无误地亮出了自己的立场。」",
               "answer": "The critic makes their position unmistakably clear",
               "bank": [
                 "The",
@@ -7751,7 +7751,7 @@
             {
               "id": "art5-10",
               "type": "fill_blank",
-              "prompt": "「Restrained, austere, and quietly ___.」(中文:「克制、素朴而悄然精湛。」)",
+              "prompt": "Restrained, austere, and quietly ___.",
               "answer": "masterful",
               "acceptableAnswers": [
                 "accomplished",
@@ -7774,7 +7774,7 @@
             {
               "id": "art5-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「归根到底,这是一部多年后仍会在脑海中萦绕的慢热佳作。」",
+              "prompt": "「归根到底,这是一部多年后仍会在脑海中萦绕的慢热佳作。」",
               "answer": "Ultimately a slow burn that will linger for years",
               "bank": [
                 "Ultimately",
@@ -8051,7 +8051,7 @@
             {
               "id": "nws1-3",
               "type": "fill_blank",
-              "prompt": "「What this ___ for the wider economy is unclear.」(中文:「这对整个宏观经济意味着什么尚不清楚。」)— 分析(analysis)句",
+              "prompt": "What this ___ for the wider economy is unclear.",
               "answer": "means",
               "acceptableAnswers": []
             },
@@ -8106,7 +8106,7 @@
             {
               "id": "nws1-7",
               "type": "fill_blank",
-              "prompt": "「Make no ___: this changes everything.」(中文:「不要搞错:这件事改变一切。」)— op-ed",
+              "prompt": "Make no ___: this changes everything.",
               "answer": "mistake",
               "acceptableAnswers": [
                 "error"
@@ -8127,7 +8127,7 @@
             {
               "id": "nws1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这一决定的影响尚未得到评估。」",
+              "prompt": "「这一决定的影响尚未得到评估。」",
               "answer": "The implications of the decision are yet to be assessed",
               "bank": [
                 "The",
@@ -8148,7 +8148,7 @@
             {
               "id": "nws1-10",
               "type": "fill_blank",
-              "prompt": "「One could ___ that the policy has failed.」(中文:「可以这样说,这一政策已经失败。」)— op-ed",
+              "prompt": "One could ___ that the policy has failed.",
               "answer": "argue",
               "acceptableAnswers": [
                 "contend",
@@ -8172,7 +8172,7 @@
             {
               "id": "nws1-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「纯报道是有出处且不偏不倚的。」",
+              "prompt": "「纯报道是有出处且不偏不倚的。」",
               "answer": "Straight reporting is sourced and impartial",
               "bank": [
                 "Straight",
@@ -8210,7 +8210,7 @@
             {
               "id": "nws2-2",
               "type": "fill_blank",
-              "prompt": "「The minister ___ to comment on the allegations.」(中文:「这位部长拒绝就指控发表评论。」)",
+              "prompt": "The minister ___ to comment on the allegations.",
               "answer": "declined",
               "acceptableAnswers": [
                 "refused"
@@ -8242,7 +8242,7 @@
             {
               "id": "nws2-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「该公司未对我们的置评请求做出回应。」",
+              "prompt": "「该公司未对我们的置评请求做出回应。」",
               "answer": "The company did not respond to our request for comment",
               "bank": [
                 "The",
@@ -8288,7 +8288,7 @@
             {
               "id": "nws2-7",
               "type": "fill_blank",
-              "prompt": "「Two ___ familiar with the talks confirmed the figure.」(中文:「两名熟悉谈判情况的消息人士证实了这一数字。」)",
+              "prompt": "Two ___ familiar with the talks confirmed the figure.",
               "answer": "sources",
               "acceptableAnswers": []
             },
@@ -8308,7 +8308,7 @@
             {
               "id": "nws2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「政府表示尚未做出任何决定。」",
+              "prompt": "「政府表示尚未做出任何决定。」",
               "answer": "The government says no decision has yet been made",
               "bank": [
                 "The",
@@ -8327,7 +8327,7 @@
             {
               "id": "nws2-10",
               "type": "fill_blank",
-              "prompt": "「Three insiders, ___ to speak on the record, described the meeting.」(中文:「三名无权公开发言的内部人士描述了这场会议。」)",
+              "prompt": "Three insiders, ___ to speak on the record, described the meeting.",
               "answer": "not authorised",
               "acceptableAnswers": [
                 "not authorized"
@@ -8349,7 +8349,7 @@
             {
               "id": "nws2-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「该办公室拒绝就此事置评。」",
+              "prompt": "「该办公室拒绝就此事置评。」",
               "answer": "The office declined to comment on the matter",
               "bank": [
                 "The",
@@ -8389,7 +8389,7 @@
             {
               "id": "nws3-2",
               "type": "fill_blank",
-              "prompt": "标题:「Court ___ Against Agency」(用现在时表达过去事件)",
+              "prompt": "Court ___ Against Agency",
               "answer": "Rules",
               "acceptableAnswers": []
             },
@@ -8419,7 +8419,7 @@
             {
               "id": "nws3-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个标题:「总统签署新法律」",
+              "prompt": "「总统签署新法律」",
               "answer": "President Signs New Law",
               "bank": [
                 "President",
@@ -8460,7 +8460,7 @@
             {
               "id": "nws3-7",
               "type": "fill_blank",
-              "prompt": "标题:「Markets ___ on Tariff News」(意为「上涨」,简短形式)",
+              "prompt": "Markets ___ on Tariff News",
               "answer": "Surge",
               "acceptableAnswers": [
                 "rise",
@@ -8484,7 +8484,7 @@
             {
               "id": "nws3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个标题:「谈判陷入僵局:消息人士」",
+              "prompt": "「谈判陷入僵局:消息人士」",
               "answer": "Talks Stall: Source",
               "bank": [
                 "Talks",
@@ -8498,7 +8498,7 @@
             {
               "id": "nws3-10",
               "type": "fill_blank",
-              "prompt": "标题(带来源后缀):「CEO Steps Down: ___」(中文:「CEO 辞职:据报道」)",
+              "prompt": "CEO Steps Down: ___",
               "answer": "Report",
               "acceptableAnswers": [
                 "sources"
@@ -8520,7 +8520,7 @@
             {
               "id": "nws3-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个标题:「法官推翻该法律」",
+              "prompt": "「法官推翻该法律」",
               "answer": "Judge Strikes Down Law",
               "bank": [
                 "Judge",
@@ -8557,7 +8557,7 @@
             {
               "id": "nws4-2",
               "type": "fill_blank",
-              "prompt": "「One could ___ that the system is broken.」(中文:「可以说,这一体系已经失灵。」)",
+              "prompt": "One could ___ that the system is broken.",
               "answer": "argue",
               "acceptableAnswers": [
                 "contend",
@@ -8592,7 +8592,7 @@
             {
               "id": "nws4-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「不要搞错:这是一个时代的终结。」",
+              "prompt": "「不要搞错:这是一个时代的终结。」",
               "answer": "Make no mistake this is the end of an era",
               "bank": [
                 "Make",
@@ -8637,7 +8637,7 @@
             {
               "id": "nws4-7",
               "type": "fill_blank",
-              "prompt": "「I, for ___, find the argument unconvincing.」(中文:「至少在我看来,这一论证并不具有说服力。」)",
+              "prompt": "I, for ___, find the argument unconvincing.",
               "answer": "one",
               "acceptableAnswers": []
             },
@@ -8656,7 +8656,7 @@
             {
               "id": "nws4-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「因此我们的呼吁很明确:必须采取行动。」",
+              "prompt": "「因此我们的呼吁很明确:必须采取行动。」",
               "answer": "Our call is therefore clear action must be taken",
               "bank": [
                 "Our",
@@ -8675,7 +8675,7 @@
             {
               "id": "nws4-10",
               "type": "fill_blank",
-              "prompt": "「Far from being a ___, the policy is a partial fix.」(中文:「这项政策远非万灵药,只是部分补救。」)",
+              "prompt": "Far from being a ___, the policy is a partial fix.",
               "answer": "panacea",
               "acceptableAnswers": [
                 "cure-all",
@@ -8698,7 +8698,7 @@
             {
               "id": "nws4-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「这并不只是一个简单的监管问题。」",
+              "prompt": "「这并不只是一个简单的监管问题。」",
               "answer": "This is not merely a question of regulation",
               "bank": [
                 "This",
@@ -8750,7 +8750,7 @@
             {
               "id": "nws5-3",
               "type": "fill_blank",
-              "prompt": "「The CEO ___ the allegations.」(中文:「CEO 否认了这些指控。」)— reporting",
+              "prompt": "The CEO ___ the allegations.",
               "answer": "denied",
               "acceptableAnswers": [
                 "refused",
@@ -8810,7 +8810,7 @@
             {
               "id": "nws5-7",
               "type": "fill_blank",
-              "prompt": "「The proposal is ___ a step forward, but far from sufficient.」(中文:「该提案表面上看是一种进步,但远远不够。」)",
+              "prompt": "The proposal is ___ a step forward, but far from sufficient.",
               "answer": "ostensibly",
               "acceptableAnswers": [
                 "apparently",
@@ -8833,7 +8833,7 @@
             {
               "id": "nws5-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「消息人士透露,尚未达成任何决定。」",
+              "prompt": "「消息人士透露,尚未达成任何决定。」",
               "answer": "Sources indicate that no decision has yet been reached",
               "bank": [
                 "Sources",
@@ -8852,7 +8852,7 @@
             {
               "id": "nws5-10",
               "type": "fill_blank",
-              "prompt": "「The firm ___ to comment when contacted.」(中文:「在被联系时,该公司拒绝置评。」)",
+              "prompt": "The firm ___ to comment when contacted.",
               "answer": "declined",
               "acceptableAnswers": [
                 "refused"
@@ -8873,7 +8873,7 @@
             {
               "id": "nws5-12",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「发言人没有立即回应我们的置评请求。」",
+              "prompt": "「发言人没有立即回应我们的置评请求。」",
               "answer": "The spokesperson did not immediately respond to our request for comment",
               "bank": [
                 "The",
@@ -9068,7 +9068,7 @@
             {
               "id": "rv1-2",
               "type": "fill_blank",
-              "prompt": "「A growing ___ of evidence indicates climate sensitivity.」(中文:「越来越多的证据表明气候敏感性。」)",
+              "prompt": "A growing ___ of evidence indicates climate sensitivity.",
               "answer": "body",
               "acceptableAnswers": [
                 "amount"
@@ -9100,7 +9100,7 @@
             {
               "id": "rv1-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们可能难以达到这个数字。」",
+              "prompt": "「我们可能难以达到这个数字。」",
               "answer": "We may have difficulty meeting that figure",
               "bank": [
                 "We",
@@ -9143,7 +9143,7 @@
             {
               "id": "rv1-7",
               "type": "fill_blank",
-              "prompt": "「I'd like to push ___ on that timeline.」(中文:「我想对这一时间表提出异议。」)",
+              "prompt": "I'd like to push ___ on that timeline.",
               "answer": "back",
               "acceptableAnswers": []
             },
@@ -9163,7 +9163,7 @@
             {
               "id": "rv1-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「本研究提出了一个新的理论框架。」",
+              "prompt": "「本研究提出了一个新的理论框架。」",
               "answer": "This study proposes a novel theoretical framework",
               "bank": [
                 "This",
@@ -9181,7 +9181,7 @@
             {
               "id": "rv1-10",
               "type": "fill_blank",
-              "prompt": "「These results ___ a robust effect.」(中文:「这些结果体现出稳健的效应。」)",
+              "prompt": "These results ___ a robust effect.",
               "answer": "demonstrate",
               "acceptableAnswers": [
                 "indicate",
@@ -9235,7 +9235,7 @@
             {
               "id": "rv2-3",
               "type": "fill_blank",
-              "prompt": "「There is a strong ___ for reform.」(中文:「推行改革的理由非常充分。」)",
+              "prompt": "There is a strong ___ for reform.",
               "answer": "case",
               "acceptableAnswers": [
                 "argument",
@@ -9245,7 +9245,7 @@
             {
               "id": "rv2-4",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「我们必须正视那个人人避而不谈的大问题。」",
+              "prompt": "「我们必须正视那个人人避而不谈的大问题。」",
               "answer": "We must address the elephant in the room",
               "bank": [
                 "We",
@@ -9290,7 +9290,7 @@
             {
               "id": "rv2-7",
               "type": "fill_blank",
-              "prompt": "「It's the ___ in the room.」(中文:「这就是那个人人避而不谈的大问题。」)",
+              "prompt": "It's the ___ in the room.",
               "answer": "elephant",
               "acceptableAnswers": []
             },
@@ -9309,7 +9309,7 @@
             {
               "id": "rv2-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「需要一种更具细腻度的处理方式。」",
+              "prompt": "「需要一种更具细腻度的处理方式。」",
               "answer": "A more nuanced approach is required",
               "bank": [
                 "A",
@@ -9326,7 +9326,7 @@
             {
               "id": "rv2-10",
               "type": "fill_blank",
-              "prompt": "「Don't make a ___ out of a molehill.」(中文:「别小题大做。」)",
+              "prompt": "Don't make a ___ out of a molehill.",
               "answer": "mountain",
               "acceptableAnswers": []
             }
@@ -9354,14 +9354,14 @@
             {
               "id": "rv3-2",
               "type": "fill_blank",
-              "prompt": "「No sooner ___ I sat down than the phone rang.」(中文:「我刚坐下电话就响了。」)",
+              "prompt": "No sooner ___ I sat down than the phone rang.",
               "answer": "had",
               "acceptableAnswers": []
             },
             {
               "id": "rv3-3",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「最先注意到错误的是 Sarah。」",
+              "prompt": "「最先注意到错误的是 Sarah。」",
               "answer": "It was Sarah who first noticed the error",
               "bank": [
                 "It",
@@ -9428,7 +9428,7 @@
             {
               "id": "rv3-7",
               "type": "fill_blank",
-              "prompt": "「Granted, the cost is high, ___ the long-term gains outweigh it.」(中文:「诚然,成本不低,但长期收益远超于此。」)",
+              "prompt": "Granted, the cost is high, ___ the long-term gains outweigh it.",
               "answer": "but",
               "acceptableAnswers": [
                 "however"
@@ -9449,7 +9449,7 @@
             {
               "id": "rv3-9",
               "type": "tap_words_in_order",
-              "prompt": "请组合出这个句子:「尽管他有所担忧,项目仍然向前推进。」",
+              "prompt": "「尽管他有所担忧,项目仍然向前推进。」",
               "answer": "Notwithstanding his concerns the project went ahead",
               "bank": [
                 "Notwithstanding",
@@ -9467,7 +9467,7 @@
             {
               "id": "rv3-10",
               "type": "fill_blank",
-              "prompt": "「The reasoning, while seductive, is ___」(中文:「这一论证看似诱人,实则似是而非。」)",
+              "prompt": "The reasoning, while seductive, is ___",
               "answer": "specious",
               "acceptableAnswers": [
                 "misleading",

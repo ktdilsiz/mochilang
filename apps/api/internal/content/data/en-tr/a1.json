@@ -261,13 +261,14 @@
             },
             {
               "id": "alp2-2",
-              "type": "fill_blank",
-              "prompt": "İngilizcede 'three' Türkçeye ___ olarak çevrilir.",
+              "type": "translate",
               "answer": "üç",
               "acceptableAnswers": [
                 "uc"
               ],
-              "explanation": "three = üç. 'th' sesine dikkat: 'tıri' değil!"
+              "explanation": "three = üç. 'th' sesine dikkat: 'tıri' değil!",
+              "source": "three",
+              "direction": "to_source"
             },
             {
               "id": "alp2-3",
@@ -334,12 +335,13 @@
             },
             {
               "id": "alp2-7",
-              "type": "fill_blank",
-              "prompt": "'I think' = 'Ben ___' (Türkçe)",
+              "type": "translate",
               "answer": "düşünüyorum",
               "acceptableAnswers": [
                 "dusunuyorum"
-              ]
+              ],
+              "source": "I think",
+              "direction": "to_source"
             },
             {
               "id": "alp2-8",
@@ -357,7 +359,7 @@
             {
               "id": "alp2-9",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bunun iyi olduğunu düşünüyorum.'",
+              "prompt": "Bunun iyi olduğunu düşünüyorum.",
               "answer": "I think this is good",
               "bank": [
                 "I",
@@ -419,10 +421,11 @@
             },
             {
               "id": "alp3-3",
-              "type": "fill_blank",
-              "prompt": "'water' Türkçede ___ demektir.",
+              "type": "translate",
               "answer": "su",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "water",
+              "direction": "to_source"
             },
             {
               "id": "alp3-4",
@@ -476,7 +479,7 @@
             {
               "id": "alp3-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Su istiyorum.'",
+              "prompt": "Su istiyorum.",
               "answer": "I want water",
               "bank": [
                 "I",
@@ -545,10 +548,11 @@
             },
             {
               "id": "alp4-2",
-              "type": "fill_blank",
-              "prompt": "'apple' Türkçede ___ demektir.",
+              "type": "translate",
               "answer": "elma",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "apple",
+              "direction": "to_source"
             },
             {
               "id": "alp4-3",
@@ -614,14 +618,14 @@
             {
               "id": "alp4-7",
               "type": "fill_blank",
-              "prompt": "'I have a ___' (Bir kedim var). Türkçedeki 'kedi' İngilizcede:",
+              "prompt": "I have a ___",
               "answer": "cat",
               "acceptableAnswers": []
             },
             {
               "id": "alp4-8",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Kedinin bir elması var.'",
+              "prompt": "Kedinin bir elması var.",
               "answer": "The cat has an apple",
               "bank": [
                 "The",
@@ -763,7 +767,7 @@
             {
               "id": "alp5-8",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Onu tanıyorum.",
+              "prompt": "Onu tanıyorum.",
               "answer": "I know him .",
               "bank": [
                 "I",
@@ -915,7 +919,7 @@
             {
               "id": "alp6-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Adım Ali.",
+              "prompt": "Adım Ali.",
               "answer": "My name is Ali .",
               "bank": [
                 "My",
@@ -994,7 +998,7 @@
             {
               "id": "alp6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Onu nasıl heceliyorsun?",
+              "prompt": "Onu nasıl heceliyorsun?",
               "answer": "How do you spell it ?",
               "bank": [
                 "How",
@@ -1282,7 +1286,7 @@
             {
               "id": "gr1-7",
               "type": "fill_blank",
-              "prompt": "'See you ___' (yarın görüşürüz). Boşluğa ne gelir?",
+              "prompt": "See you ___",
               "answer": "tomorrow",
               "acceptableAnswers": [],
               "explanation": "tomorrow = yarın."
@@ -1290,7 +1294,7 @@
             {
               "id": "gr1-8",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Yarın görüşürüz.'",
+              "prompt": "Yarın görüşürüz.",
               "answer": "See you tomorrow",
               "bank": [
                 "See",
@@ -1417,7 +1421,7 @@
             {
               "id": "gr2-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: Günaydın, Bayan Yılmaz.",
+              "prompt": "Günaydın, Bayan Yılmaz.",
               "answer": "Good morning Mrs Yılmaz",
               "bank": [
                 "Good",
@@ -1497,7 +1501,7 @@
             {
               "id": "gr3-3",
               "type": "fill_blank",
-              "prompt": "Birine cevap verdikten sonra kibarca soruyu iade et: 'And ___?'",
+              "prompt": "And ___?",
               "answer": "you",
               "acceptableAnswers": [],
               "explanation": "'And you?' = 'Sen?' anlamında. İngilizcede karşılığı sormak âdettendir."
@@ -1541,7 +1545,7 @@
             {
               "id": "gr3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: İyiyim, teşekkürler.",
+              "prompt": "İyiyim, teşekkürler.",
               "answer": "I am fine thanks",
               "bank": [
                 "I",
@@ -1567,10 +1571,11 @@
             },
             {
               "id": "gr3-8",
-              "type": "fill_blank",
-              "prompt": "'Fena değil' İngilizcede ___",
+              "type": "translate",
               "answer": "Not bad",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "Fena değil",
+              "direction": "to_target"
             },
             {
               "id": "gr3-9",
@@ -1676,7 +1681,7 @@
             {
               "id": "gr4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Benim adım Ahmet.'",
+              "prompt": "Benim adım Ahmet.",
               "answer": "My name is Ahmet",
               "bank": [
                 "My",
@@ -1690,7 +1695,7 @@
             {
               "id": "gr4-7",
               "type": "fill_blank",
-              "prompt": "'Nerelisin?' = 'Where are you ___?'",
+              "prompt": "Where are you ___?",
               "answer": "from",
               "acceptableAnswers": []
             },
@@ -1723,7 +1728,7 @@
             {
               "id": "gr4-10",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ben İstanbulluyum.'",
+              "prompt": "Ben İstanbulluyum.",
               "answer": "I am from Istanbul",
               "bank": [
                 "I",
@@ -1772,7 +1777,7 @@
             {
               "id": "gr5-3",
               "type": "fill_blank",
-              "prompt": "Akşam selamı: 'Good ___.'",
+              "prompt": "Good ___.",
               "answer": "evening",
               "acceptableAnswers": [],
               "explanation": "Akşam: good evening; gece (yatmadan): good night."
@@ -1830,7 +1835,7 @@
             {
               "id": "gr5-7",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Günaydın, efendim.",
+              "prompt": "Günaydın, efendim.",
               "answer": "Good morning , sir .",
               "bank": [
                 "Good",
@@ -1844,7 +1849,7 @@
             {
               "id": "gr5-8",
               "type": "fill_blank",
-              "prompt": "Tanışmada resmi: 'Pleased to ___ you.'",
+              "prompt": "Pleased to ___ you.",
               "answer": "meet",
               "explanation": "'Pleased to meet you.' = Tanıştığımıza memnun oldum.",
               "acceptableAnswers": [
@@ -1904,7 +1909,7 @@
             {
               "id": "gr5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Yarın görüşürüz!",
+              "prompt": "Yarın görüşürüz!",
               "answer": "See you tomorrow !",
               "bank": [
                 "See",
@@ -1940,7 +1945,7 @@
             {
               "id": "gr6-2",
               "type": "fill_blank",
-              "prompt": "Nereli olduğunu söyle: 'I am ___ Turkey.'",
+              "prompt": "I am ___ Turkey.",
               "answer": "from",
               "explanation": "'from' = -den, -dan; ülkeden geldiğini gösterir.",
               "acceptableAnswers": []
@@ -1997,7 +2002,7 @@
             {
               "id": "gr6-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Ben bir öğrenciyim.",
+              "prompt": "Ben bir öğrenciyim.",
               "answer": "I am a student .",
               "bank": [
                 "I",
@@ -2012,7 +2017,7 @@
             {
               "id": "gr6-7",
               "type": "fill_blank",
-              "prompt": "'I am a ___' kalıbı meslek söylemek için kullanılır. Boşluğa tek bir meslek yaz (örnek: bir sağlık çalışanı).",
+              "prompt": "I am a ___",
               "answer": "doctor",
               "acceptableAnswers": [],
               "explanation": "Türkçede 'doktorum' tek kelime, İngilizcede 'I am a doctor' üç kelimedir."
@@ -2070,7 +2075,7 @@
             {
               "id": "gr6-11",
               "type": "fill_blank",
-              "prompt": "'Nice ___ meet you.' — Tanıştığıma memnun oldum.",
+              "prompt": "Nice ___ meet you.",
               "answer": "to",
               "explanation": "'to' fiilden önce gelir: nice TO meet you.",
               "acceptableAnswers": []
@@ -2078,7 +2083,7 @@
             {
               "id": "gr6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Ankara'lıyım.",
+              "prompt": "Ankara'lıyım.",
               "answer": "I am from Ankara .",
               "bank": [
                 "I",
@@ -2318,7 +2323,7 @@
             {
               "id": "pr1-3",
               "type": "fill_blank",
-              "prompt": "'Biz öğrenciyiz.' = '___ are students.'",
+              "prompt": "___ are students.",
               "answer": "We",
               "acceptableAnswers": []
             },
@@ -2373,7 +2378,7 @@
             {
               "id": "pr1-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Sen benim arkadaşımsın.'",
+              "prompt": "Sen benim arkadaşımsın.",
               "answer": "You are my friend",
               "bank": [
                 "You",
@@ -2467,14 +2472,14 @@
             {
               "id": "pr2-4",
               "type": "fill_blank",
-              "prompt": "'Mehmet bir sporcudur.' = '___ is an athlete.'",
+              "prompt": "___ is an athlete.",
               "answer": "He",
               "acceptableAnswers": []
             },
             {
               "id": "pr2-5",
               "type": "fill_blank",
-              "prompt": "'Fatma bir mühendistir.' = '___ is an engineer.'",
+              "prompt": "___ is an engineer.",
               "answer": "She",
               "acceptableAnswers": []
             },
@@ -2530,7 +2535,7 @@
             {
               "id": "pr2-9",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'O benim annem.'",
+              "prompt": "O benim annem.",
               "answer": "She is my mother",
               "bank": [
                 "She",
@@ -2645,7 +2650,7 @@
             {
               "id": "pr3-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bu benim erkek kardeşim.'",
+              "prompt": "Bu benim erkek kardeşim.",
               "answer": "This is my brother",
               "bank": [
                 "This",
@@ -2659,7 +2664,7 @@
             {
               "id": "pr3-8",
               "type": "fill_blank",
-              "prompt": "'Bizim öğretmenimiz' = '___ teacher.'",
+              "prompt": "___ teacher.",
               "answer": "our",
               "acceptableAnswers": []
             },
@@ -2757,7 +2762,7 @@
             {
               "id": "pr4-5",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Siz iyi öğrencilersiniz.'",
+              "prompt": "Siz iyi öğrencilersiniz.",
               "answer": "You are good students",
               "bank": [
                 "You",
@@ -2784,7 +2789,7 @@
             {
               "id": "pr4-7",
               "type": "fill_blank",
-              "prompt": "'Sizin eviniz büyük.' = '___ house is big.'",
+              "prompt": "___ house is big.",
               "answer": "Your",
               "acceptableAnswers": []
             },
@@ -2865,7 +2870,7 @@
             {
               "id": "pr5-3",
               "type": "fill_blank",
-              "prompt": "'They help ___.' — Bize yardım ediyorlar.",
+              "prompt": "They help ___.",
               "answer": "us",
               "acceptableAnswers": [],
               "explanation": "we → us (nesne)."
@@ -2910,7 +2915,7 @@
             {
               "id": "pr5-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: O beni tanıyor.",
+              "prompt": "O beni tanıyor.",
               "answer": "She knows me .",
               "bank": [
                 "She",
@@ -2937,7 +2942,7 @@
             {
               "id": "pr5-8",
               "type": "fill_blank",
-              "prompt": "'We see ___.' — Onları görüyoruz.",
+              "prompt": "We see ___.",
               "answer": "them",
               "acceptableAnswers": [],
               "explanation": "they → them."
@@ -2994,7 +2999,7 @@
             {
               "id": "pr5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Onlar bizi seviyor.",
+              "prompt": "Onlar bizi seviyor.",
               "answer": "They love us .",
               "bank": [
                 "They",
@@ -3030,7 +3035,7 @@
             {
               "id": "pr6-2",
               "type": "fill_blank",
-              "prompt": "'That is ___ pen.' — Bu onun (kız) kalemi.",
+              "prompt": "That is ___ pen.",
               "answer": "her",
               "acceptableAnswers": [],
               "explanation": "Türkçede 'onun kalemi' = İngilizcede 'her pen' (kız) ya da 'his pen' (erkek)."
@@ -3088,7 +3093,7 @@
             {
               "id": "pr6-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Evimiz büyük.",
+              "prompt": "Evimiz büyük.",
               "answer": "Our house is big .",
               "bank": [
                 "Our",
@@ -3102,7 +3107,7 @@
             {
               "id": "pr6-7",
               "type": "fill_blank",
-              "prompt": "'They are ___ friends.' — Onlar bizim arkadaşlarımız.",
+              "prompt": "They are ___ friends.",
               "answer": "our",
               "acceptableAnswers": [],
               "explanation": "we → our."
@@ -3172,7 +3177,7 @@
             {
               "id": "pr6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Adım Ayşe.",
+              "prompt": "Adım Ayşe.",
               "answer": "My name is Ayşe .",
               "bank": [
                 "My",
@@ -3458,7 +3463,7 @@
             {
               "id": "tb1-4",
               "type": "fill_blank",
-              "prompt": "'We ___ Turkish.' (Biz Türküz.)",
+              "prompt": "We ___ Turkish.",
               "answer": "are",
               "acceptableAnswers": []
             },
@@ -3488,7 +3493,7 @@
             {
               "id": "tb1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ben Türkiyeliyim.'",
+              "prompt": "Ben Türkiyeliyim.",
               "answer": "I am from Turkey",
               "bank": [
                 "I",
@@ -3515,7 +3520,7 @@
             {
               "id": "tb1-8",
               "type": "fill_blank",
-              "prompt": "'Ali ve ben yoruluyoruz' = 'Ali and I ___ tired.'",
+              "prompt": "Ali and I ___ tired.",
               "answer": "are",
               "acceptableAnswers": [],
               "explanation": "'Ali and I' = we → 'are'."
@@ -3570,7 +3575,7 @@
             {
               "id": "tb2-2",
               "type": "fill_blank",
-              "prompt": "'O öğretmen değildir.' = 'She is ___ a teacher.'",
+              "prompt": "She is ___ a teacher.",
               "answer": "not",
               "acceptableAnswers": []
             },
@@ -3612,7 +3617,7 @@
             {
               "id": "tb2-5",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'O benim arkadaşım değil.'",
+              "prompt": "O benim arkadaşım değil.",
               "answer": "He is not my friend",
               "bank": [
                 "He",
@@ -3627,7 +3632,7 @@
             {
               "id": "tb2-6",
               "type": "fill_blank",
-              "prompt": "'Aç değilim.' = 'I am ___ hungry.'",
+              "prompt": "I am ___ hungry.",
               "answer": "not",
               "acceptableAnswers": []
             },
@@ -3672,7 +3677,7 @@
             {
               "id": "tb2-10",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Biz Ankaralı değiliz.'",
+              "prompt": "Biz Ankaralı değiliz.",
               "answer": "We are not from Ankara",
               "bank": [
                 "We",
@@ -3721,7 +3726,7 @@
             {
               "id": "tb3-3",
               "type": "fill_blank",
-              "prompt": "'Onlar evde mi?' = '___ they at home?'",
+              "prompt": "___ they at home?",
               "answer": "Are",
               "acceptableAnswers": []
             },
@@ -3751,7 +3756,7 @@
             {
               "id": "tb3-5",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Sen öğrenci misin.'",
+              "prompt": "Sen öğrenci misin.",
               "answer": "Are you a student",
               "bank": [
                 "Are",
@@ -3857,7 +3862,7 @@
             {
               "id": "tb4-3",
               "type": "fill_blank",
-              "prompt": "'Çantamda elma var.' = '___ an apple in my bag.'",
+              "prompt": "___ an apple in my bag.",
               "answer": "There is",
               "acceptableAnswers": [
                 "there's"
@@ -3889,7 +3894,7 @@
             {
               "id": "tb4-5",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bahçede bir kedi var.'",
+              "prompt": "Bahçede bir kedi var.",
               "answer": "There is a cat in the garden",
               "bank": [
                 "There",
@@ -3950,7 +3955,7 @@
             {
               "id": "tb4-10",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Hiç elma var mı.'",
+              "prompt": "Hiç elma var mı.",
               "answer": "Are there any apples",
               "bank": [
                 "Are",
@@ -3986,7 +3991,7 @@
             {
               "id": "tb5-2",
               "type": "fill_blank",
-              "prompt": "'She ___ tired.' (kısaltılmış olumsuz)",
+              "prompt": "She ___ tired.",
               "answer": "isn't",
               "acceptableAnswers": [
                 "is not"
@@ -4046,7 +4051,7 @@
             {
               "id": "tb5-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: O evde değil.",
+              "prompt": "O evde değil.",
               "answer": "He is not at home .",
               "bank": [
                 "He",
@@ -4061,7 +4066,7 @@
             {
               "id": "tb5-7",
               "type": "fill_blank",
-              "prompt": "'We ___ students.' — Biz öğrenci değiliz.",
+              "prompt": "We ___ students.",
               "answer": "aren't",
               "acceptableAnswers": [
                 "are not"
@@ -4070,7 +4075,7 @@
             {
               "id": "tb5-8",
               "type": "multiple_choice",
-              "prompt": "Hangisi doğrudur?",
+              "prompt": "",
               "options": [
                 "I amn't here.",
                 "I'm not here.",
@@ -4115,7 +4120,7 @@
             {
               "id": "tb5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Onlar hazır değil.",
+              "prompt": "Onlar hazır değil.",
               "answer": "They aren't ready .",
               "bank": [
                 "They",
@@ -4151,7 +4156,7 @@
             {
               "id": "tb6-2",
               "type": "fill_blank",
-              "prompt": "'___ he Turkish?' — O Türk mü?",
+              "prompt": "___ he Turkish?",
               "answer": "Is",
               "acceptableAnswers": [],
               "explanation": "he/she/it ile 'is' kullanılır."
@@ -4208,7 +4213,7 @@
             {
               "id": "tb6-6",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: O bir doktor mu?",
+              "prompt": "O bir doktor mu?",
               "answer": "Is she a doctor ?",
               "bank": [
                 "Is",
@@ -4236,7 +4241,7 @@
             {
               "id": "tb6-8",
               "type": "fill_blank",
-              "prompt": "'___ they at school?' — Okuldalar mı?",
+              "prompt": "___ they at school?",
               "answer": "Are",
               "acceptableAnswers": []
             },
@@ -4292,7 +4297,7 @@
             {
               "id": "tb6-12",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Türkiye'den misin?",
+              "prompt": "Türkiye'den misin?",
               "answer": "Are you from Turkey ?",
               "bank": [
                 "Are",
@@ -4547,10 +4552,11 @@
             },
             {
               "id": "nm1-3",
-              "type": "fill_blank",
-              "prompt": "1 = ___ (İngilizce)",
+              "type": "translate",
               "answer": "one",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "1",
+              "direction": "to_target"
             },
             {
               "id": "nm1-4",
@@ -4603,7 +4609,7 @@
             {
               "id": "nm1-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: bir iki üç dört beş",
+              "prompt": "bir iki üç dört beş",
               "answer": "one two three four five",
               "bank": [
                 "one",
@@ -4616,10 +4622,11 @@
             },
             {
               "id": "nm1-8",
-              "type": "fill_blank",
-              "prompt": "6 = ___",
+              "type": "translate",
               "answer": "six",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "6",
+              "direction": "to_target"
             },
             {
               "id": "nm1-9",
@@ -4681,11 +4688,12 @@
             },
             {
               "id": "nm2-3",
-              "type": "fill_blank",
-              "prompt": "12 = ___",
+              "type": "translate",
               "answer": "twelve",
               "acceptableAnswers": [],
-              "explanation": "12 'twoteen' değil 'twelve' olarak özel bir kelimedir."
+              "explanation": "12 'twoteen' değil 'twelve' olarak özel bir kelimedir.",
+              "source": "12",
+              "direction": "to_target"
             },
             {
               "id": "nm2-4",
@@ -4739,7 +4747,7 @@
             {
               "id": "nm2-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: on bir on iki on üç",
+              "prompt": "on bir on iki on üç",
               "answer": "eleven twelve thirteen",
               "bank": [
                 "eleven",
@@ -4751,10 +4759,11 @@
             },
             {
               "id": "nm2-8",
-              "type": "fill_blank",
-              "prompt": "16 = ___",
+              "type": "translate",
               "answer": "sixteen",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "16",
+              "direction": "to_target"
             },
             {
               "id": "nm2-9",
@@ -4874,7 +4883,7 @@
             {
               "id": "nm3-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Benim elli kitabım var.'",
+              "prompt": "Benim elli kitabım var.",
               "answer": "I have fifty books",
               "bank": [
                 "I",
@@ -5024,7 +5033,7 @@
             {
               "id": "nm4-8",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Saat iki buçuk.'",
+              "prompt": "Saat iki buçuk.",
               "answer": "It is half past two",
               "bank": [
                 "It",
@@ -5081,7 +5090,7 @@
             {
               "id": "nm5-2",
               "type": "fill_blank",
-              "prompt": "'I am the ___ child.' — Ben ikinci çocuğum.",
+              "prompt": "I am the ___ child.",
               "answer": "second",
               "acceptableAnswers": [
                 "2nd"
@@ -5139,7 +5148,7 @@
             {
               "id": "nm5-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Bu benim ilk günüm.",
+              "prompt": "Bu benim ilk günüm.",
               "answer": "It is my first day .",
               "bank": [
                 "It",
@@ -5225,7 +5234,7 @@
             {
               "id": "nm5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Doğum günüm ayın üçünde.",
+              "prompt": "Doğum günüm ayın üçünde.",
               "answer": "My birthday is on the third .",
               "bank": [
                 "My",
@@ -5321,7 +5330,7 @@
             {
               "id": "nm6-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Saat on.",
+              "prompt": "Saat on.",
               "answer": "It is ten o'clock .",
               "bank": [
                 "It",
@@ -5404,7 +5413,7 @@
             {
               "id": "nm6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Saat altıyı yarım geçiyor.",
+              "prompt": "Saat altıyı yarım geçiyor.",
               "answer": "It is half past six .",
               "bank": [
                 "It",
@@ -5648,7 +5657,7 @@
             {
               "id": "fm1-3",
               "type": "fill_blank",
-              "prompt": "'Erkek kardeşim' = 'my ___'",
+              "prompt": "my ___",
               "answer": "brother",
               "acceptableAnswers": []
             },
@@ -5704,7 +5713,7 @@
             {
               "id": "fm1-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Annem öğretmen.'",
+              "prompt": "Annem öğretmen.",
               "answer": "My mother is a teacher",
               "bank": [
                 "My",
@@ -5719,7 +5728,7 @@
             {
               "id": "fm1-8",
               "type": "fill_blank",
-              "prompt": "'Annem ve babam' = 'my mother and my ___'",
+              "prompt": "my mother and my ___",
               "answer": "father",
               "acceptableAnswers": [
                 "dad",
@@ -5788,7 +5797,7 @@
             {
               "id": "fm2-3",
               "type": "fill_blank",
-              "prompt": "'Kuzenim (kız ya da erkek)' = 'my ___'",
+              "prompt": "my ___",
               "answer": "cousin",
               "acceptableAnswers": []
             },
@@ -5856,7 +5865,7 @@
             {
               "id": "fm2-8",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Büyükannem burada.'",
+              "prompt": "Büyükannem burada.",
               "answer": "My grandmother is here",
               "bank": [
                 "My",
@@ -5870,7 +5879,7 @@
             {
               "id": "fm2-9",
               "type": "fill_blank",
-              "prompt": "Babamın tarafından amca: 'my uncle on my ___'s side.'",
+              "prompt": "my uncle on my ___'s side.",
               "answer": "father",
               "acceptableAnswers": [
                 "dad",
@@ -5925,17 +5934,19 @@
             },
             {
               "id": "fm3-3",
-              "type": "fill_blank",
-              "prompt": "'oğul' = ___",
+              "type": "translate",
               "answer": "son",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "oğul",
+              "direction": "to_target"
             },
             {
               "id": "fm3-4",
-              "type": "fill_blank",
-              "prompt": "'kız evlat' = ___",
+              "type": "translate",
               "answer": "daughter",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "kız evlat",
+              "direction": "to_target"
             },
             {
               "id": "fm3-5",
@@ -5990,7 +6001,7 @@
             {
               "id": "fm3-8",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Karım doktor.'",
+              "prompt": "Karım doktor.",
               "answer": "My wife is a doctor",
               "bank": [
                 "My",
@@ -6064,7 +6075,7 @@
             {
               "id": "fm4-3",
               "type": "fill_blank",
-              "prompt": "'Bu benim erkek kardeşim Ali.' = 'This is my ___ Ali.'",
+              "prompt": "This is my ___ Ali.",
               "answer": "brother",
               "acceptableAnswers": []
             },
@@ -6094,7 +6105,7 @@
             {
               "id": "fm4-5",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bu benim küçük kız kardeşim.'",
+              "prompt": "Bu benim küçük kız kardeşim.",
               "answer": "This is my younger sister",
               "bank": [
                 "This",
@@ -6122,7 +6133,7 @@
             {
               "id": "fm4-7",
               "type": "fill_blank",
-              "prompt": "'İki kız kardeşim var.' = 'I ___ two sisters.'",
+              "prompt": "I ___ two sisters.",
               "answer": "have",
               "acceptableAnswers": []
             },
@@ -6155,7 +6166,7 @@
             {
               "id": "fm4-10",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Benim büyük bir ailem var.'",
+              "prompt": "Benim büyük bir ailem var.",
               "answer": "I have a big family",
               "bank": [
                 "I",
@@ -6250,7 +6261,7 @@
             {
               "id": "fm5-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Kuzenim komiktir.",
+              "prompt": "Kuzenim komiktir.",
               "answer": "My cousin is funny .",
               "bank": [
                 "My",
@@ -6277,7 +6288,7 @@
             {
               "id": "fm5-8",
               "type": "fill_blank",
-              "prompt": "'My ___ are kind.' — Büyük annem ve büyük babam nazik.",
+              "prompt": "My ___ are kind.",
               "answer": "grandparents",
               "explanation": "grandparents = büyükanne + büyükbaba.",
               "acceptableAnswers": []
@@ -6334,7 +6345,7 @@
             {
               "id": "fm5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Büyükannem yaşlı.",
+              "prompt": "Büyükannem yaşlı.",
               "answer": "My grandmother is old .",
               "bank": [
                 "My",
@@ -6370,7 +6381,7 @@
             {
               "id": "fm6-2",
               "type": "fill_blank",
-              "prompt": "Aile büyüklüğü: 'I have a big ___.'",
+              "prompt": "I have a big ___.",
               "answer": "family",
               "acceptableAnswers": []
             },
@@ -6426,7 +6437,7 @@
             {
               "id": "fm6-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Küçük bir ailem var.",
+              "prompt": "Küçük bir ailem var.",
               "answer": "I have a small family .",
               "bank": [
                 "I",
@@ -6511,7 +6522,7 @@
             {
               "id": "fm6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Ailem büyük.",
+              "prompt": "Ailem büyük.",
               "answer": "My family is big .",
               "bank": [
                 "My",
@@ -6807,7 +6818,7 @@
             {
               "id": "ev1-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Erkek kardeşim elma yer.'",
+              "prompt": "Erkek kardeşim elma yer.",
               "answer": "My brother eats apples",
               "bank": [
                 "My",
@@ -6821,7 +6832,7 @@
             {
               "id": "ev1-8",
               "type": "fill_blank",
-              "prompt": "'They ___ English.' — Onlar İngilizce çalışırlar.",
+              "prompt": "They ___ English.",
               "answer": "study",
               "acceptableAnswers": [],
               "explanation": "'They' özne → fiil yalın."
@@ -6901,7 +6912,7 @@
             {
               "id": "ev2-4",
               "type": "fill_blank",
-              "prompt": "'They ___ work on Sundays.' (Pazar günleri çalışmazlar.)",
+              "prompt": "They ___ work on Sundays.",
               "answer": "don't",
               "acceptableAnswers": [
                 "do not"
@@ -6933,7 +6944,7 @@
             {
               "id": "ev2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Annem kahve içmez.'",
+              "prompt": "Annem kahve içmez.",
               "answer": "My mother doesn't drink coffee",
               "bank": [
                 "My",
@@ -6980,7 +6991,7 @@
             {
               "id": "ev2-10",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ben et yemem.'",
+              "prompt": "Ben et yemem.",
               "answer": "I do not eat meat",
               "bank": [
                 "I",
@@ -7041,7 +7052,7 @@
             {
               "id": "ev3-4",
               "type": "fill_blank",
-              "prompt": "'Onlar süt içer mi?' = '___ they drink milk?'",
+              "prompt": "___ they drink milk?",
               "answer": "Do",
               "acceptableAnswers": []
             },
@@ -7071,7 +7082,7 @@
             {
               "id": "ev3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Annen çalışıyor mu.'",
+              "prompt": "Annen çalışıyor mu.",
               "answer": "Does your mother work",
               "bank": [
                 "Does",
@@ -7209,7 +7220,7 @@
             {
               "id": "ev4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ben her zaman kahvaltı yaparım.'",
+              "prompt": "Ben her zaman kahvaltı yaparım.",
               "answer": "I always eat breakfast",
               "bank": [
                 "I",
@@ -7256,7 +7267,7 @@
             {
               "id": "ev4-10",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'O bazen gitar çalar.'",
+              "prompt": "O bazen gitar çalar.",
               "answer": "He sometimes plays guitar",
               "bank": [
                 "He",
@@ -7292,7 +7303,7 @@
             {
               "id": "ev5-2",
               "type": "fill_blank",
-              "prompt": "'She ___ English.' (study) — O İngilizce çalışır.",
+              "prompt": "She ___ English.",
               "answer": "studies",
               "acceptableAnswers": [],
               "explanation": "Sessizden sonra -y → -ies: study → studies."
@@ -7349,7 +7360,7 @@
             {
               "id": "ev5-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: O okula gider.",
+              "prompt": "O okula gider.",
               "answer": "He goes to school .",
               "bank": [
                 "He",
@@ -7432,7 +7443,7 @@
             {
               "id": "ev5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Onun bir arabası var.",
+              "prompt": "Onun bir arabası var.",
               "answer": "He has a car .",
               "bank": [
                 "He",
@@ -7470,7 +7481,7 @@
             {
               "id": "ev6-2",
               "type": "fill_blank",
-              "prompt": "'She ___ eat meat.' — Et yemez. (kısaltılmış)",
+              "prompt": "She ___ eat meat.",
               "answer": "doesn't",
               "acceptableAnswers": [
                 "does not"
@@ -7528,7 +7539,7 @@
             {
               "id": "ev6-6",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Müzik sever misin?",
+              "prompt": "Müzik sever misin?",
               "answer": "Do you like music ?",
               "bank": [
                 "Do",
@@ -7556,7 +7567,7 @@
             {
               "id": "ev6-8",
               "type": "fill_blank",
-              "prompt": "'___ she speak Turkish?' — Türkçe konuşur mu?",
+              "prompt": "___ she speak Turkish?",
               "answer": "Does",
               "acceptableAnswers": [],
               "explanation": "He/She/It → does."
@@ -7564,7 +7575,7 @@
             {
               "id": "ev6-9",
               "type": "multiple_choice",
-              "prompt": "Hangisi doğrudur?",
+              "prompt": "",
               "options": [
                 "He don't work.",
                 "He doesn't work.",
@@ -7613,7 +7624,7 @@
             {
               "id": "ev6-12",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: O kahve sever mi?",
+              "prompt": "O kahve sever mi?",
               "answer": "Does she like coffee ?",
               "bank": [
                 "Does",
@@ -7828,14 +7839,14 @@
             {
               "id": "ar1-3",
               "type": "fill_blank",
-              "prompt": "'___ orange' (sesli ile başlıyor)",
+              "prompt": "___ orange",
               "answer": "an",
               "acceptableAnswers": []
             },
             {
               "id": "ar1-4",
               "type": "fill_blank",
-              "prompt": "'___ car' (sessiz ile başlıyor)",
+              "prompt": "___ car",
               "answer": "a",
               "acceptableAnswers": [
                 "an"
@@ -7893,7 +7904,7 @@
             {
               "id": "ar1-8",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Bir fikrim var.'",
+              "prompt": "Bir fikrim var.",
               "answer": "I have an idea",
               "bank": [
                 "I",
@@ -7920,7 +7931,7 @@
             {
               "id": "ar1-10",
               "type": "fill_blank",
-              "prompt": "'I am ___ engineer.' (Mühendisim.)",
+              "prompt": "I am ___ engineer.",
               "answer": "an",
               "acceptableAnswers": []
             }
@@ -7962,7 +7973,7 @@
             {
               "id": "ar2-3",
               "type": "fill_blank",
-              "prompt": "'Güneş parlıyor.' = '___ sun is shining.'",
+              "prompt": "___ sun is shining.",
               "answer": "The",
               "acceptableAnswers": [],
               "explanation": "Güneş tek bir tane → her zaman 'the'."
@@ -8006,14 +8017,14 @@
             {
               "id": "ar2-6",
               "type": "fill_blank",
-              "prompt": "'I see ___ moon.' (Ay'ı görüyorum.)",
+              "prompt": "I see ___ moon.",
               "answer": "the",
               "acceptableAnswers": []
             },
             {
               "id": "ar2-7",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: Kapıyı kapat, lütfen.",
+              "prompt": "Kapıyı kapat, lütfen.",
               "answer": "Close the door please",
               "bank": [
                 "Close",
@@ -8099,7 +8110,7 @@
             {
               "id": "ar3-3",
               "type": "fill_blank",
-              "prompt": "'I drink ___ every morning.' (Her sabah çay içerim.)",
+              "prompt": "I drink ___ every morning.",
               "answer": "tea",
               "acceptableAnswers": [],
               "explanation": "Sayılamayan + genel = artikel yok."
@@ -8142,7 +8153,7 @@
             {
               "id": "ar3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Kedileri ve köpekleri severim.'",
+              "prompt": "Kedileri ve köpekleri severim.",
               "answer": "I like cats and dogs",
               "bank": [
                 "I",
@@ -8157,7 +8168,7 @@
             {
               "id": "ar3-7",
               "type": "fill_blank",
-              "prompt": "Genel anlam — sayılamayan isim. 'I drink ___' (Su içerim.)",
+              "prompt": "I drink ___",
               "answer": "water",
               "acceptableAnswers": []
             },
@@ -8237,7 +8248,7 @@
             {
               "id": "ar4-3",
               "type": "fill_blank",
-              "prompt": "'O bir doktor.' = 'She is ___ doctor.'",
+              "prompt": "She is ___ doctor.",
               "answer": "a",
               "acceptableAnswers": [
                 "an"
@@ -8282,7 +8293,7 @@
             {
               "id": "ar4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Annem doktor.'",
+              "prompt": "Annem doktor.",
               "answer": "My mother is a doctor",
               "bank": [
                 "My",
@@ -8297,7 +8308,7 @@
             {
               "id": "ar4-7",
               "type": "fill_blank",
-              "prompt": "'Sanatçısın.' = 'You are ___ artist.'",
+              "prompt": "You are ___ artist.",
               "answer": "an",
               "acceptableAnswers": []
             },
@@ -8422,7 +8433,7 @@
             {
               "id": "ar5-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Her gün süt içerim.",
+              "prompt": "Her gün süt içerim.",
               "answer": "I drink milk every day .",
               "bank": [
                 "I",
@@ -8507,7 +8518,7 @@
             {
               "id": "ar5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Bir bardak su istiyorum.",
+              "prompt": "Bir bardak su istiyorum.",
               "answer": "I want a glass of water .",
               "bank": [
                 "I",
@@ -8605,7 +8616,7 @@
             {
               "id": "ar6-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Ay güzel.",
+              "prompt": "Ay güzel.",
               "answer": "The moon is beautiful .",
               "bank": [
                 "The",
@@ -8631,7 +8642,7 @@
             {
               "id": "ar6-8",
               "type": "fill_blank",
-              "prompt": "'Can you open ___ door?' (belli bir kapı)",
+              "prompt": "Can you open ___ door?",
               "answer": "the",
               "acceptableAnswers": []
             },
@@ -8688,7 +8699,7 @@
             {
               "id": "ar6-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Okula otobüsle giderim.",
+              "prompt": "Okula otobüsle giderim.",
               "answer": "I go to school by bus .",
               "bank": [
                 "I",
@@ -8896,7 +8907,7 @@
             {
               "id": "qu1-3",
               "type": "fill_blank",
-              "prompt": "'Adın ne?' = '___ is your name?'",
+              "prompt": "___ is your name?",
               "answer": "What",
               "acceptableAnswers": []
             },
@@ -8939,7 +8950,7 @@
             {
               "id": "qu1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Öğretmenin kim.'",
+              "prompt": "Öğretmenin kim.",
               "answer": "Who is your teacher",
               "bank": [
                 "Who",
@@ -8966,7 +8977,7 @@
             {
               "id": "qu1-8",
               "type": "fill_blank",
-              "prompt": "'Bu kitap kimin?' = '___ book is this?'",
+              "prompt": "___ book is this?",
               "answer": "Whose",
               "acceptableAnswers": []
             },
@@ -9031,7 +9042,7 @@
             {
               "id": "qu2-3",
               "type": "fill_blank",
-              "prompt": "'Banka nerede?' = '___ is the bank?'",
+              "prompt": "___ is the bank?",
               "answer": "Where",
               "acceptableAnswers": []
             },
@@ -9061,7 +9072,7 @@
             {
               "id": "qu2-5",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Nerede yaşıyorsun.'",
+              "prompt": "Nerede yaşıyorsun.",
               "answer": "Where do you live",
               "bank": [
                 "Where",
@@ -9087,7 +9098,7 @@
             {
               "id": "qu2-7",
               "type": "fill_blank",
-              "prompt": "'Otobüs durağı nerede?' = '___ is the bus stop?'",
+              "prompt": "___ is the bus stop?",
               "answer": "Where",
               "acceptableAnswers": []
             },
@@ -9119,7 +9130,7 @@
             {
               "id": "qu2-10",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Ne zaman uyanıyorsun.'",
+              "prompt": "Ne zaman uyanıyorsun.",
               "answer": "When do you wake up",
               "bank": [
                 "When",
@@ -9167,7 +9178,7 @@
             {
               "id": "qu3-3",
               "type": "fill_blank",
-              "prompt": "Cevap: 'Because I'm sick.' Soru: '___ are you tired?'",
+              "prompt": "Because I'm sick.' Soru: '___ are you tired?",
               "answer": "Why",
               "acceptableAnswers": []
             },
@@ -9210,7 +9221,7 @@
             {
               "id": "qu3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Neden İngilizce çalışıyorsun.'",
+              "prompt": "Neden İngilizce çalışıyorsun.",
               "answer": "Why do you study English",
               "bank": [
                 "Why",
@@ -9225,7 +9236,7 @@
             {
               "id": "qu3-7",
               "type": "fill_blank",
-              "prompt": "'How ___ are you?' (Kaç yaşındasın?)",
+              "prompt": "How ___ are you?",
               "answer": "old",
               "acceptableAnswers": [
                 "aged",
@@ -9330,7 +9341,7 @@
             {
               "id": "qu4-4",
               "type": "fill_blank",
-              "prompt": "'___ much does it cost?' (Bu ne kadar?)",
+              "prompt": "___ much does it cost?",
               "answer": "How",
               "acceptableAnswers": []
             },
@@ -9350,7 +9361,7 @@
             {
               "id": "qu4-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Kaç kitabın var.'",
+              "prompt": "Kaç kitabın var.",
               "answer": "How many books do you have",
               "bank": [
                 "How",
@@ -9404,7 +9415,7 @@
             {
               "id": "qu4-10",
               "type": "fill_blank",
-              "prompt": "'___ much milk is there?' (Sayılamayan: ne kadar süt var?)",
+              "prompt": "___ much milk is there?",
               "answer": "How",
               "acceptableAnswers": []
             }
@@ -9433,7 +9444,7 @@
             {
               "id": "qu5-2",
               "type": "fill_blank",
-              "prompt": "'___ is your birthday?' — Doğum günün ne zaman?",
+              "prompt": "___ is your birthday?",
               "answer": "When",
               "acceptableAnswers": [],
               "explanation": "When = ne zaman."
@@ -9490,7 +9501,7 @@
             {
               "id": "qu5-6",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Otobüs durağı nerede?",
+              "prompt": "Otobüs durağı nerede?",
               "answer": "Where is the bus stop ?",
               "bank": [
                 "Where",
@@ -9518,7 +9529,7 @@
             {
               "id": "qu5-8",
               "type": "fill_blank",
-              "prompt": "'___ are you from?' — Nerelisin?",
+              "prompt": "___ are you from?",
               "answer": "Where",
               "acceptableAnswers": []
             },
@@ -9573,7 +9584,7 @@
             {
               "id": "qu5-12",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Tren ne zaman varıyor?",
+              "prompt": "Tren ne zaman varıyor?",
               "answer": "When does the train arrive ?",
               "bank": [
                 "When",
@@ -9610,13 +9621,14 @@
             },
             {
               "id": "qu6-2",
-              "type": "fill_blank",
-              "prompt": "'Because' Türkçesi: ___",
+              "type": "translate",
               "answer": "çünkü",
               "acceptableAnswers": [
                 "cunku"
               ],
-              "explanation": "'Why?' sorusunun yanıtı genelde 'Because...' ile başlar."
+              "explanation": "'Why?' sorusunun yanıtı genelde 'Because...' ile başlar.",
+              "source": "Because",
+              "direction": "to_source"
             },
             {
               "id": "qu6-3",
@@ -9683,7 +9695,7 @@
             {
               "id": "qu6-7",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Kaç elma istiyorsun?",
+              "prompt": "Kaç elma istiyorsun?",
               "answer": "How many apples do you want ?",
               "bank": [
                 "How",
@@ -9700,7 +9712,7 @@
             {
               "id": "qu6-8",
               "type": "fill_blank",
-              "prompt": "Sayılamayan miktar için: 'How ___ water?'",
+              "prompt": "How ___ water?",
               "answer": "much",
               "acceptableAnswers": [],
               "explanation": "Sayılabilirler için how many, sayılamazlar için how much."
@@ -9757,7 +9769,7 @@
             {
               "id": "qu6-12",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Kapı neden açık?",
+              "prompt": "Kapı neden açık?",
               "answer": "Why is the door open ?",
               "bank": [
                 "Why",
@@ -10006,12 +10018,13 @@
             },
             {
               "id": "col1-3",
-              "type": "fill_blank",
-              "prompt": "'yellow' Türkçesi: ___",
+              "type": "translate",
               "answer": "sarı",
               "acceptableAnswers": [
                 "sari"
-              ]
+              ],
+              "source": "yellow",
+              "direction": "to_source"
             },
             {
               "id": "col1-4",
@@ -10066,7 +10079,7 @@
             {
               "id": "col1-7",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Arabam kırmızı.",
+              "prompt": "Arabam kırmızı.",
               "answer": "My car is red .",
               "bank": [
                 "My",
@@ -10080,7 +10093,7 @@
             {
               "id": "col1-8",
               "type": "fill_blank",
-              "prompt": "'The sky is ___.' — Gökyüzü mavidir.",
+              "prompt": "The sky is ___.",
               "answer": "blue",
               "acceptableAnswers": []
             },
@@ -10136,7 +10149,7 @@
             {
               "id": "col1-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Maviyi severim.",
+              "prompt": "Maviyi severim.",
               "answer": "I like blue .",
               "bank": [
                 "I",
@@ -10172,7 +10185,7 @@
             {
               "id": "col2-2",
               "type": "fill_blank",
-              "prompt": "'a ___ book' (yeşil bir kitap)",
+              "prompt": "a ___ book",
               "answer": "green",
               "acceptableAnswers": []
             },
@@ -10241,7 +10254,7 @@
             {
               "id": "col2-7",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Sarı bir kalemim var.",
+              "prompt": "Sarı bir kalemim var.",
               "answer": "I have a yellow pencil .",
               "bank": [
                 "I",
@@ -10256,7 +10269,7 @@
             {
               "id": "col2-8",
               "type": "fill_blank",
-              "prompt": "'It is ___ green tree.' (a/an seç)",
+              "prompt": "It is ___ green tree.",
               "answer": "a",
               "acceptableAnswers": [],
               "explanation": "green sessizle başlar; 'a' kullanılır."
@@ -10313,7 +10326,7 @@
             {
               "id": "col2-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Mavi bir gömlek istiyorum.",
+              "prompt": "Mavi bir gömlek istiyorum.",
               "answer": "I want a blue shirt .",
               "bank": [
                 "I",
@@ -10350,7 +10363,7 @@
             {
               "id": "col3-2",
               "type": "fill_blank",
-              "prompt": "'What ___ is your car?' — Araban ne renk?",
+              "prompt": "What ___ is your car?",
               "answer": "color",
               "acceptableAnswers": [
                 "colour"
@@ -10408,7 +10421,7 @@
             {
               "id": "col3-6",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Top ne renk?",
+              "prompt": "Top ne renk?",
               "answer": "What color is the ball ?",
               "bank": [
                 "What",
@@ -10435,7 +10448,7 @@
             {
               "id": "col3-8",
               "type": "fill_blank",
-              "prompt": "Yanıt: 'It is ___.' (kırmızı)",
+              "prompt": "It is ___.",
               "answer": "red",
               "acceptableAnswers": []
             },
@@ -10491,7 +10504,7 @@
             {
               "id": "col3-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: En sevdiğim renk mavi.",
+              "prompt": "En sevdiğim renk mavi.",
               "answer": "My favorite color is blue .",
               "bank": [
                 "My",
@@ -10528,7 +10541,7 @@
             {
               "id": "col4-2",
               "type": "fill_blank",
-              "prompt": "'a small ___ cat' (siyah küçük bir kedi)",
+              "prompt": "a small ___ cat",
               "answer": "black",
               "acceptableAnswers": [],
               "explanation": "Sıralama: boyut + renk + isim."
@@ -10536,7 +10549,7 @@
             {
               "id": "col4-3",
               "type": "multiple_choice",
-              "prompt": "Hangisi doğrudur?",
+              "prompt": "",
               "options": [
                 "a red big car",
                 "a big red car",
@@ -10585,7 +10598,7 @@
             {
               "id": "col4-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Büyük sarı bir çiçek görüyorum.",
+              "prompt": "Büyük sarı bir çiçek görüyorum.",
               "answer": "I see a big yellow flower .",
               "bank": [
                 "I",
@@ -10613,7 +10626,7 @@
             {
               "id": "col4-8",
               "type": "fill_blank",
-              "prompt": "Renkler ile çoğul: 'I have ___ apples.' (kırmızı elmalar)",
+              "prompt": "I have ___ apples.",
               "answer": "red",
               "acceptableAnswers": []
             },
@@ -10669,7 +10682,7 @@
             {
               "id": "col4-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Yeni arabam siyah.",
+              "prompt": "Yeni arabam siyah.",
               "answer": "My new car is black .",
               "bank": [
                 "My",
@@ -10762,7 +10775,7 @@
             {
               "id": "col5-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Bayrak kırmızı ve beyaz.",
+              "prompt": "Bayrak kırmızı ve beyaz.",
               "answer": "The flag is red and white .",
               "bank": [
                 "The",
@@ -10791,7 +10804,7 @@
             {
               "id": "col5-8",
               "type": "fill_blank",
-              "prompt": "'Snow is ___.'",
+              "prompt": "Snow is ___.",
               "answer": "white",
               "acceptableAnswers": []
             },
@@ -10846,7 +10859,7 @@
             {
               "id": "col5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: En sevdiğim renk yeşil.",
+              "prompt": "En sevdiğim renk yeşil.",
               "answer": "My favorite color is green .",
               "bank": [
                 "My",
@@ -11087,12 +11100,13 @@
             },
             {
               "id": "wt1-3",
-              "type": "fill_blank",
-              "prompt": "'rainy' Türkçesi: ___",
+              "type": "translate",
               "answer": "yağmurlu",
               "acceptableAnswers": [
                 "yagmurlu"
-              ]
+              ],
+              "source": "rainy",
+              "direction": "to_source"
             },
             {
               "id": "wt1-4",
@@ -11146,7 +11160,7 @@
             {
               "id": "wt1-7",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Bugün güneşli.",
+              "prompt": "Bugün güneşli.",
               "answer": "It is sunny today .",
               "bank": [
                 "It",
@@ -11160,7 +11174,7 @@
             {
               "id": "wt1-8",
               "type": "fill_blank",
-              "prompt": "'In summer, it is ___.' (sıcak)",
+              "prompt": "In summer, it is ___.",
               "answer": "hot",
               "acceptableAnswers": []
             },
@@ -11216,7 +11230,7 @@
             {
               "id": "wt1-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Kışın hava soğuk olur.",
+              "prompt": "Kışın hava soğuk olur.",
               "answer": "It is cold in winter .",
               "bank": [
                 "It",
@@ -11253,7 +11267,7 @@
             {
               "id": "wt2-2",
               "type": "fill_blank",
-              "prompt": "'___ is hot today.' — Bugün hava sıcak.",
+              "prompt": "___ is hot today.",
               "answer": "It",
               "acceptableAnswers": [],
               "explanation": "Türkçede 'sıcak' tek kelime cümle, İngilizcede 'It is hot' kalıbı şart."
@@ -11261,7 +11275,7 @@
             {
               "id": "wt2-3",
               "type": "multiple_choice",
-              "prompt": "Hangisi doğrudur?",
+              "prompt": "",
               "options": [
                 "Cold today.",
                 "Is cold today.",
@@ -11309,7 +11323,7 @@
             {
               "id": "wt2-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Yazın hava sıcak olur.",
+              "prompt": "Yazın hava sıcak olur.",
               "answer": "It is hot in summer .",
               "bank": [
                 "It",
@@ -11337,7 +11351,7 @@
             {
               "id": "wt2-8",
               "type": "fill_blank",
-              "prompt": "'It is ___' kalıbındaki 'it' Türkçeye:",
+              "prompt": "It is ___",
               "answer": "çevrilmez",
               "acceptableAnswers": [
                 "cevirilmez",
@@ -11400,7 +11414,7 @@
             {
               "id": "wt2-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Sonbaharda hava serindir.",
+              "prompt": "Sonbaharda hava serindir.",
               "answer": "It is cool in autumn .",
               "bank": [
                 "It",
@@ -11494,7 +11508,7 @@
             {
               "id": "wt3-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Ankara'da kar yağıyor.",
+              "prompt": "Ankara'da kar yağıyor.",
               "answer": "It is snowing in Ankara .",
               "bank": [
                 "It",
@@ -11522,7 +11536,7 @@
             {
               "id": "wt3-8",
               "type": "fill_blank",
-              "prompt": "Şu an olan eylem: 'It is ___.' (rain)",
+              "prompt": "It is ___.",
               "answer": "raining",
               "acceptableAnswers": [],
               "explanation": "Şu an: -ing ekli biçim."
@@ -11579,7 +11593,7 @@
             {
               "id": "wt3-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: İstanbul'da yağmur yağıyor.",
+              "prompt": "İstanbul'da yağmur yağıyor.",
               "answer": "It is raining in Istanbul .",
               "bank": [
                 "It",
@@ -11616,7 +11630,7 @@
             {
               "id": "wt4-2",
               "type": "fill_blank",
-              "prompt": "'How is the ___ today?' — Bugün hava nasıl?",
+              "prompt": "How is the ___ today?",
               "answer": "weather",
               "acceptableAnswers": []
             },
@@ -11672,7 +11686,7 @@
             {
               "id": "wt4-6",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Şimdi yağmur yağıyor mu?",
+              "prompt": "Şimdi yağmur yağıyor mu?",
               "answer": "Is it raining now ?",
               "bank": [
                 "Is",
@@ -11756,7 +11770,7 @@
             {
               "id": "wt4-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: İzmir'de hava nasıl?",
+              "prompt": "İzmir'de hava nasıl?",
               "answer": "How is the weather in Izmir ?",
               "bank": [
                 "How",
@@ -11861,7 +11875,7 @@
             {
               "id": "wt5-7",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Kışın hava soğuk olur.",
+              "prompt": "Kışın hava soğuk olur.",
               "answer": "It is cold in winter .",
               "bank": [
                 "It",
@@ -11876,7 +11890,7 @@
             {
               "id": "wt5-8",
               "type": "fill_blank",
-              "prompt": "'It snows in ___.'",
+              "prompt": "It snows in ___.",
               "answer": "winter",
               "acceptableAnswers": []
             },
@@ -11931,7 +11945,7 @@
             {
               "id": "wt5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Sonbaharda rüzgarlı olur.",
+              "prompt": "Sonbaharda rüzgarlı olur.",
               "answer": "In autumn , it is windy .",
               "bank": [
                 "In",
@@ -12241,7 +12255,7 @@
             {
               "id": "pl1-7",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Okulum büyük.",
+              "prompt": "Okulum büyük.",
               "answer": "My school is big .",
               "bank": [
                 "My",
@@ -12254,10 +12268,11 @@
             },
             {
               "id": "pl1-8",
-              "type": "fill_blank",
-              "prompt": "'restaurant' Türkçesi: ___",
+              "type": "translate",
               "answer": "restoran",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "source": "restaurant",
+              "direction": "to_source"
             },
             {
               "id": "pl1-9",
@@ -12311,7 +12326,7 @@
             {
               "id": "pl1-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Havalimanı uzakta.",
+              "prompt": "Havalimanı uzakta.",
               "answer": "The airport is far .",
               "bank": [
                 "The",
@@ -12404,7 +12419,7 @@
             {
               "id": "pl2-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: O okulda.",
+              "prompt": "O okulda.",
               "answer": "She is at school .",
               "bank": [
                 "She",
@@ -12432,7 +12447,7 @@
             {
               "id": "pl2-8",
               "type": "fill_blank",
-              "prompt": "'My father is ___ work.' (işte)",
+              "prompt": "My father is ___ work.",
               "answer": "at",
               "acceptableAnswers": []
             },
@@ -12489,7 +12504,7 @@
             {
               "id": "pl2-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Havalimanındayım.",
+              "prompt": "Havalimanındayım.",
               "answer": "I am at the airport .",
               "bank": [
                 "I",
@@ -12526,7 +12541,7 @@
             {
               "id": "pl3-2",
               "type": "fill_blank",
-              "prompt": "'___ is the bank?' — Banka nerede?",
+              "prompt": "___ is the bank?",
               "answer": "Where",
               "acceptableAnswers": []
             },
@@ -12582,7 +12597,7 @@
             {
               "id": "pl3-6",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Evin nerede?",
+              "prompt": "Evin nerede?",
               "answer": "Where is your house ?",
               "bank": [
                 "Where",
@@ -12610,7 +12625,7 @@
             {
               "id": "pl3-8",
               "type": "fill_blank",
-              "prompt": "'Where ___ they?' — Onlar nerede?",
+              "prompt": "Where ___ they?",
               "answer": "are",
               "acceptableAnswers": []
             },
@@ -12666,7 +12681,7 @@
             {
               "id": "pl3-12",
               "type": "tap_words_in_order",
-              "prompt": "Soruyu diz: Otobüs durağı nerede?",
+              "prompt": "Otobüs durağı nerede?",
               "answer": "Where is the bus stop ?",
               "bank": [
                 "Where",
@@ -12703,7 +12718,7 @@
             {
               "id": "pl4-2",
               "type": "fill_blank",
-              "prompt": "'The cat is ___ the chair.' (üstünde)",
+              "prompt": "The cat is ___ the chair.",
               "answer": "on",
               "acceptableAnswers": []
             },
@@ -12759,7 +12774,7 @@
             {
               "id": "pl4-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Kedi yatağın üzerinde.",
+              "prompt": "Kedi yatağın üzerinde.",
               "answer": "The cat is on the bed .",
               "bank": [
                 "The",
@@ -12845,7 +12860,7 @@
             {
               "id": "pl4-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Telefonum masanın üzerinde.",
+              "prompt": "Telefonum masanın üzerinde.",
               "answer": "My phone is on the desk .",
               "bank": [
                 "My",
@@ -12882,7 +12897,7 @@
             {
               "id": "pl5-2",
               "type": "fill_blank",
-              "prompt": "'I work ___ a hospital.' (içinde)",
+              "prompt": "I work ___ a hospital.",
               "answer": "in",
               "acceptableAnswers": [],
               "explanation": "Bina içinde olduğu için 'in'."
@@ -12939,7 +12954,7 @@
             {
               "id": "pl5-6",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Kitaplarım rafın üzerinde.",
+              "prompt": "Kitaplarım rafın üzerinde.",
               "answer": "My books are on the shelf .",
               "bank": [
                 "My",
@@ -12968,7 +12983,7 @@
             {
               "id": "pl5-8",
               "type": "fill_blank",
-              "prompt": "'The cat is ___ the bed.' (üstünde)",
+              "prompt": "The cat is ___ the bed.",
               "answer": "on",
               "acceptableAnswers": []
             },
@@ -13024,7 +13039,7 @@
             {
               "id": "pl5-12",
               "type": "tap_words_in_order",
-              "prompt": "Cümleyi diz: Arkadaşların nerede?",
+              "prompt": "Arkadaşların nerede?",
               "answer": "Where are your friends ?",
               "bank": [
                 "Where",
@@ -13198,7 +13213,7 @@
             {
               "id": "rv1-3",
               "type": "fill_blank",
-              "prompt": "'I ___ from Turkey.'",
+              "prompt": "I ___ from Turkey.",
               "answer": "am",
               "acceptableAnswers": []
             },
@@ -13241,7 +13256,7 @@
             {
               "id": "rv1-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Benim adım Ahmet.'",
+              "prompt": "Benim adım Ahmet.",
               "answer": "My name is Ahmet",
               "bank": [
                 "My",
@@ -13268,7 +13283,7 @@
             {
               "id": "rv1-8",
               "type": "fill_blank",
-              "prompt": "'Onlar evde değiller.' = 'They ___ at home.'",
+              "prompt": "They ___ at home.",
               "answer": "aren't",
               "acceptableAnswers": [
                 "are not"
@@ -13335,7 +13350,7 @@
             {
               "id": "rv2-3",
               "type": "fill_blank",
-              "prompt": "'Annem öğretmen.' = 'My ___ is a teacher.'",
+              "prompt": "My ___ is a teacher.",
               "answer": "mother",
               "acceptableAnswers": [
                 "mom",
@@ -13380,7 +13395,7 @@
             {
               "id": "rv2-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'O kahve içmez.'",
+              "prompt": "O kahve içmez.",
               "answer": "She doesn't drink coffee",
               "bank": [
                 "She",
@@ -13471,7 +13486,7 @@
             {
               "id": "rv3-3",
               "type": "fill_blank",
-              "prompt": "'Güneş parlıyor.' = '___ sun is shining.'",
+              "prompt": "___ sun is shining.",
               "answer": "The",
               "acceptableAnswers": []
             },
@@ -13513,7 +13528,7 @@
             {
               "id": "rv3-6",
               "type": "tap_words_in_order",
-              "prompt": "Sırala: 'Kaç erkek kardeşin var.'",
+              "prompt": "Kaç erkek kardeşin var.",
               "answer": "How many brothers do you have",
               "bank": [
                 "How",
@@ -13542,7 +13557,7 @@
             {
               "id": "rv3-8",
               "type": "fill_blank",
-              "prompt": "'I drink ___ every morning.' (Her sabah çay içerim — genel.)",
+              "prompt": "I drink ___ every morning.",
               "answer": "tea",
               "acceptableAnswers": []
             },
