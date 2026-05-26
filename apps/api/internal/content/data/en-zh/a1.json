@@ -168,7 +168,7 @@
             {
               "id": "alp1-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的单词（注意 qu/k 的区别）",
+              "prompt": "你听到的单词（注意 qu/k 的区别）",
               "spokenText": "queen",
               "options": [
                 "queen",
@@ -437,7 +437,7 @@
             {
               "id": "alp3-4",
               "type": "match_pairs",
-              "prompt": "配对：字母与示例",
+              "prompt": "字母与示例",
               "pairs": [
                 {
                   "left": "W",
@@ -460,7 +460,7 @@
             {
               "id": "alp3-5",
               "type": "multiple_choice",
-              "prompt": "选择你听到的词（注意 v/w 的区别）",
+              "prompt": "你听到的词（注意 v/w 的区别）",
               "options": [
                 "wine",
                 "vine",
@@ -474,7 +474,7 @@
             {
               "id": "alp3-6",
               "type": "listen_and_choose",
-              "prompt": "选择正确发音：「very good」",
+              "prompt": "正确发音：「very good」",
               "spokenText": "very",
               "options": [
                 "/ˈveri ɡʊd/（上齿咬下唇）",
@@ -727,7 +727,7 @@
             {
               "id": "alp5-4",
               "type": "match_pairs",
-              "prompt": "配对：单词与不发音的字母",
+              "prompt": "单词与不发音的字母",
               "pairs": [
                 {
                   "left": "know",
@@ -800,7 +800,7 @@
             {
               "id": "alp5-9",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的词",
+              "prompt": "你听到的词",
               "spokenText": "write",
               "options": [
                 "write",
@@ -836,7 +836,7 @@
             {
               "id": "alp5-12",
               "type": "match_pairs",
-              "prompt": "配对：发音相同的对",
+              "prompt": "发音相同的对",
               "pairs": [
                 {
                   "left": "know",
@@ -905,7 +905,7 @@
             {
               "id": "alp6-4",
               "type": "multiple_choice",
-              "prompt": "配对：字母名与字母",
+              "prompt": "字母名与字母",
               "options": [
                 "i",
                 "ay",
@@ -936,7 +936,7 @@
             {
               "id": "alp6-5",
               "type": "match_pairs",
-              "prompt": "选择正确的拼读：「WANG」(王)",
+              "prompt": "拼读：「WANG」(王)",
               "pairs": [
                 {
                   "left": "A",
@@ -1023,7 +1023,7 @@
             {
               "id": "alp6-11",
               "type": "match_pairs",
-              "prompt": "配对：字母与示例单词",
+              "prompt": "字母与示例单词",
               "pairs": [
                 {
                   "left": "C",
@@ -1609,7 +1609,7 @@
             {
               "id": "gr3-6",
               "type": "tap_words_in_order",
-              "prompt": "选择正确的回答：「How are you?」",
+              "prompt": "回答：「How are you?」",
               "answer": "I'm fine. And you?",
               "bank": [
                 "I",
@@ -1659,7 +1659,7 @@
             {
               "id": "gr3-9",
               "type": "listen_and_choose",
-              "prompt": "选择最自然的回答：",
+              "prompt": "最自然的回答：",
               "spokenText": "I'm fine",
               "options": [
                 "Not bad, thanks.",
@@ -1910,7 +1910,7 @@
             {
               "id": "gr5-6",
               "type": "multiple_choice",
-              "prompt": "选择对老师最合适的回应：",
+              "prompt": "对老师最合适的回应：",
               "options": [
                 "Good morning, teacher.",
                 "Yo, teacher!",
@@ -2113,7 +2113,7 @@
             {
               "id": "gr6-6",
               "type": "tap_words_in_order",
-              "prompt": "选择正确的句子：",
+              "prompt": "句子：",
               "answer": "I am from Beijing.",
               "bank": [
                 "I",
@@ -2134,7 +2134,7 @@
             {
               "id": "gr6-7",
               "type": "fill_blank",
-              "prompt": "组句:我是一名老师。",
+              "prompt": "我是一名老师。",
               "answer": "I am a teacher",
               "acceptableAnswers": [],
               "explanation": "汉语「我是医生」是几个字，英语「I am a doctor」是三个词。",
@@ -2148,7 +2148,7 @@
             {
               "id": "gr6-8",
               "type": "multiple_choice",
-              "prompt": "填空：「I am ___ engineer.」(我是工程师)",
+              "prompt": "「I am ___ engineer.」(我是工程师)",
               "options": [
                 "I am Turkish.",
                 "I am from Turkey.",
@@ -2164,7 +2164,7 @@
             {
               "id": "gr6-9",
               "type": "listen_and_choose",
-              "prompt": "选择正确的句子：「我 25 岁」",
+              "prompt": "句子：「我 25 岁」",
               "spokenText": "Nice to meet you, too.",
               "options": [
                 "I am 25 years old.",
@@ -3290,7 +3290,7 @@
             {
               "id": "pr6-10",
               "type": "multiple_choice",
-              "prompt": "填空：「I love ___ family.」(我爱我的家人)",
+              "prompt": "「I love ___ family.」(我爱我的家人)",
               "options": [
                 "he",
                 "she",
@@ -3946,7 +3946,7 @@
             {
               "id": "tb3-7",
               "type": "multiple_choice",
-              "prompt": "选择正确的简答：「Are you Chinese?」",
+              "prompt": "简答：「Are you Chinese?」",
               "options": [
                 "Yes, I am.",
                 "Yes, I.",
@@ -3968,7 +3968,7 @@
             {
               "id": "tb3-9",
               "type": "multiple_choice",
-              "prompt": "选择最自然的疑问：「她在家吗？」",
+              "prompt": "最自然的疑问：「她在家吗？」",
               "options": [
                 "Is she at home?",
                 "She is at home?",
@@ -4073,7 +4073,7 @@
             {
               "id": "tb4-6",
               "type": "multiple_choice",
-              "prompt": "填空：「___ are two cats here.」",
+              "prompt": "「___ are two cats here.」",
               "options": [
                 "There isn't",
                 "There aren't",
@@ -5179,7 +5179,7 @@
             {
               "id": "nm4-3",
               "type": "multiple_choice",
-              "prompt": "填空：「___ is two o'clock.」",
+              "prompt": "「___ is two o'clock.」",
               "options": [
                 "quarter",
                 "half",
@@ -6738,7 +6738,7 @@
             {
               "id": "fm6-8",
               "type": "multiple_choice",
-              "prompt": "填空：「I have ___ brothers and ___ sisters.」(2 哥 1 妹)",
+              "prompt": "「I have ___ brothers and ___ sisters.」(2 哥 1 妹)",
               "options": [
                 "Annem nazik.",
                 "Babam nazik.",
@@ -6756,7 +6756,7 @@
             {
               "id": "fm6-9",
               "type": "listen_and_choose",
-              "prompt": "选择正确的句子：「我家有五口人」",
+              "prompt": "句子：「我家有五口人」",
               "spokenText": "My brother is tall.",
               "options": [
                 "There are five people in my family.",
@@ -7192,7 +7192,7 @@
             {
               "id": "ev2-3",
               "type": "multiple_choice",
-              "prompt": "填空：「I ___ speak English very well.」(我英语说得不太好)",
+              "prompt": "「I ___ speak English very well.」(我英语说得不太好)",
               "options": [
                 "She doesn't likes coffee.",
                 "She doesn't like coffee.",
@@ -7209,7 +7209,7 @@
             {
               "id": "ev2-4",
               "type": "fill_blank",
-              "prompt": "选择正确的句子：「他不工作」",
+              "prompt": "句子：「他不工作」",
               "answer": "He doesn't work.",
               "acceptableAnswers": [
                 "do not"
@@ -7342,7 +7342,7 @@
             {
               "id": "ev3-3",
               "type": "multiple_choice",
-              "prompt": "填空：「___ you speak Chinese?」",
+              "prompt": "「___ you speak Chinese?」",
               "options": [
                 "Does he plays tennis?",
                 "Does he play tennis?",
@@ -7626,7 +7626,7 @@
             {
               "id": "ev5-3",
               "type": "multiple_choice",
-              "prompt": "选择正确动词形式：「He ___ English.」(教英语)",
+              "prompt": "正确动词形式：「He ___ English.」(教英语)",
               "options": [
                 "teaches",
                 "teach",
@@ -8676,7 +8676,7 @@
             {
               "id": "ar4-9",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I am a student",
               "options": [
                 "I am a student",
@@ -8767,7 +8767,7 @@
             {
               "id": "ar5-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I want some water.",
               "options": [
                 "I want a water.",
@@ -8830,7 +8830,7 @@
             {
               "id": "ar5-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I have some bread.",
               "options": [
                 "I have a bread.",
@@ -8950,7 +8950,7 @@
             {
               "id": "ar6-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I play football.",
               "options": [
                 "I play football.",
@@ -9010,7 +9010,7 @@
             {
               "id": "ar6-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "Open the window, please.",
               "options": [
                 "Open a window, please.",
@@ -9285,7 +9285,7 @@
             {
               "id": "qu1-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "What is your name?",
               "options": [
                 "What is your name?",
@@ -9345,7 +9345,7 @@
             {
               "id": "qu1-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "Who is that?",
               "options": [
                 "Who is that?",
@@ -9453,7 +9453,7 @@
             {
               "id": "qu2-8",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "When is the meeting?",
               "options": [
                 "When is the meeting?",
@@ -9593,7 +9593,7 @@
             {
               "id": "qu3-8",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "How are you?",
               "options": [
                 "How are you?",
@@ -9724,7 +9724,7 @@
             {
               "id": "qu4-7",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "Whose pen is this?",
               "options": [
                 "Whose pen is this?",
@@ -9835,7 +9835,7 @@
             {
               "id": "qu5-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "Where do you live?",
               "options": [
                 "When do you live?",
@@ -9895,7 +9895,7 @@
             {
               "id": "qu5-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "When is the meeting?",
               "options": [
                 "Where is the meeting?",
@@ -10029,7 +10029,7 @@
             {
               "id": "qu6-6",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "How much is it?",
               "options": [
                 "How many is it?",
@@ -10080,7 +10080,7 @@
             {
               "id": "qu6-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "Why are you sad?",
               "options": [
                 "Why are you sad?",
@@ -10399,7 +10399,7 @@
             {
               "id": "col1-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的颜色",
+              "prompt": "你听到的颜色",
               "spokenText": "orange",
               "options": [
                 "orange",
@@ -10447,7 +10447,7 @@
             {
               "id": "col1-9",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "The grass is green.",
               "options": [
                 "The grass is green.",
@@ -10588,7 +10588,7 @@
             {
               "id": "col2-6",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I have a black bag.",
               "options": [
                 "I have a black back.",
@@ -10637,7 +10637,7 @@
             {
               "id": "col2-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "She has a purple dress.",
               "options": [
                 "She has a purple dress.",
@@ -10755,7 +10755,7 @@
             {
               "id": "col3-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "What color is your bag?",
               "options": [
                 "What color is your bag?",
@@ -10802,7 +10802,7 @@
             {
               "id": "col3-9",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "What color is this?",
               "options": [
                 "What color is that?",
@@ -10932,7 +10932,7 @@
             {
               "id": "col4-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I have a small red ball.",
               "options": [
                 "I have a small red ball.",
@@ -10993,7 +10993,7 @@
             {
               "id": "col4-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "Her dress is pink and white.",
               "options": [
                 "Her dress is pink and white.",
@@ -11109,7 +11109,7 @@
             {
               "id": "col5-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I have a green pen.",
               "options": [
                 "I have a green pen.",
@@ -11170,7 +11170,7 @@
             {
               "id": "col5-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "What color is your car?",
               "options": [
                 "What color is your car?",
@@ -11481,7 +11481,7 @@
             {
               "id": "wt1-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的单词",
+              "prompt": "你听到的单词",
               "spokenText": "rainy",
               "options": [
                 "sunny",
@@ -11528,7 +11528,7 @@
             {
               "id": "wt1-9",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "It is cold.",
               "options": [
                 "It is cold.",
@@ -11657,7 +11657,7 @@
             {
               "id": "wt2-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "It is windy.",
               "options": [
                 "It is windy.",
@@ -11725,7 +11725,7 @@
             {
               "id": "wt2-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "It is very hot today.",
               "options": [
                 "It is very hot today.",
@@ -11842,7 +11842,7 @@
             {
               "id": "wt3-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "It is raining.",
               "options": [
                 "It is rain.",
@@ -11891,7 +11891,7 @@
             {
               "id": "wt3-9",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "It snows in winter.",
               "options": [
                 "It snow in winter.",
@@ -12020,7 +12020,7 @@
             {
               "id": "wt4-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "How is the weather today?",
               "options": [
                 "How is the weather today?",
@@ -12081,7 +12081,7 @@
             {
               "id": "wt4-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "It is windy and cold.",
               "options": [
                 "It is windy and cold.",
@@ -12196,7 +12196,7 @@
             {
               "id": "wt5-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的季节",
+              "prompt": "你听到的季节",
               "spokenText": "autumn",
               "options": [
                 "autumn",
@@ -12256,7 +12256,7 @@
             {
               "id": "wt5-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I love summer.",
               "options": [
                 "I love summer.",
@@ -12577,7 +12577,7 @@
             {
               "id": "pl1-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的地点",
+              "prompt": "你听到的地点",
               "spokenText": "school",
               "options": [
                 "school",
@@ -12625,7 +12625,7 @@
             {
               "id": "pl1-9",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I go to the park.",
               "options": [
                 "I go to the park.",
@@ -12754,7 +12754,7 @@
             {
               "id": "pl2-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I am at home.",
               "options": [
                 "I am at home.",
@@ -12815,7 +12815,7 @@
             {
               "id": "pl2-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "He is in the kitchen.",
               "options": [
                 "He is in the kitchen.",
@@ -12932,7 +12932,7 @@
             {
               "id": "pl3-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "Where is the hospital?",
               "options": [
                 "Where is the hospital?",
@@ -12993,7 +12993,7 @@
             {
               "id": "pl3-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "Where are you now?",
               "options": [
                 "Where are you now?",
@@ -13109,7 +13109,7 @@
             {
               "id": "pl4-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "The pen is on the desk.",
               "options": [
                 "The pen is in the desk.",
@@ -13172,7 +13172,7 @@
             {
               "id": "pl4-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "The keys are on the table.",
               "options": [
                 "The keys are on the table.",
@@ -13288,7 +13288,7 @@
             {
               "id": "pl5-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "She is at the airport.",
               "options": [
                 "She is at the airport.",
@@ -13351,7 +13351,7 @@
             {
               "id": "pl5-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "I am at school now.",
               "options": [
                 "I am at school now.",
@@ -13590,7 +13590,7 @@
             {
               "id": "rv1-5",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的表达",
+              "prompt": "你听到的表达",
               "spokenText": "Nice to meet you",
               "options": [
                 "Nice to meet you",
@@ -13651,7 +13651,7 @@
             {
               "id": "rv1-10",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "He is my brother",
               "options": [
                 "He is my brother",
@@ -13763,7 +13763,7 @@
             {
               "id": "rv2-8",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的句子",
+              "prompt": "你听到的句子",
               "spokenText": "She works in a bank",
               "options": [
                 "She works in a bank",
@@ -13904,7 +13904,7 @@
             {
               "id": "rv3-7",
               "type": "listen_and_choose",
-              "prompt": "选择你听到的问题",
+              "prompt": "你听到的问题",
               "spokenText": "Where are you from?",
               "options": [
                 "Where are you from?",

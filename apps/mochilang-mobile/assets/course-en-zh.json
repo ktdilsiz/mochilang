@@ -171,7 +171,7 @@
                 {
                   "id": "alp1-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的单词（注意 qu/k 的区别）",
+                  "prompt": "你听到的单词（注意 qu/k 的区别）",
                   "spokenText": "queen",
                   "options": [
                     "queen",
@@ -440,7 +440,7 @@
                 {
                   "id": "alp3-4",
                   "type": "match_pairs",
-                  "prompt": "配对：字母与示例",
+                  "prompt": "字母与示例",
                   "pairs": [
                     {
                       "left": "W",
@@ -463,7 +463,7 @@
                 {
                   "id": "alp3-5",
                   "type": "multiple_choice",
-                  "prompt": "选择你听到的词（注意 v/w 的区别）",
+                  "prompt": "你听到的词（注意 v/w 的区别）",
                   "options": [
                     "wine",
                     "vine",
@@ -477,7 +477,7 @@
                 {
                   "id": "alp3-6",
                   "type": "listen_and_choose",
-                  "prompt": "选择正确发音：「very good」",
+                  "prompt": "正确发音：「very good」",
                   "spokenText": "very",
                   "options": [
                     "/ˈveri ɡʊd/（上齿咬下唇）",
@@ -730,7 +730,7 @@
                 {
                   "id": "alp5-4",
                   "type": "match_pairs",
-                  "prompt": "配对：单词与不发音的字母",
+                  "prompt": "单词与不发音的字母",
                   "pairs": [
                     {
                       "left": "know",
@@ -803,7 +803,7 @@
                 {
                   "id": "alp5-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的词",
+                  "prompt": "你听到的词",
                   "spokenText": "write",
                   "options": [
                     "write",
@@ -839,7 +839,7 @@
                 {
                   "id": "alp5-12",
                   "type": "match_pairs",
-                  "prompt": "配对：发音相同的对",
+                  "prompt": "发音相同的对",
                   "pairs": [
                     {
                       "left": "know",
@@ -908,7 +908,7 @@
                 {
                   "id": "alp6-4",
                   "type": "multiple_choice",
-                  "prompt": "配对：字母名与字母",
+                  "prompt": "字母名与字母",
                   "options": [
                     "i",
                     "ay",
@@ -939,7 +939,7 @@
                 {
                   "id": "alp6-5",
                   "type": "match_pairs",
-                  "prompt": "选择正确的拼读：「WANG」(王)",
+                  "prompt": "拼读：「WANG」(王)",
                   "pairs": [
                     {
                       "left": "A",
@@ -1026,7 +1026,7 @@
                 {
                   "id": "alp6-11",
                   "type": "match_pairs",
-                  "prompt": "配对：字母与示例单词",
+                  "prompt": "字母与示例单词",
                   "pairs": [
                     {
                       "left": "C",
@@ -1612,7 +1612,7 @@
                 {
                   "id": "gr3-6",
                   "type": "tap_words_in_order",
-                  "prompt": "选择正确的回答：「How are you?」",
+                  "prompt": "回答：「How are you?」",
                   "answer": "I'm fine. And you?",
                   "bank": [
                     "I",
@@ -1662,7 +1662,7 @@
                 {
                   "id": "gr3-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择最自然的回答：",
+                  "prompt": "最自然的回答：",
                   "spokenText": "I'm fine",
                   "options": [
                     "Not bad, thanks.",
@@ -1913,7 +1913,7 @@
                 {
                   "id": "gr5-6",
                   "type": "multiple_choice",
-                  "prompt": "选择对老师最合适的回应：",
+                  "prompt": "对老师最合适的回应：",
                   "options": [
                     "Good morning, teacher.",
                     "Yo, teacher!",
@@ -2116,7 +2116,7 @@
                 {
                   "id": "gr6-6",
                   "type": "tap_words_in_order",
-                  "prompt": "选择正确的句子：",
+                  "prompt": "句子：",
                   "answer": "I am from Beijing.",
                   "bank": [
                     "I",
@@ -2137,7 +2137,7 @@
                 {
                   "id": "gr6-7",
                   "type": "fill_blank",
-                  "prompt": "组句:我是一名老师。",
+                  "prompt": "我是一名老师。",
                   "answer": "I am a teacher",
                   "acceptableAnswers": [],
                   "explanation": "汉语「我是医生」是几个字，英语「I am a doctor」是三个词。",
@@ -2151,7 +2151,7 @@
                 {
                   "id": "gr6-8",
                   "type": "multiple_choice",
-                  "prompt": "填空：「I am ___ engineer.」(我是工程师)",
+                  "prompt": "「I am ___ engineer.」(我是工程师)",
                   "options": [
                     "I am Turkish.",
                     "I am from Turkey.",
@@ -2167,7 +2167,7 @@
                 {
                   "id": "gr6-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择正确的句子：「我 25 岁」",
+                  "prompt": "句子：「我 25 岁」",
                   "spokenText": "Nice to meet you, too.",
                   "options": [
                     "I am 25 years old.",
@@ -3293,7 +3293,7 @@
                 {
                   "id": "pr6-10",
                   "type": "multiple_choice",
-                  "prompt": "填空：「I love ___ family.」(我爱我的家人)",
+                  "prompt": "「I love ___ family.」(我爱我的家人)",
                   "options": [
                     "he",
                     "she",
@@ -3949,7 +3949,7 @@
                 {
                   "id": "tb3-7",
                   "type": "multiple_choice",
-                  "prompt": "选择正确的简答：「Are you Chinese?」",
+                  "prompt": "简答：「Are you Chinese?」",
                   "options": [
                     "Yes, I am.",
                     "Yes, I.",
@@ -3971,7 +3971,7 @@
                 {
                   "id": "tb3-9",
                   "type": "multiple_choice",
-                  "prompt": "选择最自然的疑问：「她在家吗？」",
+                  "prompt": "最自然的疑问：「她在家吗？」",
                   "options": [
                     "Is she at home?",
                     "She is at home?",
@@ -4076,7 +4076,7 @@
                 {
                   "id": "tb4-6",
                   "type": "multiple_choice",
-                  "prompt": "填空：「___ are two cats here.」",
+                  "prompt": "「___ are two cats here.」",
                   "options": [
                     "There isn't",
                     "There aren't",
@@ -5182,7 +5182,7 @@
                 {
                   "id": "nm4-3",
                   "type": "multiple_choice",
-                  "prompt": "填空：「___ is two o'clock.」",
+                  "prompt": "「___ is two o'clock.」",
                   "options": [
                     "quarter",
                     "half",
@@ -6741,7 +6741,7 @@
                 {
                   "id": "fm6-8",
                   "type": "multiple_choice",
-                  "prompt": "填空：「I have ___ brothers and ___ sisters.」(2 哥 1 妹)",
+                  "prompt": "「I have ___ brothers and ___ sisters.」(2 哥 1 妹)",
                   "options": [
                     "Annem nazik.",
                     "Babam nazik.",
@@ -6759,7 +6759,7 @@
                 {
                   "id": "fm6-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择正确的句子：「我家有五口人」",
+                  "prompt": "句子：「我家有五口人」",
                   "spokenText": "My brother is tall.",
                   "options": [
                     "There are five people in my family.",
@@ -7195,7 +7195,7 @@
                 {
                   "id": "ev2-3",
                   "type": "multiple_choice",
-                  "prompt": "填空：「I ___ speak English very well.」(我英语说得不太好)",
+                  "prompt": "「I ___ speak English very well.」(我英语说得不太好)",
                   "options": [
                     "She doesn't likes coffee.",
                     "She doesn't like coffee.",
@@ -7212,7 +7212,7 @@
                 {
                   "id": "ev2-4",
                   "type": "fill_blank",
-                  "prompt": "选择正确的句子：「他不工作」",
+                  "prompt": "句子：「他不工作」",
                   "answer": "He doesn't work.",
                   "acceptableAnswers": [
                     "do not"
@@ -7345,7 +7345,7 @@
                 {
                   "id": "ev3-3",
                   "type": "multiple_choice",
-                  "prompt": "填空：「___ you speak Chinese?」",
+                  "prompt": "「___ you speak Chinese?」",
                   "options": [
                     "Does he plays tennis?",
                     "Does he play tennis?",
@@ -7629,7 +7629,7 @@
                 {
                   "id": "ev5-3",
                   "type": "multiple_choice",
-                  "prompt": "选择正确动词形式：「He ___ English.」(教英语)",
+                  "prompt": "正确动词形式：「He ___ English.」(教英语)",
                   "options": [
                     "teaches",
                     "teach",
@@ -8679,7 +8679,7 @@
                 {
                   "id": "ar4-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I am a student",
                   "options": [
                     "I am a student",
@@ -8770,7 +8770,7 @@
                 {
                   "id": "ar5-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I want some water.",
                   "options": [
                     "I want a water.",
@@ -8833,7 +8833,7 @@
                 {
                   "id": "ar5-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I have some bread.",
                   "options": [
                     "I have a bread.",
@@ -8953,7 +8953,7 @@
                 {
                   "id": "ar6-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I play football.",
                   "options": [
                     "I play football.",
@@ -9013,7 +9013,7 @@
                 {
                   "id": "ar6-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Open the window, please.",
                   "options": [
                     "Open a window, please.",
@@ -9288,7 +9288,7 @@
                 {
                   "id": "qu1-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "What is your name?",
                   "options": [
                     "What is your name?",
@@ -9348,7 +9348,7 @@
                 {
                   "id": "qu1-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "Who is that?",
                   "options": [
                     "Who is that?",
@@ -9456,7 +9456,7 @@
                 {
                   "id": "qu2-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "When is the meeting?",
                   "options": [
                     "When is the meeting?",
@@ -9596,7 +9596,7 @@
                 {
                   "id": "qu3-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "How are you?",
                   "options": [
                     "How are you?",
@@ -9727,7 +9727,7 @@
                 {
                   "id": "qu4-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "Whose pen is this?",
                   "options": [
                     "Whose pen is this?",
@@ -9838,7 +9838,7 @@
                 {
                   "id": "qu5-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "Where do you live?",
                   "options": [
                     "When do you live?",
@@ -9898,7 +9898,7 @@
                 {
                   "id": "qu5-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "When is the meeting?",
                   "options": [
                     "Where is the meeting?",
@@ -10032,7 +10032,7 @@
                 {
                   "id": "qu6-6",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "How much is it?",
                   "options": [
                     "How many is it?",
@@ -10083,7 +10083,7 @@
                 {
                   "id": "qu6-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "Why are you sad?",
                   "options": [
                     "Why are you sad?",
@@ -10402,7 +10402,7 @@
                 {
                   "id": "col1-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的颜色",
+                  "prompt": "你听到的颜色",
                   "spokenText": "orange",
                   "options": [
                     "orange",
@@ -10450,7 +10450,7 @@
                 {
                   "id": "col1-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The grass is green.",
                   "options": [
                     "The grass is green.",
@@ -10591,7 +10591,7 @@
                 {
                   "id": "col2-6",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I have a black bag.",
                   "options": [
                     "I have a black back.",
@@ -10640,7 +10640,7 @@
                 {
                   "id": "col2-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She has a purple dress.",
                   "options": [
                     "She has a purple dress.",
@@ -10758,7 +10758,7 @@
                 {
                   "id": "col3-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "What color is your bag?",
                   "options": [
                     "What color is your bag?",
@@ -10805,7 +10805,7 @@
                 {
                   "id": "col3-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "What color is this?",
                   "options": [
                     "What color is that?",
@@ -10935,7 +10935,7 @@
                 {
                   "id": "col4-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I have a small red ball.",
                   "options": [
                     "I have a small red ball.",
@@ -10996,7 +10996,7 @@
                 {
                   "id": "col4-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Her dress is pink and white.",
                   "options": [
                     "Her dress is pink and white.",
@@ -11112,7 +11112,7 @@
                 {
                   "id": "col5-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I have a green pen.",
                   "options": [
                     "I have a green pen.",
@@ -11173,7 +11173,7 @@
                 {
                   "id": "col5-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "What color is your car?",
                   "options": [
                     "What color is your car?",
@@ -11484,7 +11484,7 @@
                 {
                   "id": "wt1-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的单词",
+                  "prompt": "你听到的单词",
                   "spokenText": "rainy",
                   "options": [
                     "sunny",
@@ -11531,7 +11531,7 @@
                 {
                   "id": "wt1-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It is cold.",
                   "options": [
                     "It is cold.",
@@ -11660,7 +11660,7 @@
                 {
                   "id": "wt2-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It is windy.",
                   "options": [
                     "It is windy.",
@@ -11728,7 +11728,7 @@
                 {
                   "id": "wt2-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It is very hot today.",
                   "options": [
                     "It is very hot today.",
@@ -11845,7 +11845,7 @@
                 {
                   "id": "wt3-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It is raining.",
                   "options": [
                     "It is rain.",
@@ -11894,7 +11894,7 @@
                 {
                   "id": "wt3-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It snows in winter.",
                   "options": [
                     "It snow in winter.",
@@ -12023,7 +12023,7 @@
                 {
                   "id": "wt4-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "How is the weather today?",
                   "options": [
                     "How is the weather today?",
@@ -12084,7 +12084,7 @@
                 {
                   "id": "wt4-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It is windy and cold.",
                   "options": [
                     "It is windy and cold.",
@@ -12199,7 +12199,7 @@
                 {
                   "id": "wt5-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的季节",
+                  "prompt": "你听到的季节",
                   "spokenText": "autumn",
                   "options": [
                     "autumn",
@@ -12259,7 +12259,7 @@
                 {
                   "id": "wt5-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I love summer.",
                   "options": [
                     "I love summer.",
@@ -12580,7 +12580,7 @@
                 {
                   "id": "pl1-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的地点",
+                  "prompt": "你听到的地点",
                   "spokenText": "school",
                   "options": [
                     "school",
@@ -12628,7 +12628,7 @@
                 {
                   "id": "pl1-9",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I go to the park.",
                   "options": [
                     "I go to the park.",
@@ -12757,7 +12757,7 @@
                 {
                   "id": "pl2-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I am at home.",
                   "options": [
                     "I am at home.",
@@ -12818,7 +12818,7 @@
                 {
                   "id": "pl2-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He is in the kitchen.",
                   "options": [
                     "He is in the kitchen.",
@@ -12935,7 +12935,7 @@
                 {
                   "id": "pl3-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "Where is the hospital?",
                   "options": [
                     "Where is the hospital?",
@@ -12996,7 +12996,7 @@
                 {
                   "id": "pl3-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "Where are you now?",
                   "options": [
                     "Where are you now?",
@@ -13112,7 +13112,7 @@
                 {
                   "id": "pl4-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The pen is on the desk.",
                   "options": [
                     "The pen is in the desk.",
@@ -13175,7 +13175,7 @@
                 {
                   "id": "pl4-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The keys are on the table.",
                   "options": [
                     "The keys are on the table.",
@@ -13291,7 +13291,7 @@
                 {
                   "id": "pl5-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is at the airport.",
                   "options": [
                     "She is at the airport.",
@@ -13354,7 +13354,7 @@
                 {
                   "id": "pl5-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I am at school now.",
                   "options": [
                     "I am at school now.",
@@ -13593,7 +13593,7 @@
                 {
                   "id": "rv1-5",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的表达",
+                  "prompt": "你听到的表达",
                   "spokenText": "Nice to meet you",
                   "options": [
                     "Nice to meet you",
@@ -13654,7 +13654,7 @@
                 {
                   "id": "rv1-10",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He is my brother",
                   "options": [
                     "He is my brother",
@@ -13766,7 +13766,7 @@
                 {
                   "id": "rv2-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She works in a bank",
                   "options": [
                     "She works in a bank",
@@ -13907,7 +13907,7 @@
                 {
                   "id": "rv3-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的问题",
+                  "prompt": "你听到的问题",
                   "spokenText": "Where are you from?",
                   "options": [
                     "Where are you from?",
@@ -14315,7 +14315,7 @@
                 {
                   "id": "ps1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I worked yesterday",
                   "options": [
                     "I worked yesterday",
@@ -14450,7 +14450,7 @@
                 {
                   "id": "ps2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I saw him yesterday",
                   "options": [
                     "I saw him yesterday",
@@ -14589,7 +14589,7 @@
                 {
                   "id": "ps3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "We didn't go out",
                   "options": [
                     "We didn't go out",
@@ -14730,7 +14730,7 @@
                 {
                   "id": "ps4-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的问句",
+                  "prompt": "你听到的问句",
                   "spokenText": "Did you eat lunch?",
                   "options": [
                     "Did you eat lunch?",
@@ -14868,7 +14868,7 @@
                 {
                   "id": "ps5-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He took the bus",
                   "options": [
                     "He took the bus",
@@ -15055,7 +15055,7 @@
                 {
                   "id": "ps6-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She was at home",
                   "options": [
                     "She was at home",
@@ -15408,7 +15408,7 @@
                 {
                   "id": "pc1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is cooking",
                   "options": [
                     "She is cooking",
@@ -15542,7 +15542,7 @@
                 {
                   "id": "pc2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He isn't working today",
                   "options": [
                     "He isn't working today",
@@ -15683,7 +15683,7 @@
                 {
                   "id": "pc3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I am studying right now",
                   "options": [
                     "I am studying right now",
@@ -15809,7 +15809,7 @@
                 {
                   "id": "pc4-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is opening the door",
                   "options": [
                     "She is opening the door",
@@ -15975,7 +15975,7 @@
                 {
                   "id": "pc5-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "They are swimming now",
                   "options": [
                     "They are swimming now",
@@ -16120,7 +16120,7 @@
                 {
                   "id": "pc6-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "We are looking for a flat",
                   "options": [
                     "We are looking for a flat",
@@ -16475,7 +16475,7 @@
                 {
                   "id": "pp1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "in the kitchen",
                   "options": [
                     "in the kitchen",
@@ -16613,7 +16613,7 @@
                 {
                   "id": "pp2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "at three o'clock",
                   "options": [
                     "at three o'clock",
@@ -16749,7 +16749,7 @@
                 {
                   "id": "pp3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He went to the park",
                   "options": [
                     "He went to the park",
@@ -16880,7 +16880,7 @@
                 {
                   "id": "pp4-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "in the evening",
                   "options": [
                     "in the evening",
@@ -17041,7 +17041,7 @@
                 {
                   "id": "pp5-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The bag is next to the chair",
                   "options": [
                     "The bag is next to the chair",
@@ -17201,7 +17201,7 @@
                 {
                   "id": "pp6-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She came by train",
                   "options": [
                     "She came by train",
@@ -17549,7 +17549,7 @@
                 {
                   "id": "ar1-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "I drink water every day",
                   "options": [
                     "I drink water every day",
@@ -17679,7 +17679,7 @@
                 {
                   "id": "ar2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "I have some questions",
                   "options": [
                     "I have some questions",
@@ -17823,7 +17823,7 @@
                 {
                   "id": "ar3-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "the Yellow Sea",
                   "options": [
                     "the Yellow Sea",
@@ -17947,7 +17947,7 @@
                 {
                   "id": "ar4-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I go to bed at eleven",
                   "options": [
                     "I go to bed at eleven",
@@ -18100,7 +18100,7 @@
                 {
                   "id": "ar5-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I saw a film. The film was great",
                   "options": [
                     "I saw a film. The film was great",
@@ -18266,7 +18266,7 @@
                 {
                   "id": "ar6-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is in hospital",
                   "options": [
                     "She is in hospital",
@@ -18610,7 +18610,7 @@
                 {
                   "id": "cm1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Today is colder than yesterday",
                   "options": [
                     "Today is colder than yesterday",
@@ -18744,7 +18744,7 @@
                 {
                   "id": "cm2-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "more difficult",
                   "options": [
                     "more difficult",
@@ -18892,7 +18892,7 @@
                 {
                   "id": "cm3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "the most beautiful place",
                   "options": [
                     "the most beautiful place",
@@ -19043,7 +19043,7 @@
                 {
                   "id": "cm4-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "It is better than before",
                   "options": [
                     "It is better than before",
@@ -19181,7 +19181,7 @@
                 {
                   "id": "cm5-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is as smart as her sister",
                   "options": [
                     "She is as smart as her sister",
@@ -19342,7 +19342,7 @@
                 {
                   "id": "cm6-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It is much colder today",
                   "options": [
                     "It is much colder today",
@@ -19663,7 +19663,7 @@
                 {
                   "id": "hg1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She has long hair",
                   "options": [
                     "She has long hair",
@@ -19797,7 +19797,7 @@
                 {
                   "id": "hg2-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He's got blue eyes",
                   "options": [
                     "He's got blue eyes",
@@ -19947,7 +19947,7 @@
                 {
                   "id": "hg3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的问句",
+                  "prompt": "你听到的问句",
                   "spokenText": "Do you have a pen?",
                   "options": [
                     "Do you have a pen?",
@@ -20073,7 +20073,7 @@
                 {
                   "id": "hg4-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Have a nice day",
                   "options": [
                     "Have a nice day",
@@ -20228,7 +20228,7 @@
                 {
                   "id": "hg5-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He has two cars",
                   "options": [
                     "He has two cars",
@@ -20385,7 +20385,7 @@
                 {
                   "id": "hg6-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She has a fever",
                   "options": [
                     "She has a fever",
@@ -20728,7 +20728,7 @@
                 {
                   "id": "sh1-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的问句",
+                  "prompt": "你听到的问句",
                   "spokenText": "How much is this?",
                   "options": [
                     "How much is this?",
@@ -20873,7 +20873,7 @@
                 {
                   "id": "sh2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I like the green one",
                   "options": [
                     "I like the green one",
@@ -21010,7 +21010,7 @@
                 {
                   "id": "sh3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I'll take it",
                   "options": [
                     "I'll take it",
@@ -21153,7 +21153,7 @@
                 {
                   "id": "sh4-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Cash or card?",
                   "options": [
                     "Cash or card?",
@@ -21307,7 +21307,7 @@
                 {
                   "id": "sh5-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Can I get a refund please",
                   "options": [
                     "Can I get a refund please",
@@ -21465,7 +21465,7 @@
                 {
                   "id": "sh6-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Everything is twenty percent off",
                   "options": [
                     "Everything is twenty percent off",
@@ -21821,7 +21821,7 @@
                 {
                   "id": "fd1-5",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的单词",
+                  "prompt": "你听到的单词",
                   "spokenText": "vegetable",
                   "options": [
                     "vegetable",
@@ -21869,7 +21869,7 @@
                 {
                   "id": "fd1-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的单词",
+                  "prompt": "你听到的单词",
                   "spokenText": "chicken",
                   "options": [
                     "chicken",
@@ -21999,7 +21999,7 @@
                 {
                   "id": "fd2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的单词",
+                  "prompt": "你听到的单词",
                   "spokenText": "coffee",
                   "options": [
                     "coffee",
@@ -22138,7 +22138,7 @@
                 {
                   "id": "fd3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "I'd like the chicken",
                   "options": [
                     "I'd like the chicken",
@@ -22279,7 +22279,7 @@
                 {
                   "id": "fd4-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的短语",
+                  "prompt": "你听到的短语",
                   "spokenText": "a cup of coffee",
                   "options": [
                     "a cup of coffee",
@@ -22431,7 +22431,7 @@
                 {
                   "id": "fd5-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The cake is very sweet",
                   "options": [
                     "The cake is very sweet",
@@ -22594,7 +22594,7 @@
                 {
                   "id": "fd6-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is a vegetarian",
                   "options": [
                     "She is a vegetarian",
@@ -22978,7 +22978,7 @@
                 {
                   "id": "fl1-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is sad today",
                   "options": [
                     "She is sad today",
@@ -23126,7 +23126,7 @@
                 {
                   "id": "fl2-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Are you thirsty",
                   "options": [
                     "Are you thirsty",
@@ -23314,7 +23314,7 @@
                 {
                   "id": "fl3-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is scared of dogs",
                   "options": [
                     "She is scared of dogs",
@@ -23473,7 +23473,7 @@
                 {
                   "id": "fl4-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I am bored at home",
                   "options": [
                     "I am bored at home",
@@ -23624,7 +23624,7 @@
                 {
                   "id": "fl5-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I feel a little tired",
                   "options": [
                     "I feel a little tired",
@@ -23988,7 +23988,7 @@
                 {
                   "id": "hb1-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I like reading books",
                   "options": [
                     "I like reading books",
@@ -24143,7 +24143,7 @@
                 {
                   "id": "hb2-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He plays the guitar",
                   "options": [
                     "He plays the guitar",
@@ -24304,7 +24304,7 @@
                 {
                   "id": "hb3-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I never play computer games",
                   "options": [
                     "I never play computer games",
@@ -24463,7 +24463,7 @@
                 {
                   "id": "hb4-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I enjoy listening to music",
                   "options": [
                     "I enjoy listening to music",
@@ -24618,7 +24618,7 @@
                 {
                   "id": "hb5-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "What do you like doing in your free time",
                   "options": [
                     "What do you like doing in your free time",
@@ -24982,7 +24982,7 @@
                 {
                   "id": "fp1-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is going to call you",
                   "options": [
                     "She is going to call you",
@@ -25150,7 +25150,7 @@
                 {
                   "id": "fp2-10",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It will rain tomorrow",
                   "options": [
                     "It will rain tomorrow",
@@ -25305,7 +25305,7 @@
                 {
                   "id": "fp3-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I am going to visit my parents",
                   "options": [
                     "I am going to visit my parents",
@@ -25461,7 +25461,7 @@
                 {
                   "id": "fp4-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "We are going to leave tomorrow morning",
                   "options": [
                     "We are going to leave tomorrow morning",
@@ -25617,7 +25617,7 @@
                 {
                   "id": "fp5-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I won't be late",
                   "options": [
                     "I won't be late",
@@ -25896,7 +25896,7 @@
                 {
                   "id": "rev1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Did you go to the party?",
                   "options": [
                     "Did you go to the party?",
@@ -26045,7 +26045,7 @@
                 {
                   "id": "rev2-9",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is taller than me",
                   "options": [
                     "She is taller than me",
@@ -26177,7 +26177,7 @@
                 {
                   "id": "rev3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I have two brothers",
                   "options": [
                     "I have two brothers",
@@ -26595,7 +26595,7 @@
                 {
                   "id": "pp1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I have lost my keys.",
                   "options": [
                     "I have lost my keys.",
@@ -26735,7 +26735,7 @@
                 {
                   "id": "pp2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "We have known each other for ten years.",
                   "options": [
                     "We have known each other for ten years.",
@@ -26873,7 +26873,7 @@
                 {
                   "id": "pp3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She has been ill since Tuesday.",
                   "options": [
                     "She has been ill since Tuesday.",
@@ -27009,7 +27009,7 @@
                 {
                   "id": "pp4-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He has never seen the sea.",
                   "options": [
                     "He has never seen the sea.",
@@ -27144,7 +27144,7 @@
                 {
                   "id": "pp5-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I haven't finished my homework yet.",
                   "options": [
                     "I haven't finished my homework yet.",
@@ -27268,7 +27268,7 @@
                 {
                   "id": "pp6-5",
                   "type": "match_pairs",
-                  "prompt": "选择更自然的时态",
+                  "prompt": "更自然的时态",
                   "pairs": [
                     {
                       "left": "我跑了 5 公里(刚结束,有结果)",
@@ -27322,7 +27322,7 @@
                 {
                   "id": "pp6-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It has been raining all day.",
                   "options": [
                     "It has been raining all day.",
@@ -27369,7 +27369,7 @@
                 {
                   "id": "pp6-12",
                   "type": "match_pairs",
-                  "prompt": "选择更合适的时态(完成时 vs 完成进行时)",
+                  "prompt": "更合适的时态(完成时 vs 完成进行时)",
                   "pairs": [
                     {
                       "left": "强调结果:她写完三封邮件了",
@@ -27713,7 +27713,7 @@
                 {
                   "id": "mod1-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Could you open the window, please?",
                   "options": [
                     "Could you open the window, please?",
@@ -27874,7 +27874,7 @@
                 {
                   "id": "mod2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "You don't have to come if you're tired.",
                   "options": [
                     "You don't have to come if you're tired.",
@@ -28013,7 +28013,7 @@
                 {
                   "id": "mod3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "You shouldn't worry too much.",
                   "options": [
                     "You shouldn't worry too much.",
@@ -28144,7 +28144,7 @@
                 {
                   "id": "mod4-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She might not come to the party.",
                   "options": [
                     "She might not come to the party.",
@@ -28296,7 +28296,7 @@
                 {
                   "id": "mod5-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "You don't have to bring anything.",
                   "options": [
                     "You don't have to bring anything.",
@@ -28470,7 +28470,7 @@
                 {
                   "id": "mod6-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "You'd better not be late again.",
                   "options": [
                     "You'd better not be late again.",
@@ -28864,7 +28864,7 @@
                 {
                   "id": "con1-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "If it snows, the roads get slippery.",
                   "options": [
                     "If it snows, the roads get slippery.",
@@ -29007,7 +29007,7 @@
                 {
                   "id": "con2-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "If you are late again, I will be very upset.",
                   "options": [
                     "If you are late again, I will be very upset.",
@@ -29151,7 +29151,7 @@
                 {
                   "id": "con3-7",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "If I were you, I would take the job.",
                   "options": [
                     "If I were you, I would take the job.",
@@ -29305,7 +29305,7 @@
                 {
                   "id": "con4-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "If I had a map, I wouldn't be lost now.",
                   "options": [
                     "If I had a map, I wouldn't be lost now.",
@@ -29452,7 +29452,7 @@
                 {
                   "id": "con5-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "If you had told me earlier, I could have helped.",
                   "options": [
                     "If you had told me earlier, I could have helped.",
@@ -29631,7 +29631,7 @@
                 {
                   "id": "con6-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I wish I could fly.",
                   "options": [
                     "I wish I could fly.",
@@ -30009,7 +30009,7 @@
                 {
                   "id": "pas1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The letter was sent yesterday.",
                   "options": [
                     "The letter was sent yesterday.",
@@ -30149,7 +30149,7 @@
                 {
                   "id": "pas2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The car has been repaired.",
                   "options": [
                     "The car has been repaired.",
@@ -30286,7 +30286,7 @@
                 {
                   "id": "pas3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The cake was eaten by the kids.",
                   "options": [
                     "The cake was eaten by the kids.",
@@ -30424,7 +30424,7 @@
                 {
                   "id": "pas4-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The door was opened by the wind.",
                   "options": [
                     "The door was opened by the wind.",
@@ -30564,7 +30564,7 @@
                 {
                   "id": "pas5-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The package will be sent tomorrow.",
                   "options": [
                     "The package will be sent tomorrow.",
@@ -30739,7 +30739,7 @@
                 {
                   "id": "pas6-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "My bike got stolen last week.",
                   "options": [
                     "My bike got stolen last week.",
@@ -31153,7 +31153,7 @@
                 {
                   "id": "phr1-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I gave up coffee last month.",
                   "options": [
                     "I gave up coffee last month.",
@@ -31288,7 +31288,7 @@
                 {
                   "id": "phr2-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Please turn it off.",
                   "options": [
                     "Please turn it off.",
@@ -31428,7 +31428,7 @@
                 {
                   "id": "phr3-8",
                   "type": "listen_and_choose",
-                  "prompt": "听并选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I'll work out the details tomorrow.",
                   "options": [
                     "I'll work out the details tomorrow.",
@@ -31543,7 +31543,7 @@
                 {
                   "id": "phr4-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Let's put off the trip until next week.",
                   "options": [
                     "Let's put off the trip until next week.",
@@ -31697,7 +31697,7 @@
                 {
                   "id": "phr5-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "They broke up after five years.",
                   "options": [
                     "They broke up after five years.",
@@ -31862,7 +31862,7 @@
                 {
                   "id": "phr6-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Can you turn it down?",
                   "options": [
                     "Can you turn it down?",
@@ -32272,7 +32272,7 @@
                 {
                   "id": "ff1-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She is very sympathetic to my situation.",
                   "options": [
                     "She is very sympathetic to my situation.",
@@ -32420,7 +32420,7 @@
                 {
                   "id": "ff2-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She works as a chef in a famous restaurant.",
                   "options": [
                     "She works as a chef in a famous restaurant.",
@@ -32567,7 +32567,7 @@
                 {
                   "id": "ff3-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Smoking is not allowed here.",
                   "options": [
                     "Smoking is not allowed here.",
@@ -32711,7 +32711,7 @@
                 {
                   "id": "ff4-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "He gave a brief explanation.",
                   "options": [
                     "He gave a brief explanation.",
@@ -32869,7 +32869,7 @@
                 {
                   "id": "ff5-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I eventually understood the problem.",
                   "options": [
                     "I eventually understood the problem.",
@@ -33054,7 +33054,7 @@
                 {
                   "id": "ff6-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She works in a textile factory.",
                   "options": [
                     "She works in a textile factory.",
@@ -33471,7 +33471,7 @@
                 {
                   "id": "tr1-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "What time does the bus leave?",
                   "options": [
                     "What time does the bus leave?",
@@ -33644,7 +33644,7 @@
                 {
                   "id": "tr2-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Could I have an extra towel, please?",
                   "options": [
                     "Could I have an extra towel, please?",
@@ -33817,7 +33817,7 @@
                 {
                   "id": "tr3-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It's just around the corner.",
                   "options": [
                     "It's just around the corner.",
@@ -33991,7 +33991,7 @@
                 {
                   "id": "tr4-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "What time should we set off?",
                   "options": [
                     "What time should we set off?",
@@ -34162,7 +34162,7 @@
                 {
                   "id": "tr5-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Where is the nearest metro station?",
                   "options": [
                     "Where is the nearest metro station?",
@@ -34546,7 +34546,7 @@
                 {
                   "id": "wk1-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I have a tight deadline.",
                   "options": [
                     "I have a tight deadline.",
@@ -34721,7 +34721,7 @@
                 {
                   "id": "wk2-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She works as a project manager.",
                   "options": [
                     "She works as a project manager.",
@@ -34892,7 +34892,7 @@
                 {
                   "id": "wk3-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I'll get back to you tomorrow.",
                   "options": [
                     "I'll get back to you tomorrow.",
@@ -35072,7 +35072,7 @@
                 {
                   "id": "wk4-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She manages a team of ten.",
                   "options": [
                     "She manages a team of ten.",
@@ -35248,7 +35248,7 @@
                 {
                   "id": "wk5-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Could we reschedule the meeting?",
                   "options": [
                     "Could we reschedule the meeting?",
@@ -35627,7 +35627,7 @@
                 {
                   "id": "st1-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "She was singing while I was driving.",
                   "options": [
                     "She was singing while I was driving.",
@@ -35806,7 +35806,7 @@
                 {
                   "id": "st2-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Finally, we reached the top.",
                   "options": [
                     "Finally, we reached the top.",
@@ -35980,7 +35980,7 @@
                 {
                   "id": "st3-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Apparently, he forgot to call.",
                   "options": [
                     "Apparently, he forgot to call.",
@@ -36153,7 +36153,7 @@
                 {
                   "id": "st4-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I'll never forget that day.",
                   "options": [
                     "I'll never forget that day.",
@@ -36330,7 +36330,7 @@
                 {
                   "id": "st5-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I was about to leave when the phone rang.",
                   "options": [
                     "I was about to leave when the phone rang.",
@@ -36724,7 +36724,7 @@
                 {
                   "id": "op1-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "Personally, I think it's a great idea.",
                   "options": [
                     "Personally, I think it's a great idea.",
@@ -36892,7 +36892,7 @@
                 {
                   "id": "op2-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I'm afraid I disagree.",
                   "options": [
                     "I'm afraid I disagree.",
@@ -37068,7 +37068,7 @@
                 {
                   "id": "op3-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I see your point, but I have to disagree.",
                   "options": [
                     "I see your point, but I have to disagree.",
@@ -37244,7 +37244,7 @@
                 {
                   "id": "op4-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "It might not be the best solution.",
                   "options": [
                     "It might not be the best solution.",
@@ -37419,7 +37419,7 @@
                 {
                   "id": "op5-8",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I'm afraid I can't agree with you.",
                   "options": [
                     "I'm afraid I can't agree with you.",
@@ -37724,7 +37724,7 @@
                 {
                   "id": "rev1-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "If I had more time, I would learn Italian.",
                   "options": [
                     "If I had more time, I would learn Italian.",
@@ -37867,7 +37867,7 @@
                 {
                   "id": "rev2-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "I ran into an old friend yesterday.",
                   "options": [
                     "I ran into an old friend yesterday.",
@@ -38007,7 +38007,7 @@
                 {
                   "id": "rev3-7",
                   "type": "listen_and_choose",
-                  "prompt": "选择你听到的句子",
+                  "prompt": "你听到的句子",
                   "spokenText": "The meeting has been postponed until Friday.",
                   "options": [
                     "The meeting has been postponed until Friday.",
@@ -39895,7 +39895,7 @@
                 {
                   "id": "n4-2",
                   "type": "match_pairs",
-                  "prompt": "配对「假朋友」",
+                  "prompt": "「假朋友」",
                   "pairs": [
                     {
                       "left": "actual",
@@ -50000,7 +50000,7 @@
                 {
                   "id": "biz1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Without further ado, let's dive into the agenda.",
                   "options": [
                     "Without further ado, let's dive into the agenda.",
@@ -50179,7 +50179,7 @@
                 {
                   "id": "biz2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "We have some flexibility on volume but not on price.",
                   "options": [
                     "We have some flexibility on volume but not on price.",
@@ -50361,7 +50361,7 @@
                 {
                   "id": "biz3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Notwithstanding the delay, the deliverables remain unchanged.",
                   "options": [
                     "Notwithstanding the delay, the deliverables remain unchanged.",
@@ -50550,7 +50550,7 @@
                 {
                   "id": "biz4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "We need to mitigate risk while pursuing growth.",
                   "options": [
                     "We need to mitigate risk while pursuing growth.",
@@ -50731,7 +50731,7 @@
                 {
                   "id": "biz5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "On balance, the quarter exceeded expectations despite supply-side pressures.",
                   "options": [
                     "On balance, the quarter exceeded expectations despite supply-side pressures.",
@@ -50913,7 +50913,7 @@
                 {
                   "id": "biz6-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Should you require any further information, please do not hesitate to contact me.",
                   "options": [
                     "Should you require any further information, please do not hesitate to contact me.",
@@ -51311,7 +51311,7 @@
                 {
                   "id": "ac1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The findings appear to support our hypothesis.",
                   "options": [
                     "The findings appear to support our hypothesis.",
@@ -51465,7 +51465,7 @@
                 {
                   "id": "ac2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Drawing on prior research, we extend the framework.",
                   "options": [
                     "Drawing on prior research, we extend the framework.",
@@ -51612,7 +51612,7 @@
                 {
                   "id": "ac3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The correlation is statistically significant at the one percent level.",
                   "options": [
                     "The correlation is statistically significant at the one percent level.",
@@ -51749,7 +51749,7 @@
                 {
                   "id": "ac4-5",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The literature suggests that this effect is well-established.",
                   "options": [
                     "The literature suggests that this effect is well-established.",
@@ -51913,7 +51913,7 @@
                 {
                   "id": "ac5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "While prior work has focused on outcomes, the underlying processes remain underexplored.",
                   "options": [
                     "While prior work has focused on outcomes, the underlying processes remain underexplored.",
@@ -52096,7 +52096,7 @@
                 {
                   "id": "ac6-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The findings have wider implications for policy and practice.",
                   "options": [
                     "The findings have wider implications for policy and practice.",
@@ -52499,7 +52499,7 @@
                 {
                   "id": "soc1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The judiciary remains independent in principle.",
                   "options": [
                     "The judiciary remains independent in principle.",
@@ -52642,7 +52642,7 @@
                 {
                   "id": "soc2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Marginalised groups face systemic barriers.",
                   "options": [
                     "Marginalised groups face systemic barriers.",
@@ -52783,7 +52783,7 @@
                 {
                   "id": "soc3-5",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Critics argue that the policy is short-sighted.",
                   "options": [
                     "Critics argue that the policy is short-sighted.",
@@ -52949,7 +52949,7 @@
                 {
                   "id": "soc4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Far from levelling the playing field, the reform may compound existing inequities.",
                   "options": [
                     "Far from levelling the playing field, the reform may compound existing inequities.",
@@ -53135,7 +53135,7 @@
                 {
                   "id": "soc5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Granted, the data are imperfect; that said, the trend is unmistakable.",
                   "options": [
                     "Granted, the data are imperfect; that said, the trend is unmistakable.",
@@ -53539,7 +53539,7 @@
                 {
                   "id": "id1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Let's touch base after the meeting.",
                   "options": [
                     "Let's touch base after the meeting.",
@@ -53708,7 +53708,7 @@
                 {
                   "id": "id2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "We need to address the elephant in the room.",
                   "options": [
                     "We need to address the elephant in the room.",
@@ -53849,7 +53849,7 @@
                 {
                   "id": "id3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Could you please check the figures one more time?",
                   "options": [
                     "Could you please check the figures one more time?",
@@ -53993,7 +53993,7 @@
                 {
                   "id": "id4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "We've made significant progress this quarter.",
                   "options": [
                     "We've made significant progress this quarter.",
@@ -54137,7 +54137,7 @@
                 {
                   "id": "id5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Let's circle back on that once we have more clarity.",
                   "options": [
                     "Let's circle back on that once we have more clarity.",
@@ -54321,7 +54321,7 @@
                 {
                   "id": "id6-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "I am sympathetic to your concern, but the policy stands.",
                   "options": [
                     "I am sympathetic to your concern, but the policy stands.",
@@ -54725,7 +54725,7 @@
                 {
                   "id": "gr1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Under no circumstances should you reveal the source.",
                   "options": [
                     "Under no circumstances should you reveal the source.",
@@ -54866,7 +54866,7 @@
                 {
                   "id": "gr2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "What concerns me most is the lack of transparency.",
                   "options": [
                     "What concerns me most is the lack of transparency.",
@@ -55014,7 +55014,7 @@
                 {
                   "id": "gr3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Having reviewed the data, she drew her conclusions.",
                   "options": [
                     "Having reviewed the data, she drew her conclusions.",
@@ -55160,7 +55160,7 @@
                 {
                   "id": "gr4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Not until the audit was completed did we grasp the full picture.",
                   "options": [
                     "Not until the audit was completed did we grasp the full picture.",
@@ -55339,7 +55339,7 @@
                 {
                   "id": "gr5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Having reviewed the proposal, we are prepared to move forward.",
                   "options": [
                     "Having reviewed the proposal, we are prepared to move forward.",
@@ -55710,7 +55710,7 @@
                 {
                   "id": "db1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "These claims are wholly unfounded.",
                   "options": [
                     "These claims are wholly unfounded.",
@@ -55853,7 +55853,7 @@
                 {
                   "id": "db2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The link between these variables is tenuous at best.",
                   "options": [
                     "The link between these variables is tenuous at best.",
@@ -56006,7 +56006,7 @@
                 {
                   "id": "db3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Conversely, smaller firms reported gains.",
                   "options": [
                     "Conversely, smaller firms reported gains.",
@@ -56157,7 +56157,7 @@
                 {
                   "id": "db4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Even granting the premise, the conclusion does not follow.",
                   "options": [
                     "Even granting the premise, the conclusion does not follow.",
@@ -56250,7 +56250,7 @@
                 {
                   "id": "dbt4-11",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "She told him that he had misunderstood her position entirely.",
                   "options": [
                     "She told him that he had misunderstood her position entirely.",
@@ -56351,7 +56351,7 @@
                 {
                   "id": "db5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "I take your point about timing; the underlying logic, however, still holds.",
                   "options": [
                     "I take your point about timing; the underlying logic, however, still holds.",
@@ -56792,7 +56792,7 @@
                 {
                   "id": "art1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Her debut novel is a remarkably accomplished piece of writing.",
                   "options": [
                     "Her debut novel is a remarkably accomplished piece of writing.",
@@ -56971,7 +56971,7 @@
                 {
                   "id": "art2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The screenplay never quite lives up to the premise.",
                   "options": [
                     "The screenplay never quite lives up to the premise.",
@@ -57149,7 +57149,7 @@
                 {
                   "id": "art3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The cinematography lingers on faces, drawing us into private moments.",
                   "options": [
                     "The cinematography lingers on faces, drawing us into private moments.",
@@ -57325,7 +57325,7 @@
                 {
                   "id": "art4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The performance is nothing short of a tour de force.",
                   "options": [
                     "The performance is nothing short of a tour de force.",
@@ -57497,7 +57497,7 @@
                 {
                   "id": "art5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的评价句",
+                  "prompt": "出你听到的评价句",
                   "spokenText": "It is by no means flawless, yet utterly compelling from start to finish.",
                   "options": [
                     "It is by no means flawless, yet utterly compelling from start to finish.",
@@ -57890,7 +57890,7 @@
                 {
                   "id": "nws1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "According to officials, no final decision has been made.",
                   "options": [
                     "According to officials, no final decision has been made.",
@@ -58072,7 +58072,7 @@
                 {
                   "id": "nws2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The agency declined to comment, citing the ongoing investigation.",
                   "options": [
                     "The agency declined to comment, citing the ongoing investigation.",
@@ -58244,7 +58244,7 @@
                 {
                   "id": "nws3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的标题",
+                  "prompt": "出你听到的标题",
                   "spokenText": "Talks Stall Amid Tariff Dispute: Report",
                   "options": [
                     "Talks Stall Amid Tariff Dispute: Report",
@@ -58421,7 +58421,7 @@
                 {
                   "id": "nws4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Far from being a panacea, the proposal raises more questions than it answers.",
                   "options": [
                     "Far from being a panacea, the proposal raises more questions than it answers.",
@@ -58594,7 +58594,7 @@
                 {
                   "id": "nws5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "We urge lawmakers, in the strongest possible terms, to reconsider.",
                   "options": [
                     "We urge lawmakers, in the strongest possible terms, to reconsider.",
@@ -58927,7 +58927,7 @@
                 {
                   "id": "rv1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Notwithstanding the delay, the deliverables remain unchanged.",
                   "options": [
                     "Notwithstanding the delay, the deliverables remain unchanged.",
@@ -59061,7 +59061,7 @@
                 {
                   "id": "rv2-5",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Critics argue the policy is short-sighted.",
                   "options": [
                     "Critics argue the policy is short-sighted.",
@@ -59200,7 +59200,7 @@
                 {
                   "id": "rv3-5",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "What concerns me most is the lack of transparency.",
                   "options": [
                     "What concerns me most is the lack of transparency.",
@@ -59591,7 +59591,7 @@
                 {
                   "id": "lit1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "He could discern, even in the gloom, the faint outline of the figure.",
                   "options": [
                     "He could discern, even in the gloom, the faint outline of the figure.",
@@ -59745,7 +59745,7 @@
                 {
                   "id": "lit2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The hour was late; the streets, deserted; the city, somnolent.",
                   "options": [
                     "The hour was late; the streets, deserted; the city, somnolent.",
@@ -59891,7 +59891,7 @@
                 {
                   "id": "lit3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Time, that thief of dreams, had stolen another year.",
                   "options": [
                     "Time, that thief of dreams, had stolen another year.",
@@ -60045,7 +60045,7 @@
                 {
                   "id": "lit4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "And the words came to her unbidden the rain the lamp the unanswered letter.",
                   "options": [
                     "And the words came to her unbidden the rain the lamp the unanswered letter.",
@@ -60199,7 +60199,7 @@
                 {
                   "id": "lit5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The proposal was a Trojan horse for tax cuts.",
                   "options": [
                     "The proposal was a Trojan horse for tax cuts.",
@@ -60548,7 +60548,7 @@
                 {
                   "id": "rh1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Government of the people, by the people, for the people.",
                   "options": [
                     "Government of the people, by the people, for the people.",
@@ -60686,7 +60686,7 @@
                 {
                   "id": "rh2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Imagine, for a moment, what this loss truly means.",
                   "options": [
                     "Imagine, for a moment, what this loss truly means.",
@@ -60836,7 +60836,7 @@
                 {
                   "id": "rh3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "To remain silent now is to be complicit later.",
                   "options": [
                     "To remain silent now is to be complicit later.",
@@ -60981,7 +60981,7 @@
                 {
                   "id": "rh4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Suffice it to say, the meeting did not go as planned.",
                   "options": [
                     "Suffice it to say, the meeting did not go as planned.",
@@ -61169,7 +61169,7 @@
                 {
                   "id": "rh5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Power tempts. Absolute power tempts absolutely.",
                   "options": [
                     "Power tempts. Absolute power tempts absolutely.",
@@ -61518,7 +61518,7 @@
                 {
                   "id": "ph1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Solipsism holds that only one's own mind is sure to exist.",
                   "options": [
                     "Solipsism holds that only one's own mind is sure to exist.",
@@ -61679,7 +61679,7 @@
                 {
                   "id": "ph2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Such an act may be defensible on consequentialist grounds.",
                   "options": [
                     "Such an act may be defensible on consequentialist grounds.",
@@ -61821,7 +61821,7 @@
                 {
                   "id": "ph3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "The argument commits a category mistake.",
                   "options": [
                     "The argument commits a category mistake.",
@@ -61964,7 +61964,7 @@
                 {
                   "id": "ph4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "On utilitarian grounds the policy is defensible; on deontological grounds it is not.",
                   "options": [
                     "On utilitarian grounds the policy is defensible; on deontological grounds it is not.",
@@ -62130,7 +62130,7 @@
                 {
                   "id": "ph5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Whether qualia can be reduced to neural activity remains contested.",
                   "options": [
                     "Whether qualia can be reduced to neural activity remains contested.",
@@ -62500,7 +62500,7 @@
                 {
                   "id": "rg1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的 US 句子",
+                  "prompt": "出你听到的 US 句子",
                   "spokenText": "I'll take the elevator to my apartment.",
                   "options": [
                     "I'll take the elevator to my apartment.",
@@ -62643,7 +62643,7 @@
                 {
                   "id": "rg2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "We've travelled extensively this year.",
                   "options": [
                     "We've travelled extensively this year.",
@@ -62782,7 +62782,7 @@
                 {
                   "id": "rg3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "See you this arvo at the servo.",
                   "options": [
                     "See you this arvo at the servo.",
@@ -62904,7 +62904,7 @@
                 {
                   "id": "rg4-5",
                   "type": "tap_words_in_order",
-                  "prompt": "组句(US):明天我会查看我的日程。",
+                  "prompt": "(US):明天我会查看我的日程。",
                   "answer": "I'll check my schedule tomorrow",
                   "bank": [
                     "I'll",
@@ -62919,7 +62919,7 @@
                 {
                   "id": "rg4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的 UK 句子",
+                  "prompt": "出你听到的 UK 句子",
                   "spokenText": "I'll check my schedule and ring you back.",
                   "options": [
                     "I'll check my schedule and ring you back.",
@@ -62955,7 +62955,7 @@
                 {
                   "id": "rg4-9",
                   "type": "tap_words_in_order",
-                  "prompt": "组句(UK):星期一我会给你打电话。",
+                  "prompt": "(UK):星期一我会给你打电话。",
                   "answer": "I'll ring you on Monday",
                   "bank": [
                     "I'll",
@@ -63040,7 +63040,7 @@
                 {
                   "id": "rg5-4",
                   "type": "tap_words_in_order",
-                  "prompt": "组句(正式 US 求职):我会欣然接受这个机会。",
+                  "prompt": "(正式 US 求职):我会欣然接受这个机会。",
                   "answer": "I would welcome the opportunity",
                   "bank": [
                     "I",
@@ -63067,7 +63067,7 @@
                 {
                   "id": "rg5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的 UK 邮件结尾",
+                  "prompt": "出你听到的 UK 邮件结尾",
                   "spokenText": "Kind regards, and do let me know if any questions arise.",
                   "options": [
                     "Kind regards, and do let me know if any questions arise.",
@@ -63102,7 +63102,7 @@
                 {
                   "id": "rg5-9",
                   "type": "tap_words_in_order",
-                  "prompt": "组句(熟人 UK):周五见,先走啦。",
+                  "prompt": "(熟人 UK):周五见,先走啦。",
                   "answer": "See you Friday cheers for now",
                   "bank": [
                     "See",
@@ -63430,7 +63430,7 @@
                 {
                   "id": "es1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Imagine a world where rain has become a luxury.",
                   "options": [
                     "Imagine a world where rain has become a luxury.",
@@ -63583,7 +63583,7 @@
                 {
                   "id": "es2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "While this view has merit, it overlooks the structural causes.",
                   "options": [
                     "While this view has merit, it overlooks the structural causes.",
@@ -63735,7 +63735,7 @@
                 {
                   "id": "es3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Ultimately, this question demands further empirical scrutiny.",
                   "options": [
                     "Ultimately, this question demands further empirical scrutiny.",
@@ -63879,7 +63879,7 @@
                 {
                   "id": "es4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Broadly speaking, the pattern holds, though notable exceptions exist.",
                   "options": [
                     "Broadly speaking, the pattern holds, though notable exceptions exist.",
@@ -64070,7 +64070,7 @@
                 {
                   "id": "es5-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "While ambitious, the work occasionally strains under its own weight.",
                   "options": [
                     "While ambitious, the work occasionally strains under its own weight.",
@@ -64471,7 +64471,7 @@
                 {
                   "id": "id1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "After three failed attempts, they threw in the towel.",
                   "options": [
                     "After three failed attempts, they threw in the towel.",
@@ -64646,7 +64646,7 @@
                 {
                   "id": "id2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "We weren't disagreeing; we were talking past each other.",
                   "options": [
                     "We weren't disagreeing; we were talking past each other.",
@@ -64803,7 +64803,7 @@
                 {
                   "id": "id3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "She always falls back on her training when things get tough.",
                   "options": [
                     "She always falls back on her training when things get tough.",
@@ -64956,7 +64956,7 @@
                 {
                   "id": "id4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "His promises rarely square with the figures.",
                   "options": [
                     "His promises rarely square with the figures.",
@@ -65295,7 +65295,7 @@
                 {
                   "id": "irn1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Not the worst film I've seen this year, by some distance.",
                   "options": [
                     "Not the worst film I've seen this year, by some distance.",
@@ -65416,7 +65416,7 @@
                 {
                   "id": "irn2-4",
                   "type": "tap_words_in_order",
-                  "prompt": "组句(讥讽):太棒了,又一次挫折。",
+                  "prompt": "(讥讽):太棒了,又一次挫折。",
                   "answer": "Wonderful another setback",
                   "bank": [
                     "Wonderful",
@@ -65441,7 +65441,7 @@
                 {
                   "id": "irn2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Oh, lovely. The printer's broken again.",
                   "options": [
                     "Oh, lovely. The printer's broken again.",
@@ -65594,7 +65594,7 @@
                 {
                   "id": "irn3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Officials described the talks as frank diplomatic code for tense.",
                   "options": [
                     "Officials described the talks as frank diplomatic code for tense.",
@@ -65751,7 +65751,7 @@
                 {
                   "id": "irn4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "It was, in his eyes, a perfectly executed catastrophe.",
                   "options": [
                     "It was, in his eyes, a perfectly executed catastrophe.",
@@ -66152,7 +66152,7 @@
                 {
                   "id": "po1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的诗行",
+                  "prompt": "出你听到的诗行",
                   "spokenText": "Shall I compare thee to a summer's day.",
                   "options": [
                     "Shall I compare thee to a summer's day.",
@@ -66307,7 +66307,7 @@
                 {
                   "id": "po2-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的诗行",
+                  "prompt": "出你听到的诗行",
                   "spokenText": "But soft what light through yonder window breaks.",
                   "options": [
                     "But soft what light through yonder window breaks.",
@@ -66464,7 +66464,7 @@
                 {
                   "id": "po3-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "It was a to be or not to be moment for the company.",
                   "options": [
                     "It was a to be or not to be moment for the company.",
@@ -66620,7 +66620,7 @@
                 {
                   "id": "po4-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "He took the road less travelled, and it cost him.",
                   "options": [
                     "He took the road less travelled, and it cost him.",
@@ -66921,7 +66921,7 @@
                 {
                   "id": "rv1-6",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "He could discern, even in the gloom, the faint outline of the figure.",
                   "options": [
                     "He could discern, even in the gloom, the faint outline of the figure.",
@@ -67052,7 +67052,7 @@
                 {
                   "id": "rv2-5",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的 US 句子",
+                  "prompt": "出你听到的 US 句子",
                   "spokenText": "Put it in the trunk and we'll head home.",
                   "options": [
                     "Put it in the trunk and we'll head home.",
@@ -67198,7 +67198,7 @@
                 {
                   "id": "rv3-5",
                   "type": "listen_and_choose",
-                  "prompt": "请选出你听到的句子",
+                  "prompt": "出你听到的句子",
                   "spokenText": "Ultimately, this question demands further empirical scrutiny.",
                   "options": [
                     "Ultimately, this question demands further empirical scrutiny.",

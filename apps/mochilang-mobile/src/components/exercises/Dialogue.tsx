@@ -187,6 +187,11 @@ export default function Dialogue({
   function submitChoice() {
     if (!turn || turn.kind !== 'choice' || !choicePick) return
     if (choicePick === turn.answer) {
+      // Speak the user's correct line in the target language before
+      // advancing — same reinforcement we give for fill_blank and
+      // tap_words_in_order. The next line's auto-play will queue up
+      // after this one finishes (Speech.stop in the effect cleanup).
+      speak(turn.answer, { language: ttsLangFor(targetLang) })
       advance()
     } else {
       markFailure()
@@ -202,6 +207,10 @@ export default function Dialogue({
       (a) => a.toLowerCase(),
     )
     if (accepted.includes(v.toLowerCase())) {
+      // Speak the full completed line ("$before$answer$after") so
+      // the learner hears their fill in context.
+      const full = `${turn.before}${turn.answer}${turn.after}`
+      speak(full, { language: ttsLangFor(targetLang) })
       advance()
     } else {
       markFailure()

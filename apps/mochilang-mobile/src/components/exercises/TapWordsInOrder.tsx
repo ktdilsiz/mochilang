@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { TapWordsInOrderExercise } from '@mochilang/shared'
+import { matchesSequenceAnswer } from '@mochilang/shared'
 import TappableText from '../TappableText'
 import { localeForOption, speak } from '../../lib/tts'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
@@ -87,8 +88,13 @@ export default function TapWordsInOrder({
     })
   }
 
-  const builtSentence = built.map((b) => b.word).join('')
-  const isCorrect = locked && builtSentence === exercise.answer
+  // Use the same normalized matcher LessonScreen grades with — strict
+  // equality previously disagreed with the parent when the canonical
+  // answer had different whitespace/punctuation than the joined-build,
+  // so the build area painted red while the lesson said ✓ Correct.
+  const builtSentence = built.map((b) => b.word).join(' ')
+  const isCorrect =
+    locked && matchesSequenceAnswer(builtSentence, exercise.answer)
   const isWrong = locked && !isCorrect
 
   // For long sentences (≥8 expected tokens) show a "5 / 12" progress
