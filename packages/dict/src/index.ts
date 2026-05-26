@@ -54,6 +54,10 @@ function getBilingual(from: string, to: string): BilingualDict | null {
   let data: BilingualDict | null = null;
   switch (key) {
     case 'zh-en':
+    case 'zh-tw-en':
+      // CC-CEDICT now carries both Simplified and Traditional keys
+      // (Traditional aliases mapped to the same meanings), so the
+      // Taiwanese course reuses it.
       data = DICT;
       break;
     case 'en-tr':
