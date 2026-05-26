@@ -99,6 +99,23 @@ export function isCJK(ch: string): boolean {
   return CJK_RE.test(ch);
 }
 
+/**
+ * Generate pinyin for a Chinese (or partially-Chinese) string.
+ * Strips non-CJK runs out of the result, returns null when the input
+ * has no Chinese characters. Useful for adding pinyin to translation
+ * results in the popup card.
+ */
+export function pinyinFor(text: string): string | null {
+  if (!CJK_RE.test(text)) return null;
+  const arr = pinyin(text, {
+    toneType: 'symbol',
+    type: 'array',
+    nonZh: 'removed',
+  }) as string[];
+  const joined = arr.filter((p) => p.length > 0).join(' ');
+  return joined.length > 0 ? joined : null;
+}
+
 export function isChinese(s: string): boolean {
   return isCJK(s[0] ?? '');
 }

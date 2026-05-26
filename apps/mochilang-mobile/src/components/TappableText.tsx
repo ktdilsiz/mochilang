@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { lookup, lookupBilingual, tokenize as zhTokenize } from '@mochilang/dict'
+import { lookup, lookupBilingual, pinyinFor, tokenize as zhTokenize } from '@mochilang/dict'
 import { translate } from '@mochilang/translate'
 import { useWordTranslation } from '../lib/wordTranslation'
 import { useSettings } from '../state/useSettings'
@@ -236,10 +236,20 @@ export default function TappableText({ text, style }: Props) {
         ? lookupBilingual(token.word, ctx.sourceLang, 'zh')
         : null)
     if (bil) {
+      // If the tapped word has no pinyin of its own but the result
+      // contains Chinese (e.g. tapping "hear" → 听), use the first
+      // Chinese meaning's pinyin so the popup card still annotates
+      // pronunciation. Skip when token.pinyin is already set (tapped
+      // a Chinese word).
+      const meaningsList = bil.meanings.slice(0, 6)
+      const cardPinyin =
+        token.pinyin ??
+        pinyinFor(meaningsList.find((m) => /[一-鿿]/.test(m)) ?? '') ??
+        undefined
       setActive({
         word: token.word,
-        pinyin: token.pinyin,
-        translation: bil.meanings.slice(0, 6).join('; '),
+        pinyin: cardPinyin,
+        translation: meaningsList.join('; '),
         source: 'dict',
         loading: false,
       })
