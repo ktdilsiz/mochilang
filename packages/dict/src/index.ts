@@ -1,13 +1,17 @@
 /**
- * Shared Chinese dictionary + segmentation tooling for the mochilang
- * monorepo. Wraps:
+ * Shared bilingual dictionary + Chinese segmentation tooling for the
+ * mochilang monorepo. Provides:
  *
- * - CC-CEDICT lookup (bundled `dict.json`, simplified-keyed)
- * - Forward-maximum-matching segmenter using the dictionary as the lexicon
+ * - CC-CEDICT lookup for zh→en (bundled `dict.json`, simplified-keyed)
+ * - Bilingual lookups for other course-pair directions
+ *   (en-tr / es-en / en-es / en-zh) sourced from FreeDict + inverted
+ *   CC-CEDICT, lazy-loaded per pair so the app's startup cost doesn't
+ *   pay for dictionaries the active course will never use.
+ * - Forward-maximum-matching segmenter using CC-CEDICT as the lexicon
  * - Pinyin generation (via `pinyin-pro`) per segmented word, with tones
  *
- * Pure data + functions, no React / RN / DOM dependencies, so the same code
- * runs in mochiread (Expo) and mochilang (Vite/web).
+ * Pure data + functions, no React / RN / DOM dependencies, so the same
+ * code runs in mochiread (Expo) and mochilang (Vite/web).
  */
 import { pinyin, getNumOfTone } from 'pinyin-pro';
 import data from './data/dict.json';
@@ -21,9 +25,76 @@ export type Definition = {
 
 const DICT = data as Record<string, string[]>;
 
+/**
+ * Lookup a Chinese (simplified) word in CC-CEDICT. Kept for the
+ * existing segmenter / mochiread paths that key off the legacy
+ * single-direction API. New callers should prefer the multi-pair
+ * `lookupBilingual(word, from, to)` below.
+ */
 export function lookup(word: string): Definition | null {
   const meanings = DICT[word];
   if (!meanings) return null;
+  return { word, meanings };
+}
+
+// --- Bilingual (lazy-loaded per pair) ---------------------------------------
+
+type BilingualDict = Record<string, string[]>;
+const bilingualCache: Partial<Record<string, BilingualDict | null>> = {};
+
+/**
+ * Synchronously load (and memoise) the dictionary for one direction.
+ * Each require() bundles the JSON into Metro's chunk graph but defers
+ * the JSON.parse cost to the first lookup of that direction. Returns
+ * null when we don't ship a dict for that direction.
+ */
+function getBilingual(from: string, to: string): BilingualDict | null {
+  const key = `${from}-${to}`;
+  if (key in bilingualCache) return bilingualCache[key] ?? null;
+  let data: BilingualDict | null = null;
+  switch (key) {
+    case 'zh-en':
+      data = DICT;
+      break;
+    case 'en-tr':
+      data = require('./data/bilingual/en-tr.json') as BilingualDict;
+      break;
+    case 'es-en':
+      data = require('./data/bilingual/es-en.json') as BilingualDict;
+      break;
+    case 'en-es':
+      data = require('./data/bilingual/en-es.json') as BilingualDict;
+      break;
+    case 'en-zh':
+      data = require('./data/bilingual/en-zh.json') as BilingualDict;
+      break;
+    default:
+      data = null;
+  }
+  bilingualCache[key] = data;
+  return data;
+}
+
+/**
+ * Look up a word's meanings in the dictionary for the given direction.
+ * Falls back to a lowercase lookup for case-insensitive matches; CJK
+ * sources are case-blind and CC-CEDICT keys are already simplified.
+ *
+ * Returns null when:
+ *   - No dictionary exists for that direction (e.g. fr-en today)
+ *   - The word isn't present in the bundled dict
+ *
+ * Lingva / online translation handles the long tail.
+ */
+export function lookupBilingual(
+  word: string,
+  from: string,
+  to: string,
+): Definition | null {
+  const dict = getBilingual(from, to);
+  if (!dict) return null;
+  const meanings = dict[word] ?? dict[word.toLowerCase()];
+  if (!meanings || meanings.length === 0) return null;
   return { word, meanings };
 }
 

@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { lookup, tokenize as zhTokenize } from '@mochilang/dict'
+import { lookup, lookupBilingual, tokenize as zhTokenize } from '@mochilang/dict'
 import { translate } from '@mochilang/translate'
 import { useWordTranslation } from '../lib/wordTranslation'
 import { colors, fontSizes, radius, space } from '../lib/theme'
@@ -194,7 +194,7 @@ export default function TappableText({ text, style }: Props) {
       return
     }
 
-    // 2. Offline dict — only relevant for CJK
+    // 2a. CJK direct lookup — CC-CEDICT, simplified-keyed.
     if (CJK_RE.test(token.word)) {
       const entry = lookup(token.word)
       if (entry) {
@@ -207,6 +207,22 @@ export default function TappableText({ text, style }: Props) {
         })
         return
       }
+    }
+
+    // 2b. Bilingual offline dict for the active course pair. Direction
+    // is sourceLang→targetLang because lessons show target-language
+    // content and the user wants translations into their native source
+    // language. zh-en / en-tr / es-en / en-es / en-zh are bundled.
+    const bil = lookupBilingual(token.word, ctx.targetLang, ctx.sourceLang)
+    if (bil) {
+      setActive({
+        word: token.word,
+        pinyin: token.pinyin,
+        translation: bil.meanings.slice(0, 6).join('; '),
+        source: 'dict',
+        loading: false,
+      })
+      return
     }
 
     // 3. Lingva (smart-direction: prefer source-lang translation,
