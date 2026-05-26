@@ -20,6 +20,7 @@ import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
 import Translate, {
   checkTranslateAnswer as checkTranslate,
 } from '../components/exercises/Translate'
+import { sfx } from '../lib/sfx'
 import TappableText from '../components/TappableText'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
@@ -94,15 +95,18 @@ export default function ExamScreen({
       setCorrect((c) => c + 1)
       setFeedback('correct')
       onCorrectAnswer?.(ex.id)
+      sfx.correct()
     } else {
       setFeedback('wrong')
       onWrongAnswer?.(ex.id)
+      sfx.wrong()
     }
   }
 
   function next() {
     if (isLast) {
       setDone(true)
+      sfx.complete()
       return
     }
     setIndex((i) => i + 1)
@@ -137,9 +141,11 @@ export default function ExamScreen({
       setCorrect((c) => c + 1)
       setFeedback('correct')
       onCorrectAnswer?.(ex.id)
+      sfx.correct()
     } else {
       setFeedback('wrong')
       onWrongAnswer?.(ex.id)
+      sfx.wrong()
     }
   }
 

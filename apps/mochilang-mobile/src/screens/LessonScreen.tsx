@@ -23,6 +23,7 @@ import Dialogue from '../components/exercises/Dialogue'
 import TappableText from '../components/TappableText'
 import { WordTranslationProvider } from '../lib/wordTranslation'
 import { localeForOption, speak, targetLocaleForCourse } from '../lib/tts'
+import { sfx } from '../lib/sfx'
 import { useT } from '../lib/i18n'
 import { findLanguage } from '@mochilang/shared'
 import { colors, fontSizes, radius, space } from '../lib/theme'
@@ -158,6 +159,7 @@ export default function LessonScreen({
     if (result.correct) {
       setFeedback('correct')
       onCorrectAnswer?.(ex.id)
+      sfx.correct()
       // Play the completed target-language sentence so the learner
       // hears the answer in context. Each type knows what to speak:
       // fill_blank extracts the quoted target sentence; translate
@@ -181,11 +183,13 @@ export default function LessonScreen({
       setFeedback('wrong')
       setMistakes((m) => m + 1)
       onWrongAnswer?.(ex.id)
+      sfx.wrong()
     }
   }
 
   function next() {
     if (isLast) {
+      sfx.complete()
       onComplete(mistakes)
       return
     }
@@ -222,9 +226,11 @@ export default function LessonScreen({
       setMistakes((m) => m + extraMistakes)
       setFeedback('wrong')
       onWrongAnswer?.(ex.id)
+      sfx.wrong()
     } else {
       setFeedback('correct')
       onCorrectAnswer?.(ex.id)
+      sfx.correct()
     }
   }
 

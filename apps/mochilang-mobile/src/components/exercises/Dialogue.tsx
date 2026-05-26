@@ -15,6 +15,7 @@ import { parseCourseId } from '@mochilang/shared'
 import LedgeButton from '../LedgeButton'
 import TappableText from '../TappableText'
 import { speak, stopSpeaking } from '../../lib/tts'
+import { sfx } from '../../lib/sfx'
 import { getSettings } from '../../state/useSettings'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
@@ -187,6 +188,7 @@ export default function Dialogue({
   function submitChoice() {
     if (!turn || turn.kind !== 'choice' || !choicePick) return
     if (choicePick === turn.answer) {
+      sfx.correct()
       // Speak the user's correct line in the target language before
       // advancing — same reinforcement we give for fill_blank and
       // tap_words_in_order. The next line's auto-play will queue up
@@ -195,6 +197,7 @@ export default function Dialogue({
       advance()
     } else {
       markFailure()
+      sfx.wrong()
       setTurnError(`Try again — “${choicePick}” isn't quite right.`)
     }
   }
@@ -207,6 +210,7 @@ export default function Dialogue({
       (a) => a.toLowerCase(),
     )
     if (accepted.includes(v.toLowerCase())) {
+      sfx.correct()
       // Speak the full completed line ("$before$answer$after") so
       // the learner hears their fill in context.
       const full = `${turn.before}${turn.answer}${turn.after}`
@@ -214,6 +218,7 @@ export default function Dialogue({
       advance()
     } else {
       markFailure()
+      sfx.wrong()
       setTurnError(`Not quite — the missing word is “${turn.answer}”.`)
       // Don't auto-clear the input; let the user edit toward the
       // correct answer.
