@@ -24,9 +24,16 @@ export default function ListenAndChoose({
   const { state: settings } = useSettings()
   const targetLocale = targetLocaleForCourse(courseId)
 
-  // Auto-play once on mount, when the user has opted in.
+  // Auto-play once on mount, when the user has opted in. The small
+  // delay lets the screen finish mounting and the platform TTS engine
+  // warm up — speak() fired immediately on mount sometimes races and
+  // silently drops the utterance on cold engines.
   useEffect(() => {
-    if (settings.autoPlayAudio) speak(exercise.spokenText, { language: targetLocale })
+    if (!settings.autoPlayAudio) return
+    const t = setTimeout(() => {
+      speak(exercise.spokenText, { language: targetLocale })
+    }, 500)
+    return () => clearTimeout(t)
   }, [exercise.spokenText, settings.autoPlayAudio, targetLocale])
 
   return (

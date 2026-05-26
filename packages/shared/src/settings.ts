@@ -62,7 +62,7 @@ export const SETTINGS_DEFAULT: AppSettings = {
   soundEffects: true,
   haptics: true,
   animations: true,
-  autoPlayAudio: false,
+  autoPlayAudio: true,
   showPinyin: true,
   dailyXpGoal: 20,
   theme: 'system',
