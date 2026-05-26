@@ -17,6 +17,9 @@ import FillBlank, {
 import MatchPairs from '../components/exercises/MatchPairs'
 import ListenAndChoose from '../components/exercises/ListenAndChoose'
 import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
+import Translate, {
+  checkTranslateAnswer as checkTranslate,
+} from '../components/exercises/Translate'
 import TappableText from '../components/TappableText'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
@@ -116,6 +119,7 @@ export default function ExamScreen({
       case 'listen_and_choose':
         return mcSelected !== null
       case 'fill_blank':
+      case 'translate':
         return fbValue.trim().length > 0
       case 'tap_words_in_order':
         return tapValue.length > 0
@@ -350,6 +354,21 @@ function ExerciseView({
           resetKey={resetKey}
         />
       )
+    case 'translate': {
+      // Exam re-uses the fbValue text input. Locale detection is
+      // intentionally minimal here — the lesson runner does the rich
+      // version; in the exam, the source word card alone is plenty.
+      return (
+        <Translate
+          exercise={ex}
+          value={fbValue}
+          locked={locked}
+          sourceLocale="auto"
+          answerLocale="auto"
+          onChange={setFbValue}
+        />
+      )
+    }
     case 'dialogue':
       // Dialogues are long-form interactive scenes — not a fit for the
       // timed exam format. If an author included one, render a notice
@@ -379,6 +398,10 @@ function grade(
     case 'tap_words_in_order':
       if (inputs.tapValue.length === 0) return null
       return { correct: matchesSequenceAnswer(inputs.tapValue, exercise.answer) }
+    case 'translate':
+      // Exam re-uses the fbValue text input for translate too.
+      if (inputs.fbValue.trim().length === 0) return null
+      return { correct: checkTranslate(inputs.fbValue, exercise) }
     case 'match_pairs':
       return null
     case 'dialogue':
@@ -393,6 +416,7 @@ function wrongMessage(ex: Exercise): string {
     case 'listen_and_choose':
       return `Correct: ${ex.answer}`
     case 'fill_blank':
+    case 'translate':
       return `Answer: ${ex.answer}`
     case 'tap_words_in_order':
       return `Correct: ${ex.answer}`

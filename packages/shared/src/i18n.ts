@@ -106,6 +106,16 @@ export const EN_DICT: I18nDict = {
   'tabs.social': 'Social',
   'tabs.profile': 'Profile',
   'home.hero.eyebrow': '{level} · Topic {n} of {total}',
+
+  // Per-exercise instruction headers — shown above each exercise so
+  // content prompts don't have to include their own instructions.
+  'exercise.multiple_choice.instruction': 'Choose the correct option',
+  'exercise.fill_blank.instruction': 'Fill in the blank',
+  'exercise.match_pairs.instruction': 'Match the pairs',
+  'exercise.listen_and_choose.instruction': 'Listen and choose',
+  'exercise.tap_words_in_order.instruction': 'Tap the words in order',
+  'exercise.translate.instruction': 'Translate to {target}',
+  'exercise.dialogue.instruction': 'Complete the dialogue',
 }
 
 /**
@@ -176,6 +186,13 @@ export const ZH_DICT: I18nDict = {
   'tabs.social': '社交',
   'tabs.profile': '我的',
   'home.hero.eyebrow': '{level} · 第 {n} 课题 / 共 {total}',
+  'exercise.multiple_choice.instruction': '选择正确答案',
+  'exercise.fill_blank.instruction': '填空',
+  'exercise.match_pairs.instruction': '配对',
+  'exercise.listen_and_choose.instruction': '听音选择',
+  'exercise.tap_words_in_order.instruction': '按顺序点击词语',
+  'exercise.translate.instruction': '翻译成{target}',
+  'exercise.dialogue.instruction': '完成对话',
 }
 
 /**
@@ -248,6 +265,13 @@ export const TR_DICT: I18nDict = {
   'tabs.social': 'Sosyal',
   'tabs.profile': 'Profil',
   'home.hero.eyebrow': '{level} · {total} konudan {n}. konu',
+  'exercise.multiple_choice.instruction': 'Doğru seçeneği işaretle',
+  'exercise.fill_blank.instruction': 'Boşluğu doldur',
+  'exercise.match_pairs.instruction': 'Eşleştir',
+  'exercise.listen_and_choose.instruction': 'Dinle ve seç',
+  'exercise.tap_words_in_order.instruction': 'Kelimeleri sırayla tıkla',
+  'exercise.translate.instruction': '{target} diline çevir',
+  'exercise.dialogue.instruction': 'Diyaloğu tamamla',
 }
 
 /**

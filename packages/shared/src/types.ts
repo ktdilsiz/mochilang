@@ -12,6 +12,7 @@ export type ExerciseType =
   | 'match_pairs'
   | 'listen_and_choose'
   | 'tap_words_in_order'
+  | 'translate'
   | 'dialogue'
 
 export type LessonTheme =
@@ -68,6 +69,37 @@ export interface ListenAndChooseExercise extends ExerciseBase {
   spokenText: string
   options: string[]
   answer: string
+}
+
+/**
+ * "Translate this word/phrase." The user reads `source` and types its
+ * translation. Direction tells the UI which way to label the prompt
+ * ("Translate to English" vs "Translate to Turkish") and lets the TTS
+ * speak each side in the correct language.
+ *
+ * Replaces the old fill_blank pattern "'Fena değil' İngilizcede ___"
+ * where the prompt mixed Turkish instructions with an English answer
+ * blank. With `translate`, the source word stands alone and the
+ * instruction comes from the type-derived header.
+ */
+export interface TranslateExercise extends ExerciseBase {
+  type: 'translate'
+  /** The word/phrase shown to the learner. */
+  source: string
+  /** Expected translation. Case-insensitive match against learner input. */
+  answer: string
+  /** Optional alternates accepted (case-insensitive). */
+  acceptableAnswers?: string[]
+  /**
+   * Which way the translation runs.
+   * - `to_target`: `source` is in the course's source language,
+   *   `answer` is in the target language. Header: "Translate to {target}".
+   * - `to_source`: `source` is in the target language, `answer` is in
+   *   the source language. Header: "Translate to {source}".
+   */
+  direction: 'to_target' | 'to_source'
+  /** Optional context shown below the source (e.g. a usage hint). */
+  context?: string
 }
 
 /** Reorder a scrambled set of words (or characters) to form a sentence. */
@@ -156,6 +188,7 @@ export type Exercise =
   | MatchPairsExercise
   | ListenAndChooseExercise
   | TapWordsInOrderExercise
+  | TranslateExercise
   | DialogueExercise
 
 export interface Lesson {

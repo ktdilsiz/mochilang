@@ -16,10 +16,15 @@ import FillBlank, {
 import MatchPairs from '../components/exercises/MatchPairs'
 import ListenAndChoose from '../components/exercises/ListenAndChoose'
 import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
+import Translate, {
+  checkTranslateAnswer as checkTranslate,
+} from '../components/exercises/Translate'
 import Dialogue from '../components/exercises/Dialogue'
 import TappableText from '../components/TappableText'
 import { WordTranslationProvider } from '../lib/wordTranslation'
 import { localeForOption, speak, targetLocaleForCourse } from '../lib/tts'
+import { useT } from '../lib/i18n'
+import { findLanguage } from '@mochilang/shared'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 /**
@@ -121,6 +126,7 @@ export default function LessonScreen({
   const [mcSelected, setMcSelected] = useState<string | null>(null)
   const [fbValue, setFbValue] = useState('')
   const [tapValue, setTapValue] = useState('')
+  const [translateValue, setTranslateValue] = useState('')
 
   // Shuffle exercises once per lesson attempt so the same lesson doesn't
   // drill the same sequence every time — defeats memorization without
@@ -147,26 +153,29 @@ export default function LessonScreen({
 
   function check() {
     if (locked) return
-    const result = grade(ex, { mcSelected, fbValue, tapValue })
+    const result = grade(ex, { mcSelected, fbValue, tapValue, translateValue })
     if (!result) return
     if (result.correct) {
       setFeedback('correct')
       onCorrectAnswer?.(ex.id)
       // Play the completed target-language sentence so the learner
-      // hears the answer in context. fill_blank tries to extract the
-      // quoted target sentence (so we don't read the Turkish/Chinese
-      // instruction aloud as English); tap_words_in_order's built
-      // string is already pure target language.
-      const locale = targetLocaleForCourse(courseId)
+      // hears the answer in context. Each type knows what to speak:
+      // fill_blank extracts the quoted target sentence; translate
+      // speaks the answer in its declared direction's locale;
+      // tap_words_in_order's built string is already pure target.
+      const targetLoc = targetLocaleForCourse(courseId)
       if (ex.type === 'fill_blank') {
         const sentence = fillSentence(ex.prompt, fbValue)
-        // If we couldn't pull a target-language sentence out of the
-        // prompt, speak just the answer — keeps reinforcement value
-        // without reading source-language instructions as if they
-        // were target.
-        speak(sentence ?? fbValue, { language: locale })
+        speak(sentence ?? fbValue, { language: targetLoc })
       } else if (ex.type === 'tap_words_in_order') {
-        speak(tapValue, { language: locale })
+        speak(tapValue, { language: targetLoc })
+      } else if (ex.type === 'translate') {
+        const parsed = parseCourseId(courseId)
+        const target = parsed?.target ?? 'en'
+        const source = parsed?.source ?? 'en'
+        const sourceLoc = targetLocaleForCourse(`${source}-${target}`)
+        const loc = ex.direction === 'to_target' ? targetLoc : sourceLoc
+        speak(translateValue, { language: loc })
       }
     } else {
       setFeedback('wrong')
@@ -185,6 +194,7 @@ export default function LessonScreen({
     setMcSelected(null)
     setFbValue('')
     setTapValue('')
+    setTranslateValue('')
     setResetKey((k) => k + 1)
   }
 
@@ -197,6 +207,8 @@ export default function LessonScreen({
         return fbValue.trim().length > 0
       case 'tap_words_in_order':
         return tapValue.length > 0
+      case 'translate':
+        return translateValue.trim().length > 0
       case 'match_pairs':
       case 'dialogue':
         return false
@@ -252,6 +264,7 @@ export default function LessonScreen({
       </View>
 
       <ScrollView contentContainerStyle={styles.body}>
+        <ExerciseInstruction exercise={ex} courseId={courseId} />
         <ExerciseView
           ex={ex}
           courseId={courseId}
@@ -261,6 +274,8 @@ export default function LessonScreen({
           fbValue={fbValue}
           setFbValue={setFbValue}
           setTapValue={setTapValue}
+          translateValue={translateValue}
+          setTranslateValue={setTranslateValue}
           onMatchComplete={handleMatchComplete}
           resetKey={resetKey}
         />
@@ -315,6 +330,8 @@ interface ExerciseViewProps {
   fbValue: string
   setFbValue: (v: string) => void
   setTapValue: (v: string) => void
+  translateValue: string
+  setTranslateValue: (v: string) => void
   /** Reused for match_pairs AND dialogue — both report a final mistake count. */
   onMatchComplete: (mistakes: number) => void
   resetKey: number
@@ -329,6 +346,8 @@ function ExerciseView({
   fbValue,
   setFbValue,
   setTapValue,
+  translateValue,
+  setTranslateValue,
   onMatchComplete,
   resetKey,
 }: ExerciseViewProps) {
@@ -409,6 +428,27 @@ function ExerciseView({
           resetKey={resetKey}
         />
       )
+    case 'translate': {
+      // Decode source/answer locales based on direction. to_target =
+      // source-lang prompt, target-lang answer; to_source flips it.
+      const parsed = parseCourseId(courseId)
+      const target = parsed?.target ?? 'en'
+      const source = parsed?.source ?? 'en'
+      const targetLoc = targetLocaleForCourse(courseId)
+      const sourceLoc = targetLocaleForCourse(`${source}-${target}`)
+      const sourceLocale = ex.direction === 'to_target' ? sourceLoc : targetLoc
+      const answerLocale = ex.direction === 'to_target' ? targetLoc : sourceLoc
+      return (
+        <Translate
+          exercise={ex}
+          value={translateValue}
+          locked={locked}
+          sourceLocale={sourceLocale}
+          answerLocale={answerLocale}
+          onChange={setTranslateValue}
+        />
+      )
+    }
     case 'dialogue':
       return (
         <Dialogue
@@ -422,9 +462,52 @@ function ExerciseView({
   }
 }
 
+/**
+ * Type-derived instruction header rendered above every exercise.
+ * Lets content authors stop putting instructions inside the prompt —
+ * "Boşluğu doldur:", "Translate to English", etc. now come from the
+ * type's i18n key and the prompt is just the content itself.
+ *
+ * For `translate`, the header interpolates the language being asked
+ * for ("Translate to English" vs "Translate to Turkish") based on
+ * the exercise's direction and the course's target/source pair.
+ */
+function ExerciseInstruction({
+  exercise,
+  courseId,
+}: {
+  exercise: Exercise
+  courseId: string
+}) {
+  const t = useT()
+  let text: string
+  if (exercise.type === 'translate') {
+    const parsed = parseCourseId(courseId)
+    const target = parsed?.target ?? 'en'
+    const source = parsed?.source ?? 'en'
+    const toCode = exercise.direction === 'to_target' ? target : source
+    const langInfo = findLanguage(toCode)
+    text = t('exercise.translate.instruction', {
+      target: langInfo?.name ?? toCode,
+    })
+  } else {
+    text = t(`exercise.${exercise.type}.instruction`)
+  }
+  return (
+    <View style={styles.instructionWrap}>
+      <Text style={styles.instructionText}>{text}</Text>
+    </View>
+  )
+}
+
 function grade(
   exercise: Exercise,
-  inputs: { mcSelected: string | null; fbValue: string; tapValue: string }
+  inputs: {
+    mcSelected: string | null
+    fbValue: string
+    tapValue: string
+    translateValue: string
+  },
 ): { correct: boolean } | null {
   switch (exercise.type) {
     case 'multiple_choice':
@@ -437,6 +520,9 @@ function grade(
     case 'tap_words_in_order':
       if (inputs.tapValue.length === 0) return null
       return { correct: matchesSequenceAnswer(inputs.tapValue, exercise.answer) }
+    case 'translate':
+      if (inputs.translateValue.trim().length === 0) return null
+      return { correct: checkTranslate(inputs.translateValue, exercise) }
     case 'match_pairs':
     case 'dialogue':
       // Both are self-driving — the inner component reports its result
@@ -454,6 +540,8 @@ function wrongMessage(ex: Exercise): string {
       return `Answer: ${ex.answer}`
     case 'tap_words_in_order':
       return `Correct: ${ex.answer}`
+    case 'translate':
+      return `Answer: ${ex.answer}`
     case 'match_pairs':
       return 'Some pairs were missed.'
     case 'dialogue':
@@ -491,6 +579,17 @@ const styles = StyleSheet.create({
   progressFill: { height: '100%', backgroundColor: colors.success500 },
   progressText: { fontSize: fontSizes.xs, color: colors.textMuted, fontWeight: '700' },
   body: { padding: space.lg, gap: space.lg, flexGrow: 1 },
+  instructionWrap: {
+    alignItems: 'center',
+    marginBottom: -space.sm,
+  },
+  instructionText: {
+    fontSize: fontSizes.xs,
+    fontFamily: 'Nunito_900Black',
+    color: colors.textMuted,
+    textTransform: 'uppercase',
+    letterSpacing: 1.2,
+  },
   exRoot: { gap: space.lg },
   prompt: {
     fontSize: fontSizes.xxl,
