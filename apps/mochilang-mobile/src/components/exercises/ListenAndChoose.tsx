@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { ListenAndChooseExercise } from '@mochilang/shared'
 import { localeForOption, speak, targetLocaleForCourse } from '../../lib/tts'
-import { useSettings } from '../../state/useSettings'
 import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
@@ -21,20 +20,20 @@ export default function ListenAndChoose({
   courseId,
   onSelect,
 }: Props) {
-  const { state: settings } = useSettings()
   const targetLocale = targetLocaleForCourse(courseId)
 
-  // Auto-play once on mount, when the user has opted in. The small
-  // delay lets the screen finish mounting and the platform TTS engine
-  // warm up — speak() fired immediately on mount sometimes races and
-  // silently drops the utterance on cold engines.
+  // Always auto-play on mount — listen-and-choose's audio IS the
+  // prompt, you literally cannot solve the exercise without it. The
+  // global autoPlayAudio setting still gates other touchpoints but
+  // this branch ignores it. Small delay lets the screen mount and
+  // the platform TTS engine warm up; speak() fired immediately on
+  // cold engines sometimes silently drops the utterance.
   useEffect(() => {
-    if (!settings.autoPlayAudio) return
     const t = setTimeout(() => {
       speak(exercise.spokenText, { language: targetLocale })
     }, 500)
     return () => clearTimeout(t)
-  }, [exercise.spokenText, settings.autoPlayAudio, targetLocale])
+  }, [exercise.spokenText, targetLocale])
 
   return (
     <View style={styles.root}>
