@@ -94,14 +94,20 @@ export function localeForOption(
   if (sourceRe && siblings.some((s) => sourceRe.test(s))) return targetLoc
 
   // Latin-only territory. Look at Turkish diacritics for tr courses.
-  if (parsed.target === 'tr') {
-    if (TURKISH_DIACRITICS.test(text)) return 'tr-TR'
-    if (siblings.some((s) => TURKISH_DIACRITICS.test(s))) return 'tr-TR'
-    return sourceLoc
-  }
-  if (parsed.source === 'tr') {
-    if (TURKISH_DIACRITICS.test(text)) return 'tr-TR'
-    if (siblings.some((s) => TURKISH_DIACRITICS.test(s))) return 'tr-TR'
+  // Polarity matters: a sibling having Turkish diacritics while THIS
+  // text doesn't means the two are in different languages — this text
+  // is the non-Turkish one. Previously this branch wrongly forced
+  // everything to Turkish whenever any Turkish chars appeared in any
+  // sibling (commonly the Turkish-language prompt), which broke
+  // listen-and-choose options like ["autumn", "summer", "winter"].
+  if (parsed.target === 'tr' || parsed.source === 'tr') {
+    const trIsTarget = parsed.target === 'tr'
+    const trLoc = 'tr-TR'
+    const otherLoc = trIsTarget ? sourceLoc : targetLoc
+    if (TURKISH_DIACRITICS.test(text)) return trLoc
+    const someSiblingTurkish = siblings.some((s) => TURKISH_DIACRITICS.test(s))
+    if (someSiblingTurkish) return otherLoc
+    // No Turkish evidence anywhere — both Latin, fall back to target.
     return targetLoc
   }
 

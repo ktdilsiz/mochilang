@@ -49,7 +49,11 @@ export default function TapWordsInOrder({
   }, [initialBank])
 
   useEffect(() => {
-    onChange(built.map((b) => b.word).join(''))
+    // Join with space so Latin-script languages (English, Turkish, …)
+    // produce a comparable sentence. CJK answers are normalized to be
+    // whitespace-insensitive in matchesSequenceAnswer, so a Chinese
+    // build like "你 好" still matches "你好".
+    onChange(built.map((b) => b.word).join(' '))
   }, [built, onChange])
 
   function moveToBuilt(idx: number) {

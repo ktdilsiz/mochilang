@@ -19,8 +19,23 @@ import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
 import Dialogue from '../components/exercises/Dialogue'
 import TappableText from '../components/TappableText'
 import { WordTranslationProvider } from '../lib/wordTranslation'
-import { localeForOption, speak } from '../lib/tts'
+import { localeForOption, speak, targetLocaleForCourse } from '../lib/tts'
 import { colors, fontSizes, radius, space } from '../lib/theme'
+
+/**
+ * Render a fill-blank prompt with the learner's answer slotted in,
+ * stripped of quotes and parenthetical hints so the TTS reads cleanly.
+ *
+ *   "In ___, it is hot." (yaz)   +  "summer"
+ *     → "In summer, it is hot."
+ */
+function fillSentence(prompt: string, answer: string): string {
+  let s = prompt
+  s = s.replace(/\s*\([^)]*\)\s*$/, '') // drop trailing parenthetical hint
+  s = s.replace(/^['"]|['"]$/g, '') // strip outer quotes
+  s = s.replace(/_+/g, answer.trim()) // fill the blank
+  return s.trim()
+}
 
 interface Props {
   lesson: Lesson
@@ -90,6 +105,16 @@ export default function LessonScreen({
     if (result.correct) {
       setFeedback('correct')
       onCorrectAnswer?.(ex.id)
+      // Play the completed target-language sentence so the learner
+      // hears the answer in context. fill_blank reads as the prompt
+      // with their answer slotted in; tap_words_in_order reads as the
+      // sentence they assembled.
+      const locale = targetLocaleForCourse(courseId)
+      if (ex.type === 'fill_blank') {
+        speak(fillSentence(ex.prompt, fbValue), { language: locale })
+      } else if (ex.type === 'tap_words_in_order') {
+        speak(tapValue, { language: locale })
+      }
     } else {
       setFeedback('wrong')
       setMistakes((m) => m + 1)

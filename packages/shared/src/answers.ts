@@ -86,6 +86,13 @@ export function normalizeAnswer(input: string): string {
   // Collapse all whitespace runs (incl. CJK ideographic space U+3000)
   // into a single ASCII space, then trim.
   s = s.replace(/[\s　]+/g, ' ').trim()
+  // Drop spaces immediately before ASCII punctuation. tap_words_in_order
+  // joins tokens with " " so a built sentence ends up as "Hello world ."
+  // and we want that to match a canonical "Hello world." answer.
+  s = s.replace(/ +([.,!?;:'")\]}])/g, '$1')
+  // Drop whitespace between CJK characters. Chinese/Japanese/Korean
+  // answers don't word-segment with spaces, so "你 好" should match "你好".
+  s = s.replace(/([㐀-鿿])\s+([㐀-鿿])/g, '$1$2')
   return s
 }
 
