@@ -178,6 +178,26 @@ export default function LessonScreen({
         const sourceLoc = targetLocaleForCourse(`${source}-${target}`)
         const loc = ex.direction === 'to_target' ? targetLoc : sourceLoc
         speak(translateValue, { language: loc })
+      } else if (
+        (ex.type === 'multiple_choice' || ex.type === 'listen_and_choose') &&
+        mcSelected
+      ) {
+        // For multiple_choice, fill any blank in the prompt with the
+        // selected option so the learner hears the complete sentence
+        // ("She was a teacher in 2010.") not just "was". When the
+        // prompt has no blank or no prompt at all, fall back to
+        // speaking the option alone in its detected language.
+        const sentence = ex.prompt ? fillSentence(ex.prompt, mcSelected) : null
+        if (sentence) {
+          speak(sentence, { language: targetLoc })
+        } else {
+          const loc = localeForOption(
+            mcSelected,
+            [ex.prompt ?? '', ...ex.options],
+            courseId,
+          )
+          speak(mcSelected, { language: loc })
+        }
       }
     } else {
       setFeedback('wrong')
