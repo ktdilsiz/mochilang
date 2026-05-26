@@ -14,11 +14,6 @@
  * code runs in mochiread (Expo) and mochilang (Vite/web).
  */
 import { pinyin, getNumOfTone } from 'pinyin-pro';
-import data from './data/dict.json';
-import dictEnTr from './data/bilingual/en-tr.json';
-import dictEsEn from './data/bilingual/es-en.json';
-import dictEnEs from './data/bilingual/en-es.json';
-import dictEnZh from './data/bilingual/en-zh.json';
 
 // --- Dictionary lookup -------------------------------------------------------
 
@@ -27,16 +22,29 @@ export type Definition = {
   meanings: string[];
 };
 
-const DICT = data as Record<string, string[]>;
+/**
+ * The bundled JSON dictionaries are large (CC-CEDICT alone is ~12 MB
+ * of parsed JS object literals). Loading all five at module init
+ * pushes a lot of allocation into app startup and has crashed
+ * low-end Android devices. Each `loadXxx()` defers the parse until
+ * first use and memoises the result.
+ */
+let _cedict: Record<string, string[]> | null = null;
+function loadCEDICT(): Record<string, string[]> {
+  if (_cedict) return _cedict;
+  _cedict = require('./data/dict.json') as Record<string, string[]>;
+  return _cedict;
+}
 
 /**
- * Lookup a Chinese (simplified) word in CC-CEDICT. Kept for the
- * existing segmenter / mochiread paths that key off the legacy
- * single-direction API. New callers should prefer the multi-pair
- * `lookupBilingual(word, from, to)` below.
+ * Lookup a Chinese word in CC-CEDICT (covers both Simplified and
+ * Traditional after the alias pass). Kept for the existing segmenter
+ * / mochiread paths that key off the legacy single-direction API.
+ * New callers should prefer the multi-pair `lookupBilingual(word,
+ * from, to)` below.
  */
 export function lookup(word: string): Definition | null {
-  const meanings = DICT[word];
+  const meanings = loadCEDICT()[word];
   if (!meanings) return null;
   return { word, meanings };
 }
@@ -46,26 +54,40 @@ export function lookup(word: string): Definition | null {
 type BilingualDict = Record<string, string[]>;
 
 /**
- * Static import map for the bilingual dictionaries. Top-level
- * imports are easier on Metro/web than lazy `require()` inside a
- * function — the JSON inlines into the bundle but JS engines on
- * mobile only parse the objects on first reference, so the cost
- * profile stays similar to lazy loading.
- *
- * zh-en and zh-tw-en both reuse the main CC-CEDICT (DICT), which
- * was extended to also key by Traditional characters.
+ * Lazy-loaded per direction. Each switch case's `require()` is
+ * picked up by Metro at bundle time but the parsed object only
+ * materialises on the first lookup of that direction — keeps
+ * startup memory pressure off the device.
  */
-const BILINGUAL_DICTS: Record<string, BilingualDict> = {
-  'zh-en': DICT,
-  'zh-tw-en': DICT,
-  'en-tr': dictEnTr as BilingualDict,
-  'es-en': dictEsEn as BilingualDict,
-  'en-es': dictEnEs as BilingualDict,
-  'en-zh': dictEnZh as BilingualDict,
-};
+const bilingualCache: Partial<Record<string, BilingualDict | null>> = {};
 
 function getBilingual(from: string, to: string): BilingualDict | null {
-  return BILINGUAL_DICTS[`${from}-${to}`] ?? null;
+  const key = `${from}-${to}`;
+  if (key in bilingualCache) return bilingualCache[key] ?? null;
+  let dict: BilingualDict | null = null;
+  switch (key) {
+    case 'zh-en':
+    case 'zh-tw-en':
+      // CC-CEDICT now carries both Simplified and Traditional keys.
+      dict = loadCEDICT();
+      break;
+    case 'en-tr':
+      dict = require('./data/bilingual/en-tr.json') as BilingualDict;
+      break;
+    case 'es-en':
+      dict = require('./data/bilingual/es-en.json') as BilingualDict;
+      break;
+    case 'en-es':
+      dict = require('./data/bilingual/en-es.json') as BilingualDict;
+      break;
+    case 'en-zh':
+      dict = require('./data/bilingual/en-zh.json') as BilingualDict;
+      break;
+    default:
+      dict = null;
+  }
+  bilingualCache[key] = dict;
+  return dict;
 }
 
 /**
@@ -157,10 +179,11 @@ export function segmentText(text: string): string[] {
 
     const maxLen = Math.min(MAX_WORD_LEN, n - i);
     let matched: string | null = null;
+    const cedict = loadCEDICT();
     for (let len = maxLen; len >= 2; len--) {
       const candidate = text.slice(i, i + len);
       if (!allCJK(candidate)) continue;
-      if (DICT[candidate] !== undefined) {
+      if (cedict[candidate] !== undefined) {
         matched = candidate;
         break;
       }
