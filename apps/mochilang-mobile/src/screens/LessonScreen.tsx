@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import {
   Pressable,
   ScrollView,
@@ -19,7 +19,7 @@ import TapWordsInOrder from '../components/exercises/TapWordsInOrder'
 import Dialogue from '../components/exercises/Dialogue'
 import TappableText from '../components/TappableText'
 import { WordTranslationProvider } from '../lib/wordTranslation'
-import { speak, targetLocaleForCourse } from '../lib/tts'
+import { localeForOption, speak } from '../lib/tts'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -60,9 +60,27 @@ export default function LessonScreen({
   const [fbValue, setFbValue] = useState('')
   const [tapValue, setTapValue] = useState('')
 
-  const ex = lesson.exercises[index]
-  const isLast = index === lesson.exercises.length - 1
-  const total = lesson.exercises.length
+  // Shuffle exercises once per lesson attempt so the same lesson doesn't
+  // drill the same sequence every time — defeats memorization without
+  // changing content. `useMemo` is keyed on lesson.id so a re-attempt
+  // (component remounts) gets a fresh shuffle, but mid-lesson re-renders
+  // keep the order stable. Dialogue exercises are pinned to the end —
+  // they read as a capstone scene and feel wrong opening cold.
+  const exercises = useMemo(() => {
+    const arr = [...lesson.exercises]
+    const dialogues = arr.filter((e) => e.type === 'dialogue')
+    const rest = arr.filter((e) => e.type !== 'dialogue')
+    // Fisher-Yates on the non-dialogue chunk.
+    for (let i = rest.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[rest[i], rest[j]] = [rest[j], rest[i]]
+    }
+    return [...rest, ...dialogues]
+  }, [lesson.id, lesson.exercises])
+
+  const ex = exercises[index]
+  const isLast = index === exercises.length - 1
+  const total = exercises.length
   const locked = feedback !== 'idle'
 
   function check() {
@@ -236,10 +254,6 @@ function ExerciseView({
   onMatchComplete,
   resetKey,
 }: ExerciseViewProps) {
-  // Target-language locale for the lesson; used to TTS option taps so
-  // tapping a Chinese option in zh-en speaks it as Chinese, a Turkish
-  // option in en-tr speaks Turkish, etc.
-  const targetLocale = targetLocaleForCourse(courseId)
   switch (ex.type) {
     case 'multiple_choice':
       return (
@@ -256,7 +270,13 @@ function ExerciseView({
                   onPress={() => {
                     if (locked) return
                     setMcSelected(opt)
-                    speak(opt, { language: targetLocale })
+                    speak(opt, {
+                      language: localeForOption(
+                        opt,
+                        [ex.prompt, ...ex.options],
+                        courseId,
+                      ),
+                    })
                   }}
                   style={[
                     styles.option,
@@ -285,6 +305,7 @@ function ExerciseView({
       return (
         <MatchPairs
           exercise={ex}
+          courseId={courseId}
           locked={locked}
           onComplete={onMatchComplete}
           resetKey={resetKey}

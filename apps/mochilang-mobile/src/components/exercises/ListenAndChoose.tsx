@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { ListenAndChooseExercise } from '@mochilang/shared'
-import { speak, targetLocaleForCourse } from '../../lib/tts'
+import { localeForOption, speak, targetLocaleForCourse } from '../../lib/tts'
 import { useSettings } from '../../state/useSettings'
 import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
@@ -67,7 +67,15 @@ export default function ListenAndChoose({
                 // Speak the tapped option so the learner can compare it
                 // to the prompt audio. Drills tone-pair distinctions
                 // (买/卖, 行 háng/行 xíng) without per-option audio assets.
-                speak(opt, { language: targetLocale })
+                // Per-option locale detection handles mixed-language
+                // exercises ("What does X mean?" with English answers).
+                speak(opt, {
+                  language: localeForOption(
+                    opt,
+                    [exercise.prompt, exercise.spokenText, ...exercise.options],
+                    courseId,
+                  ),
+                })
                 onSelect(opt)
               }}
             >

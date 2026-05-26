@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { MatchPairsExercise } from '@mochilang/shared'
 import TappableText from '../TappableText'
+import { localeForOption, speak } from '../../lib/tts'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
    */
   onComplete: (mistakes: number) => void
   resetKey: number
+  courseId?: string
 }
 
 type Side = 'left' | 'right'
@@ -37,7 +39,18 @@ export default function MatchPairs({
   locked,
   onComplete,
   resetKey,
+  courseId,
 }: Props) {
+  // Build the universe of tile texts once per render so localeForOption
+  // can fall back on cross-tile script signals when a single tile is
+  // Latin-only.
+  const allTileTexts = useMemo(
+    () => [
+      exercise.prompt,
+      ...exercise.pairs.flatMap((p) => [p.left, p.right]),
+    ],
+    [exercise],
+  )
   const lefts = useMemo(
     () => shuffle(exercise.pairs.map((p, i) => ({ label: p.left, pairIdx: i }))),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -64,6 +77,9 @@ export default function MatchPairs({
   function tryHandle(side: Side, label: string, pairIdx: number) {
     if (locked) return
     if (matched.has(pairIdx) && side === 'left') return
+    // Speak the tile in its own language — Chinese left, English right,
+    // or whatever the script detection picks per tile.
+    speak(label, { language: localeForOption(label, allTileTexts, courseId) })
     if (
       pick &&
       pick.side === side &&

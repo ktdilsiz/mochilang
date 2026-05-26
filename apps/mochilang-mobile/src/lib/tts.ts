@@ -38,6 +38,77 @@ export function targetLocaleForCourse(courseId: string | null | undefined): stri
 }
 
 /**
+ * Unicode-range tells for languages that don't share Latin script. If
+ * the option text matches the target's range, speak it as the target.
+ * If it matches the *source's* range, speak it as the source. This is
+ * how we figure out that "喜欢" should be zh-CN but "Like" should be
+ * en-US inside a single zh-en exercise.
+ */
+const SCRIPT_RE_FOR_LANG: Record<string, RegExp> = {
+  zh: /[一-鿿㐀-䶿豈-﫿]/,
+  ja: /[぀-ヿ]/,
+  ko: /[가-힯]/,
+  ru: /[Ѐ-ӿ]/,
+  ar: /[؀-ۿ]/,
+  hi: /[ऀ-ॿ]/,
+}
+
+/** Turkish-specific Latin diacritics — used when both course langs are Latin. */
+const TURKISH_DIACRITICS = /[çğıöşüÇĞİÖŞÜ]/
+
+/**
+ * Pick the right locale to speak `text` in, given that it appears
+ * alongside `siblings` (the other options in the same exercise) within
+ * a course pair. Logic, in order:
+ *
+ *   1. If `text` itself contains the target language's distinctive
+ *      script (CJK, Hangul, Cyrillic, etc.), use the target locale.
+ *   2. If any sibling has that target script but `text` doesn't, then
+ *      `text` is in the *source* language (translate-to-source
+ *      exercise). Use the source locale.
+ *   3. Same logic for Turkish diacritics when source/target are both
+ *      Latin-script.
+ *   4. Otherwise default to the target locale — best guess when we
+ *      have no script signal either way.
+ */
+export function localeForOption(
+  text: string,
+  siblings: string[],
+  courseId: string | null | undefined,
+): string {
+  if (!courseId) return targetLocaleForCourse(courseId)
+  const parsed = parseCourseId(courseId)
+  if (!parsed) return targetLocaleForCourse(courseId)
+  const targetLoc = LOCALE_BY_LANG[parsed.target] ?? parsed.target
+  const sourceLoc = LOCALE_BY_LANG[parsed.source] ?? parsed.source
+
+  const targetRe = SCRIPT_RE_FOR_LANG[parsed.target]
+  const sourceRe = SCRIPT_RE_FOR_LANG[parsed.source]
+
+  if (targetRe?.test(text)) return targetLoc
+  if (sourceRe?.test(text)) return sourceLoc
+
+  // Some sibling option has target script and this one doesn't — this
+  // one is the source language.
+  if (targetRe && siblings.some((s) => targetRe.test(s))) return sourceLoc
+  if (sourceRe && siblings.some((s) => sourceRe.test(s))) return targetLoc
+
+  // Latin-only territory. Look at Turkish diacritics for tr courses.
+  if (parsed.target === 'tr') {
+    if (TURKISH_DIACRITICS.test(text)) return 'tr-TR'
+    if (siblings.some((s) => TURKISH_DIACRITICS.test(s))) return 'tr-TR'
+    return sourceLoc
+  }
+  if (parsed.source === 'tr') {
+    if (TURKISH_DIACRITICS.test(text)) return 'tr-TR'
+    if (siblings.some((s) => TURKISH_DIACRITICS.test(s))) return 'tr-TR'
+    return targetLoc
+  }
+
+  return targetLoc
+}
+
+/**
  * Mobile TTS wrapper. Honors the user's settings for voice gender and
  * speech rate.
  *

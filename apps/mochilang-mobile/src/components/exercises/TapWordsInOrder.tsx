@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import type { TapWordsInOrderExercise } from '@mochilang/shared'
 import TappableText from '../TappableText'
-import { speak, targetLocaleForCourse } from '../../lib/tts'
+import { localeForOption, speak } from '../../lib/tts'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -35,7 +35,6 @@ export default function TapWordsInOrder({
   resetKey,
   courseId,
 }: Props) {
-  const targetLocale = targetLocaleForCourse(courseId)
   const initialBank = useMemo<Chip[]>(
     () => shuffle(exercise.bank).map((w, i) => ({ word: w, key: `${i}-${w}` })),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -60,8 +59,16 @@ export default function TapWordsInOrder({
       const [item] = next.splice(idx, 1)
       // Speak the token as it lands in the build area — same intent as
       // the multiple-choice path: hear the target-language word the
-      // moment you tap it.
-      speak(item.word, { language: targetLocale })
+      // moment you tap it. Per-token detection so a chip that's
+      // English (rare but possible in source-language drills) speaks
+      // English instead of being mangled by a Chinese voice.
+      speak(item.word, {
+        language: localeForOption(
+          item.word,
+          [exercise.prompt, exercise.answer, ...exercise.bank],
+          courseId,
+        ),
+      })
       setBuilt((b) => [...b, item])
       return next
     })
