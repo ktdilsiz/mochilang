@@ -34,6 +34,16 @@ interface ExerciseBase {
   id: string
   /** Optional explanation surfaced after the user answers. */
   explanation?: string
+  /**
+   * Optional source-language translation/clue for the target-language
+   * content. Rendered above the prompt as a smaller secondary line so
+   * the learner knows *what* they're producing without seeing the
+   * answer verbatim. Especially useful for vocab-specific fill_blank
+   * and translate exercises where the prompt alone is ambiguous
+   * ("My phone ___ ___ at the station." — was stolen? is left? was
+   * lost?). A Turkish/Chinese/Spanish source cue disambiguates.
+   */
+  hint?: string
 }
 
 /**

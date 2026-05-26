@@ -233,6 +233,11 @@ export default function ExamScreen({
 
       <ScrollView contentContainerStyle={styles.body}>
         <Text style={styles.eyebrow}>{eyebrow}</Text>
+        {ex.hint ? (
+          <View style={styles.hintWrap}>
+            <Text style={styles.hintText}>{ex.hint}</Text>
+          </View>
+        ) : null}
         <ExerciseView
           ex={ex}
           locked={locked}
@@ -481,6 +486,14 @@ const styles = StyleSheet.create({
     letterSpacing: 1.4,
     color: colors.textSubtle,
     textTransform: 'uppercase',
+  },
+  hintWrap: { alignItems: 'center', paddingHorizontal: space.lg },
+  hintText: {
+    fontSize: fontSizes.sm,
+    color: colors.textMuted,
+    fontStyle: 'italic',
+    textAlign: 'center',
+    lineHeight: fontSizes.sm * 1.4,
   },
   exRoot: { gap: space.lg },
   prompt: {

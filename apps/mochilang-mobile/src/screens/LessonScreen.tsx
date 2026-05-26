@@ -265,6 +265,7 @@ export default function LessonScreen({
 
       <ScrollView contentContainerStyle={styles.body}>
         <ExerciseInstruction exercise={ex} courseId={courseId} />
+        {ex.hint ? <ExerciseHint hint={ex.hint} /> : null}
         <ExerciseView
           ex={ex}
           courseId={courseId}
@@ -502,6 +503,19 @@ function ExerciseInstruction({
   )
 }
 
+/**
+ * Source-language hint shown above the prompt. Optional per exercise.
+ * Renders smaller + secondary color so it reads as a translation cue,
+ * not the primary content the learner is responding to.
+ */
+function ExerciseHint({ hint }: { hint: string }) {
+  return (
+    <View style={styles.hintWrap}>
+      <Text style={styles.hintText}>{hint}</Text>
+    </View>
+  )
+}
+
 function grade(
   exercise: Exercise,
   inputs: {
@@ -591,6 +605,18 @@ const styles = StyleSheet.create({
     color: colors.textMuted,
     textTransform: 'uppercase',
     letterSpacing: 1.2,
+  },
+  hintWrap: {
+    alignItems: 'center',
+    marginTop: -space.sm,
+    paddingHorizontal: space.lg,
+  },
+  hintText: {
+    fontSize: fontSizes.sm,
+    color: colors.textMuted,
+    fontStyle: 'italic',
+    textAlign: 'center',
+    lineHeight: fontSizes.sm * 1.4,
   },
   exRoot: { gap: space.lg },
   prompt: {
