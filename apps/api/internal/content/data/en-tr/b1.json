@@ -175,6 +175,7 @@
               "id": "pp1-3",
               "type": "fill_blank",
               "prompt": "I ___ seen that film.",
+              "hint": "O filmi görmedim.",
               "answer": "haven't",
               "acceptableAnswers": [
                 "have not"
@@ -589,6 +590,7 @@
               "id": "pp4-3",
               "type": "fill_blank",
               "prompt": "I have ___ been to Italy.",
+              "hint": "İtalya'ya hiç gitmedim.",
               "answer": "never",
               "acceptableAnswers": [],
               "explanation": "'Never' tek başına olumsuzluk taşır."
@@ -1002,6 +1004,7 @@
               "id": "pp6-10",
               "type": "fill_blank",
               "prompt": "My eyes are red because I ___ ___ ___ .",
+              "hint": "Gözlerim kızardı çünkü ağlıyordum.",
               "answer": "have been crying",
               "acceptableAnswers": [],
               "explanation": "Sonuctan ziyade sureklilik vurgusu."
@@ -1507,6 +1510,7 @@
               "id": "mod2-5",
               "type": "fill_blank",
               "prompt": "She ___ work on Saturdays.",
+              "hint": "Cumartesi günleri çalışmak zorundadır.",
               "answer": "has to",
               "acceptableAnswers": [
                 "must"
@@ -1615,6 +1619,7 @@
               "id": "mod3-2",
               "type": "fill_blank",
               "prompt": "Soru: '___ I bring a gift?'",
+              "hint": "Hediye getirmeli miyim?",
               "answer": "Should",
               "acceptableAnswers": [],
               "explanation": "Tavsiye sorusu → Should I…?"
@@ -1648,6 +1653,7 @@
               "id": "mod3-5",
               "type": "fill_blank",
               "prompt": "He ___ drive so fast.",
+              "hint": "Bu kadar hızlı sürmemeli.",
               "answer": "shouldn't",
               "acceptableAnswers": [
                 "should not"
@@ -1723,6 +1729,7 @@
               "id": "mod3-10",
               "type": "fill_blank",
               "prompt": "We ___ be more careful next time.",
+              "hint": "Bir dahaki sefere daha dikkatli olmalıyız.",
               "answer": "should",
               "acceptableAnswers": [
                 "must"
@@ -1913,6 +1920,7 @@
               "id": "mod5-3",
               "type": "fill_blank",
               "prompt": "You ___ smoke.",
+              "hint": "Sigara içmemelisin.",
               "answer": "mustn't",
               "acceptableAnswers": [
                 "must not"
@@ -1923,6 +1931,7 @@
               "id": "mod5-4",
               "type": "fill_blank",
               "prompt": "I ___ ___ ___ get up early.",
+              "hint": "Erken kalkmak zorunda değilim.",
               "answer": "don't have to",
               "acceptableAnswers": [
                 "do not have to"
@@ -2009,6 +2018,7 @@
               "id": "mod5-10",
               "type": "fill_blank",
               "prompt": "I ___ ___ wake up early yesterday.",
+              "hint": "Dün erken kalkmak zorundaydım.",
               "answer": "had to",
               "acceptableAnswers": [],
               "explanation": "'must'in geçmişi yok -> 'had to'."
@@ -2087,6 +2097,7 @@
               "id": "mod6-3",
               "type": "fill_blank",
               "prompt": "You ___ ___ be late.",
+              "hint": "Geç kalmamalısın.",
               "answer": "shouldn't",
               "acceptableAnswers": [
                 "should not"
@@ -2617,6 +2628,7 @@
               "id": "con2-2",
               "type": "fill_blank",
               "prompt": "If you ___, you will pass the exam.",
+              "hint": "Çalışırsan sınavı geçeceksin.",
               "answer": "study",
               "acceptableAnswers": [],
               "explanation": "If'li kısımda present."
@@ -2932,6 +2944,7 @@
               "id": "con4-5",
               "type": "fill_blank",
               "prompt": "If you ___ iron, it expands.",
+              "hint": "Demiri ısıtırsan, genişler.",
               "answer": "heat",
               "acceptableAnswers": [],
               "explanation": "Bilimsel gerçek → zero."
@@ -3154,6 +3167,7 @@
               "id": "con5-10",
               "type": "fill_blank",
               "prompt": "'If I ___ ___ that song, I wouldn't be sad now.'",
+              "hint": "O şarkıyı duymasaydım şimdi üzgün olmazdım.",
               "answer": "hadn't heard",
               "acceptableAnswers": [
                 "had not heard"
@@ -3235,6 +3249,7 @@
               "id": "con6-3",
               "type": "fill_blank",
               "prompt": "I wish I ___ ___ to you.",
+              "hint": "Keşke seni dinleseydim.",
               "answer": "had listened",
               "acceptableAnswers": [
                 "'d listened"
@@ -4347,6 +4362,7 @@
               "id": "pas6-3",
               "type": "fill_blank",
               "prompt": "Mona Lisa ___ ___ ___ Da Vinci.",
+              "hint": "Mona Lisa Da Vinci tarafından yapıldı.",
               "answer": "was painted by",
               "acceptableAnswers": [],
               "explanation": "Past simple passive + by."
@@ -4443,6 +4459,7 @@
               "id": "pas6-10",
               "type": "fill_blank",
               "prompt": "I ___ ___ in traffic this morning.",
+              "hint": "Bu sabah trafikte sıkıştım.",
               "answer": "got stuck",
               "acceptableAnswers": [
                 "was stuck"
@@ -4783,6 +4800,7 @@
               "id": "phr1-3",
               "type": "fill_blank",
               "prompt": "I ___ ___ an old friend at the mall.",
+              "hint": "Alışveriş merkezinde eski bir arkadaşımla karşılaştım.",
               "answer": "ran into",
               "acceptableAnswers": [
                 "bumped into",
@@ -4867,6 +4885,7 @@
               "id": "phr1-9",
               "type": "fill_blank",
               "prompt": "I ___ ___ that he was lying.",
+              "hint": "Yalan söylediğini öğrendim.",
               "answer": "found out",
               "acceptableAnswers": [
                 "discovered",
@@ -4925,6 +4944,7 @@
               "id": "phr2-3",
               "type": "fill_blank",
               "prompt": "She turned ___ the offer.",
+              "hint": "Teklifi reddetti.",
               "answer": "down",
               "acceptableAnswers": []
             },
@@ -5149,6 +5169,7 @@
               "id": "phr3-9",
               "type": "fill_blank",
               "prompt": "Can you ___ me ___ at the airport?",
+              "hint": "Beni havaalanından alabilir misin?",
               "answer": "pick up",
               "acceptableAnswers": [
                 "pick / up"
@@ -5291,6 +5312,7 @@
               "id": "phr4-9",
               "type": "fill_blank",
               "prompt": "'I'll ___ ___ about it tomorrow.'",
+              "hint": "Yarın buna bakacağım.",
               "answer": "look into",
               "acceptableAnswers": [
                 "investigate"
@@ -5347,6 +5369,7 @@
               "id": "phr5-3",
               "type": "fill_blank",
               "prompt": "I ___ ___ ___ my best friend yesterday.",
+              "hint": "Dün en iyi arkadaşımla tartıştık.",
               "answer": "fell out with",
               "acceptableAnswers": [],
               "explanation": "fall out with = kavga etmek."
@@ -5355,6 +5378,7 @@
               "id": "phr5-4",
               "type": "fill_blank",
               "prompt": "They want to ___ ___ in the countryside.",
+              "hint": "Kırsalda yerleşmek istiyorlar.",
               "answer": "settle down",
               "acceptableAnswers": [
                 "settle"
@@ -6469,6 +6493,7 @@
               "id": "ff4-9",
               "type": "fill_blank",
               "prompt": "Be ___: explain in two minutes.",
+              "hint": "Kısa konuş: iki dakikada anlat.",
               "answer": "brief",
               "acceptableAnswers": [
                 "short",
@@ -7481,6 +7506,7 @@
               "id": "tr3-4",
               "type": "fill_blank",
               "prompt": "On the ___ .",
+              "hint": "Köşede.",
               "answer": "corner",
               "acceptableAnswers": [],
               "explanation": "on the corner."
@@ -8550,6 +8576,7 @@
               "id": "wk3-4",
               "type": "fill_blank",
               "prompt": "I ___ completely.",
+              "hint": "Tamamen katılıyorum.",
               "answer": "agree",
               "acceptableAnswers": [
                 "concur"
@@ -8718,6 +8745,7 @@
               "id": "wk4-3",
               "type": "fill_blank",
               "prompt": "I ___ this project.",
+              "hint": "Bu projeyi yönetiyorum.",
               "answer": "manage",
               "acceptableAnswers": [
                 "run",
@@ -8896,6 +8924,7 @@
               "id": "wk5-3",
               "type": "fill_blank",
               "prompt": "I ___ my job.",
+              "hint": "İşimden ayrıldım.",
               "answer": "quit",
               "acceptableAnswers": [
                 "left"
@@ -9372,6 +9401,7 @@
               "id": "st1-10",
               "type": "fill_blank",
               "prompt": "While I ___ ___ , she was cooking.",
+              "hint": "Ben okurken o yemek pişiriyordu.",
               "answer": "was reading",
               "acceptableAnswers": []
             },
@@ -9896,6 +9926,7 @@
               "id": "st4-10",
               "type": "fill_blank",
               "prompt": "At the time, I ___ ___ anything.",
+              "hint": "O zamanlar hiçbir şey bilmiyordum.",
               "answer": "didn't know",
               "acceptableAnswers": [
                 "did not know"
@@ -10465,6 +10496,7 @@
               "id": "op1-10",
               "type": "fill_blank",
               "prompt": "___ ___ , ...",
+              "hint": "Bana göre, ...",
               "answer": "To me",
               "acceptableAnswers": []
             },
@@ -10634,6 +10666,7 @@
               "id": "op2-10",
               "type": "fill_blank",
               "prompt": "I ___ the same way.",
+              "hint": "Ben de aynı şekilde hissediyorum.",
               "answer": "feel",
               "acceptableAnswers": []
             },
@@ -11534,6 +11567,7 @@
               "id": "rev2-4",
               "type": "fill_blank",
               "prompt": "My phone ___ ___ at the station.",
+              "hint": "Telefonum istasyonda çalındı.",
               "answer": "was stolen",
               "acceptableAnswers": []
             },
@@ -11606,6 +11640,7 @@
               "id": "rev2-9",
               "type": "fill_blank",
               "prompt": "I went to the ___ to borrow a book.",
+              "hint": "Bir kitap ödünç almak için kütüphaneye gittim.",
               "answer": "library"
             },
             {

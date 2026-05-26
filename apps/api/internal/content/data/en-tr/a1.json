@@ -1287,6 +1287,7 @@
               "id": "gr1-7",
               "type": "fill_blank",
               "prompt": "See you ___",
+              "hint": "Yarın görüşürüz.",
               "answer": "tomorrow",
               "acceptableAnswers": [],
               "explanation": "tomorrow = yarın."
@@ -1502,6 +1503,7 @@
               "id": "gr3-3",
               "type": "fill_blank",
               "prompt": "And ___?",
+              "hint": "Ya sen?",
               "answer": "you",
               "acceptableAnswers": [],
               "explanation": "'And you?' = 'Sen?' anlamında. İngilizcede karşılığı sormak âdettendir."
@@ -1848,6 +1850,7 @@
               "id": "gr5-8",
               "type": "fill_blank",
               "prompt": "Pleased to ___ you.",
+              "hint": "Tanıştığımıza memnun oldum.",
               "answer": "meet",
               "explanation": "'Pleased to meet you.' = Tanıştığımıza memnun oldum.",
               "acceptableAnswers": [
@@ -1944,6 +1947,7 @@
               "id": "gr6-2",
               "type": "fill_blank",
               "prompt": "I am ___ Turkey.",
+              "hint": "Türkiye'denim.",
               "answer": "from",
               "explanation": "'from' = -den, -dan; ülkeden geldiğini gösterir.",
               "acceptableAnswers": []
@@ -2016,6 +2020,7 @@
               "id": "gr6-7",
               "type": "fill_blank",
               "prompt": "I am a ___",
+              "hint": "Ben bir doktorum.",
               "answer": "doctor",
               "acceptableAnswers": [],
               "explanation": "Türkçede 'doktorum' tek kelime, İngilizcede 'I am a doctor' üç kelimedir."
@@ -2322,6 +2327,7 @@
               "id": "pr1-3",
               "type": "fill_blank",
               "prompt": "___ are students.",
+              "hint": "Biz öğrenciyiz.",
               "answer": "We",
               "acceptableAnswers": []
             },
@@ -2471,6 +2477,7 @@
               "id": "pr2-4",
               "type": "fill_blank",
               "prompt": "___ is an athlete.",
+              "hint": "O bir sporcudur. (erkek)",
               "answer": "He",
               "acceptableAnswers": []
             },
@@ -2478,6 +2485,7 @@
               "id": "pr2-5",
               "type": "fill_blank",
               "prompt": "___ is an engineer.",
+              "hint": "O bir mühendistir. (kadın)",
               "answer": "She",
               "acceptableAnswers": []
             },
@@ -2663,6 +2671,7 @@
               "id": "pr3-8",
               "type": "fill_blank",
               "prompt": "___ teacher.",
+              "hint": "Bizim öğretmenimiz.",
               "answer": "our",
               "acceptableAnswers": []
             },
@@ -2787,6 +2796,7 @@
               "id": "pr4-7",
               "type": "fill_blank",
               "prompt": "___ house is big.",
+              "hint": "Senin evin büyük.",
               "answer": "Your",
               "acceptableAnswers": []
             },
@@ -2868,6 +2878,7 @@
               "id": "pr5-3",
               "type": "fill_blank",
               "prompt": "They help ___.",
+              "hint": "Bize yardım ediyorlar.",
               "answer": "us",
               "acceptableAnswers": [],
               "explanation": "we → us (nesne)."
@@ -2940,6 +2951,7 @@
               "id": "pr5-8",
               "type": "fill_blank",
               "prompt": "We see ___.",
+              "hint": "Onları görüyoruz.",
               "answer": "them",
               "acceptableAnswers": [],
               "explanation": "they → them."
@@ -3033,6 +3045,7 @@
               "id": "pr6-2",
               "type": "fill_blank",
               "prompt": "That is ___ pen.",
+              "hint": "O onun kalemi. (kadın)",
               "answer": "her",
               "acceptableAnswers": [],
               "explanation": "Türkçede 'onun kalemi' = İngilizcede 'her pen' (kız) ya da 'his pen' (erkek)."
@@ -3105,6 +3118,7 @@
               "id": "pr6-7",
               "type": "fill_blank",
               "prompt": "They are ___ friends.",
+              "hint": "Onlar bizim arkadaşlarımız.",
               "answer": "our",
               "acceptableAnswers": [],
               "explanation": "we → our."
@@ -3860,6 +3874,7 @@
               "id": "tb4-3",
               "type": "fill_blank",
               "prompt": "___ an apple in my bag.",
+              "hint": "Çantamda bir elma var.",
               "answer": "There is",
               "acceptableAnswers": [
                 "there's"
@@ -3988,6 +4003,7 @@
               "id": "tb5-2",
               "type": "fill_blank",
               "prompt": "She ___ tired.",
+              "hint": "Yorgun değil.",
               "answer": "isn't",
               "acceptableAnswers": [
                 "is not"
@@ -4063,6 +4079,7 @@
               "id": "tb5-7",
               "type": "fill_blank",
               "prompt": "We ___ students.",
+              "hint": "Biz öğrenci değiliz.",
               "answer": "aren't",
               "acceptableAnswers": [
                 "are not"
@@ -5084,6 +5101,7 @@
               "id": "nm5-2",
               "type": "fill_blank",
               "prompt": "I am the ___ child.",
+              "hint": "Ben ikinci çocuğum.",
               "answer": "second",
               "acceptableAnswers": [
                 "2nd"
@@ -5651,6 +5669,7 @@
               "id": "fm1-3",
               "type": "fill_blank",
               "prompt": "my ___",
+              "hint": "erkek kardeşim",
               "answer": "brother",
               "acceptableAnswers": []
             },
@@ -5790,6 +5809,7 @@
               "id": "fm2-3",
               "type": "fill_blank",
               "prompt": "my ___",
+              "hint": "kuzenim",
               "answer": "cousin",
               "acceptableAnswers": []
             },
@@ -5871,6 +5891,7 @@
               "id": "fm2-9",
               "type": "fill_blank",
               "prompt": "my uncle on my ___'s side.",
+              "hint": "baba tarafından amcam",
               "answer": "father",
               "acceptableAnswers": [
                 "dad",
@@ -6066,6 +6087,7 @@
               "id": "fm4-3",
               "type": "fill_blank",
               "prompt": "This is my ___ Ali.",
+              "hint": "Bu benim erkek kardeşim Ali.",
               "answer": "brother",
               "acceptableAnswers": []
             },
@@ -6278,6 +6300,7 @@
               "id": "fm5-8",
               "type": "fill_blank",
               "prompt": "My ___ are kind.",
+              "hint": "Büyükannem ve büyükbabam naziktir.",
               "answer": "grandparents",
               "explanation": "grandparents = büyükanne + büyükbaba.",
               "acceptableAnswers": []
@@ -6371,6 +6394,7 @@
               "id": "fm6-2",
               "type": "fill_blank",
               "prompt": "I have a big ___.",
+              "hint": "Büyük bir ailem var.",
               "answer": "family",
               "acceptableAnswers": []
             },
@@ -6822,6 +6846,7 @@
               "id": "ev1-8",
               "type": "fill_blank",
               "prompt": "They ___ English.",
+              "hint": "İngilizce çalışırlar.",
               "answer": "study",
               "acceptableAnswers": [],
               "explanation": "'They' özne → fiil yalın."
@@ -6902,6 +6927,7 @@
               "id": "ev2-4",
               "type": "fill_blank",
               "prompt": "They ___ work on Sundays.",
+              "hint": "Pazar günleri çalışmazlar.",
               "answer": "don't",
               "acceptableAnswers": [
                 "do not"
@@ -6962,6 +6988,7 @@
               "id": "ev2-8",
               "type": "fill_blank",
               "prompt": "'I don't ___ TV in the morning.'",
+              "hint": "Sabahları TV izlemem.",
               "answer": "watch",
               "acceptableAnswers": []
             },
@@ -7293,6 +7320,7 @@
               "id": "ev5-2",
               "type": "fill_blank",
               "prompt": "She ___ English.",
+              "hint": "İngilizce çalışır.",
               "answer": "studies",
               "acceptableAnswers": [],
               "explanation": "Sessizden sonra -y → -ies: study → studies."
@@ -7471,6 +7499,7 @@
               "id": "ev6-2",
               "type": "fill_blank",
               "prompt": "She ___ eat meat.",
+              "hint": "Et yemez.",
               "answer": "doesn't",
               "acceptableAnswers": [
                 "does not"
@@ -8098,6 +8127,7 @@
               "id": "ar3-3",
               "type": "fill_blank",
               "prompt": "I drink ___ every morning.",
+              "hint": "Her sabah çay içerim.",
               "answer": "tea",
               "acceptableAnswers": [],
               "explanation": "Sayılamayan + genel = artikel yok."
@@ -8155,6 +8185,7 @@
               "id": "ar3-7",
               "type": "fill_blank",
               "prompt": "I drink ___",
+              "hint": "Su içerim.",
               "answer": "water",
               "acceptableAnswers": []
             },
@@ -8964,6 +8995,7 @@
               "id": "qu1-8",
               "type": "fill_blank",
               "prompt": "___ book is this?",
+              "hint": "Bu kimin kitabı?",
               "answer": "Whose",
               "acceptableAnswers": []
             },
@@ -9221,6 +9253,7 @@
               "id": "qu3-7",
               "type": "fill_blank",
               "prompt": "How ___ are you?",
+              "hint": "Kaç yaşındasın?",
               "answer": "old",
               "acceptableAnswers": [
                 "aged",
@@ -9429,6 +9462,7 @@
               "id": "qu5-2",
               "type": "fill_blank",
               "prompt": "___ is your birthday?",
+              "hint": "Doğum günün ne zaman?",
               "answer": "When",
               "acceptableAnswers": [],
               "explanation": "When = ne zaman."
@@ -10078,6 +10112,7 @@
               "id": "col1-8",
               "type": "fill_blank",
               "prompt": "The sky is ___.",
+              "hint": "Gökyüzü mavidir.",
               "answer": "blue",
               "acceptableAnswers": []
             },
@@ -10170,6 +10205,7 @@
               "id": "col2-2",
               "type": "fill_blank",
               "prompt": "a ___ book",
+              "hint": "yeşil bir kitap",
               "answer": "green",
               "acceptableAnswers": []
             },
@@ -10433,6 +10469,7 @@
               "id": "col3-8",
               "type": "fill_blank",
               "prompt": "It is ___.",
+              "hint": "O kırmızıdır.",
               "answer": "red",
               "acceptableAnswers": []
             },
@@ -10526,6 +10563,7 @@
               "id": "col4-2",
               "type": "fill_blank",
               "prompt": "a small ___ cat",
+              "hint": "küçük siyah bir kedi",
               "answer": "black",
               "acceptableAnswers": [],
               "explanation": "Sıralama: boyut + renk + isim."
@@ -10610,6 +10648,7 @@
               "id": "col4-8",
               "type": "fill_blank",
               "prompt": "I have ___ apples.",
+              "hint": "Kırmızı elmalarım var.",
               "answer": "red",
               "acceptableAnswers": []
             },
@@ -10788,6 +10827,7 @@
               "id": "col5-8",
               "type": "fill_blank",
               "prompt": "Snow is ___.",
+              "hint": "Kar beyazdır.",
               "answer": "white",
               "acceptableAnswers": []
             },
@@ -11158,6 +11198,7 @@
               "id": "wt1-8",
               "type": "fill_blank",
               "prompt": "In summer, it is ___.",
+              "hint": "Yazın hava sıcaktır.",
               "answer": "hot",
               "acceptableAnswers": []
             },
@@ -11613,6 +11654,7 @@
               "id": "wt4-2",
               "type": "fill_blank",
               "prompt": "How is the ___ today?",
+              "hint": "Bugün hava nasıl?",
               "answer": "weather",
               "acceptableAnswers": []
             },
@@ -11873,6 +11915,7 @@
               "id": "wt5-8",
               "type": "fill_blank",
               "prompt": "It snows in ___.",
+              "hint": "Kışın kar yağar.",
               "answer": "winter",
               "acceptableAnswers": []
             },
@@ -12701,6 +12744,7 @@
               "id": "pl4-2",
               "type": "fill_blank",
               "prompt": "The cat is ___ the chair.",
+              "hint": "Kedi sandalyenin üstünde.",
               "answer": "on",
               "acceptableAnswers": []
             },
@@ -12966,6 +13010,7 @@
               "id": "pl5-8",
               "type": "fill_blank",
               "prompt": "The cat is ___ the bed.",
+              "hint": "Kedi yatağın üstünde.",
               "answer": "on",
               "acceptableAnswers": []
             },
@@ -13265,6 +13310,7 @@
               "id": "rv1-8",
               "type": "fill_blank",
               "prompt": "They ___ at home.",
+              "hint": "Onlar evde değil.",
               "answer": "aren't",
               "acceptableAnswers": [
                 "are not"
@@ -13332,6 +13378,7 @@
               "id": "rv2-3",
               "type": "fill_blank",
               "prompt": "My ___ is a teacher.",
+              "hint": "Annem öğretmen.",
               "answer": "mother",
               "acceptableAnswers": [
                 "mom",
@@ -13539,6 +13586,7 @@
               "id": "rv3-8",
               "type": "fill_blank",
               "prompt": "I drink ___ every morning.",
+              "hint": "Her sabah çay içerim.",
               "answer": "tea",
               "acceptableAnswers": []
             },

@@ -315,6 +315,7 @@
               "id": "biz2-2",
               "type": "fill_blank",
               "prompt": "We may have ___ meeting that figure.",
+              "hint": "Bu rakama ulaşmakta zorlanabiliriz.",
               "answer": "difficulty",
               "acceptableAnswers": [
                 "trouble",
@@ -393,6 +394,7 @@
               "id": "biz2-7",
               "type": "fill_blank",
               "prompt": "We can meet you ___",
+              "hint": "Yarı yolda buluşabiliriz.",
               "answer": "halfway",
               "acceptableAnswers": [
                 "half-way"
@@ -434,6 +436,7 @@
               "id": "biz2-10",
               "type": "fill_blank",
               "prompt": "Could we explore some ___ options?",
+              "hint": "Bazı alternatif seçenekleri inceleyebilir miyiz?",
               "answer": "alternative",
               "acceptableAnswers": [
                 "other"
@@ -574,6 +577,7 @@
               "id": "biz3-7",
               "type": "fill_blank",
               "prompt": "I am writing in ___ to your inquiry.",
+              "hint": "Sorunuza yanıt olarak yazıyorum.",
               "answer": "response",
               "acceptableAnswers": [
                 "answer",
@@ -619,6 +623,7 @@
               "id": "biz3-10",
               "type": "fill_blank",
               "prompt": "The contract shall be ___ effective upon signing.",
+              "hint": "Sözleşme imzalandığında yürürlüğe girmiş sayılır.",
               "answer": "deemed",
               "acceptableAnswers": [],
               "explanation": "'shall be deemed' sözleşme dili."
@@ -707,6 +712,7 @@
               "id": "biz4-3",
               "type": "fill_blank",
               "prompt": "This initiative gives us a competitive ___",
+              "hint": "Bu girişim bize rekabet avantajı sağlıyor.",
               "answer": "edge",
               "acceptableAnswers": [
                 "advantage"
@@ -760,6 +766,7 @@
               "id": "biz4-7",
               "type": "fill_blank",
               "prompt": "The investment yields ___ returns at this scale.",
+              "hint": "Yatırım bu ölçekte azalan getiriler veriyor.",
               "answer": "diminishing",
               "acceptableAnswers": []
             },
@@ -795,6 +802,7 @@
               "id": "biz4-10",
               "type": "fill_blank",
               "prompt": "It's a ___ proposition for both sides.",
+              "hint": "Bu iki taraf için de kazan-kazan bir teklif.",
               "answer": "win-win",
               "acceptableAnswers": [
                 "win win"
@@ -826,6 +834,7 @@
               "id": "biz5-2",
               "type": "fill_blank",
               "prompt": "Revenue grew 12% year-on-year, ___ by enterprise renewals.",
+              "hint": "Gelir kurumsal yenilemelerin etkisiyle yıllık %12 büyüdü.",
               "answer": "driven",
               "acceptableAnswers": [],
               "explanation": "Yönetici özetinde 'driven by' kazanım nedenini belirtir."
@@ -904,6 +913,7 @@
               "id": "biz5-7",
               "type": "fill_blank",
               "prompt": "The proposal is, on ___, the most defensible option available.",
+              "hint": "Teklif, sonuç olarak en savunulabilir seçenek.",
               "answer": "balance",
               "acceptableAnswers": []
             },
@@ -945,6 +955,7 @@
               "id": "biz5-10",
               "type": "fill_blank",
               "prompt": "The board is asked to ___ the proposed reallocation.",
+              "hint": "Yönetim kurulundan önerilen yeniden tahsisi onaylaması isteniyor.",
               "answer": "endorse",
               "acceptableAnswers": [
                 "approve",
@@ -1010,6 +1021,7 @@
               "id": "biz6-2",
               "type": "fill_blank",
               "prompt": "I am writing to ___ a meeting at your earliest convenience.",
+              "hint": "Sizin uygun olduğunuz en erken zamanda bir toplantı talep etmek için yazıyorum.",
               "answer": "request",
               "acceptableAnswers": [
                 "ask"
@@ -1085,6 +1097,7 @@
               "id": "biz6-7",
               "type": "fill_blank",
               "prompt": "Apologies for the ___ in responding.",
+              "hint": "Yanıttaki gecikme için özür dilerim.",
               "answer": "delay",
               "acceptableAnswers": [
                 "postpone"
@@ -1130,6 +1143,7 @@
               "id": "biz6-10",
               "type": "fill_blank",
               "prompt": "Please find ___ the revised proposal.",
+              "hint": "Revize edilmiş teklifi ekte bulabilirsiniz.",
               "answer": "attached",
               "acceptableAnswers": [
                 "enclosed"
@@ -1429,6 +1443,7 @@
               "id": "ac1-3",
               "type": "fill_blank",
               "prompt": "A growing ___ of evidence indicates climate sensitivity.",
+              "hint": "Giderek artan bir kanıt bütünü iklim hassasiyetini gösteriyor.",
               "answer": "body",
               "acceptableAnswers": [
                 "amount"
@@ -1481,6 +1496,7 @@
               "id": "ac1-7",
               "type": "fill_blank",
               "prompt": "These results ___ that further investigation is warranted.",
+              "hint": "Bu sonuçlar daha fazla araştırma gerektiğini gösteriyor.",
               "answer": "indicate",
               "acceptableAnswers": [
                 "suggest",
@@ -1524,6 +1540,7 @@
               "id": "ac1-10",
               "type": "fill_blank",
               "prompt": "The phenomenon ___ to occur more frequently in summer.",
+              "hint": "Olgu yazın daha sık görülme eğilimindedir.",
               "answer": "tends",
               "acceptableAnswers": [
                 "is inclined"
@@ -1554,6 +1571,7 @@
               "id": "ac2-2",
               "type": "fill_blank",
               "prompt": "This paper ___ that…",
+              "hint": "Bu makale şunu savunur: …",
               "answer": "argues",
               "acceptableAnswers": [
                 "contends",
@@ -1633,6 +1651,7 @@
               "id": "ac2-7",
               "type": "fill_blank",
               "prompt": "The findings have important ___ for policy.",
+              "hint": "Bulguların politika açısından önemli sonuçları vardır.",
               "answer": "implications",
               "acceptableAnswers": [
                 "consequences",
@@ -1725,6 +1744,7 @@
               "id": "ac3-3",
               "type": "fill_blank",
               "prompt": "As ___ in Table 2…",
+              "hint": "Tablo 2'de gösterildiği gibi…",
               "answer": "shown",
               "acceptableAnswers": [
                 "depicted",
@@ -1777,6 +1797,7 @@
               "id": "ac3-7",
               "type": "fill_blank",
               "prompt": "The sample is ___ relatively small.",
+              "hint": "Örneklem ne var ki nispeten küçüktür.",
               "answer": "however",
               "acceptableAnswers": [
                 "nevertheless",
@@ -1817,6 +1838,7 @@
               "id": "ac3-10",
               "type": "fill_blank",
               "prompt": "Future research should ___ this question further.",
+              "hint": "Gelecekteki araştırmalar bu soruyu daha ileri incelemelidir.",
               "answer": "investigate",
               "acceptableAnswers": [
                 "examine",
@@ -1924,6 +1946,7 @@
               "id": "ac4-7",
               "type": "fill_blank",
               "prompt": "Conversely, ___ found no such effect.",
+              "hint": "Aksine, biz böyle bir etki bulamadık.",
               "answer": "we",
               "acceptableAnswers": [
                 "i"
@@ -1965,6 +1988,7 @@
               "id": "ac4-10",
               "type": "fill_blank",
               "prompt": "The effect is statistically ___",
+              "hint": "Etki istatistiksel olarak anlamlıdır.",
               "answer": "significant",
               "acceptableAnswers": [
                 "important"
@@ -1996,6 +2020,7 @@
               "id": "ac5-2",
               "type": "fill_blank",
               "prompt": "Smith (2021) ___ a similar conclusion in a different setting.",
+              "hint": "Smith (2021) farklı bir ortamda benzer bir sonuca varır.",
               "answer": "reaches",
               "acceptableAnswers": [
                 "draws"
@@ -2074,6 +2099,7 @@
               "id": "ac5-7",
               "type": "fill_blank",
               "prompt": "This study seeks to ___ that gap in the literature.",
+              "hint": "Bu çalışma literatürdeki bu boşluğu doldurmayı amaçlar.",
               "answer": "address",
               "acceptableAnswers": [
                 "bridge",
@@ -2116,6 +2142,7 @@
               "id": "ac5-10",
               "type": "fill_blank",
               "prompt": "Recent scholarship has called this assumption into ___",
+              "hint": "Son akademik çalışmalar bu varsayımı sorgulamıştır.",
               "answer": "question",
               "acceptableAnswers": [],
               "explanation": "'call sth into question' = sorgulanır hale getirmek."
@@ -2176,6 +2203,7 @@
               "id": "ac6-2",
               "type": "fill_blank",
               "prompt": "This paper ___ the relationship between X and Y.",
+              "hint": "Bu makale X ile Y arasındaki ilişkiyi inceler.",
               "answer": "examines",
               "acceptableAnswers": [
                 "analyses",
@@ -2299,6 +2327,7 @@
               "id": "ac6-10",
               "type": "fill_blank",
               "prompt": "These findings ___ light on a long-standing debate.",
+              "hint": "Bu bulgular uzun süredir devam eden bir tartışmaya ışık tutuyor.",
               "answer": "shed",
               "acceptableAnswers": [
                 "cast",
@@ -2601,6 +2630,7 @@
               "id": "soc1-3",
               "type": "fill_blank",
               "prompt": "The ___ passed the bill last week.",
+              "hint": "Yasama organı geçen hafta tasarıyı kabul etti.",
               "answer": "legislature",
               "acceptableAnswers": [
                 "congress",
@@ -2656,6 +2686,7 @@
               "id": "soc1-7",
               "type": "fill_blank",
               "prompt": "Voters in this ___ tend to favour reform.",
+              "hint": "Bu seçim bölgesindeki seçmenler reformu destekleme eğilimindedir.",
               "answer": "constituency",
               "acceptableAnswers": []
             },
@@ -2692,6 +2723,7 @@
               "id": "soc1-10",
               "type": "fill_blank",
               "prompt": "The state has a ___ to protect citizens.",
+              "hint": "Devletin vatandaşları koruma görevi vardır.",
               "answer": "duty",
               "acceptableAnswers": [
                 "obligation",
@@ -2746,6 +2778,7 @@
               "id": "soc2-3",
               "type": "fill_blank",
               "prompt": "Income ___ has widened over the past decade.",
+              "hint": "Gelir eşitsizliği son on yılda derinleşti.",
               "answer": "inequality",
               "acceptableAnswers": [
                 "disparity"
@@ -2797,6 +2830,7 @@
               "id": "soc2-7",
               "type": "fill_blank",
               "prompt": "Closing the wage ___ remains a priority.",
+              "hint": "Ücret uçurumunu kapatmak öncelikli olmayı sürdürüyor.",
               "answer": "gap",
               "acceptableAnswers": [
                 "divide"
@@ -2838,6 +2872,7 @@
               "id": "soc2-10",
               "type": "fill_blank",
               "prompt": "The proposal aims to ___ structural barriers.",
+              "hint": "Teklif yapısal engelleri ortadan kaldırmayı amaçlıyor.",
               "answer": "dismantle",
               "acceptableAnswers": [
                 "address",
@@ -2870,6 +2905,7 @@
               "id": "soc3-2",
               "type": "fill_blank",
               "prompt": "There is a strong ___ for reform.",
+              "hint": "Reform için güçlü bir gerekçe var.",
               "answer": "case",
               "acceptableAnswers": [
                 "argument",
@@ -2948,6 +2984,7 @@
               "id": "soc3-7",
               "type": "fill_blank",
               "prompt": "Proponents ___ that the law protects vulnerable groups.",
+              "hint": "Destekçiler yasanın savunmasız grupları koruduğunu iddia ediyor.",
               "answer": "claim",
               "acceptableAnswers": [
                 "argue",
@@ -2988,6 +3025,7 @@
               "id": "soc3-10",
               "type": "fill_blank",
               "prompt": "A more ___ approach is required.",
+              "hint": "Daha incelikli bir yaklaşım gerekiyor.",
               "answer": "nuanced",
               "acceptableAnswers": [
                 "subtle",
@@ -3042,6 +3080,7 @@
               "id": "soc4-3",
               "type": "fill_blank",
               "prompt": "The reform risks ___ existing disparities.",
+              "hint": "Reform mevcut eşitsizlikleri kalıcılaştırma riski taşıyor.",
               "answer": "entrenching",
               "acceptableAnswers": [
                 "deepening",
@@ -3098,6 +3137,7 @@
               "id": "soc4-7",
               "type": "fill_blank",
               "prompt": "The wealth ___ has widened in the past two decades.",
+              "hint": "Servet uçurumu son yirmi yılda derinleşti.",
               "answer": "gap",
               "acceptableAnswers": [
                 "divide"
@@ -3141,6 +3181,7 @@
               "id": "soc4-10",
               "type": "fill_blank",
               "prompt": "Means-___ benefits target the most vulnerable.",
+              "hint": "İhtiyaç temelli yardımlar en savunmasızları hedefler.",
               "answer": "tested",
               "acceptableAnswers": [],
               "explanation": "'Means-tested benefits' = gelir testine bağlı yardımlar."
@@ -3203,6 +3244,7 @@
               "id": "soc5-2",
               "type": "fill_blank",
               "prompt": "The argument is, at ___, incomplete.",
+              "hint": "Argüman en iyi ihtimalle eksik.",
               "answer": "best",
               "acceptableAnswers": [
                 "greatest"
@@ -3283,6 +3325,7 @@
               "id": "soc5-7",
               "type": "fill_blank",
               "prompt": "The claim is, to ___ a phrase, only half the story.",
+              "hint": "İddia, deyim yerindeyse, hikayenin yalnızca yarısı.",
               "answer": "borrow",
               "acceptableAnswers": [],
               "explanation": "'to borrow a phrase' kalıbı."
@@ -3323,6 +3366,7 @@
               "id": "soc5-10",
               "type": "fill_blank",
               "prompt": "The data, ___ imperfect, point in the same direction.",
+              "hint": "Veriler kusurlu olsa da aynı yöne işaret ediyor.",
               "answer": "though",
               "acceptableAnswers": [
                 "albeit",
@@ -3633,6 +3677,7 @@
               "id": "id1-3",
               "type": "fill_blank",
               "prompt": "That project is ___ the back burner for now.",
+              "hint": "O proje şimdilik ikinci planda.",
               "answer": "on",
               "acceptableAnswers": []
             },
@@ -3683,6 +3728,7 @@
               "id": "id1-7",
               "type": "fill_blank",
               "prompt": "The ___ line is, we need to ship by Friday.",
+              "hint": "Sonuç olarak Cuma'ya kadar yetiştirmemiz lazım.",
               "answer": "bottom",
               "acceptableAnswers": []
             },
@@ -3721,6 +3767,7 @@
               "id": "id1-10",
               "type": "fill_blank",
               "prompt": "Off the ___ of my head, I",
+              "hint": "Aklıma ilk geleni söyleyeyim, …",
               "answer": "top",
               "acceptableAnswers": []
             },
@@ -3800,6 +3847,7 @@
               "id": "id2-3",
               "type": "fill_blank",
               "prompt": "Don't make a ___ out of a molehill.",
+              "hint": "Pireyi deve yapma.",
               "answer": "mountain",
               "acceptableAnswers": []
             },
@@ -3848,6 +3896,7 @@
               "id": "id2-7",
               "type": "fill_blank",
               "prompt": "I had to bite the ___ and tell the truth.",
+              "hint": "Dişimi sıkıp doğruyu söylemek zorunda kaldım.",
               "answer": "bullet",
               "acceptableAnswers": []
             },
@@ -3886,6 +3935,7 @@
               "id": "id2-10",
               "type": "fill_blank",
               "prompt": "Stop pulling my ___",
+              "hint": "Dalga geçmeyi bırak.",
               "answer": "leg",
               "acceptableAnswers": []
             }
@@ -3937,6 +3987,7 @@
               "id": "id3-3",
               "type": "fill_blank",
               "prompt": "I read an interesting article in a science ___.",
+              "hint": "Bilim dergisinde ilginç bir makale okudum.",
               "answer": "magazine",
               "acceptableAnswers": [
                 "journal"
@@ -3988,6 +4039,7 @@
               "id": "id3-7",
               "type": "fill_blank",
               "prompt": "This is a ___ topic; he gets upset easily.",
+              "hint": "Bu hassas bir konu; kolay üzülür.",
               "answer": "sensitive",
               "acceptableAnswers": [
                 "delicate"
@@ -4026,6 +4078,7 @@
               "id": "id3-10",
               "type": "fill_blank",
               "prompt": "The ___ cost was much higher than estimated.",
+              "hint": "Gerçek maliyet tahmin edilenden çok daha yüksekti.",
               "answer": "actual",
               "acceptableAnswers": [
                 "real",
@@ -4132,6 +4185,7 @@
               "id": "id4-7",
               "type": "fill_blank",
               "prompt": "Please ___ the law.",
+              "hint": "Lütfen yasalara uyun.",
               "answer": "obey",
               "acceptableAnswers": [
                 "follow"
@@ -4171,6 +4225,7 @@
               "id": "id4-10",
               "type": "fill_blank",
               "prompt": "She made a strong ___ in her speech.",
+              "hint": "Konuşmasıyla güçlü bir izlenim bıraktı.",
               "answer": "impression",
               "acceptableAnswers": []
             }
@@ -4223,6 +4278,7 @@
               "id": "id5-3",
               "type": "fill_blank",
               "prompt": "Let's not boil the ___; let's start small.",
+              "hint": "Her şeyi bir anda halletmeye çalışmayalım; küçükten başlayalım.",
               "answer": "ocean",
               "acceptableAnswers": []
             },
@@ -4275,6 +4331,7 @@
               "id": "id5-7",
               "type": "fill_blank",
               "prompt": "That decision is above my pay ___.",
+              "hint": "O karar benim yetkimi aşıyor.",
               "answer": "grade",
               "acceptableAnswers": []
             },
@@ -4315,6 +4372,7 @@
               "id": "id5-10",
               "type": "fill_blank",
               "prompt": "We need to get all our ducks in a ___ before the launch.",
+              "hint": "Lansmandan önce her şeyi yoluna koymamız gerek.",
               "answer": "row",
               "acceptableAnswers": []
             },
@@ -4401,6 +4459,7 @@
               "id": "id6-3",
               "type": "fill_blank",
               "prompt": "She is a very ___ person; she rarely overreacts.",
+              "hint": "O çok mantıklı biri; nadiren aşırı tepki verir.",
               "answer": "sensible",
               "acceptableAnswers": [
                 "reasonable",
@@ -5040,6 +5099,7 @@
               "id": "gr2-10",
               "type": "fill_blank",
               "prompt": "It was ___ here that we first met.",
+              "hint": "Tam burada ilk kez tanışmıştık.",
               "answer": "right",
               "acceptableAnswers": [
                 "correct"
@@ -5070,6 +5130,7 @@
               "id": "gr3-2",
               "type": "fill_blank",
               "prompt": "___ in haste, the report contained errors.",
+              "hint": "Aceleyle yazıldığı için rapor hatalar içeriyordu.",
               "answer": "Written",
               "acceptableAnswers": []
             },
@@ -5143,6 +5204,7 @@
               "id": "gr3-7",
               "type": "fill_blank",
               "prompt": "___ at the airport, we headed to the hotel.",
+              "hint": "Havaalanına vardıktan sonra otele gittik.",
               "answer": "Having arrived",
               "acceptableAnswers": [
                 "arriving"
@@ -5184,6 +5246,7 @@
               "id": "gr3-10",
               "type": "fill_blank",
               "prompt": "___ ignored, the problem grew worse.",
+              "hint": "Görmezden gelindiği için sorun daha da büyüdü.",
               "answer": "Being",
               "acceptableAnswers": []
             }
@@ -5328,6 +5391,7 @@
               "id": "gr4-10",
               "type": "fill_blank",
               "prompt": "Only ___ examining the data did we identify the bias.",
+              "hint": "Önyargıyı ancak verileri inceledikten sonra fark ettik.",
               "answer": "after",
               "acceptableAnswers": [],
               "explanation": "'Only after V-ing… did we…'"
@@ -5390,6 +5454,7 @@
               "id": "gr5-2",
               "type": "fill_blank",
               "prompt": "The candidate ___ for the role has fifteen years of experience.",
+              "hint": "Pozisyon için seçilen aday on beş yıllık deneyime sahip.",
               "answer": "selected",
               "acceptableAnswers": [
                 "chosen"
@@ -5786,6 +5851,7 @@
               "id": "db1-3",
               "type": "fill_blank",
               "prompt": "With ___, I must disagree.",
+              "hint": "Saygılarımla, katılmıyorum.",
               "answer": "respect",
               "acceptableAnswers": []
             },
@@ -5836,6 +5902,7 @@
               "id": "db1-7",
               "type": "fill_blank",
               "prompt": "The reasoning is ___; it merely appears valid.",
+              "hint": "Akıl yürütme sadece geçerli görünüyor; aslında yanıltıcı.",
               "answer": "specious",
               "acceptableAnswers": [
                 "misleading",
@@ -5875,6 +5942,7 @@
               "id": "db1-10",
               "type": "fill_blank",
               "prompt": "I would ___ urge you to reconsider.",
+              "hint": "Saygıyla yeniden düşünmenizi rica ederim.",
               "answer": "respectfully",
               "acceptableAnswers": []
             }
@@ -5926,6 +5994,7 @@
               "id": "db2-3",
               "type": "fill_blank",
               "prompt": "The implications are ___",
+              "hint": "Sonuçları derin.",
               "answer": "profound",
               "acceptableAnswers": [
                 "deep"
@@ -5977,6 +6046,7 @@
               "id": "db2-7",
               "type": "fill_blank",
               "prompt": "These accusations are ___",
+              "hint": "Bu suçlamalar asılsız.",
               "answer": "unfounded",
               "acceptableAnswers": [
                 "baseless",
@@ -6018,6 +6088,7 @@
               "id": "db2-10",
               "type": "fill_blank",
               "prompt": "Their reasoning is ___ flawed.",
+              "hint": "Akıl yürütmeleri temelden kusurlu.",
               "answer": "fundamentally",
               "acceptableAnswers": [
                 "essentially",
@@ -6072,6 +6143,7 @@
               "id": "db3-3",
               "type": "fill_blank",
               "prompt": "___ his concerns, the project went ahead.",
+              "hint": "Endişelerine rağmen proje devam etti.",
               "answer": "Notwithstanding",
               "acceptableAnswers": [
                 "despite",
@@ -6127,6 +6199,7 @@
               "id": "db3-7",
               "type": "fill_blank",
               "prompt": "The market has shifted; ___, our strategy must adapt.",
+              "hint": "Piyasa değişti; dolayısıyla stratejimiz de uyum sağlamalı.",
               "answer": "hence",
               "acceptableAnswers": [
                 "therefore",
@@ -6169,6 +6242,7 @@
               "id": "db3-10",
               "type": "fill_blank",
               "prompt": "___ the criticism, the policy stands.",
+              "hint": "Eleştirilere rağmen politika değişmiyor.",
               "answer": "Despite",
               "acceptableAnswers": [
                 "in spite of",
@@ -6200,6 +6274,7 @@
               "id": "db4-2",
               "type": "fill_blank",
               "prompt": "The argument ___ on a questionable assumption.",
+              "hint": "Argüman tartışmalı bir varsayıma dayanıyor.",
               "answer": "rests",
               "acceptableAnswers": [
                 "hinges"
@@ -6277,6 +6352,7 @@
               "id": "db4-7",
               "type": "fill_blank",
               "prompt": "The conclusion does not ___ from the evidence presented.",
+              "hint": "Sonuç sunulan kanıtlardan çıkmıyor.",
               "answer": "follow",
               "acceptableAnswers": []
             },
@@ -6314,6 +6390,7 @@
               "id": "db4-10",
               "type": "fill_blank",
               "prompt": "The data, ___ properly examined, suggest the opposite.",
+              "hint": "Veriler doğru incelendiğinde tersini gösteriyor.",
               "answer": "when",
               "acceptableAnswers": [
                 "if"
@@ -6455,6 +6532,7 @@
               "id": "db5-7",
               "type": "fill_blank",
               "prompt": "I ___ your concern, but the data still favour the proposal.",
+              "hint": "Endişenizi anlıyorum ama veriler hâlâ teklifin lehinde.",
               "answer": "appreciate",
               "acceptableAnswers": [
                 "share",
@@ -6836,6 +6914,7 @@
               "id": "art1-3",
               "type": "fill_blank",
               "prompt": "The director's restraint makes the climax all the more ___.",
+              "hint": "Yönetmenin ölçülü tutumu doruk anını daha da çağrışımsal kılıyor.",
               "answer": "evocative",
               "acceptableAnswers": [
                 "expressive",
@@ -6894,6 +6973,7 @@
               "id": "art1-7",
               "type": "fill_blank",
               "prompt": "The film is visually ___ but emotionally hollow.",
+              "hint": "Film görsel olarak özenli ama duygusal olarak boş.",
               "answer": "polished",
               "acceptableAnswers": [
                 "refined",
@@ -6945,6 +7025,7 @@
               "id": "art1-11",
               "type": "fill_blank",
               "prompt": "The dialogue feels ___ in places, as if written for effect.",
+              "hint": "Diyalog yer yer yapay duruyor, sanki etki için yazılmış gibi.",
               "answer": "contrived",
               "acceptableAnswers": [
                 "forced",
@@ -6996,6 +7077,7 @@
               "id": "art2-2",
               "type": "fill_blank",
               "prompt": "The performance falls ___ in the second half.",
+              "hint": "İkinci yarıda performans sönük kalıyor.",
               "answer": "flat",
               "acceptableAnswers": []
             },
@@ -7072,6 +7154,7 @@
               "id": "art2-7",
               "type": "fill_blank",
               "prompt": "A welcome ___ to form for the director.",
+              "hint": "Yönetmen için form hocasına hoş bir dönüş.",
               "answer": "return",
               "acceptableAnswers": []
             },
@@ -7111,6 +7194,7 @@
               "id": "art2-10",
               "type": "fill_blank",
               "prompt": "A ___ of the genre, both daring and disciplined.",
+              "hint": "Hem cesur hem disiplinli, türünün bir zaferi.",
               "answer": "triumph",
               "acceptableAnswers": [
                 "success"
@@ -7170,6 +7254,7 @@
               "id": "art3-2",
               "type": "fill_blank",
               "prompt": "The novel's ___ shifts unexpectedly in chapter three.",
+              "hint": "Romanın anlatıcısı üçüncü bölümde beklenmedik bir şekilde değişiyor.",
               "answer": "narrator",
               "acceptableAnswers": [
                 "voice"
@@ -7246,6 +7331,7 @@
               "id": "art3-7",
               "type": "fill_blank",
               "prompt": "Her ___ are bold and gestural.",
+              "hint": "Fırça darbeleri cesur ve hareketli.",
               "answer": "brushstrokes",
               "acceptableAnswers": [
                 "brush strokes"
@@ -7286,6 +7372,7 @@
               "id": "art3-10",
               "type": "fill_blank",
               "prompt": "The score complements the visuals without ___ them.",
+              "hint": "Müzik görselleri gölgelemeden tamamlıyor.",
               "answer": "overshadowing",
               "acceptableAnswers": []
             },
@@ -7346,6 +7433,7 @@
               "id": "art4-2",
               "type": "fill_blank",
               "prompt": "It's a slow ___, but the payoff is immense.",
+              "hint": "Ağır ilerliyor ama ödülü büyük.",
               "answer": "burn",
               "acceptableAnswers": []
             },
@@ -7419,6 +7507,7 @@
               "id": "art4-7",
               "type": "fill_blank",
               "prompt": "The story really ___ a chord with younger readers.",
+              "hint": "Hikaye genç okurlarda gerçekten bir yankı uyandırdı.",
               "answer": "struck",
               "acceptableAnswers": []
             },
@@ -7457,6 +7546,7 @@
               "id": "art4-10",
               "type": "fill_blank",
               "prompt": "It's an acquired ___, but worth the patience.",
+              "hint": "Sonradan benimsenen bir tat ama sabretmeye değer.",
               "answer": "taste",
               "acceptableAnswers": []
             },
@@ -7529,6 +7619,7 @@
               "id": "art5-3",
               "type": "fill_blank",
               "prompt": "A polished if somewhat ___ debut.",
+              "hint": "Özenli ama biraz öykünmeci bir ilk eser.",
               "answer": "derivative",
               "acceptableAnswers": [
                 "unoriginal",
@@ -7587,6 +7678,7 @@
               "id": "art5-7",
               "type": "fill_blank",
               "prompt": "The score is evocative, the script ___-handed.",
+              "hint": "Müzik çağrışımsal, senaryo ise ağır işli.",
               "answer": "heavy",
               "acceptableAnswers": []
             },
@@ -7624,6 +7716,7 @@
               "id": "art5-10",
               "type": "fill_blank",
               "prompt": "Restrained, austere, and quietly ___.",
+              "hint": "Ölçülü, sade ve sessizce ustaca.",
               "answer": "masterful",
               "acceptableAnswers": [
                 "accomplished",
@@ -7923,6 +8016,7 @@
               "id": "nws1-3",
               "type": "fill_blank",
               "prompt": "What this ___ for the wider economy is unclear.",
+              "hint": "Bunun daha geniş ekonomi için ne anlama geldiği belirsiz.",
               "answer": "means",
               "acceptableAnswers": []
             },
@@ -7978,6 +8072,7 @@
               "id": "nws1-7",
               "type": "fill_blank",
               "prompt": "Make no ___: this changes everything.",
+              "hint": "Şüpheniz olmasın: bu her şeyi değiştirir.",
               "answer": "mistake",
               "acceptableAnswers": [
                 "error"
@@ -8020,6 +8115,7 @@
               "id": "nws1-10",
               "type": "fill_blank",
               "prompt": "One could ___ that the policy has failed.",
+              "hint": "Politikanın başarısız olduğu öne sürülebilir.",
               "answer": "argue",
               "acceptableAnswers": [
                 "contend",
@@ -8082,6 +8178,7 @@
               "id": "nws2-2",
               "type": "fill_blank",
               "prompt": "The minister ___ to comment on the allegations.",
+              "hint": "Bakan iddialar hakkında yorum yapmaktan kaçındı.",
               "answer": "declined",
               "acceptableAnswers": [
                 "refused"
@@ -8159,6 +8256,7 @@
               "id": "nws2-7",
               "type": "fill_blank",
               "prompt": "Two ___ familiar with the talks confirmed the figure.",
+              "hint": "Görüşmelerden haberdar iki kaynak rakamı doğruladı.",
               "answer": "sources",
               "acceptableAnswers": []
             },
@@ -8198,6 +8296,7 @@
               "id": "nws2-10",
               "type": "fill_blank",
               "prompt": "Three insiders, ___ to speak on the record, described the meeting.",
+              "hint": "Açıklama yapma yetkisi olmayan üç içeriden kişi toplantıyı anlattı.",
               "answer": "not authorised",
               "acceptableAnswers": [
                 "not authorized"
@@ -8259,6 +8358,7 @@
               "id": "nws3-2",
               "type": "fill_blank",
               "prompt": "Court ___ Against Agency",
+              "hint": "Mahkeme kuruma karşı karar verdi.",
               "answer": "Rules",
               "acceptableAnswers": []
             },
@@ -8330,6 +8430,7 @@
               "id": "nws3-7",
               "type": "fill_blank",
               "prompt": "Markets ___ on Tariff News",
+              "hint": "Piyasalar tarife haberleriyle yükseldi.",
               "answer": "Surge",
               "acceptableAnswers": [
                 "rise",
@@ -8424,6 +8525,7 @@
               "id": "nws4-2",
               "type": "fill_blank",
               "prompt": "One could ___ that the system is broken.",
+              "hint": "Sistemin bozuk olduğu öne sürülebilir.",
               "answer": "argue",
               "acceptableAnswers": [
                 "contend",
@@ -8542,6 +8644,7 @@
               "id": "nws4-10",
               "type": "fill_blank",
               "prompt": "Far from being a ___, the policy is a partial fix.",
+              "hint": "Bu politika her derde deva değil, kısmi bir çözüm.",
               "answer": "panacea",
               "acceptableAnswers": [
                 "cure-all",
@@ -8617,6 +8720,7 @@
               "id": "nws5-3",
               "type": "fill_blank",
               "prompt": "The CEO ___ the allegations.",
+              "hint": "CEO iddiaları reddetti.",
               "answer": "denied",
               "acceptableAnswers": [
                 "refused",
@@ -8677,6 +8781,7 @@
               "id": "nws5-7",
               "type": "fill_blank",
               "prompt": "The proposal is ___ a step forward, but far from sufficient.",
+              "hint": "Teklif görünürde bir ilerleme ama yeterli olmaktan uzak.",
               "answer": "ostensibly",
               "acceptableAnswers": [
                 "apparently",
@@ -8719,6 +8824,7 @@
               "id": "nws5-10",
               "type": "fill_blank",
               "prompt": "The firm ___ to comment when contacted.",
+              "hint": "Şirket sorulduğunda yorum yapmaktan kaçındı.",
               "answer": "declined",
               "acceptableAnswers": [
                 "refused"
@@ -8934,6 +9040,7 @@
               "id": "rv1-2",
               "type": "fill_blank",
               "prompt": "A growing ___ of evidence indicates climate sensitivity.",
+              "hint": "Giderek artan bir kanıt bütünü iklim hassasiyetini gösteriyor.",
               "answer": "body",
               "acceptableAnswers": [
                 "amount"
@@ -9009,6 +9116,7 @@
               "id": "rv1-7",
               "type": "fill_blank",
               "prompt": "I'd like to push ___ on that timeline.",
+              "hint": "O zaman çizelgesine itiraz etmek istiyorum.",
               "answer": "back",
               "acceptableAnswers": []
             },
@@ -9046,6 +9154,7 @@
               "id": "rv1-10",
               "type": "fill_blank",
               "prompt": "These results ___ a robust effect.",
+              "hint": "Bu sonuçlar güçlü bir etki gösteriyor.",
               "answer": "demonstrate",
               "acceptableAnswers": [
                 "indicate",
@@ -9100,6 +9209,7 @@
               "id": "rv2-3",
               "type": "fill_blank",
               "prompt": "There is a strong ___ for reform.",
+              "hint": "Reform için güçlü bir gerekçe var.",
               "answer": "case",
               "acceptableAnswers": [
                 "argument",
@@ -9155,6 +9265,7 @@
               "id": "rv2-7",
               "type": "fill_blank",
               "prompt": "It's the ___ in the room.",
+              "hint": "Bu odadaki herkesin görmezden geldiği büyük sorun.",
               "answer": "elephant",
               "acceptableAnswers": []
             },
@@ -9191,6 +9302,7 @@
               "id": "rv2-10",
               "type": "fill_blank",
               "prompt": "Don't make a ___ out of a molehill.",
+              "hint": "Pireyi deve yapma.",
               "answer": "mountain",
               "acceptableAnswers": []
             }
@@ -9332,6 +9444,7 @@
               "id": "rv3-10",
               "type": "fill_blank",
               "prompt": "The reasoning, while seductive, is ___",
+              "hint": "Akıl yürütme cazip görünse de yanıltıcı.",
               "answer": "specious",
               "acceptableAnswers": [
                 "misleading",

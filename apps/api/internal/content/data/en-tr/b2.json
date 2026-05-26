@@ -158,6 +158,7 @@
               "id": "op1-3",
               "type": "fill_blank",
               "prompt": "___ argue that remote work boosts productivity.",
+              "hint": "Uzaktan çalışmanın verimliliği artırdığını savunurum.",
               "answer": "I'd",
               "acceptableAnswers": [
                 "i would"
@@ -226,6 +227,7 @@
               "id": "op1-7",
               "type": "fill_blank",
               "prompt": "___ my mind, the proposal lacks substance.",
+              "hint": "Bence teklifin özü yok.",
               "answer": "To",
               "acceptableAnswers": [],
               "explanation": "'To my mind' = 'bence' (resmi)."
@@ -265,6 +267,7 @@
               "id": "op1-10",
               "type": "fill_blank",
               "prompt": "Honestly, I ___ convinced.",
+              "hint": "Açıkçası, tam olarak ikna olmadım.",
               "answer": "am not entirely",
               "acceptableAnswers": [
                 "'m not entirely",
@@ -298,6 +301,7 @@
               "id": "op2-2",
               "type": "fill_blank",
               "prompt": "It's ___ complicated.",
+              "hint": "Biraz karmaşık.",
               "answer": "kind of",
               "acceptableAnswers": [
                 "kinda",
@@ -379,6 +383,7 @@
               "id": "op2-7",
               "type": "fill_blank",
               "prompt": "I see your point, ___ I",
+              "hint": "Anlıyorum, ama ben…",
               "answer": "but",
               "acceptableAnswers": [
                 "however",
@@ -424,6 +429,7 @@
               "id": "op2-10",
               "type": "fill_blank",
               "prompt": "That's a ___ point, although I'd add that…",
+              "hint": "Haklı bir noktaya değindin, yine de ben…",
               "answer": "fair",
               "acceptableAnswers": [
                 "good",
@@ -457,6 +463,7 @@
               "id": "op3-2",
               "type": "fill_blank",
               "prompt": "___ admit that the data is mixed.",
+              "hint": "Verilerin karışık olduğunu kabul edeceğim.",
               "answer": "I'll",
               "acceptableAnswers": [
                 "i have to",
@@ -535,6 +542,7 @@
               "id": "op3-7",
               "type": "fill_blank",
               "prompt": "___ the contrary, costs went down.",
+              "hint": "Aksine, maliyetler düştü.",
               "answer": "On",
               "acceptableAnswers": [],
               "explanation": "'On the contrary' sabit bir kalıptır."
@@ -611,6 +619,7 @@
               "id": "op4-2",
               "type": "fill_blank",
               "prompt": "I'm ___ convinced that this is the right approach.",
+              "hint": "Bunun doğru yaklaşım olduğuna kesinlikle inanıyorum.",
               "answer": "firmly",
               "acceptableAnswers": [
                 "absolutely",
@@ -690,6 +699,7 @@
               "id": "op4-7",
               "type": "fill_blank",
               "prompt": "All things ___, the trade-off seems worth it.",
+              "hint": "Her şey düşünüldüğünde, bu ödün verilebilir gibi.",
               "answer": "considered",
               "acceptableAnswers": [],
               "explanation": "'All things considered' = 'Her şey göz önüne alındığında'."
@@ -733,6 +743,7 @@
               "id": "op4-10",
               "type": "fill_blank",
               "prompt": "I take your ___, but I see things differently.",
+              "hint": "Görüşünü anlıyorum, ama ben farklı görüyorum.",
               "answer": "point",
               "acceptableAnswers": [],
               "explanation": "'Take someone's point' = 'birinin söylediğini anlamak'."
@@ -789,6 +800,7 @@
               "id": "op5-4",
               "type": "fill_blank",
               "prompt": "___ that the deadline has been moved, we should reprioritize.",
+              "hint": "Artık son tarih değiştirildiğine göre, yeniden önceliklendirmemiz lazım.",
               "answer": "Now",
               "acceptableAnswers": [
                 "given",
@@ -978,6 +990,7 @@
               "id": "op6-4",
               "type": "fill_blank",
               "prompt": "That said, I still ___ stand my position.",
+              "hint": "Yine de görüşümün arkasında duruyorum.",
               "answer": "by",
               "acceptableAnswers": [],
               "explanation": "'Stand by' = '...arkasında durmak'."
@@ -997,6 +1010,7 @@
               "id": "op6-6",
               "type": "fill_blank",
               "prompt": "Your argument doesn't quite ___ up for me.",
+              "hint": "Argümanın bana pek tutarlı gelmiyor.",
               "answer": "hold",
               "acceptableAnswers": [
                 "stack"
@@ -1379,6 +1393,7 @@
               "id": "n1-3",
               "type": "fill_blank",
               "prompt": "3 ___ in factory blast",
+              "hint": "Fabrika patlamasında 3 kişi öldü.",
               "answer": "dead",
               "acceptableAnswers": [
                 "killed",
@@ -1457,6 +1472,7 @@
               "id": "n1-8",
               "type": "fill_blank",
               "prompt": "CEO ___ fire over remarks.",
+              "hint": "CEO açıklamaları nedeniyle eleştiri altında.",
               "answer": "under",
               "acceptableAnswers": [],
               "explanation": "'under fire' = 'eleştiri/baskı altında'."
@@ -1541,6 +1557,7 @@
               "id": "n2-3",
               "type": "fill_blank",
               "prompt": "The minister ___ the allegations.",
+              "hint": "Bakan iddiaları reddetti.",
               "answer": "denied",
               "acceptableAnswers": [
                 "refused",
@@ -1609,6 +1626,7 @@
               "id": "n2-8",
               "type": "fill_blank",
               "prompt": "The witness ___ that he saw nothing.",
+              "hint": "Tanık hiçbir şey görmediğini iddia etti.",
               "answer": "claimed",
               "acceptableAnswers": [
                 "alleged",
@@ -1673,6 +1691,7 @@
               "id": "n3-2",
               "type": "fill_blank",
               "prompt": "Three people ___ arrested last night.",
+              "hint": "Dün gece üç kişi tutuklandı.",
               "answer": "were",
               "acceptableAnswers": [
                 "have been"
@@ -1843,6 +1862,7 @@
               "id": "n4-3",
               "type": "fill_blank",
               "prompt": "The ___ situation is unclear.",
+              "hint": "Mevcut durum belirsiz.",
               "answer": "current",
               "acceptableAnswers": [
                 "present"
@@ -1866,6 +1886,7 @@
               "id": "n4-5",
               "type": "fill_blank",
               "prompt": "Please ___ the documents.",
+              "hint": "Lütfen belgeleri kontrol edin.",
               "answer": "check",
               "acceptableAnswers": [
                 "review",
@@ -1920,6 +1941,7 @@
               "id": "n4-9",
               "type": "fill_blank",
               "prompt": "She is very ___ to criticism.",
+              "hint": "Eleştirilere karşı çok hassas.",
               "answer": "sensitive",
               "acceptableAnswers": [
                 "delicate"
@@ -1991,6 +2013,7 @@
               "id": "n5-4",
               "type": "fill_blank",
               "prompt": "The minister is ___ to have resigned.",
+              "hint": "Bakanın istifa ettiği söyleniyor.",
               "answer": "said",
               "acceptableAnswers": [
                 "alleged",
@@ -2004,6 +2027,7 @@
               "id": "n5-5",
               "type": "fill_blank",
               "prompt": "The CEO ___ denied the allegations.",
+              "hint": "CEO iddiaları kesin bir dille reddetti.",
               "answer": "flatly",
               "acceptableAnswers": [
                 "categorically",
@@ -2016,6 +2040,7 @@
               "id": "n5-6",
               "type": "fill_blank",
               "prompt": "The bill ___ scrutiny in the senate.",
+              "hint": "Tasarı senatoda incelemeden geçiyor.",
               "answer": "is undergoing",
               "acceptableAnswers": [
                 "is under",
@@ -2559,6 +2584,7 @@
               "id": "env1-3",
               "type": "fill_blank",
               "prompt": "We need to cut greenhouse gas ___.",
+              "hint": "Sera gazı salımlarını azaltmamız gerekiyor.",
               "answer": "emissions",
               "acceptableAnswers": [
                 "pollutants"
@@ -2611,6 +2637,7 @@
               "id": "env1-7",
               "type": "fill_blank",
               "prompt": "My ___ footprint is too large.",
+              "hint": "Karbon ayak izim çok büyük.",
               "answer": "carbon",
               "acceptableAnswers": []
             },
@@ -2649,6 +2676,7 @@
               "id": "env1-10",
               "type": "fill_blank",
               "prompt": "Many countries are investing in ___ energy.",
+              "hint": "Birçok ülke yenilenebilir enerjiye yatırım yapıyor.",
               "answer": "renewable",
               "acceptableAnswers": [
                 "sustainable"
@@ -2702,6 +2730,7 @@
               "id": "env2-3",
               "type": "fill_blank",
               "prompt": "We ___ explore alternative fuels.",
+              "hint": "Alternatif yakıtları araştırabiliriz.",
               "answer": "could",
               "acceptableAnswers": [
                 "might"
@@ -2755,6 +2784,7 @@
               "id": "env2-7",
               "type": "fill_blank",
               "prompt": "Companies ___ disclose their emissions data.",
+              "hint": "Şirketler emisyon verilerini açıklamalıdır.",
               "answer": "should",
               "acceptableAnswers": [
                 "must",
@@ -2846,6 +2876,7 @@
               "id": "env3-3",
               "type": "fill_blank",
               "prompt": "We need to ___ awareness about plastic waste.",
+              "hint": "Plastik atık konusunda farkındalığı artırmamız gerekiyor.",
               "answer": "raise",
               "acceptableAnswers": [
                 "boost",
@@ -2900,6 +2931,7 @@
               "id": "env3-7",
               "type": "fill_blank",
               "prompt": "Cities are ___ to extreme weather.",
+              "hint": "Şehirler aşırı hava olaylarına karşı savunmasızdır.",
               "answer": "vulnerable",
               "acceptableAnswers": [
                 "at risk",
@@ -2941,6 +2973,7 @@
               "id": "env3-10",
               "type": "fill_blank",
               "prompt": "Recycling alone ___ enough.",
+              "hint": "Tek başına geri dönüşüm yeterli değil.",
               "answer": "isn't",
               "acceptableAnswers": [
                 "is not"
@@ -2998,6 +3031,7 @@
               "id": "env4-4",
               "type": "fill_blank",
               "prompt": "Deforestation is largely ___ for biodiversity loss.",
+              "hint": "Ormansızlaşma, biyolojik çeşitlilik kaybının başlıca sebebidir.",
               "answer": "responsible",
               "acceptableAnswers": [
                 "to blame"
@@ -3008,6 +3042,7 @@
               "id": "env4-5",
               "type": "fill_blank",
               "prompt": "The government has pledged to ___ emissions by 50% by 2035.",
+              "hint": "Hükümet, 2035'e kadar emisyonları %50 azaltacağına söz verdi.",
               "answer": "cut",
               "acceptableAnswers": [
                 "reduce",
@@ -3201,6 +3236,7 @@
               "id": "env5-5",
               "type": "fill_blank",
               "prompt": "The treaty is ___ legally binding on all signatories.",
+              "hint": "Anlaşma artık tüm taraflar için yasal olarak bağlayıcı.",
               "answer": "now",
               "acceptableAnswers": [],
               "explanation": "'Legally binding' = 'yasal olarak bağlayıcı'."
@@ -3209,6 +3245,7 @@
               "id": "env5-6",
               "type": "fill_blank",
               "prompt": "They have set ___ targets to reach net zero by 2050.",
+              "hint": "Net sıfıra ulaşmak için iddialı hedefler belirlediler.",
               "answer": "ambitious",
               "acceptableAnswers": [
                 "stringent",
@@ -3562,6 +3599,7 @@
               "id": "tch1-3",
               "type": "fill_blank",
               "prompt": "We need to ___ up our infrastructure.",
+              "hint": "Altyapımızı ölçeklendirmemiz gerekiyor.",
               "answer": "scale",
               "acceptableAnswers": []
             },
@@ -3613,6 +3651,7 @@
               "id": "tch1-7",
               "type": "fill_blank",
               "prompt": "Can you ___ up on that ticket?",
+              "hint": "O bilet üzerine takip edebilir misin?",
               "answer": "follow",
               "acceptableAnswers": []
             },
@@ -3650,6 +3689,7 @@
               "id": "tch1-10",
               "type": "fill_blank",
               "prompt": "She'll ___ the meeting at 10.",
+              "hint": "Toplantıyı saat 10'da o yürütecek.",
               "answer": "run",
               "acceptableAnswers": [
                 "chair",
@@ -3791,6 +3831,7 @@
               "id": "tch2-10",
               "type": "fill_blank",
               "prompt": "We expect a ___ growth next year.",
+              "hint": "Önümüzdeki yıl mütevazı bir büyüme bekliyoruz.",
               "answer": "modest",
               "acceptableAnswers": [
                 "moderate",
@@ -3846,6 +3887,7 @@
               "id": "tch3-3",
               "type": "fill_blank",
               "prompt": "AI is ___ many industries.",
+              "hint": "Yapay zeka birçok sektörü dönüştürüyor.",
               "answer": "transforming",
               "acceptableAnswers": [
                 "changing",
@@ -3900,6 +3942,7 @@
               "id": "tch3-7",
               "type": "fill_blank",
               "prompt": "Many jobs are at ___ from automation.",
+              "hint": "Otomasyon nedeniyle birçok iş risk altında.",
               "answer": "risk",
               "acceptableAnswers": [
                 "danger"
@@ -3938,6 +3981,7 @@
               "id": "tch3-10",
               "type": "fill_blank",
               "prompt": "We rely on ___ analytics to guide strategy.",
+              "hint": "Stratejimizi yönlendirmek için veri analitiğine güveniyoruz.",
               "answer": "data",
               "acceptableAnswers": [
                 "information"
@@ -3968,6 +4012,7 @@
               "id": "tch4-2",
               "type": "fill_blank",
               "prompt": "Let's circle ___ to that later.",
+              "hint": "Daha sonra buna geri döneriz.",
               "answer": "back",
               "acceptableAnswers": [],
               "explanation": "'circle back' iş İngilizcesinde 'geri dönmek/tekrar bahsetmek'."
@@ -4044,6 +4089,7 @@
               "id": "tch4-7",
               "type": "fill_blank",
               "prompt": "We need a ___ dive into the metrics.",
+              "hint": "Metriklere derin bir dalış yapmamız gerekiyor.",
               "answer": "deep",
               "acceptableAnswers": []
             },
@@ -4080,6 +4126,7 @@
               "id": "tch4-10",
               "type": "fill_blank",
               "prompt": "Sales are tracking ___ of plan.",
+              "hint": "Satışlar plandan önde gidiyor.",
               "answer": "ahead",
               "acceptableAnswers": [
                 "above"
@@ -4137,6 +4184,7 @@
               "id": "tch5-4",
               "type": "fill_blank",
               "prompt": "AI systems should be ___ accountable.",
+              "hint": "Yapay zeka sistemleri hesap verebilir tutulmalıdır.",
               "answer": "held",
               "acceptableAnswers": [
                 "believed",
@@ -4148,6 +4196,7 @@
               "id": "tch5-5",
               "type": "fill_blank",
               "prompt": "The model was trained on a ___ dataset.",
+              "hint": "Model önyargılı bir veri setiyle eğitildi.",
               "answer": "biased",
               "acceptableAnswers": [
                 "prejudiced",
@@ -4159,6 +4208,7 @@
               "id": "tch5-6",
               "type": "fill_blank",
               "prompt": "Regulators are ___ to keep up with the pace of AI.",
+              "hint": "Düzenleyiciler yapay zekanın hızına yetişmekte zorlanıyor.",
               "answer": "struggling",
               "acceptableAnswers": [
                 "scrambling"
@@ -4705,6 +4755,7 @@
               "id": "rel1-3",
               "type": "fill_blank",
               "prompt": "She was ___ when she heard the news.",
+              "hint": "Haberi duyduğunda yıkılmıştı.",
               "answer": "devastated",
               "acceptableAnswers": [
                 "heartbroken",
@@ -4758,6 +4809,7 @@
               "id": "rel1-7",
               "type": "fill_blank",
               "prompt": "I'm ___ to be invited!",
+              "hint": "Davet edildiğim için çok mutluyum!",
               "answer": "thrilled",
               "acceptableAnswers": [
                 "excited",
@@ -4800,6 +4852,7 @@
               "id": "rel1-10",
               "type": "fill_blank",
               "prompt": "He has been ___ ever since the argument.",
+              "hint": "Tartışmadan beri kırgın hissediyor.",
               "answer": "resentful",
               "acceptableAnswers": [
                 "bitter",
@@ -4906,6 +4959,7 @@
               "id": "rel2-7",
               "type": "fill_blank",
               "prompt": "I can finally ___ up to her about my feelings.",
+              "hint": "Sonunda ona hislerimi açabilirim.",
               "answer": "open",
               "acceptableAnswers": []
             },
@@ -4943,6 +4997,7 @@
               "id": "rel2-10",
               "type": "fill_blank",
               "prompt": "I need to get ___ better with my colleagues.",
+              "hint": "İş arkadaşlarımla daha iyi geçinmem gerekiyor.",
               "answer": "along",
               "acceptableAnswers": [
                 "on"
@@ -5045,6 +5100,7 @@
               "id": "rel3-7",
               "type": "fill_blank",
               "prompt": "It's time we ___ the hatchet.",
+              "hint": "Artık barışma vakti geldi.",
               "answer": "buried",
               "acceptableAnswers": [
                 "bury"
@@ -5083,6 +5139,7 @@
               "id": "rel3-10",
               "type": "fill_blank",
               "prompt": "I owe you an ___ for what I said.",
+              "hint": "Söylediklerim için sana bir özür borçluyum.",
               "answer": "apology",
               "acceptableAnswers": [
                 "apologies"
@@ -5140,6 +5197,7 @@
               "id": "rel4-4",
               "type": "fill_blank",
               "prompt": "I owe you an ___ for what I said.",
+              "hint": "Söylediklerim için sana bir özür borçluyum.",
               "answer": "apology",
               "acceptableAnswers": [
                 "apologies"
@@ -5332,6 +5390,7 @@
               "id": "rel5-4",
               "type": "fill_blank",
               "prompt": "He still ___ a grudge against his old boss.",
+              "hint": "Eski patronuna hâlâ kin besliyor.",
               "answer": "holds",
               "acceptableAnswers": [
                 "bears",
@@ -5344,6 +5403,7 @@
               "id": "rel5-5",
               "type": "fill_blank",
               "prompt": "I can't help feeling ___ for her.",
+              "hint": "Ona acımadan duramıyorum.",
               "answer": "sorry",
               "acceptableAnswers": [],
               "explanation": "'Feel sorry for' = 'birine acımak'."
@@ -5830,6 +5890,7 @@
               "id": "cn2-2",
               "type": "fill_blank",
               "prompt": "If she ___ harder, she would have passed.",
+              "hint": "Daha çok çalışsaydı, geçerdi.",
               "answer": "had studied",
               "acceptableAnswers": []
             },
@@ -5963,6 +6024,7 @@
               "id": "cn3-2",
               "type": "fill_blank",
               "prompt": "If you hadn't quit, you ___ a manager by now.",
+              "hint": "Eğer bırakmasaydın şimdiye kadar yönetici olurdun.",
               "answer": "would be",
               "acceptableAnswers": [
                 "'d be"
@@ -6041,6 +6103,7 @@
               "id": "cn3-7",
               "type": "fill_blank",
               "prompt": "If you had eaten breakfast, you ___ hungry now.",
+              "hint": "Kahvaltı yapsaydın şimdi aç olmazdın.",
               "answer": "wouldn't be",
               "acceptableAnswers": []
             },
@@ -6081,6 +6144,7 @@
               "id": "cn3-10",
               "type": "fill_blank",
               "prompt": "If I hadn't moved cities, I ___ still working there.",
+              "hint": "Şehir değiştirmeseydim hâlâ orada çalışıyor olurdum.",
               "answer": "would be",
               "acceptableAnswers": [
                 "'d be"
@@ -6111,6 +6175,7 @@
               "id": "cn4-2",
               "type": "fill_blank",
               "prompt": "I wish I ___ a doctor.",
+              "hint": "Keşke doktor olsaydım.",
               "answer": "had become",
               "acceptableAnswers": [],
               "explanation": "Geçmiş pişmanlık için 'wish + past perfect' kullanılır."
@@ -6186,6 +6251,7 @@
               "id": "cn4-7",
               "type": "fill_blank",
               "prompt": "If only I ___ his number.",
+              "hint": "Keşke onun numarası bende olsaydı.",
               "answer": "had",
               "acceptableAnswers": []
             },
@@ -6223,6 +6289,7 @@
               "id": "cn4-10",
               "type": "fill_blank",
               "prompt": "I wish it ___ raining.",
+              "hint": "Keşke yağmur yağmasaydı.",
               "answer": "weren't",
               "acceptableAnswers": [
                 "wasn't",
@@ -6486,6 +6553,7 @@
               "id": "cn6-5",
               "type": "fill_blank",
               "prompt": "Take an umbrella in ___ it rains.",
+              "hint": "Yağmur ihtimaline karşı şemsiye al.",
               "answer": "case",
               "acceptableAnswers": [],
               "explanation": "'In case' = 'olur da, ihtimâlen'."
@@ -6860,6 +6928,7 @@
               "id": "fm1-3",
               "type": "fill_blank",
               "prompt": "The situation has ___",
+              "hint": "Durum kötüleşti.",
               "answer": "deteriorated",
               "acceptableAnswers": [
                 "worsened",
@@ -6911,6 +6980,7 @@
               "id": "fm1-7",
               "type": "fill_blank",
               "prompt": "Sales have ___ significantly this quarter.",
+              "hint": "Bu çeyrekte satışlar önemli ölçüde arttı.",
               "answer": "increased",
               "acceptableAnswers": [
                 "risen",
@@ -6951,6 +7021,7 @@
               "id": "fm1-10",
               "type": "fill_blank",
               "prompt": "Please ___ the attached document.",
+              "hint": "Ekteki belgeyi bulun lütfen.",
               "answer": "find",
               "acceptableAnswers": [
                 "discover",
@@ -7007,6 +7078,7 @@
               "id": "fm2-3",
               "type": "fill_blank",
               "prompt": "I am writing to ___ about the position.",
+              "hint": "Pozisyon hakkında bilgi almak için yazıyorum.",
               "answer": "enquire",
               "acceptableAnswers": [
                 "ask",
@@ -7098,6 +7170,7 @@
               "id": "fm2-10",
               "type": "fill_blank",
               "prompt": "Please find ___ the report.",
+              "hint": "Raporu ekte bulabilirsiniz.",
               "answer": "attached",
               "acceptableAnswers": [
                 "enclosed"
@@ -7201,6 +7274,7 @@
               "id": "fm3-7",
               "type": "fill_blank",
               "prompt": "Are there any ___ at this point?",
+              "hint": "Bu noktada herhangi bir sorunuz var mı?",
               "answer": "questions",
               "acceptableAnswers": [
                 "queries"
@@ -7238,6 +7312,7 @@
               "id": "fm3-10",
               "type": "fill_blank",
               "prompt": "I'd like to ___ to my colleague for the next part.",
+              "hint": "Bir sonraki bölüm için sözü meslektaşıma vermek istiyorum.",
               "answer": "hand over",
               "acceptableAnswers": [
                 "pass"
@@ -7303,6 +7378,7 @@
               "id": "fm4-5",
               "type": "fill_blank",
               "prompt": "I am writing with ___ to your inquiry.",
+              "hint": "Sorunuza ilişkin yazıyorum.",
               "answer": "regard",
               "acceptableAnswers": [
                 "reference"
@@ -7313,6 +7389,7 @@
               "id": "fm4-6",
               "type": "fill_blank",
               "prompt": "Should you require any further information, please do not ___ to contact me.",
+              "hint": "Daha fazla bilgiye ihtiyaç duyarsanız lütfen benimle iletişime geçmekten çekinmeyin.",
               "answer": "hesitate",
               "acceptableAnswers": [
                 "delay"
@@ -7485,6 +7562,7 @@
               "id": "fm5-4",
               "type": "fill_blank",
               "prompt": "It is widely ___ that early intervention improves outcomes.",
+              "hint": "Erken müdahalenin sonuçları iyileştirdiği yaygın olarak kabul edilir.",
               "answer": "held",
               "acceptableAnswers": [
                 "accepted",
@@ -7496,6 +7574,7 @@
               "id": "fm5-5",
               "type": "fill_blank",
               "prompt": "These findings ___ to support the hypothesis.",
+              "hint": "Bu bulgular hipotezi destekleme eğilimindedir.",
               "answer": "tend",
               "acceptableAnswers": [
                 "appear",
@@ -7507,6 +7586,7 @@
               "id": "fm5-6",
               "type": "fill_blank",
               "prompt": "There is ___ evidence to suggest a correlation.",
+              "hint": "Korelasyon olduğuna dair kayda değer kanıt vardır.",
               "answer": "substantial",
               "acceptableAnswers": [
                 "considerable",
@@ -7883,6 +7963,7 @@
               "id": "ps1-3",
               "type": "fill_blank",
               "prompt": "The package ___ delivered tomorrow.",
+              "hint": "Paket yarın teslim edilecek.",
               "answer": "will be",
               "acceptableAnswers": []
             },
@@ -7970,6 +8051,7 @@
               "id": "ps1-10",
               "type": "fill_blank",
               "prompt": "By next year, the bridge ___ been completed.",
+              "hint": "Önümüzdeki yıla kadar köprü tamamlanmış olacak.",
               "answer": "will have",
               "acceptableAnswers": []
             }
@@ -8075,6 +8157,7 @@
               "id": "ps2-7",
               "type": "fill_blank",
               "prompt": "After he ___ the report, he sent it.",
+              "hint": "Raporu bitirdikten sonra gönderdi.",
               "answer": "had finished",
               "acceptableAnswers": []
             },
@@ -8143,6 +8226,7 @@
               "id": "ps3-2",
               "type": "fill_blank",
               "prompt": "I ___ have finished by Friday.",
+              "hint": "Cumaya kadar bitirmiş olacağım.",
               "answer": "will",
               "acceptableAnswers": [
                 "'ll"
@@ -8256,6 +8340,7 @@
               "id": "ps3-10",
               "type": "fill_blank",
               "prompt": "They ___ have arrived by now.",
+              "hint": "Şimdiye kadar varmış olmalılar.",
               "answer": "should",
               "acceptableAnswers": [
                 "must"
@@ -8313,6 +8398,7 @@
               "id": "ps4-4",
               "type": "fill_blank",
               "prompt": "The bridge ___ being repaired.",
+              "hint": "Köprü onarılıyor.",
               "answer": "is",
               "acceptableAnswers": [
                 "was"
@@ -8323,6 +8409,7 @@
               "id": "ps4-5",
               "type": "fill_blank",
               "prompt": "This issue ___ have been raised earlier.",
+              "hint": "Bu mesele daha önce gündeme getirilmeliydi.",
               "answer": "should",
               "acceptableAnswers": [
                 "ought to"
@@ -8503,6 +8590,7 @@
               "id": "ps5-4",
               "type": "fill_blank",
               "prompt": "It is widely ___ that the law will pass.",
+              "hint": "Yasanın geçeceği yaygın olarak bekleniyor.",
               "answer": "expected",
               "acceptableAnswers": [
                 "believed",
@@ -8515,6 +8603,7 @@
               "id": "ps5-5",
               "type": "fill_blank",
               "prompt": "There is ___ to be tension between the two leaders.",
+              "hint": "İki lider arasında gerilim olduğu söyleniyor.",
               "answer": "said",
               "acceptableAnswers": [
                 "rumored",
@@ -8529,6 +8618,7 @@
               "id": "ps5-6",
               "type": "fill_blank",
               "prompt": "The CEO is ___ to have resigned.",
+              "hint": "CEO'nun istifa ettiği bildiriliyor.",
               "answer": "reported",
               "acceptableAnswers": [
                 "alleged",
@@ -8914,6 +9004,7 @@
               "id": "ed1-4",
               "type": "fill_blank",
               "prompt": "Compulsory ___ ends at sixteen in the UK.",
+              "hint": "İngiltere'de zorunlu eğitim on altı yaşında biter.",
               "answer": "education",
               "acceptableAnswers": [
                 "schooling"
@@ -8924,6 +9015,7 @@
               "id": "ed1-5",
               "type": "fill_blank",
               "prompt": "In the US, ___ education is free in public schools.",
+              "hint": "ABD'de devlet okullarında ilköğretim ücretsizdir.",
               "answer": "primary",
               "acceptableAnswers": [
                 "elementary",
@@ -9300,6 +9392,7 @@
               "id": "ed3-4",
               "type": "fill_blank",
               "prompt": "I had to ___ the exam after failing it.",
+              "hint": "Sınavda kalınca tekrar girmek zorunda kaldım.",
               "answer": "resit",
               "acceptableAnswers": [
                 "retake"
@@ -9310,6 +9403,7 @@
               "id": "ed3-5",
               "type": "fill_blank",
               "prompt": "My ___ point average is 3.8.",
+              "hint": "Not ortalamam 3.8.",
               "answer": "grade",
               "acceptableAnswers": [],
               "explanation": "'Grade point average (GPA)' = 'not ortalaması'."
@@ -9318,6 +9412,7 @@
               "id": "ed3-6",
               "type": "fill_blank",
               "prompt": "The exam was ___, but I scraped through.",
+              "hint": "Sınav zordu ama zar zor geçtim.",
               "answer": "tough",
               "acceptableAnswers": [
                 "difficult",
@@ -9682,6 +9777,7 @@
               "id": "ed5-4",
               "type": "fill_blank",
               "prompt": "My PhD ___ is very supportive.",
+              "hint": "Doktora danışmanım çok destekleyici.",
               "answer": "supervisor",
               "acceptableAnswers": [
                 "advisor",
@@ -9693,6 +9789,7 @@
               "id": "ed5-5",
               "type": "fill_blank",
               "prompt": "I have to ___ my thesis next month.",
+              "hint": "Önümüzdeki ay tezimi savunmam gerekiyor.",
               "answer": "defend",
               "acceptableAnswers": [
                 "submit"
@@ -9703,6 +9800,7 @@
               "id": "ed5-6",
               "type": "fill_blank",
               "prompt": "She received a ___ to study abroad.",
+              "hint": "Yurtdışında okumak için burs aldı.",
               "answer": "scholarship",
               "acceptableAnswers": [
                 "grant",
@@ -10489,6 +10587,7 @@
               "id": "db3-5",
               "type": "fill_blank",
               "prompt": "Studies have ___ this trend repeatedly.",
+              "hint": "Çalışmalar bu eğilimi defalarca doğruladı.",
               "answer": "confirmed",
               "acceptableAnswers": [
                 "documented",
@@ -10675,6 +10774,7 @@
               "id": "db4-4",
               "type": "fill_blank",
               "prompt": "May I ___ in for a second?",
+              "hint": "Bir saniye araya girebilir miyim?",
               "answer": "jump",
               "acceptableAnswers": [
                 "chime",
@@ -10696,6 +10796,7 @@
               "id": "db4-6",
               "type": "fill_blank",
               "prompt": "Just to play ___ advocate for a moment…",
+              "hint": "Bir an için şeytanın avukatlığını yapayım…",
               "answer": "devil's",
               "acceptableAnswers": [],
               "explanation": "'Play devil's advocate' = 'şeytanın avukatı olmak'."
@@ -10868,6 +10969,7 @@
               "id": "db5-4",
               "type": "fill_blank",
               "prompt": "I think we can ___ a compromise here.",
+              "hint": "Burada bir uzlaşmaya varabileceğimizi düşünüyorum.",
               "answer": "reach",
               "acceptableAnswers": [
                 "find",
@@ -10879,6 +10981,7 @@
               "id": "db5-5",
               "type": "fill_blank",
               "prompt": "Let's ___ to differ on this one.",
+              "hint": "Bu konuda anlaşamamakta anlaşalım.",
               "answer": "agree",
               "acceptableAnswers": [
                 "concur"
@@ -10889,6 +10992,7 @@
               "id": "db5-6",
               "type": "fill_blank",
               "prompt": "We seem to be at cross ___ here.",
+              "hint": "Burada amaçlarımız ters düşüyor gibi.",
               "answer": "purposes",
               "acceptableAnswers": [],
               "explanation": "'At cross purposes' = 'birbirini yanlış anlamak'."
@@ -11237,6 +11341,7 @@
               "id": "rv1-7",
               "type": "fill_blank",
               "prompt": "We must take ___ on climate change.",
+              "hint": "İklim değişikliği konusunda harekete geçmeliyiz.",
               "answer": "action",
               "acceptableAnswers": []
             },
@@ -11274,6 +11379,7 @@
               "id": "rv1-10",
               "type": "fill_blank",
               "prompt": "Two suspects ___ been detained.",
+              "hint": "İki şüpheli gözaltına alındı.",
               "answer": "have",
               "acceptableAnswers": []
             }
@@ -11302,6 +11408,7 @@
               "id": "rv2-2",
               "type": "fill_blank",
               "prompt": "Let's ___ back to that later.",
+              "hint": "Daha sonra buna geri döneriz.",
               "answer": "circle",
               "acceptableAnswers": []
             },
@@ -11374,6 +11481,7 @@
               "id": "rv2-7",
               "type": "fill_blank",
               "prompt": "I'm fed ___ with the constant delays.",
+              "hint": "Sürekli gecikmelerden bıktım.",
               "answer": "up",
               "acceptableAnswers": []
             },
@@ -11556,6 +11664,7 @@
               "id": "rv3-10",
               "type": "fill_blank",
               "prompt": "You ___ have warned me.",
+              "hint": "Beni uyarmalıydın.",
               "answer": "should",
               "acceptableAnswers": [
                 "could"

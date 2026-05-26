@@ -221,6 +221,7 @@
               "id": "pp1-9",
               "type": "fill_blank",
               "prompt": "la pregunta: '___ you ever been to Paris?'",
+              "hint": "¿Has estado alguna vez en París?",
               "answer": "Have",
               "acceptableAnswers": [],
               "explanation": "Pregunta: Have/Has + sujeto + V3?"
@@ -254,6 +255,7 @@
               "id": "pp1-12",
               "type": "fill_blank",
               "prompt": "'They ___ (finish) their homework.' Forma afirmativa con have.",
+              "hint": "Han terminado sus deberes.",
               "answer": "have finished",
               "acceptableAnswers": [
                 "'ve finished"
@@ -312,6 +314,7 @@
               "id": "pp2-4",
               "type": "fill_blank",
               "prompt": "'I ___ (live) here since 2018.' Completa con present perfect.",
+              "hint": "Vivo aquí desde 2018.",
               "answer": "have lived",
               "acceptableAnswers": [
                 "'ve lived"
@@ -322,6 +325,7 @@
               "id": "pp2-5",
               "type": "fill_blank",
               "prompt": "'She ___ (visit) Rome last summer.' Completa.",
+              "hint": "Ella visitó Roma el verano pasado.",
               "answer": "visited",
               "acceptableAnswers": [],
               "explanation": "'last summer' es tiempo terminado -> past simple."
@@ -408,6 +412,7 @@
               "id": "pp2-11",
               "type": "fill_blank",
               "prompt": "'When ___ you arrive?' Anade el auxiliar correcto (no usa present perfect porque pregunta cuando).",
+              "hint": "¿Cuándo llegaste?",
               "answer": "did",
               "acceptableAnswers": [],
               "explanation": "'When' pregunta por un momento concreto -> past simple."
@@ -464,6 +469,7 @@
               "id": "pp3-3",
               "type": "fill_blank",
               "prompt": "'We've known each other ___ we were kids.' (desde que)",
+              "hint": "Nos conocemos desde que éramos niños.",
               "answer": "since",
               "acceptableAnswers": [],
               "explanation": "since + clausula de inicio."
@@ -472,6 +478,7 @@
               "id": "pp3-4",
               "type": "fill_blank",
               "prompt": "They have been married ___ ten years.",
+              "hint": "Llevan casados diez años.",
               "answer": "for",
               "acceptableAnswers": [],
               "explanation": "for + duración."
@@ -791,6 +798,7 @@
               "id": "pp5-4",
               "type": "fill_blank",
               "prompt": "Corrige: 'I have seen him yesterday.' -> 'I ___ him yesterday.'",
+              "hint": "Lo vi ayer.",
               "answer": "saw",
               "acceptableAnswers": [],
               "explanation": "yesterday = past simple."
@@ -876,6 +884,7 @@
               "id": "pp5-10",
               "type": "fill_blank",
               "prompt": "They ___ been here since Monday. (auxiliar)",
+              "hint": "Están aquí desde el lunes.",
               "answer": "have",
               "acceptableAnswers": [],
               "explanation": "they + have."
@@ -2169,6 +2178,7 @@
               "id": "c1-3",
               "type": "fill_blank",
               "prompt": "'If you ___ (mix) red and blue, you get purple.' Verbo en presente.",
+              "hint": "Si mezclas rojo y azul, obtienes morado.",
               "answer": "mix",
               "acceptableAnswers": []
             },
@@ -2253,6 +2263,7 @@
               "id": "c1-9",
               "type": "fill_blank",
               "prompt": "'If it ___ (rain), the picnic is cancelled.' Presente simple.",
+              "hint": "Si llueve, se cancela el picnic.",
               "answer": "rains",
               "acceptableAnswers": []
             },
@@ -2325,6 +2336,7 @@
               "id": "c2-3",
               "type": "fill_blank",
               "prompt": "'If she ___ (come), I'll be happy.' Presente.",
+              "hint": "Si ella viene, estaré contento.",
               "answer": "comes",
               "acceptableAnswers": []
             },
@@ -2501,6 +2513,7 @@
               "id": "c3-4",
               "type": "fill_blank",
               "prompt": "'If she ___ (know) the answer, she would tell us.' Pasado simple.",
+              "hint": "Si supiera la respuesta, nos la diría.",
               "answer": "knew",
               "acceptableAnswers": []
             },
@@ -2583,6 +2596,7 @@
               "id": "c3-10",
               "type": "fill_blank",
               "prompt": "'I ___ (go) with you, but I'm busy.' Condicional (would + V1).",
+              "hint": "Iría contigo, pero estoy ocupado.",
               "answer": "would go",
               "acceptableAnswers": [
                 "'d go"
@@ -2664,6 +2678,7 @@
               "id": "c4-4",
               "type": "fill_blank",
               "prompt": "Negativo del first conditional: 'If you ___ (not / leave) now, you'll miss the bus.'",
+              "hint": "Si no te vas ahora, perderás el autobús.",
               "answer": "don't leave",
               "acceptableAnswers": []
             },
@@ -2744,6 +2759,7 @@
               "id": "c4-10",
               "type": "fill_blank",
               "prompt": "'If I ___ (be) you, I'd say sorry.' Forma hipotetica.",
+              "hint": "Si yo fuera tú, pediría disculpas.",
               "answer": "were",
               "acceptableAnswers": [
                 "was"
@@ -2825,6 +2841,7 @@
               "id": "c5-4",
               "type": "fill_blank",
               "prompt": "Conjuga el verbo 'invitar' en la forma correcta del primer condicional: 'If they ___ me, I'll come.'",
+              "hint": "Si me invitan, iré.",
               "answer": "invite",
               "acceptableAnswers": []
             },
@@ -2832,6 +2849,7 @@
               "id": "c5-5",
               "type": "fill_blank",
               "prompt": "'If I ___ (have) wings, I would fly.' Pasado simple para 2nd conditional.",
+              "hint": "Si tuviera alas, volaría.",
               "answer": "had",
               "acceptableAnswers": []
             },
@@ -3165,6 +3183,7 @@
               "id": "p1-4",
               "type": "fill_blank",
               "prompt": "Activa: 'Shakespeare wrote Hamlet.' Pasiva: 'Hamlet ___ by Shakespeare.'",
+              "hint": "Hamlet fue escrito por Shakespeare.",
               "answer": "was written",
               "acceptableAnswers": [],
               "explanation": "Pasado pasivo: was/were + V3."
@@ -3249,6 +3268,7 @@
               "id": "p1-10",
               "type": "fill_blank",
               "prompt": "Pregunta pasiva: '___ this dress made in Italy?'",
+              "hint": "¿Fue hecho este vestido en Italia?",
               "answer": "Was",
               "acceptableAnswers": [],
               "explanation": "Pasado pasivo en pregunta: was/were + sujeto + V3?"
@@ -3350,6 +3370,7 @@
               "id": "p2-6",
               "type": "fill_blank",
               "prompt": "The bills ___ paid every month. (presente pasivo plural)",
+              "hint": "Las facturas se pagan cada mes.",
               "answer": "are paid",
               "acceptableAnswers": []
             },
@@ -3421,6 +3442,7 @@
               "id": "p2-11",
               "type": "fill_blank",
               "prompt": "The walls ___ painted next week. (futuro pasivo)",
+              "hint": "Las paredes serán pintadas la semana que viene.",
               "answer": "will be painted",
               "acceptableAnswers": []
             },
@@ -3646,6 +3668,7 @@
               "id": "p4-4",
               "type": "fill_blank",
               "prompt": "Activa: 'They told me a secret.' Pasiva: 'I ___ told a secret.'",
+              "hint": "Me contaron un secreto.",
               "answer": "was",
               "acceptableAnswers": []
             },
@@ -3729,6 +3752,7 @@
               "id": "p4-10",
               "type": "fill_blank",
               "prompt": "Pasiva: 'She ___ promoted last month.' (promoted = recibio un ascenso)",
+              "hint": "Ella fue ascendida el mes pasado.",
               "answer": "was",
               "acceptableAnswers": []
             },
@@ -3808,6 +3832,7 @@
               "id": "p5-4",
               "type": "fill_blank",
               "prompt": "'The cake was eaten ___ the children.' Preposicion de agente.",
+              "hint": "La tarta fue comida por los niños.",
               "answer": "by",
               "acceptableAnswers": []
             },
@@ -3895,6 +3920,7 @@
               "id": "p5-11",
               "type": "fill_blank",
               "prompt": "Activa: 'My friend gave me this.' Pasiva: 'I ___ given this by my friend.'",
+              "hint": "Me dio esto un amigo.",
               "answer": "was",
               "acceptableAnswers": []
             },
@@ -4140,6 +4166,7 @@
               "id": "ph1-4",
               "type": "fill_blank",
               "prompt": "'I don't know the word. I'll ___ it ___ in the dictionary.' (rellena con dos palabras)",
+              "hint": "No conozco la palabra. La buscaré en el diccionario.",
               "answer": "look up",
               "acceptableAnswers": [],
               "explanation": "look + up = buscar."
@@ -4222,6 +4249,7 @@
               "id": "ph1-10",
               "type": "fill_blank",
               "prompt": "She ___ ___ Spanish very quickly. (aprendio rápido)",
+              "hint": "Ella aprendió español muy rápido.",
               "answer": "picked up",
               "acceptableAnswers": []
             },
@@ -4310,6 +4338,7 @@
               "id": "ph2-5",
               "type": "fill_blank",
               "prompt": "I have to ___ my shoes ___ before entering. (quitarme)",
+              "hint": "Tengo que quitarme los zapatos antes de entrar.",
               "answer": "take off",
               "acceptableAnswers": []
             },
@@ -4380,6 +4409,7 @@
               "id": "ph2-10",
               "type": "fill_blank",
               "prompt": "The plane will ___ ___ in 10 minutes. (despegar)",
+              "hint": "El avión despegará en diez minutos.",
               "answer": "take off",
               "acceptableAnswers": []
             },
@@ -4457,6 +4487,7 @@
               "id": "ph3-4",
               "type": "fill_blank",
               "prompt": "I ___ ___ Maria yesterday at the supermarket. (me encontre por casualidad)",
+              "hint": "Ayer me encontré con María en el supermercado.",
               "answer": "ran into",
               "acceptableAnswers": []
             },
@@ -4540,6 +4571,7 @@
               "id": "ph3-10",
               "type": "fill_blank",
               "prompt": "I want to ___ ___ what happened. (averiguar)",
+              "hint": "Quiero averiguar qué pasó.",
               "answer": "find out",
               "acceptableAnswers": []
             },
@@ -4641,6 +4673,7 @@
               "id": "ph4-6",
               "type": "fill_blank",
               "prompt": "My car ___ ___ on the highway. (se averio)",
+              "hint": "Mi coche se averió en la autopista.",
               "answer": "broke down",
               "acceptableAnswers": []
             },
@@ -4710,6 +4743,7 @@
               "id": "ph4-11",
               "type": "fill_blank",
               "prompt": "Can you ___ ___ the TV? I want to watch the news. (encender)",
+              "hint": "¿Puedes encender la tele? Quiero ver las noticias.",
               "answer": "turn on",
               "acceptableAnswers": []
             },
@@ -4787,6 +4821,7 @@
               "id": "ph5-5",
               "type": "fill_blank",
               "prompt": "Reescribe con pronombre: 'I'll pick up the children.' -> 'I'll pick ___ up.'",
+              "hint": "Voy a recoger a los niños.",
               "answer": "them",
               "acceptableAnswers": []
             },
@@ -5333,6 +5368,7 @@
               "id": "ff1-11",
               "type": "fill_blank",
               "prompt": "Anuncio dirigido a mujeres embarazadas: '___ women can sit here.' (escribe el adjetivo en inglés que las describe)",
+              "hint": "Las mujeres embarazadas pueden sentarse aquí.",
               "answer": "Pregnant",
               "acceptableAnswers": []
             },
@@ -5437,6 +5473,7 @@
               "id": "ff2-7",
               "type": "fill_blank",
               "prompt": "I will ___ the meeting at 10. (asistir, acudir)",
+              "hint": "Asistiré a la reunión a las diez.",
               "answer": "attend",
               "acceptableAnswers": []
             },
@@ -5784,6 +5821,7 @@
               "id": "ff4-9",
               "type": "fill_blank",
               "prompt": "'Where is the ___?' Saliendo del edificio.",
+              "hint": "¿Dónde está la salida?",
               "answer": "exit",
               "acceptableAnswers": []
             },
@@ -6279,6 +6317,7 @@
               "id": "tr1-6",
               "type": "fill_blank",
               "prompt": "Where can I check ___ my luggage?",
+              "hint": "¿Dónde puedo facturar mi equipaje?",
               "answer": "in",
               "acceptableAnswers": [],
               "explanation": "check in luggage = facturar."
@@ -6349,6 +6388,7 @@
               "id": "tr1-11",
               "type": "fill_blank",
               "prompt": "Please show me your boarding ___.",
+              "hint": "Por favor, muéstreme su tarjeta de embarque.",
               "answer": "pass",
               "acceptableAnswers": []
             },
@@ -6437,6 +6477,7 @@
               "id": "tr2-6",
               "type": "fill_blank",
               "prompt": "I have a ___ under the name Garcia. (reservacion)",
+              "hint": "Tengo una reserva a nombre de García.",
               "answer": "reservation",
               "acceptableAnswers": []
             },
@@ -6598,6 +6639,7 @@
               "id": "tr3-6",
               "type": "fill_blank",
               "prompt": "'How far is the station?' Pregunta por:",
+              "hint": "¿A qué distancia está la estación?",
               "answer": "distance",
               "acceptableAnswers": [
                 "la distancia",
@@ -6758,6 +6800,7 @@
               "id": "tr4-6",
               "type": "fill_blank",
               "prompt": "Can I have a ___ to Madrid, please? (un billete)",
+              "hint": "¿Me puede dar un billete a Madrid, por favor?",
               "answer": "ticket",
               "acceptableAnswers": []
             },
@@ -6829,6 +6872,7 @@
               "id": "tr4-11",
               "type": "fill_blank",
               "prompt": "Pregunta: '___ much does it cost?' (cuanto)",
+              "hint": "¿Cuánto cuesta?",
               "answer": "How",
               "acceptableAnswers": []
             },
@@ -6905,6 +6949,7 @@
               "id": "tr5-5",
               "type": "fill_blank",
               "prompt": "I need to see a ___. (médico)",
+              "hint": "Necesito ver a un médico.",
               "answer": "doctor",
               "acceptableAnswers": []
             },
@@ -7300,6 +7345,7 @@
               "id": "w1-6",
               "type": "fill_blank",
               "prompt": "I have a ___ at 10 a.m. with my team. (reunion)",
+              "hint": "Tengo una reunión con mi equipo a las diez.",
               "answer": "meeting",
               "acceptableAnswers": []
             },
@@ -7370,6 +7416,7 @@
               "id": "w1-11",
               "type": "fill_blank",
               "prompt": "My ___ is very kind. (jefa)",
+              "hint": "Mi jefa es muy amable.",
               "answer": "boss",
               "acceptableAnswers": []
             },
@@ -7517,6 +7564,7 @@
               "id": "w2-10",
               "type": "fill_blank",
               "prompt": "I ___ as a designer. (trabajo)",
+              "hint": "Trabajo como diseñador.",
               "answer": "work",
               "acceptableAnswers": []
             },
@@ -7767,6 +7815,7 @@
               "id": "w4-5",
               "type": "fill_blank",
               "prompt": "I have five years of ___ in marketing. (experiencia)",
+              "hint": "Tengo cinco años de experiencia en marketing.",
               "answer": "experience",
               "acceptableAnswers": []
             },
@@ -7994,6 +8043,7 @@
               "id": "w5-10",
               "type": "fill_blank",
               "prompt": "Acepta una sugerencia: 'That ___ a good point.' (es)",
+              "hint": "Es un buen punto.",
               "answer": "is",
               "acceptableAnswers": []
             },
@@ -8310,6 +8360,7 @@
               "id": "st1-5",
               "type": "fill_blank",
               "prompt": "'They ___ (eat) dinner when I arrived.' Past continuous.",
+              "hint": "Estaban cenando cuando llegué.",
               "answer": "were eating",
               "acceptableAnswers": []
             },
@@ -8317,6 +8368,7 @@
               "id": "st1-6",
               "type": "fill_blank",
               "prompt": "'She ___ (study) all evening.' Past continuous.",
+              "hint": "Ella estuvo estudiando toda la tarde.",
               "answer": "was studying",
               "acceptableAnswers": []
             },
@@ -8399,6 +8451,7 @@
               "id": "st1-12",
               "type": "fill_blank",
               "prompt": "While I ___ (sleep), the cat broke a glass.",
+              "hint": "Mientras yo dormía, el gato rompió un vaso.",
               "answer": "was sleeping",
               "acceptableAnswers": []
             }
@@ -8775,6 +8828,7 @@
               "id": "st4-4",
               "type": "fill_blank",
               "prompt": "She told me that she ___ (see) the film already. (la habia visto)",
+              "hint": "Me dijo que ya había visto la película.",
               "answer": "had seen",
               "acceptableAnswers": []
             },
@@ -8858,6 +8912,7 @@
               "id": "st4-10",
               "type": "fill_blank",
               "prompt": "They ___ (eat) before we got there.",
+              "hint": "Ya habían comido antes de que llegáramos.",
               "answer": "had eaten",
               "acceptableAnswers": []
             },
@@ -8948,6 +9003,7 @@
               "id": "st5-5",
               "type": "fill_blank",
               "prompt": "It ___ (be) raining hard when I arrived. (estaba lloviendo)",
+              "hint": "Estaba lloviendo a cántaros cuando llegué.",
               "answer": "was",
               "acceptableAnswers": []
             },
@@ -9020,6 +9076,7 @@
               "id": "st5-10",
               "type": "fill_blank",
               "prompt": "When I ___ (open) the door, my friends were waiting with a cake.",
+              "hint": "Cuando abrí la puerta, mis amigos esperaban con un pastel.",
               "answer": "opened",
               "acceptableAnswers": []
             },
@@ -9326,6 +9383,7 @@
               "id": "op1-5",
               "type": "fill_blank",
               "prompt": "___ my opinion, the film was great.",
+              "hint": "En mi opinión, la película fue genial.",
               "answer": "In",
               "acceptableAnswers": []
             },
@@ -9502,6 +9560,7 @@
               "id": "op2-6",
               "type": "fill_blank",
               "prompt": "I ___ with you on that. (estoy de acuerdo)",
+              "hint": "Estoy de acuerdo contigo en eso.",
               "answer": "agree",
               "acceptableAnswers": []
             },
@@ -9571,6 +9630,7 @@
               "id": "op2-11",
               "type": "fill_blank",
               "prompt": "I ___ what you mean. (entiendo)",
+              "hint": "Entiendo lo que quieres decir.",
               "answer": "see",
               "acceptableAnswers": [
                 "understand"
@@ -9662,6 +9722,7 @@
               "id": "op3-6",
               "type": "fill_blank",
               "prompt": "'I'm afraid I ___ agree with that.' (no)",
+              "hint": "Me temo que no estoy de acuerdo con eso.",
               "answer": "don't",
               "acceptableAnswers": []
             },
@@ -9811,6 +9872,7 @@
               "id": "op4-5",
               "type": "fill_blank",
               "prompt": "What do you ___ about it? (piensas)",
+              "hint": "¿Qué piensas sobre eso?",
               "answer": "think",
               "acceptableAnswers": [
                 "feel"
@@ -10341,6 +10403,7 @@
               "id": "r1-7",
               "type": "fill_blank",
               "prompt": "'She ___ (live) here for ten years.' Present perfect.",
+              "hint": "Ella vive aquí desde hace diez años.",
               "answer": "has lived",
               "acceptableAnswers": [
                 "'s lived"
@@ -10508,6 +10571,7 @@
               "id": "r2-7",
               "type": "fill_blank",
               "prompt": "I have a ___ at 10. (reunion)",
+              "hint": "Tengo una reunión a las diez.",
               "answer": "meeting",
               "acceptableAnswers": []
             },
@@ -10659,6 +10723,7 @@
               "id": "r3-6",
               "type": "fill_blank",
               "prompt": "Pon en pasado: 'I see him.' -> 'I ___ him.'",
+              "hint": "Lo vi.",
               "answer": "saw",
               "acceptableAnswers": []
             },
@@ -10893,6 +10958,7 @@
               "id": "r4-11",
               "type": "fill_blank",
               "prompt": "How ___ have you lived here? (cuanto tiempo)",
+              "hint": "¿Cuánto tiempo llevas viviendo aquí?",
               "answer": "long",
               "acceptableAnswers": []
             },
@@ -11029,6 +11095,7 @@
               "id": "r5-10",
               "type": "fill_blank",
               "prompt": "Corrige: 'I no can come.' -> 'I ___ come.'",
+              "hint": "No puedo venir.",
               "answer": "can't",
               "acceptableAnswers": [
                 "cannot"
@@ -11038,6 +11105,7 @@
               "id": "r5-11",
               "type": "fill_blank",
               "prompt": "Corrige: 'I have went to Paris.' -> 'I have ___ to Paris.'",
+              "hint": "He ido a París.",
               "answer": "gone",
               "acceptableAnswers": []
             },
