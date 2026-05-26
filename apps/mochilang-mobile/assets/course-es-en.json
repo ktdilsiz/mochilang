@@ -5229,7 +5229,7 @@
                 {
                   "id": "nu5-2",
                   "type": "multiple_choice",
-                  "prompt": "What does 'euros' mean in Spanish?",
+                  "prompt": "Which English currency word matches the Spanish plural noun in the options?",
                   "options": [
                     "dollars",
                     "euros",
@@ -5310,7 +5310,7 @@
                 {
                   "id": "nu5-8",
                   "type": "fill_blank",
-                  "prompt": "'It costs 15 euros' → Cuesta quince ___.",
+                  "prompt": "'It costs 15 ___' → Cuesta quince ___.",
                   "answer": "euros",
                   "acceptableAnswers": [
                     "Euros"
@@ -9040,7 +9040,7 @@
                 {
                   "id": "qu1-2",
                   "type": "multiple_choice",
-                  "prompt": "What does '¿Qué?' mean?",
+                  "prompt": "Which English question word matches the Spanish '¿Qué?'?",
                   "options": [
                     "What?",
                     "Where?",
@@ -9701,7 +9701,7 @@
                 {
                   "id": "qu5-1",
                   "type": "multiple_choice",
-                  "prompt": "How do you turn 'Hablas español' into a question?",
+                  "prompt": "How do you turn the statement 'H. español' into a question?",
                   "options": [
                     "Add 'do' at start",
                     "¿Hablas español?",
@@ -12518,7 +12518,7 @@
                 {
                   "id": "pl1-6",
                   "type": "multiple_choice",
-                  "prompt": "What does 'restaurante' mean?",
+                  "prompt": "What kind of place would you go to for a meal? (translate the Spanish word for it)",
                   "options": [
                     "rest",
                     "restoration",
@@ -12553,7 +12553,7 @@
                 {
                   "id": "pl1-8",
                   "type": "fill_blank",
-                  "prompt": "'Hospital' in Spanish → el ___.",
+                  "prompt": "Translate to Spanish — the place where sick people are treated: el ___.",
                   "answer": "hospital",
                   "acceptableAnswers": [
                     "Hospital"
@@ -14607,7 +14607,7 @@
                 {
                   "id": "pt1-3",
                   "type": "fill_blank",
-                  "prompt": "Conjugate: 'Yesterday I bought (comprar) a book.' Ayer ___ un libro.",
+                  "prompt": "Conjugate (preterite, yo) the verb meaning 'to buy': 'Yesterday I bought a book.' Ayer ___ un libro.",
                   "answer": "compré"
                 },
                 {
@@ -14741,7 +14741,7 @@
                 {
                   "id": "pt2-2",
                   "type": "fill_blank",
-                  "prompt": "Conjugate: 'She wrote (escribir) a letter.' ___ una carta.",
+                  "prompt": "Conjugate (preterite, ella) the verb meaning 'to write': 'She wrote a letter.' ___ una carta.",
                   "answer": "Escribió",
                   "acceptableAnswers": [
                     "escribió"
@@ -14838,7 +14838,7 @@
                 {
                   "id": "pt2-9",
                   "type": "multiple_choice",
-                  "prompt": "Which is the él/ella preterite of 'recibir'?",
+                  "prompt": "Which is the él/ella preterite of the verb meaning 'to receive'?",
                   "options": [
                     "recibe",
                     "recibió",
@@ -16235,7 +16235,7 @@
                 {
                   "id": "pv1-11",
                   "type": "fill_blank",
-                  "prompt": "Fill 'estudiar' (correct past tense): 'El año pasado ___ en Madrid.' (Last year I studied in Madrid)",
+                  "prompt": "Conjugate (preterite, yo) the verb meaning 'to study': 'Last year I studied in Madrid.' El año pasado ___ en Madrid.",
                   "answer": "estudié"
                 }
               ]
@@ -18512,7 +18512,7 @@
                 {
                   "id": "cm2-6",
                   "type": "fill_blank",
-                  "prompt": "Make this with 'tan...como': 'My sister is as smart as me.' Mi hermana es ___ inteligente ___ yo. (two words separated by a comma)",
+                  "prompt": "Use the 'as...as' construction: 'My sister is as smart as me.' Mi hermana es ___ inteligente ___ yo. (two words separated by a comma)",
                   "answer": "tan, como",
                   "acceptableAnswers": [
                     "tan,como"
@@ -18561,7 +18561,7 @@
                 {
                   "id": "cm2-10",
                   "type": "fill_blank",
-                  "prompt": "Use 'tantas...como': 'She has as many friends as me.' Tiene ___ amigas ___ yo. (two words separated by a comma)",
+                  "prompt": "Use the 'as many...as' construction: 'She has as many friends as me.' Tiene ___ amigas ___ yo. (two words separated by a comma)",
                   "answer": "tantas, como",
                   "acceptableAnswers": [
                     "tantas,como"
@@ -24133,7 +24133,7 @@
                 {
                   "id": "su5-4",
                   "type": "fill_blank",
-                  "prompt": "Fill the verb: 'A name escaped me.' Se me ___ un nombre.",
+                  "prompt": "Fill the verb (preterite, 3rd-person singular of the verb meaning 'to flee'): Se me ___ un nombre.",
                   "answer": "escapó"
                 },
                 {
@@ -24472,7 +24472,7 @@
                 {
                   "id": "re1-3",
                   "type": "fill_blank",
-                  "prompt": "Fill the blank ('voy' or 'me voy'): 'I'm out of here, see you later!' ¡___, hasta luego!",
+                  "prompt": "Fill the blank (reflexive form of 'ir'): 'I'm out of here, see you later!' ¡___, hasta luego!",
                   "answer": "Me voy"
                 },
                 {
@@ -24599,7 +24599,7 @@
                 {
                   "id": "re2-3",
                   "type": "fill_blank",
-                  "prompt": "Fill in (dormí / me dormí): 'I fell asleep during the movie.' ___ durante la película.",
+                  "prompt": "Fill in (reflexive form of 'dormir'): 'I fell asleep during the movie.' ___ durante la película.",
                   "answer": "Me dormí"
                 },
                 {
@@ -32598,7 +32598,7 @@
                 {
                   "id": "di2-6",
                   "type": "fill_blank",
-                  "prompt": "'¿Le mandas un mensaje a Juan?' — 'Le' here means 'to ___':",
+                  "prompt": "'¿Le mandas un mensaje a J.?' — Who does 'Le' refer to in this sentence? (the person's name)",
                   "answer": "Juan",
                   "acceptableAnswers": [
                     "él"
@@ -32648,7 +32648,7 @@
                 {
                   "id": "di2-10",
                   "type": "fill_blank",
-                  "prompt": "'Le explico la regla a mi hijo.' 'Le' refers to ___",
+                  "prompt": "'Le explico la regla a m. h.' Who does 'Le' refer to? (two words)",
                   "answer": "mi hijo",
                   "acceptableAnswers": [
                     "hijo"
@@ -33088,7 +33088,7 @@
                 {
                   "id": "di5-6",
                   "type": "fill_blank",
-                  "prompt": "Alternative for 'Estoy diciéndotelo': 'Te lo ___ diciendo.'",
+                  "prompt": "Alternative for the gerund phrase 'dic-' that moves the pronouns before the auxiliary: 'Te lo ___ diciendo.' (yo present of ser/estar — pick the one that pairs with a gerund)",
                   "answer": "estoy",
                   "acceptableAnswers": [
                     "Estoy"
@@ -33882,7 +33882,7 @@
                 {
                   "id": "mo3-9",
                   "type": "fill_blank",
-                  "prompt": "'No hay que ___ (preocuparse).' (One mustn't worry.)",
+                  "prompt": "Fill the reflexive infinitive of 'preocupar': 'No hay que ___.' (One mustn't worry.)",
                   "answer": "preocuparse",
                   "acceptableAnswers": []
                 },
@@ -37363,7 +37363,7 @@
                 {
                   "id": "st5-2",
                   "type": "fill_blank",
-                  "prompt": "Tense for 'I had already left' → ___ (había/iba) ido.",
+                  "prompt": "Tense for 'I had already left' → ___ ido. (auxiliary, imperfect of 'haber')",
                   "answer": "había",
                   "acceptableAnswers": []
                 },
@@ -39524,7 +39524,7 @@
                 {
                   "id": "cp5-3",
                   "type": "fill_blank",
-                  "prompt": "Rewrite 'Estoy comprándotelo' moving pronouns before the verb: '___ ___ estoy comprando.' Two words.",
+                  "prompt": "Rewrite the gerund-with-attached-pronouns form so the pronouns move before the auxiliary 'estoy': '___ ___ estoy comprando.' Fill the first two blanks (two pronouns).",
                   "answer": "Te lo",
                   "acceptableAnswers": [
                     "te lo"
@@ -42093,7 +42093,7 @@
                 {
                   "id": "ims1-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I wanted him to come' (Quería que él viniera)",
+                  "prompt": "Build: 'I wanted him to come'",
                   "answer": "Quería que él viniera",
                   "bank": [
                     "Quería",
@@ -42130,7 +42130,7 @@
                 {
                   "id": "ims1-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'She asked us to wait' (Nos pidió que esperáramos)",
+                  "prompt": "Build: 'She asked us to wait'",
                   "answer": "Nos pidió que esperáramos",
                   "bank": [
                     "Nos",
@@ -42265,7 +42265,7 @@
                 {
                   "id": "ims2-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'They asked us to be quiet' (Nos pidieron que nos calláramos)",
+                  "prompt": "Build: 'They asked us to be quiet'",
                   "answer": "Nos pidieron que nos calláramos",
                   "bank": [
                     "Nos",
@@ -42304,7 +42304,7 @@
                 {
                   "id": "ims2-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'They wanted me to stay' (Querían que me quedara)",
+                  "prompt": "Build: 'They wanted me to stay'",
                   "answer": "Querían que me quedara",
                   "bank": [
                     "Querían",
@@ -42343,7 +42343,7 @@
                 {
                   "id": "ims2-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The teacher insisted that we arrive on time' (El profesor insistió en que llegáramos a tiempo)",
+                  "prompt": "Build: 'The teacher insisted that we arrive on time'",
                   "answer": "El profesor insistió en que llegáramos a tiempo",
                   "bank": [
                     "El",
@@ -42406,7 +42406,7 @@
                 {
                   "id": "ims2-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I hoped that you would write to me' (Esperaba que me escribieras)",
+                  "prompt": "Build: 'I hoped that you would write to me'",
                   "answer": "Esperaba que me escribieras",
                   "bank": [
                     "Esperaba",
@@ -42452,7 +42452,7 @@
                 {
                   "id": "ims3-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build politely: 'I'd like to reserve a table for two' (Quisiera reservar una mesa para dos)",
+                  "prompt": "Build politely: 'I'd like to reserve a table for two'",
                   "answer": "Quisiera reservar una mesa para dos",
                   "bank": [
                     "Quisiera",
@@ -42490,7 +42490,7 @@
                 {
                   "id": "ims3-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I'd like to know if there's wi-fi' (Quisiera saber si hay wifi)",
+                  "prompt": "Build: 'I'd like to know if there's wi-fi'",
                   "answer": "Quisiera saber si hay wifi",
                   "bank": [
                     "Quisiera",
@@ -42527,7 +42527,7 @@
                 {
                   "id": "ims3-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I'd like to ask you a question' (Quisiera hacerle una pregunta)",
+                  "prompt": "Build: 'I'd like to ask you a question'",
                   "answer": "Quisiera hacerle una pregunta",
                   "bank": [
                     "Quisiera",
@@ -42577,7 +42577,7 @@
                 {
                   "id": "ims3-12",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I'd like to change my room' (Quisiera cambiar de habitación)",
+                  "prompt": "Build: 'I'd like to change my room'",
                   "answer": "Quisiera cambiar de habitación",
                   "bank": [
                     "Quisiera",
@@ -42620,7 +42620,7 @@
                 {
                   "id": "ims4-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'If we lived in Spain, we would speak Spanish every day' (Si viviéramos en España, hablaríamos español todos los días)",
+                  "prompt": "Build: 'If we lived in Spain, we would speak Spanish every day'",
                   "answer": "Si viviéramos en España , hablaríamos español todos los días",
                   "bank": [
                     "Si",
@@ -42663,7 +42663,7 @@
                 {
                   "id": "ims4-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'If you studied more, you'd pass' (Si estudiaras más, aprobarías)",
+                  "prompt": "Build: 'If you studied more, you'd pass'",
                   "answer": "Si estudiaras más , aprobarías",
                   "bank": [
                     "Si",
@@ -42701,7 +42701,7 @@
                 {
                   "id": "ims4-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'If they had more time, they'd visit us' (Si tuvieran más tiempo, nos visitarían)",
+                  "prompt": "Build: 'If they had more time, they'd visit us'",
                   "answer": "Si tuvieran más tiempo , nos visitarían",
                   "bank": [
                     "Si",
@@ -43038,7 +43038,7 @@
                 {
                   "id": "cp1-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I would have called you' (Te habría llamado)",
+                  "prompt": "Build: 'I would have called you'",
                   "answer": "Te habría llamado",
                   "bank": [
                     "Te",
@@ -43074,7 +43074,7 @@
                 {
                   "id": "cp1-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'We would have seen the film' (Habríamos visto la película)",
+                  "prompt": "Build: 'We would have seen the film'",
                   "answer": "Habríamos visto la película",
                   "bank": [
                     "Habríamos",
@@ -43111,7 +43111,7 @@
                 {
                   "id": "cp1-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'You would have done it better' (Lo habrías hecho mejor)",
+                  "prompt": "Build: 'You would have done it better'",
                   "answer": "Lo habrías hecho mejor",
                   "bank": [
                     "Lo",
@@ -43197,7 +43197,7 @@
                 {
                   "id": "cp2-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'We would have gone to the beach, but it rained' (Habríamos ido a la playa, pero llovió)",
+                  "prompt": "Build: 'We would have gone to the beach, but it rained'",
                   "answer": "Habríamos ido a la playa , pero llovió",
                   "bank": [
                     "Habríamos",
@@ -43236,7 +43236,7 @@
                 {
                   "id": "cp2-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I would have helped you, but I was busy' (Te habría ayudado, pero estaba ocupado)",
+                  "prompt": "Build: 'I would have helped you, but I was busy'",
                   "answer": "Te habría ayudado , pero estaba ocupado",
                   "bank": [
                     "Te",
@@ -43276,7 +43276,7 @@
                 {
                   "id": "cp2-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I would have eaten more, but I was already full' (Habría comido más, pero ya estaba lleno)",
+                  "prompt": "Build: 'I would have eaten more, but I was already full'",
                   "answer": "Habría comido más , pero ya estaba lleno",
                   "bank": [
                     "Habría",
@@ -43335,7 +43335,7 @@
                 {
                   "id": "cp2-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I would have answered, but I was in a meeting' (Habría contestado, pero estaba en una reunión)",
+                  "prompt": "Build: 'I would have answered, but I was in a meeting'",
                   "answer": "Habría contestado , pero estaba en una reunión",
                   "bank": [
                     "Habría",
@@ -43384,7 +43384,7 @@
                 {
                   "id": "cp3-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'If you had told me, I would have helped you' (Si me lo hubieras dicho, te habría ayudado)",
+                  "prompt": "Build: 'If you had told me, I would have helped you'",
                   "answer": "Si me lo hubieras dicho , te habría ayudado",
                   "bank": [
                     "Si",
@@ -43425,7 +43425,7 @@
                 {
                   "id": "cp3-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'If we hadn't missed the train, we would have arrived earlier' (Si no hubiéramos perdido el tren, habríamos llegado antes)",
+                  "prompt": "Build: 'If we hadn't missed the train, we would have arrived earlier'",
                   "answer": "Si no hubiéramos perdido el tren , habríamos llegado antes",
                   "bank": [
                     "Si",
@@ -43466,7 +43466,7 @@
                 {
                   "id": "cp3-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'If they had called us, we would have known' (Si nos hubieran llamado, lo habríamos sabido)",
+                  "prompt": "Build: 'If they had called us, we would have known'",
                   "answer": "Si nos hubieran llamado , lo habríamos sabido",
                   "bank": [
                     "Si",
@@ -43538,7 +43538,7 @@
                 {
                   "id": "cp3-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'If they had practiced more, they would have won' (Si hubieran practicado más, habrían ganado)",
+                  "prompt": "Build: 'If they had practiced more, they would have won'",
                   "answer": "Si hubieran practicado más , habrían ganado",
                   "bank": [
                     "Si",
@@ -43576,7 +43576,7 @@
                 {
                   "id": "cp4-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'They would have arrived on time if they had left earlier' (Habrían llegado a tiempo si hubieran salido antes)",
+                  "prompt": "Build: 'They would have arrived on time if they had left earlier'",
                   "answer": "Habrían llegado a tiempo si hubieran salido antes",
                   "bank": [
                     "Habrían",
@@ -43617,7 +43617,7 @@
                 {
                   "id": "cp4-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I would have been happier in another city' (Habría sido más feliz en otra ciudad)",
+                  "prompt": "Build: 'I would have been happier in another city'",
                   "answer": "Habría sido más feliz en otra ciudad",
                   "bank": [
                     "Habría",
@@ -43654,7 +43654,7 @@
                 {
                   "id": "cp4-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I would have already left by then' (Yo ya me habría ido para entonces)",
+                  "prompt": "Build: 'I would have already left by then'",
                   "answer": "Yo ya me habría ido para entonces",
                   "bank": [
                     "Yo",
@@ -43964,7 +43964,7 @@
                 {
                   "id": "pp1-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'We had already left' (Ya nos habíamos ido)",
+                  "prompt": "Build: 'We had already left'",
                   "answer": "Ya nos habíamos ido",
                   "bank": [
                     "Ya",
@@ -44000,7 +44000,7 @@
                 {
                   "id": "pp1-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Had you ever been to Argentina?' (¿Habías estado alguna vez en Argentina?)",
+                  "prompt": "Build: 'Had you ever been to Argentina?'",
                   "answer": "¿ Habías estado alguna vez en Argentina ?",
                   "bank": [
                     "¿",
@@ -44037,7 +44037,7 @@
                 {
                   "id": "pp1-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'She had broken her arm' (Se había roto el brazo)",
+                  "prompt": "Build: 'She had broken her arm'",
                   "answer": "Se había roto el brazo",
                   "bank": [
                     "Se",
@@ -44123,7 +44123,7 @@
                 {
                   "id": "pp2-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'He arrived late because he had missed the bus' (Llegó tarde porque había perdido el autobús)",
+                  "prompt": "Build: 'He arrived late because he had missed the bus'",
                   "answer": "Llegó tarde porque había perdido el autobús",
                   "bank": [
                     "Llegó",
@@ -44159,7 +44159,7 @@
                 {
                   "id": "pp2-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Before going to bed, I had already washed the dishes' (Antes de acostarme, ya había lavado los platos)",
+                  "prompt": "Build: 'Before going to bed, I had already washed the dishes'",
                   "answer": "Antes de acostarme , ya había lavado los platos",
                   "bank": [
                     "Antes",
@@ -44200,7 +44200,7 @@
                 {
                   "id": "pp2-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'We didn't go to the museum because we had been there many times' (No fuimos al museo porque habíamos ido muchas veces)",
+                  "prompt": "Build: 'We didn't go to the museum because we had been there many times'",
                   "answer": "No fuimos al museo porque habíamos ido muchas veces",
                   "bank": [
                     "No",
@@ -44269,7 +44269,7 @@
                 {
                   "id": "pp2-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'We hadn't seen each other in years' (No nos habíamos visto en años)",
+                  "prompt": "Build: 'We hadn't seen each other in years'",
                   "answer": "No nos habíamos visto en años",
                   "bank": [
                     "No",
@@ -44342,7 +44342,7 @@
                 {
                   "id": "pp3-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'They told us they had already arrived' (Nos dijeron que ya habían llegado)",
+                  "prompt": "Build: 'They told us they had already arrived'",
                   "answer": "Nos dijeron que ya habían llegado",
                   "bank": [
                     "Nos",
@@ -44381,7 +44381,7 @@
                 {
                   "id": "pp3-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'We hadn't expected so much rain' (No habíamos esperado tanta lluvia)",
+                  "prompt": "Build: 'We hadn't expected so much rain'",
                   "answer": "No habíamos esperado tanta lluvia",
                   "bank": [
                     "No",
@@ -44463,7 +44463,7 @@
                 {
                   "id": "pp4-1",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'When I got home, my brother had already cooked dinner' (Cuando llegué a casa, mi hermano ya había cocinado la cena)",
+                  "prompt": "Build: 'When I got home, my brother had already cooked dinner'",
                   "answer": "Cuando llegué a casa , mi hermano ya había cocinado la cena",
                   "bank": [
                     "Cuando",
@@ -44502,7 +44502,7 @@
                 {
                   "id": "pp4-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'No one had told me about the meeting' (Nadie me había dicho nada de la reunión)",
+                  "prompt": "Build: 'No one had told me about the meeting'",
                   "answer": "Nadie me había dicho nada de la reunión",
                   "bank": [
                     "Nadie",
@@ -44543,7 +44543,7 @@
                 {
                   "id": "pp4-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'She didn't recognize me because I had cut my hair' (No me reconoció porque me había cortado el pelo)",
+                  "prompt": "Build: 'She didn't recognize me because I had cut my hair'",
                   "answer": "No me reconoció porque me había cortado el pelo",
                   "bank": [
                     "No",
@@ -44581,7 +44581,7 @@
                 {
                   "id": "pp4-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'By the time he was 25, he had already published two books' (A los 25 años ya había publicado dos libros)",
+                  "prompt": "Build: 'By the time he was 25, he had already published two books'",
                   "answer": "A los 25 años ya había publicado dos libros",
                   "bank": [
                     "A",
@@ -44633,7 +44633,7 @@
                 {
                   "id": "pp4-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'When I met her, she had already written three books' (Cuando la conocí, ya había escrito tres libros)",
+                  "prompt": "Build: 'When I met her, she had already written three books'",
                   "answer": "Cuando la conocí , ya había escrito tres libros",
                   "bank": [
                     "Cuando",
@@ -44899,7 +44899,7 @@
                 {
                   "id": "ps1-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The houses were built in 1920' (Las casas fueron construidas en 1920)",
+                  "prompt": "Build: 'The houses were built in 1920'",
                   "answer": "Las casas fueron construidas en 1920",
                   "bank": [
                     "Las",
@@ -44935,7 +44935,7 @@
                 {
                   "id": "ps1-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The film was directed by Almodóvar' (La película fue dirigida por Almodóvar)",
+                  "prompt": "Build: 'The film was directed by Almodóvar'",
                   "answer": "La película fue dirigida por Almodóvar",
                   "bank": [
                     "La",
@@ -44974,7 +44974,7 @@
                 {
                   "id": "ps1-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The decision has been made' (La decisión ha sido tomada)",
+                  "prompt": "Build: 'The decision has been made'",
                   "answer": "La decisión ha sido tomada",
                   "bank": [
                     "La",
@@ -45064,7 +45064,7 @@
                 {
                   "id": "ps2-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Used cars are sold' (Se venden coches usados)",
+                  "prompt": "Build: 'Used cars are sold'",
                   "answer": "Se venden coches usados",
                   "bank": [
                     "Se",
@@ -45103,7 +45103,7 @@
                 {
                   "id": "ps2-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'A lot of wine is consumed in Spain' (Se consume mucho vino en España)",
+                  "prompt": "Build: 'A lot of wine is consumed in Spain'",
                   "answer": "Se consume mucho vino en España",
                   "bank": [
                     "Se",
@@ -45120,7 +45120,7 @@
                 {
                   "id": "ps2-6",
                   "type": "fill_blank",
-                  "prompt": "Make passive 'se': 'Construyen casas aquí' → '___ casas aquí.'",
+                  "prompt": "Make passive 'se': '___ casas aquí' — supply the two-word passive form (auxiliary + verb) that means 'houses are built here'.",
                   "answer": "Se construyen"
                 },
                 {
@@ -45139,7 +45139,7 @@
                 {
                   "id": "ps2-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Many books are read in this house' (Se leen muchos libros en esta casa)",
+                  "prompt": "Build: 'Many books are read in this house'",
                   "answer": "Se leen muchos libros en esta casa",
                   "bank": [
                     "Se",
@@ -45202,7 +45202,7 @@
                 {
                   "id": "ps2-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'A lot of olive oil is produced in Spain' (Se produce mucho aceite de oliva en España)",
+                  "prompt": "Build: 'A lot of olive oil is produced in Spain'",
                   "answer": "Se produce mucho aceite de oliva en España",
                   "bank": [
                     "Se",
@@ -45248,7 +45248,7 @@
                 {
                   "id": "ps3-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'One lives well in Spain' (Se vive bien en España)",
+                  "prompt": "Build: 'One lives well in Spain'",
                   "answer": "Se vive bien en España",
                   "bank": [
                     "Se",
@@ -45286,7 +45286,7 @@
                 {
                   "id": "ps3-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Here one eats very well' (Aquí se come muy bien)",
+                  "prompt": "Build: 'Here one eats very well'",
                   "answer": "Aquí se come muy bien",
                   "bank": [
                     "Aquí",
@@ -45321,7 +45321,7 @@
                 {
                   "id": "ps3-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'How does one get to the station?' (¿Cómo se llega a la estación?)",
+                  "prompt": "Build: 'How does one get to the station?'",
                   "answer": "¿ Cómo se llega a la estación ?",
                   "bank": [
                     "¿",
@@ -45431,7 +45431,7 @@
                 {
                   "id": "ps4-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It is believed that he is guilty' (Se cree que es culpable)",
+                  "prompt": "Build: 'It is believed that he is guilty'",
                   "answer": "Se cree que es culpable",
                   "bank": [
                     "Se",
@@ -45467,7 +45467,7 @@
                 {
                   "id": "ps4-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It is said that he's leaving' (Se dice que se va)",
+                  "prompt": "Build: 'It is said that he's leaving'",
                   "answer": "Se dice que se va",
                   "bank": [
                     "Se",
@@ -45506,7 +45506,7 @@
                 {
                   "id": "ps4-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'A solution was found quickly' (Se encontró una solución rápidamente)",
+                  "prompt": "Build: 'A solution was found quickly'",
                   "answer": "Se encontró una solución rápidamente",
                   "bank": [
                     "Se",
@@ -45567,7 +45567,7 @@
                 {
                   "id": "ps4-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (news): 'Five people were rescued from the fire' (Cinco personas fueron rescatadas del incendio)",
+                  "prompt": "Build (news): 'Five people were rescued from the fire'",
                   "answer": "Cinco personas fueron rescatadas del incendio",
                   "bank": [
                     "Cinco",
@@ -45861,7 +45861,7 @@
                 {
                   "id": "op1-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I don't believe he's telling the truth' (No creo que esté diciendo la verdad)",
+                  "prompt": "Build: 'I don't believe he's telling the truth'",
                   "answer": "No creo que esté diciendo la verdad",
                   "bank": [
                     "No",
@@ -45898,7 +45898,7 @@
                 {
                   "id": "op1-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It's possible that they have left' (Es posible que se hayan ido)",
+                  "prompt": "Build: 'It's possible that they have left'",
                   "answer": "Es posible que se hayan ido",
                   "bank": [
                     "Es",
@@ -45935,7 +45935,7 @@
                 {
                   "id": "op1-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I doubt that they will arrive on time' (Dudo que lleguen a tiempo)",
+                  "prompt": "Build: 'I doubt that they will arrive on time'",
                   "answer": "Dudo que lleguen a tiempo",
                   "bank": [
                     "Dudo",
@@ -46054,7 +46054,7 @@
                 {
                   "id": "op2-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'From my point of view, it's an error' (Desde mi punto de vista, es un error)",
+                  "prompt": "Build: 'From my point of view, it's an error'",
                   "answer": "Desde mi punto de vista , es un error",
                   "bank": [
                     "Desde",
@@ -46097,7 +46097,7 @@
                 {
                   "id": "op2-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'In conclusion, it's an issue we should consider' (En conclusión, es un tema que deberíamos considerar)",
+                  "prompt": "Build: 'In conclusion, it's an issue we should consider'",
                   "answer": "En conclusión , es un tema que deberíamos considerar",
                   "bank": [
                     "En",
@@ -46137,7 +46137,7 @@
                 {
                   "id": "op2-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'On the contrary, I think the opposite' (Al contrario, yo pienso lo contrario)",
+                  "prompt": "Build: 'On the contrary, I think the opposite'",
                   "answer": "Al contrario , yo pienso lo contrario",
                   "bank": [
                     "Al",
@@ -46177,7 +46177,7 @@
                 {
                   "id": "op2-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (essay): 'On the one hand, the data are clear; on the other, the analysis is debatable' (Por un lado, los datos son claros; por otro, el análisis es discutible)",
+                  "prompt": "Build (essay): 'On the one hand, the data are clear; on the other, the analysis is debatable'",
                   "answer": "Por un lado , los datos son claros ; por otro , el análisis es discutible",
                   "bank": [
                     "Por",
@@ -46238,7 +46238,7 @@
                 {
                   "id": "op3-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It's important that we arrive on time' (Es importante que lleguemos a tiempo)",
+                  "prompt": "Build: 'It's important that we arrive on time'",
                   "answer": "Es importante que lleguemos a tiempo",
                   "bank": [
                     "Es",
@@ -46274,7 +46274,7 @@
                 {
                   "id": "op3-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It's a shame that they didn't come' (Es una pena que no vinieran)",
+                  "prompt": "Build: 'It's a shame that they didn't come'",
                   "answer": "Es una pena que no vinieran",
                   "bank": [
                     "Es",
@@ -46313,7 +46313,7 @@
                 {
                   "id": "op3-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It's strange that he hasn't called' (Es extraño que no haya llamado)",
+                  "prompt": "Build: 'It's strange that he hasn't called'",
                   "answer": "Es extraño que no haya llamado",
                   "bank": [
                     "Es",
@@ -46427,7 +46427,7 @@
                 {
                   "id": "op4-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Maybe it will rain this afternoon' (Quizá llueva esta tarde)",
+                  "prompt": "Build: 'Maybe it will rain this afternoon'",
                   "answer": "Quizá llueva esta tarde",
                   "bank": [
                     "Quizá",
@@ -46466,7 +46466,7 @@
                 {
                   "id": "op4-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Perhaps you're right' (Tal vez tengas razón)",
+                  "prompt": "Build: 'Perhaps you're right'",
                   "answer": "Tal vez tengas razón",
                   "bank": [
                     "Tal",
@@ -46505,7 +46505,7 @@
                 {
                   "id": "op4-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It could be that he doesn't want to come' (Puede que no quiera venir)",
+                  "prompt": "Build: 'It could be that he doesn't want to come'",
                   "answer": "Puede que no quiera venir",
                   "bank": [
                     "Puede",
@@ -46551,7 +46551,7 @@
                 {
                   "id": "op4-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It could be that the meeting was cancelled' (Puede que se haya cancelado la reunión)",
+                  "prompt": "Build: 'It could be that the meeting was cancelled'",
                   "answer": "Puede que se haya cancelado la reunión",
                   "bank": [
                     "Puede",
@@ -46927,7 +46927,7 @@
                 {
                   "id": "nw1-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'the front page of today's newspaper' (la portada del periódico de hoy)",
+                  "prompt": "Build: 'the front page of today's newspaper'",
                   "answer": "la portada del periódico de hoy",
                   "bank": [
                     "la",
@@ -47009,7 +47009,7 @@
                 {
                   "id": "nw2-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build headline: 'Two arrested in robbery' (Detenidos dos en el robo)",
+                  "prompt": "Build headline: 'Two arrested in robbery'",
                   "answer": "Detenidos dos en el robo",
                   "bank": [
                     "Detenidos",
@@ -47057,7 +47057,7 @@
                 {
                   "id": "nw2-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build headline: 'New president elected' (Elegido nuevo presidente)",
+                  "prompt": "Build headline: 'New president elected'",
                   "answer": "Elegido nuevo presidente",
                   "bank": [
                     "Elegido",
@@ -47093,7 +47093,7 @@
                 {
                   "id": "nw2-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Investigation opened into the accident' (Abierta investigación sobre el accidente)",
+                  "prompt": "Build: 'Investigation opened into the accident'",
                   "answer": "Abierta investigación sobre el accidente",
                   "bank": [
                     "Abierta",
@@ -47155,7 +47155,7 @@
                 {
                   "id": "nw2-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build headline: 'Drought hits the south' (La sequía golpea el sur)",
+                  "prompt": "Build headline: 'Drought hits the south'",
                   "answer": "La sequía golpea el sur",
                   "bank": [
                     "La",
@@ -47192,7 +47192,7 @@
                 {
                   "id": "nw3-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Apparently, he resigned this morning' (Al parecer, dimitió esta mañana)",
+                  "prompt": "Build: 'Apparently, he resigned this morning'",
                   "answer": "Al parecer , dimitió esta mañana",
                   "bank": [
                     "Al",
@@ -47241,7 +47241,7 @@
                 {
                   "id": "nw3-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'According to the witness, the suspect fled' (Según el testigo, el sospechoso huyó)",
+                  "prompt": "Build: 'According to the witness, the suspect fled'",
                   "answer": "Según el testigo , el sospechoso huyó",
                   "bank": [
                     "Según",
@@ -47281,7 +47281,7 @@
                 {
                   "id": "nw3-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The minister insisted that the law would pass' (El ministro insistió en que la ley se aprobaría)",
+                  "prompt": "Build: 'The minister insisted that the law would pass'",
                   "answer": "El ministro insistió en que la ley se aprobaría",
                   "bank": [
                     "El",
@@ -47422,7 +47422,7 @@
                 {
                   "id": "nw4-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The crisis affected thousands of families' (La crisis afectó a miles de familias)",
+                  "prompt": "Build: 'The crisis affected thousands of families'",
                   "answer": "La crisis afectó a miles de familias",
                   "bank": [
                     "La",
@@ -47463,7 +47463,7 @@
                 {
                   "id": "nw4-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Inflation has reached 5%' (La inflación ha alcanzado el 5%)",
+                  "prompt": "Build: 'Inflation has reached 5%'",
                   "answer": "La inflación ha alcanzado el 5%",
                   "bank": [
                     "La",
@@ -47556,7 +47556,7 @@
                 {
                   "id": "nw4-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The protest paralyzed the city' (La manifestación paralizó la ciudad)",
+                  "prompt": "Build: 'The protest paralyzed the city'",
                   "answer": "La manifestación paralizó la ciudad",
                   "bank": [
                     "La",
@@ -47834,7 +47834,7 @@
                 {
                   "id": "fm1-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (formal): 'I will send you the document this afternoon' (Le enviaré el documento esta tarde)",
+                  "prompt": "Build (formal): 'I will send you the document this afternoon'",
                   "answer": "Le enviaré el documento esta tarde",
                   "bank": [
                     "Le",
@@ -47864,7 +47864,7 @@
                 {
                   "id": "fm1-5",
                   "type": "fill_blank",
-                  "prompt": "Convert tú → usted: 'Tú tienes un problema.' → '___ tiene un problema.'",
+                  "prompt": "Convert tú → formal singular subject pronoun: 'Tú tienes un problema.' → '___ tiene un problema.'",
                   "answer": "Usted",
                   "acceptableAnswers": [
                     "usted"
@@ -47885,7 +47885,7 @@
                 {
                   "id": "fm1-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (formal): 'Could you confirm your address?' (¿Podría confirmar su dirección?)",
+                  "prompt": "Build (formal): 'Could you confirm your address?'",
                   "answer": "¿ Podría confirmar su dirección ?",
                   "bank": [
                     "¿",
@@ -47924,7 +47924,7 @@
                 {
                   "id": "fm1-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (formal): 'Welcome, please follow me' (Bienvenido, por favor, sígame)",
+                  "prompt": "Build (formal): 'Welcome, please follow me'",
                   "answer": "Bienvenido , por favor , sígame",
                   "bank": [
                     "Bienvenido",
@@ -48039,7 +48039,7 @@
                 {
                   "id": "fm2-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I'm writing to request information about…' (Le escribo para solicitar información sobre…)",
+                  "prompt": "Build: 'I'm writing to request information about…'",
                   "answer": "Le escribo para solicitar información sobre…",
                   "bank": [
                     "Le",
@@ -48078,7 +48078,7 @@
                 {
                   "id": "fm2-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build email opening: 'In response to your message of the 5th of May' (En respuesta a su mensaje del 5 de mayo)",
+                  "prompt": "Build email opening: 'In response to your message of the 5th of May'",
                   "answer": "En respuesta a su mensaje del 5 de mayo",
                   "bank": [
                     "En",
@@ -48120,7 +48120,7 @@
                 {
                   "id": "fm2-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I attach the document for your review' (Le adjunto el documento para su revisión)",
+                  "prompt": "Build: 'I attach the document for your review'",
                   "answer": "Le adjunto el documento para su revisión",
                   "bank": [
                     "Le",
@@ -48212,7 +48212,7 @@
                 {
                   "id": "fm3-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I would be grateful if you could reply by Friday' (Le agradecería que respondiera antes del viernes)",
+                  "prompt": "Build: 'I would be grateful if you could reply by Friday'",
                   "answer": "Le agradecería que respondiera antes del viernes",
                   "bank": [
                     "Le",
@@ -48253,7 +48253,7 @@
                 {
                   "id": "fm3-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build complaint: 'I'm writing to report a problem with your service' (Le escribo para informarle de un problema con su servicio)",
+                  "prompt": "Build complaint: 'I'm writing to report a problem with your service'",
                   "answer": "Le escribo para informarle de un problema con su servicio",
                   "bank": [
                     "Le",
@@ -48295,7 +48295,7 @@
                 {
                   "id": "fm3-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I require an urgent response' (Necesito una respuesta urgente)",
+                  "prompt": "Build: 'I require an urgent response'",
                   "answer": "Necesito una respuesta urgente",
                   "bank": [
                     "Necesito",
@@ -48345,7 +48345,7 @@
                 {
                   "id": "fm3-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Could you please clarify this point?' (¿Podría aclarar este punto, por favor?)",
+                  "prompt": "Build: 'Could you please clarify this point?'",
                   "answer": "¿ Podría aclarar este punto , por favor ?",
                   "bank": [
                     "¿",
@@ -48432,7 +48432,7 @@
                 {
                   "id": "fm4-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'As for the budget, we propose a 5% reduction' (En cuanto al presupuesto, proponemos una reducción del 5%)",
+                  "prompt": "Build: 'As for the budget, we propose a 5% reduction'",
                   "answer": "En cuanto al presupuesto , proponemos una reducción del 5%",
                   "bank": [
                     "En",
@@ -48475,7 +48475,7 @@
                 {
                   "id": "fm4-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Given that the deadline has passed, we will reschedule' (Dado que el plazo ha vencido, lo reprogramaremos)",
+                  "prompt": "Build: 'Given that the deadline has passed, we will reschedule'",
                   "answer": "Dado que el plazo ha vencido , lo reprogramaremos",
                   "bank": [
                     "Dado",
@@ -48518,7 +48518,7 @@
                 {
                   "id": "fm4-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'In conclusion, we recommend approving the proposal' (En conclusión, recomendamos aprobar la propuesta)",
+                  "prompt": "Build: 'In conclusion, we recommend approving the proposal'",
                   "answer": "En conclusión , recomendamos aprobar la propuesta",
                   "bank": [
                     "En",
@@ -48838,7 +48838,7 @@
                 {
                   "id": "rc1-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The girl who lives upstairs is my friend' (La chica que vive arriba es mi amiga)",
+                  "prompt": "Build: 'The girl who lives upstairs is my friend'",
                   "answer": "La chica que vive arriba es mi amiga",
                   "bank": [
                     "La",
@@ -48884,7 +48884,7 @@
                 {
                   "id": "rc1-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The restaurant we went to was excellent' (El restaurante al que fuimos era excelente)",
+                  "prompt": "Build: 'The restaurant we went to was excellent'",
                   "answer": "El restaurante al que fuimos era excelente",
                   "bank": [
                     "El",
@@ -48921,7 +48921,7 @@
                 {
                   "id": "rc1-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The film I saw last night was scary' (La película que vi anoche fue de miedo)",
+                  "prompt": "Build: 'The film I saw last night was scary'",
                   "answer": "La película que vi anoche fue de miedo",
                   "bank": [
                     "La",
@@ -48984,7 +48984,7 @@
                 {
                   "id": "rc1-14",
                   "type": "multiple_choice",
-                  "prompt": "Spanish requires 'que' even when English drops it. True or false?",
+                  "prompt": "Spanish keeps the relative 'que' even when English drops it — is that correct?",
                   "options": [
                     "True",
                     "False"
@@ -49025,7 +49025,7 @@
                 {
                   "id": "rc2-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build SPECIFYING (no commas): 'The students who study pass' (Los estudiantes que estudian aprueban)",
+                  "prompt": "Build SPECIFYING (no commas): 'The students who study pass'",
                   "answer": "Los estudiantes que estudian aprueban",
                   "bank": [
                     "Los",
@@ -49054,7 +49054,7 @@
                 {
                   "id": "rc2-5",
                   "type": "fill_blank",
-                  "prompt": "Add commas if needed: 'Madrid que es la capital tiene muchos museos.' → ___",
+                  "prompt": "Add commas if needed: 'M. que es la capital tiene muchos museos.' → ___ (non-restrictive relative clause)",
                   "answer": "Madrid, que es la capital, tiene muchos museos",
                   "acceptableAnswers": [
                     "Madrid, que es la capital, tiene muchos museos."
@@ -49063,7 +49063,7 @@
                 {
                   "id": "rc2-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build EXPLANATORY: 'My car, which is new, broke down' (Mi coche, que es nuevo, se averió)",
+                  "prompt": "Build EXPLANATORY: 'My car, which is new, broke down'",
                   "answer": "Mi coche , que es nuevo , se averió",
                   "bank": [
                     "Mi",
@@ -49126,7 +49126,7 @@
                 {
                   "id": "rc2-11",
                   "type": "tap_words_in_order",
-                  "prompt": "Build SPECIFYING: 'The dish that he ordered was the best' (El plato que pidió era el mejor)",
+                  "prompt": "Build SPECIFYING: 'The dish that he ordered was the best'",
                   "answer": "El plato que pidió era el mejor",
                   "bank": [
                     "El",
@@ -49157,7 +49157,7 @@
                 {
                   "id": "rc2-13",
                   "type": "fill_blank",
-                  "prompt": "Add commas if needed: 'Mi padre que es médico vive aquí' (only one father). → ___",
+                  "prompt": "Add commas if needed: 'M. p. que es m. v. aquí' (only one father). → ___ (non-restrictive relative clause)",
                   "answer": "Mi padre, que es médico, vive aquí",
                   "acceptableAnswers": [
                     "Mi padre, que es médico, vive aquí."
@@ -49166,7 +49166,7 @@
                 {
                   "id": "rc2-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build EXPLANATORY (with commas): 'My job, which I love, is demanding' (Mi trabajo, que me encanta, es exigente)",
+                  "prompt": "Build EXPLANATORY (with commas): 'My job, which I love, is demanding'",
                   "answer": "Mi trabajo , que me encanta , es exigente",
                   "bank": [
                     "Mi",
@@ -49206,7 +49206,7 @@
                 {
                   "id": "rc3-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The topic about which we spoke was interesting' (El tema del que hablamos era interesante)",
+                  "prompt": "Build: 'The topic about which we spoke was interesting'",
                   "answer": "El tema del que hablamos era interesante",
                   "bank": [
                     "El",
@@ -49254,7 +49254,7 @@
                 {
                   "id": "rc3-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The book on which the film is based' (El libro en el que se basa la película)",
+                  "prompt": "Build: 'The book on which the film is based'",
                   "answer": "El libro en el que se basa la película",
                   "bank": [
                     "El",
@@ -49297,7 +49297,7 @@
                 {
                   "id": "rc3-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The doctor with whom I spoke was very kind' (El médico con el que hablé fue muy amable)",
+                  "prompt": "Build: 'The doctor with whom I spoke was very kind'",
                   "answer": "El médico con el que hablé fue muy amable",
                   "bank": [
                     "El",
@@ -49404,7 +49404,7 @@
                 {
                   "id": "rc4-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The city where I was born is small' (La ciudad donde nací es pequeña)",
+                  "prompt": "Build: 'The city where I was born is small'",
                   "answer": "La ciudad donde nací es pequeña",
                   "bank": [
                     "La",
@@ -49444,7 +49444,7 @@
                 {
                   "id": "rc4-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The teacher whose class I attend is great' (El profesor a cuya clase asisto es genial)",
+                  "prompt": "Build: 'The teacher whose class I attend is great'",
                   "answer": "El profesor a cuya clase asisto es genial",
                   "bank": [
                     "El",
@@ -49485,7 +49485,7 @@
                 {
                   "id": "rc4-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'What surprises me is the silence' (Lo que me sorprende es el silencio)",
+                  "prompt": "Build: 'What surprises me is the silence'",
                   "answer": "Lo que me sorprende es el silencio",
                   "bank": [
                     "Lo",
@@ -49803,7 +49803,7 @@
                 {
                   "id": "mp1-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'You shouldn't have told her' (No deberías habérselo dicho)",
+                  "prompt": "Build: 'You shouldn't have told her'",
                   "answer": "No deberías habérselo dicho",
                   "bank": [
                     "No",
@@ -49850,7 +49850,7 @@
                 {
                   "id": "mp1-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'She should have called us' (Debería habernos llamado)",
+                  "prompt": "Build: 'She should have called us'",
                   "answer": "Debería habernos llamado",
                   "bank": [
                     "Debería",
@@ -49887,7 +49887,7 @@
                 {
                   "id": "mp1-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'They should have apologized' (Deberían haber pedido perdón)",
+                  "prompt": "Build: 'They should have apologized'",
                   "answer": "Deberían haber pedido perdón",
                   "bank": [
                     "Deberían",
@@ -49980,7 +49980,7 @@
                 {
                   "id": "mp2-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'You could have told me' (Podrías habérmelo dicho)",
+                  "prompt": "Build: 'You could have told me'",
                   "answer": "Podrías habérmelo dicho",
                   "bank": [
                     "Podrías",
@@ -50028,7 +50028,7 @@
                 {
                   "id": "mp2-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I could have gone, but I didn't want to' (Podría haber ido, pero no quería)",
+                  "prompt": "Build: 'I could have gone, but I didn't want to'",
                   "answer": "Podría haber ido , pero no quería",
                   "bank": [
                     "Podría",
@@ -50068,7 +50068,7 @@
                 {
                   "id": "mp2-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I could have been a contender' (Podría haber sido un contrincante)",
+                  "prompt": "Build: 'I could have been a contender'",
                   "answer": "Podría haber sido un contrincante",
                   "bank": [
                     "Podría",
@@ -50128,7 +50128,7 @@
                 {
                   "id": "mp2-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'You could have warned me, you know' (Me podrías haber avisado, ¿sabes?)",
+                  "prompt": "Build: 'You could have warned me, you know'",
                   "answer": "Me podrías haber avisado , ¿ sabes ?",
                   "bank": [
                     "Me",
@@ -50169,7 +50169,7 @@
                 {
                   "id": "mp3-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'They must have gotten lost' (Deben de haberse perdido)",
+                  "prompt": "Build: 'They must have gotten lost'",
                   "answer": "Deben de haberse perdido",
                   "bank": [
                     "Deben",
@@ -50217,7 +50217,7 @@
                 {
                   "id": "mp3-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It must be about to rain' (Está a punto de llover)",
+                  "prompt": "Build: 'It must be about to rain'",
                   "answer": "Está a punto de llover",
                   "bank": [
                     "Está",
@@ -50257,7 +50257,7 @@
                 {
                   "id": "mp3-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It must have cost a fortune' (Debe de haber costado una fortuna)",
+                  "prompt": "Build: 'It must have cost a fortune'",
                   "answer": "Debe de haber costado una fortuna",
                   "bank": [
                     "Debe",
@@ -50354,7 +50354,7 @@
                 {
                   "id": "mp4-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build retro: 'I should have noticed the bug sooner' (Debería haber notado el error antes)",
+                  "prompt": "Build retro: 'I should have noticed the bug sooner'",
                   "answer": "Debería haber notado el error antes",
                   "bank": [
                     "Debería",
@@ -50392,7 +50392,7 @@
                 {
                   "id": "mp4-5",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'You should have asked for help' (Deberías haber pedido ayuda)",
+                  "prompt": "Build: 'You should have asked for help'",
                   "answer": "Deberías haber pedido ayuda",
                   "bank": [
                     "Deberías",
@@ -50430,7 +50430,7 @@
                 {
                   "id": "mp4-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'They might have missed the deadline' (Puede que hayan perdido la fecha límite)",
+                  "prompt": "Build: 'They might have missed the deadline'",
                   "answer": "Puede que hayan perdido la fecha límite",
                   "bank": [
                     "Puede",
@@ -50493,7 +50493,7 @@
                 {
                   "id": "mp4-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (retro): 'We could have communicated better' (Podríamos haber comunicado mejor)",
+                  "prompt": "Build (retro): 'We could have communicated better'",
                   "answer": "Podríamos haber comunicado mejor",
                   "bank": [
                     "Podríamos",
@@ -50768,7 +50768,7 @@
                 {
                   "id": "db1-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I understand your point of view, but I don't share it' (Entiendo su punto de vista, pero no lo comparto)",
+                  "prompt": "Build: 'I understand your point of view, but I don't share it'",
                   "answer": "Entiendo su punto de vista , pero no lo comparto",
                   "bank": [
                     "Entiendo",
@@ -50811,7 +50811,7 @@
                 {
                   "id": "db1-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'With all due respect, I have to disagree' (Con todo respeto, tengo que discrepar)",
+                  "prompt": "Build: 'With all due respect, I have to disagree'",
                   "answer": "Con todo respeto , tengo que discrepar",
                   "bank": [
                     "Con",
@@ -50851,7 +50851,7 @@
                 {
                   "id": "db1-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I agree on that, but I have reservations about…' (Estoy de acuerdo en eso, pero tengo reservas sobre…)",
+                  "prompt": "Build: 'I agree on that, but I have reservations about…'",
                   "answer": "Estoy de acuerdo en eso , pero tengo reservas sobre…",
                   "bank": [
                     "Estoy",
@@ -50985,7 +50985,7 @@
                 {
                   "id": "db2-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'In conclusion, the proposal needs to be reviewed' (En conclusión, la propuesta debe revisarse)",
+                  "prompt": "Build: 'In conclusion, the proposal needs to be reviewed'",
                   "answer": "En conclusión , la propuesta debe revisarse",
                   "bank": [
                     "En",
@@ -51024,7 +51024,7 @@
                 {
                   "id": "db2-7",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It must be pointed out that there are exceptions' (Es preciso señalar que hay excepciones)",
+                  "prompt": "Build: 'It must be pointed out that there are exceptions'",
                   "answer": "Es preciso señalar que hay excepciones",
                   "bank": [
                     "Es",
@@ -51063,7 +51063,7 @@
                 {
                   "id": "db2-10",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'To begin with, we must consider the facts' (Para empezar, debemos considerar los hechos)",
+                  "prompt": "Build: 'To begin with, we must consider the facts'",
                   "answer": "Para empezar , debemos considerar los hechos",
                   "bank": [
                     "Para",
@@ -51103,7 +51103,7 @@
                 {
                   "id": "db2-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Secondly, we must consider the costs' (En segundo lugar, debemos considerar los costes)",
+                  "prompt": "Build: 'Secondly, we must consider the costs'",
                   "answer": "En segundo lugar , debemos considerar los costes",
                   "bank": [
                     "En",
@@ -51154,7 +51154,7 @@
                 {
                   "id": "db3-2",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'However much you insist, you won't convince me' (Por más que insistas, no me convencerás)",
+                  "prompt": "Build: 'However much you insist, you won't convince me'",
                   "answer": "Por más que insistas , no me convencerás",
                   "bank": [
                     "Por",
@@ -51205,7 +51205,7 @@
                 {
                   "id": "db3-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Whatever the cost, we must continue' (Cueste lo que cueste, debemos continuar)",
+                  "prompt": "Build: 'Whatever the cost, we must continue'",
                   "answer": "Cueste lo que cueste , debemos continuar",
                   "bank": [
                     "Cueste",
@@ -51245,7 +51245,7 @@
                 {
                   "id": "db3-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Even so, I still have doubts' (Aun así, sigo teniendo dudas)",
+                  "prompt": "Build: 'Even so, I still have doubts'",
                   "answer": "Aun así , sigo teniendo dudas",
                   "bank": [
                     "Aun",
@@ -51347,7 +51347,7 @@
                 {
                   "id": "db4-3",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'How can you say that?' (¿Cómo puede decir eso?)",
+                  "prompt": "Build: 'How can you say that?'",
                   "answer": "¿ Cómo puede decir eso ?",
                   "bank": [
                     "¿",
@@ -51386,7 +51386,7 @@
                 {
                   "id": "db4-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I'd like to draw attention to this point' (Quisiera llamar la atención sobre este punto)",
+                  "prompt": "Build: 'I'd like to draw attention to this point'",
                   "answer": "Quisiera llamar la atención sobre este punto",
                   "bank": [
                     "Quisiera",
@@ -51426,7 +51426,7 @@
                 {
                   "id": "db4-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I want to insist on this point' (Quiero insistir en este punto)",
+                  "prompt": "Build: 'I want to insist on this point'",
                   "answer": "Quiero insistir en este punto",
                   "bank": [
                     "Quiero",
@@ -51478,7 +51478,7 @@
                 {
                   "id": "db4-13",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I want to emphasize this aspect' (Quiero subrayar este aspecto)",
+                  "prompt": "Build: 'I want to emphasize this aspect'",
                   "answer": "Quiero subrayar este aspecto",
                   "bank": [
                     "Quiero",
@@ -53948,7 +53948,7 @@
                 {
                   "id": "rv1-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (2nd cond.): 'If I were you, I'd take the job' (Si yo fuera tú, aceptaría el trabajo)",
+                  "prompt": "Build (2nd cond.): 'If I were you, I'd take the job'",
                   "answer": "Si yo fuera tú , aceptaría el trabajo",
                   "bank": [
                     "Si",
@@ -54068,7 +54068,7 @@
                 {
                   "id": "rv2-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (3rd cond.): 'If we had known, we would have come' (Si hubiéramos sabido, habríamos venido)",
+                  "prompt": "Build (3rd cond.): 'If we had known, we would have come'",
                   "answer": "Si hubiéramos sabido , habríamos venido",
                   "bank": [
                     "Si",
@@ -54094,7 +54094,7 @@
                 {
                   "id": "rv2-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (1st cond.): 'If you come, I'll be happy' (Si vienes, estaré contento)",
+                  "prompt": "Build (1st cond.): 'If you come, I'll be happy'",
                   "answer": "Si vienes , estaré contento",
                   "bank": [
                     "Si",
@@ -54132,7 +54132,7 @@
                 {
                   "id": "rv2-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (mixed): 'If you had studied, you wouldn't be so worried now' (Si hubieras estudiado, no estarías tan preocupado ahora)",
+                  "prompt": "Build (mixed): 'If you had studied, you wouldn't be so worried now'",
                   "answer": "Si hubieras estudiado , no estarías tan preocupado ahora",
                   "bank": [
                     "Si",
@@ -54194,7 +54194,7 @@
                 {
                   "id": "rv2-14",
                   "type": "tap_words_in_order",
-                  "prompt": "Build (1st cond.): 'If it rains tomorrow, we'll stay home' (Si llueve mañana, nos quedamos en casa)",
+                  "prompt": "Build (1st cond.): 'If it rains tomorrow, we'll stay home'",
                   "answer": "Si llueve mañana , nos quedamos en casa",
                   "bank": [
                     "Si",
@@ -54299,7 +54299,7 @@
                 {
                   "id": "rv3-8",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'I'm glad you came' (Me alegro de que hayas venido)",
+                  "prompt": "Build: 'I'm glad you came'",
                   "answer": "Me alegro de que hayas venido",
                   "bank": [
                     "Me",
@@ -54386,7 +54386,7 @@
                 {
                   "id": "rv4-1",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'Spanish is spoken in 20 countries' (Se habla español en 20 países)",
+                  "prompt": "Build: 'Spanish is spoken in 20 countries'",
                   "answer": "Se habla español en 20 países",
                   "bank": [
                     "Se",
@@ -54425,7 +54425,7 @@
                 {
                   "id": "rv4-4",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The film was directed by Almodóvar' (La película fue dirigida por Almodóvar)",
+                  "prompt": "Build: 'The film was directed by Almodóvar'",
                   "answer": "La película fue dirigida por Almodóvar",
                   "bank": [
                     "La",
@@ -54455,7 +54455,7 @@
                 {
                   "id": "rv4-6",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'It's said that he resigned' (Se dice que dimitió)",
+                  "prompt": "Build: 'It's said that he resigned'",
                   "answer": "Se dice que dimitió",
                   "bank": [
                     "Se",
@@ -54492,7 +54492,7 @@
                 {
                   "id": "rv4-9",
                   "type": "tap_words_in_order",
-                  "prompt": "Build: 'The book I'm reading is excellent' (El libro que estoy leyendo es excelente)",
+                  "prompt": "Sor Juana opens her soneto (vosotros present of 'acusar'): 'Hombres necios que ___ a la mujer sin razón.'",
                   "answer": "El libro que estoy leyendo es excelente",
                   "bank": [
                     "El",
@@ -55560,7 +55560,7 @@
                 {
                   "id": "biz4-9",
                   "type": "fill_blank",
-                  "prompt": "Complete the sign-off: 'Sin otro particular, reciba un ___ saludo' (cordial)",
+                  "prompt": "Complete the formal sign-off with a warm/respectful adjective: 'Sin otro particular, reciba un ___ saludo'",
                   "answer": "cordial",
                   "acceptableAnswers": [
                     "cordial",
@@ -61173,7 +61173,7 @@
                 {
                   "id": "rg4-2",
                   "type": "fill_blank",
-                  "prompt": "Complete (Colombia/Venezuela): '¡Esa fiesta estuvo ___!' (great — chévere)",
+                  "prompt": "Complete (Colombia/Venezuela slang for 'great'): '¡Esa fiesta estuvo ___!'",
                   "answer": "chévere",
                   "explanation": "'Chévere' = great/cool in Caribbean and northern South America."
                 },
@@ -62643,7 +62643,7 @@
                 {
                   "id": "vt1-9",
                   "type": "fill_blank",
-                  "prompt": "Translation: A Colombian father, affectionately, to his daughter: 'Where are ___ going?' (use ustedeo)",
+                  "prompt": "Translation: A Colombian father, affectionately, to his daughter, 'Where are you going?' — fill the formal subject pronoun typical of Colombian affectionate speech.",
                   "answer": "usted",
                   "explanation": "Colombian ustedeo: father to daughter is 'usted', not 'tú'. The sentence becomes '¿Para dónde va usted?' or '¿Adónde va usted?'."
                 },
@@ -62930,7 +62930,7 @@
                 {
                   "id": "vt3-9",
                   "type": "fill_blank",
-                  "prompt": "Spain — fill the vosotros pronoun: '¿Y ___, qué pensáis?' (one word).",
+                  "prompt": "Spain — fill the 2nd-person plural subject pronoun: '¿Y ___, qué pensáis?' (one word).",
                   "answer": "vosotros",
                   "explanation": "Subject pronoun for informal plural in Spain: 'vosotros' (or 'vosotras' for all-female group)."
                 },
@@ -64591,7 +64591,7 @@
                 {
                   "id": "pcl1-3",
                   "type": "fill_blank",
-                  "prompt": "Translate: '¡Anda ya, no me lo creo!' (one word for the interjection at the start, but type it without punctuation)",
+                  "prompt": "Translate the interjection at the start of '¡___ ya, no me lo creo!' (one word, no punctuation; idiom expressing disbelief)",
                   "answer": "Anda",
                   "explanation": "'Anda' (or '¡Anda ya!') expresses disbelief or surprise — 'no way', 'really?'.",
                   "acceptableAnswers": [
@@ -65889,7 +65889,7 @@
                 {
                   "id": "rv2-10",
                   "type": "fill_blank",
-                  "prompt": "Complete: 'Ojalá ___ echado una mano cuando lo necesitaba' (you had — hubieras)",
+                  "prompt": "Complete (pluperfect subjunctive, tú of 'haber'): 'Ojalá ___ echado una mano cuando lo necesitaba'",
                   "answer": "hubieras",
                   "explanation": "Past unreal wish: 'Ojalá + hubieras + participle'."
                 },
@@ -68519,7 +68519,7 @@
                 {
                   "id": "ph1-10",
                   "type": "multiple_choice",
-                  "prompt": "Hubiera podido vs. habría podido — which is the literary variant?",
+                  "prompt": "Between the -ra and -ría conditional perfect forms, which is the more literary variant?",
                   "options": [
                     "Hubiera podido",
                     "Habría podido",
@@ -68967,7 +68967,7 @@
                 {
                   "id": "ph4-8",
                   "type": "fill_blank",
-                  "prompt": "Rewrite without De: 'Si lo ___ (hubiera) previsto, habría tomado precauciones.'",
+                  "prompt": "Rewrite without De (pluperfect subjunctive, yo of 'haber'): 'Si lo ___ previsto, habría tomado precauciones.'",
                   "answer": "hubiera",
                   "acceptableAnswers": [
                     "hubiera",
@@ -69330,7 +69330,7 @@
                 {
                   "id": "rg1-4",
                   "type": "fill_blank",
-                  "prompt": "Spain plural informal: '¿___ tenéis tiempo?' (you guys — vosotros)",
+                  "prompt": "Spain plural informal subject pronoun: '¿___ tenéis tiempo?'",
                   "answer": "Vosotros",
                   "acceptableAnswers": [
                     "vosotros",
@@ -69638,7 +69638,7 @@
                 {
                   "id": "rg3-3",
                   "type": "fill_blank",
-                  "prompt": "Mexican polite offer: '¿___ un cafecito?' (would you like — formal usted with gustar)",
+                  "prompt": "Mexican polite offer (formal usted form of the verb meaning 'to be pleasing'): '¿___ un cafecito?'",
                   "answer": "Gusta",
                   "acceptableAnswers": [
                     "Gusta",
@@ -69969,7 +69969,7 @@
                 {
                   "id": "rg5-3",
                   "type": "fill_blank",
-                  "prompt": "Translate to Argentine: 'You're crazy, dude!' → '¡Vos ___ loco, ___ !' (sos + che)",
+                  "prompt": "Translate to Argentine (vos form of 'ser' + Argentine vocative particle): 'You're crazy, dude!' → '¡Vos ___ loco, ___ !'",
                   "answer": "sos che",
                   "acceptableAnswers": [
                     "sos che"
@@ -70026,7 +70026,7 @@
                 {
                   "id": "rg5-7",
                   "type": "fill_blank",
-                  "prompt": "Cuban question: ¿Tú ___ un cafecito? (want — tú quieres reduced phonetically often, but write standard tuteo)",
+                  "prompt": "Cuban question (tú form of 'querer'): ¿Tú ___ un cafecito?",
                   "answer": "quieres",
                   "acceptableAnswers": [
                     "quieres"
@@ -71772,7 +71772,7 @@
                 {
                   "id": "cl4-2",
                   "type": "fill_blank",
-                  "prompt": "Half-quote: 'No solo de pan… ___ el hombre.' (vive)",
+                  "prompt": "Complete the proverb (3rd-person singular present of 'vivir'): 'No solo de pan… ___ el hombre.'",
                   "answer": "vive",
                   "acceptableAnswers": [
                     "vive"
@@ -72284,7 +72284,7 @@
                 {
                   "id": "ir1-9",
                   "type": "multiple_choice",
-                  "prompt": "Spain vs Mexico irony — which is more direct?",
+                  "prompt": "Between peninsular and Mexican irony, which tends to be more direct?",
                   "options": [
                     "Spain",
                     "Mexico",
@@ -72447,7 +72447,7 @@
                 {
                   "id": "ir2-9",
                   "type": "fill_blank",
-                  "prompt": "Complete: 'El árbitro hizo la vista ___ con la falta.' (gorda)",
+                  "prompt": "Complete the idiom 'hacer la vista ___' (to turn a blind eye): 'El árbitro hizo la vista ___ con la falta.'",
                   "answer": "gorda",
                   "acceptableAnswers": [
                     "gorda"
@@ -72676,7 +72676,7 @@
                 {
                   "id": "ir4-3",
                   "type": "fill_blank",
-                  "prompt": "Complete: 'Tu propuesta es ___ interesante.' (peculiar — a euphemism for 'weird')",
+                  "prompt": "Complete with a euphemism for 'weird': 'Tu propuesta es ___ interesante.'",
                   "answer": "peculiar",
                   "acceptableAnswers": [
                     "peculiar"
@@ -73400,7 +73400,7 @@
                 {
                   "id": "po3-3",
                   "type": "fill_blank",
-                  "prompt": "Complete Lorca: 'Verde que te quiero ___ .'",
+                  "prompt": "Complete Lorca's famous line (repeat the colour the line opens with): 'V. que te quiero ___ .'",
                   "answer": "verde",
                   "acceptableAnswers": [
                     "verde"
@@ -74530,7 +74530,7 @@
                 {
                   "id": "rv4-9",
                   "type": "fill_blank",
-                  "prompt": "Sor Juana opens her soneto: 'Hombres necios que ___ a la mujer sin razón.' (acusáis)",
+                  "prompt": "Sor Juana opens her soneto (vosotros present of 'acusar'): 'Hombres necios que ___ a la mujer sin razón.'",
                   "answer": "acusáis",
                   "acceptableAnswers": [
                     "acusáis"

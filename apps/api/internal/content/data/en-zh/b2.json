@@ -264,7 +264,7 @@
             {
               "id": "op1-10",
               "type": "fill_blank",
-              "prompt": "「Honestly, I ___ convinced.」 填空(中文:「老实说,我并未完全被说服。」)",
+              "prompt": "「在我看来」 = 「___ ___ , ...」 (两个词)",
               "answer": "am not entirely",
               "acceptableAnswers": [
                 "'m not entirely",
@@ -423,7 +423,7 @@
             {
               "id": "op2-10",
               "type": "fill_blank",
-              "prompt": "「That's a ___ point, although I'd add that…」(中文:「有道理,不过我还想补充……」)",
+              "prompt": "「我有同感。」 = 「I ___ the same way.」 (感觉)",
               "answer": "fair",
               "acceptableAnswers": [
                 "good",
@@ -578,7 +578,7 @@
             {
               "id": "op3-10",
               "type": "fill_blank",
-              "prompt": "「I take your point, ___ I see things differently.」(中文:「我理解你的论点,但我有不同看法。」)",
+              "prompt": "「我恐怕得表示不同意。」 = 「I'm afraid I have to ___ .」 (不同意)",
               "answer": "but",
               "acceptableAnswers": [
                 "however",
@@ -732,7 +732,7 @@
             {
               "id": "op4-10",
               "type": "fill_blank",
-              "prompt": "「I take your ___, but I see things differently.」(中文:「我理解你的话,但我有不同看法。」)",
+              "prompt": "「我想你是对的。」 = 「I ___ you're right.」 (认为)",
               "answer": "point",
               "acceptableAnswers": [],
               "explanation": "「Take someone's point」 = 「理解某人所说的话」。"
@@ -788,7 +788,7 @@
             {
               "id": "op5-4",
               "type": "fill_blank",
-              "prompt": "「___ that the deadline has been moved, we should reprioritize.」(中文:「鉴于截止日期被推后,我们应当重新调整优先级。」)",
+              "prompt": "「你对此怎么看?」 = 「What do you think ___ this?」 (介词)",
               "answer": "Now",
               "acceptableAnswers": [
                 "given",
@@ -3189,7 +3189,7 @@
             {
               "id": "env5-4",
               "type": "fill_blank",
-              "prompt": "「Companies must ___ their emissions through verified offsets.」 填空?",
+              "prompt": "「Companies must ___ their emissions through verified credits.」 (抵消 — 动词)",
               "answer": "offset",
               "acceptableAnswers": [
                 "compensate",
@@ -7616,7 +7616,7 @@
             {
               "id": "fm5-12",
               "type": "tap_words_in_order",
-              "prompt": "造句:「这些发现应在进一步研究的前提下加以解读。」",
+              "prompt": "组句：我的表亲住在北京。",
               "answer": "These findings should be interpreted subject to further research",
               "bank": [
                 "These",
@@ -9535,7 +9535,7 @@
             {
               "id": "ed4-4",
               "type": "fill_blank",
-              "prompt": "美式:「I'm an ___ at Stanford.」 英式:「I'm an undergraduate at Stanford.」 填空?",
+              "prompt": "美式英语中本科生的非正式说法是什么 (与英式的正式拼写形式相对):「I'm an ___ at Stanford.」",
               "answer": "undergrad",
               "acceptableAnswers": [
                 "undergraduate"
@@ -10919,7 +10919,7 @@
             {
               "id": "db5-5",
               "type": "fill_blank",
-              "prompt": "「Let's ___ to disagree on this one.」 填空?",
+              "prompt": "「Let's ___ to differ on this one.」 (此处填一个动词,意为「同意」 — 整句意为「同意各持己见」)",
               "answer": "agree",
               "acceptableAnswers": [
                 "concur"
