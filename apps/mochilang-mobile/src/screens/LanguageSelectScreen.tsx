@@ -72,20 +72,40 @@ export default function LanguageSelectScreen({
     setTarget(initial.target)
   }, [initial.source, initial.target])
 
+  // Pin English first in both columns. Then alphabetical by display
+  // name so the order is stable across runs. Users coming to the
+  // picker are most likely English speakers; "I speak Spanish" is the
+  // weaker primary audience and shouldn't lead.
+  const sortLangs = (codes: string[]): string[] => {
+    return [...codes].sort((a, b) => {
+      if (a === 'en' && b !== 'en') return -1
+      if (b === 'en' && a !== 'en') return 1
+      const na = findLanguage(a)?.name ?? a
+      const nb = findLanguage(b)?.name ?? b
+      return na.localeCompare(nb)
+    })
+  }
   const sources = useMemo(
-    () => unique(courses.map((c) => parseCourseId(c.id)?.source).filter(Boolean) as string[]),
-    [courses]
+    () =>
+      sortLangs(
+        unique(
+          courses.map((c) => parseCourseId(c.id)?.source).filter(Boolean) as string[],
+        ),
+      ),
+    [courses],
   )
   const targetsForSource = useMemo(
     () =>
-      unique(
-        courses
-          .map((c) => parseCourseId(c.id))
-          .filter((p): p is { target: string; source: string } => p !== null)
-          .filter((p) => p.source === source)
-          .map((p) => p.target)
+      sortLangs(
+        unique(
+          courses
+            .map((c) => parseCourseId(c.id))
+            .filter((p): p is { target: string; source: string } => p !== null)
+            .filter((p) => p.source === source)
+            .map((p) => p.target),
+        ),
       ),
-    [courses, source]
+    [courses, source],
   )
 
   useEffect(() => {

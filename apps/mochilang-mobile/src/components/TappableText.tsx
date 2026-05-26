@@ -12,6 +12,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { lookup, lookupBilingual, tokenize as zhTokenize } from '@mochilang/dict'
 import { translate } from '@mochilang/translate'
 import { useWordTranslation } from '../lib/wordTranslation'
+import { useSettings } from '../state/useSettings'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -168,8 +169,20 @@ async function fetchLingva(
  */
 export default function TappableText({ text, style }: Props) {
   const ctx = useWordTranslation()
+  const { state: settings } = useSettings()
   const tokens = useMemo(() => tokenize(text), [text])
   const [active, setActive] = useState<ActiveLookup | null>(null)
+  // Aggregate pinyin under the Chinese line when (a) the prompt has
+  // Chinese characters and (b) the showPinyin setting is on. Falsy
+  // when no token carries pinyin (e.g. Turkish/Spanish content).
+  const inlinePinyin = useMemo(() => {
+    if (!settings.showPinyin) return null
+    if (!CJK_RE.test(text)) return null
+    const pieces = tokens
+      .map((t) => t.pinyin ?? '')
+      .filter((p) => p.length > 0)
+    return pieces.length > 0 ? pieces.join(' ') : null
+  }, [tokens, text, settings.showPinyin])
 
   // Warm the cache as soon as a tappable text mounts, so by the time
   // the user actually taps a word the persisted dict is already in
@@ -262,6 +275,7 @@ export default function TappableText({ text, style }: Props) {
           )
         })}
       </Text>
+      {inlinePinyin && <Text style={styles.inlinePinyin}>{inlinePinyin}</Text>}
 
       <Modal
         visible={active !== null}
@@ -331,6 +345,13 @@ const styles = StyleSheet.create({
     gap: space.sm,
     borderTopWidth: 4,
     borderColor: colors.primary500,
+  },
+  inlinePinyin: {
+    fontSize: fontSizes.md,
+    color: colors.primary700,
+    fontFamily: 'Nunito_700Bold',
+    textAlign: 'center',
+    marginTop: 4,
   },
   cardHeader: { gap: 2 },
   cardPinyin: {
