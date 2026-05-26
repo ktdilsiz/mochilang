@@ -16,7 +16,6 @@ import LedgeButton from '../LedgeButton'
 import TappableText from '../TappableText'
 import { speak, stopSpeaking } from '../../lib/tts'
 import { sfx } from '../../lib/sfx'
-import { getSettings } from '../../state/useSettings'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
 interface Props {
@@ -101,13 +100,16 @@ export default function Dialogue({
     return parsed?.target ?? 'en'
   }, [courseId])
 
-  // Drive autoplay + auto-advance for line turns. Speech.onDone fires
-  // when TTS finishes the line; if TTS isn't on we still advance via
-  // a length-scaled timer so the dialogue keeps moving.
+  // Drive playback + auto-advance for line turns. The dialogue voice
+  // is the whole point of this exercise type — you can't follow the
+  // conversation if Noah's lines flash by silently — so we always
+  // speak line turns, regardless of the global autoPlayAudio toggle.
+  // Speech.onDone fires when the line finishes and triggers the next
+  // turn; a length-scaled safety timer covers the rare case where the
+  // engine never reports completion (some Android voices).
   const turn: DialogueTurn | undefined = exercise.turns[turnIdx]
   useEffect(() => {
     if (!turn || turn.kind !== 'line' || locked) return
-    const settings = getSettings()
     const speakText = turn.spokenText ?? turn.text
     const fallbackMs = Math.min(
       4000,
@@ -132,18 +134,11 @@ export default function Dialogue({
       }
     })()
 
-    if (settings.autoPlayAudio) {
-      // Both routes: TTS onDone advances, and the safety timer covers
-      // the case where the engine never reports completion (rare on
-      // some Android voices).
-      speak(speakText, {
-        language: ttsLangFor(targetLang),
-        onDone: advanceOnce,
-      })
-      lineTimerRef.current = setTimeout(advanceOnce, fallbackMs + 800)
-    } else {
-      lineTimerRef.current = setTimeout(advanceOnce, fallbackMs)
-    }
+    speak(speakText, {
+      language: ttsLangFor(targetLang),
+      onDone: advanceOnce,
+    })
+    lineTimerRef.current = setTimeout(advanceOnce, fallbackMs + 800)
 
     return () => {
       cancelTimer()
