@@ -15,6 +15,10 @@
  */
 import { pinyin, getNumOfTone } from 'pinyin-pro';
 import data from './data/dict.json';
+import dictEnTr from './data/bilingual/en-tr.json';
+import dictEsEn from './data/bilingual/es-en.json';
+import dictEnEs from './data/bilingual/en-es.json';
+import dictEnZh from './data/bilingual/en-zh.json';
 
 // --- Dictionary lookup -------------------------------------------------------
 
@@ -40,43 +44,28 @@ export function lookup(word: string): Definition | null {
 // --- Bilingual (lazy-loaded per pair) ---------------------------------------
 
 type BilingualDict = Record<string, string[]>;
-const bilingualCache: Partial<Record<string, BilingualDict | null>> = {};
 
 /**
- * Synchronously load (and memoise) the dictionary for one direction.
- * Each require() bundles the JSON into Metro's chunk graph but defers
- * the JSON.parse cost to the first lookup of that direction. Returns
- * null when we don't ship a dict for that direction.
+ * Static import map for the bilingual dictionaries. Top-level
+ * imports are easier on Metro/web than lazy `require()` inside a
+ * function — the JSON inlines into the bundle but JS engines on
+ * mobile only parse the objects on first reference, so the cost
+ * profile stays similar to lazy loading.
+ *
+ * zh-en and zh-tw-en both reuse the main CC-CEDICT (DICT), which
+ * was extended to also key by Traditional characters.
  */
+const BILINGUAL_DICTS: Record<string, BilingualDict> = {
+  'zh-en': DICT,
+  'zh-tw-en': DICT,
+  'en-tr': dictEnTr as BilingualDict,
+  'es-en': dictEsEn as BilingualDict,
+  'en-es': dictEnEs as BilingualDict,
+  'en-zh': dictEnZh as BilingualDict,
+};
+
 function getBilingual(from: string, to: string): BilingualDict | null {
-  const key = `${from}-${to}`;
-  if (key in bilingualCache) return bilingualCache[key] ?? null;
-  let data: BilingualDict | null = null;
-  switch (key) {
-    case 'zh-en':
-    case 'zh-tw-en':
-      // CC-CEDICT now carries both Simplified and Traditional keys
-      // (Traditional aliases mapped to the same meanings), so the
-      // Taiwanese course reuses it.
-      data = DICT;
-      break;
-    case 'en-tr':
-      data = require('./data/bilingual/en-tr.json') as BilingualDict;
-      break;
-    case 'es-en':
-      data = require('./data/bilingual/es-en.json') as BilingualDict;
-      break;
-    case 'en-es':
-      data = require('./data/bilingual/en-es.json') as BilingualDict;
-      break;
-    case 'en-zh':
-      data = require('./data/bilingual/en-zh.json') as BilingualDict;
-      break;
-    default:
-      data = null;
-  }
-  bilingualCache[key] = data;
-  return data;
+  return BILINGUAL_DICTS[`${from}-${to}`] ?? null;
 }
 
 /**
