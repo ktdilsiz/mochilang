@@ -23,17 +23,33 @@ export type Definition = {
 };
 
 /**
- * The bundled JSON dictionaries are large (CC-CEDICT alone is ~12 MB
- * of parsed JS object literals). Loading all five at module init
- * pushes a lot of allocation into app startup and has crashed
- * low-end Android devices. Each `loadXxx()` defers the parse until
- * first use and memoises the result.
+ * CC-CEDICT after adding Traditional aliases has ~197k entries,
+ * which crashes Hermes ("Property storage exceeds 196607 properties").
+ * The dict is sharded into 4 files of ~50k entries each; we load all
+ * shards on first call and merge into a Map. Maps have no property
+ * cap so this is bulletproof, and lookups stay O(1).
+ *
+ * Lazy-loaded — the JSON shards only parse on first call to
+ * loadCEDICT() / loadCEDICTLookup(), keeping startup light for
+ * non-Chinese courses.
  */
-let _cedict: Record<string, string[]> | null = null;
-function loadCEDICT(): Record<string, string[]> {
-  if (_cedict) return _cedict;
-  _cedict = require('./data/dict.json') as Record<string, string[]>;
-  return _cedict;
+let _cedictMap: Map<string, string[]> | null = null;
+function loadCEDICT(): Map<string, string[]> {
+  if (_cedictMap) return _cedictMap;
+  const shards: Record<string, string[]>[] = [
+    require('./data/dict-0.json'),
+    require('./data/dict-1.json'),
+    require('./data/dict-2.json'),
+    require('./data/dict-3.json'),
+  ];
+  const m = new Map<string, string[]>();
+  for (const shard of shards) {
+    for (const k of Object.keys(shard)) {
+      m.set(k, shard[k]);
+    }
+  }
+  _cedictMap = m;
+  return m;
 }
 
 /**
@@ -44,49 +60,56 @@ function loadCEDICT(): Record<string, string[]> {
  * from, to)` below.
  */
 export function lookup(word: string): Definition | null {
-  const meanings = loadCEDICT()[word];
+  const meanings = loadCEDICT().get(word);
   if (!meanings) return null;
   return { word, meanings };
 }
 
 // --- Bilingual (lazy-loaded per pair) ---------------------------------------
 
-type BilingualDict = Record<string, string[]>;
+type BilingualMap = Map<string, string[]>;
 
 /**
- * Lazy-loaded per direction. Each switch case's `require()` is
- * picked up by Metro at bundle time but the parsed object only
- * materialises on the first lookup of that direction — keeps
- * startup memory pressure off the device.
+ * Lazy-loaded per direction. Each require() is picked up by Metro at
+ * bundle time; the JSON parses on first lookup of that direction.
+ * We convert the parsed object into a Map immediately so subsequent
+ * lookups don't hit the Hermes property-storage cap, and to keep all
+ * dicts using the same return type as CC-CEDICT.
  */
-const bilingualCache: Partial<Record<string, BilingualDict | null>> = {};
+const bilingualCache: Map<string, BilingualMap | null> = new Map();
 
-function getBilingual(from: string, to: string): BilingualDict | null {
+function objectToMap(o: Record<string, string[]>): BilingualMap {
+  const m = new Map<string, string[]>();
+  for (const k of Object.keys(o)) m.set(k, o[k]);
+  return m;
+}
+
+function getBilingual(from: string, to: string): BilingualMap | null {
   const key = `${from}-${to}`;
-  if (key in bilingualCache) return bilingualCache[key] ?? null;
-  let dict: BilingualDict | null = null;
+  if (bilingualCache.has(key)) return bilingualCache.get(key) ?? null;
+  let dict: BilingualMap | null = null;
   switch (key) {
     case 'zh-en':
     case 'zh-tw-en':
-      // CC-CEDICT now carries both Simplified and Traditional keys.
+      // CC-CEDICT (sharded) carries both Simplified and Traditional.
       dict = loadCEDICT();
       break;
     case 'en-tr':
-      dict = require('./data/bilingual/en-tr.json') as BilingualDict;
+      dict = objectToMap(require('./data/bilingual/en-tr.json'));
       break;
     case 'es-en':
-      dict = require('./data/bilingual/es-en.json') as BilingualDict;
+      dict = objectToMap(require('./data/bilingual/es-en.json'));
       break;
     case 'en-es':
-      dict = require('./data/bilingual/en-es.json') as BilingualDict;
+      dict = objectToMap(require('./data/bilingual/en-es.json'));
       break;
     case 'en-zh':
-      dict = require('./data/bilingual/en-zh.json') as BilingualDict;
+      dict = objectToMap(require('./data/bilingual/en-zh.json'));
       break;
     default:
       dict = null;
   }
-  bilingualCache[key] = dict;
+  bilingualCache.set(key, dict);
   return dict;
 }
 
@@ -108,7 +131,7 @@ export function lookupBilingual(
 ): Definition | null {
   const dict = getBilingual(from, to);
   if (!dict) return null;
-  const meanings = dict[word] ?? dict[word.toLowerCase()];
+  const meanings = dict.get(word) ?? dict.get(word.toLowerCase());
   if (!meanings || meanings.length === 0) return null;
   return { word, meanings };
 }
@@ -183,7 +206,7 @@ export function segmentText(text: string): string[] {
     for (let len = maxLen; len >= 2; len--) {
       const candidate = text.slice(i, i + len);
       if (!allCJK(candidate)) continue;
-      if (cedict[candidate] !== undefined) {
+      if (cedict.has(candidate)) {
         matched = candidate;
         break;
       }
