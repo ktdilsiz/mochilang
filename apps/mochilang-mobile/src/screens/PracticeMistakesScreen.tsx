@@ -11,6 +11,7 @@ interface Props {
   scopeLabel: string
   exerciseIds: string[]
   levels: Level[]
+  courseId: string
   onResolve: (exerciseId: string) => void
   onFail: (
     exerciseId: string,
@@ -28,6 +29,7 @@ export default function PracticeMistakesScreen({
   scopeLabel,
   exerciseIds,
   levels,
+  courseId,
   onResolve,
   onFail,
   onBack,
@@ -51,6 +53,7 @@ export default function PracticeMistakesScreen({
       eyebrow={`Practice mistakes — ${scopeLabel}`}
       getQuestions={getQuestions}
       passThreshold={0}
+      courseId={courseId}
       pass={{
         title: 'Practice complete',
         body: (

@@ -9,6 +9,7 @@ import ExamScreen from './ExamScreen'
 
 interface Props {
   topic: Topic
+  courseId: string
   onPass: () => void
   onBack: () => void
   onWrongAnswer?: (exerciseId: string) => void
@@ -16,6 +17,7 @@ interface Props {
 
 export default function TopicExamScreen({
   topic,
+  courseId,
   onPass,
   onBack,
   onWrongAnswer,
@@ -26,6 +28,7 @@ export default function TopicExamScreen({
       eyebrow={`Topic exam — ${topic.title}`}
       getQuestions={() => pickExamQuestions(topic, EXAM_QUESTION_COUNT)}
       passThreshold={EXAM_PASS_THRESHOLD}
+      courseId={courseId}
       pass={{
         title: 'Topic exam passed!',
         body: (

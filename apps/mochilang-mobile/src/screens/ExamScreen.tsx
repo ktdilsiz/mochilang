@@ -21,6 +21,8 @@ import Translate, {
   checkTranslateAnswer as checkTranslate,
 } from '../components/exercises/Translate'
 import { sfx } from '../lib/sfx'
+import { localeForOption, speak, targetLocaleForCourse } from '../lib/tts'
+import { parseCourseId } from '@mochilang/shared'
 import TappableText from '../components/TappableText'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
@@ -35,6 +37,8 @@ interface Props {
   pass: { title: string; body: ReactNode; cta?: string }
   /** Result-page copy when the user fails. */
   fail: { title: string; body: ReactNode }
+  /** Active course id; drives TTS locale routing per question. */
+  courseId: string
   /** Called once when the user passes and confirms. */
   onPass: () => void
   /** Quit / back navigation. */
@@ -59,6 +63,7 @@ export default function ExamScreen({
   passThreshold,
   pass,
   fail,
+  courseId,
   onPass,
   onBack,
   onWrongAnswer,
@@ -96,6 +101,25 @@ export default function ExamScreen({
       setFeedback('correct')
       onCorrectAnswer?.(ex.id)
       sfx.correct()
+      // Same speak-on-correct logic as LessonScreen, so exam audio
+      // doesn't go silent the moment the user gets out of the
+      // tutorial flow.
+      const targetLoc = targetLocaleForCourse(courseId)
+      if (ex.type === 'fill_blank' || ex.type === 'translate') {
+        speak(fbValue, { language: targetLoc })
+      } else if (ex.type === 'tap_words_in_order') {
+        speak(tapValue, { language: targetLoc })
+      } else if (
+        (ex.type === 'multiple_choice' || ex.type === 'listen_and_choose') &&
+        mcSelected
+      ) {
+        const loc = localeForOption(
+          mcSelected,
+          [ex.prompt ?? '', ...ex.options],
+          courseId,
+        )
+        speak(mcSelected, { language: loc })
+      }
     } else {
       setFeedback('wrong')
       onWrongAnswer?.(ex.id)
@@ -246,6 +270,7 @@ export default function ExamScreen({
         ) : null}
         <ExerciseView
           ex={ex}
+          courseId={courseId}
           locked={locked}
           mcSelected={mcSelected}
           setMcSelected={setMcSelected}
@@ -287,6 +312,7 @@ export default function ExamScreen({
 
 interface ExerciseViewProps {
   ex: Exercise
+  courseId: string
   locked: boolean
   mcSelected: string | null
   setMcSelected: (v: string) => void
@@ -299,6 +325,7 @@ interface ExerciseViewProps {
 
 function ExerciseView({
   ex,
+  courseId,
   locked,
   mcSelected,
   setMcSelected,
@@ -323,7 +350,19 @@ function ExerciseView({
               return (
                 <Pressable
                   key={opt}
-                  onPress={() => !locked && setMcSelected(opt)}
+                  onPress={() => {
+                    if (locked) return
+                    setMcSelected(opt)
+                    // Same speak-on-tap behaviour as LessonScreen so
+                    // exam questions aren't silent.
+                    speak(opt, {
+                      language: localeForOption(
+                        opt,
+                        [ex.prompt ?? '', ...ex.options],
+                        courseId,
+                      ),
+                    })
+                  }}
                   style={[
                     styles.option,
                     isSel && !locked && styles.optionSelected,
@@ -344,6 +383,7 @@ function ExerciseView({
       return (
         <MatchPairs
           exercise={ex}
+          courseId={courseId}
           locked={locked}
           onComplete={onMatchComplete}
           resetKey={resetKey}
@@ -353,6 +393,7 @@ function ExerciseView({
       return (
         <ListenAndChoose
           exercise={ex}
+          courseId={courseId}
           selected={mcSelected}
           locked={locked}
           onSelect={setMcSelected}
@@ -362,6 +403,7 @@ function ExerciseView({
       return (
         <TapWordsInOrder
           exercise={ex}
+          courseId={courseId}
           locked={locked}
           onChange={setTapValue}
           resetKey={resetKey}

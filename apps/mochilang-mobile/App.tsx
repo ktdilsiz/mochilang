@@ -365,6 +365,7 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
           {(props) => (
             <TopicExamScreen
               topic={props.route.params.topic}
+              courseId={courseId ?? DEFAULT_COURSE_ID}
               onPass={() => exams.pass(props.route.params.topic.id)}
               onBack={() => props.navigation.goBack()}
               onWrongAnswer={recordMistake}
@@ -391,6 +392,7 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
           {(props) => (
             <LevelExamScreen
               level={props.route.params.level}
+              courseId={courseId ?? DEFAULT_COURSE_ID}
               onPass={() => levelExams.pass(props.route.params.level.id)}
               onBack={() => props.navigation.goBack()}
               onWrongAnswer={recordMistake}
@@ -406,6 +408,7 @@ function SignedInApp({ onSignOut }: SignedInAppProps) {
               scopeLabel={props.route.params.label}
               exerciseIds={props.route.params.ids}
               levels={course.levels}
+              courseId={courseId ?? DEFAULT_COURSE_ID}
               onResolve={mistakes.resolve}
               onFail={(id, ctx) => mistakes.record(id, ctx)}
               onBack={() => props.navigation.goBack()}

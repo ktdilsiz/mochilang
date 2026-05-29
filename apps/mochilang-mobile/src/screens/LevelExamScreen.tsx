@@ -9,6 +9,7 @@ import ExamScreen from './ExamScreen'
 
 interface Props {
   level: Level
+  courseId: string
   onPass: () => void
   onBack: () => void
   onWrongAnswer?: (exerciseId: string) => void
@@ -22,6 +23,7 @@ interface Props {
  */
 export default function LevelExamScreen({
   level,
+  courseId,
   onPass,
   onBack,
   onWrongAnswer,
@@ -36,6 +38,7 @@ export default function LevelExamScreen({
         pickLevelExamQuestions(level, LEVEL_EXAM_QUESTION_COUNT)
       }
       passThreshold={LEVEL_EXAM_PASS_THRESHOLD}
+      courseId={courseId}
       pass={{
         title: 'Level passed!',
         body: (
