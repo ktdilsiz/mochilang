@@ -85,8 +85,14 @@ export function localeForOption(
   const targetLoc = LOCALE_BY_LANG[parsed.target] ?? parsed.target
   const sourceLoc = LOCALE_BY_LANG[parsed.source] ?? parsed.source
 
-  const targetRe = SCRIPT_RE_FOR_LANG[parsed.target]
-  const sourceRe = SCRIPT_RE_FOR_LANG[parsed.source]
+  // Strip region suffix (zh-tw → zh) when looking up script regex —
+  // Traditional and Simplified Chinese share the CJK Unicode range.
+  // Without this, parsed.target='zh-tw' silently fell through script
+  // detection and English options got spoken with a Taiwanese voice.
+  const targetBase = parsed.target.split('-')[0]
+  const sourceBase = parsed.source.split('-')[0]
+  const targetRe = SCRIPT_RE_FOR_LANG[targetBase]
+  const sourceRe = SCRIPT_RE_FOR_LANG[sourceBase]
 
   if (targetRe?.test(text)) return targetLoc
   if (sourceRe?.test(text)) return sourceLoc
