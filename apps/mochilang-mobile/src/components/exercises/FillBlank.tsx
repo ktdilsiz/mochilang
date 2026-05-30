@@ -26,7 +26,11 @@ export default function FillBlank({ exercise, value, locked, onChange }: Props) 
   return (
     <View style={styles.root}>
       {exercise.prompt ? (
-        <TappableText text={exercise.prompt} style={styles.prompt} />
+        <TappableText
+          text={exercise.prompt}
+          tokens={exercise.promptTokens}
+          style={styles.prompt}
+        />
       ) : null}
       <TextInput
         style={[

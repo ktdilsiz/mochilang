@@ -340,7 +340,11 @@ function ExerciseView({
       return (
         <View style={styles.exRoot}>
           {ex.prompt ? (
-            <TappableText text={ex.prompt} style={styles.prompt} />
+            <TappableText
+              text={ex.prompt}
+              tokens={ex.promptTokens}
+              style={styles.prompt}
+            />
           ) : null}
           <View style={styles.options}>
             {ex.options.map((opt) => {

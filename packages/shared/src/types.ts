@@ -44,6 +44,23 @@ interface ExerciseBase {
    * lost?). A Turkish/Chinese/Spanish source cue disambiguates.
    */
   hint?: string
+  /**
+   * Optional explicit tokenization for the prompt. Each element is one
+   * tappable unit. When set, overrides the regex/segmenter
+   * tokenization TappableText would otherwise apply.
+   *
+   * Useful for:
+   *   - Romanized pinyin where word boundaries matter ("zhí zǒu" should
+   *     be one tap, not two).
+   *   - Multi-word source-language phrases that need a single lookup
+   *     ("get up" rather than "get" + "up").
+   *   - Forcing CJK boundaries the segmenter gets wrong.
+   *
+   * Display joins the tokens with a single space (Latin scripts);
+   * the visual result is identical to writing the prompt as one
+   * pre-spaced string, but each array element is one tap target.
+   */
+  promptTokens?: string[]
 }
 
 /**

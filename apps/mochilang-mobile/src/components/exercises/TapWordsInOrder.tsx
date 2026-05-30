@@ -105,7 +105,11 @@ export default function TapWordsInOrder({
   return (
     <View style={styles.root}>
       {exercise.prompt ? (
-        <TappableText text={exercise.prompt} style={styles.prompt} />
+        <TappableText
+          text={exercise.prompt}
+          tokens={exercise.promptTokens}
+          style={styles.prompt}
+        />
       ) : null}
       {showProgress && (
         <Text style={styles.progress}>

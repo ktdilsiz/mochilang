@@ -165,7 +165,11 @@ export default function MatchPairs({
   return (
     <View style={styles.root}>
       {exercise.prompt ? (
-        <TappableText text={exercise.prompt} style={styles.prompt} />
+        <TappableText
+          text={exercise.prompt}
+          tokens={exercise.promptTokens}
+          style={styles.prompt}
+        />
       ) : null}
       <View style={styles.pairs}>
         {renderColumn('left', lefts, 'l')}

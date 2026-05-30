@@ -20,6 +20,13 @@ interface Props {
   text: string
   /** Style applied to the outer Text. */
   style?: TextStyle | TextStyle[]
+  /**
+   * Explicit per-token override. When set, these become the tap units
+   * verbatim and the regex/segmenter tokenization is skipped. Display
+   * joins them with a single space. Use this to force multi-word units
+   * ("zhi zou" as one tap) or phrasal lookups ("get up").
+   */
+  tokens?: string[]
 }
 
 interface Token {
@@ -167,10 +174,28 @@ async function fetchLingva(
  * (e.g. ExamScreen), the component renders plain text and no taps
  * fire — so wiring it into both Lesson and Exam paths is safe.
  */
-export default function TappableText({ text, style }: Props) {
+export default function TappableText({ text, style, tokens: overrideTokens }: Props) {
   const ctx = useWordTranslation()
   const { state: settings } = useSettings()
-  const tokens = useMemo(() => tokenize(text), [text])
+  const tokens = useMemo(() => {
+    // Author-supplied token override: each element becomes one tap
+    // unit verbatim. Insert " " tokens between so the rendered string
+    // reads naturally without extra View layout.
+    if (overrideTokens && overrideTokens.length > 0) {
+      const out: Token[] = []
+      overrideTokens.forEach((w, i) => {
+        if (i > 0) out.push({ word: ' ', isWord: false })
+        out.push({
+          word: w,
+          isWord: WORD_LETTER_RE.test(w) || CJK_RE.test(w),
+          // No pinyin generation for overrides — author can write the
+          // tokens as pinyin themselves if they want.
+        })
+      })
+      return out
+    }
+    return tokenize(text)
+  }, [text, overrideTokens])
   const [active, setActive] = useState<ActiveLookup | null>(null)
   // Aggregate pinyin under the Chinese line when (a) the prompt has
   // Chinese characters and (b) the showPinyin setting is on. Falsy
