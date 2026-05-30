@@ -128,22 +128,31 @@ export default function LessonScreen({
   const [tapValue, setTapValue] = useState('')
   const [translateValue, setTranslateValue] = useState('')
 
-  // Shuffle exercises once per lesson attempt so the same lesson doesn't
-  // drill the same sequence every time — defeats memorization without
-  // changing content. `useMemo` is keyed on lesson.id so a re-attempt
-  // (component remounts) gets a fresh shuffle, but mid-lesson re-renders
-  // keep the order stable. Dialogue exercises are pinned to the end —
-  // they read as a capstone scene and feel wrong opening cold.
+  // Each lesson attempt: shuffle the source exercises and take a fixed
+  // count so two consecutive plays drill different subsets. Reduces
+  // memorization and gives long lessons (16+ exercises in the source)
+  // a sane size. When the source has fewer exercises than the target,
+  // we just take what's there — no padding.
+  //
+  // Dialogues are pinned to the end as the capstone scene; we include
+  // at most one. The non-dialogue budget is whatever's left after the
+  // dialogue reservation.
+  const TARGET_EXERCISE_COUNT = 10
   const exercises = useMemo(() => {
     const arr = [...lesson.exercises]
     const dialogues = arr.filter((e) => e.type === 'dialogue')
     const rest = arr.filter((e) => e.type !== 'dialogue')
-    // Fisher-Yates on the non-dialogue chunk.
     for (let i = rest.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
       ;[rest[i], rest[j]] = [rest[j], rest[i]]
     }
-    return [...rest, ...dialogues]
+    const includeDialogue = dialogues.length > 0
+    const nonDialogueBudget = includeDialogue
+      ? TARGET_EXERCISE_COUNT - 1
+      : TARGET_EXERCISE_COUNT
+    const chosenNonDialogue = rest.slice(0, nonDialogueBudget)
+    const chosenDialogue = includeDialogue ? dialogues.slice(0, 1) : []
+    return [...chosenNonDialogue, ...chosenDialogue]
   }, [lesson.id, lesson.exercises])
 
   const ex = exercises[index]
