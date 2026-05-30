@@ -126,7 +126,8 @@
             {
               "id": "biz1-1",
               "type": "multiple_choice",
-              "prompt": "What does \"承蒙贵公司的支持\" (chéng méng guì gōngsī de zhīchí) mean?",
+              "prompt": "承蒙贵公司的支持 (chéng méng guì gōngsī de zhīchí)",
+              "hint": "What does this formal phrase mean?",
               "options": [
                 "Thanks to your company's support",
                 "Our company's support",
@@ -362,7 +363,8 @@
             {
               "id": "biz2-3",
               "type": "multiple_choice",
-              "prompt": "What does \"双方各让一步\" (shuāngfāng gè ràng yí bù) suggest?",
+              "prompt": "双方各让一步 (shuāngfāng gè ràng yí bù)",
+              "hint": "What does this negotiation phrase suggest?",
               "options": [
                 "Both sides walk away",
                 "Each side makes a concession",
@@ -374,14 +376,16 @@
             },
             {
               "id": "biz2-4",
-              "type": "fill_blank",
-              "prompt": "\"我们的底线\" (wǒmen de dǐ xiàn) means \"our ___\"",
-              "answer": "Bottom line",
+              "type": "translate",
+              "source": "我们的底线",
+              "answer": "our bottom line",
               "acceptableAnswers": [
                 "bottom line",
-                "limit",
-                "minimum"
+                "our limit",
+                "our minimum",
+                "the bottom line"
               ],
+              "direction": "to_source",
               "explanation": "底线 = bottom line, the lowest acceptable terms."
             },
             {
@@ -461,7 +465,8 @@
             {
               "id": "biz2-9",
               "type": "multiple_choice",
-              "prompt": "What does \"达成共识\" (dá chéng gòng shí) mean?",
+              "prompt": "达成共识 (dá chéng gòng shí)",
+              "hint": "What does this meeting-outcome phrase mean?",
               "options": [
                 "Reach a consensus",
                 "Walk away from talks",
@@ -526,7 +531,8 @@
             {
               "id": "biz3-2",
               "type": "multiple_choice",
-              "prompt": "What does \"兹\" (zī) mean in formal email?",
+              "prompt": "兹 (zī)",
+              "hint": "What does this character mean in a formal email?",
               "options": [
                 "Until",
                 "Hereby / herewith",
@@ -568,7 +574,8 @@
             {
               "id": "biz3-5",
               "type": "multiple_choice",
-              "prompt": "What does \"敬请查阅\" mean in a formal email?",
+              "prompt": "敬请查阅",
+              "hint": "What does this formal email phrase mean?",
               "options": [
                 "Please kindly review",
                 "Send it back",
@@ -787,7 +794,8 @@
             {
               "id": "biz4-7",
               "type": "multiple_choice",
-              "prompt": "What does \"营收同比增长百分之十五，环比下降百分之三\" mean?",
+              "prompt": "营收同比增长百分之十五，环比下降百分之三",
+              "hint": "What does this financial-results line mean?",
               "options": [
                 "Revenue rose 15% year-over-year but fell 3% quarter-over-quarter",
                 "Revenue rose 15% this quarter and 3% next quarter",
@@ -941,14 +949,16 @@
             },
             {
               "id": "biz5-4",
-              "type": "fill_blank",
-              "prompt": "\"双赢\" (shuāng yíng) means a ___ outcome",
-              "answer": "Win-win",
+              "type": "translate",
+              "source": "双赢",
+              "answer": "win-win",
               "acceptableAnswers": [
-                "win-win",
+                "win win",
+                "mutually beneficial",
                 "winwin",
-                "mutually beneficial"
+                "a win-win"
               ],
+              "direction": "to_source",
               "explanation": "双赢 is the modern business calque from English \"win-win\"."
             },
             {
@@ -973,7 +983,8 @@
             {
               "id": "biz5-6",
               "type": "multiple_choice",
-              "prompt": "What does \"会议纪要将于会后一周内发出\" mean?",
+              "prompt": "会议纪要将于会后一周内发出",
+              "hint": "What does this post-meeting line mean?",
               "options": [
                 "Meeting minutes will be issued within a week after the meeting",
                 "The meeting will end within a week",
@@ -1345,7 +1356,8 @@
             {
               "id": "ac1-1",
               "type": "multiple_choice",
-              "prompt": "What does \"她是去年从英国回来的\" emphasize?",
+              "prompt": "她是去年从英国回来的",
+              "hint": "What does this 是…的 sentence emphasize?",
               "options": [
                 "That she returned (the fact itself)",
                 "When and where she returned from",
@@ -1576,13 +1588,16 @@
             },
             {
               "id": "ac2-4",
-              "type": "fill_blank",
-              "prompt": "\"从长远来看\" (cóng cháng yuǎn lái kàn) means \"in the ___ run\"",
-              "answer": "Long",
+              "type": "translate",
+              "source": "从长远来看",
+              "answer": "in the long run",
               "acceptableAnswers": [
+                "in the long term",
                 "long term",
-                "long run"
-              ]
+                "long run",
+                "from a long-term perspective"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "ac2-5",
@@ -1606,7 +1621,8 @@
             {
               "id": "ac2-6",
               "type": "multiple_choice",
-              "prompt": "What does \"就这一问题而言，学界尚未达成共识\" mean?",
+              "prompt": "就这一问题而言，学界尚未达成共识",
+              "hint": "What does this academic line mean?",
               "options": [
                 "On this question, academia has not yet reached consensus",
                 "Scholars never discuss this question",
@@ -1749,7 +1765,8 @@
             {
               "id": "ac3-3",
               "type": "multiple_choice",
-              "prompt": "What does \"众所周知\" (zhòng suǒ zhōu zhī) mean?",
+              "prompt": "众所周知 (zhòng suǒ zhōu zhī)",
+              "hint": "What does this academic opener mean?",
               "options": [
                 "It is well known to all",
                 "Many people don't know",
@@ -1761,14 +1778,16 @@
             },
             {
               "id": "ac3-4",
-              "type": "fill_blank",
-              "prompt": "\"研究表明\" (yán jiū biǎo míng) means \"research ___\"",
-              "answer": "Shows",
+              "type": "translate",
+              "source": "研究表明",
+              "answer": "research shows",
               "acceptableAnswers": [
-                "indicates",
-                "reveals",
-                "demonstrates"
-              ]
+                "research indicates",
+                "research reveals",
+                "research demonstrates",
+                "studies show"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "ac3-5",
@@ -1857,7 +1876,8 @@
             {
               "id": "ac3-10",
               "type": "multiple_choice",
-              "prompt": "What does \"该研究为后续工作奠定了基础\" mean?",
+              "prompt": "该研究为后续工作奠定了基础",
+              "hint": "What does this academic line mean?",
               "options": [
                 "This research lays the foundation for follow-up work",
                 "This research replaces previous work",
@@ -1952,15 +1972,16 @@
             },
             {
               "id": "ac4-4",
-              "type": "fill_blank",
-              "prompt": "\"据说\" (jù shuō) introduces a claim attributed to others — \"___\" in English",
-              "answer": "It is said",
+              "type": "translate",
+              "source": "据说",
+              "answer": "it is said",
               "acceptableAnswers": [
-                "it is said",
                 "reportedly",
                 "allegedly",
-                "they say"
-              ]
+                "they say",
+                "it is reported"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "ac4-5",
@@ -2140,7 +2161,8 @@
             {
               "id": "ac5-3",
               "type": "multiple_choice",
-              "prompt": "What does \"综上所述\" (zōng shàng suǒ shù) mean?",
+              "prompt": "综上所述 (zōng shàng suǒ shù)",
+              "hint": "What does this academic conclusion marker mean?",
               "options": [
                 "Continuing on",
                 "To summarize the above",
@@ -2283,7 +2305,8 @@
             {
               "id": "ac6-1",
               "type": "multiple_choice",
-              "prompt": "What does \"我们把语言当作一种工具\" mean?",
+              "prompt": "我们把语言当作一种工具",
+              "hint": "What does this 把…当作… sentence mean?",
               "options": [
                 "We treat language as a tool",
                 "Our language is a tool",
@@ -2410,7 +2433,8 @@
             {
               "id": "ac6-9",
               "type": "multiple_choice",
-              "prompt": "What does \"该研究将文化视为一种动态结构\" mean?",
+              "prompt": "该研究将文化视为一种动态结构",
+              "hint": "What does this 将…视为… sentence mean?",
               "options": [
                 "This study regards culture as a dynamic structure",
                 "Culture is studied as static",
@@ -2455,7 +2479,8 @@
             {
               "id": "ac7-1",
               "type": "multiple_choice",
-              "prompt": "What does \"由此可见\" (yóu cǐ kě jiàn) signal in academic writing?",
+              "prompt": "由此可见 (yóu cǐ kě jiàn)",
+              "hint": "What does this discourse marker signal in academic writing?",
               "options": [
                 "Introducing new evidence",
                 "From this we can see / it follows that",
@@ -2796,7 +2821,8 @@
             {
               "id": "soc1-3",
               "type": "multiple_choice",
-              "prompt": "What does \"大城市的房价居高不下\" mean?",
+              "prompt": "大城市的房价居高不下",
+              "hint": "What does this social-issue line mean?",
               "options": [
                 "Big-city housing prices remain stubbornly high",
                 "Big-city housing prices have crashed",
@@ -2808,14 +2834,16 @@
             },
             {
               "id": "soc1-4",
-              "type": "fill_blank",
-              "prompt": "\"农民工\" (nóng mín gōng) refers to ___ workers from the countryside",
-              "answer": "Migrant",
+              "type": "translate",
+              "source": "农民工",
+              "answer": "migrant workers",
               "acceptableAnswers": [
-                "rural migrant",
-                "migrant",
-                "rural"
-              ]
+                "migrant worker",
+                "rural migrant workers",
+                "migrant labor",
+                "rural migrants"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "soc1-5",
@@ -2970,7 +2998,8 @@
             {
               "id": "soc2-2",
               "type": "multiple_choice",
-              "prompt": "What does \"少子化\" (shǎo zǐ huà) mean?",
+              "prompt": "少子化 (shǎo zǐ huà)",
+              "hint": "What does this demographic term mean?",
               "options": [
                 "More children",
                 "Declining birth rate / fewer children",
@@ -2998,21 +3027,24 @@
             },
             {
               "id": "soc2-4",
-              "type": "fill_blank",
-              "prompt": "\"养老问题\" (yǎng lǎo wèn tí) is the ___ issue",
-              "answer": "Elderly care",
+              "type": "translate",
+              "source": "养老问题",
+              "answer": "elderly care issue",
               "acceptableAnswers": [
-                "aging",
-                "elder care",
+                "aging issue",
+                "elder care issue",
                 "elderly care",
                 "old-age care",
-                "retirement care"
-              ]
+                "retirement care",
+                "aging problem"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "soc2-5",
               "type": "multiple_choice",
-              "prompt": "What does \"延迟退休年龄\" mean?",
+              "prompt": "延迟退休年龄",
+              "hint": "What does this policy term mean?",
               "options": [
                 "Delay the retirement age",
                 "Lower the retirement age",
@@ -3174,7 +3206,8 @@
             {
               "id": "soc3-3",
               "type": "multiple_choice",
-              "prompt": "What does \"绿水青山就是金山银山\" mean?",
+              "prompt": "绿水青山就是金山银山",
+              "hint": "What does this slogan mean?",
               "options": [
                 "Mountains have gold inside",
                 "Clear waters and green mountains are mountains of gold and silver (i.e. environment is wealth)",
@@ -3186,18 +3219,21 @@
             },
             {
               "id": "soc3-4",
-              "type": "fill_blank",
-              "prompt": "\"碳中和\" (tàn zhōng hé) means carbon ___",
-              "answer": "Neutrality",
+              "type": "translate",
+              "source": "碳中和",
+              "answer": "carbon neutrality",
               "acceptableAnswers": [
-                "neutral",
-                "neutrality"
-              ]
+                "carbon neutral",
+                "net zero carbon",
+                "net-zero"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "soc3-5",
               "type": "multiple_choice",
-              "prompt": "What does \"减排\" (jiǎn pái) mean?",
+              "prompt": "减排 (jiǎn pái)",
+              "hint": "What does this environmental term mean?",
               "options": [
                 "Reduce emissions",
                 "Increase emissions",
@@ -3344,7 +3380,8 @@
             {
               "id": "soc4-2",
               "type": "multiple_choice",
-              "prompt": "What does \"内卷\" (nèi juǎn) describe?",
+              "prompt": "内卷 (nèi juǎn)",
+              "hint": "What does this social-media buzzword describe?",
               "options": [
                 "Studying abroad",
                 "Excessive internal competition / rat-race",
@@ -3386,7 +3423,8 @@
             {
               "id": "soc4-5",
               "type": "multiple_choice",
-              "prompt": "What does \"双减政策\" refer to?",
+              "prompt": "双减政策",
+              "hint": "What does this policy name refer to?",
               "options": [
                 "The double-reduction policy (homework and tutoring)",
                 "Two-child policy",
@@ -3768,7 +3806,8 @@
             {
               "id": "art1-2",
               "type": "multiple_choice",
-              "prompt": "What does \"这本小说情节曲折\" mean?",
+              "prompt": "这本小说情节曲折",
+              "hint": "What does this literary-review line mean?",
               "options": [
                 "This novel has a winding / twisty plot",
                 "This novel is short",
@@ -3834,7 +3873,8 @@
             {
               "id": "art1-6",
               "type": "multiple_choice",
-              "prompt": "What does \"这部小说意境深远\" mean?",
+              "prompt": "这部小说意境深远",
+              "hint": "What does this literary-praise line mean?",
               "options": [
                 "The novel has a profound atmosphere / artistic conception",
                 "The novel is short",
@@ -3963,7 +4003,8 @@
             {
               "id": "art2-2",
               "type": "multiple_choice",
-              "prompt": "What does \"票房口碑双丰收\" mean?",
+              "prompt": "票房口碑双丰收",
+              "hint": "What does this film-review phrase mean?",
               "options": [
                 "Box office and word-of-mouth both succeed",
                 "Movie failed at box office",
@@ -3994,14 +4035,16 @@
             },
             {
               "id": "art2-4",
-              "type": "fill_blank",
-              "prompt": "\"这部电影感人至深\" — 感人至深 means deeply ___",
-              "answer": "Moving",
+              "type": "translate",
+              "source": "感人至深",
+              "answer": "deeply moving",
               "acceptableAnswers": [
-                "moving",
-                "touching",
-                "affecting"
+                "deeply touching",
+                "profoundly moving",
+                "very moving",
+                "deeply affecting"
               ],
+              "direction": "to_source",
               "explanation": "感人至深 = literally \"moves people to the depths\"."
             },
             {
@@ -4030,7 +4073,8 @@
             {
               "id": "art2-6",
               "type": "multiple_choice",
-              "prompt": "What does \"导演用细腻的镜头语言展现了人物的内心世界\" mean?",
+              "prompt": "导演用细腻的镜头语言展现了人物的内心世界",
+              "hint": "What does this film-review line mean?",
               "options": [
                 "The director uses delicate cinematography to reveal the characters' inner worlds",
                 "The director writes detailed scripts",
@@ -4796,14 +4840,16 @@
             },
             {
               "id": "nw1-4",
-              "type": "fill_blank",
-              "prompt": "\"据新华社报道\" means \"according to ___\"",
-              "answer": "Xinhua",
+              "type": "translate",
+              "source": "据新华社报道",
+              "answer": "according to Xinhua",
               "acceptableAnswers": [
-                "xinhua",
-                "xinhua news agency",
-                "xinhua news"
-              ]
+                "according to xinhua news agency",
+                "as reported by xinhua",
+                "according to xinhua news",
+                "per xinhua"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "nw1-5",
@@ -5341,15 +5387,17 @@
             },
             {
               "id": "nw4-4",
-              "type": "fill_blank",
-              "prompt": "\"中美关系\" refers to ___ relations",
-              "answer": "China-US",
+              "type": "translate",
+              "source": "中美关系",
+              "answer": "China-US relations",
               "acceptableAnswers": [
-                "china-us",
-                "us-china",
-                "sino-american",
-                "china and us"
-              ]
+                "us-china relations",
+                "sino-american relations",
+                "china and us relations",
+                "china us relations",
+                "sino-us relations"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "nw4-5",
@@ -5478,7 +5526,8 @@
             {
               "id": "nw5-1",
               "type": "multiple_choice",
-              "prompt": "What does \"值得深思\" (zhí dé shēn sī) signal?",
+              "prompt": "值得深思 (zhí dé shēn sī)",
+              "hint": "What does this editorial phrase signal?",
               "options": [
                 "Worth deep reflection",
                 "Easy to understand",
@@ -5614,7 +5663,8 @@
             {
               "id": "nw5-9",
               "type": "multiple_choice",
-              "prompt": "What does \"令人深思\" tell the reader?",
+              "prompt": "令人深思",
+              "hint": "What does this editorial phrase tell the reader?",
               "options": [
                 "The author finds it amusing",
                 "The author wants the reader to reflect deeply",
@@ -5968,15 +6018,16 @@
             },
             {
               "id": "deb1-4",
-              "type": "fill_blank",
-              "prompt": "\"毫无疑问\" (háo wú yí wèn) means ___",
-              "answer": "Without a doubt",
+              "type": "translate",
+              "source": "毫无疑问",
+              "answer": "without a doubt",
               "acceptableAnswers": [
-                "without a doubt",
                 "no doubt",
                 "undoubtedly",
-                "without any doubt"
-              ]
+                "without any doubt",
+                "beyond doubt"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "deb1-5",
@@ -6900,7 +6951,8 @@
             {
               "id": "id1-1",
               "type": "multiple_choice",
-              "prompt": "What does \"一举两得\" literally mean?",
+              "prompt": "一举两得",
+              "hint": "What does this chengyu literally mean?",
               "options": [
                 "Two actions, one gain",
                 "One action, two gains",
@@ -7428,7 +7480,8 @@
             {
               "id": "id4-1",
               "type": "multiple_choice",
-              "prompt": "What does \"入乡随俗\" mean?",
+              "prompt": "入乡随俗",
+              "hint": "What does this chengyu mean?",
               "options": [
                 "Stay home",
                 "When in Rome, do as the Romans",
@@ -8068,14 +8121,15 @@
             },
             {
               "id": "ph1-4",
-              "type": "fill_blank",
-              "prompt": "\"价值观\" (jià zhí guān) means ___",
-              "answer": "Values",
+              "type": "translate",
+              "source": "价值观",
+              "answer": "values",
               "acceptableAnswers": [
-                "values",
                 "value system",
-                "outlook on values"
-              ]
+                "outlook on values",
+                "set of values"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "ph1-5",
@@ -8256,15 +8310,17 @@
             },
             {
               "id": "ph2-4",
-              "type": "fill_blank",
-              "prompt": "\"缘分\" (yuán fèn) describes a ___ connection or chance encounter",
-              "answer": "Fated",
+              "type": "translate",
+              "source": "缘分",
+              "answer": "fated connection",
               "acceptableAnswers": [
-                "fated",
-                "destined",
-                "predestined",
-                "lucky"
-              ]
+                "destiny",
+                "predestined connection",
+                "fate",
+                "fated encounter",
+                "a fated chance encounter"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "ph2-5",

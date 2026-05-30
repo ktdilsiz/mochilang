@@ -4,7 +4,7 @@
 // are the wire payload assembled by the content loader from
 // apps/api/internal/content/data/<id>/*.json. league_meta.json is
 // derived from Go constants in internal/league.
-// Last published: 2026-05-16T22:49:23Z
+// Last published: 2026-05-30T05:02:30Z
 
 import friends from './friends.json'
 import competitors from './competitors.json'
@@ -14,6 +14,7 @@ import course_en_tr from './course-en-tr.json'
 import course_en_zh from './course-en-zh.json'
 import course_es_en from './course-es-en.json'
 import course_zh_en from './course-zh-en.json'
+import course_zh_tw_en from './course-zh-tw-en.json'
 
 export const friendsFallback = friends
 export const competitorsFallback = competitors
@@ -25,4 +26,5 @@ export const coursesFallback: Record<string, unknown> = {
   'en-zh': course_en_zh,
   'es-en': course_es_en,
   'zh-en': course_zh_en,
+  'zh-tw-en': course_zh_tw_en,
 }

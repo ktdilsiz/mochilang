@@ -229,7 +229,8 @@
             {
               "id": "cl1-3",
               "type": "multiple_choice",
-              "prompt": "An economics column ends with \"总而言之，通胀压力未减。\" What is the writer signaling?",
+              "prompt": "总而言之，通胀压力未减。",
+              "hint": "An economics column ends with this — what is the writer signaling?",
               "options": [
                 "An aside",
                 "A counter-example",
@@ -241,14 +242,16 @@
             },
             {
               "id": "cl1-4",
-              "type": "fill_blank",
-              "prompt": "\"爱国之心\" (ài guó zhī xīn) translates as ___",
-              "answer": "A heart of patriotism",
+              "type": "translate",
+              "source": "爱国之心",
+              "answer": "a heart of patriotism",
               "acceptableAnswers": [
-                "A patriotic heart",
-                "Heart of patriotism",
-                "Patriotic heart"
-              ]
+                "patriotism",
+                "a patriotic heart",
+                "love of country",
+                "patriotic spirit"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "cl1-5",
@@ -323,7 +326,8 @@
             {
               "id": "cl1-9",
               "type": "multiple_choice",
-              "prompt": "An editorial reads \"非一日之功可解.\" The 非…可… pattern is:",
+              "prompt": "非一日之功可解。",
+              "hint": "An editorial uses this phrasing — what is the 非…可… pattern?",
               "options": [
                 "Modern colloquial \"not… cannot\"",
                 "Classical negation pattern — \"not something a day's effort can solve\"",
@@ -355,7 +359,8 @@
             {
               "id": "cl2-1",
               "type": "multiple_choice",
-              "prompt": "\"其原因有三\" most naturally means:",
+              "prompt": "其原因有三",
+              "hint": "What does this phrase most naturally mean?",
               "options": [
                 "There may be a reason",
                 "The reasons are three",
@@ -368,7 +373,8 @@
             {
               "id": "cl2-2",
               "type": "multiple_choice",
-              "prompt": "\"所谓的专家\" carries which tone?",
+              "prompt": "所谓的专家",
+              "hint": "Which tone does this phrase carry?",
               "options": [
                 "Respectful",
                 "Neutral introduction",
@@ -420,7 +426,8 @@
             {
               "id": "cl2-5",
               "type": "multiple_choice",
-              "prompt": "A contract reads \"其责任 由 甲方 承担.\" 其 here refers to:",
+              "prompt": "其责任由甲方承担。",
+              "hint": "In this contract sentence, what does 其 refer to?",
               "options": [
                 "An anonymous third person",
                 "The responsibility just defined in the prior clause",
@@ -521,7 +528,8 @@
             {
               "id": "cl3-1",
               "type": "multiple_choice",
-              "prompt": "\"富而不骄\" (fù ér bù jiāo) means:",
+              "prompt": "富而不骄 (fù ér bù jiāo)",
+              "hint": "What does this saying mean?",
               "options": [
                 "Rich and proud",
                 "Rich, yet not arrogant",
@@ -534,7 +542,8 @@
             {
               "id": "cl3-2",
               "type": "multiple_choice",
-              "prompt": "Pick the most natural translation: \"年轻而有为\"",
+              "prompt": "年轻而有为",
+              "hint": "Pick the most natural English translation.",
               "options": [
                 "Young and accomplished",
                 "Young but inexperienced",
@@ -562,14 +571,16 @@
             },
             {
               "id": "cl3-4",
-              "type": "fill_blank",
-              "prompt": "Modern formal connector \"然而\" means ___",
-              "answer": "However",
+              "type": "translate",
+              "source": "然而",
+              "answer": "however",
               "acceptableAnswers": [
-                "But",
-                "Nevertheless",
-                "Yet"
+                "but",
+                "yet",
+                "nevertheless",
+                "still"
               ],
+              "direction": "to_source",
               "explanation": "然而 = literally \"yet-and\"; the workhorse contrastive in essays."
             },
             {
@@ -589,7 +600,8 @@
             {
               "id": "cl3-6",
               "type": "multiple_choice",
-              "prompt": "\"取而代之\" — what is the role of 而 here?",
+              "prompt": "取而代之",
+              "hint": "What is the role of 而 in this chengyu?",
               "options": [
                 "Adversative — \"yet\"",
                 "Sequential — \"and then\" (take and replace)",
@@ -742,15 +754,16 @@
             },
             {
               "id": "cl4-4",
-              "type": "fill_blank",
-              "prompt": "\"之乎者也\" describes someone who ___",
-              "answer": "Speaks pretentiously / hides behind pedantic jargon",
+              "type": "translate",
+              "source": "之乎者也",
+              "answer": "speaks pretentiously",
               "acceptableAnswers": [
-                "Talks pedantically",
-                "Speaks in archaic jargon",
-                "Uses empty classical talk",
-                "Pedant"
+                "speaks pretentiously / hides behind pedantic jargon",
+                "uses pedantic jargon",
+                "talks pedantically",
+                "speaks in stilted classical style"
               ],
+              "direction": "to_source",
               "explanation": "All four are classical particles bundled together — a label for hollow learnedness."
             },
             {
@@ -779,7 +792,8 @@
             {
               "id": "cl4-6",
               "type": "multiple_choice",
-              "prompt": "A legal opinion contains: \"是以本院驳回原告之诉讼请求.\" The 是以 functions as:",
+              "prompt": "是以本院驳回原告之诉讼请求。",
+              "hint": "In this legal-opinion sentence, what does 是以 function as?",
               "options": [
                 "A question marker",
                 "A topic shift",
@@ -1199,7 +1213,8 @@
             {
               "id": "po1-5",
               "type": "multiple_choice",
-              "prompt": "A diaspora speaker tells the audience \"低头思故乡\" — they are signaling:",
+              "prompt": "低头思故乡",
+              "hint": "A diaspora speaker quotes this — what are they signaling?",
               "options": [
                 "Anger at being away",
                 "Homesickness, by quoting the most-recognized line in Chinese poetry",
@@ -1302,7 +1317,8 @@
             {
               "id": "po2-1",
               "type": "multiple_choice",
-              "prompt": "\"国破山河在\" is most often quoted today when:",
+              "prompt": "国破山河在",
+              "hint": "When is this line most often quoted today?",
               "options": [
                 "Praising a beautiful landscape",
                 "Mourning a national tragedy or war",
@@ -1421,7 +1437,8 @@
             {
               "id": "po2-9",
               "type": "multiple_choice",
-              "prompt": "A war correspondent's column ends with \"国破山河在.\" The implicit message is:",
+              "prompt": "国破山河在。",
+              "hint": "A war correspondent's column closes with this — what is the implicit message?",
               "options": [
                 "The war is over and we have won",
                 "The country has suffered a devastating loss; what remains is the land itself",
@@ -1679,7 +1696,8 @@
             {
               "id": "po4-4",
               "type": "multiple_choice",
-              "prompt": "A friend says \"你这是当局者迷.\" They mean:",
+              "prompt": "你这是当局者迷。",
+              "hint": "A friend says this to you — what do they mean?",
               "options": [
                 "You are too far from the situation to judge",
                 "You're too close to the problem to see it clearly",
@@ -2252,15 +2270,17 @@
             },
             {
               "id": "rh1-3",
-              "type": "fill_blank",
-              "prompt": "The discourse marker 总而言之 signals a ___",
-              "answer": "Concluding summary",
+              "type": "translate",
+              "source": "总而言之",
+              "answer": "concluding summary",
               "acceptableAnswers": [
-                "Conclusion",
-                "Wrap-up",
-                "Summary",
-                "Summing up"
-              ]
+                "summary",
+                "in summary",
+                "in conclusion",
+                "a concluding summary",
+                "final summary"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "rh1-4",
@@ -2381,7 +2401,8 @@
             {
               "id": "rh2-1",
               "type": "multiple_choice",
-              "prompt": "\"成功也好，失败也罢，过程才重要\" is closest to:",
+              "prompt": "成功也好，失败也罢，过程才重要。",
+              "hint": "Which English meaning is closest?",
               "options": [
                 "Success matters more than the process",
                 "Win or lose, what matters is the journey",
@@ -2529,7 +2550,8 @@
             {
               "id": "rh2-10",
               "type": "multiple_choice",
-              "prompt": "A novelist writes: \"赢也好，输也罢，他都已经走得太远.\" The 也好…也罢 here contributes:",
+              "prompt": "赢也好，输也罢，他都已经走得太远。",
+              "hint": "In this novelistic line, what does the 也好…也罢 contribute?",
               "options": [
                 "Comic timing",
                 "A weary, fatalistic tone — outcome no longer matters",
@@ -2670,7 +2692,8 @@
             {
               "id": "rh3-9",
               "type": "multiple_choice",
-              "prompt": "A columnist writes: \"这家公司之所以失去市场，是因为它忘记了用户.\" The rhetorical effect of leading with 之所以 is:",
+              "prompt": "这家公司之所以失去市场，是因为它忘记了用户。",
+              "hint": "What rhetorical effect does leading with 之所以 have?",
               "options": [
                 "It softens the criticism",
                 "It builds suspense — the failure is named first; the cause becomes the reveal",
@@ -2712,7 +2735,8 @@
             {
               "id": "rh4-1",
               "type": "multiple_choice",
-              "prompt": "\"与其抱怨，不如行动.\" The structure 与其…不如… expresses:",
+              "prompt": "与其抱怨，不如行动。",
+              "hint": "What does the 与其…不如… structure express?",
               "options": [
                 "A cause-and-effect chain",
                 "A preference: rather than X, better Y",
@@ -2725,7 +2749,8 @@
             {
               "id": "rh4-2",
               "type": "multiple_choice",
-              "prompt": "\"他宁可辞职，也不妥协.\" The 宁可…也不 pattern signals that the speaker:",
+              "prompt": "他宁可辞职，也不妥协。",
+              "hint": "What does the 宁可…也不 pattern signal about the speaker?",
               "options": [
                 "Is undecided",
                 "Will accept either option",
@@ -2753,7 +2778,8 @@
             {
               "id": "rh4-4",
               "type": "multiple_choice",
-              "prompt": "\"他平时话不多，关键时刻倒是很果断.\" What does 倒是 contribute?",
+              "prompt": "他平时话不多，关键时刻倒是很果断。",
+              "hint": "What does 倒是 contribute here?",
               "options": [
                 "It restates the previous clause",
                 "It introduces a gentle reversal of expectation — \"actually / on the contrary\"",
@@ -3310,7 +3336,8 @@
             {
               "id": "id3-2",
               "type": "multiple_choice",
-              "prompt": "A coworker says \"我现在真是泥菩萨过江啊…\" They mean:",
+              "prompt": "我现在真是泥菩萨过江啊…",
+              "hint": "A coworker says this — what do they mean?",
               "options": [
                 "I'm extremely busy and successful",
                 "I can't help you — I'm in trouble myself",
@@ -3440,7 +3467,8 @@
             {
               "id": "id4-1",
               "type": "multiple_choice",
-              "prompt": "An employee who can't complain about an unfair boss says \"我真是哑巴吃黄连…\" Meaning?",
+              "prompt": "我真是哑巴吃黄连…",
+              "hint": "An employee who can't complain about an unfair boss says this — what does it mean?",
               "options": [
                 "I am literally mute",
                 "I have bitterness I can't speak of",
@@ -4004,7 +4032,8 @@
             {
               "id": "ph2-2",
               "type": "multiple_choice",
-              "prompt": "A founder posts \"上善若水\" on their wall. They are signaling:",
+              "prompt": "上善若水",
+              "hint": "A founder posts this on their office wall — what are they signaling?",
               "options": [
                 "Aggressive ambition",
                 "Daoist humility — yielding, patient, ultimately unstoppable",
@@ -4058,7 +4087,8 @@
             {
               "id": "ph2-5",
               "type": "multiple_choice",
-              "prompt": "\"无为而治\" most precisely means:",
+              "prompt": "无为而治",
+              "hint": "What does this Daoist phrase most precisely mean?",
               "options": [
                 "Govern through inaction — laziness as policy",
                 "Govern through alignment rather than coercion — minimal intervention",
@@ -4146,7 +4176,8 @@
             {
               "id": "ph3-1",
               "type": "multiple_choice",
-              "prompt": "A senior advisor says \"我们走中庸之道.\" What does this likely signal in a meeting?",
+              "prompt": "我们走中庸之道。",
+              "hint": "A senior advisor says this in a meeting — what does it likely signal?",
               "options": [
                 "We will pick the most extreme option",
                 "We will balance / avoid extremes",
@@ -4158,7 +4189,8 @@
             {
               "id": "ph3-2",
               "type": "multiple_choice",
-              "prompt": "Among urban younger speakers, \"太中庸了\" can mean:",
+              "prompt": "太中庸了",
+              "hint": "Among urban younger speakers, what can this phrase mean?",
               "options": [
                 "Highly virtuous",
                 "Wishy-washy / refusing to take a side",
@@ -4218,7 +4250,8 @@
             {
               "id": "ph3-6",
               "type": "multiple_choice",
-              "prompt": "An older boss says \"凡事 适可而止 .\" The advice is closest to:",
+              "prompt": "凡事适可而止。",
+              "hint": "An older boss says this — which English advice is closest?",
               "options": [
                 "Push as hard as you can",
                 "Know when to stop — don't overdo it",
@@ -4774,7 +4807,8 @@
             {
               "id": "rg1-2",
               "type": "multiple_choice",
-              "prompt": "A Taiwanese friend says \"我爱吃土豆.\" They probably mean:",
+              "prompt": "我爱吃土豆。",
+              "hint": "A Taiwanese friend says this — what do they probably mean?",
               "options": [
                 "Potatoes",
                 "Peanuts",
@@ -4799,13 +4833,15 @@
             },
             {
               "id": "rg1-4",
-              "type": "fill_blank",
-              "prompt": "On the mainland, the word for \"pineapple\" is ___.",
+              "type": "translate",
+              "source": "pineapple",
               "answer": "菠萝",
               "acceptableAnswers": [
                 "菠萝 (bōluó)",
-                "bōluó"
-              ]
+                "bōluó",
+                "boluo"
+              ],
+              "direction": "to_target"
             },
             {
               "id": "rg1-5",
@@ -5171,9 +5207,14 @@
             },
             {
               "id": "rg3-8",
-              "type": "fill_blank",
-              "prompt": "The Cantonese verb meaning \"to eat\" — written with a single character — is ___.",
+              "type": "translate",
+              "source": "to eat (Cantonese, single character)",
               "answer": "食",
+              "acceptableAnswers": [
+                "食 (sik)",
+                "sik"
+              ],
+              "direction": "to_target",
               "explanation": "食 is the Cantonese everyday verb where Mandarin uses 吃. The character is shared classical Chinese but only Cantonese keeps it in daily speech."
             },
             {
@@ -5821,13 +5862,16 @@
             },
             {
               "id": "md2-3",
-              "type": "fill_blank",
-              "prompt": "\"据知情人士透露\" is the Chinese equivalent of the English ___.",
-              "answer": "According to sources familiar with the matter",
+              "type": "translate",
+              "source": "据知情人士透露",
+              "answer": "according to sources familiar with the matter",
               "acceptableAnswers": [
-                "According to sources",
-                "Per sources familiar with the matter"
-              ]
+                "sources familiar with the matter say",
+                "according to people familiar with the matter",
+                "per sources familiar with the matter",
+                "sources say"
+              ],
+              "direction": "to_source"
             },
             {
               "id": "md2-4",
@@ -5946,7 +5990,8 @@
             {
               "id": "md3-1",
               "type": "multiple_choice",
-              "prompt": "\"我的帖子被河蟹了\" most likely means:",
+              "prompt": "我的帖子被河蟹了",
+              "hint": "What does this internet-slang phrase most likely mean?",
               "options": [
                 "An animal ate my post",
                 "My post was censored / harmonized",
@@ -5959,7 +6004,8 @@
             {
               "id": "md3-2",
               "type": "multiple_choice",
-              "prompt": "A comment thread ends with \"懂的都懂.\" The function is:",
+              "prompt": "懂的都懂",
+              "hint": "A comment thread ends with this — what is its function?",
               "options": [
                 "A literal claim that the topic is easy",
                 "A wink at a censored or sensitive subject — \"you know what I mean\"",
@@ -7038,7 +7084,8 @@
             {
               "id": "es4-1",
               "type": "multiple_choice",
-              "prompt": "\"唯有持之以恒，方能致远.\" The word 方能 here is the elevated form of:",
+              "prompt": "唯有持之以恒，方能致远。",
+              "hint": "What is 方能 the elevated form of?",
               "options": [
                 "可能",
                 "才能",

@@ -7840,9 +7840,10 @@
                     "a apple",
                     "an apple",
                     "the apple",
-                    "ones apple"
+                    "apple"
                   ],
-                  "answer": "an apple"
+                  "answer": "an apple",
+                  "explanation": "Türkçe'de belirsiz tanımlık yoktur. İngilizce'de sesli harfle başlayan kelimelerden önce 'an', diğerlerinden önce 'a' gelir. Tanımlık atlamak ('apple') Türk öğrencilerin en sık yaptığı hatadır."
                 },
                 {
                   "id": "ar1-2",
@@ -7851,10 +7852,11 @@
                   "options": [
                     "a book",
                     "an book",
-                    "the book a",
-                    "ones book"
+                    "book",
+                    "the book"
                   ],
-                  "answer": "a book"
+                  "answer": "a book",
+                  "explanation": "Sayılabilir tekil isimden önce 'a' veya 'an' gerekir. Türkçede 'kitap' tek başına kullanılır; İngilizcede 'book' demek dilbilgisi hatasıdır."
                 },
                 {
                   "id": "ar1-3",
@@ -7972,7 +7974,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "the",
                   "explanation": "Belirli bir pencereden bahsediliyor → 'the'."
@@ -7985,7 +7987,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "a",
                   "explanation": "Hangi pencere olduğu önemli değil → 'a'."
@@ -8062,7 +8064,7 @@
                     "A",
                     "An",
                     "The",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "The",
                   "explanation": "İlk söylendiğinde 'a cat' (yeni bilgi); ikinci söylendiğinde 'the cat' (artık biliniyor)."
@@ -8088,7 +8090,7 @@
                     "the / a",
                     "a/an / the",
                     "the / the",
-                    "(boş) / a"
+                    "(no article) / a"
                   ],
                   "answer": "a/an / the"
                 }
@@ -8248,7 +8250,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "a",
                   "explanation": "İngilizcede meslekten önce 'a/an' zorunludur — Türkçede yoktur. 'I am teacher' YANLIŞ."
@@ -8261,7 +8263,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "an"
                 },
@@ -8387,9 +8389,9 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
-                  "answer": "(boş)",
+                  "answer": "(no article)",
                   "explanation": "Sayılamayan isimlerin önüne 'a/an' GELMEZ. Genel anlamda artikelsiz kullanılır."
                 },
                 {
@@ -8494,9 +8496,9 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
-                  "answer": "(boş)",
+                  "answer": "(no article)",
                   "explanation": "Genel anlamda 'music' artikelsiz kullanılır."
                 },
                 {
@@ -8577,7 +8579,7 @@
                   "id": "ar6-2",
                   "type": "fill_blank",
                   "prompt": "'I go to ___ school every day.' (genel: okula gitmek)",
-                  "answer": "(boş)",
+                  "answer": "(no article)",
                   "acceptableAnswers": [
                     "(bos)"
                   ],
@@ -8655,9 +8657,9 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
-                  "answer": "(boş)"
+                  "answer": "(no article)"
                 },
                 {
                   "id": "ar6-8",
@@ -13498,7 +13500,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "an"
                 },

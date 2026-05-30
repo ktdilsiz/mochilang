@@ -53,8 +53,9 @@
             },
             {
               "id": "tv1-3",
-              "type": "fill_blank",
-              "prompt": "\"安检\" (ān jiǎn) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "安检",
               "answer": "Security check",
               "acceptableAnswers": [
                 "Security",
@@ -192,6 +193,19 @@
                 "connection",
                 "layover"
               ]
+            },
+            {
+              "id": "tv1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Your friend says 我 的 航班 取消 了. Which English sounds natural?",
+              "options": [
+                "My flight got cancel",
+                "My flight has been cancel",
+                "My flight is cancelled",
+                "My flight is cancel"
+              ],
+              "answer": "My flight is cancelled",
+              "explanation": "English-L1 trap: forgetting the -ed past participle. 取消 + 了 → \"is cancelled\" (state) or \"was cancelled\" / \"got cancelled\" (event)."
             }
           ]
         },
@@ -257,8 +271,9 @@
             },
             {
               "id": "tv2-4",
-              "type": "fill_blank",
-              "prompt": "\"取消\" (qǔ xiāo) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "取消",
               "answer": "Cancel",
               "acceptableAnswers": [
                 "To cancel"
@@ -386,6 +401,20 @@
               ],
               "answer": "请问多少钱一张",
               "explanation": "请问 + ... + 一 张 — fully polite: \"May I ask, how much for one ticket?\""
+            },
+            {
+              "id": "tv2-lst1",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我 知道 这 个 航班",
+              "options": [
+                "我 知道 这 个 航班",
+                "我 字典 这 个 航班",
+                "我 之 道 这 个 航班",
+                "我 自 道 这 个 航班"
+              ],
+              "answer": "我 知道 这 个 航班",
+              "explanation": "Minimal pair: 知道 (zhī dào, retroflex zh-) vs 字典 (zì diǎn, dental z-). Listen for the tongue-curl on zh."
             }
           ]
         },
@@ -567,8 +596,9 @@
             },
             {
               "id": "tv3-12",
-              "type": "fill_blank",
-              "prompt": "\"叫 醒 服务\" (jiào xǐng fú wù) means ___ call / service",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "叫 醒 服务",
               "answer": "Wake-up",
               "acceptableAnswers": [
                 "wake up",
@@ -692,8 +722,9 @@
             },
             {
               "id": "tv4-8",
-              "type": "fill_blank",
-              "prompt": "\"救 命\" (jiù mìng) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "救 命",
               "answer": "Help",
               "acceptableAnswers": [
                 "save me",
@@ -987,8 +1018,9 @@
             },
             {
               "id": "tv6-3",
-              "type": "fill_blank",
-              "prompt": "\"汇率\" (huì lǜ) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "汇率",
               "answer": "Exchange rate",
               "acceptableAnswers": [
                 "rate",
@@ -1488,6 +1520,19 @@
                 "洗 好",
                 "洗 完"
               ]
+            },
+            {
+              "id": "dp1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 请 开 空调 to natural English",
+              "options": [
+                "Please open the air-conditioner",
+                "Please turn on the AC",
+                "Please start the air-conditioner",
+                "Please opening the AC"
+              ],
+              "answer": "Please turn on the AC",
+              "explanation": "Classic Chenglish: 开 = \"open\" literally, but in English you TURN ON appliances. Same for 开 灯 (turn on lights), 开 电视 (turn on TV)."
             }
           ]
         },
@@ -1660,6 +1705,20 @@
                 "了"
               ],
               "explanation": "里 (inside) — the destination. 把 + V + 在 + place + 里 / 上 is a fixed pattern."
+            },
+            {
+              "id": "dp2-lst1",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "请 把 茶 喝 了",
+              "options": [
+                "请 把 茶 喝 了",
+                "请 把 车 喝 了",
+                "请 把 钱 喝 了",
+                "请 把 强 喝 了"
+              ],
+              "answer": "请 把 茶 喝 了",
+              "explanation": "Minimal pair: 茶 (chá) vs 车 (chē). Same initial ch-, different final and tone. Listen for the open -á vs the central -ē."
             }
           ]
         },
@@ -2789,6 +2848,19 @@
                 "There's no reason"
               ],
               "answer": "被 is more colloquial; 'got broken / got stolen' captures the unfortunate flavor"
+            },
+            {
+              "id": "ps1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural English for 我 的 自行车 被 偷 了",
+              "options": [
+                "My bicycle was stolen",
+                "My bicycle is steal",
+                "My bicycle be stolen",
+                "My bicycle stolen"
+              ],
+              "answer": "My bicycle was stolen",
+              "explanation": "English passive: be + past participle. 被 偷 了 = was stolen (event). Don't drop the auxiliary 'be' or the -en form."
             }
           ]
         },
@@ -2962,6 +3034,20 @@
                 "她吃了蛋糕"
               ],
               "answer": "蛋糕被她吃了"
+            },
+            {
+              "id": "ps2-lst1",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "这 本 书 是 老师 写 的",
+              "options": [
+                "这 本 书 是 老师 写 的",
+                "这 本 书 史 老师 写 的",
+                "这 本 书 使 老师 写 的",
+                "这 本 书 试 老师 写 的"
+              ],
+              "answer": "这 本 书 是 老师 写 的",
+              "explanation": "Tone trap: 是 (shì, 4th) vs 史 (shǐ, 3rd) vs 使 (shǐ, 3rd) vs 试 (shì, 4th). 是 is the most natural copula here — listen for the 4th-tone fall."
             }
           ]
         },
@@ -3636,6 +3722,19 @@
                 "他给你一本书"
               ],
               "answer": "他给我一本书"
+            },
+            {
+              "id": "gv1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 他 给 我 看 了 三 本 书 — pick the natural English",
+              "options": [
+                "He gave me see three book",
+                "He showed me three book",
+                "He showed me three books",
+                "He gave me three book look"
+              ],
+              "answer": "He showed me three books",
+              "explanation": "Two issues English-L1 might hit: (1) 给 ... 看 = \"show\", not \"give-look\"; (2) plural -s required on 'books'. 三 本 书 has no plural marker in Chinese but English needs it."
             }
           ]
         },
@@ -3813,6 +3912,20 @@
                 "了",
                 "发"
               ]
+            },
+            {
+              "id": "gv2-lst1",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "他 送 我 一 个 礼物",
+              "options": [
+                "他 送 我 一 个 礼物",
+                "他 送 我 一 个 利物",
+                "他 松 我 一 个 礼物",
+                "他 送 我 一 件 礼物"
+              ],
+              "answer": "他 送 我 一 个 礼物",
+              "explanation": "Tone + MW trap. 送 (sòng, 4th) vs 松 (sōng, 1st). 礼物 (lǐ wù) vs 利物 (lì wù — only the tone of 礼 changes). Also, 个 礼物 is the natural MW here."
             }
           ]
         },
@@ -4537,6 +4650,19 @@
                 "First is a question"
               ],
               "answer": "First reports the action; second describes HOW he runs"
+            },
+            {
+              "id": "dg1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 我 很 喜欢 这 部 电影 to natural English",
+              "options": [
+                "I am very like this movie",
+                "I very like this movie",
+                "I really like this movie",
+                "I am very liking this movie"
+              ],
+              "answer": "I really like this movie",
+              "explanation": "Classic Chenglish: 很 + verb → English speakers may calque as \"very + verb\" or insert a redundant \"am\". English uses \"really\" or \"a lot\" with verbs; \"very\" only modifies adjectives/adverbs."
             }
           ]
         },
@@ -5332,6 +5458,2072 @@
       ]
     },
     {
+      "id": "zh-en-complements",
+      "title": "Verb complements",
+      "description": "Resultative & directional complements — what English handles with separate words, Mandarin stitches onto the verb.",
+      "theme": "verbs",
+      "guide": {
+        "intro": "English says \"I looked but didn't see it\" with two verbs. Mandarin says 我 看 了 但 没 看见 — the result (见 = perceive) is glued to the verb (看 = look). This is the resultative complement, and it's everywhere. Directional complements work the same way but for motion.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Resultative complements"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Verb + result. The verb is the action you tried; the second character tells the outcome. Without the complement, you're only saying you DID the action, not that it WORKED."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Verb only",
+              "Verb + result",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "看 (look)",
+                "看见 (look + see)",
+                "actually saw"
+              ],
+              [
+                "听 (listen)",
+                "听懂 (listen + understand)",
+                "actually understood"
+              ],
+              [
+                "学 (study)",
+                "学会 (study + can)",
+                "learned the skill"
+              ],
+              [
+                "写 (write)",
+                "写完 (write + finish)",
+                "finished writing"
+              ]
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Directional complements"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Verb + direction. 上 (up), 下 (down), 进 (in), 出 (out), 回 (back), 过 (across). Compound forms add 来 (toward speaker) or 去 (away from speaker): 上来, 下去, 进来, 出去 …"
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "他 走 上 楼。",
+                "pinyin": "Tā zǒu shàng lóu.",
+                "translation": "He walks up the stairs."
+              },
+              {
+                "source": "他 走 上 来 了。",
+                "pinyin": "Tā zǒu shàng lái le.",
+                "translation": "He walked up (toward me)."
+              },
+              {
+                "source": "她 跑 出 教室。",
+                "pinyin": "Tā pǎo chū jiàoshì.",
+                "translation": "She runs out of the classroom."
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Potential complement: 得 / 不"
+          },
+          {
+            "kind": "paragraph",
+            "text": "To say you CAN or CAN'T achieve the result, insert 得 (able) or 不 (not able) between the verb and the complement: 看得见 / 看不见, 听得懂 / 听不懂. This is NOT the same as 可以 + verb — that asks for permission. Potential complements ask whether the result is achievable."
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "English speakers reach for 可以 看见 (\"can see\"). That's wrong. Use 看得见 (\"see-able\") for \"I can see it\"."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-complements-1",
+          "title": "Resultative: 看见, 听懂",
+          "description": "Verb + result — actually saw, actually understood",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "cmp1-1",
+              "type": "multiple_choice",
+              "prompt": "Your friend says \"我 看 了, 但 没 看见\". What happened?",
+              "options": [
+                "She looked but didn't see it",
+                "She didn't look",
+                "She saw it clearly",
+                "She isn't looking"
+              ],
+              "answer": "She looked but didn't see it",
+              "explanation": "看 = the action of looking. 看见 = look + perceive. 没 看见 = didn't manage to see, even though she looked."
+            },
+            {
+              "id": "cmp1-2",
+              "type": "multiple_choice",
+              "prompt": "Which says \"I heard (and understood) what the teacher said\"?",
+              "options": [
+                "我 听 老师 说 的 话",
+                "我 听懂 老师 说 的 话 了",
+                "我 可以 听 老师 说 的 话",
+                "我 听见 老师 但 不懂"
+              ],
+              "answer": "我 听懂 老师 说 的 话 了",
+              "explanation": "听 = listen. 听懂 = listen + understand. Without 懂, you've only listened — you might not have followed the meaning."
+            },
+            {
+              "id": "cmp1-3",
+              "type": "fill_blank",
+              "prompt": "Fill in the result: \"我 看 了 那 本 书, 但 没 看 ___ 完\" (I read that book but didn't finish)",
+              "answer": "完",
+              "acceptableAnswers": [
+                "wán"
+              ],
+              "explanation": "完 = finished. 看完 = read to completion. 没 看完 = didn't finish reading."
+            },
+            {
+              "id": "cmp1-4",
+              "type": "multiple_choice",
+              "prompt": "Pick the contrast: \"我 听 了 这 首 歌\" vs \"我 听懂 了 这 首 歌\"",
+              "options": [
+                "Identical meaning",
+                "First = listened; second = listened AND understood",
+                "First = understood; second = just heard",
+                "First is past, second is future"
+              ],
+              "answer": "First = listened; second = listened AND understood",
+              "explanation": "听 alone is just the action. 听懂 adds the result of comprehension."
+            },
+            {
+              "id": "cmp1-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I didn't see her\" (i.e. I looked but didn't manage to see her)",
+              "answer": "我 没 看见 她",
+              "bank": [
+                "我",
+                "没",
+                "看见",
+                "她",
+                "了",
+                "可以",
+                "看",
+                "见"
+              ],
+              "explanation": "Negate the WHOLE resultative compound with 没: 没 看见, not 看 没 见."
+            },
+            {
+              "id": "cmp1-6",
+              "type": "multiple_choice",
+              "prompt": "Which is the correct way to say \"I can't understand him\" (in the comprehension sense)?",
+              "options": [
+                "我 不 听 他",
+                "我 不 可以 听懂 他",
+                "我 听 不 懂 他",
+                "我 没 听 他"
+              ],
+              "answer": "我 听 不 懂 他",
+              "explanation": "Potential complement: 不 sits INSIDE between verb and result. 听不懂 = unable to understand by listening."
+            },
+            {
+              "id": "cmp1-7",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我 看见 你 了",
+              "answer": "I saw you",
+              "acceptableAnswers": [
+                "I see you",
+                "I have seen you",
+                "I spotted you"
+              ],
+              "explanation": "看见 = the result was achieved — you were actually perceived. 了 marks the change of state."
+            },
+            {
+              "id": "cmp1-8",
+              "type": "multiple_choice",
+              "prompt": "\"老师 说 得 太 快, 我 ___\" — fill in \"I didn't catch it\"",
+              "options": [
+                "不 听",
+                "没 听懂",
+                "听 见",
+                "可以 听"
+              ],
+              "answer": "没 听懂",
+              "explanation": "没 听懂 = listened but didn't manage to understand. Classic complaint about fast speakers."
+            },
+            {
+              "id": "cmp1-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "你 看见 我 的 钥匙 了 吗",
+              "options": [
+                "你 看见 我 的 钥匙 了 吗",
+                "你 看 我 的 钥匙 了 吗",
+                "你 听见 我 的 钥匙 了 吗",
+                "你 找 我 的 钥匙 了 吗"
+              ],
+              "answer": "你 看见 我 的 钥匙 了 吗",
+              "explanation": "看见 (kàn jiàn) — \"see\" with the result baked in. The right way to ask \"did you see my keys?\""
+            },
+            {
+              "id": "cmp1-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I heard the bell\" (i.e. perceived the sound)",
+              "answer": "我 听见 铃声 了",
+              "bank": [
+                "我",
+                "听见",
+                "铃声",
+                "了",
+                "听",
+                "见",
+                "看见",
+                "没"
+              ],
+              "explanation": "听见 = listen + perceive. Use this — not just 听 — when reporting that a sound reached you."
+            },
+            {
+              "id": "cmp1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 我 听 不 懂 to natural English",
+              "options": [
+                "I no can understand",
+                "I am not understand",
+                "I can't understand",
+                "I no understand"
+              ],
+              "answer": "I can't understand",
+              "explanation": "Potential complement 听不懂 → \"can't understand (by listening)\". English uses the modal \"can't\" + bare verb — no \"am\", no double negative."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-complements-2",
+          "title": "学会 / 学完 / 学好",
+          "description": "Same verb 学, three different results",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "cmp2-1",
+              "type": "multiple_choice",
+              "prompt": "\"我 学会 了 开车\" means:",
+              "options": [
+                "I'm learning to drive",
+                "I learned to drive (and can do it now)",
+                "I finished my driving lessons",
+                "I want to learn to drive"
+              ],
+              "answer": "I learned to drive (and can do it now)",
+              "explanation": "学会 = study + can. The result is acquired SKILL. You can now do the thing."
+            },
+            {
+              "id": "cmp2-2",
+              "type": "multiple_choice",
+              "prompt": "\"我 学完 了 这 本 书\" means:",
+              "options": [
+                "I mastered this book",
+                "I'm reading this book",
+                "I finished studying this book (got to the end)",
+                "I love this book"
+              ],
+              "answer": "I finished studying this book (got to the end)",
+              "explanation": "学完 = study + finish. Completion of the material, not necessarily mastery."
+            },
+            {
+              "id": "cmp2-3",
+              "type": "multiple_choice",
+              "prompt": "Contrast: \"我 学完 了 中文\" vs \"我 学会 了 中文\"",
+              "options": [
+                "Identical",
+                "First: I finished my Chinese course. Second: I actually know Chinese.",
+                "First: I know Chinese. Second: I started Chinese.",
+                "Both mean I quit Chinese"
+              ],
+              "answer": "First: I finished my Chinese course. Second: I actually know Chinese.",
+              "explanation": "完 = endpoint reached. 会 = ability acquired. You can finish a textbook without mastering the language."
+            },
+            {
+              "id": "cmp2-4",
+              "type": "multiple_choice",
+              "prompt": "\"我 要 把 这 个 问题 学好\" means:",
+              "options": [
+                "I want to finish this topic",
+                "I want to study this topic well (thoroughly)",
+                "I want to like this topic",
+                "I want to skip this topic"
+              ],
+              "answer": "I want to study this topic well (thoroughly)",
+              "explanation": "学好 = study + well. 好 as a complement signals doing the action thoroughly / to a good standard."
+            },
+            {
+              "id": "cmp2-5",
+              "type": "fill_blank",
+              "prompt": "Fill in: \"作业 我 还 没 做 ___\" (I haven't finished the homework)",
+              "answer": "完",
+              "acceptableAnswers": [
+                "wán"
+              ],
+              "explanation": "做完 = do + finish. Pair 没 with 完 to say the task isn't yet complete."
+            },
+            {
+              "id": "cmp2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He hasn't learned how to swim yet\" (still doesn't have the skill)",
+              "answer": "他 还 没 学会 游泳",
+              "bank": [
+                "他",
+                "还",
+                "没",
+                "学会",
+                "游泳",
+                "学完",
+                "可以",
+                "了"
+              ],
+              "explanation": "Negate 学会 with 没. 还 没 学会 = hasn't yet acquired the skill."
+            },
+            {
+              "id": "cmp2-7",
+              "type": "multiple_choice",
+              "prompt": "Which complement fits \"finished cooking\"?",
+              "options": [
+                "做会",
+                "做完",
+                "做好",
+                "Either 做完 or 做好"
+              ],
+              "answer": "Either 做完 or 做好",
+              "explanation": "做完 = reached the end. 做好 = done well / ready to serve. Both are common; speakers pick based on emphasis."
+            },
+            {
+              "id": "cmp2-8",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我 学会 弹 钢琴 了",
+              "answer": "I learned to play piano",
+              "acceptableAnswers": [
+                "I have learned to play piano",
+                "I can play piano now",
+                "I learned how to play the piano"
+              ],
+              "explanation": "学会 + verb-object = acquired the skill of doing X. 了 confirms the state change."
+            },
+            {
+              "id": "cmp2-9",
+              "type": "multiple_choice",
+              "prompt": "Your teacher says \"请 把 作业 做好\". She wants you to:",
+              "options": [
+                "Just do the homework",
+                "Do the homework well / carefully",
+                "Skip the homework",
+                "Finish the homework as fast as possible"
+              ],
+              "answer": "Do the homework well / carefully",
+              "explanation": "做好 emphasizes quality / readiness, not just completion."
+            },
+            {
+              "id": "cmp2-10",
+              "type": "multiple_choice",
+              "prompt": "Which pair contrasts results correctly?",
+              "options": [
+                "学完 = finished; 学会 = mastered the skill",
+                "学完 = liked it; 学会 = read it",
+                "学完 = started; 学会 = stopped",
+                "They're synonyms"
+              ],
+              "answer": "学完 = finished; 学会 = mastered the skill",
+              "explanation": "完 marks endpoint. 会 marks acquired ability. They answer different questions about the same verb."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-complements-3",
+          "title": "Directional: 上 / 下 / 进 / 出",
+          "description": "Verb + direction — walk up onto, take down, run out of",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "cmp3-1",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He walked up onto the stage\"",
+              "answer": "他 走 上 舞台",
+              "bank": [
+                "他",
+                "走",
+                "上",
+                "舞台",
+                "下",
+                "进",
+                "了",
+                "在"
+              ],
+              "explanation": "走上 = walk + onto / up. The direction follows the verb directly."
+            },
+            {
+              "id": "cmp3-2",
+              "type": "multiple_choice",
+              "prompt": "\"她 跑 出 教室\" means:",
+              "options": [
+                "She runs into the classroom",
+                "She runs around the classroom",
+                "She runs out of the classroom",
+                "She walks out of the classroom"
+              ],
+              "answer": "She runs out of the classroom",
+              "explanation": "跑 = run; 出 = out. Verb + direction = motion + path."
+            },
+            {
+              "id": "cmp3-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please take the book down (off the shelf)\"",
+              "answer": "请 把 书 拿 下 来",
+              "bank": [
+                "请",
+                "把",
+                "书",
+                "拿",
+                "下",
+                "来",
+                "上",
+                "去",
+                "了"
+              ],
+              "explanation": "拿下来 = take + down + toward speaker. Classic 把-construction with directional."
+            },
+            {
+              "id": "cmp3-4",
+              "type": "multiple_choice",
+              "prompt": "Which means \"He walks into the room\"?",
+              "options": [
+                "他 走 上 房间",
+                "他 走 进 房间",
+                "他 走 出 房间",
+                "他 走 下 房间"
+              ],
+              "answer": "他 走 进 房间",
+              "explanation": "进 = into / enter. Pair it with motion verbs (走, 跑, 跳) for entering."
+            },
+            {
+              "id": "cmp3-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The cat jumped down from the table\"",
+              "answer": "猫 从 桌子 上 跳 下 来",
+              "bank": [
+                "猫",
+                "从",
+                "桌子",
+                "上",
+                "跳",
+                "下",
+                "来",
+                "去",
+                "了"
+              ],
+              "explanation": "跳下来 = jump + down + toward speaker. 从…上 frames the starting point."
+            },
+            {
+              "id": "cmp3-6",
+              "type": "multiple_choice",
+              "prompt": "\"他 拿 上 一 杯 茶\" means:",
+              "options": [
+                "He takes a cup of tea up / picks up a cup of tea",
+                "He drinks a cup of tea",
+                "He takes a cup of tea down",
+                "He breaks a cup of tea"
+              ],
+              "answer": "He takes a cup of tea up / picks up a cup of tea",
+              "explanation": "拿上 = take + up. Picture lifting it from a surface."
+            },
+            {
+              "id": "cmp3-7",
+              "type": "fill_blank",
+              "prompt": "Fill in: \"他 跑 ___ 房间 找 钥匙\" (He ran INTO the room to look for keys)",
+              "answer": "进",
+              "acceptableAnswers": [
+                "jìn"
+              ],
+              "explanation": "进 = into. 跑进 = run into a space."
+            },
+            {
+              "id": "cmp3-8",
+              "type": "multiple_choice",
+              "prompt": "Which direction fits \"take down (from up high)\"?",
+              "options": [
+                "上",
+                "下",
+                "进",
+                "出"
+              ],
+              "answer": "下",
+              "explanation": "下 = down / off. 拿下 = take down."
+            },
+            {
+              "id": "cmp3-9",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She ran out of the supermarket\"",
+              "answer": "她 跑 出 超市",
+              "bank": [
+                "她",
+                "跑",
+                "出",
+                "超市",
+                "进",
+                "上",
+                "了",
+                "下"
+              ],
+              "explanation": "跑出 = run out (of). The location comes right after."
+            },
+            {
+              "id": "cmp3-10",
+              "type": "multiple_choice",
+              "prompt": "Which is grammatical for \"He climbed up the mountain\"?",
+              "options": [
+                "他 上 爬 山",
+                "他 爬 上 山",
+                "他 山 爬 上",
+                "他 上 山 爬"
+              ],
+              "answer": "他 爬 上 山",
+              "explanation": "Verb first, direction second, object last: 爬 (climb) + 上 (up) + 山 (mountain)."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-complements-4",
+          "title": "Compound directionals: 上来 / 下去 / 进来 / 出去",
+          "description": "Add 来 (toward speaker) or 去 (away from speaker)",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "cmp4-1",
+              "type": "multiple_choice",
+              "prompt": "You're upstairs. Your friend is downstairs. You shout \"快 上来!\" — what are you telling them?",
+              "options": [
+                "Come up here",
+                "Go up there",
+                "Come down here",
+                "Stay down there"
+              ],
+              "answer": "Come up here",
+              "explanation": "上来 = up + toward speaker. You're up; they're below; you want them to ascend to YOU."
+            },
+            {
+              "id": "cmp4-2",
+              "type": "multiple_choice",
+              "prompt": "You're upstairs and your friend wants to come up. They look up and say \"我 上 ___ 了\". Pick the right complement.",
+              "options": [
+                "来",
+                "去",
+                "下",
+                "出"
+              ],
+              "answer": "来",
+              "explanation": "Speaker is moving TOWARD you (the listener, who is up). From their perspective, you are the destination — 来 (come). 上来 = coming up."
+            },
+            {
+              "id": "cmp4-3",
+              "type": "multiple_choice",
+              "prompt": "Contrast: \"她 跑 出 去 了\" vs \"她 跑 出 来 了\"",
+              "options": [
+                "Identical",
+                "First: ran out (away from speaker). Second: ran out (toward speaker).",
+                "First: ran in. Second: ran out.",
+                "First is wrong"
+              ],
+              "answer": "First: ran out (away from speaker). Second: ran out (toward speaker).",
+              "explanation": "去 = away from speaker. 来 = toward speaker. The direction relative to YOU is the key insight English doesn't bake into motion verbs."
+            },
+            {
+              "id": "cmp4-4",
+              "type": "tap_words_in_order",
+              "prompt": "You're inside. Tell someone outside \"Come in!\"",
+              "answer": "请 进 来",
+              "bank": [
+                "请",
+                "进",
+                "来",
+                "去",
+                "出",
+                "上",
+                "下"
+              ],
+              "explanation": "进来 = enter + toward speaker. Standard invitation to come inside."
+            },
+            {
+              "id": "cmp4-5",
+              "type": "multiple_choice",
+              "prompt": "You're inside. You tell a noisy person \"出去!\". What did you say?",
+              "options": [
+                "Come in",
+                "Stay still",
+                "Get out (away from me)",
+                "Sit down"
+              ],
+              "answer": "Get out (away from me)",
+              "explanation": "出去 = out + away from speaker. Sharp dismissal."
+            },
+            {
+              "id": "cmp4-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He walked down (away from me)\"",
+              "answer": "他 走 下 去 了",
+              "bank": [
+                "他",
+                "走",
+                "下",
+                "去",
+                "了",
+                "来",
+                "上",
+                "出"
+              ],
+              "explanation": "下去 = down + away from speaker. 了 marks the completed motion."
+            },
+            {
+              "id": "cmp4-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "你 快 上 来 吧",
+              "options": [
+                "你 快 上 来 吧",
+                "你 快 下 去 吧",
+                "你 快 进 来 吧",
+                "你 快 出 去 吧"
+              ],
+              "answer": "你 快 上 来 吧",
+              "explanation": "上来 (shàng lái) — come up. Common invitation when speaker is above the listener."
+            },
+            {
+              "id": "cmp4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "请 出 去",
+              "options": [
+                "请 出 去",
+                "请 进 来",
+                "请 上 来",
+                "请 下 来"
+              ],
+              "answer": "请 出 去",
+              "explanation": "出去 (chū qù) — please go out / leave. Contrast with 进来 (come in)."
+            },
+            {
+              "id": "cmp4-9",
+              "type": "multiple_choice",
+              "prompt": "You're at the bottom of the stairs. You call to a friend at the top: \"快 ___!\" (Come down quickly!)",
+              "options": [
+                "下 来",
+                "下 去",
+                "上 来",
+                "上 去"
+              ],
+              "answer": "下 来",
+              "explanation": "Speaker is below. Friend should DESCEND TOWARD speaker → 下来."
+            },
+            {
+              "id": "cmp4-10",
+              "type": "multiple_choice",
+              "prompt": "Your friend (inside) calls you (outside): \"快 进 来 吧!\" — what are they saying?",
+              "options": [
+                "Come outside",
+                "Stay outside",
+                "Come inside (toward me)",
+                "Go further away"
+              ],
+              "answer": "Come inside (toward me)",
+              "explanation": "进来 = enter + toward speaker. They're inside; you should enter TOWARD them."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-complements-5",
+          "title": "Potential: 看得见 vs 看不见",
+          "description": "得 / 不 inserted INSIDE the complement — not the same as 可以",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "cmp5-1",
+              "type": "multiple_choice",
+              "prompt": "\"我 看得见 那 个 招牌\" means:",
+              "options": [
+                "I'm not allowed to see the sign",
+                "I can see the sign (it's visible to me)",
+                "I want to see the sign",
+                "I have to see the sign"
+              ],
+              "answer": "I can see the sign (it's visible to me)",
+              "explanation": "看得见 = see-able. 得 sits between 看 and 见 to say the result IS achievable."
+            },
+            {
+              "id": "cmp5-2",
+              "type": "multiple_choice",
+              "prompt": "\"我 听不懂 他 说 的 话\" means:",
+              "options": [
+                "I refuse to listen to him",
+                "I'm not allowed to listen to him",
+                "I can't understand what he says (it's not comprehensible to me)",
+                "I don't want to listen to him"
+              ],
+              "answer": "I can't understand what he says (it's not comprehensible to me)",
+              "explanation": "听不懂 = un-understandable-by-listening. 不 inserted between 听 and 懂. The result isn't achievable."
+            },
+            {
+              "id": "cmp5-3",
+              "type": "multiple_choice",
+              "prompt": "English-L1 trap: which is WRONG for \"I can see\"?",
+              "options": [
+                "我 看得见",
+                "我 可以 看见",
+                "我 能 看见",
+                "Both 'B' and 'C' — use potential complement 看得见 for visibility"
+              ],
+              "answer": "Both 'B' and 'C' — use potential complement 看得见 for visibility",
+              "explanation": "可以 / 能 ask about PERMISSION or general capability. 看得见 specifically says \"the sight reaches me / is visible.\" Native speakers say 看得见, not 可以 看见."
+            },
+            {
+              "id": "cmp5-4",
+              "type": "fill_blank",
+              "prompt": "Fill in: \"老师 的 字 太 小, 我 看 ___ 见\" (I can't see — the writing is too small)",
+              "answer": "不",
+              "acceptableAnswers": [
+                "bù",
+                "bu"
+              ],
+              "explanation": "Negative potential: 看不见 = can't see. 不 goes between verb and complement."
+            },
+            {
+              "id": "cmp5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I can understand what you say\"",
+              "answer": "我 听得懂 你 说 的 话",
+              "bank": [
+                "我",
+                "听得懂",
+                "你",
+                "说",
+                "的",
+                "话",
+                "可以",
+                "听懂"
+              ],
+              "explanation": "听得懂 — single chunk: verb + 得 + result. Don't break it into 可以 + 听懂."
+            },
+            {
+              "id": "cmp5-6",
+              "type": "multiple_choice",
+              "prompt": "\"这 道 题 我 做 不 出 来\" means:",
+              "options": [
+                "I refuse to do this problem",
+                "I haven't done this problem yet",
+                "I can't figure out this problem (can't produce a solution)",
+                "I forgot this problem"
+              ],
+              "answer": "I can't figure out this problem (can't produce a solution)",
+              "explanation": "做不出来 = unable to produce / work out. 不 sits inside the verb-complement compound."
+            },
+            {
+              "id": "cmp5-7",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我 看不见 黑板",
+              "answer": "I can't see the blackboard",
+              "acceptableAnswers": [
+                "I cannot see the blackboard",
+                "The blackboard isn't visible to me"
+              ],
+              "explanation": "看不见 — classic complaint from the back of the classroom."
+            },
+            {
+              "id": "cmp5-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural Mandarin for \"I can hear it\" (the sound reaches me):",
+              "options": [
+                "我 可以 听",
+                "我 听得见",
+                "我 想 听",
+                "我 必须 听"
+              ],
+              "answer": "我 听得见",
+              "explanation": "听得见 = hear-able. Use for perception capability, not permission."
+            },
+            {
+              "id": "cmp5-9",
+              "type": "multiple_choice",
+              "prompt": "Form the question \"Can you understand?\" (comprehension):",
+              "options": [
+                "你 能 听 吗?",
+                "你 可以 听 吗?",
+                "你 听得懂 吗?",
+                "你 想 听 吗?"
+              ],
+              "answer": "你 听得懂 吗?",
+              "explanation": "听得懂 吗 — standard \"do you follow?\" Distinct from asking permission."
+            },
+            {
+              "id": "cmp5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I can't finish this book\" (don't have the ability to finish it)",
+              "answer": "我 看 不 完 这 本 书",
+              "bank": [
+                "我",
+                "看",
+                "不",
+                "完",
+                "这",
+                "本",
+                "书",
+                "得",
+                "可以"
+              ],
+              "explanation": "看不完 = can't finish reading. Different from 没 看完 (haven't finished). 不 = capability; 没 = past fact."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-complements-6",
+          "title": "Mixed practice",
+          "description": "Resultative + directional + potential — pick the right form",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cmp6-1",
+              "type": "multiple_choice",
+              "prompt": "Translate: \"He climbed up the mountain (and made it to the top)\"",
+              "options": [
+                "他 爬 山",
+                "他 爬 上 山 了",
+                "他 想 爬 山",
+                "他 不 爬 山"
+              ],
+              "answer": "他 爬 上 山 了",
+              "explanation": "爬上 = climb + up (result reached). 了 confirms completion."
+            },
+            {
+              "id": "cmp6-2",
+              "type": "multiple_choice",
+              "prompt": "English-L1 trap: which is WRONG for \"I can't understand the news\"?",
+              "options": [
+                "我 听 不 懂 新闻",
+                "我 可以 不 听懂 新闻",
+                "听 不 懂 新闻",
+                "(All native: 'I 听不懂 新闻')"
+              ],
+              "answer": "我 可以 不 听懂 新闻",
+              "explanation": "可以 不 听懂 is unnatural. Use the potential complement 听不懂 — don't try to bolt 可以 onto a resultative."
+            },
+            {
+              "id": "cmp6-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please come in\" (you're inside; addressee is outside)",
+              "answer": "请 进 来",
+              "bank": [
+                "请",
+                "进",
+                "来",
+                "去",
+                "出",
+                "下"
+              ],
+              "explanation": "进来 = enter + toward speaker. Don't use 进去 here — that pushes them away from you."
+            },
+            {
+              "id": "cmp6-4",
+              "type": "multiple_choice",
+              "prompt": "Which is the natural way to say \"I learned how to cook\"?",
+              "options": [
+                "我 学 做 菜",
+                "我 学会 做 菜 了",
+                "我 可以 做 菜",
+                "我 想 学 做 菜"
+              ],
+              "answer": "我 学会 做 菜 了",
+              "explanation": "学会 = study + acquired skill. The result (capability) is the point."
+            },
+            {
+              "id": "cmp6-5",
+              "type": "multiple_choice",
+              "prompt": "Trap: \"我 没 看见 你\" vs \"我 看 不 见 你\" — pick the contrast.",
+              "options": [
+                "Identical",
+                "First: didn't see you (past fact). Second: can't see you (capability now).",
+                "First: capability. Second: past fact.",
+                "Both are wrong"
+              ],
+              "answer": "First: didn't see you (past fact). Second: can't see you (capability now).",
+              "explanation": "没 looks back at what happened. 不 inside the complement asks about current capability."
+            },
+            {
+              "id": "cmp6-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She ran out of the house (toward us)\"",
+              "answer": "她 跑 出 来 了",
+              "bank": [
+                "她",
+                "跑",
+                "出",
+                "来",
+                "去",
+                "了",
+                "进",
+                "上"
+              ],
+              "explanation": "跑出来 = run + out + toward speaker. 了 marks completion."
+            },
+            {
+              "id": "cmp6-7",
+              "type": "multiple_choice",
+              "prompt": "\"作业 我 还 没 做完, 但 已 经 做 ___ 一半\" — fill in (already done half)",
+              "options": [
+                "完",
+                "好",
+                "了 ... 完",
+                "了"
+              ],
+              "answer": "了",
+              "explanation": "已 经 做 了 一半 — neutral past with aspect 了. Don't add 完 if you haven't finished."
+            },
+            {
+              "id": "cmp6-8",
+              "type": "multiple_choice",
+              "prompt": "English-L1 trap: pick the WRONG translation of \"I can hear the music\"",
+              "options": [
+                "我 听得见 音乐",
+                "我 能 听到 音乐",
+                "我 可以 听 音乐",
+                "Native uses 听得见 / 听到 — 可以 听 means 'allowed to listen', a different idea"
+              ],
+              "answer": "我 可以 听 音乐",
+              "explanation": "可以 listen = have permission. Use a potential complement (听得见) or 听到 for actual perception."
+            },
+            {
+              "id": "cmp6-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我 看 不 见 你",
+              "options": [
+                "我 看 不 见 你",
+                "我 没 看见 你",
+                "我 可以 看见 你",
+                "我 看见 你 了"
+              ],
+              "answer": "我 看 不 见 你",
+              "explanation": "看不见 (kàn bu jiàn) — \"can't see you (right now).\" Distinct from 没 看见 (didn't see you)."
+            },
+            {
+              "id": "cmp6-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Take the suitcase down (off the rack, toward me)\"",
+              "answer": "请 把 行李箱 拿 下 来",
+              "bank": [
+                "请",
+                "把",
+                "行李箱",
+                "拿",
+                "下",
+                "来",
+                "去",
+                "上"
+              ],
+              "explanation": "拿下来 = take + down + toward speaker. Combines 把-construction with directional complement — peak B1."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-complements-dialogue",
+          "title": "Dialogue: Study group debrief",
+          "description": "Practice resultative and directional complements in conversation.",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "cmp-dlg-1",
+              "type": "dialogue",
+              "prompt": "After a study session, you and a classmate compare what you got done",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "classmate",
+                  "name": "Měi"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "classmate",
+                  "text": "你今天学了什么？(nǐ jīn tiān xué le shén me)",
+                  "spokenText": "你今天学了什么？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say 'I learned (and mastered) twenty new characters.' Pick the resultative complement.",
+                  "options": [
+                    "我学会了二十个新字。(wǒ xué huì le èr shí ge xīn zì)",
+                    "我学到二十个新字。(wǒ xué dào èr shí ge xīn zì)",
+                    "我学着二十个新字。(wǒ xué zhe èr shí ge xīn zì)"
+                  ],
+                  "answer": "我学会了二十个新字。(wǒ xué huì le èr shí ge xīn zì)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "classmate",
+                  "text": "作业呢？做完了吗？(zuò yè ne? zuò wán le ma)",
+                  "spokenText": "作业呢？做完了吗？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Say 'I finished it all.' Fill in the completion complement after 做.",
+                  "before": "都做",
+                  "after": "了。",
+                  "answer": "完",
+                  "acceptableAnswers": [
+                    "完",
+                    "wán"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "classmate",
+                  "text": "刚才老师在外面，你看见他了吗？(gāng cái lǎo shī zài wài miàn, nǐ kàn jiàn tā le ma)",
+                  "spokenText": "刚才老师在外面，你看见他了吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say 'Yes, I saw him.' Pick the resultative complement for 'perceived'.",
+                  "options": [
+                    "看见 (kàn jiàn) — perceived/saw",
+                    "看完 (kàn wán) — finished watching",
+                    "看着 (kàn zhe) — watching, ongoing"
+                  ],
+                  "answer": "看见 (kàn jiàn) — perceived/saw"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "看见了，他走进来了。(kàn jiàn le, tā zǒu jìn lái le)",
+                  "spokenText": "看见了，他走进来了。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Your sentence used 走进来. What kind of complement is 进来?",
+                  "options": [
+                    "Directional — 'in' + 'come' (toward speaker)",
+                    "Resultative — quality of result",
+                    "Aspect particle — past tense"
+                  ],
+                  "answer": "Directional — 'in' + 'come' (toward speaker)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "classmate",
+                  "text": "明天我们继续。(míng tiān wǒ men jì xù)",
+                  "spokenText": "明天我们继续。"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "好，回头见。(hǎo, huí tóu jiàn)",
+                  "spokenText": "好，回头见。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-measure-words",
+      "title": "Measure word deep dive",
+      "description": "Beyond 个 — picking the right classifier for the noun: 条, 张, 只, 件, 把, 颗, 杯, 瓶 …",
+      "theme": "numbers",
+      "guide": {
+        "intro": "In A1 you learned 个 (the universal MW) and 本 (for books). Mandarin actually has hundreds of measure words — but you only need about a dozen to sound natural. The rule of thumb: shape and category of the noun pick the MW.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Shape-based MWs"
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "MW",
+              "For",
+              "Examples"
+            ],
+            "rows": [
+              [
+                "条 (tiáo)",
+                "long, thin things",
+                "fish, snakes, roads, pants, dogs (slim ones)"
+              ],
+              [
+                "张 (zhāng)",
+                "flat things",
+                "paper, tickets, tables, beds, photos"
+              ],
+              [
+                "把 (bǎ)",
+                "hand-held / has a handle",
+                "knife, chair, umbrella, key"
+              ],
+              [
+                "颗 (kē)",
+                "small round things",
+                "star, tooth, pearl, bullet"
+              ]
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Category MWs"
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "MW",
+              "For",
+              "Examples"
+            ],
+            "rows": [
+              [
+                "只 (zhī)",
+                "most animals; one of a pair",
+                "cat, bird, hand, shoe"
+              ],
+              [
+                "双 (shuāng)",
+                "a pair of …",
+                "shoes, chopsticks, eyes"
+              ],
+              [
+                "件 (jiàn)",
+                "clothing items; events / matters",
+                "shirt, jacket, 事 (matter)"
+              ],
+              [
+                "杯 (bēi)",
+                "cup of …",
+                "tea, coffee, water"
+              ],
+              [
+                "瓶 (píng)",
+                "bottle of …",
+                "beer, water, sauce"
+              ]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "Native speakers will understand if you say 一 个 鱼 instead of 一 条 鱼 — but you'll sound like a beginner. Picking the right MW is exactly what makes B1 sound like B1."
+          },
+          {
+            "kind": "heading",
+            "text": "The 个 trap"
+          },
+          {
+            "kind": "paragraph",
+            "text": "English speakers over-use 个 because it's the safest fallback. Push yourself: when you see a long thin thing, reach for 条; flat → 张; clothing → 件; small round → 颗. Build the reflex."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-measure-words-1",
+          "title": "条 vs 张 — long vs flat",
+          "description": "Shape decides — long-thin uses 条, flat-rectangular uses 张",
+          "theme": "numbers",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "mw1-1",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 鱼 (one fish)",
+              "options": [
+                "个",
+                "条",
+                "张",
+                "只"
+              ],
+              "answer": "条",
+              "explanation": "Fish are long and slender → 条. 一 条 鱼."
+            },
+            {
+              "id": "mw1-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 三 ___ 票 (three tickets)",
+              "options": [
+                "条",
+                "张",
+                "个",
+                "本"
+              ],
+              "answer": "张",
+              "explanation": "Tickets are flat sheets → 张. 三 张 票."
+            },
+            {
+              "id": "mw1-3",
+              "type": "match_pairs",
+              "prompt": "Match the noun to its measure word",
+              "pairs": [
+                {
+                  "left": "纸 (paper)",
+                  "right": "张"
+                },
+                {
+                  "left": "蛇 (snake)",
+                  "right": "条"
+                },
+                {
+                  "left": "桌子 (table)",
+                  "right": "张"
+                },
+                {
+                  "left": "裤子 (pants)",
+                  "right": "条"
+                }
+              ]
+            },
+            {
+              "id": "mw1-4",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 路 (one road)",
+              "options": [
+                "条",
+                "张",
+                "个",
+                "颗"
+              ],
+              "answer": "条",
+              "explanation": "Roads are long and linear → 条. 一 条 路."
+            },
+            {
+              "id": "mw1-5",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 两 ___ 床 (two beds)",
+              "options": [
+                "条",
+                "个",
+                "张",
+                "只"
+              ],
+              "answer": "张",
+              "explanation": "Beds are flat / broad surface → 张. 两 张 床."
+            },
+            {
+              "id": "mw1-6",
+              "type": "match_pairs",
+              "prompt": "Match noun → MW",
+              "pairs": [
+                {
+                  "left": "照片 (photo)",
+                  "right": "张"
+                },
+                {
+                  "left": "狗 (dog)",
+                  "right": "条"
+                },
+                {
+                  "left": "地图 (map)",
+                  "right": "张"
+                },
+                {
+                  "left": "河 (river)",
+                  "right": "条"
+                }
+              ]
+            },
+            {
+              "id": "mw1-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 围巾 (one scarf)",
+              "options": [
+                "张",
+                "个",
+                "条",
+                "件"
+              ],
+              "answer": "条",
+              "explanation": "Scarves are long thin strips → 条. 一 条 围巾."
+            },
+            {
+              "id": "mw1-8",
+              "type": "multiple_choice",
+              "prompt": "Trap: which MW DOESN'T fit \"long, thin things\"?",
+              "options": [
+                "条 鱼",
+                "条 路",
+                "条 纸",
+                "条 蛇"
+              ],
+              "answer": "条 纸",
+              "explanation": "Paper is flat → 张 纸, not 条 纸. (Note: a long strip torn from paper could be 一 条, but for a sheet use 张.)"
+            },
+            {
+              "id": "mw1-9",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW for \"a long bench (long thin furniture)\": 一 ___ 长椅",
+              "options": [
+                "把",
+                "张",
+                "条",
+                "个"
+              ],
+              "answer": "条",
+              "explanation": "Long thin bench → 条. (A regular flat seat could use 张, but a long bench is shape-长.) "
+            },
+            {
+              "id": "mw1-10",
+              "type": "match_pairs",
+              "prompt": "Match noun → MW",
+              "pairs": [
+                {
+                  "left": "鱼 (fish)",
+                  "right": "条"
+                },
+                {
+                  "left": "票 (ticket)",
+                  "right": "张"
+                },
+                {
+                  "left": "裙子? (no — 件) — pants 裤子",
+                  "right": "条"
+                },
+                {
+                  "left": "纸 (paper)",
+                  "right": "张"
+                }
+              ]
+            },
+            {
+              "id": "mw1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 我 有 三 本 书 to natural English",
+              "options": [
+                "I have three book",
+                "I have three books",
+                "I has three books",
+                "I have three a book"
+              ],
+              "answer": "I have three books",
+              "explanation": "Chinese has no plural -s, so English-L1 learners coming back from heavy MW practice sometimes forget plural marking. \"three books\" — count nouns with a number need -s."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-measure-words-2",
+          "title": "只 — animals & pairs",
+          "description": "只 for most animals and one-of-a-pair; 双 for a pair",
+          "theme": "numbers",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "mw2-1",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 猫 (one cat)",
+              "options": [
+                "条",
+                "只",
+                "个",
+                "头"
+              ],
+              "answer": "只",
+              "explanation": "Most animals → 只. 一 只 猫."
+            },
+            {
+              "id": "mw2-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 两 ___ 鞋 (two shoes — i.e. two singles)",
+              "options": [
+                "双",
+                "只",
+                "条",
+                "个"
+              ],
+              "answer": "只",
+              "explanation": "Each shoe is one of a pair → 只. 一 双 鞋 = one pair; 一 只 鞋 = one (single) shoe."
+            },
+            {
+              "id": "mw2-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 鞋 (one PAIR of shoes)",
+              "options": [
+                "只",
+                "双",
+                "条",
+                "个"
+              ],
+              "answer": "双",
+              "explanation": "双 = a pair. Compare 一 只 鞋 (one single shoe) vs 一 双 鞋 (one pair)."
+            },
+            {
+              "id": "mw2-4",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 鸟 (one bird)",
+              "options": [
+                "条",
+                "只",
+                "个",
+                "头"
+              ],
+              "answer": "只",
+              "explanation": "Birds use 只 — most small/medium animals do."
+            },
+            {
+              "id": "mw2-5",
+              "type": "multiple_choice",
+              "prompt": "\"她 有 一 ___ 手 很 漂亮\" — pick the right MW",
+              "options": [
+                "条",
+                "双",
+                "件",
+                "只"
+              ],
+              "answer": "双",
+              "explanation": "Hands come as a pair → 双 手 = (a pair of) hands."
+            },
+            {
+              "id": "mw2-6",
+              "type": "multiple_choice",
+              "prompt": "Trap: pick the WRONG MW for animals",
+              "options": [
+                "一 只 猫",
+                "一 条 狗",
+                "一 个 鸟",
+                "一 只 兔子"
+              ],
+              "answer": "一 个 鸟",
+              "explanation": "Don't use 个 for birds. 鸟 takes 只. (Dogs accept BOTH 只 and 条 — long thin dogs lean 条.)"
+            },
+            {
+              "id": "mw2-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 筷子 (one pair of chopsticks)",
+              "options": [
+                "只",
+                "双",
+                "条",
+                "把"
+              ],
+              "answer": "双",
+              "explanation": "Chopsticks come as a pair → 双. One single chopstick (rare!) would be 一 只 筷子."
+            },
+            {
+              "id": "mw2-8",
+              "type": "fill_blank",
+              "prompt": "Fill in: \"我 家 有 三 ___ 猫\" (My family has three cats)",
+              "answer": "只",
+              "acceptableAnswers": [
+                "zhī"
+              ],
+              "explanation": "三 只 猫 — animals take 只."
+            },
+            {
+              "id": "mw2-9",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 两 ___ 眼睛 (two eyes)",
+              "options": [
+                "只",
+                "双",
+                "个",
+                "条"
+              ],
+              "answer": "只",
+              "explanation": "Each eye is one of a pair → 只 眼睛 (two singles). A pair → 一 双 眼睛."
+            },
+            {
+              "id": "mw2-10",
+              "type": "multiple_choice",
+              "prompt": "Which is the natural way to say \"a pair of socks\"?",
+              "options": [
+                "一 只 袜子",
+                "一 件 袜子",
+                "一 双 袜子",
+                "一 个 袜子"
+              ],
+              "answer": "一 双 袜子",
+              "explanation": "Pairs (shoes, socks, gloves, chopsticks, hands, eyes) → 双. Single sock → 只."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-measure-words-3",
+          "title": "件 — events & clothing",
+          "description": "件 for clothes (jacket, shirt) and abstract matters (一件事 = one thing/matter)",
+          "theme": "numbers",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "mw3-1",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 衬衫 (one shirt)",
+              "options": [
+                "张",
+                "件",
+                "条",
+                "个"
+              ],
+              "answer": "件",
+              "explanation": "Most clothing items → 件. 一 件 衬衫."
+            },
+            {
+              "id": "mw3-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 事 (one matter / one thing to discuss)",
+              "options": [
+                "个",
+                "件",
+                "条",
+                "张"
+              ],
+              "answer": "件",
+              "explanation": "Abstract events / matters → 件. 一 件 事 = one matter. (一 个 事 sounds wrong.)"
+            },
+            {
+              "id": "mw3-3",
+              "type": "fill_blank",
+              "prompt": "Fill in: \"我 想 告诉 你 一 ___ 事\" (I want to tell you one thing)",
+              "answer": "件",
+              "acceptableAnswers": [
+                "jiàn"
+              ],
+              "explanation": "件 事 = matter. Set phrase."
+            },
+            {
+              "id": "mw3-4",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 三 ___ 外套 (three jackets)",
+              "options": [
+                "张",
+                "条",
+                "件",
+                "个"
+              ],
+              "answer": "件",
+              "explanation": "Jackets, coats, shirts, dresses → 件."
+            },
+            {
+              "id": "mw3-5",
+              "type": "multiple_choice",
+              "prompt": "Trap: which clothing item does NOT take 件?",
+              "options": [
+                "一 件 外套",
+                "一 件 衬衫",
+                "一 件 裤子",
+                "一 件 毛衣"
+              ],
+              "answer": "一 件 裤子",
+              "explanation": "Pants → 条 (long thin shape). Tops and jackets → 件. 一 条 裤子, 一 件 毛衣."
+            },
+            {
+              "id": "mw3-6",
+              "type": "fill_blank",
+              "prompt": "Fill in: \"昨天 发生 了 一 ___ 大 事\" (Yesterday a big thing happened)",
+              "answer": "件",
+              "acceptableAnswers": [
+                "jiàn"
+              ],
+              "explanation": "Events / matters take 件. 一 件 大 事 = a big deal / important matter."
+            },
+            {
+              "id": "mw3-7",
+              "type": "multiple_choice",
+              "prompt": "\"He told me three ___\" → 他 告诉 了 我 三 ___ 事",
+              "options": [
+                "条",
+                "张",
+                "件",
+                "只"
+              ],
+              "answer": "件",
+              "explanation": "三 件 事 = three matters / things to mention."
+            },
+            {
+              "id": "mw3-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 这 ___ 工作 很 难 (this job is hard)",
+              "options": [
+                "个",
+                "件",
+                "条",
+                "张"
+              ],
+              "answer": "件",
+              "explanation": "Jobs / tasks → 件 (treated as a matter). 一 件 工作."
+            },
+            {
+              "id": "mw3-9",
+              "type": "match_pairs",
+              "prompt": "Match noun → MW",
+              "pairs": [
+                {
+                  "left": "毛衣 (sweater)",
+                  "right": "件"
+                },
+                {
+                  "left": "事 (matter)",
+                  "right": "件"
+                },
+                {
+                  "left": "裙子 (skirt) — actually takes 条",
+                  "right": "条"
+                },
+                {
+                  "left": "裤子 (pants)",
+                  "right": "条"
+                }
+              ]
+            },
+            {
+              "id": "mw3-10",
+              "type": "multiple_choice",
+              "prompt": "English-L1 trap: which is WRONG?",
+              "options": [
+                "一 件 衬衫",
+                "一 件 事",
+                "一 件 笔 (a pen)",
+                "一 件 工作"
+              ],
+              "answer": "一 件 笔 (a pen)",
+              "explanation": "Pens take 支 (zhī, for thin sticks) or 个 (casual). 件 is for clothing and matters, not stationery."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-measure-words-4",
+          "title": "把 / 颗 / 杯 / 瓶",
+          "description": "把 hand-held, 颗 small round, 杯 cups, 瓶 bottles",
+          "theme": "numbers",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "mw4-1",
+              "type": "match_pairs",
+              "prompt": "Match noun → MW",
+              "pairs": [
+                {
+                  "left": "刀 (knife)",
+                  "right": "把"
+                },
+                {
+                  "left": "星星 (star)",
+                  "right": "颗"
+                },
+                {
+                  "left": "茶 (tea)",
+                  "right": "杯"
+                },
+                {
+                  "left": "水 (water bottle)",
+                  "right": "瓶"
+                }
+              ]
+            },
+            {
+              "id": "mw4-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 椅子 (one chair)",
+              "options": [
+                "张",
+                "把",
+                "个",
+                "条"
+              ],
+              "answer": "把",
+              "explanation": "Chairs have a back you grab → 把 (hand-held / has a handle). 一 把 椅子."
+            },
+            {
+              "id": "mw4-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 雨伞 (one umbrella)",
+              "options": [
+                "条",
+                "张",
+                "把",
+                "件"
+              ],
+              "answer": "把",
+              "explanation": "Umbrellas have a handle → 把. 一 把 雨伞."
+            },
+            {
+              "id": "mw4-4",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 三 ___ 牙齿 (three teeth)",
+              "options": [
+                "颗",
+                "个",
+                "条",
+                "只"
+              ],
+              "answer": "颗",
+              "explanation": "Small round things → 颗. 三 颗 牙齿."
+            },
+            {
+              "id": "mw4-5",
+              "type": "match_pairs",
+              "prompt": "Match noun → MW",
+              "pairs": [
+                {
+                  "left": "钥匙 (key)",
+                  "right": "把"
+                },
+                {
+                  "left": "珍珠 (pearl)",
+                  "right": "颗"
+                },
+                {
+                  "left": "咖啡 (coffee)",
+                  "right": "杯"
+                },
+                {
+                  "left": "啤酒 (beer)",
+                  "right": "瓶"
+                }
+              ]
+            },
+            {
+              "id": "mw4-6",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 心 (one heart, metaphor)",
+              "options": [
+                "个",
+                "颗",
+                "条",
+                "把"
+              ],
+              "answer": "颗",
+              "explanation": "Heart is treated as a small round 'precious' object → 一 颗 心. Common in song lyrics and idioms."
+            },
+            {
+              "id": "mw4-7",
+              "type": "fill_blank",
+              "prompt": "Fill in: \"我 喝 了 两 ___ 咖啡\" (I drank two cups of coffee)",
+              "answer": "杯",
+              "acceptableAnswers": [
+                "bēi"
+              ],
+              "explanation": "杯 = cup of. 两 杯 咖啡."
+            },
+            {
+              "id": "mw4-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 红酒 (one BOTTLE of red wine)",
+              "options": [
+                "杯",
+                "瓶",
+                "件",
+                "条"
+              ],
+              "answer": "瓶",
+              "explanation": "瓶 = bottle. One glass would be 一 杯; one bottle is 一 瓶."
+            },
+            {
+              "id": "mw4-9",
+              "type": "match_pairs",
+              "prompt": "Match noun → MW",
+              "pairs": [
+                {
+                  "left": "扇子 (folding fan)",
+                  "right": "把"
+                },
+                {
+                  "left": "子弹 (bullet)",
+                  "right": "颗"
+                },
+                {
+                  "left": "汤 (soup)",
+                  "right": "碗"
+                },
+                {
+                  "left": "可乐 (cola — bottled)",
+                  "right": "瓶"
+                }
+              ]
+            },
+            {
+              "id": "mw4-10",
+              "type": "multiple_choice",
+              "prompt": "Trap: which is WRONG?",
+              "options": [
+                "一 把 刀",
+                "一 颗 星星",
+                "一 把 牙齿",
+                "一 瓶 水"
+              ],
+              "answer": "一 把 牙齿",
+              "explanation": "Teeth are small + round → 颗, not 把. 把 is for hand-held things with a handle (knives, chairs, umbrellas)."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-measure-words-5",
+          "title": "Picking the right MW",
+          "description": "Given a noun, pick its MW. English-L1 over-uses 个 — train the reflex.",
+          "theme": "numbers",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "mw5-1",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 鱼",
+              "options": [
+                "个",
+                "条",
+                "只",
+                "件"
+              ],
+              "answer": "条",
+              "explanation": "Fish are long-thin → 条. 个 is the lazy English-L1 fallback."
+            },
+            {
+              "id": "mw5-2",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 大 事 (one big deal)",
+              "options": [
+                "个",
+                "件",
+                "条",
+                "张"
+              ],
+              "answer": "件",
+              "explanation": "Matters / events → 件. (一 个 大 事 sounds wrong to natives.)"
+            },
+            {
+              "id": "mw5-3",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 三 ___ 票",
+              "options": [
+                "个",
+                "条",
+                "张",
+                "件"
+              ],
+              "answer": "张",
+              "explanation": "Tickets are flat → 张. Avoid 一 个 票."
+            },
+            {
+              "id": "mw5-4",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 雨伞",
+              "options": [
+                "个",
+                "把",
+                "条",
+                "张"
+              ],
+              "answer": "把",
+              "explanation": "Umbrella has a handle → 把. 一 个 雨伞 is the over-应用 trap."
+            },
+            {
+              "id": "mw5-5",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 两 ___ 鸟",
+              "options": [
+                "个",
+                "只",
+                "条",
+                "颗"
+              ],
+              "answer": "只",
+              "explanation": "Animals → 只 by default. (Many native speakers correct learners on 一 个 鸟.)"
+            },
+            {
+              "id": "mw5-6",
+              "type": "multiple_choice",
+              "prompt": "Trap: which is the most natural?",
+              "options": [
+                "一 个 衬衫",
+                "一 件 衬衫",
+                "一 条 衬衫",
+                "一 张 衬衫"
+              ],
+              "answer": "一 件 衬衫",
+              "explanation": "Clothing tops → 件. 一 个 衬衫 sounds learner-y."
+            },
+            {
+              "id": "mw5-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 三 ___ 珍珠 (three pearls)",
+              "options": [
+                "个",
+                "颗",
+                "条",
+                "把"
+              ],
+              "answer": "颗",
+              "explanation": "Small round → 颗. (个 fits in casual speech but loses precision.)"
+            },
+            {
+              "id": "mw5-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 啤酒 (one bottle of beer)",
+              "options": [
+                "个",
+                "瓶",
+                "杯",
+                "件"
+              ],
+              "answer": "瓶",
+              "explanation": "Bottle → 瓶. (A glass would be 一 杯 啤酒.)"
+            },
+            {
+              "id": "mw5-9",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 路 (one road)",
+              "options": [
+                "个",
+                "条",
+                "张",
+                "只"
+              ],
+              "answer": "条",
+              "explanation": "Long linear shape → 条. 一 个 路 is wrong."
+            },
+            {
+              "id": "mw5-10",
+              "type": "multiple_choice",
+              "prompt": "Trap: pick the WRONG choice (English-L1 over-uses 个)",
+              "options": [
+                "一 件 事",
+                "一 只 猫",
+                "一 个 鱼",
+                "一 张 桌子"
+              ],
+              "answer": "一 个 鱼",
+              "explanation": "Fish → 条, not 个. The other three are correct: 件 事, 只 猫, 张 桌子."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-measure-words-dialogue",
+          "title": "Dialogue: Ordering at a tea shop",
+          "description": "Order multiple items, each requiring the right measure word.",
+          "theme": "numbers",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "mw-dlg-1",
+              "type": "dialogue",
+              "prompt": "You're ordering tea and snacks at a small café",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "server",
+                  "name": "Server"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "您要点什么？(nín yào diǎn shén me)",
+                  "spokenText": "您要点什么？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Order 'a cup of tea'. Pick the correct measure word.",
+                  "options": [
+                    "一杯茶 (yì bēi chá) — cup",
+                    "一块茶 (yí kuài chá) — piece",
+                    "一瓶茶 (yì píng chá) — bottle"
+                  ],
+                  "answer": "一杯茶 (yì bēi chá) — cup"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "好的。还要别的吗？(hǎo de. hái yào bié de ma)",
+                  "spokenText": "好的。还要别的吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Add 'a piece of cake'. Pick the measure word.",
+                  "options": [
+                    "一块蛋糕 (yí kuài dàn gāo) — piece",
+                    "一杯蛋糕 (yì bēi dàn gāo) — cup",
+                    "一片蛋糕 (yí piàn dàn gāo) — thin slice"
+                  ],
+                  "answer": "一块蛋糕 (yí kuài dàn gāo) — piece"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "好。喝水吗？(hǎo. hē shuǐ ma)",
+                  "spokenText": "好。喝水吗？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Order 'a bottle of water'. Fill in the measure word.",
+                  "before": "一",
+                  "after": "水。",
+                  "answer": "瓶",
+                  "acceptableAnswers": [
+                    "瓶",
+                    "píng"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "面包要不要？(miàn bāo yào bu yào)",
+                  "spokenText": "面包要不要？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Order 'a slice of bread'. Pick the measure word for thin flat slices.",
+                  "options": [
+                    "一片面包 (yí piàn miàn bāo) — thin slice",
+                    "一块面包 (yí kuài miàn bāo) — chunk",
+                    "一杯面包 (yì bēi miàn bāo) — cup"
+                  ],
+                  "answer": "一片面包 (yí piàn miàn bāo) — thin slice"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "server",
+                  "text": "好的，请稍等。(hǎo de, qǐng shāo děng)",
+                  "spokenText": "好的，请稍等。"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "谢谢！(xiè xie)",
+                  "spokenText": "谢谢！"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "zh-en-work",
       "title": "Work & jobs",
       "description": "Careers, the office, and talking about what you do",
@@ -5455,8 +7647,9 @@
             },
             {
               "id": "wk1-8",
-              "type": "fill_blank",
-              "prompt": "\"程序员\" (chéng xù yuán) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "程序员",
               "answer": "Programmer",
               "acceptableAnswers": [
                 "software developer",
@@ -5504,6 +7697,19 @@
                 "了"
               ],
               "explanation": "当 (dāng) — \"to be / become / serve as\" a profession. More natural than 是 here."
+            },
+            {
+              "id": "wk1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 昨天 我 吃 了 一 个 苹果 to natural English",
+              "options": [
+                "Yesterday I have eaten an apple",
+                "Yesterday I ate an apple",
+                "Yesterday I am eating an apple",
+                "Yesterday I eat one apple"
+              ],
+              "answer": "Yesterday I ate an apple",
+              "explanation": "Present perfect (\"I have eaten\") is wrong with a definite past time like \"yesterday\". English requires simple past: \"I ate\". Chinese 了 is NOT \"have V-ed\" — it's just past-event marking."
             }
           ]
         },
@@ -5551,8 +7757,9 @@
             },
             {
               "id": "wk2-3",
-              "type": "fill_blank",
-              "prompt": "\"加班\" (jiā bān) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "加班",
               "answer": "Work overtime",
               "acceptableAnswers": [
                 "Overtime",
@@ -5668,6 +7875,20 @@
               "acceptableAnswers": [
                 "到"
               ]
+            },
+            {
+              "id": "wk2-lst1",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我 在 加 班",
+              "options": [
+                "我 在 加 班",
+                "我 在 抓 班",
+                "我 在 家 班",
+                "我 在 夹 班"
+              ],
+              "answer": "我 在 加 班",
+              "explanation": "j/zh trap: 加 (jiā, palatal) vs 抓 (zhuā, retroflex). The tongue position is the giveaway."
             }
           ]
         },
@@ -6385,6 +8606,19 @@
                 "我觉得这个东西很好"
               ],
               "answer": "我觉得这个想法很好"
+            },
+            {
+              "id": "op1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 我 觉得 他 是 对 的 — pick the natural English",
+              "options": [
+                "I feel he is right",
+                "I think he is right",
+                "I feel that he is true",
+                "I felt he was the right"
+              ],
+              "answer": "I think he is right",
+              "explanation": "觉得 in opinion contexts is \"think\", not \"feel\". \"I feel he is right\" sounds emotional / hesitant. Also: 对 = \"right/correct\" (not \"true\")."
             }
           ]
         },
@@ -7365,6 +9599,19 @@
                 "书",
                 "了"
               ]
+            },
+            {
+              "id": "st1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 我 已 经 去 过 北京 了 to natural English",
+              "options": [
+                "I already went Beijing",
+                "I already have go to Beijing",
+                "I have already been to Beijing",
+                "I already am going to Beijing"
+              ],
+              "answer": "I have already been to Beijing",
+              "explanation": "过 marks past experience — English uses present perfect (\"have been\") for life experience, especially with \"already\". Note: \"go to Beijing\" needs the preposition \"to\"."
             }
           ]
         },
@@ -8245,8 +10492,9 @@
             },
             {
               "id": "cu1-3",
-              "type": "fill_blank",
-              "prompt": "\"清淡\" (qīng dàn) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "清淡",
               "answer": "Light / mild",
               "acceptableAnswers": [
                 "Mild",
@@ -8373,6 +10621,19 @@
               ],
               "answer": "Southerners like rice, northerners like noodles",
               "explanation": "A classic regional joke / generalization in China."
+            },
+            {
+              "id": "cu1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 我 想 吃 一 点 米饭 — pick the natural English",
+              "options": [
+                "I want eat one little rice",
+                "I want a little rice",
+                "I want a some rice",
+                "I am want little rice"
+              ],
+              "answer": "I want a little rice",
+              "explanation": "一点 (yī diǎn) = \"a little / some\". English-L1 learners may calque it as \"one little\" (literal). \"A little\" is the natural quantifier for uncountable nouns like rice."
             }
           ]
         },
@@ -8546,6 +10807,20 @@
               ],
               "answer": "Both work — 死 了 is hyperbolic / casual; 吃 起来 真 香 is also natural",
               "explanation": "死 了 = \"to death\" — slangy intensifier. 吃 起来 真 香 = \"tastes really good (figurative directional)\"."
+            },
+            {
+              "id": "cu2-lst1",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我 要 一 碗 米饭",
+              "options": [
+                "我 要 一 碗 米饭",
+                "我 要 一 万 米饭",
+                "我 要 一 晚 米饭",
+                "我 要 一 弯 米饭"
+              ],
+              "answer": "我 要 一 碗 米饭",
+              "explanation": "Same syllable wǎn / wàn: 碗 (bowl, 3rd) vs 万 (10,000, 4th) vs 晚 (late, 3rd). Listen for 3rd-tone dip on 碗."
             }
           ]
         },
@@ -8781,8 +11056,9 @@
             },
             {
               "id": "cu4-3",
-              "type": "fill_blank",
-              "prompt": "\"AA 制\" (AA zhì) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "AA 制",
               "answer": "Going Dutch",
               "acceptableAnswers": [
                 "Splitting the bill",
@@ -8987,8 +11263,9 @@
             },
             {
               "id": "cu5-4",
-              "type": "fill_blank",
-              "prompt": "\"调味料\" (tiáo wèi liào) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "调味料",
               "answer": "Seasonings",
               "acceptableAnswers": [
                 "seasoning",
@@ -9251,8 +11528,9 @@
             },
             {
               "id": "pp1-3",
-              "type": "fill_blank",
-              "prompt": "\"漂亮\" (piào liang) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "漂亮",
               "answer": "Pretty",
               "acceptableAnswers": [
                 "Beautiful",
@@ -9376,6 +11654,19 @@
                 "漂亮 is rude"
               ],
               "answer": "漂亮 = pretty / good-looking (everyday); 美丽 = beautiful (more poetic / written)"
+            },
+            {
+              "id": "pp1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 他 个子 很 高 — pick the natural English",
+              "options": [
+                "He is very tall",
+                "His individual very high",
+                "He very tall",
+                "He has very high"
+              ],
+              "answer": "He is very tall",
+              "explanation": "个子 + 高 describes a person's height. English uses \"He is tall\" — no need to translate 个子 (literally 'individual') as a separate noun. The adjective handles it."
             }
           ]
         },
@@ -10176,6 +12467,19 @@
               ],
               "answer": "It describes autumn: clear skies, crisp air",
               "explanation": "秋 高 气爽 — \"the autumn sky is high and the air is fresh\". A famous four-character idiom."
+            },
+            {
+              "id": "se1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 今天 天气 很 热 — pick the natural English",
+              "options": [
+                "Today the weather is very hot",
+                "Today weather is very hot",
+                "Today is very hot weather",
+                "The today weather very hot"
+              ],
+              "answer": "Today the weather is very hot",
+              "explanation": "English needs \"the\" before \"weather\" (definite). Also keep subject-verb-adjective order: \"the weather IS hot\", not \"weather very hot\"."
             }
           ]
         },
@@ -10358,6 +12662,20 @@
                 "今天又湿又冷"
               ],
               "answer": "今天又闷又热"
+            },
+            {
+              "id": "se2-lst1",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "今天 很 热",
+              "options": [
+                "今天 很 热",
+                "今天 很 乐",
+                "今天 很 了",
+                "今天 很 冷"
+              ],
+              "answer": "今天 很 热",
+              "explanation": "r-initial: 热 (rè) is hard for English speakers — Mandarin r is closer to English 'zh' in 'measure'. Don't confuse with 冷 (lěng, cold) — opposite meaning."
             }
           ]
         },
@@ -10575,8 +12893,9 @@
             },
             {
               "id": "se4-3",
-              "type": "fill_blank",
-              "prompt": "\"过年\" (guò nián) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "过年",
               "answer": "Celebrate New Year",
               "acceptableAnswers": [
                 "Celebrate the new year",
@@ -10869,8 +13188,9 @@
             },
             {
               "id": "ce1-3",
-              "type": "fill_blank",
-              "prompt": "\"取款机\" (qǔ kuǎn jī) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "取款机",
               "answer": "ATM",
               "acceptableAnswers": [
                 "Cash machine",
@@ -10935,8 +13255,9 @@
             },
             {
               "id": "ce1-7",
-              "type": "fill_blank",
-              "prompt": "\"贷款\" (dài kuǎn) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "贷款",
               "answer": "Loan",
               "acceptableAnswers": [
                 "a loan",
@@ -10998,6 +13319,19 @@
               ],
               "answer": "你 能 帮 我 转 一 下 钱 吗",
               "explanation": "你 能 + 帮 + 我 V + 一下 + 吗 — fully polite ask. Standard at the bank."
+            },
+            {
+              "id": "ce1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 我 要 开 一 个 银行 账户 — pick the natural English",
+              "options": [
+                "I want open one bank account",
+                "I want to open a bank account",
+                "I am want open a bank account",
+                "I want open one's bank account"
+              ],
+              "answer": "I want to open a bank account",
+              "explanation": "Two traps: (1) \"want\" needs the infinitive \"to\" before the next verb in English; (2) 一 个 = \"a\", not \"one\" in this kind of indefinite reference."
             }
           ]
         },
@@ -11116,8 +13450,9 @@
             },
             {
               "id": "ce2-7",
-              "type": "fill_blank",
-              "prompt": "\"邮 资\" (yóu zī) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "邮 资",
               "answer": "Postage",
               "acceptableAnswers": [
                 "postage fee",
@@ -11178,6 +13513,20 @@
               ],
               "answer": "All three are acceptable",
               "explanation": "寄 / 送 / 邮 — all work for \"sending\" a letter, with 寄 the most common in modern usage."
+            },
+            {
+              "id": "ce2-lst1",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "请 在 银行 等 我",
+              "options": [
+                "请 在 银行 等 我",
+                "请 在 银 杏 等 我",
+                "请 在 阴 行 等 我",
+                "请 在 影 行 等 我"
+              ],
+              "answer": "请 在 银行 等 我",
+              "explanation": "n/ng final + tone trap. 银行 (yín háng, bank) — both syllables have -n (front) but the second uses háng with -ng. Listen carefully to the nasal."
             }
           ]
         },
@@ -11225,8 +13574,9 @@
             },
             {
               "id": "ce3-3",
-              "type": "fill_blank",
-              "prompt": "\"看 病\" (kàn bìng) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "看 病",
               "answer": "See a doctor",
               "acceptableAnswers": [
                 "Go to the doctor",
@@ -11306,8 +13656,9 @@
             },
             {
               "id": "ce3-8",
-              "type": "fill_blank",
-              "prompt": "\"处方\" (chǔ fāng) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "处方",
               "answer": "Prescription",
               "acceptableAnswers": [
                 "a prescription"
@@ -11773,8 +14124,9 @@
             },
             {
               "id": "ce6-4",
-              "type": "fill_blank",
-              "prompt": "\"着 火 了\" (zháo huǒ le) means ___",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "着 火 了",
               "answer": "Fire",
               "acceptableAnswers": [
                 "it's on fire",
@@ -12163,6 +14515,19 @@
                 "了",
                 "把"
               ]
+            },
+            {
+              "id": "rv1-cheng1",
+              "type": "multiple_choice",
+              "prompt": "Translate 我 等 你 三 个 小时 了 — pick the natural English",
+              "options": [
+                "I have waited you three hours",
+                "I waited you three hours",
+                "I have been waiting for you for three hours",
+                "I am wait you three hour"
+              ],
+              "answer": "I have been waiting for you for three hours",
+              "explanation": "Two issues: (1) \"wait\" in English needs \"for\" before the object — Chinese 等 你 is transitive directly; (2) ongoing duration → present perfect continuous (\"have been waiting\"). The 了 here marks the duration extending up to now."
             }
           ]
         },

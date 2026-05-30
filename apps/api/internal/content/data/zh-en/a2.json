@@ -42,12 +42,14 @@
             },
             {
               "id": "rt1-3",
-              "type": "fill_blank",
-              "prompt": "\"早上\" (zǎo shang) means ___",
+              "type": "translate",
+              "source": "早上",
               "answer": "Morning",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "In the morning"
-              ]
+              ],
+              "context": "zǎo shang"
             },
             {
               "id": "rt1-4",
@@ -210,12 +212,14 @@
             },
             {
               "id": "rt2-3",
-              "type": "fill_blank",
-              "prompt": "\"中午\" (zhōng wǔ) means ___",
+              "type": "translate",
+              "source": "中午",
               "answer": "Noon",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Midday"
-              ]
+              ],
+              "context": "zhōng wǔ"
             },
             {
               "id": "rt2-4",
@@ -318,6 +322,20 @@
                 "晚饭 是 谁"
               ],
               "answer": "你 吃 晚饭 了 吗"
+            },
+            {
+              "id": "rt2-95",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我中午吃饭",
+              "options": [
+                "我中午吃饭",
+                "我早上吃饭",
+                "我晚上吃饭",
+                "我中午睡觉"
+              ],
+              "answer": "我中午吃饭",
+              "explanation": "中午 = noon; 吃 饭 = have a meal."
             }
           ]
         },
@@ -354,13 +372,15 @@
             },
             {
               "id": "rt3-3",
-              "type": "fill_blank",
-              "prompt": "\"放学\" (fàng xué) means ___",
+              "type": "translate",
+              "source": "放学",
               "answer": "School ends",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Get out of school",
                 "End of school"
-              ]
+              ],
+              "context": "fàng xué"
             },
             {
               "id": "rt3-4",
@@ -467,14 +487,16 @@
             },
             {
               "id": "rt3-11",
-              "type": "fill_blank",
-              "prompt": "\"上课\" (shàng kè) means ___",
+              "type": "translate",
+              "source": "上课",
               "answer": "Have class",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Attend class",
                 "Go to class",
                 "Start class"
-              ]
+              ],
+              "context": "shàng kè"
             }
           ]
         },
@@ -570,13 +592,15 @@
             },
             {
               "id": "rt4-7",
-              "type": "fill_blank",
-              "prompt": "\"平时\" (píng shí) means ___",
+              "type": "translate",
+              "source": "平时",
               "answer": "Usually",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Normally",
                 "Usually / on weekdays"
-              ]
+              ],
+              "context": "píng shí"
             },
             {
               "id": "rt4-8",
@@ -684,13 +708,15 @@
             },
             {
               "id": "rt5-3",
-              "type": "fill_blank",
-              "prompt": "\"睡 懒觉\" (shuì lǎn jiào) means ___",
+              "type": "translate",
+              "source": "睡 懒觉",
               "answer": "Sleep in",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Sleep late",
                 "Lie in"
-              ]
+              ],
+              "context": "shuì lǎn jiào"
             },
             {
               "id": "rt5-4",
@@ -787,14 +813,16 @@
             },
             {
               "id": "rt5-10",
-              "type": "fill_blank",
-              "prompt": "\"放假\" (fàng jià) means ___",
+              "type": "translate",
+              "source": "放假",
               "answer": "Have a holiday",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Have time off",
                 "Be on vacation",
                 "Be on holiday"
-              ]
+              ],
+              "context": "fàng jià"
             },
             {
               "id": "rt5-11",
@@ -847,14 +875,16 @@
             },
             {
               "id": "rt6-3",
-              "type": "fill_blank",
-              "prompt": "\"洗澡\" (xǐ zǎo) means ___",
+              "type": "translate",
+              "source": "洗澡",
               "answer": "Take a shower / bath",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Shower",
                 "Bathe",
                 "Take a bath"
-              ]
+              ],
+              "context": "xǐ zǎo"
             },
             {
               "id": "rt6-4",
@@ -948,13 +978,15 @@
             },
             {
               "id": "rt6-10",
-              "type": "fill_blank",
-              "prompt": "\"换 衣服\" (huàn yī fu) means ___",
+              "type": "translate",
+              "source": "换 衣服",
               "answer": "Change clothes",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Get changed",
                 "Change outfit"
-              ]
+              ],
+              "context": "huàn yī fu"
             }
           ]
         },
@@ -991,13 +1023,15 @@
             },
             {
               "id": "rt7-3",
-              "type": "fill_blank",
-              "prompt": "\"睡觉 前\" (shuì jiào qián) means ___",
+              "type": "translate",
+              "source": "睡觉 前",
               "answer": "Before going to sleep",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Before bed",
                 "Before sleeping"
-              ]
+              ],
+              "context": "shuì jiào qián"
             },
             {
               "id": "rt7-4",
@@ -1107,6 +1141,32 @@
                 "上班",
                 "起床"
               ]
+            },
+            {
+              "id": "rt7-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 每天 早上 七 点 起床\"? (Watch out for Chinglish.)",
+              "options": [
+                "I get up at 7 every morning",
+                "I every day morning 7 o'clock get up",
+                "I am 7 o'clock getting up every morning",
+                "Everyday I getting up at 7 morning"
+              ],
+              "answer": "I get up at 7 every morning",
+              "explanation": "Chinese-style 我 每天 早上 七 点 起床 sounds wrong if you stack \"every day morning 7 o'clock\" in English. Natural English: \"I get up at 7 every morning\"."
+            },
+            {
+              "id": "rt7-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"今天 下午 我 去 学校\"? (Watch out for Chinglish.)",
+              "options": [
+                "Today afternoon I go to school",
+                "I am going to school this afternoon",
+                "This afternoon I will school go",
+                "I in today afternoon go school"
+              ],
+              "answer": "I am going to school this afternoon",
+              "explanation": "今天 下午 = \"this afternoon\", NOT \"today afternoon\" (Chinglish trap)."
             }
           ]
         },
@@ -1628,9 +1688,10 @@
             },
             {
               "id": "co3-3",
-              "type": "fill_blank",
-              "prompt": "\"我 还没 回家\" means ___",
+              "type": "translate",
+              "source": "我 还没 回家",
               "answer": "I haven't gone home yet",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "I have not gone home yet",
                 "I haven't returned home yet"
@@ -1993,12 +2054,14 @@
             },
             {
               "id": "co5-6",
-              "type": "fill_blank",
-              "prompt": "\"多久\" (duō jiǔ) means ___",
+              "type": "translate",
+              "source": "多久",
               "answer": "How long",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "How long (duration)"
-              ]
+              ],
+              "context": "duō jiǔ"
             },
             {
               "id": "co5-7",
@@ -2053,6 +2116,32 @@
                 "我 没 住 过 那里"
               ],
               "answer": "我 在 那里 住 了 三 年"
+            },
+            {
+              "id": "co5-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 已经 吃 了 早饭\"? (Watch out for Chinglish.)",
+              "options": [
+                "I already eat breakfast",
+                "I already have ate the breakfast",
+                "I have already eaten breakfast",
+                "I have already ate breakfast"
+              ],
+              "answer": "I have already eaten breakfast",
+              "explanation": "了 ≠ English past tense. \"I already eat\" misses present perfect; the natural English is \"I have already eaten\"."
+            },
+            {
+              "id": "co5-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"他 昨天 来 了\"? (Watch out for Chinglish.)",
+              "options": [
+                "He yesterday came",
+                "He came yesterday",
+                "He has came yesterday",
+                "Yesterday he is come"
+              ],
+              "answer": "He came yesterday",
+              "explanation": "Chinese keeps time before verb (他 昨天 来 了). English puts the time adverb after the verb: \"He came yesterday\"."
             }
           ]
         },
@@ -2156,6 +2245,1474 @@
                     "我不知道了 (Wǒ bù zhī dào le)"
                   ],
                   "answer": "太好了, 一言为定 (Tài hǎo le, yì yán wéi dìng)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-aspect",
+      "title": "Aspect markers: 了 / 过 / 着",
+      "description": "Three little particles, three big meanings — sort them out.",
+      "theme": "verbs",
+      "lessons": [
+        {
+          "id": "zh-en-aspect-1",
+          "title": "了 — completed action",
+          "description": "了 marks a completed action, not English past tense.",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "asp1-1",
+              "type": "multiple_choice",
+              "prompt": "What does the 了 in \"我 吃 了\" signal?",
+              "options": [
+                "Future tense",
+                "Completion of the action",
+                "Polite request",
+                "A question"
+              ],
+              "answer": "Completion of the action",
+              "explanation": "了 (le) marks completion — the eating happened and is done. It is NOT a tense marker."
+            },
+            {
+              "id": "asp1-2",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 已经 吃 了\"?",
+              "options": [
+                "I will eat soon",
+                "I already ate / I have already eaten",
+                "I am eating",
+                "I want to eat"
+              ],
+              "answer": "I already ate / I have already eaten",
+              "explanation": "已经 (yǐ jīng) = already; pairs naturally with completion 了."
+            },
+            {
+              "id": "asp1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I ate dinner\"",
+              "answer": "我 吃 了 晚饭",
+              "bank": [
+                "我",
+                "吃",
+                "了",
+                "晚饭",
+                "过",
+                "着",
+                "早饭"
+              ]
+            },
+            {
+              "id": "asp1-4",
+              "type": "fill_blank",
+              "prompt": "Fill the particle: \"她 买 ___ 一 本 书\" (She bought a book)",
+              "answer": "了",
+              "acceptableAnswers": [
+                "le"
+              ],
+              "explanation": "Action completed → 了 right after the verb."
+            },
+            {
+              "id": "asp1-5",
+              "type": "multiple_choice",
+              "prompt": "Which is correctly using 了 for a completed action?",
+              "options": [
+                "我 去 了 学校",
+                "我 了 去 学校",
+                "了 我 去 学校",
+                "我 去 学校 吗 了"
+              ],
+              "answer": "我 去 了 学校",
+              "explanation": "Verbal 了 sits right after the verb: 去 了."
+            },
+            {
+              "id": "asp1-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我喝了咖啡",
+              "options": [
+                "我喝了咖啡",
+                "我喝咖啡",
+                "我要喝咖啡",
+                "我没喝咖啡"
+              ],
+              "answer": "我喝了咖啡",
+              "explanation": "喝 了 = drank (completed)."
+            },
+            {
+              "id": "asp1-7",
+              "type": "multiple_choice",
+              "prompt": "True or false: 了 in \"我 吃 了\" is the same thing as English \"-ed\"",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": "False",
+              "explanation": "了 marks completion, not past time. \"明天 我 吃 了 饭 就 去\" (tomorrow, after I've eaten, I'll go) uses 了 in a future context."
+            },
+            {
+              "id": "asp1-8",
+              "type": "fill_blank",
+              "prompt": "\"我 看 完 了 电影\" means ___",
+              "answer": "I finished watching the movie",
+              "acceptableAnswers": [
+                "I have finished watching the movie",
+                "I watched the movie (finished)"
+              ],
+              "explanation": "看 完 = finish watching; 了 reinforces completion."
+            },
+            {
+              "id": "asp1-9",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He drank the water\"",
+              "answer": "他 喝 了 水",
+              "bank": [
+                "他",
+                "喝",
+                "了",
+                "水",
+                "茶",
+                "过",
+                "着"
+              ]
+            },
+            {
+              "id": "asp1-10",
+              "type": "multiple_choice",
+              "prompt": "Which English best matches \"我 写 了 三 封 信\"?",
+              "options": [
+                "I will write three letters",
+                "I wrote three letters",
+                "I am writing three letters",
+                "I have to write three letters"
+              ],
+              "answer": "I wrote three letters",
+              "explanation": "写 了 = wrote (completion); 三 封 信 = three letters."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-aspect-2",
+          "title": "过 — experiential",
+          "description": "过 means \"have done it (at some point)\" — an experience, not a single event.",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "asp2-1",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 去 过 北京\"?",
+              "options": [
+                "I went to Beijing (yesterday)",
+                "I've been to Beijing (at some point)",
+                "I am going to Beijing",
+                "I will go to Beijing"
+              ],
+              "answer": "I've been to Beijing (at some point)",
+              "explanation": "过 (guo) marks experience — at least once, ever."
+            },
+            {
+              "id": "asp2-2",
+              "type": "multiple_choice",
+              "prompt": "How does \"我 去 了 北京\" differ from \"我 去 过 北京\"?",
+              "options": [
+                "No difference",
+                "了 = a specific completed trip; 过 = have-been-there experience",
+                "了 = future; 过 = past",
+                "了 = polite; 过 = casual"
+              ],
+              "answer": "了 = a specific completed trip; 过 = have-been-there experience",
+              "explanation": "我 去 了 = I went (one specific time). 我 去 过 = I've been (at some point)."
+            },
+            {
+              "id": "asp2-3",
+              "type": "fill_blank",
+              "prompt": "Fill the particle: \"你 吃 ___ 北京 烤鸭 吗?\" (Have you ever eaten Peking duck?)",
+              "answer": "过",
+              "acceptableAnswers": [
+                "guo"
+              ],
+              "explanation": "\"Have you ever…?\" → experiential 过."
+            },
+            {
+              "id": "asp2-4",
+              "type": "multiple_choice",
+              "prompt": "Which sentence means \"I've seen this movie before\"?",
+              "options": [
+                "我 看 了 这 个 电影",
+                "我 看 过 这 个 电影",
+                "我 看 着 这 个 电影",
+                "我 在 看 这 个 电影"
+              ],
+              "answer": "我 看 过 这 个 电影",
+              "explanation": "\"…before / at some point\" = experiential 过."
+            },
+            {
+              "id": "asp2-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我去过日本",
+              "options": [
+                "我去过日本",
+                "我去了日本",
+                "我要去日本",
+                "我在日本"
+              ],
+              "answer": "我去过日本",
+              "explanation": "去 过 = have been to."
+            },
+            {
+              "id": "asp2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Have you ever been to Shanghai?\"",
+              "answer": "你 去 过 上海 吗",
+              "bank": [
+                "你",
+                "去",
+                "过",
+                "上海",
+                "吗",
+                "了",
+                "着"
+              ]
+            },
+            {
+              "id": "asp2-7",
+              "type": "multiple_choice",
+              "prompt": "Which is the WRONG way to say \"I've never tried sushi\"?",
+              "options": [
+                "我 没 吃 过 寿司",
+                "我 从来 没 吃 过 寿司",
+                "我 不 吃 过 寿司",
+                "我 还 没 吃 过 寿司"
+              ],
+              "answer": "我 不 吃 过 寿司",
+              "explanation": "Negative experiential = 没…过, never 不…过."
+            },
+            {
+              "id": "asp2-8",
+              "type": "fill_blank",
+              "prompt": "\"我 学 过 法语\" means ___",
+              "answer": "I've studied French (at some point)",
+              "acceptableAnswers": [
+                "I have studied French before",
+                "I studied French before"
+              ],
+              "explanation": "学 过 = have studied (life experience, not a current course)."
+            },
+            {
+              "id": "asp2-9",
+              "type": "multiple_choice",
+              "prompt": "Best translation of \"我 还 没 去 过\"?",
+              "options": [
+                "I am not going",
+                "I haven't been (yet)",
+                "I won't go",
+                "I went already"
+              ],
+              "answer": "I haven't been (yet)",
+              "explanation": "还 没…过 = haven't (ever / yet) done it."
+            },
+            {
+              "id": "asp2-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have eaten Sichuan food\"",
+              "answer": "我 吃 过 四川 菜",
+              "bank": [
+                "我",
+                "吃",
+                "过",
+                "四川",
+                "菜",
+                "了",
+                "饭"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-aspect-3",
+          "title": "着 — ongoing state",
+          "description": "着 marks a persisting state, not a progressive action.",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "asp3-1",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"门 开 着\"?",
+              "options": [
+                "Open the door",
+                "The door is open (and stays open)",
+                "The door opened",
+                "Will you open the door?"
+              ],
+              "answer": "The door is open (and stays open)",
+              "explanation": "着 (zhe) = the resulting state persists. Compare to 门 开 了 = the door opened."
+            },
+            {
+              "id": "asp3-2",
+              "type": "multiple_choice",
+              "prompt": "Which sentence describes a held / ongoing state?",
+              "options": [
+                "他 拿 着 一 本 书",
+                "他 拿 了 一 本 书",
+                "他 拿 过 一 本 书",
+                "他 要 拿 一 本 书"
+              ],
+              "answer": "他 拿 着 一 本 书",
+              "explanation": "拿 着 = is holding (state). 拿 了 = picked up / took (event)."
+            },
+            {
+              "id": "asp3-3",
+              "type": "fill_blank",
+              "prompt": "Fill the particle: \"她 穿 ___ 一 件 红 衣服\" (She's wearing a red shirt)",
+              "answer": "着",
+              "acceptableAnswers": [
+                "zhe"
+              ],
+              "explanation": "Wearing = ongoing state → 着."
+            },
+            {
+              "id": "asp3-4",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The window is open\" (state)",
+              "answer": "窗户 开 着",
+              "bank": [
+                "窗户",
+                "开",
+                "着",
+                "了",
+                "过",
+                "门"
+              ]
+            },
+            {
+              "id": "asp3-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "他拿着书",
+              "options": [
+                "他拿着书",
+                "他拿了书",
+                "他拿过书",
+                "他买了书"
+              ],
+              "answer": "他拿着书",
+              "explanation": "拿 着 = holding."
+            },
+            {
+              "id": "asp3-6",
+              "type": "multiple_choice",
+              "prompt": "\"墙 上 挂 着 一 张 照片\" — what does this describe?",
+              "options": [
+                "Someone is hanging a photo right now",
+                "A photo hangs / is hanging on the wall",
+                "A photo fell off the wall",
+                "Hang the photo!"
+              ],
+              "answer": "A photo hangs / is hanging on the wall",
+              "explanation": "挂 着 + locative = stative description of how something is."
+            },
+            {
+              "id": "asp3-7",
+              "type": "multiple_choice",
+              "prompt": "Which is the WRONG way to say \"I'm reading a book right now\"?",
+              "options": [
+                "我 在 看 书",
+                "我 正在 看 书",
+                "我 看 着 书",
+                "我 在 读 书"
+              ],
+              "answer": "我 看 着 书",
+              "explanation": "For action in progress use 在/正在. 着 is for stative descriptions."
+            },
+            {
+              "id": "asp3-8",
+              "type": "fill_blank",
+              "prompt": "\"桌子 上 放 着 一 杯 水\" means ___",
+              "answer": "There is a glass of water on the table",
+              "acceptableAnswers": [
+                "A glass of water sits on the table",
+                "A cup of water is on the table"
+              ],
+              "explanation": "放 着 = sits / is placed; pure existential / stative."
+            },
+            {
+              "id": "asp3-9",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He is wearing glasses\" (state)",
+              "answer": "他 戴 着 眼镜",
+              "bank": [
+                "他",
+                "戴",
+                "着",
+                "眼镜",
+                "了",
+                "过",
+                "穿"
+              ]
+            },
+            {
+              "id": "asp3-10",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"她 笑 着 说\"?",
+              "options": [
+                "She laughed",
+                "She said with a smile / smiling",
+                "She will say with a smile",
+                "She wants to smile and say"
+              ],
+              "answer": "She said with a smile / smiling",
+              "explanation": "V1 着 V2 = doing V2 while in the state of V1."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-aspect-4",
+          "title": "了 vs 过 vs 着 contrast",
+          "description": "Three particles, three meanings — pick the right one.",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "asp4-1",
+              "type": "multiple_choice",
+              "prompt": "\"我 吃 了\" most naturally means:",
+              "options": [
+                "I've eaten (it) before",
+                "I ate / I've finished eating",
+                "I am in the middle of eating",
+                "I want to eat"
+              ],
+              "answer": "I ate / I've finished eating",
+              "explanation": "了 = completion of THIS instance of eating."
+            },
+            {
+              "id": "asp4-2",
+              "type": "multiple_choice",
+              "prompt": "\"我 吃 过\" most naturally means:",
+              "options": [
+                "I ate (just now)",
+                "I've eaten it before / I've had that",
+                "I'm eating",
+                "I will eat"
+              ],
+              "answer": "I've eaten it before / I've had that",
+              "explanation": "过 = experiential — at some point in life."
+            },
+            {
+              "id": "asp4-3",
+              "type": "multiple_choice",
+              "prompt": "Which uses 着 correctly for an ongoing state?",
+              "options": [
+                "我 在 吃 着",
+                "门 开 着 (the door is open)",
+                "我 吃 着 北京 烤鸭",
+                "他 来 着"
+              ],
+              "answer": "门 开 着 (the door is open)",
+              "explanation": "着 marks a persisting RESULT-state, not action progress."
+            },
+            {
+              "id": "asp4-4",
+              "type": "fill_blank",
+              "prompt": "Fill the particle: \"我 已经 写 ___ 作业\" (I already wrote the homework)",
+              "answer": "了",
+              "acceptableAnswers": [
+                "le"
+              ],
+              "explanation": "已经 + completion → 了."
+            },
+            {
+              "id": "asp4-5",
+              "type": "fill_blank",
+              "prompt": "Fill the particle: \"你 看 ___ 这 个 电影 吗?\" (Have you ever seen this movie?)",
+              "answer": "过",
+              "acceptableAnswers": [
+                "guo"
+              ],
+              "explanation": "\"Have you ever…?\" → experiential 过."
+            },
+            {
+              "id": "asp4-6",
+              "type": "fill_blank",
+              "prompt": "Fill the particle: \"桌子 上 放 ___ 一 本 书\" (A book sits on the table)",
+              "answer": "着",
+              "acceptableAnswers": [
+                "zhe"
+              ],
+              "explanation": "Stative location description → 着."
+            },
+            {
+              "id": "asp4-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我去过北京",
+              "options": [
+                "我去过北京",
+                "我去了北京",
+                "我去着北京",
+                "我要去北京"
+              ],
+              "answer": "我去过北京",
+              "explanation": "Experiential 过 — have been to Beijing."
+            },
+            {
+              "id": "asp4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "门开着",
+              "options": [
+                "门开着",
+                "门开了",
+                "门开过",
+                "门关着"
+              ],
+              "answer": "门开着",
+              "explanation": "State of the door being open → 着."
+            },
+            {
+              "id": "asp4-9",
+              "type": "multiple_choice",
+              "prompt": "Which means \"I went there yesterday\" (specific completed trip)?",
+              "options": [
+                "我 昨天 去 过",
+                "我 昨天 去 了",
+                "我 昨天 去 着",
+                "我 昨天 在 去"
+              ],
+              "answer": "我 昨天 去 了",
+              "explanation": "Specific past event → 了, not 过 (which is more general)."
+            },
+            {
+              "id": "asp4-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have eaten Japanese food (before)\"",
+              "answer": "我 吃 过 日本 菜",
+              "bank": [
+                "我",
+                "吃",
+                "过",
+                "日本",
+                "菜",
+                "了",
+                "着"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-aspect-5",
+          "title": "Sentence-final 了",
+          "description": "End-of-sentence 了 marks a change of state — different from verbal 了.",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "asp5-1",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 累 了\"?",
+              "options": [
+                "I am always tired",
+                "I'm tired now / I've become tired",
+                "I was tired (in the past)",
+                "I will be tired"
+              ],
+              "answer": "I'm tired now / I've become tired",
+              "explanation": "Sentence-final 了 after an adjective = change of state. New situation: I wasn't tired, now I am."
+            },
+            {
+              "id": "asp5-2",
+              "type": "multiple_choice",
+              "prompt": "\"下 雨 了\" most naturally means:",
+              "options": [
+                "It rained yesterday",
+                "It's started raining / It's raining now",
+                "It will rain",
+                "It is always rainy"
+              ],
+              "answer": "It's started raining / It's raining now",
+              "explanation": "Sentence-final 了 marks the onset of a new state — the rain just began."
+            },
+            {
+              "id": "asp5-3",
+              "type": "multiple_choice",
+              "prompt": "Which is NOT a change-of-state 了?",
+              "options": [
+                "他 长大 了 (he's grown up)",
+                "我 饿 了 (I'm hungry now)",
+                "我 吃 了 饭 (I ate)",
+                "天 黑 了 (it's gotten dark)"
+              ],
+              "answer": "我 吃 了 饭 (I ate)",
+              "explanation": "了 between verb and object marks COMPLETION, not change-of-state. The other three are change-of-state."
+            },
+            {
+              "id": "asp5-4",
+              "type": "fill_blank",
+              "prompt": "\"我 不 想 吃 了\" means ___",
+              "answer": "I don't want to eat anymore",
+              "acceptableAnswers": [
+                "I no longer want to eat",
+                "I don't feel like eating anymore"
+              ],
+              "explanation": "Sentence-final 了 with negation = shift away from a prior state."
+            },
+            {
+              "id": "asp5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm full (now)\"",
+              "answer": "我 饱 了",
+              "bank": [
+                "我",
+                "饱",
+                "了",
+                "吃",
+                "过",
+                "饿"
+              ]
+            },
+            {
+              "id": "asp5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "下雨了",
+              "options": [
+                "下雨了",
+                "下雪了",
+                "刮风了",
+                "天黑了"
+              ],
+              "answer": "下雨了",
+              "explanation": "下 雨 了 = it's started raining."
+            },
+            {
+              "id": "asp5-7",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"他 是 老师 了\"?",
+              "options": [
+                "He was a teacher",
+                "He has become a teacher (he wasn't before)",
+                "He is always a teacher",
+                "He wants to be a teacher"
+              ],
+              "answer": "He has become a teacher (he wasn't before)",
+              "explanation": "Sentence-final 了 + status noun = transition into that status."
+            },
+            {
+              "id": "asp5-8",
+              "type": "multiple_choice",
+              "prompt": "Which sentence shows BOTH verbal 了 AND sentence-final 了?",
+              "options": [
+                "我 吃 了 饭 了 (I've eaten / done with the meal)",
+                "我 吃 饭 (I eat)",
+                "我 要 吃 饭 (I want to eat)",
+                "我 吃 过 饭 (I've eaten before)"
+              ],
+              "answer": "我 吃 了 饭 了 (I've eaten / done with the meal)",
+              "explanation": "First 了 = completion of eating; second 了 = current relevance / change-of-state \"I'm done now\"."
+            },
+            {
+              "id": "asp5-9",
+              "type": "fill_blank",
+              "prompt": "Fill the missing word: \"现在 几点 ___?\" (What time is it now?)",
+              "answer": "了",
+              "acceptableAnswers": [
+                "le"
+              ],
+              "explanation": "Final 了 in time questions signals \"by now\" — what time has it become?"
+            },
+            {
+              "id": "asp5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'm not a student anymore\"",
+              "answer": "我 不 是 学生 了",
+              "bank": [
+                "我",
+                "不",
+                "是",
+                "学生",
+                "了",
+                "过",
+                "着"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-aspect-dialogue",
+          "title": "Dialogue: How was your day?",
+          "description": "Three-particle showcase: 了/过/着 in a real conversation.",
+          "theme": "verbs",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "asp-dlg-1",
+              "type": "dialogue",
+              "prompt": "A friend asks what you've done, ever tried, and are doing right now",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "friend",
+                  "name": "Lì"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "你今天吃饭了吗？(nǐ jīn tiān chī fàn le ma)",
+                  "spokenText": "你今天吃饭了吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say 'I already ate (completed action today).'",
+                  "options": [
+                    "我吃了。(wǒ chī le) — completed",
+                    "我吃过。(wǒ chī guo) — ever experienced",
+                    "我吃着。(wǒ chī zhe) — in progress"
+                  ],
+                  "answer": "我吃了。(wǒ chī le) — completed"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "你吃过北京烤鸭吗？(nǐ chī guo Běi jīng kǎo yā ma)",
+                  "spokenText": "你吃过北京烤鸭吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say 'I have tried it before (life experience).'",
+                  "options": [
+                    "我吃过。(wǒ chī guo) — past experience",
+                    "我吃了。(wǒ chī le) — just now",
+                    "我吃着。(wǒ chī zhe) — eating right now"
+                  ],
+                  "answer": "我吃过。(wǒ chī guo) — past experience"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "你现在在做什么？(nǐ xiàn zài zài zuò shén me)",
+                  "spokenText": "你现在在做什么？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Say 'I'm sitting (and resting).' Use the ongoing-state particle.",
+                  "before": "我坐",
+                  "after": "休息。",
+                  "answer": "着",
+                  "acceptableAnswers": [
+                    "着",
+                    "zhe"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "听音乐吗？(tīng yīn yuè ma)",
+                  "spokenText": "听音乐吗？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Say 'I'm listening to music (right now, ongoing).'",
+                  "options": [
+                    "我听着音乐。(wǒ tīng zhe yīn yuè) — ongoing",
+                    "我听了音乐。(wǒ tīng le yīn yuè) — completed",
+                    "我听过音乐。(wǒ tīng guo yīn yuè) — have listened before"
+                  ],
+                  "answer": "我听着音乐。(wǒ tīng zhe yīn yuè) — ongoing"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "好，那一会儿见。(hǎo, nà yí huìr jiàn)",
+                  "spokenText": "好，那一会儿见。"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "好，一会儿见！(hǎo, yí huìr jiàn)",
+                  "spokenText": "好，一会儿见！"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-cleft",
+      "title": "The 是…的 emphasis pattern",
+      "description": "Highlight when, where, or how a past event happened.",
+      "theme": "questions",
+      "lessons": [
+        {
+          "id": "zh-en-cleft-1",
+          "title": "是…的 for emphasis",
+          "description": "Wrap the part you want to emphasize between 是 and 的.",
+          "theme": "questions",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "clf1-1",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 是 昨天 去 的\"?",
+              "options": [
+                "I went yesterday (neutral)",
+                "It was yesterday that I went",
+                "I will go tomorrow",
+                "I usually go on weekends"
+              ],
+              "answer": "It was yesterday that I went",
+              "explanation": "是…的 wraps the emphasized info (time, place, manner, etc.) about a known past event."
+            },
+            {
+              "id": "clf1-2",
+              "type": "multiple_choice",
+              "prompt": "How does \"我 昨天 去 了\" differ from \"我 是 昨天 去 的\"?",
+              "options": [
+                "No difference at all",
+                "了 = neutral past report; 是…的 = emphasizes WHEN the event happened",
+                "了 = future; 是…的 = past",
+                "了 = polite; 是…的 = casual"
+              ],
+              "answer": "了 = neutral past report; 是…的 = emphasizes WHEN the event happened",
+              "explanation": "Use 是…的 when the event itself is established and you want to highlight some detail like time, place, or how."
+            },
+            {
+              "id": "clf1-3",
+              "type": "fill_blank",
+              "prompt": "Fill the missing 是: \"我 ___ 在 北京 学 的 中文\" (It was in Beijing that I studied Chinese)",
+              "answer": "是",
+              "acceptableAnswers": [
+                "shì"
+              ],
+              "explanation": "是 opens the cleft; 的 closes it after the verb."
+            },
+            {
+              "id": "clf1-4",
+              "type": "fill_blank",
+              "prompt": "Fill the missing 的: \"她 是 去年 来 ___\" (It was last year she came)",
+              "answer": "的",
+              "acceptableAnswers": [
+                "de"
+              ],
+              "explanation": "的 closes the cleft at the end."
+            },
+            {
+              "id": "clf1-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I came by bus\" (emphasis on HOW)",
+              "answer": "我 是 坐 公共汽车 来 的",
+              "bank": [
+                "我",
+                "是",
+                "坐",
+                "公共汽车",
+                "来",
+                "的",
+                "了"
+              ]
+            },
+            {
+              "id": "clf1-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我是昨天去的",
+              "options": [
+                "我是昨天去的",
+                "我昨天去了",
+                "我今天去的",
+                "我要昨天去"
+              ],
+              "answer": "我是昨天去的",
+              "explanation": "Cleft with time emphasis."
+            },
+            {
+              "id": "clf1-7",
+              "type": "multiple_choice",
+              "prompt": "Which sentence emphasizes WHERE someone bought it?",
+              "options": [
+                "我 在 商店 买 了",
+                "我 是 在 商店 买 的",
+                "我 买 商店",
+                "我 要 在 商店 买"
+              ],
+              "answer": "我 是 在 商店 买 的",
+              "explanation": "是…的 brackets \"在 商店\" (at the store) — emphasizing where."
+            },
+            {
+              "id": "clf1-8",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It was yesterday that I ate it\"",
+              "answer": "我 是 昨天 吃 的",
+              "bank": [
+                "我",
+                "是",
+                "昨天",
+                "吃",
+                "的",
+                "了",
+                "今天"
+              ]
+            },
+            {
+              "id": "clf1-9",
+              "type": "translate",
+              "source": "我 是 坐 飞机 来 的",
+              "answer": "I came by plane",
+              "direction": "to_source",
+              "acceptableAnswers": [
+                "It was by plane that I came",
+                "I came here by plane"
+              ],
+              "explanation": "坐 飞机 = take a plane; cleft emphasizes the means."
+            },
+            {
+              "id": "clf1-10",
+              "type": "multiple_choice",
+              "prompt": "When does 是…的 usually NOT apply?",
+              "options": [
+                "Past event, emphasizing time/place/how",
+                "Past event, emphasizing the agent",
+                "Future event you haven't done yet",
+                "A past event detail you want to highlight"
+              ],
+              "answer": "Future event you haven't done yet",
+              "explanation": "是…的 assumes the event itself is established (usually past). For future plans, use other structures."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cleft-2",
+          "title": "Emphasizing time, place, manner",
+          "description": "Slot in 是 + (time / place / with-whom / how) + verb + 的.",
+          "theme": "questions",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "clf2-1",
+              "type": "multiple_choice",
+              "prompt": "Which 是…的 sentence emphasizes TIME?",
+              "options": [
+                "我 是 在 北京 学 的",
+                "我 是 和 朋友 去 的",
+                "我 是 昨天 来 的",
+                "我 是 坐 火车 去 的"
+              ],
+              "answer": "我 是 昨天 来 的",
+              "explanation": "昨天 (yesterday) is the time slot inside the cleft."
+            },
+            {
+              "id": "clf2-2",
+              "type": "multiple_choice",
+              "prompt": "Which 是…的 sentence emphasizes PLACE?",
+              "options": [
+                "我 是 昨天 来 的",
+                "我 是 在 上海 长大 的",
+                "我 是 坐 飞机 来 的",
+                "我 是 一 个 人 来 的"
+              ],
+              "answer": "我 是 在 上海 长大 的",
+              "explanation": "在 上海 = in Shanghai → place inside the cleft."
+            },
+            {
+              "id": "clf2-3",
+              "type": "multiple_choice",
+              "prompt": "Which 是…的 sentence emphasizes WITH WHOM?",
+              "options": [
+                "我 是 和 朋友 一起 去 的",
+                "我 是 在 家 吃 的",
+                "我 是 早上 走 的",
+                "我 是 坐 地铁 来 的"
+              ],
+              "answer": "我 是 和 朋友 一起 去 的",
+              "explanation": "和 朋友 一起 = together with friends → companion inside the cleft."
+            },
+            {
+              "id": "clf2-4",
+              "type": "multiple_choice",
+              "prompt": "Which 是…的 sentence emphasizes HOW (means)?",
+              "options": [
+                "我 是 周末 去 的",
+                "我 是 在 学校 学 的",
+                "我 是 坐 火车 来 的",
+                "我 是 自己 去 的"
+              ],
+              "answer": "我 是 坐 火车 来 的",
+              "explanation": "坐 火车 = by train → means of travel inside the cleft."
+            },
+            {
+              "id": "clf2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It was at school that I learned (it)\"",
+              "answer": "我 是 在 学校 学 的",
+              "bank": [
+                "我",
+                "是",
+                "在",
+                "学校",
+                "学",
+                "的",
+                "家"
+              ]
+            },
+            {
+              "id": "clf2-6",
+              "type": "translate",
+              "source": "我 是 和 妈妈 一起 来 的",
+              "answer": "I came together with mom",
+              "direction": "to_source",
+              "acceptableAnswers": [
+                "It was with my mom that I came",
+                "I came with my mother"
+              ],
+              "explanation": "Cleft emphasizing the companion."
+            },
+            {
+              "id": "clf2-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我是坐地铁来的",
+              "options": [
+                "我是坐地铁来的",
+                "我是坐公共汽车来的",
+                "我是开车来的",
+                "我是走路来的"
+              ],
+              "answer": "我是坐地铁来的",
+              "explanation": "坐 地铁 = by subway."
+            },
+            {
+              "id": "clf2-8",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"It was by car that he came\"",
+              "answer": "他 是 开车 来 的",
+              "bank": [
+                "他",
+                "是",
+                "开车",
+                "来",
+                "的",
+                "了",
+                "走路"
+              ]
+            },
+            {
+              "id": "clf2-9",
+              "type": "multiple_choice",
+              "prompt": "Which is WRONG?",
+              "options": [
+                "我 是 昨天 去 的",
+                "我 是 在 北京 学 的",
+                "我 是 想 去 的",
+                "我 是 自己 做 的"
+              ],
+              "answer": "我 是 想 去 的",
+              "explanation": "是…的 frames a known past EVENT, not a wish/intention. 想 去 = want to go (future-ish desire) breaks the pattern."
+            },
+            {
+              "id": "clf2-10",
+              "type": "fill_blank",
+              "prompt": "Fill the place: \"我 是 ___ 北京 出生 的\" (It was in Beijing that I was born)",
+              "answer": "在",
+              "acceptableAnswers": [
+                "zài"
+              ],
+              "explanation": "Place inside the cleft needs the preposition 在."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cleft-3",
+          "title": "Asking with 是…的",
+          "description": "Form questions that probe time, place, or means of a known past event.",
+          "theme": "questions",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "clf3-1",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"你 是 什么 时候 来 的?\"",
+              "options": [
+                "When will you come?",
+                "When was it that you came?",
+                "Are you here?",
+                "Why did you come?"
+              ],
+              "answer": "When was it that you came?",
+              "explanation": "是 什么 时候 … 的 = asks when, given that the listener already came."
+            },
+            {
+              "id": "clf3-2",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"你 是 怎么 来 的?\"",
+              "options": [
+                "Why are you here?",
+                "How did you come (here)?",
+                "When will you come?",
+                "Where are you coming from?"
+              ],
+              "answer": "How did you come (here)?",
+              "explanation": "是 怎么 … 的 = how / by what means."
+            },
+            {
+              "id": "clf3-3",
+              "type": "multiple_choice",
+              "prompt": "Which question asks WHERE someone learned Chinese?",
+              "options": [
+                "你 是 什么 时候 学 中文 的?",
+                "你 是 在 哪儿 学 的 中文?",
+                "你 是 怎么 学 中文 的?",
+                "你 是 和 谁 学 中文 的?"
+              ],
+              "answer": "你 是 在 哪儿 学 的 中文?",
+              "explanation": "在 哪儿 = where; the cleft probes the location."
+            },
+            {
+              "id": "clf3-4",
+              "type": "fill_blank",
+              "prompt": "Fill: \"你 是 ___ 来 的?\" (How did you come?)",
+              "answer": "怎么",
+              "acceptableAnswers": [
+                "zěnme",
+                "zen me"
+              ],
+              "explanation": "怎么 = how, fits the means slot."
+            },
+            {
+              "id": "clf3-5",
+              "type": "fill_blank",
+              "prompt": "Fill: \"你 是 ___ 来 的?\" (When did you come?)",
+              "answer": "什么时候",
+              "acceptableAnswers": [
+                "什么 时候",
+                "shénme shíhòu",
+                "shenme shihou"
+              ],
+              "explanation": "什么 时候 = when."
+            },
+            {
+              "id": "clf3-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Where were you born?\"",
+              "answer": "你 是 在 哪儿 出生 的",
+              "bank": [
+                "你",
+                "是",
+                "在",
+                "哪儿",
+                "出生",
+                "的",
+                "了"
+              ]
+            },
+            {
+              "id": "clf3-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "你是什么时候来的",
+              "options": [
+                "你是什么时候来的",
+                "你是怎么来的",
+                "你是和谁来的",
+                "你什么时候来"
+              ],
+              "answer": "你是什么时候来的",
+              "explanation": "Asking when, with the cleft."
+            },
+            {
+              "id": "clf3-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "你是怎么来的",
+              "options": [
+                "你是怎么来的",
+                "你是什么时候来的",
+                "你是在哪儿学的",
+                "你是和谁来的"
+              ],
+              "answer": "你是怎么来的",
+              "explanation": "Asking how."
+            },
+            {
+              "id": "clf3-9",
+              "type": "multiple_choice",
+              "prompt": "Best answer to \"你 是 怎么 来 的?\"",
+              "options": [
+                "我 是 昨天 来 的",
+                "我 是 坐 飞机 来 的",
+                "我 是 一 个 人 来 的",
+                "我 来 了"
+              ],
+              "answer": "我 是 坐 飞机 来 的",
+              "explanation": "怎么 (how) is asked → answer with the means slot (坐 飞机)."
+            },
+            {
+              "id": "clf3-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Who did you come with?\"",
+              "answer": "你 是 和 谁 一起 来 的",
+              "bank": [
+                "你",
+                "是",
+                "和",
+                "谁",
+                "一起",
+                "来",
+                "的",
+                "什么"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cleft-4",
+          "title": "Cleft vs 了 contrast",
+          "description": "Same English, two Chinese flavors: neutral past report vs cleft emphasis.",
+          "theme": "questions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "clf4-1",
+              "type": "multiple_choice",
+              "prompt": "\"I went yesterday\" as a neutral past report:",
+              "options": [
+                "我 昨天 去 了",
+                "我 是 昨天 去 的",
+                "我 去 过 昨天",
+                "我 昨天 着 去"
+              ],
+              "answer": "我 昨天 去 了",
+              "explanation": "Plain report uses 了, no emphasis."
+            },
+            {
+              "id": "clf4-2",
+              "type": "multiple_choice",
+              "prompt": "\"It was yesterday that I went\" (emphasizing the time):",
+              "options": [
+                "我 昨天 去 了",
+                "我 是 昨天 去 的",
+                "我 去 过 昨天",
+                "我 昨天 着 去"
+              ],
+              "answer": "我 是 昨天 去 的",
+              "explanation": "Cleft when you want to highlight WHEN."
+            },
+            {
+              "id": "clf4-3",
+              "type": "multiple_choice",
+              "prompt": "Best use of 是…的: someone says \"我 昨天 看 了 电影\". You want to confirm WHO went.",
+              "options": [
+                "谁 是 看 了 电影?",
+                "你 是 和 谁 一起 去 的?",
+                "你 看 了 谁?",
+                "你 想 看 谁?"
+              ],
+              "answer": "你 是 和 谁 一起 去 的?",
+              "explanation": "Probe a detail of the established event with 是…的."
+            },
+            {
+              "id": "clf4-4",
+              "type": "fill_blank",
+              "prompt": "Choose 了 or 是…的 frame. \"He came at 7 yesterday\" (neutral). \"他 昨天 七 点 来 ___.\"",
+              "answer": "了",
+              "acceptableAnswers": [
+                "le"
+              ],
+              "explanation": "Plain report → 了."
+            },
+            {
+              "id": "clf4-5",
+              "type": "fill_blank",
+              "prompt": "Choose the right particles. \"It was at 7 that he came\": \"他 ___ 七 点 来 ___.\" Two blanks; answer with both, space-separated.",
+              "answer": "是 的",
+              "acceptableAnswers": [
+                "是 的",
+                "shì de"
+              ],
+              "explanation": "Emphasis on time → 是…的 frame."
+            },
+            {
+              "id": "clf4-6",
+              "type": "multiple_choice",
+              "prompt": "Pick the more natural translation for \"I came by subway\" — somebody just asked you HOW you got here.",
+              "options": [
+                "我 坐 地铁 来 了",
+                "我 是 坐 地铁 来 的",
+                "我 坐 地铁 来 着",
+                "我 来 过 地铁"
+              ],
+              "answer": "我 是 坐 地铁 来 的",
+              "explanation": "The question is about means → cleft is natural."
+            },
+            {
+              "id": "clf4-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the more natural translation for \"I came home around 8\" — you're just reporting your day.",
+              "options": [
+                "我 八 点 回 家 了",
+                "我 是 八 点 回 家 的",
+                "我 回 过 家 八 点",
+                "我 八 点 在 回 家"
+              ],
+              "answer": "我 八 点 回 家 了",
+              "explanation": "Plain narration of what happened → 了."
+            },
+            {
+              "id": "clf4-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我是昨天来的",
+              "options": [
+                "我是昨天来的",
+                "我昨天来了",
+                "我是今天来的",
+                "我明天来"
+              ],
+              "answer": "我是昨天来的",
+              "explanation": "Cleft emphasizing the time."
+            },
+            {
+              "id": "clf4-9",
+              "type": "tap_words_in_order",
+              "prompt": "Build the cleft: \"It was in Shanghai that I worked\"",
+              "answer": "我 是 在 上海 工作 的",
+              "bank": [
+                "我",
+                "是",
+                "在",
+                "上海",
+                "工作",
+                "的",
+                "了"
+              ]
+            },
+            {
+              "id": "clf4-10",
+              "type": "multiple_choice",
+              "prompt": "Which pair best matches \"How did you come?\" / \"I came by car\"?",
+              "options": [
+                "你 怎么 来? — 我 来 了",
+                "你 是 怎么 来 的? — 我 是 开车 来 的",
+                "你 来 过 吗? — 我 来 了",
+                "你 来 了 吗? — 我 是 开车 的"
+              ],
+              "answer": "你 是 怎么 来 的? — 我 是 开车 来 的",
+              "explanation": "Cleft Q and cleft A line up — both highlight HOW."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-cleft-dialogue",
+          "title": "Dialogue: How did you two meet?",
+          "description": "Use 是…的 to emphasize when/where/how of a past event.",
+          "theme": "questions",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "clf-dlg-1",
+              "type": "dialogue",
+              "prompt": "An old friend asks how you met your partner",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "friend",
+                  "name": "Wáng"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "好久不见！你结婚了？(hǎo jiǔ bú jiàn! nǐ jié hūn le?)",
+                  "spokenText": "好久不见！你结婚了？"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "对，去年结的。(duì, qù nián jié de)",
+                  "spokenText": "对，去年结的。"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "你们什么时候认识的？(nǐ men shén me shí hou rèn shi de)",
+                  "spokenText": "你们什么时候认识的？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Emphasize WHEN: 'We met last year' (with 是…的).",
+                  "options": [
+                    "我们是去年认识的。(wǒ men shì qù nián rèn shi de)",
+                    "我们去年认识。(wǒ men qù nián rèn shi)",
+                    "我们认识了去年。(wǒ men rèn shi le qù nián)"
+                  ],
+                  "answer": "我们是去年认识的。(wǒ men shì qù nián rèn shi de)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "在哪儿认识的？(zài nǎr rèn shi de)",
+                  "spokenText": "在哪儿认识的？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Emphasize WHERE: 'We met at a coffee shop.'",
+                  "options": [
+                    "是在咖啡馆认识的。(shì zài kā fēi guǎn rèn shi de)",
+                    "在咖啡馆是认识的。(zài kā fēi guǎn shì rèn shi de)",
+                    "认识了在咖啡馆。(rèn shi le zài kā fēi guǎn)"
+                  ],
+                  "answer": "是在咖啡馆认识的。(shì zài kā fēi guǎn rèn shi de)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "怎么认识的？(zěn me rèn shi de)",
+                  "spokenText": "怎么认识的？"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Emphasize HOW: '(It was) through a friend's introduction.' Fill the 是…的 frame.",
+                  "before": "是",
+                  "after": "朋友介绍的。",
+                  "answer": "通过",
+                  "acceptableAnswers": [
+                    "通过",
+                    "tōng guò"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "friend",
+                  "text": "真巧！(zhēn qiǎo)",
+                  "spokenText": "真巧！"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "对啊，缘分。(duì a, yuán fèn)",
+                  "spokenText": "对啊，缘分。"
                 }
               ]
             }
@@ -2532,6 +4089,20 @@
                   "right": "Half kilo (fruit/veg)"
                 }
               ]
+            },
+            {
+              "id": "sh2-95",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "这件衣服太贵了",
+              "options": [
+                "这件衣服太贵了",
+                "这件衣服太便宜了",
+                "这双鞋太贵了",
+                "这本书太贵了"
+              ],
+              "answer": "这件衣服太贵了",
+              "explanation": "件 = measure word for clothes; 太 贵 了 = too expensive."
             }
           ]
         },
@@ -2568,12 +4139,14 @@
             },
             {
               "id": "sh3-3",
-              "type": "fill_blank",
-              "prompt": "\"太贵了\" (tài guì le) means ___",
+              "type": "translate",
+              "source": "太贵了",
               "answer": "Too expensive",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "It's too expensive"
-              ]
+              ],
+              "context": "tài guì le"
             },
             {
               "id": "sh3-4",
@@ -2776,13 +4349,15 @@
             },
             {
               "id": "sh4-7",
-              "type": "fill_blank",
-              "prompt": "\"找钱\" (zhǎo qián) means ___",
+              "type": "translate",
+              "source": "找钱",
               "answer": "Give change",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Return change",
                 "Make change"
-              ]
+              ],
+              "context": "zhǎo qián"
             },
             {
               "id": "sh4-8",
@@ -2901,15 +4476,17 @@
             },
             {
               "id": "sh5-5",
-              "type": "fill_blank",
-              "prompt": "\"行\" (xíng) means ___",
+              "type": "translate",
+              "source": "行",
               "answer": "OK / fine",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "OK",
                 "Fine",
                 "Alright",
                 "Sure"
-              ]
+              ],
+              "context": "xíng"
             },
             {
               "id": "sh5-6",
@@ -3023,13 +4600,15 @@
             },
             {
               "id": "sh6-3",
-              "type": "fill_blank",
-              "prompt": "\"网购\" (wǎng gòu) means ___",
+              "type": "translate",
+              "source": "网购",
               "answer": "Online shopping",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Shop online",
                 "Buy online"
-              ]
+              ],
+              "context": "wǎng gòu"
             },
             {
               "id": "sh6-4",
@@ -3118,13 +4697,15 @@
             },
             {
               "id": "sh6-9",
-              "type": "fill_blank",
-              "prompt": "\"快递\" (kuài dì) means ___",
+              "type": "translate",
+              "source": "快递",
               "answer": "Express delivery",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Courier",
                 "Delivery"
-              ]
+              ],
+              "context": "kuài dì"
             },
             {
               "id": "sh6-10",
@@ -3137,6 +4718,32 @@
                 "我 网上 是 衣服"
               ],
               "answer": "我 喜欢 网上 买 衣服"
+            },
+            {
+              "id": "sh6-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 想 买 一 件 衣服\"? (Watch out for Chinglish.)",
+              "options": [
+                "I want to buy a piece clothes",
+                "I want buy one piece of clothing",
+                "I want to buy a shirt / a piece of clothing",
+                "I want one clothes"
+              ],
+              "answer": "I want to buy a shirt / a piece of clothing",
+              "explanation": "一 件 (yī jiàn) is a measure word. Don't translate it literally as \"one piece\"; English uses the article \"a\"."
+            },
+            {
+              "id": "sh6-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"这 个 多少 钱?\"? (Watch out for Chinglish.)",
+              "options": [
+                "How much money this one?",
+                "This one is how much money?",
+                "How much is this one?",
+                "This many money?"
+              ],
+              "answer": "How much is this one?",
+              "explanation": "多少 钱 literally = \"how much money\" but natural English drops \"money\": \"How much is this?\""
             }
           ]
         },
@@ -3627,6 +5234,20 @@
                 "冷",
                 "最"
               ]
+            },
+            {
+              "id": "cm2-95",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我比他大三岁",
+              "options": [
+                "我比他大三岁",
+                "我比他小三岁",
+                "他比我大三岁",
+                "我和他一样大"
+              ],
+              "answer": "我比他大三岁",
+              "explanation": "比 X 大 + age = older than X by …years."
             }
           ]
         },
@@ -4081,6 +5702,32 @@
                 "短",
                 "饿"
               ]
+            },
+            {
+              "id": "cm5-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 比 他 高\"? (Watch out for Chinglish.)",
+              "options": [
+                "I compare him tall",
+                "I taller than him",
+                "I'm taller than he is",
+                "I more tall than him"
+              ],
+              "answer": "I'm taller than he is",
+              "explanation": "Don't render 比 as \"compare\". 我 比 他 高 = \"I'm taller than he is\" (or \"...than him\" colloquially)."
+            },
+            {
+              "id": "cm5-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"今天 比 昨天 冷\"? (Watch out for Chinglish.)",
+              "options": [
+                "Today compare yesterday cold",
+                "Today colder than yesterday",
+                "Today is colder than yesterday",
+                "Yesterday is more cold than today"
+              ],
+              "answer": "Today is colder than yesterday",
+              "explanation": "Need the copula \"is\" in English and the comparative \"-er\". 比-sentences drop both in Chinese."
             }
           ]
         },
@@ -4241,12 +5888,14 @@
             },
             {
               "id": "tp1-3",
-              "type": "fill_blank",
-              "prompt": "\"自行车\" (zì xíng chē) means ___",
+              "type": "translate",
+              "source": "自行车",
               "answer": "Bicycle",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Bike"
-              ]
+              ],
+              "context": "zì xíng chē"
             },
             {
               "id": "tp1-4",
@@ -4498,6 +6147,20 @@
                 "地铁 我 来"
               ],
               "answer": "我 坐 地铁 来 的"
+            },
+            {
+              "id": "tp2-95",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我坐地铁去公司",
+              "options": [
+                "我坐地铁去公司",
+                "我坐公共汽车去公司",
+                "我开车去公司",
+                "我走路去公司"
+              ],
+              "answer": "我坐地铁去公司",
+              "explanation": "坐 地铁 = take the subway; 去 公司 = go to work."
             }
           ]
         },
@@ -4534,13 +6197,15 @@
             },
             {
               "id": "tp3-3",
-              "type": "fill_blank",
-              "prompt": "\"开车\" (kāi chē) means ___",
+              "type": "translate",
+              "source": "开车",
               "answer": "Drive a car",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Drive",
                 "To drive"
-              ]
+              ],
+              "context": "kāi chē"
             },
             {
               "id": "tp3-4",
@@ -4689,9 +6354,11 @@
             },
             {
               "id": "tp4-4",
-              "type": "fill_blank",
-              "prompt": "\"机场\" (jī chǎng) means ___",
-              "answer": "Airport"
+              "type": "translate",
+              "source": "机场",
+              "answer": "Airport",
+              "direction": "to_source",
+              "context": "jī chǎng"
             },
             {
               "id": "tp4-5",
@@ -4820,13 +6487,15 @@
             },
             {
               "id": "tp5-3",
-              "type": "fill_blank",
-              "prompt": "\"迟到\" (chí dào) means ___",
+              "type": "translate",
+              "source": "迟到",
               "answer": "Be late",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Arrive late",
                 "Late"
-              ]
+              ],
+              "context": "chí dào"
             },
             {
               "id": "tp5-4",
@@ -4936,6 +6605,32 @@
                 "了",
                 "来不及"
               ]
+            },
+            {
+              "id": "tp5-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 去 机场\"? (Watch out for Chinglish.)",
+              "options": [
+                "I go airport",
+                "I am going to airport",
+                "I'm going to the airport",
+                "I to airport go"
+              ],
+              "answer": "I'm going to the airport",
+              "explanation": "English requires the article THE for specific places like the airport / the station. Chinese drops it."
+            },
+            {
+              "id": "tp5-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 坐 公共汽车 上班\"? (Watch out for Chinglish.)",
+              "options": [
+                "I sit bus go to work",
+                "I take bus to work",
+                "I take the bus to work",
+                "I am sitting on bus to work"
+              ],
+              "answer": "I take the bus to work",
+              "explanation": "坐 (zuò) for transport = \"take\" (the bus / subway / plane), NOT \"sit\". Article \"the\" needed."
             }
           ]
         },
@@ -5085,12 +6780,14 @@
             },
             {
               "id": "fl1-3",
-              "type": "fill_blank",
-              "prompt": "\"生气\" (shēng qì) means ___",
+              "type": "translate",
+              "source": "生气",
               "answer": "Angry",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Mad"
-              ]
+              ],
+              "context": "shēng qì"
             },
             {
               "id": "fl1-4",
@@ -5339,6 +7036,20 @@
                 "我 太 高兴 了"
               ],
               "answer": "我 太 困 了"
+            },
+            {
+              "id": "fl2-95",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我今天很高兴",
+              "options": [
+                "我今天很高兴",
+                "我今天很难过",
+                "我今天很累",
+                "我昨天很高兴"
+              ],
+              "answer": "我今天很高兴",
+              "explanation": "高兴 = happy."
             }
           ]
         },
@@ -5801,6 +7512,32 @@
                 "了",
                 "难过"
               ]
+            },
+            {
+              "id": "fl5-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 很 喜欢 咖啡\"? (Watch out for Chinglish.)",
+              "options": [
+                "I very like coffee",
+                "I am very like coffee",
+                "I like coffee",
+                "I have very like coffee"
+              ],
+              "answer": "I like coffee",
+              "explanation": "我 很 喜欢 X is a normal way to say \"I like X\"; the 很 does NOT translate to \"very\". \"I very like\" is the classic Chinglish error."
+            },
+            {
+              "id": "fl5-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 今天 不 太 高兴\"? (Watch out for Chinglish.)",
+              "options": [
+                "Today I not too happy",
+                "Today I'm not very happy",
+                "I am not too high happy today",
+                "Today me no happy"
+              ],
+              "answer": "Today I'm not very happy",
+              "explanation": "不 太 = \"not very / not too\". Use \"very\" in natural English, and don't drop the verb \"be\" (am)."
             }
           ]
         },
@@ -5961,13 +7698,15 @@
             },
             {
               "id": "cl1-3",
-              "type": "fill_blank",
-              "prompt": "\"毛衣\" (máo yī) means ___",
+              "type": "translate",
+              "source": "毛衣",
               "answer": "Sweater",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Wool sweater",
                 "Jumper"
-              ]
+              ],
+              "context": "máo yī"
             },
             {
               "id": "cl1-4",
@@ -6110,9 +7849,11 @@
             },
             {
               "id": "cl2-3",
-              "type": "fill_blank",
-              "prompt": "\"袜子\" (wà zi) means ___",
-              "answer": "Socks"
+              "type": "translate",
+              "source": "袜子",
+              "answer": "Socks",
+              "direction": "to_source",
+              "context": "wà zi"
             },
             {
               "id": "cl2-4",
@@ -6218,6 +7959,20 @@
                 "xié zi",
                 "xiezi"
               ]
+            },
+            {
+              "id": "cl2-95",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "她穿一件红衣服",
+              "options": [
+                "她穿一件红衣服",
+                "她穿一件蓝衣服",
+                "他穿一件红衣服",
+                "她穿一双红鞋"
+              ],
+              "answer": "她穿一件红衣服",
+              "explanation": "穿 = wear; 红 衣服 = red clothes."
             }
           ]
         },
@@ -6550,6 +8305,32 @@
                 "吗",
                 "中"
               ]
+            },
+            {
+              "id": "cl4-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"她 穿 红 颜色 的 衣服\"? (Watch out for Chinglish.)",
+              "options": [
+                "She wears red color clothes",
+                "She is in red color clothes",
+                "She wears red clothes",
+                "She put red color clothes"
+              ],
+              "answer": "She wears red clothes",
+              "explanation": "红 颜色 literally \"red color\" — English drops \"color\": \"red clothes\". Also 穿 = wear, not \"put\"."
+            },
+            {
+              "id": "cl4-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 要 买 一 双 鞋\"? (Watch out for Chinglish.)",
+              "options": [
+                "I want to buy one pair shoe",
+                "I want to buy a pair of shoes",
+                "I want buy a shoe pair",
+                "I one pair shoes want buy"
+              ],
+              "answer": "I want to buy a pair of shoes",
+              "explanation": "一 双 鞋 needs both \"a pair OF\" and the plural \"shoes\" in English."
             }
           ]
         },
@@ -6710,12 +8491,14 @@
             },
             {
               "id": "bd1-3",
-              "type": "fill_blank",
-              "prompt": "\"耳朵\" (ěr duo) means ___",
+              "type": "translate",
+              "source": "耳朵",
               "answer": "Ear",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Ears"
-              ]
+              ],
+              "context": "ěr duo"
             },
             {
               "id": "bd1-4",
@@ -6969,6 +8752,20 @@
                 "我 没事"
               ],
               "answer": "我 肚子 疼"
+            },
+            {
+              "id": "bd2-95",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "我头疼",
+              "options": [
+                "我头疼",
+                "我牙疼",
+                "我肚子疼",
+                "我脚疼"
+              ],
+              "answer": "我头疼",
+              "explanation": "头 = head; 疼 = hurt."
             }
           ]
         },
@@ -7005,13 +8802,15 @@
             },
             {
               "id": "bd3-3",
-              "type": "fill_blank",
-              "prompt": "\"感冒\" (gǎn mào) means ___",
+              "type": "translate",
+              "source": "感冒",
               "answer": "A cold",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Common cold",
                 "Catch a cold"
-              ]
+              ],
+              "context": "gǎn mào"
             },
             {
               "id": "bd3-4",
@@ -7322,13 +9121,15 @@
             },
             {
               "id": "bd5-3",
-              "type": "fill_blank",
-              "prompt": "\"看病\" (kàn bìng) means ___",
+              "type": "translate",
+              "source": "看病",
               "answer": "See a doctor",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Get medical care",
                 "Visit the doctor"
-              ]
+              ],
+              "context": "kàn bìng"
             },
             {
               "id": "bd5-4",
@@ -7414,14 +9215,16 @@
             },
             {
               "id": "bd5-9",
-              "type": "fill_blank",
-              "prompt": "\"住院\" (zhù yuàn) means ___",
+              "type": "translate",
+              "source": "住院",
               "answer": "Be hospitalized",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Stay in hospital",
                 "In-patient",
                 "Get admitted"
-              ]
+              ],
+              "context": "zhù yuàn"
             },
             {
               "id": "bd5-10",
@@ -7434,6 +9237,32 @@
                 "再 睡 一 会儿"
               ],
               "answer": "我们 现在 去 急诊"
+            },
+            {
+              "id": "bd5-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 头 疼\"? (Watch out for Chinglish.)",
+              "options": [
+                "My head pain",
+                "I head ache",
+                "I have a headache / My head hurts",
+                "Me pain head"
+              ],
+              "answer": "I have a headache / My head hurts",
+              "explanation": "Chinese: TOPIC + verb pattern (我 头 疼 lit. \"as for me, head hurts\"). English needs \"I have a…\" or \"My ... hurts\"."
+            },
+            {
+              "id": "bd5-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"他 的 眼睛 很 大\"? (Watch out for Chinglish.)",
+              "options": [
+                "His eyes very big",
+                "His eyes are very big",
+                "His eye is big",
+                "He very big eyes"
+              ],
+              "answer": "His eyes are very big",
+              "explanation": "Adjective predicate in Chinese drops 是. English needs \"are\"."
             }
           ]
         },
@@ -7693,14 +9522,16 @@
             },
             {
               "id": "hb1-10",
-              "type": "fill_blank",
-              "prompt": "\"运动\" (yùn dòng) means ___",
+              "type": "translate",
+              "source": "运动",
               "answer": "Sports / exercise",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Exercise",
                 "Sport",
                 "Athletics"
-              ]
+              ],
+              "context": "yùn dòng"
             }
           ]
         },
@@ -7737,15 +9568,17 @@
             },
             {
               "id": "hb2-3",
-              "type": "fill_blank",
-              "prompt": "\"画画\" (huà huà) means ___",
+              "type": "translate",
+              "source": "画画",
               "answer": "To draw / paint",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Drawing",
                 "Painting",
                 "To draw",
                 "To paint"
-              ]
+              ],
+              "context": "huà huà"
             },
             {
               "id": "hb2-4",
@@ -7886,14 +9719,16 @@
             },
             {
               "id": "hb3-3",
-              "type": "fill_blank",
-              "prompt": "\"看书\" (kàn shū) means ___",
+              "type": "translate",
+              "source": "看书",
               "answer": "Read a book",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Reading",
                 "Read books",
                 "To read"
-              ]
+              ],
+              "context": "kàn shū"
             },
             {
               "id": "hb3-4",
@@ -8076,14 +9911,16 @@
             },
             {
               "id": "hb4-5",
-              "type": "fill_blank",
-              "prompt": "\"偶尔\" (ǒu ěr) means ___",
+              "type": "translate",
+              "source": "偶尔",
               "answer": "Occasionally",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Once in a while",
                 "Now and then",
                 "Sometimes"
-              ]
+              ],
+              "context": "ǒu ěr"
             },
             {
               "id": "hb4-6",
@@ -8175,6 +10012,32 @@
                 "喜欢",
                 "讨厌"
               ]
+            },
+            {
+              "id": "hb4-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 很 喜欢 看 书\"? (Watch out for Chinglish.)",
+              "options": [
+                "I very like read book",
+                "I very like reading books",
+                "I like reading / I really like reading",
+                "I have very like book"
+              ],
+              "answer": "I like reading / I really like reading",
+              "explanation": "Same trap: 很 in 很 喜欢 doesn't translate to \"very\". And 看 书 in this context = \"read / reading\", no need for \"books\"."
+            },
+            {
+              "id": "hb4-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 每个 周末 去 跑步\"? (Watch out for Chinglish.)",
+              "options": [
+                "I every weekend go run",
+                "I go to run every weekend",
+                "I go running every weekend",
+                "I am running every weekend go"
+              ],
+              "answer": "I go running every weekend",
+              "explanation": "去 + V is often \"go V-ing\" or \"go and V\". Don't render as bare \"go run\"."
             }
           ]
         },
@@ -8586,6 +10449,20 @@
                 "晚饭",
                 "去"
               ]
+            },
+            {
+              "id": "pl2-95",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "明天我要去北京",
+              "options": [
+                "明天我要去北京",
+                "今天我要去北京",
+                "明天我要去上海",
+                "明天我去过北京"
+              ],
+              "answer": "明天我要去北京",
+              "explanation": "明天 = tomorrow; 要 = going to / will."
             }
           ]
         },
@@ -8623,13 +10500,15 @@
             },
             {
               "id": "pl3-3",
-              "type": "fill_blank",
-              "prompt": "\"当然\" (dāng rán) means ___",
+              "type": "translate",
+              "source": "当然",
               "answer": "Of course",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Sure",
                 "Certainly"
-              ]
+              ],
+              "context": "dāng rán"
             },
             {
               "id": "pl3-4",
@@ -8701,14 +10580,16 @@
             },
             {
               "id": "pl3-8",
-              "type": "fill_blank",
-              "prompt": "\"没问题\" (méi wèn tí) means ___",
+              "type": "translate",
+              "source": "没问题",
               "answer": "No problem",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Not a problem",
                 "No issue",
                 "Sure"
-              ]
+              ],
+              "context": "méi wèn tí"
             },
             {
               "id": "pl3-9",
@@ -8843,14 +10724,16 @@
             },
             {
               "id": "pl4-7",
-              "type": "fill_blank",
-              "prompt": "\"不好意思\" (bù hǎo yì si) means ___",
+              "type": "translate",
+              "source": "不好意思",
               "answer": "Sorry / embarrassed",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Sorry",
                 "Excuse me",
                 "Pardon me"
-              ]
+              ],
+              "context": "bù hǎo yì si"
             },
             {
               "id": "pl4-8",
@@ -8925,13 +10808,15 @@
             },
             {
               "id": "pl5-3",
-              "type": "fill_blank",
-              "prompt": "\"改时间\" (gǎi shí jiān) means ___",
+              "type": "translate",
+              "source": "改时间",
               "answer": "Change the time / reschedule",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Reschedule",
                 "Change time"
-              ]
+              ],
+              "context": "gǎi shí jiān"
             },
             {
               "id": "pl5-4",
@@ -9005,9 +10890,11 @@
             },
             {
               "id": "pl5-8",
-              "type": "fill_blank",
-              "prompt": "\"取消\" (qǔ xiāo) means ___",
-              "answer": "Cancel"
+              "type": "translate",
+              "source": "取消",
+              "answer": "Cancel",
+              "direction": "to_source",
+              "context": "qǔ xiāo"
             },
             {
               "id": "pl5-9",
@@ -9037,6 +10924,32 @@
                 "吃饭",
                 "我们"
               ]
+            },
+            {
+              "id": "pl5-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"明天 我 要 去 中国\"? (Watch out for Chinglish.)",
+              "options": [
+                "Tomorrow I want go China",
+                "Tomorrow I will go China",
+                "Tomorrow I am going to China",
+                "I tomorrow want go to China"
+              ],
+              "answer": "Tomorrow I am going to China",
+              "explanation": "要 here = \"going to / planning to\", not \"want\". And country names need no article — but movement verbs need \"to\"."
+            },
+            {
+              "id": "pl5-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 打算 下个 月 回家\"? (Watch out for Chinglish.)",
+              "options": [
+                "I plan next month go home",
+                "I am planning to go home next month",
+                "I plan next month back home",
+                "Next month I plan back home"
+              ],
+              "answer": "I am planning to go home next month",
+              "explanation": "回家 = \"go home\" (one chunk, no preposition). 打算 + V = \"plan to V\"."
             }
           ]
         },
@@ -9848,6 +11761,32 @@
                 "我 是 公园"
               ],
               "answer": "去 公园 或者 商场 都 行"
+            },
+            {
+              "id": "cn4-91",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"我 又 累 又 饿\"? (Watch out for Chinglish.)",
+              "options": [
+                "I again tired again hungry",
+                "I am tired and hungry",
+                "I tired hungry both",
+                "I both tired and hungry am"
+              ],
+              "answer": "I am tired and hungry",
+              "explanation": "又…又… = \"both X and Y\" / \"X and Y\" — NOT \"again and again\". And English needs \"am\"."
+            },
+            {
+              "id": "cn4-92",
+              "type": "multiple_choice",
+              "prompt": "Best English for \"因为 下雨, 所以 我 不 去\"? (Watch out for Chinglish.)",
+              "options": [
+                "Because rain, so I don't go",
+                "Because it's raining, so I am not going",
+                "Because it's raining, I'm not going",
+                "Reason raining I no go"
+              ],
+              "answer": "Because it's raining, I'm not going",
+              "explanation": "Chinese pairs 因为 with 所以 (\"because…so…\"). In English you keep ONLY ONE side — \"because\" alone, or \"so\" alone."
             }
           ]
         },
@@ -10022,9 +11961,11 @@
             },
             {
               "id": "rv1-4",
-              "type": "fill_blank",
-              "prompt": "\"周末\" (zhōu mò) means ___",
-              "answer": "Weekend"
+              "type": "translate",
+              "source": "周末",
+              "answer": "Weekend",
+              "direction": "to_source",
+              "context": "zhōu mò"
             },
             {
               "id": "rv1-5",
@@ -10098,12 +12039,14 @@
             },
             {
               "id": "rv1-10",
-              "type": "fill_blank",
-              "prompt": "\"经常\" (jīng cháng) means ___",
+              "type": "translate",
+              "source": "经常",
               "answer": "Often",
+              "direction": "to_source",
               "acceptableAnswers": [
                 "Frequently"
-              ]
+              ],
+              "context": "jīng cháng"
             }
           ]
         },

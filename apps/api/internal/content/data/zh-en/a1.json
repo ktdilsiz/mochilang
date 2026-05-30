@@ -4,6 +4,2322 @@
   "description": "First steps in Mandarin: greetings, numbers, basic verbs and questions.",
   "topics": [
     {
+      "id": "zh-en-tones",
+      "title": "Pinyin Tones",
+      "description": "Train your ear for the four tones — the foundation of Mandarin",
+      "theme": "basics",
+      "guide": {
+        "intro": "Mandarin uses pitch to tell words apart. The same syllable in a different tone is a different word — get tones in your ear before you build sentences.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Why tones matter"
+          },
+          {
+            "kind": "paragraph",
+            "text": "English uses pitch for emotion (\"REAL-ly?\" vs \"really.\"). Mandarin uses pitch for meaning. \"mā\" (mom) and \"mà\" (scold) are not the same word — they're as different as \"cat\" and \"dog\"."
+          },
+          {
+            "kind": "heading",
+            "text": "The four tones + neutral"
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Tone",
+              "Shape",
+              "Example",
+              "Meaning"
+            ],
+            "rows": [
+              [
+                "1st (¯)",
+                "High and flat — sing it",
+                "mā 妈",
+                "mother"
+              ],
+              [
+                "2nd (´)",
+                "Rising — like asking \"huh?\"",
+                "má 麻",
+                "hemp"
+              ],
+              [
+                "3rd (ˇ)",
+                "Dip down then up",
+                "mǎ 马",
+                "horse"
+              ],
+              [
+                "4th (`)",
+                "Sharp falling — like \"NO!\"",
+                "mà 骂",
+                "scold"
+              ],
+              [
+                "Neutral",
+                "Light, unstressed",
+                "ma 吗",
+                "(question particle)"
+              ]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "When you practice, exaggerate. Tones feel embarrassing at first — that's how you know you're doing them right."
+          },
+          {
+            "kind": "heading",
+            "text": "Sandhi: tones that shift"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Two real-world tweaks: (1) when two 3rd tones meet, the first becomes 2nd: nǐ + hǎo → ní hǎo. (2) 不 (bù) becomes bú before a 4th tone (bú shì). (3) 一 (yī) becomes yí before 4th, yì otherwise."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-tones-1",
+          "title": "Meet the four tones",
+          "description": "1st, 2nd, 3rd, 4th + neutral",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "tn1-1",
+              "type": "multiple_choice",
+              "prompt": "How many tones does Mandarin have (not counting neutral)?",
+              "options": [
+                "Two",
+                "Three",
+                "Four",
+                "Five"
+              ],
+              "answer": "Four",
+              "explanation": "Four tones — 1st (flat), 2nd (rising), 3rd (dip), 4th (falling). Plus an unstressed neutral tone."
+            },
+            {
+              "id": "tn1-2",
+              "type": "multiple_choice",
+              "prompt": "Which mark shows the 1st tone (high and flat)?",
+              "options": [
+                "mā",
+                "má",
+                "mǎ",
+                "mà"
+              ],
+              "answer": "mā",
+              "explanation": "The macron (¯) over the vowel signals 1st tone — held high and steady."
+            },
+            {
+              "id": "tn1-3",
+              "type": "multiple_choice",
+              "prompt": "Which mark shows the 2nd tone (rising)?",
+              "options": [
+                "mā",
+                "má",
+                "mǎ",
+                "mà"
+              ],
+              "answer": "má",
+              "explanation": "The acute accent (´) signals 2nd tone — pitch rises like \"huh?\""
+            },
+            {
+              "id": "tn1-4",
+              "type": "multiple_choice",
+              "prompt": "Which mark shows the 3rd tone (dip down then up)?",
+              "options": [
+                "mā",
+                "má",
+                "mǎ",
+                "mà"
+              ],
+              "answer": "mǎ",
+              "explanation": "The háček (ˇ) signals 3rd tone — pitch dips then comes back up."
+            },
+            {
+              "id": "tn1-5",
+              "type": "multiple_choice",
+              "prompt": "Which mark shows the 4th tone (sharp falling)?",
+              "options": [
+                "mā",
+                "má",
+                "mǎ",
+                "mà"
+              ],
+              "answer": "mà",
+              "explanation": "The grave accent (`) signals 4th tone — short, falling, often emphatic."
+            },
+            {
+              "id": "tn1-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap the syllable you hear",
+              "spokenText": "妈",
+              "options": [
+                "妈 (mā)",
+                "麻 (má)",
+                "马 (mǎ)",
+                "骂 (mà)"
+              ],
+              "answer": "妈 (mā)",
+              "explanation": "妈 is high and flat — the 1st tone. It means \"mother.\""
+            },
+            {
+              "id": "tn1-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap the syllable you hear",
+              "spokenText": "马",
+              "options": [
+                "妈 (mā)",
+                "麻 (má)",
+                "马 (mǎ)",
+                "骂 (mà)"
+              ],
+              "answer": "马 (mǎ)",
+              "explanation": "马 (horse) dips down then back up — the 3rd tone."
+            },
+            {
+              "id": "tn1-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the syllable you hear",
+              "spokenText": "骂",
+              "options": [
+                "妈 (mā)",
+                "麻 (má)",
+                "马 (mǎ)",
+                "骂 (mà)"
+              ],
+              "answer": "骂 (mà)",
+              "explanation": "骂 (scold) falls sharply from high to low — the 4th tone."
+            },
+            {
+              "id": "tn1-9",
+              "type": "match_pairs",
+              "prompt": "tone to its meaning",
+              "pairs": [
+                {
+                  "left": "mā",
+                  "right": "mother"
+                },
+                {
+                  "left": "má",
+                  "right": "hemp"
+                },
+                {
+                  "left": "mǎ",
+                  "right": "horse"
+                },
+                {
+                  "left": "mà",
+                  "right": "scold"
+                }
+              ]
+            },
+            {
+              "id": "tn1-10",
+              "type": "fill_blank",
+              "prompt": "Type the pinyin for \"horse\" (3rd tone, ma-syllable):",
+              "answer": "mǎ",
+              "acceptableAnswers": [
+                "ma3"
+              ],
+              "explanation": "马 = mǎ. Use the ˇ mark for 3rd tone (or write \"ma3\" in numeric pinyin)."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-tones-2",
+          "title": "1st vs 2nd tone",
+          "description": "Flat-high vs rising",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "tn2-1",
+              "type": "multiple_choice",
+              "prompt": "1st tone is held high and flat. 2nd tone does what?",
+              "options": [
+                "Falls sharply",
+                "Rises like a question",
+                "Dips down then up",
+                "Stays low"
+              ],
+              "answer": "Rises like a question",
+              "explanation": "2nd tone rises from mid to high — same melody as English \"huh?\""
+            },
+            {
+              "id": "tn2-2",
+              "type": "multiple_choice",
+              "prompt": "bā vs bá — which one is the 2nd tone?",
+              "options": [
+                "bā (eight)",
+                "bá (to pull)",
+                "Both",
+                "Neither"
+              ],
+              "answer": "bá (to pull)",
+              "explanation": "bā 八 (eight) is 1st tone, flat. bá 拔 (to pull) is 2nd tone, rising."
+            },
+            {
+              "id": "tn2-3",
+              "type": "multiple_choice",
+              "prompt": "fā vs fá — which means \"to send / hair\" (1st tone)?",
+              "options": [
+                "fā",
+                "fá",
+                "Both sound identical",
+                "Neither"
+              ],
+              "answer": "fā",
+              "explanation": "fā 发 is 1st tone. fá 罚 (to punish) is 2nd tone."
+            },
+            {
+              "id": "tn2-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap the syllable you hear (1st vs 2nd)",
+              "spokenText": "八",
+              "options": [
+                "bā (1st)",
+                "bá (2nd)",
+                "bǎ (3rd)",
+                "bà (4th)"
+              ],
+              "answer": "bā (1st)",
+              "explanation": "八 (eight) is flat and high — the 1st tone."
+            },
+            {
+              "id": "tn2-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the syllable you hear",
+              "spokenText": "十",
+              "options": [
+                "shī (1st, lose)",
+                "shí (2nd, ten)",
+                "shǐ (3rd, history)",
+                "shì (4th, is)"
+              ],
+              "answer": "shí (2nd, ten)",
+              "explanation": "十 (ten) rises — the 2nd tone. Don't confuse with 是 shì (is, 4th tone)."
+            },
+            {
+              "id": "tn2-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "发",
+              "options": [
+                "fā",
+                "fá",
+                "fǎ",
+                "fà"
+              ],
+              "answer": "fā",
+              "explanation": "发 fā is held flat and high."
+            },
+            {
+              "id": "tn2-7",
+              "type": "match_pairs",
+              "prompt": "1st-tone vs 2nd-tone partners",
+              "pairs": [
+                {
+                  "left": "bā 八",
+                  "right": "eight (1st)"
+                },
+                {
+                  "left": "bá 拔",
+                  "right": "to pull (2nd)"
+                },
+                {
+                  "left": "shī 失",
+                  "right": "to lose (1st)"
+                },
+                {
+                  "left": "shí 十",
+                  "right": "ten (2nd)"
+                }
+              ]
+            },
+            {
+              "id": "tn2-8",
+              "type": "fill_blank",
+              "prompt": "Type the pinyin (with tone mark) for \"ten\":",
+              "answer": "shí",
+              "acceptableAnswers": [
+                "shi2"
+              ],
+              "explanation": "十 = shí — rising tone. Compare with shī 失 (to lose), which is flat."
+            },
+            {
+              "id": "tn2-9",
+              "type": "multiple_choice",
+              "prompt": "Which describes the 2nd tone best?",
+              "options": [
+                "The voice falls sharply",
+                "The voice rises like asking 'huh?'",
+                "The voice stays low",
+                "The voice dips and rises"
+              ],
+              "answer": "The voice rises like asking 'huh?'",
+              "explanation": "Mid → high, all one smooth rise. Borrow your English question intonation."
+            },
+            {
+              "id": "tn2-10",
+              "type": "listen_and_choose",
+              "prompt": "Hear it and pick",
+              "spokenText": "拔",
+              "options": [
+                "bā",
+                "bá",
+                "bǎ",
+                "bà"
+              ],
+              "answer": "bá",
+              "explanation": "拔 (to pull out) is 2nd tone, rising."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-tones-3",
+          "title": "3rd vs 4th tone",
+          "description": "Dipping vs falling",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "tn3-1",
+              "type": "multiple_choice",
+              "prompt": "How does the 3rd tone move?",
+              "options": [
+                "Flat high",
+                "Rises smoothly",
+                "Dips down then comes back up",
+                "Falls sharply"
+              ],
+              "answer": "Dips down then comes back up",
+              "explanation": "Mid → low → mid. In careful speech the dip is dramatic; in quick speech it's often a low \"half-3rd\"."
+            },
+            {
+              "id": "tn3-2",
+              "type": "multiple_choice",
+              "prompt": "mǎi vs mài — which means \"to buy\"?",
+              "options": [
+                "mǎi (3rd tone)",
+                "mài (4th tone)",
+                "Both",
+                "Neither"
+              ],
+              "answer": "mǎi (3rd tone)",
+              "explanation": "买 mǎi = buy (dipping). 卖 mài = sell (falling). Remember: 卖 has the extra 十 on top — \"goods piled up to sell.\""
+            },
+            {
+              "id": "tn3-3",
+              "type": "multiple_choice",
+              "prompt": "kàn means \"to look/watch.\" What tone is it?",
+              "options": [
+                "1st",
+                "2nd",
+                "3rd",
+                "4th"
+              ],
+              "answer": "4th",
+              "explanation": "看 kàn — sharp falling. (kǎn 砍 \"to chop\" with 3rd tone is a different word.)"
+            },
+            {
+              "id": "tn3-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "买",
+              "options": [
+                "mǎi (buy)",
+                "mài (sell)",
+                "māi",
+                "mái"
+              ],
+              "answer": "mǎi (buy)",
+              "explanation": "买 dips and rises — 3rd tone."
+            },
+            {
+              "id": "tn3-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "卖",
+              "options": [
+                "mǎi (buy)",
+                "mài (sell)",
+                "māi",
+                "mái"
+              ],
+              "answer": "mài (sell)",
+              "explanation": "卖 falls sharply — 4th tone."
+            },
+            {
+              "id": "tn3-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "看",
+              "options": [
+                "kān",
+                "kán",
+                "kǎn (chop)",
+                "kàn (watch)"
+              ],
+              "answer": "kàn (watch)",
+              "explanation": "看 kàn — sharp, falling 4th tone."
+            },
+            {
+              "id": "tn3-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "那",
+              "options": [
+                "nā",
+                "ná (take)",
+                "nǎ (which)",
+                "nà (that)"
+              ],
+              "answer": "nà (that)",
+              "explanation": "那 nà = that — 4th tone. Compare 哪 nǎ = which — 3rd tone."
+            },
+            {
+              "id": "tn3-8",
+              "type": "match_pairs",
+              "prompt": "3rd vs 4th — pair to meaning",
+              "pairs": [
+                {
+                  "left": "mǎi 买",
+                  "right": "buy (3rd)"
+                },
+                {
+                  "left": "mài 卖",
+                  "right": "sell (4th)"
+                },
+                {
+                  "left": "nǎ 哪",
+                  "right": "which (3rd)"
+                },
+                {
+                  "left": "nà 那",
+                  "right": "that (4th)"
+                }
+              ]
+            },
+            {
+              "id": "tn3-9",
+              "type": "fill_blank",
+              "prompt": "Type the pinyin for \"to look/watch\":",
+              "answer": "kàn",
+              "acceptableAnswers": [
+                "kan4"
+              ],
+              "explanation": "看 kàn — 4th tone, sharp falling."
+            },
+            {
+              "id": "tn3-10",
+              "type": "multiple_choice",
+              "prompt": "You hear a single short, falling syllable. What tone is it most likely?",
+              "options": [
+                "1st",
+                "2nd",
+                "3rd",
+                "4th"
+              ],
+              "answer": "4th",
+              "explanation": "Short + falling = 4th. Native speakers often shorten 4th tone in casual speech."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-tones-4",
+          "title": "3rd-tone sandhi",
+          "description": "How 你好 actually sounds",
+          "theme": "basics",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "tn4-1",
+              "type": "multiple_choice",
+              "prompt": "What happens when two 3rd tones meet (3rd-tone sandhi)?",
+              "options": [
+                "The second becomes 2nd tone",
+                "The first becomes 2nd tone",
+                "Both stay 3rd",
+                "Both become neutral"
+              ],
+              "answer": "The first becomes 2nd tone",
+              "explanation": "3 + 3 → 2 + 3. So nǐ + hǎo is written nǐ hǎo but said ní hǎo."
+            },
+            {
+              "id": "tn4-2",
+              "type": "multiple_choice",
+              "prompt": "你好 is written nǐ hǎo. What does it sound like?",
+              "options": [
+                "ní hǎo",
+                "nǐ háo",
+                "nī hāo",
+                "nì hào"
+              ],
+              "answer": "ní hǎo",
+              "explanation": "First 3rd tone shifts to 2nd. Pinyin keeps the original marks; your mouth does the shift."
+            },
+            {
+              "id": "tn4-3",
+              "type": "multiple_choice",
+              "prompt": "很好 (hěn hǎo, \"very good\") — what does it sound like?",
+              "options": [
+                "hēn hǎo",
+                "hén hǎo",
+                "hěn hào",
+                "hèn hǎo"
+              ],
+              "answer": "hén hǎo",
+              "explanation": "Two 3rd tones in a row → first becomes 2nd. Said hén hǎo."
+            },
+            {
+              "id": "tn4-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "你好",
+              "options": [
+                "你好 (nǐ hǎo)",
+                "你号",
+                "你毫",
+                "您好"
+              ],
+              "answer": "你好 (nǐ hǎo)",
+              "explanation": "你好 — the most common hello. Note the sandhi: written nǐ hǎo, said ní hǎo."
+            },
+            {
+              "id": "tn4-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "很好",
+              "options": [
+                "很好 (hěn hǎo)",
+                "很高",
+                "很号",
+                "很到"
+              ],
+              "answer": "很好 (hěn hǎo)",
+              "explanation": "很好 — said hén hǎo because of 3rd-tone sandhi."
+            },
+            {
+              "id": "tn4-6",
+              "type": "multiple_choice",
+              "prompt": "How is sandhi written in pinyin?",
+              "options": [
+                "Always rewritten (ní hǎo)",
+                "Original tones kept (nǐ hǎo)",
+                "Marks removed entirely",
+                "Lowercased"
+              ],
+              "answer": "Original tones kept (nǐ hǎo)",
+              "explanation": "Standard convention: write nǐ hǎo, say ní hǎo. The shift is in your mouth, not on the page."
+            },
+            {
+              "id": "tn4-7",
+              "type": "fill_blank",
+              "prompt": "Three 3rd tones in 我也好 (wǒ yě hǎo, \"I'm also good\"). The first two shift. What do you say?",
+              "answer": "wó yé hǎo",
+              "acceptableAnswers": [
+                "wó yé hǎo.",
+                "wo2 ye2 hao3"
+              ],
+              "explanation": "Chains of 3rd tones: most become 2nd, only the last stays 3rd. wǒ yě hǎo → wó yé hǎo."
+            },
+            {
+              "id": "tn4-8",
+              "type": "match_pairs",
+              "prompt": "written vs spoken",
+              "pairs": [
+                {
+                  "left": "nǐ hǎo (written)",
+                  "right": "ní hǎo (spoken)"
+                },
+                {
+                  "left": "hěn hǎo (written)",
+                  "right": "hén hǎo (spoken)"
+                },
+                {
+                  "left": "wǒ hǎo (written)",
+                  "right": "wó hǎo (spoken)"
+                },
+                {
+                  "left": "kě yǐ (written)",
+                  "right": "ké yǐ (spoken)"
+                }
+              ]
+            },
+            {
+              "id": "tn4-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "可以",
+              "options": [
+                "可以 (kě yǐ)",
+                "可一",
+                "客气",
+                "渴意"
+              ],
+              "answer": "可以 (kě yǐ)",
+              "explanation": "可以 (\"can / may\") — written kě yǐ, said ké yǐ (sandhi)."
+            },
+            {
+              "id": "tn4-10",
+              "type": "multiple_choice",
+              "prompt": "Does sandhi apply across pauses/sentence breaks?",
+              "options": [
+                "Always, every time two 3rd tones touch",
+                "Only within a single word or tight phrase",
+                "Only in formal speech",
+                "Only for tones 1 and 2"
+              ],
+              "answer": "Only within a single word or tight phrase",
+              "explanation": "Sandhi follows the rhythm of the phrase. If you'd naturally pause between the syllables, no shift."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-tones-5",
+          "title": "不 and 一 sandhi",
+          "description": "When bù becomes bú and yī becomes yí/yì",
+          "theme": "basics",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "tn5-1",
+              "type": "multiple_choice",
+              "prompt": "不 (bù) means \"not.\" What's its default tone?",
+              "options": [
+                "1st",
+                "2nd",
+                "3rd",
+                "4th"
+              ],
+              "answer": "4th",
+              "explanation": "不 is normally 4th tone — bù. It only shifts before another 4th tone."
+            },
+            {
+              "id": "tn5-2",
+              "type": "multiple_choice",
+              "prompt": "不 + 是 (shì, \"is\") — what do you say?",
+              "options": [
+                "bù shì",
+                "bú shì",
+                "bǔ shì",
+                "bū shì"
+              ],
+              "answer": "bú shì",
+              "explanation": "Before a 4th tone, 不 becomes 2nd: bú shì \"is not.\""
+            },
+            {
+              "id": "tn5-3",
+              "type": "multiple_choice",
+              "prompt": "不 + 来 (lái, 2nd tone, \"come\") — what do you say?",
+              "options": [
+                "bù lái",
+                "bú lái",
+                "bǔ lái",
+                "bū lái"
+              ],
+              "answer": "bù lái",
+              "explanation": "Before any non-4th tone, 不 stays 4th: bù lái \"not come.\""
+            },
+            {
+              "id": "tn5-4",
+              "type": "multiple_choice",
+              "prompt": "一 (yī) means \"one.\" Before a 4th tone like 个 (gè), it becomes...",
+              "options": [
+                "yī",
+                "yí",
+                "yǐ",
+                "yì"
+              ],
+              "answer": "yí",
+              "explanation": "一 + 4th → yí. So 一个 is yí ge in speech."
+            },
+            {
+              "id": "tn5-5",
+              "type": "multiple_choice",
+              "prompt": "一 + 起 (qǐ, 3rd tone, \"rise\") — what do you say?",
+              "options": [
+                "yī qǐ",
+                "yí qǐ",
+                "yǐ qǐ",
+                "yì qǐ"
+              ],
+              "answer": "yì qǐ",
+              "explanation": "Before non-4th tones (1st, 2nd, 3rd), 一 becomes 4th: yì qǐ \"together.\""
+            },
+            {
+              "id": "tn5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "不是",
+              "options": [
+                "不是 (bú shì)",
+                "不死",
+                "不实",
+                "补使"
+              ],
+              "answer": "不是 (bú shì)",
+              "explanation": "不是 — 不 shifts to 2nd tone before 是 (4th)."
+            },
+            {
+              "id": "tn5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "一个",
+              "options": [
+                "一个 (yí ge)",
+                "一格",
+                "一各",
+                "已个"
+              ],
+              "answer": "一个 (yí ge)",
+              "explanation": "一个 = yí ge — one (thing). 个 is neutral in speech but counts as 4th for sandhi."
+            },
+            {
+              "id": "tn5-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "一起",
+              "options": [
+                "一起 (yì qǐ)",
+                "一气",
+                "一齐",
+                "意起"
+              ],
+              "answer": "一起 (yì qǐ)",
+              "explanation": "一起 = yì qǐ — together. 一 became 4th before 3rd-tone 起."
+            },
+            {
+              "id": "tn5-9",
+              "type": "fill_blank",
+              "prompt": "How do you say 不 + 要 (yào, 4th, \"want\") in speech?",
+              "answer": "bú yào",
+              "acceptableAnswers": [
+                "bu2 yao4",
+                "bú yào."
+              ],
+              "explanation": "Before a 4th tone, 不 becomes 2nd: bú yào \"don't want / don't.\""
+            },
+            {
+              "id": "tn5-10",
+              "type": "multiple_choice",
+              "prompt": "When does 一 NOT shift tone?",
+              "options": [
+                "When standing alone or saying numbers in sequence",
+                "Before a 1st tone",
+                "Before a 2nd tone",
+                "Before a 3rd tone"
+              ],
+              "answer": "When standing alone or saying numbers in sequence",
+              "explanation": "Counting (yī, èr, sān...) or year numbers (一九九九) keeps 一 as 1st tone. Sandhi only kicks in when 一 leads into another syllable as part of a meaning unit."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-tones-dialogue",
+          "title": "Dialogue: Fruit at the market",
+          "description": "Short conversation practicing tone discrimination (sì vs shí).",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "tn-dlg-1",
+              "type": "dialogue",
+              "prompt": "At a fruit stand, you can't tell if the apples are ¥4 or ¥10",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "vendor",
+                  "name": "Vendor"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "苹果多少钱？(píng guǒ duō shǎo qián)",
+                  "spokenText": "苹果多少钱？"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "vendor",
+                  "text": "四块。(sì kuài)",
+                  "spokenText": "四块。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Which tone did the vendor use on 'sì'?",
+                  "options": [
+                    "4th tone (falling) — 四 (sì, four)",
+                    "2nd tone (rising) — 十 (shí, ten)",
+                    "1st tone (high) — 西 (xī, west)"
+                  ],
+                  "answer": "4th tone (falling) — 四 (sì, four)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "十块吗？(shí kuài ma)",
+                  "spokenText": "十块吗？"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "vendor",
+                  "text": "不是十块，是四块。(bú shì shí kuài, shì sì kuài)",
+                  "spokenText": "不是十块，是四块。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "So how much does one jin of apples cost?",
+                  "options": [
+                    "¥4 (四块)",
+                    "¥10 (十块)",
+                    "¥14 (十四块)"
+                  ],
+                  "answer": "¥4 (四块)"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Confirm the price: 'Oh, four kuai.'",
+                  "before": "哦，",
+                  "after": "块。",
+                  "answer": "四",
+                  "acceptableAnswers": [
+                    "四",
+                    "sì"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "vendor",
+                  "text": "对，谢谢！(duì, xiè xie)",
+                  "spokenText": "对，谢谢！"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-pinyin",
+      "title": "Pinyin Sounds",
+      "description": "The tricky consonants and vowels of pinyin — the ones English doesn't have",
+      "theme": "basics",
+      "guide": {
+        "intro": "Pinyin is the romanization that lets you type, look up, and pronounce Mandarin. Most letters do what you'd expect — but a handful are traps for English speakers.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Initials: where sound starts"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Mandarin has three pairs that English speakers mix up: zh/ch/sh (retroflex — curl your tongue back) vs z/c/s (sibilant — tongue flat). Plus j/q/x — like Italian's c/g — always followed by i or ü."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Pinyin",
+              "Like English",
+              "Example"
+            ],
+            "rows": [
+              [
+                "zh",
+                "j in 'jar' with tongue curled back",
+                "知道 zhīdao (know)"
+              ],
+              [
+                "ch",
+                "ch in 'church', tongue curled",
+                "吃 chī (eat)"
+              ],
+              [
+                "sh",
+                "sh in 'shoe', tongue curled",
+                "是 shì (is)"
+              ],
+              [
+                "z",
+                "ds in 'kids'",
+                "字 zì (character)"
+              ],
+              [
+                "c",
+                "ts in 'cats'",
+                "次 cì (time/instance)"
+              ],
+              [
+                "s",
+                "s in 'sun'",
+                "四 sì (four)"
+              ]
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "j / q / x — the i/ü trio"
+          },
+          {
+            "kind": "paragraph",
+            "text": "j, q, x are softer than zh, ch, sh — tongue stays forward. They only ever appear before i or ü. After j/q/x, ü is written as plain u (so 居 is jū, but the vowel is really ü)."
+          },
+          {
+            "kind": "callout",
+            "tone": "warning",
+            "text": "qù sounds like \"chü\" — NOT \"q-you\" or \"tsoo.\" The q is a soft \"ch\" and ù is a rounded \"ee\" with pursed lips."
+          },
+          {
+            "kind": "heading",
+            "text": "Finals: the trap vowels"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Some finals don't match their spelling. -ian sounds like \"yen,\" not \"yan.\" -uan after j/q/x/y is really -üan (so 元 yuán = \"yu-en\"). -eng has a back \"ung\" feel vs -en which is light and forward."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "见",
+                "pinyin": "jiàn (sounds like 'jyen')",
+                "translation": "to see"
+              },
+              {
+                "source": "元",
+                "pinyin": "yuán (sounds like 'yu-en')",
+                "translation": "yuan (currency)"
+              },
+              {
+                "source": "听",
+                "pinyin": "tīng (back 'ng')",
+                "translation": "to listen"
+              },
+              {
+                "source": "真",
+                "pinyin": "zhēn (light 'en')",
+                "translation": "real"
+              }
+            ]
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-pinyin-1",
+          "title": "Initials: zh/ch/sh vs z/c/s",
+          "description": "Retroflex (tongue curled) vs flat sibilants",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "py1-1",
+              "type": "multiple_choice",
+              "prompt": "What's the difference between zh and z?",
+              "options": [
+                "zh is retroflex (tongue curls back); z is flat",
+                "z is retroflex; zh is flat",
+                "They sound identical",
+                "z is a tone mark"
+              ],
+              "answer": "zh is retroflex (tongue curls back); z is flat",
+              "explanation": "zh/ch/sh = tongue curled back (retroflex). z/c/s = tongue flat. Easy to mix up; speakers in southern China often merge them."
+            },
+            {
+              "id": "py1-2",
+              "type": "multiple_choice",
+              "prompt": "知 (\"to know\") is zhī. How is 资 (\"resource\") spelled?",
+              "options": [
+                "zhī",
+                "zī",
+                "jī",
+                "chī"
+              ],
+              "answer": "zī",
+              "explanation": "知 zhī uses the retroflex zh; 资 zī uses flat z. Same vowel, different tongue position."
+            },
+            {
+              "id": "py1-3",
+              "type": "multiple_choice",
+              "prompt": "Which English sound is closest to Mandarin c (as in 词 cí)?",
+              "options": [
+                "k in 'cat'",
+                "ts in 'cats'",
+                "s in 'sun'",
+                "ch in 'church'"
+              ],
+              "answer": "ts in 'cats'",
+              "explanation": "c is the \"ts\" cluster — no h, no curl. Don't read it as English \"c.\""
+            },
+            {
+              "id": "py1-4",
+              "type": "multiple_choice",
+              "prompt": "吃 (\"to eat\") is chī. How is 词 (\"word\") spelled?",
+              "options": [
+                "chī",
+                "cí",
+                "shí",
+                "zī"
+              ],
+              "answer": "cí",
+              "explanation": "吃 chī uses retroflex ch; 词 cí uses flat c. Common minimal pair."
+            },
+            {
+              "id": "py1-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "知",
+              "options": [
+                "知 (zhī, know)",
+                "资 (zī, resource)",
+                "吃 (chī, eat)",
+                "词 (cí, word)"
+              ],
+              "answer": "知 (zhī, know)",
+              "explanation": "Retroflex zh — tongue curled back."
+            },
+            {
+              "id": "py1-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "四",
+              "options": [
+                "是 (shì, is)",
+                "四 (sì, four)",
+                "十 (shí, ten)",
+                "私 (sī, private)"
+              ],
+              "answer": "四 (sì, four)",
+              "explanation": "四 sì — flat s, no tongue curl, 4th tone."
+            },
+            {
+              "id": "py1-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "是",
+              "options": [
+                "是 (shì, is)",
+                "四 (sì, four)",
+                "十 (shí)",
+                "私 (sī)"
+              ],
+              "answer": "是 (shì, is)",
+              "explanation": "是 shì — retroflex sh, tongue curls back."
+            },
+            {
+              "id": "py1-8",
+              "type": "match_pairs",
+              "prompt": "retroflex vs flat partners",
+              "pairs": [
+                {
+                  "left": "知 zhī",
+                  "right": "to know (retroflex)"
+                },
+                {
+                  "left": "资 zī",
+                  "right": "resource (flat)"
+                },
+                {
+                  "left": "是 shì",
+                  "right": "is (retroflex)"
+                },
+                {
+                  "left": "四 sì",
+                  "right": "four (flat)"
+                }
+              ]
+            },
+            {
+              "id": "py1-9",
+              "type": "fill_blank",
+              "prompt": "Type the pinyin for 是 (\"is\"):",
+              "answer": "shì",
+              "acceptableAnswers": [
+                "shi4"
+              ],
+              "explanation": "是 shì — retroflex sh, 4th tone. The most common verb \"to be.\""
+            },
+            {
+              "id": "py1-10",
+              "type": "multiple_choice",
+              "prompt": "Which is a fact about southern-China accents?",
+              "options": [
+                "They distinguish zh/z more carefully than the north",
+                "They often merge zh/z, ch/c, sh/s",
+                "They drop tones entirely",
+                "They never use pinyin"
+              ],
+              "answer": "They often merge zh/z, ch/c, sh/s",
+              "explanation": "Many southern speakers (Shanghai, Taiwan, etc.) don't distinguish retroflex from flat — they pronounce 是 closer to sì. Standard Mandarin (北京话) keeps them apart."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-pinyin-2",
+          "title": "Tricky j/q/x + i/ü",
+          "description": "When 'u' is really 'ü' and q isn't English q",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "py2-1",
+              "type": "multiple_choice",
+              "prompt": "j, q, x can ONLY be followed by which vowels?",
+              "options": [
+                "a or o",
+                "i or ü",
+                "Any vowel",
+                "Only u"
+              ],
+              "answer": "i or ü",
+              "explanation": "Hard rule: j/q/x never appear before a, o, u, e by themselves. They only pair with i (as in ji, qi, xi) or ü (written u, as in ju, qu, xu)."
+            },
+            {
+              "id": "py2-2",
+              "type": "multiple_choice",
+              "prompt": "居 is spelled \"jū.\" What's the actual vowel sound?",
+              "options": [
+                "plain u (oo)",
+                "ü (rounded ee — say ee with pursed lips)",
+                "yoo",
+                "uh"
+              ],
+              "answer": "ü (rounded ee — say ee with pursed lips)",
+              "explanation": "After j/q/x/y, ü drops its dots: jū looks like \"ju\" but is really jü. Make ee with rounded lips."
+            },
+            {
+              "id": "py2-3",
+              "type": "multiple_choice",
+              "prompt": "去 (\"to go\") is qù. How would you describe the sound?",
+              "options": [
+                "k-you",
+                "tsoo",
+                "soft ch + ü (\"chü\")",
+                "queue"
+              ],
+              "answer": "soft ch + ü (\"chü\")",
+              "explanation": "q is a soft, forward \"ch\" — not the English q. ù is the rounded-ee. So qù is more like \"chü\" than anything in English."
+            },
+            {
+              "id": "py2-4",
+              "type": "multiple_choice",
+              "prompt": "Which of these is actually pronounced with ü?",
+              "options": [
+                "zhu",
+                "ju",
+                "shu",
+                "cu"
+              ],
+              "answer": "ju",
+              "explanation": "ju, qu, xu, yu are all really jü, qü, xü, yü. zhu, chu, shu, zu, cu, su use real u."
+            },
+            {
+              "id": "py2-5",
+              "type": "multiple_choice",
+              "prompt": "What does the x in Mandarin sound like?",
+              "options": [
+                "ks in 'six'",
+                "soft sh — tongue forward, like a German \"ich\" softened",
+                "z in 'zebra'",
+                "h in 'hat'"
+              ],
+              "answer": "soft sh — tongue forward, like a German \"ich\" softened",
+              "explanation": "x = a forward, light \"sh.\" Tongue near the roof of the mouth, no curling. 谢 xiè (\"thanks\") and 学 xué are common."
+            },
+            {
+              "id": "py2-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "去",
+              "options": [
+                "去 (qù, go)",
+                "酷 (kù, cool)",
+                "出 (chū, exit)",
+                "苏 (sū)"
+              ],
+              "answer": "去 (qù, go)",
+              "explanation": "qù — soft ch + ü, 4th tone."
+            },
+            {
+              "id": "py2-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "学",
+              "options": [
+                "学 (xué, study)",
+                "雪 (xuě, snow)",
+                "靴 (xuē, boot)",
+                "穴 (xué, cave)"
+              ],
+              "answer": "学 (xué, study)",
+              "explanation": "xué — soft x + ü-e diphthong, 2nd tone (rising). \"To study/learn.\""
+            },
+            {
+              "id": "py2-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "鸡",
+              "options": [
+                "鸡 (jī, chicken)",
+                "知 (zhī, know)",
+                "吃 (chī, eat)",
+                "西 (xī, west)"
+              ],
+              "answer": "鸡 (jī, chicken)",
+              "explanation": "jī — soft j (like \"jee\"), 1st tone. Don't confuse with retroflex zhī."
+            },
+            {
+              "id": "py2-9",
+              "type": "fill_blank",
+              "prompt": "Type the pinyin for 学 (\"study/learn\"):",
+              "answer": "xué",
+              "acceptableAnswers": [
+                "xue2"
+              ],
+              "explanation": "xué — that x is the soft, forward \"sh,\" and ue is really üe."
+            },
+            {
+              "id": "py2-10",
+              "type": "multiple_choice",
+              "prompt": "Why is the ü written as plain u after j, q, x, y?",
+              "options": [
+                "Because they can never take real u anyway, so no ambiguity",
+                "Random orthographic choice",
+                "Computer keyboards can't type ü",
+                "It's actually pronounced as u in those cases"
+              ],
+              "answer": "Because they can never take real u anyway, so no ambiguity",
+              "explanation": "Since j/q/x/y never pair with the back-u sound, the system drops the dots — \"ju\" can only mean jü, so writing it that way saves keystrokes."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-pinyin-3",
+          "title": "Finals that fool you",
+          "description": "-ian = 'yen', -üan = 'yü-en', -eng vs -en",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "py3-1",
+              "type": "multiple_choice",
+              "prompt": "见 is jiàn. How does -ian sound?",
+              "options": [
+                "yan (like English 'yawn')",
+                "yen (rhymes with English 'ten')",
+                "ee-an",
+                "jen"
+              ],
+              "answer": "yen (rhymes with English 'ten')",
+              "explanation": "-ian doesn't sound like its spelling. jiàn rhymes with English \"yen,\" not \"yawn.\""
+            },
+            {
+              "id": "py3-2",
+              "type": "multiple_choice",
+              "prompt": "Which pair sounds the same?",
+              "options": [
+                "-ian and -iang",
+                "-ian and English 'yen'",
+                "-ian and -uan",
+                "-ian and -an"
+              ],
+              "answer": "-ian and English 'yen'",
+              "explanation": "Trust the sound, not the spelling. jian = jyen, mian = myen, tian = tyen."
+            },
+            {
+              "id": "py3-3",
+              "type": "multiple_choice",
+              "prompt": "元 is yuán. What's the actual sound?",
+              "options": [
+                "yoo-an",
+                "yu-en (like 'you' + 'when' merged)",
+                "yan",
+                "wen"
+              ],
+              "answer": "yu-en (like 'you' + 'when' merged)",
+              "explanation": "After y, the uan is really üan, which sounds like the ü of jü followed by -en. yuán = \"yü-en.\""
+            },
+            {
+              "id": "py3-4",
+              "type": "multiple_choice",
+              "prompt": "听 tīng vs 真 zhēn — what's the final difference?",
+              "options": [
+                "-ing vs -en (back 'ng' vs forward 'n')",
+                "Different tones only",
+                "Same final",
+                "-ing is silent"
+              ],
+              "answer": "-ing vs -en (back 'ng' vs forward 'n')",
+              "explanation": "-eng/-ing are deep, back nasal (like English 'ung'). -en/-in are light, forward (like English 'en')."
+            },
+            {
+              "id": "py3-5",
+              "type": "multiple_choice",
+              "prompt": "Which is correct for 听 (\"to listen\")?",
+              "options": [
+                "tīn",
+                "tīng",
+                "tīng has -eng, not -ing",
+                "tīng = tin"
+              ],
+              "answer": "tīng",
+              "explanation": "听 is tīng — 1st tone, -ing final (back nasal)."
+            },
+            {
+              "id": "py3-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "见",
+              "options": [
+                "见 (jiàn, see)",
+                "件 (jiàn, item)",
+                "尖 (jiān, sharp)",
+                "建 (jiàn, build)"
+              ],
+              "answer": "见 (jiàn, see)",
+              "explanation": "见 jiàn — \"jyen\" with 4th tone."
+            },
+            {
+              "id": "py3-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "元",
+              "options": [
+                "元 (yuán)",
+                "员 (yuán)",
+                "园 (yuán, garden)",
+                "原 (yuán, origin)"
+              ],
+              "answer": "元 (yuán)",
+              "explanation": "yuán — \"yü-en,\" rising tone. All four options share this pronunciation; 元 is the currency unit."
+            },
+            {
+              "id": "py3-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "听",
+              "options": [
+                "听 (tīng, listen)",
+                "停 (tíng, stop)",
+                "汀 (tīng)",
+                "厅 (tīng, hall)"
+              ],
+              "answer": "听 (tīng, listen)",
+              "explanation": "听 tīng — flat 1st tone with back nasal -ing."
+            },
+            {
+              "id": "py3-9",
+              "type": "fill_blank",
+              "prompt": "Type the pinyin for 真 (\"real\"):",
+              "answer": "zhēn",
+              "acceptableAnswers": [
+                "zhen1"
+              ],
+              "explanation": "zhēn — retroflex zh + light forward -en + 1st tone. Compare 真 zhēn (real) vs 正 zhèng (right/correct, with -eng)."
+            },
+            {
+              "id": "py3-10",
+              "type": "multiple_choice",
+              "prompt": "What's the trap with -üan vs -uan?",
+              "options": [
+                "They sound identical",
+                "-üan (after j/q/x/y) sounds like 'yü-en'; -uan (elsewhere) sounds like 'wan'",
+                "-uan is fake",
+                "-üan is fake"
+              ],
+              "answer": "-üan (after j/q/x/y) sounds like 'yü-en'; -uan (elsewhere) sounds like 'wan'",
+              "explanation": "Compare 元 yuán (yü-en) with 关 guān (gwan). Same letters, different vowel because of the preceding initial."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-pinyin-4",
+          "title": "Full syllables practice",
+          "description": "Read pinyin → recognize the meaning",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "py4-1",
+              "type": "multiple_choice",
+              "prompt": "你 = nǐ. What two pinyin pieces does it have?",
+              "options": [
+                "n + i",
+                "ni + i",
+                "n + ee",
+                "n + ni"
+              ],
+              "answer": "n + i",
+              "explanation": "Initial n + final i + tone mark = nǐ. The two-piece structure is the universal pinyin recipe."
+            },
+            {
+              "id": "py4-2",
+              "type": "multiple_choice",
+              "prompt": "Which pinyin spells \"hello\" (the casual greeting)?",
+              "options": [
+                "nǐ hǎo",
+                "ní hǎo",
+                "ni hao",
+                "All — depending on how you write tones"
+              ],
+              "answer": "All — depending on how you write tones",
+              "explanation": "All three appear in the wild: nǐ hǎo (formal pinyin), ní hǎo (spoken sandhi notation, less common), ni hao (no tones, informal/SMS). Beginner standard is nǐ hǎo."
+            },
+            {
+              "id": "py4-3",
+              "type": "multiple_choice",
+              "prompt": "Read this pinyin: \"wǒ shì xuéshēng.\" What does it mean?",
+              "options": [
+                "I am a student",
+                "You are a student",
+                "I study Chinese",
+                "He is a teacher"
+              ],
+              "answer": "I am a student",
+              "explanation": "wǒ (I) + shì (am) + xuéshēng (student) = 我是学生."
+            },
+            {
+              "id": "py4-4",
+              "type": "multiple_choice",
+              "prompt": "Read \"zhōngguó.\" What's this referring to?",
+              "options": [
+                "Korea",
+                "Japan",
+                "China (middle + country)",
+                "Vietnam"
+              ],
+              "answer": "China (middle + country)",
+              "explanation": "中国 zhōngguó — \"middle kingdom.\" Retroflex zh + back -ong + g- + -uo."
+            },
+            {
+              "id": "py4-5",
+              "type": "multiple_choice",
+              "prompt": "Read \"xièxie.\" What does it mean?",
+              "options": [
+                "Goodbye",
+                "Thank you",
+                "Sorry",
+                "Hello"
+              ],
+              "answer": "Thank you",
+              "explanation": "谢谢 xièxie — repeated x sounds. Second syllable is neutral tone."
+            },
+            {
+              "id": "py4-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap the character that matches what you hear",
+              "spokenText": "我",
+              "options": [
+                "我 (wǒ, I)",
+                "你 (nǐ, you)",
+                "他 (tā, he)",
+                "她 (tā, she)"
+              ],
+              "answer": "我 (wǒ, I)",
+              "explanation": "我 wǒ — initial w + o final + 3rd tone."
+            },
+            {
+              "id": "py4-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "spokenText": "中国",
+              "options": [
+                "中国 (zhōngguó, China)",
+                "中文 (zhōngwén, Chinese)",
+                "美国 (měiguó, US)",
+                "英国 (yīngguó, UK)"
+              ],
+              "answer": "中国 (zhōngguó, China)",
+              "explanation": "中国 — two retroflex+back syllables. Listen for the deep 'ong' nasal."
+            },
+            {
+              "id": "py4-8",
+              "type": "fill_blank",
+              "prompt": "Type the pinyin (with tones) for 谢谢 (\"thank you\"):",
+              "answer": "xièxie",
+              "acceptableAnswers": [
+                "xiè xie",
+                "xie4 xie"
+              ],
+              "explanation": "谢谢 xièxie — the second is neutral. Two soft x sounds."
+            },
+            {
+              "id": "py4-9",
+              "type": "fill_blank",
+              "prompt": "Type the pinyin (with tones) for 中国 (\"China\"):",
+              "answer": "zhōngguó",
+              "acceptableAnswers": [
+                "zhōng guó",
+                "zhong1 guo2"
+              ],
+              "explanation": "zhōngguó — 1st tone + 2nd tone. Retroflex zh on syllable 1."
+            },
+            {
+              "id": "py4-10",
+              "type": "multiple_choice",
+              "prompt": "Which is the trickiest part of pinyin for English speakers?",
+              "options": [
+                "Tones",
+                "j/q/x",
+                "Retroflex zh/ch/sh vs flat z/c/s",
+                "All three are common stumbling blocks"
+              ],
+              "answer": "All three are common stumbling blocks",
+              "explanation": "Don't worry — tones and tongue position both improve with listening practice. Get the system in your head; let the muscle memory follow."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-pinyin-dialogue",
+          "title": "Dialogue: Which floor?",
+          "description": "Short conversation practicing q/x initial pronunciation precision.",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "pyn-dlg-1",
+              "type": "dialogue",
+              "prompt": "At a hotel, you ask for the 7th floor but mispronounce it",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "clerk",
+                  "name": "Clerk"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "我住起楼。(wǒ zhù qǐ lóu)",
+                  "spokenText": "我住起楼。"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "起楼？您是说几楼？(qǐ lóu? nín shì shuō jǐ lóu?)",
+                  "spokenText": "起楼？您是说几楼？"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "You meant the 7th floor. Pick the correct pronunciation.",
+                  "options": [
+                    "七楼 (qī lóu) — 1st tone",
+                    "起楼 (qǐ lóu) — 3rd tone",
+                    "气楼 (qì lóu) — 4th tone"
+                  ],
+                  "answer": "七楼 (qī lóu) — 1st tone"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "you",
+                  "text": "七楼。(qī lóu)",
+                  "spokenText": "七楼。"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "好的。房间是七一二。(hǎo de. fáng jiān shì qī yī èr)",
+                  "spokenText": "好的。房间是七一二。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Which initial does 'qī' (七) start with?",
+                  "options": [
+                    "q — tip of tongue near front, no aspiration like English",
+                    "x — like English 'sh'",
+                    "j — like English 'j'"
+                  ],
+                  "answer": "q — tip of tongue near front, no aspiration like English"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Repeat the room number: 'Room seven-one-two'.",
+                  "before": "房间是",
+                  "after": "一二。",
+                  "answer": "七",
+                  "acceptableAnswers": [
+                    "七",
+                    "qī"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "clerk",
+                  "text": "对。电梯在那边。(duì. diàn tī zài nà biān)",
+                  "spokenText": "对。电梯在那边。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zh-en-characters",
+      "title": "How Characters Work",
+      "description": "Chinese characters are made of reusable pieces — learn to spot them",
+      "theme": "basics",
+      "guide": {
+        "intro": "Chinese characters look intimidating but they're built from a small set of reusable pieces. Once you see the pattern, learning new characters speeds up.",
+        "sections": [
+          {
+            "kind": "heading",
+            "text": "Characters are made of pieces"
+          },
+          {
+            "kind": "paragraph",
+            "text": "Almost every Chinese character is a combination of smaller components. Some components are simple characters in their own right; others (radicals) only appear as parts of larger characters. Recognizing the pieces makes the whole easier."
+          },
+          {
+            "kind": "examples",
+            "rows": [
+              {
+                "source": "好 hǎo",
+                "pinyin": "= 女 (woman) + 子 (child)",
+                "translation": "good"
+              },
+              {
+                "source": "明 míng",
+                "pinyin": "= 日 (sun) + 月 (moon)",
+                "translation": "bright"
+              },
+              {
+                "source": "林 lín",
+                "pinyin": "= 木 (tree) + 木 (tree)",
+                "translation": "forest"
+              },
+              {
+                "source": "休 xiū",
+                "pinyin": "= 亻 (person) + 木 (tree)",
+                "translation": "rest (a person leaning on a tree)"
+              }
+            ]
+          },
+          {
+            "kind": "heading",
+            "text": "Radicals as meaning clues"
+          },
+          {
+            "kind": "paragraph",
+            "text": "About 200 \"radicals\" group characters by meaning. If a character contains 氵 (water), it likely relates to water (rivers, drinking, thirst). 心 (heart) → emotions. 口 (mouth) → speech and eating. The radical doesn't tell you the whole meaning, but it points you in the right neighborhood."
+          },
+          {
+            "kind": "table",
+            "headers": [
+              "Radical",
+              "Means",
+              "Example characters"
+            ],
+            "rows": [
+              [
+                "氵",
+                "water",
+                "河 river, 海 sea, 江 river, 渴 thirsty"
+              ],
+              [
+                "木",
+                "wood/tree",
+                "林 forest, 树 tree, 桥 bridge"
+              ],
+              [
+                "心",
+                "heart",
+                "想 think, 爱 love, 急 urgent"
+              ],
+              [
+                "口",
+                "mouth",
+                "吃 eat, 喝 drink, 叫 shout/call"
+              ],
+              [
+                "亻",
+                "person",
+                "你 you, 他 he, 们 plural-marker"
+              ],
+              [
+                "女",
+                "woman",
+                "她 she, 好 good, 妈 mom"
+              ]
+            ]
+          },
+          {
+            "kind": "callout",
+            "tone": "tip",
+            "text": "When you see a new character, guess at the radical first. If it has 氵 you'll be roughly right calling it water-related — that's enough to remember it."
+          }
+        ]
+      },
+      "lessons": [
+        {
+          "id": "zh-en-characters-1",
+          "title": "Characters are made of pieces",
+          "description": "Components and meaning-compounds",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "ch1-1",
+              "type": "multiple_choice",
+              "prompt": "好 (\"good\") is made of which two components?",
+              "options": [
+                "女 (woman) + 子 (child)",
+                "口 (mouth) + 日 (sun)",
+                "木 (tree) + 水 (water)",
+                "It's a single piece"
+              ],
+              "answer": "女 (woman) + 子 (child)",
+              "explanation": "好 hǎo = 女 + 子 — woman with child. A traditional mnemonic for \"good.\""
+            },
+            {
+              "id": "ch1-2",
+              "type": "multiple_choice",
+              "prompt": "明 (\"bright\") is made of which two components?",
+              "options": [
+                "日 (sun) + 月 (moon)",
+                "口 (mouth) + 月 (moon)",
+                "目 (eye) + 月 (moon)",
+                "It's not a compound"
+              ],
+              "answer": "日 (sun) + 月 (moon)",
+              "explanation": "明 míng = sun + moon = bright. One of the most famous \"meaning-compound\" characters."
+            },
+            {
+              "id": "ch1-3",
+              "type": "multiple_choice",
+              "prompt": "林 (\"forest\") is made of what?",
+              "options": [
+                "木 + 木 (two trees)",
+                "木 + 林",
+                "木 + 草",
+                "It's not a compound"
+              ],
+              "answer": "木 + 木 (two trees)",
+              "explanation": "Two 木 (tree) = 林 lín (forest/grove). Three trees = 森 sēn (dense forest). Repeat for emphasis."
+            },
+            {
+              "id": "ch1-4",
+              "type": "multiple_choice",
+              "prompt": "Which character means \"to rest\" (a person leaning on a tree)?",
+              "options": [
+                "休",
+                "林",
+                "好",
+                "明"
+              ],
+              "answer": "休",
+              "explanation": "休 xiū = 亻 (person) + 木 (tree). Pictorial: a person resting against a tree."
+            },
+            {
+              "id": "ch1-5",
+              "type": "match_pairs",
+              "prompt": "character to its components",
+              "pairs": [
+                {
+                  "left": "好",
+                  "right": "女 + 子"
+                },
+                {
+                  "left": "明",
+                  "right": "日 + 月"
+                },
+                {
+                  "left": "林",
+                  "right": "木 + 木"
+                },
+                {
+                  "left": "休",
+                  "right": "亻 + 木"
+                }
+              ]
+            },
+            {
+              "id": "ch1-6",
+              "type": "multiple_choice",
+              "prompt": "你 (\"you\") contains which component on the left?",
+              "options": [
+                "亻 (person radical)",
+                "氵 (water)",
+                "口 (mouth)",
+                "心 (heart)"
+              ],
+              "answer": "亻 (person radical)",
+              "explanation": "亻 is the \"person\" radical (a flattened form of 人). It shows up in many person-related characters: 你, 他, 们, 休, 体."
+            },
+            {
+              "id": "ch1-7",
+              "type": "multiple_choice",
+              "prompt": "Why do components matter for learning?",
+              "options": [
+                "They don't — just memorize each character whole",
+                "They group characters by meaning and pronunciation, making recall faster",
+                "They are random decorations",
+                "They only matter for traditional characters"
+              ],
+              "answer": "They group characters by meaning and pronunciation, making recall faster",
+              "explanation": "Most characters fall into a pattern: one piece hints at meaning (radical), one hints at sound. Knowing this turns rote memorization into educated guessing."
+            },
+            {
+              "id": "ch1-8",
+              "type": "multiple_choice",
+              "prompt": "她 (\"she\") differs from 他 (\"he\") only by replacing which component?",
+              "options": [
+                "亻 (person) → 女 (woman)",
+                "口 → 女",
+                "氵 → 女",
+                "It's the same character"
+              ],
+              "answer": "亻 (person) → 女 (woman)",
+              "explanation": "他 tā = person + 也 (the default \"he\"). 她 tā = woman + 也 (the gendered \"she\"). Same sound, different left piece."
+            },
+            {
+              "id": "ch1-9",
+              "type": "fill_blank",
+              "prompt": "好 = 女 + ___ . Type the second component:",
+              "answer": "子",
+              "acceptableAnswers": [
+                "zi",
+                "child"
+              ],
+              "explanation": "好 hǎo = 女 (woman) + 子 (child). The traditional reading: a woman with her child = \"good.\""
+            },
+            {
+              "id": "ch1-10",
+              "type": "multiple_choice",
+              "prompt": "森 (\"dense forest\") is made of how many 木?",
+              "options": [
+                "One",
+                "Two",
+                "Three",
+                "Four"
+              ],
+              "answer": "Three",
+              "explanation": "森 sēn = three 木. One tree = 木. Two = 林 (forest). Three = 森 (dense forest). Chinese character design at its most direct."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-characters-2",
+          "title": "Common radicals",
+          "description": "氵 water, 木 wood, 心 heart, 口 mouth",
+          "theme": "basics",
+          "xp": 10,
+          "exercises": [
+            {
+              "id": "ch2-1",
+              "type": "multiple_choice",
+              "prompt": "氵 is the radical for what?",
+              "options": [
+                "Fire",
+                "Water",
+                "Wood",
+                "Metal"
+              ],
+              "answer": "Water",
+              "explanation": "氵 is the \"three-drops\" form of 水 shuǐ (water). Appears on the left of water-related characters: 河 (river), 海 (sea), 渴 (thirsty)."
+            },
+            {
+              "id": "ch2-2",
+              "type": "multiple_choice",
+              "prompt": "Which character does NOT contain the water radical 氵?",
+              "options": [
+                "河 (river)",
+                "海 (sea)",
+                "山 (mountain)",
+                "江 (river)"
+              ],
+              "answer": "山 (mountain)",
+              "explanation": "山 shān is its own pictograph (three peaks) — no 氵. 河, 海, 江 all use 氵 because they involve water."
+            },
+            {
+              "id": "ch2-3",
+              "type": "multiple_choice",
+              "prompt": "木 is the radical for what?",
+              "options": [
+                "Water",
+                "Wood / tree",
+                "Fire",
+                "Earth"
+              ],
+              "answer": "Wood / tree",
+              "explanation": "木 mù = tree. As a radical, it marks things made of wood or related to trees: 桥 bridge, 树 tree, 林 forest."
+            },
+            {
+              "id": "ch2-4",
+              "type": "multiple_choice",
+              "prompt": "What does 心 mean (as a radical)?",
+              "options": [
+                "Hand",
+                "Heart / feelings",
+                "Foot",
+                "Eye"
+              ],
+              "answer": "Heart / feelings",
+              "explanation": "心 xīn = heart. Appears in characters for emotions and thinking: 想 think, 爱 love, 急 urgent, 怕 afraid."
+            },
+            {
+              "id": "ch2-5",
+              "type": "multiple_choice",
+              "prompt": "口 means \"mouth.\" Which character uses it?",
+              "options": [
+                "吃 (eat)",
+                "学 (study)",
+                "高 (tall)",
+                "看 (look)"
+              ],
+              "answer": "吃 (eat)",
+              "explanation": "吃 chī (eat) has 口 on the left — eating uses the mouth. Also 喝 (drink), 叫 (shout/call), 唱 (sing)."
+            },
+            {
+              "id": "ch2-6",
+              "type": "match_pairs",
+              "prompt": "radical to its meaning",
+              "pairs": [
+                {
+                  "left": "氵",
+                  "right": "water"
+                },
+                {
+                  "left": "木",
+                  "right": "wood/tree"
+                },
+                {
+                  "left": "心",
+                  "right": "heart/feelings"
+                },
+                {
+                  "left": "口",
+                  "right": "mouth"
+                }
+              ]
+            },
+            {
+              "id": "ch2-7",
+              "type": "match_pairs",
+              "prompt": "character to its radical",
+              "pairs": [
+                {
+                  "left": "河 (river)",
+                  "right": "氵 (water)"
+                },
+                {
+                  "left": "树 (tree)",
+                  "right": "木 (wood)"
+                },
+                {
+                  "left": "想 (think)",
+                  "right": "心 (heart)"
+                },
+                {
+                  "left": "喝 (drink)",
+                  "right": "口 (mouth)"
+                }
+              ]
+            },
+            {
+              "id": "ch2-8",
+              "type": "multiple_choice",
+              "prompt": "Which radical would you expect to find in a character meaning \"to sing\"?",
+              "options": [
+                "氵 (water)",
+                "口 (mouth)",
+                "木 (wood)",
+                "心 (heart)"
+              ],
+              "answer": "口 (mouth)",
+              "explanation": "唱 chàng (to sing) has 口 — singing uses the mouth. Pattern repeats: 叫 (shout), 喊 (yell), 喝 (drink), 吃 (eat)."
+            },
+            {
+              "id": "ch2-9",
+              "type": "multiple_choice",
+              "prompt": "Which radical would you expect in 爱 (\"love\")?",
+              "options": [
+                "氵 (water)",
+                "心 (heart)",
+                "口 (mouth)",
+                "木 (wood)"
+              ],
+              "answer": "心 (heart)",
+              "explanation": "爱 ài contains 心 in the middle (slightly hidden in modern simplified form, very clear in traditional 愛). Love = a heart matter."
+            },
+            {
+              "id": "ch2-10",
+              "type": "multiple_choice",
+              "prompt": "Why are radicals useful for looking up characters?",
+              "options": [
+                "They're alphabetized by radical in dictionaries",
+                "Older paper dictionaries indexed all characters by their radical and stroke count",
+                "Both of the above are true",
+                "They aren't useful for lookup"
+              ],
+              "answer": "Both of the above are true",
+              "explanation": "Before digital tools, you found a character by identifying its radical, then counting remaining strokes. Knowing radicals = knowing how to navigate the language."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-characters-3",
+          "title": "Reading by radical clue",
+          "description": "Guess unfamiliar characters from their radical",
+          "theme": "basics",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "ch3-1",
+              "type": "multiple_choice",
+              "prompt": "渴 (kě) contains 氵 (water). What's the likely meaning?",
+              "options": [
+                "Mountain",
+                "Thirsty (water-related)",
+                "Tree",
+                "Heart"
+              ],
+              "answer": "Thirsty (water-related)",
+              "explanation": "渴 kě = thirsty. The 氵 radical hints at water; the rest gives the sound (曷 hé/gě). Confidence trick: see 氵 → bet on water."
+            },
+            {
+              "id": "ch3-2",
+              "type": "multiple_choice",
+              "prompt": "想 (xiǎng) has 心 (heart) on the bottom. Likely meaning?",
+              "options": [
+                "Run",
+                "Think / want (heart-related)",
+                "Eat",
+                "See"
+              ],
+              "answer": "Think / want (heart-related)",
+              "explanation": "想 xiǎng = to think, to want, to miss. The heart radical signals \"mental/emotional\" — exactly right."
+            },
+            {
+              "id": "ch3-3",
+              "type": "multiple_choice",
+              "prompt": "桥 (qiáo) has 木 (wood) on the left. Likely meaning?",
+              "options": [
+                "Bridge (made of wood)",
+                "Mountain",
+                "Cloud",
+                "Soup"
+              ],
+              "answer": "Bridge (made of wood)",
+              "explanation": "桥 qiáo = bridge. Old bridges were wood — hence the radical. Pattern: 木 = something built from / made of wood."
+            },
+            {
+              "id": "ch3-4",
+              "type": "multiple_choice",
+              "prompt": "唱 (chàng) has 口 (mouth) on the left. Likely meaning?",
+              "options": [
+                "To sleep",
+                "To sing or call out (mouth-related)",
+                "To run",
+                "To buy"
+              ],
+              "answer": "To sing or call out (mouth-related)",
+              "explanation": "唱 chàng = to sing. Anything you do with your mouth — speak, eat, shout, sing — tends to have 口."
+            },
+            {
+              "id": "ch3-5",
+              "type": "multiple_choice",
+              "prompt": "湖 (hú) has 氵 . What is it?",
+              "options": [
+                "Mountain",
+                "Lake (water-related)",
+                "Forest",
+                "Tiger"
+              ],
+              "answer": "Lake (water-related)",
+              "explanation": "湖 hú = lake. Big body of water → 氵 radical is the giveaway."
+            },
+            {
+              "id": "ch3-6",
+              "type": "multiple_choice",
+              "prompt": "忙 (máng) has 忄 (the side form of 心). Likely meaning category?",
+              "options": [
+                "Animal",
+                "Mental / feeling state",
+                "Color",
+                "Number"
+              ],
+              "answer": "Mental / feeling state",
+              "explanation": "忙 máng = busy (mentally occupied). 忄 is the side-form of 心 — same heart radical, different shape. Shows up in 快 (happy/fast), 怕 (afraid), 怒 (angry)."
+            },
+            {
+              "id": "ch3-7",
+              "type": "multiple_choice",
+              "prompt": "喝 (hē) has 口. Likely meaning?",
+              "options": [
+                "To drink",
+                "To run",
+                "To sleep",
+                "To pay"
+              ],
+              "answer": "To drink",
+              "explanation": "喝 hē = to drink. Mouth radical 口 + sound clue from 曷. Compare with 渴 kě (thirsty, water radical)."
+            },
+            {
+              "id": "ch3-8",
+              "type": "match_pairs",
+              "prompt": "unfamiliar character → likely meaning category",
+              "pairs": [
+                {
+                  "left": "渴 (氵)",
+                  "right": "water-related (thirsty)"
+                },
+                {
+                  "left": "想 (心)",
+                  "right": "mind/feelings (think)"
+                },
+                {
+                  "left": "桥 (木)",
+                  "right": "wood/structure (bridge)"
+                },
+                {
+                  "left": "唱 (口)",
+                  "right": "mouth/voice (sing)"
+                }
+              ]
+            },
+            {
+              "id": "ch3-9",
+              "type": "fill_blank",
+              "prompt": "You see 树 — a character with 木 on the left. The character means ___",
+              "answer": "tree",
+              "acceptableAnswers": [
+                "a tree",
+                "trees"
+              ],
+              "explanation": "树 shù = tree. The 木 radical is the giveaway. Use this trick on every new character: find the radical, narrow the meaning."
+            },
+            {
+              "id": "ch3-10",
+              "type": "multiple_choice",
+              "prompt": "Final tip: when you meet a new character, what should you do first?",
+              "options": [
+                "Memorize the whole thing as one shape",
+                "Identify the radical to guess the meaning category",
+                "Skip it",
+                "Look up the pinyin only"
+              ],
+              "answer": "Identify the radical to guess the meaning category",
+              "explanation": "Radical → category → narrow guess from context. Far more efficient than rote memorization. The other components often hint at sound."
+            }
+          ]
+        },
+        {
+          "id": "zh-en-characters-dialogue",
+          "title": "Dialogue: Calligraphy class",
+          "description": "Short conversation practicing character radicals.",
+          "theme": "basics",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "ch-dlg-1",
+              "type": "dialogue",
+              "prompt": "Your calligraphy teacher quizzes you on radicals",
+              "speakers": [
+                {
+                  "id": "you",
+                  "name": "You"
+                },
+                {
+                  "id": "teacher",
+                  "name": "Teacher"
+                }
+              ],
+              "turns": [
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "看这个字：好。(kàn zhè ge zì: hǎo)",
+                  "spokenText": "看这个字：好。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Which two components make up 好?",
+                  "options": [
+                    "女 (woman) + 子 (child)",
+                    "木 (tree) + 子 (child)",
+                    "日 (sun) + 月 (moon)"
+                  ],
+                  "answer": "女 (woman) + 子 (child)"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "对。现在看：林。(duì. xiàn zài kàn: lín)",
+                  "spokenText": "对。现在看：林。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "What does the radical in 林 suggest?",
+                  "options": [
+                    "Trees / wood — 木 doubled means a forest",
+                    "Water — flowing stream",
+                    "Fire — burning"
+                  ],
+                  "answer": "Trees / wood — 木 doubled means a forest"
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "好。下一个：明。(hǎo. xià yí ge: míng)",
+                  "spokenText": "好。下一个：明。"
+                },
+                {
+                  "kind": "choice",
+                  "speaker": "you",
+                  "prompt": "Which two radicals build 明 (bright)?",
+                  "options": [
+                    "日 (sun) + 月 (moon)",
+                    "女 (woman) + 子 (child)",
+                    "木 (tree) + 林 (forest)"
+                  ],
+                  "answer": "日 (sun) + 月 (moon)"
+                },
+                {
+                  "kind": "fill",
+                  "speaker": "you",
+                  "prompt": "Name the right character: 'sun and moon together mean ___' (bright).",
+                  "before": "日 + 月 = ",
+                  "after": "",
+                  "answer": "明",
+                  "acceptableAnswers": [
+                    "明",
+                    "míng"
+                  ]
+                },
+                {
+                  "kind": "line",
+                  "speaker": "teacher",
+                  "text": "很好！你学得快。(hěn hǎo! nǐ xué de kuài)",
+                  "spokenText": "很好！你学得快。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "zh-en-greetings",
       "title": "Greetings",
       "description": "Say hello, goodbye, and how are you",
@@ -266,16 +2582,15 @@
             },
             {
               "id": "g1-11",
-              "type": "fill_blank",
-              "prompt": "\"拜拜\" (bài bài) means ___",
+              "type": "translate",
+              "source": "拜拜",
               "answer": "Bye-bye",
               "acceptableAnswers": [
-                "bye",
                 "Bye",
-                "Goodbye",
-                "bye bye",
-                "byebye"
+                "Bye-bye"
               ],
+              "direction": "to_source",
+              "context": "Casual goodbye — borrowed from English \"bye-bye\"",
               "explanation": "Borrowed from English — common in informal goodbyes, especially over the phone."
             }
           ]
@@ -353,15 +2668,16 @@
             },
             {
               "id": "g2-6",
-              "type": "fill_blank",
-              "prompt": "\"不错\" (bú cuò) literally \"not wrong\" — it means ___",
+              "type": "translate",
+              "source": "不错",
               "answer": "Not bad",
               "acceptableAnswers": [
-                "not bad",
+                "Not bad",
                 "Pretty good",
-                "Good",
-                "Fine"
+                "Good"
               ],
+              "direction": "to_source",
+              "context": "Casual reply to \"how are you\" — literally \"not wrong\"",
               "explanation": "Common, slightly understated way to answer \"how are you?\" — like English \"not bad.\""
             },
             {
@@ -431,15 +2747,16 @@
             },
             {
               "id": "g2-11",
-              "type": "fill_blank",
-              "prompt": "\"马马虎虎\" (mǎ mǎ hū hū) literally \"horse horse tiger tiger\" means ___",
+              "type": "translate",
+              "source": "马马虎虎",
               "answer": "So-so",
               "acceptableAnswers": [
-                "so-so",
-                "so so",
-                "Mediocre",
-                "Average"
+                "So-so",
+                "Just okay",
+                "Meh"
               ],
+              "direction": "to_source",
+              "context": "Idiomatic \"so-so\" — literally \"horse horse tiger tiger\"",
               "explanation": "A fun idiom — when neither good nor bad, you're \"horse-tiger.\""
             }
           ]
@@ -477,14 +2794,16 @@
             },
             {
               "id": "g3-3",
-              "type": "fill_blank",
-              "prompt": "\"不客气\" (bú kè qi) means ___",
+              "type": "translate",
+              "source": "不客气",
               "answer": "You're welcome",
               "acceptableAnswers": [
-                "You are welcome",
-                "you're welcome",
-                "youre welcome"
+                "You're welcome",
+                "No problem",
+                "Don't mention it"
               ],
+              "direction": "to_source",
+              "context": "Reply to \"thank you\" — literally \"don't be polite\"",
               "explanation": "Literally \"don't be polite\" — the standard reply to 谢谢."
             },
             {
@@ -538,9 +2857,14 @@
             },
             {
               "id": "g3-7",
-              "type": "fill_blank",
-              "prompt": "\"请\" (qǐng) means ___",
+              "type": "translate",
+              "source": "请",
               "answer": "Please",
+              "acceptableAnswers": [
+                "Please"
+              ],
+              "direction": "to_source",
+              "context": "Polite \"please\" — also \"please go ahead\"",
               "explanation": "Place 请 at the start of a request to be polite, e.g. 请坐 (please sit)."
             },
             {
@@ -583,17 +2907,17 @@
             },
             {
               "id": "g3-11",
-              "type": "fill_blank",
-              "prompt": "\"没关系\" (méi guān xi) means ___",
+              "type": "translate",
+              "source": "没关系",
               "answer": "It's okay",
               "acceptableAnswers": [
-                "it's okay",
+                "It's okay",
+                "No worries",
                 "It's fine",
-                "No problem",
-                "Doesn't matter",
-                "It is okay",
-                "Never mind"
-              ]
+                "No problem"
+              ],
+              "direction": "to_source",
+              "context": "Reply to \"sorry\" — literally \"no relation/no matter\""
             },
             {
               "id": "g3-12",
@@ -769,6 +3093,60 @@
               ],
               "answer": "你好, 我叫... 认识你很高兴",
               "explanation": "Mirror the greeting and add \"nice to meet you\" — that's the standard A1 introduction."
+            },
+            {
+              "id": "g4-12",
+              "type": "multiple_choice",
+              "prompt": "How do you politely say \"hello, teacher\" in Mandarin?",
+              "options": [
+                "Hello, teacher",
+                "老师你好",
+                "老师，您好",
+                "你好老师"
+              ],
+              "answer": "老师，您好",
+              "explanation": "Address first (老师), then 您好 (formal hello). 'Hello, teacher' is English; back-translating it literally to 你好老师 sounds blunt."
+            },
+            {
+              "id": "g4-13",
+              "type": "multiple_choice",
+              "prompt": "Which is a common Chenglish slip when saying \"how are you?\"",
+              "options": [
+                "你好吗？",
+                "How are you 吗？",
+                "你怎么样？",
+                "你身体好吗？"
+              ],
+              "answer": "How are you 吗？",
+              "explanation": "Mixing English vocabulary with Chinese particles is the classic learner mistake. Stick to 你好吗？ or 你怎么样？"
+            },
+            {
+              "id": "g4-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "您好",
+              "options": [
+                "你好",
+                "您好",
+                "再见",
+                "拜拜"
+              ],
+              "answer": "您好",
+              "explanation": "Listen for the formal 您 (nín) instead of 你 (nǐ) — sounds nearly identical but slightly more nasal/elongated. Use with elders, customers, strangers."
+            },
+            {
+              "id": "g4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "谢谢",
+              "options": [
+                "谢谢",
+                "再见",
+                "请",
+                "没关系"
+              ],
+              "answer": "谢谢",
+              "explanation": "谢谢 xièxie — the soft x is the giveaway. Two-syllable thank-you, second syllable neutral."
             }
           ]
         },
@@ -1100,13 +3478,15 @@
             },
             {
               "id": "n1-5",
-              "type": "fill_blank",
-              "prompt": "\"四\" (sì) means ___",
+              "type": "translate",
+              "source": "四",
               "answer": "Four",
               "acceptableAnswers": [
-                "4",
-                "four"
+                "Four",
+                "4"
               ],
+              "direction": "to_source",
+              "context": "The number 4 (sì)",
               "explanation": "四 sounds similar to 死 (sǐ, \"death\") — for this reason 4 is sometimes considered unlucky in Chinese culture, like 13 in the West."
             },
             {
@@ -1178,13 +3558,15 @@
             },
             {
               "id": "n1-11",
-              "type": "fill_blank",
-              "prompt": "\"五\" (wǔ) means ___",
+              "type": "translate",
+              "source": "五",
               "answer": "Five",
               "acceptableAnswers": [
-                "5",
-                "five"
-              ]
+                "Five",
+                "5"
+              ],
+              "direction": "to_source",
+              "context": "The number 5 (wǔ)"
             },
             {
               "id": "n1-12",
@@ -1235,13 +3617,15 @@
             },
             {
               "id": "n2-3",
-              "type": "fill_blank",
-              "prompt": "\"十\" (shí) means ___",
+              "type": "translate",
+              "source": "十",
               "answer": "Ten",
               "acceptableAnswers": [
-                "10",
-                "ten"
-              ]
+                "Ten",
+                "10"
+              ],
+              "direction": "to_source",
+              "context": "The number 10 (shí)"
             },
             {
               "id": "n2-4",
@@ -1720,13 +4104,15 @@
             },
             {
               "id": "n5-3",
-              "type": "fill_blank",
-              "prompt": "\"零\" (líng) means ___",
+              "type": "translate",
+              "source": "零",
               "answer": "Zero",
               "acceptableAnswers": [
-                "0",
-                "zero"
+                "Zero",
+                "0"
               ],
+              "direction": "to_source",
+              "context": "The number 0 (líng)",
               "explanation": "零 is the formal zero. You'll also see 〇 (a circle) used in dates and ID numbers."
             },
             {
@@ -1852,6 +4238,60 @@
                 "二零二二年"
               ],
               "answer": "二零二四年"
+            },
+            {
+              "id": "n5-13",
+              "type": "multiple_choice",
+              "prompt": "Which is correct for \"one person\"?",
+              "options": [
+                "一人",
+                "一个人",
+                "one person",
+                "一 person"
+              ],
+              "answer": "一个人",
+              "explanation": "Mandarin requires a measure word: 一个人 (one + 个 + person). Saying just 一人 is poetic/literary; learners often drop 个 by analogy with English. 个 is the most common measure word."
+            },
+            {
+              "id": "n5-14",
+              "type": "multiple_choice",
+              "prompt": "Pick the right way to say \"three books\":",
+              "options": [
+                "三书",
+                "三本书",
+                "three 书",
+                "三 book"
+              ],
+              "answer": "三本书",
+              "explanation": "Books use 本 as their measure word. 三本书 = three + 本 + book. Skipping the measure word is a common English-L1 slip."
+            },
+            {
+              "id": "n5-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "四",
+              "options": [
+                "四 (sì, four)",
+                "十 (shí, ten)",
+                "是 (shì, is)",
+                "私 (sī, private)"
+              ],
+              "answer": "四 (sì, four)",
+              "explanation": "Minimal-pair listening: 四 sì has flat s and 4th tone. Compare with 是 shì (retroflex sh, also 4th) and 十 shí (retroflex sh, rising). Southern speakers often merge these — standard Mandarin keeps them distinct."
+            },
+            {
+              "id": "n5-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "十",
+              "options": [
+                "四 (sì)",
+                "十 (shí)",
+                "是 (shì)",
+                "私 (sī)"
+              ],
+              "answer": "十 (shí)",
+              "explanation": "十 shí — retroflex sh and 2nd tone (rising). The most confused number for English learners is 4/10 because of these sound contrasts."
             }
           ]
         },
@@ -2213,15 +4653,16 @@
             },
             {
               "id": "b1-10",
-              "type": "fill_blank",
-              "prompt": "\"对\" (duì) literally \"correct\" — used like ___",
+              "type": "translate",
+              "source": "对",
               "answer": "Yes",
               "acceptableAnswers": [
-                "yes",
                 "Right",
                 "Correct",
                 "That's right"
               ],
+              "direction": "to_source",
+              "context": "Casual confirmation — literally \"correct\"",
               "explanation": "对 is the closest word to a casual \"yes\" — confirms what someone said. Reverse: 不对 (\"no, that's wrong\")."
             },
             {
@@ -2288,13 +4729,15 @@
             },
             {
               "id": "b2-3",
-              "type": "fill_blank",
-              "prompt": "\"我们\" (wǒ men) means ___",
+              "type": "translate",
+              "source": "我们",
               "answer": "We",
               "acceptableAnswers": [
-                "we",
+                "We",
                 "Us"
               ],
+              "direction": "to_source",
+              "context": "Plural we/us — 我 + 们 (plural marker)",
               "explanation": "Add \"们\" to make a plural pronoun: 我们 = we."
             },
             {
@@ -2755,6 +5198,60 @@
               ],
               "answer": "这个",
               "explanation": "这 (zhè) and 那 (nà) — both fourth tone. Distinguish by the 'zh' vs 'n' onset."
+            },
+            {
+              "id": "b4-13",
+              "type": "multiple_choice",
+              "prompt": "Which is correct for \"I am a student\"?",
+              "options": [
+                "我学生",
+                "我是学生",
+                "I student",
+                "我是 student"
+              ],
+              "answer": "我是学生",
+              "explanation": "Mandarin REQUIRES 是 between two nouns: 我是学生. Dropping 是 (as in 我学生) is wrong — it's the equivalent of saying \"I student\" in English."
+            },
+            {
+              "id": "b4-14",
+              "type": "multiple_choice",
+              "prompt": "Build \"He is my friend\":",
+              "options": [
+                "他朋友我",
+                "他是我的朋友",
+                "He my friend",
+                "他我的朋友"
+              ],
+              "answer": "他是我的朋友",
+              "explanation": "Need 是 (is) AND 的 (possessive marker): 他是我的朋友. Dropping either is a Chenglish slip."
+            },
+            {
+              "id": "b4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "我是",
+              "options": [
+                "我是 (wǒ shì)",
+                "我四 (wǒ sì)",
+                "我十 (wǒ shí)",
+                "我私 (wǒ sī)"
+              ],
+              "answer": "我是 (wǒ shì)",
+              "explanation": "我是 wǒ shì = \"I am.\" Note retroflex sh on 是 — tongue curls back, distinct from flat s of 四."
+            },
+            {
+              "id": "b4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "不是",
+              "options": [
+                "不是 (bú shì)",
+                "不四 (bù sì)",
+                "不十",
+                "不私"
+              ],
+              "answer": "不是 (bú shì)",
+              "explanation": "不是 — 不 shifted to 2nd tone (sandhi rule: before 4th tone, bù → bú). \"Not.\""
             }
           ]
         },
@@ -2882,15 +5379,16 @@
             },
             {
               "id": "fa1-3",
-              "type": "fill_blank",
-              "prompt": "\"家\" (jiā) means ___",
+              "type": "translate",
+              "source": "家",
               "answer": "Home",
               "acceptableAnswers": [
+                "Home",
                 "Family",
-                "House",
-                "home",
-                "family"
-              ]
+                "House"
+              ],
+              "direction": "to_source",
+              "context": "Home / family — jiā"
             },
             {
               "id": "fa1-4",
@@ -3079,14 +5577,16 @@
             },
             {
               "id": "fa2-5",
-              "type": "fill_blank",
-              "prompt": "\"姐姐\" (jiě jie) means ___",
+              "type": "translate",
+              "source": "姐姐",
               "answer": "Older sister",
               "acceptableAnswers": [
-                "older sister",
+                "Older sister",
                 "Big sister",
-                "Sister (older)"
-              ]
+                "Elder sister"
+              ],
+              "direction": "to_source",
+              "context": "Older sister — jiějie"
             },
             {
               "id": "fa2-6",
@@ -3673,6 +6173,46 @@
                 "表妹",
                 "上海"
               ]
+            },
+            {
+              "id": "fa5-13",
+              "type": "multiple_choice",
+              "prompt": "Which is correct for \"my mom\"?",
+              "options": [
+                "我妈妈",
+                "我的妈妈",
+                "Both are correct (的 is often dropped for close family)",
+                "Me mom"
+              ],
+              "answer": "Both are correct (的 is often dropped for close family)",
+              "explanation": "For close family/friends, 的 is usually omitted: 我妈妈, 我哥哥, 我朋友. Adding 的 isn't wrong, just less natural. For non-family possession (我的书) 的 is required."
+            },
+            {
+              "id": "fa5-14",
+              "type": "multiple_choice",
+              "prompt": "\"My family has five people\" — which is most natural?",
+              "options": [
+                "我家五人",
+                "我的家庭五个人",
+                "我家有五个人",
+                "My family 有 five 人"
+              ],
+              "answer": "我家有五个人",
+              "explanation": "Use 有 (\"have\") to express existence: 我家有五个人. 我家五人 drops the verb, which is a common Chenglish error."
+            },
+            {
+              "id": "fa5-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "妈妈",
+              "options": [
+                "妈妈 (māma)",
+                "马马 (mǎmǎ)",
+                "麻麻",
+                "骂骂"
+              ],
+              "answer": "妈妈 (māma)",
+              "explanation": "妈妈 māma — flat high 1st tone, second syllable neutral. Listen for the steady held pitch, not a dip (3rd) or fall (4th)."
             }
           ]
         },
@@ -3800,13 +6340,16 @@
             },
             {
               "id": "fo1-3",
-              "type": "fill_blank",
-              "prompt": "\"米饭\" (mǐ fàn) means ___",
+              "type": "translate",
+              "source": "米饭",
               "answer": "Rice",
               "acceptableAnswers": [
-                "rice",
-                "cooked rice"
-              ]
+                "Rice",
+                "Cooked rice",
+                "Steamed rice"
+              ],
+              "direction": "to_source",
+              "context": "Cooked rice — staple of Chinese meals"
             },
             {
               "id": "fo1-4",
@@ -3860,13 +6403,15 @@
             },
             {
               "id": "fo1-7",
-              "type": "fill_blank",
-              "prompt": "\"喝\" (hē) means ___",
+              "type": "translate",
+              "source": "喝",
               "answer": "Drink",
               "acceptableAnswers": [
-                "drink",
+                "Drink",
                 "To drink"
               ],
+              "direction": "to_source",
+              "context": "Verb \"to drink\" — also used for soup",
               "explanation": "喝 is for liquids. For solids, use 吃 (chī, eat). 喝水, 喝茶, 喝咖啡."
             },
             {
@@ -4147,12 +6692,15 @@
             },
             {
               "id": "fo3-5",
-              "type": "fill_blank",
-              "prompt": "\"水果\" (shuǐ guǒ) means ___",
+              "type": "translate",
+              "source": "水果",
               "answer": "Fruit",
               "acceptableAnswers": [
-                "fruit"
+                "Fruit",
+                "Fresh fruit"
               ],
+              "direction": "to_source",
+              "context": "Fruit — literally \"water fruit\"",
               "explanation": "水 = water, 果 = fruit. Literally \"water-fruit\" — emphasizes juicy/fresh produce."
             },
             {
@@ -4576,6 +7124,32 @@
                 "我喜欢吃面包"
               ],
               "answer": "我喜欢吃面条"
+            },
+            {
+              "id": "fo5-12",
+              "type": "multiple_choice",
+              "prompt": "\"I really like spicy food\" — which has the right word order?",
+              "options": [
+                "我非常喜欢辣的菜",
+                "我喜欢非常辣的菜",
+                "I very like spicy food",
+                "I really like 辣 food"
+              ],
+              "answer": "我非常喜欢辣的菜",
+              "explanation": "Adverbs like 非常 (very/really) come BEFORE the verb, not between the verb and object. \"I very like\" is a classic back-translation Chenglish."
+            },
+            {
+              "id": "fo5-13",
+              "type": "multiple_choice",
+              "prompt": "Which is the correct way to say \"a cup of coffee\"?",
+              "options": [
+                "一咖啡",
+                "一杯咖啡",
+                "one coffee",
+                "一个咖啡"
+              ],
+              "answer": "一杯咖啡",
+              "explanation": "Liquid in a cup uses 杯 (cup) as the measure word: 一杯咖啡. 一个咖啡 is wrong because 个 is for countable items, not portions of liquid."
             }
           ]
         },
@@ -4828,14 +7402,15 @@
             },
             {
               "id": "v1-3",
-              "type": "fill_blank",
-              "prompt": "\"吃\" (chī) means ___",
+              "type": "translate",
+              "source": "吃",
               "answer": "Eat",
               "acceptableAnswers": [
-                "To eat",
-                "eat",
-                "to eat"
-              ]
+                "Eat",
+                "To eat"
+              ],
+              "direction": "to_source",
+              "context": "Verb \"to eat\" — chī"
             },
             {
               "id": "v1-4",
@@ -5061,13 +7636,15 @@
             },
             {
               "id": "v2-8",
-              "type": "fill_blank",
-              "prompt": "\"爱\" (ài) means ___",
+              "type": "translate",
+              "source": "爱",
               "answer": "Love",
               "acceptableAnswers": [
-                "love",
+                "Love",
                 "To love"
               ],
+              "direction": "to_source",
+              "context": "Verb \"to love\" — stronger than 喜欢",
               "explanation": "爱 is stronger than 喜欢. Reserved for family, partners, deep affection — though usage is loosening among young Chinese."
             },
             {
@@ -5476,6 +8053,46 @@
                 "things to sell"
               ],
               "explanation": "Mnemonic: 卖 has 十 stacked on 买 — the seller has more stuff. Helps separate the two characters."
+            },
+            {
+              "id": "v4-13",
+              "type": "multiple_choice",
+              "prompt": "\"Did you eat?\" in past tense — which is correct?",
+              "options": [
+                "你吃了吗？",
+                "你吃吗？",
+                "Did you ate?",
+                "你 did eat 吗？"
+              ],
+              "answer": "你吃了吗？",
+              "explanation": "Past completion uses 了 after the verb: 你吃了吗？ \"Did you ate\" is a Chenglish double-marking error (English speakers sometimes try to mark tense twice)."
+            },
+            {
+              "id": "v4-14",
+              "type": "multiple_choice",
+              "prompt": "How do you say \"I am eating\"?",
+              "options": [
+                "我吃",
+                "我在吃",
+                "I am 吃",
+                "我是吃"
+              ],
+              "answer": "我在吃",
+              "explanation": "Ongoing action uses 在 before the verb: 我在吃 \"I'm eating.\" Don't use 是 (which means \"to be\"); that's a Chenglish trap from English \"I AM eating.\""
+            },
+            {
+              "id": "v4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "看",
+              "options": [
+                "看 (kàn, watch)",
+                "砍 (kǎn, chop)",
+                "刊 (kān)",
+                "侃 (kǎn)"
+              ],
+              "answer": "看 (kàn, watch)",
+              "explanation": "看 kàn — sharp falling 4th tone. Common verb \"to look/watch.\" Compare with kǎn (3rd, dipping)."
             }
           ]
         },
@@ -5603,13 +8220,16 @@
             },
             {
               "id": "p1-3",
-              "type": "fill_blank",
-              "prompt": "\"那里\" (nà lǐ) means ___",
+              "type": "translate",
+              "source": "那里",
               "answer": "There",
               "acceptableAnswers": [
-                "there",
-                "Over there"
-              ]
+                "There",
+                "Over there",
+                "That place"
+              ],
+              "direction": "to_source",
+              "context": "There (specific location) — opposite of 这里"
             },
             {
               "id": "p1-4",
@@ -6199,6 +8819,46 @@
                 "我家不近"
               ],
               "answer": "我家很近"
+            },
+            {
+              "id": "p4-12",
+              "type": "multiple_choice",
+              "prompt": "\"I'm at home\" — which is right?",
+              "options": [
+                "我家",
+                "我在家",
+                "I at home",
+                "我是在家"
+              ],
+              "answer": "我在家",
+              "explanation": "Location uses 在 (at): 我在家 \"I'm at home.\" Don't combine 是 + 在; that's a doubled-be Chenglish slip from English \"I AM at home.\""
+            },
+            {
+              "id": "p4-13",
+              "type": "multiple_choice",
+              "prompt": "\"There are three people in the room\" — correct version?",
+              "options": [
+                "三个人在房间",
+                "房间里有三个人",
+                "Three 个 people 在 room",
+                "房间有三人"
+              ],
+              "answer": "房间里有三个人",
+              "explanation": "Existence in a location uses 有: 房间里 (in the room) + 有 (has) + 三个人 (three people). 里 (inside) is also typically required after the location."
+            },
+            {
+              "id": "p4-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "哪里",
+              "options": [
+                "哪里 (nǎlǐ, where)",
+                "那里 (nàlǐ, there)",
+                "你里",
+                "里里"
+              ],
+              "answer": "哪里 (nǎlǐ, where)",
+              "explanation": "Minimal pair: 哪里 nǎlǐ (which place / where) — both 3rd tones; first becomes 2nd in speech. 那里 nàlǐ (there) — 4th + 3rd. The tone difference is the only difference."
             }
           ]
         },
@@ -7213,6 +9873,46 @@
                 "下午"
               ],
               "answer": "晚上"
+            },
+            {
+              "id": "t5-12",
+              "type": "multiple_choice",
+              "prompt": "\"Tomorrow I go to school\" — which is most natural?",
+              "options": [
+                "我去学校明天",
+                "明天我去学校",
+                "I tomorrow 去 school",
+                "去学校明天我"
+              ],
+              "answer": "明天我去学校",
+              "explanation": "Time expressions go BEFORE the verb in Mandarin: 明天我去学校. Putting time at the end (我去学校明天) is a Chenglish back-translation from \"I go to school TOMORROW.\""
+            },
+            {
+              "id": "t5-13",
+              "type": "multiple_choice",
+              "prompt": "\"What time is it?\" — pick the right phrasing:",
+              "options": [
+                "什么时间？",
+                "现在几点？",
+                "What time is 它？",
+                "时间是什么？"
+              ],
+              "answer": "现在几点？",
+              "explanation": "Standard phrasing: 现在几点？ (literally \"now what o'clock?\"). Literal back-translations from English fail because Mandarin doesn't structure questions like English."
+            },
+            {
+              "id": "t5-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "今天",
+              "options": [
+                "今天 (jīntiān, today)",
+                "明天 (míngtiān, tomorrow)",
+                "昨天 (zuótiān, yesterday)",
+                "前天"
+              ],
+              "answer": "今天 (jīntiān, today)",
+              "explanation": "今天 jīntiān — both 1st tones (high and flat). Compare with 明天 (rising + flat) and 昨天 (rising + flat). Listen for the steady opening pitch."
             }
           ]
         },
@@ -8088,6 +10788,32 @@
               "prompt": "Statement: 他是学生. The yes/no question (with 吗) is: 他是学生 ___",
               "answer": "吗",
               "explanation": "Add 吗 at the end. Yes/no questions don't change word order."
+            },
+            {
+              "id": "q4-13",
+              "type": "multiple_choice",
+              "prompt": "\"What is this?\" — which is right?",
+              "options": [
+                "什么是这个？",
+                "这是什么？",
+                "What 是 this？",
+                "这个什么是？"
+              ],
+              "answer": "这是什么？",
+              "explanation": "Standard Mandarin word order: subject + verb + question word: 这 + 是 + 什么. Putting 什么 first is a Chenglish slip from English \"What is...\""
+            },
+            {
+              "id": "q4-14",
+              "type": "multiple_choice",
+              "prompt": "\"Do you have time?\" — correct version?",
+              "options": [
+                "你有时间吗？",
+                "Do you 有 time？",
+                "你时间有吗？",
+                "你有吗时间？"
+              ],
+              "answer": "你有时间吗？",
+              "explanation": "Yes/no questions add 吗 to the END of a statement: 你有时间吗？ The full sentence stays in normal order; only 吗 is added."
             }
           ]
         },
@@ -8834,6 +11560,32 @@
                 "我开车"
               ],
               "answer": "我坐地铁"
+            },
+            {
+              "id": "d4-12",
+              "type": "multiple_choice",
+              "prompt": "\"Turn left\" — which is correct?",
+              "options": [
+                "Turn 左",
+                "向左转",
+                "左转向",
+                "转左"
+              ],
+              "answer": "向左转",
+              "explanation": "Mandarin direction phrase: 向 (toward) + 左 (left) + 转 (turn). Word order differs from English; 转左 is a literal back-translation that sounds off."
+            },
+            {
+              "id": "d4-13",
+              "type": "multiple_choice",
+              "prompt": "\"Go straight\" — pick the right one:",
+              "options": [
+                "去直",
+                "直去",
+                "直走",
+                "Go 直"
+              ],
+              "answer": "直走",
+              "explanation": "走 (walk/go) is used for directions on foot: 直走 (straight + walk). Using 去 (go to a destination) for \"go straight\" is a Chenglish slip — 去 takes a destination, not a manner."
             }
           ]
         },
@@ -9552,6 +12304,32 @@
                 "黑"
               ],
               "explanation": "头发 (tóu fa) = hair. 我奶奶的头发 = \"my grandma's hair.\""
+            },
+            {
+              "id": "c4-12",
+              "type": "multiple_choice",
+              "prompt": "\"A red car\" — pick the correct one:",
+              "options": [
+                "红车",
+                "红色的车",
+                "Red 车",
+                "红的车"
+              ],
+              "answer": "红色的车",
+              "explanation": "Most colors take 色 (color suffix) + 的 (modifier marker): 红色的车. 红的车 and 红车 are sometimes acceptable in compounds but the full form is safest."
+            },
+            {
+              "id": "c4-13",
+              "type": "multiple_choice",
+              "prompt": "\"The sky is blue\" — which is correct?",
+              "options": [
+                "天是蓝",
+                "天是蓝的",
+                "Sky 是 blue",
+                "天蓝是"
+              ],
+              "answer": "天是蓝的",
+              "explanation": "Predicate adjectives in 是...的 take 的 at the end: 天是蓝的. Dropping 的 (天是蓝) sounds incomplete — like saying \"the sky is blue thing\" but trailing off."
             }
           ]
         },
@@ -10278,6 +13056,32 @@
                 "明天刮风"
               ],
               "answer": "明天下雨"
+            },
+            {
+              "id": "w4-12",
+              "type": "multiple_choice",
+              "prompt": "\"It's raining\" — which is right?",
+              "options": [
+                "它在下雨",
+                "下雨",
+                "It is 下雨",
+                "天在下雨"
+              ],
+              "answer": "下雨",
+              "explanation": "Mandarin has no \"it\" subject for weather: just 下雨 (\"falling rain\") or 在下雨. Adding 它 (\"it\") is a Chenglish slip — Mandarin doesn't use dummy pronouns."
+            },
+            {
+              "id": "w4-13",
+              "type": "multiple_choice",
+              "prompt": "\"It's very cold today\" — best version:",
+              "options": [
+                "今天它很冷",
+                "今天很冷",
+                "Today is very 冷",
+                "今天是很冷"
+              ],
+              "answer": "今天很冷",
+              "explanation": "Stative adjectives take 很 directly, no 是: 今天很冷. Adding 是 (今天是很冷) is a Chenglish slip from English \"today IS cold.\""
             }
           ]
         },
@@ -11025,6 +13829,32 @@
                 "请问银行在哪里"
               ],
               "answer": "请问洗手间在哪里"
+            },
+            {
+              "id": "r4-12",
+              "type": "multiple_choice",
+              "prompt": "\"I'm going to eat lunch with my friend\" — natural order?",
+              "options": [
+                "我去吃午饭和我的朋友",
+                "我和我朋友去吃午饭",
+                "I go eat lunch with my 朋友",
+                "我去和朋友吃午饭"
+              ],
+              "answer": "我和我朋友去吃午饭",
+              "explanation": "\"With X\" phrases go BEFORE the verb in Mandarin: 和我朋友 (with my friend) + 去吃午饭 (go eat lunch). Putting 和... at the end is a classic Chenglish back-translation."
+            },
+            {
+              "id": "r4-13",
+              "type": "multiple_choice",
+              "prompt": "\"I bought two books yesterday\" — pick the right one:",
+              "options": [
+                "昨天我买了两本书",
+                "我昨天买两本书了",
+                "I yesterday 买 two books",
+                "我买两书昨天"
+              ],
+              "answer": "昨天我买了两本书",
+              "explanation": "Standard order: time (昨天) + subject (我) + verb+了 (买了) + object+measure (两本书). Past 了 sits right after the verb. Time at the end is Chenglish."
             }
           ]
         },
