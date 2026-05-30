@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   ActivityIndicator,
   Dimensions,
@@ -84,6 +84,36 @@ export default function HomeScreen({
   const [popoverPlacement, setPopoverPlacement] = useState<'below' | 'above'>(
     'below'
   )
+
+  // Collapse/expand state for levels and topics. Default: only the
+  // current (next-to-do) level and topic are expanded; everything else
+  // is collapsed. User toggles persist for the session only.
+  const [expandedLevels, setExpandedLevels] = useState<Set<string>>(
+    () => new Set(),
+  )
+  const [expandedTopics, setExpandedTopics] = useState<Set<string>>(
+    () => new Set(),
+  )
+
+  function toggleLevel(id: string) {
+    setOpenLessonId(null)
+    setExpandedLevels((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+
+  function toggleTopic(id: string) {
+    setOpenLessonId(null)
+    setExpandedTopics((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
 
   const scrollRef = useRef<ScrollView>(null)
   // Each lesson row registers its View ref here so we can measure where
@@ -226,6 +256,24 @@ export default function HomeScreen({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [course.levels, progress.state.results, examsPassed, levelExamsPassed, devMode])
 
+  // Auto-expand the current level + topic on first sight of them.
+  // Adding to the set rather than replacing means manually-expanded
+  // siblings stay open as the user progresses.
+  const heroLevelId = heroInfo.heroLevel?.id ?? null
+  const heroTopicId = heroInfo.heroTopic?.id ?? null
+  useEffect(() => {
+    if (heroLevelId) {
+      setExpandedLevels((prev) =>
+        prev.has(heroLevelId) ? prev : new Set([...prev, heroLevelId]),
+      )
+    }
+    if (heroTopicId) {
+      setExpandedTopics((prev) =>
+        prev.has(heroTopicId) ? prev : new Set([...prev, heroTopicId]),
+      )
+    }
+  }, [heroLevelId, heroTopicId])
+
   if (course.loading && course.levels.length === 0) {
     return (
       <View style={styles.center}>
@@ -318,6 +366,10 @@ export default function HomeScreen({
             openLessonId={openLessonId}
             popoverPlacement={popoverPlacement}
             rowRefs={rowRefs}
+            expanded={expandedLevels.has(level.id)}
+            expandedTopics={expandedTopics}
+            onToggle={() => toggleLevel(level.id)}
+            onToggleTopic={toggleTopic}
             onSelectLesson={onSelectLesson}
             onOpenGuide={onOpenGuide}
             onTakeExam={onTakeExam}
@@ -361,6 +413,10 @@ interface SectionProps {
   openLessonId: string | null
   popoverPlacement: 'below' | 'above'
   rowRefs: React.MutableRefObject<Record<string, View | null>>
+  expanded: boolean
+  expandedTopics: Set<string>
+  onToggle: () => void
+  onToggleTopic: (id: string) => void
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
   onTakeExam: (topic: Topic) => void
@@ -388,6 +444,10 @@ function LevelSection({
   openLessonId,
   popoverPlacement,
   rowRefs,
+  expanded,
+  expandedTopics,
+  onToggle,
+  onToggleTopic,
   onSelectLesson,
   onOpenGuide,
   onTakeExam,
@@ -406,14 +466,30 @@ function LevelSection({
     openLessonId !== null &&
     level.topics.some((t) => t.lessons.some((l) => l.id === openLessonId))
 
+  // Summary counts for the collapsed divider.
+  const totalTopics = level.topics.length
+  const clearedTopics = level.topics.filter((t) =>
+    isTopicCleared(t, progressResults, examsPassed),
+  ).length
+
   return (
     <View style={[styles.level, levelHasOpen && styles.levelOpen]}>
-      <View style={styles.levelDivider}>
+      <Pressable
+        onPress={onToggle}
+        style={({ pressed }) => [
+          styles.levelDivider,
+          pressed && { opacity: 0.7 },
+        ]}
+        accessibilityRole="button"
+        accessibilityLabel={`${expanded ? 'Collapse' : 'Expand'} ${level.name}`}
+      >
         <View style={styles.dividerLine} />
-        <Text style={styles.levelPill}>{level.name}</Text>
+        <Text style={styles.levelPill}>
+          {expanded ? '▾' : '▸'} {level.name} · {clearedTopics}/{totalTopics}
+        </Text>
         <View style={styles.dividerLine} />
-      </View>
-      {showLevelExam && (
+      </Pressable>
+      {expanded && showLevelExam && (
         <Pressable
           onPress={() => onTakeLevelExam(level)}
           style={({ pressed }) => [
@@ -426,7 +502,7 @@ function LevelSection({
           </Text>
         </Pressable>
       )}
-      {levelMistakeCount > 0 && (
+      {expanded && levelMistakeCount > 0 && (
         <Pressable
           onPress={() => onPracticeLevel(level)}
           style={({ pressed }) => [
@@ -439,45 +515,48 @@ function LevelSection({
           </Text>
         </Pressable>
       )}
-      {level.topics.map((topic, ti) => {
-        const unlocked =
-          devMode ||
-          isTopicUnlocked(
-            allLevels,
-            topic.id,
-            progressResults,
-            examsPassed,
-            levelExamsPassed
+      {expanded &&
+        level.topics.map((topic, ti) => {
+          const unlocked =
+            devMode ||
+            isTopicUnlocked(
+              allLevels,
+              topic.id,
+              progressResults,
+              examsPassed,
+              levelExamsPassed
+            )
+          const cleared = isTopicCleared(topic, progressResults, examsPassed)
+          const examPassed = examsPassed[topic.id] === true
+          const prev = unlocked ? null : previousTopic(allLevels, topic.id)
+          return (
+            <TopicCard
+              key={topic.id}
+              topic={topic}
+              topicNumber={ti + 1}
+              lessonStartIdx={lessonStartIndices.get(topic.id) ?? 0}
+              unlocked={unlocked}
+              cleared={cleared}
+              examPassed={examPassed}
+              previousTopic={prev}
+              mistakes={mistakes}
+              isCompleted={isCompleted}
+              nextId={nextId}
+              openLessonId={openLessonId}
+              popoverPlacement={popoverPlacement}
+              rowRefs={rowRefs}
+              expanded={expandedTopics.has(topic.id)}
+              onToggle={() => onToggleTopic(topic.id)}
+              onSelectLesson={onSelectLesson}
+              onOpenGuide={onOpenGuide}
+              onTakeExam={onTakeExam}
+              onPracticeLesson={onPracticeLesson}
+              onPracticeTopic={onPracticeTopic}
+              onNodePress={onNodePress}
+              onCloseLesson={onCloseLesson}
+            />
           )
-        const cleared = isTopicCleared(topic, progressResults, examsPassed)
-        const examPassed = examsPassed[topic.id] === true
-        const prev = unlocked ? null : previousTopic(allLevels, topic.id)
-        return (
-          <TopicCard
-            key={topic.id}
-            topic={topic}
-            topicNumber={ti + 1}
-            lessonStartIdx={lessonStartIndices.get(topic.id) ?? 0}
-            unlocked={unlocked}
-            cleared={cleared}
-            examPassed={examPassed}
-            previousTopic={prev}
-            mistakes={mistakes}
-            isCompleted={isCompleted}
-            nextId={nextId}
-            openLessonId={openLessonId}
-            popoverPlacement={popoverPlacement}
-            rowRefs={rowRefs}
-            onSelectLesson={onSelectLesson}
-            onOpenGuide={onOpenGuide}
-            onTakeExam={onTakeExam}
-            onPracticeLesson={onPracticeLesson}
-            onPracticeTopic={onPracticeTopic}
-            onNodePress={onNodePress}
-            onCloseLesson={onCloseLesson}
-          />
-        )
-      })}
+        })}
     </View>
   )
 }
@@ -497,6 +576,8 @@ interface TopicProps {
   openLessonId: string | null
   popoverPlacement: 'below' | 'above'
   rowRefs: React.MutableRefObject<Record<string, View | null>>
+  expanded: boolean
+  onToggle: () => void
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
   onTakeExam: (topic: Topic) => void
@@ -520,6 +601,8 @@ function TopicCard({
   openLessonId,
   popoverPlacement,
   rowRefs,
+  expanded,
+  onToggle,
   onSelectLesson,
   onOpenGuide,
   onTakeExam,
@@ -548,21 +631,25 @@ function TopicCard({
         !unlocked && styles.topicLocked,
       ]}
     >
-      <View
-        style={[
+      <Pressable
+        onPress={onToggle}
+        accessibilityRole="button"
+        accessibilityLabel={`${expanded ? 'Collapse' : 'Expand'} ${topic.title}`}
+        style={({ pressed }) => [
           styles.topicHeader,
           {
             backgroundColor: tint.bg,
             borderColor: tint.edge,
             borderBottomColor: tint.edgeDeep,
           },
+          pressed && { opacity: 0.85 },
         ]}
       >
         <View style={styles.topicHeaderRow}>
           <View style={{ flex: 1 }}>
             <View style={styles.topicEyebrowRow}>
               <Text style={[styles.topicEyebrow, { color: tint.fg }]}>
-                Topic {topicNumber}
+                {expanded ? '▾' : '▸'} Topic {topicNumber}
               </Text>
               {(cleared || allDone) && <Text style={styles.topicDone}>✓</Text>}
               {examPassed && !allDone && (
@@ -633,9 +720,9 @@ function TopicCard({
             </View>
           </View>
         </View>
-      </View>
+      </Pressable>
 
-      <View style={styles.path}>
+      {expanded && <View style={styles.path}>
         {topic.lessons.map((lesson, idx) => {
           const offset = Math.sin((lessonStartIdx + idx) * (Math.PI / 4)) * 80
           const isOpen = openLessonId === lesson.id
@@ -687,7 +774,7 @@ function TopicCard({
             </View>
           )
         })}
-      </View>
+      </View>}
     </View>
   )
 }
