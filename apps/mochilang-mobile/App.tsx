@@ -464,6 +464,30 @@ function SignedInTabs({
   onPracticeLevel,
 }: SignedInTabsProps) {
   const t = useT()
+
+  // Dev shortcuts — only surfaced in the UI when developerMode is on
+  // (HomeScreen reads the setting). These bypass actually doing the
+  // lessons; useful when testing topic/level boundaries without
+  // grinding through every exercise.
+  async function devCompleteLesson(lesson: Lesson) {
+    if (progress.state.results[lesson.id]) return
+    await progress.recordCompletion(lesson.id, 0, lesson.xp, {
+      xpMultiplier: 1,
+      useStreakFreeze: false,
+    })
+  }
+  async function devCompleteTopic(topic: Topic) {
+    for (const lesson of topic.lessons) {
+      await devCompleteLesson(lesson)
+    }
+    exams.pass(topic.id)
+  }
+  async function devCompleteLevel(level: Level) {
+    for (const topic of level.topics) {
+      await devCompleteTopic(topic)
+    }
+    levelExams.pass(level.id)
+  }
   return (
     <Tabs.Navigator
       screenOptions={{
@@ -483,6 +507,7 @@ function SignedInTabs({
         {(props) => (
           <HomeScreen
             courseId={courseId}
+            progress={progress}
             examsPassed={exams.state}
             levelExamsPassed={levelExams.state}
             mistakes={mistakes.state}
@@ -500,6 +525,9 @@ function SignedInTabs({
             onPracticeLesson={onPracticeLesson}
             onPracticeTopic={onPracticeTopic}
             onPracticeLevel={onPracticeLevel}
+            onDevCompleteLesson={devCompleteLesson}
+            onDevCompleteTopic={devCompleteTopic}
+            onDevCompleteLevel={devCompleteLevel}
           />
         )}
       </Tabs.Screen>

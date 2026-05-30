@@ -80,14 +80,13 @@ function fillSentence(prompt: string, answer: string): string | null {
   if (extracted) {
     return extracted.replace(/_+/g, answer.trim()).trim()
   }
-  // No quoted blank. Try the bare-prompt format as a last resort —
-  // legacy zh-en exercises sometimes have the blank directly in the
-  // prompt with no quoting.
-  const trimmed = prompt
-    .replace(/\s*\([^)]*\)\s*$/, '')
-    .replace(/^['"]|['"]$/g, '')
-  if (!trimmed.includes('___') && !/_/.test(trimmed)) return null
-  return trimmed.replace(/_+/g, answer.trim()).trim()
+  // No quoted target-language sentence containing the blank. Returning
+  // null tells the caller to speak just the answer instead of risking
+  // a mixed-language read of the whole prompt — e.g. for prompts like
+  // `"拜拜" (bài bài) means ___`, the blank is inside a source-language
+  // gloss, not a target sentence, so reading "拜拜 (bài bài) means
+  // byebye" in Chinese voice is wrong.
+  return null
 }
 
 interface Props {
@@ -168,7 +167,19 @@ export default function LessonScreen({
       const targetLoc = targetLocaleForCourse(courseId)
       if (ex.type === 'fill_blank') {
         const sentence = ex.prompt ? fillSentence(ex.prompt, fbValue) : null
-        speak(sentence ?? fbValue, { language: targetLoc })
+        if (sentence) {
+          speak(sentence, { language: targetLoc })
+        } else {
+          // No clean target sentence — detect per-answer so
+          // translate-style fill_blanks (Chinese prompt, English
+          // answer) read in the right voice.
+          const loc = localeForOption(
+            fbValue,
+            [ex.prompt ?? '', ex.answer],
+            courseId,
+          )
+          speak(fbValue, { language: loc })
+        }
       } else if (ex.type === 'tap_words_in_order') {
         speak(tapValue, { language: targetLoc })
       } else if (ex.type === 'translate') {
@@ -204,6 +215,35 @@ export default function LessonScreen({
       setMistakes((m) => m + 1)
       onWrongAnswer?.(ex.id)
       sfx.wrong()
+      // Speak the correct answer so the learner hears the right form
+      // alongside seeing it. Picks the right locale per exercise type
+      // (multiple-choice / translate may have a source-language
+      // answer; fill_blank / tap_words / listen are target).
+      const targetLoc = targetLocaleForCourse(courseId)
+      if (ex.type === 'multiple_choice' || ex.type === 'listen_and_choose') {
+        const loc = localeForOption(
+          ex.answer,
+          [ex.prompt ?? '', ...ex.options],
+          courseId,
+        )
+        speak(ex.answer, { language: loc })
+      } else if (ex.type === 'fill_blank') {
+        const loc = localeForOption(
+          ex.answer,
+          [ex.prompt ?? '', ex.answer],
+          courseId,
+        )
+        speak(ex.answer, { language: loc })
+      } else if (ex.type === 'tap_words_in_order') {
+        speak(ex.answer, { language: targetLoc })
+      } else if (ex.type === 'translate') {
+        const parsed = parseCourseId(courseId)
+        const target = parsed?.target ?? 'en'
+        const source = parsed?.source ?? 'en'
+        const sourceLoc = targetLocaleForCourse(`${source}-${target}`)
+        const loc = ex.direction === 'to_target' ? targetLoc : sourceLoc
+        speak(ex.answer, { language: loc })
+      }
     }
   }
 

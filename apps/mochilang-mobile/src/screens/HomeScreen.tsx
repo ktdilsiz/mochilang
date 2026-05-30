@@ -36,6 +36,10 @@ import { colors, fontSizes, radius, space, tintForTheme } from '../lib/theme'
 
 interface Props {
   courseId: string
+  /** Shared progress state from the App-level hook — passing as a
+   * prop instead of calling useProgress() locally so HomeScreen sees
+   * the same state container that LessonScreen writes to. */
+  progress: ReturnType<typeof useProgress>
   examsPassed: TopicExamsPassed
   levelExamsPassed: LevelExamsPassed
   mistakes: MistakesState
@@ -46,6 +50,10 @@ interface Props {
   onPracticeLesson: (lesson: Lesson) => void
   onPracticeTopic: (topic: Topic) => void
   onPracticeLevel: (level: Level) => void
+  /** Dev-mode shortcuts — only surfaced when settings.developerMode. */
+  onDevCompleteLesson: (lesson: Lesson) => void
+  onDevCompleteTopic: (topic: Topic) => void
+  onDevCompleteLevel: (level: Level) => void
 }
 
 /**
@@ -64,6 +72,7 @@ const POPOVER_GAP = 8 // vertical gap between node and popover
  */
 export default function HomeScreen({
   courseId,
+  progress,
   examsPassed,
   levelExamsPassed,
   mistakes,
@@ -74,9 +83,11 @@ export default function HomeScreen({
   onPracticeLesson,
   onPracticeTopic,
   onPracticeLevel,
+  onDevCompleteLesson,
+  onDevCompleteTopic,
+  onDevCompleteLevel,
 }: Props) {
   const insets = useSafeAreaInsets()
-  const progress = useProgress()
   const course = useCourse(courseId)
   const { state: settings } = useSettings()
   const devMode = settings.developerMode
@@ -377,6 +388,9 @@ export default function HomeScreen({
             onPracticeLesson={onPracticeLesson}
             onPracticeTopic={onPracticeTopic}
             onPracticeLevel={onPracticeLevel}
+            onDevCompleteLesson={onDevCompleteLesson}
+            onDevCompleteTopic={onDevCompleteTopic}
+            onDevCompleteLevel={onDevCompleteLevel}
             onNodePress={handleNodePress}
             onCloseLesson={() => setOpenLessonId(null)}
           />
@@ -424,6 +438,9 @@ interface SectionProps {
   onPracticeLesson: (lesson: Lesson) => void
   onPracticeTopic: (topic: Topic) => void
   onPracticeLevel: (level: Level) => void
+  onDevCompleteLesson: (lesson: Lesson) => void
+  onDevCompleteTopic: (topic: Topic) => void
+  onDevCompleteLevel: (level: Level) => void
   onNodePress: (lessonId: string) => void
   onCloseLesson: () => void
 }
@@ -455,6 +472,9 @@ function LevelSection({
   onPracticeLesson,
   onPracticeTopic,
   onPracticeLevel,
+  onDevCompleteLesson,
+  onDevCompleteTopic,
+  onDevCompleteLevel,
   onNodePress,
   onCloseLesson,
 }: SectionProps) {
@@ -515,6 +535,19 @@ function LevelSection({
           </Text>
         </Pressable>
       )}
+      {expanded && devMode && (
+        <Pressable
+          onPress={() => onDevCompleteLevel(level)}
+          style={({ pressed }) => [
+            styles.devBtn,
+            pressed && { transform: [{ translateY: 1 }] },
+          ]}
+        >
+          <Text style={styles.devBtnText}>
+            🛠 Dev: complete {level.id.toUpperCase()}
+          </Text>
+        </Pressable>
+      )}
       {expanded &&
         level.topics.map((topic, ti) => {
           const unlocked =
@@ -547,11 +580,14 @@ function LevelSection({
               rowRefs={rowRefs}
               expanded={expandedTopics.has(topic.id)}
               onToggle={() => onToggleTopic(topic.id)}
+              devMode={devMode}
               onSelectLesson={onSelectLesson}
               onOpenGuide={onOpenGuide}
               onTakeExam={onTakeExam}
               onPracticeLesson={onPracticeLesson}
               onPracticeTopic={onPracticeTopic}
+              onDevCompleteLesson={onDevCompleteLesson}
+              onDevCompleteTopic={onDevCompleteTopic}
               onNodePress={onNodePress}
               onCloseLesson={onCloseLesson}
             />
@@ -578,11 +614,14 @@ interface TopicProps {
   rowRefs: React.MutableRefObject<Record<string, View | null>>
   expanded: boolean
   onToggle: () => void
+  devMode: boolean
   onSelectLesson: (lesson: Lesson) => void
   onOpenGuide: (topic: Topic) => void
   onTakeExam: (topic: Topic) => void
   onPracticeLesson: (lesson: Lesson) => void
   onPracticeTopic: (topic: Topic) => void
+  onDevCompleteLesson: (lesson: Lesson) => void
+  onDevCompleteTopic: (topic: Topic) => void
   onNodePress: (lessonId: string) => void
   onCloseLesson: () => void
 }
@@ -603,11 +642,14 @@ function TopicCard({
   rowRefs,
   expanded,
   onToggle,
+  devMode,
   onSelectLesson,
   onOpenGuide,
   onTakeExam,
   onPracticeLesson,
   onPracticeTopic,
+  onDevCompleteLesson,
+  onDevCompleteTopic,
   onNodePress,
   onCloseLesson,
 }: TopicProps) {
@@ -713,6 +755,17 @@ function TopicCard({
                 </Text>
               </Pressable>
             )}
+            {devMode && !allDone && (
+              <Pressable
+                onPress={() => onDevCompleteTopic(topic)}
+                style={({ pressed }) => [
+                  styles.devBtn,
+                  pressed && { transform: [{ translateY: 1 }] },
+                ]}
+              >
+                <Text style={styles.devBtnText}>🛠 Dev: topic</Text>
+              </Pressable>
+            )}
             <View style={styles.progressPill}>
               <Text style={styles.progressPillText}>
                 {completed} / {topic.lessons.length}
@@ -760,6 +813,7 @@ function TopicCard({
                   isNext={lesson.id === nextId}
                   placement={popoverPlacement}
                   mistakeCount={mistakesForLesson(lesson.id, mistakes).length}
+                  devMode={devMode}
                   onStart={() => {
                     onCloseLesson()
                     onSelectLesson(lesson)
@@ -767,6 +821,10 @@ function TopicCard({
                   onPracticeMistakes={() => {
                     onCloseLesson()
                     onPracticeLesson(lesson)
+                  }}
+                  onDevComplete={() => {
+                    onCloseLesson()
+                    onDevCompleteLesson(lesson)
                   }}
                   rowOffset={offset}
                 />
@@ -785,8 +843,10 @@ function LessonPopover({
   isNext,
   placement,
   mistakeCount,
+  devMode,
   onStart,
   onPracticeMistakes,
+  onDevComplete,
   rowOffset,
 }: {
   lesson: Lesson
@@ -794,8 +854,10 @@ function LessonPopover({
   isNext: boolean
   placement: 'below' | 'above'
   mistakeCount: number
+  devMode: boolean
   onStart: () => void
   onPracticeMistakes: () => void
+  onDevComplete: () => void
   rowOffset: number
 }) {
   return (
@@ -829,6 +891,13 @@ function LessonPopover({
             label={`🎯 Practice mistakes (${mistakeCount})`}
             tone="neutral"
             onPress={onPracticeMistakes}
+          />
+        )}
+        {devMode && !done && (
+          <LedgeButton
+            label="🛠 Dev: mark complete"
+            tone="neutral"
+            onPress={onDevComplete}
           />
         )}
       </View>
@@ -961,6 +1030,24 @@ const styles = StyleSheet.create({
   levelPracticeBtnText: {
     color: colors.error700,
     fontSize: fontSizes.sm,
+    fontFamily: 'Nunito_900Black',
+  },
+  devBtn: {
+    alignSelf: 'center',
+    backgroundColor: '#fff8e0',
+    borderColor: '#d49a13',
+    borderWidth: 2,
+    borderBottomWidth: 3,
+    borderStyle: 'dashed',
+    borderRadius: radius.pill,
+    paddingHorizontal: space.md,
+    paddingVertical: 6,
+    marginTop: 4,
+    marginBottom: 4,
+  },
+  devBtnText: {
+    color: '#8a5e00',
+    fontSize: fontSizes.xs,
     fontFamily: 'Nunito_900Black',
   },
 
