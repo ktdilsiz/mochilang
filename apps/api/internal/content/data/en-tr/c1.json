@@ -120,15 +120,21 @@
           "exercises": [
             {
               "id": "biz1-1",
-              "type": "multiple_choice",
-              "prompt": "'Bugünkü gündem üç ana noktayı kapsıyor' İngilizcesi?",
+              "type": "translate",
+              "prompt": "İngilizceye çevir: 'Bugünkü gündem üç ana noktayı kapsıyor.'",
               "options": [
                 "Today's agenda covers three main points.",
                 "Today agenda is three points.",
                 "Today's agendas covers three points.",
                 "The agenda today three main."
               ],
-              "answer": "Today's agenda covers three main points."
+              "answer": "Today's agenda covers three main points.",
+              "acceptableAnswers": [
+                "Today's agenda covers three main points.",
+                "Today's agenda includes three main points.",
+                "Today's agenda comprises three main points."
+              ],
+              "explanation": "Possessive 'Today's' + tekil 'agenda' + 'covers/includes' fiili; toplantı açılış kalıbı."
             },
             {
               "id": "biz1-2",
@@ -1303,6 +1309,74 @@
                   "text": "Thank you. I'll circulate the updated forecast and remediation plan by close of business Friday."
                 }
               ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-business-l8",
+          "title": "İş İngilizcesinde dinleme tuzakları: zayıf formlar ve linking",
+          "description": "Toplantılarda 'would have', 'could have' kısaltmaları ve 'to' weak form'u (/tə/) Türk öğrenciler için tuzaktır.",
+          "theme": "verbs",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "cs-c1-1",
+              "type": "listen_and_choose",
+              "spokenText": "We could've avoided this if we'd flagged it earlier.",
+              "options": [
+                "We could of avoided this if we'd flagged it earlier.",
+                "We could've avoided this if we'd flagged it earlier.",
+                "We could have avoid this if we flagged it earlier.",
+                "We could've avoided this if we had flag it earlier."
+              ],
+              "answer": "We could've avoided this if we'd flagged it earlier.",
+              "explanation": "'could've' + 'we'd' (= we had) past unreal conditional kısaltmasıdır."
+            },
+            {
+              "id": "cs-c1-2",
+              "type": "listen_and_choose",
+              "spokenText": "I'd like ya to weigh in on this.",
+              "options": [
+                "I'd like you to weigh in on this.",
+                "I'd like ya to weigh in on this.",
+                "I'd like to you weigh in on this.",
+                "I like you weigh in on this."
+              ],
+              "answer": "I'd like ya to weigh in on this.",
+              "explanation": "'ya' = 'you' (zayıf form, çok günlük). İş toplantısında nadirdir; lider-takım sohbetinde geçer."
+            },
+            {
+              "id": "cs-c1-3",
+              "type": "fill_blank",
+              "prompt": "We ___ ('ve) been talking about this for weeks.",
+              "answer": "have",
+              "hint": "'we've' = 'we have'."
+            },
+            {
+              "id": "cs-c1-4",
+              "type": "multiple_choice",
+              "prompt": "'I'd've thought so' açılımı?",
+              "options": [
+                "I would have thought so.",
+                "I had have thought so.",
+                "I do have thought so.",
+                "I did have thought so."
+              ],
+              "answer": "I would have thought so.",
+              "explanation": "Çift kısaltma 'I'd've' = 'I would have'. Çok yaygın konuşma kalıbı."
+            },
+            {
+              "id": "cs-c1-5",
+              "type": "listen_and_choose",
+              "spokenText": "Let's circle back to that on Tuesday.",
+              "options": [
+                "Let's circle back to that on Tuesday.",
+                "Let's circle back to that in Tuesday.",
+                "Let's circle back that on Tuesday.",
+                "Let circle back to that on Tuesday."
+              ],
+              "answer": "Let's circle back to that on Tuesday.",
+              "explanation": "'to that' linking: /tə ðæt/ — Türk kulağı 'that'i kaybetmemeli."
             }
           ]
         }
@@ -2489,6 +2563,94 @@
                   "text": "Thank you. We'll move to the second examiner after a brief pause."
                 }
               ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-academic-l8",
+          "title": "Modal speculation: must / could / might / can't + have V3",
+          "description": "Geçmişe yönelik tahmin gücü ve modal passive; akademik analizde sık.",
+          "theme": "writing",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "msp-c1-1",
+              "type": "multiple_choice",
+              "prompt": "Sonuçlar bekleneneden farklı — 'Veri toplama yöntemi sorunlu olmuş olmalı.' İngilizcesi?",
+              "options": [
+                "The data collection must be flawed.",
+                "The data collection must have been flawed.",
+                "The data collection should be flawed.",
+                "The data collection might be flawed."
+              ],
+              "answer": "The data collection must have been flawed.",
+              "explanation": "'must have V3' geçmişe yönelik güçlü tahmin (~%90+) + 'be flawed' pasif -> modal passive perfect."
+            },
+            {
+              "id": "msp-c1-2",
+              "type": "fill_blank",
+              "prompt": "The findings ___ have been influenced by sample bias.",
+              "answer": "might",
+              "hint": "Zayıf olasılık (hedged) — akademik yazıda sık.",
+              "explanation": "'might have V3' düşük olasılık (~%30); akademik hedge için ideal."
+            },
+            {
+              "id": "msp-c1-3",
+              "type": "multiple_choice",
+              "prompt": "'It can't have been a coincidence.' tonu?",
+              "options": [
+                "Güçlü olumsuz tahmin (~%90+ değildir)",
+                "Olasılık (~%50)",
+                "İzin",
+                "Yetenek"
+              ],
+              "answer": "Güçlü olumsuz tahmin (~%90+ değildir)",
+              "explanation": "Türkçedeki 'olamaz' karşılığı 'can't have V3' modal speculation kalıbıdır."
+            },
+            {
+              "id": "msp-c1-4",
+              "type": "tap_words_in_order",
+              "prompt": "Bu sonuç ölçüm hatasından kaynaklanmış olabilir.",
+              "answer": "This result may have stemmed from a measurement error",
+              "bank": [
+                "This",
+                "result",
+                "may",
+                "have",
+                "stemmed",
+                "from",
+                "a",
+                "measurement",
+                "error",
+                "might",
+                "be",
+                "stem"
+              ]
+            },
+            {
+              "id": "msp-c1-5",
+              "type": "multiple_choice",
+              "prompt": "Modal passive: 'Karar perşembeye kadar verilmeli.' İngilizcesi?",
+              "options": [
+                "The decision must be making by Thursday.",
+                "The decision must be made by Thursday.",
+                "The decision must have made by Thursday.",
+                "The decision must to be made by Thursday."
+              ],
+              "answer": "The decision must be made by Thursday.",
+              "explanation": "Modal + be + V3 = modal passive; akademik/iş yazışmasında çok yaygın."
+            },
+            {
+              "id": "msp-c1-6",
+              "type": "listen_and_choose",
+              "spokenText": "They could've completed the project on time if resources had been available.",
+              "options": [
+                "They could of completed the project on time if resources had been available.",
+                "They could've completed the project on time if resources had been available.",
+                "They could have complete the project on time if resources had been available.",
+                "They couldn't have completed the project on time if resources had been available."
+              ],
+              "answer": "They could've completed the project on time if resources had been available."
             }
           ]
         }
@@ -4723,6 +4885,111 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-c1-idioms-l8",
+          "title": "Phrasal verb üretim drilli (separable / inseparable)",
+          "description": "Ayrılabilir vs ayrılamaz öbek fiiller; nesne pronoun ise nereye konur?",
+          "theme": "vocab",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pv-c1-1",
+              "type": "multiple_choice",
+              "prompt": "DOĞRU olan hangisi? (nesne zamir)",
+              "options": [
+                "Please look it up.",
+                "Please look up it.",
+                "Please look-up it.",
+                "Please it look up."
+              ],
+              "answer": "Please look it up.",
+              "explanation": "'look up' ayrılabilirdir; nesne ZAMİR olduğunda partikül ZORUNLU olarak sonda kalır."
+            },
+            {
+              "id": "pv-c1-2",
+              "type": "multiple_choice",
+              "prompt": "HATALI olan hangisi?",
+              "options": [
+                "I ran into her at the conference.",
+                "I ran her into at the conference.",
+                "She came across an old letter.",
+                "We got over the setback quickly."
+              ],
+              "answer": "I ran her into at the conference.",
+              "explanation": "'run into' (rastlamak) ayrılamazdır; nesne her zaman partikülden sonra."
+            },
+            {
+              "id": "pv-c1-3",
+              "type": "fill_blank",
+              "prompt": "We need to ___ ___ the contract issues before Friday.",
+              "answer": "iron out",
+              "hint": "Sorunları çözmek / pürüzleri gidermek.",
+              "explanation": "'iron out the issues' ya da 'iron the issues out'; ikisi de OK çünkü ayrılabilir + nesne isim."
+            },
+            {
+              "id": "pv-c1-4",
+              "type": "tap_words_in_order",
+              "prompt": "Bu eleştiriyi sineye çekemiyorum.",
+              "answer": "I can't put up with this criticism",
+              "bank": [
+                "I",
+                "can't",
+                "put",
+                "up",
+                "with",
+                "this",
+                "criticism",
+                "up with",
+                "with up",
+                "over"
+              ]
+            },
+            {
+              "id": "pv-c1-5",
+              "type": "match_pairs",
+              "prompt": "Phrasal verb — Türkçe (resmi alternatif)",
+              "pairs": [
+                {
+                  "left": "weigh in (on)",
+                  "right": "görüş bildirmek (= comment on)"
+                },
+                {
+                  "left": "iron out",
+                  "right": "pürüzleri gidermek (= resolve)"
+                },
+                {
+                  "left": "get over",
+                  "right": "atlatmak (= recover from)"
+                },
+                {
+                  "left": "put up with",
+                  "right": "katlanmak (= tolerate)"
+                },
+                {
+                  "left": "bring up",
+                  "right": "gündeme getirmek (= raise)"
+                },
+                {
+                  "left": "come up with",
+                  "right": "bulmak/üretmek (= devise)"
+                }
+              ]
+            },
+            {
+              "id": "pv-c1-6",
+              "type": "multiple_choice",
+              "prompt": "Akademik makalede 'come up with a solution' yerine en uygun resmi alternatif?",
+              "options": [
+                "think up a solution",
+                "devise a solution",
+                "cook up a solution",
+                "stumble on a solution"
+              ],
+              "answer": "devise a solution",
+              "explanation": "Phrasal verb -> tek-kelime Latin kökenli karşılık akademik tonu yükseltir; register kayışı."
+            }
+          ]
         }
       ]
     },
@@ -5442,12 +5709,12 @@
               "type": "multiple_choice",
               "prompt": "'The report submitted yesterday is incomplete.' yapısı nedir?",
               "options": [
-                "Active relative",
-                "Reduced passive relative ('which was submitted')",
-                "Standard passive",
-                "Subjunctive"
+                "Active relative ('the report that submits')",
+                "Reduced passive relative ('which was submitted' -> 'submitted')",
+                "Standard passive ('was being submitted')",
+                "Subjunctive ('that the report be submitted')"
               ],
-              "answer": "Reduced passive relative ('which was submitted')",
+              "answer": "Reduced passive relative ('which was submitted' -> 'submitted')",
               "explanation": "'which was submitted' → 'submitted' (past participle clause)."
             },
             {

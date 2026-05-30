@@ -494,12 +494,16 @@
                 },
                 {
                   "id": "alp3-8",
-                  "type": "fill_blank",
-                  "prompt": "Türkçede 'çok iyi' İngilizcede '___ good' olur.",
+                  "type": "translate",
+                  "source": "çok",
                   "answer": "very",
                   "acceptableAnswers": [
-                    "extremely"
-                  ]
+                    "really",
+                    "so"
+                  ],
+                  "direction": "to_target",
+                  "context": "'çok iyi' = '___ good'",
+                  "explanation": "Türkçede 'çok' sıfat/zarf önünde 'very'."
                 },
                 {
                   "id": "alp3-9",
@@ -2603,10 +2607,16 @@
                 },
                 {
                   "id": "pr3-3",
-                  "type": "fill_blank",
-                  "prompt": "'Ayşe'nin kalemi' = '___ pen' (Ayşe için zamir).",
-                  "answer": "her",
-                  "acceptableAnswers": []
+                  "type": "multiple_choice",
+                  "prompt": "'Ayşe'nin kalemi' İngilizcede:",
+                  "options": [
+                    "his pen",
+                    "her pen",
+                    "their pen",
+                    "your pen"
+                  ],
+                  "answer": "her pen",
+                  "explanation": "Ayşe kadın → 'her'. Türkçede 'o' gender-neutral."
                 },
                 {
                   "id": "pr3-4",
@@ -5285,11 +5295,15 @@
                 },
                 {
                   "id": "nm6-2",
-                  "type": "fill_blank",
-                  "prompt": "'It's ___ past three.' — Üçü buçuk geçiyor.",
-                  "answer": "half",
-                  "explanation": "half past = buçuk.",
-                  "acceptableAnswers": []
+                  "type": "translate",
+                  "source": "buçuk geçiyor",
+                  "answer": "half past",
+                  "acceptableAnswers": [
+                    "thirty"
+                  ],
+                  "direction": "to_target",
+                  "context": "'Üçü buçuk geçiyor.' = 'It's ___ ___ three.'",
+                  "explanation": "'half past three' = 3:30."
                 },
                 {
                   "id": "nm6-3",
@@ -5370,10 +5384,12 @@
                 },
                 {
                   "id": "nm6-8",
-                  "type": "fill_blank",
-                  "prompt": "'It's a ___ past five.' — Beşi çeyrek geçiyor.",
-                  "answer": "quarter",
-                  "acceptableAnswers": []
+                  "type": "translate",
+                  "source": "çeyrek geçiyor",
+                  "answer": "quarter past",
+                  "acceptableAnswers": [],
+                  "direction": "to_target",
+                  "context": "'Beşi çeyrek geçiyor.' = 'It's a ___ ___ five.'"
                 },
                 {
                   "id": "nm6-9",
@@ -5529,6 +5545,70 @@
                       "answer": "Thank you!"
                     }
                   ]
+                },
+                {
+                  "id": "nm-plural-1",
+                  "type": "multiple_choice",
+                  "prompt": "'iki kitap' İngilizcede:",
+                  "options": [
+                    "two book",
+                    "two books",
+                    "two the books",
+                    "the two book"
+                  ],
+                  "answer": "two books",
+                  "explanation": "Türkçede sayıdan sonra çoğul eki kullanılmaz; İngilizcede sayı 1'den büyükse çoğul -s ZORUNLUDUR."
+                },
+                {
+                  "id": "nm-plural-2",
+                  "type": "multiple_choice",
+                  "prompt": "Hangisi DOĞRU?",
+                  "options": [
+                    "I have three brother.",
+                    "I have three brothers.",
+                    "I have a three brothers.",
+                    "I have three the brothers."
+                  ],
+                  "answer": "I have three brothers.",
+                  "explanation": "'Üç kardeşim var' → 'three brothers'. -s düşmez."
+                },
+                {
+                  "id": "nm-plural-3",
+                  "type": "tap_words_in_order",
+                  "prompt": "İki elmam var.",
+                  "answer": "I have two apples",
+                  "bank": [
+                    "I",
+                    "have",
+                    "two",
+                    "apples",
+                    "apple",
+                    "an",
+                    "a"
+                  ]
+                },
+                {
+                  "id": "nm-plural-4",
+                  "type": "listen_and_choose",
+                  "prompt": "Duyduğun cümleyi seç",
+                  "spokenText": "She has five cats.",
+                  "options": [
+                    "She has five cats.",
+                    "She has five cat.",
+                    "She has the five cats.",
+                    "She have five cats."
+                  ],
+                  "answer": "She has five cats.",
+                  "explanation": "Sayıdan sonra çoğul -s düşmez."
+                },
+                {
+                  "id": "nm-plural-5",
+                  "type": "fill_blank",
+                  "prompt": "I have four ___.",
+                  "hint": "Dört kalemim var.",
+                  "answer": "pens",
+                  "acceptableAnswers": [],
+                  "explanation": "İngilizcede 'four pens' (çoğul -s zorunlu)."
                 }
               ]
             }
@@ -6879,6 +6959,19 @@
                     "He plays baseball"
                   ],
                   "answer": "He plays football"
+                },
+                {
+                  "id": "ev1-sov",
+                  "type": "multiple_choice",
+                  "prompt": "'Her gün okula giderim.' İngilizcede:",
+                  "options": [
+                    "I every day to school go.",
+                    "I go to school every day.",
+                    "Every day I to school go.",
+                    "To school every day I go."
+                  ],
+                  "answer": "I go to school every day.",
+                  "explanation": "Türkçede fiil sonda; İngilizcede SVO sırası KORUNMALIDIR."
                 }
               ]
             },
@@ -7840,9 +7933,10 @@
                     "a apple",
                     "an apple",
                     "the apple",
-                    "ones apple"
+                    "apple"
                   ],
-                  "answer": "an apple"
+                  "answer": "an apple",
+                  "explanation": "Türkçe'de belirsiz tanımlık yoktur. İngilizce'de sesli harfle başlayan kelimelerden önce 'an', diğerlerinden önce 'a' gelir. Tanımlık atlamak ('apple') Türk öğrencilerin en sık yaptığı hatadır."
                 },
                 {
                   "id": "ar1-2",
@@ -7851,10 +7945,11 @@
                   "options": [
                     "a book",
                     "an book",
-                    "the book a",
-                    "ones book"
+                    "book",
+                    "the book"
                   ],
-                  "answer": "a book"
+                  "answer": "a book",
+                  "explanation": "Sayılabilir tekil isimden önce 'a' veya 'an' gerekir. Türkçede 'kitap' tek başına kullanılır; İngilizcede 'book' demek dilbilgisi hatasıdır."
                 },
                 {
                   "id": "ar1-3",
@@ -7898,28 +7993,28 @@
                 {
                   "id": "ar1-6",
                   "type": "multiple_choice",
-                  "prompt": "Hangisi DOĞRU? (h sessiz)",
+                  "prompt": "Hangisi DOĞRU? ('hour' kelimesinde 'h' okunmaz)",
                   "options": [
                     "a hour",
                     "an hour",
-                    "the hour none",
-                    "any hour"
+                    "the hour",
+                    "hour"
                   ],
                   "answer": "an hour",
-                  "explanation": "'hour' kelimesinde 'h' okunmaz; kelime aslında sesli sesle başlar."
+                  "explanation": "'hour' yazıda 'h' ile başlasa da seslice 'auır' okunur → ünlü sesle başlar → 'an'. Türkçede artikel olmadığı için Türk öğrenciler 'hour' (artikelsiz) demeye meyillidir."
                 },
                 {
                   "id": "ar1-7",
                   "type": "multiple_choice",
-                  "prompt": "Hangisi DOĞRU? (u 'yu' sesi)",
+                  "prompt": "Hangisi DOĞRU? ('university' 'yuniversiti' okunur)",
                   "options": [
                     "an university",
                     "a university",
-                    "the universities",
-                    "any universities"
+                    "university",
+                    "the university"
                   ],
                   "answer": "a university",
-                  "explanation": "'university' aslında 'yuniversiti' diye okunur; başında /y/ sessiz sesi vardır → 'a'."
+                  "explanation": "Yazılışta 'u' var ama söyleyişte /y/ → ünsüz → 'a'. Türk öğrenciler hem 'an' hem de artikelsiz 'university' üretir."
                 },
                 {
                   "id": "ar1-8",
@@ -7972,7 +8067,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "the",
                   "explanation": "Belirli bir pencereden bahsediliyor → 'the'."
@@ -7985,7 +8080,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "a",
                   "explanation": "Hangi pencere olduğu önemli değil → 'a'."
@@ -8062,7 +8157,7 @@
                     "A",
                     "An",
                     "The",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "The",
                   "explanation": "İlk söylendiğinde 'a cat' (yeni bilgi); ikinci söylendiğinde 'the cat' (artık biliniyor)."
@@ -8088,7 +8183,7 @@
                     "the / a",
                     "a/an / the",
                     "the / the",
-                    "(boş) / a"
+                    "(no article) / a"
                   ],
                   "answer": "a/an / the"
                 }
@@ -8248,7 +8343,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "a",
                   "explanation": "İngilizcede meslekten önce 'a/an' zorunludur — Türkçede yoktur. 'I am teacher' YANLIŞ."
@@ -8261,7 +8356,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "an"
                 },
@@ -8387,9 +8482,9 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
-                  "answer": "(boş)",
+                  "answer": "(no article)",
                   "explanation": "Sayılamayan isimlerin önüne 'a/an' GELMEZ. Genel anlamda artikelsiz kullanılır."
                 },
                 {
@@ -8494,9 +8589,9 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
-                  "answer": "(boş)",
+                  "answer": "(no article)",
                   "explanation": "Genel anlamda 'music' artikelsiz kullanılır."
                 },
                 {
@@ -8577,7 +8672,7 @@
                   "id": "ar6-2",
                   "type": "fill_blank",
                   "prompt": "'I go to ___ school every day.' (genel: okula gitmek)",
-                  "answer": "(boş)",
+                  "answer": "(no article)",
                   "acceptableAnswers": [
                     "(bos)"
                   ],
@@ -8655,9 +8750,9 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
-                  "answer": "(boş)"
+                  "answer": "(no article)"
                 },
                 {
                   "id": "ar6-8",
@@ -9300,6 +9395,22 @@
                   ],
                   "answer": "Why do you go to school?",
                   "explanation": "Geniş zamanda soruda yardımcı fiil 'do/does' kullanılır."
+                },
+                {
+                  "id": "qu3-do-trap",
+                  "type": "tap_words_in_order",
+                  "prompt": "Neden okula gidersin?",
+                  "answer": "Why do you go to school",
+                  "bank": [
+                    "Why",
+                    "do",
+                    "you",
+                    "go",
+                    "to",
+                    "school",
+                    "are",
+                    "is"
+                  ]
                 }
               ]
             },
@@ -11268,6 +11379,19 @@
                     "summer",
                     "."
                   ]
+                },
+                {
+                  "id": "we1-sov",
+                  "type": "multiple_choice",
+                  "prompt": "'Bugün hava güneşli.' En doğru çevirisi:",
+                  "options": [
+                    "Today weather sunny.",
+                    "Today is the weather sunny.",
+                    "It is sunny today.",
+                    "Sunny today it is."
+                  ],
+                  "answer": "It is sunny today.",
+                  "explanation": "Hava durumu 'It is + sıfat' yapısıyla."
                 }
               ]
             },
@@ -13414,14 +13538,15 @@
                 {
                   "id": "rv2-5",
                   "type": "multiple_choice",
-                  "prompt": "'O her gün futbol oynar.' (he özne) = ___",
+                  "prompt": "'O her gün futbol oynar.' (he) =",
                   "options": [
                     "He play football every day.",
                     "He plays football every day.",
-                    "He playing football every day.",
-                    "He played football every day."
+                    "He every day football plays.",
+                    "He is play football every day."
                   ],
-                  "answer": "He plays football every day."
+                  "answer": "He plays football every day.",
+                  "explanation": "3. tekil -s ZORUNLU; 'every day' fiil ile nesne arasında değil."
                 },
                 {
                   "id": "rv2-6",
@@ -13498,7 +13623,7 @@
                     "a",
                     "an",
                     "the",
-                    "(boş)"
+                    "(no article)"
                   ],
                   "answer": "an"
                 },
@@ -13616,6 +13741,32 @@
                     "My sister gone to school."
                   ],
                   "answer": "My sister goes to school."
+                },
+                {
+                  "id": "rv3-calque1",
+                  "type": "multiple_choice",
+                  "prompt": "'Bir kahve, lütfen.' (kafede sipariş) En doğru:",
+                  "options": [
+                    "One coffee, please.",
+                    "A coffee, please.",
+                    "The coffee, please.",
+                    "Coffee one, please."
+                  ],
+                  "answer": "A coffee, please.",
+                  "explanation": "Türkçedeki 'bir' İngilizcede 'a/an'; 'one' sayı vurgusu yapar."
+                },
+                {
+                  "id": "rv3-calque2",
+                  "type": "multiple_choice",
+                  "prompt": "'Çok şey öğrendim.' En doğru çevirisi:",
+                  "options": [
+                    "I learned very thing.",
+                    "I learned much things.",
+                    "I learned a lot of things.",
+                    "I learned very many thing."
+                  ],
+                  "answer": "I learned a lot of things.",
+                  "explanation": "'Very' isim önüne gelmez."
                 }
               ]
             },
@@ -13900,11 +14051,13 @@
                 },
                 {
                   "id": "ps1-3",
-                  "type": "fill_blank",
-                  "prompt": "'study' → ___ (geçmiş)",
+                  "type": "translate",
+                  "source": "study (geniş zaman)",
                   "answer": "studied",
                   "acceptableAnswers": [],
-                  "explanation": "Sessizden sonra 'y' → 'ied'."
+                  "direction": "to_target",
+                  "context": "study → ___ (geçmiş zaman)",
+                  "explanation": "Sessizle biten -y → -ied."
                 },
                 {
                   "id": "ps1-4",
@@ -14039,10 +14192,13 @@
                 },
                 {
                   "id": "ps2-4",
-                  "type": "fill_blank",
-                  "prompt": "'eat' → ___ (geçmiş)",
+                  "type": "translate",
+                  "source": "eat (geniş zaman)",
                   "answer": "ate",
-                  "acceptableAnswers": []
+                  "acceptableAnswers": [],
+                  "direction": "to_target",
+                  "context": "eat → ___ (düzensiz geçmiş)",
+                  "explanation": "eat-ate-eaten."
                 },
                 {
                   "id": "ps2-5",
@@ -14407,6 +14563,19 @@
                     "Was she came home?"
                   ],
                   "answer": "Did she come home?"
+                },
+                {
+                  "id": "ps4-sov",
+                  "type": "multiple_choice",
+                  "prompt": "'Dün okula gittim.' En doğru:",
+                  "options": [
+                    "I yesterday to school went.",
+                    "Yesterday I to school went.",
+                    "I went to school yesterday.",
+                    "I to school yesterday went."
+                  ],
+                  "answer": "I went to school yesterday.",
+                  "explanation": "İngilizce: [özne] [fiil] [yer] [zaman]."
                 }
               ]
             },
@@ -14827,6 +14996,189 @@
                       "prompt": "Nazik bir kapanış seç."
                     }
                   ]
+                },
+                {
+                  "id": "ps7-pronoun",
+                  "type": "multiple_choice",
+                  "prompt": "'Annem dün geldi. (O) çok yorgundu.' En doğru:",
+                  "options": [
+                    "My mother came yesterday. He was very tired.",
+                    "My mother came yesterday. She was very tired.",
+                    "My mother came yesterday. It was very tired.",
+                    "My mother came yesterday. They was very tired."
+                  ],
+                  "answer": "My mother came yesterday. She was very tired.",
+                  "explanation": "'mother' kadın → 'she'."
+                }
+              ]
+            },
+            {
+              "id": "en-tr-past-simple-word-order",
+              "title": "Kelime sırası: Özne–Yüklem–Nesne",
+              "description": "İngilizcede cümleler özne-yüklem-nesne sırası izler (SVO). Türkçedeki özne-nesne-yüklem (SOV) düzeninden farklıdır.",
+              "theme": "tense",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "wo1-1",
+                  "type": "multiple_choice",
+                  "prompt": "'Ben kitabı okudum' İngilizcede:",
+                  "options": [
+                    "I the book read.",
+                    "I read the book.",
+                    "Read I the book.",
+                    "The book I read."
+                  ],
+                  "answer": "I read the book.",
+                  "explanation": "İngilizcede yüklem (read) nesneden (the book) önce gelir. Türkçedeki SOV sırasını İngilizceye doğrudan taşımayın."
+                },
+                {
+                  "id": "wo1-2",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi sıra doğru?",
+                  "options": [
+                    "She a coffee drinks.",
+                    "She drinks a coffee.",
+                    "Drinks she a coffee.",
+                    "A coffee she drinks."
+                  ],
+                  "answer": "She drinks a coffee.",
+                  "explanation": "Özne (She) → yüklem (drinks) → nesne (a coffee)."
+                },
+                {
+                  "id": "wo1-3",
+                  "type": "tap_words_in_order",
+                  "prompt": "'Annem yemeği pişiriyor.'",
+                  "answer": "My mother is cooking the meal",
+                  "bank": [
+                    "mother",
+                    "My",
+                    "is",
+                    "cooking",
+                    "the",
+                    "meal",
+                    "cooks"
+                  ],
+                  "explanation": "Şu an yapılan bir eylem için present continuous: özne + be + V-ing + nesne."
+                },
+                {
+                  "id": "wo1-4",
+                  "type": "translate",
+                  "direction": "to_target",
+                  "source": "Ali her gün gazete okur.",
+                  "answer": "Ali reads a newspaper every day",
+                  "acceptableAnswers": [
+                    "Ali reads the newspaper every day",
+                    "Ali reads a newspaper every day."
+                  ],
+                  "explanation": "Sıra: Özne (Ali) → yüklem (reads) → nesne (a newspaper) → zaman zarfı (every day). Zaman zarfı genelde sona gelir."
+                },
+                {
+                  "id": "wo1-5",
+                  "type": "multiple_choice",
+                  "prompt": "'Yarın okula gideceğim' için doğru sıra:",
+                  "options": [
+                    "Tomorrow I to school will go.",
+                    "I tomorrow will go school.",
+                    "I will go to school tomorrow.",
+                    "Will I go to school tomorrow."
+                  ],
+                  "answer": "I will go to school tomorrow.",
+                  "explanation": "Özne + yardımcı fiil + ana fiil + yer + zaman. 'Tomorrow' başa da gelebilir ama sonu daha doğal."
+                },
+                {
+                  "id": "wo1-6",
+                  "type": "fill_blank",
+                  "prompt": "Doğru sırada doldurun: ___ (büyük bir kek) yaptık.",
+                  "answer": "We made a big cake",
+                  "acceptableAnswers": [
+                    "we made a big cake"
+                  ],
+                  "explanation": "Sıfat (big) ismin önüne gelir; isim tamlaması nesne olarak yüklemden sonra."
+                }
+              ]
+            },
+            {
+              "id": "en-tr-past-simple-do-support",
+              "title": "Soru ve olumsuz: do/does/did yardımcısı",
+              "description": "İngilizcede normal fiillerle soru ve olumsuz cümle kurmak için do/does (geniş zaman) ve did (geçmiş zaman) yardımcı fiili kullanılır. Türkçede böyle bir yardımcı yoktur.",
+              "theme": "tense",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "ds1-1",
+                  "type": "multiple_choice",
+                  "prompt": "'Çay sever misin?' İngilizcede:",
+                  "options": [
+                    "You like tea?",
+                    "Like you tea?",
+                    "Do you like tea?",
+                    "Are you like tea?"
+                  ],
+                  "answer": "Do you like tea?",
+                  "explanation": "Normal fiillerle (like, eat, work…) soru için do/does kullanılır. 'Are' burada yanlış çünkü 'like' bir 'be' fiili değil."
+                },
+                {
+                  "id": "ds1-2",
+                  "type": "multiple_choice",
+                  "prompt": "'O et yemez' İngilizcede:",
+                  "options": [
+                    "He no eat meat.",
+                    "He doesn't eat meat.",
+                    "He not eats meat.",
+                    "He isn't eat meat."
+                  ],
+                  "answer": "He doesn't eat meat.",
+                  "explanation": "3. tekil şahıs (he/she/it) için 'does not' / 'doesn't' kullanılır. Ana fiil yalın halde kalır: 'eat', 'eats' değil."
+                },
+                {
+                  "id": "ds1-3",
+                  "type": "fill_blank",
+                  "prompt": "___ you speak English? — Yes, I do.",
+                  "answer": "Do",
+                  "acceptableAnswers": [
+                    "do"
+                  ],
+                  "explanation": "I/you/we/they için 'Do' ile başlar."
+                },
+                {
+                  "id": "ds1-4",
+                  "type": "fill_blank",
+                  "prompt": "She ___ work on Sundays.",
+                  "answer": "doesn't",
+                  "acceptableAnswers": [
+                    "does not"
+                  ],
+                  "explanation": "Geniş zaman olumsuz, 3. tekil şahıs."
+                },
+                {
+                  "id": "ds1-5",
+                  "type": "tap_words_in_order",
+                  "prompt": "'Dün okula gittin mi?'",
+                  "answer": "Did you go to school yesterday",
+                  "bank": [
+                    "you",
+                    "Did",
+                    "go",
+                    "to",
+                    "school",
+                    "yesterday",
+                    "went"
+                  ],
+                  "explanation": "Geçmiş zaman sorularında 'did' + özne + fiilin yalın hali."
+                },
+                {
+                  "id": "ds1-6",
+                  "type": "multiple_choice",
+                  "prompt": "Hangisi yanlış?",
+                  "options": [
+                    "Do you like coffee?",
+                    "Does she work here?",
+                    "Did they go home?",
+                    "Does he likes apples?"
+                  ],
+                  "answer": "Does he likes apples?",
+                  "explanation": "'Does' kullanıldığında ana fiil yalın halde (like) olmalı: 'Does he like apples?'"
                 }
               ]
             }
@@ -17609,15 +17961,15 @@
                 {
                   "id": "ar5-1",
                   "type": "multiple_choice",
-                  "prompt": "'I have a cat. ___ cat is black.' (boşluğa hangisi gelir?)",
+                  "prompt": "'I drink ___ water.' — Su içerim.",
                   "options": [
-                    "A",
-                    "The",
-                    "An",
-                    "(boş)"
+                    "a",
+                    "an",
+                    "the",
+                    "— (artikelsiz)"
                   ],
-                  "answer": "The",
-                  "explanation": "İkinci geçişte 'the'."
+                  "answer": "— (artikelsiz)",
+                  "explanation": "Sayılamayan isimlerin önüne 'a/an' GELMEZ."
                 },
                 {
                   "id": "ar5-2",
@@ -19306,6 +19658,19 @@
                     "have",
                     "a"
                   ]
+                },
+                {
+                  "id": "hg1-plural",
+                  "type": "multiple_choice",
+                  "prompt": "'İki çocuğu var.' En doğru:",
+                  "options": [
+                    "She has two child.",
+                    "She has two children.",
+                    "She has two childs.",
+                    "She has the two children."
+                  ],
+                  "answer": "She has two children.",
+                  "explanation": "child → children."
                 }
               ]
             },
@@ -19717,6 +20082,19 @@
                   ],
                   "answer": "Bebek doğurmak / sahibi olmak (her ikisi)",
                   "explanation": "Bağlama göre hem doğum eylemi hem sahiplik."
+                },
+                {
+                  "id": "hg4-plural",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi cümle YANLIŞ?",
+                  "options": [
+                    "I have two books.",
+                    "She has three cats.",
+                    "He has five brother.",
+                    "They have six friends."
+                  ],
+                  "answer": "He has five brother.",
+                  "explanation": "'He has five brothers'."
                 }
               ]
             },
@@ -25891,6 +26269,61 @@
                       "text": "Got it! See you Friday."
                     }
                   ]
+                },
+                {
+                  "id": "rv-pron-1",
+                  "type": "listen_and_choose",
+                  "prompt": "Duyduğun kelimeyi seç (uzun /iː/ ya da kısa /ɪ/)",
+                  "spokenText": "sheep",
+                  "options": [
+                    "ship",
+                    "sheep",
+                    "cheap",
+                    "chip"
+                  ],
+                  "answer": "sheep",
+                  "explanation": "'ship' (kısa i) / 'sheep' (uzun i) farklı kelimelerdir."
+                },
+                {
+                  "id": "rv-pron-2",
+                  "type": "listen_and_choose",
+                  "prompt": "Duyduğun kelimeyi seç",
+                  "spokenText": "dog",
+                  "options": [
+                    "dog",
+                    "dock",
+                    "talk",
+                    "duck"
+                  ],
+                  "answer": "dog",
+                  "explanation": "Türk öğrenciler son sessizleri sertleştirir; dog ≠ dock."
+                },
+                {
+                  "id": "rv-pron-3",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi çift ANLAM olarak farklıdır?",
+                  "options": [
+                    "wine ~ vine (şarap / asma)",
+                    "we ~ ve (aynı)",
+                    "very ~ wery (aynı)",
+                    "wash ~ vash (aynı)"
+                  ],
+                  "answer": "wine ~ vine (şarap / asma)",
+                  "explanation": "İngilizcede /v/ ve /w/ farklı: wine ≠ vine."
+                },
+                {
+                  "id": "rv-pron-4",
+                  "type": "listen_and_choose",
+                  "prompt": "Duyduğun kelimeyi seç (TH sesi)",
+                  "spokenText": "think",
+                  "options": [
+                    "think",
+                    "sink",
+                    "tink",
+                    "fink"
+                  ],
+                  "answer": "think",
+                  "explanation": "Türkçede TH yok; dilin ucunu üst dişlere değdirip hava üfle."
                 }
               ]
             }
@@ -26354,17 +26787,19 @@
                   "id": "pp3-3",
                   "type": "fill_blank",
                   "prompt": "I have known her ___ five years.",
+                  "hint": "Onu 5 yıldır tanıyorum (süre).",
                   "answer": "for",
                   "acceptableAnswers": [],
-                  "explanation": "Süre → for."
+                  "explanation": "Süre için 'for'."
                 },
                 {
                   "id": "pp3-4",
                   "type": "fill_blank",
                   "prompt": "He has worked here ___ Monday.",
+                  "hint": "Pazartesiden beri burada çalışıyor.",
                   "answer": "since",
                   "acceptableAnswers": [],
-                  "explanation": "Başlangıç noktası → since."
+                  "explanation": "Başlangıç noktası → 'since'."
                 },
                 {
                   "id": "pp3-5",
@@ -26626,10 +27061,11 @@
                 {
                   "id": "pp5-3",
                   "type": "fill_blank",
-                  "prompt": "'She hasn't called me ___ .' (henüz)",
+                  "prompt": "She hasn't called me ___ .",
+                  "hint": "Henüz aramadı (olumsuz cümlede 'henüz').",
                   "answer": "yet",
                   "acceptableAnswers": [],
-                  "explanation": "Olumsuz cümle sonunda 'yet' = henüz."
+                  "explanation": "Olumsuz cümlede 'henüz' = 'yet'."
                 },
                 {
                   "id": "pp5-4",
@@ -27250,12 +27686,12 @@
                   "prompt": "Hangi cümle YANLIŞ?",
                   "options": [
                     "She can speaks English.",
+                    "I am can swim.",
                     "She can speak English.",
-                    "Can she speak English?",
-                    "She cannot speak English."
+                    "Can she speak English?"
                   ],
                   "answer": "She can speaks English.",
-                  "explanation": "Modal + V1 (yalın fiil); 'speaks' olmaz."
+                  "explanation": "İki yaygın hata: 'She can speaks' ve 'I am can swim'."
                 },
                 {
                   "id": "mod1-5",
@@ -27344,6 +27780,19 @@
                     "I can park here?"
                   ],
                   "answer": "Can I park here?"
+                },
+                {
+                  "id": "mod1-extra",
+                  "type": "multiple_choice",
+                  "prompt": "'Gitmek zorunda mıyım?' En doğru:",
+                  "options": [
+                    "Must I to go?",
+                    "Must I go?",
+                    "Do I must go?",
+                    "I must to go?"
+                  ],
+                  "answer": "Must I go?",
+                  "explanation": "Modallardan sonra 'to' GELMEZ."
                 }
               ]
             },
@@ -27493,6 +27942,19 @@
                     "have to"
                   ],
                   "explanation": "Kişisel zorunluluk → must (have to da kabul)."
+                },
+                {
+                  "id": "mod2-extra",
+                  "type": "multiple_choice",
+                  "prompt": "Hangisi YANLIŞ?",
+                  "options": [
+                    "I have to go.",
+                    "I must go.",
+                    "I must to go.",
+                    "I should go."
+                  ],
+                  "answer": "I must to go.",
+                  "explanation": "'have to' içinde 'to'; 'must to' YANLIŞ."
                 }
               ]
             },
@@ -27685,12 +28147,14 @@
                 {
                   "id": "mod4-4",
                   "type": "fill_blank",
-                  "prompt": "'They ___ be late because of traffic.' (gecikebilirler)",
+                  "prompt": "They ___ be late because of traffic.",
+                  "hint": "Trafik yüzünden gecikebilirler (orta olasılık).",
                   "answer": "may",
                   "acceptableAnswers": [
-                    "could",
-                    "might"
-                  ]
+                    "might",
+                    "could"
+                  ],
+                  "explanation": "Olasılık modalları: may/might/could."
                 },
                 {
                   "id": "mod4-5",
@@ -29915,6 +30379,32 @@
                   ],
                   "answer": "The experiment was conducted.",
                   "explanation": "Akademik dilde objektif pasif tercih edilir."
+                },
+                {
+                  "id": "pas-overapp",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi cümle YANLIŞ?",
+                  "options": [
+                    "The window was broken.",
+                    "It was happened yesterday.",
+                    "He died last year.",
+                    "The cake was eaten."
+                  ],
+                  "answer": "It was happened yesterday.",
+                  "explanation": "'happen' / 'die' ETKEN."
+                },
+                {
+                  "id": "pas-overapp2",
+                  "type": "multiple_choice",
+                  "prompt": "'Dün bir kaza oldu.' En doğru:",
+                  "options": [
+                    "An accident was happened yesterday.",
+                    "An accident happened yesterday.",
+                    "An accident was happen yesterday.",
+                    "Was happened an accident yesterday."
+                  ],
+                  "answer": "An accident happened yesterday.",
+                  "explanation": "'happen' ETKEN."
                 }
               ]
             },
@@ -35387,13 +35877,15 @@
                 },
                 {
                   "id": "st2-4",
-                  "type": "fill_blank",
-                  "prompt": "'Bu sırada' İngilizcede: ___",
+                  "type": "translate",
+                  "source": "bu sırada",
                   "answer": "meanwhile",
                   "acceptableAnswers": [
                     "in the meantime",
                     "meantime"
-                  ]
+                  ],
+                  "direction": "to_target",
+                  "explanation": "İki olayın aynı anda olduğunu belirtmek için."
                 },
                 {
                   "id": "st2-5",
@@ -37813,6 +38305,109 @@
                       "text": "Me too. Let's plan dinner this weekend — I've brought you a little gift."
                     }
                   ]
+                },
+                {
+                  "id": "rv-articles",
+                  "type": "multiple_choice",
+                  "prompt": "'Hayat ilginç. Ama (bu) hayat zor.' En doğru:",
+                  "options": [
+                    "The life is interesting. But the life is hard.",
+                    "Life is interesting. But the life is hard.",
+                    "Life is interesting. But life is hard.",
+                    "The life is interesting. But life is hard."
+                  ],
+                  "answer": "Life is interesting. But the life is hard.",
+                  "explanation": "Genel: artikelsiz; belirli: 'the'."
+                },
+                {
+                  "id": "rv-articles2",
+                  "type": "fill_blank",
+                  "prompt": "I saw ___ man in the park. ___ man was very tall.",
+                  "hint": "Parkta bir adam gördüm. (O) adam çok uzundu.",
+                  "answer": "a / The",
+                  "acceptableAnswers": [
+                    "a/The",
+                    "a, The"
+                  ],
+                  "explanation": "İlk: 'a'; ikinci: 'the'."
+                }
+              ]
+            },
+            {
+              "id": "en-tr-b1-review-relative-clauses",
+              "title": "İlgi cümleleri (who, which, that)",
+              "description": "İngilizcede ilgi zamirleri (who/which/that) iki cümleyi birleştirir. Türkçedeki '-an/-en' yapısının karşılığıdır ancak isimden sonra gelir.",
+              "theme": "review",
+              "xp": 14,
+              "exercises": [
+                {
+                  "id": "rel1-1",
+                  "type": "multiple_choice",
+                  "prompt": "'Dün okuduğum kitap çok ilginçti.' En doğru:",
+                  "options": [
+                    "Yesterday I read book very interesting was.",
+                    "The book yesterday I read very interesting was.",
+                    "The book that I read yesterday was very interesting.",
+                    "The yesterday read book was very interesting."
+                  ],
+                  "answer": "The book that I read yesterday was very interesting.",
+                  "explanation": "Türkçede 'okuduğum' sıfat cümlesi 'kitap' ÖNÜNE; İngilizcede 'that I read yesterday' SONUNA."
+                },
+                {
+                  "id": "rel1-2",
+                  "type": "multiple_choice",
+                  "prompt": "'Bana yardım eden kadın doktordu.' En doğru:",
+                  "options": [
+                    "The woman helped me was a doctor.",
+                    "The me helped woman was a doctor.",
+                    "The woman who helped me was a doctor.",
+                    "The woman which helped me was a doctor."
+                  ],
+                  "answer": "The woman who helped me was a doctor.",
+                  "explanation": "İnsanlar için 'who'."
+                },
+                {
+                  "id": "rel1-3",
+                  "type": "tap_words_in_order",
+                  "prompt": "Tanıdığım çocuk Ankara'da yaşıyor.",
+                  "answer": "The boy that I know lives in Ankara",
+                  "bank": [
+                    "The",
+                    "boy",
+                    "that",
+                    "I",
+                    "know",
+                    "lives",
+                    "in",
+                    "Ankara",
+                    "knows",
+                    "the",
+                    "yesterday"
+                  ]
+                },
+                {
+                  "id": "rel1-4",
+                  "type": "multiple_choice",
+                  "prompt": "'Aldığım araba kırmızı.' İngilizcede 'that' düşürülebilir mi?",
+                  "options": [
+                    "Hayır, asla",
+                    "Evet, nesne ilgi adılı olduğunda (The car I bought is red.)",
+                    "Sadece kişilerde",
+                    "Yalnızca formal stilde"
+                  ],
+                  "answer": "Evet, nesne ilgi adılı olduğunda (The car I bought is red.)",
+                  "explanation": "Nesne durumunda düşürülebilir; özne durumunda KALIR."
+                },
+                {
+                  "id": "rel1-5",
+                  "type": "fill_blank",
+                  "prompt": "I have a friend ___ lives in London.",
+                  "hint": "Londra'da yaşayan bir arkadaşım var.",
+                  "answer": "who",
+                  "acceptableAnswers": [
+                    "that"
+                  ],
+                  "explanation": "İnsan için 'who' veya 'that'."
                 }
               ]
             }
@@ -37952,16 +38547,21 @@
               "exercises": [
                 {
                   "id": "op1-1",
-                  "type": "multiple_choice",
-                  "prompt": "'It seems to me that…' ifadesinin Türkçe karşılığı nedir?",
+                  "type": "translate",
+                  "prompt": "Türkçeye çevir: 'It seems to me that the proposal needs revision.'",
                   "options": [
-                    "Görünüşe göre…",
-                    "Bana öyle geliyor ki…",
-                    "Kesinlikle inanıyorum ki…",
-                    "Bilmiyorum ama…"
+                    "Bana göre kesinlikle...",
+                    "Bana öyle geliyor ki...",
+                    "Hiç şüphesiz...",
+                    "Eminim ki..."
                   ],
-                  "answer": "Bana öyle geliyor ki…",
-                  "explanation": "'It seems to me' kişisel bir izlenimi yumuşak biçimde aktarır."
+                  "answer": "Bana öyle geliyor ki teklif gözden geçirilmeli.",
+                  "explanation": "'It seems to me' kişisel izlenimi yumuşak biçimde aktarır; Türkçedeki 'bana öyle geliyor ki' aynı hedge işlevini görür.",
+                  "acceptableAnswers": [
+                    "Bana öyle geliyor ki teklif gözden geçirilmeli.",
+                    "Bana öyle geliyor ki öneri gözden geçirilmeli.",
+                    "Bana öyle geliyor ki teklif revize edilmeli."
+                  ]
                 },
                 {
                   "id": "op1-2",
@@ -39047,6 +39647,126 @@
                       "text": "Good call. Let's grab another coffee and pick the next one to watch."
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "en-tr-opinions-l8",
+              "title": "Türkçe-İngilizce calque tuzakları (open the light, strong rain...)",
+              "description": "Türkçeden birebir çeviri sonucu doğan tipik B2 hataları.",
+              "theme": "speaking",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "cq-b2-1",
+                  "type": "multiple_choice",
+                  "prompt": "'Işığı aç' İngilizcesi?",
+                  "options": [
+                    "Open the light.",
+                    "Turn on the light.",
+                    "Make the light.",
+                    "Light the light on."
+                  ],
+                  "answer": "Turn on the light.",
+                  "explanation": "Türkçe 'aç' = İngilizce 'turn on' (cihazlar için). 'Open the light' (*) yaygın L1 calque hatasıdır."
+                },
+                {
+                  "id": "cq-b2-2",
+                  "type": "multiple_choice",
+                  "prompt": "'Hava şiddetli yağmurlu' İngilizcesi?",
+                  "options": [
+                    "It's a strong rain.",
+                    "It's a hard rain.",
+                    "It's heavy rain.",
+                    "It's a big rain."
+                  ],
+                  "answer": "It's heavy rain.",
+                  "explanation": "Yağmur için collocation: 'heavy rain'. Türkçe 'şiddetli/güçlü' birebir 'strong/hard' olarak transfer EDİLMEZ."
+                },
+                {
+                  "id": "cq-b2-3",
+                  "type": "multiple_choice",
+                  "prompt": "'Yalan söyleme' İngilizcesi?",
+                  "options": [
+                    "Don't say a lie.",
+                    "Don't tell a lie.",
+                    "Don't speak a lie.",
+                    "Don't talk a lie."
+                  ],
+                  "answer": "Don't tell a lie.",
+                  "explanation": "'tell a lie / tell the truth / tell a story' — 'say' kullanılmaz. Türkçe 'söylemek' birebir 'say' olarak gitmez."
+                },
+                {
+                  "id": "cq-b2-4",
+                  "type": "match_pairs",
+                  "prompt": "Türkçe calque (yanlış) — Doğru İngilizce",
+                  "pairs": [
+                    {
+                      "left": "open the TV",
+                      "right": "turn on the TV"
+                    },
+                    {
+                      "left": "close the door (kilitlemek)",
+                      "right": "lock the door"
+                    },
+                    {
+                      "left": "make a decision (yanlış: do a decision)",
+                      "right": "make a decision"
+                    },
+                    {
+                      "left": "make sport (yanlış)",
+                      "right": "do sports / play sports"
+                    },
+                    {
+                      "left": "strong tea (doğru) — 'powerful tea' (yanlış)",
+                      "right": "strong tea"
+                    },
+                    {
+                      "left": "do a mistake (yanlış)",
+                      "right": "make a mistake"
+                    }
+                  ]
+                },
+                {
+                  "id": "cq-b2-5",
+                  "type": "fill_blank",
+                  "prompt": "I need to ___ a decision today.",
+                  "answer": "make",
+                  "hint": "'karar vermek' = 'make a decision' (UK'de 'take' da olur, 'do' asla).",
+                  "explanation": "Türkçe 'karar vermek' -> 'do a decision' yaygın hata; 'make' standarttır."
+                },
+                {
+                  "id": "cq-b2-6",
+                  "type": "tap_words_in_order",
+                  "prompt": "Bu kahve çok güçlü; sütle yumuşatabilir misin?",
+                  "answer": "This coffee is too strong can you soften it with milk",
+                  "bank": [
+                    "This",
+                    "coffee",
+                    "is",
+                    "too",
+                    "strong",
+                    "powerful",
+                    "can",
+                    "you",
+                    "soften",
+                    "it",
+                    "with",
+                    "milk",
+                    "do"
+                  ]
+                },
+                {
+                  "id": "cq-b2-7",
+                  "type": "listen_and_choose",
+                  "spokenText": "Could you turn off the lights before you leave?",
+                  "options": [
+                    "Could you close the lights before you leave?",
+                    "Could you turn off the lights before you leave?",
+                    "Could you open the lights before you leave?",
+                    "Could you put off the lights before you leave?"
+                  ],
+                  "answer": "Could you turn off the lights before you leave?"
                 }
               ]
             }
@@ -44132,12 +44852,12 @@
                   "type": "multiple_choice",
                   "prompt": "'If I had studied medicine, I would be a doctor now.' Bu cümle hangi koşul yapısıdır?",
                   "options": [
-                    "Type 1",
-                    "Type 2",
-                    "Type 3",
-                    "Mixed (3 + 2)"
+                    "Type 1 (real)",
+                    "Type 2 (present unreal)",
+                    "Type 3 (past unreal)",
+                    "Mixed (past condition -> present result)"
                   ],
-                  "answer": "Mixed (3 + 2)",
+                  "answer": "Mixed (past condition -> present result)",
                   "explanation": "Geçmişteki koşul (Type 3) + şimdiki sonuç (Type 2) = mixed conditional."
                 },
                 {
@@ -45630,6 +46350,79 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "en-tr-formal-l7",
+              "title": "Yazıda 'he / she / they' — cinsiyet ve nötr kullanım",
+              "description": "Türkçede 'o' cinsiyetsiz; İngilizce yazıda Türk öğrenciler sıkça karıştırır veya cinsiyeti kaçırır.",
+              "theme": "grammar",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "pn-b2-1",
+                  "type": "multiple_choice",
+                  "prompt": "İş arkadaşı Ayşe için resmi e-postada doğru zamir?",
+                  "options": [
+                    "he",
+                    "she",
+                    "it",
+                    "they"
+                  ],
+                  "answer": "she",
+                  "explanation": "Türkçedeki tek 'o'dan farklı olarak İngilizce yazıda 3. tekil için cinsiyet seçilmek zorundadır; kişi adı dişil -> 'she'."
+                },
+                {
+                  "id": "pn-b2-2",
+                  "type": "fill_blank",
+                  "prompt": "I spoke to the candidate; ___ said the interview went well. (cinsiyet bilinmiyor)",
+                  "answer": "they",
+                  "hint": "Cinsiyet bilinmediğinde resmi modern İngilizcede tekil 'they' kabul edilir.",
+                  "explanation": "Modern formal usage: 'singular they' cinsiyet bilinmediğinde standarttır; eski 'he or she' alternatiftir."
+                },
+                {
+                  "id": "pn-b2-3",
+                  "type": "multiple_choice",
+                  "prompt": "HATALI cümle hangisi?",
+                  "options": [
+                    "Ms. Yılmaz forwarded the report; he will follow up next week.",
+                    "Ms. Yılmaz forwarded the report; she will follow up next week.",
+                    "Dr. Lee submitted the paper; they will revise it.",
+                    "The author published the book; she revised it last year."
+                  ],
+                  "answer": "Ms. Yılmaz forwarded the report; he will follow up next week.",
+                  "explanation": "'Ms.' dişil hitap; sonraki zamir 'he' olamaz — yaygın Türk-L1 hatası ('o'nun cinsiyetsizliğinden kaynaklanır)."
+                },
+                {
+                  "id": "pn-b2-4",
+                  "type": "tap_words_in_order",
+                  "prompt": "Müdür kararı kendisi verdi.",
+                  "answer": "The manager made the decision herself",
+                  "bank": [
+                    "The",
+                    "manager",
+                    "made",
+                    "the",
+                    "decision",
+                    "herself",
+                    "himself",
+                    "theirself",
+                    "themselves"
+                  ]
+                },
+                {
+                  "id": "pn-b2-5",
+                  "type": "listen_and_choose",
+                  "spokenText": "If a student forgets their ID, they should report to reception.",
+                  "options": [
+                    "If a student forgets their ID, they should report to reception.",
+                    "If a student forgets his ID, he should report to reception.",
+                    "If a student forgets its ID, it should report to reception.",
+                    "If a student forgets the ID, the student should report."
+                  ],
+                  "answer": "If a student forgets their ID, they should report to reception.",
+                  "explanation": "Belirsiz tekil özneye atıfta 'singular they' resmi yazımda kabul edilir."
+                }
+              ]
             }
           ]
         },
@@ -46660,6 +47453,160 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "en-tr-passive-l7",
+              "title": "İleri tanımlık kullanımı (a/an/the/zero)",
+              "description": "Türkçede tanımlık yoktur; ileri kullanımda generic plural, soyut isim ve kurum isimlerinde Türk öğrenciler hâlâ hata yapar.",
+              "theme": "grammar",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "art-b2-1",
+                  "type": "multiple_choice",
+                  "prompt": "Genel doğru: 'Kediler bağımsızdır.' İngilizcesi?",
+                  "options": [
+                    "The cats are independent.",
+                    "Cats are independent.",
+                    "A cat is independent.",
+                    "Cat is independent."
+                  ],
+                  "answer": "Cats are independent.",
+                  "explanation": "Genel doğrularda çoğul isim TANIMLIKSIZ kullanılır. Türkçedeki tanımsız özne mantığı bire bir kopyalanmaz."
+                },
+                {
+                  "id": "art-b2-2",
+                  "type": "fill_blank",
+                  "prompt": "She studies ___ university.",
+                  "answer": "at",
+                  "hint": "Kurum olarak üniversiteden bahsederken tanımlık kullanılmaz.",
+                  "explanation": "Kurum işlevinde: at school / at university / in hospital (UK) — tanımlık YOK. Bina olarak bahsedersen 'at the university' olur."
+                },
+                {
+                  "id": "art-b2-3",
+                  "type": "multiple_choice",
+                  "prompt": "Soyut isim: 'Sabır bir erdemdir.' İngilizcesi?",
+                  "options": [
+                    "The patience is a virtue.",
+                    "Patience is a virtue.",
+                    "A patience is a virtue.",
+                    "Patience is virtue."
+                  ],
+                  "answer": "Patience is a virtue.",
+                  "explanation": "Soyut isim (patience) genel anlamda tanımlıksız; ama 'is a virtue' belirsiz çoğunluğun bir üyesi için 'a' alır."
+                },
+                {
+                  "id": "art-b2-4",
+                  "type": "tap_words_in_order",
+                  "prompt": "Genel olarak müzik onu sakinleştirir.",
+                  "answer": "Music calms her in general",
+                  "bank": [
+                    "The",
+                    "Music",
+                    "music",
+                    "calms",
+                    "her",
+                    "in",
+                    "general",
+                    "a"
+                  ]
+                },
+                {
+                  "id": "art-b2-5",
+                  "type": "listen_and_choose",
+                  "spokenText": "He's been admitted to hospital again.",
+                  "options": [
+                    "He's been admitted to hospital again.",
+                    "He's been admitted to the hospital again.",
+                    "He's been admitted at hospital again.",
+                    "He's been admitted to a hospital again."
+                  ],
+                  "answer": "He's been admitted to hospital again.",
+                  "explanation": "BrE'de hasta olarak yatış için 'to hospital' (tanımlıksız); AmE'de 'to the hospital' yaygın."
+                }
+              ]
+            },
+            {
+              "id": "en-tr-passive-l8",
+              "title": "Dinleme tuzakları: should've / would've / gonna / wanna",
+              "description": "Bağlantılı konuşmada 'should have' -> 'should've' [ʃʊdəv], 'should of' DEĞİL. Türk öğrenciler için ileri seviye dinleme tuzağı.",
+              "theme": "grammar",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "cs-b2-1",
+                  "type": "listen_and_choose",
+                  "spokenText": "I should've told you sooner.",
+                  "options": [
+                    "I should of told you sooner.",
+                    "I should've told you sooner.",
+                    "I should have to tell you sooner.",
+                    "I shouldn't tell you sooner."
+                  ],
+                  "answer": "I should've told you sooner.",
+                  "explanation": "Konuşmada 'should've' [ʃʊdəv] 'should of' gibi duyulabilir ama YAZIMDA 'should have / should've' doğrudur; 'should of' yaygın anadil İngilizce hatasıdır, ESL'de kaçınılmalı."
+                },
+                {
+                  "id": "cs-b2-2",
+                  "type": "listen_and_choose",
+                  "spokenText": "What're you gonna do about it?",
+                  "options": [
+                    "What are you going to do about it?",
+                    "What are you gonna do about it?",
+                    "What're you going to do?",
+                    "What you going do about it?"
+                  ],
+                  "answer": "What are you gonna do about it?",
+                  "explanation": "'gonna' = 'going to' (gelecek zaman, going to-future); konuşma transkripsiyonu. Resmi yazımda 'going to' kullanılır."
+                },
+                {
+                  "id": "cs-b2-3",
+                  "type": "listen_and_choose",
+                  "spokenText": "I wanna grab a coffee before the meeting.",
+                  "options": [
+                    "I want to grab a coffee before the meeting.",
+                    "I wanna grab a coffee before the meeting.",
+                    "I wanted grab a coffee before the meeting.",
+                    "I want a grab a coffee."
+                  ],
+                  "answer": "I wanna grab a coffee before the meeting.",
+                  "explanation": "'wanna' = 'want to' (mastar tamamlayıcı). Sadece samimi konuşmada."
+                },
+                {
+                  "id": "cs-b2-4",
+                  "type": "multiple_choice",
+                  "prompt": "Hangisi YAZIMDA YANLIŞ?",
+                  "options": [
+                    "I should have called.",
+                    "I should've called.",
+                    "I should of called.",
+                    "I shouldn't have called."
+                  ],
+                  "answer": "I should of called.",
+                  "explanation": "'should of' yazılı dilde HATA; doğrusu 'should have / should've'. Telaffuz aldatmacasıdır."
+                },
+                {
+                  "id": "cs-b2-5",
+                  "type": "fill_blank",
+                  "prompt": "She ___ ('d been) waiting for an hour when I arrived.",
+                  "answer": "had",
+                  "hint": "'She'd been' = 'She had been'. Bağlantılı konuşmada 'd düşer.",
+                  "explanation": "'d kısaltması bağlama göre 'had' veya 'would' olabilir; burada past perfect continuous -> 'had been'."
+                },
+                {
+                  "id": "cs-b2-6",
+                  "type": "listen_and_choose",
+                  "spokenText": "He's gotta finish this by Friday.",
+                  "options": [
+                    "He has got to finish this by Friday.",
+                    "He's got to finish this by Friday.",
+                    "He's gotta finish this by Friday.",
+                    "He gotta finish this by Friday."
+                  ],
+                  "answer": "He's gotta finish this by Friday.",
+                  "explanation": "'gotta' = 'got to' (zorunluluk, konuşma dili). Resmi yazımda 'has to / must'."
+                }
+              ]
             }
           ]
         },
@@ -46995,12 +47942,12 @@
                   "type": "multiple_choice",
                   "prompt": "BrE 'revise' = AmE'de hangi fiil?",
                   "options": [
-                    "edit",
-                    "review (study again)",
-                    "revisit",
-                    "redo"
+                    "edit (revise written text)",
+                    "review (study material again)",
+                    "revisit (consider again)",
+                    "redo (do over)"
                   ],
-                  "answer": "review (study again)",
+                  "answer": "review (study material again)",
                   "explanation": "BrE 'revise' = 'tekrar çalışmak'; AmE'de 'review' kullanılır."
                 },
                 {
@@ -47839,6 +48786,97 @@
                       "speaker": "teacher",
                       "text": "Wonderful. I'll arrange an introduction next week. Thanks for being so engaged."
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "en-tr-b2-education-l7",
+              "title": "Sayılamayan isimler ve partitifler (a piece of advice...)",
+              "description": "Türkçede 'bir tavsiye' doğal; İngilizcede 'an advice' YANLIŞTIR. Üst düzeyde bile sürer.",
+              "theme": "reading",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "part-b2-1",
+                  "type": "multiple_choice",
+                  "prompt": "Hangisi DOĞRU?",
+                  "options": [
+                    "I need an advice.",
+                    "I need a piece of advice.",
+                    "I need one advice.",
+                    "I need advices."
+                  ],
+                  "answer": "I need a piece of advice.",
+                  "explanation": "'advice' sayılamaz; tek bir parça için 'a piece of advice' veya 'some advice'."
+                },
+                {
+                  "id": "part-b2-2",
+                  "type": "match_pairs",
+                  "prompt": "Sayılamayan isim — Partitif",
+                  "pairs": [
+                    {
+                      "left": "advice",
+                      "right": "a piece of"
+                    },
+                    {
+                      "left": "clothing",
+                      "right": "an item of"
+                    },
+                    {
+                      "left": "news",
+                      "right": "a piece of"
+                    },
+                    {
+                      "left": "furniture",
+                      "right": "an item / a piece of"
+                    },
+                    {
+                      "left": "information",
+                      "right": "a piece of"
+                    },
+                    {
+                      "left": "bread",
+                      "right": "a slice / loaf of"
+                    }
+                  ]
+                },
+                {
+                  "id": "part-b2-3",
+                  "type": "fill_blank",
+                  "prompt": "She bought three ___ of clothing on sale.",
+                  "answer": "items",
+                  "hint": "'clothing' sayılamaz; çokluk için 'items of clothing'.",
+                  "explanation": "Türkçedeki '3 kıyafet' doğrudan '*three clothings' olmaz."
+                },
+                {
+                  "id": "part-b2-4",
+                  "type": "multiple_choice",
+                  "prompt": "HATALI olan hangisi?",
+                  "options": [
+                    "Two pieces of news arrived.",
+                    "Two equipments are needed.",
+                    "Several items of furniture were damaged.",
+                    "A piece of evidence was found."
+                  ],
+                  "answer": "Two equipments are needed.",
+                  "explanation": "'equipment' sayılamaz; çoğul YOK. Doğru: 'two pieces/items of equipment'."
+                },
+                {
+                  "id": "part-b2-5",
+                  "type": "tap_words_in_order",
+                  "prompt": "Sana bir tavsiye verebilir miyim?",
+                  "answer": "Can I give you a piece of advice",
+                  "bank": [
+                    "Can",
+                    "I",
+                    "give",
+                    "you",
+                    "a",
+                    "piece",
+                    "of",
+                    "advice",
+                    "an"
                   ]
                 }
               ]
@@ -49033,6 +50071,80 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "en-tr-b2-debate-l7",
+              "title": "Dolaylı sorular (indirect / embedded questions)",
+              "description": "Resmi ve kibar sorularda doğrudan inversion düşer; Türk öğrenciler 'Can you tell me where is X?' hatası yapar.",
+              "theme": "speaking",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "iq-b2-1",
+                  "type": "multiple_choice",
+                  "prompt": "Kibar/resmi: 'İstasyon nerede biliyor musunuz?' İngilizcesi?",
+                  "options": [
+                    "Could you tell me where is the station?",
+                    "Could you tell me where the station is?",
+                    "Where the station is could you tell me?",
+                    "Can you tell me where is the station?"
+                  ],
+                  "answer": "Could you tell me where the station is?",
+                  "explanation": "Dolaylı/gömülü sorularda yardımcı fiil DÜŞMEZ ama özne+fiil sırasına döner: 'where IS the station?' -> 'where the station IS'."
+                },
+                {
+                  "id": "iq-b2-2",
+                  "type": "fill_blank",
+                  "prompt": "I wonder ___ he will arrive on time.",
+                  "answer": "if",
+                  "hint": "Evet/hayır sorusu gömüldüğünde 'if' veya 'whether' kullanılır.",
+                  "explanation": "Yes/no sorusu -> 'if/whether'; wh-soru -> ilgili wh-kelime; her iki durumda da inversion yok."
+                },
+                {
+                  "id": "iq-b2-3",
+                  "type": "tap_words_in_order",
+                  "prompt": "Toplantının saat kaçta başladığını biliyor musunuz?",
+                  "answer": "Do you know what time the meeting started",
+                  "bank": [
+                    "Do",
+                    "you",
+                    "know",
+                    "what",
+                    "time",
+                    "the",
+                    "meeting",
+                    "started",
+                    "did",
+                    "start",
+                    "is"
+                  ]
+                },
+                {
+                  "id": "iq-b2-4",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi cümle DOLAYLI soru kuralına UYGUN değildir?",
+                  "options": [
+                    "Could you tell me where she lives?",
+                    "I'd like to know what time it is.",
+                    "Do you know how much does it cost?",
+                    "Can you remember if you locked the door?"
+                  ],
+                  "answer": "Do you know how much does it cost?",
+                  "explanation": "'does it cost' inversion'ı; gömülü soruda 'how much it costs' olmalı."
+                },
+                {
+                  "id": "iq-b2-5",
+                  "type": "listen_and_choose",
+                  "spokenText": "Could you tell me where the nearest pharmacy is?",
+                  "options": [
+                    "Could you tell me where is the nearest pharmacy?",
+                    "Could you tell me where the nearest pharmacy is?",
+                    "Could you tell me where the nearest pharmacy?",
+                    "Could you tell me where's the nearest pharmacy?"
+                  ],
+                  "answer": "Could you tell me where the nearest pharmacy is?"
+                }
+              ]
             }
           ]
         },
@@ -49717,15 +50829,21 @@
               "exercises": [
                 {
                   "id": "biz1-1",
-                  "type": "multiple_choice",
-                  "prompt": "'Bugünkü gündem üç ana noktayı kapsıyor' İngilizcesi?",
+                  "type": "translate",
+                  "prompt": "İngilizceye çevir: 'Bugünkü gündem üç ana noktayı kapsıyor.'",
                   "options": [
                     "Today's agenda covers three main points.",
                     "Today agenda is three points.",
                     "Today's agendas covers three points.",
                     "The agenda today three main."
                   ],
-                  "answer": "Today's agenda covers three main points."
+                  "answer": "Today's agenda covers three main points.",
+                  "acceptableAnswers": [
+                    "Today's agenda covers three main points.",
+                    "Today's agenda includes three main points.",
+                    "Today's agenda comprises three main points."
+                  ],
+                  "explanation": "Possessive 'Today's' + tekil 'agenda' + 'covers/includes' fiili; toplantı açılış kalıbı."
                 },
                 {
                   "id": "biz1-2",
@@ -50900,6 +52018,74 @@
                       "text": "Thank you. I'll circulate the updated forecast and remediation plan by close of business Friday."
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "en-tr-business-l8",
+              "title": "İş İngilizcesinde dinleme tuzakları: zayıf formlar ve linking",
+              "description": "Toplantılarda 'would have', 'could have' kısaltmaları ve 'to' weak form'u (/tə/) Türk öğrenciler için tuzaktır.",
+              "theme": "verbs",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "cs-c1-1",
+                  "type": "listen_and_choose",
+                  "spokenText": "We could've avoided this if we'd flagged it earlier.",
+                  "options": [
+                    "We could of avoided this if we'd flagged it earlier.",
+                    "We could've avoided this if we'd flagged it earlier.",
+                    "We could have avoid this if we flagged it earlier.",
+                    "We could've avoided this if we had flag it earlier."
+                  ],
+                  "answer": "We could've avoided this if we'd flagged it earlier.",
+                  "explanation": "'could've' + 'we'd' (= we had) past unreal conditional kısaltmasıdır."
+                },
+                {
+                  "id": "cs-c1-2",
+                  "type": "listen_and_choose",
+                  "spokenText": "I'd like ya to weigh in on this.",
+                  "options": [
+                    "I'd like you to weigh in on this.",
+                    "I'd like ya to weigh in on this.",
+                    "I'd like to you weigh in on this.",
+                    "I like you weigh in on this."
+                  ],
+                  "answer": "I'd like ya to weigh in on this.",
+                  "explanation": "'ya' = 'you' (zayıf form, çok günlük). İş toplantısında nadirdir; lider-takım sohbetinde geçer."
+                },
+                {
+                  "id": "cs-c1-3",
+                  "type": "fill_blank",
+                  "prompt": "We ___ ('ve) been talking about this for weeks.",
+                  "answer": "have",
+                  "hint": "'we've' = 'we have'."
+                },
+                {
+                  "id": "cs-c1-4",
+                  "type": "multiple_choice",
+                  "prompt": "'I'd've thought so' açılımı?",
+                  "options": [
+                    "I would have thought so.",
+                    "I had have thought so.",
+                    "I do have thought so.",
+                    "I did have thought so."
+                  ],
+                  "answer": "I would have thought so.",
+                  "explanation": "Çift kısaltma 'I'd've' = 'I would have'. Çok yaygın konuşma kalıbı."
+                },
+                {
+                  "id": "cs-c1-5",
+                  "type": "listen_and_choose",
+                  "spokenText": "Let's circle back to that on Tuesday.",
+                  "options": [
+                    "Let's circle back to that on Tuesday.",
+                    "Let's circle back to that in Tuesday.",
+                    "Let's circle back that on Tuesday.",
+                    "Let circle back to that on Tuesday."
+                  ],
+                  "answer": "Let's circle back to that on Tuesday.",
+                  "explanation": "'to that' linking: /tə ðæt/ — Türk kulağı 'that'i kaybetmemeli."
                 }
               ]
             }
@@ -52086,6 +53272,94 @@
                       "text": "Thank you. We'll move to the second examiner after a brief pause."
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "en-tr-academic-l8",
+              "title": "Modal speculation: must / could / might / can't + have V3",
+              "description": "Geçmişe yönelik tahmin gücü ve modal passive; akademik analizde sık.",
+              "theme": "writing",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "msp-c1-1",
+                  "type": "multiple_choice",
+                  "prompt": "Sonuçlar bekleneneden farklı — 'Veri toplama yöntemi sorunlu olmuş olmalı.' İngilizcesi?",
+                  "options": [
+                    "The data collection must be flawed.",
+                    "The data collection must have been flawed.",
+                    "The data collection should be flawed.",
+                    "The data collection might be flawed."
+                  ],
+                  "answer": "The data collection must have been flawed.",
+                  "explanation": "'must have V3' geçmişe yönelik güçlü tahmin (~%90+) + 'be flawed' pasif -> modal passive perfect."
+                },
+                {
+                  "id": "msp-c1-2",
+                  "type": "fill_blank",
+                  "prompt": "The findings ___ have been influenced by sample bias.",
+                  "answer": "might",
+                  "hint": "Zayıf olasılık (hedged) — akademik yazıda sık.",
+                  "explanation": "'might have V3' düşük olasılık (~%30); akademik hedge için ideal."
+                },
+                {
+                  "id": "msp-c1-3",
+                  "type": "multiple_choice",
+                  "prompt": "'It can't have been a coincidence.' tonu?",
+                  "options": [
+                    "Güçlü olumsuz tahmin (~%90+ değildir)",
+                    "Olasılık (~%50)",
+                    "İzin",
+                    "Yetenek"
+                  ],
+                  "answer": "Güçlü olumsuz tahmin (~%90+ değildir)",
+                  "explanation": "Türkçedeki 'olamaz' karşılığı 'can't have V3' modal speculation kalıbıdır."
+                },
+                {
+                  "id": "msp-c1-4",
+                  "type": "tap_words_in_order",
+                  "prompt": "Bu sonuç ölçüm hatasından kaynaklanmış olabilir.",
+                  "answer": "This result may have stemmed from a measurement error",
+                  "bank": [
+                    "This",
+                    "result",
+                    "may",
+                    "have",
+                    "stemmed",
+                    "from",
+                    "a",
+                    "measurement",
+                    "error",
+                    "might",
+                    "be",
+                    "stem"
+                  ]
+                },
+                {
+                  "id": "msp-c1-5",
+                  "type": "multiple_choice",
+                  "prompt": "Modal passive: 'Karar perşembeye kadar verilmeli.' İngilizcesi?",
+                  "options": [
+                    "The decision must be making by Thursday.",
+                    "The decision must be made by Thursday.",
+                    "The decision must have made by Thursday.",
+                    "The decision must to be made by Thursday."
+                  ],
+                  "answer": "The decision must be made by Thursday.",
+                  "explanation": "Modal + be + V3 = modal passive; akademik/iş yazışmasında çok yaygın."
+                },
+                {
+                  "id": "msp-c1-6",
+                  "type": "listen_and_choose",
+                  "spokenText": "They could've completed the project on time if resources had been available.",
+                  "options": [
+                    "They could of completed the project on time if resources had been available.",
+                    "They could've completed the project on time if resources had been available.",
+                    "They could have complete the project on time if resources had been available.",
+                    "They couldn't have completed the project on time if resources had been available."
+                  ],
+                  "answer": "They could've completed the project on time if resources had been available."
                 }
               ]
             }
@@ -54320,6 +55594,111 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "en-tr-c1-idioms-l8",
+              "title": "Phrasal verb üretim drilli (separable / inseparable)",
+              "description": "Ayrılabilir vs ayrılamaz öbek fiiller; nesne pronoun ise nereye konur?",
+              "theme": "vocab",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "pv-c1-1",
+                  "type": "multiple_choice",
+                  "prompt": "DOĞRU olan hangisi? (nesne zamir)",
+                  "options": [
+                    "Please look it up.",
+                    "Please look up it.",
+                    "Please look-up it.",
+                    "Please it look up."
+                  ],
+                  "answer": "Please look it up.",
+                  "explanation": "'look up' ayrılabilirdir; nesne ZAMİR olduğunda partikül ZORUNLU olarak sonda kalır."
+                },
+                {
+                  "id": "pv-c1-2",
+                  "type": "multiple_choice",
+                  "prompt": "HATALI olan hangisi?",
+                  "options": [
+                    "I ran into her at the conference.",
+                    "I ran her into at the conference.",
+                    "She came across an old letter.",
+                    "We got over the setback quickly."
+                  ],
+                  "answer": "I ran her into at the conference.",
+                  "explanation": "'run into' (rastlamak) ayrılamazdır; nesne her zaman partikülden sonra."
+                },
+                {
+                  "id": "pv-c1-3",
+                  "type": "fill_blank",
+                  "prompt": "We need to ___ ___ the contract issues before Friday.",
+                  "answer": "iron out",
+                  "hint": "Sorunları çözmek / pürüzleri gidermek.",
+                  "explanation": "'iron out the issues' ya da 'iron the issues out'; ikisi de OK çünkü ayrılabilir + nesne isim."
+                },
+                {
+                  "id": "pv-c1-4",
+                  "type": "tap_words_in_order",
+                  "prompt": "Bu eleştiriyi sineye çekemiyorum.",
+                  "answer": "I can't put up with this criticism",
+                  "bank": [
+                    "I",
+                    "can't",
+                    "put",
+                    "up",
+                    "with",
+                    "this",
+                    "criticism",
+                    "up with",
+                    "with up",
+                    "over"
+                  ]
+                },
+                {
+                  "id": "pv-c1-5",
+                  "type": "match_pairs",
+                  "prompt": "Phrasal verb — Türkçe (resmi alternatif)",
+                  "pairs": [
+                    {
+                      "left": "weigh in (on)",
+                      "right": "görüş bildirmek (= comment on)"
+                    },
+                    {
+                      "left": "iron out",
+                      "right": "pürüzleri gidermek (= resolve)"
+                    },
+                    {
+                      "left": "get over",
+                      "right": "atlatmak (= recover from)"
+                    },
+                    {
+                      "left": "put up with",
+                      "right": "katlanmak (= tolerate)"
+                    },
+                    {
+                      "left": "bring up",
+                      "right": "gündeme getirmek (= raise)"
+                    },
+                    {
+                      "left": "come up with",
+                      "right": "bulmak/üretmek (= devise)"
+                    }
+                  ]
+                },
+                {
+                  "id": "pv-c1-6",
+                  "type": "multiple_choice",
+                  "prompt": "Akademik makalede 'come up with a solution' yerine en uygun resmi alternatif?",
+                  "options": [
+                    "think up a solution",
+                    "devise a solution",
+                    "cook up a solution",
+                    "stumble on a solution"
+                  ],
+                  "answer": "devise a solution",
+                  "explanation": "Phrasal verb -> tek-kelime Latin kökenli karşılık akademik tonu yükseltir; register kayışı."
+                }
+              ]
             }
           ]
         },
@@ -55039,12 +56418,12 @@
                   "type": "multiple_choice",
                   "prompt": "'The report submitted yesterday is incomplete.' yapısı nedir?",
                   "options": [
-                    "Active relative",
-                    "Reduced passive relative ('which was submitted')",
-                    "Standard passive",
-                    "Subjunctive"
+                    "Active relative ('the report that submits')",
+                    "Reduced passive relative ('which was submitted' -> 'submitted')",
+                    "Standard passive ('was being submitted')",
+                    "Subjunctive ('that the report be submitted')"
                   ],
-                  "answer": "Reduced passive relative ('which was submitted')",
+                  "answer": "Reduced passive relative ('which was submitted' -> 'submitted')",
                   "explanation": "'which was submitted' → 'submitted' (past participle clause)."
                 },
                 {
@@ -60583,10 +61962,14 @@
                 },
                 {
                   "id": "rh3-3",
-                  "type": "fill_blank",
-                  "prompt": "The choice ___ ours.",
-                  "answer": "is",
-                  "acceptableAnswers": []
+                  "type": "translate",
+                  "prompt": "İngilizceye çevir (retorik anaphora): 'Seçim bizimdir. Sorumluluk bizimdir. Gelecek bizimdir.'",
+                  "answer": "The choice is ours. The responsibility is ours. The future is ours.",
+                  "acceptableAnswers": [
+                    "The choice is ours. The responsibility is ours. The future is ours.",
+                    "The choice is ours, the responsibility is ours, the future is ours."
+                  ],
+                  "explanation": "Anaphora retorik figürü: cümle başı tekrar ile vurgu. Üç kısa cümle tipik söylev ritmi."
                 },
                 {
                   "id": "rh3-4",
@@ -61108,6 +62491,79 @@
                       "text": "Now you're cooking. Send me a fresh draft by six and we'll run it tomorrow."
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "en-tr-c2-rhetoric-l7",
+              "title": "İleri inversion ve cleft — söylev için üretim",
+              "description": "C1'de tanınan inversion/cleft yapıları C2'de söylev/op-ed yazımında üretilmeli.",
+              "theme": "speaking",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "rc-c2-1",
+                  "type": "multiple_choice",
+                  "prompt": "Op-ed kapanışı için EN ETKİLİ olan?",
+                  "options": [
+                    "The data shows the policy doesn't work.",
+                    "Not only does the data refute the policy, but it also exposes its premises.",
+                    "Data show policy doesn't work and also expose premises.",
+                    "The policy is bad. The data is bad. Conclude."
+                  ],
+                  "answer": "Not only does the data refute the policy, but it also exposes its premises.",
+                  "explanation": "'Not only...but also...' inversion'ı retorik kapanışta vurguyu artırır."
+                },
+                {
+                  "id": "rc-c2-2",
+                  "type": "tap_words_in_order",
+                  "prompt": "Asıl gerekli olan, cesarettir.",
+                  "answer": "What is truly needed is courage",
+                  "bank": [
+                    "What",
+                    "is",
+                    "truly",
+                    "needed",
+                    "courage",
+                    "need",
+                    "needs",
+                    "what",
+                    "that"
+                  ]
+                },
+                {
+                  "id": "rc-c2-3",
+                  "type": "fill_blank",
+                  "prompt": "___ have we faced a challenge of this scale.",
+                  "answer": "Rarely",
+                  "hint": "Olumsuz/sıklık zarfı cümle başında -> inversion.",
+                  "explanation": "Cümle başı 'rarely/seldom/never' -> yardımcı fiil özneden önce: 'Rarely have we...'."
+                },
+                {
+                  "id": "rc-c2-4",
+                  "type": "multiple_choice",
+                  "prompt": "It-cleft ile vurgu: 'Sözleşmeyi imzalayan Sarah'ydı.' İngilizcesi?",
+                  "options": [
+                    "Sarah signed the contract.",
+                    "It was Sarah who signed the contract.",
+                    "Sarah is the one signed the contract.",
+                    "Was Sarah signed the contract."
+                  ],
+                  "answer": "It was Sarah who signed the contract.",
+                  "explanation": "It-cleft: 'It is/was X that/who...' yapısı — vurguyu özneye taşır."
+                },
+                {
+                  "id": "rc-c2-5",
+                  "type": "listen_and_choose",
+                  "spokenText": "Hardly had we begun before the system crashed.",
+                  "options": [
+                    "Hardly we had begun before the system crashed.",
+                    "Hardly had we begun before the system crashed.",
+                    "Hard we had begun before the system crashed.",
+                    "Hardly we begun before the system crashed."
+                  ],
+                  "answer": "Hardly had we begun before the system crashed.",
+                  "explanation": "'Hardly...before/when' negative inversion: 'hardly had + S + V3'."
                 }
               ]
             }
@@ -62640,10 +64096,10 @@
                   "type": "multiple_choice",
                   "prompt": "UK İngilizcesinde 'r' sesi (kelime sonunda) genelde:",
                   "options": [
-                    "Telaffuz edilir",
+                    "Net telaffuz edilir (rhotic)",
                     "Düşürülür (non-rhotic)",
-                    "İki kez söylenir",
-                    "Susturulmaz"
+                    "Yumuşatılır (tap-r)",
+                    "Sadece vurgulu hecede söylenir"
                   ],
                   "answer": "Düşürülür (non-rhotic)"
                 },
@@ -62661,12 +64117,13 @@
                   "type": "multiple_choice",
                   "prompt": "'water' kelimesinin US 'tap-T' (yumuşak T) telaffuzu hangi sese yakındır?",
                   "options": [
-                    "d",
-                    "t",
-                    "r",
-                    "k"
+                    "flap / soft [d] (water -> 'wadder')",
+                    "clear [t] (water -> 'wa-ter')",
+                    "rolled [r]",
+                    "glottal [k]"
                   ],
-                  "answer": "d"
+                  "answer": "flap / soft [d] (water -> 'wadder')",
+                  "explanation": "AmE'de iki ünlü arası /t/ 'flap T' [ɾ] olur ve İngiliz kulağı için /d/'ye yakın duyulur (water -> 'wadder')."
                 },
                 {
                   "id": "rg4-5",
@@ -63019,6 +64476,67 @@
                       "text": "Fine, fine — I'll bring the cheque. Or the check. Or whatever Kyle calls it."
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "en-tr-c2-regional-l7",
+              "title": "Minimal pair dinleme (ileri seviye)",
+              "description": "C2'de bile Türk öğrenciler bazı çiftlerde tökezler: live/leave, full/fool, beach/bitch, sheet/shit.",
+              "theme": "vocab",
+              "xp": 12,
+              "exercises": [
+                {
+                  "id": "mp-c2-1",
+                  "type": "listen_and_choose",
+                  "spokenText": "She lives on the beach.",
+                  "options": [
+                    "She leaves on the beach.",
+                    "She lives on the beach.",
+                    "She lives on the bitch.",
+                    "She leaves on the bitch."
+                  ],
+                  "answer": "She lives on the beach.",
+                  "explanation": "/i:/ (long, leave) vs /ɪ/ (short, live); /i:tʃ/ (beach) vs /ɪtʃ/ (bitch) — bağlam yardımcısı: 'on the beach' coğrafi."
+                },
+                {
+                  "id": "mp-c2-2",
+                  "type": "listen_and_choose",
+                  "spokenText": "The glass is full.",
+                  "options": [
+                    "The glass is fool.",
+                    "The glass is full.",
+                    "The class is full.",
+                    "The grass is full."
+                  ],
+                  "answer": "The glass is full.",
+                  "explanation": "/ʊ/ (full) vs /uː/ (fool); /gl/ (glass) vs /kl/ (class)."
+                },
+                {
+                  "id": "mp-c2-3",
+                  "type": "listen_and_choose",
+                  "spokenText": "I'll need a clean sheet of paper.",
+                  "options": [
+                    "I'll need a clean shit of paper.",
+                    "I'll need a clean sheet of paper.",
+                    "I'll need a clean seat of paper.",
+                    "I'll need a clean ship of paper."
+                  ],
+                  "answer": "I'll need a clean sheet of paper.",
+                  "explanation": "Türk konuşanlar için /iː/-/ɪ/ ayrımı sheet/shit'te kritiktir; bağlam ('paper') tek başına çözmez."
+                },
+                {
+                  "id": "mp-c2-4",
+                  "type": "listen_and_choose",
+                  "spokenText": "We should sit on the seat.",
+                  "options": [
+                    "We should seat on the sit.",
+                    "We should sit on the seat.",
+                    "We should sit on the sheet.",
+                    "We should seat on the seat."
+                  ],
+                  "answer": "We should sit on the seat.",
+                  "explanation": "/sɪt/ (oturmak, kısa) vs /siːt/ (koltuk, uzun) — ünlü uzunluğu Türkçede fonemik değil, İngilizcede ayırt edici."
                 }
               ]
             }
@@ -65997,10 +67515,10 @@
                   "type": "multiple_choice",
                   "prompt": "'Shall I compare thee to a summer's day' kaç iambdır?",
                   "options": [
-                    "3",
-                    "4",
+                    "3 (trimeter)",
+                    "4 (tetrameter)",
                     "5 (pentameter)",
-                    "6"
+                    "6 (hexameter)"
                   ],
                   "answer": "5 (pentameter)"
                 },

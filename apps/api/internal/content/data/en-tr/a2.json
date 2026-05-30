@@ -185,11 +185,13 @@
             },
             {
               "id": "ps1-3",
-              "type": "fill_blank",
-              "prompt": "'study' → ___ (geçmiş)",
+              "type": "translate",
+              "source": "study (geniş zaman)",
               "answer": "studied",
               "acceptableAnswers": [],
-              "explanation": "Sessizden sonra 'y' → 'ied'."
+              "direction": "to_target",
+              "context": "study → ___ (geçmiş zaman)",
+              "explanation": "Sessizle biten -y → -ied."
             },
             {
               "id": "ps1-4",
@@ -324,10 +326,13 @@
             },
             {
               "id": "ps2-4",
-              "type": "fill_blank",
-              "prompt": "'eat' → ___ (geçmiş)",
+              "type": "translate",
+              "source": "eat (geniş zaman)",
               "answer": "ate",
-              "acceptableAnswers": []
+              "acceptableAnswers": [],
+              "direction": "to_target",
+              "context": "eat → ___ (düzensiz geçmiş)",
+              "explanation": "eat-ate-eaten."
             },
             {
               "id": "ps2-5",
@@ -692,6 +697,19 @@
                 "Was she came home?"
               ],
               "answer": "Did she come home?"
+            },
+            {
+              "id": "ps4-sov",
+              "type": "multiple_choice",
+              "prompt": "'Dün okula gittim.' En doğru:",
+              "options": [
+                "I yesterday to school went.",
+                "Yesterday I to school went.",
+                "I went to school yesterday.",
+                "I to school yesterday went."
+              ],
+              "answer": "I went to school yesterday.",
+              "explanation": "İngilizce: [özne] [fiil] [yer] [zaman]."
             }
           ]
         },
@@ -1112,6 +1130,189 @@
                   "prompt": "Nazik bir kapanış seç."
                 }
               ]
+            },
+            {
+              "id": "ps7-pronoun",
+              "type": "multiple_choice",
+              "prompt": "'Annem dün geldi. (O) çok yorgundu.' En doğru:",
+              "options": [
+                "My mother came yesterday. He was very tired.",
+                "My mother came yesterday. She was very tired.",
+                "My mother came yesterday. It was very tired.",
+                "My mother came yesterday. They was very tired."
+              ],
+              "answer": "My mother came yesterday. She was very tired.",
+              "explanation": "'mother' kadın → 'she'."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-past-simple-word-order",
+          "title": "Kelime sırası: Özne–Yüklem–Nesne",
+          "description": "İngilizcede cümleler özne-yüklem-nesne sırası izler (SVO). Türkçedeki özne-nesne-yüklem (SOV) düzeninden farklıdır.",
+          "theme": "tense",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "wo1-1",
+              "type": "multiple_choice",
+              "prompt": "'Ben kitabı okudum' İngilizcede:",
+              "options": [
+                "I the book read.",
+                "I read the book.",
+                "Read I the book.",
+                "The book I read."
+              ],
+              "answer": "I read the book.",
+              "explanation": "İngilizcede yüklem (read) nesneden (the book) önce gelir. Türkçedeki SOV sırasını İngilizceye doğrudan taşımayın."
+            },
+            {
+              "id": "wo1-2",
+              "type": "multiple_choice",
+              "prompt": "Hangi sıra doğru?",
+              "options": [
+                "She a coffee drinks.",
+                "She drinks a coffee.",
+                "Drinks she a coffee.",
+                "A coffee she drinks."
+              ],
+              "answer": "She drinks a coffee.",
+              "explanation": "Özne (She) → yüklem (drinks) → nesne (a coffee)."
+            },
+            {
+              "id": "wo1-3",
+              "type": "tap_words_in_order",
+              "prompt": "'Annem yemeği pişiriyor.'",
+              "answer": "My mother is cooking the meal",
+              "bank": [
+                "mother",
+                "My",
+                "is",
+                "cooking",
+                "the",
+                "meal",
+                "cooks"
+              ],
+              "explanation": "Şu an yapılan bir eylem için present continuous: özne + be + V-ing + nesne."
+            },
+            {
+              "id": "wo1-4",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Ali her gün gazete okur.",
+              "answer": "Ali reads a newspaper every day",
+              "acceptableAnswers": [
+                "Ali reads the newspaper every day",
+                "Ali reads a newspaper every day."
+              ],
+              "explanation": "Sıra: Özne (Ali) → yüklem (reads) → nesne (a newspaper) → zaman zarfı (every day). Zaman zarfı genelde sona gelir."
+            },
+            {
+              "id": "wo1-5",
+              "type": "multiple_choice",
+              "prompt": "'Yarın okula gideceğim' için doğru sıra:",
+              "options": [
+                "Tomorrow I to school will go.",
+                "I tomorrow will go school.",
+                "I will go to school tomorrow.",
+                "Will I go to school tomorrow."
+              ],
+              "answer": "I will go to school tomorrow.",
+              "explanation": "Özne + yardımcı fiil + ana fiil + yer + zaman. 'Tomorrow' başa da gelebilir ama sonu daha doğal."
+            },
+            {
+              "id": "wo1-6",
+              "type": "fill_blank",
+              "prompt": "Doğru sırada doldurun: ___ (büyük bir kek) yaptık.",
+              "answer": "We made a big cake",
+              "acceptableAnswers": [
+                "we made a big cake"
+              ],
+              "explanation": "Sıfat (big) ismin önüne gelir; isim tamlaması nesne olarak yüklemden sonra."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-past-simple-do-support",
+          "title": "Soru ve olumsuz: do/does/did yardımcısı",
+          "description": "İngilizcede normal fiillerle soru ve olumsuz cümle kurmak için do/does (geniş zaman) ve did (geçmiş zaman) yardımcı fiili kullanılır. Türkçede böyle bir yardımcı yoktur.",
+          "theme": "tense",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "ds1-1",
+              "type": "multiple_choice",
+              "prompt": "'Çay sever misin?' İngilizcede:",
+              "options": [
+                "You like tea?",
+                "Like you tea?",
+                "Do you like tea?",
+                "Are you like tea?"
+              ],
+              "answer": "Do you like tea?",
+              "explanation": "Normal fiillerle (like, eat, work…) soru için do/does kullanılır. 'Are' burada yanlış çünkü 'like' bir 'be' fiili değil."
+            },
+            {
+              "id": "ds1-2",
+              "type": "multiple_choice",
+              "prompt": "'O et yemez' İngilizcede:",
+              "options": [
+                "He no eat meat.",
+                "He doesn't eat meat.",
+                "He not eats meat.",
+                "He isn't eat meat."
+              ],
+              "answer": "He doesn't eat meat.",
+              "explanation": "3. tekil şahıs (he/she/it) için 'does not' / 'doesn't' kullanılır. Ana fiil yalın halde kalır: 'eat', 'eats' değil."
+            },
+            {
+              "id": "ds1-3",
+              "type": "fill_blank",
+              "prompt": "___ you speak English? — Yes, I do.",
+              "answer": "Do",
+              "acceptableAnswers": [
+                "do"
+              ],
+              "explanation": "I/you/we/they için 'Do' ile başlar."
+            },
+            {
+              "id": "ds1-4",
+              "type": "fill_blank",
+              "prompt": "She ___ work on Sundays.",
+              "answer": "doesn't",
+              "acceptableAnswers": [
+                "does not"
+              ],
+              "explanation": "Geniş zaman olumsuz, 3. tekil şahıs."
+            },
+            {
+              "id": "ds1-5",
+              "type": "tap_words_in_order",
+              "prompt": "'Dün okula gittin mi?'",
+              "answer": "Did you go to school yesterday",
+              "bank": [
+                "you",
+                "Did",
+                "go",
+                "to",
+                "school",
+                "yesterday",
+                "went"
+              ],
+              "explanation": "Geçmiş zaman sorularında 'did' + özne + fiilin yalın hali."
+            },
+            {
+              "id": "ds1-6",
+              "type": "multiple_choice",
+              "prompt": "Hangisi yanlış?",
+              "options": [
+                "Do you like coffee?",
+                "Does she work here?",
+                "Did they go home?",
+                "Does he likes apples?"
+              ],
+              "answer": "Does he likes apples?",
+              "explanation": "'Does' kullanıldığında ana fiil yalın halde (like) olmalı: 'Does he like apples?'"
             }
           ]
         }
@@ -3894,15 +4095,15 @@
             {
               "id": "ar5-1",
               "type": "multiple_choice",
-              "prompt": "'I have a cat. ___ cat is black.' (boşluğa hangisi gelir?)",
+              "prompt": "'I drink ___ water.' — Su içerim.",
               "options": [
-                "A",
-                "The",
-                "An",
-                "(boş)"
+                "a",
+                "an",
+                "the",
+                "— (artikelsiz)"
               ],
-              "answer": "The",
-              "explanation": "İkinci geçişte 'the'."
+              "answer": "— (artikelsiz)",
+              "explanation": "Sayılamayan isimlerin önüne 'a/an' GELMEZ."
             },
             {
               "id": "ar5-2",
@@ -5591,6 +5792,19 @@
                 "have",
                 "a"
               ]
+            },
+            {
+              "id": "hg1-plural",
+              "type": "multiple_choice",
+              "prompt": "'İki çocuğu var.' En doğru:",
+              "options": [
+                "She has two child.",
+                "She has two children.",
+                "She has two childs.",
+                "She has the two children."
+              ],
+              "answer": "She has two children.",
+              "explanation": "child → children."
             }
           ]
         },
@@ -6002,6 +6216,19 @@
               ],
               "answer": "Bebek doğurmak / sahibi olmak (her ikisi)",
               "explanation": "Bağlama göre hem doğum eylemi hem sahiplik."
+            },
+            {
+              "id": "hg4-plural",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle YANLIŞ?",
+              "options": [
+                "I have two books.",
+                "She has three cats.",
+                "He has five brother.",
+                "They have six friends."
+              ],
+              "answer": "He has five brother.",
+              "explanation": "'He has five brothers'."
             }
           ]
         },
@@ -12176,6 +12403,61 @@
                   "text": "Got it! See you Friday."
                 }
               ]
+            },
+            {
+              "id": "rv-pron-1",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç (uzun /iː/ ya da kısa /ɪ/)",
+              "spokenText": "sheep",
+              "options": [
+                "ship",
+                "sheep",
+                "cheap",
+                "chip"
+              ],
+              "answer": "sheep",
+              "explanation": "'ship' (kısa i) / 'sheep' (uzun i) farklı kelimelerdir."
+            },
+            {
+              "id": "rv-pron-2",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç",
+              "spokenText": "dog",
+              "options": [
+                "dog",
+                "dock",
+                "talk",
+                "duck"
+              ],
+              "answer": "dog",
+              "explanation": "Türk öğrenciler son sessizleri sertleştirir; dog ≠ dock."
+            },
+            {
+              "id": "rv-pron-3",
+              "type": "multiple_choice",
+              "prompt": "Hangi çift ANLAM olarak farklıdır?",
+              "options": [
+                "wine ~ vine (şarap / asma)",
+                "we ~ ve (aynı)",
+                "very ~ wery (aynı)",
+                "wash ~ vash (aynı)"
+              ],
+              "answer": "wine ~ vine (şarap / asma)",
+              "explanation": "İngilizcede /v/ ve /w/ farklı: wine ≠ vine."
+            },
+            {
+              "id": "rv-pron-4",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun kelimeyi seç (TH sesi)",
+              "spokenText": "think",
+              "options": [
+                "think",
+                "sink",
+                "tink",
+                "fink"
+              ],
+              "answer": "think",
+              "explanation": "Türkçede TH yok; dilin ucunu üst dişlere değdirip hava üfle."
             }
           ]
         }

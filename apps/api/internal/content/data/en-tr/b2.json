@@ -130,16 +130,21 @@
           "exercises": [
             {
               "id": "op1-1",
-              "type": "multiple_choice",
-              "prompt": "'It seems to me that…' ifadesinin Türkçe karşılığı nedir?",
+              "type": "translate",
+              "prompt": "Türkçeye çevir: 'It seems to me that the proposal needs revision.'",
               "options": [
-                "Görünüşe göre…",
-                "Bana öyle geliyor ki…",
-                "Kesinlikle inanıyorum ki…",
-                "Bilmiyorum ama…"
+                "Bana göre kesinlikle...",
+                "Bana öyle geliyor ki...",
+                "Hiç şüphesiz...",
+                "Eminim ki..."
               ],
-              "answer": "Bana öyle geliyor ki…",
-              "explanation": "'It seems to me' kişisel bir izlenimi yumuşak biçimde aktarır."
+              "answer": "Bana öyle geliyor ki teklif gözden geçirilmeli.",
+              "explanation": "'It seems to me' kişisel izlenimi yumuşak biçimde aktarır; Türkçedeki 'bana öyle geliyor ki' aynı hedge işlevini görür.",
+              "acceptableAnswers": [
+                "Bana öyle geliyor ki teklif gözden geçirilmeli.",
+                "Bana öyle geliyor ki öneri gözden geçirilmeli.",
+                "Bana öyle geliyor ki teklif revize edilmeli."
+              ]
             },
             {
               "id": "op1-2",
@@ -1225,6 +1230,126 @@
                   "text": "Good call. Let's grab another coffee and pick the next one to watch."
                 }
               ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-opinions-l8",
+          "title": "Türkçe-İngilizce calque tuzakları (open the light, strong rain...)",
+          "description": "Türkçeden birebir çeviri sonucu doğan tipik B2 hataları.",
+          "theme": "speaking",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "cq-b2-1",
+              "type": "multiple_choice",
+              "prompt": "'Işığı aç' İngilizcesi?",
+              "options": [
+                "Open the light.",
+                "Turn on the light.",
+                "Make the light.",
+                "Light the light on."
+              ],
+              "answer": "Turn on the light.",
+              "explanation": "Türkçe 'aç' = İngilizce 'turn on' (cihazlar için). 'Open the light' (*) yaygın L1 calque hatasıdır."
+            },
+            {
+              "id": "cq-b2-2",
+              "type": "multiple_choice",
+              "prompt": "'Hava şiddetli yağmurlu' İngilizcesi?",
+              "options": [
+                "It's a strong rain.",
+                "It's a hard rain.",
+                "It's heavy rain.",
+                "It's a big rain."
+              ],
+              "answer": "It's heavy rain.",
+              "explanation": "Yağmur için collocation: 'heavy rain'. Türkçe 'şiddetli/güçlü' birebir 'strong/hard' olarak transfer EDİLMEZ."
+            },
+            {
+              "id": "cq-b2-3",
+              "type": "multiple_choice",
+              "prompt": "'Yalan söyleme' İngilizcesi?",
+              "options": [
+                "Don't say a lie.",
+                "Don't tell a lie.",
+                "Don't speak a lie.",
+                "Don't talk a lie."
+              ],
+              "answer": "Don't tell a lie.",
+              "explanation": "'tell a lie / tell the truth / tell a story' — 'say' kullanılmaz. Türkçe 'söylemek' birebir 'say' olarak gitmez."
+            },
+            {
+              "id": "cq-b2-4",
+              "type": "match_pairs",
+              "prompt": "Türkçe calque (yanlış) — Doğru İngilizce",
+              "pairs": [
+                {
+                  "left": "open the TV",
+                  "right": "turn on the TV"
+                },
+                {
+                  "left": "close the door (kilitlemek)",
+                  "right": "lock the door"
+                },
+                {
+                  "left": "make a decision (yanlış: do a decision)",
+                  "right": "make a decision"
+                },
+                {
+                  "left": "make sport (yanlış)",
+                  "right": "do sports / play sports"
+                },
+                {
+                  "left": "strong tea (doğru) — 'powerful tea' (yanlış)",
+                  "right": "strong tea"
+                },
+                {
+                  "left": "do a mistake (yanlış)",
+                  "right": "make a mistake"
+                }
+              ]
+            },
+            {
+              "id": "cq-b2-5",
+              "type": "fill_blank",
+              "prompt": "I need to ___ a decision today.",
+              "answer": "make",
+              "hint": "'karar vermek' = 'make a decision' (UK'de 'take' da olur, 'do' asla).",
+              "explanation": "Türkçe 'karar vermek' -> 'do a decision' yaygın hata; 'make' standarttır."
+            },
+            {
+              "id": "cq-b2-6",
+              "type": "tap_words_in_order",
+              "prompt": "Bu kahve çok güçlü; sütle yumuşatabilir misin?",
+              "answer": "This coffee is too strong can you soften it with milk",
+              "bank": [
+                "This",
+                "coffee",
+                "is",
+                "too",
+                "strong",
+                "powerful",
+                "can",
+                "you",
+                "soften",
+                "it",
+                "with",
+                "milk",
+                "do"
+              ]
+            },
+            {
+              "id": "cq-b2-7",
+              "type": "listen_and_choose",
+              "spokenText": "Could you turn off the lights before you leave?",
+              "options": [
+                "Could you close the lights before you leave?",
+                "Could you turn off the lights before you leave?",
+                "Could you open the lights before you leave?",
+                "Could you put off the lights before you leave?"
+              ],
+              "answer": "Could you turn off the lights before you leave?"
             }
           ]
         }
@@ -6310,12 +6435,12 @@
               "type": "multiple_choice",
               "prompt": "'If I had studied medicine, I would be a doctor now.' Bu cümle hangi koşul yapısıdır?",
               "options": [
-                "Type 1",
-                "Type 2",
-                "Type 3",
-                "Mixed (3 + 2)"
+                "Type 1 (real)",
+                "Type 2 (present unreal)",
+                "Type 3 (past unreal)",
+                "Mixed (past condition -> present result)"
               ],
-              "answer": "Mixed (3 + 2)",
+              "answer": "Mixed (past condition -> present result)",
               "explanation": "Geçmişteki koşul (Type 3) + şimdiki sonuç (Type 2) = mixed conditional."
             },
             {
@@ -7808,6 +7933,79 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-formal-l7",
+          "title": "Yazıda 'he / she / they' — cinsiyet ve nötr kullanım",
+          "description": "Türkçede 'o' cinsiyetsiz; İngilizce yazıda Türk öğrenciler sıkça karıştırır veya cinsiyeti kaçırır.",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "pn-b2-1",
+              "type": "multiple_choice",
+              "prompt": "İş arkadaşı Ayşe için resmi e-postada doğru zamir?",
+              "options": [
+                "he",
+                "she",
+                "it",
+                "they"
+              ],
+              "answer": "she",
+              "explanation": "Türkçedeki tek 'o'dan farklı olarak İngilizce yazıda 3. tekil için cinsiyet seçilmek zorundadır; kişi adı dişil -> 'she'."
+            },
+            {
+              "id": "pn-b2-2",
+              "type": "fill_blank",
+              "prompt": "I spoke to the candidate; ___ said the interview went well. (cinsiyet bilinmiyor)",
+              "answer": "they",
+              "hint": "Cinsiyet bilinmediğinde resmi modern İngilizcede tekil 'they' kabul edilir.",
+              "explanation": "Modern formal usage: 'singular they' cinsiyet bilinmediğinde standarttır; eski 'he or she' alternatiftir."
+            },
+            {
+              "id": "pn-b2-3",
+              "type": "multiple_choice",
+              "prompt": "HATALI cümle hangisi?",
+              "options": [
+                "Ms. Yılmaz forwarded the report; he will follow up next week.",
+                "Ms. Yılmaz forwarded the report; she will follow up next week.",
+                "Dr. Lee submitted the paper; they will revise it.",
+                "The author published the book; she revised it last year."
+              ],
+              "answer": "Ms. Yılmaz forwarded the report; he will follow up next week.",
+              "explanation": "'Ms.' dişil hitap; sonraki zamir 'he' olamaz — yaygın Türk-L1 hatası ('o'nun cinsiyetsizliğinden kaynaklanır)."
+            },
+            {
+              "id": "pn-b2-4",
+              "type": "tap_words_in_order",
+              "prompt": "Müdür kararı kendisi verdi.",
+              "answer": "The manager made the decision herself",
+              "bank": [
+                "The",
+                "manager",
+                "made",
+                "the",
+                "decision",
+                "herself",
+                "himself",
+                "theirself",
+                "themselves"
+              ]
+            },
+            {
+              "id": "pn-b2-5",
+              "type": "listen_and_choose",
+              "spokenText": "If a student forgets their ID, they should report to reception.",
+              "options": [
+                "If a student forgets their ID, they should report to reception.",
+                "If a student forgets his ID, he should report to reception.",
+                "If a student forgets its ID, it should report to reception.",
+                "If a student forgets the ID, the student should report."
+              ],
+              "answer": "If a student forgets their ID, they should report to reception.",
+              "explanation": "Belirsiz tekil özneye atıfta 'singular they' resmi yazımda kabul edilir."
+            }
+          ]
         }
       ]
     },
@@ -8838,6 +9036,160 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-tr-passive-l7",
+          "title": "İleri tanımlık kullanımı (a/an/the/zero)",
+          "description": "Türkçede tanımlık yoktur; ileri kullanımda generic plural, soyut isim ve kurum isimlerinde Türk öğrenciler hâlâ hata yapar.",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "art-b2-1",
+              "type": "multiple_choice",
+              "prompt": "Genel doğru: 'Kediler bağımsızdır.' İngilizcesi?",
+              "options": [
+                "The cats are independent.",
+                "Cats are independent.",
+                "A cat is independent.",
+                "Cat is independent."
+              ],
+              "answer": "Cats are independent.",
+              "explanation": "Genel doğrularda çoğul isim TANIMLIKSIZ kullanılır. Türkçedeki tanımsız özne mantığı bire bir kopyalanmaz."
+            },
+            {
+              "id": "art-b2-2",
+              "type": "fill_blank",
+              "prompt": "She studies ___ university.",
+              "answer": "at",
+              "hint": "Kurum olarak üniversiteden bahsederken tanımlık kullanılmaz.",
+              "explanation": "Kurum işlevinde: at school / at university / in hospital (UK) — tanımlık YOK. Bina olarak bahsedersen 'at the university' olur."
+            },
+            {
+              "id": "art-b2-3",
+              "type": "multiple_choice",
+              "prompt": "Soyut isim: 'Sabır bir erdemdir.' İngilizcesi?",
+              "options": [
+                "The patience is a virtue.",
+                "Patience is a virtue.",
+                "A patience is a virtue.",
+                "Patience is virtue."
+              ],
+              "answer": "Patience is a virtue.",
+              "explanation": "Soyut isim (patience) genel anlamda tanımlıksız; ama 'is a virtue' belirsiz çoğunluğun bir üyesi için 'a' alır."
+            },
+            {
+              "id": "art-b2-4",
+              "type": "tap_words_in_order",
+              "prompt": "Genel olarak müzik onu sakinleştirir.",
+              "answer": "Music calms her in general",
+              "bank": [
+                "The",
+                "Music",
+                "music",
+                "calms",
+                "her",
+                "in",
+                "general",
+                "a"
+              ]
+            },
+            {
+              "id": "art-b2-5",
+              "type": "listen_and_choose",
+              "spokenText": "He's been admitted to hospital again.",
+              "options": [
+                "He's been admitted to hospital again.",
+                "He's been admitted to the hospital again.",
+                "He's been admitted at hospital again.",
+                "He's been admitted to a hospital again."
+              ],
+              "answer": "He's been admitted to hospital again.",
+              "explanation": "BrE'de hasta olarak yatış için 'to hospital' (tanımlıksız); AmE'de 'to the hospital' yaygın."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-passive-l8",
+          "title": "Dinleme tuzakları: should've / would've / gonna / wanna",
+          "description": "Bağlantılı konuşmada 'should have' -> 'should've' [ʃʊdəv], 'should of' DEĞİL. Türk öğrenciler için ileri seviye dinleme tuzağı.",
+          "theme": "grammar",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "cs-b2-1",
+              "type": "listen_and_choose",
+              "spokenText": "I should've told you sooner.",
+              "options": [
+                "I should of told you sooner.",
+                "I should've told you sooner.",
+                "I should have to tell you sooner.",
+                "I shouldn't tell you sooner."
+              ],
+              "answer": "I should've told you sooner.",
+              "explanation": "Konuşmada 'should've' [ʃʊdəv] 'should of' gibi duyulabilir ama YAZIMDA 'should have / should've' doğrudur; 'should of' yaygın anadil İngilizce hatasıdır, ESL'de kaçınılmalı."
+            },
+            {
+              "id": "cs-b2-2",
+              "type": "listen_and_choose",
+              "spokenText": "What're you gonna do about it?",
+              "options": [
+                "What are you going to do about it?",
+                "What are you gonna do about it?",
+                "What're you going to do?",
+                "What you going do about it?"
+              ],
+              "answer": "What are you gonna do about it?",
+              "explanation": "'gonna' = 'going to' (gelecek zaman, going to-future); konuşma transkripsiyonu. Resmi yazımda 'going to' kullanılır."
+            },
+            {
+              "id": "cs-b2-3",
+              "type": "listen_and_choose",
+              "spokenText": "I wanna grab a coffee before the meeting.",
+              "options": [
+                "I want to grab a coffee before the meeting.",
+                "I wanna grab a coffee before the meeting.",
+                "I wanted grab a coffee before the meeting.",
+                "I want a grab a coffee."
+              ],
+              "answer": "I wanna grab a coffee before the meeting.",
+              "explanation": "'wanna' = 'want to' (mastar tamamlayıcı). Sadece samimi konuşmada."
+            },
+            {
+              "id": "cs-b2-4",
+              "type": "multiple_choice",
+              "prompt": "Hangisi YAZIMDA YANLIŞ?",
+              "options": [
+                "I should have called.",
+                "I should've called.",
+                "I should of called.",
+                "I shouldn't have called."
+              ],
+              "answer": "I should of called.",
+              "explanation": "'should of' yazılı dilde HATA; doğrusu 'should have / should've'. Telaffuz aldatmacasıdır."
+            },
+            {
+              "id": "cs-b2-5",
+              "type": "fill_blank",
+              "prompt": "She ___ ('d been) waiting for an hour when I arrived.",
+              "answer": "had",
+              "hint": "'She'd been' = 'She had been'. Bağlantılı konuşmada 'd düşer.",
+              "explanation": "'d kısaltması bağlama göre 'had' veya 'would' olabilir; burada past perfect continuous -> 'had been'."
+            },
+            {
+              "id": "cs-b2-6",
+              "type": "listen_and_choose",
+              "spokenText": "He's gotta finish this by Friday.",
+              "options": [
+                "He has got to finish this by Friday.",
+                "He's got to finish this by Friday.",
+                "He's gotta finish this by Friday.",
+                "He gotta finish this by Friday."
+              ],
+              "answer": "He's gotta finish this by Friday.",
+              "explanation": "'gotta' = 'got to' (zorunluluk, konuşma dili). Resmi yazımda 'has to / must'."
+            }
+          ]
         }
       ]
     },
@@ -9173,12 +9525,12 @@
               "type": "multiple_choice",
               "prompt": "BrE 'revise' = AmE'de hangi fiil?",
               "options": [
-                "edit",
-                "review (study again)",
-                "revisit",
-                "redo"
+                "edit (revise written text)",
+                "review (study material again)",
+                "revisit (consider again)",
+                "redo (do over)"
               ],
-              "answer": "review (study again)",
+              "answer": "review (study material again)",
               "explanation": "BrE 'revise' = 'tekrar çalışmak'; AmE'de 'review' kullanılır."
             },
             {
@@ -10017,6 +10369,97 @@
                   "speaker": "teacher",
                   "text": "Wonderful. I'll arrange an introduction next week. Thanks for being so engaged."
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-b2-education-l7",
+          "title": "Sayılamayan isimler ve partitifler (a piece of advice...)",
+          "description": "Türkçede 'bir tavsiye' doğal; İngilizcede 'an advice' YANLIŞTIR. Üst düzeyde bile sürer.",
+          "theme": "reading",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "part-b2-1",
+              "type": "multiple_choice",
+              "prompt": "Hangisi DOĞRU?",
+              "options": [
+                "I need an advice.",
+                "I need a piece of advice.",
+                "I need one advice.",
+                "I need advices."
+              ],
+              "answer": "I need a piece of advice.",
+              "explanation": "'advice' sayılamaz; tek bir parça için 'a piece of advice' veya 'some advice'."
+            },
+            {
+              "id": "part-b2-2",
+              "type": "match_pairs",
+              "prompt": "Sayılamayan isim — Partitif",
+              "pairs": [
+                {
+                  "left": "advice",
+                  "right": "a piece of"
+                },
+                {
+                  "left": "clothing",
+                  "right": "an item of"
+                },
+                {
+                  "left": "news",
+                  "right": "a piece of"
+                },
+                {
+                  "left": "furniture",
+                  "right": "an item / a piece of"
+                },
+                {
+                  "left": "information",
+                  "right": "a piece of"
+                },
+                {
+                  "left": "bread",
+                  "right": "a slice / loaf of"
+                }
+              ]
+            },
+            {
+              "id": "part-b2-3",
+              "type": "fill_blank",
+              "prompt": "She bought three ___ of clothing on sale.",
+              "answer": "items",
+              "hint": "'clothing' sayılamaz; çokluk için 'items of clothing'.",
+              "explanation": "Türkçedeki '3 kıyafet' doğrudan '*three clothings' olmaz."
+            },
+            {
+              "id": "part-b2-4",
+              "type": "multiple_choice",
+              "prompt": "HATALI olan hangisi?",
+              "options": [
+                "Two pieces of news arrived.",
+                "Two equipments are needed.",
+                "Several items of furniture were damaged.",
+                "A piece of evidence was found."
+              ],
+              "answer": "Two equipments are needed.",
+              "explanation": "'equipment' sayılamaz; çoğul YOK. Doğru: 'two pieces/items of equipment'."
+            },
+            {
+              "id": "part-b2-5",
+              "type": "tap_words_in_order",
+              "prompt": "Sana bir tavsiye verebilir miyim?",
+              "answer": "Can I give you a piece of advice",
+              "bank": [
+                "Can",
+                "I",
+                "give",
+                "you",
+                "a",
+                "piece",
+                "of",
+                "advice",
+                "an"
               ]
             }
           ]
@@ -11209,6 +11652,80 @@
                   "text": "On that, we agree completely. Perhaps the takeaway is investment in modern leadership training."
                 }
               ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-b2-debate-l7",
+          "title": "Dolaylı sorular (indirect / embedded questions)",
+          "description": "Resmi ve kibar sorularda doğrudan inversion düşer; Türk öğrenciler 'Can you tell me where is X?' hatası yapar.",
+          "theme": "speaking",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "iq-b2-1",
+              "type": "multiple_choice",
+              "prompt": "Kibar/resmi: 'İstasyon nerede biliyor musunuz?' İngilizcesi?",
+              "options": [
+                "Could you tell me where is the station?",
+                "Could you tell me where the station is?",
+                "Where the station is could you tell me?",
+                "Can you tell me where is the station?"
+              ],
+              "answer": "Could you tell me where the station is?",
+              "explanation": "Dolaylı/gömülü sorularda yardımcı fiil DÜŞMEZ ama özne+fiil sırasına döner: 'where IS the station?' -> 'where the station IS'."
+            },
+            {
+              "id": "iq-b2-2",
+              "type": "fill_blank",
+              "prompt": "I wonder ___ he will arrive on time.",
+              "answer": "if",
+              "hint": "Evet/hayır sorusu gömüldüğünde 'if' veya 'whether' kullanılır.",
+              "explanation": "Yes/no sorusu -> 'if/whether'; wh-soru -> ilgili wh-kelime; her iki durumda da inversion yok."
+            },
+            {
+              "id": "iq-b2-3",
+              "type": "tap_words_in_order",
+              "prompt": "Toplantının saat kaçta başladığını biliyor musunuz?",
+              "answer": "Do you know what time the meeting started",
+              "bank": [
+                "Do",
+                "you",
+                "know",
+                "what",
+                "time",
+                "the",
+                "meeting",
+                "started",
+                "did",
+                "start",
+                "is"
+              ]
+            },
+            {
+              "id": "iq-b2-4",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle DOLAYLI soru kuralına UYGUN değildir?",
+              "options": [
+                "Could you tell me where she lives?",
+                "I'd like to know what time it is.",
+                "Do you know how much does it cost?",
+                "Can you remember if you locked the door?"
+              ],
+              "answer": "Do you know how much does it cost?",
+              "explanation": "'does it cost' inversion'ı; gömülü soruda 'how much it costs' olmalı."
+            },
+            {
+              "id": "iq-b2-5",
+              "type": "listen_and_choose",
+              "spokenText": "Could you tell me where the nearest pharmacy is?",
+              "options": [
+                "Could you tell me where is the nearest pharmacy?",
+                "Could you tell me where the nearest pharmacy is?",
+                "Could you tell me where the nearest pharmacy?",
+                "Could you tell me where's the nearest pharmacy?"
+              ],
+              "answer": "Could you tell me where the nearest pharmacy is?"
             }
           ]
         }

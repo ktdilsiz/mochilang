@@ -491,12 +491,16 @@
             },
             {
               "id": "alp3-8",
-              "type": "fill_blank",
-              "prompt": "Türkçede 'çok iyi' İngilizcede '___ good' olur.",
+              "type": "translate",
+              "source": "çok",
               "answer": "very",
               "acceptableAnswers": [
-                "extremely"
-              ]
+                "really",
+                "so"
+              ],
+              "direction": "to_target",
+              "context": "'çok iyi' = '___ good'",
+              "explanation": "Türkçede 'çok' sıfat/zarf önünde 'very'."
             },
             {
               "id": "alp3-9",
@@ -2600,10 +2604,16 @@
             },
             {
               "id": "pr3-3",
-              "type": "fill_blank",
-              "prompt": "'Ayşe'nin kalemi' = '___ pen' (Ayşe için zamir).",
-              "answer": "her",
-              "acceptableAnswers": []
+              "type": "multiple_choice",
+              "prompt": "'Ayşe'nin kalemi' İngilizcede:",
+              "options": [
+                "his pen",
+                "her pen",
+                "their pen",
+                "your pen"
+              ],
+              "answer": "her pen",
+              "explanation": "Ayşe kadın → 'her'. Türkçede 'o' gender-neutral."
             },
             {
               "id": "pr3-4",
@@ -5282,11 +5292,15 @@
             },
             {
               "id": "nm6-2",
-              "type": "fill_blank",
-              "prompt": "'It's ___ past three.' — Üçü buçuk geçiyor.",
-              "answer": "half",
-              "explanation": "half past = buçuk.",
-              "acceptableAnswers": []
+              "type": "translate",
+              "source": "buçuk geçiyor",
+              "answer": "half past",
+              "acceptableAnswers": [
+                "thirty"
+              ],
+              "direction": "to_target",
+              "context": "'Üçü buçuk geçiyor.' = 'It's ___ ___ three.'",
+              "explanation": "'half past three' = 3:30."
             },
             {
               "id": "nm6-3",
@@ -5367,10 +5381,12 @@
             },
             {
               "id": "nm6-8",
-              "type": "fill_blank",
-              "prompt": "'It's a ___ past five.' — Beşi çeyrek geçiyor.",
-              "answer": "quarter",
-              "acceptableAnswers": []
+              "type": "translate",
+              "source": "çeyrek geçiyor",
+              "answer": "quarter past",
+              "acceptableAnswers": [],
+              "direction": "to_target",
+              "context": "'Beşi çeyrek geçiyor.' = 'It's a ___ ___ five.'"
             },
             {
               "id": "nm6-9",
@@ -5526,6 +5542,70 @@
                   "answer": "Thank you!"
                 }
               ]
+            },
+            {
+              "id": "nm-plural-1",
+              "type": "multiple_choice",
+              "prompt": "'iki kitap' İngilizcede:",
+              "options": [
+                "two book",
+                "two books",
+                "two the books",
+                "the two book"
+              ],
+              "answer": "two books",
+              "explanation": "Türkçede sayıdan sonra çoğul eki kullanılmaz; İngilizcede sayı 1'den büyükse çoğul -s ZORUNLUDUR."
+            },
+            {
+              "id": "nm-plural-2",
+              "type": "multiple_choice",
+              "prompt": "Hangisi DOĞRU?",
+              "options": [
+                "I have three brother.",
+                "I have three brothers.",
+                "I have a three brothers.",
+                "I have three the brothers."
+              ],
+              "answer": "I have three brothers.",
+              "explanation": "'Üç kardeşim var' → 'three brothers'. -s düşmez."
+            },
+            {
+              "id": "nm-plural-3",
+              "type": "tap_words_in_order",
+              "prompt": "İki elmam var.",
+              "answer": "I have two apples",
+              "bank": [
+                "I",
+                "have",
+                "two",
+                "apples",
+                "apple",
+                "an",
+                "a"
+              ]
+            },
+            {
+              "id": "nm-plural-4",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğun cümleyi seç",
+              "spokenText": "She has five cats.",
+              "options": [
+                "She has five cats.",
+                "She has five cat.",
+                "She has the five cats.",
+                "She have five cats."
+              ],
+              "answer": "She has five cats.",
+              "explanation": "Sayıdan sonra çoğul -s düşmez."
+            },
+            {
+              "id": "nm-plural-5",
+              "type": "fill_blank",
+              "prompt": "I have four ___.",
+              "hint": "Dört kalemim var.",
+              "answer": "pens",
+              "acceptableAnswers": [],
+              "explanation": "İngilizcede 'four pens' (çoğul -s zorunlu)."
             }
           ]
         }
@@ -6876,6 +6956,19 @@
                 "He plays baseball"
               ],
               "answer": "He plays football"
+            },
+            {
+              "id": "ev1-sov",
+              "type": "multiple_choice",
+              "prompt": "'Her gün okula giderim.' İngilizcede:",
+              "options": [
+                "I every day to school go.",
+                "I go to school every day.",
+                "Every day I to school go.",
+                "To school every day I go."
+              ],
+              "answer": "I go to school every day.",
+              "explanation": "Türkçede fiil sonda; İngilizcede SVO sırası KORUNMALIDIR."
             }
           ]
         },
@@ -7897,28 +7990,28 @@
             {
               "id": "ar1-6",
               "type": "multiple_choice",
-              "prompt": "Hangisi DOĞRU? (h sessiz)",
+              "prompt": "Hangisi DOĞRU? ('hour' kelimesinde 'h' okunmaz)",
               "options": [
                 "a hour",
                 "an hour",
-                "the hour none",
-                "any hour"
+                "the hour",
+                "hour"
               ],
               "answer": "an hour",
-              "explanation": "'hour' kelimesinde 'h' okunmaz; kelime aslında sesli sesle başlar."
+              "explanation": "'hour' yazıda 'h' ile başlasa da seslice 'auır' okunur → ünlü sesle başlar → 'an'. Türkçede artikel olmadığı için Türk öğrenciler 'hour' (artikelsiz) demeye meyillidir."
             },
             {
               "id": "ar1-7",
               "type": "multiple_choice",
-              "prompt": "Hangisi DOĞRU? (u 'yu' sesi)",
+              "prompt": "Hangisi DOĞRU? ('university' 'yuniversiti' okunur)",
               "options": [
                 "an university",
                 "a university",
-                "the universities",
-                "any universities"
+                "university",
+                "the university"
               ],
               "answer": "a university",
-              "explanation": "'university' aslında 'yuniversiti' diye okunur; başında /y/ sessiz sesi vardır → 'a'."
+              "explanation": "Yazılışta 'u' var ama söyleyişte /y/ → ünsüz → 'a'. Türk öğrenciler hem 'an' hem de artikelsiz 'university' üretir."
             },
             {
               "id": "ar1-8",
@@ -9299,6 +9392,22 @@
               ],
               "answer": "Why do you go to school?",
               "explanation": "Geniş zamanda soruda yardımcı fiil 'do/does' kullanılır."
+            },
+            {
+              "id": "qu3-do-trap",
+              "type": "tap_words_in_order",
+              "prompt": "Neden okula gidersin?",
+              "answer": "Why do you go to school",
+              "bank": [
+                "Why",
+                "do",
+                "you",
+                "go",
+                "to",
+                "school",
+                "are",
+                "is"
+              ]
             }
           ]
         },
@@ -11267,6 +11376,19 @@
                 "summer",
                 "."
               ]
+            },
+            {
+              "id": "we1-sov",
+              "type": "multiple_choice",
+              "prompt": "'Bugün hava güneşli.' En doğru çevirisi:",
+              "options": [
+                "Today weather sunny.",
+                "Today is the weather sunny.",
+                "It is sunny today.",
+                "Sunny today it is."
+              ],
+              "answer": "It is sunny today.",
+              "explanation": "Hava durumu 'It is + sıfat' yapısıyla."
             }
           ]
         },
@@ -13413,14 +13535,15 @@
             {
               "id": "rv2-5",
               "type": "multiple_choice",
-              "prompt": "'O her gün futbol oynar.' (he özne) = ___",
+              "prompt": "'O her gün futbol oynar.' (he) =",
               "options": [
                 "He play football every day.",
                 "He plays football every day.",
-                "He playing football every day.",
-                "He played football every day."
+                "He every day football plays.",
+                "He is play football every day."
               ],
-              "answer": "He plays football every day."
+              "answer": "He plays football every day.",
+              "explanation": "3. tekil -s ZORUNLU; 'every day' fiil ile nesne arasında değil."
             },
             {
               "id": "rv2-6",
@@ -13615,6 +13738,32 @@
                 "My sister gone to school."
               ],
               "answer": "My sister goes to school."
+            },
+            {
+              "id": "rv3-calque1",
+              "type": "multiple_choice",
+              "prompt": "'Bir kahve, lütfen.' (kafede sipariş) En doğru:",
+              "options": [
+                "One coffee, please.",
+                "A coffee, please.",
+                "The coffee, please.",
+                "Coffee one, please."
+              ],
+              "answer": "A coffee, please.",
+              "explanation": "Türkçedeki 'bir' İngilizcede 'a/an'; 'one' sayı vurgusu yapar."
+            },
+            {
+              "id": "rv3-calque2",
+              "type": "multiple_choice",
+              "prompt": "'Çok şey öğrendim.' En doğru çevirisi:",
+              "options": [
+                "I learned very thing.",
+                "I learned much things.",
+                "I learned a lot of things.",
+                "I learned very many thing."
+              ],
+              "answer": "I learned a lot of things.",
+              "explanation": "'Very' isim önüne gelmez."
             }
           ]
         },

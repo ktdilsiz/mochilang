@@ -454,17 +454,19 @@
               "id": "pp3-3",
               "type": "fill_blank",
               "prompt": "I have known her ___ five years.",
+              "hint": "Onu 5 yıldır tanıyorum (süre).",
               "answer": "for",
               "acceptableAnswers": [],
-              "explanation": "Süre → for."
+              "explanation": "Süre için 'for'."
             },
             {
               "id": "pp3-4",
               "type": "fill_blank",
               "prompt": "He has worked here ___ Monday.",
+              "hint": "Pazartesiden beri burada çalışıyor.",
               "answer": "since",
               "acceptableAnswers": [],
-              "explanation": "Başlangıç noktası → since."
+              "explanation": "Başlangıç noktası → 'since'."
             },
             {
               "id": "pp3-5",
@@ -726,10 +728,11 @@
             {
               "id": "pp5-3",
               "type": "fill_blank",
-              "prompt": "'She hasn't called me ___ .' (henüz)",
+              "prompt": "She hasn't called me ___ .",
+              "hint": "Henüz aramadı (olumsuz cümlede 'henüz').",
               "answer": "yet",
               "acceptableAnswers": [],
-              "explanation": "Olumsuz cümle sonunda 'yet' = henüz."
+              "explanation": "Olumsuz cümlede 'henüz' = 'yet'."
             },
             {
               "id": "pp5-4",
@@ -1350,12 +1353,12 @@
               "prompt": "Hangi cümle YANLIŞ?",
               "options": [
                 "She can speaks English.",
+                "I am can swim.",
                 "She can speak English.",
-                "Can she speak English?",
-                "She cannot speak English."
+                "Can she speak English?"
               ],
               "answer": "She can speaks English.",
-              "explanation": "Modal + V1 (yalın fiil); 'speaks' olmaz."
+              "explanation": "İki yaygın hata: 'She can speaks' ve 'I am can swim'."
             },
             {
               "id": "mod1-5",
@@ -1444,6 +1447,19 @@
                 "I can park here?"
               ],
               "answer": "Can I park here?"
+            },
+            {
+              "id": "mod1-extra",
+              "type": "multiple_choice",
+              "prompt": "'Gitmek zorunda mıyım?' En doğru:",
+              "options": [
+                "Must I to go?",
+                "Must I go?",
+                "Do I must go?",
+                "I must to go?"
+              ],
+              "answer": "Must I go?",
+              "explanation": "Modallardan sonra 'to' GELMEZ."
             }
           ]
         },
@@ -1593,6 +1609,19 @@
                 "have to"
               ],
               "explanation": "Kişisel zorunluluk → must (have to da kabul)."
+            },
+            {
+              "id": "mod2-extra",
+              "type": "multiple_choice",
+              "prompt": "Hangisi YANLIŞ?",
+              "options": [
+                "I have to go.",
+                "I must go.",
+                "I must to go.",
+                "I should go."
+              ],
+              "answer": "I must to go.",
+              "explanation": "'have to' içinde 'to'; 'must to' YANLIŞ."
             }
           ]
         },
@@ -1785,12 +1814,14 @@
             {
               "id": "mod4-4",
               "type": "fill_blank",
-              "prompt": "'They ___ be late because of traffic.' (gecikebilirler)",
+              "prompt": "They ___ be late because of traffic.",
+              "hint": "Trafik yüzünden gecikebilirler (orta olasılık).",
               "answer": "may",
               "acceptableAnswers": [
-                "could",
-                "might"
-              ]
+                "might",
+                "could"
+              ],
+              "explanation": "Olasılık modalları: may/might/could."
             },
             {
               "id": "mod4-5",
@@ -4015,6 +4046,32 @@
               ],
               "answer": "The experiment was conducted.",
               "explanation": "Akademik dilde objektif pasif tercih edilir."
+            },
+            {
+              "id": "pas-overapp",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle YANLIŞ?",
+              "options": [
+                "The window was broken.",
+                "It was happened yesterday.",
+                "He died last year.",
+                "The cake was eaten."
+              ],
+              "answer": "It was happened yesterday.",
+              "explanation": "'happen' / 'die' ETKEN."
+            },
+            {
+              "id": "pas-overapp2",
+              "type": "multiple_choice",
+              "prompt": "'Dün bir kaza oldu.' En doğru:",
+              "options": [
+                "An accident was happened yesterday.",
+                "An accident happened yesterday.",
+                "An accident was happen yesterday.",
+                "Was happened an accident yesterday."
+              ],
+              "answer": "An accident happened yesterday.",
+              "explanation": "'happen' ETKEN."
             }
           ]
         },
@@ -9487,13 +9544,15 @@
             },
             {
               "id": "st2-4",
-              "type": "fill_blank",
-              "prompt": "'Bu sırada' İngilizcede: ___",
+              "type": "translate",
+              "source": "bu sırada",
               "answer": "meanwhile",
               "acceptableAnswers": [
                 "in the meantime",
                 "meantime"
-              ]
+              ],
+              "direction": "to_target",
+              "explanation": "İki olayın aynı anda olduğunu belirtmek için."
             },
             {
               "id": "st2-5",
@@ -11913,6 +11972,109 @@
                   "text": "Me too. Let's plan dinner this weekend — I've brought you a little gift."
                 }
               ]
+            },
+            {
+              "id": "rv-articles",
+              "type": "multiple_choice",
+              "prompt": "'Hayat ilginç. Ama (bu) hayat zor.' En doğru:",
+              "options": [
+                "The life is interesting. But the life is hard.",
+                "Life is interesting. But the life is hard.",
+                "Life is interesting. But life is hard.",
+                "The life is interesting. But life is hard."
+              ],
+              "answer": "Life is interesting. But the life is hard.",
+              "explanation": "Genel: artikelsiz; belirli: 'the'."
+            },
+            {
+              "id": "rv-articles2",
+              "type": "fill_blank",
+              "prompt": "I saw ___ man in the park. ___ man was very tall.",
+              "hint": "Parkta bir adam gördüm. (O) adam çok uzundu.",
+              "answer": "a / The",
+              "acceptableAnswers": [
+                "a/The",
+                "a, The"
+              ],
+              "explanation": "İlk: 'a'; ikinci: 'the'."
+            }
+          ]
+        },
+        {
+          "id": "en-tr-b1-review-relative-clauses",
+          "title": "İlgi cümleleri (who, which, that)",
+          "description": "İngilizcede ilgi zamirleri (who/which/that) iki cümleyi birleştirir. Türkçedeki '-an/-en' yapısının karşılığıdır ancak isimden sonra gelir.",
+          "theme": "review",
+          "xp": 14,
+          "exercises": [
+            {
+              "id": "rel1-1",
+              "type": "multiple_choice",
+              "prompt": "'Dün okuduğum kitap çok ilginçti.' En doğru:",
+              "options": [
+                "Yesterday I read book very interesting was.",
+                "The book yesterday I read very interesting was.",
+                "The book that I read yesterday was very interesting.",
+                "The yesterday read book was very interesting."
+              ],
+              "answer": "The book that I read yesterday was very interesting.",
+              "explanation": "Türkçede 'okuduğum' sıfat cümlesi 'kitap' ÖNÜNE; İngilizcede 'that I read yesterday' SONUNA."
+            },
+            {
+              "id": "rel1-2",
+              "type": "multiple_choice",
+              "prompt": "'Bana yardım eden kadın doktordu.' En doğru:",
+              "options": [
+                "The woman helped me was a doctor.",
+                "The me helped woman was a doctor.",
+                "The woman who helped me was a doctor.",
+                "The woman which helped me was a doctor."
+              ],
+              "answer": "The woman who helped me was a doctor.",
+              "explanation": "İnsanlar için 'who'."
+            },
+            {
+              "id": "rel1-3",
+              "type": "tap_words_in_order",
+              "prompt": "Tanıdığım çocuk Ankara'da yaşıyor.",
+              "answer": "The boy that I know lives in Ankara",
+              "bank": [
+                "The",
+                "boy",
+                "that",
+                "I",
+                "know",
+                "lives",
+                "in",
+                "Ankara",
+                "knows",
+                "the",
+                "yesterday"
+              ]
+            },
+            {
+              "id": "rel1-4",
+              "type": "multiple_choice",
+              "prompt": "'Aldığım araba kırmızı.' İngilizcede 'that' düşürülebilir mi?",
+              "options": [
+                "Hayır, asla",
+                "Evet, nesne ilgi adılı olduğunda (The car I bought is red.)",
+                "Sadece kişilerde",
+                "Yalnızca formal stilde"
+              ],
+              "answer": "Evet, nesne ilgi adılı olduğunda (The car I bought is red.)",
+              "explanation": "Nesne durumunda düşürülebilir; özne durumunda KALIR."
+            },
+            {
+              "id": "rel1-5",
+              "type": "fill_blank",
+              "prompt": "I have a friend ___ lives in London.",
+              "hint": "Londra'da yaşayan bir arkadaşım var.",
+              "answer": "who",
+              "acceptableAnswers": [
+                "that"
+              ],
+              "explanation": "İnsan için 'who' veya 'that'."
             }
           ]
         }

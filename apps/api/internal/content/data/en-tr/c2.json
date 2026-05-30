@@ -1402,10 +1402,14 @@
             },
             {
               "id": "rh3-3",
-              "type": "fill_blank",
-              "prompt": "The choice ___ ours.",
-              "answer": "is",
-              "acceptableAnswers": []
+              "type": "translate",
+              "prompt": "İngilizceye çevir (retorik anaphora): 'Seçim bizimdir. Sorumluluk bizimdir. Gelecek bizimdir.'",
+              "answer": "The choice is ours. The responsibility is ours. The future is ours.",
+              "acceptableAnswers": [
+                "The choice is ours. The responsibility is ours. The future is ours.",
+                "The choice is ours, the responsibility is ours, the future is ours."
+              ],
+              "explanation": "Anaphora retorik figürü: cümle başı tekrar ile vurgu. Üç kısa cümle tipik söylev ritmi."
             },
             {
               "id": "rh3-4",
@@ -1927,6 +1931,79 @@
                   "text": "Now you're cooking. Send me a fresh draft by six and we'll run it tomorrow."
                 }
               ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-c2-rhetoric-l7",
+          "title": "İleri inversion ve cleft — söylev için üretim",
+          "description": "C1'de tanınan inversion/cleft yapıları C2'de söylev/op-ed yazımında üretilmeli.",
+          "theme": "speaking",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "rc-c2-1",
+              "type": "multiple_choice",
+              "prompt": "Op-ed kapanışı için EN ETKİLİ olan?",
+              "options": [
+                "The data shows the policy doesn't work.",
+                "Not only does the data refute the policy, but it also exposes its premises.",
+                "Data show policy doesn't work and also expose premises.",
+                "The policy is bad. The data is bad. Conclude."
+              ],
+              "answer": "Not only does the data refute the policy, but it also exposes its premises.",
+              "explanation": "'Not only...but also...' inversion'ı retorik kapanışta vurguyu artırır."
+            },
+            {
+              "id": "rc-c2-2",
+              "type": "tap_words_in_order",
+              "prompt": "Asıl gerekli olan, cesarettir.",
+              "answer": "What is truly needed is courage",
+              "bank": [
+                "What",
+                "is",
+                "truly",
+                "needed",
+                "courage",
+                "need",
+                "needs",
+                "what",
+                "that"
+              ]
+            },
+            {
+              "id": "rc-c2-3",
+              "type": "fill_blank",
+              "prompt": "___ have we faced a challenge of this scale.",
+              "answer": "Rarely",
+              "hint": "Olumsuz/sıklık zarfı cümle başında -> inversion.",
+              "explanation": "Cümle başı 'rarely/seldom/never' -> yardımcı fiil özneden önce: 'Rarely have we...'."
+            },
+            {
+              "id": "rc-c2-4",
+              "type": "multiple_choice",
+              "prompt": "It-cleft ile vurgu: 'Sözleşmeyi imzalayan Sarah'ydı.' İngilizcesi?",
+              "options": [
+                "Sarah signed the contract.",
+                "It was Sarah who signed the contract.",
+                "Sarah is the one signed the contract.",
+                "Was Sarah signed the contract."
+              ],
+              "answer": "It was Sarah who signed the contract.",
+              "explanation": "It-cleft: 'It is/was X that/who...' yapısı — vurguyu özneye taşır."
+            },
+            {
+              "id": "rc-c2-5",
+              "type": "listen_and_choose",
+              "spokenText": "Hardly had we begun before the system crashed.",
+              "options": [
+                "Hardly we had begun before the system crashed.",
+                "Hardly had we begun before the system crashed.",
+                "Hard we had begun before the system crashed.",
+                "Hardly we begun before the system crashed."
+              ],
+              "answer": "Hardly had we begun before the system crashed.",
+              "explanation": "'Hardly...before/when' negative inversion: 'hardly had + S + V3'."
             }
           ]
         }
@@ -3459,10 +3536,10 @@
               "type": "multiple_choice",
               "prompt": "UK İngilizcesinde 'r' sesi (kelime sonunda) genelde:",
               "options": [
-                "Telaffuz edilir",
+                "Net telaffuz edilir (rhotic)",
                 "Düşürülür (non-rhotic)",
-                "İki kez söylenir",
-                "Susturulmaz"
+                "Yumuşatılır (tap-r)",
+                "Sadece vurgulu hecede söylenir"
               ],
               "answer": "Düşürülür (non-rhotic)"
             },
@@ -3480,12 +3557,13 @@
               "type": "multiple_choice",
               "prompt": "'water' kelimesinin US 'tap-T' (yumuşak T) telaffuzu hangi sese yakındır?",
               "options": [
-                "d",
-                "t",
-                "r",
-                "k"
+                "flap / soft [d] (water -> 'wadder')",
+                "clear [t] (water -> 'wa-ter')",
+                "rolled [r]",
+                "glottal [k]"
               ],
-              "answer": "d"
+              "answer": "flap / soft [d] (water -> 'wadder')",
+              "explanation": "AmE'de iki ünlü arası /t/ 'flap T' [ɾ] olur ve İngiliz kulağı için /d/'ye yakın duyulur (water -> 'wadder')."
             },
             {
               "id": "rg4-5",
@@ -3838,6 +3916,67 @@
                   "text": "Fine, fine — I'll bring the cheque. Or the check. Or whatever Kyle calls it."
                 }
               ]
+            }
+          ]
+        },
+        {
+          "id": "en-tr-c2-regional-l7",
+          "title": "Minimal pair dinleme (ileri seviye)",
+          "description": "C2'de bile Türk öğrenciler bazı çiftlerde tökezler: live/leave, full/fool, beach/bitch, sheet/shit.",
+          "theme": "vocab",
+          "xp": 12,
+          "exercises": [
+            {
+              "id": "mp-c2-1",
+              "type": "listen_and_choose",
+              "spokenText": "She lives on the beach.",
+              "options": [
+                "She leaves on the beach.",
+                "She lives on the beach.",
+                "She lives on the bitch.",
+                "She leaves on the bitch."
+              ],
+              "answer": "She lives on the beach.",
+              "explanation": "/i:/ (long, leave) vs /ɪ/ (short, live); /i:tʃ/ (beach) vs /ɪtʃ/ (bitch) — bağlam yardımcısı: 'on the beach' coğrafi."
+            },
+            {
+              "id": "mp-c2-2",
+              "type": "listen_and_choose",
+              "spokenText": "The glass is full.",
+              "options": [
+                "The glass is fool.",
+                "The glass is full.",
+                "The class is full.",
+                "The grass is full."
+              ],
+              "answer": "The glass is full.",
+              "explanation": "/ʊ/ (full) vs /uː/ (fool); /gl/ (glass) vs /kl/ (class)."
+            },
+            {
+              "id": "mp-c2-3",
+              "type": "listen_and_choose",
+              "spokenText": "I'll need a clean sheet of paper.",
+              "options": [
+                "I'll need a clean shit of paper.",
+                "I'll need a clean sheet of paper.",
+                "I'll need a clean seat of paper.",
+                "I'll need a clean ship of paper."
+              ],
+              "answer": "I'll need a clean sheet of paper.",
+              "explanation": "Türk konuşanlar için /iː/-/ɪ/ ayrımı sheet/shit'te kritiktir; bağlam ('paper') tek başına çözmez."
+            },
+            {
+              "id": "mp-c2-4",
+              "type": "listen_and_choose",
+              "spokenText": "We should sit on the seat.",
+              "options": [
+                "We should seat on the sit.",
+                "We should sit on the seat.",
+                "We should sit on the sheet.",
+                "We should seat on the seat."
+              ],
+              "answer": "We should sit on the seat.",
+              "explanation": "/sɪt/ (oturmak, kısa) vs /siːt/ (koltuk, uzun) — ünlü uzunluğu Türkçede fonemik değil, İngilizcede ayırt edici."
             }
           ]
         }
@@ -6816,10 +6955,10 @@
               "type": "multiple_choice",
               "prompt": "'Shall I compare thee to a summer's day' kaç iambdır?",
               "options": [
-                "3",
-                "4",
+                "3 (trimeter)",
+                "4 (tetrameter)",
                 "5 (pentameter)",
-                "6"
+                "6 (hexameter)"
               ],
               "answer": "5 (pentameter)"
             },
