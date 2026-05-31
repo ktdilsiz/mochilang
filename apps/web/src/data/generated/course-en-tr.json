@@ -105177,107 +105177,103 @@
                 },
                 {
                   "id": "art3-13",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "The cinematography lingers on faces, drawing us into private moments.",
+                  "type": "multiple_choice",
+                  "prompt": "'Curatorial choices' ifadesi en çok hangi alanda kullanılır?",
                   "options": [
-                    "instrumentation",
-                    "Kötü yazılmış anlatıcı",
-                    "curatorial",
-                    "The cinematography lingers on faces, drawing us into private moments."
+                    "Sergi düzenlemesi",
+                    "Film montajı",
+                    "Orkestra yönetimi",
+                    "Roman kurgusu"
                   ],
-                  "answer": "The cinematography lingers on faces, drawing us into private moments."
+                  "answer": "Sergi düzenlemesi"
                 },
                 {
                   "id": "art3-14",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "The cinematography lingers on face, drawing us into private moments.",
-                  "options": [
-                    "The cinematography lingers on face, drawing us into private moments.",
-                    "The cinematography lingers on faces, drawing us into private moments.",
-                    "prose style",
-                    "off"
-                  ],
-                  "answer": "The cinematography lingers on face, drawing us into private moments."
+                  "type": "fill_blank",
+                  "prompt": "The unreliable ___ keeps the reader guessing about what really happened.",
+                  "hint": "Güvenilmez anlatıcı, okuyucuyu olanlar konusunda sürekli tahmin yürütmek zorunda bırakıyor.",
+                  "answer": "narrator",
+                  "acceptableAnswers": [
+                    "voice"
+                  ]
                 },
                 {
                   "id": "art3-15",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "stands",
-                  "options": [
-                    "plot",
-                    "stands",
-                    "Albüm kapağı",
-                    "prose"
+                  "type": "translate",
+                  "prompt": "Fırça darbeleri cesur, hareketli ve son derece duygu yüklü.",
+                  "direction": "tr-to-en",
+                  "answer": "The brushstrokes are bold, gestural and emotionally charged",
+                  "acceptableAnswers": [
+                    "Her brushstrokes are bold, gestural and emotionally charged",
+                    "The brushwork is bold, gestural and emotionally charged"
                   ],
-                  "answer": "stands"
+                  "context": "Resim eleştirisinde sıkça kullanılan üç sıfat zinciri."
                 },
                 {
                   "id": "art3-16",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Güvenilmez anlatıcı (kasıtlı bir teknik)",
+                  "type": "multiple_choice",
+                  "prompt": "Bir film eleştirmeni 'the score never overshadows the visuals' derken neyi över?",
                   "options": [
-                    "stands",
-                    "loud",
-                    "The author's voice is immediately recognisable on the page",
-                    "Güvenilmez anlatıcı (kasıtlı bir teknik)"
+                    "Müziğin görselleri gölgelemeden tamamlamasını",
+                    "Görsellerin müziği bastırmasını",
+                    "Müziğin yokluğunu",
+                    "Görsellerin abartılı oluşunu"
                   ],
-                  "answer": "Güvenilmez anlatıcı (kasıtlı bir teknik)"
+                  "answer": "Müziğin görselleri gölgelemeden tamamlamasını"
                 },
                 {
                   "id": "art3-17",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "style",
-                  "options": [
-                    "The author's voice is immediately recognisable on the page",
-                    "yet",
-                    "prose",
-                    "style"
-                  ],
-                  "answer": "style"
+                  "type": "tap_words_in_order",
+                  "prompt": "Görüntü yönetimi yüzlerde oyalanarak bizi mahrem anların içine çekiyor.",
+                  "answer": "The cinematography lingers on faces drawing us into private moments",
+                  "bank": [
+                    "The",
+                    "cinematography",
+                    "lingers",
+                    "on",
+                    "faces",
+                    "drawing",
+                    "us",
+                    "into",
+                    "private",
+                    "moments",
+                    "rushes",
+                    "public",
+                    "the"
+                  ]
                 },
                 {
                   "id": "art3-18",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "author's",
-                  "options": [
-                    "author's",
-                    "its",
-                    "ear",
-                    "out"
-                  ],
-                  "answer": "author's"
+                  "type": "fill_blank",
+                  "prompt": "The album's ___ favours warm acoustic textures over synthetic ones.",
+                  "hint": "Albümün enstrüman kullanımı sentetik dokular yerine sıcak akustik dokuları tercih ediyor.",
+                  "answer": "instrumentation",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "art3-19",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "prose",
-                  "options": [
-                    "Film senaryosu",
-                    "Güvenilmez anlatıcı (kasıtlı bir teknik)",
-                    "prose",
-                    "emotionally"
+                  "type": "translate",
+                  "prompt": "Yazarın sesi daha ilk paragraftan hemen tanınıyor.",
+                  "direction": "tr-to-en",
+                  "answer": "The author's voice is immediately recognisable from the very first paragraph",
+                  "acceptableAnswers": [
+                    "The author's voice is instantly recognisable from the very first paragraph",
+                    "The author's voice is immediately recognizable from the first paragraph"
                   ],
-                  "answer": "prose"
+                  "context": "Üslup analizi için tipik bir cümle kalıbı."
                 },
                 {
                   "id": "art3-20",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "The exhibition stands out for its curatorial choices",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi terim hem resim hem yazı eleştirisinde mecazi olarak kullanılabilir?",
                   "options": [
-                    "The cinematography lingers on faces, drawing us in private moments.",
-                    "for",
-                    "brushstrokes",
-                    "The exhibition stands out for its curatorial choices"
+                    "brushwork",
+                    "instrumentation",
+                    "cinematography",
+                    "score"
                   ],
-                  "answer": "The exhibition stands out for its curatorial choices"
+                  "answer": "brushwork",
+                  "explanation": "'brushwork' bir yazarın detay işçiliği için mecazen kullanılabilir."
                 }
               ]
             },
@@ -105455,107 +105451,98 @@
                 },
                 {
                   "id": "art4-13",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "in",
+                  "type": "multiple_choice",
+                  "prompt": "'It's a slow burn but the payoff is immense' nasıl yorumlanır?",
                   "options": [
-                    "for",
-                    "in",
-                    "time",
-                    "Olumsuz"
+                    "Ağır ilerliyor ama sonunda büyük bir ödül sunuyor",
+                    "Sıkıcı ve ödülsüz",
+                    "Hızlı ama yüzeysel",
+                    "Yavaş ve kısa"
                   ],
-                  "answer": "in"
+                  "answer": "Ağır ilerliyor ama sonunda büyük bir ödül sunuyor"
                 },
                 {
                   "id": "art4-14",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Sevdiğini pek itiraf etmek istemediğin keyifli bir şey",
-                  "options": [
-                    "This",
-                    "of",
-                    "Sevdiğini pek itiraf etmek istemediğin keyifli bir şey",
-                    "The performance is nothing short of a tour de force."
-                  ],
-                  "answer": "Sevdiğini pek itiraf etmek istemediğin keyifli bir şey"
+                  "type": "fill_blank",
+                  "prompt": "His later work was widely seen as ___ of its time.",
+                  "hint": "Geç dönem işleri büyük ölçüde zamanının ötesinde görüldü.",
+                  "answer": "ahead",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "art4-15",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "film",
-                  "options": [
-                    "Olumsuz",
-                    "film",
-                    "innocent",
-                    "kalbe dokundu"
+                  "type": "translate",
+                  "prompt": "Performans tam bir başyapıt sergisinden başka bir şey değil.",
+                  "direction": "tr-to-en",
+                  "answer": "The performance is nothing short of a tour de force",
+                  "acceptableAnswers": [
+                    "The performance is nothing less than a tour de force"
                   ],
-                  "answer": "film"
+                  "context": "'Nothing short of' güçlü bir vurgu kalıbıdır."
                 },
                 {
                   "id": "art4-16",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "burn",
+                  "type": "multiple_choice",
+                  "prompt": "'An acquired taste' deyimi neyi anlatır?",
                   "options": [
-                    "falls",
-                    "in",
-                    "burn",
-                    "Yasak meyve"
+                    "İlk anda sevilmeyen, sonradan beğenilmeye başlanan eser",
+                    "Çocukluktan beri sevilen tat",
+                    "Pahalı bir hobi",
+                    "Yapay tat"
                   ],
-                  "answer": "burn"
+                  "answer": "İlk anda sevilmeyen, sonradan beğenilmeye başlanan eser"
                 },
                 {
                   "id": "art4-17",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "act",
-                  "options": [
-                    "taste",
-                    "is",
-                    "The performance is nothing short of a tour the force.",
-                    "act"
-                  ],
-                  "answer": "act"
+                  "type": "tap_words_in_order",
+                  "prompt": "Bu hikaye genç okurlarda derin bir yankı uyandırdı.",
+                  "answer": "This story really struck a chord with younger readers",
+                  "bank": [
+                    "This",
+                    "story",
+                    "really",
+                    "struck",
+                    "a",
+                    "chord",
+                    "with",
+                    "younger",
+                    "readers",
+                    "elder",
+                    "missed",
+                    "the"
+                  ]
                 },
                 {
                   "id": "art4-18",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "novel",
-                  "options": [
-                    "This",
-                    "novel",
-                    "Yasak meyve",
-                    "The album was ahead of its time"
-                  ],
-                  "answer": "novel"
+                  "type": "fill_blank",
+                  "prompt": "The much-anticipated finale falls ___, sadly.",
+                  "hint": "Çok beklenen final ne yazık ki havasını kaybediyor.",
+                  "answer": "flat",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "art4-19",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "The performance is nothing short of a tour-de-fource.",
-                  "options": [
-                    "The performance is nothing short of a tour-de-fource.",
-                    "a",
-                    "in",
-                    "gizli zevk"
+                  "type": "translate",
+                  "prompt": "Bu film benim için tam bir gizli zevk; herkese itiraf etmem.",
+                  "direction": "tr-to-en",
+                  "answer": "This film is something of a guilty pleasure for me; I don't admit it to everyone",
+                  "acceptableAnswers": [
+                    "This film is a guilty pleasure of mine; I don't admit it to everyone",
+                    "This film is something of a guilty pleasure for me, I don't admit it to everyone"
                   ],
-                  "answer": "The performance is nothing short of a tour-de-fource."
+                  "context": "'Guilty pleasure' deyiminin günlük kullanımı."
                 },
                 {
                   "id": "art4-20",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "is",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi cümle olumlu bir eleştiri içermez?",
                   "options": [
-                    "the",
-                    "behind",
-                    "is",
-                    "The novel falls flat in the final act"
+                    "A tour de force from start to finish.",
+                    "A welcome return to form.",
+                    "The final act falls flat.",
+                    "It struck a chord with audiences worldwide."
                   ],
-                  "answer": "is"
+                  "answer": "The final act falls flat."
                 }
               ]
             },
@@ -105732,107 +105719,101 @@
                 },
                 {
                   "id": "art5-13",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "will",
+                  "type": "multiple_choice",
+                  "prompt": "'Ölçülü, sade ve sessizce ustaca' ifadesinin eleştirmen tutumu nedir?",
                   "options": [
-                    "vague",
-                    "heavy",
-                    "a",
-                    "will"
+                    "Sessiz ama derin bir övgü",
+                    "Açık bir reddediş",
+                    "Karışık bir değerlendirme",
+                    "Sıradan tanımlama"
                   ],
-                  "answer": "will"
+                  "answer": "Sessiz ama derin bir övgü"
                 },
                 {
                   "id": "art5-14",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "burn",
-                  "options": [
-                    "position",
-                    "burn",
-                    "obscured",
-                    "Karışık — bir kusur övgüyü zayıflatıyor"
-                  ],
-                  "answer": "burn"
+                  "type": "fill_blank",
+                  "prompt": "Pretentious to the point of ___-parody.",
+                  "hint": "Kendi kendisinin parodisine dönüşecek kadar gösterişli.",
+                  "answer": "self",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "art5-15",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Karışık",
-                  "options": [
-                    "Karışık",
-                    "accomplished",
-                    "masterful",
-                    "critic"
+                  "type": "translate",
+                  "prompt": "Yapay diyaloglar, aksi takdirde özenli olan bir yapımı sekteye uğratıyor.",
+                  "direction": "tr-to-en",
+                  "answer": "Contrived dialogue undermines an otherwise polished production",
+                  "acceptableAnswers": [
+                    "Contrived dialogue undermines an otherwise polished piece",
+                    "Contrived dialogue undermines an otherwise polished work"
                   ],
-                  "answer": "Karışık"
+                  "context": "'Otherwise + olumlu sıfat' eleştirel bir koşullu övgüdür."
                 },
                 {
                   "id": "art5-16",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "It is by no means flawless, yet utter compelling from start to finish.",
+                  "type": "multiple_choice",
+                  "prompt": "'Sorely lacking in nuance' hangi tutumu yansıtır?",
                   "options": [
-                    "that",
-                    "Sert eleştiri",
-                    "unmistakably",
-                    "It is by no means flawless, yet utter compelling from start to finish."
+                    "Olumsuz",
+                    "Olumlu",
+                    "Karışık",
+                    "Tarafsız"
                   ],
-                  "answer": "It is by no means flawless, yet utter compelling from start to finish."
+                  "answer": "Olumsuz"
                 },
                 {
                   "id": "art5-17",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Şaka",
-                  "options": [
-                    "masterful",
-                    "Şaka",
-                    "It is by no means flawless, yet utterly compel from start to finish.",
-                    "the"
-                  ],
-                  "answer": "Şaka"
+                  "type": "tap_words_in_order",
+                  "prompt": "Başyapıt değil ama hoş bir gizli zevk.",
+                  "answer": "Not a masterpiece but a delightful guilty pleasure",
+                  "bank": [
+                    "Not",
+                    "a",
+                    "masterpiece",
+                    "but",
+                    "delightful",
+                    "guilty",
+                    "pleasure",
+                    "innocent",
+                    "dull",
+                    "the",
+                    "yet"
+                  ]
                 },
                 {
                   "id": "art5-18",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Karışık — bir kusur övgüyü zayıflatıyor",
-                  "options": [
-                    "heavy",
-                    "barely",
-                    "Karışık (sevgiyle eleştiri)",
-                    "Karışık — bir kusur övgüyü zayıflatıyor"
-                  ],
-                  "answer": "Karışık — bir kusur övgüyü zayıflatıyor"
+                  "type": "fill_blank",
+                  "prompt": "Uneven but never ___, the album rewards repeated listens.",
+                  "hint": "Tutarsız ama hiç sıkıcı değil; albüm tekrar dinlemeyi ödüllendiriyor.",
+                  "answer": "dull",
+                  "acceptableAnswers": [
+                    "boring",
+                    "uninteresting"
+                  ]
                 },
                 {
                   "id": "art5-19",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "It is by no means flawless, yet utterly compel from start to finish.",
-                  "options": [
-                    "critic",
-                    "burn",
-                    "It is by no means flawless, yet utterly compel from start to finish.",
-                    "makes"
+                  "type": "translate",
+                  "prompt": "Müzik çağrışımsal, senaryo ise gereğinden ağır işli.",
+                  "direction": "tr-to-en",
+                  "answer": "The score is evocative, while the script is heavy-handed",
+                  "acceptableAnswers": [
+                    "The score is evocative; the script, heavy-handed",
+                    "The score is evocative while the script feels heavy-handed"
                   ],
-                  "answer": "It is by no means flawless, yet utterly compel from start to finish."
+                  "context": "Bir eserin iki ögesini karşılaştıran tipik kalıp."
                 },
                 {
                   "id": "art5-20",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "It is by no means flawless, yet utterly compelling from start to finish.",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi snippet 'karışık' tutumu en iyi yansıtır?",
                   "options": [
-                    "It is by no means flawless, yet utterly compelling from start to finish.",
-                    "fast",
-                    "olumsuz",
-                    "derivative"
+                    "Uneven but never dull, with a quietly masterful lead performance.",
+                    "A flawless triumph of the genre.",
+                    "Sorely lacking in nuance and emotional weight.",
+                    "Pretentious to the point of self-parody."
                   ],
-                  "answer": "It is by no means flawless, yet utterly compelling from start to finish."
+                  "answer": "Uneven but never dull, with a quietly masterful lead performance."
                 }
               ]
             },
@@ -105953,250 +105934,226 @@
                 },
                 {
                   "id": "art6-2",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "some",
+                  "type": "multiple_choice",
+                  "prompt": "Diyalogda 'the hanging is doing a great deal of the curatorial argument for you' ne anlama gelir?",
                   "options": [
-                    "yes",
-                    "some",
-                    "wall",
-                    "The"
+                    "Eserlerin asılış düzeni, küratörün tezini büyük ölçüde anlatıyor",
+                    "Tablolar duvardan düşmek üzere",
+                    "Küratör çok fazla konuşuyor",
+                    "Sergi salonu küçük"
                   ],
-                  "answer": "some"
+                  "answer": "Eserlerin asılış düzeni, küratörün tezini büyük ölçüde anlatıyor"
                 },
                 {
                   "id": "art6-3",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "period",
-                  "options": [
-                    "what",
-                    "visitors",
-                    "failure",
-                    "period"
-                  ],
-                  "answer": "period"
+                  "type": "fill_blank",
+                  "prompt": "What strikes me first isn't the palette but the way the figures lean almost ___ out of frame.",
+                  "hint": "Figürlerin neredeyse fark edilmez biçimde çerçeveden eğilmesini vurgulayan zarf.",
+                  "answer": "imperceptibly",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "art6-4",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "the",
+                  "type": "multiple_choice",
+                  "prompt": "'A deliberate refusal of resolution' bir resimde neyi över?",
                   "options": [
-                    "the",
-                    "what",
-                    "piece",
-                    "artist's"
+                    "Bilinçli olarak çözüme bağlanmamayı, askıda bırakmayı",
+                    "Net ve kapalı bir kompozisyonu",
+                    "Renklerin parlaklığını",
+                    "Tuvalin büyüklüğünü"
                   ],
-                  "answer": "the"
+                  "answer": "Bilinçli olarak çözüme bağlanmamayı, askıda bırakmayı"
                 },
                 {
                   "id": "art6-5",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "wall",
-                  "options": [
-                    "artist",
-                    "wall",
-                    "Generous",
-                    "great"
+                  "type": "translate",
+                  "prompt": "Alt boya yüzeye sızıyor değil, kasten gün yüzüne çıkarılıyor.",
+                  "direction": "tr-to-en",
+                  "answer": "The underpainting isn't bleeding through so much as being deliberately exhumed",
+                  "acceptableAnswers": [
+                    "The underpainting isn't bleeding so much as deliberately exhumed",
+                    "The underpainting is not bleeding through so much as being deliberately exhumed"
                   ],
-                  "answer": "wall"
+                  "context": "'Not X so much as Y' yapısı C1 düzeyinde nüanslı karşıtlık kurar."
                 },
                 {
                   "id": "art6-6",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "I'm",
-                  "options": [
-                    "you",
-                    "Come",
-                    "I'm",
-                    "what's"
-                  ],
-                  "answer": "I'm"
+                  "type": "fill_blank",
+                  "prompt": "Some critics have read the dissolution as a failure of ___ nerve.",
+                  "hint": "Bazı eleştirmenler bu erimeyi bir kompozisyon cesareti eksikliği olarak okudu.",
+                  "answer": "compositional",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "art6-7",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "obsessively",
+                  "type": "multiple_choice",
+                  "prompt": "'On closer inspection' ifadesi eleştiride neyi imler?",
                   "options": [
-                    "in",
-                    "Quite",
-                    "obsessively",
-                    "second"
+                    "Daha yakından bakıldığında, ilk izlenimin değiştiğini",
+                    "Eleştirmenin yorulduğunu",
+                    "Eserin küçük olduğunu",
+                    "İzleyiciyi davet etmediğini"
                   ],
-                  "answer": "obsessively"
+                  "answer": "Daha yakından bakıldığında, ilk izlenimin değiştiğini"
                 },
                 {
                   "id": "art6-8",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "first",
-                  "options": [
+                  "type": "tap_words_in_order",
+                  "prompt": "Bu sanatçının bu dönemdeki saplantısı eşik temasıdır.",
+                  "answer": "This artist's preoccupation in this period is the threshold",
+                  "bank": [
+                    "This",
+                    "artist's",
+                    "preoccupation",
+                    "in",
                     "this",
-                    "doing",
-                    "deal",
-                    "first"
-                  ],
-                  "answer": "first"
+                    "period",
+                    "is",
+                    "the",
+                    "threshold",
+                    "ceiling",
+                    "was",
+                    "an"
+                  ]
                 },
                 {
                   "id": "art6-9",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Would",
-                  "options": [
-                    "Would",
-                    "bleeds",
-                    "Lead",
-                    "The"
-                  ],
-                  "answer": "Would"
+                  "type": "fill_blank",
+                  "prompt": "Rarely ___ one encounter a painter so willing to let her figures dissolve into their grounds.",
+                  "hint": "Devrik bir yapı: 'Rarely' ile başlayan cümlede yardımcı fiil öne çıkar.",
+                  "answer": "does",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "art6-10",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "I'd",
-                  "options": [
-                    "read",
-                    "prefer",
-                    "like",
-                    "I'd"
+                  "type": "translate",
+                  "prompt": "Vesveselenme gibi görünen şey, aslında çözümün bilinçli bir reddidir.",
+                  "direction": "tr-to-en",
+                  "answer": "What looks like vacillation is in fact a deliberate refusal of resolution",
+                  "acceptableAnswers": [
+                    "What appears to be vacillation is, in fact, a deliberate refusal of resolution",
+                    "What looks like vacillation is actually a deliberate refusal of resolution"
                   ],
-                  "answer": "I'd"
+                  "context": "'What looks like X is in fact Y' kalıbı eleştirel itirazlarda sık kullanılır."
                 },
                 {
                   "id": "art6-11",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "critics",
+                  "type": "multiple_choice",
+                  "prompt": "'A quiet act of self-citation' bir sanatçı için ne anlama gelir?",
                   "options": [
-                    "not-quite-there",
-                    "critics",
-                    "wall",
-                    "nerve"
+                    "Sanatçının kendi önceki işine sessizce gönderme yapması",
+                    "Kendi adını imza atması",
+                    "Eleştirmenleri alıntılaması",
+                    "Çalıntı yapması"
                   ],
-                  "answer": "critics"
+                  "answer": "Sanatçının kendi önceki işine sessizce gönderme yapması"
                 },
                 {
                   "id": "art6-12",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Welcome",
-                  "options": [
-                    "bleeds",
-                    "like",
-                    "Welcome",
-                    "how"
-                  ],
-                  "answer": "Welcome"
+                  "type": "fill_blank",
+                  "prompt": "I'd be ___ to claim that — though it may land closer to her intent than the catalogue essay.",
+                  "hint": "Böyle bir iddiada bulunmaya çekinirdim, dercesine kibar bir mütevazılık.",
+                  "answer": "reluctant",
+                  "acceptableAnswers": [
+                    "hesitant"
+                  ]
                 },
                 {
                   "id": "art6-13",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "room",
-                  "options": [
+                  "type": "tap_words_in_order",
+                  "prompt": "Bu tablo izleyicinin değil, kendisinin ağır işini yapıyor.",
+                  "answer": "The painting itself is doing the heavy lifting not the viewer",
+                  "bank": [
+                    "The",
+                    "painting",
+                    "itself",
                     "is",
-                    "room",
-                    "argument",
-                    "catalogue"
-                  ],
-                  "answer": "room"
+                    "doing",
+                    "the",
+                    "heavy",
+                    "lifting",
+                    "not",
+                    "viewer",
+                    "light",
+                    "critic"
+                  ]
                 },
                 {
                   "id": "art6-14",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "artist's",
+                  "type": "multiple_choice",
+                  "prompt": "'The not-quite-there' ifadesi neyi tarif eder?",
                   "options": [
-                    "curious",
-                    "even",
-                    "artist's",
-                    "Quite"
+                    "Tam olarak orada olmayan, eşikteki, askıda olan",
+                    "Yanlış yerleştirilmiş",
+                    "Yokluk",
+                    "Geç kalmış sanatçı"
                   ],
-                  "answer": "artist's"
+                  "answer": "Tam olarak orada olmayan, eşikteki, askıda olan"
                 },
                 {
                   "id": "art6-15",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "margin",
-                  "options": [
-                    "would",
-                    "margin",
-                    "this",
-                    "to"
-                  ],
-                  "answer": "margin"
+                  "type": "fill_blank",
+                  "prompt": "The underpainting bleeds through on the right ___, almost confessionally.",
+                  "hint": "Alt boya sağ kenarda neredeyse itirafvari sızıyor.",
+                  "answer": "margin",
+                  "acceptableAnswers": [
+                    "edge"
+                  ]
                 },
                 {
                   "id": "art6-16",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "would",
-                  "options": [
-                    "argument",
-                    "underpainting",
-                    "curatorial",
-                    "would"
+                  "type": "translate",
+                  "prompt": "Fırça işçiliği bu reddi ödüllendiriyor.",
+                  "direction": "tr-to-en",
+                  "answer": "The brushwork rewards that refusal",
+                  "acceptableAnswers": [
+                    "Her brushwork rewards that refusal"
                   ],
-                  "answer": "would"
+                  "context": "Kısa, vurgulu sanat eleştirisi cümlesi."
                 },
                 {
                   "id": "art6-17",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "compositional",
+                  "type": "multiple_choice",
+                  "prompt": "'I'd resist that reading firmly' eleştirel diyalogda neye karşılık gelir?",
                   "options": [
-                    "read",
-                    "way",
-                    "compositional",
-                    "failure"
+                    "Bir yorumu kibar ama kararlı bir biçimde reddetmek",
+                    "Yorumu görmezden gelmek",
+                    "Eleştirmene saldırmak",
+                    "Konuyu değiştirmek"
                   ],
-                  "answer": "compositional"
+                  "answer": "Bir yorumu kibar ama kararlı bir biçimde reddetmek"
                 },
                 {
                   "id": "art6-18",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "artist",
-                  "options": [
-                    "artist",
-                    "curious",
-                    "I'd",
-                    "how"
-                  ],
-                  "answer": "artist"
+                  "type": "fill_blank",
+                  "prompt": "Looking more ___, one sees the underpainting isn't bleeding so much as deliberately exhumed.",
+                  "hint": "Daha yakından bakınca alt boya sızmıyor, bilinçle gün yüzüne çıkarılıyor.",
+                  "answer": "closely",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "art6-19",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "this",
-                  "options": [
-                    "as",
-                    "read",
-                    "quieter",
-                    "this"
+                  "type": "translate",
+                  "prompt": "Sanatçının bu döneme dair takıntısı sürekli geri döndüğü bir eşik fikridir.",
+                  "direction": "tr-to-en",
+                  "answer": "The artist's preoccupation in this period is a notion of the threshold she returns to obsessively",
+                  "acceptableAnswers": [
+                    "The artist's preoccupation in this period is the threshold she returns to obsessively",
+                    "The artist's obsession in this period is a notion of the threshold she keeps returning to"
                   ],
-                  "answer": "this"
+                  "context": "Küratör söyleminde tekrarlanan ana fikir."
                 },
                 {
                   "id": "art6-20",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "thank",
+                  "type": "multiple_choice",
+                  "prompt": "Diyalogda 'pretty cool I guess' yanıtı neden uygun değildir?",
                   "options": [
-                    "bleeds",
-                    "thank",
-                    "way",
-                    "Lead"
+                    "C1 düzeyinde tonu fazla gevşek ve yüzeyseldir",
+                    "Dilbilgisi yanlıştır",
+                    "Çok uzundur",
+                    "Sanatçıyı eleştirir"
                   ],
-                  "answer": "thank"
+                  "answer": "C1 düzeyinde tonu fazla gevşek ve yüzeyseldir"
                 }
               ]
             }
@@ -106749,107 +106706,88 @@
                 },
                 {
                   "id": "nws2-13",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "no",
+                  "type": "multiple_choice",
+                  "prompt": "'Did not immediately respond' kalıbının habercilikteki işlevi nedir?",
                   "options": [
-                    "hemen yanıt vermedi",
-                    "no",
-                    "according to sources familiar with the matter",
-                    "answered"
+                    "Kaynağın suçlu olduğunu duyurur",
+                    "Yorum istendi ama dönüş olmadı; ton tarafsız kalır",
+                    "Kaynağın yanıt verdiğini ima eder",
+                    "Konunun gizli olduğunu açıklar"
                   ],
-                  "answer": "no"
+                  "answer": "Yorum istendi ama dönüş olmadı; ton tarafsız kalır"
                 },
                 {
                   "id": "nws2-14",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "matter",
-                  "options": [
-                    "Tartışmasız iddia kurar",
-                    "The government says no decision has yet been made",
-                    "matter",
-                    "officials yelled"
-                  ],
-                  "answer": "matter"
+                  "type": "fill_blank",
+                  "prompt": "A senior official, speaking ___ condition of anonymity, confirmed the deal.",
+                  "hint": "İsminin gizli kalması koşuluyla konuşan üst düzey bir yetkili anlaşmayı doğruladı.",
+                  "answer": "on",
+                  "acceptableAnswers": [
+                    "under"
+                  ]
                 },
                 {
                   "id": "nws2-15",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "says",
-                  "options": [
-                    "says",
-                    "already",
-                    "The",
-                    "the"
-                  ],
-                  "answer": "says"
+                  "type": "translate",
+                  "prompt": "Çevirin: 'Ajans, devam eden soruşturmayı gerekçe göstererek yorum yapmaktan kaçındı.'",
+                  "direction": "tr-to-en",
+                  "answer": "The agency declined to comment, citing the ongoing investigation.",
+                  "context": "Atıf + 'citing' kalıbı: kaçınma gerekçelendirilir."
                 },
                 {
                   "id": "nws2-16",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "to",
+                  "type": "multiple_choice",
+                  "prompt": "Hangisi en gevşek atıf kalıbıdır?",
                   "options": [
-                    "to",
-                    "comment",
-                    "Övgü",
-                    "yetkililer söylüyor"
+                    "according to court filings",
+                    "according to two sources familiar with the matter",
+                    "people are saying",
+                    "the minister confirmed"
                   ],
-                  "answer": "to"
+                  "answer": "people are saying"
                 },
                 {
                   "id": "nws2-17",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "been",
-                  "options": [
-                    "matter",
-                    "been",
-                    "Tarafsız ama imalı",
-                    "according to sources familiar with the matter"
-                  ],
-                  "answer": "been"
+                  "type": "fill_blank",
+                  "prompt": "The reporter spoke to four people ___ direct knowledge of the talks.",
+                  "hint": "Muhabir, görüşmeleri doğrudan bilen dört kişiyle konuştu.",
+                  "answer": "with",
+                  "acceptableAnswers": []
                 },
                 {
                   "id": "nws2-18",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "has",
-                  "options": [
-                    "officials yelled",
-                    "no",
-                    "Kişisel görüş bildirir",
-                    "has"
-                  ],
-                  "answer": "has"
+                  "type": "tap_words_in_order",
+                  "prompt": "Hiçbir yorum yapılmadı.",
+                  "answer": "No comment was offered",
+                  "bank": [
+                    "No",
+                    "comment",
+                    "was",
+                    "offered",
+                    "officials",
+                    "yelled",
+                    "yes"
+                  ]
                 },
                 {
                   "id": "nws2-19",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "officials yelled",
+                  "type": "multiple_choice",
+                  "prompt": "'Spokesperson' yerine resmi atıfta hangisi yer alabilir?",
                   "options": [
-                    "on",
-                    "officials yelled",
-                    "in",
-                    "our"
+                    "a press officer",
+                    "an insider",
+                    "a friend",
+                    "a fan"
                   ],
-                  "answer": "officials yelled"
+                  "answer": "a press officer"
                 },
                 {
                   "id": "nws2-20",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "sources",
-                  "options": [
-                    "sources",
-                    "matter",
-                    "Hakaret",
-                    "decision"
-                  ],
-                  "answer": "sources"
+                  "type": "translate",
+                  "prompt": "Çevirin: 'Kayda geçmeye yetkisi olmayan bir kaynak rakamı doğruladı.'",
+                  "direction": "tr-to-en",
+                  "answer": "A source not authorised to speak on the record confirmed the figure.",
+                  "context": "Anonim kaynak gerekçelendirmesi; haberciliğin standart kalıbı."
                 }
               ]
             },
@@ -107020,107 +106958,92 @@
                 },
                 {
                   "id": "nws3-13",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Anlaşma için Başbakan endişeli.",
+                  "type": "multiple_choice",
+                  "prompt": "Hangi manşet İngilizce manşet konvansiyonlarını ihlal eder?",
                   "options": [
-                    "sources",
-                    "geçmiş için present",
-                    "Anlaşma için Başbakan endişeli.",
-                    "Genellikle düşürülür"
-                  ],
-                  "answer": "Anlaşma için Başbakan endişeli."
-                },
-                {
-                  "id": "nws3-14",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Genellikle düşürülür",
-                  "options": [
-                    "Source",
-                    "Judge",
-                    "İki nokta + tırnak kalıbı",
-                    "Genellikle düşürülür"
-                  ],
-                  "answer": "Genellikle düşürülür"
-                },
-                {
-                  "id": "nws3-15",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "geçmiş için present",
-                  "options": [
-                    "geçmiş için present",
-                    "President",
-                    "soar",
-                    "Genellikle düşürülür"
-                  ],
-                  "answer": "geçmiş için present"
-                },
-                {
-                  "id": "nws3-16",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Rules",
-                  "options": [
-                    "Rules",
-                    "İki kez yazılır",
-                    "Up",
-                    "Talk Stalls Amid Tariff Disputes: Report"
-                  ],
-                  "answer": "Rules"
-                },
-                {
-                  "id": "nws3-17",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "The Senate has passed the budget yesterday.",
-                  "options": [
-                    "Genellikle düşürülür",
+                    "Court Rules Against Agency",
+                    "Markets Up on Tariff News",
                     "The Senate has passed the budget yesterday.",
-                    "Source",
-                    "a"
+                    "Talks Stall: Sources"
                   ],
                   "answer": "The Senate has passed the budget yesterday."
                 },
                 {
-                  "id": "nws3-18",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "President Signs New Law",
+                  "id": "nws3-14",
+                  "type": "fill_blank",
+                  "prompt": "Manşet (artikelsiz, present tense): 'Central Bank ___ Rates'",
+                  "hint": "Merkez Bankası faiz oranlarını düşürdü.",
+                  "answer": "Cuts",
+                  "acceptableAnswers": [
+                    "Slashes",
+                    "Lowers"
+                  ]
+                },
+                {
+                  "id": "nws3-15",
+                  "type": "translate",
+                  "prompt": "Manşet çevirisi: 'Bakan: Bu Bir Dönüm Noktası'",
+                  "direction": "tr-to-en",
+                  "answer": "Minister: 'Turning Point'",
+                  "context": "Manşette iki nokta + tırnak içinde alıntı kalıbı."
+                },
+                {
+                  "id": "nws3-16",
+                  "type": "multiple_choice",
+                  "prompt": "'Talks Stall: Report' yapısındaki ':' işaretinin işlevi nedir?",
                   "options": [
-                    "President Signs New Law",
-                    "jump",
-                    "Signs",
-                    "Surge"
+                    "Cümle başı işareti",
+                    "Vurgu için süs",
+                    "Atıf eklemek (kaynağa dayandığını belirtmek)",
+                    "Tarih belirtmek"
                   ],
-                  "answer": "President Signs New Law"
+                  "answer": "Atıf eklemek (kaynağa dayandığını belirtmek)"
+                },
+                {
+                  "id": "nws3-17",
+                  "type": "tap_words_in_order",
+                  "prompt": "Manşet: 'Yargıç Kuruma Karşı Karar Verdi'",
+                  "answer": "Judge Rules Against Agency",
+                  "bank": [
+                    "Judge",
+                    "Rules",
+                    "Against",
+                    "Agency",
+                    "Ruled",
+                    "the",
+                    "an"
+                  ]
+                },
+                {
+                  "id": "nws3-18",
+                  "type": "fill_blank",
+                  "prompt": "Manşet (be düşürülür): 'Markets ___ on Tariff News' — Türkçe: 'Tarife haberleriyle piyasalar yükselişte.'",
+                  "hint": "'are' düşer; ardından gelen sıfat/zarf gelir.",
+                  "answer": "Up",
+                  "acceptableAnswers": [
+                    "Higher",
+                    "Surge"
+                  ]
                 },
                 {
                   "id": "nws3-19",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "soar",
+                  "type": "multiple_choice",
+                  "prompt": "Hangisi manşet için 'imminent' (yakın, çok yakında olacak) yerine kullanılamaz?",
                   "options": [
-                    "Down",
-                    "Up",
-                    "soar",
-                    "Source"
+                    "Near",
+                    "Looms",
+                    "Yesterday",
+                    "Pending"
                   ],
-                  "answer": "soar"
+                  "answer": "Yesterday"
                 },
                 {
                   "id": "nws3-20",
-                  "type": "listen_and_choose",
-                  "prompt": "Tap the word you hear",
-                  "spokenText": "Signed",
-                  "options": [
-                    "Signed",
-                    "atıf eki",
-                    "iki nokta + tırnak",
-                    "Down"
-                  ],
-                  "answer": "Signed"
+                  "type": "translate",
+                  "prompt": "Manşet çevirisi: 'CEO İstifa Etti: Kaynaklar'",
+                  "direction": "tr-to-en",
+                  "answer": "CEO Steps Down: Sources",
+                  "context": "Atıf eki + present tense + artikelsiz manşet."
                 }
               ]
             },
