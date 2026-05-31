@@ -1404,6 +1404,271 @@
                   "spokenText": "好，我下周找时间去看。"
                 }
               ]
+            },
+            {
+              "id": "opn5-2",
+              "type": "multiple_choice",
+              "prompt": "Which best HEDGES \"I think the plot is a bit draggy\"?",
+              "options": [
+                "我觉得剧情比较拖沓",
+                "剧情绝对烂透了",
+                "剧情我无所谓",
+                "剧情完全完美"
+              ],
+              "answer": "我觉得剧情比较拖沓",
+              "explanation": "比较 (relatively) softens the criticism — classic Chinese hedge."
+            },
+            {
+              "id": "opn5-3",
+              "type": "fill_blank",
+              "prompt": "Soften: \"剧情___拖沓\" (somewhat draggy)",
+              "before": "剧情",
+              "after": "拖沓",
+              "answer": "比较",
+              "acceptableAnswers": [
+                "有点",
+                "有点儿",
+                "稍微"
+              ],
+              "hint": "use a softener like \"relatively\" or \"a bit\""
+            },
+            {
+              "id": "opn5-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "演技不错",
+              "answer": "the acting isn't bad",
+              "acceptableAnswers": [
+                "the performance is not bad",
+                "the acting is decent",
+                "the acting is pretty good"
+              ],
+              "context": "complimenting acting in a film"
+            },
+            {
+              "id": "opn5-5",
+              "type": "multiple_choice",
+              "prompt": "Pick the connector for half-agreement (\"I partly agree, but...\"):",
+              "options": [
+                "我部分同意，不过",
+                "我完全同意，而且",
+                "我反对，因此",
+                "我支持，所以"
+              ],
+              "answer": "我部分同意，不过",
+              "explanation": "部分同意 = partial agreement; 不过 introduces the nuance."
+            },
+            {
+              "id": "opn5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Those slow shots actually have flavor\"",
+              "answer": "那些 慢镜头 反而 很 有 味道",
+              "bank": [
+                "那些",
+                "慢镜头",
+                "反而",
+                "很",
+                "有",
+                "味道",
+                "节奏",
+                "导演",
+                "不"
+              ]
+            },
+            {
+              "id": "opn5-7",
+              "type": "fill_blank",
+              "prompt": "Hedge with \"maybe\": \"我觉得___是在讲家庭的疏离感\"",
+              "before": "我觉得",
+              "after": "是在讲家庭的疏离感",
+              "answer": "大概",
+              "acceptableAnswers": [
+                "也许",
+                "或许",
+                "似乎"
+              ],
+              "hint": "a probability/hedge adverb"
+            },
+            {
+              "id": "opn5-8",
+              "type": "multiple_choice",
+              "prompt": "What does 贯穿全片 mean?",
+              "options": [
+                "runs through the whole film",
+                "ruins the whole film",
+                "exits the whole film",
+                "ends the film"
+              ],
+              "answer": "runs through the whole film",
+              "explanation": "贯穿 = run through; 全片 = the whole film. A theme that 贯穿 the film is woven throughout it."
+            },
+            {
+              "id": "opn5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "推荐看，不过得有耐心",
+              "answer": "I recommend watching it, but you need patience",
+              "acceptableAnswers": [
+                "recommended, but you need to be patient",
+                "I'd recommend it, though you'll need patience"
+              ]
+            },
+            {
+              "id": "opn5-10",
+              "type": "multiple_choice",
+              "prompt": "The phrase 反而 signals:",
+              "options": [
+                "an unexpected contrary result",
+                "an additive list",
+                "a cause-effect",
+                "a time sequence"
+              ],
+              "answer": "an unexpected contrary result",
+              "explanation": "反而 = \"on the contrary / surprisingly\" — it flips an expectation."
+            },
+            {
+              "id": "opn5-11",
+              "type": "fill_blank",
+              "prompt": "Theme runs through the film: \"那种感觉确实___全片\"",
+              "before": "那种感觉确实",
+              "after": "全片",
+              "answer": "贯穿",
+              "hint": "a 2-character verb for \"runs through\""
+            },
+            {
+              "id": "opn5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the hedge you hear",
+              "spokenText": "我 觉 得 大 概",
+              "options": [
+                "我 觉 得 大 概",
+                "我 大 概 觉 得",
+                "大 概 我 觉 得",
+                "觉 得 我 大 概"
+              ],
+              "answer": "我 觉 得 大 概",
+              "explanation": "Standard hedge order: subject + 觉得 + 大概."
+            },
+            {
+              "id": "opn5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Recommended, but you need patience\"",
+              "answer": "推荐 看 不过 得 有 耐心",
+              "bank": [
+                "推荐",
+                "看",
+                "不过",
+                "得",
+                "有",
+                "耐心",
+                "节奏",
+                "因此",
+                "了"
+              ]
+            },
+            {
+              "id": "opn5-14",
+              "type": "multiple_choice",
+              "prompt": "Which is the most natural way to recommend with a caveat?",
+              "options": [
+                "推荐看，不过节奏比较慢",
+                "推荐看因此节奏比较慢",
+                "推荐看所以慢节奏",
+                "推荐看而且千万别看"
+              ],
+              "answer": "推荐看，不过节奏比较慢",
+              "explanation": "不过 introduces a soft caveat — the natural \"but\" for hedged recommendations."
+            },
+            {
+              "id": "opn5-15",
+              "type": "match_pairs",
+              "prompt": "phrase to function",
+              "pairs": [
+                {
+                  "left": "我觉得",
+                  "right": "casual opinion opener"
+                },
+                {
+                  "left": "不过",
+                  "right": "soft \"but\""
+                },
+                {
+                  "left": "反而",
+                  "right": "unexpected contrary"
+                },
+                {
+                  "left": "大概",
+                  "right": "hedge / probably"
+                }
+              ]
+            },
+            {
+              "id": "opn5-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "导演想表达的主题",
+              "answer": "the theme the director wants to express",
+              "acceptableAnswers": [
+                "the theme the director was trying to express",
+                "the topic the director wanted to express"
+              ]
+            },
+            {
+              "id": "opn5-17",
+              "type": "fill_blank",
+              "prompt": "Recommend with caveat: \"推荐看，___得有耐心\"",
+              "before": "推荐看，",
+              "after": "得有耐心",
+              "answer": "不过",
+              "acceptableAnswers": [
+                "但是",
+                "只是"
+              ],
+              "hint": "a soft contrastive connector"
+            },
+            {
+              "id": "opn5-18",
+              "type": "multiple_choice",
+              "prompt": "疏离感 most accurately means:",
+              "options": [
+                "a sense of alienation",
+                "a sense of intimacy",
+                "a sense of joy",
+                "a sense of urgency"
+              ],
+              "answer": "a sense of alienation",
+              "explanation": "疏离 = estrangement; 感 = feeling. Often used to describe modern family dynamics."
+            },
+            {
+              "id": "opn5-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"I partly agree, but the slow pace actually has flavor\"",
+              "answer": "我 部分 同意 不过 慢 节奏 反而 有 味道",
+              "bank": [
+                "我",
+                "部分",
+                "同意",
+                "不过",
+                "慢",
+                "节奏",
+                "反而",
+                "有",
+                "味道",
+                "因此"
+              ]
+            },
+            {
+              "id": "opn5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "贯 穿 全 片",
+              "options": [
+                "贯 穿 全 片",
+                "全 片 贯 穿",
+                "贯 全 穿 片",
+                "穿 贯 全 片"
+              ],
+              "answer": "贯 穿 全 片"
             }
           ]
         }
@@ -3047,6 +3312,259 @@
                   "spokenText": "好，希望执行得顺利。"
                 }
               ]
+            },
+            {
+              "id": "nws6-2",
+              "type": "multiple_choice",
+              "prompt": "Which reporting marker means \"it is said / rumor has it\" (slightly more formal)?",
+              "options": [
+                "据说",
+                "听说",
+                "我说",
+                "说了"
+              ],
+              "answer": "据说",
+              "explanation": "据说 cites a source/rumor; 听说 is casual \"I heard\"."
+            },
+            {
+              "id": "nws6-3",
+              "type": "fill_blank",
+              "prompt": "Casual report opener: \"___对企业的影响会很大\"",
+              "before": "",
+              "after": "对企业的影响会很大",
+              "answer": "听说",
+              "acceptableAnswers": [
+                "据说"
+              ],
+              "hint": "an \"I heard\" marker"
+            },
+            {
+              "id": "nws6-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "没想到推进得这么快",
+              "answer": "I didn't expect it to move forward this fast",
+              "acceptableAnswers": [
+                "didn't expect them to push it through so quickly",
+                "I didn't think it would advance this fast"
+              ]
+            },
+            {
+              "id": "nws6-5",
+              "type": "multiple_choice",
+              "prompt": "立法 means:",
+              "options": [
+                "legislation / making laws",
+                "law enforcement",
+                "court case",
+                "police action"
+              ],
+              "answer": "legislation / making laws",
+              "explanation": "立 (establish) + 法 (law) = legislate."
+            },
+            {
+              "id": "nws6-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"This time the rules are stricter than Europe's\"",
+              "answer": "这次 的 规定 比 欧洲 的 还 严",
+              "bank": [
+                "这次",
+                "的",
+                "规定",
+                "比",
+                "欧洲",
+                "的",
+                "还",
+                "严",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "nws6-7",
+              "type": "multiple_choice",
+              "prompt": "Pick the best concessive structure (\"Although costs will rise, in the long run it benefits the industry\"):",
+              "options": [
+                "虽然成本会增加，但是长远看对行业是好事",
+                "因为成本增加所以长远好事",
+                "成本增加并且长远好事",
+                "成本增加因此但是好事"
+              ],
+              "answer": "虽然成本会增加，但是长远看对行业是好事"
+            },
+            {
+              "id": "nws6-8",
+              "type": "fill_blank",
+              "prompt": "Concession: \"___成本会增加，但是长远看是好事\"",
+              "before": "",
+              "after": "成本会增加，但是长远看是好事",
+              "answer": "虽然",
+              "acceptableAnswers": [
+                "尽管"
+              ],
+              "hint": "the \"although\" concessive"
+            },
+            {
+              "id": "nws6-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "中小公司可能很难合规",
+              "answer": "small and medium-sized companies may struggle to comply",
+              "acceptableAnswers": [
+                "SMEs might find compliance difficult",
+                "it may be hard for small and medium firms to comply"
+              ]
+            },
+            {
+              "id": "nws6-10",
+              "type": "multiple_choice",
+              "prompt": "合规 most accurately means:",
+              "options": [
+                "compliance (with regulations)",
+                "merging",
+                "combining files",
+                "harmonizing"
+              ],
+              "answer": "compliance (with regulations)",
+              "explanation": "合 (conform) + 规 (rule) = compliance — common in business/legal Chinese."
+            },
+            {
+              "id": "nws6-11",
+              "type": "fill_blank",
+              "prompt": "Long view: \"___看对行业是好事\" (\"in the long run\")",
+              "before": "",
+              "after": "看对行业是好事",
+              "answer": "长远",
+              "hint": "a 2-character word for \"long-term\""
+            },
+            {
+              "id": "nws6-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the reporting marker you hear",
+              "spokenText": "据 说 这 次",
+              "options": [
+                "据 说 这 次",
+                "听 说 这 次",
+                "这 次 据 说",
+                "据 这 次 说"
+              ],
+              "answer": "据 说 这 次"
+            },
+            {
+              "id": "nws6-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Let's observe a while and see the effect\"",
+              "answer": "我们 再 观察 一段 时间 看看 效果",
+              "bank": [
+                "我们",
+                "再",
+                "观察",
+                "一段",
+                "时间",
+                "看看",
+                "效果",
+                "立刻",
+                "马上"
+              ]
+            },
+            {
+              "id": "nws6-14",
+              "type": "multiple_choice",
+              "prompt": "推进 most accurately means:",
+              "options": [
+                "to push forward / advance",
+                "to push back",
+                "to delay",
+                "to cancel"
+              ],
+              "answer": "to push forward / advance"
+            },
+            {
+              "id": "nws6-15",
+              "type": "match_pairs",
+              "prompt": "term to meaning",
+              "pairs": [
+                {
+                  "left": "立法",
+                  "right": "legislation"
+                },
+                {
+                  "left": "合规",
+                  "right": "compliance"
+                },
+                {
+                  "left": "成本",
+                  "right": "cost"
+                },
+                {
+                  "left": "行业",
+                  "right": "industry"
+                }
+              ]
+            },
+            {
+              "id": "nws6-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "希望执行得顺利",
+              "answer": "I hope the implementation goes smoothly",
+              "acceptableAnswers": [
+                "hope it's enforced smoothly",
+                "hope execution is smooth"
+              ]
+            },
+            {
+              "id": "nws6-17",
+              "type": "fill_blank",
+              "prompt": "Wrap-up suggestion: \"我们再___一段时间\" (\"observe\")",
+              "before": "我们再",
+              "after": "一段时间",
+              "answer": "观察",
+              "hint": "a 2-character verb for \"watch and see\""
+            },
+            {
+              "id": "nws6-18",
+              "type": "multiple_choice",
+              "prompt": "Which is the most natural way to wrap up a topic with patience?",
+              "options": [
+                "我们再观察一段时间看看效果吧",
+                "我们立刻必须现在决定",
+                "观察不要因为决定立刻",
+                "效果观察立刻马上必须"
+              ],
+              "answer": "我们再观察一段时间看看效果吧"
+            },
+            {
+              "id": "nws6-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Although costs increase, in the long run it's good for the industry\"",
+              "answer": "虽然 成本 增加 但是 长远 看 对 行业 是 好事",
+              "bank": [
+                "虽然",
+                "成本",
+                "增加",
+                "但是",
+                "长远",
+                "看",
+                "对",
+                "行业",
+                "是",
+                "好事",
+                "因为"
+              ]
+            },
+            {
+              "id": "nws6-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "推 进 得 这 么 快",
+              "options": [
+                "推 进 得 这 么 快",
+                "推 进 这 么 得 快",
+                "进 推 得 这 么 快",
+                "这 么 快 推 进 得"
+              ],
+              "answer": "推 进 得 这 么 快"
             }
           ]
         }
@@ -4435,6 +4953,255 @@
                   "spokenText": "对，环保得从日常做起。"
                 }
               ]
+            },
+            {
+              "id": "env5-2",
+              "type": "multiple_choice",
+              "prompt": "垃圾分类 means:",
+              "options": [
+                "garbage sorting / recycling separation",
+                "garbage collection",
+                "garbage truck",
+                "garbage fee"
+              ],
+              "answer": "garbage sorting / recycling separation",
+              "explanation": "垃圾 (garbage) + 分类 (sort by category) — China's mandatory recycling policy term."
+            },
+            {
+              "id": "env5-3",
+              "type": "fill_blank",
+              "prompt": "Concede a hassle: \"虽然___点，但是确实该做\"",
+              "before": "虽然",
+              "after": "点，但是确实该做",
+              "answer": "麻烦",
+              "hint": "\"troublesome\" / \"a hassle\""
+            },
+            {
+              "id": "env5-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "一次性餐具",
+              "answer": "disposable utensils / single-use tableware",
+              "acceptableAnswers": [
+                "disposable tableware",
+                "single-use cutlery",
+                "throwaway utensils"
+              ]
+            },
+            {
+              "id": "env5-5",
+              "type": "multiple_choice",
+              "prompt": "Pick the correct 与其...不如 construction (\"rather than X, better to Y\"):",
+              "options": [
+                "与其用一次性筷子，不如自己带一双",
+                "与其用一次性筷子，因此自己带一双",
+                "与其用一次性筷子，所以自己带一双",
+                "与其用一次性筷子，而且自己带一双"
+              ],
+              "answer": "与其用一次性筷子，不如自己带一双",
+              "explanation": "与其 X 不如 Y is a fixed pair — Y is the preferred option."
+            },
+            {
+              "id": "env5-6",
+              "type": "fill_blank",
+              "prompt": "Complete the pair: \"与其用一次性筷子，___自己带一双\"",
+              "before": "与其用一次性筷子，",
+              "after": "自己带一双",
+              "answer": "不如",
+              "hint": "pairs with 与其"
+            },
+            {
+              "id": "env5-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Bringing your own is more eco-friendly\"",
+              "answer": "自己 带 一双 更 环保",
+              "bank": [
+                "自己",
+                "带",
+                "一双",
+                "更",
+                "环保",
+                "因此",
+                "了",
+                "不"
+              ]
+            },
+            {
+              "id": "env5-8",
+              "type": "multiple_choice",
+              "prompt": "环保 means:",
+              "options": [
+                "environmentally friendly",
+                "environmental damage",
+                "environmental cost",
+                "environmental cleanup"
+              ],
+              "answer": "environmentally friendly",
+              "explanation": "环 (environment) + 保 (protect) — eco-friendly / green."
+            },
+            {
+              "id": "env5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "或许可以在茶水间贴个提醒",
+              "answer": "maybe we could put a reminder up in the pantry",
+              "acceptableAnswers": [
+                "perhaps we could post a reminder in the tea room",
+                "we could maybe put a notice in the pantry"
+              ]
+            },
+            {
+              "id": "env5-10",
+              "type": "fill_blank",
+              "prompt": "Hedge a suggestion: \"___可以在茶水间贴个提醒\"",
+              "before": "",
+              "after": "可以在茶水间贴个提醒",
+              "answer": "或许",
+              "acceptableAnswers": [
+                "也许",
+                "大概"
+              ],
+              "hint": "a tentative \"perhaps\""
+            },
+            {
+              "id": "env5-11",
+              "type": "multiple_choice",
+              "prompt": "茶水间 refers to:",
+              "options": [
+                "office pantry / tea room",
+                "tea house",
+                "bathroom",
+                "meeting room"
+              ],
+              "answer": "office pantry / tea room",
+              "explanation": "Common term in Chinese offices for the kitchen/break area."
+            },
+            {
+              "id": "env5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the connector pair you hear",
+              "spokenText": "与 其 不 如",
+              "options": [
+                "与 其 不 如",
+                "不 如 与 其",
+                "与 不 其 如",
+                "其 与 如 不"
+              ],
+              "answer": "与 其 不 如"
+            },
+            {
+              "id": "env5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"I hope everyone slowly forms the habit\"",
+              "answer": "希望 大家 慢慢 都 能 养成 习惯",
+              "bank": [
+                "希望",
+                "大家",
+                "慢慢",
+                "都",
+                "能",
+                "养成",
+                "习惯",
+                "立刻",
+                "马上"
+              ]
+            },
+            {
+              "id": "env5-14",
+              "type": "multiple_choice",
+              "prompt": "养成习惯 most accurately means:",
+              "options": [
+                "to form/develop a habit",
+                "to break a habit",
+                "to copy a habit",
+                "to teach a habit"
+              ],
+              "answer": "to form/develop a habit",
+              "explanation": "养成 (cultivate, gradually) + 习惯 (habit) — formed over time."
+            },
+            {
+              "id": "env5-15",
+              "type": "match_pairs",
+              "prompt": "term to meaning",
+              "pairs": [
+                {
+                  "left": "环保",
+                  "right": "eco-friendly"
+                },
+                {
+                  "left": "提醒",
+                  "right": "reminder"
+                },
+                {
+                  "left": "习惯",
+                  "right": "habit"
+                },
+                {
+                  "left": "日常",
+                  "right": "daily / everyday"
+                }
+              ]
+            },
+            {
+              "id": "env5-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "环保得从日常做起",
+              "answer": "going green starts from daily life",
+              "acceptableAnswers": [
+                "eco-friendliness starts in everyday life",
+                "being green starts with everyday habits"
+              ]
+            },
+            {
+              "id": "env5-17",
+              "type": "fill_blank",
+              "prompt": "Daily basis: \"环保得从___做起\"",
+              "before": "环保得从",
+              "after": "做起",
+              "answer": "日常",
+              "hint": "\"everyday / daily life\""
+            },
+            {
+              "id": "env5-18",
+              "type": "multiple_choice",
+              "prompt": "Which most softly proposes a workplace nudge?",
+              "options": [
+                "或许可以在茶水间贴个提醒",
+                "必须立刻在茶水间贴提醒",
+                "茶水间不要因为提醒",
+                "提醒因此茶水间"
+              ],
+              "answer": "或许可以在茶水间贴个提醒"
+            },
+            {
+              "id": "env5-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Rather than use disposables, better to bring your own\"",
+              "answer": "与其 用 一次性 不如 自己 带",
+              "bank": [
+                "与其",
+                "用",
+                "一次性",
+                "不如",
+                "自己",
+                "带",
+                "因此",
+                "所以"
+              ]
+            },
+            {
+              "id": "env5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "养 成 习 惯",
+              "options": [
+                "养 成 习 惯",
+                "习 惯 养 成",
+                "成 养 惯 习",
+                "养 习 成 惯"
+              ],
+              "answer": "养 成 习 惯"
             }
           ]
         }
@@ -6133,6 +6900,260 @@
                   "spokenText": "感谢您的来电，祝您生活愉快。"
                 }
               ]
+            },
+            {
+              "id": "tch6-2",
+              "type": "multiple_choice",
+              "prompt": "死机 most accurately means:",
+              "options": [
+                "a device freezes/crashes",
+                "a phone dies (out of battery)",
+                "an app is deleted",
+                "a screen breaks"
+              ],
+              "answer": "a device freezes/crashes",
+              "explanation": "死机 literally \"dead machine\" — the device locks up / freezes."
+            },
+            {
+              "id": "tch6-3",
+              "type": "fill_blank",
+              "prompt": "Polite issue report: \"我的手机最近经常突然___\"",
+              "before": "我的手机最近经常突然",
+              "after": "",
+              "answer": "死机",
+              "hint": "device freeze / crash"
+            },
+            {
+              "id": "tch6-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "重启也没用",
+              "answer": "restarting doesn't help either",
+              "acceptableAnswers": [
+                "rebooting doesn't help",
+                "restarting doesn't work"
+              ]
+            },
+            {
+              "id": "tch6-5",
+              "type": "multiple_choice",
+              "prompt": "Pick the polite/formal complaint opener:",
+              "options": [
+                "您好，我的手机最近经常突然死机",
+                "嘿哥们手机老挂掉烦死了",
+                "手机不行老是怎么搞的",
+                "死机突然然后但是"
+              ],
+              "answer": "您好，我的手机最近经常突然死机",
+              "explanation": "您好 + complete polite sentence is the right register for customer support."
+            },
+            {
+              "id": "tch6-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"My phone often suddenly freezes lately\"",
+              "answer": "我 的 手机 最近 经常 突然 死机",
+              "bank": [
+                "我",
+                "的",
+                "手机",
+                "最近",
+                "经常",
+                "突然",
+                "死机",
+                "了",
+                "不"
+              ]
+            },
+            {
+              "id": "tch6-7",
+              "type": "fill_blank",
+              "prompt": "Hedge a date: \"___是上个月吧，具体日期记不清\"",
+              "before": "",
+              "after": "是上个月吧，具体日期记不清",
+              "answer": "大概",
+              "acceptableAnswers": [
+                "大约",
+                "差不多"
+              ],
+              "hint": "approximation adverb"
+            },
+            {
+              "id": "tch6-8",
+              "type": "multiple_choice",
+              "prompt": "记不清 means:",
+              "options": [
+                "can't remember clearly",
+                "never remembered",
+                "won't remember",
+                "remembered wrongly"
+              ],
+              "answer": "can't remember clearly",
+              "explanation": "记 (remember) + 不清 (not clearly) — partial / fuzzy memory."
+            },
+            {
+              "id": "tch6-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "请您先尝试在设置里清除缓存",
+              "answer": "please first try clearing the cache in settings",
+              "acceptableAnswers": [
+                "please try clearing the cache in settings first",
+                "could you first try to clear the cache in the settings"
+              ]
+            },
+            {
+              "id": "tch6-10",
+              "type": "multiple_choice",
+              "prompt": "缓存 in a tech context means:",
+              "options": [
+                "cache",
+                "battery",
+                "screen",
+                "signal"
+              ],
+              "answer": "cache",
+              "explanation": "缓 (buffer) + 存 (store) — temporary data storage."
+            },
+            {
+              "id": "tch6-11",
+              "type": "fill_blank",
+              "prompt": "Polite hedge — \"I'm afraid\": \"我___清完之后问题还在\"",
+              "before": "我",
+              "after": "清完之后问题还在",
+              "answer": "担心",
+              "acceptableAnswers": [
+                "怕"
+              ],
+              "hint": "\"worry that\" / \"afraid that\""
+            },
+            {
+              "id": "tch6-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "清 除 缓 存",
+              "options": [
+                "清 除 缓 存",
+                "缓 存 清 除",
+                "清 缓 除 存",
+                "除 清 存 缓"
+              ],
+              "answer": "清 除 缓 存"
+            },
+            {
+              "id": "tch6-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"May I ask roughly how much the inspection costs?\"",
+              "answer": "请问 检测 大概 需要 多少 费用",
+              "bank": [
+                "请问",
+                "检测",
+                "大概",
+                "需要",
+                "多少",
+                "费用",
+                "免费",
+                "门店"
+              ]
+            },
+            {
+              "id": "tch6-14",
+              "type": "multiple_choice",
+              "prompt": "保修期 means:",
+              "options": [
+                "warranty period",
+                "trial period",
+                "return period",
+                "billing period"
+              ],
+              "answer": "warranty period",
+              "explanation": "保修 (warranty service) + 期 (period)."
+            },
+            {
+              "id": "tch6-15",
+              "type": "match_pairs",
+              "prompt": "term to meaning",
+              "pairs": [
+                {
+                  "left": "死机",
+                  "right": "freeze / crash"
+                },
+                {
+                  "left": "缓存",
+                  "right": "cache"
+                },
+                {
+                  "left": "门店",
+                  "right": "physical store"
+                },
+                {
+                  "left": "费用",
+                  "right": "cost / fee"
+                }
+              ]
+            },
+            {
+              "id": "tch6-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "保修期内是免费的",
+              "answer": "it's free within the warranty period",
+              "acceptableAnswers": [
+                "within the warranty period it's free of charge",
+                "free during the warranty"
+              ]
+            },
+            {
+              "id": "tch6-17",
+              "type": "fill_blank",
+              "prompt": "Suggest taking it in: \"建议您带到___检测\"",
+              "before": "建议您带到",
+              "after": "检测",
+              "answer": "门店",
+              "hint": "physical retail store"
+            },
+            {
+              "id": "tch6-18",
+              "type": "multiple_choice",
+              "prompt": "Which is the most natural formal acknowledgement to a fix suggestion?",
+              "options": [
+                "好的，不过我担心清完之后问题还在",
+                "好那快点说怎么搞",
+                "清完不需要因为问题",
+                "问题清完然后但是"
+              ],
+              "answer": "好的，不过我担心清完之后问题还在"
+            },
+            {
+              "id": "tch6-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Roughly last month, the exact date I don't remember clearly\"",
+              "answer": "大概 是 上个月 具体 日期 我 记 不 清 了",
+              "bank": [
+                "大概",
+                "是",
+                "上个月",
+                "具体",
+                "日期",
+                "我",
+                "记",
+                "不",
+                "清",
+                "了",
+                "今天"
+              ]
+            },
+            {
+              "id": "tch6-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "保 修 期 内",
+              "options": [
+                "保 修 期 内",
+                "修 保 期 内",
+                "保 期 修 内",
+                "内 保 修 期"
+              ],
+              "answer": "保 修 期 内"
             }
           ]
         }
@@ -7488,6 +8509,264 @@
                   "spokenText": "好的，有进展我会随时跟您沟通。"
                 }
               ]
+            },
+            {
+              "id": "edu5-2",
+              "type": "multiple_choice",
+              "prompt": "积极 most accurately means:",
+              "options": [
+                "proactive / engaged",
+                "passive",
+                "lazy",
+                "aggressive"
+              ],
+              "answer": "proactive / engaged",
+              "explanation": "Often used for students/employees who actively participate."
+            },
+            {
+              "id": "edu5-3",
+              "type": "fill_blank",
+              "prompt": "Politely ask about weak points: \"他还有哪些方面需要___?\"",
+              "before": "他还有哪些方面需要",
+              "after": "",
+              "answer": "加强",
+              "hint": "\"strengthen / reinforce\""
+            },
+            {
+              "id": "edu5-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "作文似乎不太敢表达自己",
+              "answer": "in writing he seems hesitant to express himself",
+              "acceptableAnswers": [
+                "in compositions he doesn't quite dare to express himself",
+                "writing-wise he seems afraid to express himself"
+              ]
+            },
+            {
+              "id": "edu5-5",
+              "type": "multiple_choice",
+              "prompt": "似乎 conveys:",
+              "options": [
+                "it seems / apparently",
+                "definitely",
+                "actually not",
+                "very much"
+              ],
+              "answer": "it seems / apparently",
+              "explanation": "似乎 is a hedge — softens an observation."
+            },
+            {
+              "id": "edu5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Although he doesn't talk much at home, he has many ideas\"",
+              "answer": "虽然 他 在家 话 不 多 其实 想法 挺 多 的",
+              "bank": [
+                "虽然",
+                "他",
+                "在家",
+                "话",
+                "不",
+                "多",
+                "其实",
+                "想法",
+                "挺",
+                "多",
+                "的",
+                "但是"
+              ]
+            },
+            {
+              "id": "edu5-7",
+              "type": "fill_blank",
+              "prompt": "Concession: \"___他在家话不多，其实想法挺多的\"",
+              "before": "",
+              "after": "他在家话不多，其实想法挺多的",
+              "answer": "虽然",
+              "acceptableAnswers": [
+                "尽管"
+              ],
+              "hint": "\"although\""
+            },
+            {
+              "id": "edu5-8",
+              "type": "multiple_choice",
+              "prompt": "其实 most accurately means:",
+              "options": [
+                "actually / in fact",
+                "consequently",
+                "however",
+                "therefore"
+              ],
+              "answer": "actually / in fact",
+              "explanation": "Used to reveal a contrasting reality."
+            },
+            {
+              "id": "edu5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我们也许可以让他每周写一篇小日记",
+              "answer": "perhaps we could have him write a short journal entry each week",
+              "acceptableAnswers": [
+                "maybe we can have him write a little weekly diary",
+                "perhaps we could let him write a short diary every week"
+              ]
+            },
+            {
+              "id": "edu5-10",
+              "type": "fill_blank",
+              "prompt": "Hedge suggestion: \"我们___可以让他每周写一篇小日记\"",
+              "before": "我们",
+              "after": "可以让他每周写一篇小日记",
+              "answer": "也许",
+              "acceptableAnswers": [
+                "或许",
+                "大概"
+              ],
+              "hint": "tentative \"maybe\""
+            },
+            {
+              "id": "edu5-11",
+              "type": "multiple_choice",
+              "prompt": "Which suggestion uses appropriate parent-teacher register?",
+              "options": [
+                "我们也许可以让他每周写一篇小日记",
+                "强迫他每天写十篇必须完成",
+                "随便让他写不写都行",
+                "他不需要因为写日记"
+              ],
+              "answer": "我们也许可以让他每周写一篇小日记"
+            },
+            {
+              "id": "edu5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the hedge you hear",
+              "spokenText": "我 们 也 许 可 以",
+              "options": [
+                "我 们 也 许 可 以",
+                "我 们 一 定 可 以",
+                "也 许 我 们 可 以",
+                "可 以 我 们 也 许"
+              ],
+              "answer": "我 们 也 许 可 以"
+            },
+            {
+              "id": "edu5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"In class I'll call on him more to speak\"",
+              "answer": "我 会 在 课 上 多 请 他 发言",
+              "bank": [
+                "我",
+                "会",
+                "在",
+                "课",
+                "上",
+                "多",
+                "请",
+                "他",
+                "发言",
+                "了",
+                "不"
+              ]
+            },
+            {
+              "id": "edu5-14",
+              "type": "multiple_choice",
+              "prompt": "发言 in this context means:",
+              "options": [
+                "to speak up (in class/meeting)",
+                "to write a paper",
+                "to read aloud",
+                "to ask permission"
+              ],
+              "answer": "to speak up (in class/meeting)",
+              "explanation": "发 (issue) + 言 (speech) — speak up formally in a forum."
+            },
+            {
+              "id": "edu5-15",
+              "type": "match_pairs",
+              "prompt": "term to meaning",
+              "pairs": [
+                {
+                  "left": "积极",
+                  "right": "proactive"
+                },
+                {
+                  "left": "加强",
+                  "right": "strengthen"
+                },
+                {
+                  "left": "似乎",
+                  "right": "seemingly"
+                },
+                {
+                  "left": "配合",
+                  "right": "cooperate"
+                }
+              ]
+            },
+            {
+              "id": "edu5-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "非常感谢您的耐心",
+              "answer": "thank you very much for your patience",
+              "acceptableAnswers": [
+                "many thanks for your patience",
+                "thanks so much for being patient"
+              ]
+            },
+            {
+              "id": "edu5-17",
+              "type": "fill_blank",
+              "prompt": "Formal close: \"我们家长也会___\"",
+              "before": "我们家长也会",
+              "after": "",
+              "answer": "配合",
+              "hint": "\"cooperate / work together\""
+            },
+            {
+              "id": "edu5-18",
+              "type": "multiple_choice",
+              "prompt": "配合 most accurately means:",
+              "options": [
+                "to cooperate / coordinate",
+                "to compete",
+                "to abandon",
+                "to ignore"
+              ],
+              "answer": "to cooperate / coordinate"
+            },
+            {
+              "id": "edu5-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"As soon as there's progress I'll communicate with you anytime\"",
+              "answer": "有 进展 我 会 随时 跟 您 沟通",
+              "bank": [
+                "有",
+                "进展",
+                "我",
+                "会",
+                "随时",
+                "跟",
+                "您",
+                "沟通",
+                "立刻",
+                "不"
+              ]
+            },
+            {
+              "id": "edu5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "鼓 励",
+              "options": [
+                "鼓 励",
+                "励 鼓",
+                "鼓 立",
+                "故 励"
+              ],
+              "answer": "鼓 励"
             }
           ]
         }
@@ -9124,6 +10403,263 @@
                   "spokenText": "谢谢你听我说这些，心里好受多了。"
                 }
               ]
+            },
+            {
+              "id": "rel6-2",
+              "type": "multiple_choice",
+              "prompt": "老是 most accurately means:",
+              "options": [
+                "always / constantly (often complaining tone)",
+                "occasionally",
+                "never",
+                "rarely"
+              ],
+              "answer": "always / constantly (often complaining tone)",
+              "explanation": "老是 carries a slightly negative tinge — \"always doing X\" (annoyingly)."
+            },
+            {
+              "id": "rel6-3",
+              "type": "fill_blank",
+              "prompt": "Express empathy: \"我能___你现在的感受\"",
+              "before": "我能",
+              "after": "你现在的感受",
+              "answer": "理解",
+              "hint": "\"understand\" / \"comprehend\" (empathic)"
+            },
+            {
+              "id": "rel6-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "这种状态真的很累",
+              "answer": "being in this state is really exhausting",
+              "acceptableAnswers": [
+                "this kind of state is really tiring",
+                "this situation is really draining"
+              ]
+            },
+            {
+              "id": "rel6-5",
+              "type": "multiple_choice",
+              "prompt": "Which is empathetic listening (not judgmental)?",
+              "options": [
+                "我能理解你现在的感受",
+                "你怎么这么差劲",
+                "你活该自己解决",
+                "你不要再说了"
+              ],
+              "answer": "我能理解你现在的感受",
+              "explanation": "理解感受 = empathic acknowledgement — the gold standard."
+            },
+            {
+              "id": "rel6-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Rather than keep arguing, better to calm down first then talk\"",
+              "answer": "与其 继续 吵 不如 先 冷静 一下 再 谈",
+              "bank": [
+                "与其",
+                "继续",
+                "吵",
+                "不如",
+                "先",
+                "冷静",
+                "一下",
+                "再",
+                "谈",
+                "因此"
+              ]
+            },
+            {
+              "id": "rel6-7",
+              "type": "fill_blank",
+              "prompt": "Suggestion frame: \"___继续吵，不如先冷静一下\"",
+              "before": "",
+              "after": "继续吵，不如先冷静一下",
+              "answer": "与其",
+              "hint": "pairs with 不如"
+            },
+            {
+              "id": "rel6-8",
+              "type": "multiple_choice",
+              "prompt": "冷静 in this context means:",
+              "options": [
+                "calm down",
+                "freeze",
+                "stay quiet",
+                "be cold-hearted"
+              ],
+              "answer": "calm down",
+              "explanation": "冷 (cold) + 静 (still/quiet) — emotional calm."
+            },
+            {
+              "id": "rel6-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我一开口就忍不住",
+              "answer": "as soon as I open my mouth I can't help myself",
+              "acceptableAnswers": [
+                "the moment I start talking I can't hold back",
+                "once I start speaking I lose control"
+              ]
+            },
+            {
+              "id": "rel6-10",
+              "type": "fill_blank",
+              "prompt": "Concrete tactic with hedge: \"你可以试试先写下来想说的，___会有帮助\"",
+              "before": "你可以试试先写下来想说的，",
+              "after": "会有帮助",
+              "answer": "也许",
+              "acceptableAnswers": [
+                "或许",
+                "大概"
+              ],
+              "hint": "tentative \"maybe\""
+            },
+            {
+              "id": "rel6-11",
+              "type": "multiple_choice",
+              "prompt": "忍不住 most accurately means:",
+              "options": [
+                "can't help (oneself) / can't resist",
+                "remember well",
+                "refuse to do",
+                "succeed"
+              ],
+              "answer": "can't help (oneself) / can't resist",
+              "explanation": "忍 (endure) + 不住 (can't keep) — the self-control breaks."
+            },
+            {
+              "id": "rel6-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the suggestion pair you hear",
+              "spokenText": "与 其 不 如",
+              "options": [
+                "与 其 不 如",
+                "不 如 与 其",
+                "因 此 与 其",
+                "与 其 因 此"
+              ],
+              "answer": "与 其 不 如"
+            },
+            {
+              "id": "rel6-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Your relationship foundation is good, slowly adjust and it'll be fine\"",
+              "answer": "你们 感情 基础 好 慢慢 调整 就 行",
+              "bank": [
+                "你们",
+                "感情",
+                "基础",
+                "好",
+                "慢慢",
+                "调整",
+                "就",
+                "行",
+                "完蛋",
+                "了"
+              ]
+            },
+            {
+              "id": "rel6-14",
+              "type": "multiple_choice",
+              "prompt": "感情基础 most accurately means:",
+              "options": [
+                "emotional foundation (of a relationship)",
+                "emotional outburst",
+                "emotional support",
+                "emotional contract"
+              ],
+              "answer": "emotional foundation (of a relationship)",
+              "explanation": "感情 (feelings) + 基础 (foundation) — the bedrock of a relationship."
+            },
+            {
+              "id": "rel6-15",
+              "type": "match_pairs",
+              "prompt": "term to meaning",
+              "pairs": [
+                {
+                  "left": "理解",
+                  "right": "understand / empathize"
+                },
+                {
+                  "left": "冷静",
+                  "right": "calm down"
+                },
+                {
+                  "left": "忍不住",
+                  "right": "can't help"
+                },
+                {
+                  "left": "调整",
+                  "right": "adjust"
+                }
+              ]
+            },
+            {
+              "id": "rel6-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "心里好受多了",
+              "answer": "I feel much better inside",
+              "acceptableAnswers": [
+                "my heart feels much better",
+                "I feel a lot better"
+              ]
+            },
+            {
+              "id": "rel6-17",
+              "type": "fill_blank",
+              "prompt": "Encourage gently: \"慢慢___就行\" (\"adjust\")",
+              "before": "慢慢",
+              "after": "就行",
+              "answer": "调整",
+              "hint": "\"adjust / tweak\""
+            },
+            {
+              "id": "rel6-18",
+              "type": "multiple_choice",
+              "prompt": "Which is a soft, non-minimizing encouragement?",
+              "options": [
+                "你们感情基础好，慢慢调整就行",
+                "你们绝对完蛋了肯定分手",
+                "调整不需要因为基础感情",
+                "完蛋因此分手所以基础"
+              ],
+              "answer": "你们感情基础好，慢慢调整就行"
+            },
+            {
+              "id": "rel6-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"You can try writing down what you want to say first, maybe it'll help\"",
+              "answer": "你 可以 试试 先 写 下来 想 说 的 也许 会 有 帮助",
+              "bank": [
+                "你",
+                "可以",
+                "试试",
+                "先",
+                "写",
+                "下来",
+                "想",
+                "说",
+                "的",
+                "也许",
+                "会",
+                "有",
+                "帮助",
+                "立刻"
+              ]
+            },
+            {
+              "id": "rel6-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "心 里 好 受",
+              "options": [
+                "心 里 好 受",
+                "好 受 心 里",
+                "心 好 受 里",
+                "里 心 好 受"
+              ],
+              "answer": "心 里 好 受"
             }
           ]
         }
@@ -10569,6 +12105,263 @@
                   "spokenText": "你一定可以的，有需要随时找我聊。"
                 }
               ]
+            },
+            {
+              "id": "emo5-2",
+              "type": "multiple_choice",
+              "prompt": "心情复杂 most accurately means:",
+              "options": [
+                "mixed/conflicted feelings",
+                "happy mood",
+                "angry mood",
+                "calm mood"
+              ],
+              "answer": "mixed/conflicted feelings",
+              "explanation": "复杂 (complex) + 心情 (mood) — the classic \"mixed feelings\"."
+            },
+            {
+              "id": "emo5-3",
+              "type": "fill_blank",
+              "prompt": "Frame mixed feelings: \"___挺开心的，另一方面又怕做不好\"",
+              "before": "",
+              "after": "挺开心的，另一方面又怕做不好",
+              "answer": "一方面",
+              "hint": "pairs with 另一方面"
+            },
+            {
+              "id": "emo5-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "另一方面又怕做不好",
+              "answer": "on the other hand I'm afraid of doing it badly",
+              "acceptableAnswers": [
+                "on the other hand I'm worried I can't do it well",
+                "on the other I fear I'll mess it up"
+              ]
+            },
+            {
+              "id": "emo5-5",
+              "type": "multiple_choice",
+              "prompt": "Which expresses balanced mixed feelings?",
+              "options": [
+                "一方面挺开心的，另一方面又怕做不好",
+                "开心因此怕另一方面",
+                "心情不需要因为开心",
+                "做不好所以开心因此"
+              ],
+              "answer": "一方面挺开心的，另一方面又怕做不好"
+            },
+            {
+              "id": "emo5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"On one hand quite happy, on the other afraid of doing it badly\"",
+              "answer": "一方面 挺 开心 的 另一方面 又 怕 做 不 好",
+              "bank": [
+                "一方面",
+                "挺",
+                "开心",
+                "的",
+                "另一方面",
+                "又",
+                "怕",
+                "做",
+                "不",
+                "好",
+                "因此"
+              ]
+            },
+            {
+              "id": "emo5-7",
+              "type": "fill_blank",
+              "prompt": "Hedge: \"我___对团队的责任一下子重了很多\"",
+              "before": "我",
+              "after": "对团队的责任一下子重了很多",
+              "answer": "觉得似乎",
+              "acceptableAnswers": [
+                "似乎觉得",
+                "觉得好像",
+                "好像觉得"
+              ],
+              "hint": "\"feel like / seems\""
+            },
+            {
+              "id": "emo5-8",
+              "type": "multiple_choice",
+              "prompt": "岗位 most accurately means:",
+              "options": [
+                "job position / post",
+                "office building",
+                "team meeting",
+                "salary"
+              ],
+              "answer": "job position / post",
+              "explanation": "Used in formal Chinese to refer to a work role/post."
+            },
+            {
+              "id": "emo5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "与其说是紧张，不如说是一种被信任的压力",
+              "answer": "rather than calling it nervousness, it's more like the pressure of being trusted",
+              "acceptableAnswers": [
+                "it's not so much nervousness as the pressure of being trusted",
+                "it's less nervousness and more a pressure of being trusted"
+              ]
+            },
+            {
+              "id": "emo5-10",
+              "type": "multiple_choice",
+              "prompt": "与其说...不如说 is used to:",
+              "options": [
+                "reframe a description ('rather than say X, say Y')",
+                "give a cause",
+                "make a list",
+                "express time"
+              ],
+              "answer": "reframe a description ('rather than say X, say Y')",
+              "explanation": "It's a precision-naming pattern — refining a description."
+            },
+            {
+              "id": "emo5-11",
+              "type": "fill_blank",
+              "prompt": "Reframe: \"与其说是紧张，___说是一种被信任的压力\"",
+              "before": "与其说是紧张，",
+              "after": "说是一种被信任的压力",
+              "answer": "不如",
+              "hint": "pairs with 与其说"
+            },
+            {
+              "id": "emo5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the reframer you hear",
+              "spokenText": "与 其 说 不 如 说",
+              "options": [
+                "与 其 说 不 如 说",
+                "不 如 说 与 其 说",
+                "与 不 其 如 说 说",
+                "说 与 其 不 如 说"
+              ],
+              "answer": "与 其 说 不 如 说"
+            },
+            {
+              "id": "emo5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"I hope after some time I can slowly adapt to this rhythm\"",
+              "answer": "希望 过 一段 时间 我 能 慢慢 适应 这个 节奏",
+              "bank": [
+                "希望",
+                "过",
+                "一段",
+                "时间",
+                "我",
+                "能",
+                "慢慢",
+                "适应",
+                "这个",
+                "节奏",
+                "立刻"
+              ]
+            },
+            {
+              "id": "emo5-14",
+              "type": "multiple_choice",
+              "prompt": "被信任 means:",
+              "options": [
+                "being trusted",
+                "trusting someone",
+                "not trusting",
+                "untrusted"
+              ],
+              "answer": "being trusted",
+              "explanation": "被 marks the passive; 信任 = trust. Together: \"to be trusted\"."
+            },
+            {
+              "id": "emo5-15",
+              "type": "match_pairs",
+              "prompt": "term to meaning",
+              "pairs": [
+                {
+                  "left": "升职",
+                  "right": "promotion"
+                },
+                {
+                  "left": "岗位",
+                  "right": "job position"
+                },
+                {
+                  "left": "适应",
+                  "right": "adapt to"
+                },
+                {
+                  "left": "复杂",
+                  "right": "complicated / mixed"
+                }
+              ]
+            },
+            {
+              "id": "emo5-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "新岗位压力大",
+              "answer": "the pressure at the new position is high",
+              "acceptableAnswers": [
+                "new position comes with a lot of pressure",
+                "the new role has high pressure"
+              ]
+            },
+            {
+              "id": "emo5-17",
+              "type": "fill_blank",
+              "prompt": "Cautious optimism: \"我能慢慢___这个节奏\"",
+              "before": "我能慢慢",
+              "after": "这个节奏",
+              "answer": "适应",
+              "hint": "\"get used to / adapt\""
+            },
+            {
+              "id": "emo5-18",
+              "type": "multiple_choice",
+              "prompt": "Which is cautious optimism, not over-promising?",
+              "options": [
+                "希望过一段时间我能慢慢适应这个节奏",
+                "我立刻马上肯定完全没问题",
+                "适应不需要因为节奏",
+                "节奏因此适应慢慢"
+              ],
+              "answer": "希望过一段时间我能慢慢适应这个节奏"
+            },
+            {
+              "id": "emo5-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Rather than nervousness, say it's pressure from being trusted\"",
+              "answer": "与其 说 是 紧张 不如 说 是 被 信任 的 压力",
+              "bank": [
+                "与其",
+                "说",
+                "是",
+                "紧张",
+                "不如",
+                "说",
+                "是",
+                "被",
+                "信任",
+                "的",
+                "压力",
+                "因为"
+              ]
+            },
+            {
+              "id": "emo5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "慢 慢 适 应",
+              "options": [
+                "慢 慢 适 应",
+                "适 应 慢 慢",
+                "慢 适 应 慢",
+                "应 适 慢 慢"
+              ],
+              "answer": "慢 慢 适 应"
             }
           ]
         }
@@ -11906,6 +13699,269 @@
                   "spokenText": "感谢您的补充，这正是我们要继续讨论的。"
                 }
               ]
+            },
+            {
+              "id": "deb5-2",
+              "type": "multiple_choice",
+              "prompt": "Which opens a polite disagreement on a panel?",
+              "options": [
+                "您的观点很有意思，不过我有一点不同看法",
+                "您说得完全错了根本不对",
+                "您观点完蛋了别说了",
+                "您看法不行因为完全"
+              ],
+              "answer": "您的观点很有意思，不过我有一点不同看法",
+              "explanation": "Acknowledge first (\"有意思\") then introduce difference (\"不过\")."
+            },
+            {
+              "id": "deb5-3",
+              "type": "fill_blank",
+              "prompt": "Polite opener: \"您的观点很有意思，___我有一点不同看法\"",
+              "before": "您的观点很有意思，",
+              "after": "我有一点不同看法",
+              "answer": "不过",
+              "acceptableAnswers": [
+                "但是"
+              ],
+              "hint": "soft contrastive connector"
+            },
+            {
+              "id": "deb5-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "面对面交流难以完全替代",
+              "answer": "face-to-face communication is hard to fully replace",
+              "acceptableAnswers": [
+                "in-person communication is difficult to completely replace",
+                "face-to-face interaction can hardly be fully replaced"
+              ]
+            },
+            {
+              "id": "deb5-5",
+              "type": "multiple_choice",
+              "prompt": "面对面 most accurately means:",
+              "options": [
+                "face-to-face",
+                "back-to-back",
+                "side-by-side",
+                "far away"
+              ],
+              "answer": "face-to-face",
+              "explanation": "Reduplication 面 + 面 = face confronting face."
+            },
+            {
+              "id": "deb5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Remote work does have advantages, but face-to-face is hard to fully replace\"",
+              "answer": "远程 办公 确实 有 优势 但是 面对面 交流 难以 完全 替代",
+              "bank": [
+                "远程",
+                "办公",
+                "确实",
+                "有",
+                "优势",
+                "但是",
+                "面对面",
+                "交流",
+                "难以",
+                "完全",
+                "替代",
+                "因此"
+              ]
+            },
+            {
+              "id": "deb5-7",
+              "type": "fill_blank",
+              "prompt": "Concede + push back: \"远程办公___有优势，但是面对面交流难以完全替代\"",
+              "before": "远程办公",
+              "after": "有优势，但是面对面交流难以完全替代",
+              "answer": "确实",
+              "hint": "\"indeed / certainly\" (concession)"
+            },
+            {
+              "id": "deb5-8",
+              "type": "multiple_choice",
+              "prompt": "难以 means:",
+              "options": [
+                "hard to / difficult to",
+                "easy to",
+                "not yet",
+                "no longer"
+              ],
+              "answer": "hard to / difficult to",
+              "explanation": "难 (hard) + 以 (to) — formal/written \"hard to X\"."
+            },
+            {
+              "id": "deb5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "也许混合办公会是比较合理的方向",
+              "answer": "perhaps hybrid work would be a more reasonable direction",
+              "acceptableAnswers": [
+                "hybrid work might be a more sensible direction",
+                "maybe a mixed office model is a more reasonable direction"
+              ]
+            },
+            {
+              "id": "deb5-10",
+              "type": "fill_blank",
+              "prompt": "Hedge a proposal: \"___混合办公会是比较合理的方向\"",
+              "before": "",
+              "after": "混合办公会是比较合理的方向",
+              "answer": "也许",
+              "acceptableAnswers": [
+                "大概",
+                "或许"
+              ],
+              "hint": "tentative \"perhaps\""
+            },
+            {
+              "id": "deb5-11",
+              "type": "multiple_choice",
+              "prompt": "弱化 most accurately means:",
+              "options": [
+                "weaken / be diluted",
+                "strengthen",
+                "speed up",
+                "delete"
+              ],
+              "answer": "weaken / be diluted",
+              "explanation": "弱 (weak) + 化 (-ify) — to weaken / dilute. Often passive: 被弱化."
+            },
+            {
+              "id": "deb5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "难 以 完 全 替 代",
+              "options": [
+                "难 以 完 全 替 代",
+                "完 全 难 以 替 代",
+                "替 代 难 以 完 全",
+                "难 完 以 替 全 代"
+              ],
+              "answer": "难 以 完 全 替 代"
+            },
+            {
+              "id": "deb5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"I'm not opposed to remote, I just worry team culture gets weakened\"",
+              "answer": "我 并 不是 反对 远程 只是 担心 团队 文化 被 弱化",
+              "bank": [
+                "我",
+                "并",
+                "不是",
+                "反对",
+                "远程",
+                "只是",
+                "担心",
+                "团队",
+                "文化",
+                "被",
+                "弱化",
+                "因为"
+              ]
+            },
+            {
+              "id": "deb5-14",
+              "type": "multiple_choice",
+              "prompt": "并不是...只是... is a structure for:",
+              "options": [
+                "clarifying you're not against X, you just worry about Y",
+                "blaming someone for X and Y",
+                "explaining a cause",
+                "telling time"
+              ],
+              "answer": "clarifying you're not against X, you just worry about Y",
+              "explanation": "It softens disagreement — denies blanket opposition, raises a specific concern."
+            },
+            {
+              "id": "deb5-15",
+              "type": "match_pairs",
+              "prompt": "term to meaning",
+              "pairs": [
+                {
+                  "left": "远程办公",
+                  "right": "remote work"
+                },
+                {
+                  "left": "面对面",
+                  "right": "face-to-face"
+                },
+                {
+                  "left": "替代",
+                  "right": "replace / substitute"
+                },
+                {
+                  "left": "弱化",
+                  "right": "weaken"
+                }
+              ]
+            },
+            {
+              "id": "deb5-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "混合模式确实越来越主流了",
+              "answer": "the hybrid model is indeed becoming more and more mainstream",
+              "acceptableAnswers": [
+                "mixed-mode is really becoming more mainstream",
+                "hybrid mode is becoming the dominant approach"
+              ]
+            },
+            {
+              "id": "deb5-17",
+              "type": "fill_blank",
+              "prompt": "Concern phrasing: \"只是担心团队文化被___\"",
+              "before": "只是担心团队文化被",
+              "after": "",
+              "answer": "弱化",
+              "hint": "\"weakened / diluted\" (passive)"
+            },
+            {
+              "id": "deb5-18",
+              "type": "multiple_choice",
+              "prompt": "Which is a wrap-up with reservation (not full opposition)?",
+              "options": [
+                "我并不是反对远程，只是担心团队文化被弱化",
+                "反对远程因此文化弱化",
+                "文化弱化所以反对远程",
+                "远程不要因为文化"
+              ],
+              "answer": "我并不是反对远程，只是担心团队文化被弱化"
+            },
+            {
+              "id": "deb5-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Your view is interesting, but I have a slightly different opinion\"",
+              "answer": "您 的 观点 很 有 意思 不过 我 有 一点 不同 看法",
+              "bank": [
+                "您",
+                "的",
+                "观点",
+                "很",
+                "有",
+                "意思",
+                "不过",
+                "我",
+                "有",
+                "一点",
+                "不同",
+                "看法",
+                "因此"
+              ]
+            },
+            {
+              "id": "deb5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "混 合 办 公",
+              "options": [
+                "混 合 办 公",
+                "办 公 混 合",
+                "合 混 办 公",
+                "混 办 合 公"
+              ],
+              "answer": "混 合 办 公"
             }
           ]
         }
@@ -13394,6 +15450,256 @@
                   "spokenText": "那就这样定了，感谢您的配合。"
                 }
               ]
+            },
+            {
+              "id": "fml5-2",
+              "type": "multiple_choice",
+              "prompt": "贵公司 is a formal way to say:",
+              "options": [
+                "your (esteemed) company",
+                "expensive company",
+                "very company",
+                "my company"
+              ],
+              "answer": "your (esteemed) company",
+              "explanation": "贵 (esteemed/honorable) — polite reference to someone else's organization."
+            },
+            {
+              "id": "fml5-3",
+              "type": "fill_blank",
+              "prompt": "Formal acknowledgment: \"非常感谢___公司的邀请\"",
+              "before": "非常感谢",
+              "after": "公司的邀请",
+              "answer": "贵",
+              "hint": "honorific prefix \"your esteemed...\""
+            },
+            {
+              "id": "fml5-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "邀请您下周三出席年度晚宴",
+              "answer": "we invite you to attend the annual dinner next Wednesday",
+              "acceptableAnswers": [
+                "we'd like to invite you to attend the year-end banquet next Wednesday",
+                "inviting you to the annual dinner this coming Wednesday"
+              ]
+            },
+            {
+              "id": "fml5-5",
+              "type": "multiple_choice",
+              "prompt": "Which is the most formal acknowledgment of an invitation?",
+              "options": [
+                "您好张女士，非常感谢贵公司的邀请",
+                "嗨小张啊行行行知道了",
+                "邀请不需要因为感谢公司",
+                "公司邀请所以感谢"
+              ],
+              "answer": "您好张女士，非常感谢贵公司的邀请"
+            },
+            {
+              "id": "fml5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"I'm very sorry, that day I already have an important arrangement\"",
+              "answer": "非常 抱歉 那 天 我 已 有 重要 安排",
+              "bank": [
+                "非常",
+                "抱歉",
+                "那",
+                "天",
+                "我",
+                "已",
+                "有",
+                "重要",
+                "安排",
+                "了",
+                "不"
+              ]
+            },
+            {
+              "id": "fml5-7",
+              "type": "fill_blank",
+              "prompt": "Polite decline hedge: \"___无法出席\" (\"I'm afraid I can't attend\")",
+              "before": "",
+              "after": "无法出席",
+              "answer": "恐怕",
+              "hint": "\"I'm afraid / I fear\""
+            },
+            {
+              "id": "fml5-8",
+              "type": "multiple_choice",
+              "prompt": "恐怕 in this register means:",
+              "options": [
+                "I'm afraid (regretful hedge)",
+                "literally fearful",
+                "definitely",
+                "happily"
+              ],
+              "answer": "I'm afraid (regretful hedge)",
+              "explanation": "Common in formal Chinese to soften bad news."
+            },
+            {
+              "id": "fml5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "实在抱歉无法调整时间",
+              "answer": "I'm truly sorry that I can't adjust the time",
+              "acceptableAnswers": [
+                "I really apologize for not being able to change the time",
+                "truly sorry, I'm unable to shift the time"
+              ]
+            },
+            {
+              "id": "fml5-10",
+              "type": "fill_blank",
+              "prompt": "Apologize formally: \"实在___无法调整时间\"",
+              "before": "实在",
+              "after": "无法调整时间",
+              "answer": "抱歉",
+              "acceptableAnswers": [
+                "不好意思"
+              ],
+              "hint": "formal \"sorry\""
+            },
+            {
+              "id": "fml5-11",
+              "type": "multiple_choice",
+              "prompt": "无法 most accurately means:",
+              "options": [
+                "unable to / cannot",
+                "must",
+                "may",
+                "will"
+              ],
+              "answer": "unable to / cannot",
+              "explanation": "无 (no) + 法 (way) — \"no way to do\" → can't."
+            },
+            {
+              "id": "fml5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the hedge you hear",
+              "spokenText": "恐 怕 无 法 出 席",
+              "options": [
+                "恐 怕 无 法 出 席",
+                "无 法 恐 怕 出 席",
+                "出 席 恐 怕 无 法",
+                "恐 无 怕 法 出 席"
+              ],
+              "answer": "恐 怕 无 法 出 席"
+            },
+            {
+              "id": "fml5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"I can arrange for a colleague to attend on my behalf\"",
+              "answer": "我 可以 安排 同事 代为 出席",
+              "bank": [
+                "我",
+                "可以",
+                "安排",
+                "同事",
+                "代为",
+                "出席",
+                "亲自",
+                "因此"
+              ]
+            },
+            {
+              "id": "fml5-14",
+              "type": "multiple_choice",
+              "prompt": "代为 in 代为出席 means:",
+              "options": [
+                "on (someone's) behalf",
+                "instead of going",
+                "at the same time",
+                "before going"
+              ],
+              "answer": "on (someone's) behalf",
+              "explanation": "代 (replace / represent) + 为 — formal \"to act on behalf of\"."
+            },
+            {
+              "id": "fml5-15",
+              "type": "match_pairs",
+              "prompt": "formal term to meaning",
+              "pairs": [
+                {
+                  "left": "出席",
+                  "right": "attend (formal)"
+                },
+                {
+                  "left": "贵公司",
+                  "right": "your esteemed company"
+                },
+                {
+                  "left": "恐怕",
+                  "right": "I'm afraid"
+                },
+                {
+                  "left": "致谢",
+                  "right": "express thanks"
+                }
+              ]
+            },
+            {
+              "id": "fml5-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "并在之后亲自致谢",
+              "answer": "and personally express thanks afterwards",
+              "acceptableAnswers": [
+                "and afterward thank them in person",
+                "and offer personal thanks later"
+              ]
+            },
+            {
+              "id": "fml5-17",
+              "type": "fill_blank",
+              "prompt": "Polite request: \"请您___\" (\"please grant your understanding\")",
+              "before": "请您",
+              "after": "",
+              "answer": "谅解",
+              "hint": "formal \"understanding / forgiveness\""
+            },
+            {
+              "id": "fml5-18",
+              "type": "multiple_choice",
+              "prompt": "Which is a polite offer when declining?",
+              "options": [
+                "我可以安排同事代为出席",
+                "随便派个人去吧反正我没空",
+                "出席不需要因为同事",
+                "同事代为反正不需要"
+              ],
+              "answer": "我可以安排同事代为出席"
+            },
+            {
+              "id": "fml5-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"I'm truly sorry, I'm unable to adjust the time, please understand\"",
+              "answer": "实在 抱歉 无法 调整 时间 请 您 谅解",
+              "bank": [
+                "实在",
+                "抱歉",
+                "无法",
+                "调整",
+                "时间",
+                "请",
+                "您",
+                "谅解",
+                "因此",
+                "了"
+              ]
+            },
+            {
+              "id": "fml5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the phrase you hear",
+              "spokenText": "亲 自 致 谢",
+              "options": [
+                "亲 自 致 谢",
+                "致 谢 亲 自",
+                "亲 致 自 谢",
+                "谢 致 亲 自"
+              ],
+              "answer": "亲 自 致 谢"
             }
           ]
         }
@@ -14438,6 +16744,252 @@
                   "spokenText": "我去跟他聊聊。"
                 }
               ]
+            },
+            {
+              "id": "cyd-2",
+              "type": "multiple_choice",
+              "prompt": "半途而废 (bàn tú ér fèi) means:",
+              "options": [
+                "give up halfway",
+                "finish strong",
+                "start late",
+                "skip a step"
+              ],
+              "answer": "give up halfway",
+              "explanation": "半 (half) + 途 (way) + 而 + 废 (abandon) — abandon midway."
+            },
+            {
+              "id": "cyd-3",
+              "type": "fill_blank",
+              "prompt": "Don't quit midway: \"别___\"",
+              "before": "别",
+              "after": "",
+              "answer": "半途而废",
+              "hint": "4-character chengyu meaning \"abandon halfway\""
+            },
+            {
+              "id": "cyd-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "入乡随俗",
+              "answer": "when in Rome, do as the Romans do",
+              "acceptableAnswers": [
+                "follow local customs",
+                "when entering a village, follow its customs",
+                "do as the locals do"
+              ]
+            },
+            {
+              "id": "cyd-5",
+              "type": "multiple_choice",
+              "prompt": "入乡随俗 fits which advice?",
+              "options": [
+                "adapt to local culture",
+                "leave the country",
+                "stick to your own ways",
+                "give up trying"
+              ],
+              "answer": "adapt to local culture"
+            },
+            {
+              "id": "cyd-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"He has to adapt to local customs and slowly adjust\"",
+              "answer": "他 得 入乡随俗 慢慢 适应",
+              "bank": [
+                "他",
+                "得",
+                "入乡随俗",
+                "慢慢",
+                "适应",
+                "半途而废",
+                "因此"
+              ]
+            },
+            {
+              "id": "cyd-7",
+              "type": "fill_blank",
+              "prompt": "Slowly: \"他得入乡随俗，___适应\"",
+              "before": "他得入乡随俗，",
+              "after": "适应",
+              "answer": "慢慢",
+              "hint": "\"slowly / gradually\""
+            },
+            {
+              "id": "cyd-8",
+              "type": "multiple_choice",
+              "prompt": "一帆风顺 means:",
+              "options": [
+                "smooth sailing all the way",
+                "stormy seas",
+                "lost at sea",
+                "back to harbor"
+              ],
+              "answer": "smooth sailing all the way",
+              "explanation": "一 (one) + 帆 (sail) + 风顺 (favorable wind) — everything goes smoothly."
+            },
+            {
+              "id": "cyd-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "守株待兔",
+              "answer": "wait for a windfall (literally: guard the tree-stump waiting for a rabbit)",
+              "acceptableAnswers": [
+                "wait passively for opportunity",
+                "wait by the stump for a rabbit",
+                "expect fortune without effort"
+              ]
+            },
+            {
+              "id": "cyd-10",
+              "type": "multiple_choice",
+              "prompt": "守株待兔 criticizes which behavior?",
+              "options": [
+                "passively waiting for luck instead of working",
+                "actively hunting",
+                "planning carefully",
+                "consulting experts"
+              ],
+              "answer": "passively waiting for luck instead of working",
+              "explanation": "A farmer once saw a rabbit run into a stump and die — then quit farming to wait for more. The chengyu mocks passive luck-chasing."
+            },
+            {
+              "id": "cyd-11",
+              "type": "fill_blank",
+              "prompt": "Adapt phrase: \"他得___，慢慢适应\"",
+              "before": "他得",
+              "after": "，慢慢适应",
+              "answer": "入乡随俗",
+              "hint": "chengyu for \"go local\""
+            },
+            {
+              "id": "cyd-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the chengyu you hear",
+              "spokenText": "半 途 而 废",
+              "options": [
+                "半 途 而 废",
+                "入 乡 随 俗",
+                "一 帆 风 顺",
+                "守 株 待 兔"
+              ],
+              "answer": "半 途 而 废"
+            },
+            {
+              "id": "cyd-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"I think he shouldn't give up halfway\"",
+              "answer": "我 觉得 他 不 应该 半途而废",
+              "bank": [
+                "我",
+                "觉得",
+                "他",
+                "不",
+                "应该",
+                "半途而废",
+                "入乡随俗",
+                "了"
+              ]
+            },
+            {
+              "id": "cyd-14",
+              "type": "multiple_choice",
+              "prompt": "画蛇添足 means:",
+              "options": [
+                "overdo it / add unnecessary feet to a snake",
+                "draw a perfect picture",
+                "snake-shaped art",
+                "lose a competition"
+              ],
+              "answer": "overdo it / add unnecessary feet to a snake",
+              "explanation": "Story: a snake-drawing winner added feet, lost. Means: ruin by overdoing."
+            },
+            {
+              "id": "cyd-15",
+              "type": "match_pairs",
+              "prompt": "chengyu to meaning",
+              "pairs": [
+                {
+                  "left": "半途而废",
+                  "right": "give up halfway"
+                },
+                {
+                  "left": "入乡随俗",
+                  "right": "follow local customs"
+                },
+                {
+                  "left": "一帆风顺",
+                  "right": "smooth sailing"
+                },
+                {
+                  "left": "守株待兔",
+                  "right": "wait for a windfall"
+                }
+              ]
+            },
+            {
+              "id": "cyd-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "亡羊补牢",
+              "answer": "better late than never (mend the fold after losing a sheep)",
+              "acceptableAnswers": [
+                "mend the pen after the sheep are gone",
+                "fix the problem after it's noticed",
+                "it's not too late to mend"
+              ]
+            },
+            {
+              "id": "cyd-17",
+              "type": "fill_blank",
+              "prompt": "Friend's reasoning: \"可是新公司___不一样\"",
+              "before": "可是新公司",
+              "after": "不一样",
+              "answer": "文化",
+              "hint": "what makes companies different — \"culture\""
+            },
+            {
+              "id": "cyd-18",
+              "type": "multiple_choice",
+              "prompt": "亡羊补牢 most accurately means:",
+              "options": [
+                "it's not too late to fix things",
+                "the sheep are gone forever",
+                "build a new fence first",
+                "ignore the problem"
+              ],
+              "answer": "it's not too late to fix things",
+              "explanation": "After losing sheep, you still mend the pen — a positive chengyu for late but valid correction."
+            },
+            {
+              "id": "cyd-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"He just worked three months\"",
+              "answer": "他 才 做 了 三 个 月",
+              "bank": [
+                "他",
+                "才",
+                "做",
+                "了",
+                "三",
+                "个",
+                "月",
+                "已经",
+                "不"
+              ]
+            },
+            {
+              "id": "cyd-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the chengyu you hear",
+              "spokenText": "入 乡 随 俗",
+              "options": [
+                "入 乡 随 俗",
+                "半 途 而 废",
+                "画 蛇 添 足",
+                "亡 羊 补 牢"
+              ],
+              "answer": "入 乡 随 俗"
             }
           ]
         }
@@ -15798,6 +18350,265 @@
                   "spokenText": "说得对，希望他以后能注意分寸。"
                 }
               ]
+            },
+            {
+              "id": "rev5-2",
+              "type": "multiple_choice",
+              "prompt": "出发点 most accurately means:",
+              "options": [
+                "intention / starting point of motivation",
+                "departure gate",
+                "ending point",
+                "starting line of a race"
+              ],
+              "answer": "intention / starting point of motivation",
+              "explanation": "Lit. \"departure point\" — used metaphorically for one's underlying motive."
+            },
+            {
+              "id": "rev5-3",
+              "type": "fill_blank",
+              "prompt": "Concession: \"虽然他___是好的，但是说话方式确实欠妥\"",
+              "before": "虽然他",
+              "after": "是好的，但是说话方式确实欠妥",
+              "answer": "出发点",
+              "hint": "\"intention / starting motivation\""
+            },
+            {
+              "id": "rev5-4",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "说话方式确实欠妥",
+              "answer": "the way (he) spoke was indeed inappropriate",
+              "acceptableAnswers": [
+                "his way of speaking was really not appropriate",
+                "the manner of speech was certainly improper"
+              ]
+            },
+            {
+              "id": "rev5-5",
+              "type": "multiple_choice",
+              "prompt": "欠妥 means:",
+              "options": [
+                "inappropriate / not quite proper",
+                "very polite",
+                "very efficient",
+                "extremely loud"
+              ],
+              "answer": "inappropriate / not quite proper",
+              "explanation": "欠 (lack) + 妥 (proper) — falls short of appropriateness."
+            },
+            {
+              "id": "rev5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Although his intention was good, his speaking style was inappropriate\"",
+              "answer": "虽然 他 出发点 是 好 的 但是 说话 方式 确实 欠妥",
+              "bank": [
+                "虽然",
+                "他",
+                "出发点",
+                "是",
+                "好",
+                "的",
+                "但是",
+                "说话",
+                "方式",
+                "确实",
+                "欠妥",
+                "因此"
+              ]
+            },
+            {
+              "id": "rev5-7",
+              "type": "fill_blank",
+              "prompt": "Soft reporting: \"___经理已经找他单独谈过了\"",
+              "before": "",
+              "after": "经理已经找他单独谈过了",
+              "answer": "听说",
+              "acceptableAnswers": [
+                "据说"
+              ],
+              "hint": "an \"I heard\" marker"
+            },
+            {
+              "id": "rev5-8",
+              "type": "multiple_choice",
+              "prompt": "脸色都变了 most accurately means:",
+              "options": [
+                "(his/her) face changed (showing displeasure)",
+                "the lights changed color",
+                "the makeup faded",
+                "the camera shifted"
+              ],
+              "answer": "(his/her) face changed (showing displeasure)",
+              "explanation": "脸色 (face/expression) + 变 (change) — vivid Chinese idiom for visible emotional reaction."
+            },
+            {
+              "id": "rev5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我们或许应该让小王亲自给客户写封邮件道歉",
+              "answer": "perhaps we should have Xiao Wang personally write an apology email to the client",
+              "acceptableAnswers": [
+                "maybe we should let Xiao Wang write an apology email to the customer himself",
+                "perhaps Xiao Wang should personally email the client to apologize"
+              ]
+            },
+            {
+              "id": "rev5-10",
+              "type": "fill_blank",
+              "prompt": "Hedge a fix: \"我们___应该让小王亲自给客户写封邮件道歉\"",
+              "before": "我们",
+              "after": "应该让小王亲自给客户写封邮件道歉",
+              "answer": "或许",
+              "acceptableAnswers": [
+                "也许",
+                "大概"
+              ],
+              "hint": "tentative \"perhaps\""
+            },
+            {
+              "id": "rev5-11",
+              "type": "multiple_choice",
+              "prompt": "亲自 most accurately means:",
+              "options": [
+                "personally / in person",
+                "by phone",
+                "via someone else",
+                "later on"
+              ],
+              "answer": "personally / in person",
+              "explanation": "亲 (kin/own) + 自 (self) — do it oneself, not via proxy."
+            },
+            {
+              "id": "rev5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the reframer pair you hear",
+              "spokenText": "与 其 不 如",
+              "options": [
+                "与 其 不 如",
+                "不 如 与 其",
+                "与 不 其 如",
+                "其 与 如 不"
+              ],
+              "answer": "与 其 不 如"
+            },
+            {
+              "id": "rev5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Rather than assigning blame, better to treat it as a lesson\"",
+              "answer": "与其 追究 责任 不如 把 它 当成 一次 教训",
+              "bank": [
+                "与其",
+                "追究",
+                "责任",
+                "不如",
+                "把",
+                "它",
+                "当成",
+                "一次",
+                "教训",
+                "因此"
+              ]
+            },
+            {
+              "id": "rev5-14",
+              "type": "multiple_choice",
+              "prompt": "追究责任 means:",
+              "options": [
+                "assign / pursue blame",
+                "promote someone",
+                "thank someone",
+                "delegate work"
+              ],
+              "answer": "assign / pursue blame",
+              "explanation": "追究 (investigate / pursue) + 责任 (responsibility) — pursue accountability."
+            },
+            {
+              "id": "rev5-15",
+              "type": "match_pairs",
+              "prompt": "term to meaning",
+              "pairs": [
+                {
+                  "left": "出发点",
+                  "right": "intention"
+                },
+                {
+                  "left": "欠妥",
+                  "right": "inappropriate"
+                },
+                {
+                  "left": "教训",
+                  "right": "lesson"
+                },
+                {
+                  "left": "分寸",
+                  "right": "sense of propriety"
+                }
+              ]
+            },
+            {
+              "id": "rev5-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "希望他以后能注意分寸",
+              "answer": "I hope he can mind his manners going forward",
+              "acceptableAnswers": [
+                "hope he'll watch his words from now on",
+                "hope he can show better judgment in the future"
+              ]
+            },
+            {
+              "id": "rev5-17",
+              "type": "fill_blank",
+              "prompt": "Wrap-up: \"希望他以后能注意___\"",
+              "before": "希望他以后能注意",
+              "after": "",
+              "answer": "分寸",
+              "hint": "\"sense of propriety / measure\""
+            },
+            {
+              "id": "rev5-18",
+              "type": "multiple_choice",
+              "prompt": "分寸 in this context means:",
+              "options": [
+                "a sense of appropriate measure",
+                "an inch in length",
+                "an angle",
+                "a number"
+              ],
+              "answer": "a sense of appropriate measure",
+              "explanation": "分 + 寸 are old units of length — metaphorically, a fine sense of social proportion."
+            },
+            {
+              "id": "rev5-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Email is more formal than a phone call, and more careful\"",
+              "answer": "邮件 比 电话 更 正式 也 更 慎重",
+              "bank": [
+                "邮件",
+                "比",
+                "电话",
+                "更",
+                "正式",
+                "也",
+                "更",
+                "慎重",
+                "因此",
+                "了"
+              ]
+            },
+            {
+              "id": "rev5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "追 究 责 任",
+              "options": [
+                "追 究 责 任",
+                "责 任 追 究",
+                "追 责 究 任",
+                "究 追 任 责"
+              ],
+              "answer": "追 究 责 任"
             }
           ]
         }

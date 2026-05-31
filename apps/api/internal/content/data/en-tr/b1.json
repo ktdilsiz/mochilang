@@ -14756,6 +14756,110 @@
                   "right": "finance"
                 }
               ]
+            },
+            {
+              "id": "wk1-13",
+              "type": "fill_blank",
+              "prompt": "'Şirket' İngilizce: ___",
+              "answer": "company",
+              "acceptableAnswers": [
+                "firm"
+              ],
+              "explanation": "company = şirket."
+            },
+            {
+              "id": "wk1-14",
+              "type": "multiple_choice",
+              "prompt": "'CEO' Türkçesi:",
+              "options": [
+                "genel müdür",
+                "stajyer",
+                "müşteri",
+                "tedarikçi"
+              ],
+              "answer": "genel müdür",
+              "explanation": "CEO = Chief Executive Officer / genel müdür."
+            },
+            {
+              "id": "wk1-15",
+              "type": "tap_words_in_order",
+              "prompt": "Saat üçte bir toplantım var.",
+              "answer": "I have a meeting at three",
+              "bank": [
+                "I",
+                "have",
+                "a",
+                "meeting",
+                "at",
+                "three",
+                "has",
+                "met",
+                "on"
+              ]
+            },
+            {
+              "id": "wk1-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "The deadline is next Friday.",
+              "options": [
+                "The deadline is next Friday.",
+                "The dead line is next Friday.",
+                "The deadlines is next Friday.",
+                "The deadline is last Friday."
+              ],
+              "answer": "The deadline is next Friday."
+            },
+            {
+              "id": "wk1-17",
+              "type": "translate",
+              "prompt": "Maaşıma zam aldım.",
+              "direction": "tr_to_en",
+              "context": "raise",
+              "answer": "I got a pay rise",
+              "acceptableAnswers": [
+                "I got a raise"
+              ],
+              "explanation": "pay rise / raise = maaş zammı."
+            },
+            {
+              "id": "wk1-18",
+              "type": "multiple_choice",
+              "prompt": "'employee' karşılığı:",
+              "options": [
+                "işveren",
+                "çalışan",
+                "stajyer",
+                "müşteri"
+              ],
+              "answer": "çalışan",
+              "explanation": "employee = çalışan."
+            },
+            {
+              "id": "wk1-19",
+              "type": "fill_blank",
+              "prompt": "'İşveren' İngilizce: ___",
+              "answer": "employer",
+              "acceptableAnswers": [],
+              "explanation": "employer = işveren."
+            },
+            {
+              "id": "wk1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Bir yöneticim ve iki çalışma arkadaşım var.",
+              "answer": "I have a manager and two colleagues",
+              "bank": [
+                "I",
+                "have",
+                "a",
+                "manager",
+                "and",
+                "two",
+                "colleagues",
+                "got",
+                "on",
+                "at"
+              ]
             }
           ]
         },
@@ -14928,6 +15032,110 @@
                   "left": "Do you like your job?",
                   "right": "Yes, I love it."
                 }
+              ]
+            },
+            {
+              "id": "wk2-13",
+              "type": "multiple_choice",
+              "prompt": "'I am self-employed.' Türkçesi:",
+              "options": [
+                "İşsizim.",
+                "Serbest meslek/kendi işim var.",
+                "Bir şirket için çalışıyorum.",
+                "Stajyerim."
+              ],
+              "answer": "Serbest meslek/kendi işim var.",
+              "explanation": "self-employed = serbest meslek."
+            },
+            {
+              "id": "wk2-14",
+              "type": "fill_blank",
+              "prompt": "'Bir bankada çalışıyorum.' = 'I work ___ a bank.'",
+              "answer": "at",
+              "acceptableAnswers": [
+                "in",
+                "for"
+              ],
+              "explanation": "at + lokasyon."
+            },
+            {
+              "id": "wk2-15",
+              "type": "tap_words_in_order",
+              "prompt": "O bir İT şirketinde çalışır.",
+              "answer": "He works at an IT company",
+              "bank": [
+                "He",
+                "works",
+                "at",
+                "an",
+                "IT",
+                "company",
+                "work",
+                "on",
+                "in"
+              ]
+            },
+            {
+              "id": "wk2-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I work in finance.",
+              "options": [
+                "I work in finance.",
+                "I work on finance.",
+                "I work at finance.",
+                "I worked in finance."
+              ],
+              "answer": "I work in finance."
+            },
+            {
+              "id": "wk2-17",
+              "type": "translate",
+              "prompt": "Ben muhasebeciyim.",
+              "direction": "tr_to_en",
+              "context": "meslek",
+              "answer": "I am an accountant",
+              "acceptableAnswers": [
+                "I'm an accountant"
+              ],
+              "explanation": "a/an + meslek."
+            },
+            {
+              "id": "wk2-18",
+              "type": "multiple_choice",
+              "prompt": "'I work in ___' kalıbından sonra ne gelir?",
+              "options": [
+                "şirket adı",
+                "sektör/alan",
+                "meslek",
+                "ülke"
+              ],
+              "answer": "sektör/alan",
+              "explanation": "work in + sektör (finance, marketing)."
+            },
+            {
+              "id": "wk2-19",
+              "type": "fill_blank",
+              "prompt": "'Ne iş yapıyorsun?' = 'What do you do ___ a living?'",
+              "answer": "for",
+              "acceptableAnswers": [],
+              "explanation": "for a living = geçim için."
+            },
+            {
+              "id": "wk2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Pazarlama bölümünde çalışıyorum.",
+              "answer": "I work in the marketing department",
+              "bank": [
+                "I",
+                "work",
+                "in",
+                "the",
+                "marketing",
+                "department",
+                "on",
+                "at",
+                "department"
               ]
             }
           ]
@@ -15104,6 +15312,113 @@
                   "left": "Let's wrap up.",
                   "right": "Bitirme"
                 }
+              ]
+            },
+            {
+              "id": "wk3-13",
+              "type": "multiple_choice",
+              "prompt": "'Could you elaborate?' anlamı:",
+              "options": [
+                "Yarın gelir misin?",
+                "Daha açıklayabilir misin?",
+                "Anladım mı?",
+                "Konu nedir?"
+              ],
+              "answer": "Daha açıklayabilir misin?",
+              "explanation": "elaborate = ayrıntılı açıklamak."
+            },
+            {
+              "id": "wk3-14",
+              "type": "fill_blank",
+              "prompt": "'Üzgünüm, geç kaldım.' = 'I'm ___ I'm late.'",
+              "answer": "sorry",
+              "acceptableAnswers": [],
+              "explanation": "sorry = üzgün."
+            },
+            {
+              "id": "wk3-15",
+              "type": "tap_words_in_order",
+              "prompt": "Toplantıyı ileri bir tarihe alalım.",
+              "answer": "Let us push the meeting to a later date",
+              "bank": [
+                "Let",
+                "us",
+                "push",
+                "the",
+                "meeting",
+                "to",
+                "a",
+                "later",
+                "date",
+                "later",
+                "earlier",
+                "on"
+              ]
+            },
+            {
+              "id": "wk3-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Let me take a look at it.",
+              "options": [
+                "Let me take a look at it.",
+                "Let me take a look on it.",
+                "Let me have look at it.",
+                "Let me take a look it."
+              ],
+              "answer": "Let me take a look at it."
+            },
+            {
+              "id": "wk3-17",
+              "type": "translate",
+              "prompt": "Bir saniye düşünmem gerek.",
+              "direction": "tr_to_en",
+              "context": "meeting",
+              "answer": "I need a second to think",
+              "acceptableAnswers": [
+                "I need a moment to think"
+              ],
+              "explanation": "a second/moment = bir saniye/an."
+            },
+            {
+              "id": "wk3-18",
+              "type": "multiple_choice",
+              "prompt": "'I'll keep you posted.' anlamı:",
+              "options": [
+                "Seni bilgilendireceğim.",
+                "Posta gönderirim.",
+                "Seni bekleyeceğim.",
+                "Sözünü unuttum."
+              ],
+              "answer": "Seni bilgilendireceğim.",
+              "explanation": "keep posted = bilgi vermeye devam etmek."
+            },
+            {
+              "id": "wk3-19",
+              "type": "fill_blank",
+              "prompt": "'Toplantımız iptal oldu.' = 'Our meeting has been ___.'",
+              "answer": "cancelled",
+              "acceptableAnswers": [
+                "canceled"
+              ],
+              "explanation": "cancelled = iptal."
+            },
+            {
+              "id": "wk3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Bu konuya sonra dönelim.",
+              "answer": "Let us come back to this later",
+              "bank": [
+                "Let",
+                "us",
+                "come",
+                "back",
+                "to",
+                "this",
+                "later",
+                "later",
+                "earlier",
+                "on"
               ]
             }
           ]
@@ -15282,6 +15597,109 @@
                   "right": "The boss approved the budget."
                 }
               ]
+            },
+            {
+              "id": "wk4-13",
+              "type": "multiple_choice",
+              "prompt": "'follow up with the client' Türkçesi:",
+              "options": [
+                "Müşteriye geri dönmek",
+                "Müşteriyi takip etmek/iletişim sürdürmek",
+                "Müşteriyi reddetmek",
+                "Müşteriyle başka konuşmak"
+              ],
+              "answer": "Müşteriyi takip etmek/iletişim sürdürmek",
+              "explanation": "follow up with = iletişim sürdürmek."
+            },
+            {
+              "id": "wk4-14",
+              "type": "fill_blank",
+              "prompt": "'Bu görevi sana devretmek istiyorum.' = 'I'd like to ___ this task to you.'",
+              "answer": "delegate",
+              "acceptableAnswers": [
+                "assign"
+              ],
+              "explanation": "delegate / assign = devretmek/atamak."
+            },
+            {
+              "id": "wk4-15",
+              "type": "tap_words_in_order",
+              "prompt": "Bir takımı yönetiyorum.",
+              "answer": "I manage a team",
+              "bank": [
+                "I",
+                "manage",
+                "a",
+                "team",
+                "managed",
+                "manages",
+                "on",
+                "at"
+              ]
+            },
+            {
+              "id": "wk4-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "We delivered the project on time.",
+              "options": [
+                "We delivered the project on time.",
+                "We delivered the project on tomorrow.",
+                "We delivered project on time.",
+                "We delivers the project on time."
+              ],
+              "answer": "We delivered the project on time."
+            },
+            {
+              "id": "wk4-17",
+              "type": "translate",
+              "prompt": "Bu görevi yarına kadar bitirebilir miyim?",
+              "direction": "tr_to_en",
+              "context": "deadline",
+              "answer": "Can I finish this task by tomorrow",
+              "acceptableAnswers": [
+                "Could I finish this task by tomorrow"
+              ],
+              "explanation": "by tomorrow = yarına kadar."
+            },
+            {
+              "id": "wk4-18",
+              "type": "multiple_choice",
+              "prompt": "'set a goal' Türkçesi:",
+              "options": [
+                "bir hedef koymak",
+                "hedefi tutturmak",
+                "gol atmak",
+                "hedefi azaltmak"
+              ],
+              "answer": "bir hedef koymak",
+              "explanation": "set = koymak; goal = hedef."
+            },
+            {
+              "id": "wk4-19",
+              "type": "fill_blank",
+              "prompt": "'Bu süreçte ona yardım edeceğim.' = 'I'll ___ him in this process.'",
+              "answer": "support",
+              "acceptableAnswers": [
+                "help"
+              ],
+              "explanation": "support = desteklemek."
+            },
+            {
+              "id": "wk4-20",
+              "type": "tap_words_in_order",
+              "prompt": "Son tarihi yakaladım.",
+              "answer": "I met the deadline",
+              "bank": [
+                "I",
+                "met",
+                "the",
+                "deadline",
+                "meet",
+                "missed",
+                "on",
+                "at"
+              ]
             }
           ]
         },
@@ -15457,6 +15875,111 @@
                   "right": "send an email"
                 }
               ]
+            },
+            {
+              "id": "wk5-13",
+              "type": "multiple_choice",
+              "prompt": "'I'll take care of it.' Türkçesi:",
+              "options": [
+                "Onu ben hallederim.",
+                "Onu bekleyeceğim.",
+                "Bunu unutmuyorum.",
+                "Bunu onaylamıyorum."
+              ],
+              "answer": "Onu ben hallederim.",
+              "explanation": "take care of = halletmek."
+            },
+            {
+              "id": "wk5-14",
+              "type": "fill_blank",
+              "prompt": "'Yeni bir görüşme talep edeceğim.' = 'I'll ___ a new meeting.'",
+              "answer": "request",
+              "acceptableAnswers": [
+                "schedule"
+              ],
+              "explanation": "request a meeting = toplantı talep etmek."
+            },
+            {
+              "id": "wk5-15",
+              "type": "tap_words_in_order",
+              "prompt": "Bu hafta yorgun düştüm.",
+              "answer": "I am exhausted this week",
+              "bank": [
+                "I",
+                "am",
+                "exhausted",
+                "this",
+                "week",
+                "tired",
+                "exhaust",
+                "on",
+                "at"
+              ]
+            },
+            {
+              "id": "wk5-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I'm running behind schedule.",
+              "options": [
+                "I'm running behind schedule.",
+                "I'm running ahead schedule.",
+                "I'm running on schedule.",
+                "I'm running for schedule."
+              ],
+              "answer": "I'm running behind schedule."
+            },
+            {
+              "id": "wk5-17",
+              "type": "translate",
+              "prompt": "Bunu Cumaya kadar bitirebilir miyim?",
+              "direction": "tr_to_en",
+              "context": "deadline",
+              "answer": "Can I finish this by Friday",
+              "acceptableAnswers": [
+                "Could I finish this by Friday"
+              ],
+              "explanation": "by Friday = Cumaya kadar."
+            },
+            {
+              "id": "wk5-18",
+              "type": "multiple_choice",
+              "prompt": "'pay rise' Türkçesi:",
+              "options": [
+                "maaş zammı",
+                "ödeme gecikmesi",
+                "fazla mesai",
+                "prim"
+              ],
+              "answer": "maaş zammı",
+              "explanation": "pay rise = maaş zammı."
+            },
+            {
+              "id": "wk5-19",
+              "type": "fill_blank",
+              "prompt": "'İşten ayrılıyorum.' = 'I am ___ my job.'",
+              "answer": "quitting",
+              "acceptableAnswers": [
+                "leaving"
+              ],
+              "explanation": "quit/leave = işten ayrılmak."
+            },
+            {
+              "id": "wk5-20",
+              "type": "tap_words_in_order",
+              "prompt": "Yarın izin alacağım.",
+              "answer": "I will take tomorrow off",
+              "bank": [
+                "I",
+                "will",
+                "take",
+                "tomorrow",
+                "off",
+                "tomorrow",
+                "on",
+                "at",
+                "took"
+              ]
             }
           ]
         },
@@ -15570,6 +16093,243 @@
                   "text": "Perfect. Let's catch up again on Friday. Have a productive day."
                 }
               ]
+            },
+            {
+              "id": "wk6-2",
+              "type": "multiple_choice",
+              "prompt": "Diyalogdan: 'I've ___ the client report.' Boşluğa:",
+              "options": [
+                "finished",
+                "finishing",
+                "finish",
+                "finishes"
+              ],
+              "answer": "finished",
+              "explanation": "present perfect: have + V3."
+            },
+            {
+              "id": "wk6-3",
+              "type": "fill_blank",
+              "prompt": "'Marketing hasn't sent the final logo ___.' (henüz)",
+              "answer": "yet",
+              "acceptableAnswers": [],
+              "explanation": "yet = henüz."
+            },
+            {
+              "id": "wk6-4",
+              "type": "multiple_choice",
+              "prompt": "'Any blockers or issues?' Türkçesi:",
+              "options": [
+                "Engeller veya sorunlar var mı?",
+                "Yeni ürün var mı?",
+                "Tatil planı var mı?",
+                "Yeni bir görev var mı?"
+              ],
+              "answer": "Engeller veya sorunlar var mı?",
+              "explanation": "blocker = engelleyici."
+            },
+            {
+              "id": "wk6-5",
+              "type": "fill_blank",
+              "prompt": "'I'll have everything ready ___ Tuesday.' (... -e kadar)",
+              "answer": "by",
+              "acceptableAnswers": [],
+              "explanation": "by + zaman = ... -e kadar."
+            },
+            {
+              "id": "wk6-6",
+              "type": "multiple_choice",
+              "prompt": "'Would you mind ___ the draft?' (gözden geçirir misin)",
+              "options": [
+                "review",
+                "reviewing",
+                "to review",
+                "reviews"
+              ],
+              "answer": "reviewing",
+              "explanation": "Would you mind + V-ing."
+            },
+            {
+              "id": "wk6-7",
+              "type": "fill_blank",
+              "prompt": "'Send it ___ Wednesday.' (Çarşambaya kadar)",
+              "answer": "by",
+              "acceptableAnswers": [],
+              "explanation": "by = -e kadar."
+            },
+            {
+              "id": "wk6-8",
+              "type": "tap_words_in_order",
+              "prompt": "Bugün onlarla görüşeceğim.",
+              "answer": "I will follow up with them today",
+              "bank": [
+                "I",
+                "will",
+                "follow",
+                "up",
+                "with",
+                "them",
+                "today",
+                "follow",
+                "on",
+                "at"
+              ]
+            },
+            {
+              "id": "wk6-9",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "What's on your plate now?",
+              "options": [
+                "What's on your plate now?",
+                "What's on your plan now?",
+                "What's in your plate now?",
+                "Whats your plate now?"
+              ],
+              "answer": "What's on your plate now?"
+            },
+            {
+              "id": "wk6-10",
+              "type": "multiple_choice",
+              "prompt": "Diyalogdan: 'pulling their weight' anlamı:",
+              "options": [
+                "Ağır şey çekmek",
+                "Üzerine düşeni yapmak",
+                "Yorulmak",
+                "İzin almak"
+              ],
+              "answer": "Üzerine düşeni yapmak",
+              "explanation": "pull (one's) weight = üstüne düşeni yapmak."
+            },
+            {
+              "id": "wk6-11",
+              "type": "fill_blank",
+              "prompt": "'Sonraki haftanın toplantısı için slaytlar üzerinde ___.' (calışıyorum)",
+              "answer": "working",
+              "acceptableAnswers": [
+                "I am working"
+              ],
+              "explanation": "be + V-ing."
+            },
+            {
+              "id": "wk6-12",
+              "type": "multiple_choice",
+              "prompt": "'standup' (iş bağlamında) ne demek?",
+              "options": [
+                "Ayakta toplantı / günlük kısa toplantı",
+                "Komedi gösterisi",
+                "Kalkış",
+                "Konferans"
+              ],
+              "answer": "Ayakta toplantı / günlük kısa toplantı",
+              "explanation": "daily standup = günlük kısa toplantı."
+            },
+            {
+              "id": "wk6-13",
+              "type": "translate",
+              "prompt": "Bu hafta ekip mükemmel iş çıkardı.",
+              "direction": "tr_to_en",
+              "context": "sprint",
+              "answer": "The team has done excellent work this week",
+              "acceptableAnswers": [
+                "The team has been doing excellent work this week"
+              ],
+              "explanation": "has done/has been doing = present perfect."
+            },
+            {
+              "id": "wk6-14",
+              "type": "tap_words_in_order",
+              "prompt": "Geri bildirimi Perşembe veririm.",
+              "answer": "I will give you my feedback Thursday",
+              "bank": [
+                "I",
+                "will",
+                "give",
+                "you",
+                "my",
+                "feedback",
+                "Thursday",
+                "gave",
+                "on",
+                "at"
+              ]
+            },
+            {
+              "id": "wk6-15",
+              "type": "multiple_choice",
+              "prompt": "Diyalogdan: 'It's holding up the design.' Türkçesi:",
+              "options": [
+                "Tasarımı geciktiriyor.",
+                "Tasarımı destekliyor.",
+                "Tasarımı kapatıyor.",
+                "Tasarımı yapıyor."
+              ],
+              "answer": "Tasarımı geciktiriyor.",
+              "explanation": "hold up = geciktirmek."
+            },
+            {
+              "id": "wk6-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Have a productive day.",
+              "options": [
+                "Have a productive day.",
+                "Has a productive day.",
+                "Have an productive day.",
+                "Have a product day."
+              ],
+              "answer": "Have a productive day."
+            },
+            {
+              "id": "wk6-17",
+              "type": "fill_blank",
+              "prompt": "'I'll pass that ___.' (iletmek)",
+              "answer": "on",
+              "acceptableAnswers": [],
+              "explanation": "pass on = iletmek."
+            },
+            {
+              "id": "wk6-18",
+              "type": "multiple_choice",
+              "prompt": "'Let's catch up again on Friday.' Türkçesi:",
+              "options": [
+                "Cuma tekrar konuşalım/buluşalım.",
+                "Cuma yetişelim.",
+                "Cuma evden çıkalım.",
+                "Cuma erken gel."
+              ],
+              "answer": "Cuma tekrar konuşalım/buluşalım.",
+              "explanation": "catch up = konuşmak/buluşmak."
+            },
+            {
+              "id": "wk6-19",
+              "type": "tap_words_in_order",
+              "prompt": "Salı akşamına kadar her şey hazır olacak.",
+              "answer": "Everything will be ready by Tuesday evening",
+              "bank": [
+                "Everything",
+                "will",
+                "be",
+                "ready",
+                "by",
+                "Tuesday",
+                "evening",
+                "at",
+                "on",
+                "prepares"
+              ]
+            },
+            {
+              "id": "wk6-20",
+              "type": "translate",
+              "prompt": "Sabah ekibimizle hızlı bir toplantı yaparız.",
+              "direction": "tr_to_en",
+              "context": "standup",
+              "answer": "We have a quick standup in the morning",
+              "acceptableAnswers": [
+                "We have a quick meeting in the morning"
+              ],
+              "explanation": "have a meeting/standup."
             }
           ]
         }
