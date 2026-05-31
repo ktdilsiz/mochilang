@@ -206,6 +206,72 @@
               ],
               "answer": "My flight is cancelled",
               "explanation": "English-L1 trap: forgetting the -ed past participle. 取消 + 了 → \"is cancelled\" (state) or \"was cancelled\" / \"got cancelled\" (event)."
+            },
+            {
+              "id": "tv1-13",
+              "type": "multiple_choice",
+              "prompt": "Which one means \"flight number\"?",
+              "options": [
+                "航班号",
+                "登机牌",
+                "护照号",
+                "座位号"
+              ],
+              "answer": "航班号"
+            },
+            {
+              "id": "tv1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please show me your boarding pass\"",
+              "answer": "请 给 我 看 一下 你 的 登机牌"
+            },
+            {
+              "id": "tv1-15",
+              "type": "fill_blank",
+              "prompt": "\"行李 ___ 重 了\" — fill the missing word for \"too\"",
+              "answer": "超"
+            },
+            {
+              "id": "tv1-16",
+              "type": "multiple_choice",
+              "prompt": "What's the natural reply to \"您 的 行李 有 几 件？\"",
+              "options": [
+                "我 有 两 件",
+                "我 是 两 件",
+                "两 件 我",
+                "件 两"
+              ],
+              "answer": "我 有 两 件"
+            },
+            {
+              "id": "tv1-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我的航班取消了",
+                "我的航班晚点了",
+                "我的航班起飞了",
+                "我的航班到达了"
+              ],
+              "answer": "我的航班取消了"
+            },
+            {
+              "id": "tv1-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Where is the boarding gate?\"",
+              "answer": "登机 口 在 哪里"
+            },
+            {
+              "id": "tv1-19",
+              "type": "multiple_choice",
+              "prompt": "What's the meaning of \"降落\" (jiàng luò)?",
+              "options": [
+                "Take off",
+                "Land",
+                "Board",
+                "Delay"
+              ],
+              "answer": "Land"
             }
           ]
         },
@@ -415,6 +481,72 @@
               ],
               "answer": "我 知道 这 个 航班",
               "explanation": "Minimal pair: 知道 (zhī dào, retroflex zh-) vs 字典 (zì diǎn, dental z-). Listen for the tongue-curl on zh."
+            },
+            {
+              "id": "tv2-13",
+              "type": "multiple_choice",
+              "prompt": "What does \"单程 票\" (dān chéng piào) mean?",
+              "options": [
+                "Round-trip ticket",
+                "One-way ticket",
+                "First-class ticket",
+                "Standby ticket"
+              ],
+              "answer": "One-way ticket"
+            },
+            {
+              "id": "tv2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to change my ticket to tomorrow\"",
+              "answer": "我 想 把 票 改 到 明天"
+            },
+            {
+              "id": "tv2-15",
+              "type": "fill_blank",
+              "prompt": "\"经济 ___ \" (jīng jì ___) — fill in for \"economy class\"",
+              "answer": "舱"
+            },
+            {
+              "id": "tv2-16",
+              "type": "multiple_choice",
+              "prompt": "Which phrase means \"book a ticket online\"?",
+              "options": [
+                "网上 订票",
+                "窗口 订票",
+                "电话 订票",
+                "现场 买票"
+              ],
+              "answer": "网上 订票"
+            },
+            {
+              "id": "tv2-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我要一张经济舱",
+                "我要一张商务舱",
+                "我要一张头等舱",
+                "我要一张往返票"
+              ],
+              "answer": "我要一张经济舱"
+            },
+            {
+              "id": "tv2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Can I get a refund on this ticket?\"",
+              "answer": "这 张 票 可以 退 吗"
+            },
+            {
+              "id": "tv2-19",
+              "type": "multiple_choice",
+              "prompt": "How would you ask the price of a round-trip ticket?",
+              "options": [
+                "往返 票 多少 钱",
+                "单程 多少 钱",
+                "便宜 票 多少",
+                "退 票 多少 钱"
+              ],
+              "answer": "往返 票 多少 钱"
             }
           ]
         },
@@ -604,6 +736,79 @@
                 "wake up",
                 "morning call"
               ]
+            },
+            {
+              "id": "tv3-13",
+              "type": "multiple_choice",
+              "prompt": "Which means \"single room\"?",
+              "options": [
+                "单人间",
+                "双人间",
+                "套间",
+                "大床间"
+              ],
+              "answer": "单人间"
+            },
+            {
+              "id": "tv3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Is breakfast included?\"",
+              "answer": "包 早餐 吗"
+            },
+            {
+              "id": "tv3-15",
+              "type": "fill_blank",
+              "prompt": "\"前 台\" (qián tái) means \"front ___\"",
+              "answer": "Desk"
+            },
+            {
+              "id": "tv3-16",
+              "type": "multiple_choice",
+              "prompt": "What does \"换 房间\" (huàn fáng jiān) mean?",
+              "options": [
+                "Clean the room",
+                "Switch rooms",
+                "Pay for the room",
+                "Reserve a room"
+              ],
+              "answer": "Switch rooms"
+            },
+            {
+              "id": "tv3-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我想换一个安静的房间",
+                "我想要一个安静的房间",
+                "我想看一个安静的房间",
+                "我想订一个安静的房间"
+              ],
+              "answer": "我想换一个安静的房间"
+            },
+            {
+              "id": "tv3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"There's no hot water in my room\"",
+              "answer": "我 房间 没有 热水"
+            },
+            {
+              "id": "tv3-19",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural way to ask for late check-out:",
+              "options": [
+                "我 能 晚 点 退 房 吗",
+                "我 退 房 晚 一些",
+                "退 房 我 晚 点",
+                "晚 退 房 可以"
+              ],
+              "answer": "我 能 晚 点 退 房 吗"
+            },
+            {
+              "id": "tv3-20",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "客房 服务",
+              "answer": "Room service"
             }
           ]
         },
@@ -787,6 +992,79 @@
                 "地铁 在 哪？我 是 迷路。"
               ],
               "answer": "我 迷路 了，请 问 地铁 在 哪里？"
+            },
+            {
+              "id": "tv4-13",
+              "type": "multiple_choice",
+              "prompt": "Which means \"embassy\"?",
+              "options": [
+                "大使馆",
+                "警察局",
+                "海关",
+                "银行"
+              ],
+              "answer": "大使馆"
+            },
+            {
+              "id": "tv4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please call the police for me\"",
+              "answer": "请 帮 我 报 警"
+            },
+            {
+              "id": "tv4-15",
+              "type": "fill_blank",
+              "prompt": "\"小心\" (xiǎo xīn) means \"be ___\"",
+              "answer": "Careful"
+            },
+            {
+              "id": "tv4-16",
+              "type": "multiple_choice",
+              "prompt": "What does \"丢 了\" (diū le) mean?",
+              "options": [
+                "Bought",
+                "Lost",
+                "Found",
+                "Hid"
+              ],
+              "answer": "Lost"
+            },
+            {
+              "id": "tv4-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我迷路了",
+                "我累了",
+                "我饿了",
+                "我病了"
+              ],
+              "answer": "我迷路了"
+            },
+            {
+              "id": "tv4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My bag was taken by someone\"",
+              "answer": "我 的 包 被 人 拿 走 了"
+            },
+            {
+              "id": "tv4-19",
+              "type": "multiple_choice",
+              "prompt": "Pick the right phrase at an emergency:",
+              "options": [
+                "救 命",
+                "你好",
+                "再见",
+                "谢谢"
+              ],
+              "answer": "救 命"
+            },
+            {
+              "id": "tv4-20",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "报 警",
+              "answer": "Call the police"
             }
           ]
         },
@@ -971,6 +1249,85 @@
                 "和"
               ],
               "explanation": "比 起 X (\"compared to X\") + 我 更 ... — a B1 comparative pattern."
+            },
+            {
+              "id": "tv5-12",
+              "type": "multiple_choice",
+              "prompt": "Which means \"train station\"?",
+              "options": [
+                "火车站",
+                "机场",
+                "公交站",
+                "地铁站"
+              ],
+              "answer": "火车站"
+            },
+            {
+              "id": "tv5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'd like to buy a high-speed train ticket\"",
+              "answer": "我 想 买 一 张 高铁 票"
+            },
+            {
+              "id": "tv5-14",
+              "type": "fill_blank",
+              "prompt": "\"硬 座\" (yìng zuò) is a kind of ___ on a Chinese train",
+              "answer": "Hard seat"
+            },
+            {
+              "id": "tv5-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"卧铺\" (wò pù) mean?",
+              "options": [
+                "Sleeper berth",
+                "Hard seat",
+                "Soft seat",
+                "Standing room"
+              ],
+              "answer": "Sleeper berth"
+            },
+            {
+              "id": "tv5-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "高铁几点出发",
+                "高铁几点到达",
+                "高铁多少钱",
+                "高铁在哪里"
+              ],
+              "answer": "高铁几点出发"
+            },
+            {
+              "id": "tv5-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This train is full\"",
+              "answer": "这 趟 车 满 了"
+            },
+            {
+              "id": "tv5-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the right reply: \"几号 站台?\"",
+              "options": [
+                "三号 站台",
+                "三 块 钱",
+                "三 点 钟",
+                "三 个 人"
+              ],
+              "answer": "三号 站台"
+            },
+            {
+              "id": "tv5-19",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "动车",
+              "answer": "Bullet train"
+            },
+            {
+              "id": "tv5-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I missed the train\"",
+              "answer": "我 错过 了 火车"
             }
           ]
         },
@@ -1137,6 +1494,85 @@
               ],
               "answer": "Sign here",
               "explanation": "签 名 (qiān míng) — sign your name."
+            },
+            {
+              "id": "tv6-12",
+              "type": "multiple_choice",
+              "prompt": "Which means \"to withdraw money\"?",
+              "options": [
+                "取 钱",
+                "存 钱",
+                "换 钱",
+                "借 钱"
+              ],
+              "answer": "取 钱"
+            },
+            {
+              "id": "tv6-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Can I pay by credit card?\"",
+              "answer": "可以 用 信用卡 付款 吗"
+            },
+            {
+              "id": "tv6-14",
+              "type": "fill_blank",
+              "prompt": "\"零钱\" (líng qián) means \"___ change\"",
+              "answer": "Small"
+            },
+            {
+              "id": "tv6-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"找钱\" (zhǎo qián) mean?",
+              "options": [
+                "Look for money",
+                "Give change back",
+                "Lose money",
+                "Save money"
+              ],
+              "answer": "Give change back"
+            },
+            {
+              "id": "tv6-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我要换一些人民币",
+                "我要换一些美元",
+                "我要换一些日元",
+                "我要换一些欧元"
+              ],
+              "answer": "我要换一些人民币"
+            },
+            {
+              "id": "tv6-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'd like to exchange 100 dollars\"",
+              "answer": "我 想 换 一百 美元"
+            },
+            {
+              "id": "tv6-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural \"Do you have smaller bills?\":",
+              "options": [
+                "你 有 零钱 吗",
+                "你 是 零钱 吗",
+                "零钱 你 多少",
+                "钱 零 你"
+              ],
+              "answer": "你 有 零钱 吗"
+            },
+            {
+              "id": "tv6-19",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "支付宝",
+              "answer": "Alipay"
+            },
+            {
+              "id": "tv6-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This card cannot be used here\"",
+              "answer": "这 张 卡 在 这里 不 能 用"
             }
           ]
         },
@@ -1232,6 +1668,176 @@
                   "spokenText": "谢谢，祝您工作愉快"
                 }
               ]
+            },
+            {
+              "id": "tv7-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"check-in counter\"?",
+              "options": [
+                "值机 柜台",
+                "海关 柜台",
+                "免税 柜台",
+                "登机 柜台"
+              ],
+              "answer": "值机 柜台"
+            },
+            {
+              "id": "tv7-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please put your luggage on the belt\"",
+              "answer": "请 把 行李 放 在 传送带 上"
+            },
+            {
+              "id": "tv7-4",
+              "type": "fill_blank",
+              "prompt": "\"托运\" (tuō yùn) means to ___ luggage",
+              "answer": "Check in"
+            },
+            {
+              "id": "tv7-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"超重\" (chāo zhòng) mean?",
+              "options": [
+                "Light",
+                "Overweight",
+                "Cheap",
+                "Expensive"
+              ],
+              "answer": "Overweight"
+            },
+            {
+              "id": "tv7-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "请把护照给我",
+                "请把行李给我",
+                "请把登机牌给我",
+                "请把钱包给我"
+              ],
+              "answer": "请把护照给我"
+            },
+            {
+              "id": "tv7-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have two suitcases to check\"",
+              "answer": "我 有 两 个 行李箱 要 托运"
+            },
+            {
+              "id": "tv7-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the polite reply to the agent: \"Yes, here you are\"",
+              "options": [
+                "好 的 ， 给 您",
+                "对 ， 你 拿",
+                "是 ， 我 给",
+                "给 ， 你 用"
+              ],
+              "answer": "好 的 ， 给 您"
+            },
+            {
+              "id": "tv7-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "登机 口",
+              "answer": "Boarding gate"
+            },
+            {
+              "id": "tv7-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Where is gate twelve?\"",
+              "answer": "十二 号 登机 口 在 哪里"
+            },
+            {
+              "id": "tv7-11",
+              "type": "multiple_choice",
+              "prompt": "Which means \"boarding time\"?",
+              "options": [
+                "登机 时间",
+                "起飞 时间",
+                "到达 时间",
+                "出发 时间"
+              ],
+              "answer": "登机 时间"
+            },
+            {
+              "id": "tv7-12",
+              "type": "fill_blank",
+              "prompt": "\"经济 舱\" (jīng jì cāng) — what class?",
+              "answer": "Economy"
+            },
+            {
+              "id": "tv7-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我的行李超重了",
+                "我的行李不见了",
+                "我的行李很多",
+                "我的行李很重"
+              ],
+              "answer": "我的行李超重了"
+            },
+            {
+              "id": "tv7-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Can I take this on the plane?\"",
+              "answer": "这 个 可以 带 上 飞机 吗"
+            },
+            {
+              "id": "tv7-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the right phrase: \"Please go to security check\"",
+              "options": [
+                "请 去 安检",
+                "请 去 海关",
+                "请 去 退 房",
+                "请 去 出口"
+              ],
+              "answer": "请 去 安检"
+            },
+            {
+              "id": "tv7-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "晚点",
+              "answer": "Delayed"
+            },
+            {
+              "id": "tv7-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My seat is on the aisle\"",
+              "answer": "我 的 座位 在 走道 边"
+            },
+            {
+              "id": "tv7-18",
+              "type": "multiple_choice",
+              "prompt": "What does \"出 发 大厅\" mean?",
+              "options": [
+                "Arrivals hall",
+                "Departures hall",
+                "Baggage claim",
+                "Customs"
+              ],
+              "answer": "Departures hall"
+            },
+            {
+              "id": "tv7-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "航班准时起飞",
+                "航班晚点了",
+                "航班取消了",
+                "航班降落了"
+              ],
+              "answer": "航班准时起飞"
+            },
+            {
+              "id": "tv7-20",
+              "type": "fill_blank",
+              "prompt": "\"行李 ___ \" — fill the word for claim tag",
+              "answer": "牌"
             }
           ]
         }
@@ -1533,6 +2139,79 @@
               ],
               "answer": "Please turn on the AC",
               "explanation": "Classic Chenglish: 开 = \"open\" literally, but in English you TURN ON appliances. Same for 开 灯 (turn on lights), 开 电视 (turn on TV)."
+            },
+            {
+              "id": "ds1-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the well-formed 把-sentence:",
+              "options": [
+                "我 把 房间 打扫 了",
+                "把 我 房间 打扫",
+                "我 打扫 把 房间",
+                "房间 我 把 打扫"
+              ],
+              "answer": "我 把 房间 打扫 了"
+            },
+            {
+              "id": "ds1-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She put the book on the shelf\" with 把",
+              "answer": "她 把 书 放 在 书架 上"
+            },
+            {
+              "id": "ds1-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"请 ___ 灯 关 上\" (use the disposal marker)",
+              "answer": "把"
+            },
+            {
+              "id": "ds1-15",
+              "type": "multiple_choice",
+              "prompt": "What does the 把 in \"我 把 钱 给 他\" emphasize?",
+              "options": [
+                "The money (specific) and what happens to it",
+                "The person giving",
+                "The time",
+                "The amount"
+              ],
+              "answer": "The money (specific) and what happens to it"
+            },
+            {
+              "id": "ds1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他把信寄出去了",
+                "他把信写完了",
+                "他把信看完了",
+                "他把信收到了"
+              ],
+              "answer": "他把信寄出去了"
+            },
+            {
+              "id": "ds1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I sold the old car\"",
+              "answer": "我 把 旧 车 卖 了"
+            },
+            {
+              "id": "ds1-18",
+              "type": "multiple_choice",
+              "prompt": "Which sentence sounds wrong?",
+              "options": [
+                "我 把 看 这 本 书 完",
+                "我 把 苹果 吃 了",
+                "我 把 门 打 开",
+                "我 把 钱包 找 到 了"
+              ],
+              "answer": "我 把 看 这 本 书 完"
+            },
+            {
+              "id": "ds1-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Please close the window",
+              "answer": "请 把 窗户 关 上"
             }
           ]
         },
@@ -1719,6 +2398,79 @@
               ],
               "answer": "请 把 茶 喝 了",
               "explanation": "Minimal pair: 茶 (chá) vs 车 (chē). Same initial ch-, different final and tone. Listen for the open -á vs the central -ē."
+            },
+            {
+              "id": "ds2-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the right order for \"He moved the chair into the room\":",
+              "options": [
+                "他 把 椅子 搬 进 房间",
+                "他 椅子 把 搬 进 房间",
+                "他 搬 把 椅子 房间",
+                "把 他 椅子 搬 进 房间"
+              ],
+              "answer": "他 把 椅子 搬 进 房间"
+            },
+            {
+              "id": "ds2-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please put the keys in the drawer\"",
+              "answer": "请 把 钥匙 放 在 抽屉 里"
+            },
+            {
+              "id": "ds2-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 ___ 杯子 洗 干净 了\" (disposal marker)",
+              "answer": "把"
+            },
+            {
+              "id": "ds2-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"她 把 信 寄 给 朋友 了\" mean?",
+              "options": [
+                "She sent the letter to her friend",
+                "Her friend sent her a letter",
+                "She wrote a letter",
+                "She received a letter"
+              ],
+              "answer": "She sent the letter to her friend"
+            },
+            {
+              "id": "ds2-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "请把门关上",
+                "请把窗户关上",
+                "请把灯关上",
+                "请把电视关上"
+              ],
+              "answer": "请把门关上"
+            },
+            {
+              "id": "ds2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He brought the food to the table\"",
+              "answer": "他 把 菜 端 到 桌子 上"
+            },
+            {
+              "id": "ds2-18",
+              "type": "multiple_choice",
+              "prompt": "Why is 把 used here: \"请 把 这 个 包裹 送 到 我 家\"?",
+              "options": [
+                "To focus on the specific package and where it goes",
+                "To make the sentence past tense",
+                "To form a question",
+                "It's optional"
+              ],
+              "answer": "To focus on the specific package and where it goes"
+            },
+            {
+              "id": "ds2-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Put the box on the floor",
+              "answer": "把 箱子 放 在 地 上"
             }
           ]
         },
@@ -1892,6 +2644,85 @@
               ],
               "answer": "收拾 好",
               "explanation": "收拾 好 — \"tidy up\" + 好 (good/done). The other complements don't fit the verb 收拾."
+            },
+            {
+              "id": "ds3-12",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 把 字 写 错 了\" mean?",
+              "options": [
+                "I wrote the character correctly",
+                "I wrote the character wrong",
+                "I forgot the character",
+                "I taught the character"
+              ],
+              "answer": "I wrote the character wrong"
+            },
+            {
+              "id": "ds3-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She wrapped the gift up\"",
+              "answer": "她 把 礼物 包 起来 了"
+            },
+            {
+              "id": "ds3-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 把 书 看 ___ 了\" (result: finished)",
+              "answer": "完"
+            },
+            {
+              "id": "ds3-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the right result complement: \"我 把 衣服 洗 ___ 了\" (cleaned)",
+              "options": [
+                "干净",
+                "完",
+                "好",
+                "见"
+              ],
+              "answer": "干净"
+            },
+            {
+              "id": "ds3-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我把房间收拾好了",
+                "我把房间打扫了",
+                "我把衣服洗好了",
+                "我把饭做好了"
+              ],
+              "answer": "我把房间收拾好了"
+            },
+            {
+              "id": "ds3-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He fixed the chair\"",
+              "answer": "他 把 椅子 修 好 了"
+            },
+            {
+              "id": "ds3-18",
+              "type": "multiple_choice",
+              "prompt": "Which complement means \"successfully\"?",
+              "options": [
+                "好",
+                "完",
+                "见",
+                "到"
+              ],
+              "answer": "好"
+            },
+            {
+              "id": "ds3-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I broke the phone",
+              "answer": "我 把 手机 弄 坏 了"
+            },
+            {
+              "id": "ds3-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 把 蛋糕 切 ___ 八 块\" (cut INTO 8 pieces)",
+              "answer": "成"
             }
           ]
         },
@@ -2068,6 +2899,85 @@
                 "里",
                 "下"
               ]
+            },
+            {
+              "id": "ds4-12",
+              "type": "multiple_choice",
+              "prompt": "Which is correct for \"He carried the suitcase to the room\"?",
+              "options": [
+                "他 把 行李箱 搬 到 房间 里",
+                "他 搬 把 行李箱 房间",
+                "他 行李箱 把 搬 房间",
+                "把 他 行李箱 搬 房间"
+              ],
+              "answer": "他 把 行李箱 搬 到 房间 里"
+            },
+            {
+              "id": "ds4-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please put the cup on the table\"",
+              "answer": "请 把 杯子 放 在 桌子 上"
+            },
+            {
+              "id": "ds4-14",
+              "type": "fill_blank",
+              "prompt": "Fill the directional: \"我 把 信 ___ 给 老板\" (sent)",
+              "answer": "寄"
+            },
+            {
+              "id": "ds4-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the WRONG verb after 把:",
+              "options": [
+                "认识",
+                "搬",
+                "送",
+                "放"
+              ],
+              "answer": "认识"
+            },
+            {
+              "id": "ds4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我把车开到家门口",
+                "我把车开到办公室",
+                "我把车停在家门口",
+                "我把车修好了"
+              ],
+              "answer": "我把车开到家门口"
+            },
+            {
+              "id": "ds4-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He returned the book to the library\"",
+              "answer": "他 把 书 还 到 图书馆 了"
+            },
+            {
+              "id": "ds4-18",
+              "type": "multiple_choice",
+              "prompt": "What does \"把 钱 存 到 银行\" mean?",
+              "options": [
+                "Deposit money at the bank",
+                "Take money from the bank",
+                "Borrow money from the bank",
+                "Exchange money at the bank"
+              ],
+              "answer": "Deposit money at the bank"
+            },
+            {
+              "id": "ds4-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "She put the cat on the chair",
+              "answer": "她 把 猫 放 在 椅子 上"
+            },
+            {
+              "id": "ds4-20",
+              "type": "fill_blank",
+              "prompt": "Fill the location result: \"他 把 自行车 停 ___ 门 口\"",
+              "answer": "在"
             }
           ]
         },
@@ -2257,6 +3167,79 @@
                 "里"
               ],
               "explanation": "别 (bié) — informal \"don't\". Goes before 把 just like 不 要."
+            },
+            {
+              "id": "ds5-13",
+              "type": "multiple_choice",
+              "prompt": "Where does 没 go in \"He hasn't washed the dishes\"?",
+              "options": [
+                "他 没 把 碗 洗",
+                "他 把 没 碗 洗",
+                "他 把 碗 没 洗",
+                "没 他 把 碗 洗"
+              ],
+              "answer": "他 没 把 碗 洗"
+            },
+            {
+              "id": "ds5-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Don't put the bag on the bed\"",
+              "answer": "别 把 包 放 在 床 上"
+            },
+            {
+              "id": "ds5-15",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 ___ 把 信 寄 出 去\" (\"haven't yet\")",
+              "answer": "还 没"
+            },
+            {
+              "id": "ds5-16",
+              "type": "multiple_choice",
+              "prompt": "Pick the right way to politely say no: \"Don't break the window\"",
+              "options": [
+                "请 不 要 把 窗户 弄 坏",
+                "请 把 不 要 窗户 弄 坏",
+                "请 窗户 不 要 把 弄 坏",
+                "不 要 请 把 窗户 弄 坏"
+              ],
+              "answer": "请 不 要 把 窗户 弄 坏"
+            },
+            {
+              "id": "ds5-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "别把书放在地上",
+                "别把书放在桌上",
+                "别把书拿走",
+                "别把书弄丢"
+              ],
+              "answer": "别把书放在地上"
+            },
+            {
+              "id": "ds5-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I haven't finished the report yet\"",
+              "answer": "我 还 没 把 报告 做 完"
+            },
+            {
+              "id": "ds5-19",
+              "type": "multiple_choice",
+              "prompt": "What's the difference between 别 and 不 要?",
+              "options": [
+                "别 is more casual, 不 要 a bit stronger",
+                "They mean the opposite",
+                "别 is past tense",
+                "不 要 is rude"
+              ],
+              "answer": "别 is more casual, 不 要 a bit stronger"
+            },
+            {
+              "id": "ds5-20",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Don't throw the trash here",
+              "answer": "别 把 垃圾 扔 在 这里"
             }
           ]
         },
@@ -2422,6 +3405,85 @@
                 "寄",
                 "送"
               ]
+            },
+            {
+              "id": "ds6-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the wrong sentence:",
+              "options": [
+                "我 把 这 个 道理 懂 了",
+                "我 把 灯 关 了",
+                "我 把 钱 给 他 了",
+                "我 把 房间 收拾 好 了"
+              ],
+              "answer": "我 把 这 个 道理 懂 了"
+            },
+            {
+              "id": "ds6-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please correct the mistake\"",
+              "answer": "请 把 错误 改 过来"
+            },
+            {
+              "id": "ds6-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"他 把 文件 交 ___ 老板\" (gave to)",
+              "answer": "给"
+            },
+            {
+              "id": "ds6-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the right phrase: \"He saved the file\"",
+              "options": [
+                "他 把 文件 保存 了",
+                "他 文件 把 保存",
+                "把 他 保存 文件",
+                "他 保存 把 文件"
+              ],
+              "answer": "他 把 文件 保存 了"
+            },
+            {
+              "id": "ds6-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "请把座位让给他",
+                "请把座位让给我",
+                "请把饭让给他",
+                "请把书让给他"
+              ],
+              "answer": "请把座位让给他"
+            },
+            {
+              "id": "ds6-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He read this report carefully\"",
+              "answer": "他 把 这 份 报告 仔细 看 了 一 遍"
+            },
+            {
+              "id": "ds6-18",
+              "type": "multiple_choice",
+              "prompt": "Which result-verb pair works best for \"finish the dishes\"?",
+              "options": [
+                "洗 完",
+                "洗 见",
+                "洗 上",
+                "洗 起来"
+              ],
+              "answer": "洗 完"
+            },
+            {
+              "id": "ds6-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He cleaned the room",
+              "answer": "他 把 房间 打扫 干净 了"
+            },
+            {
+              "id": "ds6-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"妈妈 把 我 的 衣服 ___ 好 了\" (folded)",
+              "answer": "叠"
             }
           ]
         },
@@ -2517,6 +3579,176 @@
                   "spokenText": "都搬完了，请检查一下"
                 }
               ]
+            },
+            {
+              "id": "ds7-2",
+              "type": "multiple_choice",
+              "prompt": "Which is the disposal pattern marker?",
+              "options": [
+                "把",
+                "被",
+                "让",
+                "给"
+              ],
+              "answer": "把"
+            },
+            {
+              "id": "ds7-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please move the table over here\"",
+              "answer": "请 把 桌子 搬 过来"
+            },
+            {
+              "id": "ds7-4",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 ___ 行李 放 进 卧室 了\" (disposal marker)",
+              "answer": "把"
+            },
+            {
+              "id": "ds7-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"把 家具 搬 进 来\" mean?",
+              "options": [
+                "Move furniture in",
+                "Move furniture out",
+                "Buy furniture",
+                "Throw away furniture"
+              ],
+              "answer": "Move furniture in"
+            },
+            {
+              "id": "ds7-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "请把箱子搬到楼上",
+                "请把箱子搬到楼下",
+                "请把椅子搬到楼上",
+                "请把桌子搬到楼上"
+              ],
+              "answer": "请把箱子搬到楼上"
+            },
+            {
+              "id": "ds7-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He hung the painting on the wall\"",
+              "answer": "他 把 画 挂 在 墙 上 了"
+            },
+            {
+              "id": "ds7-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the right verb: \"___ 沙发 摆 在 客厅\"",
+              "options": [
+                "把",
+                "被",
+                "让",
+                "给"
+              ],
+              "answer": "把"
+            },
+            {
+              "id": "ds7-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "搬家",
+              "answer": "Move (house)"
+            },
+            {
+              "id": "ds7-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I cleaned the kitchen yesterday\"",
+              "answer": "昨天 我 把 厨房 打扫 干净 了"
+            },
+            {
+              "id": "ds7-11",
+              "type": "multiple_choice",
+              "prompt": "Which means \"furniture\"?",
+              "options": [
+                "家具",
+                "家人",
+                "家务",
+                "家乡"
+              ],
+              "answer": "家具"
+            },
+            {
+              "id": "ds7-12",
+              "type": "fill_blank",
+              "prompt": "Fill: \"他 把 床 ___ 在 窗 边\" (location verb)",
+              "answer": "放"
+            },
+            {
+              "id": "ds7-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我把房间收拾好了",
+                "我把房间打扫好了",
+                "我把房间整理好了",
+                "我把房间布置好了"
+              ],
+              "answer": "我把房间收拾好了"
+            },
+            {
+              "id": "ds7-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please don't put the books on the floor\"",
+              "answer": "请 不 要 把 书 放 在 地 上"
+            },
+            {
+              "id": "ds7-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the right disposal sentence: \"She arranged the flowers in the vase\"",
+              "options": [
+                "她 把 花 插 在 花瓶 里",
+                "她 花 把 插 在 花瓶",
+                "把 她 花 花瓶 插",
+                "她 插 把 花 花瓶"
+              ],
+              "answer": "她 把 花 插 在 花瓶 里"
+            },
+            {
+              "id": "ds7-16",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I put the keys on the table",
+              "answer": "我 把 钥匙 放 在 桌子 上"
+            },
+            {
+              "id": "ds7-17",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 ___ 把 灯 关 上\" (haven't yet)",
+              "answer": "还 没"
+            },
+            {
+              "id": "ds7-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I haven't unpacked yet\"",
+              "answer": "我 还 没 把 行李 打 开"
+            },
+            {
+              "id": "ds7-19",
+              "type": "multiple_choice",
+              "prompt": "What does \"打开 行李\" mean?",
+              "options": [
+                "Unpack luggage",
+                "Pack luggage",
+                "Lose luggage",
+                "Buy luggage"
+              ],
+              "answer": "Unpack luggage"
+            },
+            {
+              "id": "ds7-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "把书放在书架上",
+                "把书放在桌子上",
+                "把书放在床上",
+                "把书放在地上"
+              ],
+              "answer": "把书放在书架上"
             }
           ]
         }
@@ -2861,6 +4093,79 @@
               ],
               "answer": "My bicycle was stolen",
               "explanation": "English passive: be + past participle. 被 偷 了 = was stolen (event). Don't drop the auxiliary 'be' or the -en form."
+            },
+            {
+              "id": "ps1-12",
+              "type": "multiple_choice",
+              "prompt": "What is the most common passive marker?",
+              "options": [
+                "被",
+                "把",
+                "让",
+                "给"
+              ],
+              "answer": "被"
+            },
+            {
+              "id": "ps1-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The door was opened by the wind\"",
+              "answer": "门 被 风 吹 开 了"
+            },
+            {
+              "id": "ps1-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 的 书 ___ 朋友 拿 走 了\" (passive marker)",
+              "answer": "被"
+            },
+            {
+              "id": "ps1-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 被 老板 表扬 了\" mean?",
+              "options": [
+                "I was praised by the boss",
+                "I praised the boss",
+                "I'm angry at the boss",
+                "I work for the boss"
+              ],
+              "answer": "I was praised by the boss"
+            },
+            {
+              "id": "ps1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他被老师表扬了",
+                "他被老师批评了",
+                "她被老师表扬了",
+                "他被同学表扬了"
+              ],
+              "answer": "他被老师表扬了"
+            },
+            {
+              "id": "ps1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My letter was read by mom\"",
+              "answer": "我 的 信 被 妈妈 看 了"
+            },
+            {
+              "id": "ps1-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural passive: \"The cake was eaten\"",
+              "options": [
+                "蛋糕 被 吃 了",
+                "蛋糕 把 吃 了",
+                "蛋糕 让 吃 了",
+                "蛋糕 给 吃 了"
+              ],
+              "answer": "蛋糕 被 吃 了"
+            },
+            {
+              "id": "ps1-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "My phone was broken",
+              "answer": "我 的 手机 被 弄 坏 了"
             }
           ]
         },
@@ -3048,6 +4353,79 @@
               ],
               "answer": "这 本 书 是 老师 写 的",
               "explanation": "Tone trap: 是 (shì, 4th) vs 史 (shǐ, 3rd) vs 使 (shǐ, 3rd) vs 试 (shì, 4th). 是 is the most natural copula here — listen for the 4th-tone fall."
+            },
+            {
+              "id": "ps2-12",
+              "type": "multiple_choice",
+              "prompt": "Convert \"老师 批评 了 学生\" to passive:",
+              "options": [
+                "学生 被 老师 批评 了",
+                "老师 被 学生 批评 了",
+                "学生 把 老师 批评 了",
+                "老师 把 学生 批评 了"
+              ],
+              "answer": "学生 被 老师 批评 了"
+            },
+            {
+              "id": "ps2-13",
+              "type": "tap_words_in_order",
+              "prompt": "Convert to passive: \"小狗 咬 了 我\"",
+              "answer": "我 被 小狗 咬 了"
+            },
+            {
+              "id": "ps2-14",
+              "type": "fill_blank",
+              "prompt": "Fill the agent in: \"窗户 被 ___ 打 破 了\" (a child)",
+              "answer": "小孩"
+            },
+            {
+              "id": "ps2-15",
+              "type": "multiple_choice",
+              "prompt": "What is the active version of \"信 被 我 寄 出去 了\"?",
+              "options": [
+                "我 把 信 寄 出去 了",
+                "我 寄 把 信 出去 了",
+                "信 我 寄 出去 了",
+                "把 我 寄 信 出去 了"
+              ],
+              "answer": "我 把 信 寄 出去 了"
+            },
+            {
+              "id": "ps2-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "书被她拿走了",
+                "书被他拿走了",
+                "书她拿走了",
+                "书被她看完了"
+              ],
+              "answer": "书被她拿走了"
+            },
+            {
+              "id": "ps2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The room was tidied by mom\"",
+              "answer": "房间 被 妈妈 收拾 好 了"
+            },
+            {
+              "id": "ps2-18",
+              "type": "multiple_choice",
+              "prompt": "Why convert active to passive?",
+              "options": [
+                "To emphasize the patient or when the agent isn't important",
+                "Passive is required in past tense",
+                "To make a question",
+                "Active is wrong"
+              ],
+              "answer": "To emphasize the patient or when the agent isn't important"
+            },
+            {
+              "id": "ps2-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The window was broken by him",
+              "answer": "窗户 被 他 打 破 了"
             }
           ]
         },
@@ -3210,6 +4588,85 @@
                 "written",
                 "formal/written"
               ]
+            },
+            {
+              "id": "ps3-12",
+              "type": "multiple_choice",
+              "prompt": "Which is the most colloquial passive marker?",
+              "options": [
+                "让",
+                "被",
+                "把",
+                "给"
+              ],
+              "answer": "让"
+            },
+            {
+              "id": "ps3-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I got bitten by a mosquito\" using 让",
+              "answer": "我 让 蚊子 咬 了"
+            },
+            {
+              "id": "ps3-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"他 ___ 同事 帮 了 一 个 大 忙\" (casual passive)",
+              "answer": "让"
+            },
+            {
+              "id": "ps3-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 叫 雨 淋 湿 了\" mean?",
+              "options": [
+                "I got wet from the rain",
+                "I called for rain",
+                "I made the rain wet",
+                "I'm allergic to rain"
+              ],
+              "answer": "I got wet from the rain"
+            },
+            {
+              "id": "ps3-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我让狗咬了一口",
+                "我被狗咬了一口",
+                "我让狗追了一下",
+                "我让猫抓了一下"
+              ],
+              "answer": "我让狗咬了一口"
+            },
+            {
+              "id": "ps3-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The cake got eaten by the kid\" with 让",
+              "answer": "蛋糕 让 小孩 吃 了"
+            },
+            {
+              "id": "ps3-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the right casual passive: \"My bike got taken\"",
+              "options": [
+                "我 的 自行车 让 人 骑 走 了",
+                "我 的 自行车 把 人 骑 走 了",
+                "我 的 自行车 给 人 骑 走 了",
+                "我 的 自行车 让 骑 走 了"
+              ],
+              "answer": "我 的 自行车 让 人 骑 走 了"
+            },
+            {
+              "id": "ps3-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He got scolded by mom",
+              "answer": "他 让 妈妈 骂 了"
+            },
+            {
+              "id": "ps3-20",
+              "type": "fill_blank",
+              "prompt": "Fill the right register marker in formal writing: \"这 个 决定 ___ 大家 接受 了\"",
+              "answer": "被"
             }
           ]
         },
@@ -3376,6 +4833,85 @@
                 "他没被妈妈批评"
               ],
               "answer": "他没被老师批评"
+            },
+            {
+              "id": "ps4-12",
+              "type": "multiple_choice",
+              "prompt": "Where does 没 go in passive sentences?",
+              "options": [
+                "Before 被",
+                "After 被",
+                "After the verb",
+                "It doesn't go anywhere"
+              ],
+              "answer": "Before 被"
+            },
+            {
+              "id": "ps4-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The window wasn't broken\"",
+              "answer": "窗户 没 被 打 破"
+            },
+            {
+              "id": "ps4-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 ___ 被 蚊子 咬\" (\"haven't been\")",
+              "answer": "没"
+            },
+            {
+              "id": "ps4-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the right negation: \"My letter wasn't sent\"",
+              "options": [
+                "我 的 信 没 被 寄 出去",
+                "我 的 信 不 被 寄 出去",
+                "我 的 信 被 没 寄 出去",
+                "我 的 信 没 寄 出去 被"
+              ],
+              "answer": "我 的 信 没 被 寄 出去"
+            },
+            {
+              "id": "ps4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他没被批评",
+                "他被批评了",
+                "她没被批评",
+                "他没批评她"
+              ],
+              "answer": "他没被批评"
+            },
+            {
+              "id": "ps4-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The cake wasn't finished\"",
+              "answer": "蛋糕 没 被 吃 完"
+            },
+            {
+              "id": "ps4-18",
+              "type": "multiple_choice",
+              "prompt": "Why use 没 not 不 with 被?",
+              "options": [
+                "被-sentences describe completed events, so use 没",
+                "不 means yes in passive",
+                "They're interchangeable",
+                "不 only works in future"
+              ],
+              "answer": "被-sentences describe完成 events, so use 没"
+            },
+            {
+              "id": "ps4-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The phone wasn't stolen",
+              "answer": "手机 没 被 偷"
+            },
+            {
+              "id": "ps4-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"作业 ___ 被 老师 检查 ___ \" (haven't ... yet)",
+              "answer": "还 没 / 过"
             }
           ]
         },
@@ -3471,6 +5007,176 @@
                   "spokenText": "好的，谢谢您的帮助"
                 }
               ]
+            },
+            {
+              "id": "ps5-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"police station\"?",
+              "options": [
+                "警察局",
+                "邮局",
+                "邮政局",
+                "派出所"
+              ],
+              "answer": "警察局"
+            },
+            {
+              "id": "ps5-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My wallet was stolen on the bus\"",
+              "answer": "我 的 钱包 在 公交车 上 被 偷 了"
+            },
+            {
+              "id": "ps5-4",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 想 ___ 案\" (\"report a case\")",
+              "answer": "报"
+            },
+            {
+              "id": "ps5-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"小偷\" (xiǎo tōu) mean?",
+              "options": [
+                "Thief",
+                "Officer",
+                "Citizen",
+                "Suspect"
+              ],
+              "answer": "Thief"
+            },
+            {
+              "id": "ps5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我的护照被偷了",
+                "我的钱包被偷了",
+                "我的手机被偷了",
+                "我的行李被偷了"
+              ],
+              "answer": "我的护照被偷了"
+            },
+            {
+              "id": "ps5-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My bag was taken by someone\"",
+              "answer": "我 的 包 被 人 拿 走 了"
+            },
+            {
+              "id": "ps5-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural question: \"What was inside?\"",
+              "options": [
+                "里面 有 什么",
+                "什么 里面 有",
+                "有 什么 里面",
+                "里面 什么 有"
+              ],
+              "answer": "里面 有 什么"
+            },
+            {
+              "id": "ps5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "报警",
+              "answer": "Call the police"
+            },
+            {
+              "id": "ps5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"There was about 500 yuan inside\"",
+              "answer": "里面 大概 有 五百 块 钱"
+            },
+            {
+              "id": "ps5-11",
+              "type": "multiple_choice",
+              "prompt": "Which means \"to file a report\"?",
+              "options": [
+                "报案",
+                "报名",
+                "报到",
+                "报销"
+              ],
+              "answer": "报案"
+            },
+            {
+              "id": "ps5-12",
+              "type": "fill_blank",
+              "prompt": "\"现场\" (xiàn chǎng) means the ___",
+              "answer": "Scene"
+            },
+            {
+              "id": "ps5-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "请你描述一下小偷",
+                "请你看一下小偷",
+                "请你认一下小偷",
+                "请你说一下小偷"
+              ],
+              "answer": "请你描述一下小偷"
+            },
+            {
+              "id": "ps5-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I didn't see his face clearly\"",
+              "answer": "我 没 看 清 他 的 脸"
+            },
+            {
+              "id": "ps5-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural way to ask for help: \"Can you help me?\"",
+              "options": [
+                "你 能 帮 我 一下 吗",
+                "你 是 帮 我 吗",
+                "帮 我 你 吗",
+                "我 你 帮 一下"
+              ],
+              "answer": "你 能 帮 我 一下 吗"
+            },
+            {
+              "id": "ps5-16",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Someone stole my phone",
+              "answer": "有 人 偷 了 我 的 手机"
+            },
+            {
+              "id": "ps5-17",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 的 自行车 ___ 偷 了\" (passive marker)",
+              "answer": "被"
+            },
+            {
+              "id": "ps5-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want to file a missing-items report\"",
+              "answer": "我 想 报 失"
+            },
+            {
+              "id": "ps5-19",
+              "type": "multiple_choice",
+              "prompt": "What does \"失物 招领\" mean?",
+              "options": [
+                "Lost and found",
+                "Police report",
+                "Insurance claim",
+                "Filing complaint"
+              ],
+              "answer": "Lost and found"
+            },
+            {
+              "id": "ps5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "请填一下这张表",
+                "请写一下这张表",
+                "请看一下这张表",
+                "请给我一下这张表"
+              ],
+              "answer": "请填一下这张表"
             }
           ]
         }
@@ -3735,6 +5441,85 @@
               ],
               "answer": "He showed me three books",
               "explanation": "Two issues English-L1 might hit: (1) 给 ... 看 = \"show\", not \"give-look\"; (2) plural -s required on 'books'. 三 本 书 has no plural marker in Chinese but English needs it."
+            },
+            {
+              "id": "gv1-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the right structure for \"give\":",
+              "options": [
+                "S + 给 + recipient + object",
+                "S + object + 给 + recipient",
+                "给 + S + recipient",
+                "S + 给 + object + recipient"
+              ],
+              "answer": "S + 给 + recipient + object"
+            },
+            {
+              "id": "gv1-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Dad gave me a watch\"",
+              "answer": "爸爸 给 我 一 块 手表"
+            },
+            {
+              "id": "gv1-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"妈妈 ___ 我 做 了 蛋糕\" (FOR me)",
+              "answer": "给"
+            },
+            {
+              "id": "gv1-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"老板 给 我 加 了 工资\" mean?",
+              "options": [
+                "The boss gave me a raise",
+                "I gave the boss money",
+                "The boss gave me a job",
+                "I asked for a raise"
+              ],
+              "answer": "The boss gave me a raise"
+            },
+            {
+              "id": "gv1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "妈妈给我做早饭",
+                "妈妈给我买衣服",
+                "我给妈妈做早饭",
+                "妈妈给我打电话"
+              ],
+              "answer": "妈妈给我做早饭"
+            },
+            {
+              "id": "gv1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Could you give me your phone number?\"",
+              "answer": "能 给 我 你 的 电话 号码 吗"
+            },
+            {
+              "id": "gv1-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence: \"He sent me an email\"",
+              "options": [
+                "他 给 我 发 了 一 封 邮件",
+                "他 我 给 邮件 发",
+                "邮件 他 给 我 发",
+                "他 发 给 邮件 我"
+              ],
+              "answer": "他 给 我 发 了 一 封 邮件"
+            },
+            {
+              "id": "gv1-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "She gave me a pen",
+              "answer": "她 给 我 一 支 笔"
+            },
+            {
+              "id": "gv1-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"老师 ___ 学生 讲 故事\" (FOR / TO students)",
+              "answer": "给"
             }
           ]
         },
@@ -3926,6 +5711,79 @@
               ],
               "answer": "他 送 我 一 个 礼物",
               "explanation": "Tone + MW trap. 送 (sòng, 4th) vs 松 (sōng, 1st). 礼物 (lǐ wù) vs 利物 (lì wù — only the tone of 礼 changes). Also, 个 礼物 is the natural MW here."
+            },
+            {
+              "id": "gv2-12",
+              "type": "multiple_choice",
+              "prompt": "Which means \"do FOR someone\"?",
+              "options": [
+                "给 + person + 做",
+                "做 + 给 + person",
+                "给 + 做 + person",
+                "person + 给 + 做"
+              ],
+              "answer": "给 + person + 做"
+            },
+            {
+              "id": "gv2-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Mom cooked dinner for me\"",
+              "answer": "妈妈 给 我 做 了 晚饭"
+            },
+            {
+              "id": "gv2-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 ___ 朋友 写 一 封 邮件\" (FOR friend)",
+              "answer": "给"
+            },
+            {
+              "id": "gv2-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 给 你 介绍 一下\" mean?",
+              "options": [
+                "Let me introduce",
+                "I forgot you",
+                "I want to ask you",
+                "Let me know you"
+              ],
+              "answer": "Let me introduce"
+            },
+            {
+              "id": "gv2-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他给我倒了一杯茶",
+                "他给我做了一杯茶",
+                "他给我端了一杯茶",
+                "他给我泡了一杯茶"
+              ],
+              "answer": "他给我倒了一杯茶"
+            },
+            {
+              "id": "gv2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My friend translated this for me\"",
+              "answer": "我 的 朋友 给 我 翻译 了 这 个"
+            },
+            {
+              "id": "gv2-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the right form: \"He called me yesterday\"",
+              "options": [
+                "他 昨天 给 我 打 了 电话",
+                "他 昨天 打 给 我 电话",
+                "他 昨天 我 给 打 电话",
+                "他 给 昨天 我 打 电话"
+              ],
+              "answer": "他 昨天 给 我 打 了 电话"
+            },
+            {
+              "id": "gv2-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I'll call you tonight",
+              "answer": "今天 晚上 我 给 你 打 电话"
             }
           ]
         },
@@ -4102,6 +5960,85 @@
                 "请给我介绍一下"
               ],
               "answer": "我给你介绍一下"
+            },
+            {
+              "id": "gv3-12",
+              "type": "multiple_choice",
+              "prompt": "Which means \"introduce me\"?",
+              "options": [
+                "给 我 介绍",
+                "我 给 介绍",
+                "介绍 我 给",
+                "给 介绍 我"
+              ],
+              "answer": "给 我 介绍"
+            },
+            {
+              "id": "gv3-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Could you pour me a glass of water?\"",
+              "answer": "你 能 给 我 倒 一 杯 水 吗"
+            },
+            {
+              "id": "gv3-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"请 ___ 我 留 一 个 口信\" (FOR me)",
+              "answer": "给"
+            },
+            {
+              "id": "gv3-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"给 客人 倒 茶\" mean?",
+              "options": [
+                "Pour tea for the guests",
+                "Drink tea with guests",
+                "Buy tea for guests",
+                "Make tea with guests"
+              ],
+              "answer": "Pour tea for the guests"
+            },
+            {
+              "id": "gv3-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我给你带了一些茶",
+                "我给你买了一些茶",
+                "我给你泡了一些茶",
+                "我给你送了一些茶"
+              ],
+              "answer": "我给你带了一些茶"
+            },
+            {
+              "id": "gv3-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Mom called me this morning\"",
+              "answer": "今天 早上 妈妈 给 我 打 了 电话"
+            },
+            {
+              "id": "gv3-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural translation: \"Send me a text\"",
+              "options": [
+                "给 我 发 短信",
+                "短信 给 我 发",
+                "我 短信 给 发",
+                "发 我 短信"
+              ],
+              "answer": "给 我 发 短信"
+            },
+            {
+              "id": "gv3-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He brought me a gift",
+              "answer": "他 给 我 带 了 一 个 礼物"
+            },
+            {
+              "id": "gv3-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 ___ 朋友 介绍 工作\" (FOR friend)",
+              "answer": "给"
             }
           ]
         },
@@ -4273,6 +6210,85 @@
                 "我把书送他了"
               ],
               "answer": "我把书给他了"
+            },
+            {
+              "id": "gv4-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the right verb-coverb pair: \"sent the package to mom\"",
+              "options": [
+                "把 包裹 寄 给 妈妈",
+                "把 给 妈妈 寄 包裹",
+                "包裹 寄 把 妈妈 给",
+                "把 寄 包裹 妈妈 给"
+              ],
+              "answer": "把 包裹 寄 给 妈妈"
+            },
+            {
+              "id": "gv4-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I bought a present for my mom\"",
+              "answer": "我 给 妈妈 买 了 一 个 礼物"
+            },
+            {
+              "id": "gv4-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"老板 ___ 我 涨 了 工资\" (FOR me)",
+              "answer": "给"
+            },
+            {
+              "id": "gv4-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"把 给\" combine often mean?",
+              "options": [
+                "Move something specific to a recipient",
+                "Take something away",
+                "Hide something",
+                "Buy something"
+              ],
+              "answer": "Move something specific to a recipient"
+            },
+            {
+              "id": "gv4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我把礼物给他了",
+                "我把书给他了",
+                "我把钱给他了",
+                "我把卡给他了"
+              ],
+              "answer": "我把礼物给他了"
+            },
+            {
+              "id": "gv4-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She handed me the keys\"",
+              "answer": "她 把 钥匙 给 我 了"
+            },
+            {
+              "id": "gv4-18",
+              "type": "multiple_choice",
+              "prompt": "Why use 把 + 给 together?",
+              "options": [
+                "把 introduces the object; 给 introduces the recipient",
+                "They mean the same",
+                "把 is past, 给 is future",
+                "It's wrong to combine them"
+              ],
+              "answer": "把 introduces the object; 给 introduces the recipient"
+            },
+            {
+              "id": "gv4-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I gave him the book",
+              "answer": "我 把 书 给 他 了"
+            },
+            {
+              "id": "gv4-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"他 把 信 寄 ___ 老板 了\" (recipient marker)",
+              "answer": "给"
             }
           ]
         },
@@ -4368,6 +6384,176 @@
                   "spokenText": "那太好了，生日快乐！"
                 }
               ]
+            },
+            {
+              "id": "gv5-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"birthday\"?",
+              "options": [
+                "生日",
+                "节日",
+                "假日",
+                "周末"
+              ],
+              "answer": "生日"
+            },
+            {
+              "id": "gv5-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Happy birthday!\"",
+              "answer": "生日 快乐"
+            },
+            {
+              "id": "gv5-4",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 ___ 你 买 了 一 个 礼物\" (FOR you)",
+              "answer": "给"
+            },
+            {
+              "id": "gv5-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"礼物\" (lǐ wù) mean?",
+              "options": [
+                "Gift",
+                "Card",
+                "Cake",
+                "Candle"
+              ],
+              "answer": "Gift"
+            },
+            {
+              "id": "gv5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "祝你生日快乐",
+                "祝你新年快乐",
+                "祝你节日快乐",
+                "祝你工作顺利"
+              ],
+              "answer": "祝你生日快乐"
+            },
+            {
+              "id": "gv5-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This is a small gift for you\"",
+              "answer": "这 是 给 你 的 一 个 小 礼物"
+            },
+            {
+              "id": "gv5-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural reply when receiving a gift:",
+              "options": [
+                "谢谢 ， 你 真 客气",
+                "你 不 应该",
+                "我 不 要",
+                "不 是 我 的"
+              ],
+              "answer": "谢谢 ， 你 真 客气"
+            },
+            {
+              "id": "gv5-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "蛋糕",
+              "answer": "Cake"
+            },
+            {
+              "id": "gv5-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Everyone, let's sing the birthday song\"",
+              "answer": "大家 一起 唱 生日 歌"
+            },
+            {
+              "id": "gv5-11",
+              "type": "multiple_choice",
+              "prompt": "Which means \"to blow out (candles)\"?",
+              "options": [
+                "吹",
+                "点",
+                "灭",
+                "烧"
+              ],
+              "answer": "吹"
+            },
+            {
+              "id": "gv5-12",
+              "type": "fill_blank",
+              "prompt": "\"许 愿\" (xǔ yuàn) means to make a ___",
+              "answer": "Wish"
+            },
+            {
+              "id": "gv5-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "快吹蜡烛许个愿",
+                "快点蜡烛许个愿",
+                "快灭蜡烛许个愿",
+                "快烧蜡烛许个愿"
+              ],
+              "answer": "快吹蜡烛许个愿"
+            },
+            {
+              "id": "gv5-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Could you cut me a small slice?\"",
+              "answer": "你 能 给 我 切 一 小 块 吗"
+            },
+            {
+              "id": "gv5-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the polite reply to thank-you for a gift:",
+              "options": [
+                "不 客气",
+                "不 用 谢 ， 喜欢 就 好",
+                "Both work",
+                "Neither works"
+              ],
+              "answer": "Both work"
+            },
+            {
+              "id": "gv5-16",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I prepared a cake for you",
+              "answer": "我 给 你 准备 了 一 个 蛋糕"
+            },
+            {
+              "id": "gv5-17",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 ___ 我 唱 生日 歌\" (FOR me)",
+              "answer": "给"
+            },
+            {
+              "id": "gv5-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This gift is really thoughtful\"",
+              "answer": "这 个 礼物 真 用心"
+            },
+            {
+              "id": "gv5-19",
+              "type": "multiple_choice",
+              "prompt": "What does \"用心\" (yòng xīn) mean here?",
+              "options": [
+                "Thoughtful / heartfelt",
+                "Expensive",
+                "Big",
+                "Cheap"
+              ],
+              "answer": "Thoughtful / heartfelt"
+            },
+            {
+              "id": "gv5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "这是给你的礼物",
+                "这是给他的礼物",
+                "这是你的礼物",
+                "这是新的礼物"
+              ],
+              "answer": "这是给你的礼物"
             }
           ]
         }
@@ -4663,6 +6849,79 @@
               ],
               "answer": "I really like this movie",
               "explanation": "Classic Chenglish: 很 + verb → English speakers may calque as \"very + verb\" or insert a redundant \"am\". English uses \"really\" or \"a lot\" with verbs; \"very\" only modifies adjectives/adverbs."
+            },
+            {
+              "id": "dg1-12",
+              "type": "multiple_choice",
+              "prompt": "What does \"她 跳 得 非常 好\" mean?",
+              "options": [
+                "She dances really well",
+                "She wants to dance",
+                "She doesn't dance",
+                "She danced once"
+              ],
+              "answer": "She dances really well"
+            },
+            {
+              "id": "dg1-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He eats really fast\"",
+              "answer": "他 吃 得 很 快"
+            },
+            {
+              "id": "dg1-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 唱 ___ 不 错\" (de particle)",
+              "answer": "得"
+            },
+            {
+              "id": "dg1-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence: \"My friend talks too much\"",
+              "options": [
+                "我 朋友 说 得 太 多 了",
+                "我 朋友 太 说 得 多",
+                "我 朋友 太 多 说 得",
+                "说 得 我 朋友 太 多"
+              ],
+              "answer": "我 朋友 说 得 太 多 了"
+            },
+            {
+              "id": "dg1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他写字写得很漂亮",
+                "他写字写得很慢",
+                "她写字写得很漂亮",
+                "他画画画得很漂亮"
+              ],
+              "answer": "他写字写得很漂亮"
+            },
+            {
+              "id": "dg1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She walks really slowly\"",
+              "answer": "她 走 得 很 慢"
+            },
+            {
+              "id": "dg1-18",
+              "type": "multiple_choice",
+              "prompt": "Why doesn't bare \"他 跑 快\" sound right?",
+              "options": [
+                "Without 得 + adverb, it sounds like a fragment",
+                "Missing 了",
+                "Missing subject",
+                "跑 should be 走"
+              ],
+              "answer": "Without 得 + adverb, it sounds like a fragment"
+            },
+            {
+              "id": "dg1-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He swims really well",
+              "answer": "他 游 得 很 好"
             }
           ]
         },
@@ -4839,6 +7098,85 @@
                 "了"
               ],
               "explanation": "得 + clause — \"runs to such a degree that he can't stop\". Classic B1 result-clause use of 得."
+            },
+            {
+              "id": "dg2-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the right pattern: \"She speaks Japanese well\"",
+              "options": [
+                "她 说 日语 说 得 很 好",
+                "她 日语 得 很 好",
+                "她 说 日语 得 很 好 说",
+                "她 得 说 日语 很 好"
+              ],
+              "answer": "她 说 日语 说 得 很 好"
+            },
+            {
+              "id": "dg2-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He plays soccer really well\"",
+              "answer": "他 踢 足球 踢 得 很 好"
+            },
+            {
+              "id": "dg2-14",
+              "type": "fill_blank",
+              "prompt": "Fill the missing verb: \"他 ___ 字 写 得 很 漂亮\" (verb-doubling)",
+              "answer": "写"
+            },
+            {
+              "id": "dg2-15",
+              "type": "multiple_choice",
+              "prompt": "Which is the alternative pattern (no verb doubling)?",
+              "options": [
+                "O + V 得 ...",
+                "S + V + O + 得",
+                "S + V + 得 + O",
+                "V + O + 得 + adj"
+              ],
+              "answer": "O + V 得 ..."
+            },
+            {
+              "id": "dg2-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "她跳舞跳得很美",
+                "她唱歌唱得很美",
+                "她画画画得很美",
+                "她写字写得很美"
+              ],
+              "answer": "她跳舞跳得很美"
+            },
+            {
+              "id": "dg2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He drives so fast it's scary\"",
+              "answer": "他 开 车 开 得 很 吓 人"
+            },
+            {
+              "id": "dg2-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the WRONG sentence:",
+              "options": [
+                "他 中文 说 得 不 错",
+                "他 说 中文 说 得 不 错",
+                "他 说 中文 得 不 错",
+                "中文 他 说 得 不 错"
+              ],
+              "answer": "他 说 中文 得 不 错"
+            },
+            {
+              "id": "dg2-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "She sings beautifully",
+              "answer": "她 唱 歌 唱 得 很 好 听"
+            },
+            {
+              "id": "dg2-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"老板 工作 ___ 得 很 努力\" (verb-doubling: working)",
+              "answer": "做"
             }
           ]
         },
@@ -5016,6 +7354,85 @@
               ],
               "answer": "他高兴地笑了",
               "explanation": "高兴 (happy) + 地 + 笑 — the 地 turns an adjective into an adverb modifying the verb."
+            },
+            {
+              "id": "dg3-12",
+              "type": "multiple_choice",
+              "prompt": "Which particle marks adverbs (manner before verb)?",
+              "options": [
+                "地",
+                "得",
+                "的",
+                "了"
+              ],
+              "answer": "地"
+            },
+            {
+              "id": "dg3-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He carefully wrote down each word\"",
+              "answer": "他 认真 地 写 下 每 一 个 字"
+            },
+            {
+              "id": "dg3-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 高兴 ___ 跑 进来\" (manner: happily)",
+              "answer": "地"
+            },
+            {
+              "id": "dg3-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the right particle: \"我 ___ 爸爸 是 老师\" (possession)",
+              "options": [
+                "的",
+                "地",
+                "得",
+                "了"
+              ],
+              "answer": "的"
+            },
+            {
+              "id": "dg3-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他慢慢地走",
+                "他慢慢地说",
+                "他慢慢地吃",
+                "他快快地走"
+              ],
+              "answer": "他慢慢地走"
+            },
+            {
+              "id": "dg3-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My older sister's bike\"",
+              "answer": "我 姐姐 的 自行车"
+            },
+            {
+              "id": "dg3-18",
+              "type": "multiple_choice",
+              "prompt": "What's wrong with \"他 跑 的 很 快\"?",
+              "options": [
+                "Should be 得, not 的",
+                "Missing 了",
+                "跑 is wrong",
+                "Should be 不 quick"
+              ],
+              "answer": "Should be 得, not 的"
+            },
+            {
+              "id": "dg3-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "She speaks slowly and clearly",
+              "answer": "她 说 话 说 得 慢 又 清楚"
+            },
+            {
+              "id": "dg3-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 是 一 个 聪明 ___ 学生\" (modifier particle)",
+              "answer": "的"
             }
           ]
         },
@@ -5182,6 +7599,85 @@
                 "你中文说得太好了"
               ],
               "answer": "你中文说得很好"
+            },
+            {
+              "id": "dg4-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the right negation: \"He doesn't sleep well\"",
+              "options": [
+                "他 睡 得 不 好",
+                "他 不 睡 得 好",
+                "他 没 睡 得 好",
+                "他 睡 不 得 好"
+              ],
+              "answer": "他 睡 得 不 好"
+            },
+            {
+              "id": "dg4-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Does he write well?\"",
+              "answer": "他 写 得 好 不 好"
+            },
+            {
+              "id": "dg4-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"你 今天 睡 得 ___\" (how)",
+              "answer": "怎么样"
+            },
+            {
+              "id": "dg4-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"你 跑 得 怎么样?\" mean?",
+              "options": [
+                "How well do you run?",
+                "Why do you run?",
+                "When did you run?",
+                "Where do you run?"
+              ],
+              "answer": "How well do you run?"
+            },
+            {
+              "id": "dg4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "你昨天睡得好不好",
+                "你昨天睡得好吗",
+                "你昨天睡得不好",
+                "你昨天睡得很好"
+              ],
+              "answer": "你昨天睡得好不好"
+            },
+            {
+              "id": "dg4-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Did your interview go well?\"",
+              "answer": "你 的 面试 进行 得 顺利 吗"
+            },
+            {
+              "id": "dg4-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the right negative form: \"She doesn't run very fast\"",
+              "options": [
+                "她 跑 得 不 太 快",
+                "她 不 跑 得 快",
+                "她 跑 不 得 太 快",
+                "她 跑 得 太 不 快"
+              ],
+              "answer": "她 跑 得 不 太 快"
+            },
+            {
+              "id": "dg4-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "How well do you cook?",
+              "answer": "你 做 饭 做 得 怎么样"
+            },
+            {
+              "id": "dg4-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 跑 得 ___ 怎么 快\" (\"not particularly\")",
+              "answer": "不"
             }
           ]
         },
@@ -5357,6 +7853,85 @@
                 "了",
                 "热"
               ]
+            },
+            {
+              "id": "dg5-12",
+              "type": "multiple_choice",
+              "prompt": "What does \"她 累 得 不 想 说话\" mean?",
+              "options": [
+                "She's so tired she doesn't want to talk",
+                "She's tired and talking",
+                "She's not tired, just quiet",
+                "She likes silence"
+              ],
+              "answer": "She's so tired she doesn't want to talk"
+            },
+            {
+              "id": "dg5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He laughed so hard he cried\"",
+              "answer": "他 笑 得 哭 了"
+            },
+            {
+              "id": "dg5-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 急 ___ 哭 了 起来\" (resultative de)",
+              "answer": "得"
+            },
+            {
+              "id": "dg5-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence: \"The room is so quiet you can hear a pin drop\"",
+              "options": [
+                "房间 安静 得 能 听 到 针 落 地 的 声音",
+                "房间 太 安静 能 听 到 针",
+                "针 落 地 声音 房间 安静",
+                "听 到 针 房间 太 安静"
+              ],
+              "answer": "房间 安静 得 能 听 到 针 落 地 的 声音"
+            },
+            {
+              "id": "dg5-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他急得满头大汗",
+                "他累得满头大汗",
+                "他热得满头大汗",
+                "他跑得满头大汗"
+              ],
+              "answer": "他急得满头大汗"
+            },
+            {
+              "id": "dg5-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"She was so happy she couldn't sleep\"",
+              "answer": "她 高兴 得 睡 不 着"
+            },
+            {
+              "id": "dg5-18",
+              "type": "multiple_choice",
+              "prompt": "Why use 得 here, not 地?",
+              "options": [
+                "得 introduces a result/extent after the verb; 地 is for manner before the verb",
+                "They mean the same",
+                "Either works",
+                "It's just a tone choice"
+              ],
+              "answer": "得 introduces a result/extent after the verb; 地 is for manner before the verb"
+            },
+            {
+              "id": "dg5-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "He was so angry he couldn't speak",
+              "answer": "他 气 得 说 不 出 话 来"
+            },
+            {
+              "id": "dg5-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 唱 ___ 大家 都 站 起来 鼓掌\" (so well that)",
+              "answer": "得"
             }
           ]
         },
@@ -5452,6 +8027,176 @@
                   "spokenText": "下次再一起看一部吧"
                 }
               ]
+            },
+            {
+              "id": "dg6-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"movie\"?",
+              "options": [
+                "电影",
+                "电视",
+                "戏剧",
+                "音乐"
+              ],
+              "answer": "电影"
+            },
+            {
+              "id": "dg6-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"How was the movie?\"",
+              "answer": "电影 怎么样"
+            },
+            {
+              "id": "dg6-4",
+              "type": "fill_blank",
+              "prompt": "Fill: \"这 部 电影 拍 ___ 很 好\" (de particle)",
+              "answer": "得"
+            },
+            {
+              "id": "dg6-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"拍 得 好\" mean about a movie?",
+              "options": [
+                "Well shot / well made",
+                "Acted well",
+                "Long enough",
+                "Loud enough"
+              ],
+              "answer": "Well shot / well made"
+            },
+            {
+              "id": "dg6-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "这部电影非常感人",
+                "这部电影非常无聊",
+                "这部电影非常好看",
+                "这部电影非常长"
+              ],
+              "answer": "这部电影非常感人"
+            },
+            {
+              "id": "dg6-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The actor performed really well\"",
+              "answer": "演员 演 得 很 好"
+            },
+            {
+              "id": "dg6-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural way to say \"the ending was unexpected\":",
+              "options": [
+                "结局 没 想 到",
+                "结局 想 不 到",
+                "结局 出 乎 意 料",
+                "All are reasonable"
+              ],
+              "answer": "All are reasonable"
+            },
+            {
+              "id": "dg6-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "结局",
+              "answer": "Ending"
+            },
+            {
+              "id": "dg6-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I think this movie is very meaningful\"",
+              "answer": "我 觉得 这 部 电影 很 有 意 义"
+            },
+            {
+              "id": "dg6-11",
+              "type": "multiple_choice",
+              "prompt": "Which means \"plot / storyline\"?",
+              "options": [
+                "剧情",
+                "结局",
+                "演员",
+                "导演"
+              ],
+              "answer": "剧情"
+            },
+            {
+              "id": "dg6-12",
+              "type": "fill_blank",
+              "prompt": "\"导演\" (dǎo yǎn) means ___",
+              "answer": "Director"
+            },
+            {
+              "id": "dg6-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "演员演得太好了",
+                "演员演得不太好",
+                "演员长得很好看",
+                "演员演得很差"
+              ],
+              "answer": "演员演得太好了"
+            },
+            {
+              "id": "dg6-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My friend thinks the movie is too long\"",
+              "answer": "我 朋友 觉得 电影 太 长 了"
+            },
+            {
+              "id": "dg6-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the strongest praise: \"超 棒\"",
+              "options": [
+                "Super great",
+                "Pretty good",
+                "Just okay",
+                "Not great"
+              ],
+              "answer": "Super great"
+            },
+            {
+              "id": "dg6-16",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "The acting was excellent",
+              "answer": "演员 演 技 非常 出 色"
+            },
+            {
+              "id": "dg6-17",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 觉得 电影 拍 ___ 不 错\" (de particle)",
+              "answer": "得"
+            },
+            {
+              "id": "dg6-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Would you watch this movie again?\"",
+              "answer": "你 还 会 再 看 这 部 电影 吗"
+            },
+            {
+              "id": "dg6-19",
+              "type": "multiple_choice",
+              "prompt": "What does \"值 得 看\" (zhí de kàn) mean?",
+              "options": [
+                "Worth watching",
+                "Not worth watching",
+                "Already watched",
+                "Want to watch"
+              ],
+              "answer": "Worth watching"
+            },
+            {
+              "id": "dg6-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "这部电影值得看",
+                "这部电影不值得看",
+                "这部电影没人看",
+                "这部电影没看完"
+              ],
+              "answer": "这部电影值得看"
             }
           ]
         }
@@ -5702,6 +8447,85 @@
               ],
               "answer": "I can't understand",
               "explanation": "Potential complement 听不懂 → \"can't understand (by listening)\". English uses the modal \"can't\" + bare verb — no \"am\", no double negative."
+            },
+            {
+              "id": "cmp1-12",
+              "type": "multiple_choice",
+              "prompt": "Which means \"see (perceive)\"?",
+              "options": [
+                "看见",
+                "看完",
+                "看到",
+                "看不见"
+              ],
+              "answer": "看见"
+            },
+            {
+              "id": "cmp1-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Did you hear me?\"",
+              "answer": "你 听见 我 了 吗"
+            },
+            {
+              "id": "cmp1-14",
+              "type": "fill_blank",
+              "prompt": "Fill the result: \"我 听 ___ 了 你 的 话\" (heard/understood)",
+              "answer": "懂"
+            },
+            {
+              "id": "cmp1-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"我 听不懂\" mean?",
+              "options": [
+                "I can't understand (what's being said)",
+                "I refuse to listen",
+                "I won't listen",
+                "I haven't listened"
+              ],
+              "answer": "I can't understand (what's being said)"
+            },
+            {
+              "id": "cmp1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我没听见你说什么",
+                "我没看见你",
+                "我没听懂你说的",
+                "我听见了你说话"
+              ],
+              "answer": "我没听见你说什么"
+            },
+            {
+              "id": "cmp1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I saw your message\"",
+              "answer": "我 看见 你 的 信息 了"
+            },
+            {
+              "id": "cmp1-18",
+              "type": "multiple_choice",
+              "prompt": "Why use 看见 not just 看?",
+              "options": [
+                "看见 includes the result of seeing; 看 is just the action of looking",
+                "看见 is past; 看 is future",
+                "They mean the same",
+                "看见 is formal only"
+              ],
+              "answer": "看见 includes the result of seeing; 看 is just the action of looking"
+            },
+            {
+              "id": "cmp1-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I didn't hear what he said",
+              "answer": "我 没 听见 他 说 什么"
+            },
+            {
+              "id": "cmp1-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"老师 的 字 太 小, 我 看 ___ 见\" (negative result)",
+              "answer": "不"
             }
           ]
         },
@@ -5842,6 +8666,97 @@
               ],
               "answer": "学完 = finished; 学会 = mastered the skill",
               "explanation": "完 marks endpoint. 会 marks acquired ability. They answer different questions about the same verb."
+            },
+            {
+              "id": "cmp2-11",
+              "type": "multiple_choice",
+              "prompt": "Which complement marks completion?",
+              "options": [
+                "完",
+                "会",
+                "懂",
+                "见"
+              ],
+              "answer": "完"
+            },
+            {
+              "id": "cmp2-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I haven't finished reading this book\"",
+              "answer": "我 还 没 看 完 这 本 书"
+            },
+            {
+              "id": "cmp2-13",
+              "type": "fill_blank",
+              "prompt": "Fill: \"妈妈 还 没 ___ 完 饭\" (做 — cook)",
+              "answer": "做"
+            },
+            {
+              "id": "cmp2-14",
+              "type": "multiple_choice",
+              "prompt": "What does \"学会\" (xué huì) mean?",
+              "options": [
+                "Learn (and acquire the skill)",
+                "Begin to learn",
+                "Want to learn",
+                "Finish a lesson"
+              ],
+              "answer": "Learn (and acquire the skill)"
+            },
+            {
+              "id": "cmp2-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我学会了游泳",
+                "我学完了游泳",
+                "我学过了游泳",
+                "我会游泳"
+              ],
+              "answer": "我学会了游泳"
+            },
+            {
+              "id": "cmp2-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Have you finished your homework?\"",
+              "answer": "你 作业 做 完 了 吗"
+            },
+            {
+              "id": "cmp2-17",
+              "type": "multiple_choice",
+              "prompt": "Pick the right complement: \"He cooked the food well\"",
+              "options": [
+                "他 把 饭 做 好 了",
+                "他 把 饭 做 见 了",
+                "他 把 饭 做 会 了",
+                "他 把 饭 做 出 了"
+              ],
+              "answer": "他 把 饭 做 好 了"
+            },
+            {
+              "id": "cmp2-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I finally learned how to drive",
+              "answer": "我 终于 学会 了 开 车"
+            },
+            {
+              "id": "cmp2-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 还 没 ___ 完 这 个 项目\" (做 — finish doing)",
+              "answer": "做"
+            },
+            {
+              "id": "cmp2-20",
+              "type": "multiple_choice",
+              "prompt": "Pick the difference: 做 完 vs 做 好",
+              "options": [
+                "做 完 = finished (done with); 做 好 = done well / properly",
+                "Same thing",
+                "完 is future, 好 is past",
+                "好 means wrong"
+              ],
+              "answer": "做 完 = finished (done with); 做 好 = done well / properly"
             }
           ]
         },
@@ -5996,6 +8911,97 @@
               ],
               "answer": "他 爬 上 山",
               "explanation": "Verb first, direction second, object last: 爬 (climb) + 上 (up) + 山 (mountain)."
+            },
+            {
+              "id": "cmp3-11",
+              "type": "multiple_choice",
+              "prompt": "Which directional means \"into\"?",
+              "options": [
+                "进",
+                "出",
+                "上",
+                "下"
+              ],
+              "answer": "进"
+            },
+            {
+              "id": "cmp3-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He walked into the office\"",
+              "answer": "他 走 进 办公室"
+            },
+            {
+              "id": "cmp3-13",
+              "type": "fill_blank",
+              "prompt": "Fill the directional: \"她 跑 ___ 房间 了\" (out)",
+              "answer": "出"
+            },
+            {
+              "id": "cmp3-14",
+              "type": "multiple_choice",
+              "prompt": "What does \"拿 出来\" (ná chū lái) mean?",
+              "options": [
+                "Take out (toward speaker)",
+                "Put inside",
+                "Throw away",
+                "Pick up"
+              ],
+              "answer": "Take out (toward speaker)"
+            },
+            {
+              "id": "cmp3-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他走上楼了",
+                "他走下楼了",
+                "他走进房间了",
+                "他走出房间了"
+              ],
+              "answer": "他走上楼了"
+            },
+            {
+              "id": "cmp3-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Take the box down\"",
+              "answer": "把 箱子 拿 下 来"
+            },
+            {
+              "id": "cmp3-17",
+              "type": "multiple_choice",
+              "prompt": "Pick the right directional: \"He climbed up the mountain\"",
+              "options": [
+                "他 爬 上 山",
+                "他 爬 下 山",
+                "他 爬 进 山",
+                "他 爬 出 山"
+              ],
+              "answer": "他 爬 上 山"
+            },
+            {
+              "id": "cmp3-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "She ran out of the room",
+              "answer": "她 跑 出 房间"
+            },
+            {
+              "id": "cmp3-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"小猫 跳 ___ 桌子\" (up onto)",
+              "answer": "上"
+            },
+            {
+              "id": "cmp3-20",
+              "type": "multiple_choice",
+              "prompt": "What does \"飞 上 天\" (fēi shàng tiān) mean?",
+              "options": [
+                "Fly up to the sky",
+                "Fly down",
+                "Land",
+                "Fly away"
+              ],
+              "answer": "Fly up to the sky"
             }
           ]
         },
@@ -6144,6 +9150,97 @@
               ],
               "answer": "Come inside (toward me)",
               "explanation": "进来 = enter + toward speaker. They're inside; you should enter TOWARD them."
+            },
+            {
+              "id": "cmp4-11",
+              "type": "multiple_choice",
+              "prompt": "Pick the right \"come down to me\":",
+              "options": [
+                "下 来",
+                "下 去",
+                "上 来",
+                "上 去"
+              ],
+              "answer": "下 来"
+            },
+            {
+              "id": "cmp4-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'll come up (to you)\" (you're up there)",
+              "answer": "我 上 去"
+            },
+            {
+              "id": "cmp4-13",
+              "type": "fill_blank",
+              "prompt": "Fill: \"快 ___ 来 吃饭\" (downstairs, kids upstairs)",
+              "answer": "下"
+            },
+            {
+              "id": "cmp4-14",
+              "type": "multiple_choice",
+              "prompt": "You're outside. Tell your friend (inside) \"I'll come in\":",
+              "options": [
+                "我 进 来",
+                "我 进 去",
+                "我 出 来",
+                "我 出 去"
+              ],
+              "answer": "我 进 去"
+            },
+            {
+              "id": "cmp4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "你快上来吧",
+                "你快下去吧",
+                "你快进来吧",
+                "你快出去吧"
+              ],
+              "answer": "你快上来吧"
+            },
+            {
+              "id": "cmp4-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He walked out\" (away from us)",
+              "answer": "他 走 出 去 了"
+            },
+            {
+              "id": "cmp4-17",
+              "type": "multiple_choice",
+              "prompt": "Why does direction matter with 来/去?",
+              "options": [
+                "来 = toward speaker; 去 = away from speaker",
+                "来 = past; 去 = future",
+                "They're random",
+                "Both mean the same"
+              ],
+              "answer": "来 = toward speaker; 去 = away from speaker"
+            },
+            {
+              "id": "cmp4-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Please come up here",
+              "answer": "请 上 来"
+            },
+            {
+              "id": "cmp4-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"她 跑 出 ___ 了\" (toward us)",
+              "answer": "来"
+            },
+            {
+              "id": "cmp4-20",
+              "type": "multiple_choice",
+              "prompt": "Pick the right phrase: \"He brought it up here\" (you're upstairs)",
+              "options": [
+                "他 拿 上 来 了",
+                "他 拿 上 去 了",
+                "他 拿 下 来 了",
+                "他 拿 进 来 了"
+              ],
+              "answer": "他 拿 上 来 了"
             }
           ]
         },
@@ -6289,6 +9386,97 @@
                 "可以"
               ],
               "explanation": "看不完 = can't finish reading. Different from 没 看完 (haven't finished). 不 = capability; 没 = past fact."
+            },
+            {
+              "id": "cmp5-11",
+              "type": "multiple_choice",
+              "prompt": "What's the difference between 看见 and 看得见?",
+              "options": [
+                "看见 = past fact 'saw'; 看得见 = current capability 'can see'",
+                "Same thing",
+                "看见 is future",
+                "看得见 is past"
+              ],
+              "answer": "看见 = past fact 'saw'; 看得见 = current capability 'can see'"
+            },
+            {
+              "id": "cmp5-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I can hear it clearly\"",
+              "answer": "我 听得 很 清楚"
+            },
+            {
+              "id": "cmp5-13",
+              "type": "fill_blank",
+              "prompt": "Fill: \"这 个 字 我 看 ___ 见\" (potential: cannot see)",
+              "answer": "不"
+            },
+            {
+              "id": "cmp5-14",
+              "type": "multiple_choice",
+              "prompt": "What's the potential form of 听懂?",
+              "options": [
+                "听得懂 / 听不懂",
+                "听过 / 听了",
+                "听完 / 没听",
+                "听见 / 听到"
+              ],
+              "answer": "听得懂 / 听不懂"
+            },
+            {
+              "id": "cmp5-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我听不懂你说的",
+                "我听得懂你说的",
+                "我没听你说的",
+                "我听完了你说的"
+              ],
+              "answer": "我听不懂你说的"
+            },
+            {
+              "id": "cmp5-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Can you finish reading this book?\"",
+              "answer": "你 看得 完 这 本 书 吗"
+            },
+            {
+              "id": "cmp5-17",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural negation: \"I can't reach the top shelf\"",
+              "options": [
+                "我 够 不 到 顶 上 的 架子",
+                "我 没 够 顶 上 的 架子",
+                "我 不 够 到 顶 上 的 架子",
+                "顶 上 我 够 不 到 的 架子"
+              ],
+              "answer": "我 够 不 到 顶 上 的 架子"
+            },
+            {
+              "id": "cmp5-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I can understand a little Chinese",
+              "answer": "我 听得 懂 一些 中文"
+            },
+            {
+              "id": "cmp5-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"这 道 题 我 做 ___ 出 来\" (can't, potential)",
+              "answer": "不"
+            },
+            {
+              "id": "cmp5-20",
+              "type": "multiple_choice",
+              "prompt": "What does \"想得起来\" mean?",
+              "options": [
+                "Can recall",
+                "Cannot recall",
+                "Will think",
+                "Have thought"
+              ],
+              "answer": "Can recall"
             }
           ]
         },
@@ -6439,6 +9627,97 @@
                 "上"
               ],
               "explanation": "拿下来 = take + down + toward speaker. Combines 把-construction with directional complement — peak B1."
+            },
+            {
+              "id": "cmp6-11",
+              "type": "multiple_choice",
+              "prompt": "Pick the right form for \"already half-done\":",
+              "options": [
+                "已经 做 了 一半",
+                "做 了 一半 已经",
+                "已经 一半 做 了",
+                "一半 已经 做 了"
+              ],
+              "answer": "已经 做 了 一半"
+            },
+            {
+              "id": "cmp6-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I finally figured it out\"",
+              "answer": "我 终于 想 出来 了"
+            },
+            {
+              "id": "cmp6-13",
+              "type": "fill_blank",
+              "prompt": "Fill: \"老师 的 话 我 听 ___ 懂 了\" (potential: can)",
+              "answer": "得"
+            },
+            {
+              "id": "cmp6-14",
+              "type": "multiple_choice",
+              "prompt": "Pick the right complement: \"I successfully fixed the computer\"",
+              "options": [
+                "我 把 电脑 修 好 了",
+                "我 把 电脑 修 完 了",
+                "我 把 电脑 修 见 了",
+                "我 把 电脑 修 上 了"
+              ],
+              "answer": "我 把 电脑 修 好 了"
+            },
+            {
+              "id": "cmp6-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我学会了开车",
+                "我学完了开车",
+                "我学过了开车",
+                "我没学开车"
+              ],
+              "answer": "我学会了开车"
+            },
+            {
+              "id": "cmp6-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He couldn't think of her name\"",
+              "answer": "他 想 不 起 她 的 名字"
+            },
+            {
+              "id": "cmp6-17",
+              "type": "multiple_choice",
+              "prompt": "Trap: which is WRONG?",
+              "options": [
+                "我 听得见 音乐",
+                "我 看不见 黑板",
+                "我 听 不 见 一 下",
+                "我 看得见 招牌"
+              ],
+              "answer": "我 听 不 见 一 下"
+            },
+            {
+              "id": "cmp6-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I finally understood",
+              "answer": "我 终于 听 懂 了"
+            },
+            {
+              "id": "cmp6-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 走 ___ 来\" (into, toward us)",
+              "answer": "进"
+            },
+            {
+              "id": "cmp6-20",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural sentence: \"Please bring up the suitcase\"",
+              "options": [
+                "请 把 行李箱 拿 上 来",
+                "请 把 行李箱 拿 上 去",
+                "请 把 行李箱 拿 下 来",
+                "请 把 行李箱 拿 出 来"
+              ],
+              "answer": "请 把 行李箱 拿 上 来"
             }
           ]
         },
@@ -6546,6 +9825,176 @@
                   "spokenText": "好，回头见。"
                 }
               ]
+            },
+            {
+              "id": "cmp-dlg-2",
+              "type": "multiple_choice",
+              "prompt": "Which means \"study session\"?",
+              "options": [
+                "学习",
+                "学校",
+                "学院",
+                "学问"
+              ],
+              "answer": "学习"
+            },
+            {
+              "id": "cmp-dlg-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"How much did you finish today?\"",
+              "answer": "你 今天 做 完 了 多少"
+            },
+            {
+              "id": "cmp-dlg-4",
+              "type": "fill_blank",
+              "prompt": "Fill: \"我 ___ 完 三 章\" (finished, complement)",
+              "answer": "看"
+            },
+            {
+              "id": "cmp-dlg-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"看 完 三 章\" mean?",
+              "options": [
+                "Finished reading 3 chapters",
+                "Have 3 chapters left",
+                "Started 3 chapters",
+                "Skipped 3 chapters"
+              ],
+              "answer": "Finished reading 3 chapters"
+            },
+            {
+              "id": "cmp-dlg-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我做完了第一题",
+                "我做完了第二题",
+                "我看完了第一章",
+                "我写完了作文"
+              ],
+              "answer": "我做完了第一题"
+            },
+            {
+              "id": "cmp-dlg-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I still haven't memorized these characters\"",
+              "answer": "我 还 没 记 住 这些 字"
+            },
+            {
+              "id": "cmp-dlg-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the right complement: \"I memorized all the new words\"",
+              "options": [
+                "我 把 生 词 都 记 住 了",
+                "我 把 生 词 都 记 完 了",
+                "我 把 生 词 都 记 好 了",
+                "我 把 生 词 都 记 见 了"
+              ],
+              "answer": "我 把 生 词 都 记 住 了"
+            },
+            {
+              "id": "cmp-dlg-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "复习",
+              "answer": "Review"
+            },
+            {
+              "id": "cmp-dlg-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Did you understand the lecture today?\"",
+              "answer": "你 听 懂 今天 的 课 了 吗"
+            },
+            {
+              "id": "cmp-dlg-11",
+              "type": "multiple_choice",
+              "prompt": "Which means \"new vocabulary\"?",
+              "options": [
+                "生 词",
+                "课文",
+                "练习",
+                "考试"
+              ],
+              "answer": "生 词"
+            },
+            {
+              "id": "cmp-dlg-12",
+              "type": "fill_blank",
+              "prompt": "\"复习\" means to ___",
+              "answer": "Review"
+            },
+            {
+              "id": "cmp-dlg-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我没听懂今天的课",
+                "我听懂了今天的课",
+                "我没听完今天的课",
+                "我没看懂今天的课"
+              ],
+              "answer": "我没听懂今天的课"
+            },
+            {
+              "id": "cmp-dlg-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Can you teach me?\"",
+              "answer": "你 能 教 我 吗"
+            },
+            {
+              "id": "cmp-dlg-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural phrase: \"Let's review together\"",
+              "options": [
+                "我们 一起 复习 吧",
+                "复习 一起 我们 吧",
+                "一起 我们 复习 吧",
+                "吧 一起 复习 我们"
+              ],
+              "answer": "我们 一起 复习 吧"
+            },
+            {
+              "id": "cmp-dlg-16",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I haven't finished my homework yet",
+              "answer": "我 还 没 做 完 作业"
+            },
+            {
+              "id": "cmp-dlg-17",
+              "type": "fill_blank",
+              "prompt": "Fill: \"这 个 问题 我 想 ___ 来 了\" (figured out: 出)",
+              "answer": "出"
+            },
+            {
+              "id": "cmp-dlg-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"There's a question I can't figure out\"",
+              "answer": "有 一 个 问题 我 做 不 出来"
+            },
+            {
+              "id": "cmp-dlg-19",
+              "type": "multiple_choice",
+              "prompt": "What does \"做 不 出来\" mean?",
+              "options": [
+                "Can't figure out (a problem)",
+                "Don't want to do",
+                "Already done",
+                "Will do later"
+              ],
+              "answer": "Can't figure out (a problem)"
+            },
+            {
+              "id": "cmp-dlg-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我们一起做作业吧",
+                "我们一起复习吧",
+                "我们一起学习吧",
+                "我们一起预习吧"
+              ],
+              "answer": "我们一起做作业吧"
             }
           ]
         }
@@ -6827,6 +10276,85 @@
               ],
               "answer": "I have three books",
               "explanation": "Chinese has no plural -s, so English-L1 learners coming back from heavy MW practice sometimes forget plural marking. \"three books\" — count nouns with a number need -s."
+            },
+            {
+              "id": "mw1-12",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 河 (one river)",
+              "options": [
+                "条",
+                "张",
+                "个",
+                "颗"
+              ],
+              "answer": "条"
+            },
+            {
+              "id": "mw1-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I bought three tickets\"",
+              "answer": "我 买 了 三 张 票"
+            },
+            {
+              "id": "mw1-14",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 裤子\" (pants)",
+              "answer": "条"
+            },
+            {
+              "id": "mw1-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 桌子 (one table)",
+              "options": [
+                "张",
+                "把",
+                "个",
+                "条"
+              ],
+              "answer": "张"
+            },
+            {
+              "id": "mw1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我家有三条鱼",
+                "我家有三只鱼",
+                "我家有三个鱼",
+                "我家有三张鱼"
+              ],
+              "answer": "我家有三条鱼"
+            },
+            {
+              "id": "mw1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"There are two roads ahead\"",
+              "answer": "前面 有 两 条 路"
+            },
+            {
+              "id": "mw1-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 床单 (one bed sheet)",
+              "options": [
+                "张",
+                "条",
+                "个",
+                "件"
+              ],
+              "answer": "张"
+            },
+            {
+              "id": "mw1-19",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I bought two long skirts",
+              "answer": "我 买 了 两 条 长 裙"
+            },
+            {
+              "id": "mw1-20",
+              "type": "fill_blank",
+              "prompt": "Fill: \"墙 上 挂 着 一 ___ 画\" (picture)",
+              "answer": "张"
             }
           ]
         },
@@ -6963,6 +10491,97 @@
               ],
               "answer": "一 双 袜子",
               "explanation": "Pairs (shoes, socks, gloves, chopsticks, hands, eyes) → 双. Single sock → 只."
+            },
+            {
+              "id": "mw2-11",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 老虎 (one tiger)",
+              "options": [
+                "只",
+                "条",
+                "头",
+                "个"
+              ],
+              "answer": "只"
+            },
+            {
+              "id": "mw2-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"There are five birds in the tree\"",
+              "answer": "树 上 有 五 只 鸟"
+            },
+            {
+              "id": "mw2-13",
+              "type": "fill_blank",
+              "prompt": "Fill: \"两 ___ 袜子\" (a pair of socks)",
+              "answer": "双"
+            },
+            {
+              "id": "mw2-14",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 牛 (one cow)",
+              "options": [
+                "头",
+                "只",
+                "条",
+                "匹"
+              ],
+              "answer": "头"
+            },
+            {
+              "id": "mw2-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我有两只猫",
+                "我有两只狗",
+                "我有两个猫",
+                "我有两条猫"
+              ],
+              "answer": "我有两只猫"
+            },
+            {
+              "id": "mw2-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I bought a pair of leather shoes\"",
+              "answer": "我 买 了 一 双 皮鞋"
+            },
+            {
+              "id": "mw2-17",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 马 (one horse)",
+              "options": [
+                "匹",
+                "只",
+                "头",
+                "条"
+              ],
+              "answer": "匹"
+            },
+            {
+              "id": "mw2-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "We have three cats",
+              "answer": "我们 有 三 只 猫"
+            },
+            {
+              "id": "mw2-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 兔子\" (rabbit)",
+              "answer": "只"
+            },
+            {
+              "id": "mw2-20",
+              "type": "multiple_choice",
+              "prompt": "Trap: pick the WRONG MW:",
+              "options": [
+                "一 双 猫",
+                "一 双 鞋",
+                "一 双 筷子",
+                "一 双 手"
+              ],
+              "answer": "一 双 猫"
             }
           ]
         },
@@ -7106,6 +10725,97 @@
               ],
               "answer": "一 件 笔 (a pen)",
               "explanation": "Pens take 支 (zhī, for thin sticks) or 个 (casual). 件 is for clothing and matters, not stationery."
+            },
+            {
+              "id": "mw3-11",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 毛衣 (one sweater)",
+              "options": [
+                "件",
+                "条",
+                "个",
+                "张"
+              ],
+              "answer": "件"
+            },
+            {
+              "id": "mw3-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I have an important matter\"",
+              "answer": "我 有 一 件 重 要 的 事"
+            },
+            {
+              "id": "mw3-13",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 工作\" (job)",
+              "answer": "份"
+            },
+            {
+              "id": "mw3-14",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 五 ___ 衣服 (five articles of clothing)",
+              "options": [
+                "件",
+                "条",
+                "个",
+                "张"
+              ],
+              "answer": "件"
+            },
+            {
+              "id": "mw3-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "他买了一件外套",
+                "他买了一件衬衫",
+                "他买了一件毛衣",
+                "他买了一件大衣"
+              ],
+              "answer": "他买了一件外套"
+            },
+            {
+              "id": "mw3-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"There's something I need to tell you\"",
+              "answer": "有 一 件 事 我 想 告诉 你"
+            },
+            {
+              "id": "mw3-17",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 三 ___ 礼物 (three gifts)",
+              "options": [
+                "件",
+                "个",
+                "条",
+                "张"
+              ],
+              "answer": "件"
+            },
+            {
+              "id": "mw3-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I want to share a piece of news",
+              "answer": "我 想 告诉 你 一 件 新闻"
+            },
+            {
+              "id": "mw3-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"这 ___ 事 很 重要\" (matter, formal)",
+              "answer": "件"
+            },
+            {
+              "id": "mw3-20",
+              "type": "multiple_choice",
+              "prompt": "Trap: which is WRONG?",
+              "options": [
+                "一 件 杯子",
+                "一 件 衬衫",
+                "一 件 事",
+                "一 件 工作"
+              ],
+              "answer": "一 件 杯子"
             }
           ]
         },
@@ -7272,6 +10982,97 @@
               ],
               "answer": "一 把 牙齿",
               "explanation": "Teeth are small + round → 颗, not 把. 把 is for hand-held things with a handle (knives, chairs, umbrellas)."
+            },
+            {
+              "id": "mw4-11",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 刀 (one knife)",
+              "options": [
+                "把",
+                "条",
+                "个",
+                "张"
+              ],
+              "answer": "把"
+            },
+            {
+              "id": "mw4-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I drank a cup of tea\"",
+              "answer": "我 喝 了 一 杯 茶"
+            },
+            {
+              "id": "mw4-13",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 啤酒\" (bottle)",
+              "answer": "瓶"
+            },
+            {
+              "id": "mw4-14",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 葡萄 (one grape)",
+              "options": [
+                "颗",
+                "个",
+                "条",
+                "把"
+              ],
+              "answer": "颗"
+            },
+            {
+              "id": "mw4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我要一杯咖啡",
+                "我要一杯茶",
+                "我要一瓶水",
+                "我要一杯水"
+              ],
+              "answer": "我要一杯咖啡"
+            },
+            {
+              "id": "mw4-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I bought two bottles of water\"",
+              "answer": "我 买 了 两 瓶 水"
+            },
+            {
+              "id": "mw4-17",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 钥匙 (one key)",
+              "options": [
+                "把",
+                "条",
+                "个",
+                "张"
+              ],
+              "answer": "把"
+            },
+            {
+              "id": "mw4-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "Give me a bottle of beer",
+              "answer": "给 我 一 瓶 啤酒"
+            },
+            {
+              "id": "mw4-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 子弹\" (bullet)",
+              "answer": "颗"
+            },
+            {
+              "id": "mw4-20",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 扇子 (one fan)",
+              "options": [
+                "把",
+                "条",
+                "张",
+                "件"
+              ],
+              "answer": "把"
             }
           ]
         },
@@ -7411,6 +11212,97 @@
               ],
               "answer": "一 个 鱼",
               "explanation": "Fish → 条, not 个. The other three are correct: 件 事, 只 猫, 张 桌子."
+            },
+            {
+              "id": "mw5-11",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 杂志 (one magazine)",
+              "options": [
+                "本",
+                "张",
+                "条",
+                "个"
+              ],
+              "answer": "本"
+            },
+            {
+              "id": "mw5-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I bought a cup of coffee\"",
+              "answer": "我 买 了 一 杯 咖啡"
+            },
+            {
+              "id": "mw5-13",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 椅子\" (chair)",
+              "answer": "把"
+            },
+            {
+              "id": "mw5-14",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 三 ___ 词典 (three dictionaries)",
+              "options": [
+                "本",
+                "张",
+                "件",
+                "条"
+              ],
+              "answer": "本"
+            },
+            {
+              "id": "mw5-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我有三本书",
+                "我有三张书",
+                "我有三个书",
+                "我有三件书"
+              ],
+              "answer": "我有三本书"
+            },
+            {
+              "id": "mw5-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I read two books last month\"",
+              "answer": "上 个 月 我 看 了 两 本 书"
+            },
+            {
+              "id": "mw5-17",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW for 'a pair of chopsticks':",
+              "options": [
+                "一 双 筷子",
+                "一 把 筷子",
+                "一 件 筷子",
+                "一 张 筷子"
+              ],
+              "answer": "一 双 筷子"
+            },
+            {
+              "id": "mw5-18",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I have three books",
+              "answer": "我 有 三 本 书"
+            },
+            {
+              "id": "mw5-19",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 笔\" (pen — long thin handled)",
+              "answer": "支"
+            },
+            {
+              "id": "mw5-20",
+              "type": "multiple_choice",
+              "prompt": "Trap: pick the WRONG MW (over-using 个):",
+              "options": [
+                "一 本 杂志",
+                "一 个 杂志",
+                "一 张 海报",
+                "一 件 大事"
+              ],
+              "answer": "一 个 杂志"
             }
           ]
         },
@@ -7518,6 +11410,176 @@
                   "spokenText": "谢谢！"
                 }
               ]
+            },
+            {
+              "id": "mw-dlg-2",
+              "type": "multiple_choice",
+              "prompt": "Which MW for \"a cup of\"?",
+              "options": [
+                "杯",
+                "瓶",
+                "条",
+                "把"
+              ],
+              "answer": "杯"
+            },
+            {
+              "id": "mw-dlg-3",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I want a cup of hot tea\"",
+              "answer": "我 要 一 杯 热 茶"
+            },
+            {
+              "id": "mw-dlg-4",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 蛋糕\" (slice/piece)",
+              "answer": "块"
+            },
+            {
+              "id": "mw-dlg-5",
+              "type": "multiple_choice",
+              "prompt": "What does \"一 块 蛋糕\" mean?",
+              "options": [
+                "A slice of cake",
+                "A box of cake",
+                "A bowl of cake",
+                "A bag of cake"
+              ],
+              "answer": "A slice of cake"
+            },
+            {
+              "id": "mw-dlg-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "请给我一杯咖啡",
+                "请给我一杯茶",
+                "请给我一瓶水",
+                "请给我一块蛋糕"
+              ],
+              "answer": "请给我一杯咖啡"
+            },
+            {
+              "id": "mw-dlg-7",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'd like a slice of bread\"",
+              "answer": "我 要 一 块 面包"
+            },
+            {
+              "id": "mw-dlg-8",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 饼干 (one cookie)",
+              "options": [
+                "块",
+                "片",
+                "颗",
+                "条"
+              ],
+              "answer": "块"
+            },
+            {
+              "id": "mw-dlg-9",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "一 碗 米饭",
+              "answer": "A bowl of rice"
+            },
+            {
+              "id": "mw-dlg-10",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please give me two pieces of bread\"",
+              "answer": "请 给 我 两 块 面包"
+            },
+            {
+              "id": "mw-dlg-11",
+              "type": "multiple_choice",
+              "prompt": "Which MW for \"a slice of\" (thin slice)?",
+              "options": [
+                "片",
+                "块",
+                "条",
+                "颗"
+              ],
+              "answer": "片"
+            },
+            {
+              "id": "mw-dlg-12",
+              "type": "fill_blank",
+              "prompt": "\"一 ___ 面 包\" (slice — thin)",
+              "answer": "片"
+            },
+            {
+              "id": "mw-dlg-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "我要一片面包",
+                "我要一块面包",
+                "我要一条面包",
+                "我要一个面包"
+              ],
+              "answer": "我要一片面包"
+            },
+            {
+              "id": "mw-dlg-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"How much for one bottle of juice?\"",
+              "answer": "一 瓶 果汁 多少 钱"
+            },
+            {
+              "id": "mw-dlg-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW: 一 ___ 牛奶 (carton/box)",
+              "options": [
+                "盒",
+                "瓶",
+                "杯",
+                "包"
+              ],
+              "answer": "盒"
+            },
+            {
+              "id": "mw-dlg-16",
+              "type": "translate",
+              "direction": "to_target",
+              "source": "I want a piece of cake",
+              "answer": "我 要 一 块 蛋糕"
+            },
+            {
+              "id": "mw-dlg-17",
+              "type": "fill_blank",
+              "prompt": "Fill: \"一 ___ 糖\" (candy — small round)",
+              "answer": "颗"
+            },
+            {
+              "id": "mw-dlg-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This cup of tea is too hot\"",
+              "answer": "这 杯 茶 太 烫 了"
+            },
+            {
+              "id": "mw-dlg-19",
+              "type": "multiple_choice",
+              "prompt": "Pick the right MW for ice cream: 一 ___ 冰激凌",
+              "options": [
+                "个",
+                "杯",
+                "支",
+                "All three work depending on the form"
+              ],
+              "answer": "All three work depending on the form"
+            },
+            {
+              "id": "mw-dlg-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap what you hear",
+              "options": [
+                "再来一杯茶",
+                "再来一块蛋糕",
+                "再来一片面包",
+                "再来一瓶水"
+              ],
+              "answer": "再来一杯茶"
             }
           ]
         }
