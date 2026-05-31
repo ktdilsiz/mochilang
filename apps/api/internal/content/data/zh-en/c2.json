@@ -346,6 +346,159 @@
                 "一日之功"
               ],
               "explanation": "非一日之功可成 — \"cannot be done in a day's effort.\" A boilerplate editorial closer that quietly hedges expectations."
+            },
+            {
+              "id": "cl1-11",
+              "type": "translate",
+              "source": "无价之宝",
+              "answer": "a priceless treasure",
+              "acceptableAnswers": [
+                "priceless treasure",
+                "an invaluable treasure",
+                "treasure beyond price"
+              ],
+              "direction": "to_source",
+              "explanation": "无价 (without price) + 之 (formal 的) + 宝 (treasure)."
+            },
+            {
+              "id": "cl1-12",
+              "type": "fill_blank",
+              "prompt": "An editorial closes: \"教育乃国___大计.\" Fill the formal modifier-linker (one character).",
+              "hint": "The literary counterpart of 的.",
+              "answer": "之",
+              "acceptableAnswers": [
+                "之"
+              ],
+              "explanation": "国之大计 = the great strategy of the nation. 之 is the formal modifier-linker."
+            },
+            {
+              "id": "cl1-13",
+              "type": "multiple_choice",
+              "prompt": "取而代之",
+              "hint": "What is the function here?",
+              "options": [
+                "Take and then replace it",
+                "Refuse to substitute",
+                "Add to it",
+                "Search for it"
+              ],
+              "answer": "Take and then replace it",
+              "explanation": "之 stands for an antecedent object — \"replace IT.\" 而 sequences the two verbs."
+            },
+            {
+              "id": "cl1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"The rise of this generation is a great event of our age.\" (formal)",
+              "answer": "此 代 之 崛起 乃 时代 之 大事",
+              "bank": [
+                "此",
+                "代",
+                "之",
+                "崛起",
+                "乃",
+                "时代",
+                "大事",
+                "了",
+                "把",
+                "因为",
+                "也",
+                "就"
+              ]
+            },
+            {
+              "id": "cl1-15",
+              "type": "match_pairs",
+              "prompt": "each phrase to its discourse role",
+              "pairs": [
+                {
+                  "left": "总而言之",
+                  "right": "Closing marker — to sum up"
+                },
+                {
+                  "left": "言之有理",
+                  "right": "Endorsing a point made"
+                },
+                {
+                  "left": "非一日之功",
+                  "right": "Hedging slow progress"
+                },
+                {
+                  "left": "无价之宝",
+                  "right": "Praising something rare"
+                }
+              ]
+            },
+            {
+              "id": "cl1-16",
+              "type": "listen_and_choose",
+              "prompt": "A formal speech opener is read. Pick what you hear.",
+              "spokenText": "国之根本，在于民；民之所盼，乃政之所行",
+              "options": [
+                "国之根本，在于民；民之所盼，乃政之所行",
+                "国家的根本是人民，人民期盼什么，政府就做什么",
+                "国家最重要的是百姓，老百姓要什么，政府就给什么",
+                "对国家来说人民是根，他们的愿望就是政策"
+              ],
+              "answer": "国之根本，在于民；民之所盼，乃政之所行",
+              "explanation": "Four 之-linkers plus 乃 (formal copula) and 所 + verb construction — high literary register. Distractors paraphrase in colloquial."
+            },
+            {
+              "id": "cl1-17",
+              "type": "fill_blank",
+              "prompt": "A speech ends: \"此乃人民___所望。\" Fill the formal modifier-linker.",
+              "hint": "之 or 的 — pick the literary one.",
+              "answer": "之",
+              "acceptableAnswers": [
+                "之"
+              ],
+              "explanation": "人民之所望 — \"that which the people hope for.\" 之 + 所 + verb is a classical relative-clause builder still alive in speeches."
+            },
+            {
+              "id": "cl1-18",
+              "type": "translate",
+              "source": "切肤之痛",
+              "answer": "pain felt to the bone",
+              "acceptableAnswers": [
+                "pain in the flesh",
+                "pain felt in the flesh",
+                "keenly felt pain",
+                "pain that cuts to the skin"
+              ],
+              "direction": "to_source",
+              "explanation": "切肤 (cutting the skin) + 之 (formal 的) + 痛 (pain). A literary set phrase still widely used."
+            },
+            {
+              "id": "cl1-19",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 之 in the CLASSICAL pronoun sense (= him/it/them)?",
+              "options": [
+                "国家之兴",
+                "我 以 此 为 戒 以 警 之",
+                "改革 之 难",
+                "无价之宝"
+              ],
+              "answer": "我 以 此 为 戒 以 警 之",
+              "explanation": "警之 = \"warn them.\" 之 here is the classical object pronoun (= him/her/it/them). The other three use 之 as a modifier-linker (= 的)."
+            },
+            {
+              "id": "cl1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"It is no easy task — not a thing a single day's effort can accomplish.\" (formal)",
+              "answer": "此 非 易 事 非 一日 之 功 可 成",
+              "bank": [
+                "此",
+                "非",
+                "易",
+                "事",
+                "一日",
+                "之",
+                "功",
+                "可",
+                "成",
+                "了",
+                "因为",
+                "把"
+              ]
             }
           ]
         },
@@ -515,6 +668,147 @@
               ],
               "answer": "我所吃饭",
               "explanation": "所 + verb forms a noun-clause but only with transitive verbs taking an object that becomes the head — and 所吃饭 is ungrammatical because 吃饭 is already V+O. Correct would be 我所吃的饭. The other three are well-formed."
+            },
+            {
+              "id": "cl2-11",
+              "type": "translate",
+              "source": "其责任由甲方承担",
+              "answer": "the responsibility for it shall be borne by Party A",
+              "acceptableAnswers": [
+                "the responsibility shall be borne by Party A",
+                "Party A shall bear the responsibility",
+                "responsibility for it is borne by Party A"
+              ],
+              "direction": "to_source",
+              "explanation": "其 = formal anaphor (\"its / their\"); 由…承担 = formal passive \"shall be borne by.\""
+            },
+            {
+              "id": "cl2-12",
+              "type": "fill_blank",
+              "prompt": "A policy paper begins: \"___ 周知，气候问题已迫在眉睫.\" Fill the canonical four-character all-knowing opener.",
+              "hint": "Begins with 众...",
+              "answer": "众所",
+              "acceptableAnswers": [
+                "众所周知"
+              ],
+              "explanation": "众所周知 = \"as is known to all\" — the textbook 所 opener for editorials."
+            },
+            {
+              "id": "cl2-13",
+              "type": "multiple_choice",
+              "prompt": "理所当然",
+              "hint": "What does this set phrase assert?",
+              "options": [
+                "It is in dispute",
+                "It is self-evident / a matter of course",
+                "It is forbidden",
+                "It is unprecedented"
+              ],
+              "answer": "It is self-evident / a matter of course",
+              "explanation": "理 (reason) + 所 + 当然 (naturally) — \"as reason makes it natural.\" Used to assert a claim as obvious."
+            },
+            {
+              "id": "cl2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"This is what the people hope for.\" (formal)",
+              "answer": "此 乃 人民 所 望",
+              "bank": [
+                "此",
+                "乃",
+                "人民",
+                "所",
+                "望",
+                "了",
+                "把",
+                "也",
+                "因为",
+                "就"
+              ]
+            },
+            {
+              "id": "cl2-15",
+              "type": "translate",
+              "source": "前所未有的挑战",
+              "answer": "an unprecedented challenge",
+              "acceptableAnswers": [
+                "unprecedented challenge",
+                "a challenge never before seen",
+                "a challenge without precedent"
+              ],
+              "direction": "to_source",
+              "explanation": "前 (before) + 所 + 未有 (never had) — a classical four-character compression for \"unprecedented.\""
+            },
+            {
+              "id": "cl2-16",
+              "type": "listen_and_choose",
+              "prompt": "A formal report opener is read aloud. Pick what you hear.",
+              "spokenText": "众所周知，所谓的改革，其难度前所未有",
+              "options": [
+                "众所周知，所谓的改革，其难度前所未有",
+                "大家都知道，这种改革很难，从没见过",
+                "我们都明白，改革难度很大，史无前例",
+                "据说，改革的事情很复杂，难度不小"
+              ],
+              "answer": "众所周知，所谓的改革，其难度前所未有",
+              "explanation": "Three 所-phrases (众所周知, 所谓, 前所未有) plus 其 — stacked register markers. Distractors say similar things colloquially."
+            },
+            {
+              "id": "cl2-17",
+              "type": "multiple_choice",
+              "prompt": "无所谓",
+              "hint": "Choose the closest reading in everyday use.",
+              "options": [
+                "No way",
+                "It doesn't matter / one is indifferent",
+                "Cannot say",
+                "Don't ask"
+              ],
+              "answer": "It doesn't matter / one is indifferent",
+              "explanation": "无 (none) + 所谓 (so-called / what is called) — literally \"there is nothing to call it,\" so \"it doesn't matter.\""
+            },
+            {
+              "id": "cl2-18",
+              "type": "fill_blank",
+              "prompt": "A contract clause: \"___ 费用由乙方支付.\" Fill the formal anaphor (one character).",
+              "hint": "The formal counterpart of 它的 / 这些.",
+              "answer": "其",
+              "acceptableAnswers": [
+                "其"
+              ],
+              "explanation": "其 = formal possessive/anaphor — \"its (i.e. the costs just mentioned).\""
+            },
+            {
+              "id": "cl2-19",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 所 INCORRECTLY?",
+              "options": [
+                "我 所 说 的 话",
+                "前 所 未 有 的 事",
+                "众 所 周 知 的 道理",
+                "我 所 看 电影"
+              ],
+              "answer": "我 所 看 电影",
+              "explanation": "所 + V forms a noun-clause head; 我所看的电影 (= the movie I watched) is correct, but 所看电影 with no 的 is ungrammatical."
+            },
+            {
+              "id": "cl2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"What is so-called expertise is in truth only superficial knowledge.\"",
+              "answer": "所谓 的 专业 其 实 不过 是 皮毛",
+              "bank": [
+                "所谓",
+                "的",
+                "专业",
+                "其",
+                "实",
+                "不过",
+                "是",
+                "皮毛",
+                "了",
+                "因为",
+                "把",
+                "也"
+              ]
             }
           ]
         },
@@ -676,6 +970,162 @@
               ],
               "answer": "此 乃 国 之 大 事 也",
               "explanation": "Classical 也 is sentence-final and assertion-like (≈ \"is the case\"). Pairs naturally with 此乃 (\"this is\") + 之 in literary register. The other three are modern adverbial 也 = \"also/too.\""
+            },
+            {
+              "id": "cl3-11",
+              "type": "translate",
+              "source": "然而",
+              "answer": "however",
+              "acceptableAnswers": [
+                "but",
+                "yet",
+                "nevertheless",
+                "still",
+                "and yet"
+              ],
+              "direction": "to_source",
+              "explanation": "然 (so / thus) + 而 (yet) — the workhorse essay contrastive."
+            },
+            {
+              "id": "cl3-12",
+              "type": "fill_blank",
+              "prompt": "An essay shift: \"政策 推 行 三 年，___ 收效 甚微.\" Fill the formal contrastive (two characters).",
+              "hint": "Begins with 然.",
+              "answer": "然而",
+              "acceptableAnswers": [
+                "然而",
+                "然"
+              ],
+              "explanation": "然而 — \"however / yet.\" The literary turn. 然 alone is also acceptable in higher registers."
+            },
+            {
+              "id": "cl3-13",
+              "type": "multiple_choice",
+              "prompt": "富而不骄",
+              "hint": "What does this saying assert?",
+              "options": [
+                "Wealthy and yet arrogant",
+                "Wealthy, yet humble",
+                "Once well-off, no longer",
+                "Unsure of one's standing"
+              ],
+              "answer": "Wealthy, yet humble",
+              "explanation": "Adversative 而 — \"wealthy, yet not arrogant.\" A literary praise pattern."
+            },
+            {
+              "id": "cl3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build (literary): \"He is young yet steady; he speaks little yet his words have weight.\"",
+              "answer": "他 年轻 而 沉稳 言 少 而 有 分量",
+              "bank": [
+                "他",
+                "年轻",
+                "而",
+                "沉稳",
+                "言",
+                "少",
+                "有",
+                "分量",
+                "了",
+                "也",
+                "因为",
+                "把"
+              ]
+            },
+            {
+              "id": "cl3-15",
+              "type": "match_pairs",
+              "prompt": "the 而-construction to its function",
+              "pairs": [
+                {
+                  "left": "起而行之",
+                  "right": "Sequential — rise and act"
+                },
+                {
+                  "left": "富而不骄",
+                  "right": "Adversative — yet not"
+                },
+                {
+                  "left": "敏而好学",
+                  "right": "Coordinative — both qualities"
+                },
+                {
+                  "left": "总而言之",
+                  "right": "Fossilized discourse marker"
+                }
+              ]
+            },
+            {
+              "id": "cl3-16",
+              "type": "listen_and_choose",
+              "prompt": "A literary-register sentence is read aloud. Pick what you hear.",
+              "spokenText": "改革者，难而必行；改革之路，远而不可弃",
+              "options": [
+                "改革者，难而必行；改革之路，远而不可弃",
+                "改革这件事很难，但一定要做，路虽远不能放弃",
+                "改革很难做，但必须做，前路漫长不可丢弃",
+                "搞改革，难度大，但要坚持，路远也要走完"
+              ],
+              "answer": "改革者，难而必行；改革之路，远而不可弃",
+              "explanation": "Two adversative 而 + 之 + 者 — high literary register. Distractors paraphrase in modern Mandarin."
+            },
+            {
+              "id": "cl3-17",
+              "type": "translate",
+              "source": "起而行之",
+              "answer": "rise up and act on it",
+              "acceptableAnswers": [
+                "stand up and act",
+                "rise and act",
+                "act on it",
+                "stand up and take action"
+              ],
+              "direction": "to_source",
+              "explanation": "起 (rise) + 而 (sequential) + 行 (act) + 之 (it). Sequential 而 plus classical pronoun 之."
+            },
+            {
+              "id": "cl3-18",
+              "type": "fill_blank",
+              "prompt": "A line of praise: \"敏 ___ 好 学，言 ___ 中 肯.\" Fill the literary coordinator (one character, twice).",
+              "hint": "A single classical conjunction.",
+              "answer": "而",
+              "acceptableAnswers": [
+                "而"
+              ],
+              "explanation": "敏而好学 (sharp and fond of learning) — a Lúnyǔ allusion. 而 coordinates parallel praise."
+            },
+            {
+              "id": "cl3-19",
+              "type": "multiple_choice",
+              "prompt": "Which 而 is the SEQUENTIAL one (\"and then\")?",
+              "options": [
+                "年轻 而 有为",
+                "富 而 不 骄",
+                "取 而 代 之",
+                "总 而 言 之"
+              ],
+              "answer": "取 而 代 之",
+              "explanation": "取而代之 = \"take, and then replace it\" — first take, then substitute. The others are coordinative, adversative, or fossilized discourse markers."
+            },
+            {
+              "id": "cl3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build (formal contrast): \"The policy may sound elegant, yet in practice it is hard to apply.\"",
+              "answer": "此 策 听 之 雅 然 而 行 之 难",
+              "bank": [
+                "此",
+                "策",
+                "听",
+                "之",
+                "雅",
+                "然",
+                "而",
+                "行",
+                "难",
+                "了",
+                "把",
+                "也"
+              ]
             }
           ]
         },
@@ -861,6 +1311,149 @@
               ],
               "answer": "我 以 此 为 戒 以 免 重 蹈 覆辙",
               "explanation": "The second 以 in 以免 (\"so as to avoid\") is the classical purpose marker — same root as 以便 (\"so as to facilitate\"). The first 以 here is 以…为… (\"take… as…\"); option 1 is identity-marking 以; option 4 is the verb 以为 (\"think\")."
+            },
+            {
+              "id": "cl4-11",
+              "type": "translate",
+              "source": "以人为本",
+              "answer": "put people first",
+              "acceptableAnswers": [
+                "people-first",
+                "regard the people as the foundation",
+                "people-oriented",
+                "take the people as the foundation"
+              ],
+              "direction": "to_source",
+              "explanation": "以…为… — \"take X as Y.\" Famous policy slogan."
+            },
+            {
+              "id": "cl4-12",
+              "type": "fill_blank",
+              "prompt": "A legal opinion closes: \"___ 以 本 院 驳 回 原 告 之 诉.\" Fill the formal demonstrative (one character).",
+              "hint": "Begins with 是.",
+              "answer": "是",
+              "acceptableAnswers": [
+                "是"
+              ],
+              "explanation": "是以 = \"therefore / for this reason\" — fossil 是 + 以, found at the head of court opinions and white papers."
+            },
+            {
+              "id": "cl4-13",
+              "type": "multiple_choice",
+              "prompt": "若 政策 行 之 有 效，则 民 受 其 利。",
+              "hint": "What is the function of 则 here?",
+              "options": [
+                "A question marker",
+                "Formal \"then\" (= 就)",
+                "A negation",
+                "A topic shift"
+              ],
+              "answer": "Formal \"then\" (= 就)",
+              "explanation": "若…则… = literary \"if…then…\" Pair with colloquial 要是…就… for the everyday version."
+            },
+            {
+              "id": "cl4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"This being so, then there is no need to hesitate further.\" (formal)",
+              "answer": "既然 如此 则 不必 再 犹豫",
+              "bank": [
+                "既然",
+                "如此",
+                "则",
+                "不必",
+                "再",
+                "犹豫",
+                "了",
+                "把",
+                "因为",
+                "也"
+              ]
+            },
+            {
+              "id": "cl4-15",
+              "type": "match_pairs",
+              "prompt": "the 者-noun to a near-synonym",
+              "pairs": [
+                {
+                  "left": "学者",
+                  "right": "scholar"
+                },
+                {
+                  "left": "记者",
+                  "right": "reporter"
+                },
+                {
+                  "left": "强者",
+                  "right": "the strong one"
+                },
+                {
+                  "left": "受害者",
+                  "right": "victim"
+                }
+              ]
+            },
+            {
+              "id": "cl4-16",
+              "type": "listen_and_choose",
+              "prompt": "A legal-register sentence is read aloud. Pick what you hear.",
+              "spokenText": "是以本院驳回原告之诉讼请求",
+              "options": [
+                "是以本院驳回原告之诉讼请求",
+                "因此法院不接受原告的诉求",
+                "所以这个法院拒绝了起诉人的请求",
+                "据此，本院不予支持原告主张"
+              ],
+              "answer": "是以本院驳回原告之诉讼请求",
+              "explanation": "是以 (formal therefore), 本院 (this court), 之 (formal 的), 诉讼请求 (claim of suit) — four literal-register markers. Distractors translate the same content in modern Chinese."
+            },
+            {
+              "id": "cl4-17",
+              "type": "translate",
+              "source": "然则",
+              "answer": "that being the case",
+              "acceptableAnswers": [
+                "in that case",
+                "if so",
+                "that being so",
+                "then"
+              ],
+              "direction": "to_source",
+              "explanation": "然 (so) + 则 (then) — \"if that is so, then.\" A literary cohesive."
+            },
+            {
+              "id": "cl4-18",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 者 as a PRONOMINAL nominalizer (\"the one who…\")?",
+              "options": [
+                "这 是 一 个 学者",
+                "强 者 胜，弱 者 败",
+                "他 是 记者",
+                "这 部 电影 不 错"
+              ],
+              "answer": "强 者 胜，弱 者 败",
+              "explanation": "强者 / 弱者 = \"the strong one / the weak one\" — 者 nominalizing an adjective into a pronominal head. The other 者 instances are part of fixed nouns (学者, 记者)."
+            },
+            {
+              "id": "cl4-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build a formal conditional close: \"If the policy is carried out, then the people will benefit; if not, then losses will mount.\"",
+              "answer": "政策 若 行 则 民 受 其 利 不 行 则 损 益 增",
+              "bank": [
+                "政策",
+                "若",
+                "行",
+                "则",
+                "民",
+                "受",
+                "其",
+                "利",
+                "不",
+                "损",
+                "益",
+                "增",
+                "了",
+                "因为"
+              ]
             }
           ]
         },
@@ -986,6 +1579,295 @@
                   "text": "前所未有的进步。下次见！(qián suǒ wèi yǒu de jìn bù. xià cì jiàn!)",
                   "spokenText": "前所未有的进步。下次见！"
                 }
+              ]
+            },
+            {
+              "id": "cl5-2",
+              "type": "multiple_choice",
+              "prompt": "无用之用",
+              "hint": "What is the Zhuangzi paradox?",
+              "options": [
+                "No use is useless",
+                "The use of the useless",
+                "Useful is not useful",
+                "Without use, no use"
+              ],
+              "answer": "The use of the useless",
+              "explanation": "庄子's paradox: the seemingly useless has its own deep utility."
+            },
+            {
+              "id": "cl5-3",
+              "type": "fill_blank",
+              "prompt": "Close the four-character idiom: \"前 ___ 未 有.\"",
+              "hint": "The classical relative-clause marker.",
+              "answer": "所",
+              "acceptableAnswers": [
+                "所"
+              ],
+              "explanation": "前所未有 = unprecedented. 所 + verb forms a relative."
+            },
+            {
+              "id": "cl5-4",
+              "type": "translate",
+              "source": "众所周知",
+              "answer": "as everyone knows",
+              "acceptableAnswers": [
+                "as is known to all",
+                "everyone knows",
+                "it is universally known"
+              ],
+              "direction": "to_source",
+              "explanation": "Canonical 所-opener for editorials and white papers."
+            },
+            {
+              "id": "cl5-5",
+              "type": "multiple_choice",
+              "prompt": "其言深远",
+              "hint": "Pick the natural reading.",
+              "options": [
+                "His words are shallow",
+                "His words are far-reaching / profound",
+                "His words are angry",
+                "His words are sweet"
+              ],
+              "answer": "His words are far-reaching / profound",
+              "explanation": "其 = his (formal); 深远 = deep and far. Standard praise of a Daoist sage."
+            },
+            {
+              "id": "cl5-6",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Zhuangzi's words run deep — they make one reflect.\" (formal)",
+              "answer": "庄子 其 言 深远 发人深省",
+              "bank": [
+                "庄子",
+                "其",
+                "言",
+                "深远",
+                "发人深省",
+                "了",
+                "也",
+                "把",
+                "因为",
+                "就"
+              ]
+            },
+            {
+              "id": "cl5-7",
+              "type": "match_pairs",
+              "prompt": "each classical particle to its colloquial counterpart",
+              "pairs": [
+                {
+                  "left": "之",
+                  "right": "的"
+                },
+                {
+                  "left": "其",
+                  "right": "他/她/它的"
+                },
+                {
+                  "left": "所",
+                  "right": "relative-clause marker"
+                },
+                {
+                  "left": "也 (sentence-final)",
+                  "right": "classical copula"
+                }
+              ]
+            },
+            {
+              "id": "cl5-8",
+              "type": "listen_and_choose",
+              "prompt": "A book-club opener is read aloud. Pick what you hear.",
+              "spokenText": "今晚我们读庄子的一段，关于无用之用",
+              "options": [
+                "今晚我们读庄子的一段，关于无用之用",
+                "今天晚上一起看庄子，讲没用的用处",
+                "我们晚上读一段庄子，关于没用东西的用",
+                "今晚分析庄子，谈一谈无用与有用"
+              ],
+              "answer": "今晚我们读庄子的一段，关于无用之用",
+              "explanation": "Standard reading-circle phrasing with 之-construction intact."
+            },
+            {
+              "id": "cl5-9",
+              "type": "multiple_choice",
+              "prompt": "「人皆知有用之用，而莫知无用之用也」中的「也」最接近哪个功能？",
+              "hint": "Pick the classical particle's role here.",
+              "options": [
+                "= 也 (also)",
+                "Sentence-final assertion / copula-like",
+                "= 吗 (question)",
+                "= 的 (possessive)"
+              ],
+              "answer": "Sentence-final assertion / copula-like",
+              "explanation": "Classical sentence-final 也 anchors a statement — it asserts \"is the case.\" Not the modern adverb \"also.\""
+            },
+            {
+              "id": "cl5-10",
+              "type": "fill_blank",
+              "prompt": "Complete the closing idiom: \"前 所 ___ 有 的 进 步.\"",
+              "hint": "Negation, one character.",
+              "answer": "未",
+              "acceptableAnswers": [
+                "未"
+              ],
+              "explanation": "前所未有 — \"unprecedented.\" 未 is the classical negation \"not yet.\""
+            },
+            {
+              "id": "cl5-11",
+              "type": "translate",
+              "source": "发人深省",
+              "answer": "thought-provoking",
+              "acceptableAnswers": [
+                "makes one think deeply",
+                "deeply thought-provoking",
+                "stirs deep reflection"
+              ],
+              "direction": "to_source",
+              "explanation": "发人 (stir a person) + 深省 (deep reflection). Idiomatic praise of profound writing."
+            },
+            {
+              "id": "cl5-12",
+              "type": "multiple_choice",
+              "prompt": "「其言」的现代说法是？",
+              "hint": "Translate 其 into modern Chinese.",
+              "options": [
+                "我的话",
+                "他的话",
+                "这话",
+                "那种话"
+              ],
+              "answer": "他的话",
+              "explanation": "其 is the formal third-person possessive — \"his / her / its.\""
+            },
+            {
+              "id": "cl5-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build a closing line: \"Next week we read the Analects — please digest tonight's classical particles.\"",
+              "answer": "下周 读 论语 请 把 今晚 之 乎 者 也 消化 掉",
+              "bank": [
+                "下周",
+                "读",
+                "论语",
+                "请",
+                "把",
+                "今晚",
+                "之",
+                "乎",
+                "者",
+                "也",
+                "消化",
+                "掉",
+                "了",
+                "因为"
+              ]
+            },
+            {
+              "id": "cl5-14",
+              "type": "match_pairs",
+              "prompt": "the classical phrase to its English meaning",
+              "pairs": [
+                {
+                  "left": "之乎者也",
+                  "right": "pedantic classical jargon"
+                },
+                {
+                  "left": "前所未有",
+                  "right": "unprecedented"
+                },
+                {
+                  "left": "众所周知",
+                  "right": "as everyone knows"
+                },
+                {
+                  "left": "发人深省",
+                  "right": "thought-provoking"
+                }
+              ]
+            },
+            {
+              "id": "cl5-15",
+              "type": "listen_and_choose",
+              "prompt": "A Zhuangzi line is read aloud. Pick what you hear.",
+              "spokenText": "人皆知有用之用，而莫知无用之用也",
+              "options": [
+                "人皆知有用之用，而莫知无用之用也",
+                "大家都知道有用的好处，但不知道无用的好处",
+                "人们了解什么有用，却不懂没用的妙处",
+                "都明白有用的价值，却忽略无用的价值"
+              ],
+              "answer": "人皆知有用之用，而莫知无用之用也",
+              "explanation": "Original classical line with 皆 (all), 莫 (none), 之 (of), 也 (assertion). Distractors paraphrase."
+            },
+            {
+              "id": "cl5-16",
+              "type": "multiple_choice",
+              "prompt": "\"所\" + verb 构成的最常见结构是？",
+              "hint": "Think about 所说, 所见, 所知…",
+              "options": [
+                "A future tense",
+                "A passive relative clause: \"that which is V-ed\"",
+                "A polite imperative",
+                "A negation"
+              ],
+              "answer": "A passive relative clause: \"that which is V-ed\"",
+              "explanation": "所 + V = \"that which is V-ed\" — a classical relative-clause head still active in formal modern prose."
+            },
+            {
+              "id": "cl5-17",
+              "type": "fill_blank",
+              "prompt": "Begin the speech: \"庄 子 ___ 言 深 远.\" Fill the classical possessive (one character).",
+              "hint": "= his.",
+              "answer": "其",
+              "acceptableAnswers": [
+                "其"
+              ],
+              "explanation": "其 = formal third-person possessive."
+            },
+            {
+              "id": "cl5-18",
+              "type": "translate",
+              "source": "之乎者也",
+              "answer": "classical jargon",
+              "acceptableAnswers": [
+                "pedantic classical-style speech",
+                "stilted classical talk",
+                "stuffy classical particles",
+                "speaks in classical jargon"
+              ],
+              "direction": "to_source",
+              "explanation": "Four classical particles bundled — a label for hollow learnedness."
+            },
+            {
+              "id": "cl5-19",
+              "type": "multiple_choice",
+              "prompt": "Which sentence properly imitates the Zhuangzi style?",
+              "options": [
+                "人 皆 知 之 而 莫 行 也",
+                "我 也 知道 这个",
+                "他 不 想 去 了",
+                "今天 天气 真 好"
+              ],
+              "answer": "人 皆 知 之 而 莫 行 也",
+              "explanation": "皆…而莫…也 — classical universal + negation + assertion. The others are plain modern Chinese."
+            },
+            {
+              "id": "cl5-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build a literary close: \"Zhuangzi's words run deep — they truly make one reflect.\"",
+              "answer": "庄子 之 言 深远 实 发人深省",
+              "bank": [
+                "庄子",
+                "之",
+                "言",
+                "深远",
+                "实",
+                "发人深省",
+                "也",
+                "了",
+                "把",
+                "因为",
+                "就"
               ]
             }
           ]
@@ -1304,6 +2186,157 @@
                   "right": "Theme that makes 静夜思 universal"
                 }
               ]
+            },
+            {
+              "id": "po1-11",
+              "type": "translate",
+              "source": "故乡",
+              "answer": "hometown",
+              "acceptableAnswers": [
+                "native place",
+                "home village",
+                "homeland"
+              ],
+              "direction": "to_source",
+              "explanation": "故 (old) + 乡 (village) — the canonical word for one's home."
+            },
+            {
+              "id": "po1-12",
+              "type": "fill_blank",
+              "prompt": "Closing the quartet: \"低头___故乡.\" Fill the verb of yearning (one character).",
+              "hint": "= ponder, miss.",
+              "answer": "思",
+              "acceptableAnswers": [
+                "思"
+              ],
+              "explanation": "低头思故乡 — bow the head and yearn for home. 思 is the classical verb of longing."
+            },
+            {
+              "id": "po1-13",
+              "type": "multiple_choice",
+              "prompt": "床前明月光",
+              "hint": "What image opens the quartet?",
+              "options": [
+                "A lamp on the table",
+                "Moonlight before the bed",
+                "Frost in the courtyard",
+                "Wind in the pines"
+              ],
+              "answer": "Moonlight before the bed",
+              "explanation": "床前 (before the bed) + 明月光 (bright moonlight). The opening image is moonlight pooling near the sleeper's bed."
+            },
+            {
+              "id": "po1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Reassemble: \"I wondered if it were frost on the ground.\"",
+              "answer": "疑 是 地 上 霜",
+              "bank": [
+                "疑",
+                "是",
+                "地",
+                "上",
+                "霜",
+                "明",
+                "月",
+                "床",
+                "前"
+              ]
+            },
+            {
+              "id": "po1-15",
+              "type": "match_pairs",
+              "prompt": "the line to the bodily gesture it depicts",
+              "pairs": [
+                {
+                  "left": "床前明月光",
+                  "right": "Lying in bed"
+                },
+                {
+                  "left": "疑是地上霜",
+                  "right": "Glancing at the floor"
+                },
+                {
+                  "left": "举头望明月",
+                  "right": "Lifting the head"
+                },
+                {
+                  "left": "低头思故乡",
+                  "right": "Lowering the head"
+                }
+              ]
+            },
+            {
+              "id": "po1-16",
+              "type": "listen_and_choose",
+              "prompt": "A speaker recites the opening of 静夜思. Pick what you hear.",
+              "spokenText": "床前明月光，疑是地上霜",
+              "options": [
+                "床前明月光，疑是地上霜",
+                "举头望明月，低头思故乡",
+                "空山不见人，但闻人语响",
+                "海内存知己，天涯若比邻"
+              ],
+              "answer": "床前明月光，疑是地上霜"
+            },
+            {
+              "id": "po1-17",
+              "type": "translate",
+              "source": "诗仙",
+              "answer": "Poetry Immortal",
+              "acceptableAnswers": [
+                "the Immortal of Poetry",
+                "Poet Immortal",
+                "Immortal of Poetry"
+              ],
+              "direction": "to_source",
+              "explanation": "李白's honorific — 诗 (poetry) + 仙 (immortal). Contrast with 杜甫's 诗圣 (Sage)."
+            },
+            {
+              "id": "po1-18",
+              "type": "fill_blank",
+              "prompt": "Open the quartet: \"___ 前 明 月 光.\" Fill the place (one character).",
+              "hint": "Where the sleepless poet lies.",
+              "answer": "床",
+              "acceptableAnswers": [
+                "床"
+              ],
+              "explanation": "床前 — \"in front of the bed.\" The intimate domestic setting that frames the moonlit insomnia."
+            },
+            {
+              "id": "po1-19",
+              "type": "multiple_choice",
+              "prompt": "Which line of the quartet expresses the actual longing (not the perception)?",
+              "options": [
+                "床前明月光",
+                "疑是地上霜",
+                "举头望明月",
+                "低头思故乡"
+              ],
+              "answer": "低头思故乡",
+              "explanation": "The first three lines build the perceptual moment; only the fourth, 低头思故乡, names the emotional content — the longing for home."
+            },
+            {
+              "id": "po1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Reassemble the full quartet of 静夜思.",
+              "answer": "床 前 明月 光 疑 是 地上 霜 举头 望 明月 低头 思 故乡",
+              "bank": [
+                "床",
+                "前",
+                "明月",
+                "光",
+                "疑",
+                "是",
+                "地上",
+                "霜",
+                "举头",
+                "望",
+                "低头",
+                "思",
+                "故乡",
+                "山",
+                "松"
+              ]
             }
           ]
         },
@@ -1464,6 +2497,153 @@
                 "鸟",
                 "惊",
                 "心",
+                "明月",
+                "故乡"
+              ]
+            },
+            {
+              "id": "po2-11",
+              "type": "translate",
+              "source": "诗圣",
+              "answer": "Poetry Sage",
+              "acceptableAnswers": [
+                "the Sage of Poetry",
+                "Sage of Poetry"
+              ],
+              "direction": "to_source",
+              "explanation": "Dù Fǔ's honorific — 诗 + 圣. Contrast with 李白's 诗仙."
+            },
+            {
+              "id": "po2-12",
+              "type": "fill_blank",
+              "prompt": "Complete the famous opening: \"国破山河在，城春草木___.\" (one character)",
+              "hint": "= deep / dense.",
+              "answer": "深",
+              "acceptableAnswers": [
+                "深"
+              ],
+              "explanation": "草木深 — the grass and trees grow thick in the abandoned spring city. The depth measures the abandonment."
+            },
+            {
+              "id": "po2-13",
+              "type": "multiple_choice",
+              "prompt": "感时花溅泪",
+              "hint": "Pick the closest reading.",
+              "options": [
+                "Flowers spatter water in the wind",
+                "Moved by the times, even blossoms shed tears",
+                "Flowers heal the wounded",
+                "Flowers fall when crushed"
+              ],
+              "answer": "Moved by the times, even blossoms shed tears",
+              "explanation": "感时 (moved by the era) + 花溅泪 (flowers spatter tears) — Dù Fǔ's signature image of grief so deep that even nature seems to mourn."
+            },
+            {
+              "id": "po2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Reassemble: \"Resenting separation, even birds startle the heart.\"",
+              "answer": "恨 别 鸟 惊 心",
+              "bank": [
+                "恨",
+                "别",
+                "鸟",
+                "惊",
+                "心",
+                "感",
+                "时",
+                "花",
+                "溅",
+                "泪"
+              ]
+            },
+            {
+              "id": "po2-15",
+              "type": "match_pairs",
+              "prompt": "each Dù Fǔ image to its emotional weight",
+              "pairs": [
+                {
+                  "left": "国破",
+                  "right": "Catastrophic state collapse"
+                },
+                {
+                  "left": "山河在",
+                  "right": "What endures — the bare land"
+                },
+                {
+                  "left": "城春",
+                  "right": "Spring without people"
+                },
+                {
+                  "left": "草木深",
+                  "right": "The thicket of an emptied city"
+                }
+              ]
+            },
+            {
+              "id": "po2-16",
+              "type": "listen_and_choose",
+              "prompt": "A war-correspondent recites the canonical lament. Pick what you hear.",
+              "spokenText": "感时花溅泪，恨别鸟惊心",
+              "options": [
+                "感时花溅泪，恨别鸟惊心",
+                "国破山河在，城春草木深",
+                "举头望明月，低头思故乡",
+                "空山不见人，但闻人语响"
+              ],
+              "answer": "感时花溅泪，恨别鸟惊心"
+            },
+            {
+              "id": "po2-17",
+              "type": "translate",
+              "source": "国破山河在",
+              "answer": "The state is broken — yet mountains and rivers remain",
+              "acceptableAnswers": [
+                "The country is shattered, the land remains",
+                "The dynasty is ruined; the mountains and rivers endure",
+                "Kingdom destroyed, but the land stays"
+              ],
+              "direction": "to_source",
+              "explanation": "国 (state) + 破 (broken) — institutions gone, geography intact. The framing line for all later war-mourning."
+            },
+            {
+              "id": "po2-18",
+              "type": "fill_blank",
+              "prompt": "An editorial after a disaster closes: \"国破山河在，城春草木___.\" Complete it.",
+              "hint": "= deep / thick.",
+              "answer": "深",
+              "acceptableAnswers": [
+                "深"
+              ],
+              "explanation": "草木深 — the unintended overgrowth of an emptied city. Echoed in modern disaster reporting."
+            },
+            {
+              "id": "po2-19",
+              "type": "multiple_choice",
+              "prompt": "Why does 杜甫 carry the title 诗圣 rather than 诗仙?",
+              "options": [
+                "He outlived 李白",
+                "His verse foregrounds Confucian moral conscience and historical witness",
+                "He wrote more poems",
+                "He served at court longer"
+              ],
+              "answer": "His verse foregrounds Confucian moral conscience and historical witness",
+              "explanation": "圣 (sage) marks Confucian gravity — 杜甫 is read as the conscience of his age. 仙 (immortal) marks 李白's free, transcendent voice."
+            },
+            {
+              "id": "po2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Reassemble the famous couplet: \"The state is broken — mountains and rivers remain; spring in the city, grass and trees grow thick.\"",
+              "answer": "国 破 山河 在 城 春 草木 深",
+              "bank": [
+                "国",
+                "破",
+                "山河",
+                "在",
+                "城",
+                "春",
+                "草木",
+                "深",
+                "举头",
                 "明月",
                 "故乡"
               ]
@@ -1630,6 +2810,163 @@
               ],
               "answer": "His poems use minimal narrative — image after image with little human presence or argument",
               "explanation": "Compare with Dù Fǔ (who tells stories) or Lǐ Bái (who emotes). 王维 selects images and lets them stand — that compositional restraint is what readers call \"silent.\""
+            },
+            {
+              "id": "po3-11",
+              "type": "translate",
+              "source": "诗佛",
+              "answer": "Poetry Buddha",
+              "acceptableAnswers": [
+                "the Buddha of Poetry",
+                "Buddha of Poetry"
+              ],
+              "direction": "to_source",
+              "explanation": "Wang Wei's honorific — his Chan-quiet nature poems read like silent meditation."
+            },
+            {
+              "id": "po3-12",
+              "type": "fill_blank",
+              "prompt": "Continue the couplet: \"明月松间照，___ 石 上 流.\" (one character)",
+              "hint": "Clear spring water.",
+              "answer": "清泉",
+              "acceptableAnswers": [
+                "清泉",
+                "清"
+              ],
+              "explanation": "明月松间照，清泉石上流 — moon between pines, clear spring over stones."
+            },
+            {
+              "id": "po3-13",
+              "type": "multiple_choice",
+              "prompt": "空山不见人",
+              "hint": "Pick the closest English rendering.",
+              "options": [
+                "The mountain is empty — no one in sight",
+                "The mountain is empty — birds fly south",
+                "The mountain has lost its people",
+                "The mountain is haunted"
+              ],
+              "answer": "The mountain is empty — no one in sight",
+              "explanation": "空山 (empty mountain) + 不见人 (no person to be seen) — Wang Wei's emptiness made visual."
+            },
+            {
+              "id": "po3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Reassemble: \"Only the echo of voices is heard.\"",
+              "answer": "但 闻 人 语 响",
+              "bank": [
+                "但",
+                "闻",
+                "人",
+                "语",
+                "响",
+                "空",
+                "山",
+                "不",
+                "见"
+              ]
+            },
+            {
+              "id": "po3-15",
+              "type": "match_pairs",
+              "prompt": "each Wang Wei image to the sense engaged",
+              "pairs": [
+                {
+                  "left": "空山不见人",
+                  "right": "Sight — the absence"
+                },
+                {
+                  "left": "但闻人语响",
+                  "right": "Hearing — disembodied voices"
+                },
+                {
+                  "left": "明月松间照",
+                  "right": "Sight — filtered light"
+                },
+                {
+                  "left": "清泉石上流",
+                  "right": "Sight + hearing — water"
+                }
+              ]
+            },
+            {
+              "id": "po3-16",
+              "type": "listen_and_choose",
+              "prompt": "A literary recital of 鹿柴's opening. Pick what you hear.",
+              "spokenText": "空山不见人，但闻人语响",
+              "options": [
+                "空山不见人，但闻人语响",
+                "明月松间照，清泉石上流",
+                "举头望明月，低头思故乡",
+                "国破山河在，城春草木深"
+              ],
+              "answer": "空山不见人，但闻人语响"
+            },
+            {
+              "id": "po3-17",
+              "type": "translate",
+              "source": "诗中有画，画中有诗",
+              "answer": "There is painting in his poems, and poetry in his paintings",
+              "acceptableAnswers": [
+                "painting in poetry, poetry in painting",
+                "his poems are paintings, his paintings are poems",
+                "poems contain paintings, paintings contain poems"
+              ],
+              "direction": "to_source",
+              "explanation": "Su Shi's two-line praise of Wang Wei — the canonical formulation of multi-art fusion."
+            },
+            {
+              "id": "po3-18",
+              "type": "fill_blank",
+              "prompt": "Wang Wei's most famous opening: \"空 ___ 不 见 人.\" (one character)",
+              "hint": "= mountain.",
+              "answer": "山",
+              "acceptableAnswers": [
+                "山"
+              ],
+              "explanation": "空山 (empty mountain) is the framing image for Wang Wei's quietest poems."
+            },
+            {
+              "id": "po3-19",
+              "type": "multiple_choice",
+              "prompt": "Which feature most distinguishes Wang Wei's nature poems from those of his Tang peers?",
+              "options": [
+                "Heavier narration",
+                "Image-first composition with minimal human presence — Chan-quiet",
+                "More political content",
+                "Longer line-lengths"
+              ],
+              "answer": "Image-first composition with minimal human presence — Chan-quiet",
+              "explanation": "Wang Wei sets image after image and steps aside. His peers narrate; he watches. That restraint is what readers call \"silent.\""
+            },
+            {
+              "id": "po3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Reassemble Wang Wei's quartet from 鹿柴.",
+              "answer": "空 山 不 见 人 但 闻 人 语 响 返 景 入 深 林 复 照 青 苔 上",
+              "bank": [
+                "空",
+                "山",
+                "不",
+                "见",
+                "人",
+                "但",
+                "闻",
+                "语",
+                "响",
+                "返",
+                "景",
+                "入",
+                "深",
+                "林",
+                "复",
+                "照",
+                "青",
+                "苔",
+                "上",
+                "明",
+                "月"
+              ]
             }
           ]
         },
@@ -1797,6 +3134,159 @@
               ],
               "answer": "旧唐书 (the Old Book of Tang)",
               "explanation": "当局者迷 is from 旧唐书, NOT from 题西林壁. The two are quoted together because they say the same thing — but the proverb has its own source. Knowing this is a marker of literary literacy."
+            },
+            {
+              "id": "po4-11",
+              "type": "translate",
+              "source": "千里共婵娟",
+              "answer": "sharing the moon's beauty across a thousand miles",
+              "acceptableAnswers": [
+                "share the bright moon across a thousand li",
+                "across a thousand miles, share the same moon",
+                "even at a thousand miles, share the moon"
+              ],
+              "direction": "to_source",
+              "explanation": "婵娟 (a poetic name for the moon) + 共 (share). Mid-Autumn blessing for separated family."
+            },
+            {
+              "id": "po4-12",
+              "type": "fill_blank",
+              "prompt": "Mid-Autumn greeting: \"但 愿 人 长 ___，千 里 共 婵 娟.\" (one character)",
+              "hint": "= endure / long.",
+              "answer": "久",
+              "acceptableAnswers": [
+                "久"
+              ],
+              "explanation": "但愿人长久 — \"may people endure long.\" The blessing that pairs with 千里共婵娟."
+            },
+            {
+              "id": "po4-13",
+              "type": "multiple_choice",
+              "prompt": "不识庐山真面目",
+              "hint": "When is this line most often quoted?",
+              "options": [
+                "Praising a famous mountain",
+                "Naming someone's blind spot — too close to see clearly",
+                "Inviting a friend on a hike",
+                "Citing a geography textbook"
+              ],
+              "answer": "Naming someone's blind spot — too close to see clearly",
+              "explanation": "Quoted whenever someone is too immersed in a situation to perceive its shape — the canonical Chinese line for self-blindness."
+            },
+            {
+              "id": "po4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Reassemble: \"I do not see the true face of Mount Lu — only because I myself am inside this mountain.\"",
+              "answer": "不 识 庐山 真 面 目 只 缘 身 在 此 山 中",
+              "bank": [
+                "不",
+                "识",
+                "庐山",
+                "真",
+                "面",
+                "目",
+                "只",
+                "缘",
+                "身",
+                "在",
+                "此",
+                "山",
+                "中",
+                "明月"
+              ]
+            },
+            {
+              "id": "po4-15",
+              "type": "match_pairs",
+              "prompt": "each Sū Shì line to its standard use",
+              "pairs": [
+                {
+                  "left": "但愿人长久",
+                  "right": "Festival blessing — wishing endurance"
+                },
+                {
+                  "left": "千里共婵娟",
+                  "right": "Comforting separated family"
+                },
+                {
+                  "left": "不识庐山真面目",
+                  "right": "Naming self-blindness"
+                },
+                {
+                  "left": "只缘身在此山中",
+                  "right": "Explaining why one cannot see it"
+                }
+              ]
+            },
+            {
+              "id": "po4-16",
+              "type": "listen_and_choose",
+              "prompt": "A Mid-Autumn toast is read aloud. Pick what you hear.",
+              "spokenText": "但愿人长久，千里共婵娟",
+              "options": [
+                "但愿人长久，千里共婵娟",
+                "海内存知己，天涯若比邻",
+                "国破山河在，城春草木深",
+                "明月松间照，清泉石上流"
+              ],
+              "answer": "但愿人长久，千里共婵娟"
+            },
+            {
+              "id": "po4-17",
+              "type": "translate",
+              "source": "当局者迷",
+              "answer": "the one in the thick of it loses sight",
+              "acceptableAnswers": [
+                "the one involved is confused",
+                "the participant is blind",
+                "the one inside cannot see clearly"
+              ],
+              "direction": "to_source",
+              "explanation": "From 旧唐书 — paired with 苏轼's 题西林壁 because both describe self-blindness."
+            },
+            {
+              "id": "po4-18",
+              "type": "fill_blank",
+              "prompt": "A reflection: \"___ 缘 身 在 此 山 中.\" Fill the limiting connector (one character).",
+              "hint": "= only / merely.",
+              "answer": "只",
+              "acceptableAnswers": [
+                "只"
+              ],
+              "explanation": "只缘 — \"only because.\" The literary causal frame that names the reason for the prior line's blindness."
+            },
+            {
+              "id": "po4-19",
+              "type": "multiple_choice",
+              "prompt": "苏轼为何在文化记忆中常与前朝诗人并提？",
+              "hint": "Why does cultural memory pair this Song-era figure with earlier poets?",
+              "options": [
+                "He plagiarized them",
+                "His couplets entered the same quoting-canon and are quoted together in everyday speech",
+                "He edited their collected works",
+                "He visited their tombs"
+              ],
+              "answer": "His couplets entered the same quoting-canon and are quoted together in everyday speech",
+              "explanation": "Schoolchildren memorize Tang and Song couplets side by side. The reading public quotes 苏轼 next to 李白 — chronology aside, both belong to the canon of memorized verse."
+            },
+            {
+              "id": "po4-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build the festival blessing: \"May people endure long, and across a thousand miles share the moon.\"",
+              "answer": "但 愿 人 长 久 千 里 共 婵娟",
+              "bank": [
+                "但",
+                "愿",
+                "人",
+                "长",
+                "久",
+                "千",
+                "里",
+                "共",
+                "婵娟",
+                "明月",
+                "举头"
+              ]
             }
           ]
         },
@@ -1965,6 +3455,157 @@
               ],
               "answer": "谁知盘中餐，粒粒皆辛苦",
               "explanation": "From 李绅's 悯农 — every Chinese child memorizes it. The recital cadence (slow, steady) is unmistakable in family contexts."
+            },
+            {
+              "id": "po5-11",
+              "type": "translate",
+              "source": "海内存知己",
+              "answer": "if a true friend remains within the four seas",
+              "acceptableAnswers": [
+                "a true friend within the four seas",
+                "if a friend remains in the world",
+                "as long as a true friend exists in the world"
+              ],
+              "direction": "to_source",
+              "explanation": "海内 (within the four seas — i.e. anywhere in the realm) + 存 (remain) + 知己 (a friend who knows you)."
+            },
+            {
+              "id": "po5-12",
+              "type": "fill_blank",
+              "prompt": "Farewell toast: \"海 内 存 知 己，天 涯 若 ___ 邻.\" (one character)",
+              "hint": "= near, next door.",
+              "answer": "比",
+              "acceptableAnswers": [
+                "比"
+              ],
+              "explanation": "若比邻 — \"feels like next door.\" The line that has carried Chinese farewells for fourteen centuries."
+            },
+            {
+              "id": "po5-13",
+              "type": "multiple_choice",
+              "prompt": "野火烧不尽，春风吹又生",
+              "hint": "When is this couplet most often quoted today?",
+              "options": [
+                "Describing a wildfire",
+                "Praising resilience — what is written off comes back",
+                "Lamenting a death",
+                "Criticizing carelessness"
+              ],
+              "answer": "Praising resilience — what is written off comes back",
+              "explanation": "From 白居易's 草. Quoted whenever something declared finished proves stubbornly alive — a company, a movement, a relationship."
+            },
+            {
+              "id": "po5-14",
+              "type": "tap_words_in_order",
+              "prompt": "Reassemble the children's dinner-table line from 悯农.",
+              "answer": "谁 知 盘 中 餐 粒 粒 皆 辛 苦",
+              "bank": [
+                "谁",
+                "知",
+                "盘",
+                "中",
+                "餐",
+                "粒",
+                "皆",
+                "辛",
+                "苦",
+                "明月",
+                "故乡"
+              ]
+            },
+            {
+              "id": "po5-15",
+              "type": "match_pairs",
+              "prompt": "the Tang line to the everyday situation that triggers it",
+              "pairs": [
+                {
+                  "left": "海内存知己",
+                  "right": "Farewell toast"
+                },
+                {
+                  "left": "野火烧不尽",
+                  "right": "Praising resilience"
+                },
+                {
+                  "left": "谁知盘中餐",
+                  "right": "Don't waste food"
+                },
+                {
+                  "left": "举头望明月",
+                  "right": "Diaspora homesickness"
+                }
+              ]
+            },
+            {
+              "id": "po5-16",
+              "type": "listen_and_choose",
+              "prompt": "A famous resilience couplet is read aloud. Pick what you hear.",
+              "spokenText": "野火烧不尽，春风吹又生",
+              "options": [
+                "野火烧不尽，春风吹又生",
+                "海内存知己，天涯若比邻",
+                "谁知盘中餐，粒粒皆辛苦",
+                "明月松间照，清泉石上流"
+              ],
+              "answer": "野火烧不尽，春风吹又生"
+            },
+            {
+              "id": "po5-17",
+              "type": "translate",
+              "source": "粒粒皆辛苦",
+              "answer": "every grain comes from hard labor",
+              "acceptableAnswers": [
+                "each grain is the fruit of toil",
+                "every grain is the result of suffering",
+                "each grain represents toil"
+              ],
+              "direction": "to_source",
+              "explanation": "粒粒 (every grain) + 皆 (all) + 辛苦 (hard labor). 李绅's 悯农 line."
+            },
+            {
+              "id": "po5-18",
+              "type": "fill_blank",
+              "prompt": "A grandparent reminds: \"谁 知 盘 中 ___ ，粒 粒 皆 辛 苦.\" (one character)",
+              "hint": "= cooked meal / food.",
+              "answer": "餐",
+              "acceptableAnswers": [
+                "餐"
+              ],
+              "explanation": "盘中餐 — the food on the dish. The canonical line for not wasting food."
+            },
+            {
+              "id": "po5-19",
+              "type": "multiple_choice",
+              "prompt": "为什么只引用 \"谁知盘中餐\" 一句就能教育小孩？",
+              "hint": "Why is quoting only that single first line enough?",
+              "options": [
+                "小孩看不懂",
+                "每个孩子早已背下后一句；停顿促使他们默念",
+                "整首诗太长",
+                "这样念更顺口"
+              ],
+              "answer": "每个孩子早已背下后一句；停顿促使他们默念",
+              "explanation": "Cultural memorization makes the half-line a complete pedagogical gesture — the listener finishes it in their head."
+            },
+            {
+              "id": "po5-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build the resilience couplet: \"Wildfire cannot burn it all out — spring wind blows it back to life.\"",
+              "answer": "野 火 烧 不 尽 春 风 吹 又 生",
+              "bank": [
+                "野",
+                "火",
+                "烧",
+                "不",
+                "尽",
+                "春",
+                "风",
+                "吹",
+                "又",
+                "生",
+                "明月",
+                "故乡"
+              ]
             }
           ]
         },
@@ -2085,6 +3726,280 @@
                   "spokenText": "夸张而气象万千，李白之笔，无人能及。谢谢您的精彩分享。"
                 }
               ]
+            },
+            {
+              "id": "po6-2",
+              "type": "translate",
+              "source": "羁旅之思",
+              "answer": "the longing of one far from home",
+              "acceptableAnswers": [
+                "the homesickness of a traveler",
+                "a traveler's longing",
+                "longing of the sojourner"
+              ],
+              "direction": "to_source",
+              "explanation": "羁旅 (sojourn) + 之 (formal of) + 思 (longing). High literary register."
+            },
+            {
+              "id": "po6-3",
+              "type": "fill_blank",
+              "prompt": "Praise of brevity: \"言 简 ___ 意 远.\" (one character)",
+              "hint": "Literary coordinator.",
+              "answer": "而",
+              "acceptableAnswers": [
+                "而"
+              ],
+              "explanation": "言简而意远 — \"few in words, far in meaning.\" Classical praise for terse profundity."
+            },
+            {
+              "id": "po6-4",
+              "type": "multiple_choice",
+              "prompt": "盛唐之音",
+              "hint": "Pick the most accurate reading.",
+              "options": [
+                "The folk music of the Tang dynasty",
+                "The voice of the High Tang — its poetic spirit at its peak",
+                "Court music regulations",
+                "A genre of opera"
+              ],
+              "answer": "The voice of the High Tang — its poetic spirit at its peak",
+              "explanation": "盛唐 (High Tang) + 之 (of) + 音 (voice / sound). A literary-historical term for the poetic spirit of Li Bai and Du Fu's era."
+            },
+            {
+              "id": "po6-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build (literary): \"The poet's hand — unmatched.\"",
+              "answer": "李白 之 笔 无人 能及",
+              "bank": [
+                "李白",
+                "之",
+                "笔",
+                "无人",
+                "能及",
+                "了",
+                "把",
+                "因为",
+                "也"
+              ]
+            },
+            {
+              "id": "po6-6",
+              "type": "match_pairs",
+              "prompt": "the literary term to its meaning",
+              "pairs": [
+                {
+                  "left": "平仄",
+                  "right": "Level vs. oblique tones"
+                },
+                {
+                  "left": "意境",
+                  "right": "Imagistic atmosphere"
+                },
+                {
+                  "left": "知音",
+                  "right": "Friend who truly understands"
+                },
+                {
+                  "left": "羁旅",
+                  "right": "Sojourn / being away from home"
+                }
+              ]
+            },
+            {
+              "id": "po6-7",
+              "type": "listen_and_choose",
+              "prompt": "A host praises a guest's reading. Pick what you hear.",
+              "spokenText": "不愧为知音",
+              "options": [
+                "不愧为知音",
+                "我也这样想",
+                "你看明白了吗",
+                "他真的来了"
+              ],
+              "answer": "不愧为知音",
+              "explanation": "不愧为 = \"worthy of being called.\" + 知音 = \"one who knows the music\" (a true friend). High literary praise."
+            },
+            {
+              "id": "po6-8",
+              "type": "translate",
+              "source": "千古不易之题",
+              "answer": "an eternal theme",
+              "acceptableAnswers": [
+                "a timeless subject",
+                "a theme that has not changed across ages",
+                "an undying theme"
+              ],
+              "direction": "to_source",
+              "explanation": "千古 (a thousand antiquities) + 不易 (unchanging) + 之题 (formal \"theme of\")."
+            },
+            {
+              "id": "po6-9",
+              "type": "fill_blank",
+              "prompt": "Classical possessive in Li Bai: \"黄 河 ___ 水 天 上 来.\" (one character)",
+              "hint": "Formal modifier-linker.",
+              "answer": "之",
+              "acceptableAnswers": [
+                "之"
+              ],
+              "explanation": "黄河之水 = \"the waters of the Yellow River.\" Famous Li Bai opening."
+            },
+            {
+              "id": "po6-10",
+              "type": "multiple_choice",
+              "prompt": "意境",
+              "hint": "Pick the closest literary-critical reading.",
+              "options": [
+                "A line's word count",
+                "The imagistic-atmospheric world a poem creates",
+                "Rhyme placement",
+                "Calligraphic style"
+              ],
+              "answer": "The imagistic-atmospheric world a poem creates",
+              "explanation": "意境 = \"realm of meaning + image.\" The atmosphere a poem evokes — central category of Chinese poetics."
+            },
+            {
+              "id": "po6-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build the conventional praise: \"His hand is hyperbolic, his vision boundless.\"",
+              "answer": "夸张 而 气象 万千",
+              "bank": [
+                "夸张",
+                "而",
+                "气象",
+                "万千",
+                "了",
+                "把",
+                "因为",
+                "也",
+                "就"
+              ]
+            },
+            {
+              "id": "po6-12",
+              "type": "match_pairs",
+              "prompt": "the Li Bai / Du Fu honorific to its emphasis",
+              "pairs": [
+                {
+                  "left": "诗仙",
+                  "right": "Transcendent free spirit"
+                },
+                {
+                  "left": "诗圣",
+                  "right": "Confucian moral conscience"
+                },
+                {
+                  "left": "诗佛",
+                  "right": "Buddhist quietism"
+                },
+                {
+                  "left": "诗鬼",
+                  "right": "Otherworldly strangeness (李贺)"
+                }
+              ]
+            },
+            {
+              "id": "po6-13",
+              "type": "listen_and_choose",
+              "prompt": "A literary critic identifies a poem's contrast. Pick what you hear.",
+              "spokenText": "国破山河在",
+              "options": [
+                "国破山河在",
+                "城春草木深",
+                "举头望明月",
+                "海内存知己"
+              ],
+              "answer": "国破山河在"
+            },
+            {
+              "id": "po6-14",
+              "type": "translate",
+              "source": "望月思乡",
+              "answer": "to gaze at the moon and long for home",
+              "acceptableAnswers": [
+                "gaze at the moon, miss home",
+                "moonlit homesickness",
+                "look at the moon and yearn for one's hometown"
+              ],
+              "direction": "to_source",
+              "explanation": "Four-character compression of the universal Chinese poetic motif."
+            },
+            {
+              "id": "po6-15",
+              "type": "fill_blank",
+              "prompt": "A critic notes: \"忧 国 ___ 思 与 盛 唐 之 音 并 存.\" Fill the formal modifier-linker.",
+              "hint": "The classical 的.",
+              "answer": "之",
+              "acceptableAnswers": [
+                "之"
+              ],
+              "explanation": "忧国之思 — \"the worry of one who loves his country.\" 之 links modifier to noun."
+            },
+            {
+              "id": "po6-16",
+              "type": "multiple_choice",
+              "prompt": "What does 平仄 govern in classical regulated verse?",
+              "options": [
+                "Calligraphy strokes",
+                "Tonal patterning across a line / couplet",
+                "The number of syllables in a poem",
+                "Rhyme equivalence"
+              ],
+              "answer": "Tonal patterning across a line / couplet",
+              "explanation": "平 (level) vs. 仄 (oblique) tones must alternate by rule in 律诗 — that patterning is what 平仄 governs."
+            },
+            {
+              "id": "po6-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build the closing thanks: \"Thank you for your wonderful insight.\"",
+              "answer": "谢谢 您 的 精彩 分享",
+              "bank": [
+                "谢谢",
+                "您",
+                "的",
+                "精彩",
+                "分享",
+                "了",
+                "把",
+                "因为",
+                "也"
+              ]
+            },
+            {
+              "id": "po6-18",
+              "type": "translate",
+              "source": "知音",
+              "answer": "a true friend who understands",
+              "acceptableAnswers": [
+                "a soulmate in art",
+                "one who knows the music",
+                "a bosom friend"
+              ],
+              "direction": "to_source",
+              "explanation": "Literally \"one who knows the music\" — from the Bo Ya / Zhong Ziqi story."
+            },
+            {
+              "id": "po6-19",
+              "type": "fill_blank",
+              "prompt": "Praise of brevity: \"言 简 而 意 ___.\" (one character)",
+              "hint": "= far, distant, lasting.",
+              "answer": "远",
+              "acceptableAnswers": [
+                "远"
+              ],
+              "explanation": "言简而意远 — terse words, far-reaching meaning."
+            },
+            {
+              "id": "po6-20",
+              "type": "multiple_choice",
+              "prompt": "Which response best matches a literary-host's register?",
+              "options": [
+                "哎呦不错哦",
+                "言简而意远，意境深远",
+                "差不多得了吧",
+                "随便啦"
+              ],
+              "answer": "言简而意远，意境深远",
+              "explanation": "言简而意远 + 意境深远 — paired four-character praises in literary register. The others are colloquial, dismissive, or casual."
             }
           ]
         }
@@ -2388,6 +4303,149 @@
               ],
               "answer": "Cultural-rhetorical convention rooted in classical 骈文 (parallel prose) — balanced rhythm signals seriousness and care",
               "explanation": "骈文 (parallel prose) trained centuries of writers to value matched clauses. Modern editorial Chinese inherits the instinct: balanced rhythm = serious writer. Imbalanced clauses sound rushed even when grammatically fine."
+            },
+            {
+              "id": "rh1-11",
+              "type": "translate",
+              "source": "效率优先，公平为本",
+              "answer": "efficiency first, fairness at the root",
+              "acceptableAnswers": [
+                "efficiency comes first, fairness is foundational",
+                "prioritize efficiency, ground in fairness",
+                "efficiency leads, fairness anchors"
+              ],
+              "direction": "to_source",
+              "explanation": "Four-character + four-character — the editorial signature rhythm."
+            },
+            {
+              "id": "rh1-12",
+              "type": "fill_blank",
+              "prompt": "Build the rhythm: \"___ 方面 我们 要 倾听 民意，___ 方面 我们 要 回应 民忧.\" Fill the parallel openers.",
+              "hint": "Half-half framing.",
+              "answer": "一 另一",
+              "acceptableAnswers": [
+                "一/另一",
+                "一…另一"
+              ],
+              "explanation": "一方面…另一方面… is the two-sided framing pattern. Both halves must be matched in clause length."
+            },
+            {
+              "id": "rh1-13",
+              "type": "multiple_choice",
+              "prompt": "Which line keeps the tightest 4+4 cadence?",
+              "options": [
+                "我们要兼顾经济发展和环境保护这两件大事",
+                "经济发展，环境保护，都很重要",
+                "发展经济，保护环境",
+                "我们既要发展也要保护"
+              ],
+              "answer": "发展经济，保护环境",
+              "explanation": "Two 4-character parallel clauses; identical verb-object grammar. Editorial rhythm at its most compressed."
+            },
+            {
+              "id": "rh1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build a tight 4+4 parallel: \"Develop the economy; protect the environment.\"",
+              "answer": "发展 经济 保护 环境",
+              "bank": [
+                "发展",
+                "经济",
+                "保护",
+                "环境",
+                "了",
+                "因为",
+                "把",
+                "也"
+              ]
+            },
+            {
+              "id": "rh1-15",
+              "type": "match_pairs",
+              "prompt": "the cadence to the editorial effect",
+              "pairs": [
+                {
+                  "left": "4 + 4 parallel",
+                  "right": "Tight, slogan-like"
+                },
+                {
+                  "left": "一方面…另一方面…",
+                  "right": "Balanced two-sided framing"
+                },
+                {
+                  "left": "教育之于X…教育之于Y…",
+                  "right": "Mirrored thematic restatement"
+                },
+                {
+                  "left": "padded one-sided",
+                  "right": "Reads as hurried"
+                }
+              ]
+            },
+            {
+              "id": "rh1-16",
+              "type": "listen_and_choose",
+              "prompt": "Which version has the strongest parallel rhythm?",
+              "spokenText": "效率优先，公平为本",
+              "options": [
+                "效率优先，公平为本",
+                "效率比较重要，公平也得照顾到",
+                "我们应该兼顾效率和公平",
+                "效率是先要的，公平要作为根本"
+              ],
+              "answer": "效率优先，公平为本"
+            },
+            {
+              "id": "rh1-17",
+              "type": "translate",
+              "source": "教育之于国家，关乎未来",
+              "answer": "education, to a nation, concerns its future",
+              "acceptableAnswers": [
+                "for a nation, education is its future",
+                "education concerns the nation's future",
+                "education matters to the nation's future"
+              ],
+              "direction": "to_source",
+              "explanation": "之于 = formal \"with respect to.\" The line mirrors a preceding one about 教育之于个人."
+            },
+            {
+              "id": "rh1-18",
+              "type": "fill_blank",
+              "prompt": "Mirror the editorial pair: \"教育 之 于 个人，关乎 前途；教育 之 ___ 国家，关乎 未来.\" Fill the formal preposition (one character).",
+              "hint": "Pairs with 之.",
+              "answer": "于",
+              "acceptableAnswers": [
+                "于"
+              ],
+              "explanation": "之于 — literary \"with respect to.\""
+            },
+            {
+              "id": "rh1-19",
+              "type": "multiple_choice",
+              "prompt": "Which line below is the LEAST balanced for an editorial?",
+              "options": [
+                "效率优先，公平为本",
+                "发展经济，保护环境",
+                "我们应当兼顾整体效率，也要关心一下公平的问题",
+                "倾听民意，回应民忧"
+              ],
+              "answer": "我们应当兼顾整体效率，也要关心一下公平的问题",
+              "explanation": "Mismatched clause lengths and softeners (一下) break the editorial cadence."
+            },
+            {
+              "id": "rh1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build a literary parallel pair: \"Listen to the people's hopes; respond to the people's worries.\"",
+              "answer": "倾听 民意 回应 民忧",
+              "bank": [
+                "倾听",
+                "民意",
+                "回应",
+                "民忧",
+                "了",
+                "也",
+                "因为",
+                "把"
+              ]
             }
           ]
         },
@@ -2560,6 +4618,157 @@
               ],
               "answer": "A weary, fatalistic tone — outcome no longer matters",
               "explanation": "也好…也罢 carries a faintly resigned quality that's perfect for a novelist signaling that a character has passed the point of caring about outcomes. That tonal coloring is what separates it from the neutral 无论…还是…."
+            },
+            {
+              "id": "rh2-11",
+              "type": "translate",
+              "source": "成功也好，失败也罢",
+              "answer": "whether success or failure",
+              "acceptableAnswers": [
+                "win or lose",
+                "succeed or fail, either way",
+                "be it success or failure"
+              ],
+              "direction": "to_source",
+              "explanation": "也好…也罢 — slightly weary, philosophical concessive pair."
+            },
+            {
+              "id": "rh2-12",
+              "type": "fill_blank",
+              "prompt": "Build the concessive pair: \"赞 ___，骂 ___，时间 终 会 给出 答案.\" (Fill the two markers.)",
+              "hint": "Literary 也...也...",
+              "answer": "也好 也罢",
+              "acceptableAnswers": [
+                "也好…也罢"
+              ],
+              "explanation": "赞也好，骂也罢 — \"praise or scold, either way…\""
+            },
+            {
+              "id": "rh2-13",
+              "type": "multiple_choice",
+              "prompt": "Which sentence misuses the concessive pair 也好…也罢?",
+              "options": [
+                "信也好，不信也罢，事实就在那里",
+                "他来也好，没来也罢，会议照常",
+                "天气也好，所以我去散步",
+                "成功也好，失败也罢，过程最重要"
+              ],
+              "answer": "天气也好，所以我去散步",
+              "explanation": "也好 here is the modern adjective \"is fine,\" not the concessive marker — and the pattern needs two balanced alternatives."
+            },
+            {
+              "id": "rh2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build a literary concessive: \"Whether praised or scolded, time will give the answer.\"",
+              "answer": "赞 也好 骂 也罢 时间 终 会 给出 答案",
+              "bank": [
+                "赞",
+                "也好",
+                "骂",
+                "也罢",
+                "时间",
+                "终",
+                "会",
+                "给出",
+                "答案",
+                "了",
+                "因为",
+                "把"
+              ]
+            },
+            {
+              "id": "rh2-15",
+              "type": "match_pairs",
+              "prompt": "the concessive to its tonal coloring",
+              "pairs": [
+                {
+                  "left": "也好…也罢…",
+                  "right": "Slightly resigned, literary"
+                },
+                {
+                  "left": "无论…还是…",
+                  "right": "Neutral comprehensive"
+                },
+                {
+                  "left": "不管…都…",
+                  "right": "Conversational"
+                },
+                {
+                  "left": "纵使…亦…",
+                  "right": "Highly classical"
+                }
+              ]
+            },
+            {
+              "id": "rh2-16",
+              "type": "listen_and_choose",
+              "prompt": "A columnist reads a literary concessive. Pick what you hear.",
+              "spokenText": "信也好，不信也罢，事实就在那里",
+              "options": [
+                "信也好，不信也罢，事实就在那里",
+                "你信不信，事实都在那儿",
+                "无论你信不信，事实摆在那里",
+                "不管你信不信，事实都摆着"
+              ],
+              "answer": "信也好，不信也罢，事实就在那里"
+            },
+            {
+              "id": "rh2-17",
+              "type": "translate",
+              "source": "也罢",
+              "answer": "let it be",
+              "acceptableAnswers": [
+                "never mind",
+                "so be it",
+                "let it go"
+              ],
+              "direction": "to_source",
+              "explanation": "Used alone, 也罢 means \"so be it\"; in pairs (也好…也罢), it carries half the concessive frame."
+            },
+            {
+              "id": "rh2-18",
+              "type": "fill_blank",
+              "prompt": "Concessive line: \"政策 通过 也好，否决 ___ ，公共 讨论 已 走 向 深入.\" (one character + 罢)",
+              "hint": "Pairs with 也好.",
+              "answer": "也罢",
+              "acceptableAnswers": [
+                "也罢"
+              ],
+              "explanation": "通过也好，否决也罢 — \"passed or rejected, either way…\""
+            },
+            {
+              "id": "rh2-19",
+              "type": "multiple_choice",
+              "prompt": "What kind of speaker most likely uses 也好…也罢?",
+              "options": [
+                "A child reporting events",
+                "A columnist or novelist signaling weary detachment",
+                "A street vendor",
+                "A song lyricist (only)"
+              ],
+              "answer": "A columnist or novelist signaling weary detachment",
+              "explanation": "Its slightly resigned, philosophical coloring suits literary op-ed and novel-narrator prose."
+            },
+            {
+              "id": "rh2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build (literary novelistic): \"Whether he wins or loses, he has already gone too far.\"",
+              "answer": "赢 也好 输 也罢 他 都 已经 走 得 太 远",
+              "bank": [
+                "赢",
+                "也好",
+                "输",
+                "也罢",
+                "他",
+                "都",
+                "已经",
+                "走",
+                "得",
+                "太",
+                "远",
+                "了",
+                "因为"
+              ]
             }
           ]
         },
@@ -2707,6 +4916,157 @@
               "id": "rh3-10",
               "type": "tap_words_in_order",
               "prompt": "Build a premise sentence (既然…就…): \"Since the people have given their trust, then we must repay them with effort.\"",
+              "answer": "既然 人民 给予 我们 信任 我们 就 应当 以 努力 回报",
+              "bank": [
+                "既然",
+                "人民",
+                "给予",
+                "我们",
+                "信任",
+                "就",
+                "应当",
+                "以",
+                "努力",
+                "回报",
+                "了",
+                "因为"
+              ]
+            },
+            {
+              "id": "rh3-11",
+              "type": "translate",
+              "source": "之所以…是因为…",
+              "answer": "the reason X is that Y",
+              "acceptableAnswers": [
+                "X is the case because Y",
+                "the reason for X is Y",
+                "X happens because Y"
+              ],
+              "direction": "to_source",
+              "explanation": "Inverted causal: result first, cause as reveal."
+            },
+            {
+              "id": "rh3-12",
+              "type": "fill_blank",
+              "prompt": "Inversion: \"中国 经济 ___ 能 持续 增长，是 因为 改革开放 的 推动.\" (3 characters)",
+              "hint": "Lead with the consequence.",
+              "answer": "之所以",
+              "acceptableAnswers": [
+                "之所以"
+              ],
+              "explanation": "之所以 leads with the result; 是因为 follows with the cause."
+            },
+            {
+              "id": "rh3-13",
+              "type": "multiple_choice",
+              "prompt": "Why might a writer choose 之所以…是因为… over 因为…所以…?",
+              "options": [
+                "It is shorter",
+                "It foregrounds the result and turns the cause into a reveal",
+                "It is required after 但是",
+                "It is colloquial"
+              ],
+              "answer": "It foregrounds the result and turns the cause into a reveal",
+              "explanation": "Inverting cause and effect builds rhetorical suspense — perfect for editorials."
+            },
+            {
+              "id": "rh3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"The reason he persisted is that he never forgot the original promise.\"",
+              "answer": "他 之所以 坚持 下来 是因为 他 从未 忘记 最初 的 承诺",
+              "bank": [
+                "他",
+                "之所以",
+                "坚持",
+                "下来",
+                "是因为",
+                "从未",
+                "忘记",
+                "最初",
+                "的",
+                "承诺",
+                "了",
+                "因为",
+                "把"
+              ]
+            },
+            {
+              "id": "rh3-15",
+              "type": "match_pairs",
+              "prompt": "the causal connector to its register",
+              "pairs": [
+                {
+                  "left": "因为…所以…",
+                  "right": "Neutral / colloquial-formal"
+                },
+                {
+                  "left": "之所以…是因为…",
+                  "right": "Essay-register inversion"
+                },
+                {
+                  "left": "由于…故…",
+                  "right": "Highly formal / classical-flavored"
+                },
+                {
+                  "left": "既然…就…",
+                  "right": "Premise treated as given"
+                }
+              ]
+            },
+            {
+              "id": "rh3-16",
+              "type": "listen_and_choose",
+              "prompt": "A speaker reads an inverted causal line. Pick what you hear.",
+              "spokenText": "这项改革之所以成功，是因为它把民生放在首位",
+              "options": [
+                "这项改革之所以成功，是因为它把民生放在首位",
+                "改革成功的原因是把人民生活放第一",
+                "因为重视民生，改革就成功了",
+                "改革靠的是把民生放第一"
+              ],
+              "answer": "这项改革之所以成功，是因为它把民生放在首位"
+            },
+            {
+              "id": "rh3-17",
+              "type": "translate",
+              "source": "由于…故…",
+              "answer": "owing to X, hence Y",
+              "acceptableAnswers": [
+                "because of X, therefore Y",
+                "due to X, hence Y",
+                "since X, therefore Y"
+              ],
+              "direction": "to_source",
+              "explanation": "由于…故… is the most formal of the causal patterns — closest to classical."
+            },
+            {
+              "id": "rh3-18",
+              "type": "fill_blank",
+              "prompt": "Premise: \"___ 你 已 决定，就 别 再 犹豫.\" Fill the literary premise marker (2 characters).",
+              "hint": "= since.",
+              "answer": "既然",
+              "acceptableAnswers": [
+                "既然"
+              ],
+              "explanation": "既然…就… — \"since X (premise), then Y.\""
+            },
+            {
+              "id": "rh3-19",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 之所以 INCORRECTLY?",
+              "options": [
+                "他 之所以 成功 是因为 坚持",
+                "她 之所以 离开 是因为 健康",
+                "之所以 下雨 今天 不 出门",
+                "我 之所以 喜欢 是因为 它 美"
+              ],
+              "answer": "之所以 下雨 今天 不 出门",
+              "explanation": "之所以 must attach to a clause as the result; 是因为 introduces the cause. Used alone for 因为, it is wrong."
+            },
+            {
+              "id": "rh3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Since the people have given us their trust, we must repay them with effort.\"",
               "answer": "既然 人民 给予 我们 信任 我们 就 应当 以 努力 回报",
               "bank": [
                 "既然",
@@ -2879,6 +5239,160 @@
                 "与其…不如"
               ],
               "explanation": "与其抱怨命运不公，不如改写自己的故事 — \"rather than complain about an unfair fate, better to rewrite your own story.\" Classic motivational rhetoric in deliberative cadence."
+            },
+            {
+              "id": "rh4-11",
+              "type": "translate",
+              "source": "与其抱怨，不如行动",
+              "answer": "rather than complain, better to act",
+              "acceptableAnswers": [
+                "instead of complaining, take action",
+                "rather than grumble, act",
+                "better to act than complain"
+              ],
+              "direction": "to_source",
+              "explanation": "与其…不如… — the deliberative comparison."
+            },
+            {
+              "id": "rh4-12",
+              "type": "fill_blank",
+              "prompt": "Deliberative: \"___ 抱怨 命运 不公，___ 改写 自己 的 故事.\" Fill the pair (2 + 2 characters).",
+              "hint": "Rather X, better Y.",
+              "answer": "与其 不如",
+              "acceptableAnswers": [
+                "与其…不如"
+              ],
+              "explanation": "与其抱怨…，不如改写… — motivational rhetoric."
+            },
+            {
+              "id": "rh4-13",
+              "type": "multiple_choice",
+              "prompt": "他 宁可 辞职，也不 妥协",
+              "hint": "Pick the closest English.",
+              "options": [
+                "He would rather resign than compromise",
+                "He cannot resign without compromise",
+                "He compromises rather than resigns",
+                "He is undecided"
+              ],
+              "answer": "He would rather resign than compromise",
+              "explanation": "宁可…也不 — strong preference, refusing the alternative at cost."
+            },
+            {
+              "id": "rh4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build (literary): \"Rather than sit and debate the way, better to rise and walk it.\"",
+              "answer": "与其 坐 而 论 道 不如 起 而 行 之",
+              "bank": [
+                "与其",
+                "坐",
+                "而",
+                "论",
+                "道",
+                "不如",
+                "起",
+                "行",
+                "之",
+                "了",
+                "因为",
+                "把"
+              ]
+            },
+            {
+              "id": "rh4-15",
+              "type": "match_pairs",
+              "prompt": "the choice/preference pattern to its use",
+              "pairs": [
+                {
+                  "left": "与其…不如…",
+                  "right": "Recommending the better of two"
+                },
+                {
+                  "left": "宁可…也不…",
+                  "right": "Strong preference, refusing alternative"
+                },
+                {
+                  "left": "倒是…",
+                  "right": "Soft contrastive — actually"
+                },
+                {
+                  "left": "反而…",
+                  "right": "Sharper contrastive — instead"
+                }
+              ]
+            },
+            {
+              "id": "rh4-16",
+              "type": "listen_and_choose",
+              "prompt": "A literary line is read. Pick what you hear.",
+              "spokenText": "与其坐而论道，不如起而行之",
+              "options": [
+                "与其坐而论道，不如起而行之",
+                "与其坐着讨论，不如起来行动",
+                "讨论不如行动",
+                "不要光说不练，要去做"
+              ],
+              "answer": "与其坐而论道，不如起而行之"
+            },
+            {
+              "id": "rh4-17",
+              "type": "translate",
+              "source": "倒是",
+              "answer": "actually / on the contrary",
+              "acceptableAnswers": [
+                "as it happens",
+                "actually",
+                "on the contrary",
+                "in fact"
+              ],
+              "direction": "to_source",
+              "explanation": "Soft contrastive — gentler than 反而."
+            },
+            {
+              "id": "rh4-18",
+              "type": "fill_blank",
+              "prompt": "Reversal: \"你 这么 一 说，我 ___ 想 起来 了.\" Fill the soft contrastive (2 characters).",
+              "hint": "Gentle realization.",
+              "answer": "倒是",
+              "acceptableAnswers": [
+                "倒是",
+                "倒"
+              ],
+              "explanation": "倒是 — marks an unexpected memory or admission."
+            },
+            {
+              "id": "rh4-19",
+              "type": "multiple_choice",
+              "prompt": "How does 倒是 differ from 反而?",
+              "options": [
+                "They are identical",
+                "倒是 is sharper than 反而",
+                "倒是 is softer / conversational; 反而 is sharper and often signals an unexpected counter-result",
+                "反而 is rude"
+              ],
+              "answer": "倒是 is softer / conversational; 反而 is sharper and often signals an unexpected counter-result",
+              "explanation": "Both are contrastives but with different rhetorical force."
+            },
+            {
+              "id": "rh4-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"He would rather sacrifice short-term gain than betray his customers' trust.\"",
+              "answer": "他 宁可 牺牲 短期 利益 也不 辜负 客户 的 信任",
+              "bank": [
+                "他",
+                "宁可",
+                "牺牲",
+                "短期",
+                "利益",
+                "也不",
+                "辜负",
+                "客户",
+                "的",
+                "信任",
+                "了",
+                "因为",
+                "把"
+              ]
             }
           ]
         },
@@ -2988,6 +5502,299 @@
                   "spokenText": "「富而不骄」——好句子。明早九点见报。"
                 }
               ]
+            },
+            {
+              "id": "rh5-2",
+              "type": "translate",
+              "source": "排比",
+              "answer": "parallelism",
+              "acceptableAnswers": [
+                "the parallel figure",
+                "parallel construction",
+                "tricolon / parallelism"
+              ],
+              "direction": "to_source",
+              "explanation": "排比 — the rhetorical figure of three or more parallel clauses."
+            },
+            {
+              "id": "rh5-3",
+              "type": "fill_blank",
+              "prompt": "Editorial rhetoric: \"政策 ___ 春 风，似 细 雨，若 朝 阳.\" Fill the literary \"is like\" (one character).",
+              "hint": "Three simile markers in a row.",
+              "answer": "如",
+              "acceptableAnswers": [
+                "如"
+              ],
+              "explanation": "如…似…若… — three near-synonyms for \"like\" stacked for cadence."
+            },
+            {
+              "id": "rh5-4",
+              "type": "multiple_choice",
+              "prompt": "「政策如春风，似细雨，若朝阳」用了什么修辞？",
+              "hint": "Identify the figures.",
+              "options": [
+                "对偶 — antithesis",
+                "排比 + 比喻 — parallelism with simile",
+                "反问 — rhetorical question",
+                "夸张 — hyperbole"
+              ],
+              "answer": "排比 + 比喻 — parallelism with simile",
+              "explanation": "Three parallel clauses (排比), each a simile (比喻). Classic editorial flourish."
+            },
+            {
+              "id": "rh5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build the editorial figure: \"Policy is like spring wind, like fine rain, like the rising sun.\"",
+              "answer": "政策 如 春风 似 细雨 若 朝阳",
+              "bank": [
+                "政策",
+                "如",
+                "春风",
+                "似",
+                "细雨",
+                "若",
+                "朝阳",
+                "了",
+                "把",
+                "也",
+                "因为"
+              ]
+            },
+            {
+              "id": "rh5-6",
+              "type": "match_pairs",
+              "prompt": "the rhetorical figure to its Chinese name",
+              "pairs": [
+                {
+                  "left": "antithesis",
+                  "right": "对偶"
+                },
+                {
+                  "left": "parallelism",
+                  "right": "排比"
+                },
+                {
+                  "left": "rhetorical question",
+                  "right": "反问"
+                },
+                {
+                  "left": "hyperbole",
+                  "right": "夸张"
+                }
+              ]
+            },
+            {
+              "id": "rh5-7",
+              "type": "listen_and_choose",
+              "prompt": "An editor names a rhetorical figure. Pick what you hear.",
+              "spokenText": "排比加比喻",
+              "options": [
+                "排比加比喻",
+                "对偶加反问",
+                "夸张加比喻",
+                "排比加反问"
+              ],
+              "answer": "排比加比喻"
+            },
+            {
+              "id": "rh5-8",
+              "type": "translate",
+              "source": "未免太重",
+              "answer": "perhaps a bit too heavy",
+              "acceptableAnswers": [
+                "a bit overbearing",
+                "somewhat heavy-handed",
+                "rather too much"
+              ],
+              "direction": "to_source",
+              "explanation": "未免 — \"can hardly avoid\" → a softened critique."
+            },
+            {
+              "id": "rh5-9",
+              "type": "fill_blank",
+              "prompt": "Editor diplomacy: \"我 改 成 陈 述 句，留 一 分 ___.\" Fill the closing word (2 characters).",
+              "hint": "= breathing room.",
+              "answer": "余地",
+              "acceptableAnswers": [
+                "余地"
+              ],
+              "explanation": "留余地 — leave room (for the reader's own thought). An editor's standard counsel."
+            },
+            {
+              "id": "rh5-10",
+              "type": "multiple_choice",
+              "prompt": "「不可不察也」中的「也」是什么用法？",
+              "hint": "Ancient or everyday register?",
+              "options": [
+                "Modern \"also\"",
+                "Literary sentence-final assertion marker",
+                "Question marker",
+                "Possessive"
+              ],
+              "answer": "Literary sentence-final assertion marker",
+              "explanation": "也 here anchors the assertion — \"is certainly the case.\" Survives in editorial closes."
+            },
+            {
+              "id": "rh5-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build the diplomatic response: \"I'll change it to a declarative — leave a little room.\"",
+              "answer": "我 改 成 陈述句 留 一 分 余地",
+              "bank": [
+                "我",
+                "改",
+                "成",
+                "陈述句",
+                "留",
+                "一",
+                "分",
+                "余地",
+                "了",
+                "把",
+                "因为"
+              ]
+            },
+            {
+              "id": "rh5-12",
+              "type": "match_pairs",
+              "prompt": "the editor's phrase to its meaning",
+              "pairs": [
+                {
+                  "left": "未免太重",
+                  "right": "perhaps a bit too heavy"
+                },
+                {
+                  "left": "留余地",
+                  "right": "leave room for the reader"
+                },
+                {
+                  "left": "分量自重",
+                  "right": "weight speaks for itself"
+                },
+                {
+                  "left": "见报",
+                  "right": "go to print"
+                }
+              ]
+            },
+            {
+              "id": "rh5-13",
+              "type": "listen_and_choose",
+              "prompt": "An editor closes a meeting. Pick what you hear.",
+              "spokenText": "明早九点见报",
+              "options": [
+                "明早九点见报",
+                "明天上午发表",
+                "今晚就上版",
+                "下周再说吧"
+              ],
+              "answer": "明早九点见报"
+            },
+            {
+              "id": "rh5-14",
+              "type": "translate",
+              "source": "富而不骄",
+              "answer": "wealthy yet not arrogant",
+              "acceptableAnswers": [
+                "rich but humble",
+                "wealthy without arrogance",
+                "rich yet modest"
+              ],
+              "direction": "to_source",
+              "explanation": "Adversative 而 — \"X yet not Y.\""
+            },
+            {
+              "id": "rh5-15",
+              "type": "fill_blank",
+              "prompt": "Adversative connector: \"富 ___ 不 骄.\" (one character)",
+              "hint": "Classical 而 or 但?",
+              "answer": "而",
+              "acceptableAnswers": [
+                "而"
+              ],
+              "explanation": "而 — the adversative literary connector. 但 is its colloquial cousin."
+            },
+            {
+              "id": "rh5-16",
+              "type": "multiple_choice",
+              "prompt": "稿子开篇用了排比，气势是有的。",
+              "hint": "What did the editor just say?",
+              "options": [
+                "The piece lacks any force",
+                "The opening used parallelism — there's force, alright",
+                "The opening is too short",
+                "The opening is too colloquial"
+              ],
+              "answer": "The opening used parallelism — there's force, alright",
+              "explanation": "排比 = parallelism; 气势 = momentum / force. The editor concedes the piece has it."
+            },
+            {
+              "id": "rh5-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"The piece's opening used parallelism — there's force, alright.\"",
+              "answer": "稿子 开篇 用 了 排比 气势 是 有 的",
+              "bank": [
+                "稿子",
+                "开篇",
+                "用",
+                "了",
+                "排比",
+                "气势",
+                "是",
+                "有",
+                "的",
+                "因为",
+                "也",
+                "把"
+              ]
+            },
+            {
+              "id": "rh5-18",
+              "type": "match_pairs",
+              "prompt": "each editor's verdict to its underlying meaning",
+              "pairs": [
+                {
+                  "left": "气势是有的",
+                  "right": "has force, but…"
+                },
+                {
+                  "left": "未免太重",
+                  "right": "a touch heavy-handed"
+                },
+                {
+                  "left": "留一分余地",
+                  "right": "leave room for the reader"
+                },
+                {
+                  "left": "见报",
+                  "right": "go to print"
+                }
+              ]
+            },
+            {
+              "id": "rh5-19",
+              "type": "translate",
+              "source": "说教",
+              "answer": "preachiness",
+              "acceptableAnswers": [
+                "sermonizing",
+                "moralizing",
+                "preachy tone"
+              ],
+              "direction": "to_source",
+              "explanation": "说教 — the editor's complaint about a heavy rhetorical question."
+            },
+            {
+              "id": "rh5-20",
+              "type": "multiple_choice",
+              "prompt": "An editor calls a paragraph \"说教\" — what should the writer do?",
+              "options": [
+                "Add more rhetorical questions",
+                "Soften the moralizing tone, perhaps convert to a declarative",
+                "Quote more poets",
+                "Use more 排比"
+              ],
+              "answer": "Soften the moralizing tone, perhaps convert to a declarative",
+              "explanation": "说教 = preachy. The fix is to dial down rhetorical questions and let the reader draw the conclusion."
             }
           ]
         }
@@ -3149,6 +5956,161 @@
               ],
               "answer": "募集到的款项实属 鸦雀无声",
               "explanation": "鸦雀无声 describes a silent crowd, not insufficient funds. A native reader would feel the misfit instantly. Distractor-spotting at C2 means recognizing the image inside each idiom."
+            },
+            {
+              "id": "id1-11",
+              "type": "translate",
+              "source": "杯水车薪",
+              "answer": "a cup of water on a burning cartload",
+              "acceptableAnswers": [
+                "a hopelessly inadequate effort",
+                "a drop in the bucket",
+                "grossly insufficient help"
+              ],
+              "direction": "to_source",
+              "explanation": "杯水 (a cup of water) + 车薪 (a cartload of burning firewood). The classic idiom of insufficiency."
+            },
+            {
+              "id": "id1-12",
+              "type": "fill_blank",
+              "prompt": "An editorial closes: \"对受灾群众而言，这点款项不过 ___.\" (4 characters) Fill the idiom of insufficiency.",
+              "hint": "Cup vs cartload of fire.",
+              "answer": "杯水车薪",
+              "acceptableAnswers": [
+                "杯水车薪"
+              ],
+              "explanation": "杯水车薪 — the standard editorial idiom for a grossly insufficient effort."
+            },
+            {
+              "id": "id1-13",
+              "type": "multiple_choice",
+              "prompt": "A famous unknown publishes a quiet but field-changing paper. The fitting idiom is:",
+              "options": [
+                "杯水车薪",
+                "一鸣惊人",
+                "鸦雀无声",
+                "饮水思源"
+              ],
+              "answer": "一鸣惊人",
+              "explanation": "一鸣惊人 — \"one cry stuns everyone.\" Fits an unknown who astonishes."
+            },
+            {
+              "id": "id1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build the editorial line: \"Faced with such a huge gap, this sum is hardly more than a cup of water on a cartload of fire.\"",
+              "answer": "面对 庞大 的 缺口 这 点 钱 无 异 于 杯水车薪",
+              "bank": [
+                "面对",
+                "庞大",
+                "的",
+                "缺口",
+                "这",
+                "点",
+                "钱",
+                "无",
+                "异",
+                "于",
+                "杯水车薪",
+                "了",
+                "因为"
+              ]
+            },
+            {
+              "id": "id1-15",
+              "type": "match_pairs",
+              "prompt": "the C2 idiom to a fitting context",
+              "pairs": [
+                {
+                  "left": "杯水车薪",
+                  "right": "Token donation toward huge need"
+                },
+                {
+                  "left": "一鸣惊人",
+                  "right": "Unknown achieves overnight"
+                },
+                {
+                  "left": "鸦雀无声",
+                  "right": "Hushed courtroom"
+                },
+                {
+                  "left": "饮水思源",
+                  "right": "Alumnus giving back"
+                }
+              ]
+            },
+            {
+              "id": "id1-16",
+              "type": "listen_and_choose",
+              "prompt": "An editorial intones a record-breaking idiom. Pick what you hear.",
+              "spokenText": "今夏的高温实属前所未有",
+              "options": [
+                "今夏的高温实属前所未有",
+                "今年夏天热得离谱",
+                "近年夏天温度真高",
+                "这个夏天气温创纪录"
+              ],
+              "answer": "今夏的高温实属前所未有"
+            },
+            {
+              "id": "id1-17",
+              "type": "translate",
+              "source": "饮水思源",
+              "answer": "drink water, remember its source",
+              "acceptableAnswers": [
+                "remember where the water came from",
+                "remember one's origins",
+                "never forget one's roots"
+              ],
+              "direction": "to_source",
+              "explanation": "The humble alumnus's idiom."
+            },
+            {
+              "id": "id1-18",
+              "type": "fill_blank",
+              "prompt": "A judge enters and the gallery hushes: \"全场 顿时 ___.\" (4 characters)",
+              "hint": "Even the crows are silent.",
+              "answer": "鸦雀无声",
+              "acceptableAnswers": [
+                "鸦雀无声"
+              ],
+              "explanation": "鸦雀无声 — total silence in a crowd."
+            },
+            {
+              "id": "id1-19",
+              "type": "multiple_choice",
+              "prompt": "An award citation: \"她获 此 殊荣，可谓 ___ —— 多年 耕耘 终 得 认可.\" Pick the right idiom.",
+              "options": [
+                "名副其实",
+                "一鸣惊人",
+                "杯水车薪",
+                "鸦雀无声"
+              ],
+              "answer": "名副其实",
+              "explanation": "名副其实 — \"the title is earned\" — endorses an earned reputation."
+            },
+            {
+              "id": "id1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Her thesis truly amazed everyone — before that nearly no one had heard her name.\"",
+              "answer": "她 那 篇 论文 真是 一鸣惊人 之前 大家 几乎 没 听 过 她 的 名字",
+              "bank": [
+                "她",
+                "那",
+                "篇",
+                "论文",
+                "真是",
+                "一鸣惊人",
+                "之前",
+                "大家",
+                "几乎",
+                "没",
+                "听",
+                "过",
+                "的",
+                "名字",
+                "了",
+                "因为"
+              ]
             }
           ]
         },
@@ -3300,6 +6262,152 @@
               ],
               "answer": "Learning without reflection leaves you confused / lost",
               "explanation": "The full Analects line: 学而不思则罔，思而不学则殆 — both halves needed. 罔 here is closer to \"lost / muddled\" than \"empty.\""
+            },
+            {
+              "id": "id2-11",
+              "type": "translate",
+              "source": "塞翁失马，焉知非福",
+              "answer": "an old man's lost horse — who knows it isn't a blessing",
+              "acceptableAnswers": [
+                "a blessing in disguise",
+                "bad luck may yet prove fortunate",
+                "the old man at the frontier lost his horse — perhaps a blessing"
+              ],
+              "direction": "to_source",
+              "explanation": "The classical long form. The punchline 焉知非福 carries the meaning."
+            },
+            {
+              "id": "id2-12",
+              "type": "fill_blank",
+              "prompt": "After a startup pivot saved by the layoff: \"当 初 被 裁 员，如今 想来 真 是 ___ ， 焉 知 非 福.\" (4 characters)",
+              "hint": "Old man lost his horse.",
+              "answer": "塞翁失马",
+              "acceptableAnswers": [
+                "塞翁失马"
+              ],
+              "explanation": "塞翁失马 — set up; 焉知非福 — punchline."
+            },
+            {
+              "id": "id2-13",
+              "type": "multiple_choice",
+              "prompt": "An interviewee says \"三人行 必有 我师\" — what register and what attitude?",
+              "options": [
+                "Boastful — self-promotion",
+                "Confucian humility — there's always something to learn",
+                "Daoist withdrawal",
+                "A literal claim about three travelers"
+              ],
+              "answer": "Confucian humility — there's always something to learn",
+              "explanation": "From 论语. Quoted to signal teachability."
+            },
+            {
+              "id": "id2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build the long form: \"Old man at the frontier lost his horse — how to know it isn't fortune?\"",
+              "answer": "塞翁 失马 焉 知 非 福",
+              "bank": [
+                "塞翁",
+                "失马",
+                "焉",
+                "知",
+                "非",
+                "福",
+                "也",
+                "矣",
+                "其"
+              ]
+            },
+            {
+              "id": "id2-15",
+              "type": "match_pairs",
+              "prompt": "the long-form opening to its punchline",
+              "pairs": [
+                {
+                  "left": "塞翁失马",
+                  "right": "焉知非福"
+                },
+                {
+                  "left": "百闻不如",
+                  "right": "一见"
+                },
+                {
+                  "left": "学而不思",
+                  "right": "则罔"
+                },
+                {
+                  "left": "三人行",
+                  "right": "必有我师"
+                }
+              ]
+            },
+            {
+              "id": "id2-16",
+              "type": "listen_and_choose",
+              "prompt": "A friend offers a long-form consolation. Pick what you hear.",
+              "spokenText": "塞翁失马，焉知非福",
+              "options": [
+                "塞翁失马，焉知非福",
+                "塞翁丢马，怎么知道不是好事",
+                "丢了马的老头，可能是福气",
+                "失去也许就是得到"
+              ],
+              "answer": "塞翁失马，焉知非福"
+            },
+            {
+              "id": "id2-17",
+              "type": "translate",
+              "source": "百闻不如一见",
+              "answer": "hearing a hundred times is not as good as seeing once",
+              "acceptableAnswers": [
+                "seeing is believing",
+                "one look beats a hundred reports",
+                "experience beats hearsay"
+              ],
+              "direction": "to_source",
+              "explanation": "The stock argument for first-hand experience."
+            },
+            {
+              "id": "id2-18",
+              "type": "fill_blank",
+              "prompt": "Confucian classic: \"学 而 不 思 则 ___.\" (one character)",
+              "hint": "= lost / muddled.",
+              "answer": "罔",
+              "acceptableAnswers": [
+                "罔"
+              ],
+              "explanation": "学而不思则罔 — learning without reflection leaves one lost."
+            },
+            {
+              "id": "id2-19",
+              "type": "multiple_choice",
+              "prompt": "Which scenario LEAST fits 塞翁失马?",
+              "options": [
+                "A canceled flight that avoided a maintenance scare",
+                "A failed job application that pushed someone into a better field",
+                "A chronic illness that forced healthier habits",
+                "A long-planned promotion that arrived on schedule"
+              ],
+              "answer": "A long-planned promotion that arrived on schedule",
+              "explanation": "塞翁失马 needs an initial misfortune that turns out for the best."
+            },
+            {
+              "id": "id2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build the Analects line: \"Learning without reflection leaves one lost; reflection without learning is perilous.\"",
+              "answer": "学 而 不 思 则 罔 思 而 不 学 则 殆",
+              "bank": [
+                "学",
+                "而",
+                "不",
+                "思",
+                "则",
+                "罔",
+                "殆",
+                "了",
+                "也",
+                "其",
+                "因为"
+              ]
             }
           ]
         },
@@ -3453,6 +6561,151 @@
                 "也",
                 "之",
                 "其"
+              ]
+            },
+            {
+              "id": "id3-11",
+              "type": "translate",
+              "source": "八仙过海，各显神通",
+              "answer": "the Eight Immortals cross the sea, each showing their divine skill",
+              "acceptableAnswers": [
+                "each shows their own skill",
+                "everyone uses what they have",
+                "each plays their own strength"
+              ],
+              "direction": "to_source",
+              "explanation": "The team-ad-lib 歇后语."
+            },
+            {
+              "id": "id3-12",
+              "type": "fill_blank",
+              "prompt": "Project manager says: \"这次 大家 就 ___ ，各 显 神 通 吧.\" (4 characters)",
+              "hint": "Eight Immortals.",
+              "answer": "八仙过海",
+              "acceptableAnswers": [
+                "八仙过海"
+              ],
+              "explanation": "八仙过海，各显神通 — \"each plays their strength.\""
+            },
+            {
+              "id": "id3-13",
+              "type": "multiple_choice",
+              "prompt": "A coworker says \"我现在真是 泥菩萨过江啊.\" What's implied?",
+              "options": [
+                "I am extremely busy and successful",
+                "I can't help you — I'm in trouble myself",
+                "I am religious and worried",
+                "I feel adventurous"
+              ],
+              "answer": "I can't help you — I'm in trouble myself",
+              "explanation": "Implied 自身难保 — clay Bodhisattva can't even save itself."
+            },
+            {
+              "id": "id3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build the saying: \"A clay Bodhisattva crossing the river — even itself it cannot save.\"",
+              "answer": "泥菩萨 过 江 自身 难 保",
+              "bank": [
+                "泥菩萨",
+                "过",
+                "江",
+                "自身",
+                "难",
+                "保",
+                "了",
+                "也",
+                "因为"
+              ]
+            },
+            {
+              "id": "id3-15",
+              "type": "match_pairs",
+              "prompt": "the 歇后语 to its plain-Mandarin punchline",
+              "pairs": [
+                {
+                  "left": "八仙过海",
+                  "right": "大家各凭本事"
+                },
+                {
+                  "left": "竹篮打水",
+                  "right": "白忙一场"
+                },
+                {
+                  "left": "泥菩萨过江",
+                  "right": "自顾不暇"
+                },
+                {
+                  "left": "哑巴吃黄连",
+                  "right": "苦在心里"
+                }
+              ]
+            },
+            {
+              "id": "id3-16",
+              "type": "listen_and_choose",
+              "prompt": "A friend sighs about a failed venture. Pick what you hear.",
+              "spokenText": "真是竹篮打水，一场空",
+              "options": [
+                "真是竹篮打水，一场空",
+                "白忙了一场",
+                "辛苦付东流",
+                "一切都白费了"
+              ],
+              "answer": "真是竹篮打水，一场空"
+            },
+            {
+              "id": "id3-17",
+              "type": "translate",
+              "source": "竹篮打水，一场空",
+              "answer": "drawing water with a bamboo basket — all for nothing",
+              "acceptableAnswers": [
+                "effort that came to nothing",
+                "all in vain",
+                "bamboo basket for water — empty result"
+              ],
+              "direction": "to_source",
+              "explanation": "Two-part 歇后语. Image + moral."
+            },
+            {
+              "id": "id3-18",
+              "type": "fill_blank",
+              "prompt": "Polite refusal: \"我 现 在 真是 泥 菩 萨 过 江，自 身 ___ 保 啊.\" (one character)",
+              "hint": "= difficult / hard.",
+              "answer": "难",
+              "acceptableAnswers": [
+                "难"
+              ],
+              "explanation": "自身难保 — can't even save oneself."
+            },
+            {
+              "id": "id3-19",
+              "type": "multiple_choice",
+              "prompt": "歇后语 are most natural in which register?",
+              "options": [
+                "Government white papers",
+                "Academic philosophy journals",
+                "Casual speech, online chat, family conversation",
+                "Diplomatic communiqués"
+              ],
+              "answer": "Casual speech, online chat, family conversation",
+              "explanation": "歇后语 are colloquial — warm, vivid. Formal print prefers 成语."
+            },
+            {
+              "id": "id3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build the saying: \"Drawing water with a bamboo basket — all for nothing.\"",
+              "answer": "竹篮 打 水 一 场 空",
+              "bank": [
+                "竹篮",
+                "打",
+                "水",
+                "一",
+                "场",
+                "空",
+                "了",
+                "也",
+                "其",
+                "因为"
               ]
             }
           ]
@@ -3613,6 +6866,154 @@
                 "了",
                 "之"
               ]
+            },
+            {
+              "id": "id4-11",
+              "type": "translate",
+              "source": "哑巴吃黄连，有苦说不出",
+              "answer": "a mute eats coptis — has bitterness but cannot speak it",
+              "acceptableAnswers": [
+                "bitterness that cannot be voiced",
+                "silent suffering",
+                "unspoken grievance"
+              ],
+              "direction": "to_source",
+              "explanation": "黄连 = the bitter herb."
+            },
+            {
+              "id": "id4-12",
+              "type": "fill_blank",
+              "prompt": "Long-suffering relative says: \"我 这 一 辈子 真是 ___ ， 有 苦 说 不 出.\" (5 characters)",
+              "hint": "A mute eats coptis.",
+              "answer": "哑巴吃黄连",
+              "acceptableAnswers": [
+                "哑巴吃黄连"
+              ],
+              "explanation": "哑巴吃黄连 — set-up of the silent-suffering 歇后语."
+            },
+            {
+              "id": "id4-13",
+              "type": "multiple_choice",
+              "prompt": "Which is more likely in a formal newspaper editorial?",
+              "options": [
+                "竹篮打水，一场空",
+                "杯水车薪",
+                "泥菩萨过江",
+                "八仙过海"
+              ],
+              "answer": "杯水车薪",
+              "explanation": "成语 belong in editorials; 歇后语 are colloquial."
+            },
+            {
+              "id": "id4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"The company forced overtime — staff could only swallow it in silence.\"",
+              "answer": "公司 硬性 要求 加班 员工 只好 哑巴 吃 黄连",
+              "bank": [
+                "公司",
+                "硬性",
+                "要求",
+                "加班",
+                "员工",
+                "只好",
+                "哑巴",
+                "吃",
+                "黄连",
+                "了",
+                "因为",
+                "把"
+              ]
+            },
+            {
+              "id": "id4-15",
+              "type": "match_pairs",
+              "prompt": "the saying to the rhetorical move it performs",
+              "pairs": [
+                {
+                  "left": "哑巴吃黄连",
+                  "right": "Naming silent suffering"
+                },
+                {
+                  "left": "塞翁失马",
+                  "right": "Reframing a loss as possible gain"
+                },
+                {
+                  "left": "杯水车薪",
+                  "right": "Dismissing an effort as inadequate"
+                },
+                {
+                  "left": "饮水思源",
+                  "right": "Performing humble gratitude"
+                }
+              ]
+            },
+            {
+              "id": "id4-16",
+              "type": "listen_and_choose",
+              "prompt": "A novelist quotes the unspoken-grievance 歇后语. Pick what you hear.",
+              "spokenText": "她真是哑巴吃黄连，有苦说不出",
+              "options": [
+                "她真是哑巴吃黄连，有苦说不出",
+                "她肚子里有怨气没法说",
+                "她心里苦却不能讲",
+                "她有委屈说不出口"
+              ],
+              "answer": "她真是哑巴吃黄连，有苦说不出"
+            },
+            {
+              "id": "id4-17",
+              "type": "translate",
+              "source": "黄连",
+              "answer": "coptis (a bitter Chinese herb)",
+              "acceptableAnswers": [
+                "coptis",
+                "the bitter herb coptis",
+                "Chinese goldthread"
+              ],
+              "direction": "to_source",
+              "explanation": "黄连 — one of the bitterest items in the traditional pharmacy."
+            },
+            {
+              "id": "id4-18",
+              "type": "fill_blank",
+              "prompt": "Complete: \"哑巴 吃 黄连，有 ___ 说 不 出.\" (one character)",
+              "hint": "= bitter (literal + figurative).",
+              "answer": "苦",
+              "acceptableAnswers": [
+                "苦"
+              ],
+              "explanation": "苦 — literal bitterness and figurative grievance simultaneously."
+            },
+            {
+              "id": "id4-19",
+              "type": "multiple_choice",
+              "prompt": "Which scenario best fits 哑巴吃黄连?",
+              "options": [
+                "A grand award acceptance speech",
+                "A junior employee unfairly blamed at a meeting",
+                "Celebrating a new product launch",
+                "Praising a colleague's swift action"
+              ],
+              "answer": "A junior employee unfairly blamed at a meeting",
+              "explanation": "Silent suffering you can't voice — the office-grievance scenario."
+            },
+            {
+              "id": "id4-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"A mute eats coptis — has bitterness but cannot speak it.\"",
+              "answer": "哑巴 吃 黄连 有 苦 说 不 出",
+              "bank": [
+                "哑巴",
+                "吃",
+                "黄连",
+                "有",
+                "苦",
+                "说",
+                "不",
+                "出",
+                "了",
+                "之"
+              ]
             }
           ]
         },
@@ -3733,6 +7134,284 @@
                   "spokenText": "来日方长，再喝一杯！"
                 }
               ]
+            },
+            {
+              "id": "id5-2",
+              "type": "translate",
+              "source": "雷厉风行",
+              "answer": "decisive and swift in action",
+              "acceptableAnswers": [
+                "acts like thunder and wind",
+                "decisive action",
+                "no-hesitation execution"
+              ],
+              "direction": "to_source",
+              "explanation": "雷厉 (thunder-fierce) + 风行 (wind-swift). The chengyu for decisive movement."
+            },
+            {
+              "id": "id5-3",
+              "type": "fill_blank",
+              "prompt": "Praise for decisive action: \"老李 辞职 创业 真是 ___.\" (4 characters)",
+              "hint": "Thunder + wind.",
+              "answer": "雷厉风行",
+              "acceptableAnswers": [
+                "雷厉风行"
+              ],
+              "explanation": "雷厉风行 — the no-hesitation chengyu."
+            },
+            {
+              "id": "id5-4",
+              "type": "multiple_choice",
+              "prompt": "画蛇添足",
+              "hint": "Pick the closest English.",
+              "options": [
+                "Paint a tiger to look like a cat",
+                "Paint legs on a snake — to overdo it and ruin the result",
+                "Add color to flowers",
+                "Sketch from life"
+              ],
+              "answer": "Paint legs on a snake — to overdo it and ruin the result",
+              "explanation": "画蛇添足 — the overreach chengyu. Sketching legs on a snake spoils the snake."
+            },
+            {
+              "id": "id5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build the caution: \"Business was already good — further expansion would be painting legs on a snake.\"",
+              "answer": "原本 生意 就 好 再 扩张 恐怕 画蛇添足",
+              "bank": [
+                "原本",
+                "生意",
+                "就",
+                "好",
+                "再",
+                "扩张",
+                "恐怕",
+                "画蛇添足",
+                "了",
+                "因为",
+                "把",
+                "也"
+              ]
+            },
+            {
+              "id": "id5-6",
+              "type": "match_pairs",
+              "prompt": "the chengyu to its English meaning",
+              "pairs": [
+                {
+                  "left": "雷厉风行",
+                  "right": "decisive and swift"
+                },
+                {
+                  "left": "画蛇添足",
+                  "right": "overdo and ruin"
+                },
+                {
+                  "left": "守株待兔",
+                  "right": "wait passively for luck"
+                },
+                {
+                  "left": "对牛弹琴",
+                  "right": "speak to the wrong audience"
+                }
+              ]
+            },
+            {
+              "id": "id5-7",
+              "type": "listen_and_choose",
+              "prompt": "Praise for a decisive entrepreneur. Pick what you hear.",
+              "spokenText": "真是说干就干，雷厉风行",
+              "options": [
+                "真是说干就干，雷厉风行",
+                "他做事很快很果断",
+                "动手就做，毫不拖延",
+                "决定了就行动"
+              ],
+              "answer": "真是说干就干，雷厉风行"
+            },
+            {
+              "id": "id5-8",
+              "type": "translate",
+              "source": "当机立断",
+              "answer": "decide on the spot",
+              "acceptableAnswers": [
+                "seize the moment and decide",
+                "decisive at the critical moment",
+                "make the call at the moment"
+              ],
+              "direction": "to_source",
+              "explanation": "当机 (at the moment) + 立断 (decide standing) — the chengyu for split-second decisions."
+            },
+            {
+              "id": "id5-9",
+              "type": "fill_blank",
+              "prompt": "Steady but decisive: \"做 生 意 要 不 慌 不 忙，但 也 得 ___ 立 断.\" (2 characters)",
+              "hint": "= seize the moment.",
+              "answer": "当机",
+              "acceptableAnswers": [
+                "当机"
+              ],
+              "explanation": "当机立断 — \"decide on the spot.\""
+            },
+            {
+              "id": "id5-10",
+              "type": "multiple_choice",
+              "prompt": "What does the irony in \"他真是个'人才'\" depend on?",
+              "options": [
+                "The audience missing the quote marks",
+                "Quote marks around 人才 inviting a sarcastic reading",
+                "A grammatical mistake",
+                "A regional pronunciation"
+              ],
+              "answer": "Quote marks around 人才 inviting a sarcastic reading",
+              "explanation": "「人才」 in scare quotes flips the meaning — \"some 'talent,' that one.\""
+            },
+            {
+              "id": "id5-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build the sarcastic verdict: \"He really is some kind of 'talent.'\"",
+              "answer": "他 真 是 个 人才",
+              "bank": [
+                "他",
+                "真",
+                "是",
+                "个",
+                "人才",
+                "了",
+                "也",
+                "把",
+                "因为"
+              ]
+            },
+            {
+              "id": "id5-12",
+              "type": "match_pairs",
+              "prompt": "the conversational chengyu to its situation",
+              "pairs": [
+                {
+                  "left": "雷厉风行",
+                  "right": "Praising decisive action"
+                },
+                {
+                  "left": "画蛇添足",
+                  "right": "Warning against overreach"
+                },
+                {
+                  "left": "当机立断",
+                  "right": "Demanding a split-second call"
+                },
+                {
+                  "left": "来日方长",
+                  "right": "Toasting future days together"
+                }
+              ]
+            },
+            {
+              "id": "id5-13",
+              "type": "listen_and_choose",
+              "prompt": "A toast at the end of an evening. Pick what you hear.",
+              "spokenText": "来日方长，再喝一杯",
+              "options": [
+                "来日方长，再喝一杯",
+                "时间还长，慢慢来",
+                "今后机会多着呢",
+                "以后日子长着呢"
+              ],
+              "answer": "来日方长，再喝一杯"
+            },
+            {
+              "id": "id5-14",
+              "type": "translate",
+              "source": "来日方长",
+              "answer": "the days ahead are long",
+              "acceptableAnswers": [
+                "there's plenty of time to come",
+                "many more days lie ahead",
+                "we have ample time ahead"
+              ],
+              "direction": "to_source",
+              "explanation": "来日 (days to come) + 方长 (still long). A standard farewell-with-hope chengyu."
+            },
+            {
+              "id": "id5-15",
+              "type": "fill_blank",
+              "prompt": "Calm composure: \"不 慌 ___ 忙.\" (one character)",
+              "hint": "Repeats the negation.",
+              "answer": "不",
+              "acceptableAnswers": [
+                "不"
+              ],
+              "explanation": "不慌不忙 — \"neither panicked nor hurried.\""
+            },
+            {
+              "id": "id5-16",
+              "type": "multiple_choice",
+              "prompt": "反话听得出，才算真朋友",
+              "hint": "Pick the closest English.",
+              "options": [
+                "A real friend never lies",
+                "A real friend catches the irony",
+                "A real friend speaks frankly",
+                "A real friend agrees with you"
+              ],
+              "answer": "A real friend catches the irony",
+              "explanation": "反话 (counter-speech / irony) + 听得出 (can hear out) — \"can detect irony.\""
+            },
+            {
+              "id": "id5-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build the line: \"To catch a friend's irony — that's the mark of a real friend.\"",
+              "answer": "反话 听 得 出 才 算 真 朋友",
+              "bank": [
+                "反话",
+                "听",
+                "得",
+                "出",
+                "才",
+                "算",
+                "真",
+                "朋友",
+                "了",
+                "也",
+                "因为"
+              ]
+            },
+            {
+              "id": "id5-18",
+              "type": "translate",
+              "source": "冒进",
+              "answer": "rash forward push",
+              "acceptableAnswers": [
+                "overreaching advance",
+                "advancing recklessly",
+                "premature expansion"
+              ],
+              "direction": "to_source",
+              "explanation": "冒 (risk) + 进 (advance). The opposite of 稳步."
+            },
+            {
+              "id": "id5-19",
+              "type": "fill_blank",
+              "prompt": "Express doubt: \"他 这 次 有 点 ___ 进.\" (one character)",
+              "hint": "= risk / venture.",
+              "answer": "冒",
+              "acceptableAnswers": [
+                "冒"
+              ],
+              "explanation": "冒进 — advancing rashly."
+            },
+            {
+              "id": "id5-20",
+              "type": "multiple_choice",
+              "prompt": "Which chengyu would replace 雷厉风行 if you wanted to soften the praise?",
+              "options": [
+                "画蛇添足",
+                "雷厉风行 (unchanged)",
+                "说干就干",
+                "守株待兔"
+              ],
+              "answer": "说干就干",
+              "explanation": "说干就干 is colloquial and warm; 雷厉风行 is sharper and more formal. Both describe decisive action but at different registers."
             }
           ]
         }
@@ -4006,6 +7685,157 @@
               ],
               "answer": "仁义为怀",
               "explanation": "仁义为怀 — \"with humaneness and righteousness held in the heart\" — the standard eulogy register for a person of principle."
+            },
+            {
+              "id": "ph1-11",
+              "type": "translate",
+              "source": "见利忘义",
+              "answer": "to see profit and abandon principle",
+              "acceptableAnswers": [
+                "to forsake principle for profit",
+                "to forget righteousness at the sight of gain",
+                "to chase money at ethics' cost"
+              ],
+              "direction": "to_source",
+              "explanation": "见 (see) + 利 (profit) + 忘 (forget) + 义 (principle). Common in business journalism."
+            },
+            {
+              "id": "ph1-12",
+              "type": "fill_blank",
+              "prompt": "Accusation: \"那 个 合伙 人 见 ___ 忘 义.\" (one character)",
+              "hint": "= profit / gain.",
+              "answer": "利",
+              "acceptableAnswers": [
+                "利"
+              ],
+              "explanation": "见利忘义 — the canonical idiom."
+            },
+            {
+              "id": "ph1-13",
+              "type": "multiple_choice",
+              "prompt": "舍生取义",
+              "hint": "Pick the closest English.",
+              "options": [
+                "Live by your principles when convenient",
+                "Give up your life to grasp righteousness",
+                "Be born into honor",
+                "Take whatever you can"
+              ],
+              "answer": "Give up your life to grasp righteousness",
+              "explanation": "舍 (give up) + 生 (life) + 取 (grasp) + 义 (righteousness). The martyr's idiom from Mencius."
+            },
+            {
+              "id": "ph1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"See profit and forget principle — such a person cannot be trusted.\"",
+              "answer": "见 利 忘 义 这 种 人 不 可 信",
+              "bank": [
+                "见",
+                "利",
+                "忘",
+                "义",
+                "这",
+                "种",
+                "人",
+                "不",
+                "可",
+                "信",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "ph1-15",
+              "type": "match_pairs",
+              "prompt": "the Confucian virtue to its domain",
+              "pairs": [
+                {
+                  "left": "仁",
+                  "right": "How to treat fellow humans"
+                },
+                {
+                  "left": "义",
+                  "right": "Doing the right thing at cost"
+                },
+                {
+                  "left": "礼",
+                  "right": "Manners and ritual"
+                },
+                {
+                  "left": "智",
+                  "right": "Practical moral wisdom"
+                }
+              ]
+            },
+            {
+              "id": "ph1-16",
+              "type": "listen_and_choose",
+              "prompt": "An accusation. Pick what you hear.",
+              "spokenText": "见利忘义",
+              "options": [
+                "见利忘义",
+                "见钱眼开",
+                "财迷心窍",
+                "唯利是图"
+              ],
+              "answer": "见利忘义"
+            },
+            {
+              "id": "ph1-17",
+              "type": "translate",
+              "source": "仁义为怀",
+              "answer": "to hold humaneness and righteousness in one's heart",
+              "acceptableAnswers": [
+                "principled and humane at heart",
+                "carrying virtue in one's breast",
+                "with virtue in one's heart"
+              ],
+              "direction": "to_source",
+              "explanation": "Eulogy register for a person of principle."
+            },
+            {
+              "id": "ph1-18",
+              "type": "fill_blank",
+              "prompt": "Eulogy: \"先生 一 生 ___ 为 怀，受 人 敬 重.\" (2 characters)",
+              "hint": "Benevolence + righteousness.",
+              "answer": "仁义",
+              "acceptableAnswers": [
+                "仁义"
+              ],
+              "explanation": "仁义为怀 — \"with virtue held in the heart.\""
+            },
+            {
+              "id": "ph1-19",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 礼 in the modern \"manners / propriety\" sense?",
+              "options": [
+                "古代祭祀有严格的礼",
+                "对长辈说话要有礼貌",
+                "周礼是儒家经典之一",
+                "国之大事，礼不可废"
+              ],
+              "answer": "对长辈说话要有礼貌",
+              "explanation": "礼貌 — the modern compound for politeness."
+            },
+            {
+              "id": "ph1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"All his life he held humaneness and righteousness — he was respected by everyone.\"",
+              "answer": "他 一 生 仁义 为 怀 受 人 敬重",
+              "bank": [
+                "他",
+                "一",
+                "生",
+                "仁义",
+                "为",
+                "怀",
+                "受",
+                "人",
+                "敬重",
+                "了",
+                "也",
+                "因为"
+              ]
             }
           ]
         },
@@ -4163,6 +7993,156 @@
                 "之",
                 "也"
               ]
+            },
+            {
+              "id": "ph2-11",
+              "type": "translate",
+              "source": "顺其自然",
+              "answer": "let it take its natural course",
+              "acceptableAnswers": [
+                "let nature take its course",
+                "let things be",
+                "go with the flow"
+              ],
+              "direction": "to_source",
+              "explanation": "Daoist-flavored consolation."
+            },
+            {
+              "id": "ph2-12",
+              "type": "fill_blank",
+              "prompt": "Engraved on a tea shop wall: \"上 善 若 ___.\" (one character)",
+              "hint": "Yielding element.",
+              "answer": "水",
+              "acceptableAnswers": [
+                "水"
+              ],
+              "explanation": "上善若水 — \"the highest good is like water.\" From the 道德经."
+            },
+            {
+              "id": "ph2-13",
+              "type": "multiple_choice",
+              "prompt": "无为而治",
+              "hint": "Pick the most precise reading.",
+              "options": [
+                "Govern through laziness",
+                "Govern through alignment rather than coercion — minimal intervention",
+                "Refuse to govern at all",
+                "Govern with strict laws"
+              ],
+              "answer": "Govern through alignment rather than coercion — minimal intervention",
+              "explanation": "无为 is non-coercive action, not zero action."
+            },
+            {
+              "id": "ph2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"The highest good is like water — it benefits all and contends with none.\"",
+              "answer": "上 善 若 水 利 万 物 而 不 争",
+              "bank": [
+                "上",
+                "善",
+                "若",
+                "水",
+                "利",
+                "万",
+                "物",
+                "而",
+                "不",
+                "争",
+                "之",
+                "也"
+              ]
+            },
+            {
+              "id": "ph2-15",
+              "type": "match_pairs",
+              "prompt": "the Daoist phrase to its rhetorical use",
+              "pairs": [
+                {
+                  "left": "顺其自然",
+                  "right": "Console a friend"
+                },
+                {
+                  "left": "无为而治",
+                  "right": "Praise hands-off leadership"
+                },
+                {
+                  "left": "上善若水",
+                  "right": "Daoist humility"
+                },
+                {
+                  "left": "知足常乐",
+                  "right": "Encourage contentment"
+                }
+              ]
+            },
+            {
+              "id": "ph2-16",
+              "type": "listen_and_choose",
+              "prompt": "A Daoist consolation. Pick what you hear.",
+              "spokenText": "顺其自然吧",
+              "options": [
+                "顺其自然吧",
+                "随它去吧",
+                "别想太多了",
+                "看开点吧"
+              ],
+              "answer": "顺其自然吧"
+            },
+            {
+              "id": "ph2-17",
+              "type": "translate",
+              "source": "知足常乐",
+              "answer": "to know enough is to be ever content",
+              "acceptableAnswers": [
+                "contentment is the secret of joy",
+                "happy is one who knows enough",
+                "knowing satisfaction brings lasting joy"
+              ],
+              "direction": "to_source",
+              "explanation": "Daoist contentment maxim."
+            },
+            {
+              "id": "ph2-18",
+              "type": "fill_blank",
+              "prompt": "Daoist contentment: \"知 ___ 常 乐.\" (one character)",
+              "hint": "= enough.",
+              "answer": "足",
+              "acceptableAnswers": [
+                "足"
+              ],
+              "explanation": "知足常乐 — \"knowing enough means lasting joy.\""
+            },
+            {
+              "id": "ph2-19",
+              "type": "multiple_choice",
+              "prompt": "A doubting employee might silently translate 无为而治 from a manager as:",
+              "options": [
+                "She micromanages every detail",
+                "She lets things drift while sounding lofty about it",
+                "She enforces rigid Confucian hierarchy",
+                "She has no business plan"
+              ],
+              "answer": "She lets things drift while sounding lofty about it",
+              "explanation": "无为而治 can be principled minimalism OR a flattering label for absentee leadership — C2 reading tracks both."
+            },
+            {
+              "id": "ph2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"My management style is governance by non-coercion.\"",
+              "answer": "我 的 管理 风格 是 无 为 而 治",
+              "bank": [
+                "我",
+                "的",
+                "管理",
+                "风格",
+                "是",
+                "无",
+                "为",
+                "而",
+                "治",
+                "了",
+                "因为"
+              ]
             }
           ]
         },
@@ -4309,6 +8289,151 @@
                 "了",
                 "也",
                 "之"
+              ]
+            },
+            {
+              "id": "ph3-11",
+              "type": "translate",
+              "source": "中庸之道",
+              "answer": "the doctrine of the mean",
+              "acceptableAnswers": [
+                "the middle way",
+                "the path of moderation",
+                "the Confucian mean"
+              ],
+              "direction": "to_source",
+              "explanation": "中 (middle) + 庸 (ordinary / constant) + 之道 (the way of)."
+            },
+            {
+              "id": "ph3-12",
+              "type": "fill_blank",
+              "prompt": "Confucian principle of moderation: \"过 ___ 不 及.\" (one character)",
+              "hint": "= like, as.",
+              "answer": "犹",
+              "acceptableAnswers": [
+                "犹"
+              ],
+              "explanation": "过犹不及 — \"going too far is like not going far enough.\""
+            },
+            {
+              "id": "ph3-13",
+              "type": "multiple_choice",
+              "prompt": "适可而止",
+              "hint": "Pick the closest English.",
+              "options": [
+                "Push as hard as possible",
+                "Know when to stop — don't overdo it",
+                "Always finish what you start",
+                "Begin again if you fail"
+              ],
+              "answer": "Know when to stop — don't overdo it",
+              "explanation": "适 (appropriate) + 可 + 而止 (and stop). Confucian moderation."
+            },
+            {
+              "id": "ph3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"In all things, going too far is as bad as falling short.\"",
+              "answer": "凡 事 过 犹 不 及",
+              "bank": [
+                "凡",
+                "事",
+                "过",
+                "犹",
+                "不",
+                "及",
+                "了",
+                "也",
+                "之"
+              ]
+            },
+            {
+              "id": "ph3-15",
+              "type": "match_pairs",
+              "prompt": "the moderation phrase to its English gloss",
+              "pairs": [
+                {
+                  "left": "走中庸之道",
+                  "right": "Take the middle path"
+                },
+                {
+                  "left": "过犹不及",
+                  "right": "Excess equals deficiency"
+                },
+                {
+                  "left": "适可而止",
+                  "right": "Stop at the right point"
+                },
+                {
+                  "left": "恰到好处",
+                  "right": "Just right"
+                }
+              ]
+            },
+            {
+              "id": "ph3-16",
+              "type": "listen_and_choose",
+              "prompt": "A wine expert praises a vintage. Pick what you hear.",
+              "spokenText": "恰到好处，既不过浓也不过淡",
+              "options": [
+                "恰到好处，既不过浓也不过淡",
+                "刚刚好，不浓不淡",
+                "正好合适，浓淡适中",
+                "完美平衡，浓淡均匀"
+              ],
+              "answer": "恰到好处，既不过浓也不过淡"
+            },
+            {
+              "id": "ph3-17",
+              "type": "translate",
+              "source": "恰到好处",
+              "answer": "exactly right",
+              "acceptableAnswers": [
+                "just right",
+                "perfectly judged",
+                "neither overdone nor underdone"
+              ],
+              "direction": "to_source",
+              "explanation": "恰 (precisely) + 到好处 (at the right point)."
+            },
+            {
+              "id": "ph3-18",
+              "type": "fill_blank",
+              "prompt": "Wine note: \"___ 到 好 处, 既 不 过 浓 也 不 过 淡.\" (one character)",
+              "hint": "= precisely.",
+              "answer": "恰",
+              "acceptableAnswers": [
+                "恰"
+              ],
+              "explanation": "恰到好处 — perfectly judged."
+            },
+            {
+              "id": "ph3-19",
+              "type": "multiple_choice",
+              "prompt": "Which phrase is LEAST related to the rhetoric of moderation?",
+              "options": [
+                "中庸之道",
+                "过犹不及",
+                "舍生取义",
+                "适可而止"
+              ],
+              "answer": "舍生取义",
+              "explanation": "舍生取义 — die for principle — is moral extremism. The others gesture toward balance."
+            },
+            {
+              "id": "ph3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build the principle of moderation: \"We take the middle way.\"",
+              "answer": "我们 走 中庸 之 道",
+              "bank": [
+                "我们",
+                "走",
+                "中庸",
+                "之",
+                "道",
+                "了",
+                "也",
+                "把",
+                "因为"
               ]
             }
           ]
@@ -4473,6 +8598,161 @@
                 "也",
                 "之"
               ]
+            },
+            {
+              "id": "ph4-11",
+              "type": "translate",
+              "source": "三人行，必有我师",
+              "answer": "when three of us walk together, there's surely one I can learn from",
+              "acceptableAnswers": [
+                "there's always someone to learn from",
+                "in any group, one is sure to be my teacher",
+                "I find a teacher in any company"
+              ],
+              "direction": "to_source",
+              "explanation": "From the Analects. Used to perform Confucian humility."
+            },
+            {
+              "id": "ph4-12",
+              "type": "fill_blank",
+              "prompt": "Mencius long form: \"舍 生 而 取 ___ 者 也.\" (one character)",
+              "hint": "= righteousness.",
+              "answer": "义",
+              "acceptableAnswers": [
+                "义"
+              ],
+              "explanation": "Mencius' canonical expansion of 舍生取义."
+            },
+            {
+              "id": "ph4-13",
+              "type": "multiple_choice",
+              "prompt": "上善若水",
+              "hint": "What stance is the writer reaching for?",
+              "options": [
+                "Ruthless competition",
+                "Daoist humility / yielding strength",
+                "Dismissal of Daoism",
+                "Literal hydrology"
+              ],
+              "answer": "Daoist humility / yielding strength",
+              "explanation": "上善若水 — \"the highest good is like water.\" The yielding-strength stance."
+            },
+            {
+              "id": "ph4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"When walking with two others, there must be one from whom I can learn.\"",
+              "answer": "三 人 行 必 有 我 师",
+              "bank": [
+                "三",
+                "人",
+                "行",
+                "必",
+                "有",
+                "我",
+                "师",
+                "焉",
+                "也",
+                "之"
+              ]
+            },
+            {
+              "id": "ph4-15",
+              "type": "match_pairs",
+              "prompt": "the classical source to a phrase from it",
+              "pairs": [
+                {
+                  "left": "论语 (Confucius)",
+                  "right": "三人行必有我师"
+                },
+                {
+                  "left": "道德经 (Laozi)",
+                  "right": "上善若水"
+                },
+                {
+                  "left": "孟子",
+                  "right": "舍生取义"
+                },
+                {
+                  "left": "中庸",
+                  "right": "过犹不及"
+                }
+              ]
+            },
+            {
+              "id": "ph4-16",
+              "type": "listen_and_choose",
+              "prompt": "A Confucian quotation. Pick what you hear.",
+              "spokenText": "三人行必有我师",
+              "options": [
+                "三人行必有我师",
+                "两人行必有一师",
+                "三人之中有师者",
+                "三个人里有老师"
+              ],
+              "answer": "三人行必有我师"
+            },
+            {
+              "id": "ph4-17",
+              "type": "translate",
+              "source": "克己复礼",
+              "answer": "subdue the self and return to ritual",
+              "acceptableAnswers": [
+                "restrain oneself and restore propriety",
+                "discipline the self, return to ritual order",
+                "self-mastery and ritual restoration"
+              ],
+              "direction": "to_source",
+              "explanation": "Confucius' definition of 仁."
+            },
+            {
+              "id": "ph4-18",
+              "type": "fill_blank",
+              "prompt": "Confucian self-discipline: \"克 ___ 复 礼.\" (one character)",
+              "hint": "= self / oneself.",
+              "answer": "己",
+              "acceptableAnswers": [
+                "己"
+              ],
+              "explanation": "克己 — to subdue / discipline oneself."
+            },
+            {
+              "id": "ph4-19",
+              "type": "multiple_choice",
+              "prompt": "Which is the philosophical school behind 无为而治?",
+              "options": [
+                "儒家 (Confucian)",
+                "道家 (Daoist)",
+                "法家 (Legalist)",
+                "墨家 (Mohist)"
+              ],
+              "answer": "道家 (Daoist)",
+              "explanation": "Non-coercive governance is the Daoist political ideal."
+            },
+            {
+              "id": "ph4-20",
+              "type": "tap_words_in_order",
+              "prompt": "Build the Mencius line: \"Life I desire; righteousness I also desire — if the two cannot be had together, I give up life and take righteousness.\"",
+              "answer": "生 亦 我 所 欲 也 义 亦 我 所 欲 也 二 者 不 可 得 兼 舍 生 而 取 义 者 也",
+              "bank": [
+                "生",
+                "亦",
+                "我",
+                "所",
+                "欲",
+                "也",
+                "义",
+                "二",
+                "者",
+                "不",
+                "可",
+                "得",
+                "兼",
+                "舍",
+                "而",
+                "取",
+                "其",
+                "之"
+              ]
             }
           ]
         },
@@ -4593,6 +8873,286 @@
                   "spokenText": "天人合一——四字含整个宇宙观。下周读《道德经》。"
                 }
               ]
+            },
+            {
+              "id": "ph5-2",
+              "type": "translate",
+              "source": "仁者爱人",
+              "answer": "the humane person loves others",
+              "acceptableAnswers": [
+                "benevolence is loving others",
+                "the man of virtue loves people",
+                "humaneness means caring for others"
+              ],
+              "direction": "to_source",
+              "explanation": "Confucius' definition of 仁 as relational love."
+            },
+            {
+              "id": "ph5-3",
+              "type": "fill_blank",
+              "prompt": "Confucian pairing: \"仁 ___ 并 举，乃 儒家 之 骨.\" (one character)",
+              "hint": "Pairs with 仁.",
+              "answer": "义",
+              "acceptableAnswers": [
+                "义"
+              ],
+              "explanation": "仁义 — the foundational Confucian compound."
+            },
+            {
+              "id": "ph5-4",
+              "type": "multiple_choice",
+              "prompt": "「道不可以条文尽」中的「道」最接近哪个含义？",
+              "hint": "Daoist cosmic principle.",
+              "options": [
+                "A codified legal system",
+                "The underlying pattern of reality — not exhaustible by rules",
+                "A road",
+                "A method"
+              ],
+              "answer": "The underlying pattern of reality — not exhaustible by rules",
+              "explanation": "Daoist 道 resists being captured by codified rules — that is its philosophical point."
+            },
+            {
+              "id": "ph5-5",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"The Way cannot be exhausted by written rules.\"",
+              "answer": "道 不 可 以 条 文 尽",
+              "bank": [
+                "道",
+                "不",
+                "可",
+                "以",
+                "条",
+                "文",
+                "尽",
+                "了",
+                "也",
+                "之",
+                "其"
+              ]
+            },
+            {
+              "id": "ph5-6",
+              "type": "match_pairs",
+              "prompt": "the slogan to its philosophical school",
+              "pairs": [
+                {
+                  "left": "克己复礼",
+                  "right": "Confucian"
+                },
+                {
+                  "left": "无为而治",
+                  "right": "Daoist"
+                },
+                {
+                  "left": "仁者爱人",
+                  "right": "Confucian"
+                },
+                {
+                  "left": "天人合一",
+                  "right": "Daoist"
+                }
+              ]
+            },
+            {
+              "id": "ph5-7",
+              "type": "listen_and_choose",
+              "prompt": "A professor explains 无为. Pick what you hear.",
+              "spokenText": "无为非不作为，乃顺其自然之治",
+              "options": [
+                "无为非不作为，乃顺其自然之治",
+                "无为不是不做事，是顺应自然的治理",
+                "不是什么都不做，而是顺其自然",
+                "无为就是让事情自然发生"
+              ],
+              "answer": "无为非不作为，乃顺其自然之治"
+            },
+            {
+              "id": "ph5-8",
+              "type": "translate",
+              "source": "天人合一",
+              "answer": "the oneness of heaven and humanity",
+              "acceptableAnswers": [
+                "unity of heaven and human",
+                "harmony of person and cosmos",
+                "the human and heaven are one"
+              ],
+              "direction": "to_source",
+              "explanation": "Four-character cosmology — a Daoist motto."
+            },
+            {
+              "id": "ph5-9",
+              "type": "fill_blank",
+              "prompt": "Daoist cosmology: \"___ 合 一.\" (2 characters)",
+              "hint": "Heaven + human.",
+              "answer": "天人",
+              "acceptableAnswers": [
+                "天人"
+              ],
+              "explanation": "天人合一 — oneness of heaven and humanity."
+            },
+            {
+              "id": "ph5-10",
+              "type": "multiple_choice",
+              "prompt": "「克己复礼」属于哪一家？",
+              "hint": "Which philosophical school?",
+              "options": [
+                "儒家",
+                "道家",
+                "法家",
+                "墨家"
+              ],
+              "answer": "儒家",
+              "explanation": "克己复礼 is from the Analects — Confucius' definition of 仁."
+            },
+            {
+              "id": "ph5-11",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Non-action is not inaction — it is governance that follows nature.\"",
+              "answer": "无 为 非 不 作 为 乃 顺 其 自然 之 治",
+              "bank": [
+                "无",
+                "为",
+                "非",
+                "不",
+                "作",
+                "乃",
+                "顺",
+                "其",
+                "自然",
+                "之",
+                "治",
+                "了"
+              ]
+            },
+            {
+              "id": "ph5-12",
+              "type": "match_pairs",
+              "prompt": "the philosophical term to its closest gloss",
+              "pairs": [
+                {
+                  "left": "仁",
+                  "right": "benevolence rooted in empathy"
+                },
+                {
+                  "left": "义",
+                  "right": "doing what one ought"
+                },
+                {
+                  "left": "道",
+                  "right": "the underlying way"
+                },
+                {
+                  "left": "无为",
+                  "right": "non-coercive action"
+                }
+              ]
+            },
+            {
+              "id": "ph5-13",
+              "type": "listen_and_choose",
+              "prompt": "A professor offers a Daoist four-character motto. Pick what you hear.",
+              "spokenText": "天人合一",
+              "options": [
+                "天人合一",
+                "天地人和",
+                "天人感应",
+                "万物归一"
+              ],
+              "answer": "天人合一"
+            },
+            {
+              "id": "ph5-14",
+              "type": "translate",
+              "source": "应当",
+              "answer": "ought / should",
+              "acceptableAnswers": [
+                "one ought to",
+                "what one should do",
+                "duty / obligation"
+              ],
+              "direction": "to_source",
+              "explanation": "应当 — the modern verb for Confucian \"ought,\" closely tied to 义."
+            },
+            {
+              "id": "ph5-15",
+              "type": "fill_blank",
+              "prompt": "Definition: \"义 近 于 ___ 当.\" (one character)",
+              "hint": "= ought / should.",
+              "answer": "应",
+              "acceptableAnswers": [
+                "应"
+              ],
+              "explanation": "义近于应当 — \"righteousness is close to ought.\""
+            },
+            {
+              "id": "ph5-16",
+              "type": "multiple_choice",
+              "prompt": "「君君臣臣」属于哪一家？",
+              "hint": "School of thought.",
+              "options": [
+                "儒家 (proper roles)",
+                "道家 (non-action)",
+                "法家 (laws)",
+                "墨家 (universal love)"
+              ],
+              "answer": "儒家 (proper roles)",
+              "explanation": "君君臣臣父父子子 — the Analects on proper relational roles. Confucian."
+            },
+            {
+              "id": "ph5-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build: \"Humaneness and righteousness held together — these are the spine of Confucianism.\"",
+              "answer": "仁义 并 举 乃 儒家 之 骨",
+              "bank": [
+                "仁义",
+                "并",
+                "举",
+                "乃",
+                "儒家",
+                "之",
+                "骨",
+                "了",
+                "也",
+                "因为"
+              ]
+            },
+            {
+              "id": "ph5-18",
+              "type": "translate",
+              "source": "自然观",
+              "answer": "view of nature",
+              "acceptableAnswers": [
+                "philosophy of nature",
+                "conception of the natural",
+                "outlook on nature"
+              ],
+              "direction": "to_source",
+              "explanation": "自然 + 观 — \"natural-view.\" Daoist key term."
+            },
+            {
+              "id": "ph5-19",
+              "type": "fill_blank",
+              "prompt": "Confucian definition: \"仁 以 爱 人 为 ___ .\" (one character)",
+              "hint": "= foundation / root.",
+              "answer": "本",
+              "acceptableAnswers": [
+                "本"
+              ],
+              "explanation": "以爱人为本 — \"take loving others as the foundation.\""
+            },
+            {
+              "id": "ph5-20",
+              "type": "multiple_choice",
+              "prompt": "What does the four-character formula 天人合一 most fully contain?",
+              "options": [
+                "A claim about astronomy",
+                "An entire cosmology of harmony between human and cosmos",
+                "A literal description of weather",
+                "A Confucian ritual"
+              ],
+              "answer": "An entire cosmology of harmony between human and cosmos",
+              "explanation": "天人合一 packs Daoist cosmology into four characters — a hallmark of philosophical Chinese."
             }
           ]
         }
