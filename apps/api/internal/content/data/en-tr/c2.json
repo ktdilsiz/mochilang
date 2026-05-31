@@ -253,6 +253,137 @@
                 "scent",
                 "odor"
               ]
+            },
+            {
+              "id": "lit1-11",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle daha Germanik / sade?",
+              "options": [
+                "He commenced his lengthy peroration.",
+                "He started his long speech.",
+                "He inaugurated his protracted address.",
+                "He initiated his verbose discourse."
+              ],
+              "answer": "He started his long speech."
+            },
+            {
+              "id": "lit1-12",
+              "type": "fill_blank",
+              "prompt": "The minister sought to ___ the negotiations as swiftly as decorum allowed.",
+              "hint": "Bakan görüşmeleri zarafetin izin verdiği ölçüde hızla sona erdirmeye çalıştı.",
+              "answer": "conclude",
+              "acceptableAnswers": [
+                "terminate",
+                "end"
+              ]
+            },
+            {
+              "id": "lit1-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Latince register — resmi anlatı",
+              "prompt": "Ev sahibi, misafirlerini büyük bir nezaketle salona aldı.",
+              "answer": "The host received his guests into the drawing room with the utmost civility.",
+              "acceptableAnswers": [
+                "The host ushered his guests into the drawing room with the greatest civility.",
+                "The host welcomed his guests into the drawing room with the utmost courtesy."
+              ]
+            },
+            {
+              "id": "lit1-14",
+              "type": "multiple_choice",
+              "prompt": "Edebî olarak en Latinate seçenek hangisidir?",
+              "options": [
+                "He saw what they were up to.",
+                "He noticed what they were doing.",
+                "He apprehended their intentions at once.",
+                "He got what they meant."
+              ],
+              "answer": "He apprehended their intentions at once."
+            },
+            {
+              "id": "lit1-15",
+              "type": "fill_blank",
+              "prompt": "A faint ___ of regret tinged her parting words.",
+              "hint": "Veda sözlerine hafif bir pişmanlık tonu sızmıştı.",
+              "answer": "intimation",
+              "acceptableAnswers": [
+                "hint",
+                "suggestion",
+                "trace"
+              ]
+            },
+            {
+              "id": "lit1-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "He endeavoured, with characteristic restraint, to articulate what others had merely felt.",
+              "options": [
+                "He endeavoured, with characteristic restraint, to articulate what others had merely felt.",
+                "He endeavour, with characteristic restraint, to articulate what others had merely felt.",
+                "He endeavoured, with characteristic restraints, to articulate what other had merely feel.",
+                "He endeavoured, with characteristic restraint, to articulating what others had merely felt."
+              ],
+              "answer": "He endeavoured, with characteristic restraint, to articulate what others had merely felt."
+            },
+            {
+              "id": "lit1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Konuşması, gerçek bir duygunun yokluğunda Latince kelimelerle süslenmişti.",
+              "answer": "His speech was ornamented with Latinate words in the absence of genuine feeling",
+              "bank": [
+                "His",
+                "speech",
+                "was",
+                "ornamented",
+                "with",
+                "Latinate",
+                "words",
+                "in",
+                "the",
+                "absence",
+                "of",
+                "genuine",
+                "feeling",
+                "started",
+                "presence",
+                "and"
+              ]
+            },
+            {
+              "id": "lit1-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Latinate kayıt — Türkçeye çeviri",
+              "prompt": "She perceived, with a chill of recognition, that the truth had been there all along.",
+              "answer": "Tanıdık bir ürpertiyle, gerçeğin başından beri orada olduğunu sezdi.",
+              "acceptableAnswers": [
+                "Tanış bir ürpertiyle, gerçeğin baştan beri orada olduğunu fark etti.",
+                "Bir tanıma ürpertisiyle gerçeğin en başından beri orada olduğunu anladı."
+              ]
+            },
+            {
+              "id": "lit1-19",
+              "type": "fill_blank",
+              "prompt": "Their argument ___ from a trivial misunderstanding into open enmity.",
+              "hint": "Tartışmaları küçük bir yanlış anlamadan açık bir düşmanlığa dönüştü.",
+              "answer": "escalated",
+              "acceptableAnswers": [
+                "evolved",
+                "grew"
+              ]
+            },
+            {
+              "id": "lit1-20",
+              "type": "multiple_choice",
+              "prompt": "Yazar 'concluded' yerine 'wrapped up' kullanırsa ne olur?",
+              "options": [
+                "Anlam değişmez ama register düşer; ton daha günlük olur.",
+                "Anlam değişir; süreç farklı olur.",
+                "Yalnızca dilbilgisi hatasıdır.",
+                "Cümle anlamını kaybeder."
+              ],
+              "answer": "Anlam değişmez ama register düşer; ton daha günlük olur."
             }
           ]
         },
@@ -404,6 +535,131 @@
               "acceptableAnswers": [
                 "nearly"
               ]
+            },
+            {
+              "id": "lit2-11",
+              "type": "multiple_choice",
+              "prompt": "Üçüncü tekil sınırlı (third-person limited) bakış açısı nasıl tanımlanır?",
+              "options": [
+                "Anlatıcı her karakterin zihnine erişir.",
+                "Anlatıcı sadece tek bir karakterin zihinsel ufkuyla sınırlıdır.",
+                "Anlatıcı okuyucuya doğrudan seslenir.",
+                "Anlatıcı yalnızca diyalog aktarır."
+              ],
+              "answer": "Anlatıcı sadece tek bir karakterin zihinsel ufkuyla sınırlıdır."
+            },
+            {
+              "id": "lit2-12",
+              "type": "fill_blank",
+              "prompt": "She told herself she did not mind; she ___ minded a great deal.",
+              "hint": "Aldırmadığını söyledi kendine; aslında pek çok şeye aldırıyordu.",
+              "answer": "minded",
+              "acceptableAnswers": [
+                "did mind"
+              ]
+            },
+            {
+              "id": "lit2-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Serbest dolaylı söyleyiş",
+              "prompt": "Yorgundu. O kadar yorgundu ki. Bu gün hiç bitmeyecek miydi?",
+              "answer": "She was tired. So very tired. Would this day never end?",
+              "acceptableAnswers": [
+                "She was exhausted. So very exhausted. Was this day never going to end?",
+                "She was tired. So very tired. Would this day ever come to an end?"
+              ]
+            },
+            {
+              "id": "lit2-14",
+              "type": "multiple_choice",
+              "prompt": "'unreliable narrator' nedir?",
+              "options": [
+                "Anlatımı tutarsız bir yazar.",
+                "Güvenilirliği şüpheli bir anlatıcı; okur onun aktarımını sorgulamak zorundadır.",
+                "Yalnızca çocuk anlatıcı.",
+                "Romandaki ikincil karakter."
+              ],
+              "answer": "Güvenilirliği şüpheli bir anlatıcı; okur onun aktarımını sorgulamak zorundadır."
+            },
+            {
+              "id": "lit2-15",
+              "type": "fill_blank",
+              "prompt": "He could not have known, ___ then, that the letter would never arrive.",
+              "hint": "O sırada mektubun hiç gelmeyeceğini bilemezdi.",
+              "answer": "not",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "lit2-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "The narrator hovered, as it were, a half-step behind her own observations.",
+              "options": [
+                "The narrator hovered, as it were, a half-step behind her own observations.",
+                "The narrator hover, as it were, a half-step behind her own observation.",
+                "The narrator hovered, as it where, a half-step behind her own observations.",
+                "The narrator hovered, as it were, a half-step behind hers own observations."
+              ],
+              "answer": "The narrator hovered, as it were, a half-step behind her own observations."
+            },
+            {
+              "id": "lit2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Anlatıcının sesi, okurun farkına varmadan karakterinkine kayıyordu.",
+              "answer": "The narrator's voice was sliding into the character's without the reader noticing",
+              "bank": [
+                "The",
+                "narrator's",
+                "voice",
+                "was",
+                "sliding",
+                "into",
+                "the",
+                "character's",
+                "without",
+                "the",
+                "reader",
+                "noticing",
+                "knowing",
+                "rising",
+                "and"
+              ]
+            },
+            {
+              "id": "lit2-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Bilinçli karakter sesi",
+              "prompt": "What did it matter, after all, what people thought of her?",
+              "answer": "Sonuçta, insanların onun hakkında ne düşündüğü neyi değiştirirdi ki?",
+              "acceptableAnswers": [
+                "Ne fark ederdi ki, sonuçta, insanların onun için ne düşündüğü?",
+                "Sonuçta insanların onun hakkında ne düşündüğünün ne önemi vardı?"
+              ]
+            },
+            {
+              "id": "lit2-19",
+              "type": "fill_blank",
+              "prompt": "There was, in his telling, an oddly ___ quality, as if the truth were always one syllable out of reach.",
+              "hint": "Anlatımında garip bir şekilde uzak, dolaylı bir nitelik vardı; sanki gerçek bir hece ötede kalıyordu.",
+              "answer": "evasive",
+              "acceptableAnswers": [
+                "elusive",
+                "oblique"
+              ]
+            },
+            {
+              "id": "lit2-20",
+              "type": "multiple_choice",
+              "prompt": "Anlatıcı serbest dolaylı söyleyişe geçtiğinde okur ne hisseder?",
+              "options": [
+                "Yazardan kopuş.",
+                "Karakterin sesinin anlatımı içeriden boyadığını sezer.",
+                "Diyalogun bittiğini.",
+                "Romanın bittiğini."
+              ],
+              "answer": "Karakterin sesinin anlatımı içeriden boyadığını sezer."
             }
           ]
         },
@@ -556,6 +812,130 @@
                 "marked",
                 "ticked"
               ]
+            },
+            {
+              "id": "lit3-11",
+              "type": "multiple_choice",
+              "prompt": "'extended metaphor' nedir?",
+              "options": [
+                "Bir paragraf veya pasaj boyunca sürdürülen metafor.",
+                "Sadece tek cümlede kalan metafor.",
+                "Bir karakterin lakabı.",
+                "Yalnızca somut nesne metaforu."
+              ],
+              "answer": "Bir paragraf veya pasaj boyunca sürdürülen metafor."
+            },
+            {
+              "id": "lit3-12",
+              "type": "fill_blank",
+              "prompt": "Memory is a ___ that grows brighter the more often it is polished.",
+              "hint": "Anı, ne kadar parlatılırsa o kadar berraklaşan bir aynadır.",
+              "answer": "mirror",
+              "acceptableAnswers": [
+                "lantern",
+                "lamp"
+              ]
+            },
+            {
+              "id": "lit3-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Edebî teşbih",
+              "prompt": "Sessizlik, sonu olmayan bir nehir gibi odanın içinden akıyordu.",
+              "answer": "Silence flowed through the room like a river without end.",
+              "acceptableAnswers": [
+                "Silence ran through the room like an endless river.",
+                "Silence moved through the room like a river that had no end."
+              ]
+            },
+            {
+              "id": "lit3-14",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle KIŞIŞELEŞTIRME (personification) içerir?",
+              "options": [
+                "The argument collapsed under its own weight.",
+                "Her words were sharper than knives.",
+                "The autumn breeze nudged the door open as if asking for entry.",
+                "It rained for three days straight."
+              ],
+              "answer": "The autumn breeze nudged the door open as if asking for entry."
+            },
+            {
+              "id": "lit3-15",
+              "type": "fill_blank",
+              "prompt": "His grief, ___ a tide, returned with each anniversary.",
+              "hint": "Kederi, bir gel-git gibi her yıldönümünde geri dönerdi.",
+              "answer": "like",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "lit3-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Dusk settled over the harbour like a slow, considered argument.",
+              "options": [
+                "Dusk settled over the harbour like a slow, considered argument.",
+                "Dust settled over the harbour like a slow, considered argument.",
+                "Dusk settled over the harbours like a slow, considering argument.",
+                "Dusk settle over the harbour like a slow, considered argument."
+              ],
+              "answer": "Dusk settled over the harbour like a slow, considered argument."
+            },
+            {
+              "id": "lit3-17",
+              "type": "tap_words_in_order",
+              "prompt": "Şehir, kendi gürültüsünün altında nefes alan bir hayvandı.",
+              "answer": "The city was an animal breathing beneath its own noise",
+              "bank": [
+                "The",
+                "city",
+                "was",
+                "an",
+                "animal",
+                "breathing",
+                "beneath",
+                "its",
+                "own",
+                "noise",
+                "above",
+                "the",
+                "and"
+              ]
+            },
+            {
+              "id": "lit3-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Metafor",
+              "prompt": "Hope was the slender thread by which her sanity hung.",
+              "answer": "Umut, sağduyusunun asılı olduğu o ince ipti.",
+              "acceptableAnswers": [
+                "Umut, akıl sağlığını üzerinde tuttuğu ince bir iplikti.",
+                "Umut, sağduyusunun bağlı olduğu o ince ipti."
+              ]
+            },
+            {
+              "id": "lit3-19",
+              "type": "fill_blank",
+              "prompt": "The mountain ___ over the village, a silent guardian.",
+              "hint": "Dağ, sessiz bir bekçi gibi köyün üzerinde yükselirdi.",
+              "answer": "loomed",
+              "acceptableAnswers": [
+                "towered",
+                "rose"
+              ]
+            },
+            {
+              "id": "lit3-20",
+              "type": "multiple_choice",
+              "prompt": "'mixed metaphor' nedir ve neden zayıf sayılır?",
+              "options": [
+                "İki bağdaşmaz imgeyi birleştirmek; okurun gözünde resim çatışır.",
+                "İki dile çevirmek; doğal değildir.",
+                "Bilinçli bir edebî hile; en güçlü araçtır.",
+                "Sadece şiirsel cümlelerde geçer; sorun değildir."
+              ],
+              "answer": "İki bağdaşmaz imgeyi birleştirmek; okurun gözünde resim çatışır."
             }
           ]
         },
@@ -719,6 +1099,117 @@
                 "yeniden seçim"
               ],
               "answer": "anımsama"
+            },
+            {
+              "id": "lit4-12",
+              "type": "fill_blank",
+              "prompt": "Her thoughts came in ___ a kettle on the boil suddenly silent suddenly loud.",
+              "hint": "Düşünceleri, ani sessizliklere ve gürültülere kapılmış kaynayan bir su gibi geldi.",
+              "answer": "fits",
+              "acceptableAnswers": [
+                "bursts",
+                "waves"
+              ]
+            },
+            {
+              "id": "lit4-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Bilinç akışı parçaları",
+              "prompt": "Bir şey söylemeliydi söylemeliydi ne söyleyebilirdi ki — kelimeler yoktu sadece o eski hafiflik.",
+              "answer": "She must say something must say what could she say — there were no words only that old lightness.",
+              "acceptableAnswers": [
+                "She had to say something had to say what could she say — there were no words only that familiar lightness.",
+                "She ought to say something ought to say what could she say — there were no words only that old lightness."
+              ]
+            },
+            {
+              "id": "lit4-14",
+              "type": "multiple_choice",
+              "prompt": "'interior monologue' ile 'stream of consciousness' arasındaki ince fark?",
+              "options": [
+                "İkisi aynı şeydir.",
+                "Interior monologue daha düzenli ve mantıklı; stream of consciousness ise düşüncelerin filtresiz akışıdır.",
+                "Stream of consciousness yalnızca üçüncü kişide olur.",
+                "Interior monologue yalnızca tiyatroda kullanılır."
+              ],
+              "answer": "Interior monologue daha düzenli ve mantıklı; stream of consciousness ise düşüncelerin filtresiz akışıdır."
+            },
+            {
+              "id": "lit4-15",
+              "type": "fill_blank",
+              "prompt": "An ___ struck her with the force of something long-known and only now admitted.",
+              "hint": "Uzun zamandır bilinen ve ancak şimdi kabul edilen bir şey gücünde bir aydınlanma onu çarptı.",
+              "answer": "epiphany",
+              "acceptableAnswers": [
+                "insight",
+                "awareness"
+              ]
+            },
+            {
+              "id": "lit4-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "And then unbidden the memory the kitchen the open window the smell of bread.",
+              "options": [
+                "And then unbidden the memory the kitchen the open window the smell of bread.",
+                "And then unbidden the memories the kitchen the open window the smell of bread.",
+                "And then unbidden the memory the kitchens the open windows the smell of breads.",
+                "And then unbidden the memory the kitchen the open windows the smell of bread."
+              ],
+              "answer": "And then unbidden the memory the kitchen the open window the smell of bread."
+            },
+            {
+              "id": "lit4-17",
+              "type": "tap_words_in_order",
+              "prompt": "Cümle parçalandı çünkü düşünce de parçalanmıştı.",
+              "answer": "The sentence fractured because the thought had fractured too",
+              "bank": [
+                "The",
+                "sentence",
+                "fractured",
+                "because",
+                "the",
+                "thought",
+                "had",
+                "fractured",
+                "too",
+                "started",
+                "and",
+                "however"
+              ]
+            },
+            {
+              "id": "lit4-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Modernist ritim",
+              "prompt": "Time, in her telling, was less a line than a tide drawing in and out.",
+              "answer": "Onun anlatımında zaman, bir çizgi değil, bir gelip giden gel-gitti.",
+              "acceptableAnswers": [
+                "Onun anlatımında zaman bir çizgi değildi, gelip giden bir met-cezirdi.",
+                "Onun anlatısında zaman bir çizgiden çok, içeri ve dışarı çekilen bir gel-gitti."
+              ]
+            },
+            {
+              "id": "lit4-19",
+              "type": "multiple_choice",
+              "prompt": "Modernist anlatı genellikle hangisini reddeder?",
+              "options": [
+                "Açık başlangıç-orta-son üçlemesi; doğrusal zaman.",
+                "Her türlü karakteri.",
+                "Tüm dili.",
+                "Diyaloğu."
+              ],
+              "answer": "Açık başlangıç-orta-son üçlemesi; doğrusal zaman."
+            },
+            {
+              "id": "lit4-20",
+              "type": "fill_blank",
+              "prompt": "He drifted ___ sleep and waking, no longer certain which was which.",
+              "hint": "Uyku ile uyanıklık arasında savruldu, artık hangisinin hangisi olduğundan emin değildi.",
+              "answer": "between",
+              "acceptableAnswers": []
             }
           ]
         },
@@ -873,6 +1364,112 @@
                 "Yalnızca akademik metinde uygundur"
               ],
               "answer": "Anlatımı zenginleştirir, bilgili okurla suç ortaklığı kurar"
+            },
+            {
+              "id": "lit5-12",
+              "type": "fill_blank",
+              "prompt": "His ambition proved a ___ bargain: he gained the world but lost himself.",
+              "hint": "Hırsı bir Faustyan pazarlığa dönüştü; dünyayı kazandı ama kendini yitirdi.",
+              "answer": "Faustian",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "lit5-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Klasik allüzyon kullanımı",
+              "prompt": "Sürekli iflasın eşiğine gelen bu girişimleri yönetmek, Sisifos'a yakışır bir görevdi.",
+              "answer": "Managing these perennially insolvent ventures was a task worthy of Sisyphus.",
+              "acceptableAnswers": [
+                "Managing these perpetually failing ventures was a truly Sisyphean task.",
+                "Running these perennially bankrupt ventures was a labour worthy of Sisyphus."
+              ]
+            },
+            {
+              "id": "lit5-14",
+              "type": "multiple_choice",
+              "prompt": "'Cassandra' allüzyonu hangi anlama gelir?",
+              "options": [
+                "Sözüne kimsenin inanmadığı, doğru kehanetlerde bulunan kişi.",
+                "Yalan söyleyen ama inandırıcı görünen kişi.",
+                "Hep sessiz kalan kişi.",
+                "Geleceği değiştiren kişi."
+              ],
+              "answer": "Sözüne kimsenin inanmadığı, doğru kehanetlerde bulunan kişi."
+            },
+            {
+              "id": "lit5-15",
+              "type": "fill_blank",
+              "prompt": "Crossing the ___ meant there was no turning back.",
+              "hint": "Rubicon'u geçmek geri dönüşün olmadığı anlamına geliyordu.",
+              "answer": "Rubicon",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "lit5-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "She was, in matters of finance, a veritable Cassandra, repeatedly ignored until disaster vindicated her.",
+              "options": [
+                "She was, in matters of finance, a veritable Cassandra, repeatedly ignored until disaster vindicated her.",
+                "She was, in matters of finance, a veritable Cassandras, repeatedly ignore until disaster vindicated her.",
+                "She was, in matter of finance, a veritable Cassandra, repeated ignored until disaster vindicated her.",
+                "She were, in matters of finance, a veritable Cassandra, repeatedly ignored until disasters vindicated her."
+              ],
+              "answer": "She was, in matters of finance, a veritable Cassandra, repeatedly ignored until disaster vindicated her."
+            },
+            {
+              "id": "lit5-17",
+              "type": "tap_words_in_order",
+              "prompt": "Tasarısı, masum dış görünüşünün altında bir Truva atıydı.",
+              "answer": "His proposal was a Trojan horse beneath its innocent exterior",
+              "bank": [
+                "His",
+                "proposal",
+                "was",
+                "a",
+                "Trojan",
+                "horse",
+                "beneath",
+                "its",
+                "innocent",
+                "exterior",
+                "vague",
+                "interior",
+                "and"
+              ]
+            },
+            {
+              "id": "lit5-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Klasik gönderme",
+              "prompt": "The compromise was a Pyrrhic triumph: he won the point but lost the friendship.",
+              "answer": "Uzlaşma, Pirus zaferine dönüştü: tartışmayı kazandı ama dostluğu yitirdi.",
+              "acceptableAnswers": [
+                "Uzlaşma bir Pirus zaferi oldu: tartışmayı kazandı ama dostluğu kaybetti.",
+                "Bu uzlaşı Pirus zaferiydi: noktayı kazandı, dostluğu kaybetti."
+              ]
+            },
+            {
+              "id": "lit5-19",
+              "type": "multiple_choice",
+              "prompt": "Klasik allüzyon kullanırken yaygın bir tehlike nedir?",
+              "options": [
+                "Okurun göndermeyi tanımaması durumunda anlamın çökmesi.",
+                "Türkçe çevirinin imkansız olması.",
+                "Anlatımı kısaltması.",
+                "Yalnızca şiirde işe yaraması."
+              ],
+              "answer": "Okurun göndermeyi tanımaması durumunda anlamın çökmesi."
+            },
+            {
+              "id": "lit5-20",
+              "type": "fill_blank",
+              "prompt": "His curiosity opened a ___ box of legal complications.",
+              "hint": "Merakı, içinden hukuki sorunlar çıkan bir Pandora'nın kutusunu açtı.",
+              "answer": "Pandora's",
+              "acceptableAnswers": []
             }
           ]
         },
@@ -983,6 +1580,250 @@
                   "speaker": "host",
                   "text": "And on that delicious disagreement, let's break for wine."
                 }
+              ]
+            },
+            {
+              "id": "lit6-2",
+              "type": "multiple_choice",
+              "prompt": "Diyalogda 'free indirect speech' ifadesi neye işaret eder?",
+              "options": [
+                "Tırnaksız, raporlama fiilsiz, karakterin sesinin anlatıma sızdığı söyleyiş.",
+                "Yüksek sesle okunan diyalog.",
+                "Yazarın okurla doğrudan konuşması.",
+                "Sahnedeki yan replikler."
+              ],
+              "answer": "Tırnaksız, raporlama fiilsiz, karakterin sesinin anlatıma sızdığı söyleyiş."
+            },
+            {
+              "id": "lit6-3",
+              "type": "fill_blank",
+              "prompt": "It functions less as symbol ___ as motif, gathering meaning with each iteration.",
+              "hint": "Sembolden çok motif olarak işliyor; her tekrarda anlam topluyor.",
+              "answer": "than",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "lit6-4",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Edebî yorumda zarif bir karşı çıkış",
+              "prompt": "Söylediklerini anlıyorum, ancak çizgiyi bu kadar net çizmekten çekinirdim.",
+              "answer": "I take the point, though I'd hesitate to draw the line quite so cleanly.",
+              "acceptableAnswers": [
+                "I take your point, but I would hesitate to draw the line quite so neatly.",
+                "I see what you mean, though I would be reluctant to draw the line so cleanly."
+              ]
+            },
+            {
+              "id": "lit6-5",
+              "type": "multiple_choice",
+              "prompt": "'teeters on the edge of sentimentality' anlamı?",
+              "options": [
+                "Duygusallığa düşmenin eşiğinde sallanıyor ama düşmüyor.",
+                "Tam duygusal.",
+                "Hiç duygusu yok.",
+                "Akademik bir terim."
+              ],
+              "answer": "Duygusallığa düşmenin eşiğinde sallanıyor ama düşmüyor."
+            },
+            {
+              "id": "lit6-6",
+              "type": "fill_blank",
+              "prompt": "A symbol declares itself; a motif ___ weight with each return.",
+              "hint": "Sembol kendini ilan eder; motif her dönüşünde ağırlık biriktirir.",
+              "answer": "accrues",
+              "acceptableAnswers": [
+                "gathers",
+                "accumulates"
+              ]
+            },
+            {
+              "id": "lit6-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "What I found most arresting was how the Latinate register surfaces precisely when she most needs to obscure her motives.",
+              "options": [
+                "What I found most arresting was how the Latinate register surfaces precisely when she most needs to obscure her motives.",
+                "What I find most arresting was how the Latinate register surface precisely when she most needs to obscure her motives.",
+                "What I found most arresting were how the Latinate registers surfaces precisely when she most need to obscure her motives.",
+                "What I founded most arresting was how the Latinate register surfaces precisely when she mostly needs to obscure her motives."
+              ],
+              "answer": "What I found most arresting was how the Latinate register surfaces precisely when she most needs to obscure her motives."
+            },
+            {
+              "id": "lit6-8",
+              "type": "tap_words_in_order",
+              "prompt": "Sonun hak edilmiş olduğunu düşünüyorum, ancak son paragraf duygusallığın eşiğinde sallanıyor.",
+              "answer": "I think the ending is earned though the final paragraph teeters on the edge of sentimentality",
+              "bank": [
+                "I",
+                "think",
+                "the",
+                "ending",
+                "is",
+                "earned",
+                "though",
+                "the",
+                "final",
+                "paragraph",
+                "teeters",
+                "on",
+                "the",
+                "edge",
+                "of",
+                "sentimentality",
+                "broken",
+                "however"
+              ]
+            },
+            {
+              "id": "lit6-9",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Edebî tartışma — kibar itiraz",
+              "prompt": "Lovely tension to leave on. Shall we turn to the ending — earned, or contrived?",
+              "answer": "Bırakmak için güzel bir gerilim. Sona dönelim mi — hak edilmiş mi, yapay mı?",
+              "acceptableAnswers": [
+                "Bunu bırakmak için ne hoş bir gerilim. Sona dönelim mi — kazanılmış mı, yoksa zorlama mı?",
+                "Ayrılırken pek güzel bir gerilim. Sonu konuşalım mı — hak edilmiş mi, zorlama mı?"
+              ]
+            },
+            {
+              "id": "lit6-10",
+              "type": "multiple_choice",
+              "prompt": "'I'd hesitate to' ifadesinin işlevi?",
+              "options": [
+                "Görüşü yumuşatmak (hedging) — kesinlikten kaçınmak.",
+                "Kesin reddetmek.",
+                "Yüksek sesle konuşmak.",
+                "Sözü kesmek."
+              ],
+              "answer": "Görüşü yumuşatmak (hedging) — kesinlikten kaçınmak."
+            },
+            {
+              "id": "lit6-11",
+              "type": "fill_blank",
+              "prompt": "I rather liked it. The boundary between her thoughts and the narration ___",
+              "hint": "Düşünceleri ile anlatım arasındaki sınır eridi.",
+              "answer": "dissolves",
+              "acceptableAnswers": [
+                "dissolved",
+                "blurs",
+                "blurred"
+              ]
+            },
+            {
+              "id": "lit6-12",
+              "type": "multiple_choice",
+              "prompt": "'we're suddenly complicit in her self-deception' anlamı?",
+              "options": [
+                "Aniden onun kendini aldatışına ortak ediliyoruz.",
+                "Yazarın oyununa düşüyoruz.",
+                "Karakteri yargılamamız isteniyor.",
+                "Hikayeden çıkartılıyoruz."
+              ],
+              "answer": "Aniden onun kendini aldatışına ortak ediliyoruz."
+            },
+            {
+              "id": "lit6-13",
+              "type": "fill_blank",
+              "prompt": "On balance, the closing chapter feels ___ rather than contrived.",
+              "hint": "Genel olarak, son bölüm zorlama değil hak edilmiş hissettiriyor.",
+              "answer": "earned",
+              "acceptableAnswers": [
+                "deserved"
+              ]
+            },
+            {
+              "id": "lit6-14",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "A symbol declares itself; a motif accrues weight with each return.",
+              "options": [
+                "A symbol declares itself; a motif accrues weight with each return.",
+                "A symbols declares itself; a motif accrues weight with each return.",
+                "A symbol declares itself; a motifs accrue weight with each returns.",
+                "A symbol declares it; a motif accrue weight with each return."
+              ],
+              "answer": "A symbol declares itself; a motif accrues weight with each return."
+            },
+            {
+              "id": "lit6-15",
+              "type": "tap_words_in_order",
+              "prompt": "Anlatıcı uyarısız bir biçimde serbest dolaylı söyleyişe geçiyor.",
+              "answer": "The narrator slips into free indirect speech without warning",
+              "bank": [
+                "The",
+                "narrator",
+                "slips",
+                "into",
+                "free",
+                "indirect",
+                "speech",
+                "without",
+                "warning",
+                "with",
+                "loud",
+                "and"
+              ]
+            },
+            {
+              "id": "lit6-16",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Kitap kulübü tartışması",
+              "prompt": "Düzyazıda en çok dikkatimi çeken şey neydi biliyor musun? Tam saklanması gerektiğinde Latince kayıt yüzeye çıkıyor.",
+              "answer": "Do you know what struck me most about the prose? The Latinate register surfaces precisely when she most needs to hide.",
+              "acceptableAnswers": [
+                "You know what arrested me most in the prose? The Latinate register comes up exactly when she most needs to hide.",
+                "Do you know what most caught my eye in the prose? The Latinate register emerges precisely when she most needs to conceal herself."
+              ]
+            },
+            {
+              "id": "lit6-17",
+              "type": "multiple_choice",
+              "prompt": "'on balance' ifadesi tartışmada nasıl bir işlev görür?",
+              "options": [
+                "Genel değerlendirme yaparken nüanslı bir karar bildirir.",
+                "Karşı argümanı tamamen reddeder.",
+                "Konuşmayı kaba bir biçimde keser.",
+                "Anlatımı doğrudan tutar."
+              ],
+              "answer": "Genel değerlendirme yaparken nüanslı bir karar bildirir."
+            },
+            {
+              "id": "lit6-18",
+              "type": "fill_blank",
+              "prompt": "I'd ___ that the shutter, at certain moments, behaves symbolically.",
+              "hint": "Belirli anlarda panjurun sembolik davrandığını iddia ederim.",
+              "answer": "argue",
+              "acceptableAnswers": [
+                "suggest",
+                "contend"
+              ]
+            },
+            {
+              "id": "lit6-19",
+              "type": "multiple_choice",
+              "prompt": "'a delicious disagreement' ne anlatır?",
+              "options": [
+                "Üzerinde uzun uzun düşünülmeye değer hoş bir anlaşmazlık.",
+                "Acı bir kavga.",
+                "Önemsiz bir fikir ayrılığı.",
+                "Anlamsız bir tartışma."
+              ],
+              "answer": "Üzerinde uzun uzun düşünülmeye değer hoş bir anlaşmazlık."
+            },
+            {
+              "id": "lit6-20",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Edebî yorumda kararsızlık",
+              "prompt": "Earned, on balance — though the final paragraph teeters without quite tipping over.",
+              "answer": "Genel olarak hak edilmiş — ancak son paragraf, düşmeden eşikte sallanıyor.",
+              "acceptableAnswers": [
+                "Genel anlamda kazanılmış — gerçi son paragraf, düşmeden kıyıda sallanıyor.",
+                "Tartmak gerekirse hak edilmiş — yine de son paragraf düşmeden tehlikeli biçimde sallanıyor."
               ]
             }
           ]
@@ -1211,6 +2052,129 @@
               "acceptableAnswers": [
                 "error"
               ]
+            },
+            {
+              "id": "rh1-11",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle ANAPHORA örneğidir?",
+              "options": [
+                "We shall fight on the beaches; we shall fight on the landing grounds; we shall fight in the fields.",
+                "I came, I saw, I conquered.",
+                "It was the best of times, it was the worst of times.",
+                "Ask not what your country can do for you."
+              ],
+              "answer": "We shall fight on the beaches; we shall fight on the landing grounds; we shall fight in the fields."
+            },
+            {
+              "id": "rh1-12",
+              "type": "fill_blank",
+              "prompt": "Ours is not to reason why; ___ is but to do and die.",
+              "hint": "Bizim işimiz sorgulamak değil, yalnızca yapmak ve ölmektir.",
+              "answer": "ours",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rh1-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Klasik retorik — antitez ve paralelizm",
+              "prompt": "Cesaret konuşur, korkaklık susar; özgürlük yaratır, tiranlık yıkar.",
+              "answer": "Courage speaks, cowardice is silent; freedom creates, tyranny destroys.",
+              "acceptableAnswers": [
+                "Courage speaks and cowardice is silent; freedom builds and tyranny tears down.",
+                "Courage speaks, cowardice keeps silent; freedom creates, tyranny ruins."
+              ]
+            },
+            {
+              "id": "rh1-14",
+              "type": "multiple_choice",
+              "prompt": "'epistrophe' aşağıdaki hangi cümlede görülür?",
+              "options": [
+                "Of the people, by the people, for the people.",
+                "We rise; we fall; we rise again.",
+                "I have a dream; I have a dream today.",
+                "Time is money."
+              ],
+              "answer": "Of the people, by the people, for the people."
+            },
+            {
+              "id": "rh1-15",
+              "type": "fill_blank",
+              "prompt": "We are not enemies, ___ friends.",
+              "hint": "Düşman değil dostuz.",
+              "answer": "but",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rh1-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Let every nation know, whether it wishes us well or ill, that we shall pay any price.",
+              "options": [
+                "Let every nation know, whether it wishes us well or ill, that we shall pay any price.",
+                "Let every nations know, whether it wish us well or ill, that we shall pay any price.",
+                "Let every nation know, whether it wishes us well or ills, that we shall pay any prices.",
+                "Lets every nation know, whether it wishes us well or ill, that we shall pay any price."
+              ],
+              "answer": "Let every nation know, whether it wishes us well or ill, that we shall pay any price."
+            },
+            {
+              "id": "rh1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Düşmanlarımıza inat değil, dostlarımız uğruna inşa ediyoruz.",
+              "answer": "We build not in defiance of our enemies but for the sake of our friends",
+              "bank": [
+                "We",
+                "build",
+                "not",
+                "in",
+                "defiance",
+                "of",
+                "our",
+                "enemies",
+                "but",
+                "for",
+                "the",
+                "sake",
+                "of",
+                "our",
+                "friends",
+                "however",
+                "destroy",
+                "the"
+              ]
+            },
+            {
+              "id": "rh1-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Söylev — chiasmus",
+              "prompt": "It is not what your country can give to you that matters, but what you can give to your country.",
+              "answer": "Önemli olan ülkenizin size ne verebileceği değil, sizin ülkenize ne verebileceğinizdir.",
+              "acceptableAnswers": [
+                "Önemli olan, ülkenizin size verebileceği değil, sizin ülkenize verebileceğinizdir.",
+                "Mesele, ülkenizin sana ne verebileceği değil, senin ülkene ne verebileceğindir."
+              ]
+            },
+            {
+              "id": "rh1-19",
+              "type": "fill_blank",
+              "prompt": "Government of the people, ___ the people, for the people.",
+              "hint": "Halkın yönetimi, halk tarafından, halk için.",
+              "answer": "by",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rh1-20",
+              "type": "multiple_choice",
+              "prompt": "'asyndeton' nedir?",
+              "options": [
+                "Bağlaçsız sıralama — 'I came, I saw, I conquered' gibi.",
+                "Çok bağlaçlı sıralama.",
+                "Bir cümleyi başka bir dile çevirme.",
+                "Tekrar eden son hece."
+              ],
+              "answer": "Bağlaçsız sıralama — 'I came, I saw, I conquered' gibi."
             }
           ]
         },
@@ -1355,6 +2319,128 @@
               "acceptableAnswers": [
                 "experienced"
               ]
+            },
+            {
+              "id": "rh2-11",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle ETHOS'u en açık biçimde kurar?",
+              "options": [
+                "Numbers tell the story.",
+                "As a doctor with twenty years on the ward, I can tell you what the data hides.",
+                "Imagine your child in that bed.",
+                "We must act now."
+              ],
+              "answer": "As a doctor with twenty years on the ward, I can tell you what the data hides."
+            },
+            {
+              "id": "rh2-12",
+              "type": "fill_blank",
+              "prompt": "The argument leans heavily on ___, but the audience will respond to feeling.",
+              "hint": "Argüman ağır biçimde mantığa dayanıyor ama dinleyici duyguya tepki verecek.",
+              "answer": "logos",
+              "acceptableAnswers": [
+                "logic",
+                "reason"
+              ]
+            },
+            {
+              "id": "rh2-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Söylev — ethos kurmak",
+              "prompt": "Bunu söyleyen biri olarak, otuz yıl boyunca bu sahaya hizmet ettim; sözlerime karşılıksız inanmanızı beklemiyorum.",
+              "answer": "I say this as someone who has served in this field for thirty years; I do not ask you to take my word on faith.",
+              "acceptableAnswers": [
+                "I say this as somebody who has worked in this field for thirty years; I am not asking you to take my word on faith.",
+                "I speak as one who has served this field for thirty years; I do not expect you to believe me unconditionally."
+              ]
+            },
+            {
+              "id": "rh2-14",
+              "type": "multiple_choice",
+              "prompt": "Hangi araç KAIROS'a en yakındır?",
+              "options": [
+                "Geçmiş başarıları sıralamak.",
+                "Şu anın aciliyetini vurgulamak: 'This moment, and no other, demands…'",
+                "Mantık zincirini kurmak.",
+                "Hikaye anlatmak."
+              ],
+              "answer": "Şu anın aciliyetini vurgulamak: 'This moment, and no other, demands…'"
+            },
+            {
+              "id": "rh2-15",
+              "type": "fill_blank",
+              "prompt": "If we cannot move them with facts, we must reach them through ___",
+              "hint": "Olgularla ulaşamıyorsak, onlara duygu yoluyla ulaşmalıyız.",
+              "answer": "story",
+              "acceptableAnswers": [
+                "narrative",
+                "stories"
+              ]
+            },
+            {
+              "id": "rh2-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I have lived this struggle; I do not borrow the experience from others.",
+              "options": [
+                "I have lived this struggle; I do not borrow the experience from others.",
+                "I have live this struggle; I do not borrow the experience from others.",
+                "I have lived this struggles; I do not borrowed the experience from other.",
+                "I have lived these struggle; I do not borrow the experiences from others."
+              ],
+              "answer": "I have lived this struggle; I do not borrow the experience from others."
+            },
+            {
+              "id": "rh2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Mantık ikna eder, duygu harekete geçirir.",
+              "answer": "Logic persuades emotion moves",
+              "bank": [
+                "Logic",
+                "persuades",
+                "emotion",
+                "moves",
+                "logic",
+                "and",
+                "or",
+                "moved"
+              ]
+            },
+            {
+              "id": "rh2-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "İkna — pathos",
+              "prompt": "Imagine, just for one evening, a family that no longer knows where its next meal will come from.",
+              "answer": "Bir akşam için olsun, bir sonraki öğününün nereden geleceğini artık bilmeyen bir aileyi düşünün.",
+              "acceptableAnswers": [
+                "Sadece bir akşamlığına, bir sonraki öğününün nereden geleceğini bilmeyen bir aileyi düşünün.",
+                "Bir akşamlığına da olsa, bir sonraki yemeğinin nereden geleceğini bilmeyen bir aileyi gözünüzde canlandırın."
+              ]
+            },
+            {
+              "id": "rh2-19",
+              "type": "fill_blank",
+              "prompt": "The figures are stark, but it is the human ___ that will move them.",
+              "hint": "Rakamlar çıplak ama dinleyiciyi harekete geçirecek olan insan boyutudur.",
+              "answer": "cost",
+              "acceptableAnswers": [
+                "dimension",
+                "toll"
+              ]
+            },
+            {
+              "id": "rh2-20",
+              "type": "multiple_choice",
+              "prompt": "Ethos, pathos, logos dengesi ne zaman bozulur?",
+              "options": [
+                "Konuşmacı yalnızca duyguya dayandığında — argüman içi boş gelir.",
+                "Yalnızca logos kullanıldığında — sözcükler çoğalır.",
+                "Yalnızca ethos kullanıldığında — konuşma uzar.",
+                "Hepsi birlikte kullanıldığında."
+              ],
+              "answer": "Konuşmacı yalnızca duyguya dayandığında — argüman içi boş gelir."
             }
           ]
         },
@@ -1508,6 +2594,129 @@
               "hint": "Bu anın gerektirdiklerine birlikte yükselelim.",
               "answer": "together",
               "acceptableAnswers": []
+            },
+            {
+              "id": "rh3-11",
+              "type": "multiple_choice",
+              "prompt": "'The choice is ours' kapanışının retorik etkisi?",
+              "options": [
+                "Sorumluluğu okuyucuya devreder; eyleme çağırır.",
+                "Konuyu değiştirir.",
+                "Bilgi verir.",
+                "Soru sorar."
+              ],
+              "answer": "Sorumluluğu okuyucuya devreder; eyleme çağırır."
+            },
+            {
+              "id": "rh3-12",
+              "type": "fill_blank",
+              "prompt": "If not now, ___? If not us, who?",
+              "hint": "Şimdi değilse ne zaman? Biz değilsek kim?",
+              "answer": "when",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rh3-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Op-ed kapanışı — vurgulu mühür",
+              "prompt": "Suskunluk artık bir konum değil, bir suç ortaklığıdır.",
+              "answer": "Silence is no longer a position; it is a form of complicity.",
+              "acceptableAnswers": [
+                "Silence is no longer a stance; it is a kind of complicity.",
+                "Silence is no longer a position — it has become complicity."
+              ]
+            },
+            {
+              "id": "rh3-14",
+              "type": "multiple_choice",
+              "prompt": "Hangi kapanış cümlesi 'mühürleme' (sealing) etkisi taşır?",
+              "options": [
+                "There are a few things to consider.",
+                "Make no mistake: the bill before us is not reform but retreat.",
+                "Maybe we'll come back to this later.",
+                "Time will tell."
+              ],
+              "answer": "Make no mistake: the bill before us is not reform but retreat."
+            },
+            {
+              "id": "rh3-15",
+              "type": "fill_blank",
+              "prompt": "We owe it to those who ___ to act before they arrive.",
+              "hint": "Henüz gelmemiş olanlara, onlar gelmeden harekete geçmeyi borçluyuz.",
+              "answer": "come after",
+              "acceptableAnswers": [
+                "follow",
+                "are still to come"
+              ]
+            },
+            {
+              "id": "rh3-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Make no mistake: tomorrow's reckoning will be measured by today's silence.",
+              "options": [
+                "Make no mistake: tomorrow's reckoning will be measured by today's silence.",
+                "Made no mistake: tomorrow's reckoning will be measured by today's silence.",
+                "Make no mistake: tomorrow's reckonings will be measured by today's silences.",
+                "Make no mistakes: tomorrow's reckoning will be measure by today's silence."
+              ],
+              "answer": "Make no mistake: tomorrow's reckoning will be measured by today's silence."
+            },
+            {
+              "id": "rh3-17",
+              "type": "tap_words_in_order",
+              "prompt": "Şimdi sessiz kalmak, daha sonra suç ortağı olmaktır.",
+              "answer": "To remain silent now is to be complicit later",
+              "bank": [
+                "To",
+                "remain",
+                "silent",
+                "now",
+                "is",
+                "to",
+                "be",
+                "complicit",
+                "later",
+                "loud",
+                "and",
+                "before"
+              ]
+            },
+            {
+              "id": "rh3-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Op-ed çağrısı",
+              "prompt": "History will judge us not by what we said, but by what we permitted.",
+              "answer": "Tarih bizi söylediklerimizle değil, izin verdiklerimizle yargılayacak.",
+              "acceptableAnswers": [
+                "Tarih bizi söylediklerimize göre değil, müsaade ettiklerimize göre yargılayacak.",
+                "Tarih bizi söylediğimizle değil, göz yumduğumuzla yargılayacaktır."
+              ]
+            },
+            {
+              "id": "rh3-19",
+              "type": "fill_blank",
+              "prompt": "Let us rise, together, to the ___ of the moment.",
+              "hint": "Bu anın gerektirdiklerine birlikte yükselelim.",
+              "answer": "demands",
+              "acceptableAnswers": [
+                "challenge",
+                "occasion"
+              ]
+            },
+            {
+              "id": "rh3-20",
+              "type": "multiple_choice",
+              "prompt": "Op-ed kapanışında üçlü paralelizm (tricolon) nasıl etki yapar?",
+              "options": [
+                "Ritmik kapanış sağlar; söz birikir ve mühürlenir.",
+                "Anlamı dağıtır.",
+                "Hedging yapar.",
+                "Soru sorar."
+              ],
+              "answer": "Ritmik kapanış sağlar; söz birikir ve mühürlenir."
             }
           ]
         },
@@ -1664,6 +2873,115 @@
                 "Konuyu değiştirmek"
               ],
               "answer": "Argümanı korumalı sunup eleştiriye karşı dayanıklı kılmak"
+            },
+            {
+              "id": "rh4-12",
+              "type": "fill_blank",
+              "prompt": "It would not be ___ to suggest that the report was, at best, partial.",
+              "hint": "Raporun en iyi ihtimalle eksik olduğunu söylemek aşırı olmazdı.",
+              "answer": "unreasonable",
+              "acceptableAnswers": [
+                "unfair"
+              ]
+            },
+            {
+              "id": "rh4-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Litotes / understatement — ince ironi",
+              "prompt": "Sonuç tam bir başarı sayılamazdı.",
+              "answer": "The outcome could scarcely be described as an unqualified success.",
+              "acceptableAnswers": [
+                "The outcome could hardly be described as an unqualified success.",
+                "The outcome was, to say the least, not exactly a triumph."
+              ]
+            },
+            {
+              "id": "rh4-14",
+              "type": "multiple_choice",
+              "prompt": "'It is not unreasonable to think…' yapısı:",
+              "options": [
+                "Çift olumsuzlama ile yumuşatılmış olumlama — litotes.",
+                "Doğrudan reddetme.",
+                "Yüksek vurgu.",
+                "Soru sorma."
+              ],
+              "answer": "Çift olumsuzlama ile yumuşatılmış olumlama — litotes."
+            },
+            {
+              "id": "rh4-15",
+              "type": "fill_blank",
+              "prompt": "The minister's account was, ___ to put it generously, incomplete.",
+              "hint": "Bakanın anlatımı, cömert davranırsak, eksikti.",
+              "answer": "to",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rh4-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "One might be forgiven for sensing a certain reluctance on the minister's part.",
+              "options": [
+                "One might be forgiven for sensing a certain reluctance on the minister's part.",
+                "One might be forgiving for sensing a certain reluctance on the minister's part.",
+                "One might be forgiven for sense a certain reluctance on the minister's part.",
+                "Ones might be forgiven for sensing a certain reluctances on the minister's part."
+              ],
+              "answer": "One might be forgiven for sensing a certain reluctance on the minister's part."
+            },
+            {
+              "id": "rh4-17",
+              "type": "tap_words_in_order",
+              "prompt": "Sonucun büsbütün tatmin edici olduğunu söylemek pek doğru olmaz.",
+              "answer": "It would hardly be accurate to call the outcome wholly satisfactory",
+              "bank": [
+                "It",
+                "would",
+                "hardly",
+                "be",
+                "accurate",
+                "to",
+                "call",
+                "the",
+                "outcome",
+                "wholly",
+                "satisfactory",
+                "completely",
+                "and",
+                "the"
+              ]
+            },
+            {
+              "id": "rh4-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Söylem — ince ima",
+              "prompt": "It is, perhaps, no coincidence that the most vocal critics fell silent the week the contract was signed.",
+              "answer": "Belki de en yüksek sesli eleştirmenlerin, sözleşmenin imzalandığı hafta susmuş olması bir tesadüf değil.",
+              "acceptableAnswers": [
+                "Belki de en yüksek sesli eleştirmenlerin, sözleşmenin imzalandığı hafta sessizliğe gömülmesi bir tesadüf değildir.",
+                "En sesli eleştirmenlerin, sözleşmenin imzalandığı hafta susmaları belki de bir rastlantı değildir."
+              ]
+            },
+            {
+              "id": "rh4-19",
+              "type": "fill_blank",
+              "prompt": "Suffice it ___ say, the figures did not bear out the minister's optimism.",
+              "hint": "Sözü uzatmaya gerek yok, rakamlar bakanın iyimserliğini doğrulamadı.",
+              "answer": "to",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rh4-20",
+              "type": "multiple_choice",
+              "prompt": "Hedging tonunu en ÇOK güçlendirenlerden biri?",
+              "options": [
+                "'It might be argued that…' gibi öne sürümler.",
+                "Doğrudan emirler.",
+                "Mutlak ifadeler.",
+                "Yüksek sesli sıfatlar."
+              ],
+              "answer": "'It might be argued that…' gibi öne sürümler."
             }
           ]
         },
@@ -1819,6 +3137,115 @@
                 "Soyut kelime sevmez."
               ],
               "answer": "Hatırlanır, alıntılanır, taşınır."
+            },
+            {
+              "id": "rh5-12",
+              "type": "fill_blank",
+              "prompt": "Style is the dress of ___",
+              "hint": "Üslup, düşüncenin giysisidir.",
+              "answer": "thought",
+              "acceptableAnswers": [
+                "thoughts"
+              ]
+            },
+            {
+              "id": "rh5-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Aforizma üretimi",
+              "prompt": "Cesaret nadiren yüksek seslidir; çoğu kez devam etmenin başka adıdır.",
+              "answer": "Courage is rarely loud; more often it is another name for continuing.",
+              "acceptableAnswers": [
+                "Courage is seldom loud; more often it is just another name for going on.",
+                "Courage is rarely loud — most of the time it is simply another word for carrying on."
+              ]
+            },
+            {
+              "id": "rh5-14",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle aforizmaya en yakındır?",
+              "options": [
+                "What we mistake for memory is often only repetition.",
+                "I remember a lot of things from yesterday.",
+                "Memory is something we have, and we use it sometimes.",
+                "Remembering is a thing that brains can do."
+              ],
+              "answer": "What we mistake for memory is often only repetition."
+            },
+            {
+              "id": "rh5-15",
+              "type": "fill_blank",
+              "prompt": "Seldom ___ a single sentence carried such weight.",
+              "hint": "Tek bir cümle nadiren bu denli ağırlık taşımıştır.",
+              "answer": "has",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rh5-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "What history teaches, more than anything, is how rarely it is heeded.",
+              "options": [
+                "What history teaches, more than anything, is how rarely it is heeded.",
+                "What history teach, more than anything, is how rarely it is heeded.",
+                "What history teaches, more than anything, are how rarely it is heeded.",
+                "What histories teaches, more than anything, is how rarely it is heeded."
+              ],
+              "answer": "What history teaches, more than anything, is how rarely it is heeded."
+            },
+            {
+              "id": "rh5-17",
+              "type": "tap_words_in_order",
+              "prompt": "Kısa cümle bir bıçak değildir; bir mühürdür.",
+              "answer": "The short sentence is not a blade it is a seal",
+              "bank": [
+                "The",
+                "short",
+                "sentence",
+                "is",
+                "not",
+                "a",
+                "blade",
+                "it",
+                "is",
+                "a",
+                "seal",
+                "but",
+                "and",
+                "long"
+              ]
+            },
+            {
+              "id": "rh5-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Aforizma — söylev",
+              "prompt": "Where conviction is loudest, scrutiny is most needed.",
+              "answer": "İnancın en yüksek olduğu yerde, sorgulama en çok gereklidir.",
+              "acceptableAnswers": [
+                "İnancın en gürültülü olduğu yerde, sorgulamaya en çok ihtiyaç vardır.",
+                "Kanaatin en yüksek sesle dile geldiği yerde, sorgulamaya en çok gerek duyulur."
+              ]
+            },
+            {
+              "id": "rh5-19",
+              "type": "fill_blank",
+              "prompt": "Brevity ___ wit's soul; what is spared is felt.",
+              "hint": "Kısalık, nüktenin canıdır; söylenmeyen hissedilir.",
+              "answer": "is",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rh5-20",
+              "type": "multiple_choice",
+              "prompt": "'Power corrupts; absolute power corrupts absolutely' cümlesi hangi figürleri birlikte kullanır?",
+              "options": [
+                "Tekrar (anadiplosis) + paralelizm + aforizma.",
+                "Yalnızca soru sorma.",
+                "Anlatım — bilinç akışı.",
+                "Yalnızca onomatope."
+              ],
+              "answer": "Tekrar (anadiplosis) + paralelizm + aforizma."
             }
           ]
         },
@@ -1931,6 +3358,241 @@
                   "text": "Now you're cooking. Send me a fresh draft by six and we'll run it tomorrow."
                 }
               ]
+            },
+            {
+              "id": "rh6-2",
+              "type": "multiple_choice",
+              "prompt": "Editörün 'soften the verbs' tavsiyesinin nedeni?",
+              "options": [
+                "Argümanı iddia yerine ima edip okurun kendi çıkarımını yapmasına alan açmak.",
+                "Argümanı zayıflatmak.",
+                "Konuşmacının fikir bildirmemesi.",
+                "Köşe yazısını kısaltmak."
+              ],
+              "answer": "Argümanı iddia yerine ima edip okurun kendi çıkarımını yapmasına alan açmak."
+            },
+            {
+              "id": "rh6-3",
+              "type": "fill_blank",
+              "prompt": "I'll recast 'proves' as ___ and let the reader do the arithmetic.",
+              "hint": "'Kanıtlar'ı 'düşündürür'e çevirip aritmetiği okuyucuya bırakacağım.",
+              "answer": "suggests",
+              "acceptableAnswers": [
+                "implies"
+              ]
+            },
+            {
+              "id": "rh6-4",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Editör masası — köşe yazısı revizyonu",
+              "prompt": "Yumuşak bir karşı çıkışla — bu kararsızlık bir hedge değil, argümanın kendisi.",
+              "answer": "I'd push back, gently — the ambivalence isn't a hedge; it is the argument.",
+              "acceptableAnswers": [
+                "I would push back, gently — the ambivalence is not a hedge; it is the argument.",
+                "I'd push back politely — that ambivalence isn't a hedge, it's the argument itself."
+              ]
+            },
+            {
+              "id": "rh6-5",
+              "type": "multiple_choice",
+              "prompt": "Editörün 'reads as glib' eleştirisi hangi anlama gelir?",
+              "options": [
+                "Çok yüzeysel, fazla kolay görünüyor.",
+                "Çok karmaşık.",
+                "Çok kısa.",
+                "Çok şiirsel."
+              ],
+              "answer": "Çok yüzeysel, fazla kolay görünüyor."
+            },
+            {
+              "id": "rh6-6",
+              "type": "fill_blank",
+              "prompt": "Let me see whether the tricolon ___ its keep before I sacrifice it.",
+              "hint": "Bu üçlünün hakkını verip vermediğine bakayım, sonra atarım.",
+              "answer": "earns",
+              "acceptableAnswers": [
+                "is earning"
+              ]
+            },
+            {
+              "id": "rh6-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "The kicker has to signal the ambivalence; as written, it reads as flinching.",
+              "options": [
+                "The kicker has to signal the ambivalence; as written, it reads as flinching.",
+                "The kicker has to signaled the ambivalence; as written, it reads as flinching.",
+                "The kicker has to signal the ambivalences; as written, they reads as flinching.",
+                "The kickers has to signal the ambivalence; as written, it read as flinching."
+              ],
+              "answer": "The kicker has to signal the ambivalence; as written, it reads as flinching."
+            },
+            {
+              "id": "rh6-8",
+              "type": "tap_words_in_order",
+              "prompt": "Kesinlik değil; belirsizliğin cesareti.",
+              "answer": "Not certainty but the courage of uncertainty",
+              "bank": [
+                "Not",
+                "certainty",
+                "but",
+                "the",
+                "courage",
+                "of",
+                "uncertainty",
+                "however",
+                "and",
+                "the"
+              ]
+            },
+            {
+              "id": "rh6-9",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Editör masası — başlık önerisi",
+              "prompt": "Give me a headline that whispers rather than shouts.",
+              "answer": "Bana bağıran değil fısıldayan bir başlık ver.",
+              "acceptableAnswers": [
+                "Bana haykıran değil, fısıldayan bir başlık ver.",
+                "Bağırmak yerine fısıldayan bir başlık getir bana."
+              ]
+            },
+            {
+              "id": "rh6-10",
+              "type": "multiple_choice",
+              "prompt": "'something to that effect' deyiminin işlevi?",
+              "options": [
+                "Önerinin yaklaşık olduğunu, kesin ifadelendirilmediğini belirtir.",
+                "Önerinin kesin olduğunu söyler.",
+                "Konuşmayı keser.",
+                "Hiçbir şey eklemez."
+              ],
+              "answer": "Önerinin yaklaşık olduğunu, kesin ifadelendirilmediğini belirtir."
+            },
+            {
+              "id": "rh6-11",
+              "type": "fill_blank",
+              "prompt": "I'll dial down the rhetoric so the argument can ___ the weight of its own assertions.",
+              "hint": "Retoriği yumuşatayım ki argüman kendi iddialarının ağırlığını taşıyabilsin.",
+              "answer": "carry",
+              "acceptableAnswers": [
+                "bear",
+                "hold"
+              ]
+            },
+            {
+              "id": "rh6-12",
+              "type": "multiple_choice",
+              "prompt": "'Now you're cooking' editörün hangi tonunu yansıtır?",
+              "options": [
+                "Şakacı bir onay — 'şimdi tutturdun'.",
+                "Sert bir eleştiri.",
+                "Resmi bir reddetme.",
+                "Tarafsız bir tespit."
+              ],
+              "answer": "Şakacı bir onay — 'şimdi tutturdun'."
+            },
+            {
+              "id": "rh6-13",
+              "type": "fill_blank",
+              "prompt": "Send me a fresh ___ by six and we'll run it tomorrow.",
+              "hint": "Altıya kadar yeni bir taslak gönder, yarın yayımlarız.",
+              "answer": "draft",
+              "acceptableAnswers": [
+                "version"
+              ]
+            },
+            {
+              "id": "rh6-14",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I'd rebuild the kicker with an antithesis — not certainty, but the courage of uncertainty.",
+              "options": [
+                "I'd rebuild the kicker with an antithesis — not certainty, but the courage of uncertainty.",
+                "I'd rebuilt the kicker with an antithesis — not certainty, but the courage of uncertainty.",
+                "I'd rebuild the kicker with an antithesis — not certain, but the courage of uncertain.",
+                "I'd rebuild the kickers with an antitheses — not certainty, but the courage of uncertainty."
+              ],
+              "answer": "I'd rebuild the kicker with an antithesis — not certainty, but the courage of uncertainty."
+            },
+            {
+              "id": "rh6-15",
+              "type": "tap_words_in_order",
+              "prompt": "İddia ettiğin yerde sezdir — yumuşak fiiller kullan.",
+              "answer": "Where you are asserting insinuate instead use softer verbs",
+              "bank": [
+                "Where",
+                "you",
+                "are",
+                "asserting",
+                "insinuate",
+                "instead",
+                "use",
+                "softer",
+                "verbs",
+                "harder",
+                "and",
+                "the"
+              ]
+            },
+            {
+              "id": "rh6-16",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Editör notu — figür seçimi",
+              "prompt": "Bu antitez ile yeniden kurmama izin ver — bir şey kabilinden.",
+              "answer": "Let me rebuild it with this antithesis — something to that effect.",
+              "acceptableAnswers": [
+                "Allow me to rebuild it with this antithesis — something along those lines.",
+                "Let me reconstruct it using this antithesis — something of the sort."
+              ]
+            },
+            {
+              "id": "rh6-17",
+              "type": "multiple_choice",
+              "prompt": "'doing too much heavy lifting' ifadesi yazı bağlamında ne anlatır?",
+              "options": [
+                "Tek bir öğenin (lede) yazının tüm yükünü taşımaya çalışması.",
+                "Yazının çok uzun olması.",
+                "Cümlelerin gramerinin zor olması.",
+                "Yazarın yorgun olması."
+              ],
+              "answer": "Tek bir öğenin (lede) yazının tüm yükünü taşımaya çalışması."
+            },
+            {
+              "id": "rh6-18",
+              "type": "fill_blank",
+              "prompt": "'Why the certainty is the ___' — that might do the work without overselling.",
+              "hint": "Kesinlik semptomudur — bu, abartmadan iş görür.",
+              "answer": "symptom",
+              "acceptableAnswers": [
+                "sign"
+              ]
+            },
+            {
+              "id": "rh6-19",
+              "type": "multiple_choice",
+              "prompt": "'pick a side, or commit to your ambivalence' editörün hangi prensibini yansıtır?",
+              "options": [
+                "Net bir duruş gerekir; muğlaklığı da bilinçli savunmalısın.",
+                "Konuyu değiştir.",
+                "Yazıyı yeniden başlat.",
+                "Argümanı sil."
+              ],
+              "answer": "Net bir duruş gerekir; muğlaklığı da bilinçli savunmalısın."
+            },
+            {
+              "id": "rh6-20",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Editöre yanıt",
+              "prompt": "I take your point — let me see whether the tricolon earns its keep before I sacrifice it.",
+              "answer": "Söylediğini anlıyorum — feda etmeden önce bu üçlünün hakkını verip vermediğine bir bakayım.",
+              "acceptableAnswers": [
+                "Söylediğini anladım — bu üçlünün hakkını veriyor mu, feda etmeden önce göreyim.",
+                "Söylediğine katılıyorum — bu üçlüyü feda etmeden önce hak edip etmediğine bakayım."
+              ]
             }
           ]
         },
@@ -2004,6 +3666,196 @@
               ],
               "answer": "Hardly had we begun before the system crashed.",
               "explanation": "'Hardly...before/when' negative inversion: 'hardly had + S + V3'."
+            },
+            {
+              "id": "rc-c2-6",
+              "type": "multiple_choice",
+              "prompt": "Söylevde inversion'ın işlevi nedir?",
+              "options": [
+                "Vurguyu güçlendirir; ritmi keser ve dikkati toplar.",
+                "Yalnızca dilbilgisi kuralıdır.",
+                "Anlamı belirsizleştirir.",
+                "Kullanılmamalıdır."
+              ],
+              "answer": "Vurguyu güçlendirir; ritmi keser ve dikkati toplar."
+            },
+            {
+              "id": "rc-c2-7",
+              "type": "fill_blank",
+              "prompt": "___ did the policy fail; it actively damaged the very communities it claimed to help.",
+              "hint": "Politika sadece başarısız olmadı; iddia ettiği toplulukları aktif olarak da zarara uğrattı.",
+              "answer": "Not only",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rc-c2-8",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Söylev — negatif inversion",
+              "prompt": "Hiçbir koşulda halkımız bu adaletsizliği sessizce kabul etmeyecek.",
+              "answer": "Under no circumstances will our people quietly accept this injustice.",
+              "acceptableAnswers": [
+                "On no account will our people quietly accept this injustice.",
+                "In no circumstances will our people silently accept this injustice."
+              ]
+            },
+            {
+              "id": "rc-c2-9",
+              "type": "multiple_choice",
+              "prompt": "What-cleft ile vurgu: 'Eksik olan şey, cesarettir.' İngilizcesi?",
+              "options": [
+                "Courage is what is missing.",
+                "What is missing is courage.",
+                "Both A and B are correct cleft forms.",
+                "Missing courage is."
+              ],
+              "answer": "Both A and B are correct cleft forms."
+            },
+            {
+              "id": "rc-c2-10",
+              "type": "fill_blank",
+              "prompt": "It is precisely ___ this moment that resolve matters most.",
+              "hint": "Tam da bu anda kararlılık en çok önem taşır.",
+              "answer": "at",
+              "acceptableAnswers": [
+                "in"
+              ]
+            },
+            {
+              "id": "rc-c2-11",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Little did we suspect, on that quiet morning, what the day would bring.",
+              "options": [
+                "Little did we suspect, on that quiet morning, what the day would bring.",
+                "Little we did suspect, on that quiet morning, what the day would bring.",
+                "Little did we suspected, on that quiet morning, what the day would brought.",
+                "Little did we suspect, on that quiets morning, what the days would bring."
+              ],
+              "answer": "Little did we suspect, on that quiet morning, what the day would bring."
+            },
+            {
+              "id": "rc-c2-12",
+              "type": "tap_words_in_order",
+              "prompt": "Sadece o anda anladık, oysa çoktan geç kalmıştık.",
+              "answer": "Only then did we understand though we were already too late",
+              "bank": [
+                "Only",
+                "then",
+                "did",
+                "we",
+                "understand",
+                "though",
+                "we",
+                "were",
+                "already",
+                "too",
+                "late",
+                "however",
+                "the",
+                "and"
+              ]
+            },
+            {
+              "id": "rc-c2-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Cleft — vurgu",
+              "prompt": "Bizi buraya getiren şey, korku değil, umuttu.",
+              "answer": "What brought us here was hope, not fear.",
+              "acceptableAnswers": [
+                "It was hope, not fear, that brought us here.",
+                "Hope, not fear, was what brought us here."
+              ]
+            },
+            {
+              "id": "rc-c2-14",
+              "type": "fill_blank",
+              "prompt": "So great ___ the response that the servers buckled within minutes.",
+              "hint": "Tepki o kadar büyüktü ki sunucular dakikalar içinde çöktü.",
+              "answer": "was",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rc-c2-15",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle 'No sooner' inversion'unu doğru kullanır?",
+              "options": [
+                "No sooner we had arrived than the storm broke.",
+                "No sooner had we arrived than the storm broke.",
+                "No sooner did we arrived than the storm broke.",
+                "No sooner we arrived than the storm broke."
+              ],
+              "answer": "No sooner had we arrived than the storm broke."
+            },
+            {
+              "id": "rc-c2-16",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Söylev — it-cleft",
+              "prompt": "Yargıyı veren biz değildik; sessizliğimiz oldu.",
+              "answer": "It was not we who passed the judgement; it was our silence.",
+              "acceptableAnswers": [
+                "It was not us who passed the judgement — it was our silence.",
+                "It was not we who delivered the judgement; it was our silence."
+              ]
+            },
+            {
+              "id": "rc-c2-17",
+              "type": "fill_blank",
+              "prompt": "Such ___ his composure that he answered without raising his voice.",
+              "hint": "Soğukkanlılığı öyleydi ki sesini yükseltmeden cevap verdi.",
+              "answer": "was",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "rc-c2-18",
+              "type": "multiple_choice",
+              "prompt": "Pseudo-cleft yapısı 'All I want is…' nasıl kullanılır?",
+              "options": [
+                "Vurgulu bir tek-istek bildirir.",
+                "Soru sorar.",
+                "Doğrudan emir bildirir.",
+                "Hiçbir vurgusal işlevi yoktur."
+              ],
+              "answer": "Vurgulu bir tek-istek bildirir."
+            },
+            {
+              "id": "rc-c2-19",
+              "type": "tap_words_in_order",
+              "prompt": "İnsanları harekete geçiren, fikirler değildir; bu fikirleri içeren hikayelerdir.",
+              "answer": "It is not ideas that move people but the stories that carry them",
+              "bank": [
+                "It",
+                "is",
+                "not",
+                "ideas",
+                "that",
+                "move",
+                "people",
+                "but",
+                "the",
+                "stories",
+                "that",
+                "carry",
+                "them",
+                "however",
+                "movies",
+                "and"
+              ]
+            },
+            {
+              "id": "rc-c2-20",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "It was only in retrospect that the significance of the moment became apparent.",
+              "options": [
+                "It was only in retrospect that the significance of the moment became apparent.",
+                "It was only in retrospects that the significance of the moment became apparent.",
+                "It was only in retrospect that the significance of the moments became apparently.",
+                "It was only in retrospect that the significance of the moment become apparent."
+              ],
+              "answer": "It was only in retrospect that the significance of the moment became apparent."
             }
           ]
         }
@@ -2235,6 +4087,134 @@
                 "real",
                 "true"
               ]
+            },
+            {
+              "id": "ph1-11",
+              "type": "multiple_choice",
+              "prompt": "'epistemic humility' Türkçedeki karşılığı?",
+              "options": [
+                "Bilgi alanındaki alçakgönüllülük; bilgisinin sınırlarını kabul etmek.",
+                "Sahte alçakgönüllülük.",
+                "Tarihi bilgi.",
+                "Mantıksal kesinlik."
+              ],
+              "answer": "Bilgi alanındaki alçakgönüllülük; bilgisinin sınırlarını kabul etmek."
+            },
+            {
+              "id": "ph1-12",
+              "type": "fill_blank",
+              "prompt": "What we ___ to know and what we can in fact know are seldom identical.",
+              "hint": "Bilmeyi umduğumuz ile gerçekte bilebileceğimiz nadiren aynıdır.",
+              "answer": "hope",
+              "acceptableAnswers": [
+                "claim",
+                "aspire"
+              ]
+            },
+            {
+              "id": "ph1-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Felsefe — kavram tartışması",
+              "prompt": "Varlık, niceliklerle değil, ancak niteliklerle anlaşılır.",
+              "answer": "Being is grasped not through quantities but only through qualities.",
+              "acceptableAnswers": [
+                "Being is understood not by means of quantities but only by means of qualities.",
+                "Existence is comprehended not in terms of quantities but only in terms of qualities."
+              ]
+            },
+            {
+              "id": "ph1-14",
+              "type": "multiple_choice",
+              "prompt": "'a posteriori' ne anlama gelir?",
+              "options": [
+                "Deneyim öncesi bilgi.",
+                "Deneyime dayalı bilgi.",
+                "Yalnızca duyusal yanılgı.",
+                "Mantığa aykırı bilgi."
+              ],
+              "answer": "Deneyime dayalı bilgi."
+            },
+            {
+              "id": "ph1-15",
+              "type": "fill_blank",
+              "prompt": "Phenomenology takes as its subject the structure of ___ experience.",
+              "hint": "Fenomenoloji, kendine konu olarak yaşanmış deneyimin yapısını alır.",
+              "answer": "lived",
+              "acceptableAnswers": [
+                "conscious"
+              ]
+            },
+            {
+              "id": "ph1-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "The Cartesian cogito sought a foundation impervious to doubt.",
+              "options": [
+                "The Cartesian cogito sought a foundation impervious to doubt.",
+                "The Cartesian cogito sought a foundations impervious to doubt.",
+                "The Cartesian cogitos sought a foundation impervious to doubt.",
+                "The Cartesian cogito seeks a foundation imperviousness to doubt."
+              ],
+              "answer": "The Cartesian cogito sought a foundation impervious to doubt."
+            },
+            {
+              "id": "ph1-17",
+              "type": "tap_words_in_order",
+              "prompt": "Bilen ile bilinen arasındaki sınır felsefede kalıcı bir sorundur.",
+              "answer": "The boundary between knower and known is a perennial problem in philosophy",
+              "bank": [
+                "The",
+                "boundary",
+                "between",
+                "knower",
+                "and",
+                "known",
+                "is",
+                "a",
+                "perennial",
+                "problem",
+                "in",
+                "philosophy",
+                "settled",
+                "and",
+                "the"
+              ]
+            },
+            {
+              "id": "ph1-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Akademik felsefe",
+              "prompt": "Solipsism, taken seriously, becomes self-refuting the moment one attempts to communicate it.",
+              "answer": "Solipsizm ciddiye alındığında, onu iletmeye kalkışıldığı anda kendi kendini çürütür.",
+              "acceptableAnswers": [
+                "Ciddiye alındığında solipsizm, onu iletmeye çalışıldığı anda kendi kendini çürütür hale gelir.",
+                "Solipsizm, ciddiyetle ele alındığında, iletilmeye başlandığı anda kendini geçersiz kılar."
+              ]
+            },
+            {
+              "id": "ph1-19",
+              "type": "fill_blank",
+              "prompt": "Justified true belief is the classical ___ for knowledge.",
+              "hint": "Gerekçelendirilmiş doğru inanç, bilgi için klasik bir formüldür.",
+              "answer": "formula",
+              "acceptableAnswers": [
+                "definition",
+                "criterion"
+              ]
+            },
+            {
+              "id": "ph1-20",
+              "type": "multiple_choice",
+              "prompt": "Gettier vakaları neyi sorgulatır?",
+              "options": [
+                "Gerekçelendirilmiş doğru inancın bilgi için yeterli olup olmadığını.",
+                "Sayıların var olup olmadığını.",
+                "Tarihsel olayların gerçekliğini.",
+                "Etiğin temellerini."
+              ],
+              "answer": "Gerekçelendirilmiş doğru inancın bilgi için yeterli olup olmadığını."
             }
           ]
         },
@@ -2383,6 +4363,130 @@
               "acceptableAnswers": [
                 "can"
               ]
+            },
+            {
+              "id": "ph2-11",
+              "type": "multiple_choice",
+              "prompt": "'It could not but be the case' ifadesi hangi modal kuvveti taşır?",
+              "options": [
+                "Zorunluluk — kaçınılmazlık.",
+                "Zayıf olasılık.",
+                "İhtimal dışı bir durum.",
+                "Yasaklama."
+              ],
+              "answer": "Zorunluluk — kaçınılmazlık."
+            },
+            {
+              "id": "ph2-12",
+              "type": "fill_blank",
+              "prompt": "Had the laws been otherwise, things ___ have unfolded very differently.",
+              "hint": "Yasalar başka türlü olsaydı, olaylar çok farklı gelişebilirdi.",
+              "answer": "might",
+              "acceptableAnswers": [
+                "could",
+                "would"
+              ]
+            },
+            {
+              "id": "ph2-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Akademik felsefe — modal nüans",
+              "prompt": "Hareketin başka türlü olabileceğini söylemek, hareketin kaçınılmaz olduğunu reddetmektir.",
+              "answer": "To say the act could have been otherwise is to deny that it was inevitable.",
+              "acceptableAnswers": [
+                "Saying that the act could have been otherwise amounts to denying that it was inevitable.",
+                "To claim the act might have been otherwise is to refuse the thought that it was inevitable."
+              ]
+            },
+            {
+              "id": "ph2-14",
+              "type": "multiple_choice",
+              "prompt": "'is bound to' ifadesi felsefi söylemde:",
+              "options": [
+                "Güçlü bir öngörü / zorunluluk bildirir.",
+                "Belirsizlik bildirir.",
+                "Olumsuzluk bildirir.",
+                "Sadece edebî kullanıma sahiptir."
+              ],
+              "answer": "Güçlü bir öngörü / zorunluluk bildirir."
+            },
+            {
+              "id": "ph2-15",
+              "type": "fill_blank",
+              "prompt": "One ___ not assume that being entails knowing oneself.",
+              "hint": "Var olmanın kendini bilmeyi gerektirdiği varsayılmamalı.",
+              "answer": "ought",
+              "acceptableAnswers": [
+                "should"
+              ]
+            },
+            {
+              "id": "ph2-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Such an inference might be sound under some readings but is hardly compelling on others.",
+              "options": [
+                "Such an inference might be sound under some readings but is hardly compelling on others.",
+                "Such an inference might be sound under some reading but is hardly compelling on others.",
+                "Such an inferences might be sound under some readings but is hardly compelling on others.",
+                "Such an inference might be sound under some readings but is hardly compelled on others."
+              ],
+              "answer": "Such an inference might be sound under some readings but is hardly compelling on others."
+            },
+            {
+              "id": "ph2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Aksini varsaymak için iyi nedenlerimiz olabilirdi.",
+              "answer": "We might have had good reasons to suppose otherwise",
+              "bank": [
+                "We",
+                "might",
+                "have",
+                "had",
+                "good",
+                "reasons",
+                "to",
+                "suppose",
+                "otherwise",
+                "the",
+                "should",
+                "would"
+              ]
+            },
+            {
+              "id": "ph2-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Modal nüans — felsefi tartışma",
+              "prompt": "It need not follow that what is possible is also actual.",
+              "answer": "Mümkün olanın aynı zamanda gerçek olması gerekmez.",
+              "acceptableAnswers": [
+                "Mümkün olandan, onun aynı zamanda fiili olduğu sonucu çıkmaz.",
+                "Olabilir olanın, fiilen var olduğu zorunlu olarak çıkmaz."
+              ]
+            },
+            {
+              "id": "ph2-19",
+              "type": "fill_blank",
+              "prompt": "Whether the agent ___ have acted otherwise is the crux of the debate.",
+              "hint": "Failin başka türlü davranıp davranamayacağı tartışmanın asıl meselesidir.",
+              "answer": "could",
+              "acceptableAnswers": [
+                "might"
+              ]
+            },
+            {
+              "id": "ph2-20",
+              "type": "multiple_choice",
+              "prompt": "'must necessarily' ifadesi felsefi metinlerde neden eleştirilir?",
+              "options": [
+                "Tekrar (pleonasm) içerir; 'must' zaten zorunluluk bildirir.",
+                "Yanlış anlamlıdır.",
+                "Yalnızca şiirde kullanılır.",
+                "Çok zayıftır."
+              ],
+              "answer": "Tekrar (pleonasm) içerir; 'must' zaten zorunluluk bildirir."
             }
           ]
         },
@@ -2527,6 +4631,127 @@
                 "suggest",
                 "indicate"
               ]
+            },
+            {
+              "id": "ph3-11",
+              "type": "multiple_choice",
+              "prompt": "'non sequitur' nedir?",
+              "options": [
+                "Öncüllerden çıkmayan sonuç.",
+                "Mantıksal olarak doğru sonuç.",
+                "Yan bir argüman.",
+                "Tarihsel bir argüman."
+              ],
+              "answer": "Öncüllerden çıkmayan sonuç."
+            },
+            {
+              "id": "ph3-12",
+              "type": "fill_blank",
+              "prompt": "An ad hominem attack targets the ___ rather than the argument.",
+              "hint": "Ad hominem saldırı argümanı değil, konuşmacıyı hedef alır.",
+              "answer": "person",
+              "acceptableAnswers": [
+                "speaker",
+                "individual"
+              ]
+            },
+            {
+              "id": "ph3-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Akademik argüman çözümlemesi",
+              "prompt": "Bu argüman geçerli olsa da, öncüllerinden biri zayıf kaldığı için sağlam değildir.",
+              "answer": "Although the argument is valid, it is not sound because one of its premises is weak.",
+              "acceptableAnswers": [
+                "Even though the argument is valid, it is not sound, since one of its premises is weak.",
+                "While the argument is valid, it fails to be sound because one of its premises is weak."
+              ]
+            },
+            {
+              "id": "ph3-14",
+              "type": "multiple_choice",
+              "prompt": "'a straw-man fallacy' nedir?",
+              "options": [
+                "Karşı tarafın görüşünü çürütülmesi kolay bir karikatüre indirgemek.",
+                "Yalnızca kanıt sunmak.",
+                "Doğru ve eksiksiz aktarmak.",
+                "Soru sormak."
+              ],
+              "answer": "Karşı tarafın görüşünü çürütülmesi kolay bir karikatüre indirgemek."
+            },
+            {
+              "id": "ph3-15",
+              "type": "fill_blank",
+              "prompt": "The premises ___ not in fact entail the conclusion.",
+              "hint": "Öncüller aslında sonucu gerektirmiyor.",
+              "answer": "do",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "ph3-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "The argument trades on an equivocation between two senses of 'natural'.",
+              "options": [
+                "The argument trades on an equivocation between two senses of 'natural'.",
+                "The argument trades on an equivocations between two senses of 'natural'.",
+                "The argument trade on an equivocation between two senses of 'natural'.",
+                "The arguments trade on an equivocation between two senses of 'natural'."
+              ],
+              "answer": "The argument trades on an equivocation between two senses of 'natural'."
+            },
+            {
+              "id": "ph3-17",
+              "type": "tap_words_in_order",
+              "prompt": "Bu argüman cevaplamak istediği soruyu varsayıyor.",
+              "answer": "This argument presupposes the very question it claims to answer",
+              "bank": [
+                "This",
+                "argument",
+                "presupposes",
+                "the",
+                "very",
+                "question",
+                "it",
+                "claims",
+                "to",
+                "answer",
+                "and",
+                "answers",
+                "the"
+              ]
+            },
+            {
+              "id": "ph3-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Akademik felsefe — argüman eleştirisi",
+              "prompt": "Granting the premises for the sake of argument, the conclusion still does not follow.",
+              "answer": "Öncülleri tartışma adına kabul etsek bile, sonuç yine de çıkmıyor.",
+              "acceptableAnswers": [
+                "Tartışma uğruna öncülleri kabul etsek de, sonuç yine de çıkmıyor.",
+                "Öncülleri tartışma uğruna doğru saysak bile, sonuç yine de çıkarsanamıyor."
+              ]
+            },
+            {
+              "id": "ph3-19",
+              "type": "fill_blank",
+              "prompt": "The inference is invalid; the premises ___ true would still leave the conclusion open.",
+              "hint": "Çıkarım geçersizdir; öncüller doğru olsaydı bile sonuç açık kalırdı.",
+              "answer": "being",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "ph3-20",
+              "type": "multiple_choice",
+              "prompt": "Argümanın 'geçerli' (valid) olması ne demektir?",
+              "options": [
+                "Öncüller doğruysa, sonucun da doğru olmasının mantıksal olarak zorunlu olması.",
+                "Öncüllerin de doğru olması.",
+                "Sonucun ikna edici olması.",
+                "Argümanın uzun olması."
+              ],
+              "answer": "Öncüller doğruysa, sonucun da doğru olmasının mantıksal olarak zorunlu olması."
             }
           ]
         },
@@ -2689,6 +4914,117 @@
                 "Sadece kanun"
               ],
               "answer": "En çok mutluluk en çok kişiye"
+            },
+            {
+              "id": "ph4-12",
+              "type": "fill_blank",
+              "prompt": "Kant insisted that persons be treated as ___ in themselves, never merely as means.",
+              "hint": "Kant kişilerin kendinde amaç olarak görülmesinde ısrar eder.",
+              "answer": "ends",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "ph4-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Etik — felsefi ayrım",
+              "prompt": "Konsekvansiyalist bir gerekçeyle savunulabilen şey, deontolojik açıdan haksız kalabilir.",
+              "answer": "What may be defensible on consequentialist grounds may yet remain unjust on deontological terms.",
+              "acceptableAnswers": [
+                "Something defensible on consequentialist grounds can still be unjust in deontological terms.",
+                "What is defensible on consequentialist grounds may none the less be unjust on deontological grounds."
+              ]
+            },
+            {
+              "id": "ph4-14",
+              "type": "multiple_choice",
+              "prompt": "'agent-relative reasons' anlamı?",
+              "options": [
+                "Faile özgü, kendisinin tutmaya yatkın olduğu ahlaki nedenler.",
+                "Tüm faillerce paylaşılan tarafsız nedenler.",
+                "Ekonomik nedenler.",
+                "Tarihsel nedenler."
+              ],
+              "answer": "Faile özgü, kendisinin tutmaya yatkın olduğu ahlaki nedenler."
+            },
+            {
+              "id": "ph4-15",
+              "type": "fill_blank",
+              "prompt": "Virtue ethics asks what a person of practical wisdom ___ do in this situation.",
+              "hint": "Erdem etiği, pratik bilgeliğe sahip birinin bu durumda ne yapacağını sorar.",
+              "answer": "would",
+              "acceptableAnswers": [
+                "might"
+              ]
+            },
+            {
+              "id": "ph4-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "A purely consequentialist calculus risks reducing persons to mere variables in an equation.",
+              "options": [
+                "A purely consequentialist calculus risks reducing persons to mere variables in an equation.",
+                "A purely consequentialist calculus risk reducing persons to mere variables in an equation.",
+                "A purely consequentialist calculus risks reduce persons to mere variables in an equation.",
+                "A purely consequentialist calculus risks reducing persons to mere variables in an equations."
+              ],
+              "answer": "A purely consequentialist calculus risks reducing persons to mere variables in an equation."
+            },
+            {
+              "id": "ph4-17",
+              "type": "tap_words_in_order",
+              "prompt": "Tramvay problemi, sezgi ile ilke arasındaki gerilimi gözler önüne serer.",
+              "answer": "The trolley problem lays bare the tension between intuition and principle",
+              "bank": [
+                "The",
+                "trolley",
+                "problem",
+                "lays",
+                "bare",
+                "the",
+                "tension",
+                "between",
+                "intuition",
+                "and",
+                "principle",
+                "fact",
+                "the",
+                "and"
+              ]
+            },
+            {
+              "id": "ph4-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Akademik etik",
+              "prompt": "There are wrongs that no aggregate of goods can outweigh.",
+              "answer": "Hiçbir iyilik toplamının ağır basamayacağı yanlışlar vardır.",
+              "acceptableAnswers": [
+                "Toplamı ne olursa olsun hiçbir iyiliğin telafi edemeyeceği yanlışlar vardır.",
+                "Bazı yanlışlar, hiçbir iyilik birikiminin ağır basamayacağı türdendir."
+              ]
+            },
+            {
+              "id": "ph4-19",
+              "type": "fill_blank",
+              "prompt": "An act-utilitarian appraises each action by its expected ___",
+              "hint": "Eylem-faydacı her bir eylemi beklenen sonuçlarına göre değerlendirir.",
+              "answer": "consequences",
+              "acceptableAnswers": [
+                "outcomes"
+              ]
+            },
+            {
+              "id": "ph4-20",
+              "type": "multiple_choice",
+              "prompt": "'supererogation' nedir?",
+              "options": [
+                "Görevden öteye geçen ahlaki eylemler (ödülü olmayan kahramanlıklar).",
+                "Görevi yerine getirmek.",
+                "Yasaklı eylem.",
+                "Mantıksal hata."
+              ],
+              "answer": "Görevden öteye geçen ahlaki eylemler (ödülü olmayan kahramanlıklar)."
             }
           ]
         },
@@ -2848,6 +5184,119 @@
                 "Bilinçten kaçış"
               ],
               "answer": "Bilincin maddenin temel bir özelliği olduğu görüşü"
+            },
+            {
+              "id": "ph5-12",
+              "type": "fill_blank",
+              "prompt": "Functionalism identifies mental states with their causal ___",
+              "hint": "İşlevselcilik zihinsel durumları nedensel rolleriyle özdeşleştirir.",
+              "answer": "roles",
+              "acceptableAnswers": [
+                "functions"
+              ]
+            },
+            {
+              "id": "ph5-13",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Akademik felsefe — zihin felsefesi",
+              "prompt": "Bir nörolojik süreç bilinçli bir deneyime neden olabilir, ancak ne onunla aynıdır ne de onu açıklar.",
+              "answer": "A neural process may cause a conscious experience, but it is neither identical with it nor explanatory of it.",
+              "acceptableAnswers": [
+                "A neurological process can cause a conscious experience, yet it is neither identical with it nor an explanation of it.",
+                "A neural process may give rise to a conscious experience, but it is neither identical with that experience nor an explanation of it."
+              ]
+            },
+            {
+              "id": "ph5-14",
+              "type": "multiple_choice",
+              "prompt": "'the explanatory gap' (Levine) nedir?",
+              "options": [
+                "Fiziksel açıklamalar ile öznel deneyim arasındaki kapatılamayan boşluk.",
+                "Argümandaki mantıksal boşluk.",
+                "Yalnızca dilbilimsel bir kavram.",
+                "Sayısal bir hesap hatası."
+              ],
+              "answer": "Fiziksel açıklamalar ile öznel deneyim arasındaki kapatılamayan boşluk."
+            },
+            {
+              "id": "ph5-15",
+              "type": "fill_blank",
+              "prompt": "There is something it is ___ to undergo the experience, and that 'something' is what physicalism struggles to capture.",
+              "hint": "Deneyimi yaşamanın belirli bir hâli vardır; fizikalizmin yakalamakta zorlandığı şey budur.",
+              "answer": "like",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "ph5-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Chalmers distinguishes the easy problems from the hard problem of consciousness.",
+              "options": [
+                "Chalmers distinguishes the easy problems from the hard problem of consciousness.",
+                "Chalmers distinguish the easy problems from the hard problem of consciousness.",
+                "Chalmers distinguishes the easy problem from the hard problems of consciousness.",
+                "Chalmers distinguishes the easy problems from the hardly problem of consciousness."
+              ],
+              "answer": "Chalmers distinguishes the easy problems from the hard problem of consciousness."
+            },
+            {
+              "id": "ph5-17",
+              "type": "tap_words_in_order",
+              "prompt": "Bilincin niteliksel boyutu fiziğin sözlüğüne çevrilemez.",
+              "answer": "The qualitative dimension of consciousness resists translation into the vocabulary of physics",
+              "bank": [
+                "The",
+                "qualitative",
+                "dimension",
+                "of",
+                "consciousness",
+                "resists",
+                "translation",
+                "into",
+                "the",
+                "vocabulary",
+                "of",
+                "physics",
+                "the",
+                "and",
+                "yields"
+              ]
+            },
+            {
+              "id": "ph5-18",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Zihin felsefesi",
+              "prompt": "Even a complete physical description of the brain would not, on this view, suffice to explain the felt quality of experience.",
+              "answer": "Bu görüşe göre, beynin eksiksiz bir fiziksel betimi bile, deneyimin hissedilen niteliğini açıklamaya yetmez.",
+              "acceptableAnswers": [
+                "Bu görüşe göre beynin tam bir fiziksel tanımı bile, deneyimin hissedilen niteliğini açıklamak için yeterli olmazdı.",
+                "Bu bakışla, beynin eksiksiz bir fiziksel betimlemesi bile, deneyimin hissedilen niteliğini açıklamaya yetmezdi."
+              ]
+            },
+            {
+              "id": "ph5-19",
+              "type": "fill_blank",
+              "prompt": "Inverted qualia thought experiments cast doubt on simple ___ between brain states and experience.",
+              "hint": "Tersine çevrilmiş qualia düşünce deneyleri, beyin durumları ile deneyim arasındaki basit özdeşliklere şüphe düşürür.",
+              "answer": "identifications",
+              "acceptableAnswers": [
+                "correlations",
+                "mappings"
+              ]
+            },
+            {
+              "id": "ph5-20",
+              "type": "multiple_choice",
+              "prompt": "'philosophical zombie' düşünce deneyinin amacı nedir?",
+              "options": [
+                "Davranışça insanla aynı ancak bilinci olmayan bir varlığın kavramsal mümkünlüğünü sorgulayarak fizikalizme baskı uygulamak.",
+                "Korku filmleri için bir kavram üretmek.",
+                "Tarihsel bir karakter analizi yapmak.",
+                "Tıbbi bir vaka tartışması."
+              ],
+              "answer": "Davranışça insanla aynı ancak bilinci olmayan bir varlığın kavramsal mümkünlüğünü sorgulayarak fizikalizme baskı uygulamak."
             }
           ]
         },
@@ -2957,6 +5406,246 @@
                   "speaker": "prof",
                   "text": "Excellent. We'll return to whether 'merely uncomfortable' will do, next week."
                 }
+              ]
+            },
+            {
+              "id": "ph6-2",
+              "type": "multiple_choice",
+              "prompt": "'nomological possibility' nedir?",
+              "options": [
+                "Doğa yasalarıyla tutarlı olabilirlik.",
+                "Hukuki olabilirlik.",
+                "Sözcüksel olabilirlik.",
+                "Estetik olabilirlik."
+              ],
+              "answer": "Doğa yasalarıyla tutarlı olabilirlik."
+            },
+            {
+              "id": "ph6-3",
+              "type": "fill_blank",
+              "prompt": "Compatibilists insist that free will is compatible with ___",
+              "hint": "Bağdaşırcılar özgür iradenin determinizmle bağdaşabileceğini savunur.",
+              "answer": "determinism",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "ph6-4",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Felsefe semineri — bağdaşırcılık",
+              "prompt": "Yasalar artı durum okumasını kabul ederken yine de 'yapabilirdi' ile ne kastettiğimizi onun tüketmediğini öne sürebilir.",
+              "answer": "One could grant the laws-plus-state reading while denying that this exhausts what we mean by 'could have'.",
+              "acceptableAnswers": [
+                "One might accept the laws-plus-state reading and still deny that it exhausts what we mean by 'could'.",
+                "One can concede the laws-plus-state reading while insisting that it does not exhaust what 'could' means here."
+              ]
+            },
+            {
+              "id": "ph6-5",
+              "type": "multiple_choice",
+              "prompt": "'epistemic possibility' anlamı?",
+              "options": [
+                "Bildiklerimizle tutarlı olabilirlik.",
+                "Bilinemez olan.",
+                "Yalnızca duyusal yanılgı.",
+                "Mantıksal zorunluluk."
+              ],
+              "answer": "Bildiklerimizle tutarlı olabilirlik."
+            },
+            {
+              "id": "ph6-6",
+              "type": "fill_blank",
+              "prompt": "Capacities, on this view, are not ___ to the modal profile of physical states.",
+              "hint": "Bu görüşe göre yetiler fiziksel durumların modal profiline indirgenemez.",
+              "answer": "reducible",
+              "acceptableAnswers": []
+            },
+            {
+              "id": "ph6-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I'll concede that's the genuine difficulty, though I'd resist calling the regress vicious.",
+              "options": [
+                "I'll concede that's the genuine difficulty, though I'd resist calling the regress vicious.",
+                "I concede that's the genuine difficulty, though I'd resists calling the regress vicious.",
+                "I'll concede that's the genuine difficulties, though I'd resist calling the regresses vicious.",
+                "I'll concede that's the genuine difficulty, though I resist call the regress viciously."
+              ],
+              "answer": "I'll concede that's the genuine difficulty, though I'd resist calling the regress vicious."
+            },
+            {
+              "id": "ph6-8",
+              "type": "tap_words_in_order",
+              "prompt": "Yetinin açıklaması modaliteyi arka kapıdan geri sokmamalıdır.",
+              "answer": "An account of capacity should not smuggle modality back in through the side door",
+              "bank": [
+                "An",
+                "account",
+                "of",
+                "capacity",
+                "should",
+                "not",
+                "smuggle",
+                "modality",
+                "back",
+                "in",
+                "through",
+                "the",
+                "side",
+                "door",
+                "front",
+                "and"
+              ]
+            },
+            {
+              "id": "ph6-9",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Felsefi karşı pozisyon",
+              "prompt": "I'd want to distinguish that from a weaker reading on which 'could' tracks merely epistemic possibility.",
+              "answer": "Bunu, 'yapabilirdi' ifadesinin yalnızca epistemik olabilirliği izlediği daha zayıf bir okumadan ayırmak isterdim.",
+              "acceptableAnswers": [
+                "Bunu, 'yapabilirdi'nin yalnızca epistemik olabilirliği izlediği daha zayıf bir okumadan ayırmak isterim.",
+                "Bunu, 'yapabilirdi'nin sırf epistemik olabilirliği izlediği daha güçsüz bir okumadan ayırt etmek isterdim."
+              ]
+            },
+            {
+              "id": "ph6-10",
+              "type": "multiple_choice",
+              "prompt": "'a vicious regress' anlamı?",
+              "options": [
+                "Açıklayıcı gücü çökerten, sonsuza giden geriye dönüş.",
+                "Açıklayıcı bir geriye dönüş, kabul edilir.",
+                "Yalnızca matematiksel bir araç.",
+                "Tarihsel bir argüman."
+              ],
+              "answer": "Açıklayıcı gücü çökerten, sonsuza giden geriye dönüş."
+            },
+            {
+              "id": "ph6-11",
+              "type": "fill_blank",
+              "prompt": "The agent could have done ___ — that is the modal claim at issue.",
+              "hint": "Fail başka türlü davranabilirdi — tartışmadaki modal iddia budur.",
+              "answer": "otherwise",
+              "acceptableAnswers": [
+                "differently"
+              ]
+            },
+            {
+              "id": "ph6-12",
+              "type": "multiple_choice",
+              "prompt": "'press on it' (felsefi tartışmada) ne anlama gelir?",
+              "options": [
+                "Bu noktayı sıkıştır, daha derin sorgula.",
+                "Konuyu bırak.",
+                "Sus.",
+                "Soruyu değiştir."
+              ],
+              "answer": "Bu noktayı sıkıştır, daha derin sorgula."
+            },
+            {
+              "id": "ph6-13",
+              "type": "fill_blank",
+              "prompt": "Capacities, exercised, are precisely what 'free' agency seems to ___",
+              "hint": "Kullanılan yetiler tam da özgür failliğin gerektirdiği şey gibidir.",
+              "answer": "require",
+              "acceptableAnswers": [
+                "demand",
+                "involve"
+              ]
+            },
+            {
+              "id": "ph6-14",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Now you owe us an account of capacity that does not smuggle modality back in.",
+              "options": [
+                "Now you owe us an account of capacity that does not smuggle modality back in.",
+                "Now you owes us an account of capacity that does not smuggle modality back in.",
+                "Now you owe us an account of capacity that do not smuggle modality back in.",
+                "Now you owe us an accounts of capacity that does not smuggles modality back in."
+              ],
+              "answer": "Now you owe us an account of capacity that does not smuggle modality back in."
+            },
+            {
+              "id": "ph6-15",
+              "type": "tap_words_in_order",
+              "prompt": "Tartışmaya başlamadan önce 'yapabilirdi' nin modal gücünü netleştirelim.",
+              "answer": "Before we begin let us clarify the modal force of could have",
+              "bank": [
+                "Before",
+                "we",
+                "begin",
+                "let",
+                "us",
+                "clarify",
+                "the",
+                "modal",
+                "force",
+                "of",
+                "could",
+                "have",
+                "and",
+                "after",
+                "the"
+              ]
+            },
+            {
+              "id": "ph6-16",
+              "type": "translate",
+              "direction": "tr_to_en",
+              "context": "Seminerde profesörün sözünü yumuşatma",
+              "prompt": "Mümkün, evet — gerçi karşı hamleyi duymadan henüz bağlanmak istemem.",
+              "answer": "Possibly, yes — though I'd want to hear the counter-move before I commit.",
+              "acceptableAnswers": [
+                "Possibly, yes — but I would want to hear the counter-move before committing.",
+                "Quite possibly, yes — though I'd rather hear the counter-move before I commit."
+              ]
+            },
+            {
+              "id": "ph6-17",
+              "type": "multiple_choice",
+              "prompt": "'on this reading' ifadesinin işlevi?",
+              "options": [
+                "Bir kavramın belirli bir yorumunu işaretlemek; yorum-bağımlı bir argüman kurmak.",
+                "Konuşmacının kitap okuduğunu söylemek.",
+                "Konuşmayı kapatmak.",
+                "Hiçbir işlevi yoktur."
+              ],
+              "answer": "Bir kavramın belirli bir yorumunu işaretlemek; yorum-bağımlı bir argüman kurmak."
+            },
+            {
+              "id": "ph6-18",
+              "type": "fill_blank",
+              "prompt": "We'll return to whether 'merely uncomfortable' will ___, next week.",
+              "hint": "'Sadece rahatsız edici'nin yeterli olup olmayacağına haftaya döneceğiz.",
+              "answer": "do",
+              "acceptableAnswers": [
+                "suffice"
+              ]
+            },
+            {
+              "id": "ph6-19",
+              "type": "multiple_choice",
+              "prompt": "'I'll concede' ifadesi seminerde nasıl bir hamle yapar?",
+              "options": [
+                "Bir noktayı kabul ederek diyalogu güçlendirme — zayıflık değil, sofistike bir taktik.",
+                "Yenilgiyi ilan etme.",
+                "Konuyu değiştirme.",
+                "Susma."
+              ],
+              "answer": "Bir noktayı kabul ederek diyalogu güçlendirme — zayıflık değil, sofistike bir taktik."
+            },
+            {
+              "id": "ph6-20",
+              "type": "translate",
+              "direction": "en_to_tr",
+              "context": "Felsefi argüman geliştirme",
+              "prompt": "Capacities aren't reducible to the modal profile of physical states.",
+              "answer": "Yetiler, fiziksel durumların modal profiline indirgenemez.",
+              "acceptableAnswers": [
+                "Yetiler, fiziksel durumların modal profiline indirgenebilir değildir.",
+                "Kapasiteler, fiziksel durumların modal profilinin bir indirgenmesi olarak ele alınamaz."
               ]
             }
           ]

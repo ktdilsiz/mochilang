@@ -279,6 +279,159 @@
                 "am not fully"
               ],
               "explanation": "'Not entirely convinced' yumuşak bir karşı çıkma kalıbıdır."
+            },
+            {
+              "id": "op1-11",
+              "type": "multiple_choice",
+              "prompt": "Hangi kalıp en RESMİ görüş açar?",
+              "options": [
+                "I reckon they're wrong.",
+                "It would appear that the data contradicts the claim.",
+                "I guess maybe it's bad.",
+                "Yeah, I dunno about that."
+              ],
+              "answer": "It would appear that the data contradicts the claim.",
+              "explanation": "'It would appear that…' akademik / resmi gözlem kalıbıdır; diğerleri gündelik konuşma."
+            },
+            {
+              "id": "op1-12",
+              "type": "fill_blank",
+              "prompt": "Personally ___, I'd rather avoid that approach.",
+              "hint": "Şahsen, o yaklaşımdan uzak durmayı tercih ederim.",
+              "answer": "speaking",
+              "acceptableAnswers": [
+                "Speaking"
+              ],
+              "explanation": "'Personally speaking' kişisel görüş açıcı kalıptır."
+            },
+            {
+              "id": "op1-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "İş toplantısında görüş bildirme",
+              "prompt": "İngilizceye çevir: 'Benim açımdan, bu strateji uzun vadede sürdürülemez.'",
+              "options": [
+                "From my perspective, this strategy is unsustainable in the long run.",
+                "By my side, this strategy not sustaining longly.",
+                "In my view this strategy long term won't continue.",
+                "My perspective this approach not lasting too long."
+              ],
+              "answer": "From my perspective, this strategy is unsustainable in the long run.",
+              "acceptableAnswers": [
+                "From my perspective, this strategy is unsustainable over the long run.",
+                "From my perspective, this strategy is not sustainable in the long run."
+              ],
+              "explanation": "'From my perspective' = benim açımdan; 'unsustainable in the long run' = uzun vadede sürdürülemez."
+            },
+            {
+              "id": "op1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Bana sorarsan onların kararı aceleci alındı.",
+              "answer": "If you ask me their decision was made too hastily",
+              "bank": [
+                "If",
+                "you",
+                "ask",
+                "me",
+                "their",
+                "decision",
+                "was",
+                "made",
+                "too",
+                "hastily",
+                "they",
+                "very"
+              ],
+              "explanation": "'If you ask me' samimi görüş açıcı; pasif 'was made' kararın alınma tarzını öne çıkarır."
+            },
+            {
+              "id": "op1-15",
+              "type": "fill_blank",
+              "prompt": "As ___ I'm concerned, the deadline is unrealistic.",
+              "hint": "Bana kalırsa, teslim tarihi gerçekçi değil.",
+              "answer": "far as",
+              "acceptableAnswers": [
+                "Far as"
+              ],
+              "explanation": "'As far as I'm concerned' = bana kalırsa."
+            },
+            {
+              "id": "op1-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "From where I stand, the figures speak for themselves.",
+              "options": [
+                "From where I stand, the figures speak for themselves.",
+                "From where I stand the figure speaks for himself.",
+                "Where I stand from, the figures speak themselves.",
+                "From where I stand, the fingers speak for themselves."
+              ],
+              "answer": "From where I stand, the figures speak for themselves.",
+              "explanation": "'From where I stand' = benim durduğum yerden / benim açımdan."
+            },
+            {
+              "id": "op1-17",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle TARAFSIZ bir görüş bildirir?",
+              "options": [
+                "Frankly, that's nonsense!",
+                "It could be argued that both sides have valid points.",
+                "Obviously you're missing the point.",
+                "There's no way that's true."
+              ],
+              "answer": "It could be argued that both sides have valid points.",
+              "explanation": "'It could be argued that…' nesnel ve dengeli görüş kalıbı; diğerleri çok keskindir."
+            },
+            {
+              "id": "op1-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Bir tartışmada görüş açma",
+              "prompt": "Türkçeye çevir: 'I'd venture to say the policy is flawed.'",
+              "options": [
+                "Tahminimce politika eksiksiz.",
+                "Diyebilirim ki politika hatalı.",
+                "Anlaşılan, politika bitmiş.",
+                "Maalesef politika sona erdi."
+              ],
+              "answer": "Diyebilirim ki politika hatalı.",
+              "acceptableAnswers": [
+                "Şunu söyleme cüretinde bulunurum: politika hatalı.",
+                "Söyleyebilirim ki politika kusurlu."
+              ],
+              "explanation": "'I'd venture to say' = çekinerek söyleyebilirim ki; B2 hedge."
+            },
+            {
+              "id": "op1-19",
+              "type": "fill_blank",
+              "prompt": "If I'm ___ honest, I have doubts about the budget.",
+              "hint": "Dürüst olmam gerekirse, bütçe konusunda şüphelerim var.",
+              "answer": "being",
+              "acceptableAnswers": [
+                "Being"
+              ],
+              "explanation": "'If I'm being honest' = dürüst olmam gerekirse; samimi görüş açıcı."
+            },
+            {
+              "id": "op1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Şahsen bu yaklaşımın gözden geçirilmesi gerektiğine inanıyorum.",
+              "answer": "Personally I believe this approach needs to be reconsidered",
+              "bank": [
+                "Personally",
+                "I",
+                "believe",
+                "this",
+                "approach",
+                "needs",
+                "to",
+                "be",
+                "reconsidered",
+                "very",
+                "from",
+                "myself"
+              ],
+              "explanation": "'Personally I believe' kişisel görüş; 'needs to be reconsidered' pasif zorunluluk."
             }
           ]
         },
@@ -441,6 +594,158 @@
                 "valid"
               ],
               "explanation": "'fair point' = 'haklı bir nokta'."
+            },
+            {
+              "id": "op2-11",
+              "type": "multiple_choice",
+              "prompt": "Hangisi EN YUMUŞAK karşı çıkmadır?",
+              "options": [
+                "You're completely wrong.",
+                "I'm not entirely sure that's the case.",
+                "That's nonsense, honestly.",
+                "Absolutely not — no way."
+              ],
+              "answer": "I'm not entirely sure that's the case.",
+              "explanation": "'Not entirely sure' = tam emin değilim; hedge ile karşı çıkma."
+            },
+            {
+              "id": "op2-12",
+              "type": "fill_blank",
+              "prompt": "I'd ___ argue that the figures are a little misleading.",
+              "hint": "Rakamların biraz yanıltıcı olduğunu söylerdim.",
+              "answer": "tentatively",
+              "acceptableAnswers": [
+                "Tentatively"
+              ],
+              "explanation": "'Tentatively argue' = çekinceli olarak ileri sürmek; klasik hedge."
+            },
+            {
+              "id": "op2-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Toplantıda nazikçe karşı çıkma",
+              "prompt": "İngilizceye çevir: 'Söyledikleriniz ilginç ama tam katılamıyorum.'",
+              "options": [
+                "What you say interesting but I cannot quite be agree.",
+                "What you said is interesting, but I don't quite agree.",
+                "Your speak is interesting but I am no agreeable.",
+                "Speaking interesting, but agree fully I'm not."
+              ],
+              "answer": "What you said is interesting, but I don't quite agree.",
+              "acceptableAnswers": [
+                "What you said is interesting, but I'm not entirely sure I agree."
+              ],
+              "explanation": "'don't quite agree' yumuşak karşı çıkma; 'fully'/'entirely' yerine 'quite' kullanılır."
+            },
+            {
+              "id": "op2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Bir bakıma haklı sayılırsın ama tam olarak değil.",
+              "answer": "In a way you've got a point but not entirely",
+              "bank": [
+                "In",
+                "a",
+                "way",
+                "you've",
+                "got",
+                "a",
+                "point",
+                "but",
+                "not",
+                "entirely",
+                "very",
+                "fully"
+              ],
+              "explanation": "'In a way' yumuşatma; 'not entirely' kısmen kabul + kısmen karşı çıkma."
+            },
+            {
+              "id": "op2-15",
+              "type": "fill_blank",
+              "prompt": "I ___ inclined to disagree, though I respect your view.",
+              "hint": "Görüşünüze saygı duysam da katılmamaya meyilliyim.",
+              "answer": "am",
+              "acceptableAnswers": [
+                "'m"
+              ],
+              "explanation": "'I'm inclined to disagree' = katılmamaya meyilliyim; kibar karşı çıkma."
+            },
+            {
+              "id": "op2-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I take your point, but I have some reservations.",
+              "options": [
+                "I take your point, but I have some reservations.",
+                "I took your point, but I have some reservation.",
+                "Take your point I, but I have some preservation.",
+                "I make your point, but I have some reservations."
+              ],
+              "answer": "I take your point, but I have some reservations.",
+              "explanation": "'Take your point' kabul; 'reservations' = çekinceler."
+            },
+            {
+              "id": "op2-17",
+              "type": "multiple_choice",
+              "prompt": "Bir görüşü çok yumuşatan zarf hangisidir?",
+              "options": [
+                "definitely",
+                "arguably",
+                "absolutely",
+                "undeniably"
+              ],
+              "answer": "arguably",
+              "explanation": "'Arguably' = tartışmaya açık biçimde; en güçlü hedge."
+            },
+            {
+              "id": "op2-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Yumuşak karşı çıkma",
+              "prompt": "Türkçeye çevir: 'I see where you're coming from, but I'm not convinced.'",
+              "options": [
+                "Sizi nereden geldiğinizi gördüm.",
+                "Nereden geldiğinizi anlıyorum ama ikna olmadım.",
+                "Geldiğiniz yerden bakıyorum, kesin haklısınız.",
+                "Görüş açınızı kabul ettim."
+              ],
+              "answer": "Nereden geldiğinizi anlıyorum ama ikna olmadım.",
+              "acceptableAnswers": [
+                "Bakış açınızı anlıyorum ama ikna olmadım."
+              ],
+              "explanation": "'See where you're coming from' = bakış açınızı anlıyorum (idiom)."
+            },
+            {
+              "id": "op2-19",
+              "type": "fill_blank",
+              "prompt": "It might ___ be worth reconsidering the timeline.",
+              "hint": "Belki zaman çizelgesini gözden geçirmeye değer olabilir.",
+              "answer": "just",
+              "acceptableAnswers": [
+                "Just",
+                "well"
+              ],
+              "explanation": "'might just be worth' = -e değer olabilir (yumuşatılmış öneri)."
+            },
+            {
+              "id": "op2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Tam olarak öyle olduğunu söyleyemem ama yakın.",
+              "answer": "I wouldn't say it's exactly like that but it's close",
+              "bank": [
+                "I",
+                "wouldn't",
+                "say",
+                "it's",
+                "exactly",
+                "like",
+                "that",
+                "but",
+                "it's",
+                "close",
+                "very",
+                "near"
+              ],
+              "explanation": "'I wouldn't say' yumuşak karşı çıkma; B2 hedge."
             }
           ]
         },
@@ -598,6 +903,154 @@
                 "though"
               ],
               "explanation": "'I take your point' kibar bir kabul, ardından 'but' ile karşı çıkma."
+            },
+            {
+              "id": "op3-11",
+              "type": "multiple_choice",
+              "prompt": "Hangi kalıp argüman BAŞLATIR?",
+              "options": [
+                "All things considered…",
+                "First and foremost,",
+                "On the contrary,",
+                "To sum up,"
+              ],
+              "answer": "First and foremost,",
+              "explanation": "'First and foremost' tartışmaya açıcı; B2 resmi kalıp."
+            },
+            {
+              "id": "op3-12",
+              "type": "fill_blank",
+              "prompt": "On the ___ hand, working from home can hurt collaboration.",
+              "hint": "Öte yandan, evden çalışmak iş birliğine zarar verebilir.",
+              "answer": "other",
+              "acceptableAnswers": [
+                "Other"
+              ],
+              "explanation": "'On the other hand' karşı argüman açıcı."
+            },
+            {
+              "id": "op3-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Bir tartışmada karşıt görüş sunma",
+              "prompt": "İngilizceye çevir: 'Bir yandan zaman kazandırır; öte yandan kaliteyi düşürebilir.'",
+              "options": [
+                "On one hand saves time on other reduces quality.",
+                "On the one hand, it saves time; on the other hand, it can reduce quality.",
+                "One side time saves, another side quality drops.",
+                "Saves time it does, but quality possibly low."
+              ],
+              "answer": "On the one hand, it saves time; on the other hand, it can reduce quality.",
+              "acceptableAnswers": [
+                "On the one hand it saves time; on the other, it can lower quality."
+              ],
+              "explanation": "İkili kalıp: 'on the one hand … on the other hand'."
+            },
+            {
+              "id": "op3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Her şey göz önüne alındığında, faydalar maliyetlerden ağır basıyor.",
+              "answer": "All things considered the benefits outweigh the costs",
+              "bank": [
+                "All",
+                "things",
+                "considered",
+                "the",
+                "benefits",
+                "outweigh",
+                "the",
+                "costs",
+                "very",
+                "consider",
+                "weigh"
+              ],
+              "explanation": "'All things considered' = her şey hesaba katıldığında; B2 özetleme."
+            },
+            {
+              "id": "op3-15",
+              "type": "fill_blank",
+              "prompt": "Furthermore, the data ___ this conclusion.",
+              "hint": "Üstelik, veriler bu sonucu destekliyor.",
+              "answer": "supports",
+              "acceptableAnswers": [
+                "support"
+              ],
+              "explanation": "'Furthermore' = üstelik; tartışmayı güçlendirir."
+            },
+            {
+              "id": "op3-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Granted, the plan has drawbacks, but the upside is significant.",
+              "options": [
+                "Granted, the plan has drawbacks, but the upside is significant.",
+                "Granted the plan as drawbacks but the upside in significant.",
+                "Grant it, the plan has drawback, but the upside it's significant.",
+                "Granted, the plant has drawbacks, but the upside is significant."
+              ],
+              "answer": "Granted, the plan has drawbacks, but the upside is significant.",
+              "explanation": "'Granted, … but' kısmi kabul + karşı çıkma kalıbı."
+            },
+            {
+              "id": "op3-17",
+              "type": "multiple_choice",
+              "prompt": "Tartışmayı KAPATAN ifade hangisidir?",
+              "options": [
+                "Moreover,",
+                "In addition,",
+                "To conclude,",
+                "Besides,"
+              ],
+              "answer": "To conclude,",
+              "explanation": "'To conclude' özetleme; diğerleri yeni argüman ekler."
+            },
+            {
+              "id": "op3-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Tartışma kapanışı",
+              "prompt": "Türkçeye çevir: 'In light of these findings, we should rethink our strategy.'",
+              "options": [
+                "Bu yorumlar yüzünden, kararı verdik.",
+                "Bu bulgular ışığında, stratejimizi yeniden düşünmeliyiz.",
+                "Bu ışıkta, planımızı sona erdireceğiz.",
+                "Bulgulara rağmen stratejiyi koruyalım."
+              ],
+              "answer": "Bu bulgular ışığında, stratejimizi yeniden düşünmeliyiz.",
+              "acceptableAnswers": [
+                "Bu bulguların ışığında, stratejimizi gözden geçirmeliyiz."
+              ],
+              "explanation": "'In light of' = -in ışığında; B2 resmi kalıp."
+            },
+            {
+              "id": "op3-19",
+              "type": "fill_blank",
+              "prompt": "By ___ of contrast, the previous policy delivered better outcomes.",
+              "hint": "Aksine, bir önceki politika daha iyi sonuçlar verdi.",
+              "answer": "way",
+              "acceptableAnswers": [
+                "Way"
+              ],
+              "explanation": "'By way of contrast' = aksine; tartışmada karşıtlık kurma."
+            },
+            {
+              "id": "op3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Bunun yanı sıra, ahlaki kaygılar göz ardı edilemez.",
+              "answer": "Furthermore the ethical concerns cannot be ignored",
+              "bank": [
+                "Furthermore",
+                "the",
+                "ethical",
+                "concerns",
+                "cannot",
+                "be",
+                "ignored",
+                "very",
+                "neither",
+                "moreover"
+              ],
+              "explanation": "'Furthermore' + pasif 'cannot be ignored' = ahlaki kaygılar göz ardı edilemez."
             }
           ]
         },
@@ -752,6 +1205,160 @@
               "answer": "point",
               "acceptableAnswers": [],
               "explanation": "'Take someone's point' = 'birinin söylediğini anlamak'."
+            },
+            {
+              "id": "op4-11",
+              "type": "multiple_choice",
+              "prompt": "Hangisi GÖRÜŞ kalıbıdır, gerçek değil?",
+              "options": [
+                "Water boils at 100°C.",
+                "I'd argue that remote work is here to stay.",
+                "The Earth orbits the Sun.",
+                "London is the capital of the UK."
+              ],
+              "answer": "I'd argue that remote work is here to stay.",
+              "explanation": "'I'd argue' kişisel görüş; diğerleri olgu."
+            },
+            {
+              "id": "op4-12",
+              "type": "fill_blank",
+              "prompt": "I'm ___ of two minds about this proposal.",
+              "hint": "Bu teklif konusunda kararsızım.",
+              "answer": "kind",
+              "acceptableAnswers": [
+                "sort",
+                "Kind",
+                "Sort"
+              ],
+              "explanation": "'Kind/sort of two minds' = ikircikli; B2 hedge."
+            },
+            {
+              "id": "op4-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Görüş ifade etme tekrarı",
+              "prompt": "İngilizceye çevir: 'Açıkçası, bu konuda kesin bir yargıya varmak için erken.'",
+              "options": [
+                "Honestly, it's too early to reach a definitive conclusion on this.",
+                "Frankly is too early reach definitive judgement.",
+                "Open spoken, too soon for the certain idea.",
+                "Honest say, it early on this topic to judge."
+              ],
+              "answer": "Honestly, it's too early to reach a definitive conclusion on this.",
+              "acceptableAnswers": [
+                "Frankly, it's too early to reach a firm conclusion on this."
+              ],
+              "explanation": "'Honestly' samimi açıcı; 'reach a definitive conclusion' = kesin yargıya varmak."
+            },
+            {
+              "id": "op4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Doğrusunu söylemek gerekirse hala karar veremedim.",
+              "answer": "To be honest I still haven't made up my mind",
+              "bank": [
+                "To",
+                "be",
+                "honest",
+                "I",
+                "still",
+                "haven't",
+                "made",
+                "up",
+                "my",
+                "mind",
+                "very",
+                "decide"
+              ],
+              "explanation": "'To be honest' samimi açıcı; 'haven't made up my mind' = karar veremedim."
+            },
+            {
+              "id": "op4-15",
+              "type": "fill_blank",
+              "prompt": "I'm ___ the fence on this issue.",
+              "hint": "Bu konuda kararsızım.",
+              "answer": "on",
+              "acceptableAnswers": [
+                "On"
+              ],
+              "explanation": "'On the fence' = kararsız; B2 idiomatic."
+            },
+            {
+              "id": "op4-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I tend to side with the minority view on this one.",
+              "options": [
+                "I tend to side with the minority view on this one.",
+                "I tend to side with minority view on this won.",
+                "I attend to side with the majority view on this one.",
+                "I tend aside with the minority view on this one."
+              ],
+              "answer": "I tend to side with the minority view on this one.",
+              "explanation": "'Tend to side with' = -in tarafını tutmaya meyilliyim."
+            },
+            {
+              "id": "op4-17",
+              "type": "multiple_choice",
+              "prompt": "Hangisi GÖRÜŞ ŞİDDETİNİ azaltır?",
+              "options": [
+                "I'm absolutely certain that…",
+                "I'd say, more or less, that…",
+                "It is unquestionable that…",
+                "There can be no doubt that…"
+              ],
+              "answer": "I'd say, more or less, that…",
+              "explanation": "'More or less' = aşağı yukarı; klasik B2 hedge."
+            },
+            {
+              "id": "op4-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Yumuşatma + görüş",
+              "prompt": "Türkçeye çevir: 'I'm leaning towards the second option, to be fair.'",
+              "options": [
+                "Açıkçası ikinci seçeneğe daha yakınım.",
+                "Bana kalırsa birinci seçenek daha iyi.",
+                "Eğilerek ikinci seçeneği seçtim.",
+                "Adil olmak gerekirse ikinci seçeneği reddederim."
+              ],
+              "answer": "Açıkçası ikinci seçeneğe daha yakınım.",
+              "acceptableAnswers": [
+                "Doğrusunu söylemek gerekirse ikinci seçeneğe meyilliyim."
+              ],
+              "explanation": "'Leaning towards' = -e meyilliyim; 'to be fair' = doğrusunu söylemek gerekirse."
+            },
+            {
+              "id": "op4-19",
+              "type": "fill_blank",
+              "prompt": "Generally ___, I'd say the policy works.",
+              "hint": "Genel olarak konuşursam, politika işliyor diyebilirim.",
+              "answer": "speaking",
+              "acceptableAnswers": [
+                "Speaking"
+              ],
+              "explanation": "'Generally speaking' = genel olarak konuşursak; hedge + görüş."
+            },
+            {
+              "id": "op4-20",
+              "type": "tap_words_in_order",
+              "prompt": "Söylediklerinde bir doğruluk payı olduğunu kabul ediyorum.",
+              "answer": "I admit there's a grain of truth in what you say",
+              "bank": [
+                "I",
+                "admit",
+                "there's",
+                "a",
+                "grain",
+                "of",
+                "truth",
+                "in",
+                "what",
+                "you",
+                "say",
+                "very",
+                "lot"
+              ],
+              "explanation": "'A grain of truth' = doğruluk payı; B2 idiomatic."
             }
           ]
         },
@@ -942,6 +1549,127 @@
                 "the",
                 "ground"
               ]
+            },
+            {
+              "id": "op5-13",
+              "type": "multiple_choice",
+              "prompt": "Hangi kalıp görüşü TEMELLENDİRİR?",
+              "options": [
+                "By the way,",
+                "The reason being that…",
+                "On second thought,",
+                "Speaking of which,"
+              ],
+              "answer": "The reason being that…",
+              "explanation": "'The reason being that…' = bunun nedeni şudur ki; B2 resmi gerekçelendirme."
+            },
+            {
+              "id": "op5-14",
+              "type": "fill_blank",
+              "prompt": "I'd justify this view on the ___ that recent research backs it up.",
+              "hint": "Bu görüşü, son araştırmaların desteklediği gerekçesiyle savunurum.",
+              "answer": "grounds",
+              "acceptableAnswers": [
+                "Grounds",
+                "basis"
+              ],
+              "explanation": "'On the grounds that…' = -e dayanarak; B2 gerekçelendirme."
+            },
+            {
+              "id": "op5-15",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Görüşü kanıta dayandırma",
+              "prompt": "İngilizceye çevir: 'Bu yaklaşımı destekliyorum çünkü çoklu çalışmalar etkili olduğunu gösteriyor.'",
+              "options": [
+                "I support this approach because multiple studies show it's effective.",
+                "Support is this approach for multiple study showing effective.",
+                "I am supporter of approach because many study show effect.",
+                "Approach support I, multiple studies effective showed."
+              ],
+              "answer": "I support this approach because multiple studies show it's effective.",
+              "acceptableAnswers": [
+                "I support this approach because multiple studies have shown it works.",
+                "I back this approach because numerous studies show it is effective."
+              ],
+              "explanation": "Gerekçelendirme: çünkü + çoklu kanıt göstermek."
+            },
+            {
+              "id": "op5-16",
+              "type": "tap_words_in_order",
+              "prompt": "Bu görüşü destekleyen güçlü kanıtlar var.",
+              "answer": "There is strong evidence to support this view",
+              "bank": [
+                "There",
+                "is",
+                "strong",
+                "evidence",
+                "to",
+                "support",
+                "this",
+                "view",
+                "very",
+                "much",
+                "many"
+              ],
+              "explanation": "'There is strong evidence to support…' = destekleyen güçlü kanıt vardır."
+            },
+            {
+              "id": "op5-17",
+              "type": "fill_blank",
+              "prompt": "This is ___ out by recent polling data.",
+              "hint": "Bu, son anket verileriyle doğrulanıyor.",
+              "answer": "borne",
+              "acceptableAnswers": [
+                "Borne",
+                "born"
+              ],
+              "explanation": "'Borne out by' = -le doğrulanmış; B2 resmi pasif."
+            },
+            {
+              "id": "op5-18",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "My view stems from years of practical experience in the field.",
+              "options": [
+                "My view stems from years of practical experience in the field.",
+                "My view steams from years of practical experience in the field.",
+                "My view stems form years of practice experience in the field.",
+                "My view stems from years of physical experience in the field."
+              ],
+              "answer": "My view stems from years of practical experience in the field.",
+              "explanation": "'Stems from' = -den kaynaklanır; görüşü temellendirme."
+            },
+            {
+              "id": "op5-19",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Veriye dayalı gerekçelendirme",
+              "prompt": "Türkçeye çevir: 'The figures back up my argument.'",
+              "options": [
+                "Rakamlar argümanımı destekliyor.",
+                "Rakamlar argümanımı reddediyor.",
+                "Rakamlar arkadan saldırıyor.",
+                "Rakamlar argümanım için yetersiz."
+              ],
+              "answer": "Rakamlar argümanımı destekliyor.",
+              "acceptableAnswers": [
+                "Veriler iddiamı destekliyor."
+              ],
+              "explanation": "'Back up' phrasal = desteklemek (kanıt anlamında)."
+            },
+            {
+              "id": "op5-20",
+              "type": "multiple_choice",
+              "prompt": "Hangisi EN ZAYIF gerekçelendirmedir?",
+              "options": [
+                "Studies have consistently shown that…",
+                "I just feel like it's true.",
+                "Empirical evidence suggests that…",
+                "Recent meta-analyses confirm that…"
+              ],
+              "answer": "I just feel like it's true.",
+              "explanation": "'Just feel like' = sezgisel; akademik bağlamda zayıf gerekçe."
             }
           ]
         },
@@ -1135,6 +1863,131 @@
                 "that",
                 "very"
               ]
+            },
+            {
+              "id": "op6-13",
+              "type": "multiple_choice",
+              "prompt": "Karşı argümanı nazikçe ÇÜRÜTEN kalıp?",
+              "options": [
+                "Shut up, you're wrong.",
+                "That's a valid concern, however the data tells a different story.",
+                "Whatever, doesn't matter.",
+                "You always say that."
+              ],
+              "answer": "That's a valid concern, however the data tells a different story.",
+              "explanation": "Kibar yapı: kabul + karşı kanıt."
+            },
+            {
+              "id": "op6-14",
+              "type": "fill_blank",
+              "prompt": "While I ___ your point about cost, efficiency should also be considered.",
+              "hint": "Maliyet konusundaki noktanı kabul etmekle birlikte, verimlilik de düşünülmeli.",
+              "answer": "appreciate",
+              "acceptableAnswers": [
+                "Appreciate",
+                "see",
+                "accept"
+              ],
+              "explanation": "'While I appreciate your point…' = kabul + karşı çıkma."
+            },
+            {
+              "id": "op6-15",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Karşı argümana yanıt",
+              "prompt": "İngilizceye çevir: 'Bu eleştiri yerinde olabilir, ancak küçük ölçekli sonuçlara göre değerlendirmiyoruz.'",
+              "options": [
+                "That criticism may be valid, but we don't judge by small-scale results.",
+                "This critic is fair, however we did not assess by results.",
+                "Criticism right is, but small scaled result we measure no.",
+                "Criticism valid is, but small result no judge we."
+              ],
+              "answer": "That criticism may be valid, but we don't judge by small-scale results.",
+              "acceptableAnswers": [
+                "That criticism may be fair, but we don't evaluate based on small-scale results."
+              ],
+              "explanation": "Kibar çürütme: 'may be valid, but…'."
+            },
+            {
+              "id": "op6-16",
+              "type": "tap_words_in_order",
+              "prompt": "Söylediklerinde haklılık payı var ama tablonun tamamı değil.",
+              "answer": "There's some truth in what you say but it's not the whole picture",
+              "bank": [
+                "There's",
+                "some",
+                "truth",
+                "in",
+                "what",
+                "you",
+                "say",
+                "but",
+                "it's",
+                "not",
+                "the",
+                "whole",
+                "picture",
+                "very",
+                "much"
+              ],
+              "explanation": "'Some truth in what you say' kısmi kabul; 'whole picture' karşı çıkış."
+            },
+            {
+              "id": "op6-17",
+              "type": "fill_blank",
+              "prompt": "I take your point, ___ I'd argue the opposite is also true.",
+              "hint": "Noktanı anlıyorum, ancak tersinin de doğru olduğunu savunurum.",
+              "answer": "though",
+              "acceptableAnswers": [
+                "Though",
+                "but"
+              ],
+              "explanation": "'Though' karşıt bağlantı kurar."
+            },
+            {
+              "id": "op6-18",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "With respect, that overlooks a key piece of evidence.",
+              "options": [
+                "With respect, that overlooks a key piece of evidence.",
+                "With respect that overlooks the key piece of evidence.",
+                "With respect, that overlooks a keep piece of evidence.",
+                "With respects, that overlooks a key piece of evident."
+              ],
+              "answer": "With respect, that overlooks a key piece of evidence.",
+              "explanation": "'With respect, … overlooks' = saygıyla, … gözden kaçırıyor; kibar karşı çıkma."
+            },
+            {
+              "id": "op6-19",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Karşı argümanı kısmen kabul",
+              "prompt": "Türkçeye çevir: 'You raise a fair point, but it doesn't quite hold up under scrutiny.'",
+              "options": [
+                "Adil bir nokta açtın ama incelendiğinde pek tutmuyor.",
+                "Yerinde söyledin, üstelik tamamen doğru.",
+                "Hak verdim ama kabul etmiyorum tamamen.",
+                "Noktan tutarsız değil, kabul."
+              ],
+              "answer": "Adil bir nokta açtın ama incelendiğinde pek tutmuyor.",
+              "acceptableAnswers": [
+                "Yerinde bir nokta açıyorsun ama yakından incelenince çok tutarlı durmuyor."
+              ],
+              "explanation": "'Doesn't quite hold up under scrutiny' = yakından incelenince tutmuyor."
+            },
+            {
+              "id": "op6-20",
+              "type": "multiple_choice",
+              "prompt": "Hangisi en GÜÇLÜ karşı çürütmedir?",
+              "options": [
+                "I'm afraid the evidence simply doesn't support that claim.",
+                "Maybe you're right, maybe not.",
+                "I sort of disagree, I suppose.",
+                "I'm not sure, but okay."
+              ],
+              "answer": "I'm afraid the evidence simply doesn't support that claim.",
+              "explanation": "'I'm afraid the evidence simply doesn't support…' kibar ama güçlü."
             }
           ]
         },
@@ -1230,6 +2083,290 @@
                   "text": "Good call. Let's grab another coffee and pick the next one to watch."
                 }
               ]
+            },
+            {
+              "id": "op7-2",
+              "type": "multiple_choice",
+              "prompt": "Bir film için 'overrated' ne demek?",
+              "options": [
+                "Az değer biçilmiş",
+                "Olduğundan fazla övülen",
+                "Hiç izlenmemiş",
+                "Çok kısa"
+              ],
+              "answer": "Olduğundan fazla övülen",
+              "explanation": "'Overrated' = abartılan, fazla övülmüş; 'underrated' tersidir."
+            },
+            {
+              "id": "op7-3",
+              "type": "fill_blank",
+              "prompt": "The ending felt ___ — it could have used another ten minutes.",
+              "hint": "Final aceleye getirilmiş hissettirdi; on dakika daha sürebilirdi.",
+              "answer": "rushed",
+              "acceptableAnswers": [
+                "Rushed"
+              ],
+              "explanation": "'Rushed' = aceleye getirilmiş."
+            },
+            {
+              "id": "op7-4",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Film yorumu",
+              "prompt": "İngilizceye çevir: 'Tempo bence biraz bozuktu.'",
+              "options": [
+                "I think the pacing was a bit off.",
+                "The tempo according me a little broken.",
+                "Pacing the I find break a bit.",
+                "Tempo a broken bit for me."
+              ],
+              "answer": "I think the pacing was a bit off.",
+              "acceptableAnswers": [
+                "In my opinion, the pacing was a little off."
+              ],
+              "explanation": "'Pacing was off' = tempo bozuktu (film/dizi yorumlarında klasik)."
+            },
+            {
+              "id": "op7-5",
+              "type": "tap_words_in_order",
+              "prompt": "Bir bakıma katılıyorum, ama o sahneler atmosferi kurdu.",
+              "answer": "I sort of agree but those scenes built the atmosphere",
+              "bank": [
+                "I",
+                "sort",
+                "of",
+                "agree",
+                "but",
+                "those",
+                "scenes",
+                "built",
+                "the",
+                "atmosphere",
+                "very",
+                "construct"
+              ],
+              "explanation": "'Sort of agree' yumuşak kabul + 'built the atmosphere' = atmosfer kurdu."
+            },
+            {
+              "id": "op7-6",
+              "type": "fill_blank",
+              "prompt": "The ___ was the strongest element of the film.",
+              "hint": "Film müziği filmin en güçlü öğesiydi.",
+              "answer": "soundtrack",
+              "acceptableAnswers": [
+                "Soundtrack"
+              ],
+              "explanation": "'Soundtrack' = film müziği."
+            },
+            {
+              "id": "op7-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I'd recommend it, but they should have read the book first.",
+              "options": [
+                "I'd recommend it, but they should have read the book first.",
+                "I recommend it, but they should read the book first.",
+                "I'd recommend it, but they shouldn't have read the book first.",
+                "I'd recommend it, but they should've ridden the book first."
+              ],
+              "answer": "I'd recommend it, but they should have read the book first.",
+              "explanation": "Modal perfect: 'should have read' = okumalıydılar."
+            },
+            {
+              "id": "op7-8",
+              "type": "multiple_choice",
+              "prompt": "'Carried the emotional weight' deyimi ne demek?",
+              "options": [
+                "Filmin duygusal yükünü taşıdı",
+                "Film çok hafifti",
+                "Müzik duygulardan kaçındı",
+                "Senaryo duygu yoktu"
+              ],
+              "answer": "Filmin duygusal yükünü taşıdı",
+              "explanation": "'Carry the emotional weight' = duygusal yükü omuzlamak (sahne, oyuncu, müzik için)."
+            },
+            {
+              "id": "op7-9",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Modal perfect ile öneri",
+              "prompt": "Türkçeye çevir: 'They could have cut twenty minutes.'",
+              "options": [
+                "Yirmi dakika kesebilirlerdi.",
+                "Yirmi dakika kesmek istedik.",
+                "Yirmi dakika sonra kesecekler.",
+                "Yirmi dakika önce kestiler."
+              ],
+              "answer": "Yirmi dakika kesebilirlerdi.",
+              "acceptableAnswers": [
+                "Yirmi dakika kısaltabilirlerdi."
+              ],
+              "explanation": "'Could have + V3' = -ebilirdi (geçmiş olanak/eleştiri)."
+            },
+            {
+              "id": "op7-10",
+              "type": "fill_blank",
+              "prompt": "Honestly, I ___ it a bit overrated.",
+              "hint": "Açıkçası bence biraz abartılıydı.",
+              "answer": "found",
+              "acceptableAnswers": [
+                "Found"
+              ],
+              "explanation": "'I found it overrated' = abartılı buldum."
+            },
+            {
+              "id": "op7-11",
+              "type": "multiple_choice",
+              "prompt": "'I'd argue' ne anlatır?",
+              "options": [
+                "Geçmişte tartıştım.",
+                "Tartışmaya açık biçimde savunurum.",
+                "Asla tartışmam.",
+                "Tartışmaktan korkarım."
+              ],
+              "answer": "Tartışmaya açık biçimde savunurum.",
+              "explanation": "'I'd argue' = I would argue; çekinceli ama kararlı görüş bildirme."
+            },
+            {
+              "id": "op7-12",
+              "type": "tap_words_in_order",
+              "prompt": "Sonu aceleye getirilmişti ama oyunculuk kurtardı.",
+              "answer": "The ending was rushed but the acting saved it",
+              "bank": [
+                "The",
+                "ending",
+                "was",
+                "rushed",
+                "but",
+                "the",
+                "acting",
+                "saved",
+                "it",
+                "very",
+                "very"
+              ],
+              "explanation": "'Was rushed' pasif; 'saved it' = kurtardı."
+            },
+            {
+              "id": "op7-13",
+              "type": "fill_blank",
+              "prompt": "From my ___, the soundtrack carried the film.",
+              "hint": "Benim açımdan film müziği filmi taşıdı.",
+              "answer": "perspective",
+              "acceptableAnswers": [
+                "Perspective",
+                "view",
+                "viewpoint"
+              ],
+              "explanation": "'From my perspective' = benim açımdan; klasik B2 görüş açıcı."
+            },
+            {
+              "id": "op7-14",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Fair point — the director could have trimmed the runtime.",
+              "options": [
+                "Fair point — the director could have trimmed the runtime.",
+                "Fair point — the director could trim the runtime.",
+                "Fair point — the director could have charmed the runtime.",
+                "Fare point — the directorate could have trimmed the runtime."
+              ],
+              "answer": "Fair point — the director could have trimmed the runtime.",
+              "explanation": "'Fair point' = yerinde nokta; 'trimmed the runtime' = süreyi kısalttı."
+            },
+            {
+              "id": "op7-15",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Çekinceli tavsiye",
+              "prompt": "İngilizceye çevir: 'Önerirdim ama önce kitabı okumalılar.'",
+              "options": [
+                "I'd recommend it, but they should read the book first.",
+                "Recommend would I, then they read book first.",
+                "Would recommendation, but book read have they.",
+                "I will recommend, after they read book."
+              ],
+              "answer": "I'd recommend it, but they should read the book first.",
+              "acceptableAnswers": [
+                "I would recommend it, but they should read the book first.",
+                "I'd suggest it, but they should read the book first."
+              ],
+              "explanation": "'I'd recommend' kibar tavsiye; should = -malı/-meli."
+            },
+            {
+              "id": "op7-16",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle EN DOĞAL bir film öneri kalıbıdır?",
+              "options": [
+                "I'd recommend it if you liked the book.",
+                "Recommendation I make this for you the watch.",
+                "You watch must this film immediately.",
+                "Recommend, but possibly maybe also."
+              ],
+              "answer": "I'd recommend it if you liked the book.",
+              "explanation": "'I'd recommend it if…' yumuşak kişisel tavsiye."
+            },
+            {
+              "id": "op7-17",
+              "type": "fill_blank",
+              "prompt": "It ___ to me the soundtrack carried the weight.",
+              "hint": "Bana öyle geliyor ki film müziği yükü taşıdı.",
+              "answer": "seems",
+              "acceptableAnswers": [
+                "Seems"
+              ],
+              "explanation": "'It seems to me' yumuşak görüş açıcı."
+            },
+            {
+              "id": "op7-18",
+              "type": "tap_words_in_order",
+              "prompt": "Sıradakini seçip başka bir kahve alalım.",
+              "answer": "Let's pick the next one and grab another coffee",
+              "bank": [
+                "Let's",
+                "pick",
+                "the",
+                "next",
+                "one",
+                "and",
+                "grab",
+                "another",
+                "coffee",
+                "very",
+                "take"
+              ],
+              "explanation": "'Let's pick' öneri açar; 'grab a coffee' = bir kahve almak."
+            },
+            {
+              "id": "op7-19",
+              "type": "multiple_choice",
+              "prompt": "'Modal perfect' nedir?",
+              "options": [
+                "modal + V1",
+                "modal + have + V3",
+                "modal + V2",
+                "modal + V-ing"
+              ],
+              "answer": "modal + have + V3",
+              "explanation": "Modal perfect = modal + have + past participle (should have read, could have cut)."
+            },
+            {
+              "id": "op7-20",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Film yorumu kapanışı",
+              "prompt": "Türkçeye çevir: 'Good call — let's grab another coffee.'",
+              "options": [
+                "İyi karar — başka bir kahve alalım.",
+                "İyi telefon — kahve içme zamanı.",
+                "Doğru yer — kahveye gidelim.",
+                "Çağrı iyi — kahve ister misin?"
+              ],
+              "answer": "İyi karar — başka bir kahve alalım.",
+              "acceptableAnswers": [
+                "İyi fikir — bir kahve daha alalım."
+              ],
+              "explanation": "'Good call' = iyi karar / iyi fikir (idiomatic)."
             }
           ]
         },
@@ -1350,6 +2487,194 @@
                 "Could you put off the lights before you leave?"
               ],
               "answer": "Could you turn off the lights before you leave?"
+            },
+            {
+              "id": "cq-b2-8",
+              "type": "multiple_choice",
+              "prompt": "'Saç kestirdim' İngilizcesi?",
+              "options": [
+                "I cut my hair (kendi kendine).",
+                "I had my hair cut.",
+                "I made my hair cut.",
+                "I did my hair cut."
+              ],
+              "answer": "I had my hair cut.",
+              "explanation": "Causative: 'have something done' = -tırmak. Birebir 'cut' yanlış anlam verir."
+            },
+            {
+              "id": "cq-b2-9",
+              "type": "fill_blank",
+              "prompt": "I have to ___ a shower before the meeting.",
+              "hint": "Toplantıdan önce duş almalıyım.",
+              "answer": "take",
+              "acceptableAnswers": [
+                "Take",
+                "have"
+              ],
+              "explanation": "'Take a shower' veya 'have a shower'. Türkçe 'duş al' birebir 'buy a shower' DEĞİL."
+            },
+            {
+              "id": "cq-b2-10",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Calque tuzakları",
+              "prompt": "İngilizceye çevir: 'Lütfen dikkatini ver.'",
+              "options": [
+                "Please pay attention.",
+                "Please give attention.",
+                "Please make attention.",
+                "Please open attention."
+              ],
+              "answer": "Please pay attention.",
+              "acceptableAnswers": [],
+              "explanation": "Collocation: 'pay attention'. Türkçe 'dikkat ver' birebir 'give' OLMAZ."
+            },
+            {
+              "id": "cq-b2-11",
+              "type": "multiple_choice",
+              "prompt": "'Doğum günümü kutladık' İngilizcesi?",
+              "options": [
+                "We did my birthday.",
+                "We celebrated my birthday.",
+                "We made my birthday.",
+                "We opened my birthday."
+              ],
+              "answer": "We celebrated my birthday.",
+              "explanation": "'Celebrate' fiili; 'do/make/open' calque."
+            },
+            {
+              "id": "cq-b2-12",
+              "type": "fill_blank",
+              "prompt": "I need to ___ a photo of this view.",
+              "hint": "Bu manzaranın fotoğrafını çekmem lazım.",
+              "answer": "take",
+              "acceptableAnswers": [
+                "Take"
+              ],
+              "explanation": "'Take a photo'; Türkçe 'çekmek' İngilizce 'pull' DEĞİL."
+            },
+            {
+              "id": "cq-b2-13",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "I'd like to make a reservation for two.",
+              "options": [
+                "I'd like to make a reservation for two.",
+                "I'd like to do a reservation for two.",
+                "I'd like to open a reservation for two.",
+                "I'd like to make a recreation for two."
+              ],
+              "answer": "I'd like to make a reservation for two.",
+              "explanation": "'Make a reservation' = rezervasyon yapmak. 'Do/open' yanlış."
+            },
+            {
+              "id": "cq-b2-14",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "False friend / calque",
+              "prompt": "Türkçeye çevir: 'I missed the bus this morning.'",
+              "options": [
+                "Bu sabah otobüsü kaçırdım.",
+                "Bu sabah otobüsü özledim.",
+                "Bu sabah otobüsü kaybettim.",
+                "Bu sabah otobüsü unuttum."
+              ],
+              "answer": "Bu sabah otobüsü kaçırdım.",
+              "acceptableAnswers": [
+                "Sabah otobüsü kaçırdım."
+              ],
+              "explanation": "'Miss the bus' = otobüsü kaçırmak; 'miss someone' ise özlemek. Bağlam ayırır."
+            },
+            {
+              "id": "cq-b2-15",
+              "type": "multiple_choice",
+              "prompt": "'Ayakkabımı giydim' İngilizcesi?",
+              "options": [
+                "I dressed my shoes.",
+                "I put on my shoes.",
+                "I wore on my shoes.",
+                "I made my shoes."
+              ],
+              "answer": "I put on my shoes.",
+              "explanation": "'Put on' = giyme eylemi; 'wear' giyiyor olma durumu; 'dress' giyinmek anlamına gelir."
+            },
+            {
+              "id": "cq-b2-16",
+              "type": "fill_blank",
+              "prompt": "Can you ___ me a favour and check the door?",
+              "hint": "Bana bir iyilik yapıp kapıyı kontrol eder misin?",
+              "answer": "do",
+              "acceptableAnswers": [
+                "Do"
+              ],
+              "explanation": "'Do someone a favour' = iyilik yapmak. 'Make a favour' calque."
+            },
+            {
+              "id": "cq-b2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Yağmur şiddetleniyor — şemsiyemi unuttum.",
+              "answer": "The rain is getting heavier and I forgot my umbrella",
+              "bank": [
+                "The",
+                "rain",
+                "is",
+                "getting",
+                "heavier",
+                "and",
+                "I",
+                "forgot",
+                "my",
+                "umbrella",
+                "very",
+                "strong"
+              ],
+              "explanation": "'Heavy rain' / 'rain is getting heavier' B2 collocation."
+            },
+            {
+              "id": "cq-b2-18",
+              "type": "multiple_choice",
+              "prompt": "'Trafiğe takıldım' İngilizcesi?",
+              "options": [
+                "I caught traffic.",
+                "I got stuck in traffic.",
+                "I stuck the traffic.",
+                "I was sticky on traffic."
+              ],
+              "answer": "I got stuck in traffic.",
+              "explanation": "'Get stuck in traffic' = trafiğe takılmak; idiom."
+            },
+            {
+              "id": "cq-b2-19",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Could you keep an eye on my bag for a minute?",
+              "options": [
+                "Could you keep an eye on my bag for a minute?",
+                "Could you keep an ear on my bag for a minute?",
+                "Could you give an eye on my bag for a minute?",
+                "Could you put an eye on my bag for a minute?"
+              ],
+              "answer": "Could you keep an eye on my bag for a minute?",
+              "explanation": "'Keep an eye on' = göz kulak olmak; B2 idiom."
+            },
+            {
+              "id": "cq-b2-20",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Calque tekrarı",
+              "prompt": "İngilizceye çevir: 'Bana yardım edebilir misin?'",
+              "options": [
+                "Can you help me?",
+                "Can you do help for me?",
+                "Can you make a help to me?",
+                "Could you giving help me?"
+              ],
+              "answer": "Can you help me?",
+              "acceptableAnswers": [
+                "Could you help me?",
+                "Could you give me a hand?"
+              ],
+              "explanation": "Basit 'help me'; calque 'do/make help' yanlıştır."
             }
           ]
         }
@@ -1632,6 +2957,167 @@
                 "Future continuous"
               ],
               "answer": "Present tense + dropped articles"
+            },
+            {
+              "id": "n1-11",
+              "type": "multiple_choice",
+              "prompt": "Manşet 'Storm leaves thousands without power' tam karşılığı?",
+              "options": [
+                "Fırtına binlerce kişiyi elektriksiz bıraktı.",
+                "Fırtına bin kişiyi yarı elektrikli yaptı.",
+                "Fırtına gücü binlerce kişiye taşıdı.",
+                "Binlerce kişi fırtınaya elektrik verdi."
+              ],
+              "answer": "Fırtına binlerce kişiyi elektriksiz bıraktı.",
+              "explanation": "'Leave + sb + without' = -siz bırakmak; 'power' bağlamda 'elektrik'."
+            },
+            {
+              "id": "n1-12",
+              "type": "fill_blank",
+              "prompt": "Talks ___ over wage dispute",
+              "hint": "Ücret anlaşmazlığında görüşmeler tıkandı.",
+              "answer": "stall",
+              "acceptableAnswers": [
+                "Stall",
+                "break down",
+                "stalled"
+              ],
+              "explanation": "Manşet stili: kısa fiil — 'stall' = durmak; ayrıca 'break down' kullanılır."
+            },
+            {
+              "id": "n1-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Manşet stili",
+              "prompt": "İngilizceye çevir: 'Tasarı parlamentodan geçti.'",
+              "options": [
+                "Bill passes parliament.",
+                "Bill passed by parliament.",
+                "Bill has parliament passing.",
+                "Bill making parliament pass."
+              ],
+              "answer": "Bill passes parliament.",
+              "acceptableAnswers": [
+                "Bill clears parliament.",
+                "Bill passed in parliament."
+              ],
+              "explanation": "Manşet: present simple + kısa fiil 'pass/clear'."
+            },
+            {
+              "id": "n1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Başkanın gelecek ay görüşmelere ev sahipliği yapması bekleniyor.",
+              "answer": "The president is expected to host talks next month",
+              "bank": [
+                "The",
+                "president",
+                "is",
+                "expected",
+                "to",
+                "host",
+                "talks",
+                "next",
+                "month",
+                "very",
+                "will",
+                "going"
+              ],
+              "explanation": "'Is expected to + V1' manşet kalıbı."
+            },
+            {
+              "id": "n1-15",
+              "type": "fill_blank",
+              "prompt": "Floods ___ residents in coastal towns",
+              "hint": "Seller kıyı kasabalarındaki sakinleri yerinden etti.",
+              "answer": "displace",
+              "acceptableAnswers": [
+                "Displace",
+                "force out",
+                "uproot"
+              ],
+              "explanation": "'Displace' manşette 'yerinden etmek'."
+            },
+            {
+              "id": "n1-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz manşeti seçin",
+              "spokenText": "Tech giant unveils plans for new headquarters.",
+              "options": [
+                "Tech giant unveils plans for new headquarters.",
+                "Tech giant unveils plans for newer headquarter.",
+                "Tech giant unveils plan for new headquarters.",
+                "Tech giant unfailed plans for new headquarters."
+              ],
+              "answer": "Tech giant unveils plans for new headquarters.",
+              "explanation": "'Unveil' manşet fiili = tanıtmak/açıklamak."
+            },
+            {
+              "id": "n1-17",
+              "type": "multiple_choice",
+              "prompt": "Manşet 'Markets brace for rate hike' ne anlatır?",
+              "options": [
+                "Piyasalar faiz artışına hazırlanıyor.",
+                "Faizler piyasaya çekildi.",
+                "Piyasalar faizleri sabit tuttu.",
+                "Faiz oranı düştü."
+              ],
+              "answer": "Piyasalar faiz artışına hazırlanıyor.",
+              "explanation": "'Brace for' = -e hazırlanmak/göğüs germek."
+            },
+            {
+              "id": "n1-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Manşet okuma",
+              "prompt": "Türkçeye çevir: 'Tech firm to slash thousands of jobs.'",
+              "options": [
+                "Teknoloji firması binlerce işi kesecek.",
+                "Teknoloji firması binlerce işe alacak.",
+                "Teknoloji firması işsizlere yardım etti.",
+                "Teknoloji firmasında binlerce iş açıldı."
+              ],
+              "answer": "Teknoloji firması binlerce işi kesecek.",
+              "acceptableAnswers": [
+                "Teknoloji şirketi binlerce çalışanı işten çıkaracak."
+              ],
+              "explanation": "Manşette 'to + V1' = gelecek; 'slash' = sert biçimde kesmek."
+            },
+            {
+              "id": "n1-19",
+              "type": "fill_blank",
+              "prompt": "Drought ___ farmers across the south",
+              "hint": "Kuraklık güneydeki çiftçileri vurdu.",
+              "answer": "hits",
+              "acceptableAnswers": [
+                "hit",
+                "Hits"
+              ],
+              "explanation": "'Hit' manşet stilinde 'vurmak / etkilemek'."
+            },
+            {
+              "id": "n1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Yeni yasanın bu yıl sonuna kadar yürürlüğe girmesi bekleniyor.",
+              "answer": "The new law is expected to take effect by the end of the year",
+              "bank": [
+                "The",
+                "new",
+                "law",
+                "is",
+                "expected",
+                "to",
+                "take",
+                "effect",
+                "by",
+                "the",
+                "end",
+                "of",
+                "the",
+                "year",
+                "very",
+                "will"
+              ],
+              "explanation": "'Take effect' = yürürlüğe girmek; 'is expected to' manşet kalıbı."
             }
           ]
         },
@@ -1790,6 +3276,162 @@
               ],
               "answer": "confirmed",
               "explanation": "'confirmed' = 'doğruladı'; bilgiyi resmî biçimde teyit eder."
+            },
+            {
+              "id": "n2-11",
+              "type": "multiple_choice",
+              "prompt": "'Officials claim that…' kalıbı en uygun şekilde nasıl çevrilir?",
+              "options": [
+                "Yetkililer iddia ediyor ki…",
+                "Yetkililer onayladı ki…",
+                "Yetkililer reddetti ki…",
+                "Yetkililer söz verdi ki…"
+              ],
+              "answer": "Yetkililer iddia ediyor ki…",
+              "explanation": "'Claim' = iddia etmek; tarafsız ama doğrulanmamış aktarım."
+            },
+            {
+              "id": "n2-12",
+              "type": "fill_blank",
+              "prompt": "The committee ___ that further investigation is necessary.",
+              "hint": "Komite, daha fazla soruşturmanın gerekli olduğunu vurguladı.",
+              "answer": "stressed",
+              "acceptableAnswers": [
+                "Stressed",
+                "emphasized",
+                "underlined"
+              ],
+              "explanation": "'Stress / emphasize / underline' = vurgulamak; haberde atıf fiili."
+            },
+            {
+              "id": "n2-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Atıf fiilleri",
+              "prompt": "İngilizceye çevir: 'Sözcü iddiayı kesinlikle reddetti.'",
+              "options": [
+                "The spokesperson categorically denied the allegation.",
+                "The spokesperson denied categorical the allegation.",
+                "The spokesperson rejected absolutely the claims.",
+                "Spokes person reject categoric allegation."
+              ],
+              "answer": "The spokesperson categorically denied the allegation.",
+              "acceptableAnswers": [
+                "The spokesperson firmly denied the allegation."
+              ],
+              "explanation": "'Categorically denied' = kesinlikle reddetti; B2 atıf."
+            },
+            {
+              "id": "n2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Çalışma, sonuçların eski araştırmaları desteklediğini gösteriyor.",
+              "answer": "The study shows that the results back up earlier research",
+              "bank": [
+                "The",
+                "study",
+                "shows",
+                "that",
+                "the",
+                "results",
+                "back",
+                "up",
+                "earlier",
+                "research",
+                "very",
+                "support"
+              ],
+              "explanation": "'Shows that' nesnel atıf; 'back up' = desteklemek."
+            },
+            {
+              "id": "n2-15",
+              "type": "fill_blank",
+              "prompt": "Witnesses ___ that they had heard a loud bang before the crash.",
+              "hint": "Tanıklar, kazadan önce yüksek bir patlama duyduklarını ifade etti.",
+              "answer": "stated",
+              "acceptableAnswers": [
+                "Stated",
+                "reported",
+                "claimed"
+              ],
+              "explanation": "'Stated' nesnel atıf fiilidir; B2 haber dili."
+            },
+            {
+              "id": "n2-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Investigators have urged caution when interpreting the data.",
+              "options": [
+                "Investigators have urged caution when interpreting the data.",
+                "Investigators have urged caution when interpreting the date.",
+                "Investigators have urge caution when interpret the data.",
+                "Investigators have urged cautious when interpreting the data."
+              ],
+              "answer": "Investigators have urged caution when interpreting the data.",
+              "explanation": "'Urge caution' = ihtiyatı tavsiye etmek."
+            },
+            {
+              "id": "n2-17",
+              "type": "multiple_choice",
+              "prompt": "Hangi atıf fiili EN ŞÜPHELİDİR?",
+              "options": [
+                "confirmed",
+                "stated",
+                "alleged",
+                "noted"
+              ],
+              "answer": "alleged",
+              "explanation": "'Alleged' = iddia edilen; doğrulanmamış bilgi vurgular."
+            },
+            {
+              "id": "n2-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Atıf",
+              "prompt": "Türkçeye çevir: 'The minister conceded that mistakes had been made.'",
+              "options": [
+                "Bakan, hatalar yapıldığını kabul etti.",
+                "Bakan, hata olmadığını söyledi.",
+                "Bakan, hataları reddetti.",
+                "Bakan, hatasız çalıştığını ifade etti."
+              ],
+              "answer": "Bakan, hatalar yapıldığını kabul etti.",
+              "acceptableAnswers": [
+                "Bakan, hatalar yapılmış olduğunu kabul etti."
+              ],
+              "explanation": "'Conceded' = (istemeyerek) kabul etti; B2 atıf."
+            },
+            {
+              "id": "n2-19",
+              "type": "fill_blank",
+              "prompt": "The minister ___ the rumors as 'baseless'.",
+              "hint": "Bakan söylentileri 'temelsiz' diye reddetti.",
+              "answer": "dismissed",
+              "acceptableAnswers": [
+                "Dismissed",
+                "rejected"
+              ],
+              "explanation": "'Dismiss' = (ciddiye almayıp) reddetmek."
+            },
+            {
+              "id": "n2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Yetkililer durumun kontrol altında olduğu konusunda halkı temin etti.",
+              "answer": "Officials assured the public that the situation was under control",
+              "bank": [
+                "Officials",
+                "assured",
+                "the",
+                "public",
+                "that",
+                "the",
+                "situation",
+                "was",
+                "under",
+                "control",
+                "very",
+                "told"
+              ],
+              "explanation": "'Assure sb that' = -e söz konusunda güvence vermek; B2 atıf."
             }
           ]
         },
@@ -1937,6 +3579,157 @@
               "answer": "is",
               "acceptableAnswers": [],
               "explanation": "'is expected to' kalıbında simple present passive."
+            },
+            {
+              "id": "n3-11",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle EN TARAFSIZ ton kullanır?",
+              "options": [
+                "The disgraceful policy was finally scrapped.",
+                "The controversial policy was withdrawn following protests.",
+                "Those evil bureaucrats finally backed down!",
+                "Idiotic officials gave up at last."
+              ],
+              "answer": "The controversial policy was withdrawn following protests.",
+              "explanation": "Tarafsız ton: yan sıfat yok; 'controversial' tartışmalı, 'withdrawn' pasif."
+            },
+            {
+              "id": "n3-12",
+              "type": "fill_blank",
+              "prompt": "A statement ___ released by the ministry late last night.",
+              "hint": "Bakanlık tarafından dün gece geç saatlerde bir açıklama yayımlandı.",
+              "answer": "was",
+              "acceptableAnswers": [
+                "Was"
+              ],
+              "explanation": "Pasif: was released = yayımlandı."
+            },
+            {
+              "id": "n3-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Haber pasifi",
+              "prompt": "İngilizceye çevir: 'Tasarı oybirliğiyle reddedildi.'",
+              "options": [
+                "The bill was unanimously rejected.",
+                "The bill rejected unanimous.",
+                "Bill was reject unanimously.",
+                "Bill rejected with one voice."
+              ],
+              "answer": "The bill was unanimously rejected.",
+              "acceptableAnswers": [
+                "The bill was unanimously voted down."
+              ],
+              "explanation": "Pasif + adverb: 'was unanimously rejected' = oybirliğiyle reddedildi."
+            },
+            {
+              "id": "n3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Şüpheli sorgulanmak üzere gözaltına alındı.",
+              "answer": "The suspect was taken into custody for questioning",
+              "bank": [
+                "The",
+                "suspect",
+                "was",
+                "taken",
+                "into",
+                "custody",
+                "for",
+                "questioning",
+                "very",
+                "police"
+              ],
+              "explanation": "Pasif: 'was taken into custody' = gözaltına alındı."
+            },
+            {
+              "id": "n3-15",
+              "type": "fill_blank",
+              "prompt": "Several roads ___ closed due to the floods.",
+              "hint": "Seller nedeniyle birkaç yol kapatıldı.",
+              "answer": "have been",
+              "acceptableAnswers": [
+                "Have been",
+                "were",
+                "are"
+              ],
+              "explanation": "Present perfect passive: have been closed = kapatılmış durumda."
+            },
+            {
+              "id": "n3-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Two suspects are believed to have fled the country.",
+              "options": [
+                "Two suspects are believed to have fled the country.",
+                "Two suspects are believing to have fled the country.",
+                "Two suspect are believed to have flying the country.",
+                "Two suspects believe to have fled the country."
+              ],
+              "answer": "Two suspects are believed to have fled the country.",
+              "explanation": "Passive reporting: 'are believed to have V3'."
+            },
+            {
+              "id": "n3-17",
+              "type": "multiple_choice",
+              "prompt": "Tarafsız ton için en iyi seçim?",
+              "options": [
+                "Critics absolutely destroyed the proposal.",
+                "The proposal has come under criticism from various quarters.",
+                "Everyone hated the proposal.",
+                "The dumb proposal sank."
+              ],
+              "answer": "The proposal has come under criticism from various quarters.",
+              "explanation": "'Come under criticism' nötr, profesyonel."
+            },
+            {
+              "id": "n3-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Pasif raporlama",
+              "prompt": "Türkçeye çevir: 'Damages are estimated at over five million dollars.'",
+              "options": [
+                "Hasarın beş milyon doların üzerinde olduğu tahmin ediliyor.",
+                "Beş milyon dolarlık hasar verildi.",
+                "Hasar beş milyon dolardan azdır.",
+                "Hasar tahmin edilemez."
+              ],
+              "answer": "Hasarın beş milyon doların üzerinde olduğu tahmin ediliyor.",
+              "acceptableAnswers": [
+                "Zararın beş milyon doları aştığı tahmin edilmektedir."
+              ],
+              "explanation": "'Are estimated at' = (-in) -e tahmin ediliyor; pasif raporlama."
+            },
+            {
+              "id": "n3-19",
+              "type": "fill_blank",
+              "prompt": "The cause of the fire is ___ being investigated.",
+              "hint": "Yangının nedeni hâlâ araştırılıyor.",
+              "answer": "still",
+              "acceptableAnswers": [
+                "Still"
+              ],
+              "explanation": "Present continuous passive: is being investigated."
+            },
+            {
+              "id": "n3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Karara yetkililerce henüz ulaşılamadı.",
+              "answer": "A decision has not yet been reached by the authorities",
+              "bank": [
+                "A",
+                "decision",
+                "has",
+                "not",
+                "yet",
+                "been",
+                "reached",
+                "by",
+                "the",
+                "authorities",
+                "very",
+                "make"
+              ],
+              "explanation": "Present perfect passive: 'has not yet been reached'."
             }
           ]
         },
@@ -2085,6 +3878,158 @@
               ],
               "answer": "olası / nihayetinde gerçekleşecek olan",
               "explanation": "False friend! 'eventual' = 'sonunda gerçekleşecek olan'; Türkçedeki 'eventüel' (olası) ile karışır."
+            },
+            {
+              "id": "n4-11",
+              "type": "multiple_choice",
+              "prompt": "'Eventually' kelimesi neyi vurgular?",
+              "options": [
+                "Olası bir şeyi",
+                "Sonunda, en sonunda gerçekleşeni",
+                "Bu sırada olanı",
+                "Geri kalanı"
+              ],
+              "answer": "Sonunda, en sonunda gerçekleşeni",
+              "explanation": "'Eventually' = sonunda; Türkçe 'olası/eventual' ile karıştırılır (false friend)."
+            },
+            {
+              "id": "n4-12",
+              "type": "fill_blank",
+              "prompt": "The protest was ___, with hundreds taking part.",
+              "hint": "Protesto kalabalıktı; yüzlerce kişi katıldı.",
+              "answer": "widespread",
+              "acceptableAnswers": [
+                "Widespread",
+                "huge",
+                "massive"
+              ],
+              "explanation": "'Widespread' = yaygın; B2 haber sözcüğü."
+            },
+            {
+              "id": "n4-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "False friend",
+              "prompt": "İngilizceye çevir: 'Sansasyonel bir manşet attı.'",
+              "options": [
+                "It ran a sensational headline.",
+                "It runs sensational headlines.",
+                "It made a sensitive headline.",
+                "It threw sensational headlines."
+              ],
+              "answer": "It ran a sensational headline.",
+              "acceptableAnswers": [
+                "The paper ran a sensational headline."
+              ],
+              "explanation": "'Sensational' (manşet) = sansasyonel/abartılı; 'sensitive' = hassas — false friend."
+            },
+            {
+              "id": "n4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Konu medyada geniş yer buldu.",
+              "answer": "The issue received extensive media coverage",
+              "bank": [
+                "The",
+                "issue",
+                "received",
+                "extensive",
+                "media",
+                "coverage",
+                "very",
+                "much",
+                "wide"
+              ],
+              "explanation": "'Extensive media coverage' = geniş medya kapsamı."
+            },
+            {
+              "id": "n4-15",
+              "type": "fill_blank",
+              "prompt": "An ___ from the company is expected later today.",
+              "hint": "Şirketten bugün ilerleyen saatlerde bir açıklama bekleniyor.",
+              "answer": "announcement",
+              "acceptableAnswers": [
+                "Announcement",
+                "statement"
+              ],
+              "explanation": "'Announcement / statement' = açıklama (haber dili)."
+            },
+            {
+              "id": "n4-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "The death toll is expected to rise as rescue efforts continue.",
+              "options": [
+                "The death toll is expected to rise as rescue efforts continue.",
+                "The dead toll is expected to raise as rescue effort continues.",
+                "The death role is expected to rise as rescue efforts continue.",
+                "The death toll is expected to rice as rescue efforts continue."
+              ],
+              "answer": "The death toll is expected to rise as rescue efforts continue.",
+              "explanation": "'Death toll' = can kaybı sayısı; klasik haber kalıbı."
+            },
+            {
+              "id": "n4-17",
+              "type": "multiple_choice",
+              "prompt": "'Actually' Türkçe karşılığı en yakın hangisidir?",
+              "options": [
+                "Aslında",
+                "Şu anda",
+                "Çok hızlıca",
+                "Gerçekten heyecanlı"
+              ],
+              "answer": "Aslında",
+              "explanation": "'Actually' = aslında. 'Aktüel' (Türkçe) = current — false friend."
+            },
+            {
+              "id": "n4-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Haber sözcüğü",
+              "prompt": "Türkçeye çevir: 'The summit yielded few concrete results.'",
+              "options": [
+                "Zirve somut sonuçlar üretmedi.",
+                "Zirve somut sonuçları çoğalttı.",
+                "Zirve birkaç bulut sonuç verdi.",
+                "Zirvede somut karar alındı."
+              ],
+              "answer": "Zirve somut sonuçlar üretmedi.",
+              "acceptableAnswers": [
+                "Zirveden somut sonuç çıkmadı.",
+                "Zirve fazla somut sonuç vermedi."
+              ],
+              "explanation": "'Yield few concrete results' = az somut sonuç verdi/üretmedi."
+            },
+            {
+              "id": "n4-19",
+              "type": "fill_blank",
+              "prompt": "The PM faced ___ criticism over the leaked memo.",
+              "hint": "Başbakan, sızdırılan mektup üzerine sert eleştirilerle karşılaştı.",
+              "answer": "harsh",
+              "acceptableAnswers": [
+                "Harsh",
+                "fierce",
+                "stinging"
+              ],
+              "explanation": "'Harsh / fierce criticism' = sert eleştiri."
+            },
+            {
+              "id": "n4-20",
+              "type": "tap_words_in_order",
+              "prompt": "Hisse senedi fiyatları sabah erken saatlerde sert düştü.",
+              "answer": "Share prices plunged sharply in early morning trading",
+              "bank": [
+                "Share",
+                "prices",
+                "plunged",
+                "sharply",
+                "in",
+                "early",
+                "morning",
+                "trading",
+                "very",
+                "fell"
+              ],
+              "explanation": "'Plunge sharply' = sert düşmek; B2 ekonomi haberi."
             }
           ]
         },
@@ -2287,6 +4232,123 @@
                 "the",
                 "by"
               ]
+            },
+            {
+              "id": "n5-13",
+              "type": "multiple_choice",
+              "prompt": "Hangisi EN GÜVENİLİR kaynak atfıdır?",
+              "options": [
+                "According to unverified social-media posts…",
+                "According to a peer-reviewed Lancet study…",
+                "Some random guy said…",
+                "Rumour has it that…"
+              ],
+              "answer": "According to a peer-reviewed Lancet study…",
+              "explanation": "'Peer-reviewed' = hakemli; akademik güvenilir kaynak."
+            },
+            {
+              "id": "n5-14",
+              "type": "fill_blank",
+              "prompt": "___ to anonymous sources, the deal is nearly done.",
+              "hint": "Anonim kaynaklara göre, anlaşma neredeyse tamam.",
+              "answer": "According",
+              "acceptableAnswers": [
+                "according"
+              ],
+              "explanation": "'According to' = -e göre; haber atıfı."
+            },
+            {
+              "id": "n5-15",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Haber kaynağı",
+              "prompt": "İngilizceye çevir: 'Bağımsız haber kuruluşları olayı doğruladı.'",
+              "options": [
+                "Independent news outlets have confirmed the incident.",
+                "Independent news outlets confirm incident.",
+                "News independent has confirmed an incident.",
+                "Incident the independent news confirmed."
+              ],
+              "answer": "Independent news outlets have confirmed the incident.",
+              "acceptableAnswers": [
+                "Independent media have confirmed the incident."
+              ],
+              "explanation": "'Independent news outlets' = bağımsız haber kuruluşları."
+            },
+            {
+              "id": "n5-16",
+              "type": "tap_words_in_order",
+              "prompt": "Yetkili kaynaklara göre soruşturma sürüyor.",
+              "answer": "According to authoritative sources the investigation is ongoing",
+              "bank": [
+                "According",
+                "to",
+                "authoritative",
+                "sources",
+                "the",
+                "investigation",
+                "is",
+                "ongoing",
+                "very",
+                "officials"
+              ],
+              "explanation": "'According to authoritative sources' nesnel atıf kalıbı."
+            },
+            {
+              "id": "n5-17",
+              "type": "fill_blank",
+              "prompt": "The report is ___ on classified documents.",
+              "hint": "Rapor gizli belgelere dayanıyor.",
+              "answer": "based",
+              "acceptableAnswers": [
+                "Based"
+              ],
+              "explanation": "'Is based on' = -e dayanmaktadır; haber kaynağı."
+            },
+            {
+              "id": "n5-18",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Citing leaked documents, the journalist alleged widespread corruption.",
+              "options": [
+                "Citing leaked documents, the journalist alleged widespread corruption.",
+                "Sighting leaked documents, the journalist alleged widespread corruption.",
+                "Citing leaked document, the journal alleged widespread corruption.",
+                "Citing leaked documents, the journalist alleging widespread corruption."
+              ],
+              "answer": "Citing leaked documents, the journalist alleged widespread corruption.",
+              "explanation": "'Citing leaked documents' = sızdırılmış belgelere dayanarak."
+            },
+            {
+              "id": "n5-19",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Atıf zinciri",
+              "prompt": "Türkçeye çevir: 'Two officials, speaking on condition of anonymity, confirmed the plan.'",
+              "options": [
+                "Anonim kalma şartıyla konuşan iki yetkili, planı doğruladı.",
+                "İki yetkili, planı reddetti.",
+                "İki anonim yetkili, planı sızdırdı.",
+                "Adıyla konuşan iki yetkili planı yalanladı."
+              ],
+              "answer": "Anonim kalma şartıyla konuşan iki yetkili, planı doğruladı.",
+              "acceptableAnswers": [
+                "İsimlerinin açıklanmaması şartıyla konuşan iki yetkili planı doğruladı."
+              ],
+              "explanation": "'Speaking on condition of anonymity' = anonim kalma şartıyla konuşarak."
+            },
+            {
+              "id": "n5-20",
+              "type": "multiple_choice",
+              "prompt": "Habercilikte 'on the record' ne anlama gelir?",
+              "options": [
+                "Açıklamanın yayımlanabilir olduğunu",
+                "Kayıt dışı olduğunu",
+                "Sadece eski kayıtları kapsadığını",
+                "Tartışmaya açık olduğunu"
+              ],
+              "answer": "Açıklamanın yayımlanabilir olduğunu",
+              "explanation": "'On the record' = açıklama yayımlanabilir; 'off the record' tersidir."
             }
           ]
         },
@@ -2475,6 +4537,130 @@
                 "the",
                 "much"
               ]
+            },
+            {
+              "id": "n6-13",
+              "type": "multiple_choice",
+              "prompt": "Direct: 'I will resign tomorrow.' Reported speech?",
+              "options": [
+                "He said he will resign tomorrow.",
+                "He said he would resign the following day.",
+                "He says he resigned tomorrow.",
+                "He said he will resigning tomorrow."
+              ],
+              "answer": "He said he would resign the following day.",
+              "explanation": "Reported speech: will -> would; tomorrow -> the following day."
+            },
+            {
+              "id": "n6-14",
+              "type": "fill_blank",
+              "prompt": "She asked him ___ he had seen the report.",
+              "hint": "Raporu görüp görmediğini ona sordu.",
+              "answer": "if",
+              "acceptableAnswers": [
+                "If",
+                "whether",
+                "Whether"
+              ],
+              "explanation": "Yes/no soru için reported: 'if/whether'."
+            },
+            {
+              "id": "n6-15",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Reported speech",
+              "prompt": "İngilizceye çevir: 'Anlaşmayı dün imzaladıklarını söyledi.'",
+              "options": [
+                "He said they had signed the deal the day before.",
+                "He said they signed the deal yesterday.",
+                "He told they had sign the deal yesterday.",
+                "He says they had sign the deal previous day."
+              ],
+              "answer": "He said they had signed the deal the day before.",
+              "acceptableAnswers": [
+                "He said they had signed the deal the previous day."
+              ],
+              "explanation": "Past simple -> past perfect; yesterday -> the day before/previous day."
+            },
+            {
+              "id": "n6-16",
+              "type": "tap_words_in_order",
+              "prompt": "Şirketin geçen hafta zorda olduğunu kabul ettiğini bildirdi.",
+              "answer": "He reported that the company had admitted being in trouble the previous week",
+              "bank": [
+                "He",
+                "reported",
+                "that",
+                "the",
+                "company",
+                "had",
+                "admitted",
+                "being",
+                "in",
+                "trouble",
+                "the",
+                "previous",
+                "week",
+                "very",
+                "last"
+              ],
+              "explanation": "Reported + past perfect 'had admitted'; last week -> the previous week."
+            },
+            {
+              "id": "n6-17",
+              "type": "fill_blank",
+              "prompt": "The minister insisted that he ___ been misquoted.",
+              "hint": "Bakan, sözlerinin yanlış aktarıldığında ısrar etti.",
+              "answer": "had",
+              "acceptableAnswers": [
+                "Had"
+              ],
+              "explanation": "Reported insist + past perfect 'had been misquoted'."
+            },
+            {
+              "id": "n6-18",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "He claimed he would address the allegations the following day.",
+              "options": [
+                "He claimed he would address the allegations the following day.",
+                "He claim he would address the allegations the following day.",
+                "He claimed he will address the allegations the following day.",
+                "He claimed he would address the allegation the followed day."
+              ],
+              "answer": "He claimed he would address the allegations the following day.",
+              "explanation": "Reported: claim + would; tomorrow -> the following day."
+            },
+            {
+              "id": "n6-19",
+              "type": "multiple_choice",
+              "prompt": "Direct: 'Have you seen this email?' Reported?",
+              "options": [
+                "She asked him have you seen this email.",
+                "She asked him if he had seen that email.",
+                "She asked him whether he sees that email.",
+                "She asked him does he see this email."
+              ],
+              "answer": "She asked him if he had seen that email.",
+              "explanation": "Yes/no question reported: if + past perfect + this -> that."
+            },
+            {
+              "id": "n6-20",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Aktarılan söz",
+              "prompt": "Türkçeye çevir: 'They denied having any involvement in the scandal.'",
+              "options": [
+                "Skandalla herhangi bir ilişkilerinin olduğunu reddettiler.",
+                "Skandalı çözdüklerini söylediler.",
+                "Skandalla ilişkilerini onayladılar.",
+                "Skandala karıştıklarını kabul ettiler."
+              ],
+              "answer": "Skandalla herhangi bir ilişkilerinin olduğunu reddettiler.",
+              "acceptableAnswers": [
+                "Skandalda herhangi bir dahillerinin olduğunu reddettiler."
+              ],
+              "explanation": "'Deny + V-ing' kalıbı; aktarılan söz."
             }
           ]
         },
@@ -2572,6 +4758,292 @@
                   "text": "Let's hope something changes soon. I'll check the updates at lunch."
                 }
               ]
+            },
+            {
+              "id": "n7-2",
+              "type": "multiple_choice",
+              "prompt": "'Transit strike' Türkçe karşılığı?",
+              "options": [
+                "Ulaşım grevi",
+                "Geçici darbe",
+                "Yolcu protestosu",
+                "Trafik kazası"
+              ],
+              "answer": "Ulaşım grevi",
+              "explanation": "'Transit strike' = toplu ulaşım grevi."
+            },
+            {
+              "id": "n7-3",
+              "type": "fill_blank",
+              "prompt": "The unions are demanding a fifteen percent ___.",
+              "hint": "Sendikalar yüzde on beş zam talep ediyor.",
+              "answer": "raise",
+              "acceptableAnswers": [
+                "Raise",
+                "increase",
+                "pay rise"
+              ],
+              "explanation": "'Pay raise / pay rise' = maaş zammı."
+            },
+            {
+              "id": "n7-4",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Haber yansıması",
+              "prompt": "İngilizceye çevir: 'Müzakereler gece yarısı tıkandı.'",
+              "options": [
+                "Negotiations broke down at midnight.",
+                "Negotiations break midnight.",
+                "Negotiation broke at midnight down.",
+                "Negotiations crashing midnight."
+              ],
+              "answer": "Negotiations broke down at midnight.",
+              "acceptableAnswers": [
+                "Talks broke down at midnight.",
+                "Talks collapsed at midnight."
+              ],
+              "explanation": "'Break down' = (müzakere) tıkanmak/çökmek."
+            },
+            {
+              "id": "n7-5",
+              "type": "tap_words_in_order",
+              "prompt": "Sendikaların yüzde on beş zam istediği bildiriliyor.",
+              "answer": "The unions are said to be demanding a fifteen percent raise",
+              "bank": [
+                "The",
+                "unions",
+                "are",
+                "said",
+                "to",
+                "be",
+                "demanding",
+                "a",
+                "fifteen",
+                "percent",
+                "raise",
+                "very",
+                "want",
+                "increase"
+              ],
+              "explanation": "Passive reporting: 'are said to be V-ing'."
+            },
+            {
+              "id": "n7-6",
+              "type": "fill_blank",
+              "prompt": "The whole infrastructure ___ been neglected for years.",
+              "hint": "Tüm altyapı yıllarca ihmal edildi.",
+              "answer": "has",
+              "acceptableAnswers": [
+                "Has"
+              ],
+              "explanation": "Present perfect passive: has been neglected."
+            },
+            {
+              "id": "n7-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Funding has been cut repeatedly since the last election.",
+              "options": [
+                "Funding has been cut repeatedly since the last election.",
+                "Funding has be cut repeated since the last election.",
+                "Funding has been cuts repeatedly since last the election.",
+                "Funding had been cut repeatedly since the last election."
+              ],
+              "answer": "Funding has been cut repeatedly since the last election.",
+              "explanation": "Present perfect passive + 'since' belirteci."
+            },
+            {
+              "id": "n7-8",
+              "type": "multiple_choice",
+              "prompt": "'Commute' kelimesi ne anlama gelir?",
+              "options": [
+                "Toplu sohbet",
+                "İş-ev yolculuğu",
+                "Kısa tatil",
+                "Yıllık izin"
+              ],
+              "answer": "İş-ev yolculuğu",
+              "explanation": "'Commute' = işe gidip gelme yolculuğu."
+            },
+            {
+              "id": "n7-9",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Karışık koşul",
+              "prompt": "Türkçeye çevir: 'If the city had invested in alternative routes, we wouldn't be stuck now.'",
+              "options": [
+                "Şehir alternatif güzergâhlara yatırım yapsaydı, şu an mahsur kalmazdık.",
+                "Şehir alternatif güzergâh seçer; biz mahsur kalırız.",
+                "Eğer şehir yatırırsa biz mahsur kalmadık.",
+                "Şehir yol seçti çünkü biz mahsur değildik."
+              ],
+              "answer": "Şehir alternatif güzergâhlara yatırım yapsaydı, şu an mahsur kalmazdık.",
+              "acceptableAnswers": [
+                "Şehir alternatif yollara yatırım yapmış olsaydı, şu an mahsur kalmıyor olurduk."
+              ],
+              "explanation": "Mixed conditional: past 'had invested' + present result 'wouldn't be'."
+            },
+            {
+              "id": "n7-10",
+              "type": "fill_blank",
+              "prompt": "It is ___ that the talks will resume this afternoon.",
+              "hint": "Görüşmelerin öğleden sonra yeniden başlayacağı bildiriliyor.",
+              "answer": "reported",
+              "acceptableAnswers": [
+                "Reported",
+                "said",
+                "expected"
+              ],
+              "explanation": "Passive reporting: 'It is reported that…' yaygın kalıp."
+            },
+            {
+              "id": "n7-11",
+              "type": "tap_words_in_order",
+              "prompt": "Belediye başkanı çok sinirli geliyordu.",
+              "answer": "The mayor sounded furious",
+              "bank": [
+                "The",
+                "mayor",
+                "sounded",
+                "furious",
+                "very",
+                "angry",
+                "looked"
+              ],
+              "explanation": "'Sounded furious' = çok sinirli geliyordu (duyduklarına göre)."
+            },
+            {
+              "id": "n7-12",
+              "type": "multiple_choice",
+              "prompt": "'Reach a deal' deyimi ne demek?",
+              "options": [
+                "Anlaşmayı bozmak",
+                "Anlaşmaya varmak",
+                "Anlaşmaya direnmek",
+                "Anlaşmayı ertelemek"
+              ],
+              "answer": "Anlaşmaya varmak",
+              "explanation": "'Reach a deal' = anlaşmaya varmak (idiomatic)."
+            },
+            {
+              "id": "n7-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Aktarılan söylenti",
+              "prompt": "İngilizceye çevir: 'Müzakerelerin gün içinde yeniden başlayacağı söyleniyor.'",
+              "options": [
+                "It is said that the talks will resume later today.",
+                "It said the talks will resume today.",
+                "Talks said today they will start.",
+                "The talks today are resumed will be."
+              ],
+              "answer": "It is said that the talks will resume later today.",
+              "acceptableAnswers": [
+                "The talks are said to resume later today."
+              ],
+              "explanation": "Passive reporting: 'It is said that…'."
+            },
+            {
+              "id": "n7-14",
+              "type": "fill_blank",
+              "prompt": "If they don't reach a deal, my ___ will be a nightmare.",
+              "hint": "Anlaşma sağlanmazsa, işe gidiş gelişim çile olacak.",
+              "answer": "commute",
+              "acceptableAnswers": [
+                "Commute"
+              ],
+              "explanation": "'Commute' = işe gidiş geliş yolculuğu."
+            },
+            {
+              "id": "n7-15",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Apparently, negotiations broke down at midnight.",
+              "options": [
+                "Apparently, negotiations broke down at midnight.",
+                "Apparently, negotiation broke down at midnight.",
+                "Appearance, negotiations broke down at midnight.",
+                "Apparently, negotiations broken down at midnight."
+              ],
+              "answer": "Apparently, negotiations broke down at midnight.",
+              "explanation": "'Apparently' = anlaşıldığı kadarıyla; kanıta dayalı söylenti."
+            },
+            {
+              "id": "n7-16",
+              "type": "multiple_choice",
+              "prompt": "'Has been cut repeatedly' yapısı nedir?",
+              "options": [
+                "Past simple passive",
+                "Present perfect passive",
+                "Present continuous active",
+                "Past perfect active"
+              ],
+              "answer": "Present perfect passive",
+              "explanation": "have/has + been + V3 = present perfect passive."
+            },
+            {
+              "id": "n7-17",
+              "type": "fill_blank",
+              "prompt": "The mayor was ___ furious during the press conference.",
+              "hint": "Belediye başkanı basın toplantısında çok öfkeliydi.",
+              "answer": "absolutely",
+              "acceptableAnswers": [
+                "Absolutely",
+                "clearly",
+                "evidently"
+              ],
+              "explanation": "'Absolutely furious' yoğunlaştırıcı; B2 deyim."
+            },
+            {
+              "id": "n7-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Haber yorumu",
+              "prompt": "Türkçeye çevir: 'Let's hope something changes soon.'",
+              "options": [
+                "Umarım yakında bir şeyler değişir.",
+                "Yakında bir şey değişmesini istemem.",
+                "Yakında değişmediğini umarım.",
+                "Bir şey hızlıca değişmeli olmasın."
+              ],
+              "answer": "Umarım yakında bir şeyler değişir.",
+              "acceptableAnswers": [
+                "Umarız bir şeyler yakında değişir."
+              ],
+              "explanation": "'Let's hope' = umalım/umarım; istek bildirir."
+            },
+            {
+              "id": "n7-19",
+              "type": "tap_words_in_order",
+              "prompt": "Bu sabah haberlerde grev üst sıralarda yer aldı.",
+              "answer": "The strike was top of the news this morning",
+              "bank": [
+                "The",
+                "strike",
+                "was",
+                "top",
+                "of",
+                "the",
+                "news",
+                "this",
+                "morning",
+                "very",
+                "stop"
+              ],
+              "explanation": "'Top of the news' = haberin başında / en üstünde."
+            },
+            {
+              "id": "n7-20",
+              "type": "multiple_choice",
+              "prompt": "'Apparently' nasıl bir bilgi belirleyicisidir?",
+              "options": [
+                "Kesin doğrulanmış",
+                "Görünüşe/anlaşıldığına göre (kanıt belirsiz)",
+                "Asla doğrulanmamış",
+                "Sadece akademik"
+              ],
+              "answer": "Görünüşe/anlaşıldığına göre (kanıt belirsiz)",
+              "explanation": "'Apparently' = görünüşe göre; söylenti veya çıkarıma dayalı."
             }
           ]
         }
@@ -2806,6 +5278,159 @@
               "acceptableAnswers": [
                 "sustainable"
               ]
+            },
+            {
+              "id": "env1-11",
+              "type": "multiple_choice",
+              "prompt": "'Carbon footprint' nedir?",
+              "options": [
+                "Karbon ayak izi (sera gazı salımı)",
+                "Kara kömür yığını",
+                "Bitki örtüsü",
+                "Karbon yakıtı tükenmesi"
+              ],
+              "answer": "Karbon ayak izi (sera gazı salımı)",
+              "explanation": "'Carbon footprint' = bir kişi/şirketin sera gazı salımı toplamı."
+            },
+            {
+              "id": "env1-12",
+              "type": "fill_blank",
+              "prompt": "Single-use plastics are now ___ in many cities.",
+              "hint": "Tek kullanımlık plastikler artık birçok şehirde yasaklandı.",
+              "answer": "banned",
+              "acceptableAnswers": [
+                "Banned",
+                "prohibited"
+              ],
+              "explanation": "'Banned' = yasaklı; pasif kullanım."
+            },
+            {
+              "id": "env1-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "İklim sözcükleri",
+              "prompt": "İngilizceye çevir: 'Sera gazı emisyonları artıyor.'",
+              "options": [
+                "Greenhouse gas emissions are rising.",
+                "Greenhouse gases emit rising.",
+                "Greenhouse emission gases raises.",
+                "Greenhouse gas emit are rise."
+              ],
+              "answer": "Greenhouse gas emissions are rising.",
+              "acceptableAnswers": [
+                "Greenhouse gas emissions are increasing.",
+                "Greenhouse gas emissions are on the rise."
+              ],
+              "explanation": "'Greenhouse gas emissions' = sera gazı emisyonları."
+            },
+            {
+              "id": "env1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Küresel ısınma değiştirilemez bir hâle gelmeden harekete geçmeliyiz.",
+              "answer": "We need to act before global warming becomes irreversible",
+              "bank": [
+                "We",
+                "need",
+                "to",
+                "act",
+                "before",
+                "global",
+                "warming",
+                "becomes",
+                "irreversible",
+                "very",
+                "now"
+              ],
+              "explanation": "'Irreversible' = geri döndürülemez; B2 iklim kelimesi."
+            },
+            {
+              "id": "env1-15",
+              "type": "fill_blank",
+              "prompt": "Many species are now on the brink of ___.",
+              "hint": "Pek çok tür artık yok olmanın eşiğinde.",
+              "answer": "extinction",
+              "acceptableAnswers": [
+                "Extinction"
+              ],
+              "explanation": "'On the brink of extinction' = yok olmanın eşiğinde."
+            },
+            {
+              "id": "env1-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Biodiversity loss accelerates as habitats shrink.",
+              "options": [
+                "Biodiversity loss accelerates as habitats shrink.",
+                "Biodiversity lost accelerates as habitats shrink.",
+                "Biodiversity loss accelerated as habitat shrinks.",
+                "Biodiversity loss accelerating as habitats shrunk."
+              ],
+              "answer": "Biodiversity loss accelerates as habitats shrink.",
+              "explanation": "'Biodiversity loss' = biyoçeşitlilik kaybı; 'shrink' = küçülmek."
+            },
+            {
+              "id": "env1-17",
+              "type": "multiple_choice",
+              "prompt": "Hangisi 'fossil fuels' grubuna girer?",
+              "options": [
+                "Coal, oil and natural gas",
+                "Solar and wind",
+                "Hydroelectric and tidal",
+                "Geothermal and biomass"
+              ],
+              "answer": "Coal, oil and natural gas",
+              "explanation": "Fosil yakıtlar: kömür, petrol, doğal gaz."
+            },
+            {
+              "id": "env1-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "İklim haberleri",
+              "prompt": "Türkçeye çevir: 'Sea levels are rising at an alarming rate.'",
+              "options": [
+                "Deniz seviyeleri endişe verici bir hızla yükseliyor.",
+                "Deniz seviyesi alarmda kırmızı.",
+                "Deniz suyu hızla azalıyor.",
+                "Su seviyesi sabit kalıyor."
+              ],
+              "answer": "Deniz seviyeleri endişe verici bir hızla yükseliyor.",
+              "acceptableAnswers": [
+                "Deniz seviyeleri ürkütücü bir hızla yükseliyor."
+              ],
+              "explanation": "'At an alarming rate' = endişe verici bir hızla."
+            },
+            {
+              "id": "env1-19",
+              "type": "fill_blank",
+              "prompt": "We must ___ our reliance on fossil fuels.",
+              "hint": "Fosil yakıtlara olan bağımlılığımızı azaltmalıyız.",
+              "answer": "reduce",
+              "acceptableAnswers": [
+                "Reduce",
+                "cut"
+              ],
+              "explanation": "'Reduce reliance on' = bağımlılığı azaltmak."
+            },
+            {
+              "id": "env1-20",
+              "type": "tap_words_in_order",
+              "prompt": "Eriyen buzullar dünya genelinde kıyı toplulukları için ciddi bir tehdit oluşturuyor.",
+              "answer": "Melting glaciers pose a serious threat to coastal communities worldwide",
+              "bank": [
+                "Melting",
+                "glaciers",
+                "pose",
+                "a",
+                "serious",
+                "threat",
+                "to",
+                "coastal",
+                "communities",
+                "worldwide",
+                "very",
+                "ice"
+              ],
+              "explanation": "'Pose a threat to' = tehdit oluşturmak; B2 iklim haberi kalıbı."
             }
           ]
         },
@@ -2952,6 +5577,161 @@
               "prompt": "Without action, the climate ___ continue to warm.",
               "answer": "will",
               "acceptableAnswers": []
+            },
+            {
+              "id": "env2-11",
+              "type": "multiple_choice",
+              "prompt": "Hangi modal en GÜÇLÜ öneri bildirir?",
+              "options": [
+                "might",
+                "could",
+                "should",
+                "may"
+              ],
+              "answer": "should",
+              "explanation": "'Should' = öneri; 'might/could/may' daha zayıf olasılık."
+            },
+            {
+              "id": "env2-12",
+              "type": "fill_blank",
+              "prompt": "Governments ___ invest in renewable energy now.",
+              "hint": "Hükümetler şu anda yenilenebilir enerjiye yatırım yapmalı.",
+              "answer": "ought to",
+              "acceptableAnswers": [
+                "should",
+                "Should",
+                "must",
+                "need to"
+              ],
+              "explanation": "'Ought to' = -malıdır; 'should' eşdeğeri."
+            },
+            {
+              "id": "env2-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Modal ile öneri",
+              "prompt": "İngilizceye çevir: 'Şirketler net sıfır hedefleri benimsemeli.'",
+              "options": [
+                "Companies should adopt net-zero targets.",
+                "Companies must adopting net-zero targets.",
+                "Companies have adopt net-zero target.",
+                "Companies adoption net-zero must."
+              ],
+              "answer": "Companies should adopt net-zero targets.",
+              "acceptableAnswers": [
+                "Companies ought to adopt net-zero targets.",
+                "Firms should adopt net-zero targets."
+              ],
+              "explanation": "'Should adopt' = benimsemeli; net-zero = net sıfır."
+            },
+            {
+              "id": "env2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Geri dönüşüm tek başına yetersiz; tüketimi azaltmalıyız.",
+              "answer": "Recycling alone is not enough we must reduce consumption",
+              "bank": [
+                "Recycling",
+                "alone",
+                "is",
+                "not",
+                "enough",
+                "we",
+                "must",
+                "reduce",
+                "consumption",
+                "very",
+                "cut"
+              ],
+              "explanation": "'Must reduce' = azaltmalıyız; öneri."
+            },
+            {
+              "id": "env2-15",
+              "type": "fill_blank",
+              "prompt": "Cities ___ to ban diesel cars by 2030.",
+              "hint": "Şehirlerin 2030'a kadar dizel araçları yasaklaması yerinde olabilir.",
+              "answer": "might want",
+              "acceptableAnswers": [
+                "might want",
+                "may wish",
+                "ought"
+              ],
+              "explanation": "'Might want to' = -se iyi olur (yumuşak öneri)."
+            },
+            {
+              "id": "env2-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "We had better act now before it's too late.",
+              "options": [
+                "We had better act now before it's too late.",
+                "We have better act now before it's too late.",
+                "We had bitter act now before it's too late.",
+                "We had better acting now before it's too late."
+              ],
+              "answer": "We had better act now before it's too late.",
+              "explanation": "'Had better' = -sek iyi olur; güçlü öneri."
+            },
+            {
+              "id": "env2-17",
+              "type": "multiple_choice",
+              "prompt": "Hangisi en KİBAR öneri kalıbıdır?",
+              "options": [
+                "You must do it!",
+                "It might be worth considering a switch to LED bulbs.",
+                "Do it now or else.",
+                "You have no choice."
+              ],
+              "answer": "It might be worth considering a switch to LED bulbs.",
+              "explanation": "'It might be worth considering' = düşünmeye değer olabilir; kibar."
+            },
+            {
+              "id": "env2-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Politika önerisi",
+              "prompt": "Türkçeye çevir: 'Authorities ought to incentivise the use of public transport.'",
+              "options": [
+                "Yetkililer toplu taşıma kullanımını teşvik etmeli.",
+                "Yetkililer toplu taşımayı yasaklamalı.",
+                "Yetkililer toplu taşımayı zorunlu kıldı.",
+                "Yetkililer toplu taşımayı azaltmalı."
+              ],
+              "answer": "Yetkililer toplu taşıma kullanımını teşvik etmeli.",
+              "acceptableAnswers": [
+                "Yetkililer toplu ulaşım kullanımını desteklemeli."
+              ],
+              "explanation": "'Ought to incentivise' = teşvik etmeli; B2 resmi öneri."
+            },
+            {
+              "id": "env2-19",
+              "type": "fill_blank",
+              "prompt": "It ___ be wise to introduce a deposit scheme for bottles.",
+              "hint": "Şişeler için bir depozito sistemi getirmek akıllıca olabilir.",
+              "answer": "would",
+              "acceptableAnswers": [
+                "Would",
+                "might"
+              ],
+              "explanation": "'Would be wise' = akıllıca olur; B2 öneri yumuşatma."
+            },
+            {
+              "id": "env2-20",
+              "type": "tap_words_in_order",
+              "prompt": "Tek kullanımlık ürünleri tedavüden kaldırmayı düşünmeliyiz.",
+              "answer": "We should consider phasing out single-use products",
+              "bank": [
+                "We",
+                "should",
+                "consider",
+                "phasing",
+                "out",
+                "single-use",
+                "products",
+                "very",
+                "stop",
+                "remove"
+              ],
+              "explanation": "'Phase out' = aşamalı olarak kaldırmak; iklim politikası."
             }
           ]
         },
@@ -3103,6 +5883,160 @@
               "acceptableAnswers": [
                 "is not"
               ]
+            },
+            {
+              "id": "env3-11",
+              "type": "multiple_choice",
+              "prompt": "'Tackle climate change' deyimi ne demek?",
+              "options": [
+                "İklim değişikliğini görmezden gelmek",
+                "İklim değişikliğiyle mücadele etmek",
+                "İklim haberlerini engellemek",
+                "İklim alanında yatırım yapmak"
+              ],
+              "answer": "İklim değişikliğiyle mücadele etmek",
+              "explanation": "'Tackle' = (sorunla) mücadele etmek; aktif çözüm dili."
+            },
+            {
+              "id": "env3-12",
+              "type": "fill_blank",
+              "prompt": "One way to ___ the problem is to invest in clean energy.",
+              "hint": "Soruna çözüm yollarından biri temiz enerjiye yatırım yapmaktır.",
+              "answer": "address",
+              "acceptableAnswers": [
+                "Address",
+                "tackle",
+                "solve"
+              ],
+              "explanation": "'Address the problem' = soruna eğilmek; çözüm dili."
+            },
+            {
+              "id": "env3-13",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Sorun-çözüm dili",
+              "prompt": "İngilizceye çevir: 'Hava kirliliği, çocuklarda solunum sorunlarına yol açıyor.'",
+              "options": [
+                "Air pollution causes respiratory issues in children.",
+                "Air pollution caused respiratory problem in children.",
+                "Air pollution leading respiratory issue in childs.",
+                "Air dirty cause breath problems children."
+              ],
+              "answer": "Air pollution causes respiratory issues in children.",
+              "acceptableAnswers": [
+                "Air pollution leads to respiratory problems in children."
+              ],
+              "explanation": "'Causes' / 'leads to' = -e neden olmak."
+            },
+            {
+              "id": "env3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Bu sorun hem bireysel hem kurumsal eylem gerektirir.",
+              "answer": "This issue requires both individual and corporate action",
+              "bank": [
+                "This",
+                "issue",
+                "requires",
+                "both",
+                "individual",
+                "and",
+                "corporate",
+                "action",
+                "very",
+                "personal"
+              ],
+              "explanation": "'Requires both X and Y' = hem X hem Y gerektirir."
+            },
+            {
+              "id": "env3-15",
+              "type": "fill_blank",
+              "prompt": "Plastic pollution poses a serious ___ to marine life.",
+              "hint": "Plastik kirliliği deniz canlılarına ciddi bir tehdit oluşturuyor.",
+              "answer": "threat",
+              "acceptableAnswers": [
+                "Threat",
+                "risk",
+                "danger"
+              ],
+              "explanation": "'Pose a threat to' = -e tehdit oluşturmak."
+            },
+            {
+              "id": "env3-16",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "There is no silver bullet for this crisis.",
+              "options": [
+                "There is no silver bullet for this crisis.",
+                "There is no silver ballot for this crisis.",
+                "There are no silver bullets for these crisis.",
+                "There is no silver bullet for these crises."
+              ],
+              "answer": "There is no silver bullet for this crisis.",
+              "explanation": "'No silver bullet' = tek başına çözüm yok; B2 idiom."
+            },
+            {
+              "id": "env3-17",
+              "type": "multiple_choice",
+              "prompt": "Hangisi sorun bildirir, çözüm değil?",
+              "options": [
+                "Adopting circular models is key.",
+                "Deforestation rates remain alarmingly high.",
+                "Carbon taxes have proven effective.",
+                "Companies should switch to recycled inputs."
+              ],
+              "answer": "Deforestation rates remain alarmingly high.",
+              "explanation": "Sorun: yüksek orman kaybı oranları; diğerleri çözüm."
+            },
+            {
+              "id": "env3-18",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Çözüm dili",
+              "prompt": "Türkçeye çevir: 'Recycling initiatives can mitigate some of the damage.'",
+              "options": [
+                "Geri dönüşüm girişimleri zararın bir kısmını hafifletebilir.",
+                "Geri dönüşüm hasara katkı sağlar.",
+                "Geri dönüşüm girişimleri zararı çoğaltır.",
+                "Geri dönüşüm zararı doğrular."
+              ],
+              "answer": "Geri dönüşüm girişimleri zararın bir kısmını hafifletebilir.",
+              "acceptableAnswers": [
+                "Geri dönüşüm girişimleri verilen zararın bir kısmını azaltabilir."
+              ],
+              "explanation": "'Mitigate' = (zararı) hafifletmek; B2 çözüm fiili."
+            },
+            {
+              "id": "env3-19",
+              "type": "fill_blank",
+              "prompt": "Education is ___ to long-term behavioural change.",
+              "hint": "Uzun vadeli davranış değişikliğinde eğitim hayati öneme sahip.",
+              "answer": "key",
+              "acceptableAnswers": [
+                "Key",
+                "crucial",
+                "vital"
+              ],
+              "explanation": "'Key/crucial/vital to' = -de hayati; B2 önem belirteci."
+            },
+            {
+              "id": "env3-20",
+              "type": "tap_words_in_order",
+              "prompt": "Hâlâ etkili bir küresel müdahale geliştirilmemiştir.",
+              "answer": "An effective global response has yet to be developed",
+              "bank": [
+                "An",
+                "effective",
+                "global",
+                "response",
+                "has",
+                "yet",
+                "to",
+                "be",
+                "developed",
+                "very",
+                "make"
+              ],
+              "explanation": "'Has yet to be V3' = henüz V-mamış; pasif + present perfect."
             }
           ]
         },
@@ -3297,6 +6231,125 @@
                 "by",
                 "much"
               ]
+            },
+            {
+              "id": "env4-13",
+              "type": "multiple_choice",
+              "prompt": "'Owing to' kalıbı ne anlama gelir?",
+              "options": [
+                "-e rağmen",
+                "-den dolayı",
+                "-e karşın",
+                "Yine de"
+              ],
+              "answer": "-den dolayı",
+              "explanation": "'Owing to' = -den dolayı; resmi neden bağlacı."
+            },
+            {
+              "id": "env4-14",
+              "type": "fill_blank",
+              "prompt": "Coral reefs are dying ___ to warming oceans.",
+              "hint": "Okyanusların ısınması nedeniyle mercan resifleri ölüyor.",
+              "answer": "due",
+              "acceptableAnswers": [
+                "Due",
+                "owing"
+              ],
+              "explanation": "'Due to / owing to' = -e bağlı olarak / -den dolayı."
+            },
+            {
+              "id": "env4-15",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Neden-sonuç",
+              "prompt": "İngilizceye çevir: 'Aşırı tüketim, kaynak tükenmesine yol açmaktadır.'",
+              "options": [
+                "Overconsumption leads to resource depletion.",
+                "Overconsumption resources finish.",
+                "Over-consume cause to resources end.",
+                "Over consumption resources to depleted."
+              ],
+              "answer": "Overconsumption leads to resource depletion.",
+              "acceptableAnswers": [
+                "Excessive consumption leads to resource depletion."
+              ],
+              "explanation": "'Leads to' = -e yol açar; 'depletion' = tükenme."
+            },
+            {
+              "id": "env4-16",
+              "type": "tap_words_in_order",
+              "prompt": "Ormanların kesilmesi, sayısız türün yok olmasına yol açmıştır.",
+              "answer": "Deforestation has resulted in the extinction of countless species",
+              "bank": [
+                "Deforestation",
+                "has",
+                "resulted",
+                "in",
+                "the",
+                "extinction",
+                "of",
+                "countless",
+                "species",
+                "very",
+                "many"
+              ],
+              "explanation": "'Result in' = -e yol açmak; present perfect."
+            },
+            {
+              "id": "env4-17",
+              "type": "fill_blank",
+              "prompt": "Sea-level rise is a ___ consequence of melting ice.",
+              "hint": "Deniz seviyesinin yükselmesi, buz erimesinin doğrudan bir sonucudur.",
+              "answer": "direct",
+              "acceptableAnswers": [
+                "Direct"
+              ],
+              "explanation": "'Direct consequence of' = doğrudan sonucu."
+            },
+            {
+              "id": "env4-18",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Floods have become more frequent as a result of climate change.",
+              "options": [
+                "Floods have become more frequent as a result of climate change.",
+                "Floods have became more frequent as a result of climate change.",
+                "Floods have become more frequently as a result of climate change.",
+                "Floods has become more frequent as a result of climate change."
+              ],
+              "answer": "Floods have become more frequent as a result of climate change.",
+              "explanation": "'As a result of' = sonucunda; neden-sonuç bağlacı."
+            },
+            {
+              "id": "env4-19",
+              "type": "multiple_choice",
+              "prompt": "Hangisi BİR SONUÇ bildiren cümle?",
+              "options": [
+                "Industrial farming is one major cause of soil erosion.",
+                "Excessive irrigation leads to salinity in soils.",
+                "Soils are losing fertility because of intensive cultivation.",
+                "Consequently, food production will become harder."
+              ],
+              "answer": "Consequently, food production will become harder.",
+              "explanation": "'Consequently' = sonuç olarak; sonuç bildirir."
+            },
+            {
+              "id": "env4-20",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "İklim yorumu",
+              "prompt": "Türkçeye çevir: 'Stricter regulations have brought about noticeable improvements.'",
+              "options": [
+                "Daha katı düzenlemeler gözle görülür iyileşmeler getirdi.",
+                "Sıkı kurallar gözlerden kaçtı.",
+                "Düzenlemeler bozulmaya yol açtı.",
+                "Katı düzenlemeler hiç fark yaratmadı."
+              ],
+              "answer": "Daha katı düzenlemeler gözle görülür iyileşmeler getirdi.",
+              "acceptableAnswers": [
+                "Daha sıkı düzenlemeler kayda değer iyileşmelere yol açtı."
+              ],
+              "explanation": "'Bring about' = -e neden olmak / getirmek; B2 phrasal."
             }
           ]
         },
@@ -3491,6 +6544,126 @@
                 "by",
                 "from"
               ]
+            },
+            {
+              "id": "env5-13",
+              "type": "multiple_choice",
+              "prompt": "'Sustainable' kelimesinin Türkçe karşılığı?",
+              "options": [
+                "Sürdürülebilir",
+                "Sürekli",
+                "Geçici",
+                "Sınırsız"
+              ],
+              "answer": "Sürdürülebilir",
+              "explanation": "'Sustainable' = sürdürülebilir; çevre politikası anahtar kelimesi."
+            },
+            {
+              "id": "env5-14",
+              "type": "fill_blank",
+              "prompt": "The new policy aims to ___ emissions by 40 percent.",
+              "hint": "Yeni politika, emisyonları yüzde 40 oranında azaltmayı hedefliyor.",
+              "answer": "cut",
+              "acceptableAnswers": [
+                "Cut",
+                "reduce",
+                "lower"
+              ],
+              "explanation": "'Cut emissions by X%' = emisyonları X% kesmek/azaltmak."
+            },
+            {
+              "id": "env5-15",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Politika dili",
+              "prompt": "İngilizceye çevir: 'Karbon vergileri tartışmalı kalmaya devam ediyor.'",
+              "options": [
+                "Carbon taxes remain controversial.",
+                "Carbon taxes remained controversy.",
+                "Carbon taxation is controversial keep.",
+                "Carbon taxes are controversy lasting."
+              ],
+              "answer": "Carbon taxes remain controversial.",
+              "acceptableAnswers": [
+                "Carbon taxes continue to be controversial."
+              ],
+              "explanation": "'Remain controversial' = tartışmalı kalmak."
+            },
+            {
+              "id": "env5-16",
+              "type": "tap_words_in_order",
+              "prompt": "Politika yapıcılar, vatandaşlara mali teşvikler sunmalı.",
+              "answer": "Policymakers should offer financial incentives to citizens",
+              "bank": [
+                "Policymakers",
+                "should",
+                "offer",
+                "financial",
+                "incentives",
+                "to",
+                "citizens",
+                "very",
+                "give",
+                "money"
+              ],
+              "explanation": "'Offer financial incentives' = mali teşvik sunmak."
+            },
+            {
+              "id": "env5-17",
+              "type": "fill_blank",
+              "prompt": "Cities must ___ a circular economy model.",
+              "hint": "Şehirler döngüsel ekonomi modelini benimsemeli.",
+              "answer": "adopt",
+              "acceptableAnswers": [
+                "Adopt",
+                "embrace"
+              ],
+              "explanation": "'Adopt a model' = bir modeli benimsemek."
+            },
+            {
+              "id": "env5-18",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "The legislation has been criticised as toothless.",
+              "options": [
+                "The legislation has been criticised as toothless.",
+                "The legislation has being criticised as toothless.",
+                "The legislator has been criticised as toothless.",
+                "The legislation has been criticised as ruthless."
+              ],
+              "answer": "The legislation has been criticised as toothless.",
+              "explanation": "'Toothless legislation' = dişsiz/etkisiz yasa (idiom)."
+            },
+            {
+              "id": "env5-19",
+              "type": "multiple_choice",
+              "prompt": "'Sustainability' içinde EN KAPSAYICI üç boyut hangisidir?",
+              "options": [
+                "Economic, environmental, social",
+                "Political, military, financial",
+                "Religious, cultural, ethnic",
+                "Digital, mechanical, biological"
+              ],
+              "answer": "Economic, environmental, social",
+              "explanation": "Üç sütun: ekonomik, çevresel, sosyal (triple bottom line)."
+            },
+            {
+              "id": "env5-20",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Politika çağrısı",
+              "prompt": "Türkçeye çevir: 'Without binding commitments, voluntary pledges fall short.'",
+              "options": [
+                "Bağlayıcı taahhütler olmadan gönüllü vaatler yetersiz kalır.",
+                "Bağlayıcı taahhütler gönüllü vaatleri çoğaltır.",
+                "Vaatler taahhütleri zorunlu yapar.",
+                "Gönüllü vaatler tek başına yeterlidir."
+              ],
+              "answer": "Bağlayıcı taahhütler olmadan gönüllü vaatler yetersiz kalır.",
+              "acceptableAnswers": [
+                "Bağlayıcı taahhütler olmaksızın gönüllü taahhütler yetersiz kalır."
+              ],
+              "explanation": "'Binding commitments' = bağlayıcı taahhütler; 'fall short' = yetersiz kalmak."
             }
           ]
         },
@@ -3588,6 +6761,281 @@
                   "text": "Perfect. I'll send a meeting invite for Thursday. Thanks for jumping in."
                 }
               ]
+            },
+            {
+              "id": "env6-2",
+              "type": "multiple_choice",
+              "prompt": "'Disposable cup' nedir?",
+              "options": [
+                "Tek kullanımlık bardak",
+                "Geri dönüştürülmüş bardak",
+                "Cam bardak",
+                "Termos bardak"
+              ],
+              "answer": "Tek kullanımlık bardak",
+              "explanation": "'Disposable' = tek kullanımlık; çevre konusunda anahtar."
+            },
+            {
+              "id": "env6-3",
+              "type": "fill_blank",
+              "prompt": "We should switch to ___ cups to cut waste.",
+              "hint": "Atığı azaltmak için yeniden kullanılabilir bardaklara geçmeliyiz.",
+              "answer": "reusable",
+              "acceptableAnswers": [
+                "Reusable"
+              ],
+              "explanation": "'Reusable' = yeniden kullanılabilir."
+            },
+            {
+              "id": "env6-4",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Sürdürülebilirlik diyaloğu",
+              "prompt": "İngilizceye çevir: 'Tek kullanımlık plastikler şehir merkezinde yasak.'",
+              "options": [
+                "Single-use plastics are banned in the city centre.",
+                "Single-use plastic banning is in city centre.",
+                "Plastics single-use prohibited the city centre.",
+                "Once-use plastics ban in the centre."
+              ],
+              "answer": "Single-use plastics are banned in the city centre.",
+              "acceptableAnswers": [
+                "Single-use plastics are prohibited in the city centre."
+              ],
+              "explanation": "'Single-use plastics' = tek kullanımlık plastikler; pasif 'are banned'."
+            },
+            {
+              "id": "env6-5",
+              "type": "tap_words_in_order",
+              "prompt": "İK'dan uygun bir geri dönüşüm istasyonu kurmasını isteyebiliriz.",
+              "answer": "We could ask HR to install a proper recycling station",
+              "bank": [
+                "We",
+                "could",
+                "ask",
+                "HR",
+                "to",
+                "install",
+                "a",
+                "proper",
+                "recycling",
+                "station",
+                "very",
+                "set",
+                "build"
+              ],
+              "explanation": "'Install a recycling station' = geri dönüşüm istasyonu kurmak."
+            },
+            {
+              "id": "env6-6",
+              "type": "fill_blank",
+              "prompt": "Better late than ___.",
+              "hint": "Geç olsun, güç olmasın.",
+              "answer": "never",
+              "acceptableAnswers": [
+                "Never"
+              ],
+              "explanation": "'Better late than never' = geç olsun güç olmasın (idiom)."
+            },
+            {
+              "id": "env6-7",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Want to draft a proposal together this week?",
+              "options": [
+                "Want to draft a proposal together this week?",
+                "Want to draft a proposal together this weak?",
+                "Want to drift a proposal together this week?",
+                "Want to draft a proposition together this week?"
+              ],
+              "answer": "Want to draft a proposal together this week?",
+              "explanation": "'Draft a proposal' = taslak/önerge yazmak."
+            },
+            {
+              "id": "env6-8",
+              "type": "multiple_choice",
+              "prompt": "'Jump in' (toplantı/sohbet bağlamında) ne demek?",
+              "options": [
+                "Atlamak (fiziksel)",
+                "Konuya katılmak / dahil olmak",
+                "Toplantıdan ayrılmak",
+                "Eleştirmek"
+              ],
+              "answer": "Konuya katılmak / dahil olmak",
+              "explanation": "'Jump in' = (söz almak için) atılmak / dahil olmak."
+            },
+            {
+              "id": "env6-9",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Diyalogdan",
+              "prompt": "Türkçeye çevir: 'I'll send a meeting invite for Thursday.'",
+              "options": [
+                "Perşembe için toplantı daveti göndereceğim.",
+                "Perşembe günü toplantıya gideceğim.",
+                "Perşembeyi davete çağıracağım.",
+                "Perşembe günü toplantı iptal."
+              ],
+              "answer": "Perşembe için toplantı daveti göndereceğim.",
+              "acceptableAnswers": [
+                "Perşembe günü için bir toplantı daveti göndereceğim."
+              ],
+              "explanation": "'Meeting invite' = toplantı daveti."
+            },
+            {
+              "id": "env6-10",
+              "type": "fill_blank",
+              "prompt": "I noticed we still use ___ cups every day.",
+              "hint": "Her gün hâlâ tek kullanımlık bardak kullandığımızı fark ettim.",
+              "answer": "disposable",
+              "acceptableAnswers": [
+                "Disposable"
+              ],
+              "explanation": "'Disposable cups' = tek kullanımlık bardaklar."
+            },
+            {
+              "id": "env6-11",
+              "type": "multiple_choice",
+              "prompt": "'Encouraging' Türkçe karşılığı?",
+              "options": [
+                "Cesaret kırıcı",
+                "Cesaret verici / umut verici",
+                "Cesaretli",
+                "Cesaretsiz"
+              ],
+              "answer": "Cesaret verici / umut verici",
+              "explanation": "'Encouraging' = cesaret verici, umut verici (haberler için)."
+            },
+            {
+              "id": "env6-12",
+              "type": "tap_words_in_order",
+              "prompt": "İşe atıldığın için teşekkür ederim.",
+              "answer": "Thanks for jumping in",
+              "bank": [
+                "Thanks",
+                "for",
+                "jumping",
+                "in",
+                "very",
+                "to",
+                "the"
+              ],
+              "explanation": "'Thanks for jumping in' = atıldığın için teşekkürler."
+            },
+            {
+              "id": "env6-13",
+              "type": "fill_blank",
+              "prompt": "Single-use plastics are now ___ in the city centre.",
+              "hint": "Tek kullanımlık plastikler artık şehir merkezinde yasak.",
+              "answer": "banned",
+              "acceptableAnswers": [
+                "Banned",
+                "prohibited"
+              ],
+              "explanation": "Pasif 'are banned' = yasaklandı."
+            },
+            {
+              "id": "env6-14",
+              "type": "listen_and_choose",
+              "prompt": "Duyduğunuz cümleyi seçin",
+              "spokenText": "Shouldn't we switch to reusable ones?",
+              "options": [
+                "Shouldn't we switch to reusable ones?",
+                "Shouldn't we switch to reasonable ones?",
+                "Shouldn't we switching to reusable ones?",
+                "Shouldn't we switch to reusable one?"
+              ],
+              "answer": "Shouldn't we switch to reusable ones?",
+              "explanation": "'Shouldn't we…?' kibar öneri sorusu."
+            },
+            {
+              "id": "env6-15",
+              "type": "translate",
+              "direction": "tr-en",
+              "context": "Sürdürülebilirlik önerisi",
+              "prompt": "İngilizceye çevir: 'Birlikte bir öneri taslağı hazırlamak ister misin?'",
+              "options": [
+                "Want to draft a proposal together?",
+                "Want a proposal drafting we?",
+                "Do want we propose a draft?",
+                "Together you want write proposal?"
+              ],
+              "answer": "Want to draft a proposal together?",
+              "acceptableAnswers": [
+                "Would you like to draft a proposal together?"
+              ],
+              "explanation": "'Draft a proposal' = taslak hazırlamak."
+            },
+            {
+              "id": "env6-16",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle EN DOĞAL ofis önerisidir?",
+              "options": [
+                "Maybe we could install a recycling station near the kitchen.",
+                "Recycling station near kitchen installation maybe could we.",
+                "Install we maybe kitchen near a recycling station.",
+                "Could install maybe a kitchen station recycle near."
+              ],
+              "answer": "Maybe we could install a recycling station near the kitchen.",
+              "explanation": "'Maybe we could…' kibar öneri başlatıcı."
+            },
+            {
+              "id": "env6-17",
+              "type": "fill_blank",
+              "prompt": "I'll ___ a meeting invite for Thursday.",
+              "hint": "Perşembe için bir toplantı daveti göndereceğim.",
+              "answer": "send",
+              "acceptableAnswers": [
+                "Send"
+              ],
+              "explanation": "'Send a meeting invite' = toplantı daveti göndermek."
+            },
+            {
+              "id": "env6-18",
+              "type": "tap_words_in_order",
+              "prompt": "Doğrudur, geç olsun güç olmasın.",
+              "answer": "True better late than never",
+              "bank": [
+                "True",
+                "better",
+                "late",
+                "than",
+                "never",
+                "very",
+                "not"
+              ],
+              "explanation": "'Better late than never' = geç olsun güç olmasın."
+            },
+            {
+              "id": "env6-19",
+              "type": "multiple_choice",
+              "prompt": "Hangisi 'recycling station' içeriği OLABİLİR?",
+              "options": [
+                "Coffee mugs and posters",
+                "Bins for paper, plastic and glass",
+                "Office chairs",
+                "Printer toner"
+              ],
+              "answer": "Bins for paper, plastic and glass",
+              "explanation": "Recycling station = kağıt/plastik/cam için ayrı kovalar."
+            },
+            {
+              "id": "env6-20",
+              "type": "translate",
+              "direction": "en-tr",
+              "context": "Ofis sürdürülebilirliği",
+              "prompt": "Türkçeye çevir: 'That's encouraging — let's act on it.'",
+              "options": [
+                "Bu cesaret verici — harekete geçelim.",
+                "Bu hayal kırıklığı — bırakalım.",
+                "Bu kötü haber — vazgeçelim.",
+                "Bu önemli değil — bekleyelim."
+              ],
+              "answer": "Bu cesaret verici — harekete geçelim.",
+              "acceptableAnswers": [
+                "Bu umut verici — buna göre hareket edelim."
+              ],
+              "explanation": "'Act on it' = bu yönde harekete geçmek."
             }
           ]
         }
