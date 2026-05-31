@@ -310,6 +310,86 @@
               ],
               "answer": "因为电影太长了，所以我就走了。",
               "explanation": "Unlike English, where doubling \"because…so\" sounds redundant, Chinese commonly uses both 因为…所以…together. Just keep them at the start of each clause."
+            },
+            {
+              "id": "op1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我个人认为这个想法值得考虑",
+              "answer": "Personally I believe this idea is worth considering",
+              "acceptableAnswers": [
+                "I personally believe this idea deserves consideration",
+                "In my personal view this idea is worth thinking about"
+              ],
+              "explanation": "我个人认为 lifts the register from casual 我觉得 — common in essays and meetings."
+            },
+            {
+              "id": "op1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In my view, this view is not entirely correct\"",
+              "answer": "在 我 看 来 这 个 看法 不 完全 正确",
+              "bank": [
+                "在",
+                "我",
+                "看",
+                "来",
+                "这",
+                "个",
+                "看法",
+                "不",
+                "完全",
+                "正确",
+                "了",
+                "都"
+              ]
+            },
+            {
+              "id": "op1-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the most hedged way to say \"I think it's a bit expensive\":",
+              "options": [
+                "我觉得有点儿贵",
+                "贵死了",
+                "贵贵贵",
+                "我觉得超贵"
+              ],
+              "answer": "我觉得有点儿贵",
+              "explanation": "有点儿 + adj is the classic hedge. The other options are blunt/casual."
+            },
+            {
+              "id": "op1-16",
+              "type": "fill_blank",
+              "prompt": "Lift the register: casual 我觉得 → formal/considered \"我 ___ 这个想法很好\"",
+              "answer": "认为",
+              "acceptableAnswers": [
+                "认 为"
+              ],
+              "explanation": "认为 is the considered/formal cousin of 觉得."
+            },
+            {
+              "id": "op1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我觉得他说的比较有道理",
+              "answer": "I think what he said makes fairly good sense",
+              "acceptableAnswers": [
+                "I feel he has a fairly reasonable point",
+                "I think what he says is fairly reasonable"
+              ]
+            },
+            {
+              "id": "op1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the opener you hear",
+              "spokenText": "我 个 人 认 为",
+              "options": [
+                "我 个 人 认 为",
+                "我 个 人 觉 得",
+                "我 在 看 来",
+                "依 我 之 见"
+              ],
+              "answer": "我 个 人 认 为",
+              "explanation": "我个人认为 — five syllables, formal opener. Listen for the 4-tone 认 and 2-tone 为."
             }
           ]
         },
@@ -470,6 +550,133 @@
               ],
               "answer": "不 仅",
               "explanation": "不仅 (bù jǐn) and 不但 (bù dàn) are near-synonyms — 不但 is slightly more spoken. 不过 means \"however\" and 不然 means \"otherwise\". Listen for the second syllable."
+            },
+            {
+              "id": "op2-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He's not only smart, but also very hardworking\"",
+              "answer": "他 不仅 聪明 而且 非常 努力",
+              "bank": [
+                "他",
+                "不仅",
+                "聪明",
+                "而且",
+                "非常",
+                "努力",
+                "也",
+                "了",
+                "但是"
+              ]
+            },
+            {
+              "id": "op2-13",
+              "type": "multiple_choice",
+              "prompt": "不仅 cannot pair with:",
+              "options": [
+                "而且",
+                "还",
+                "也",
+                "可是"
+              ],
+              "answer": "可是",
+              "explanation": "可是 introduces contrast. 不仅 needs an additive: 而且 / 还 / 也."
+            },
+            {
+              "id": "op2-14",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他不仅会说中文，还会说日语",
+              "answer": "He not only speaks Chinese, but also Japanese",
+              "acceptableAnswers": [
+                "Not only does he speak Chinese, he speaks Japanese too",
+                "He can speak Chinese as well as Japanese"
+              ]
+            },
+            {
+              "id": "op2-15",
+              "type": "fill_blank",
+              "prompt": "\"这家餐厅 ___ 便宜，___ 很好吃\"",
+              "answer": "不仅 / 而且",
+              "acceptableAnswers": [
+                "不仅 而且",
+                "不仅/而且",
+                "不仅 / 还"
+              ],
+              "explanation": "Classic 不仅...而且 frame for stacking two positive points."
+            },
+            {
+              "id": "op2-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Not only do I like him, but my sister also likes him\"",
+              "answer": "不仅 我 喜欢 他 而且 我 妹妹 也 喜欢 他",
+              "bank": [
+                "不仅",
+                "我",
+                "喜欢",
+                "他",
+                "而且",
+                "我",
+                "妹妹",
+                "也",
+                "喜欢",
+                "他",
+                "了"
+              ]
+            },
+            {
+              "id": "op2-17",
+              "type": "multiple_choice",
+              "prompt": "Best translation: \"This restaurant is not only cheap but also delicious\":",
+              "options": [
+                "这家餐厅不仅便宜而且很好吃",
+                "这家餐厅便宜好吃",
+                "好吃便宜这家",
+                "这家好吃便宜餐厅"
+              ],
+              "answer": "这家餐厅不仅便宜而且很好吃"
+            },
+            {
+              "id": "op2-18",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他不仅高，还很帅",
+              "answer": "He is not only tall but also very handsome",
+              "acceptableAnswers": [
+                "Not only is he tall, he is also very handsome",
+                "He's tall and also very good-looking"
+              ]
+            },
+            {
+              "id": "op2-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Involution not only affects work, but also affects life\"",
+              "answer": "内卷 不仅 影响 工作 还 影响 生活",
+              "bank": [
+                "内卷",
+                "不仅",
+                "影响",
+                "工作",
+                "还",
+                "影响",
+                "生活",
+                "了",
+                "但是",
+                "也"
+              ]
+            },
+            {
+              "id": "op2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the second-half connector you hear",
+              "spokenText": "而 且",
+              "options": [
+                "而 且",
+                "可 是",
+                "但 是",
+                "并 且"
+              ],
+              "answer": "而 且",
+              "explanation": "而且 (ér qiě) is the standard partner of 不仅. Don't confuse with 但是 (contrast)."
             }
           ]
         },
@@ -671,6 +878,130 @@
               ],
               "answer": "我 不 太 同意",
               "explanation": "不太 + verb is the soft-disagreement frame. Hear it as a polite \"not quite\" rather than \"not at all\"."
+            },
+            {
+              "id": "op3-12",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I completely agree with your view\"",
+              "answer": "我 完全 同意 你 的 看法",
+              "bank": [
+                "我",
+                "完全",
+                "同意",
+                "你",
+                "的",
+                "看法",
+                "反对",
+                "基本",
+                "了"
+              ]
+            },
+            {
+              "id": "op3-13",
+              "type": "multiple_choice",
+              "prompt": "Pick the polite pushback for use with a boss:",
+              "options": [
+                "您说得有道理，不过我有一点不同看法",
+                "你错了",
+                "胡说",
+                "不对"
+              ],
+              "answer": "您说得有道理，不过我有一点不同看法",
+              "explanation": "Concede first (有道理), then introduce disagreement softly (一点不同看法)."
+            },
+            {
+              "id": "op3-14",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我基本同意你的看法",
+              "answer": "I basically agree with your view",
+              "acceptableAnswers": [
+                "I largely agree with your view",
+                "I mostly agree with what you think"
+              ]
+            },
+            {
+              "id": "op3-15",
+              "type": "fill_blank",
+              "prompt": "Soft pushback: \"我 ___ 同意你的看法\" (I don't quite agree)",
+              "answer": "不太",
+              "acceptableAnswers": [
+                "不 太"
+              ],
+              "explanation": "不太 + verb is the soft-disagreement frame: \"not quite agree\" instead of \"disagree\"."
+            },
+            {
+              "id": "op3-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"To some extent, what you said makes sense\"",
+              "answer": "在 某 种 程度 上 你 说 得 有 道理",
+              "bank": [
+                "在",
+                "某",
+                "种",
+                "程度",
+                "上",
+                "你",
+                "说",
+                "得",
+                "有",
+                "道理",
+                "了",
+                "完全"
+              ]
+            },
+            {
+              "id": "op3-17",
+              "type": "multiple_choice",
+              "prompt": "Which phrase is the strongest disagreement?",
+              "options": [
+                "我有不同的看法",
+                "我不太同意",
+                "完全反对",
+                "话不能这么说"
+              ],
+              "answer": "完全反对",
+              "explanation": "完全反对 = completely opposed. The others are all softened/polite forms."
+            },
+            {
+              "id": "op3-18",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "话不能这么说",
+              "answer": "I wouldn't put it that way",
+              "acceptableAnswers": [
+                "You can't say it like that",
+                "That's not quite how I'd put it"
+              ],
+              "context": "huà bù néng zhè me shuō"
+            },
+            {
+              "id": "op3-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"That's indeed the case, but…\"",
+              "answer": "确实 如此 但是",
+              "bank": [
+                "确实",
+                "如此",
+                "但是",
+                "可是",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "op3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the strong-agreement phrase you hear",
+              "spokenText": "完 全 同 意",
+              "options": [
+                "完 全 同 意",
+                "基 本 同 意",
+                "不 太 同 意",
+                "完 全 反 对"
+              ],
+              "answer": "完 全 同 意",
+              "explanation": "完全同意 — \"completely agree\". The strongest form on the agreement spectrum."
             }
           ]
         },
@@ -863,6 +1194,114 @@
               ],
               "answer": "凡事都有两面：一方面…另一方面…",
               "explanation": "Balanced essays in Chinese almost always open with 凡事都有两面 or a similar two-sides formula before laying out 一方面 / 另一方面."
+            },
+            {
+              "id": "op4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "一方面工作很累，另一方面工资也不高",
+              "answer": "On one hand the work is tiring, on the other hand the pay isn't high either",
+              "acceptableAnswers": [
+                "On one hand work is exhausting; on the other, the pay is also not high",
+                "The work is tiring, and the pay isn't great either"
+              ]
+            },
+            {
+              "id": "op4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This restaurant is both cheap and delicious\" (既...又)",
+              "answer": "这家 餐厅 既 便宜 又 好吃",
+              "bank": [
+                "这家",
+                "餐厅",
+                "既",
+                "便宜",
+                "又",
+                "好吃",
+                "也",
+                "了",
+                "贵"
+              ]
+            },
+            {
+              "id": "op4-15",
+              "type": "multiple_choice",
+              "prompt": "既 must pair with which word?",
+              "options": [
+                "又",
+                "也",
+                "但是",
+                "因为"
+              ],
+              "answer": "又",
+              "explanation": "既 X 又 Y is locked. 也 pairs with 不仅, not 既."
+            },
+            {
+              "id": "op4-16",
+              "type": "fill_blank",
+              "prompt": "\"一方面 工资 很 高 ___ 压力 也 很 大\"",
+              "answer": "另一方面",
+              "acceptableAnswers": [
+                "另 一 方面"
+              ],
+              "explanation": "一方面 must pair with 另一方面 — the locked two-sides frame."
+            },
+            {
+              "id": "op4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "她既漂亮又聪明",
+              "answer": "She is both pretty and smart",
+              "acceptableAnswers": [
+                "She is both beautiful and clever",
+                "She's pretty as well as smart"
+              ]
+            },
+            {
+              "id": "op4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Everything has two sides — one hand the advantages, on the other the disadvantages\"",
+              "answer": "凡事 都 有 两 面 一方面 好处 另一方面 坏处",
+              "bank": [
+                "凡事",
+                "都",
+                "有",
+                "两",
+                "面",
+                "一方面",
+                "好处",
+                "另一方面",
+                "坏处",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "op4-19",
+              "type": "multiple_choice",
+              "prompt": "Pick the GRAMMATICALLY CORRECT sentence:",
+              "options": [
+                "这个工作既稳定又有意思",
+                "这个工作既稳定也有意思",
+                "一方面工作很累也另一方面工资不高",
+                "她既漂亮但是聪明"
+              ],
+              "answer": "这个工作既稳定又有意思",
+              "explanation": "既 must pair with 又, not 也 / 但是. 一方面 must pair with 另一方面."
+            },
+            {
+              "id": "op4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the two-sided opener you hear",
+              "spokenText": "一 方 面",
+              "options": [
+                "一 方 面",
+                "另 一 方 面",
+                "凡 事 两 面",
+                "一 方 二 面"
+              ],
+              "answer": "一 方 面",
+              "explanation": "一方面 (yī fāng miàn) — \"on one hand\". Three syllables, falling-rising-falling cadence."
             }
           ]
         },
@@ -1208,6 +1647,85 @@
               ],
               "answer": "我看完了那篇文章。",
               "explanation": "English \"I read the article\" implies completion, but Chinese 看 alone just means \"look at\". 看完 (read-finish) explicitly marks the result."
+            },
+            {
+              "id": "nw1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "据相关媒体报道",
+              "answer": "According to relevant media reports",
+              "acceptableAnswers": [
+                "Per related media coverage",
+                "According to related media"
+              ],
+              "context": "jù xiāng guān méi tǐ bào dào"
+            },
+            {
+              "id": "nw1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Today's breaking news is about education reform\"",
+              "answer": "今天 的 突发 新闻 是 关于 教育 改革",
+              "bank": [
+                "今天",
+                "的",
+                "突发",
+                "新闻",
+                "是",
+                "关于",
+                "教育",
+                "改革",
+                "头条",
+                "了"
+              ]
+            },
+            {
+              "id": "nw1-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"自媒体\" refer to?",
+              "options": [
+                "Influencer / self-published online media",
+                "State media",
+                "Print newspaper",
+                "TV news"
+              ],
+              "answer": "Influencer / self-published online media",
+              "explanation": "自媒体 — WeChat public-account / Weibo-style independent media."
+            },
+            {
+              "id": "nw1-16",
+              "type": "fill_blank",
+              "prompt": "\"这 条 新闻 ___ 了 热搜\"",
+              "answer": "上",
+              "acceptableAnswers": [
+                "登上"
+              ],
+              "explanation": "上热搜 = make it onto the trending search list. 上 here is the verb \"to ascend onto\"."
+            },
+            {
+              "id": "nw1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "假新闻",
+              "answer": "Fake news",
+              "acceptableAnswers": [
+                "A fake news report",
+                "False news"
+              ],
+              "context": "jiǎ xīn wén"
+            },
+            {
+              "id": "nw1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the news term you hear",
+              "spokenText": "记 者",
+              "options": [
+                "记 者",
+                "记 录",
+                "继 续",
+                "几 着"
+              ],
+              "answer": "记 者",
+              "explanation": "记者 (jì zhě) — reporter. 4th tone + neutral tone. Common in news bylines."
             }
           ]
         },
@@ -1401,6 +1919,114 @@
               ],
               "answer": "导 致",
               "explanation": "导致 (dǎo zhì) is more clinical and explanatory; 引起 (yǐn qǐ) is more general; 造成 (zào chéng) emphasizes negative outcomes. All three appear in news but the verb you hear here is 导致."
+            },
+            {
+              "id": "nw2-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "这件事引起了广泛关注",
+              "answer": "This matter drew widespread attention",
+              "acceptableAnswers": [
+                "This incident has attracted widespread attention",
+                "The matter has caused broad public attention"
+              ]
+            },
+            {
+              "id": "nw2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The accident caused multiple injuries\"",
+              "answer": "这 起 事故 造成 了 多 人 受伤",
+              "bank": [
+                "这",
+                "起",
+                "事故",
+                "造成",
+                "了",
+                "多",
+                "人",
+                "受伤",
+                "影响",
+                "也"
+              ]
+            },
+            {
+              "id": "nw2-15",
+              "type": "multiple_choice",
+              "prompt": "Which verb is the most CLINICAL (cause-effect explanation)?",
+              "options": [
+                "导致",
+                "引起",
+                "造成",
+                "影响"
+              ],
+              "answer": "导致",
+              "explanation": "导致 — \"lead to\" — neutral and clinical. 造成 emphasizes negative outcomes; 引起 is more general."
+            },
+            {
+              "id": "nw2-16",
+              "type": "fill_blank",
+              "prompt": "News register: \"这 个 决定 会 ___ 深远 的 影响\"",
+              "answer": "产生",
+              "acceptableAnswers": [
+                "产 生"
+              ],
+              "explanation": "产生影响 — \"produce an impact\" — standard collocation in news/essay register."
+            },
+            {
+              "id": "nw2-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "嫌疑人被警方逮捕",
+              "answer": "The suspect was arrested by the police",
+              "acceptableAnswers": [
+                "The suspect has been arrested by police",
+                "Police arrested the suspect"
+              ]
+            },
+            {
+              "id": "nw2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This event sparked public attention\"",
+              "answer": "这 件 事 引发 了 公众 的 关注",
+              "bank": [
+                "这",
+                "件",
+                "事",
+                "引发",
+                "了",
+                "公众",
+                "的",
+                "关注",
+                "导致",
+                "也"
+              ]
+            },
+            {
+              "id": "nw2-19",
+              "type": "multiple_choice",
+              "prompt": "Best news-register version of \"Currently, multiple people have been injured\":",
+              "options": [
+                "目前已造成多人受伤",
+                "现在很多人受伤了",
+                "好多人受伤啦",
+                "现在受伤人很多"
+              ],
+              "answer": "目前已造成多人受伤",
+              "explanation": "目前 (now, formal) + 已 (already, formal) + 造成 — three news-register markers."
+            },
+            {
+              "id": "nw2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the verb you hear",
+              "spokenText": "造 成",
+              "options": [
+                "造 成",
+                "造 就",
+                "组 成",
+                "导 致"
+              ],
+              "answer": "造 成",
+              "explanation": "造成 (zào chéng) — \"bring about\" (often negative). 4th tone + 2nd tone."
             }
           ]
         },
@@ -1614,6 +2240,113 @@
               ],
               "answer": "由 于",
               "explanation": "由于 is the news/written equivalent of 因为. 由此 (\"from this\") is a follow-on connector. Listen for the second syllable."
+            },
+            {
+              "id": "nw3-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "政府出台了一项新政策",
+              "answer": "The government rolled out a new policy",
+              "acceptableAnswers": [
+                "The government has introduced a new policy",
+                "A new policy has been launched by the government"
+              ]
+            },
+            {
+              "id": "nw3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The new policy will affect millions of people\"",
+              "answer": "新 政策 将 影响 数 百万 人",
+              "bank": [
+                "新",
+                "政策",
+                "将",
+                "影响",
+                "数",
+                "百万",
+                "人",
+                "会",
+                "了",
+                "已经"
+              ]
+            },
+            {
+              "id": "nw3-15",
+              "type": "multiple_choice",
+              "prompt": "Which is the formal/news-register equivalent of 因为?",
+              "options": [
+                "由于",
+                "可是",
+                "所以",
+                "如果"
+              ],
+              "answer": "由于",
+              "explanation": "由于 is the news/written cousin of 因为. Common in policy reporting."
+            },
+            {
+              "id": "nw3-16",
+              "type": "fill_blank",
+              "prompt": "News frame: \"这 项 政策 ___ 支持 年轻 人 创业\" (aims to)",
+              "answer": "旨在",
+              "acceptableAnswers": [
+                "旨 在"
+              ],
+              "explanation": "旨在 — \"aims to / is intended to\" — formal news collocation."
+            },
+            {
+              "id": "nw3-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "政府对这个问题非常重视",
+              "answer": "The government takes this issue very seriously",
+              "acceptableAnswers": [
+                "The government attaches great importance to this issue",
+                "The authorities pay great attention to this issue"
+              ]
+            },
+            {
+              "id": "nw3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The wealth gap is one of society's serious problems\"",
+              "answer": "贫富 差距 是 社会 严重 问题 之一",
+              "bank": [
+                "贫富",
+                "差距",
+                "是",
+                "社会",
+                "严重",
+                "问题",
+                "之一",
+                "也",
+                "了"
+              ]
+            },
+            {
+              "id": "nw3-19",
+              "type": "multiple_choice",
+              "prompt": "News-register equivalent of 现在:",
+              "options": [
+                "目前",
+                "今天",
+                "刚才",
+                "马上"
+              ],
+              "answer": "目前",
+              "explanation": "目前 — \"currently\" — formal/news register. 现在 is the casual equivalent."
+            },
+            {
+              "id": "nw3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the formal future marker you hear",
+              "spokenText": "将",
+              "options": [
+                "将",
+                "会",
+                "要",
+                "想"
+              ],
+              "answer": "将",
+              "explanation": "将 is the formal/news-register \"will\". 会 is the casual equivalent."
             }
           ]
         },
@@ -1799,6 +2532,111 @@
               ],
               "answer": "专 家 表 示 此 事 影 响 深 远",
               "explanation": "Listen for 此事 (this matter) instead of 这件事 — both mean the same but 此 is news/written register only. Anchors deliver these compressed forms."
+            },
+            {
+              "id": "nw4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "专家表示此事影响深远",
+              "answer": "Experts say this matter will have far-reaching effects",
+              "acceptableAnswers": [
+                "Experts indicate that this incident has profound impact",
+                "Experts say the consequences of this are far-reaching"
+              ]
+            },
+            {
+              "id": "nw4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"According to reports, the issue has been resolved\"",
+              "answer": "据 报道 问题 已经 解决",
+              "bank": [
+                "据",
+                "报道",
+                "问题",
+                "已经",
+                "解决",
+                "了",
+                "没有",
+                "现在"
+              ]
+            },
+            {
+              "id": "nw4-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the headline-register: \"Two countries sign trade agreement\":",
+              "options": [
+                "两 国 签署 贸易 协议",
+                "两个国家签了贸易协议了",
+                "他们签了协议",
+                "国家协议签"
+              ],
+              "answer": "两 国 签署 贸易 协议",
+              "explanation": "Headlines drop particles, prefer compact forms: 两国 (two countries), 签署 (sign, formal), no 了."
+            },
+            {
+              "id": "nw4-16",
+              "type": "fill_blank",
+              "prompt": "Headline cadence: \"暴雨 ___ 北京\" (\"Rainstorm hits Beijing\")",
+              "answer": "袭击",
+              "acceptableAnswers": [
+                "袭 击"
+              ],
+              "explanation": "袭击 (xí jī) — \"strike/attack\" — headline metaphor for storms and disasters."
+            },
+            {
+              "id": "nw4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "再创新高",
+              "answer": "Hits a new high again",
+              "acceptableAnswers": [
+                "Sets another record",
+                "Reaches a new peak again"
+              ],
+              "context": "zài chuàng xīn gāo"
+            },
+            {
+              "id": "nw4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Headline build: \"This year the economy continues to grow\"",
+              "answer": "今年 经济 持续 增长",
+              "bank": [
+                "今年",
+                "经济",
+                "持续",
+                "增长",
+                "在",
+                "了",
+                "的",
+                "正"
+              ]
+            },
+            {
+              "id": "nw4-19",
+              "type": "multiple_choice",
+              "prompt": "Headline-register opener:",
+              "options": [
+                "据相关媒体报道",
+                "听说啊",
+                "你猜怎么着",
+                "我朋友说"
+              ],
+              "answer": "据相关媒体报道",
+              "explanation": "据相关媒体报道 — \"according to related media reports\" — the standard news opener."
+            },
+            {
+              "id": "nw4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the headline verb you hear",
+              "spokenText": "宣 布",
+              "options": [
+                "宣 布",
+                "宣 告",
+                "宣 传",
+                "宣 言"
+              ],
+              "answer": "宣 布",
+              "explanation": "宣布 (xuān bù) — \"announce\". Common in headlines: 公司宣布."
             }
           ]
         },
@@ -2001,6 +2839,114 @@
               ],
               "answer": "躺 平",
               "explanation": "躺平 (tǎng píng, lying flat) — the opt-out meme. Listen for the falling tone on 躺 followed by rising 平."
+            },
+            {
+              "id": "nw5-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "越来越多的年轻人选择躺平",
+              "answer": "More and more young people choose to lie flat",
+              "acceptableAnswers": [
+                "An increasing number of young people are choosing to opt out",
+                "More young people are choosing 'lying flat'"
+              ]
+            },
+            {
+              "id": "nw5-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This is a very common phenomenon today\"",
+              "answer": "这 是 现在 很 普遍 的 现象",
+              "bank": [
+                "这",
+                "是",
+                "现在",
+                "很",
+                "普遍",
+                "的",
+                "现象",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "nw5-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"老龄化\" mean?",
+              "options": [
+                "Population aging",
+                "Urbanization",
+                "Globalization",
+                "Industrialization"
+              ],
+              "answer": "Population aging",
+              "explanation": "老龄化 — the aging of a society. 化 = -ization."
+            },
+            {
+              "id": "nw5-16",
+              "type": "fill_blank",
+              "prompt": "Trend frame: \"中国 ___ 成为 一 个 老龄化 社会\" (is becoming)",
+              "answer": "正在",
+              "acceptableAnswers": [
+                "正 在"
+              ],
+              "explanation": "正在 + V = is in the process of V-ing. Standard news-essay frame for trends in progress."
+            },
+            {
+              "id": "nw5-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我们这一代面临着前所未有的压力",
+              "answer": "Our generation faces unprecedented pressure",
+              "acceptableAnswers": [
+                "This generation faces pressure like never before",
+                "We of this generation are confronting unprecedented stress"
+              ]
+            },
+            {
+              "id": "nw5-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Behind this trend are complex social factors\"",
+              "answer": "这 种 趋势 背后 有 复杂 的 社会 因素",
+              "bank": [
+                "这",
+                "种",
+                "趋势",
+                "背后",
+                "有",
+                "复杂",
+                "的",
+                "社会",
+                "因素",
+                "原因",
+                "了"
+              ]
+            },
+            {
+              "id": "nw5-19",
+              "type": "multiple_choice",
+              "prompt": "What is \"北漂\"?",
+              "options": [
+                "Young migrant chasing work in Beijing",
+                "Beijing's northern outskirts",
+                "Tourist in Beijing",
+                "Beijing-style tea"
+              ],
+              "answer": "Young migrant chasing work in Beijing",
+              "explanation": "北 (Beijing) + 漂 (drift) — referring to young people drifting to Beijing for work."
+            },
+            {
+              "id": "nw5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the slang term you hear",
+              "spokenText": "内 卷",
+              "options": [
+                "内 卷",
+                "内 心",
+                "内 涵",
+                "内 向"
+              ],
+              "answer": "内 卷",
+              "explanation": "内卷 (nèi juǎn) — involution. 4th tone + 3rd tone. The cutthroat-competition meme."
             }
           ]
         },
@@ -2410,6 +3356,81 @@
               ],
               "answer": "全球 变暖 越来越 严重",
               "explanation": "全球变暖 (quán qiú biàn nuǎn) = global warming. The repeated 越来越 (yuè lái yuè) means \"more and more\"."
+            },
+            {
+              "id": "ev1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "空气污染越来越严重",
+              "answer": "Air pollution is getting more and more serious",
+              "acceptableAnswers": [
+                "Air pollution keeps getting worse",
+                "The air pollution problem is worsening"
+              ]
+            },
+            {
+              "id": "ev1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"We should reduce carbon emissions\"",
+              "answer": "我们 应该 减少 碳 排放",
+              "bank": [
+                "我们",
+                "应该",
+                "减少",
+                "碳",
+                "排放",
+                "增加",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "ev1-15",
+              "type": "multiple_choice",
+              "prompt": "What is \"碳中和\"?",
+              "options": [
+                "Carbon neutral",
+                "Heavy carbon",
+                "Carbon nuclear",
+                "Carbon trade"
+              ],
+              "answer": "Carbon neutral",
+              "explanation": "碳中和 — the official term for carbon neutrality."
+            },
+            {
+              "id": "ev1-16",
+              "type": "fill_blank",
+              "prompt": "Formal noun: 环保 → ___",
+              "answer": "环境保护",
+              "acceptableAnswers": [
+                "环 境 保 护"
+              ],
+              "explanation": "环保 is the casual contraction; 环境保护 is the full formal noun."
+            },
+            {
+              "id": "ev1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "全球变暖",
+              "answer": "Global warming",
+              "acceptableAnswers": [
+                "Climate warming"
+              ],
+              "context": "quán qiú biàn nuǎn"
+            },
+            {
+              "id": "ev1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "雾 霾",
+              "options": [
+                "雾 霾",
+                "雾 气",
+                "黄 沙",
+                "尘 土"
+              ],
+              "answer": "雾 霾",
+              "explanation": "雾霾 (wù mái) — smog. 4th tone + 2nd tone. Northern China winter vocab."
             }
           ]
         },
@@ -2597,6 +3618,110 @@
               ],
               "answer": "天 气 越 来 越 热",
               "explanation": "越来越 + adj is one of the most common B2 patterns spoken at conversational speed. Listen for the rising-falling cadence on 越来越."
+            },
+            {
+              "id": "ev2-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "天气越来越热",
+              "answer": "The weather is getting hotter and hotter",
+              "acceptableAnswers": [
+                "It's getting hotter and hotter",
+                "The weather keeps getting hotter"
+              ]
+            },
+            {
+              "id": "ev2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The problem is getting more and more serious\"",
+              "answer": "问题 越 来 越 严重",
+              "bank": [
+                "问题",
+                "越",
+                "来",
+                "越",
+                "严重",
+                "也",
+                "更",
+                "了"
+              ]
+            },
+            {
+              "id": "ev2-15",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is WRONG?",
+              "options": [
+                "天气越来越冷",
+                "天气越来越很冷",
+                "雨越下越大",
+                "他越说越生气"
+              ],
+              "answer": "天气越来越很冷",
+              "explanation": "越来越 already intensifies — adding 很 doubles up."
+            },
+            {
+              "id": "ev2-16",
+              "type": "fill_blank",
+              "prompt": "Two-subject frame: \"天气 ___ 冷, 我 ___ 想 喝 热 茶\"",
+              "answer": "越 / 越",
+              "acceptableAnswers": [
+                "越 越",
+                "越/越"
+              ],
+              "explanation": "Both halves of 越 X 越 Y are required. Different subjects can sit inside each half."
+            },
+            {
+              "id": "ev2-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "环保意识越来越强",
+              "answer": "Environmental awareness is getting stronger and stronger",
+              "acceptableAnswers": [
+                "People's environmental consciousness keeps growing",
+                "Awareness of environmental protection is increasingly strong"
+              ]
+            },
+            {
+              "id": "ev2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The earlier we act, the better\"",
+              "answer": "越 早 行动 越 好",
+              "bank": [
+                "越",
+                "早",
+                "行动",
+                "越",
+                "好",
+                "都",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "ev2-19",
+              "type": "multiple_choice",
+              "prompt": "Best translation: \"The more I know about the environment, the more worried I get\":",
+              "options": [
+                "我越了解环境越担心",
+                "我担心环境",
+                "环境担心很",
+                "了解环境我"
+              ],
+              "answer": "我越了解环境越担心"
+            },
+            {
+              "id": "ev2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the pattern you hear",
+              "spokenText": "越 来 越",
+              "options": [
+                "越 来 越",
+                "越 学 越",
+                "更 来 更",
+                "越 越 来"
+              ],
+              "answer": "越 来 越",
+              "explanation": "越来越 (yuè lái yuè) — \"more and more\". Three syllables, all 4th tone."
             }
           ]
         },
@@ -2796,6 +3921,114 @@
                 "也",
                 "了"
               ]
+            },
+            {
+              "id": "ev3-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我们应该减少使用一次性用品",
+              "answer": "We should reduce our use of disposable products",
+              "acceptableAnswers": [
+                "We ought to use fewer disposable items",
+                "Let's cut down on single-use products"
+              ]
+            },
+            {
+              "id": "ev3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Used batteries belong in hazardous waste\"",
+              "answer": "用 过 的 电池 属于 有害 垃圾",
+              "bank": [
+                "用",
+                "过",
+                "的",
+                "电池",
+                "属于",
+                "有害",
+                "垃圾",
+                "湿",
+                "可回收",
+                "了"
+              ]
+            },
+            {
+              "id": "ev3-15",
+              "type": "multiple_choice",
+              "prompt": "Where does food waste go?",
+              "options": [
+                "湿垃圾",
+                "干垃圾",
+                "有害垃圾",
+                "可回收垃圾"
+              ],
+              "answer": "湿垃圾",
+              "explanation": "Wet waste (湿垃圾) is for food scraps; recyclables go to 可回收; batteries are hazardous (有害)."
+            },
+            {
+              "id": "ev3-16",
+              "type": "fill_blank",
+              "prompt": "Slogan: \"自带 ___ 袋\" (bring your own X bag)",
+              "answer": "购物",
+              "acceptableAnswers": [
+                "购 物"
+              ],
+              "explanation": "自带购物袋 — bring your own shopping bag. A common green-living slogan."
+            },
+            {
+              "id": "ev3-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "越来越多的人开始用环保杯",
+              "answer": "More and more people are starting to use reusable cups",
+              "acceptableAnswers": [
+                "An increasing number of people now use eco-friendly cups",
+                "More people are switching to reusable cups"
+              ]
+            },
+            {
+              "id": "ev3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Recycling protects the environment and saves resources\" (不仅...而且)",
+              "answer": "回收 不仅 保护 环境 而且 节约 资源",
+              "bank": [
+                "回收",
+                "不仅",
+                "保护",
+                "环境",
+                "而且",
+                "节约",
+                "资源",
+                "也",
+                "了",
+                "但是"
+              ]
+            },
+            {
+              "id": "ev3-19",
+              "type": "multiple_choice",
+              "prompt": "What is \"一次性用品\"?",
+              "options": [
+                "Single-use products",
+                "Used products",
+                "Free products",
+                "Imported products"
+              ],
+              "answer": "Single-use products",
+              "explanation": "一次性 — literally \"one-time-nature\" — disposable / single-use."
+            },
+            {
+              "id": "ev3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the waste category you hear",
+              "spokenText": "有 害 垃 圾",
+              "options": [
+                "有 害 垃 圾",
+                "可 回 收 垃 圾",
+                "湿 垃 圾",
+                "干 垃 圾"
+              ],
+              "answer": "有 害 垃 圾",
+              "explanation": "有害 (yǒu hài) — hazardous. Different from 可回收 (recyclable) and 干/湿 (dry/wet)."
             }
           ]
         },
@@ -2993,6 +4226,118 @@
                   "right": "Deforestation"
                 }
               ]
+            },
+            {
+              "id": "ev4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "气候变化是今天最严重的问题之一",
+              "answer": "Climate change is one of today's most serious problems",
+              "acceptableAnswers": [
+                "Climate change is among today's most pressing issues",
+                "Climate change is one of the gravest problems today"
+              ]
+            },
+            {
+              "id": "ev4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"We should ride bikes more and drive less\"",
+              "answer": "我们 应该 多 骑 自行车 少 开 车",
+              "bank": [
+                "我们",
+                "应该",
+                "多",
+                "骑",
+                "自行车",
+                "少",
+                "开",
+                "车",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "ev4-15",
+              "type": "multiple_choice",
+              "prompt": "Best translation for \"If we don't act, the consequences will be severe\":",
+              "options": [
+                "如果我们不行动，后果将会很严重",
+                "后果严重",
+                "我们行动严重",
+                "不行动严重"
+              ],
+              "answer": "如果我们不行动，后果将会很严重",
+              "explanation": "如果...将会 — \"if...will\" — formal/essay future."
+            },
+            {
+              "id": "ev4-16",
+              "type": "fill_blank",
+              "prompt": "\"为 了 保护 地球, 我们 应该 ___ 小事 做 起\" (start from)",
+              "answer": "从",
+              "acceptableAnswers": [
+                "從"
+              ],
+              "explanation": "从 X 做起 = start from X. 从小事做起 = start with small things."
+            },
+            {
+              "id": "ev4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "低碳生活",
+              "answer": "Low-carbon lifestyle",
+              "acceptableAnswers": [
+                "A low-carbon lifestyle",
+                "Low-carbon living"
+              ],
+              "context": "dī tàn shēng huó"
+            },
+            {
+              "id": "ev4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Even if one person's strength is small, it can still change the world\"",
+              "answer": "即使 一 个 人 的 力量 很 小 也 能 改变 世界",
+              "bank": [
+                "即使",
+                "一",
+                "个",
+                "人",
+                "的",
+                "力量",
+                "很",
+                "小",
+                "也",
+                "能",
+                "改变",
+                "世界",
+                "了"
+              ]
+            },
+            {
+              "id": "ev4-19",
+              "type": "multiple_choice",
+              "prompt": "What does \"节约用水\" mean?",
+              "options": [
+                "Save / conserve water",
+                "Waste water",
+                "Drink more water",
+                "Boil water"
+              ],
+              "answer": "Save / conserve water",
+              "explanation": "节约 = save / conserve. 用水 = water use."
+            },
+            {
+              "id": "ev4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "气 候 变 化",
+              "options": [
+                "气 候 变 化",
+                "气 候 变 暖",
+                "天 气 变 化",
+                "气 温 变 化"
+              ],
+              "answer": "气 候 变 化",
+              "explanation": "气候变化 — climate change. Listen for 气候 (climate) vs 天气 (weather)."
             }
           ]
         },
@@ -3359,6 +4704,72 @@
               ],
               "answer": "这个 应用 用 起来 很 方便",
               "explanation": "V+起来 = \"to V (it)\" — 用起来 means \"to use (it)\". 方便 = convenient."
+            },
+            {
+              "id": "tc1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我的手机快没电了",
+              "answer": "My phone is almost out of battery",
+              "acceptableAnswers": [
+                "My phone's battery is almost dead",
+                "My phone is about to die"
+              ]
+            },
+            {
+              "id": "tc1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Please scan my WeChat QR code\"",
+              "answer": "请 扫 一 下 我 的 微信 二维码",
+              "bank": [
+                "请",
+                "扫",
+                "一",
+                "下",
+                "我",
+                "的",
+                "微信",
+                "二维码",
+                "扫码",
+                "支付宝"
+              ]
+            },
+            {
+              "id": "tc1-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"流量不够用\" mean?",
+              "options": [
+                "Out of mobile data",
+                "Phone is broken",
+                "Network is too fast",
+                "Phone is old"
+              ],
+              "answer": "Out of mobile data",
+              "explanation": "流量 = mobile data; 不够用 = not enough to use."
+            },
+            {
+              "id": "tc1-16",
+              "type": "fill_blank",
+              "prompt": "\"我 的 微信 打 ___ 开\" (potential complement: can't open)",
+              "answer": "不",
+              "acceptableAnswers": [
+                "不开"
+              ],
+              "explanation": "V + 不 + result = can't achieve the result. 打不开 = can't open."
+            },
+            {
+              "id": "tc1-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "扫 码",
+              "options": [
+                "扫 码",
+                "扫 地",
+                "刷 卡",
+                "扫 描"
+              ],
+              "answer": "扫 码",
+              "explanation": "扫码 (sǎo mǎ) — scan a code. Heard dozens of times a day in China."
             }
           ]
         },
@@ -3579,6 +4990,102 @@
               ],
               "answer": "我现在很少发朋友圈了",
               "explanation": "很少 + V (rarely do V), with sentence-final 了 marking the changed state — \"I'm no longer the type who posts much\"."
+            },
+            {
+              "id": "tc2-14",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我现在很少发朋友圈了",
+              "answer": "I rarely post on Moments now",
+              "acceptableAnswers": [
+                "I don't post on Moments much anymore",
+                "These days I seldom share to Moments"
+              ]
+            },
+            {
+              "id": "tc2-15",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Don't click on links from strangers\"",
+              "answer": "不要 点 陌生 人 发 来 的 链接",
+              "bank": [
+                "不要",
+                "点",
+                "陌生",
+                "人",
+                "发",
+                "来",
+                "的",
+                "链接",
+                "可以",
+                "了"
+              ]
+            },
+            {
+              "id": "tc2-16",
+              "type": "multiple_choice",
+              "prompt": "What does \"屏蔽\" mean in social media?",
+              "options": [
+                "Mute / hide posts without unfriending",
+                "Block forever",
+                "Like a post",
+                "Forward to others"
+              ],
+              "answer": "Mute / hide posts without unfriending",
+              "explanation": "屏蔽 — soft-block. The friend stays in your list but you don't see their posts."
+            },
+            {
+              "id": "tc2-17",
+              "type": "fill_blank",
+              "prompt": "\"她 每天 都 在 朋友圈 ___ 娃\" (show off her kid)",
+              "answer": "晒",
+              "acceptableAnswers": [
+                "曬"
+              ],
+              "explanation": "晒 (shài) on social media = flaunt / show off. 晒娃 = post kid pics."
+            },
+            {
+              "id": "tc2-18",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "网络诈骗",
+              "answer": "Online scam",
+              "acceptableAnswers": [
+                "Internet fraud",
+                "Online fraud"
+              ],
+              "context": "wǎng luò zhà piàn"
+            },
+            {
+              "id": "tc2-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I posted a photo on Moments\"",
+              "answer": "我 在 朋友圈 发 了 一 张 照片",
+              "bank": [
+                "我",
+                "在",
+                "朋友圈",
+                "发",
+                "了",
+                "一",
+                "张",
+                "照片",
+                "评论",
+                "微信"
+              ]
+            },
+            {
+              "id": "tc2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the verb you hear",
+              "spokenText": "刷 视 频",
+              "options": [
+                "刷 视 频",
+                "看 视 频",
+                "拍 视 频",
+                "录 视 频"
+              ],
+              "answer": "刷 视 频",
+              "explanation": "刷视频 — \"swipe through videos\" — endless Douyin / Xiaohongshu scrolling."
             }
           ]
         },
@@ -3797,6 +5304,99 @@
               ],
               "answer": "加 班",
               "explanation": "加班 (jiā bān, work overtime) and 上班 (shàng bān, go to work) start with different first syllables. The complaint volume is also a clue — 加班 carries more sigh."
+            },
+            {
+              "id": "tc3-14",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我几乎每天都要加班",
+              "answer": "I have to work overtime almost every day",
+              "acceptableAnswers": [
+                "Nearly every day I have to do overtime",
+                "I'm working overtime almost daily"
+              ]
+            },
+            {
+              "id": "tc3-15",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"To finish the project I pulled an all-nighter\"",
+              "answer": "为 了 完成 项目 我 通宵 了",
+              "bank": [
+                "为",
+                "了",
+                "完成",
+                "项目",
+                "我",
+                "通宵",
+                "了",
+                "下班",
+                "几乎"
+              ]
+            },
+            {
+              "id": "tc3-16",
+              "type": "multiple_choice",
+              "prompt": "What does 996 mean?",
+              "options": [
+                "Working 9am-9pm, 6 days a week",
+                "A subway line",
+                "A WeChat code",
+                "A discount day"
+              ],
+              "answer": "Working 9am-9pm, 6 days a week",
+              "explanation": "Hugely controversial in Chinese tech. 996.icu became a viral protest meme."
+            },
+            {
+              "id": "tc3-17",
+              "type": "fill_blank",
+              "prompt": "\"___ 工资 很 高, 但是 压力 非常 大\" (although)",
+              "answer": "尽管",
+              "acceptableAnswers": [
+                "虽然"
+              ],
+              "explanation": "尽管 / 虽然 introduce real-fact concessions. Both pair with 但是."
+            },
+            {
+              "id": "tc3-18",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我越加班越累",
+              "answer": "The more I work overtime, the more exhausted I get",
+              "acceptableAnswers": [
+                "The longer I work overtime, the more tired I become",
+                "Overtime makes me more and more tired"
+              ]
+            },
+            {
+              "id": "tc3-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Workplace pressure is getting bigger and bigger\"",
+              "answer": "工作 压力 越 来 越 大",
+              "bank": [
+                "工作",
+                "压力",
+                "越",
+                "来",
+                "越",
+                "大",
+                "小",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "tc3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the workplace term you hear",
+              "spokenText": "压 力",
+              "options": [
+                "压 力",
+                "鸭 梨",
+                "押 韵",
+                "雅 利"
+              ],
+              "answer": "压 力",
+              "explanation": "压力 (yā lì) — pressure / stress. 1st tone + 4th tone."
             }
           ]
         },
@@ -4028,6 +5628,100 @@
                 "也",
                 "了"
               ]
+            },
+            {
+              "id": "tc4-14",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "现在年轻人内卷得很厉害",
+              "answer": "Young people today are deep in fierce involution",
+              "acceptableAnswers": [
+                "Young people are heavily involved in the rat race now",
+                "The involution is intense among today's youth"
+              ]
+            },
+            {
+              "id": "tc4-15",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He chose to lie flat\"",
+              "answer": "他 选择 躺平",
+              "bank": [
+                "他",
+                "选择",
+                "躺平",
+                "了",
+                "内卷",
+                "不"
+              ]
+            },
+            {
+              "id": "tc4-16",
+              "type": "multiple_choice",
+              "prompt": "What does \"裸辞\" mean?",
+              "options": [
+                "Quit without a backup plan",
+                "Get fired",
+                "Take vacation",
+                "Switch teams"
+              ],
+              "answer": "Quit without a backup plan",
+              "explanation": "裸辞 (luǒ cí) — literally \"naked resign\" — quitting with nothing lined up."
+            },
+            {
+              "id": "tc4-17",
+              "type": "fill_blank",
+              "prompt": "\"我 ___ 躺平 也 不 想 继续 内卷\" (would rather)",
+              "answer": "宁愿",
+              "acceptableAnswers": [
+                "宁 愿"
+              ],
+              "explanation": "宁愿 X 也不 Y — \"would rather X than Y\". B2 strong-preference frame."
+            },
+            {
+              "id": "tc4-18",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "卷不动了",
+              "answer": "I can't keep up with the involution anymore",
+              "acceptableAnswers": [
+                "I can't compete anymore",
+                "I'm too tired to keep grinding"
+              ],
+              "context": "juǎn bù dòng le"
+            },
+            {
+              "id": "tc4-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In an involution environment, even hard work changes nothing\" (即使...也)",
+              "answer": "在 内卷 的 环境 里 即使 努力 也 改变 不 了 什么",
+              "bank": [
+                "在",
+                "内卷",
+                "的",
+                "环境",
+                "里",
+                "即使",
+                "努力",
+                "也",
+                "改变",
+                "不",
+                "了",
+                "什么"
+              ]
+            },
+            {
+              "id": "tc4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the meme you hear",
+              "spokenText": "佛 系",
+              "options": [
+                "佛 系",
+                "佛 教",
+                "服 气",
+                "复 习"
+              ],
+              "answer": "佛 系",
+              "explanation": "佛系 (fó xì) — \"Buddha-style\" — whatever-happens / zen attitude. 2nd tone + 4th tone."
             }
           ]
         },
@@ -4236,6 +5930,103 @@
               ],
               "answer": "算 法",
               "explanation": "算法 (suàn fǎ) — algorithm. Easy to confuse with 算数 (count / arithmetic). The second syllable is the giveaway."
+            },
+            {
+              "id": "tc5-14",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "机器翻译越来越准确",
+              "answer": "Machine translation is getting more and more accurate",
+              "acceptableAnswers": [
+                "Machine translation keeps becoming more accurate",
+                "Machine translation grows increasingly accurate"
+              ]
+            },
+            {
+              "id": "tc5-15",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"We can use AI to solve many problems\"",
+              "answer": "我们 可以 用 人工智能 来 解决 很 多 问题",
+              "bank": [
+                "我们",
+                "可以",
+                "用",
+                "人工智能",
+                "来",
+                "解决",
+                "很",
+                "多",
+                "问题",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "tc5-16",
+              "type": "multiple_choice",
+              "prompt": "Best translation for \"Many jobs may be replaced by AI\":",
+              "options": [
+                "很多工作可能会被人工智能取代",
+                "人工智能很多工作",
+                "工作要人工智能",
+                "AI是工作"
+              ],
+              "answer": "很多工作可能会被人工智能取代",
+              "explanation": "被 marks the passive. The jobs are 被 replaced 被人工智能 (by AI)."
+            },
+            {
+              "id": "tc5-17",
+              "type": "fill_blank",
+              "prompt": "Tech-register future: \"人工智能 ___ 改变 我们 的 生活 方式\" (formal will)",
+              "answer": "将",
+              "acceptableAnswers": [
+                "将 会"
+              ],
+              "explanation": "将 — formal/news-register \"will\". Preferred in tech and journalistic writing over 会."
+            },
+            {
+              "id": "tc5-18",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "即使人工智能发展得很快，也需要考虑伦理问题",
+              "answer": "Even if AI develops fast, ethics issues still need to be considered",
+              "acceptableAnswers": [
+                "Even with rapid AI development, ethical issues require attention",
+                "Even if AI advances quickly, ethics must be considered"
+              ]
+            },
+            {
+              "id": "tc5-19",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although AI is powerful, it can't replace humans\" (尽管...但是)",
+              "answer": "尽管 人工智能 很 强大 但是 不 能 取代 人类",
+              "bank": [
+                "尽管",
+                "人工智能",
+                "很",
+                "强大",
+                "但是",
+                "不",
+                "能",
+                "取代",
+                "人类",
+                "也",
+                "了"
+              ]
+            },
+            {
+              "id": "tc5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the AI term you hear",
+              "spokenText": "大 模 型",
+              "options": [
+                "大 模 型",
+                "大 模 板",
+                "大 型 号",
+                "小 模 型"
+              ],
+              "answer": "大 模 型",
+              "explanation": "大模型 (dà mó xíng) — large language model. Hot topic in Chinese tech news."
             }
           ]
         },
@@ -4588,6 +6379,84 @@
               ],
               "answer": "我上周考试了。",
               "explanation": "Time phrases sit before the verb in Chinese — either at the start of the clause or after the subject. Postposing the time, English-style, doesn't work."
+            },
+            {
+              "id": "ed1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我弟弟上初二",
+              "answer": "My younger brother is in his second year of junior high",
+              "acceptableAnswers": [
+                "My little brother is in grade 8",
+                "My brother is in junior high year 2"
+              ]
+            },
+            {
+              "id": "ed1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Tomorrow we have a math test\"",
+              "answer": "明天 我们 有 数学 考试",
+              "bank": [
+                "明天",
+                "我们",
+                "有",
+                "数学",
+                "考试",
+                "课",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "ed1-15",
+              "type": "multiple_choice",
+              "prompt": "What is \"补习班\"?",
+              "options": [
+                "Cram school / tutoring class",
+                "Lunch class",
+                "Sports class",
+                "Music class"
+              ],
+              "answer": "Cram school / tutoring class",
+              "explanation": "补习班 — after-school tutoring class. Restricted by 2021's 双减 policy."
+            },
+            {
+              "id": "ed1-16",
+              "type": "fill_blank",
+              "prompt": "\"学习 ___ 需要 时间, ___ 需要 精力\" (not only / but also)",
+              "answer": "不仅 / 而且",
+              "acceptableAnswers": [
+                "不仅 而且",
+                "不仅 / 还",
+                "不仅 / 也"
+              ],
+              "explanation": "不仅 X 而且 Y is the standard additive frame."
+            },
+            {
+              "id": "ed1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "毕业",
+              "answer": "Graduate",
+              "acceptableAnswers": [
+                "To graduate",
+                "Graduation"
+              ],
+              "context": "bì yè"
+            },
+            {
+              "id": "ed1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "研 究 生",
+              "options": [
+                "研 究 生",
+                "研 究 室",
+                "研 究 员",
+                "研 修 生"
+              ],
+              "answer": "研 究 生",
+              "explanation": "研究生 (yán jiū shēng) — graduate student. Third syllable distinguishes from variants."
             }
           ]
         },
@@ -4793,6 +6662,115 @@
               ],
               "answer": "状 元",
               "explanation": "状元 (zhuàng yuán) — historically the imperial-exam top scorer; now the title for each province's top gaokao scorer. 4th tone + 2nd tone."
+            },
+            {
+              "id": "ed2-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他每天都很努力学习准备高考",
+              "answer": "He studies very hard every day to prepare for the gaokao",
+              "acceptableAnswers": [
+                "He works hard daily to prep for the college entrance exam",
+                "He prepares for the gaokao with daily hard study"
+              ]
+            },
+            {
+              "id": "ed2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In order to take the gaokao, he gave up many things\"",
+              "answer": "为 了 高考 他 放弃 了 很 多 东西",
+              "bank": [
+                "为",
+                "了",
+                "高考",
+                "他",
+                "放弃",
+                "了",
+                "很",
+                "多",
+                "东西",
+                "考试",
+                "也"
+              ]
+            },
+            {
+              "id": "ed2-15",
+              "type": "multiple_choice",
+              "prompt": "What is \"状元\"?",
+              "options": [
+                "Top scorer (provincial)",
+                "Tutor",
+                "Exam proctor",
+                "Failing student"
+              ],
+              "answer": "Top scorer (provincial)",
+              "explanation": "状元 — historically the top imperial-exam scorer; now used for each province's gaokao top scorer."
+            },
+            {
+              "id": "ed2-16",
+              "type": "fill_blank",
+              "prompt": "Compete frame: \"应试 教育 虽然 能 筛选 学生, ___ 忽视 了 创造力 的 培养\" (but)",
+              "answer": "但是",
+              "acceptableAnswers": [
+                "但 是",
+                "可是"
+              ],
+              "explanation": "虽然 X 但是 Y — classic concede-then-criticize structure."
+            },
+            {
+              "id": "ed2-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我不想再卷了",
+              "answer": "I don't want to compete in this rat race anymore",
+              "acceptableAnswers": [
+                "I'm done grinding",
+                "I'm tired of the academic involution"
+              ]
+            },
+            {
+              "id": "ed2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He prepared for the gaokao for three years\" (verb-doubling)",
+              "answer": "他 准备 高考 准备 了 三 年",
+              "bank": [
+                "他",
+                "准备",
+                "高考",
+                "准备",
+                "了",
+                "三",
+                "年",
+                "在",
+                "也"
+              ]
+            },
+            {
+              "id": "ed2-19",
+              "type": "multiple_choice",
+              "prompt": "What does \"考上了\" mean?",
+              "options": [
+                "Got admitted (tested in)",
+                "Started studying",
+                "Failed",
+                "Skipped exam"
+              ],
+              "answer": "Got admitted (tested in)",
+              "explanation": "上 here is a result complement: tested-onto = got in."
+            },
+            {
+              "id": "ed2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the gaokao term you hear",
+              "spokenText": "录 取",
+              "options": [
+                "录 取",
+                "落 榜",
+                "录 制",
+                "落 选"
+              ],
+              "answer": "录 取",
+              "explanation": "录取 (lù qǔ) — be admitted / enrolled. 4th tone + 3rd tone."
             }
           ]
         },
@@ -4992,6 +6970,115 @@
               ],
               "answer": "留 学",
               "explanation": "留学 (liú xué) — to study abroad. The first character is 留 (stay/remain), implying \"stay (overseas) to study\"."
+            },
+            {
+              "id": "ed3-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "她被美国一所顶尖大学录取了",
+              "answer": "She was admitted to a top US university",
+              "acceptableAnswers": [
+                "She got into a top US college",
+                "A leading American university admitted her"
+              ]
+            },
+            {
+              "id": "ed3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My older sister is studying abroad in the US\"",
+              "answer": "我 姐姐 在 美国 留学",
+              "bank": [
+                "我",
+                "姐姐",
+                "在",
+                "美国",
+                "留学",
+                "中国",
+                "了",
+                "去"
+              ]
+            },
+            {
+              "id": "ed3-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"海归\" mean?",
+              "options": [
+                "A returnee who studied abroad",
+                "A seafood restaurant",
+                "A tourist",
+                "A diplomat"
+              ],
+              "answer": "A returnee who studied abroad",
+              "explanation": "海归 — pun on 海龟 (sea turtle). Those who 'return from overseas studies'."
+            },
+            {
+              "id": "ed3-16",
+              "type": "fill_blank",
+              "prompt": "Concession: \"___ 留学 费用 很 高, 但是 经历 很 值得\"",
+              "answer": "虽然",
+              "acceptableAnswers": [
+                "尽管"
+              ],
+              "explanation": "虽然 / 尽管 introduce real-fact concessions. Both pair with 但是."
+            },
+            {
+              "id": "ed3-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我想去国外开开眼界",
+              "answer": "I want to go abroad to broaden my horizons",
+              "acceptableAnswers": [
+                "I want to go overseas to widen my view",
+                "I'd like to go abroad and see the world"
+              ]
+            },
+            {
+              "id": "ed3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Studying abroad isn't only for studies, it's also a life experience\" (不仅...还)",
+              "answer": "留学 不仅 是 为 了 学习 还 是 一 种 人生 经历",
+              "bank": [
+                "留学",
+                "不仅",
+                "是",
+                "为",
+                "了",
+                "学习",
+                "还",
+                "是",
+                "一",
+                "种",
+                "人生",
+                "经历",
+                "了"
+              ]
+            },
+            {
+              "id": "ed3-19",
+              "type": "multiple_choice",
+              "prompt": "Which is part of the application process?",
+              "options": [
+                "推荐信",
+                "高考",
+                "九年义务",
+                "毕业典礼"
+              ],
+              "answer": "推荐信",
+              "explanation": "推荐信 — recommendation letter, central to international school applications."
+            },
+            {
+              "id": "ed3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "奖 学 金",
+              "options": [
+                "奖 学 金",
+                "讲 学 金",
+                "奖 励 金",
+                "学 杂 费"
+              ],
+              "answer": "奖 学 金",
+              "explanation": "奖学金 (jiǎng xué jīn) — scholarship. 3rd tone + 2nd tone + 1st tone."
             }
           ]
         },
@@ -5194,6 +7281,116 @@
               ],
               "answer": "终 身 学 习",
               "explanation": "终身学习 (zhōng shēn xué xí) — formal term for lifelong learning. 终身 = whole life. The casual equivalent would be 活到老学到老."
+            },
+            {
+              "id": "ed4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我学中文学了三年",
+              "answer": "I have studied Chinese for three years",
+              "acceptableAnswers": [
+                "I've been studying Chinese for three years",
+                "It's been three years since I started learning Chinese"
+              ]
+            },
+            {
+              "id": "ed4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The more I study, the more I find I don't know enough\"",
+              "answer": "我 越 学 越 发现 自己 知道 得 太 少",
+              "bank": [
+                "我",
+                "越",
+                "学",
+                "越",
+                "发现",
+                "自己",
+                "知道",
+                "得",
+                "太",
+                "少",
+                "多",
+                "了"
+              ]
+            },
+            {
+              "id": "ed4-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"自学成才\" describe?",
+              "options": [
+                "Self-taught and successful",
+                "Hired tutors",
+                "Failed online classes",
+                "Studied at elite schools"
+              ],
+              "answer": "Self-taught and successful",
+              "explanation": "自学 (self-study) + 成才 (become talented). Chengyu praising self-made experts."
+            },
+            {
+              "id": "ed4-16",
+              "type": "fill_blank",
+              "prompt": "Hypothetical: \"___ 毕业 了, 也 应该 继续 学习\"",
+              "answer": "即使",
+              "acceptableAnswers": [
+                "即 使"
+              ],
+              "explanation": "即使...也 — \"even if...still\". Used here for the hypothetical \"even when you've graduated\"."
+            },
+            {
+              "id": "ed4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "活到老，学到老",
+              "answer": "Live to old age, learn to old age",
+              "acceptableAnswers": [
+                "Lifelong learning",
+                "You're never too old to learn",
+                "Live and learn forever"
+              ]
+            },
+            {
+              "id": "ed4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Online classes are convenient but lack interaction\"",
+              "answer": "网课 很 方便 但是 缺少 互动",
+              "bank": [
+                "网课",
+                "很",
+                "方便",
+                "但是",
+                "缺少",
+                "互动",
+                "了",
+                "也",
+                "因为"
+              ]
+            },
+            {
+              "id": "ed4-19",
+              "type": "multiple_choice",
+              "prompt": "Pick the formal term for lifelong learning:",
+              "options": [
+                "终身学习",
+                "永远学习",
+                "一直学",
+                "天天学"
+              ],
+              "answer": "终身学习",
+              "explanation": "终身学习 — formal term. 活到老学到老 is the casual proverb version."
+            },
+            {
+              "id": "ed4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the term you hear",
+              "spokenText": "学 历",
+              "options": [
+                "学 历",
+                "学 习",
+                "学 校",
+                "学 期"
+              ],
+              "answer": "学 历",
+              "explanation": "学历 (xué lì) — academic credentials. 2nd tone + 4th tone."
             }
           ]
         },
@@ -5525,6 +7722,86 @@
               ],
               "answer": "他昨天告诉我了。",
               "explanation": "Time (昨天) goes BEFORE the verb, after the subject. English allows trailing time (\"told me yesterday\") — Chinese strongly prefers preverbal."
+            },
+            {
+              "id": "rl1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我跟同事们相处得很好",
+              "answer": "I get along really well with my coworkers",
+              "acceptableAnswers": [
+                "My coworkers and I get along well",
+                "I have a good relationship with my colleagues"
+              ]
+            },
+            {
+              "id": "rl1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He's my best friend, we talk about everything\"",
+              "answer": "他 是 我 最 好 的 朋友 我们 什么 都 聊",
+              "bank": [
+                "他",
+                "是",
+                "我",
+                "最",
+                "好",
+                "的",
+                "朋友",
+                "我们",
+                "什么",
+                "都",
+                "聊",
+                "了"
+              ]
+            },
+            {
+              "id": "rl1-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"发小\" mean?",
+              "options": [
+                "Childhood friend (grew up together)",
+                "Younger sibling",
+                "A crush",
+                "Distant cousin"
+              ],
+              "answer": "Childhood friend (grew up together)",
+              "explanation": "发小 — childhood friend; in northern Mandarin often pronounced 发小儿."
+            },
+            {
+              "id": "rl1-16",
+              "type": "fill_blank",
+              "prompt": "Concession: \"___ 我们 不 常 见面, 但是 还是 好 朋友\"",
+              "answer": "虽然",
+              "acceptableAnswers": [
+                "尽管"
+              ],
+              "explanation": "虽然 / 尽管 introduce concessions of real fact, paired with 但是."
+            },
+            {
+              "id": "rl1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我们一拍即合",
+              "answer": "We hit it off immediately",
+              "acceptableAnswers": [
+                "We clicked instantly",
+                "We got along right away"
+              ],
+              "context": "yī pāi jí hé"
+            },
+            {
+              "id": "rl1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the friendship term you hear",
+              "spokenText": "知 己",
+              "options": [
+                "知 己",
+                "自 己",
+                "之 间",
+                "至 极"
+              ],
+              "answer": "知 己",
+              "explanation": "知己 (zhī jǐ) — soulmate / true friend who knows you. 1st tone + 3rd tone."
             }
           ]
         },
@@ -5725,6 +8002,119 @@
               ],
               "answer": "吵 架",
               "explanation": "吵架 (chǎo jià) = argue / quarrel. 打架 (dǎ jià) = physical fight. The first syllable is the differentiator."
+            },
+            {
+              "id": "rl2-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他跟我特别合得来",
+              "answer": "He gets along really well with me",
+              "acceptableAnswers": [
+                "He and I really click",
+                "He and I are very compatible"
+              ]
+            },
+            {
+              "id": "rl2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"As soon as we met, we became good friends\"",
+              "answer": "我们 一 见面 就 成 了 好 朋友",
+              "bank": [
+                "我们",
+                "一",
+                "见面",
+                "就",
+                "成",
+                "了",
+                "好",
+                "朋友",
+                "和",
+                "在"
+              ]
+            },
+            {
+              "id": "rl2-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"合得来\" mean?",
+              "options": [
+                "Get along well",
+                "Meet up",
+                "Live together",
+                "Argue often"
+              ],
+              "answer": "Get along well",
+              "explanation": "合得来 — V + 得 + 来 potential complement: \"can/do come together\" = compatible."
+            },
+            {
+              "id": "rl2-16",
+              "type": "fill_blank",
+              "prompt": "\"他 ___ 喝酒 ___ 说 很 多 话\" (as soon as...then...)",
+              "answer": "一 / 就",
+              "acceptableAnswers": [
+                "一 就",
+                "一/就"
+              ],
+              "explanation": "一 X 就 Y — \"as soon as X, Y\". The most common temporal-causal frame in spoken Mandarin."
+            },
+            {
+              "id": "rl2-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我和同事有过误会，但是现在解决了",
+              "answer": "My coworker and I had a misunderstanding, but it's resolved now",
+              "acceptableAnswers": [
+                "I had a misunderstanding with my colleague, but it's been cleared up",
+                "There was a misunderstanding between us, now resolved"
+              ]
+            },
+            {
+              "id": "rl2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Even if he doesn't understand me, I won't give up this friendship\" (即使...也)",
+              "answer": "即使 他 不 理解 我 我 也 不 会 放弃 这 段 友谊",
+              "bank": [
+                "即使",
+                "他",
+                "不",
+                "理解",
+                "我",
+                "我",
+                "也",
+                "不",
+                "会",
+                "放弃",
+                "这",
+                "段",
+                "友谊",
+                "了"
+              ]
+            },
+            {
+              "id": "rl2-19",
+              "type": "multiple_choice",
+              "prompt": "Which verb means \"forgive\"?",
+              "options": [
+                "原谅",
+                "理解",
+                "信任",
+                "支持"
+              ],
+              "answer": "原谅",
+              "explanation": "原谅 — forgive. 理解 = understand; 信任 = trust; 支持 = support."
+            },
+            {
+              "id": "rl2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the verb you hear",
+              "spokenText": "和 好",
+              "options": [
+                "和 好",
+                "吵 架",
+                "聊 天",
+                "误 会"
+              ],
+              "answer": "和 好",
+              "explanation": "和好 (hé hǎo) — make up after a fight. 2nd tone + 3rd tone."
             }
           ]
         },
@@ -5932,6 +8322,112 @@
               ],
               "answer": "脱 单",
               "explanation": "脱单 (tuō dān) — escape singleness. 单身 = single, 脱 = escape from. The 双十一 / 七夕 holiday goal of many."
+            },
+            {
+              "id": "rl3-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他们在一起两年了",
+              "answer": "They've been together for two years",
+              "acceptableAnswers": [
+                "They've been a couple for two years",
+                "They have been dating for two years"
+              ]
+            },
+            {
+              "id": "rl3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He keeps liking my posts on Moments\"",
+              "answer": "他 一直 给 我 的 朋友圈 点赞",
+              "bank": [
+                "他",
+                "一直",
+                "给",
+                "我",
+                "的",
+                "朋友圈",
+                "点赞",
+                "评论",
+                "了"
+              ]
+            },
+            {
+              "id": "rl3-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"脱单\" mean?",
+              "options": [
+                "Get out of single status",
+                "Break up",
+                "Get married",
+                "Have a crush"
+              ],
+              "answer": "Get out of single status",
+              "explanation": "脱单 — escape singleness. 单身 = single, 脱 = escape from."
+            },
+            {
+              "id": "rl3-16",
+              "type": "fill_blank",
+              "prompt": "Concession: \"他们 ___ 经常 吵架, ___ 从来 没 分手\" (although / but)",
+              "answer": "虽然 / 但是",
+              "acceptableAnswers": [
+                "尽管 / 但是",
+                "虽然 但是"
+              ],
+              "explanation": "虽然 / 尽管 + 但是 — concede then contrast."
+            },
+            {
+              "id": "rl3-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他在跟我玩暧昧",
+              "answer": "He's playing the ambiguous game with me",
+              "acceptableAnswers": [
+                "He's leading me on without committing",
+                "He's flirting without commitment"
+              ]
+            },
+            {
+              "id": "rl3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"My parents went on a blind date and got married\"",
+              "answer": "我 父母 是 相亲 结婚 的",
+              "bank": [
+                "我",
+                "父母",
+                "是",
+                "相亲",
+                "结婚",
+                "的",
+                "了",
+                "在"
+              ]
+            },
+            {
+              "id": "rl3-19",
+              "type": "multiple_choice",
+              "prompt": "What does \"撩\" mean in a dating context?",
+              "options": [
+                "Flirt with / tease",
+                "Forget",
+                "Insult",
+                "Ignore"
+              ],
+              "answer": "Flirt with / tease",
+              "explanation": "撩 — internet/dating slang for flirting. 撩妹 / 撩汉 = flirt with girls/guys."
+            },
+            {
+              "id": "rl3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the dating term you hear",
+              "spokenText": "异 地 恋",
+              "options": [
+                "异 地 恋",
+                "一 段 恋",
+                "异 性 恋",
+                "异 国 情"
+              ],
+              "answer": "异 地 恋",
+              "explanation": "异地恋 (yì dì liàn) — long-distance relationship. All 4th tones."
             }
           ]
         },
@@ -6131,6 +8627,114 @@
               ],
               "answer": "患 难 见 真 情",
               "explanation": "患难见真情 — \"hardship reveals true feeling\". A four-character set phrase common in writing about loyal friendship."
+            },
+            {
+              "id": "rl4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "真正的朋友永远会支持你",
+              "answer": "A true friend will always support you",
+              "acceptableAnswers": [
+                "Real friends always have your back",
+                "A genuine friend will support you forever"
+              ]
+            },
+            {
+              "id": "rl4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"As I get older, my friends are getting fewer\"",
+              "answer": "我 越 长大 朋友 越 少",
+              "bank": [
+                "我",
+                "越",
+                "长大",
+                "朋友",
+                "越",
+                "少",
+                "多",
+                "了",
+                "更"
+              ]
+            },
+            {
+              "id": "rl4-15",
+              "type": "multiple_choice",
+              "prompt": "What does the chengyu \"患难见真情\" mean?",
+              "options": [
+                "Hard times reveal true friendship",
+                "Time heals all",
+                "Money is everything",
+                "Friends come and go"
+              ],
+              "answer": "Hard times reveal true friendship",
+              "explanation": "患难见真情 — \"hardship reveals true feeling\"."
+            },
+            {
+              "id": "rl4-16",
+              "type": "fill_blank",
+              "prompt": "Concession: \"___ 我们 住 在 不同 的 城市, 但是 关系 还 是 很 好\"",
+              "answer": "尽管",
+              "acceptableAnswers": [
+                "虽然"
+              ],
+              "explanation": "尽管 / 虽然 — real-fact concession, paired with 但是."
+            },
+            {
+              "id": "rl4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "友谊地久天长",
+              "answer": "May our friendship last forever",
+              "acceptableAnswers": [
+                "Long-lasting friendship",
+                "Friendship as enduring as heaven and earth",
+                "Auld Lang Syne"
+              ],
+              "context": "yǒu yì dì jiǔ tiān cháng"
+            },
+            {
+              "id": "rl4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Having you as a friend is so wonderful\"",
+              "answer": "有 你 这 个 朋友 真 好",
+              "bank": [
+                "有",
+                "你",
+                "这",
+                "个",
+                "朋友",
+                "真",
+                "好",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "rl4-19",
+              "type": "multiple_choice",
+              "prompt": "Which chengyu describes a plain, principled friendship?",
+              "options": [
+                "君子之交",
+                "肝胆相照",
+                "莫逆之交",
+                "心心相印"
+              ],
+              "answer": "君子之交",
+              "explanation": "君子之交淡如水 — a gentleman's friendship is plain like water; enduring without flashy obligations."
+            },
+            {
+              "id": "rl4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the chengyu you hear",
+              "spokenText": "心 心 相 印",
+              "options": [
+                "心 心 相 印",
+                "心 想 事 成",
+                "情 投 意 合",
+                "肝 胆 相 照"
+              ],
+              "answer": "心 心 相 印",
+              "explanation": "心心相印 — hearts in tune, understanding wordlessly. Four 1st-tone syllables."
             }
           ]
         },
@@ -6314,6 +8918,115 @@
               ],
               "answer": "学 了 三 年",
               "explanation": "Two valid orders: 学了三年 (just completed/described) vs 学三年了 (still going). Listen for which you hear."
+            },
+            {
+              "id": "rl5-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我等了她两个小时",
+              "answer": "I waited for her for two hours",
+              "acceptableAnswers": [
+                "I spent two hours waiting for her",
+                "I waited two hours for her"
+              ]
+            },
+            {
+              "id": "rl5-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He played basketball for an entire afternoon\"",
+              "answer": "他 打 篮球 打 了 一 个 下午",
+              "bank": [
+                "他",
+                "打",
+                "篮球",
+                "打",
+                "了",
+                "一",
+                "个",
+                "下午",
+                "在",
+                "也"
+              ]
+            },
+            {
+              "id": "rl5-15",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is GRAMMATICALLY WRONG?",
+              "options": [
+                "我学中文学了三年",
+                "我学了三年中文",
+                "我看电视看了两个小时",
+                "我学中文了三年"
+              ],
+              "answer": "我学中文了三年",
+              "explanation": "If you keep the object 中文 after the verb, you must repeat the verb. Otherwise: 我学了三年中文."
+            },
+            {
+              "id": "rl5-16",
+              "type": "fill_blank",
+              "prompt": "Verb-doubling: \"我们 认识 ___ 十 年 了\"",
+              "answer": "认识",
+              "acceptableAnswers": [
+                "认 识"
+              ],
+              "explanation": "Repeat 认识 to take the duration: 我们认识认识了十年."
+            },
+            {
+              "id": "rl5-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我们认识三年了",
+              "answer": "We've known each other for three years",
+              "acceptableAnswers": [
+                "We've been friends for three years",
+                "It's been three years since we met"
+              ]
+            },
+            {
+              "id": "rl5-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I've worked at this company for ten years\"",
+              "answer": "我 在 这 家 公司 工作 工作 了 十 年",
+              "bank": [
+                "我",
+                "在",
+                "这",
+                "家",
+                "公司",
+                "工作",
+                "工作",
+                "了",
+                "十",
+                "年",
+                "也"
+              ]
+            },
+            {
+              "id": "rl5-19",
+              "type": "multiple_choice",
+              "prompt": "Best translation: \"How long have you studied Chinese?\":",
+              "options": [
+                "你学中文学了多久了？",
+                "你中文多久？",
+                "学中文多久你？",
+                "多久学你中文？"
+              ],
+              "answer": "你学中文学了多久了？",
+              "explanation": "Verb-doubling pattern in question form. Sentence-final 了 marks 'up to now'."
+            },
+            {
+              "id": "rl5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the duration phrase you hear",
+              "spokenText": "学 了 三 年",
+              "options": [
+                "学 了 三 年",
+                "学 三 年 了",
+                "三 年 学 了",
+                "学 三 个 年"
+              ],
+              "answer": "学 了 三 年",
+              "explanation": "学了三年 (just completed) vs 学三年了 (still going). 量词 年 doesn't take 个."
             }
           ]
         },
@@ -6771,6 +9484,84 @@
               ],
               "answer": "我 心情 不太 好",
               "explanation": "心情 (xīn qíng) = mood. 不太好 = \"not very good\" — a common hedged way to admit a low mood."
+            },
+            {
+              "id": "em1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我心里很难受",
+              "answer": "I feel really bad inside",
+              "acceptableAnswers": [
+                "I'm hurting deeply",
+                "My heart aches"
+              ]
+            },
+            {
+              "id": "em1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"That moment was incredibly awkward\"",
+              "answer": "那 一 刻 真 的 太 尴尬 了",
+              "bank": [
+                "那",
+                "一",
+                "刻",
+                "真",
+                "的",
+                "太",
+                "尴尬",
+                "了",
+                "都",
+                "很"
+              ]
+            },
+            {
+              "id": "em1-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the MILDEST expression of nervousness:",
+              "options": [
+                "我有点紧张",
+                "我超紧张",
+                "我极其紧张",
+                "我非常紧张"
+              ],
+              "answer": "我有点紧张",
+              "explanation": "有点 + adj is the mild hedge. The others are all strong."
+            },
+            {
+              "id": "em1-16",
+              "type": "fill_blank",
+              "prompt": "Strong degree: \"我 ___ 失望\" (extremely)",
+              "answer": "极其",
+              "acceptableAnswers": [
+                "极 其"
+              ],
+              "explanation": "极其 + adj is the strongest mid-formal intensifier. 非常 is a step below."
+            },
+            {
+              "id": "em1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我无语了",
+              "answer": "I'm speechless / I don't even know what to say",
+              "acceptableAnswers": [
+                "I have no words",
+                "I'm at a loss for words"
+              ],
+              "context": "wú yǔ le"
+            },
+            {
+              "id": "em1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the emotion you hear",
+              "spokenText": "失 望",
+              "options": [
+                "失 望",
+                "希 望",
+                "失 败",
+                "失 去"
+              ],
+              "answer": "失 望",
+              "explanation": "失望 (shī wàng) — disappointed. 1st tone + 4th tone."
             }
           ]
         },
@@ -6967,6 +9758,120 @@
               ],
               "answer": "即 使",
               "explanation": "即使 (jí shǐ, 2nd + 3rd tone) starts with the rising 即. 即便 also starts with 即 but has falling 便. Practice the contrast."
+            },
+            {
+              "id": "em2-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "即使下雨，我也要去",
+              "answer": "Even if it rains, I'll still go",
+              "acceptableAnswers": [
+                "I'll go even if it rains",
+                "Even though it might rain, I'm going"
+              ]
+            },
+            {
+              "id": "em2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Even if no one supports me, I'll still keep going\"",
+              "answer": "即使 没 有 人 支持 我 我 也 会 坚持 下去",
+              "bank": [
+                "即使",
+                "没",
+                "有",
+                "人",
+                "支持",
+                "我",
+                "我",
+                "也",
+                "会",
+                "坚持",
+                "下去",
+                "了",
+                "如果"
+              ]
+            },
+            {
+              "id": "em2-15",
+              "type": "multiple_choice",
+              "prompt": "即使 must pair with which word?",
+              "options": [
+                "也 / 还",
+                "因为",
+                "但是",
+                "所以"
+              ],
+              "answer": "也 / 还",
+              "explanation": "即使...也 / 还 is the locked frame. Without 也 the sentence sounds unfinished."
+            },
+            {
+              "id": "em2-16",
+              "type": "fill_blank",
+              "prompt": "Hypothetical: \"___ 你 不 同意, 我 也 会 这么 做\"",
+              "answer": "即使",
+              "acceptableAnswers": [
+                "即 使",
+                "即便"
+              ],
+              "explanation": "即使 / 即便 introduce hypotheticals; 即便 is slightly more written."
+            },
+            {
+              "id": "em2-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "即使没有钱，我也很快乐",
+              "answer": "Even without money, I'm still happy",
+              "acceptableAnswers": [
+                "Even if I have no money, I'm happy",
+                "Money or no money, I'm content"
+              ]
+            },
+            {
+              "id": "em2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Even if it costs a lot, this experience is worth it\"",
+              "answer": "即使 花 很 多 钱 这 段 经历 也 值得",
+              "bank": [
+                "即使",
+                "花",
+                "很",
+                "多",
+                "钱",
+                "这",
+                "段",
+                "经历",
+                "也",
+                "值得",
+                "了",
+                "如果"
+              ]
+            },
+            {
+              "id": "em2-19",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is GRAMMATICALLY WRONG?",
+              "options": [
+                "即使下雨，我也要去",
+                "即使下雨，我不去",
+                "即使没钱，我也开心",
+                "即使他来，我也不去"
+              ],
+              "answer": "即使下雨，我不去",
+              "explanation": "Missing the obligatory 也 / 还 in the second clause."
+            },
+            {
+              "id": "em2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the formal version you hear",
+              "spokenText": "即 便",
+              "options": [
+                "即 便",
+                "即 使",
+                "尽 管",
+                "如 果"
+              ],
+              "answer": "即 便",
+              "explanation": "即便 (jí biàn) — slightly more formal synonym for 即使. 4th tone instead of 3rd in second syllable."
             }
           ]
         },
@@ -7161,6 +10066,117 @@
                 "也",
                 "如果"
               ]
+            },
+            {
+              "id": "em3-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "尽管下雨，他还是去跑步了",
+              "answer": "Although it was raining, he still went running",
+              "acceptableAnswers": [
+                "Despite the rain, he still went for a run",
+                "Even though it rained, he went running anyway"
+              ]
+            },
+            {
+              "id": "em3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although we tried hard, we didn't succeed\"",
+              "answer": "尽管 我们 很 努力 但是 没有 成功",
+              "bank": [
+                "尽管",
+                "我们",
+                "很",
+                "努力",
+                "但是",
+                "没有",
+                "成功",
+                "即使",
+                "也"
+              ]
+            },
+            {
+              "id": "em3-15",
+              "type": "multiple_choice",
+              "prompt": "When do you use 尽管 instead of 即使?",
+              "options": [
+                "尽管 = real fact; 即使 = hypothetical",
+                "尽管 = hypothetical; 即使 = real fact",
+                "They are identical",
+                "尽管 is past tense"
+              ],
+              "answer": "尽管 = real fact; 即使 = hypothetical",
+              "explanation": "Real fact → 尽管 / 虽然. Hypothetical → 即使."
+            },
+            {
+              "id": "em3-16",
+              "type": "fill_blank",
+              "prompt": "Casual swap of 尽管: \"___ 下雨, 他 还是 去 跑步 了\"",
+              "answer": "虽然",
+              "acceptableAnswers": [
+                "虽 然"
+              ],
+              "explanation": "虽然 is the everyday spoken cousin of 尽管."
+            },
+            {
+              "id": "em3-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "尽管如此",
+              "answer": "Despite this / nevertheless",
+              "acceptableAnswers": [
+                "In spite of this",
+                "Nonetheless"
+              ],
+              "context": "jǐn guǎn rú cǐ"
+            },
+            {
+              "id": "em3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although I'm tired, I'll still finish my work\"",
+              "answer": "尽管 我 很 累 我 还 是 会 做 完 工作",
+              "bank": [
+                "尽管",
+                "我",
+                "很",
+                "累",
+                "我",
+                "还",
+                "是",
+                "会",
+                "做",
+                "完",
+                "工作",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "em3-19",
+              "type": "multiple_choice",
+              "prompt": "Best translation: \"Despite the heavy rain, the event still went ahead\":",
+              "options": [
+                "尽管下大雨，活动还是照常进行",
+                "下雨活动",
+                "活动雨",
+                "进行下大雨"
+              ],
+              "answer": "尽管下大雨，活动还是照常进行",
+              "explanation": "照常 (as usual / as scheduled) is a common essay-register word."
+            },
+            {
+              "id": "em3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the formal contrast connector you hear",
+              "spokenText": "然 而",
+              "options": [
+                "然 而",
+                "但 是",
+                "可 是",
+                "不 过"
+              ],
+              "answer": "然 而",
+              "explanation": "然而 — formal/written \"however\". The others are progressively more casual."
             }
           ]
         },
@@ -7346,6 +10362,112 @@
               ],
               "answer": "委 屈",
               "explanation": "委屈 (wěi qū) — feeling wronged or unfairly treated. The mid-falling 委 + falling 屈 distinguishes it."
+            },
+            {
+              "id": "em4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "这部电影让我很感动",
+              "answer": "This movie really moved me",
+              "acceptableAnswers": [
+                "This movie deeply touched me",
+                "I was very moved by this movie"
+              ]
+            },
+            {
+              "id": "em4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This news really shocked me\"",
+              "answer": "这个 消息 让 我 非常 吃惊",
+              "bank": [
+                "这个",
+                "消息",
+                "让",
+                "我",
+                "非常",
+                "吃惊",
+                "高兴",
+                "了",
+                "不"
+              ]
+            },
+            {
+              "id": "em4-15",
+              "type": "multiple_choice",
+              "prompt": "Which is the most natural way to say \"I felt wronged\"?",
+              "options": [
+                "我觉得很委屈",
+                "我是委屈",
+                "委屈是我",
+                "我委屈我"
+              ],
+              "answer": "我觉得很委屈",
+              "explanation": "委屈 is a stative emotion. Use 觉得 + 委屈, never 是 + 委屈."
+            },
+            {
+              "id": "em4-16",
+              "type": "fill_blank",
+              "prompt": "Formal version of 让: \"此 事 ___ 本人 深感 烦恼\"",
+              "answer": "令",
+              "acceptableAnswers": [
+                "lìng"
+              ],
+              "explanation": "令 — formal written equivalent of 让. Essay register."
+            },
+            {
+              "id": "em4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我对结果感到满意",
+              "answer": "I'm satisfied with the result",
+              "acceptableAnswers": [
+                "I'm pleased with the outcome",
+                "I feel content with the result"
+              ]
+            },
+            {
+              "id": "em4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"What you did made me extremely disappointed\"",
+              "answer": "你 做 的 事 让 我 非常 失望",
+              "bank": [
+                "你",
+                "做",
+                "的",
+                "事",
+                "让",
+                "我",
+                "非常",
+                "失望",
+                "了",
+                "都"
+              ]
+            },
+            {
+              "id": "em4-19",
+              "type": "multiple_choice",
+              "prompt": "Best translation: \"It surprised me that he came\":",
+              "options": [
+                "他来了让我很惊讶",
+                "他惊讶来",
+                "我惊讶他",
+                "惊讶他来"
+              ],
+              "answer": "他来了让我很惊讶"
+            },
+            {
+              "id": "em4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the emotion you hear",
+              "spokenText": "骄 傲",
+              "options": [
+                "骄 傲",
+                "焦 急",
+                "教 务",
+                "脚 步"
+              ],
+              "answer": "骄 傲",
+              "explanation": "骄傲 (jiāo ào) — proud. 1st tone + 4th tone."
             }
           ]
         },
@@ -7663,6 +10785,83 @@
               ],
               "answer": "我把方案发给老板了。",
               "explanation": "When the verb has a beneficiary (发给) + a definite object (the proposal), 把 puts the object up front and keeps the directional clear. The other orders sound off or ambiguous."
+            },
+            {
+              "id": "db1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "你怎么会这么想？",
+              "answer": "How could you think that?",
+              "acceptableAnswers": [
+                "Why would you think this way?",
+                "How could you possibly think that?"
+              ]
+            },
+            {
+              "id": "db1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Don't you think this is unfair?\"",
+              "answer": "难道 你 不 觉得 这 不 公平 吗",
+              "bank": [
+                "难道",
+                "你",
+                "不",
+                "觉得",
+                "这",
+                "不",
+                "公平",
+                "吗",
+                "了",
+                "也"
+              ]
+            },
+            {
+              "id": "db1-15",
+              "type": "multiple_choice",
+              "prompt": "What does \"难道X不Y吗?\" express?",
+              "options": [
+                "A pushy rhetorical question",
+                "A neutral question",
+                "A polite request",
+                "A negative statement"
+              ],
+              "answer": "A pushy rhetorical question",
+              "explanation": "难道 + statement + 吗 = rhetorical with disbelief."
+            },
+            {
+              "id": "db1-16",
+              "type": "fill_blank",
+              "prompt": "Outrage frame: \"你 ___ 能 说 出 这 种 话?\" (how could)",
+              "answer": "怎么",
+              "acceptableAnswers": [
+                "怎 么"
+              ],
+              "explanation": "怎么能 — \"how could (you)\" — standard for outraged rhetorical questions."
+            },
+            {
+              "id": "db1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "这怎么可能呢？",
+              "answer": "How could this be possible?",
+              "acceptableAnswers": [
+                "How is this possible?",
+                "There's no way this is possible"
+              ]
+            },
+            {
+              "id": "db1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the rhetorical opener you hear",
+              "spokenText": "难 道",
+              "options": [
+                "难 道",
+                "难 怪",
+                "难 看",
+                "难 受"
+              ],
+              "answer": "难 道",
+              "explanation": "难道 (nán dào) — \"don't tell me…\". 2nd tone + 4th tone."
             }
           ]
         },
@@ -7878,6 +11077,120 @@
               ],
               "answer": "确 实",
               "explanation": "确实 (què shí) — \"indeed/truly\" — the strong-agreement concession word. Distinguish from 其实 (actually), 事实 (fact), 真实 (real)."
+            },
+            {
+              "id": "db2-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "我承认你说得有道理",
+              "answer": "I admit what you said makes sense",
+              "acceptableAnswers": [
+                "I'll grant that you have a point",
+                "I concede you make a fair point"
+              ]
+            },
+            {
+              "id": "db2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although what you said makes sense, I still disagree\"",
+              "answer": "虽然 你 说 得 有 道理 但是 我 还是 不 同意",
+              "bank": [
+                "虽然",
+                "你",
+                "说",
+                "得",
+                "有",
+                "道理",
+                "但是",
+                "我",
+                "还是",
+                "不",
+                "同意",
+                "也"
+              ]
+            },
+            {
+              "id": "db2-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the formal essay opener for an undeniable fact:",
+              "options": [
+                "不可否认",
+                "嗯嗯",
+                "对啊",
+                "好啦"
+              ],
+              "answer": "不可否认",
+              "explanation": "不可否认 — \"undeniably\" — formal essay concession opener."
+            },
+            {
+              "id": "db2-16",
+              "type": "fill_blank",
+              "prompt": "Casual pushback: \"你 说 得 有 道理, ___ 我 还是 不 同意\" (however)",
+              "answer": "不过",
+              "acceptableAnswers": [
+                "不 过"
+              ],
+              "explanation": "不过 — \"however\" — casual conversational alternative to 但是."
+            },
+            {
+              "id": "db2-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "你这么说也对，但是…",
+              "answer": "What you say is also right, but…",
+              "acceptableAnswers": [
+                "You have a point, but…",
+                "There's truth to that, but…"
+              ]
+            },
+            {
+              "id": "db2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although your view has merit, the situation is more complex than you think\"",
+              "answer": "虽然 你 的 看法 有 道理 但是 情况 比 你 想 得 复杂",
+              "bank": [
+                "虽然",
+                "你",
+                "的",
+                "看法",
+                "有",
+                "道理",
+                "但是",
+                "情况",
+                "比",
+                "你",
+                "想",
+                "得",
+                "复杂",
+                "了"
+              ]
+            },
+            {
+              "id": "db2-19",
+              "type": "multiple_choice",
+              "prompt": "Which is the FORMAL essay-style concession opener?",
+              "options": [
+                "诚然，A的观点有其合理性，然而…",
+                "对啊对啊，但是…",
+                "嗯嗯，但是…",
+                "你说得没错"
+              ],
+              "answer": "诚然，A的观点有其合理性，然而…",
+              "explanation": "诚然 + 有其合理性 + 然而 — full essay register."
+            },
+            {
+              "id": "db2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the strong-concession word you hear",
+              "spokenText": "确 实",
+              "options": [
+                "确 实",
+                "其 实",
+                "事 实",
+                "真 实"
+              ],
+              "answer": "确 实",
+              "explanation": "确实 — \"indeed/truly\". 4th tone + 2nd tone."
             }
           ]
         },
@@ -8065,6 +11378,115 @@
               ],
               "answer": "因 此",
               "explanation": "因此 (yīn cǐ, therefore) is paired with 由于 / 因为 to mark the consequence half. Don't confuse with 因为 (because) or 由此 (from this)."
+            },
+            {
+              "id": "db3-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "由此可见",
+              "answer": "From this we can see / from this it is evident",
+              "acceptableAnswers": [
+                "Therefore it is clear",
+                "From this one can tell"
+              ],
+              "context": "yóu cǐ kě jiàn"
+            },
+            {
+              "id": "db3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The reason I came is because I want to help you\" (之所以...是因为)",
+              "answer": "我 之所以 来 是 因为 我 想 帮 你",
+              "bank": [
+                "我",
+                "之所以",
+                "来",
+                "是",
+                "因为",
+                "我",
+                "想",
+                "帮",
+                "你",
+                "了",
+                "所以"
+              ]
+            },
+            {
+              "id": "db3-15",
+              "type": "multiple_choice",
+              "prompt": "Formal/written version of 因为:",
+              "options": [
+                "由于",
+                "如果",
+                "但是",
+                "可是"
+              ],
+              "answer": "由于",
+              "explanation": "由于 pairs with 因此 in news/essay register, mirroring 因为...所以."
+            },
+            {
+              "id": "db3-16",
+              "type": "fill_blank",
+              "prompt": "Cause-effect frame: \"因为 天气 不 好, ___ 航班 取消 了\"",
+              "answer": "所以",
+              "acceptableAnswers": [
+                "所 以"
+              ],
+              "explanation": "因为...所以 — Chinese uses BOTH halves as a matched pair, unlike English."
+            },
+            {
+              "id": "db3-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "原因有以下几点",
+              "answer": "The reasons are as follows",
+              "acceptableAnswers": [
+                "There are several reasons listed below",
+                "The reasons are the following points"
+              ]
+            },
+            {
+              "id": "db3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Due to limited time, we'll have to discuss this next time\"",
+              "answer": "由于 时间 有限 我们 下次 再 讨论",
+              "bank": [
+                "由于",
+                "时间",
+                "有限",
+                "我们",
+                "下次",
+                "再",
+                "讨论",
+                "因为",
+                "了"
+              ]
+            },
+            {
+              "id": "db3-19",
+              "type": "multiple_choice",
+              "prompt": "Pick the FORMAL written version of \"because the weather was bad, the flight was cancelled\":",
+              "options": [
+                "由于天气恶劣，航班被迫取消",
+                "因为天气不好，航班取消了",
+                "天气不好，航班没了",
+                "航班因为天气取消"
+              ],
+              "answer": "由于天气恶劣，航班被迫取消",
+              "explanation": "由于 + 恶劣 + 被迫 — three news-register markers in one sentence."
+            },
+            {
+              "id": "db3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the formal effect connector you hear",
+              "spokenText": "因 此",
+              "options": [
+                "因 此",
+                "因 为",
+                "因 而",
+                "由 此"
+              ],
+              "answer": "因 此",
+              "explanation": "因此 (yīn cǐ) — \"therefore\" — partner of 由于 / 因为 in formal cause-effect."
             }
           ]
         },
@@ -8272,6 +11694,117 @@
               ],
               "answer": "总 而 言 之",
               "explanation": "总而言之 (zǒng ér yán zhī) — four-syllable formal summary phrase. Listen for the rhythm; the others differ in syllable count or register."
+            },
+            {
+              "id": "db4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "总的来说，他是个好人",
+              "answer": "Generally speaking, he's a good person",
+              "acceptableAnswers": [
+                "Overall, he is a good person",
+                "All in all, he's a good person"
+              ]
+            },
+            {
+              "id": "db4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In short, I think we should support this plan\"",
+              "answer": "总之 我 觉得 我们 应该 支持 这个 计划",
+              "bank": [
+                "总之",
+                "我",
+                "觉得",
+                "我们",
+                "应该",
+                "支持",
+                "这个",
+                "计划",
+                "反对",
+                "了"
+              ]
+            },
+            {
+              "id": "db4-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the formal essay summary opener:",
+              "options": [
+                "综上所述",
+                "好啦总之",
+                "嗯所以",
+                "anyway"
+              ],
+              "answer": "综上所述",
+              "explanation": "综上所述 — \"in summary of all the above\" — standard closing for written arguments."
+            },
+            {
+              "id": "db4-16",
+              "type": "fill_blank",
+              "prompt": "Idiom: \"___ 结底, 问题 在 于…\" (fundamentally)",
+              "answer": "归根",
+              "acceptableAnswers": [
+                "归 根"
+              ],
+              "explanation": "归根结底 — \"trace to the root\" — formal closing chengyu for final conclusions."
+            },
+            {
+              "id": "db4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "归根结底",
+              "answer": "Fundamentally / at the root of it",
+              "acceptableAnswers": [
+                "When all is said and done",
+                "At the bottom of it"
+              ],
+              "context": "guī gēn jié dǐ"
+            },
+            {
+              "id": "db4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In short, we should think about this issue from multiple angles\"",
+              "answer": "总之 我们 应该 从 多 个 角度 思考 这 个 问题",
+              "bank": [
+                "总之",
+                "我们",
+                "应该",
+                "从",
+                "多",
+                "个",
+                "角度",
+                "思考",
+                "这",
+                "个",
+                "问题",
+                "了"
+              ]
+            },
+            {
+              "id": "db4-19",
+              "type": "multiple_choice",
+              "prompt": "Pick the most casual conversation closer:",
+              "options": [
+                "总之就这样",
+                "综上所述",
+                "总而言之",
+                "由此观之"
+              ],
+              "answer": "总之就这样",
+              "explanation": "总之就这样 — \"anyway, that's how it is\" — casual chat closer."
+            },
+            {
+              "id": "db4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the closing phrase you hear",
+              "spokenText": "换 句 话 说",
+              "options": [
+                "换 句 话 说",
+                "总 的 来 说",
+                "总 而 言 之",
+                "综 上 所 述"
+              ],
+              "answer": "换 句 话 说",
+              "explanation": "换句话说 — \"in other words\". Used to rephrase or restate a point."
             }
           ]
         },
@@ -8779,6 +12312,84 @@
               ],
               "answer": "敬请 回复 谢谢",
               "explanation": "敬请回复 (jìng qǐng huí fù) — \"kindly reply\" — a standard formal email closer."
+            },
+            {
+              "id": "fm1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "目前公司面临许多挑战",
+              "answer": "Currently the company is facing many challenges",
+              "acceptableAnswers": [
+                "At present the company faces many challenges",
+                "The company is now confronting many challenges"
+              ]
+            },
+            {
+              "id": "fm1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build a formal request: \"May I please ask, when are you available?\"",
+              "answer": "请 问 您 何 时 方 便",
+              "bank": [
+                "请",
+                "问",
+                "您",
+                "何",
+                "时",
+                "方",
+                "便",
+                "什么",
+                "时候",
+                "了"
+              ]
+            },
+            {
+              "id": "fm1-15",
+              "type": "multiple_choice",
+              "prompt": "Which sentence is FORMAL?",
+              "options": [
+                "尊敬的张先生，请问您何时方便回复邮件？",
+                "嘿，你啥时候发邮件啊？",
+                "邮件呢？",
+                "你怎么还没发？"
+              ],
+              "answer": "尊敬的张先生，请问您何时方便回复邮件？",
+              "explanation": "尊敬的, 您, 何时方便 — every choice signals formal register."
+            },
+            {
+              "id": "fm1-16",
+              "type": "fill_blank",
+              "prompt": "Lift register: casual 现在 → ___",
+              "answer": "目前",
+              "acceptableAnswers": [
+                "目 前"
+              ],
+              "explanation": "现在 → 目前 is the standard register lift."
+            },
+            {
+              "id": "fm1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "您",
+              "answer": "You (formal)",
+              "acceptableAnswers": [
+                "Polite you",
+                "Honorific you"
+              ],
+              "context": "nín"
+            },
+            {
+              "id": "fm1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the formal closing you hear",
+              "spokenText": "敬 请 回 复",
+              "options": [
+                "敬 请 回 复",
+                "请 回 复",
+                "敬 请 答 复",
+                "敬 请 回 信"
+              ],
+              "answer": "敬 请 回 复",
+              "explanation": "敬请回复 — \"kindly reply\" — standard formal email closer."
             }
           ]
         },
@@ -8967,6 +12578,115 @@
               ],
               "answer": "尊 敬 的",
               "explanation": "尊敬的 (zūn jìng de) — \"Respected\" — is the standard salutation prefix. 尊重 means \"respect\" the verb, not for greetings."
+            },
+            {
+              "id": "fm2-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "感谢您的支持",
+              "answer": "Thank you for your support",
+              "acceptableAnswers": [
+                "We thank you for your support",
+                "Thanks for your kind support"
+              ]
+            },
+            {
+              "id": "fm2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build a formal email opener: \"Dear (respected) Mr. Wang, hello\"",
+              "answer": "尊敬 的 王 先生 您 好",
+              "bank": [
+                "尊敬",
+                "的",
+                "王",
+                "先生",
+                "您",
+                "好",
+                "嗨",
+                "了"
+              ]
+            },
+            {
+              "id": "fm2-15",
+              "type": "multiple_choice",
+              "prompt": "Which is the UNIVERSAL formal letter sign-off?",
+              "options": [
+                "此致敬礼",
+                "拜拜",
+                "回头见",
+                "好的"
+              ],
+              "answer": "此致敬礼",
+              "explanation": "此致敬礼 — universal formal letter close. 顺祝商祺 is business-specific."
+            },
+            {
+              "id": "fm2-16",
+              "type": "fill_blank",
+              "prompt": "Polite formal request: \"___ 您 明天 之前 把 文件 发 给 我\" (please bother)",
+              "answer": "麻烦",
+              "acceptableAnswers": [
+                "麻 烦"
+              ],
+              "explanation": "麻烦您 — warm-formal request opener. Acknowledges the inconvenience."
+            },
+            {
+              "id": "fm2-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "敬请回复",
+              "answer": "Please respond (formal request for reply)",
+              "acceptableAnswers": [
+                "Please reply",
+                "Kindly respond"
+              ],
+              "context": "jìng qǐng huí fù"
+            },
+            {
+              "id": "fm2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build the email body: \"I am writing to inquire about the recent project progress\"",
+              "answer": "本人 写 此 邮件 是 想 了解 最近 项目 的 进展",
+              "bank": [
+                "本人",
+                "写",
+                "此",
+                "邮件",
+                "是",
+                "想",
+                "了解",
+                "最近",
+                "项目",
+                "的",
+                "进展",
+                "了"
+              ]
+            },
+            {
+              "id": "fm2-19",
+              "type": "multiple_choice",
+              "prompt": "When do you write 顺祝商祺?",
+              "options": [
+                "In business letters",
+                "Between friends",
+                "In informal WeChats",
+                "In school assignments"
+              ],
+              "answer": "In business letters",
+              "explanation": "顺祝商祺 specifically wishes business prosperity — for B2B emails."
+            },
+            {
+              "id": "fm2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the salutation prefix you hear",
+              "spokenText": "尊 敬 的",
+              "options": [
+                "尊 敬 的",
+                "尊 重 的",
+                "诚 挚 的",
+                "亲 爱 的"
+              ],
+              "answer": "尊 敬 的",
+              "explanation": "尊敬的 — \"Respected\" — standard salutation. 亲爱的 (\"dear\") is for friends/family."
             }
           ]
         },
@@ -9164,6 +12884,113 @@
               ],
               "answer": "麻 烦",
               "explanation": "麻烦 (má fan) — \"to trouble (someone)\" — the politeness keyword. 2nd tone + neutral. Don't confuse with 麻木 (numb)."
+            },
+            {
+              "id": "fm3-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "能否请您介绍一下？",
+              "answer": "Could you please introduce yourself?",
+              "acceptableAnswers": [
+                "Could you give a brief introduction?",
+                "Would you be able to introduce yourself?"
+              ]
+            },
+            {
+              "id": "fm3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build a customer-service phrase: \"Please wait a moment, I will check immediately\"",
+              "answer": "请 您 稍 等 我 马 上 查 一 下",
+              "bank": [
+                "请",
+                "您",
+                "稍",
+                "等",
+                "我",
+                "马",
+                "上",
+                "查",
+                "一",
+                "下",
+                "了"
+              ]
+            },
+            {
+              "id": "fm3-15",
+              "type": "multiple_choice",
+              "prompt": "A customer service rep would say:",
+              "options": [
+                "请您稍候",
+                "等等",
+                "等会儿",
+                "马上"
+              ],
+              "answer": "请您稍候",
+              "explanation": "请您稍候 — \"please wait a moment\" — standard service phrase. 候 is more formal than 等."
+            },
+            {
+              "id": "fm3-16",
+              "type": "fill_blank",
+              "prompt": "Polite phone request: \"___ 您 帮 我 转接 给 李 经理\" (bother you)",
+              "answer": "麻烦",
+              "acceptableAnswers": [
+                "麻 烦"
+              ],
+              "explanation": "麻烦您 — apology+request frame for polite phone/email asks."
+            },
+            {
+              "id": "fm3-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "如有疑问，请联系我们",
+              "answer": "If you have any questions, please contact us",
+              "acceptableAnswers": [
+                "Should you have questions, please reach out",
+                "If you have inquiries, please contact us"
+              ]
+            },
+            {
+              "id": "fm3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"May I ask, what time does the meeting start?\"",
+              "answer": "请问 会议 几 点 开始",
+              "bank": [
+                "请问",
+                "会议",
+                "几",
+                "点",
+                "开始",
+                "了",
+                "结束",
+                "什么"
+              ]
+            },
+            {
+              "id": "fm3-19",
+              "type": "multiple_choice",
+              "prompt": "Best translation: \"Sorry to trouble you, could you help me check this?\":",
+              "options": [
+                "麻烦您了，能帮我查一下吗？",
+                "查一下",
+                "你查",
+                "帮查"
+              ],
+              "answer": "麻烦您了，能帮我查一下吗？",
+              "explanation": "麻烦您了 + 能帮我 + 一下 — full polite request frame."
+            },
+            {
+              "id": "fm3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the polite verb you hear",
+              "spokenText": "麻 烦",
+              "options": [
+                "麻 烦",
+                "麻 木",
+                "马 虎",
+                "马 上"
+              ],
+              "answer": "麻 烦",
+              "explanation": "麻烦 (má fan) — \"trouble (someone)\" — the politeness keyword. 2nd + neutral tone."
             }
           ]
         },
@@ -9357,6 +13184,116 @@
               ],
               "answer": "首 先",
               "explanation": "首先 (shǒu xiān) — \"first\". Speech sequencing trio: 首先, 其次, 最后."
+            },
+            {
+              "id": "fm4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "今天我想跟大家分享…",
+              "answer": "Today I want to share with everyone…",
+              "acceptableAnswers": [
+                "Today I'd like to share with all of you",
+                "Today I want to share with you all"
+              ]
+            },
+            {
+              "id": "fm4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"First of all, thank you all for coming\"",
+              "answer": "首先 感谢 大家 的 到来",
+              "bank": [
+                "首先",
+                "感谢",
+                "大家",
+                "的",
+                "到来",
+                "再见",
+                "谢谢",
+                "了"
+              ]
+            },
+            {
+              "id": "fm4-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the appropriate speech CLOSING:",
+              "options": [
+                "谢谢大家，我的发言到此结束",
+                "好啦，就这样",
+                "拜拜",
+                "走啦"
+              ],
+              "answer": "谢谢大家，我的发言到此结束",
+              "explanation": "Standard speech ending: thank the audience + 到此结束 (\"ends here\")."
+            },
+            {
+              "id": "fm4-16",
+              "type": "fill_blank",
+              "prompt": "Speech transition: \"接 ___ 来 请 允 许 我 介绍\" (next)",
+              "answer": "下",
+              "acceptableAnswers": [
+                "下 来"
+              ],
+              "explanation": "接下来 — \"next / following this\" — speech transition phrase."
+            },
+            {
+              "id": "fm4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "在此，我谨代表…",
+              "answer": "Here, on behalf of…",
+              "acceptableAnswers": [
+                "On this occasion, I respectfully represent…",
+                "Here I solemnly represent…"
+              ]
+            },
+            {
+              "id": "fm4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"I'd like to take this opportunity to thank everyone for their support\"",
+              "answer": "我 想 借 此 机 会 感 谢 大 家 的 支 持",
+              "bank": [
+                "我",
+                "想",
+                "借",
+                "此",
+                "机",
+                "会",
+                "感",
+                "谢",
+                "大",
+                "家",
+                "的",
+                "支",
+                "持",
+                "了"
+              ]
+            },
+            {
+              "id": "fm4-19",
+              "type": "multiple_choice",
+              "prompt": "Pick the appropriate WEDDING banquet opener (father of the bride):",
+              "options": [
+                "尊敬的各位来宾，感谢大家在百忙之中前来参加",
+                "嗨，大伙儿，谢谢哈",
+                "你好，欢迎",
+                "终于来了"
+              ],
+              "answer": "尊敬的各位来宾，感谢大家在百忙之中前来参加",
+              "explanation": "百忙之中 — fixed phrase acknowledging guests' time. 前来 = formal \"come here\"."
+            },
+            {
+              "id": "fm4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the speech sequencer you hear",
+              "spokenText": "首 先",
+              "options": [
+                "首 先",
+                "首 都",
+                "其 次",
+                "最 后"
+              ],
+              "answer": "首 先",
+              "explanation": "首先 — \"first\". Speech sequencing trio: 首先, 其次, 最后."
             }
           ]
         },
@@ -9717,6 +13654,103 @@
               ],
               "answer": "入乡随俗",
               "explanation": "入乡随俗 (rù xiāng suí sú) — when in Rome…"
+            },
+            {
+              "id": "cy1-12",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "画蛇添足",
+              "answer": "Gilding the lily / adding something unnecessary",
+              "acceptableAnswers": [
+                "Adding feet to a snake",
+                "Overdoing it"
+              ],
+              "context": "huà shé tiān zú"
+            },
+            {
+              "id": "cy1-13",
+              "type": "multiple_choice",
+              "prompt": "Pick the chengyu meaning \"better late than never\":",
+              "options": [
+                "亡羊补牢",
+                "半途而废",
+                "守株待兔",
+                "对牛弹琴"
+              ],
+              "answer": "亡羊补牢",
+              "explanation": "亡羊补牢 — \"mend the pen after losing sheep\"; act even if some damage is already done."
+            },
+            {
+              "id": "cy1-14",
+              "type": "fill_blank",
+              "prompt": "Story setup: 跟 他 讲 哲学 就 是 ___ — 他 根本 不 感兴趣。",
+              "answer": "对牛弹琴",
+              "acceptableAnswers": [
+                "duì niú tán qín"
+              ],
+              "explanation": "对牛弹琴 — \"playing the qin for a cow\"; addressing the wrong audience."
+            },
+            {
+              "id": "cy1-15",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "一举两得",
+              "answer": "Kill two birds with one stone",
+              "acceptableAnswers": [
+                "Two birds with one stone",
+                "One action, two gains"
+              ],
+              "context": "yī jǔ liǎng dé"
+            },
+            {
+              "id": "cy1-16",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"When in Rome, do as the Romans do\"",
+              "answer": "入乡随俗",
+              "bank": [
+                "入乡随俗",
+                "半途而废",
+                "一举两得",
+                "自相矛盾",
+                "了"
+              ]
+            },
+            {
+              "id": "cy1-17",
+              "type": "multiple_choice",
+              "prompt": "What does \"守株待兔\" describe?",
+              "options": [
+                "Waiting passively for luck",
+                "Working hard",
+                "Helping others",
+                "Studying carefully"
+              ],
+              "answer": "Waiting passively for luck",
+              "explanation": "Mocks reliance on lucky one-offs instead of effort."
+            },
+            {
+              "id": "cy1-18",
+              "type": "fill_blank",
+              "prompt": "捐 这 点 钱 对 救灾 来说 只是 ___",
+              "answer": "杯水车薪",
+              "acceptableAnswers": [
+                "bēi shuǐ chē xīn"
+              ],
+              "explanation": "杯水车薪 — far too little to make a difference."
+            },
+            {
+              "id": "cy1-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the chengyu you hear",
+              "spokenText": "半 途 而 废",
+              "options": [
+                "半 途 而 废",
+                "半 信 半 疑",
+                "一 帆 风 顺",
+                "守 株 待 兔"
+              ],
+              "answer": "半 途 而 废",
+              "explanation": "半途而废 — give up halfway. Four-syllable rhythm: 4-2-2-4."
             }
           ]
         },
@@ -9871,6 +13905,120 @@
                 "rù xiāng suí sú"
               ],
               "explanation": "Before a business trip to Japan, learn the etiquette — when in Rome."
+            },
+            {
+              "id": "cy2-12",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "到了国外就要入乡随俗",
+              "answer": "Once you arrive abroad, when in Rome",
+              "acceptableAnswers": [
+                "Once you're overseas, adapt to local customs",
+                "When abroad, do as the locals do"
+              ]
+            },
+            {
+              "id": "cy2-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"You can't just wait passively for a windfall\"",
+              "answer": "你 不能 守株待兔",
+              "bank": [
+                "你",
+                "不能",
+                "守株待兔",
+                "必须",
+                "努力",
+                "也",
+                "了"
+              ]
+            },
+            {
+              "id": "cy2-14",
+              "type": "multiple_choice",
+              "prompt": "Which sentence uses 杯水车薪 CORRECTLY?",
+              "options": [
+                "我每个月存一百块，对买房来说就是杯水车薪。",
+                "他考试得了第一名，真是杯水车薪。",
+                "今天天气真好，杯水车薪。",
+                "她的中文进步很快，杯水车薪。"
+              ],
+              "answer": "我每个月存一百块，对买房来说就是杯水车薪。",
+              "explanation": "杯水车薪 fits contexts of inadequate effort/resources."
+            },
+            {
+              "id": "cy2-15",
+              "type": "fill_blank",
+              "prompt": "学 中文 最 忌讳 ___, 要 坚持 下去。",
+              "answer": "半途而废",
+              "acceptableAnswers": [
+                "bàn tú ér fèi"
+              ],
+              "explanation": "Learning Chinese — the worst is to give up halfway."
+            },
+            {
+              "id": "cy2-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他刚才说不去，现在又说要去，简直是自相矛盾",
+              "answer": "He just said he wouldn't go, now he says he will — totally self-contradictory",
+              "acceptableAnswers": [
+                "He was saying no and now he's saying yes — utterly contradicting himself",
+                "First he refused, now he agrees — that's self-contradictory"
+              ]
+            },
+            {
+              "id": "cy2-17",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Explaining technology to my grandma is like pearls before swine\"",
+              "answer": "跟 奶奶 解释 科技 就是 对牛弹琴",
+              "bank": [
+                "跟",
+                "奶奶",
+                "解释",
+                "科技",
+                "就是",
+                "对牛弹琴",
+                "听",
+                "不",
+                "也"
+              ]
+            },
+            {
+              "id": "cy2-18",
+              "type": "multiple_choice",
+              "prompt": "Pick the natural use of 望梅止渴:",
+              "options": [
+                "想着假期还有一周，只能望梅止渴。",
+                "他真是望梅止渴，太厉害了。",
+                "今天天气望梅止渴。",
+                "我的手机望梅止渴。"
+              ],
+              "answer": "想着假期还有一周，只能望梅止渴。",
+              "explanation": "望梅止渴 — comfort yourself with thoughts of something you can't yet have."
+            },
+            {
+              "id": "cy2-19",
+              "type": "fill_blank",
+              "prompt": "虽然 项目 晚 了 一 点, 但 现在 改 还 来 得 及, ___。",
+              "answer": "亡羊补牢",
+              "acceptableAnswers": [
+                "wáng yáng bǔ láo"
+              ],
+              "explanation": "亡羊补牢 — it's never too late to fix things."
+            },
+            {
+              "id": "cy2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the chengyu you hear",
+              "spokenText": "一 举 两 得",
+              "options": [
+                "一 举 两 得",
+                "一 心 二 用",
+                "事 半 功 倍",
+                "两 全 其 美"
+              ],
+              "answer": "一 举 两 得",
+              "explanation": "一举两得 — kill two birds with one stone. 1-3-3-2 tones."
             }
           ]
         },
@@ -10073,6 +14221,121 @@
               ],
               "answer": "守株待兔",
               "explanation": "守株待兔 mocks the idea of waiting passively for lucky outcomes instead of working for them."
+            },
+            {
+              "id": "cy3-12",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "亡羊补牢，为时未晚",
+              "answer": "It's never too late to mend",
+              "acceptableAnswers": [
+                "Better late than never",
+                "Even after a setback, it's not too late to act"
+              ]
+            },
+            {
+              "id": "cy3-13",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"His action is gilding the lily\"",
+              "answer": "他 这样 做 就是 画蛇添足",
+              "bank": [
+                "他",
+                "这样",
+                "做",
+                "就是",
+                "画蛇添足",
+                "了",
+                "也",
+                "不"
+              ]
+            },
+            {
+              "id": "cy3-14",
+              "type": "multiple_choice",
+              "prompt": "Which chengyu warns AGAINST passive thinking?",
+              "options": [
+                "守株待兔",
+                "入乡随俗",
+                "一举两得",
+                "亡羊补牢"
+              ],
+              "answer": "守株待兔",
+              "explanation": "守株待兔 mocks waiting passively for lucky outcomes."
+            },
+            {
+              "id": "cy3-15",
+              "type": "fill_blank",
+              "prompt": "他 给 程序员 讲 艺术 理论, 简直 是 ___。",
+              "answer": "对牛弹琴",
+              "acceptableAnswers": [
+                "duì niú tán qín"
+              ],
+              "explanation": "Pearls before swine — mismatched audience."
+            },
+            {
+              "id": "cy3-16",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他给程序员讲艺术理论，简直是对牛弹琴",
+              "answer": "He explains art theory to programmers — total pearls before swine",
+              "acceptableAnswers": [
+                "Lecturing programmers on art theory is like playing qin for a cow",
+                "Explaining art to coders is wasted effort"
+              ]
+            },
+            {
+              "id": "cy3-17",
+              "type": "multiple_choice",
+              "prompt": "Which chengyu warns AGAINST doing too little?",
+              "options": [
+                "杯水车薪",
+                "一举两得",
+                "入乡随俗",
+                "守株待兔"
+              ],
+              "answer": "杯水车薪",
+              "explanation": "杯水车薪 — symbolizes inadequate effort."
+            },
+            {
+              "id": "cy3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"This new policy is just a drop in the bucket\"",
+              "answer": "这 项 新 政策 就是 杯水车薪",
+              "bank": [
+                "这",
+                "项",
+                "新",
+                "政策",
+                "就是",
+                "杯水车薪",
+                "了",
+                "也",
+                "不"
+              ]
+            },
+            {
+              "id": "cy3-19",
+              "type": "fill_blank",
+              "prompt": "在 国外 旅行 要 ___ — 尊重 当地 的 习惯。",
+              "answer": "入乡随俗",
+              "acceptableAnswers": [
+                "rù xiāng suí sú"
+              ],
+              "explanation": "入乡随俗 — when in Rome, do as the Romans do."
+            },
+            {
+              "id": "cy3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the chengyu you hear",
+              "spokenText": "亡 羊 补 牢",
+              "options": [
+                "亡 羊 补 牢",
+                "守 株 待 兔",
+                "对 牛 弹 琴",
+                "画 蛇 添 足"
+              ],
+              "answer": "亡 羊 补 牢",
+              "explanation": "亡羊补牢 — mend the pen after losing sheep. 2-2-3-2 tones."
             }
           ]
         },
@@ -10405,6 +14668,81 @@
               ],
               "answer": "今天早上我跟他视频了一个小时。",
               "explanation": "Time (今天早上) comes first, subject (我) next, coverb phrase (跟他), then verb + duration. English-style trailing time/duration doesn't transfer."
+            },
+            {
+              "id": "rv1-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "即使你不同意，在我看来这也是正确的事",
+              "answer": "Even if you disagree, in my view this is still the right thing to do",
+              "acceptableAnswers": [
+                "Even if you don't agree, I think this is the right thing",
+                "Even with your disagreement, I still see this as right"
+              ]
+            },
+            {
+              "id": "rv1-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"He's not only smart, he's also hardworking\"",
+              "answer": "他 不仅 聪明 而且 努力",
+              "bank": [
+                "他",
+                "不仅",
+                "聪明",
+                "而且",
+                "努力",
+                "但是",
+                "也",
+                "了"
+              ]
+            },
+            {
+              "id": "rv1-15",
+              "type": "multiple_choice",
+              "prompt": "Which is GRAMMATICALLY WRONG?",
+              "options": [
+                "他越说越生气",
+                "他越来越很努力",
+                "他越来越努力",
+                "天气越来越热"
+              ],
+              "answer": "他越来越很努力",
+              "explanation": "越来越 already intensifies — adding 很 doubles up."
+            },
+            {
+              "id": "rv1-16",
+              "type": "fill_blank",
+              "prompt": "Connector quiz: \"___ 下雨, 我 也 要 去\" (hypothetical)",
+              "answer": "即使",
+              "acceptableAnswers": [
+                "即 使"
+              ],
+              "explanation": "Hypothetical → 即使. Real fact → 尽管 / 虽然."
+            },
+            {
+              "id": "rv1-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "环保越来越重要",
+              "answer": "Environmental protection is getting more and more important",
+              "acceptableAnswers": [
+                "Eco-protection grows increasingly important",
+                "Environmentalism is more important than ever"
+              ]
+            },
+            {
+              "id": "rv1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the connector pair you hear",
+              "spokenText": "即 使 也",
+              "options": [
+                "即 使 也",
+                "尽 管 但 是",
+                "不 仅 而 且",
+                "虽 然 但 是"
+              ],
+              "answer": "即 使 也",
+              "explanation": "即使...也 — hypothetical concession pair."
             }
           ]
         },
@@ -10620,6 +14958,119 @@
               ],
               "answer": "尽管 996 很辛苦，但是很多年轻人不仅不抗议，而且选择躺平",
               "explanation": "Layered B2: 尽管...但是 (concession) followed by 不仅不...而且 (negative not-only-but-also) — both connector pairs correctly partnered."
+            },
+            {
+              "id": "rv2-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "他不仅学习努力，而且工作也非常努力",
+              "answer": "He not only studies hard but also works very hard",
+              "acceptableAnswers": [
+                "Not only is his study diligent, his work is too",
+                "He works hard at study and also at work"
+              ]
+            },
+            {
+              "id": "rv2-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Although the work is tiring, the salary is fairly good\"",
+              "answer": "虽然 工作 很 累 但是 工资 比较 不错",
+              "bank": [
+                "虽然",
+                "工作",
+                "很",
+                "累",
+                "但是",
+                "工资",
+                "比较",
+                "不错",
+                "也",
+                "了"
+              ]
+            },
+            {
+              "id": "rv2-15",
+              "type": "multiple_choice",
+              "prompt": "Pick the layered B2 sentence:",
+              "options": [
+                "尽管 996 很辛苦，但是很多年轻人不仅不抗议，而且选择躺平",
+                "尽管 996 因此年轻人选择躺平",
+                "996 而且不仅躺平",
+                "尽管 996 但是不仅躺平"
+              ],
+              "answer": "尽管 996 很辛苦，但是很多年轻人不仅不抗议，而且选择躺平",
+              "explanation": "Two correctly partnered connector pairs in one sentence."
+            },
+            {
+              "id": "rv2-16",
+              "type": "fill_blank",
+              "prompt": "Stack frame: \"这 部 手机 ___ 贵 ___ 电池 也 不 好\" (not only / but also)",
+              "answer": "不仅 / 而且",
+              "acceptableAnswers": [
+                "不仅 而且",
+                "不仅 / 还",
+                "不仅 / 也"
+              ],
+              "explanation": "不仅 X 而且 Y — additive frame."
+            },
+            {
+              "id": "rv2-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "越来越多的人开始关注环保",
+              "answer": "More and more people are starting to pay attention to environmental protection",
+              "acceptableAnswers": [
+                "An increasing number of people are paying attention to environmentalism",
+                "More people are getting concerned about the environment"
+              ]
+            },
+            {
+              "id": "rv2-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"The longer I live in China, the more I like the food here\"",
+              "answer": "我 在 中国 住 得 越 久 就 越 喜欢 这里 的 食物",
+              "bank": [
+                "我",
+                "在",
+                "中国",
+                "住",
+                "得",
+                "越",
+                "久",
+                "就",
+                "越",
+                "喜欢",
+                "这里",
+                "的",
+                "食物",
+                "了"
+              ]
+            },
+            {
+              "id": "rv2-19",
+              "type": "multiple_choice",
+              "prompt": "Best translation: \"The more you study, the more you find there's still much you don't know\":",
+              "options": [
+                "你越学越发现还有很多不知道的",
+                "学习不知道",
+                "学习多很",
+                "你不知道学"
+              ],
+              "answer": "你越学越发现还有很多不知道的"
+            },
+            {
+              "id": "rv2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the compound sentence you hear",
+              "spokenText": "一 方 面 网 课 很 方 便 另 一 方 面 缺 少 互 动",
+              "options": [
+                "一 方 面 网 课 很 方 便 另 一 方 面 缺 少 互 动",
+                "网 课 很 方 便 但 是 缺 少 互 动",
+                "网 课 不 方 便 但 是 互 动 多",
+                "网 课 互 动 不 多 但 是 方 便"
+              ],
+              "answer": "一 方 面 网 课 很 方 便 另 一 方 面 缺 少 互 动",
+              "explanation": "一方面...另一方面 — two parallel four-syllable openers."
             }
           ]
         },
@@ -10814,6 +15265,114 @@
               ],
               "answer": "然 而",
               "explanation": "然而 — formal/written \"however\". 但是 / 可是 / 不过 are progressively more casual. Anchor delivery and essay reading favor 然而."
+            },
+            {
+              "id": "rv3-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "敬请回复",
+              "answer": "Please respond (formal)",
+              "acceptableAnswers": [
+                "Kindly reply",
+                "Please send your reply"
+              ]
+            },
+            {
+              "id": "rv3-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build a formal opener: \"I am writing this letter to thank you for your help\"",
+              "answer": "我 写 此 信 是 想 感 谢 您 的 帮助",
+              "bank": [
+                "我",
+                "写",
+                "此",
+                "信",
+                "是",
+                "想",
+                "感",
+                "谢",
+                "您",
+                "的",
+                "帮助",
+                "了"
+              ]
+            },
+            {
+              "id": "rv3-15",
+              "type": "multiple_choice",
+              "prompt": "Which is the FORMAL connector?",
+              "options": [
+                "然而",
+                "但是",
+                "可是",
+                "不过"
+              ],
+              "answer": "然而",
+              "explanation": "然而 — formal/written \"however\". The others are progressively more casual."
+            },
+            {
+              "id": "rv3-16",
+              "type": "fill_blank",
+              "prompt": "Formal lift: casual 现在 没 什么 时间, 因为 太忙 了 → \"___ 没 有 太 多 时间, 由于 工作 繁忙\"",
+              "answer": "目前",
+              "acceptableAnswers": [
+                "目 前"
+              ],
+              "explanation": "现在 → 目前 is the standard register lift."
+            },
+            {
+              "id": "rv3-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "尊敬的李总，请问您何时方便？",
+              "answer": "Respected Manager Li, may I ask when you are available?",
+              "acceptableAnswers": [
+                "Dear Manager Li, when would be convenient for you?",
+                "Respected Manager Li, when are you available?"
+              ]
+            },
+            {
+              "id": "rv3-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build the formal sentence: \"Currently the company is facing many challenges\"",
+              "answer": "目前 公司 面临 许多 挑战",
+              "bank": [
+                "目前",
+                "公司",
+                "面临",
+                "许多",
+                "挑战",
+                "现在",
+                "了",
+                "很多"
+              ]
+            },
+            {
+              "id": "rv3-19",
+              "type": "multiple_choice",
+              "prompt": "A friend WeChats you about a deadline. Pick the appropriate reply:",
+              "options": [
+                "好嘞，没问题",
+                "本人将于近日完成",
+                "敬请放心，必将按期完成",
+                "我谨代表自己保证完成"
+              ],
+              "answer": "好嘞，没问题",
+              "explanation": "Casual friend chat — formal options would be jarringly stiff."
+            },
+            {
+              "id": "rv3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the formal pronoun you hear",
+              "spokenText": "您",
+              "options": [
+                "您",
+                "你",
+                "他",
+                "她"
+              ],
+              "answer": "您",
+              "explanation": "您 (nín) — polite \"you\". The nasal ending is slightly held compared to 你."
             }
           ]
         },
@@ -11023,6 +15582,122 @@
                   "right": "The reason for X is because Y"
                 }
               ]
+            },
+            {
+              "id": "rv4-13",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "凡事都有两面，关键在于我们怎么看",
+              "answer": "Everything has two sides; the key is how we look at it",
+              "acceptableAnswers": [
+                "Every issue has two sides — what matters is our perspective",
+                "There are two sides to everything; what counts is how we view it"
+              ]
+            },
+            {
+              "id": "rv4-14",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"Even if pressure is great, I'll still keep going\"",
+              "answer": "即使 压力 很 大 我 也 会 坚持 下去",
+              "bank": [
+                "即使",
+                "压力",
+                "很",
+                "大",
+                "我",
+                "也",
+                "会",
+                "坚持",
+                "下去",
+                "如果",
+                "了"
+              ]
+            },
+            {
+              "id": "rv4-15",
+              "type": "multiple_choice",
+              "prompt": "Which sentence pairs the connectors CORRECTLY?",
+              "options": [
+                "虽然他很累，但是没有放弃",
+                "他不仅聪明，但是很努力",
+                "尽管下雨，也我去了",
+                "即使你来，但是我不去"
+              ],
+              "answer": "虽然他很累，但是没有放弃",
+              "explanation": "虽然 needs 但是; 不仅 needs 而且/还/也; 尽管 needs 但是/还是; 即使 needs 也/还."
+            },
+            {
+              "id": "rv4-16",
+              "type": "fill_blank",
+              "prompt": "Layered: \"___ 工作 很 难, 但是 我 不仅 完成 了, 而且 学 到 了 很 多\"",
+              "answer": "虽然",
+              "acceptableAnswers": [
+                "尽管"
+              ],
+              "explanation": "虽然 / 尽管 — concession opener, paired with 但是."
+            },
+            {
+              "id": "rv4-17",
+              "type": "translate",
+              "direction": "to_source",
+              "source": "总之，环保越来越重要",
+              "answer": "In short, environmental protection is getting more and more important",
+              "acceptableAnswers": [
+                "In sum, environmentalism keeps growing in importance",
+                "All in all, eco-protection is increasingly vital"
+              ]
+            },
+            {
+              "id": "rv4-18",
+              "type": "tap_words_in_order",
+              "prompt": "Build \"In my view, even if AI develops fast, we cannot ignore ethics\"",
+              "answer": "在 我 看 来 即使 人工智能 发展 得 很 快 我们 也 不 能 忽视 伦理",
+              "bank": [
+                "在",
+                "我",
+                "看",
+                "来",
+                "即使",
+                "人工智能",
+                "发展",
+                "得",
+                "很",
+                "快",
+                "我们",
+                "也",
+                "不",
+                "能",
+                "忽视",
+                "伦理",
+                "了"
+              ]
+            },
+            {
+              "id": "rv4-19",
+              "type": "multiple_choice",
+              "prompt": "Best translation: \"I have to admit, what you said makes a lot of sense\":",
+              "options": [
+                "我得承认，你说得很有道理",
+                "我说有道理",
+                "你说我承认",
+                "有道理我"
+              ],
+              "answer": "我得承认，你说得很有道理",
+              "explanation": "得 (děi) = must/have to. 我得承认 is a strong concession opener."
+            },
+            {
+              "id": "rv4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the trend statement you hear",
+              "spokenText": "越 来 越 多 的 年 轻 人 选 择 躺 平",
+              "options": [
+                "越 来 越 多 的 年 轻 人 选 择 躺 平",
+                "越 来 越 多 的 年 轻 人 选 择 内 卷",
+                "越 来 越 少 年 轻 人 选 择 躺 平",
+                "年 轻 人 越 来 越 不 喜 欢 躺 平"
+              ],
+              "answer": "越 来 越 多 的 年 轻 人 选 择 躺 平",
+              "explanation": "越来越多的 + N + 选择 + V — the standard trend-reporting frame."
             }
           ]
         },
