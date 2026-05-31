@@ -13412,107 +13412,104 @@
             },
             {
               "id": "art1-13",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Her debut novel is a remarkably accomplish piece of writing.",
+              "type": "multiple_choice",
+              "prompt": "'The performance was technically polished but emotionally hollow' yorumu neyi ima eder?",
               "options": [
-                "achieves",
-                "Saran",
-                "Her debut novel is a remarkably accomplish piece of writing.",
-                "cilalı"
+                "Teknik mükemmeliyet duygusal derinliği telafi etmez",
+                "Sanatçı amatördür",
+                "Eser hem teknik hem duygusal olarak başarılı",
+                "Duygusal yoğunluk teknik kusurları örter"
               ],
-              "answer": "Her debut novel is a remarkably accomplish piece of writing."
+              "answer": "Teknik mükemmeliyet duygusal derinliği telafi etmez",
+              "explanation": "İki olumlu/olumsuz uçlu nüanslı eleştiri."
             },
             {
               "id": "art1-14",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "heavy-handed",
-              "options": [
-                "Kabalığı, ince işlenmemişliği",
-                "expressive",
-                "İnceliği",
-                "heavy-handed"
-              ],
-              "answer": "heavy-handed"
+              "type": "fill_blank",
+              "prompt": "The novel's prose is ___, never wasting a single word.",
+              "hint": "Romanın üslubu son derece ölçülü, hiçbir kelimeyi boşa harcamıyor.",
+              "answer": "restrained",
+              "acceptableAnswers": [
+                "spare",
+                "austere"
+              ]
             },
             {
               "id": "art1-15",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "refined",
-              "options": [
-                "refined",
-                "yalın / sade",
-                "derivative",
-                "expressive"
+              "type": "translate",
+              "prompt": "Bu yorum fazlasıyla gösterişli ama özünde sığ.",
+              "direction": "tr-to-en",
+              "answer": "This interpretation is overly pretentious but essentially shallow",
+              "acceptableAnswers": [
+                "This reading is overly pretentious but essentially shallow",
+                "This take is overly pretentious yet essentially shallow"
               ],
-              "answer": "refined"
+              "context": "Eleştirmenin kibrini vurgulayan değerlendirme."
             },
             {
               "id": "art1-16",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "achieves",
+              "type": "multiple_choice",
+              "prompt": "'Jarring' bir geçiş ne tür bir etki yaratır?",
               "options": [
-                "achieves",
-                "restrained",
-                "raw",
-                "austere"
+                "Akıcı ve doğal",
+                "Rahatsız edici ve uyumsuz",
+                "Yumuşak ve davetkâr",
+                "Belirsiz ve muğlak"
               ],
-              "answer": "achieves"
+              "answer": "Rahatsız edici ve uyumsuz"
             },
             {
               "id": "art1-17",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "stilted",
-              "options": [
-                "stilted",
-                "ham",
-                "evocative",
-                "yet"
-              ],
-              "answer": "stilted"
+              "type": "fill_blank",
+              "prompt": "Critics dismissed the sequel as ___ of the original.",
+              "hint": "Eleştirmenler devam filmini orijinalin taklidi olarak değerlendirip reddetti.",
+              "answer": "derivative",
+              "acceptableAnswers": [
+                "imitative"
+              ]
             },
             {
               "id": "art1-18",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "derivative",
-              "options": [
-                "derivative",
-                "yalın / sade",
+              "type": "tap_words_in_order",
+              "prompt": "Sahne tasarımı yapay ama atmosferi sürükleyici.",
+              "answer": "The set design feels contrived but the atmosphere is immersive",
+              "bank": [
+                "The",
+                "set",
+                "design",
+                "feels",
                 "contrived",
-                "Ustalıklı"
-              ],
-              "answer": "derivative"
+                "but",
+                "the",
+                "atmosphere",
+                "is",
+                "immersive",
+                "loud",
+                "soft"
+              ]
             },
             {
               "id": "art1-19",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "expressive",
-              "options": [
-                "honesty",
-                "pretentious",
-                "loud",
-                "expressive"
+              "type": "translate",
+              "prompt": "Yönetmenin ölçülü tutumu doruk anını daha çağrışım uyandırıcı kılıyor.",
+              "direction": "tr-to-en",
+              "answer": "The director's restraint makes the climax all the more evocative",
+              "acceptableAnswers": [
+                "The director's restraint renders the climax all the more evocative"
               ],
-              "answer": "expressive"
+              "context": "Eleştirel yazıda yaygın bir 'restraint vs payoff' kalıbı."
             },
             {
               "id": "art1-20",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "The set design is austere yet evocative",
+              "type": "multiple_choice",
+              "prompt": "Bir oyuncuyu 'understated yet expressive' diye övmek neyi vurgular?",
               "options": [
-                "Her debut novel is remarkable accomplished piece of writing.",
-                "cilalı",
-                "a",
-                "The set design is austere yet evocative"
+                "Abartısız ama ifade gücü yüksek",
+                "Sessiz ve duygusuz",
+                "Gürültülü ve dramatik",
+                "Yapay ve zorlama"
               ],
-              "answer": "The set design is austere yet evocative"
+              "answer": "Abartısız ama ifade gücü yüksek"
             }
           ]
         },
@@ -13693,107 +13690,102 @@
             },
             {
               "id": "art2-13",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "An immersive triumph from start to finish.",
+              "type": "multiple_choice",
+              "prompt": "'A welcome return to form' kalıbı hangi durumda kullanılır?",
               "options": [
-                "and",
-                "An immersive triumph from start to finish.",
-                "it",
-                "The screenplay never quite lives up to the premise."
+                "Sanatçının yıllar sonra eski kalitesine ulaşması",
+                "İlk eserinin yayımlanması",
+                "Sanatçının emekli olması",
+                "Üslubunun tamamen değişmesi"
               ],
-              "answer": "An immersive triumph from start to finish."
+              "answer": "Sanatçının yıllar sonra eski kalitesine ulaşması"
             },
             {
               "id": "art2-14",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "praised",
-              "options": [
-                "The screenplay never quite lives up to the premise.",
-                "decade",
-                "praised",
-                "succeeds"
-              ],
-              "answer": "praised"
+              "type": "fill_blank",
+              "prompt": "The screenplay never quite ___ up to the premise.",
+              "hint": "Senaryo, ana fikrin vaadini tam karşılayamıyor.",
+              "answer": "lives",
+              "acceptableAnswers": []
             },
             {
               "id": "art2-15",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "the",
-              "options": [
-                "the",
-                "decade",
-                "Tutarsız ama hiç sıkıcı değil",
-                "A polished piece of contemporary fiction."
+              "type": "translate",
+              "prompt": "Hiç de kusursuz değil ama son derece sürükleyici.",
+              "direction": "tr-to-en",
+              "answer": "It is by no means flawless, yet utterly compelling",
+              "acceptableAnswers": [
+                "It is by no means flawless yet utterly compelling",
+                "It is by no means perfect, yet utterly compelling"
               ],
-              "answer": "the"
+              "context": "İki yönlü dengeli eleştiri kalıbı."
             },
             {
               "id": "art2-16",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Kusursuz ve sürükleyici",
+              "type": "multiple_choice",
+              "prompt": "'Sorely lacking in emotional weight' ne anlama gelir?",
               "options": [
-                "Kusursuz ve sürükleyici",
-                "one",
-                "return",
-                "decade"
+                "Duygusal ağırlık açısından büyük ölçüde eksik",
+                "Duygusal olarak yoğun",
+                "Aşırı duygusal",
+                "Ölçülü ve etkili"
               ],
-              "answer": "Kusursuz ve sürükleyici"
+              "answer": "Duygusal ağırlık açısından büyük ölçüde eksik"
             },
             {
               "id": "art2-17",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "The film is sorely lacking in emotional weight.",
-              "options": [
-                "success",
-                "The film is sorely lacking in emotional weight.",
-                "Tutarsız ama hiç sıkıcı değil",
-                "unanimously"
-              ],
-              "answer": "The film is sorely lacking in emotional weight."
+              "type": "tap_words_in_order",
+              "prompt": "Bu film türünün gerçek bir zaferidir.",
+              "answer": "This film is a true triumph of the genre",
+              "bank": [
+                "This",
+                "film",
+                "is",
+                "a",
+                "true",
+                "triumph",
+                "of",
+                "the",
+                "genre",
+                "failure",
+                "fades",
+                "in"
+              ]
             },
             {
               "id": "art2-18",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "to",
-              "options": [
-                "past",
-                "It fails to deliver and quickly fades from memory",
-                "This",
-                "to"
-              ],
-              "answer": "to"
+              "type": "fill_blank",
+              "prompt": "Uneven but never ___, the album rewards a patient listener.",
+              "hint": "Tutarsız ama hiç sıkıcı değil; albüm sabırlı dinleyiciyi ödüllendiriyor.",
+              "answer": "uninteresting",
+              "acceptableAnswers": [
+                "boring",
+                "dull"
+              ]
             },
             {
               "id": "art2-19",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "success",
-              "options": [
-                "Her zaman düz",
-                "Critics",
-                "The screenplay never quite live up to the premise.",
-                "success"
+              "type": "translate",
+              "prompt": "Eleştirmenler oybirliğiyle övdü ama izleyici ilgisiz kaldı.",
+              "direction": "tr-to-en",
+              "answer": "Critics praised it almost unanimously but audiences remained indifferent",
+              "acceptableAnswers": [
+                "Critics have praised it almost unanimously, but audiences remained indifferent",
+                "Critics praised it unanimously yet audiences remained indifferent"
               ],
-              "answer": "success"
+              "context": "Eleştirmen-izleyici uçurumunu betimleyen ifade."
             },
             {
               "id": "art2-20",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "past",
+              "type": "multiple_choice",
+              "prompt": "'The film fails to deliver on its ambitious premise' cümlesi neyi vurgular?",
               "options": [
-                "Critics have praised it almost unanimously",
-                "past",
-                "praised",
-                "triumph"
+                "İddialı çıkış noktasının karşılığını verememesi",
+                "Filmin çok kısa olması",
+                "Yönetmenin tanınmıyor olması",
+                "Bütçenin yetersizliği"
               ],
-              "answer": "past"
+              "answer": "İddialı çıkış noktasının karşılığını verememesi"
             }
           ]
         },
@@ -15280,107 +15272,91 @@
             },
             {
               "id": "nws1-13",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "claim",
+              "type": "multiple_choice",
+              "prompt": "'Bu gazete inanmaktadır ki…' kalıbı hangi register'ın imzasıdır?",
               "options": [
-                "impartial",
-                "mistake",
-                "It is high time…",
-                "claim"
+                "düz haber (reporting)",
+                "başyazı (editorial)",
+                "analiz (analysis)",
+                "köşe yazısı (op-ed)"
               ],
-              "answer": "claim"
+              "answer": "başyazı (editorial)"
             },
             {
               "id": "nws1-14",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "rumour",
-              "options": [
-                "moans",
-                "Make no mistake…",
-                "rants",
-                "rumour"
-              ],
-              "answer": "rumour"
+              "type": "fill_blank",
+              "prompt": "The senator ___ that the report had been doctored.",
+              "hint": "Senatör, raporun tahrif edildiğini iddia etti (kanıtsız, mesafeli).",
+              "answer": "alleged",
+              "acceptableAnswers": [
+                "claimed"
+              ]
             },
             {
               "id": "nws1-15",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "assert",
-              "options": [
-                "editorial",
-                "moans",
-                "According to official, no final decision has been made.",
-                "assert"
-              ],
-              "answer": "assert"
+              "type": "translate",
+              "prompt": "Çevirin: 'Şüpheniz olmasın: bu bir dönüm noktasıdır.'",
+              "direction": "tr-to-en",
+              "answer": "Make no mistake: this is a turning point.",
+              "context": "Başyazı / op-ed registerına özgü vurgulu açılış."
             },
             {
               "id": "nws1-16",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "assessed",
+              "type": "multiple_choice",
+              "prompt": "Düz habere en uygun atıf fiili hangisidir?",
               "options": [
-                "Make no mistake: this is a turning point.",
-                "feature",
-                "assessed",
-                "According to officials, the agreement is imminent."
+                "rants",
+                "moans",
+                "announced",
+                "thunders"
               ],
-              "answer": "assessed"
+              "answer": "announced"
             },
             {
               "id": "nws1-17",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "editorial",
-              "options": [
-                "editorial",
-                "What this means for…",
+              "type": "tap_words_in_order",
+              "prompt": "Bir kişi politikanın başarısız olduğunu öne sürebilir.",
+              "answer": "One could argue the policy has failed",
+              "bank": [
+                "One",
+                "could",
+                "argue",
+                "the",
+                "policy",
+                "has",
+                "failed",
+                "rumour",
                 "barely",
-                "It is high time…"
-              ],
-              "answer": "editorial"
+                "ago"
+              ]
             },
             {
               "id": "nws1-18",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "According to official, no final decision has been made.",
-              "options": [
-                "According to official, no final decision has been made.",
-                "Make no mistake: this is a turning point.",
-                "One could argue the policy has failed.",
-                "Markets closed slightly higher on Tuesday."
-              ],
-              "answer": "According to official, no final decision has been made."
+              "type": "fill_blank",
+              "prompt": "What this verdict ___ for future cases remains to be seen.",
+              "hint": "Bu kararın gelecekteki davalar için ne anlama geldiği henüz belirsiz (analiz registerı).",
+              "answer": "means",
+              "acceptableAnswers": []
             },
             {
               "id": "nws1-19",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "The implications of the decision are yet to be assessed",
+              "type": "multiple_choice",
+              "prompt": "Hangi sıfat düz haber registerına en uygundur?",
               "options": [
-                "maintain",
-                "One could argue the policy has failed.",
-                "editorial",
-                "The implications of the decision are yet to be assessed"
+                "indefensible",
+                "shameful",
+                "impartial",
+                "outrageous"
               ],
-              "answer": "The implications of the decision are yet to be assessed"
+              "answer": "impartial"
             },
             {
               "id": "nws1-20",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "ago",
-              "options": [
-                "ago",
-                "alleges",
-                "According to officials, no final decision has been made.",
-                "biased"
-              ],
-              "answer": "ago"
+              "type": "translate",
+              "prompt": "Çevirin: 'Yetkililere göre nihai bir karar henüz alınmadı.'",
+              "direction": "tr-to-en",
+              "answer": "According to officials, no final decision has been made.",
+              "context": "Düz haberin tipik atıf + edilgen yapı kalıbı."
             }
           ]
         },
