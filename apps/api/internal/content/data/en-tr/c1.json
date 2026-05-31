@@ -16021,107 +16021,97 @@
             },
             {
               "id": "nws4-13",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Far from a panacea, the proposal raises more questions than it answers.",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle op-ed'in 'aciliyet vurgusu' (call-to-action) klişesidir?",
               "options": [
-                "Yanılmayın",
-                "mistake",
-                "Far from a panacea, the proposal raises more questions than it answers.",
-                "Mizah"
+                "Markets edged higher on Tuesday.",
+                "The time to act is now.",
+                "According to the report, the figure stands at 12%.",
+                "The bill was signed at noon."
               ],
-              "answer": "Far from a panacea, the proposal raises more questions than it answers."
+              "answer": "The time to act is now."
             },
             {
               "id": "nws4-14",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "merely",
-              "options": [
-                "clear",
-                "merely",
-                "Our call is therefore clear action must be taken",
-                "assert"
-              ],
-              "answer": "merely"
+              "type": "fill_blank",
+              "prompt": "This is not ___ a matter of policy; it is a question of principle.",
+              "hint": "Bu yalnızca bir politika meselesi değil, ilke meselesidir.",
+              "answer": "merely",
+              "acceptableAnswers": [
+                "simply",
+                "just"
+              ]
             },
             {
               "id": "nws4-15",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Our",
-              "options": [
-                "Far from being a panacea, the proposals raises more questions than it answer.",
-                "must",
-                "the",
-                "Our"
-              ],
-              "answer": "Our"
+              "type": "translate",
+              "prompt": "Çevirin: 'Ben, kendi adıma, bu argümanı ikna edici bulmuyorum.'",
+              "direction": "tr-to-en",
+              "answer": "I, for one, find this argument unconvincing.",
+              "context": "Op-ed kişisel duruş kalıbı: 'I, for one,…'"
             },
             {
               "id": "nws4-16",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "This is not merely a question of regulation",
+              "type": "multiple_choice",
+              "prompt": "Op-ed'de 'hedging' (yumuşatma) işlevi nedir?",
               "options": [
-                "Far from being a panacea, the proposals raises more questions than it answer.",
-                "This is not merely a question of regulation",
-                "a",
-                "maintain"
+                "Yazarın iddiasını kesinleştirir",
+                "Yazarı kanıtsız iddiadan korur, tartışmaya alan açar",
+                "Cümleyi süsler",
+                "Atıf değildir, yalnızca süs unsurudur"
               ],
-              "answer": "This is not merely a question of regulation"
+              "answer": "Yazarı kanıtsız iddiadan korur, tartışmaya alan açar"
             },
             {
               "id": "nws4-17",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "must",
-              "options": [
-                "must",
-                "start",
-                "always",
-                "rejected"
-              ],
-              "answer": "must"
+              "type": "tap_words_in_order",
+              "prompt": "Söylemeye gerek yok ki, sonuçları büyük olacaktır.",
+              "answer": "Needless to say the consequences will be far reaching",
+              "bank": [
+                "Needless",
+                "to",
+                "say",
+                "the",
+                "consequences",
+                "will",
+                "be",
+                "far",
+                "reaching",
+                "merely",
+                "loudly",
+                "start"
+              ]
             },
             {
               "id": "nws4-18",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "argue",
-              "options": [
-                "argue",
-                "is",
-                "therefore",
-                "Make"
-              ],
-              "answer": "argue"
+              "type": "fill_blank",
+              "prompt": "It seems ___ to suggest that the policy has reached its limits.",
+              "hint": "Politikanın sınırlarına ulaştığını öne sürmek makul görünüyor.",
+              "answer": "plausible",
+              "acceptableAnswers": [
+                "reasonable",
+                "fair"
+              ]
             },
             {
               "id": "nws4-19",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "the",
+              "type": "multiple_choice",
+              "prompt": "Hangisi op-ed'de tipik bir 'klişe imza' (cliché phrase) DEĞİLDİR?",
               "options": [
-                "This is wrong.",
-                "the",
-                "silver bullet",
-                "a"
+                "Make no mistake",
+                "It is high time",
+                "Far from being a panacea",
+                "Closed slightly higher on Tuesday"
               ],
-              "answer": "the"
+              "answer": "Closed slightly higher on Tuesday"
             },
             {
               "id": "nws4-20",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "start",
-              "options": [
-                "merely",
-                "this",
-                "Far from being a panaceas, the proposal raises more questions than it answers.",
-                "start"
-              ],
-              "answer": "start"
+              "type": "translate",
+              "prompt": "Çevirin: 'Her derde deva olmak şöyle dursun, öneri yanıtladığından çok soru doğuruyor.'",
+              "direction": "tr-to-en",
+              "answer": "Far from being a panacea, the proposal raises more questions than it answers.",
+              "context": "Op-ed'in tipik karşı-koyuş (concessive) açılışı."
             }
           ]
         },
@@ -16305,107 +16295,95 @@
             },
             {
               "id": "nws5-13",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "reached",
+              "type": "multiple_choice",
+              "prompt": "'The senator allegedly accepted gifts.' Bu cümlede 'allegedly'in işlevi?",
               "options": [
-                "reached",
-                "request",
-                "ostensibly",
-                "that"
+                "İddiayı kanıt olarak sunar",
+                "Atıfı kişisel görüşe dönüştürür",
+                "İddiayı kanıtlanmamış olarak işaretler, gazeteyi koruma altına alır",
+                "Olayın zamanını belirtir"
               ],
-              "answer": "reached"
+              "answer": "İddiayı kanıtlanmamış olarak işaretler, gazeteyi koruma altına alır"
             },
             {
               "id": "nws5-14",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Tarafsız onay",
-              "options": [
-                "The",
-                "We urges lawmakers, in the strongest possible terms, to reconsider.",
-                "Tarafsız onay",
-                "Açık iddianame"
-              ],
-              "answer": "Tarafsız onay"
+              "type": "fill_blank",
+              "prompt": "The firm is ___ in talks with regulators, according to two sources.",
+              "hint": "İki kaynağa göre şirket düzenleyicilerle görüşmeler içinde olduğu bildiriliyor.",
+              "answer": "reportedly",
+              "acceptableAnswers": [
+                "allegedly"
+              ]
             },
             {
               "id": "nws5-15",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "denied",
-              "options": [
-                "denied",
-                "headline",
-                "decision",
-                "refuted"
-              ],
-              "answer": "denied"
+              "type": "translate",
+              "prompt": "Çevirin: 'Yasakoyuculara, en güçlü ifadelerle, yeniden düşünmelerini rica ediyoruz.'",
+              "direction": "tr-to-en",
+              "answer": "We urge lawmakers, in the strongest possible terms, to reconsider.",
+              "context": "Başyazı registerının tipik çağrı kalıbı."
             },
             {
               "id": "nws5-16",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Açık iddianame",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle düz haberin standart 'kaynak yanıt vermedi' kalıbıdır?",
               "options": [
-                "obituary",
-                "Onaylanmış olgu",
-                "refuted",
-                "Açık iddianame"
+                "Officials refused to confirm or deny anything at all.",
+                "The spokesperson did not immediately respond to a request for comment.",
+                "They were silent, which speaks volumes.",
+                "We urge officials to respond."
               ],
-              "answer": "Açık iddianame"
+              "answer": "The spokesperson did not immediately respond to a request for comment."
             },
             {
               "id": "nws5-17",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Kanıtlanmış suçlama",
-              "options": [
-                "Açık iddianame",
-                "Kanıtlanmış suçlama",
-                "reporting",
-                "obituary"
-              ],
-              "answer": "Kanıtlanmış suçlama"
+              "type": "fill_blank",
+              "prompt": "The minister ___ wrongdoing during the press conference.",
+              "hint": "Bakan basın toplantısında bir yanlışlık olduğunu reddetti.",
+              "answer": "denied",
+              "acceptableAnswers": [
+                "rejected",
+                "disputed"
+              ]
             },
             {
               "id": "nws5-18",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "the",
+              "type": "multiple_choice",
+              "prompt": "'Ostensibly' (görünürde) hangi register'ı en iyi besler?",
               "options": [
-                "apparently",
-                "We urge lawmaker, in the strongest possible terms, to reconsider.",
-                "already",
-                "the"
+                "Düz haber",
+                "Hava raporu",
+                "Analiz veya op-ed (şüphe imalı)",
+                "Spor sonuçları"
               ],
-              "answer": "the"
+              "answer": "Analiz veya op-ed (şüphe imalı)"
             },
             {
               "id": "nws5-19",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "declined",
-              "options": [
-                "to",
-                "İddia düzeyinde, mesafeli",
-                "declined",
-                "We urge lawmakers, in the strongest possible terms, to reconsider."
-              ],
-              "answer": "declined"
+              "type": "tap_words_in_order",
+              "prompt": "Kaynaklar bir karara henüz varılmadığını bildiriyor.",
+              "answer": "Sources indicate that no decision has yet been reached",
+              "bank": [
+                "Sources",
+                "indicate",
+                "that",
+                "no",
+                "decision",
+                "has",
+                "yet",
+                "been",
+                "reached",
+                "already",
+                "loudly"
+              ]
             },
             {
               "id": "nws5-20",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "The",
-              "options": [
-                "The",
-                "Tarafsız onay",
-                "denied",
-                "declined"
-              ],
-              "answer": "The"
+              "type": "translate",
+              "prompt": "Çevirin: 'CEO iddiaları reddetti ve devam eden soruşturmayı gerekçe gösterdi.'",
+              "direction": "tr-to-en",
+              "answer": "The CEO denied the allegations, citing the ongoing investigation.",
+              "context": "Atıf + 'citing' + reddetme: hem düz haber hem analiz registerında işler."
             }
           ]
         },
@@ -16533,250 +16511,234 @@
             },
             {
               "id": "nws6-2",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "our",
+              "type": "multiple_choice",
+              "prompt": "'What's at stake isn't the headline number but the precedent…' yapısının işlevi nedir?",
               "options": [
-                "count",
-                "Give",
-                "our",
-                "us"
+                "Konuyu değiştirir",
+                "Cleft (vurgu kaydırması) ile odağı manşetten yapısal sorunda toplar",
+                "Konuyu basitleştirir",
+                "Sayıyı doğrular"
               ],
-              "answer": "our"
+              "answer": "Cleft (vurgu kaydırması) ile odağı manşetten yapısal sorunda toplar"
             },
             {
               "id": "nws6-3",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "enforcement",
-              "options": [
-                "for",
-                "enforcement",
-                "sounds",
-                "in"
-              ],
-              "answer": "enforcement"
+              "type": "fill_blank",
+              "prompt": "I'd stop ___ of imputing motive, but the timing is suspicious.",
+              "hint": "Niyet atfetmekten kaçınırım; ancak zamanlama şüpheli.",
+              "answer": "short",
+              "acceptableAnswers": []
             },
             {
               "id": "nws6-4",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Give",
-              "options": [
-                "Give",
-                "release",
-                "thought",
-                "they"
-              ],
-              "answer": "Give"
+              "type": "translate",
+              "prompt": "Çevirin: 'Destekçiler güvencelerin sağlam olduğunu öne sürüyor.'",
+              "direction": "tr-to-en",
+              "answer": "Supporters argue the safeguards are robust.",
+              "context": "Söyleşide karşı görüşü atıfla aktarma kalıbı."
             },
             {
               "id": "nws6-5",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "wrong",
+              "type": "multiple_choice",
+              "prompt": "Hangi söyleşi yanıtı C1 register'ına uygundur?",
               "options": [
-                "tonight",
-                "nearly",
-                "wrong",
-                "thought"
+                "Yeah they're crooks, obviously.",
+                "Idk, hard to say tbh.",
+                "I'd stop short of imputing motive, but I'd note the structural weakness is too convenient.",
+                "Just delete the whole thing."
               ],
-              "answer": "wrong"
+              "answer": "I'd stop short of imputing motive, but I'd note the structural weakness is too convenient."
             },
             {
               "id": "nws6-6",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "that",
-              "options": [
-                "that",
-                "We're",
-                "life",
-                "bill"
-              ],
-              "answer": "that"
+              "type": "fill_blank",
+              "prompt": "Not for a moment ___ I dismiss the polling — but support softens once respondents see the clause.",
+              "hint": "Devrik vurgu: 'asla küçümsemem' — yardımcı fiille.",
+              "answer": "would",
+              "acceptableAnswers": [
+                "do"
+              ]
             },
             {
               "id": "nws6-7",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "push",
-              "options": [
-                "wrong",
+              "type": "tap_words_in_order",
+              "prompt": "Bana itiraz etmenize izin verin — anket halkın desteklediğini gösteriyor.",
+              "answer": "Let me push back the polling shows the public supports it",
+              "bank": [
+                "Let",
+                "me",
                 "push",
                 "back",
-                "bad"
-              ],
-              "answer": "push"
+                "the",
+                "polling",
+                "shows",
+                "public",
+                "supports",
+                "it",
+                "loudly",
+                "barely"
+              ]
             },
             {
               "id": "nws6-8",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "time",
+              "type": "multiple_choice",
+              "prompt": "'A charge of bad faith' deyiminin gazetecilikteki anlamı nedir?",
               "options": [
-                "enforcement",
-                "at",
-                "time",
-                "The"
+                "İnanç değişikliği iddiası",
+                "Kötü niyet (kasten yanıltma) suçlaması",
+                "Maliyet iddiası",
+                "Övgü"
               ],
-              "answer": "time"
+              "answer": "Kötü niyet (kasten yanıltma) suçlaması"
             },
             {
               "id": "nws6-9",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "stake",
-              "options": [
-                "rewrite",
-                "Supporters",
-                "stake",
-                "one"
-              ],
-              "answer": "stake"
+              "type": "translate",
+              "prompt": "Çevirin: 'Basın bültenini değil, uygulama maddesini okuyun.'",
+              "direction": "tr-to-en",
+              "answer": "Read the enforcement clause, not the press release.",
+              "context": "Söyleşi kapanış vurgusu — vatandaşa pratik tavsiye."
             },
             {
               "id": "nws6-10",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Doesn't",
-              "options": [
-                "Doesn't",
-                "listeners",
-                "Final",
-                "will"
-              ],
-              "answer": "Doesn't"
+              "type": "fill_blank",
+              "prompt": "Support softens ___ once respondents see the enforcement clause.",
+              "hint": "Yanıt verenler uygulama maddesini görünce destek belirgin biçimde zayıflıyor.",
+              "answer": "markedly",
+              "acceptableAnswers": [
+                "noticeably",
+                "considerably",
+                "significantly"
+              ]
             },
             {
               "id": "nws6-11",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "faith",
+              "type": "multiple_choice",
+              "prompt": "'Window-dressing' deyimi habercilikte ne ifade eder?",
               "options": [
-                "shows",
-                "public",
-                "back",
-                "faith"
+                "Cam temizliği",
+                "Süslü manşet",
+                "Etkisi olmayan, görüntüde iyi gözüken düzenleme",
+                "Reklam"
               ],
-              "answer": "faith"
+              "answer": "Etkisi olmayan, görüntüde iyi gözüken düzenleme"
             },
             {
               "id": "nws6-12",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "something",
-              "options": [
-                "that",
-                "something",
-                "me",
-                "Are"
-              ],
-              "answer": "something"
+              "type": "fill_blank",
+              "prompt": "Polling shows the public ___ supports the bill.",
+              "hint": "Anket, halkın yasayı genel olarak desteklediğini gösteriyor.",
+              "answer": "broadly",
+              "acceptableAnswers": [
+                "largely",
+                "generally"
+              ]
             },
             {
               "id": "nws6-13",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "bad",
-              "options": [
-                "here",
-                "faith",
-                "rewrite",
-                "bad"
-              ],
-              "answer": "bad"
+              "type": "tap_words_in_order",
+              "prompt": "Yasa tasarısının en eleştirel seslerinden biri oldunuz.",
+              "answer": "You have been one of the most vocal critics of the bill",
+              "bank": [
+                "You",
+                "have",
+                "been",
+                "one",
+                "of",
+                "the",
+                "most",
+                "vocal",
+                "critics",
+                "of",
+                "bill",
+                "barely",
+                "loudly"
+              ]
             },
             {
               "id": "nws6-14",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "broadly",
+              "type": "multiple_choice",
+              "prompt": "'Give our listeners the headline — what's at stake here?' sorusunda 'the headline' ne demek?",
               "options": [
-                "Doesn't",
-                "argue",
-                "drafters",
-                "broadly"
+                "Manşeti okuyun",
+                "Konunun en kritik özeti, can alıcı noktası",
+                "Manşet yazarı",
+                "Reklam metni"
               ],
-              "answer": "broadly"
+              "answer": "Konunun en kritik özeti, can alıcı noktası"
             },
             {
               "id": "nws6-15",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "nearly",
-              "options": [
-                "sounds",
-                "Thank",
-                "release",
-                "nearly"
-              ],
-              "answer": "nearly"
+              "type": "fill_blank",
+              "prompt": "The structural weakness is too convenient to be ___.",
+              "hint": "Yapısal zayıflık tesadüfi olamayacak kadar işine yarıyor.",
+              "answer": "accidental",
+              "acceptableAnswers": [
+                "coincidental"
+              ]
             },
             {
               "id": "nws6-16",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "us",
-              "options": [
-                "governs",
-                "us",
-                "like",
-                "be"
-              ],
-              "answer": "us"
+              "type": "translate",
+              "prompt": "Çevirin: 'Bu, yasama meclisinin yanıtlaması gereken bir sorudur.'",
+              "direction": "tr-to-en",
+              "answer": "That's a question for the legislators to answer.",
+              "context": "Söyleşide soruyu top yerine geri yollama klişesi."
             },
             {
               "id": "nws6-17",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "what",
+              "type": "multiple_choice",
+              "prompt": "'I'd hand the review function to an independent body.' — Buradaki 'I'd' ne ifade eder?",
               "options": [
-                "back",
-                "not",
-                "what",
-                "would"
+                "Geçmiş alışkanlık",
+                "Koşullu öneri / hipotetik tavsiye",
+                "Kesin gerçek",
+                "Gelecek planı"
               ],
-              "answer": "what"
+              "answer": "Koşullu öneri / hipotetik tavsiye"
             },
             {
               "id": "nws6-18",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "saying",
-              "options": [
-                "saying",
-                "that",
+              "type": "tap_words_in_order",
+              "prompt": "Basın bülteni hayatınızı yöneten şey olmayacak.",
+              "answer": "The press release will not be what governs your life",
+              "bank": [
+                "The",
+                "press",
+                "release",
+                "will",
+                "not",
+                "be",
+                "what",
                 "governs",
-                "like"
-              ],
-              "answer": "saying"
+                "your",
+                "life",
+                "barely",
+                "loudly"
+              ]
             },
             {
               "id": "nws6-19",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "Read",
-              "options": [
-                "us",
-                "Read",
-                "robust",
-                "count"
-              ],
-              "answer": "Read"
+              "type": "fill_blank",
+              "prompt": "The independent body needs the power to ___ disclosure.",
+              "hint": "Bağımsız kurumun ifşayı zorunlu kılma yetkisi olmalı.",
+              "answer": "compel",
+              "acceptableAnswers": [
+                "require",
+                "mandate"
+              ]
             },
             {
               "id": "nws6-20",
-              "type": "listen_and_choose",
-              "prompt": "Tap the word you hear",
-              "spokenText": "We're",
+              "type": "multiple_choice",
+              "prompt": "Hangi cümle 'sound bite' (basın için kısa ve etkili söz) olarak en uygunudur?",
               "options": [
-                "Thank",
-                "rewrite",
-                "We're",
-                "sharper"
+                "Idk man, hard to say in a sound bite.",
+                "Read the enforcement clause, not the press release.",
+                "Well, I have many thoughts on this, let me elaborate at length.",
+                "Maybe, possibly, we could perhaps consider."
               ],
-              "answer": "We're"
+              "answer": "Read the enforcement clause, not the press release."
             }
           ]
         }
