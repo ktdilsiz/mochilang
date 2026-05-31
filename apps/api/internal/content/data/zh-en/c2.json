@@ -9492,6 +9492,136 @@
                 "地铁",
                 "了"
               ]
+            },
+            {
+              "id": "rg1-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "计程车",
+              "options": [
+                "我马上去坐地铁。",
+                "我去坐捷运上班。",
+                "计程车",
+                "下班 后 我 搭 捷运 回家"
+              ],
+              "answer": "计程车"
+            },
+            {
+              "id": "rg1-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "公交",
+              "options": [
+                "公交",
+                "捷运",
+                "我去坐地铁上班。",
+                "我今儿去打的。"
+              ],
+              "answer": "公交"
+            },
+            {
+              "id": "rg1-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我马上去坐地铁。",
+              "options": [
+                "回家",
+                "了",
+                "我马上去坐地铁。",
+                "软体"
+              ],
+              "answer": "我马上去坐地铁。"
+            },
+            {
+              "id": "rg1-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我等下要去搭捷运。",
+              "options": [
+                "软体",
+                "我马上去坐地铁。",
+                "我去搭捷运上班。",
+                "我等下要去搭捷运。"
+              ],
+              "answer": "我等下要去搭捷运。"
+            },
+            {
+              "id": "rg1-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "地铁",
+              "options": [
+                "我电脑里的硬件好旧了",
+                "地铁",
+                "捷运",
+                "后"
+              ],
+              "answer": "地铁"
+            },
+            {
+              "id": "rg1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "下班",
+              "options": [
+                "我去搭捷运上班。",
+                "我电脑里的硬件好旧了",
+                "下班",
+                "计程车"
+              ],
+              "answer": "下班"
+            },
+            {
+              "id": "rg1-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "搭",
+              "options": [
+                "搭",
+                "了",
+                "下班 后 我 搭 捷运 回家",
+                "回家"
+              ],
+              "answer": "搭"
+            },
+            {
+              "id": "rg1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "菠萝",
+              "options": [
+                "菠萝",
+                "我马上去坐地铁。",
+                "我电脑里的程序好旧了",
+                "搭"
+              ],
+              "answer": "菠萝"
+            },
+            {
+              "id": "rg1-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我电脑里的影片好旧了",
+              "options": [
+                "回家",
+                "地铁",
+                "我",
+                "我电脑里的影片好旧了"
+              ],
+              "answer": "我电脑里的影片好旧了"
+            },
+            {
+              "id": "rg1-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我现在去坐公交车。",
+              "options": [
+                "回家",
+                "我电脑里的硬件好旧了",
+                "我去坐捷运上班。",
+                "我现在去坐公交车。"
+              ],
+              "answer": "我现在去坐公交车。"
             }
           ]
         },
@@ -9644,6 +9774,136 @@
               ],
               "answer": "我等下去巴刹买点菜，要不要帮你买什么",
               "explanation": "Singapore markers: 巴刹 (Malay-derived word for market), 等下 (Taiwan-style \"in a moment\"), absence of 儿化, characteristic prosody. Compare to the Beijing-flavored option with 待会儿 / 点儿."
+            },
+            {
+              "id": "rg2-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我等会去市场买点东西，需不需要帮你带些什么",
+              "options": [
+                "我等会去市场买点东西，需不需要帮你带些什么",
+                "你住哪里",
+                "你这个人怎么这样，做这些没用的事干嘛",
+                "你去哪里"
+              ],
+              "answer": "我等会去市场买点东西，需不需要帮你带些什么"
+            },
+            {
+              "id": "rg2-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "儿化 + 咱们 + 干啥",
+              "options": [
+                "儿化 + 咱们 + 干啥",
+                "你在哪里",
+                "今天天气挺好的，我们出去走走",
+                "你怎么这么不讲理，何必如此"
+              ],
+              "answer": "儿化 + 咱们 + 干啥"
+            },
+            {
+              "id": "rg2-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "你去哪儿",
+              "options": [
+                "今天天气挺好的，我们出去走走",
+                "我等下去巴刹买点菜，要不要帮你买什么",
+                "你去哪儿",
+                "你这个人怎么这样，做这些没用的事干嘛"
+              ],
+              "answer": "你去哪儿"
+            },
+            {
+              "id": "rg2-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "你住哪里",
+              "options": [
+                "你住哪里",
+                "我等会去市场买点东西，需不需要帮你带些什么",
+                "你在哪里",
+                "我跟你讲，这件事情真的有够麻烦的"
+              ],
+              "answer": "你住哪里"
+            },
+            {
+              "id": "rg2-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "你去哪里",
+              "options": [
+                "今天天气挺好的，我们出去走走",
+                "你去哪里",
+                "你去哪儿",
+                "你在哪里"
+              ],
+              "answer": "你去哪里"
+            },
+            {
+              "id": "rg2-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "跟你说，这事真的好麻烦",
+              "options": [
+                "跟你说，这事真的好麻烦",
+                "今天天气挺好的，我们出去走走",
+                "你为什么这样做，请你说明原因",
+                "你住哪里"
+              ],
+              "answer": "跟你说，这事真的好麻烦"
+            },
+            {
+              "id": "rg2-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "今天的天气很好，我们去公园吧",
+              "options": [
+                "我告诉你啊，这事儿真够麻烦的",
+                "你去哪儿",
+                "今天的天气很好，我们去公园吧",
+                "我等下去巴刹买点菜，要不要帮你买什么"
+              ],
+              "answer": "今天的天气很好，我们去公园吧"
+            },
+            {
+              "id": "rg2-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "你在哪里",
+              "options": [
+                "你为什么这样做，请你说明原因",
+                "我跟你说，这件事真的特别麻烦",
+                "你在哪里",
+                "你这人咋这样啊，整这些没用的干啥"
+              ],
+              "answer": "你在哪里"
+            },
+            {
+              "id": "rg2-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "你这人咋这样啊，整这些没用的干啥",
+              "options": [
+                "我跟你讲，这件事情真的有够麻烦的",
+                "你这人咋这样啊，整这些没用的干啥",
+                "我马上去超市买菜，要给你买什么吗",
+                "儿化 + 咱们 + 干啥"
+              ],
+              "answer": "你这人咋这样啊，整这些没用的干啥"
+            },
+            {
+              "id": "rg2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "你怎么这么不讲理，何必如此",
+              "options": [
+                "你怎么这么不讲理，何必如此",
+                "你去哪里",
+                "我待会儿去菜市场买点儿菜，要不要给你带点儿什么",
+                "我等会去市场买点东西，需不需要帮你带些什么"
+              ],
+              "answer": "你怎么这么不讲理，何必如此"
             }
           ]
         },
@@ -9807,6 +10067,136 @@
                 "了",
                 "嘅"
               ]
+            },
+            {
+              "id": "rg3-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "东西",
+              "options": [
+                "东西",
+                "他说他不来了",
+                "他 说 他 不 吃 这 些 东西",
+                "些"
+              ],
+              "answer": "东西"
+            },
+            {
+              "id": "rg3-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "食",
+              "options": [
+                "吃",
+                "食",
+                "了",
+                "他没说要来"
+              ],
+              "answer": "食"
+            },
+            {
+              "id": "rg3-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "嘅",
+              "options": [
+                "些",
+                "这",
+                "嘅",
+                "食"
+              ],
+              "answer": "嘅"
+            },
+            {
+              "id": "rg3-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "今晚我请客",
+              "options": [
+                "今晚我请客",
+                "他",
+                "东西",
+                "他说他不来了"
+              ],
+              "answer": "今晚我请客"
+            },
+            {
+              "id": "rg3-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "他不知道来不来",
+              "options": [
+                "了",
+                "他说他不来了",
+                "不",
+                "他不知道来不来"
+              ],
+              "answer": "他不知道来不来"
+            },
+            {
+              "id": "rg3-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "他说他不来了",
+              "options": [
+                "了",
+                "他说他不来了",
+                "今晚一起吃饭吧",
+                "他"
+              ],
+              "answer": "他说他不来了"
+            },
+            {
+              "id": "rg3-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "他 说 他 不 吃 这 些 东西",
+              "options": [
+                "他 说 他 不 吃 这 些 东西",
+                "这",
+                "他",
+                "他说他要来了"
+              ],
+              "answer": "他 说 他 不 吃 这 些 东西"
+            },
+            {
+              "id": "rg3-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "这",
+              "options": [
+                "这",
+                "了",
+                "不",
+                "他"
+              ],
+              "answer": "这"
+            },
+            {
+              "id": "rg3-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "些",
+              "options": [
+                "些",
+                "食",
+                "他没说要来",
+                "今晚我请客"
+              ],
+              "answer": "些"
+            },
+            {
+              "id": "rg3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "他说他要来了",
+              "options": [
+                "今天晚上想吃什么",
+                "些",
+                "他说他要来了",
+                "今晚不要一起吃饭"
+              ],
+              "answer": "他说他要来了"
             }
           ]
         },
@@ -9951,6 +10341,136 @@
                 "儿",
                 "待会儿"
               ]
+            },
+            {
+              "id": "rg4-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我 等下 去 巴刹 买 点 菜",
+              "options": [
+                "点",
+                "儿",
+                "我 等下 去 巴刹 买 点 菜",
+                "待会儿"
+              ],
+              "answer": "我 等下 去 巴刹 买 点 菜"
+            },
+            {
+              "id": "rg4-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "了",
+              "options": [
+                "点",
+                "我",
+                "待会儿",
+                "了"
+              ],
+              "answer": "了"
+            },
+            {
+              "id": "rg4-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "巴刹",
+              "options": [
+                "巴刹",
+                "当局",
+                "影片",
+                "等下"
+              ],
+              "answer": "巴刹"
+            },
+            {
+              "id": "rg4-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "菜",
+              "options": [
+                "菜",
+                "我",
+                "巴刹",
+                "儿"
+              ],
+              "answer": "菜"
+            },
+            {
+              "id": "rg4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "点",
+              "options": [
+                "点",
+                "等下",
+                "去",
+                "了"
+              ],
+              "answer": "点"
+            },
+            {
+              "id": "rg4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "当局",
+              "options": [
+                "买",
+                "我 等下 去 巴刹 买 点 菜",
+                "点",
+                "当局"
+              ],
+              "answer": "当局"
+            },
+            {
+              "id": "rg4-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我",
+              "options": [
+                "影片",
+                "去",
+                "当局",
+                "我"
+              ],
+              "answer": "我"
+            },
+            {
+              "id": "rg4-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "影片",
+              "options": [
+                "了",
+                "儿",
+                "影片",
+                "等下"
+              ],
+              "answer": "影片"
+            },
+            {
+              "id": "rg4-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "等下",
+              "options": [
+                "当局",
+                "儿",
+                "点",
+                "等下"
+              ],
+              "answer": "等下"
+            },
+            {
+              "id": "rg4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "去",
+              "options": [
+                "买",
+                "了",
+                "当局",
+                "去"
+              ],
+              "answer": "去"
             }
           ]
         },
@@ -10076,6 +10596,253 @@
                   "spokenText": "豆浆！明早一起去喝。"
                 }
               ]
+            },
+            {
+              "id": "rg5-2",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我下周要换新手机",
+              "options": [
+                "台湾叫",
+                "今晚太累",
+                "我下周要换新手机",
+                "听起来差一字"
+              ],
+              "answer": "我下周要换新手机"
+            },
+            {
+              "id": "rg5-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "香港我们说",
+              "options": [
+                "软件",
+                "听起来差一字",
+                "香港我们说",
+                "我下周要换新手机"
+              ],
+              "answer": "香港我们说"
+            },
+            {
+              "id": "rg5-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我搭的士回去就好",
+              "options": [
+                "今晚太累",
+                "我搭的士回去就好",
+                "对",
+                "可能买苹果"
+              ],
+              "answer": "我搭的士回去就好"
+            },
+            {
+              "id": "rg5-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "软件",
+              "options": [
+                "明早一起去喝",
+                "软件",
+                "我搭的士回去就好",
+                "豆浆"
+              ],
+              "answer": "软件"
+            },
+            {
+              "id": "rg5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "豆浆",
+              "options": [
+                "大陆呢",
+                "明早一起去喝",
+                "我下周要换新手机",
+                "豆浆"
+              ],
+              "answer": "豆浆"
+            },
+            {
+              "id": "rg5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "可能买苹果",
+              "options": [
+                "可能买苹果",
+                "也通",
+                "你们呢",
+                "软件"
+              ],
+              "answer": "可能买苹果"
+            },
+            {
+              "id": "rg5-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "大陆叫",
+              "options": [
+                "大陆叫",
+                "今晚太累",
+                "香港我们说",
+                "听起来差一字"
+              ],
+              "answer": "大陆叫"
+            },
+            {
+              "id": "rg5-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "对",
+              "options": [
+                "大陆叫",
+                "软体",
+                "对",
+                "台湾叫苹果"
+              ],
+              "answer": "对"
+            },
+            {
+              "id": "rg5-10",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "今晚太累",
+              "options": [
+                "软体",
+                "明早一起去喝",
+                "今晚太累",
+                "香港我们说"
+              ],
+              "answer": "今晚太累"
+            },
+            {
+              "id": "rg5-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "明早一起去喝",
+              "options": [
+                "听起来差一字",
+                "台湾叫",
+                "豆浆",
+                "明早一起去喝"
+              ],
+              "answer": "明早一起去喝"
+            },
+            {
+              "id": "rg5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "台湾叫苹果",
+              "options": [
+                "豆浆",
+                "大陆呢",
+                "我下周要换新手机",
+                "台湾叫苹果"
+              ],
+              "answer": "台湾叫苹果"
+            },
+            {
+              "id": "rg5-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "你们呢",
+              "options": [
+                "也通",
+                "香港我们说",
+                "可能买苹果",
+                "你们呢"
+              ],
+              "answer": "你们呢"
+            },
+            {
+              "id": "rg5-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "软体",
+              "options": [
+                "软体",
+                "台湾叫",
+                "我搭的士回去就好",
+                "大陆呢"
+              ],
+              "answer": "软体"
+            },
+            {
+              "id": "rg5-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "听起来差一字",
+              "options": [
+                "软件",
+                "听起来差一字",
+                "香港我们说",
+                "可能买苹果"
+              ],
+              "answer": "听起来差一字"
+            },
+            {
+              "id": "rg5-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "大陆呢",
+              "options": [
+                "大陆叫",
+                "今晚太累",
+                "大陆呢",
+                "我下周要换新手机"
+              ],
+              "answer": "大陆呢"
+            },
+            {
+              "id": "rg5-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "台湾叫",
+              "options": [
+                "今晚太累",
+                "台湾叫",
+                "香港我们说",
+                "你们呢"
+              ],
+              "answer": "台湾叫"
+            },
+            {
+              "id": "rg5-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "也通",
+              "options": [
+                "大陆呢",
+                "也通",
+                "大陆叫",
+                "可能买苹果"
+              ],
+              "answer": "也通"
+            },
+            {
+              "id": "rg5-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我下周要换新手机",
+              "options": [
+                "香港我们说",
+                "我下周要换新手机",
+                "也通",
+                "今晚太累"
+              ],
+              "answer": "我下周要换新手机"
+            },
+            {
+              "id": "rg5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "香港我们说",
+              "options": [
+                "可能买苹果",
+                "豆浆",
+                "香港我们说",
+                "也通"
+              ],
+              "answer": "香港我们说"
             }
           ]
         }
@@ -10375,6 +11142,136 @@
                 "了",
                 "也"
               ]
+            },
+            {
+              "id": "md1-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "也",
+              "options": [
+                "也",
+                "向",
+                "交涉",
+                "反对"
+              ],
+              "answer": "也"
+            },
+            {
+              "id": "md1-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "已",
+              "options": [
+                "我方坚决支持这一决定，并表示热烈欢迎",
+                "已",
+                "行径",
+                "有关"
+              ],
+              "answer": "已"
+            },
+            {
+              "id": "md1-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "了",
+              "options": [
+                "据知情人士透露，相关方面尚无回应",
+                "我方坚决支持这一决定，并表示热烈欢迎",
+                "了",
+                "此类"
+              ],
+              "answer": "了"
+            },
+            {
+              "id": "md1-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我们对这件事很不满意，已经跟相关人员谈过了",
+              "options": [
+                "我们对这件事很不满意，已经跟相关人员谈过了",
+                "部门",
+                "此类",
+                "已"
+              ],
+              "answer": "我们对这件事很不满意，已经跟相关人员谈过了"
+            },
+            {
+              "id": "md1-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "并",
+              "options": [
+                "交涉",
+                "据知情人士透露，相关方面尚无回应",
+                "了",
+                "并"
+              ],
+              "answer": "并"
+            },
+            {
+              "id": "md1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "有关",
+              "options": [
+                "有关",
+                "方",
+                "交涉",
+                "已"
+              ],
+              "answer": "有关"
+            },
+            {
+              "id": "md1-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "反对",
+              "options": [
+                "严正",
+                "我们对这件事很不满意，已经跟相关人员谈过了",
+                "反对",
+                "我方对此表示强烈不满，并已向有关方面提出严正交涉"
+              ],
+              "answer": "反对"
+            },
+            {
+              "id": "md1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "此类",
+              "options": [
+                "部门",
+                "此类",
+                "我 方 坚决 反对 此类 行径 并 已 向 有关 部门 提出 严正 交涉",
+                "严正"
+              ],
+              "answer": "此类"
+            },
+            {
+              "id": "md1-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "向",
+              "options": [
+                "我 方 坚决 反对 此类 行径 并 已 向 有关 部门 提出 严正 交涉",
+                "向",
+                "交涉",
+                "行径"
+              ],
+              "answer": "向"
+            },
+            {
+              "id": "md1-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "据知情人士透露，相关方面尚无回应",
+              "options": [
+                "我们对这件事很不满意，已经跟相关人员谈过了",
+                "此类",
+                "据知情人士透露，相关方面尚无回应",
+                "有关"
+              ],
+              "answer": "据知情人士透露，相关方面尚无回应"
             }
           ]
         },
@@ -10537,6 +11434,136 @@
                 "了",
                 "也"
               ]
+            },
+            {
+              "id": "md2-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "据知情人士透露",
+              "options": [
+                "据 多 名 知情 人士 透露 截至 发稿 该 公司 尚无 回应",
+                "也",
+                "据知情人士透露",
+                "名"
+              ],
+              "answer": "据知情人士透露"
+            },
+            {
+              "id": "md2-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "了",
+              "options": [
+                "回应",
+                "了",
+                "据知情人士透露 + 截至发稿 + 尚无回应 + 多名…表示",
+                "透露"
+              ],
+              "answer": "了"
+            },
+            {
+              "id": "md2-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "透露",
+              "options": [
+                "透露",
+                "该",
+                "我方对此表示强烈不满，并提出严正交涉",
+                "懂的都懂 + 233 + 河蟹"
+              ],
+              "answer": "透露"
+            },
+            {
+              "id": "md2-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "公司",
+              "options": [
+                "多",
+                "公司",
+                "据传该公司将于年内裁员，目前尚待证实。",
+                "也"
+              ],
+              "answer": "公司"
+            },
+            {
+              "id": "md2-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "截至",
+              "options": [
+                "公司",
+                "回应",
+                "截至",
+                "名"
+              ],
+              "answer": "截至"
+            },
+            {
+              "id": "md2-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "回应",
+              "options": [
+                "据",
+                "知情",
+                "回应",
+                "透露"
+              ],
+              "answer": "回应"
+            },
+            {
+              "id": "md2-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "见利忘义 + 一鸣惊人 + 鸦雀无声",
+              "options": [
+                "人士",
+                "该",
+                "据知情人士透露，截至发稿，该公司尚无回应",
+                "见利忘义 + 一鸣惊人 + 鸦雀无声"
+              ],
+              "answer": "见利忘义 + 一鸣惊人 + 鸦雀无声"
+            },
+            {
+              "id": "md2-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我方对此表示强烈不满，并提出严正交涉",
+              "options": [
+                "据 多 名 知情 人士 透露 截至 发稿 该 公司 尚无 回应",
+                "我方对此表示强烈不满，并提出严正交涉",
+                "该",
+                "据传该公司将于年内裁员，目前尚待证实。"
+              ],
+              "answer": "我方对此表示强烈不满，并提出严正交涉"
+            },
+            {
+              "id": "md2-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "据知情人士透露 + 截至发稿 + 尚无回应 + 多名…表示",
+              "options": [
+                "截",
+                "据知情人士透露 + 截至发稿 + 尚无回应 + 多名…表示",
+                "知情",
+                "我方对此表示强烈不满，并提出严正交涉"
+              ],
+              "answer": "据知情人士透露 + 截至发稿 + 尚无回应 + 多名…表示"
+            },
+            {
+              "id": "md2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "也",
+              "options": [
+                "公司发言人坚决否认了所有指控",
+                "也",
+                "发稿",
+                "据"
+              ],
+              "answer": "也"
             }
           ]
         },
@@ -10680,6 +11707,136 @@
               ],
               "answer": "To evade automated censorship of the original characters",
               "explanation": "Filter-evasion is the structural origin. Once the homophones spread, they became cultural in-jokes in their own right — the censorship is the punchline."
+            },
+            {
+              "id": "md3-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "懂的都懂",
+              "options": [
+                "懂的都懂",
+                "愿",
+                "这波操作我给满分",
+                "在医护人员的努力下，疫情得到了有效控制。"
+              ],
+              "answer": "懂的都懂"
+            },
+            {
+              "id": "md3-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "厉害了，我的国（笑）",
+              "options": [
+                "厉害了，我的国（笑）",
+                "懂的都懂",
+                "这波操作我给满分",
+                "泥菩萨"
+              ],
+              "answer": "厉害了，我的国（笑）"
+            },
+            {
+              "id": "md3-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "泥菩萨",
+              "options": [
+                "在医护人员的努力下，疫情得到了有效控制。",
+                "厉害了，我的国（笑）",
+                "泥菩萨",
+                "懂的都懂"
+              ],
+              "answer": "泥菩萨"
+            },
+            {
+              "id": "md3-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "河",
+              "options": [
+                "河",
+                "这波操作我给满分",
+                "总的来说，只有同时考虑效率和公平，才能走得远",
+                "泥菩萨"
+              ],
+              "answer": "河"
+            },
+            {
+              "id": "md3-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "总的来说，只有同时考虑效率和公平，才能走得远",
+              "options": [
+                "懂的都懂",
+                "这波操作我给满分",
+                "总的来说，只有同时考虑效率和公平，才能走得远",
+                "愿"
+              ],
+              "answer": "总的来说，只有同时考虑效率和公平，才能走得远"
+            },
+            {
+              "id": "md3-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "这波操作我给满分",
+              "options": [
+                "这波操作我给满分",
+                "愿",
+                "泥菩萨",
+                "懂的都懂"
+              ],
+              "answer": "这波操作我给满分"
+            },
+            {
+              "id": "md3-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "愿",
+              "options": [
+                "这波操作我给满分",
+                "河",
+                "厉害了，我的国（笑）",
+                "愿"
+              ],
+              "answer": "愿"
+            },
+            {
+              "id": "md3-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "在医护人员的努力下，疫情得到了有效控制。",
+              "options": [
+                "在医护人员的努力下，疫情得到了有效控制。",
+                "总的来说，只有同时考虑效率和公平，才能走得远",
+                "这波操作我给满分",
+                "河"
+              ],
+              "answer": "在医护人员的努力下，疫情得到了有效控制。"
+            },
+            {
+              "id": "md3-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "懂的都懂",
+              "options": [
+                "愿",
+                "泥菩萨",
+                "懂的都懂",
+                "这波操作我给满分"
+              ],
+              "answer": "懂的都懂"
+            },
+            {
+              "id": "md3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "厉害了，我的国（笑）",
+              "options": [
+                "这波操作我给满分",
+                "泥菩萨",
+                "在医护人员的努力下，疫情得到了有效控制。",
+                "厉害了，我的国（笑）"
+              ],
+              "answer": "厉害了，我的国（笑）"
             }
           ]
         },
@@ -10846,6 +12003,136 @@
                 "了",
                 "也"
               ]
+            },
+            {
+              "id": "md4-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "【评论】呼吁加强对企业的监管",
+              "options": [
+                "回应",
+                "截至",
+                "公司",
+                "【评论】呼吁加强对企业的监管"
+              ],
+              "answer": "【评论】呼吁加强对企业的监管"
+            },
+            {
+              "id": "md4-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "截至 发稿 该 公司 尚 无 回应",
+              "options": [
+                "也",
+                "截至 发稿 该 公司 尚 无 回应",
+                "【快讯】公司CEO今日宣布辞职",
+                "【深度】传该公司或将裁员，多个部门人心惶惶"
+              ],
+              "answer": "截至 发稿 该 公司 尚 无 回应"
+            },
+            {
+              "id": "md4-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "【独家】裁员真相：多名员工讲述内部决策过程",
+              "options": [
+                "也",
+                "【快讯】上海市中心发生交通事故 多人受伤",
+                "一",
+                "【独家】裁员真相：多名员工讲述内部决策过程"
+              ],
+              "answer": "【独家】裁员真相：多名员工讲述内部决策过程"
+            },
+            {
+              "id": "md4-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "了",
+              "options": [
+                "了",
+                "截至",
+                "稳",
+                "不"
+              ],
+              "answer": "了"
+            },
+            {
+              "id": "md4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "教育部 回应 高考 改革 稳 中 求 进 不 搞 一 刀 切",
+              "options": [
+                "教育部 回应 高考 改革 稳 中 求 进 不 搞 一 刀 切",
+                "一",
+                "求",
+                "教育部"
+              ],
+              "answer": "教育部 回应 高考 改革 稳 中 求 进 不 搞 一 刀 切"
+            },
+            {
+              "id": "md4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "该",
+              "options": [
+                "【独家】裁员真相：多名员工讲述内部决策过程",
+                "该",
+                "稳",
+                "不"
+              ],
+              "answer": "该"
+            },
+            {
+              "id": "md4-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "中",
+              "options": [
+                "【评论】呼吁加强对企业的监管",
+                "教育部 回应 高考 改革 稳 中 求 进 不 搞 一 刀 切",
+                "中",
+                "截至"
+              ],
+              "answer": "中"
+            },
+            {
+              "id": "md4-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "稳",
+              "options": [
+                "高考",
+                "进",
+                "稳",
+                "【独家】公司证实：下季度将裁员15%"
+              ],
+              "answer": "稳"
+            },
+            {
+              "id": "md4-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "教育部",
+              "options": [
+                "不",
+                "尚",
+                "教育部",
+                "该"
+              ],
+              "answer": "教育部"
+            },
+            {
+              "id": "md4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "切",
+              "options": [
+                "教育部",
+                "搞",
+                "【独家】公司证实：下季度将裁员15%",
+                "切"
+              ],
+              "answer": "切"
             }
           ]
         },
@@ -10972,6 +12259,253 @@
                   "spokenText": "不可不察也——好结尾。明早头版。"
                 }
               ]
+            },
+            {
+              "id": "md5-2",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "再看下一句",
+              "options": [
+                "好结尾",
+                "不可不察也",
+                "再看下一句",
+                "典型社论开篇"
+              ],
+              "answer": "再看下一句"
+            },
+            {
+              "id": "md5-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "好结尾",
+              "options": [
+                "下一段更微妙",
+                "之意",
+                "这是套话",
+                "好结尾"
+              ],
+              "answer": "好结尾"
+            },
+            {
+              "id": "md5-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "不等于行动",
+              "options": [
+                "下一段更微妙",
+                "新举措",
+                "众所周知",
+                "不等于行动"
+              ],
+              "answer": "不等于行动"
+            },
+            {
+              "id": "md5-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "典型社论开篇",
+              "options": [
+                "之意",
+                "典型社论开篇",
+                "似有",
+                "新举措"
+              ],
+              "answer": "典型社论开篇"
+            },
+            {
+              "id": "md5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "这条新华社快讯",
+              "options": [
+                "引号",
+                "这条新华社快讯",
+                "好眼力",
+                "最稳妥"
+              ],
+              "answer": "这条新华社快讯"
+            },
+            {
+              "id": "md5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "最稳妥",
+              "options": [
+                "最稳妥",
+                "所谓的",
+                "今天就发稿",
+                "这条新华社快讯"
+              ],
+              "answer": "最稳妥"
+            },
+            {
+              "id": "md5-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "不可不察也",
+              "options": [
+                "不可不察也",
+                "明早头版",
+                "下一段更微妙",
+                "之意"
+              ],
+              "answer": "不可不察也"
+            },
+            {
+              "id": "md5-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "众所周知",
+              "options": [
+                "引号",
+                "众所周知",
+                "所谓的",
+                "下一段更微妙"
+              ],
+              "answer": "众所周知"
+            },
+            {
+              "id": "md5-10",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "对",
+              "options": [
+                "对",
+                "众所周知",
+                "这是套话",
+                "引号"
+              ],
+              "answer": "对"
+            },
+            {
+              "id": "md5-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "下一段更微妙",
+              "options": [
+                "好结尾",
+                "似有",
+                "之意",
+                "下一段更微妙"
+              ],
+              "answer": "下一段更微妙"
+            },
+            {
+              "id": "md5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "这是套话",
+              "options": [
+                "下一段更微妙",
+                "新举措",
+                "这是套话",
+                "对"
+              ],
+              "answer": "这是套话"
+            },
+            {
+              "id": "md5-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "明早头版",
+              "options": [
+                "怀疑",
+                "明早头版",
+                "新举措",
+                "不等于行动"
+              ],
+              "answer": "明早头版"
+            },
+            {
+              "id": "md5-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "所谓的",
+              "options": [
+                "所谓的",
+                "似有",
+                "好结尾",
+                "下一段更微妙"
+              ],
+              "answer": "所谓的"
+            },
+            {
+              "id": "md5-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "似有",
+              "options": [
+                "好结尾",
+                "似有",
+                "不等于行动",
+                "典型社论开篇"
+              ],
+              "answer": "似有"
+            },
+            {
+              "id": "md5-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "之意",
+              "options": [
+                "下一段更微妙",
+                "不等于行动",
+                "之意",
+                "好眼力"
+              ],
+              "answer": "之意"
+            },
+            {
+              "id": "md5-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "引号",
+              "options": [
+                "引号",
+                "之意",
+                "明早头版",
+                "好眼力"
+              ],
+              "answer": "引号"
+            },
+            {
+              "id": "md5-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "今天就发稿",
+              "options": [
+                "明早头版",
+                "典型社论开篇",
+                "下一段更微妙",
+                "今天就发稿"
+              ],
+              "answer": "今天就发稿"
+            },
+            {
+              "id": "md5-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "好眼力",
+              "options": [
+                "似有",
+                "再看下一句",
+                "好眼力",
+                "好结尾"
+              ],
+              "answer": "好眼力"
+            },
+            {
+              "id": "md5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "怀疑",
+              "options": [
+                "新举措",
+                "怀疑",
+                "下一段更微妙",
+                "之意"
+              ],
+              "answer": "怀疑"
             }
           ]
         }
@@ -11278,6 +12812,136 @@
                 "了",
                 "因为"
               ]
+            },
+            {
+              "id": "es1-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "因为",
+              "options": [
+                "有人 认为 财富 是 衡量 成功 的 唯一 标准 此 观点 然而 远 不 全面",
+                "子 曰 学 而 不 思 则 罔 此 言 至今 仍 不 过时",
+                "全面",
+                "因为"
+              ],
+              "answer": "因为"
+            },
+            {
+              "id": "es1-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "学",
+              "options": [
+                "成功",
+                "衡量",
+                "近年来，人工智能之发展日新月异。",
+                "学"
+              ],
+              "answer": "学"
+            },
+            {
+              "id": "es1-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "而",
+              "options": [
+                "而",
+                "子",
+                "仍",
+                "不"
+              ],
+              "answer": "而"
+            },
+            {
+              "id": "es1-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "认为",
+              "options": [
+                "过时",
+                "认为",
+                "近年来 人工智能 之 发展 日新月异",
+                "思"
+              ],
+              "answer": "认为"
+            },
+            {
+              "id": "es1-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "观点",
+              "options": [
+                "远",
+                "财富",
+                "至今",
+                "观点"
+              ],
+              "answer": "观点"
+            },
+            {
+              "id": "es1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "发展",
+              "options": [
+                "衡量",
+                "仍",
+                "有人",
+                "发展"
+              ],
+              "answer": "发展"
+            },
+            {
+              "id": "es1-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "思",
+              "options": [
+                "成功",
+                "有人",
+                "日新月异",
+                "思"
+              ],
+              "answer": "思"
+            },
+            {
+              "id": "es1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "过时",
+              "options": [
+                "是",
+                "过时",
+                "思",
+                "古语有"
+              ],
+              "answer": "过时"
+            },
+            {
+              "id": "es1-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "曰",
+              "options": [
+                "有人 认为 财富 是 衡量 成功 的 唯一 标准 此 观点 然而 远 不 全面",
+                "曰",
+                "的",
+                "近年来"
+              ],
+              "answer": "曰"
+            },
+            {
+              "id": "es1-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "此",
+              "options": [
+                "财富",
+                "所以",
+                "此",
+                "我觉得读书和旅行都很重要"
+              ],
+              "answer": "此"
             }
           ]
         },
@@ -11449,6 +13113,136 @@
                 "因为",
                 "所以"
               ]
+            },
+            {
+              "id": "es2-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "把",
+              "options": [
+                "最后",
+                "把",
+                "综上所述，唯有兼顾效率与公平，方能行稳致远",
+                "应当"
+              ],
+              "answer": "把"
+            },
+            {
+              "id": "es2-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "效率",
+              "options": [
+                "现象",
+                "其次",
+                "效率",
+                "我觉得，效率和公平都重要，这样才能长久"
+              ],
+              "answer": "效率"
+            },
+            {
+              "id": "es2-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "由此",
+              "options": [
+                "由此",
+                "与",
+                "必须",
+                "首先"
+              ],
+              "answer": "由此"
+            },
+            {
+              "id": "es2-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "最后",
+              "options": [
+                "最后",
+                "提出",
+                "西方",
+                "首先"
+              ],
+              "answer": "最后"
+            },
+            {
+              "id": "es2-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "可见",
+              "options": [
+                "可见",
+                "首先 我们 应当 观察 现象 其次 分析 成因 最后 提出 对策",
+                "综上所述",
+                "我们"
+              ],
+              "answer": "可见"
+            },
+            {
+              "id": "es2-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我觉得，效率和公平都重要，这样才能长久",
+              "options": [
+                "西方",
+                "首先 我们 应当 观察 现象 其次 分析 成因 最后 提出 对策",
+                "我觉得，效率和公平都重要，这样才能长久",
+                "提出"
+              ],
+              "answer": "我觉得，效率和公平都重要，这样才能长久"
+            },
+            {
+              "id": "es2-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "观察",
+              "options": [
+                "观察",
+                "对策",
+                "把",
+                "了"
+              ],
+              "answer": "观察"
+            },
+            {
+              "id": "es2-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "必须",
+              "options": [
+                "必须",
+                "了",
+                "改革",
+                "最后"
+              ],
+              "answer": "必须"
+            },
+            {
+              "id": "es2-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "对策",
+              "options": [
+                "由此 可见 教育 改革 必须 兼顾 效率 与 公平",
+                "对策",
+                "我觉得，效率和公平都重要，这样才能长久",
+                "总而言之，效率和公平都要兼顾，才能走得稳"
+              ],
+              "answer": "对策"
+            },
+            {
+              "id": "es2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "现象",
+              "options": [
+                "可见",
+                "现象",
+                "公平",
+                "对策"
+              ],
+              "answer": "现象"
             }
           ]
         },
@@ -11631,6 +13425,136 @@
                 "了",
                 "因为"
               ]
+            },
+            {
+              "id": "es3-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "隐私",
+              "options": [
+                "隐私",
+                "学习 重要 — 大家 都 知道",
+                "过度",
+                "据统计"
+              ],
+              "answer": "隐私"
+            },
+            {
+              "id": "es3-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "不可",
+              "options": [
+                "研究表明，长期睡眠不足将显著提高心血管疾病的风险",
+                "不可",
+                "技术",
+                "焦虑"
+              ],
+              "answer": "不可"
+            },
+            {
+              "id": "es3-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "必须",
+              "options": [
+                "容",
+                "不可",
+                "必须",
+                "因为"
+              ],
+              "answer": "必须"
+            },
+            {
+              "id": "es3-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "新",
+              "options": [
+                "风险",
+                "因为",
+                "不",
+                "新"
+              ],
+              "answer": "新"
+            },
+            {
+              "id": "es3-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "据统计 超过 七成 的 受访者 对 此 政策 不 满意",
+              "options": [
+                "据统计 超过 七成 的 受访者 对 此 政策 不 满意",
+                "不可",
+                "研究",
+                "焦虑"
+              ],
+              "answer": "据统计 超过 七成 的 受访者 对 此 政策 不 满意"
+            },
+            {
+              "id": "es3-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "因为",
+              "options": [
+                "使用",
+                "容",
+                "教育 改变 人生 ， 据 统计 ， 受 高等教育 者 收入 平均 高 出 三 成 ， 因此 政策 应 予 支持",
+                "因为"
+              ],
+              "answer": "因为"
+            },
+            {
+              "id": "es3-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "与",
+              "options": [
+                "与",
+                "媒体",
+                "过度",
+                "使用"
+              ],
+              "answer": "与"
+            },
+            {
+              "id": "es3-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "忽视",
+              "options": [
+                "然而",
+                "忽视",
+                "学习 重要 — 大家 都 知道",
+                "隐私"
+              ],
+              "answer": "忽视"
+            },
+            {
+              "id": "es3-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "研究表明",
+              "options": [
+                "表明",
+                "风险",
+                "教育 是 好 东西 — 我 觉得",
+                "研究表明"
+              ],
+              "answer": "研究表明"
+            },
+            {
+              "id": "es3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "据统计",
+              "options": [
+                "容",
+                "新",
+                "据统计",
+                "隐私"
+              ],
+              "answer": "据统计"
             }
           ]
         },
@@ -11807,6 +13731,136 @@
                 "了",
                 "因为"
               ]
+            },
+            {
+              "id": "es4-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "总的来说，只有坚持下去才能走得远",
+              "options": [
+                "总的来说，只有坚持下去才能走得远",
+                "了",
+                "综上所述",
+                "文化"
+              ],
+              "answer": "总的来说，只有坚持下去才能走得远"
+            },
+            {
+              "id": "es4-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "把",
+              "options": [
+                "前行",
+                "任重",
+                "把",
+                "制度"
+              ],
+              "answer": "把"
+            },
+            {
+              "id": "es4-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "前行",
+              "options": [
+                "而",
+                "由此",
+                "由此 唯有",
+                "前行"
+              ],
+              "answer": "前行"
+            },
+            {
+              "id": "es4-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "才能",
+              "options": [
+                "才能",
+                "饮水思源",
+                "综上所述",
+                "三者"
+              ],
+              "answer": "才能"
+            },
+            {
+              "id": "es4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "因为",
+              "options": [
+                "制度",
+                "致远",
+                "因为",
+                "可见"
+              ],
+              "answer": "因为"
+            },
+            {
+              "id": "es4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "持之以恒",
+              "options": [
+                "把",
+                "持之以恒",
+                "应该",
+                "综上所述 任重 而 道远 唯有 砥砺 前行 方能 致远"
+              ],
+              "answer": "持之以恒"
+            },
+            {
+              "id": "es4-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "必须",
+              "options": [
+                "因为",
+                "必须",
+                "才能",
+                "可能"
+              ],
+              "answer": "必须"
+            },
+            {
+              "id": "es4-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "总而言之，要坚持不懈，才能成功",
+              "options": [
+                "制度",
+                "总而言之，要坚持不懈，才能成功",
+                "了",
+                "综上所述 唯有 持之以恒 方能 致远"
+              ],
+              "answer": "总而言之，要坚持不懈，才能成功"
+            },
+            {
+              "id": "es4-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "与",
+              "options": [
+                "应该",
+                "与",
+                "任重",
+                "制度"
+              ],
+              "answer": "与"
+            },
+            {
+              "id": "es4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "砥砺",
+              "options": [
+                "因为",
+                "所以",
+                "我觉得只要坚持就一定能成功",
+                "砥砺"
+              ],
+              "answer": "砥砺"
             }
           ]
         },
@@ -11927,6 +13981,253 @@
                   "spokenText": "论其要旨——好。明天交稿，谢啦。"
                 }
               ]
+            },
+            {
+              "id": "es5-2",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "下一句呢",
+              "options": [
+                "结尾呢",
+                "下一句呢",
+                "论其要旨",
+                "学术随笔用"
+              ],
+              "answer": "下一句呢"
+            },
+            {
+              "id": "es5-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我觉得稳",
+              "options": [
+                "我觉得稳",
+                "第二段我用了",
+                "结尾呢",
+                "所以"
+              ],
+              "answer": "我觉得稳"
+            },
+            {
+              "id": "es5-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "所以",
+              "options": [
+                "我们不可不正视",
+                "所以",
+                "学术随笔用",
+                "论其要旨"
+              ],
+              "answer": "所以"
+            },
+            {
+              "id": "es5-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "第二段我用了",
+              "options": [
+                "我的开篇是",
+                "我们不可不正视",
+                "妙",
+                "第二段我用了"
+              ],
+              "answer": "第二段我用了"
+            },
+            {
+              "id": "es5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "好",
+              "options": [
+                "留有余韵",
+                "我们不可不正视",
+                "明天交稿",
+                "好"
+              ],
+              "answer": "好"
+            },
+            {
+              "id": "es5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "雅",
+              "options": [
+                "论其要旨",
+                "妙",
+                "所以",
+                "雅"
+              ],
+              "answer": "雅"
+            },
+            {
+              "id": "es5-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "谢啦",
+              "options": [
+                "比",
+                "犹待后人探赜",
+                "留有余韵",
+                "谢啦"
+              ],
+              "answer": "谢啦"
+            },
+            {
+              "id": "es5-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "论其要旨",
+              "options": [
+                "所以",
+                "论其要旨",
+                "谢啦",
+                "犹待后人探赜"
+              ],
+              "answer": "论其要旨"
+            },
+            {
+              "id": "es5-10",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "明天交稿",
+              "options": [
+                "明天交稿",
+                "窃以为",
+                "你说得对",
+                "所以"
+              ],
+              "answer": "明天交稿"
+            },
+            {
+              "id": "es5-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我的开篇是",
+              "options": [
+                "留有余韵",
+                "论其要旨",
+                "我的开篇是",
+                "明天交稿"
+              ],
+              "answer": "我的开篇是"
+            },
+            {
+              "id": "es5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "结尾呢",
+              "options": [
+                "结尾呢",
+                "好",
+                "是不是太老气",
+                "我的开篇是"
+              ],
+              "answer": "结尾呢"
+            },
+            {
+              "id": "es5-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "妙",
+              "options": [
+                "结尾呢",
+                "妙",
+                "犹待后人探赜",
+                "第二段我用了"
+              ],
+              "answer": "妙"
+            },
+            {
+              "id": "es5-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "你说得对",
+              "options": [
+                "明天交稿",
+                "你说得对",
+                "下一句呢",
+                "比"
+              ],
+              "answer": "你说得对"
+            },
+            {
+              "id": "es5-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "学术随笔用",
+              "options": [
+                "是不是太老气",
+                "学术随笔用",
+                "留有余韵",
+                "你说得对"
+              ],
+              "answer": "学术随笔用"
+            },
+            {
+              "id": "es5-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我们不可不正视",
+              "options": [
+                "我们不可不正视",
+                "是不是太老气",
+                "好",
+                "雅"
+              ],
+              "answer": "我们不可不正视"
+            },
+            {
+              "id": "es5-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "窃以为",
+              "options": [
+                "谢啦",
+                "窃以为",
+                "结尾呢",
+                "明天交稿"
+              ],
+              "answer": "窃以为"
+            },
+            {
+              "id": "es5-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "比",
+              "options": [
+                "好",
+                "比",
+                "犹待后人探赜",
+                "学术随笔用"
+              ],
+              "answer": "比"
+            },
+            {
+              "id": "es5-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "留有余韵",
+              "options": [
+                "留有余韵",
+                "所以",
+                "明天交稿",
+                "比"
+              ],
+              "answer": "留有余韵"
+            },
+            {
+              "id": "es5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "是不是太老气",
+              "options": [
+                "所以",
+                "是不是太老气",
+                "妙",
+                "我觉得稳"
+              ],
+              "answer": "是不是太老气"
             }
           ]
         }
@@ -12124,6 +14425,136 @@
               ],
               "answer": "A formal demonstrative pronoun (= 这 in elevated register)",
               "explanation": "此 is the literary counterpart of 这 — \"this.\" Compare 此言 (this saying), 此事 (this matter), 由此可见 (from this we can see). It carries an editorial weight 这 doesn't."
+            },
+            {
+              "id": "rv1-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "三",
+              "options": [
+                "三",
+                "不必",
+                "原因",
+                "逆转"
+              ],
+              "answer": "三"
+            },
+            {
+              "id": "rv1-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "其 原因 有 三 此 不可 忽视",
+              "options": [
+                "其 原因 有 三 此 不可 忽视",
+                "有",
+                "因为",
+                "了"
+              ],
+              "answer": "其 原因 有 三 此 不可 忽视"
+            },
+            {
+              "id": "rv1-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "忽视",
+              "options": [
+                "逆转",
+                "忽视",
+                "也",
+                "畏惧"
+              ],
+              "answer": "忽视"
+            },
+            {
+              "id": "rv1-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "乃",
+              "options": [
+                "发展",
+                "也",
+                "乃",
+                "不必"
+              ],
+              "answer": "乃"
+            },
+            {
+              "id": "rv1-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "不必",
+              "options": [
+                "人工智能",
+                "其 原因 有 三 此 不可 忽视",
+                "大势",
+                "不必"
+              ],
+              "answer": "不必"
+            },
+            {
+              "id": "rv1-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "把",
+              "options": [
+                "人工智能 之 发展 乃 时代 之 大势 不可 逆转 亦 不必 畏惧",
+                "把",
+                "大家都知道，这次改革对国民经济的影响很深远，史上没有过",
+                "之"
+              ],
+              "answer": "把"
+            },
+            {
+              "id": "rv1-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "之",
+              "options": [
+                "畏惧",
+                "时代",
+                "之",
+                "大势"
+              ],
+              "answer": "之"
+            },
+            {
+              "id": "rv1-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "畏惧",
+              "options": [
+                "乃",
+                "众所 之",
+                "其",
+                "畏惧"
+              ],
+              "answer": "畏惧"
+            },
+            {
+              "id": "rv1-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "此",
+              "options": [
+                "此",
+                "众所周知 之",
+                "大家都知道，这次改革对国民经济的影响很深远，史上没有过",
+                "因为"
+              ],
+              "answer": "此"
+            },
+            {
+              "id": "rv1-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "原因",
+              "options": [
+                "因为",
+                "原因",
+                "大势",
+                "大家都知道，这次改革对国民经济的影响很深远，史上没有过"
+              ],
+              "answer": "原因"
             }
           ]
         },
@@ -12263,6 +14694,136 @@
               ],
               "answer": "顺其自然",
               "explanation": "顺其自然 — let nature take its course. The Daoist-flavored consolation phrase."
+            },
+            {
+              "id": "rv2-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "顺其自然",
+              "options": [
+                "顺其自然",
+                "见利忘义",
+                "舍生取义",
+                "名副其实"
+              ],
+              "answer": "顺其自然"
+            },
+            {
+              "id": "rv2-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "舍生取义",
+              "options": [
+                "见利忘义",
+                "塞翁失马",
+                "舍生取义",
+                "名副其实"
+              ],
+              "answer": "舍生取义"
+            },
+            {
+              "id": "rv2-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "饮水思源",
+              "options": [
+                "饮水思源",
+                "见利忘义",
+                "顺其自然",
+                "杯水车薪"
+              ],
+              "answer": "饮水思源"
+            },
+            {
+              "id": "rv2-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "名副其实",
+              "options": [
+                "塞翁失马",
+                "名副其实",
+                "杯水车薪",
+                "鸦雀无声"
+              ],
+              "answer": "名副其实"
+            },
+            {
+              "id": "rv2-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "见利忘义",
+              "options": [
+                "顺其自然",
+                "见利忘义",
+                "塞翁失马",
+                "一鸣惊人"
+              ],
+              "answer": "见利忘义"
+            },
+            {
+              "id": "rv2-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "塞翁失马",
+              "options": [
+                "鸦雀无声",
+                "名副其实",
+                "塞翁失马",
+                "舍生取义"
+              ],
+              "answer": "塞翁失马"
+            },
+            {
+              "id": "rv2-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "一鸣惊人",
+              "options": [
+                "塞翁失马",
+                "名副其实",
+                "一鸣惊人",
+                "顺其自然"
+              ],
+              "answer": "一鸣惊人"
+            },
+            {
+              "id": "rv2-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "鸦雀无声",
+              "options": [
+                "名副其实",
+                "鸦雀无声",
+                "杯水车薪",
+                "饮水思源"
+              ],
+              "answer": "鸦雀无声"
+            },
+            {
+              "id": "rv2-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "杯水车薪",
+              "options": [
+                "名副其实",
+                "前所未有",
+                "杯水车薪",
+                "一鸣惊人"
+              ],
+              "answer": "杯水车薪"
+            },
+            {
+              "id": "rv2-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "前所未有",
+              "options": [
+                "见利忘义",
+                "塞翁失马",
+                "顺其自然",
+                "前所未有"
+              ],
+              "answer": "前所未有"
             }
           ]
         },
@@ -12403,6 +14964,136 @@
               ],
               "answer": "据知情人士透露，截至发稿，公司方面尚无正式回应",
               "explanation": "据知情人士透露 + 截至发稿 + 尚无正式回应 — three commercial-press hedge markers (anonymous source, time-fence, unanswered-status). Distinct from official protest, online satire, and essay-quoted-authority registers."
+            },
+            {
+              "id": "rv3-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "再",
+              "options": [
+                "再",
+                "搞",
+                "但第三段那句反问",
+                "恨"
+              ],
+              "answer": "再"
+            },
+            {
+              "id": "rv3-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "古人云：读万卷书，行万里路",
+              "options": [
+                "古人云：读万卷书，行万里路",
+                "恨",
+                "但第三段那句反问",
+                "我方对此表示强烈不满"
+              ],
+              "answer": "古人云：读万卷书，行万里路"
+            },
+            {
+              "id": "rv3-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "搞",
+              "options": [
+                "再",
+                "搞",
+                "但第三段那句反问",
+                "恨"
+              ],
+              "answer": "搞"
+            },
+            {
+              "id": "rv3-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "恨",
+              "options": [
+                "再",
+                "据知情人士透露，截至发稿，公司方面尚无正式回应",
+                "恨",
+                "搞"
+              ],
+              "answer": "恨"
+            },
+            {
+              "id": "rv3-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "据知情人士透露，截至发稿，公司方面尚无正式回应",
+              "options": [
+                "据知情人士透露，截至发稿，公司方面尚无正式回应",
+                "搞",
+                "我方对此表示强烈不满",
+                "但第三段那句反问"
+              ],
+              "answer": "据知情人士透露，截至发稿，公司方面尚无正式回应"
+            },
+            {
+              "id": "rv3-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "这波操作我给满分，懂的都懂",
+              "options": [
+                "搞",
+                "恨",
+                "这波操作我给满分，懂的都懂",
+                "古人云：读万卷书，行万里路"
+              ],
+              "answer": "这波操作我给满分，懂的都懂"
+            },
+            {
+              "id": "rv3-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "但第三段那句反问",
+              "options": [
+                "古人云：读万卷书，行万里路",
+                "我方对此表示强烈不满",
+                "再",
+                "但第三段那句反问"
+              ],
+              "answer": "但第三段那句反问"
+            },
+            {
+              "id": "rv3-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "我方对此表示强烈不满",
+              "options": [
+                "据知情人士透露，截至发稿，公司方面尚无正式回应",
+                "我方对此表示强烈不满",
+                "但第三段那句反问",
+                "再"
+              ],
+              "answer": "我方对此表示强烈不满"
+            },
+            {
+              "id": "rv3-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "再",
+              "options": [
+                "这波操作我给满分，懂的都懂",
+                "但第三段那句反问",
+                "再",
+                "据知情人士透露，截至发稿，公司方面尚无正式回应"
+              ],
+              "answer": "再"
+            },
+            {
+              "id": "rv3-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "古人云：读万卷书，行万里路",
+              "options": [
+                "搞",
+                "我方对此表示强烈不满",
+                "古人云：读万卷书，行万里路",
+                "再"
+              ],
+              "answer": "古人云：读万卷书，行万里路"
             }
           ]
         },
@@ -12561,6 +15252,136 @@
                   "right": "Balanced — 4-character cadence"
                 }
               ]
+            },
+            {
+              "id": "rv4-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "失败",
+              "options": [
+                "失败",
+                "把",
+                "教育",
+                "我们 要 重视 效率 ， 同时 也 要 兼顾 公平"
+              ],
+              "answer": "失败"
+            },
+            {
+              "id": "rv4-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "因为",
+              "options": [
+                "你",
+                "因为",
+                "一方面要兼顾效率，另一方面要切实地保障好社会公平。",
+                "一方面要努力地兼顾整体效率，另一方面要保障公平。"
+              ],
+              "answer": "因为"
+            },
+            {
+              "id": "rv4-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "教育",
+              "options": [
+                "你 信 也好 不信 也罢 事实 就 在 那里",
+                "效率 是 我们 应该 优先 考虑 的 ， 公平 为 本",
+                "教育",
+                "与其坐而论道，不如起而行之"
+              ],
+              "answer": "教育"
+            },
+            {
+              "id": "rv4-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "也罢",
+              "options": [
+                "也罢",
+                "你 信 也好 不信 也罢 事实 就 在 那里",
+                "一方面要兼顾效率问题，另一方面要保障公平。",
+                "与其去抱怨这件事情，不如行动"
+              ],
+              "answer": "也罢"
+            },
+            {
+              "id": "rv4-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "与其讨论，不如赶快行动起来",
+              "options": [
+                "与其讨论，不如赶快行动起来",
+                "一方面要努力地兼顾整体效率，另一方面要保障公平。",
+                "人",
+                "就"
+              ],
+              "answer": "与其讨论，不如赶快行动起来"
+            },
+            {
+              "id": "rv4-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "也好",
+              "options": [
+                "也好",
+                "了",
+                "人",
+                "因为"
+              ],
+              "answer": "也好"
+            },
+            {
+              "id": "rv4-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "一方面要兼顾效率，另一方面要切实地保障好社会公平。",
+              "options": [
+                "一方面要兼顾效率，另一方面要切实地保障好社会公平。",
+                "也好",
+                "我们 要 重视 效率 ， 同时 也 要 兼顾 公平",
+                "兴"
+              ],
+              "answer": "一方面要兼顾效率，另一方面要切实地保障好社会公平。"
+            },
+            {
+              "id": "rv4-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "与其去抱怨这件事情，不如行动",
+              "options": [
+                "事实",
+                "效率 优先 ， 公平 为 本",
+                "一方面要兼顾效率问题，另一方面要保障公平。",
+                "与其去抱怨这件事情，不如行动"
+              ],
+              "answer": "与其去抱怨这件事情，不如行动"
+            },
+            {
+              "id": "rv4-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "在",
+              "options": [
+                "与其讨论，不如赶快行动起来",
+                "国",
+                "在",
+                "与其在那里抱怨，不如赶紧采取一些行动"
+              ],
+              "answer": "在"
+            },
+            {
+              "id": "rv4-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "与其坐而论道，不如起而行之",
+              "options": [
+                "在",
+                "也罢",
+                "信",
+                "与其坐而论道，不如起而行之"
+              ],
+              "answer": "与其坐而论道，不如起而行之"
             }
           ]
         },
@@ -12688,6 +15509,253 @@
                   "spokenText": "画龙点睛——再改一稿便可付梓。"
                 }
               ]
+            },
+            {
+              "id": "rv5-2",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "妙",
+              "options": [
+                "茶餐厅虽通用",
+                "画龙点睛",
+                "妙",
+                "再改一稿便可付梓"
+              ],
+              "answer": "妙"
+            },
+            {
+              "id": "rv5-3",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "正是我对您的期待",
+              "options": [
+                "好态度",
+                "画龙点睛",
+                "所谓的盛世",
+                "正是我对您的期待"
+              ],
+              "answer": "正是我对您的期待"
+            },
+            {
+              "id": "rv5-4",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "稿子整体我读完了",
+              "options": [
+                "稿子整体我读完了",
+                "加引号",
+                "但稍嫌雕琢",
+                "但有几处可商榷"
+              ],
+              "answer": "稿子整体我读完了"
+            },
+            {
+              "id": "rv5-5",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "反讽自见",
+              "options": [
+                "好态度",
+                "正是我对您的期待",
+                "妙",
+                "反讽自见"
+              ],
+              "answer": "反讽自见"
+            },
+            {
+              "id": "rv5-6",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "再改一稿便可付梓",
+              "options": [
+                "稿子整体我读完了",
+                "茶餐厅虽通用",
+                "再改一稿便可付梓",
+                "但稍嫌雕琢"
+              ],
+              "answer": "再改一稿便可付梓"
+            },
+            {
+              "id": "rv5-7",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "好态度",
+              "options": [
+                "好态度",
+                "茶餐厅虽通用",
+                "稿子整体我读完了",
+                "但有几处可商榷"
+              ],
+              "answer": "好态度"
+            },
+            {
+              "id": "rv5-8",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "台湾读者恐生疏",
+              "options": [
+                "好态度",
+                "台湾读者恐生疏",
+                "所谓的盛世",
+                "但稍嫌雕琢"
+              ],
+              "answer": "台湾读者恐生疏"
+            },
+            {
+              "id": "rv5-9",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "画龙点睛",
+              "options": [
+                "画龙点睛",
+                "所谓的盛世",
+                "反讽自见",
+                "茶餐厅虽通用"
+              ],
+              "answer": "画龙点睛"
+            },
+            {
+              "id": "rv5-10",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "但有几处可商榷",
+              "options": [
+                "所谓的盛世",
+                "但有几处可商榷",
+                "台湾读者恐生疏",
+                "文气贯通"
+              ],
+              "answer": "但有几处可商榷"
+            },
+            {
+              "id": "rv5-11",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "加引号",
+              "options": [
+                "但情景要交代清",
+                "加引号",
+                "妙",
+                "稿子整体我读完了"
+              ],
+              "answer": "加引号"
+            },
+            {
+              "id": "rv5-12",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "文气贯通",
+              "options": [
+                "正是我对您的期待",
+                "文气贯通",
+                "好态度",
+                "茶餐厅虽通用"
+              ],
+              "answer": "文气贯通"
+            },
+            {
+              "id": "rv5-13",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "字斟句酌",
+              "options": [
+                "气势是有",
+                "但情景要交代清",
+                "字斟句酌",
+                "加引号"
+              ],
+              "answer": "字斟句酌"
+            },
+            {
+              "id": "rv5-14",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "但稍嫌雕琢",
+              "options": [
+                "再改一稿便可付梓",
+                "台湾读者恐生疏",
+                "但稍嫌雕琢",
+                "文气贯通"
+              ],
+              "answer": "但稍嫌雕琢"
+            },
+            {
+              "id": "rv5-15",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "茶餐厅虽通用",
+              "options": [
+                "茶餐厅虽通用",
+                "画龙点睛",
+                "正是我对您的期待",
+                "稿子整体我读完了"
+              ],
+              "answer": "茶餐厅虽通用"
+            },
+            {
+              "id": "rv5-16",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "但情景要交代清",
+              "options": [
+                "气势是有",
+                "所谓的盛世",
+                "但情景要交代清",
+                "但稍嫌雕琢"
+              ],
+              "answer": "但情景要交代清"
+            },
+            {
+              "id": "rv5-17",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "气势是有",
+              "options": [
+                "反讽自见",
+                "但情景要交代清",
+                "茶餐厅虽通用",
+                "气势是有"
+              ],
+              "answer": "气势是有"
+            },
+            {
+              "id": "rv5-18",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "所谓的盛世",
+              "options": [
+                "正是我对您的期待",
+                "所谓的盛世",
+                "气势是有",
+                "文气贯通"
+              ],
+              "answer": "所谓的盛世"
+            },
+            {
+              "id": "rv5-19",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "妙",
+              "options": [
+                "妙",
+                "但情景要交代清",
+                "正是我对您的期待",
+                "加引号"
+              ],
+              "answer": "妙"
+            },
+            {
+              "id": "rv5-20",
+              "type": "listen_and_choose",
+              "prompt": "Tap the word you hear",
+              "spokenText": "正是我对您的期待",
+              "options": [
+                "正是我对您的期待",
+                "茶餐厅虽通用",
+                "稿子整体我读完了",
+                "再改一稿便可付梓"
+              ],
+              "answer": "正是我对您的期待"
             }
           ]
         }
