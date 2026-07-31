@@ -119,11 +119,14 @@ export default function ExamScreen({
       case 'listen_and_choose':
         return mcSelected !== null
       case 'fill_blank':
+      case 'translate':
         return fbValue.trim().length > 0
       case 'tap_words_in_order':
         return tapValue.length > 0
       case 'match_pairs':
         return false
+      case 'dialogue':
+        return true
     }
   }
 
@@ -340,6 +343,7 @@ function renderExercise(exercise: Exercise, props: RenderInputs) {
         />
       )
     case 'fill_blank':
+    case 'translate':
       return (
         <FillBlank
           exercise={exercise}
@@ -375,6 +379,18 @@ function renderExercise(exercise: Exercise, props: RenderInputs) {
           resetKey={resetKey}
         />
       )
+    case 'dialogue':
+      return (
+        <div className="dialogue-web-stub">
+          <p>
+            <strong>“{exercise.prompt}”</strong>
+          </p>
+          <p>
+            Dialogue exercises are only playable in the mobile app right now.
+            Tap Continue to skip — your XP credit isn't affected.
+          </p>
+        </div>
+      )
   }
 }
 
@@ -388,6 +404,7 @@ function grade(
       if (inputs.mcSelected === null) return null
       return { correct: inputs.mcSelected === exercise.answer }
     case 'fill_blank':
+    case 'translate':
       if (inputs.fbValue.trim().length === 0) return null
       return { correct: checkFillBlank(inputs.fbValue, exercise) }
     case 'tap_words_in_order':
@@ -395,5 +412,7 @@ function grade(
       return { correct: matchesSequenceAnswer(inputs.tapValue, exercise.answer) }
     case 'match_pairs':
       return null
+    case 'dialogue':
+      return { correct: true }
   }
 }

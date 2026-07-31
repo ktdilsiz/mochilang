@@ -29,7 +29,7 @@
  * canonical forms and learners can type whatever their keyboard produced.
  */
 
-import type { FillBlankExercise } from './types'
+
 
 /**
  * Single-character substitutions that NFKC doesn't already handle.
@@ -104,7 +104,7 @@ export function normalizeAnswer(input: string): string {
  */
 export function matchesAnswer(
   input: string,
-  exercise: FillBlankExercise
+  exercise: { answer: string; acceptableAnswers?: string[] }
 ): boolean {
   const normalized = normalizeAnswer(input)
   if (normalized.length === 0) return false

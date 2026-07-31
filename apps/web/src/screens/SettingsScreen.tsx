@@ -105,6 +105,16 @@ export default function SettingsScreen({ onBack }: Props) {
         />
       </section>
 
+      <section className="settings-section">
+        <h2>Developer</h2>
+        <ToggleRow
+          label="Developer mode (Unlock all)"
+          description="Bypass locked topics and lessons so all content is immediately reachable."
+          value={state.developerMode}
+          onChange={(v) => update('developerMode', v)}
+        />
+      </section>
+
       <button
         type="button"
         className="ledge-button tone-neutral settings-reset"

@@ -87,6 +87,7 @@ export default function LessonScreen({
       case 'listen_and_choose':
         return mcSelected !== null
       case 'fill_blank':
+      case 'translate':
         return fbValue.trim().length > 0
       case 'tap_words_in_order':
         return tapValue.length > 0
@@ -259,6 +260,7 @@ function ExerciseSwitch(props: {
         />
       )
     case 'fill_blank':
+    case 'translate':
       return (
         <FillBlank
           exercise={exercise}
@@ -322,6 +324,7 @@ function grade(
       if (inputs.mcSelected === null) return null
       return { correct: inputs.mcSelected === exercise.answer }
     case 'fill_blank':
+    case 'translate':
       if (inputs.fbValue.trim().length === 0) return null
       return { correct: checkFillBlank(inputs.fbValue, exercise) }
     case 'tap_words_in_order':

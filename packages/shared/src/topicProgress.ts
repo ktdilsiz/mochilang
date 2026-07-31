@@ -100,8 +100,10 @@ export function isTopicUnlocked(
   topicId: string,
   results: Record<string, unknown>,
   examsPassed: TopicExamsPassed,
-  levelExamsPassed: LevelExamsPassed = {}
+  levelExamsPassed: LevelExamsPassed = {},
+  developerMode = false
 ): boolean {
+  if (developerMode) return true
   for (let li = 0; li < levels.length; li++) {
     const level = levels[li]
     for (let ti = 0; ti < level.topics.length; ti++) {

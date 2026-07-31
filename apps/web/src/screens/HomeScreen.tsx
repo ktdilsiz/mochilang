@@ -18,6 +18,7 @@ import {
   previousTopic,
 } from '@mochilang/shared'
 import type { ProgressState } from '../state'
+import { useSettings } from '../settings'
 import { iconForLesson } from '../components/lessonIcons'
 import mochiThinking from '../assets/mochi-thinking.png'
 import './HomeScreen.css'
@@ -61,6 +62,9 @@ export default function HomeScreen({
 }: Props) {
   const [openId, setOpenId] = useState<string | null>(null)
 
+  const { state: settings } = useSettings()
+  const developerMode = settings.developerMode
+
   // Flat reference for prereq lookups — turning topic ids into topic
   // objects so we can show "Complete <Title> first" when a prereq isn't
   // met. Built once per render over the full level list.
@@ -95,7 +99,7 @@ export default function HomeScreen({
     for (let t = 0; t < level.topics.length; t++) {
       const topic = level.topics[t]
       if (
-        !isTopicUnlocked(levels, topic.id, progress.results, examsPassed, levelExamsPassed)
+        !isTopicUnlocked(levels, topic.id, progress.results, examsPassed, levelExamsPassed, developerMode)
       ) {
         continue
       }
@@ -220,14 +224,15 @@ export default function HomeScreen({
                     topic.id,
                     progress.results,
                     examsPassed,
-                    levelExamsPassed
+                    levelExamsPassed,
+                    developerMode
                   )
                   const cleared = isTopicCleared(topic, progress.results, examsPassed)
                   const examPassed = examsPassed[topic.id] === true
-                  const prereqReason = unlocked
+                  const prereqReason = (unlocked && !developerMode)
                     ? computeLockReason(topic, allTopics, isCompleted)
                     : null
-                  const hardLockReason = unlocked
+                  const hardLockReason = (unlocked || developerMode)
                     ? null
                     : describeHardLock(levels, topic.id)
                   return (
