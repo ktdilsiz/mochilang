@@ -79,9 +79,9 @@ All other `/api/*` routes go through `requireSession` which reads the cookie, lo
 | GET | `/api/friends` | – | Hardcoded roster + this-week sparklines |
 | GET | `/api/league` | – | Leaderboard + auto-resolves week rollover |
 
-Lesson/topic/guide content stays in the frontend for now (`apps/web/src/data/lessons.ts`).
-A future `/api/content` endpoint can serve that when content needs to ship without
-a client release.
+Course metadata and level bundles are served from `/api/content`. Web and mobile
+also ship generated fallback bundles so the core learning flow remains available
+offline.
 
 ## Quick test
 

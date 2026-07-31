@@ -1,5 +1,5 @@
 import type { FillBlankExercise, TranslateExercise } from '@mochilang/shared'
-import { matchesAnswer } from '@mochilang/shared'
+import { checkTypedAnswer } from '../../lib/answers'
 import './exercise.css'
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function FillBlank({ exercise, value, locked, onChange }: Props) {
-  const isCorrect = locked && checkAnswer(value, exercise)
+  const isCorrect = locked && checkTypedAnswer(value, exercise)
   const isWrong = locked && !isCorrect
   const promptText =
     ('prompt' in exercise && exercise.prompt)
@@ -38,17 +38,4 @@ export default function FillBlank({ exercise, value, locked, onChange }: Props) 
       )}
     </div>
   )
-}
-
-/**
- * Re-exported from @mochilang/shared so existing call sites keep
- * compiling. The shared implementation normalizes case, Unicode form,
- * smart quotes, dash variants, and full-width Chinese punctuation
- * before comparing — see packages/shared/src/answers.ts.
- */
-export function checkAnswer(
-  value: string,
-  exercise: FillBlankExercise | TranslateExercise
-): boolean {
-  return matchesAnswer(value, exercise)
 }

@@ -1,5 +1,3 @@
-import type { Lesson, LessonTheme } from '@mochilang/shared'
-
 type IconName = 'chat' | 'numbers' | 'check' | 'family' | 'food' | 'pin' | 'clock' | 'palette' | 'cloud'
 
 function Svg({
@@ -118,37 +116,5 @@ export function LessonIcon({ name }: { name: IconName }) {
         </Svg>
       )
   }
-}
-
-function pickIconNameByTheme(theme: LessonTheme): IconName {
-  switch (theme) {
-    case 'numbers':
-      return 'numbers'
-    case 'family':
-      return 'family'
-    case 'food':
-      return 'food'
-    case 'location':
-    case 'directions':
-      return 'pin'
-    case 'time':
-      return 'clock'
-    case 'colors':
-      return 'palette'
-    case 'weather':
-      return 'cloud'
-    case 'basics':
-    case 'questions':
-    case 'verbs':
-    case 'greetings':
-    case 'review':
-    default:
-      return 'chat'
-  }
-}
-
-export function iconForLesson(lesson: Lesson, opts?: { completed?: boolean }): React.ReactNode {
-  if (opts?.completed) return <LessonIcon name="check" />
-  return <LessonIcon name={pickIconNameByTheme(lesson.theme)} />
 }
 

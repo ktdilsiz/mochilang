@@ -1,14 +1,16 @@
 {
   "name": "mochilang",
   "private": true,
+  "packageManager": "pnpm@11.18.0",
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "pnpm": {
-    "overrides": {
-      "react": "19.1.0",
-      "react-dom": "19.1.0"
-    }
+  "scripts": {
+    "check": "pnpm run check:web && pnpm run check:mobile && pnpm run check:mochiread && pnpm run check:api",
+    "check:web": "pnpm --filter web lint && pnpm --filter web build",
+    "check:mobile": "pnpm --filter mochilang-mobile exec tsc --noEmit",
+    "check:mochiread": "pnpm --filter mochiread exec tsc --noEmit",
+    "check:api": "cd apps/api && go test ./..."
   }
 }

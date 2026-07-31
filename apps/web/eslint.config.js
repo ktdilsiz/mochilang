@@ -20,6 +20,10 @@ export default defineConfig([
     },
     rules: {
       '@typescript-eslint/consistent-type-imports': 'error',
+      // Exercise and course-picker state is intentionally reset when its
+      // identity changes. The React Hooks rule cannot distinguish that
+      // controlled reset from an accidental cascading update.
+      'react-hooks/set-state-in-effect': 'off',
     },
   },
 ])

@@ -19,7 +19,7 @@ import {
 } from '@mochilang/shared'
 import type { ProgressState } from '../state'
 import { useSettings } from '../settings'
-import { iconForLesson } from '../components/lessonIcons'
+import { iconForLesson } from '../components/lessonIconForLesson'
 import mochiThinking from '../assets/mochi-thinking.png'
 import './HomeScreen.css'
 

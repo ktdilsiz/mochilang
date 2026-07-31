@@ -1,34 +1,27 @@
 # mochilang-mobile
 
-React Native + Expo port of the mochilang web app, currently in **Phase 1**.
+React Native + Expo client for MochiLang.
 
-## What's working in Phase 1
+## Included features
 
-- Theme system mirroring the web's CSS palette (cream/coral, themed banners, ledge buttons)
-- Bottom-tab navigation (Learn / League / Friends / Profile) + native-stack for the Lesson modal
-- LoginScreen — offline-mode-only ("Continue without an account")
-- HomeScreen — vertical lesson list grouped by level + topic, with progress and XP/streak counters
-- LessonScreen — `multiple_choice` exercises end-to-end, with check/feedback/continue and a progress bar
-- Other 4 exercise types fall through to a "Phase 2" stub (with TTS-friendly play button for `listen_and_choose`)
-- Profile / League / Friends tabs are stubs that explain what's coming
+- Offline course bundles, progress storage, settings, and profile setup.
+- Lessons and topic/level exams, including multiple choice, fill-in-the-blank,
+  translation, matching, listening, word ordering, and dialogue exercises.
+- Learn, league, social, community, village, power-up, and mistake-practice flows.
+- Native text-to-speech, sound effects, and shared learning/progression rules.
 
-## What's not yet (Phase 2)
+## Still to plan before a production release
 
-- Google sign-in via `expo-auth-session` (web uses GIS; RN flow is different)
-- The other 4 exercise types: `fill_blank`, `match_pairs`, `listen_and_choose`, `tap_words_in_order`
-- The fancy winding lesson path on Home (we ship a vertical list for now)
-- Topic guides (`TopicGuideScreen`)
-- League leaderboard, Friends roster, Profile editor + spaced-review modal
-- Bundled course JSON for offline-without-API; today the course loads from `/api/content/courses/zh-en` only
-- Push notifications, haptics on lesson complete, App Store icons + screenshots
+- Native Google sign-in via `expo-auth-session`.
+- Push notifications, haptics, store metadata, screenshots, and release QA.
+- Device coverage and automated mobile end-to-end testing.
 
 ## Run it
 
 ```bash
-# 1. Make sure the API is running and reachable from your phone
+# 1. Optionally run the API and make it reachable from your phone
 cd apps/api && go run .                # runs on :8181
-# Phase 1 defaults to offline mode so this is optional, but you'll see
-# empty content (no course JSON bundled yet) without it.
+# Course bundles and local progress work without it.
 
 # 2. Edit app.json's extra.apiUrl to your laptop's LAN IP if you want
 #    real API calls from a phone. e.g.
@@ -52,12 +45,12 @@ src/
 ├── components/LedgeButton.tsx   # the chunky bottom-shadow primitive
 ├── state/
 │   ├── useProgress.ts           # AsyncStorage-backed progress hook
-│   └── useCourse.ts             # API-only course loader (Phase 1)
+│   └── useCourse.ts             # API-first loader with bundled fallback
 └── screens/
     ├── LoginScreen.tsx
     ├── HomeScreen.tsx
     ├── LessonScreen.tsx
-    └── StubScreen.tsx           # generic placeholder for un-ported tabs
+    └── ...                      # exams, community, village, and social flows
 ```
 
 ## Shared with web
@@ -68,4 +61,5 @@ Everything in `packages/shared/` — types, API client, league math, date helper
 
 - App Store rejects thin WebView wrappers — that's why we ditched the previous wrapper for a real RN port even though the web app works fine
 - Cookie-based Google Sign-In needs HTTPS in production — Phase 2 will use `expo-auth-session` which handles the OAuth flow natively
-- The course JSON isn't bundled into the RN app yet, so first launch needs a network round-trip to render content. Phase 2 will copy the bundle in via `metro.config.js` and add a true offline fallback
+- Course bundles make core learning available offline; network-backed account and
+  social features still need a reachable API.

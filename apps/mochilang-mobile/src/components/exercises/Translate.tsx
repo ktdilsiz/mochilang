@@ -117,22 +117,13 @@ export default function Translate({
 }
 
 /**
- * Grade a translate exercise. Reuses `matchesAnswer` by adapting the
- * TranslateExercise shape into the FillBlankExercise shape (same
- * acceptable-answer semantics). Keeps the grading pipeline single-
- * sourced.
+ * Grade a translate exercise with the shared acceptable-answer rules.
  */
 export function checkTranslateAnswer(
   value: string,
   exercise: TranslateExercise,
 ): boolean {
-  return matchesAnswer(value, {
-    type: 'fill_blank',
-    id: exercise.id,
-    prompt: exercise.source,
-    answer: exercise.answer,
-    acceptableAnswers: exercise.acceptableAnswers,
-  })
+  return matchesAnswer(value, exercise)
 }
 
 const styles = StyleSheet.create({
