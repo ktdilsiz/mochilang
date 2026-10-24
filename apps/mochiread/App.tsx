@@ -186,6 +186,7 @@ function AppRoot() {
             fontSize={prefs.fontSize}
             pinyinMode={prefs.pinyinMode}
             showToneColors={prefs.showToneColors}
+            pagePlayback={prefs.pagePlayback}
             page={readingPage}
             onPageChange={setReadingPage}
             onWordPress={(token, rect) => {

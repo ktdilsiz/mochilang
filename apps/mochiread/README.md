@@ -11,8 +11,11 @@ homographs; other entries/readings can be selected separately in the popup. Name
 context-dependent readings may still be missing or ambiguous. Passage
 translation requires the network; dictionary lookup and readings do not.
 Japanese furigana sits over kanji runs; kana/okurigana stay unannotated. Half-width
-kana is normalized for lookup while original text is retained. Passage audio
-speaks sentences, including punctuation. Vocabulary saves dictionary forms
+kana is normalized for lookup while original text is retained. Audio defaults
+to Read along: one spoken word and one highlight at a time, including Japanese
+particle pronunciations. Choose Natural sentences in Audio for continuous
+speech; it highlights the sentence unless the voice reports word boundaries.
+Vocabulary saves dictionary forms
 with the original sentence; old conjugated cards merge without losing review
 counts. Saved texts and vocabulary remember their language; legacy data defaults
 to Chinese. Voice choices are saved separately for Chinese and Japanese.
@@ -29,6 +32,11 @@ See [JMDICT-NOTICE.md](./JMDICT-NOTICE.md) for source and licence details.
 The browser regression command exports the app to a temporary directory and
 uses headless Chrome. Set `MOCHIREAD_BROWSER_CHANNEL` for another Playwright
 browser channel, or `MOCHIREAD_WEB_DIR` to test an existing web export.
+Set `MOCHIREAD_LIVE_TRANSLATION=1` to additionally check real Japanese and
+Chinese translation services. Translation rejects echoed CJK source text,
+uses request deadlines and cancellation, and falls back to MyMemory. Long
+passages split at UTF-8-safe boundaries within the provider's 500-byte limit.
+The translation sheet identifies the service that actually returned the result.
 
 Built with Expo + React Native, runs on iOS, Android, and the web.
 

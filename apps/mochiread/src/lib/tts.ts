@@ -23,7 +23,8 @@ export function speak(text: string, language: ReadingLanguage = 'zh') {
 export async function speakAsync(
   text: string,
   language: ReadingLanguage = 'zh',
-  onBoundary?: (charIndex: number) => void
+  onBoundary?: (charIndex: number, charLength?: number) => void,
+  onStart?: () => void
 ): Promise<void> {
   stop();
   const request = generation;
@@ -45,8 +46,9 @@ export async function speakAsync(
       rate: config.rate,
       pitch: 1.0,
       voice,
-      onBoundary: (event: { charIndex: number }) => {
-        if (request === generation) onBoundary?.(event.charIndex);
+      onStart: () => { if (request === generation) onStart?.(); },
+      onBoundary: (event: { charIndex: number; charLength?: number; name?: string }) => {
+        if (request === generation && (!event.name || event.name === 'word') && event.charIndex < text.length) onBoundary?.(event.charIndex, event.charLength);
       },
       onDone: finish,
       onStopped: finish,

@@ -13,6 +13,7 @@ import { migrateVocabulary, sameVocabWord } from './lib/vocabulary';
 
 export type FontSize = 'sm' | 'md' | 'lg' | 'xl';
 export type SpeechRate = 'slow' | 'normal' | 'fast';
+export type PagePlayback = 'word' | 'sentence';
 export type PinyinMode = 'on' | 'off' | 'hint';
 export type ReadingLanguage = 'zh' | 'ja';
 
@@ -24,6 +25,7 @@ export type Preferences = {
   showToneColors: boolean;
   themeMode: ThemeMode;
   speechRate: SpeechRate;
+  pagePlayback: PagePlayback;
   autoPlay: boolean;
   voiceId?: string;
   japaneseVoiceId?: string;
@@ -75,6 +77,7 @@ const DEFAULT_PREFS: Preferences = {
   showToneColors: true,
   themeMode: 'system',
   speechRate: 'normal',
+  pagePlayback: 'word',
   autoPlay: true,
 };
 

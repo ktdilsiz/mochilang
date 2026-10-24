@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { tokenize, lookup, lookupJapanese, isReadableWord, alignJapaneseReading } from './index';
 import { paginateLines } from '../../../apps/mochiread/src/lib/paginate';
-import { sentenceForToken, speechSegments } from '../../../apps/mochiread/src/lib/reading';
+import { sentenceForToken, speechSegments, readAlongSegments, boundaryRange } from '../../../apps/mochiread/src/lib/reading';
 import { migrateVocabulary, sameVocabWord } from '../../../apps/mochiread/src/lib/vocabulary';
 
 test('Japanese text is preserved including emoji, mixed scripts and hard newlines', () => {
@@ -131,6 +131,26 @@ test('sentence speech retains punctuation, mixed scripts and selection context',
   assert.equal(segments[1].text, '生ビールとcoffee！');
   const quoted = speechSegments(tokenize('「学校へ行こう。」今日は雨です。', 'ja'), 'ja');
   assert.equal(quoted[0].text, '「学校へ行こう。」');
+});
+
+test('read along owns one word per utterance and uses Japanese particle sounds', () => {
+  const tokens = tokenize('私は学校へ行こう。', 'ja');
+  const segments = readAlongSegments(tokens, 'ja');
+  assert.deepEqual(segments.map((segment) => segment.text), ['わたし', 'わ', 'がっこう', 'え', 'いこう。']);
+  assert(segments.every((segment) => segment.start === segment.end));
+  assert.deepEqual(segments.map((segment) => tokens[segment.start].word), ['私', 'は', '学校', 'へ', '行こう']);
+});
+
+test('speech boundaries cannot jump to the last word on an utterance-end event', () => {
+  const tokens = tokenize('今日は学校に行こう。', 'ja');
+  const segment = speechSegments(tokens, 'ja')[0];
+  const schoolOffset = segment.text.indexOf('学校');
+  const schoolIndex = tokens.findIndex((token) => token.word === '学校');
+  assert.deepEqual(boundaryRange(segment, tokens, schoolOffset, 2), [schoolIndex, schoolIndex]);
+  assert.equal(boundaryRange(segment, tokens, segment.text.length), null);
+  assert.equal(boundaryRange(segment, tokens, segment.text.length + 20), null);
+  assert.equal(boundaryRange(segment, tokens, segment.text.indexOf('。')), null);
+  assert.equal(boundaryRange(segment, tokens, -1), null);
 });
 
 test('line and page boundaries keep Japanese punctuation with its neighbour', () => {

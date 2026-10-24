@@ -49,6 +49,22 @@ export function AudioScreen({ language, onBack }: Props) {
     <View style={[s.root, { backgroundColor: theme.bg }]}>
       <AppHeader title="Audio" leading="back" onLeadingPress={onBack} />
       <ScrollView contentContainerStyle={s.body}>
+        <Section title="Page playback" theme={theme}>
+          <VoiceRow
+            label="Read along"
+            hint="Speak and highlight one word at a time. Works with every voice."
+            selected={prefs.pagePlayback === 'word'}
+            onPress={() => setPrefs({ pagePlayback: 'word' })}
+            theme={theme}
+          />
+          <VoiceRow
+            label="Natural sentences"
+            hint="Continuous speech. Highlights the sentence, or words when supported by the voice."
+            selected={prefs.pagePlayback === 'sentence'}
+            onPress={() => setPrefs({ pagePlayback: 'sentence' })}
+            theme={theme}
+          />
+        </Section>
         <Section title="Speech rate" theme={theme}>
           <View style={s.chipRow}>
             {RATE_OPTIONS.map((opt) => {

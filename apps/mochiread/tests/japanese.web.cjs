@@ -36,8 +36,10 @@ const server = http.createServer((request, response) => {
       window.speechSynthesis.speak = (message) => {
         window.testSpeech.push({ text: message.text, language: message.lang, voice: message.voice?.voiceURI });
         message.onstart?.({});
-        message.onboundary?.({ charIndex: 0 });
-        timer = setTimeout(() => message.onend?.({}), 250);
+        // Some Japanese voices only emit a sentence boundary at its end.
+        // This must never move a read-along highlight to the final word.
+        message.onboundary?.({ name: 'sentence', charIndex: message.text.length, charLength: 0 });
+        timer = setTimeout(() => message.onend?.({}), 450);
       };
       window.speechSynthesis.cancel = () => clearTimeout(timer);
       if (localStorage.getItem('mochiread:test-seeded')) return;
@@ -110,16 +112,31 @@ const server = http.createServer((request, response) => {
     assert.equal(eat.examples[0].sentence, '食べられなかった。');
     await page.mouse.click(410, 850);
 
-    // Real sentence speech, including punctuation; stopping cannot start the
-    // queued next sentence even if the platform omits its onStopped event.
+    // Word tracking works even when the voice supplies no word events.
     await page.getByLabel('Play page', { exact: true }).click();
-    await page.waitForFunction(() => window.testSpeech.length > 0);
+    await page.waitForFunction(() => window.testSpeech.length === 1 && document.querySelector('[aria-label="私"]')?.getAttribute('aria-selected') === 'true').catch(async (error) => {
+      console.log(await page.evaluate(() => ({ speech: window.testSpeech, highlighted: [...document.querySelectorAll('[role="button"][aria-selected="true"]')].map((node) => node.getAttribute('aria-label')) })));
+      throw error;
+    });
+    assert.equal((await page.evaluate(() => window.testSpeech))[0].text, 'わたし');
+    await page.waitForFunction(() => window.testSpeech.length === 2 && document.querySelector('[aria-label="は"]')?.getAttribute('aria-selected') === 'true');
     await page.getByLabel('Pause', { exact: true }).click();
-    await page.waitForTimeout(350);
+    await page.waitForTimeout(500);
     const speech = await page.evaluate(() => window.testSpeech);
-    assert.equal(speech.length, 1);
-    assert.equal(speech[0].text, '私は学校に行こう。');
+    assert.equal(speech.length, 2);
+    assert.equal(speech[1].text, 'わ');
     assert.equal(speech[0].language, 'ja-JP');
+
+    await menu('Audio');
+    await page.getByText('Natural sentences', { exact: true }).click();
+    await page.getByLabel('Back', { exact: true }).click();
+    await page.evaluate(() => { window.testSpeech = []; });
+    await page.getByLabel('Play page', { exact: true }).click();
+    await page.waitForFunction(() => window.testSpeech.length === 1);
+    assert.equal((await page.evaluate(() => window.testSpeech))[0].text, '私は学校に行こう。');
+    assert.equal(await page.getByRole('button', { name: '学校', exact: true }).getAttribute('aria-selected'), 'true');
+    assert.equal(await page.getByRole('button', { name: '行こう', exact: true }).getAttribute('aria-selected'), 'true');
+    await page.getByLabel('Pause', { exact: true }).click();
 
     let translatedFromJapanese = false;
     await page.route('**/api/v1/**', async (route) => {
@@ -130,6 +147,35 @@ const server = http.createServer((request, response) => {
     await page.getByText('Translate', { exact: true }).click();
     await page.getByText('I will go to school.', { exact: true }).waitFor();
     assert(translatedFromJapanese);
+    await page.getByLabel('Close', { exact: true }).click();
+
+    // Reproduce the real outage: HTTP 200 with an echoed source is rejected,
+    // then the working fallback supplies English and its own attribution.
+    await page.unroute('**/api/v1/**');
+    await page.route('**/api/v1/**', async (route) => {
+      const source = decodeURIComponent(new URL(route.request().url()).pathname.split('/').at(-1));
+      await route.fulfill({ json: { translation: source } });
+    });
+    let fallbackFails = false;
+    await page.route('https://api.mymemory.translated.net/**', async (route) => {
+      await route.fulfill({ json: fallbackFails
+        ? { responseStatus: 429, quotaFinished: true, responseDetails: 'Quota exceeded' }
+        : { responseStatus: 200, responseData: { translatedText: 'I will go to school.' } } });
+    });
+    const translateSchool = async () => {
+      await page.getByRole('button', { name: '学校', exact: true }).click({ delay: 500 });
+      await page.getByText('Translate', { exact: true }).click();
+    };
+    await translateSchool();
+    await page.getByText('I will go to school.', { exact: true }).waitFor();
+    await page.getByText('Translation via MyMemory.', { exact: true }).waitFor();
+    await page.getByLabel('Close', { exact: true }).click();
+    fallbackFails = true;
+    await translateSchool();
+    await page.getByText('Couldn’t translate. Try again.', { exact: true }).waitFor();
+    fallbackFails = false;
+    await page.getByText('Retry', { exact: true }).click();
+    await page.getByText('I will go to school.', { exact: true }).waitFor();
     await page.getByLabel('Close', { exact: true }).click();
     await menu('Audio');
     await page.getByText('Japanese test voice', { exact: true }).click();
@@ -148,8 +194,30 @@ const server = http.createServer((request, response) => {
     }
     await page.setViewportSize({ width: 430, height: 932 });
     await page.screenshot({ path: path.join(root, 'japanese-reader.png') });
+
+    if (process.env.MOCHIREAD_LIVE_TRANSLATION === '1') {
+      await page.unroute('**/api/v1/**');
+      await page.unroute('https://api.mymemory.translated.net/**');
+      for (const language of ['ja', 'zh']) {
+        await menu('New text');
+        await page.getByText(language === 'ja' ? 'Japanese' : 'Chinese', { exact: true }).click();
+        const source = language === 'ja' ? '今日はいい天気です。' : '今天天气很好。';
+        await page.locator('textarea').fill(source);
+        await page.getByText('Read', { exact: true }).click();
+        const words = page.getByRole('button', { name: language === 'ja' ? '今日' : '今天', exact: true });
+        await words.click({ delay: 500 });
+        await page.getByRole('button', { name: language === 'ja' ? 'です' : '好', exact: true }).click();
+        await page.getByText('Translate', { exact: true }).click();
+        const result = page.getByTestId('translation-result');
+        await result.waitFor({ timeout: 30000 });
+        const english = await result.innerText();
+        assert(/[a-z]/i.test(english) && !/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u.test(english), english);
+        console.log(`LIVE ${language} → English: ${english}`);
+        await page.getByLabel('Close', { exact: true }).click();
+      }
+    }
     assert.deepEqual(errors, []);
-    console.log('PASS: migration, Japanese lookups, grammar, canonical vocabulary, review history, furigana, widths, sentence speech/cancel, voice settings, translation routing.');
+    console.log('PASS: migration, dictionary, vocabulary, furigana, widths, per-word tracking without boundary events, sentence mode/cancel, voice settings, translation echo rejection/fallback/retry.');
     console.log(`Preview screenshot: ${path.join(root, 'japanese-reader.png')}`);
   } finally { await browser.close(); }
 })().catch((error) => { console.error(error); process.exitCode = 1; }).finally(() => server.close());

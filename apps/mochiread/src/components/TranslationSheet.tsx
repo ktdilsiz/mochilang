@@ -38,7 +38,7 @@ export function TranslationSheet({ text, language, onClose }: Props) {
     >
       <Pressable style={s.backdrop} onPress={onClose} />
       <View style={s.center} pointerEvents="box-none">
-        <Sheet text={text} language={language} onClose={onClose} />
+        <Sheet key={`${language}:${text}`} text={text} language={language} onClose={onClose} />
       </View>
     </Animated.View>
   );
@@ -56,29 +56,25 @@ function Sheet({
   const theme = useTheme();
   const [state, setState] = useState<
     | { kind: 'loading' }
-    | { kind: 'ok'; translation: string }
+    | { kind: 'ok'; translation: string; source: string }
     | { kind: 'error'; message: string }
   >({ kind: 'loading' });
 
-  const fetchTranslation = async () => {
-    setState({ kind: 'loading' });
-    try {
-      const { translation } = await translate(text, {
-        from: language,
-        to: 'en',
-      });
-      setState({ kind: 'ok', translation });
-    } catch (e) {
-      setState({
-        kind: 'error',
-        message: e instanceof Error ? e.message : String(e),
-      });
-    }
-  };
+  const [retry, setRetry] = useState(0);
+  const fetchTranslation = () => setRetry((value) => value + 1);
 
   useEffect(() => {
-    fetchTranslation();
-  }, [text, language]);
+    const controller = new AbortController();
+    setState({ kind: 'loading' });
+    translate(text, { from: language, to: 'en', signal: controller.signal })
+      .then(({ translation, source }) => {
+        if (!controller.signal.aborted) setState({ kind: 'ok', translation, source });
+      })
+      .catch((error) => {
+        if (!controller.signal.aborted) setState({ kind: 'error', message: error instanceof Error ? error.message : String(error) });
+      });
+    return () => controller.abort();
+  }, [text, language, retry]);
 
   return (
     <Pressable
@@ -138,7 +134,9 @@ function Sheet({
       </ScrollView>
 
       <Text style={[s.footerNote, { color: theme.textSubtle }]}>
-        Translation via Lingva (open-source Google Translate proxy).
+        {state.kind === 'ok'
+          ? `Translation via ${state.source === 'mymemory' ? 'MyMemory' : state.source === 'mixed' ? 'Lingva and MyMemory' : 'Lingva'}.`
+          : 'Online translation · Lingva / MyMemory'}
       </Text>
     </Pressable>
   );
@@ -184,6 +182,8 @@ function TranslationView({
   }
   return (
     <Text
+      testID="translation-result"
+      accessibilityLabel="English translation"
       style={[s.translation, { color: theme.text }]}
       selectable
     >

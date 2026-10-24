@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { isReadableWord, type Token } from '@mochilang/dict';
 import { paginateLines, tokenWidth } from '../lib/paginate';
-import { speechSegments } from '../lib/reading';
+import { speechSegments, readAlongSegments, boundaryRange } from '../lib/reading';
 import { speakAsync, stop as stopSpeech } from '../lib/tts';
 import {
   FONT_SIZE_VALUES,
@@ -16,6 +16,7 @@ import {
   type FontSize,
   type PinyinMode,
   type ReadingLanguage,
+  type PagePlayback,
 } from '../state';
 import { useTheme, type Theme } from '../theme';
 import type { WordRect } from './ThoughtBubble';
@@ -26,6 +27,7 @@ type Props = {
   fontSize: FontSize;
   pinyinMode: PinyinMode;
   showToneColors: boolean;
+  pagePlayback: PagePlayback;
   page: number;
   onPageChange: (page: number) => void;
   onWordPress: (token: Token, rect: WordRect) => void;
@@ -41,6 +43,7 @@ export function Reader({
   fontSize,
   pinyinMode,
   showToneColors,
+  pagePlayback,
   page,
   onPageChange,
   onWordPress,
@@ -53,13 +56,13 @@ export function Reader({
   const reservePinyinRow = pinyinMode !== 'off';
 
   const [layout, setLayout] = useState({ width: 0, height: 0 });
-  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+  const [playingRange, setPlayingRange] = useState<[number, number] | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const playbackRun = useRef(0);
   const stopPlayback = () => {
     playbackRun.current++;
     setIsPlaying(false);
-    setPlayingIndex(null);
+    setPlayingRange(null);
     stopSpeech();
   };
   const [revealed, setRevealed] = useState<Set<string>>(() => new Set());
@@ -80,7 +83,7 @@ export function Reader({
   useEffect(() => {
     setRevealed(new Set());
     setIsPlaying(false);
-    setPlayingIndex(null);
+    setPlayingRange(null);
     stopSpeech();
   }, [tokens]);
 
@@ -108,20 +111,20 @@ export function Reader({
     let cancelled = false;
     let i = 0;
     (async () => {
-      const segments = speechSegments(currentTokens, language);
+      const segments = pagePlayback === 'word' ? readAlongSegments(currentTokens, language) : speechSegments(currentTokens, language);
       while (!cancelled && run === playbackRun.current && i < segments.length) {
         const segment = segments[i];
-        setPlayingIndex(segment.start);
-        await speakAsync(segment.text, language, (charIndex) => {
+        await speakAsync(segment.text, language, pagePlayback === 'word' ? undefined : (charIndex, charLength) => {
           if (cancelled || run !== playbackRun.current) return;
-          let relative = 0;
-          while (relative + 1 < segment.offsets.length && segment.offsets[relative + 1] <= charIndex) relative++;
-          setPlayingIndex(segment.start + relative);
+          const range = boundaryRange(segment, currentTokens, charIndex, charLength);
+          if (range) setPlayingRange(range);
+        }, () => {
+          if (!cancelled && run === playbackRun.current) setPlayingRange([segment.start, segment.end]);
         });
         i++;
       }
       if (!cancelled && run === playbackRun.current) {
-        setPlayingIndex(null);
+        setPlayingRange(null);
         setIsPlaying(false);
       }
     })();
@@ -129,11 +132,11 @@ export function Reader({
       cancelled = true;
       stopSpeech();
     };
-  }, [isPlaying, currentTokens, language]);
+  }, [isPlaying, currentTokens, language, pagePlayback]);
 
   // Stop & reset when the page changes.
   useEffect(() => {
-    setPlayingIndex(null);
+    setPlayingRange(null);
     setIsPlaying(false);
     stopSpeech();
   }, [safePage]);
@@ -247,7 +250,7 @@ export function Reader({
                       pinyinMode={pinyinMode}
                       isRevealed={isRevealed}
                       showToneColors={language === 'zh' && showToneColors}
-                      isPlaying={playingIndex === tokenIndex}
+                      isPlaying={!!playingRange && playingRange[0] <= tokenIndex && tokenIndex <= playingRange[1]}
                       isSelected={selected}
                       maxWidth={Math.max(30, layout.width - PAGE_PADDING * 2 - line.tokens.filter((other) => other !== t).reduce((sum, other) => sum + tokenWidth(other, hanziSize, pinyinSize, reservePinyinRow), 0))}
                       theme={theme}
@@ -452,6 +455,8 @@ function WordChip({
       ref={ref}
       accessibilityRole="button"
       accessibilityLabel={token.word}
+      accessibilityState={{ selected: isSelected || isPlaying }}
+      aria-selected={isSelected || isPlaying}
       onPress={handle}
       onLongPress={() => onLongPress(tokenIndex)}
       delayLongPress={350}
