@@ -112,8 +112,8 @@ export function AudioScreen({ language, onBack }: Props) {
             </Text>
           ) : voices.length === 0 ? (
             <Text style={[s.muted, { color: theme.textMuted }]}>
-              No alternate {languageName} voices found on this device. Using the
-              system default.
+              No {languageName} voice was found. Install a {languageName} voice
+              in your device's speech settings, then reopen Audio.
             </Text>
           ) : (
             <View style={s.voiceList}>

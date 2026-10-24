@@ -9,6 +9,7 @@ import {
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { HSK3_SENTENCES } from './data/hsk3-sentences';
 import { HSK4_SENTENCES } from './data/hsk4-sentences';
+import { migrateVocabulary, sameVocabWord } from './lib/vocabulary';
 
 export type FontSize = 'sm' | 'md' | 'lg' | 'xl';
 export type SpeechRate = 'slow' | 'normal' | 'fast';
@@ -54,6 +55,8 @@ export type VocabEntry = {
   language: ReadingLanguage;
   pinyin: string;
   meanings: string[];
+  entryId?: string;
+  examples?: { sentence: string; surface: string }[];
   savedAt: number;
   remembered: number;
   forgotten: number;
@@ -126,10 +129,10 @@ type Store = {
   removeText: (id: string) => void;
   reorderLibrary: (next: LibraryEntry[]) => void;
   vocab: VocabEntry[];
-  saveWord: (entry: Pick<VocabEntry, 'word' | 'language' | 'pinyin' | 'meanings'>) => void;
-  removeWord: (word: string, language?: ReadingLanguage) => void;
-  isWordSaved: (word: string, language?: ReadingLanguage) => boolean;
-  recordReview: (word: string, remembered: boolean, language?: ReadingLanguage) => void;
+  saveWord: (entry: Pick<VocabEntry, 'word' | 'language' | 'pinyin' | 'meanings' | 'entryId' | 'examples'>) => void;
+  removeWord: (word: string, language?: ReadingLanguage, entryId?: string) => void;
+  isWordSaved: (word: string, language?: ReadingLanguage, entryId?: string) => boolean;
+  recordReview: (word: string, remembered: boolean, language?: ReadingLanguage, entryId?: string) => void;
   stats: DayStats[];
   recordWordTap: () => void;
   recordReadingTime: (seconds: number) => void;
@@ -216,23 +219,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         if (!seeded) AsyncStorage.setItem(KEY_SEEDED, '1');
         if (v) {
           const parsed = JSON.parse(v) as Partial<VocabEntry>[];
-          setVocab(
-            parsed
-              .filter((e): e is Partial<VocabEntry> & { word: string } => !!e?.word)
-              .map((e) => ({
-                word: e.word,
-                language: e.language === 'ja' ? 'ja' : 'zh',
-                pinyin: e.pinyin ?? '',
-                meanings: e.meanings ?? [],
-                savedAt: e.savedAt ?? Date.now(),
-                remembered: e.remembered ?? 0,
-                forgotten: e.forgotten ?? 0,
-                lastReviewedAt: e.lastReviewedAt,
-                ease: e.ease ?? 2.5,
-                intervalDays: e.intervalDays ?? 0,
-                dueAt: e.dueAt ?? Date.now(),
-              }))
-          );
+          setVocab(migrateVocabulary(parsed));
         }
       } finally {
         setHydrated(true);
@@ -281,7 +268,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         setVocab((prev) => {
           if (
             prev.some(
-              (v) => v.word === entry.word && v.language === entry.language
+              (v) => sameVocabWord(v, entry.word, entry.language, entry.entryId)
             )
           )
             return prev;
@@ -299,16 +286,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             ...prev,
           ];
         }),
-      removeWord: (word, language = 'zh') =>
+      removeWord: (word, language = 'zh', entryId) =>
         setVocab((prev) =>
-          prev.filter((v) => v.word !== word || v.language !== language)
+          prev.filter((v) => !sameVocabWord(v, word, language, entryId))
         ),
-      isWordSaved: (word, language = 'zh') =>
-        vocab.some((v) => v.word === word && v.language === language),
-      recordReview: (word, remembered, language = 'zh') =>
+      isWordSaved: (word, language = 'zh', entryId) =>
+        vocab.some((v) => sameVocabWord(v, word, language, entryId)),
+      recordReview: (word, remembered, language = 'zh', entryId) =>
         setVocab((prev) =>
           prev.map((v) =>
-            v.word === word && v.language === language
+            sameVocabWord(v, word, language, entryId)
               ? applySm2(v, remembered)
               : v
           )

@@ -21,6 +21,7 @@ import {
   type Token,
 } from '@mochilang/dict';
 import { configureTTS, stop as stopSpeech } from './src/lib/tts';
+import { sentenceForToken } from './src/lib/reading';
 import {
   StoreProvider,
   useStore,
@@ -62,7 +63,7 @@ function AppRoot() {
   const [hydrated, setHydrated] = useState(false);
   const [screen, setScreen] = useState<Screen>('reader');
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selected, setSelected] = useState<{ token: Token; rect: WordRect } | null>(
+  const [selected, setSelected] = useState<{ token: Token; rect: WordRect; sentence: string } | null>(
     null
   );
   const [exploring, setExploring] = useState<string | null>(null);
@@ -188,7 +189,7 @@ function AppRoot() {
             page={readingPage}
             onPageChange={setReadingPage}
             onWordPress={(token, rect) => {
-              setSelected({ token, rect });
+              setSelected({ token, rect, sentence: sentenceForToken(tokens, tokens.indexOf(token)) });
               recordWordTap();
             }}
             onTranslate={(text) => setTranslating(text)}
@@ -234,6 +235,8 @@ function AppRoot() {
         word={selected?.token.word ?? null}
         language={language}
         pinyin={selected?.token.pinyin ?? ''}
+        japanese={selected?.token.japanese}
+        sentence={selected?.sentence}
         rect={selected?.rect ?? null}
         onClose={() => setSelected(null)}
         onExplore={(w) => {

@@ -1,96 +1,61 @@
-import type { Token } from '@mochilang/dict';
-import { isCJK, isJapaneseGlyph } from '@mochilang/dict';
+import { isCJK, isJapaneseGlyph, type Token } from '@mochilang/dict';
 
 type Args = {
   tokens: Token[];
   hanziSize: number;
   pinyinSize: number;
-  /** Reserve vertical space for pinyin (or its hidden-hint underline). */
   reservePinyinRow: boolean;
   viewWidth: number;
   viewHeight: number;
 };
-
-const TOKEN_HORIZONTAL_PADDING = 6; // matches paddingHorizontal: 3 on each side
-
-/**
- * Greedy pagination: pack tokens line-by-line, fill pages line-by-line.
- *
- * Token widths are estimated from font size + character class (CJK glyphs are
- * ~square; ASCII is ~55% as wide). Line height includes the pinyin row when
- * it's enabled. Hard newlines (`\n` tokens) end the current line.
- */
-export function paginate({
-  tokens,
-  hanziSize,
-  pinyinSize,
-  reservePinyinRow,
-  viewWidth,
-  viewHeight,
-}: Args): Token[][] {
-  if (viewWidth <= 0 || viewHeight <= 0) return [tokens];
-
-  const lineHeight = Math.round(
-    hanziSize * 1.25 + (reservePinyinRow ? pinyinSize + 2 : 0) + 8
-  );
-  const linesPerPage = Math.max(1, Math.floor(viewHeight / lineHeight));
-
-  const pages: Token[][] = [];
-  let pageBuf: Token[] = [];
-  let lineBuf: Token[] = [];
-  let lineWidth = 0;
-  let lineIndex = 0;
-
-  const finishLine = () => {
-    pageBuf.push(...lineBuf);
-    lineBuf = [];
-    lineWidth = 0;
-    lineIndex++;
-    if (lineIndex >= linesPerPage) {
-      pages.push(pageBuf);
-      pageBuf = [];
-      lineIndex = 0;
-    }
-  };
-
-  for (const t of tokens) {
-    if (t.word === '\n') {
-      // Hard line break: flush whatever's on the current line and emit the
-      // newline token so the renderer can force a flex-wrap. The line count
-      // still ticks, so paragraph-heavy text paginates correctly.
-      pageBuf.push(...lineBuf, t);
-      lineBuf = [];
-      lineWidth = 0;
-      lineIndex++;
-      if (lineIndex >= linesPerPage) {
-        pages.push(pageBuf);
-        pageBuf = [];
-        lineIndex = 0;
-      }
-      continue;
-    }
-    const w = Math.max(
-      estimateWidth(t.word, hanziSize),
-      reservePinyinRow ? estimateWidth(t.pinyin, pinyinSize) : 0
-    );
-    if (w + lineWidth > viewWidth && lineBuf.length > 0) {
-      finishLine();
-    }
-    lineBuf.push(t);
-    lineWidth += w;
-  }
-
-  if (lineBuf.length > 0) finishLine();
-  if (pageBuf.length > 0) pages.push(pageBuf);
-  if (pages.length === 0) pages.push([]);
-
-  return pages;
+const OPENING = new Set([...'（(「『【〈《〔｛{［[']);
+const CLOSING = new Set([...'、。，．！？!?：；:;)]}）」』】〉》〕］｝ーぁぃぅぇぉっゃゅょァィゥェォッャュョ']);
+export function textWidth(text: string, size: number): number {
+  let width = 0;
+  for (const char of text) width += (isCJK(char) || isJapaneseGlyph(char) || /[\u3000-\u303f\uff01-\uff60]/.test(char) || char.codePointAt(0)! > 0xffff) ? size : size * 0.55;
+  return width;
 }
 
-function estimateWidth(word: string, hanziSize: number): number {
-  let w = 0;
-  for (const ch of word) {
-    w += isCJK(ch) || isJapaneseGlyph(ch) ? hanziSize : hanziSize * 0.55;
+export function tokenWidth(token: Token, size: number, readingSize: number, showReadings: boolean): number {
+  if (token.word === '\n') return 0;
+  const ruby = token.japanese?.ruby;
+  const width = ruby
+    ? ruby.reduce((sum, part) => sum + Math.max(textWidth(part.text, size), showReadings ? textWidth(part.reading, readingSize) : 0), 0)
+    : Math.max(textWidth(token.word, size), showReadings ? textWidth(token.pinyin, readingSize) : 0);
+  return width + (isCJK(token.word[0] ?? '') || isJapaneseGlyph(token.word[0] ?? '') ? 6 : 0);
+}
+
+/** Layout and rendering share these exact lines; punctuation travels with its
+ * neighbour so a soft line/page cannot start with 。 or end with 「. */
+export function paginateLines({ tokens, hanziSize, pinyinSize, reservePinyinRow, viewWidth, viewHeight }: Args): Token[][][] {
+  if (viewWidth <= 0 || viewHeight <= 0) return [[tokens]];
+  const groups: Token[][] = [];
+  for (const token of tokens) {
+    const previous = groups[groups.length - 1];
+    const previousText = previous?.map((part) => part.word).join('') ?? '';
+    if (token.word !== '\n' && previous && !previousText.endsWith('\n') &&
+        (CLOSING.has([...token.word][0]) || OPENING.has([...previousText].at(-1)!))) previous.push(token);
+    else groups.push([token]);
   }
-  return w + TOKEN_HORIZONTAL_PADDING;
+  const height = Math.round(hanziSize * 1.25 + (reservePinyinRow ? pinyinSize + 2 : 0) + 8);
+  const limit = Math.max(1, Math.floor(viewHeight / height));
+  const pages: Token[][][] = [];
+  let page: Token[][] = [], line: Token[] = [], width = 0;
+  const finish = () => {
+    page.push(line); line = []; width = 0;
+    if (page.length >= limit) { pages.push(page); page = []; }
+  };
+  for (const group of groups) {
+    if (group[0].word === '\n') { line.push(...group); finish(); continue; }
+    const nextWidth = group.reduce((sum, token) => sum + tokenWidth(token, hanziSize, pinyinSize, reservePinyinRow), 0);
+    if (line.length && width + nextWidth > viewWidth) finish();
+    line.push(...group); width += nextWidth;
+  }
+  if (line.length) finish();
+  if (page.length) pages.push(page);
+  return pages.length ? pages : [[[]]];
+}
+
+export function paginate(args: Args): Token[][] {
+  return paginateLines(args).map((page) => page.flat());
 }

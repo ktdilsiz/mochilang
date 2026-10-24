@@ -9,7 +9,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { lookup, lookupJapanese } from '@mochilang/dict';
+import { lookup, lookupJapanese, type JapaneseDefinition } from '@mochilang/dict';
 import { hasExploreData } from '../lib/decomp';
 import { speak, stop } from '../lib/tts';
 import { useStore } from '../state';
@@ -22,6 +22,8 @@ type Props = {
   word: string | null;
   language: ReadingLanguage;
   pinyin: string;
+  japanese?: JapaneseDefinition;
+  sentence?: string;
   rect: WordRect | null;
   onClose: () => void;
   onExplore: (word: string) => void;
@@ -32,11 +34,14 @@ const PANEL_WIDTH = 280;
 const ARROW_HEIGHT = 10;
 const GAP = 8;
 const EDGE_PADDING = 8;
+const posLabel = (tag: string) => ({ prt: 'Particle', n: 'Noun', 'n-pr': 'Proper noun', v1: 'Ichidan verb', vk: 'Irregular verb', vs: 'Suru verb', 'vs-i': 'Suru verb', 'adj-i': 'i-adjective', 'adj-na': 'na-adjective', adv: 'Adverb', exp: 'Expression', aux: 'Auxiliary', 'aux-v': 'Auxiliary verb', pn: 'Pronoun', pref: 'Prefix', suf: 'Suffix', ctr: 'Counter' }[tag] ?? (tag.startsWith('v5') ? 'Godan verb' : tag));
 
 export function ThoughtBubble({
   word,
   language,
   pinyin,
+  japanese,
+  sentence,
   rect,
   onClose,
   onExplore,
@@ -47,8 +52,16 @@ export function ThoughtBubble({
   const opacity = useRef(new Animated.Value(0)).current;
   const translateY = useRef(new Animated.Value(-6)).current;
   const [bubbleHeight, setBubbleHeight] = useState(0);
+  const [readingChoice, setReadingChoice] = useState<{ key: string; entryId: string; reading: string } | null>(null);
   const { saveWord, removeWord, isWordSaved, prefs } = useStore();
   const theme = useTheme();
+  const choiceKey = (word ?? '') + '\0' + (sentence ?? '');
+  const japaneseEntry = language === 'ja' && word
+    ? readingChoice?.key === choiceKey
+      ? lookupJapanese(word, readingChoice)
+      : japanese ?? lookupJapanese(word)
+    : null;
+  const displayReading = japaneseEntry?.reading ?? pinyin;
 
   useEffect(() => {
     if (!visible) return;
@@ -74,9 +87,9 @@ export function ThoughtBubble({
         useNativeDriver: true,
       }),
     ]).start();
-    if (word && prefs.autoPlay) speak(word, language);
+    if (word && prefs.autoPlay) speak(language === 'ja' ? displayReading || word : word, language);
     return () => stop();
-  }, [visible, word, language, prefs.autoPlay]);
+  }, [visible, word, language, displayReading, prefs.autoPlay]);
 
   if (!visible) return null;
 
@@ -112,17 +125,21 @@ export function ThoughtBubble({
   const HEADER_AND_PADDING = 110;
   const scrollMaxHeight = Math.max(60, availableHeight - HEADER_AND_PADDING);
 
-  const entry = language === 'zh' ? lookup(word) : lookupJapanese(word);
-  const saved = isWordSaved(word, language);
+  const entry = language === 'zh' ? lookup(word) : japaneseEntry;
+  const savedWord = japaneseEntry?.dictionaryForm ?? word;
+  const entryId = japaneseEntry?.entryId;
+  const saved = isWordSaved(savedWord, language, entryId);
 
   const toggleSave = () => {
     if (saved) {
-      removeWord(word, language);
+      removeWord(savedWord, language, entryId);
     } else {
       saveWord({
-        word,
+        word: savedWord,
         language,
-        pinyin,
+        pinyin: japaneseEntry?.dictionaryReading ?? pinyin,
+        entryId,
+        examples: language === 'ja' && sentence ? [{ sentence, surface: word }] : undefined,
         meanings: entry?.meanings ?? [],
       });
     }
@@ -173,9 +190,14 @@ export function ThoughtBubble({
             <View style={s.headerRow}>
               <View style={s.headerText}>
                 <Text style={[s.pinyin, { color: theme.textMuted }]}>
-                  {pinyin}
+                  {displayReading}
                 </Text>
                 <Text style={[s.word, { color: theme.text }]}>{word}</Text>
+                {japaneseEntry?.conjugation && (
+                  <Text style={{ color: theme.textMuted, fontSize: 12 }}>
+                    {japaneseEntry.dictionaryForm} · {japaneseEntry.conjugation}
+                  </Text>
+                )}
               </View>
               <View style={s.headerButtons}>
                 <Pressable
@@ -202,7 +224,7 @@ export function ThoughtBubble({
                   </Text>
                 </Pressable>
                 <Pressable
-                  onPress={() => speak(word, language)}
+                  onPress={() => speak(language === 'ja' ? displayReading || word : word, language)}
                   hitSlop={10}
                   style={({ pressed }) => [
                     s.iconBtn,
@@ -220,7 +242,38 @@ export function ThoughtBubble({
               contentContainerStyle={s.scrollContent}
               showsVerticalScrollIndicator
             >
-              {entry ? (
+              {japaneseEntry ? (
+                <View style={s.meanings}>
+                  {japaneseEntry.senses.map((sense, i) => (
+                    <View key={i}>
+                      <Text style={{ color: theme.textMuted, fontSize: 11 }}>{[...new Set(sense.partsOfSpeech.map(posLabel))].join(' · ')}</Text>
+                      {sense.meanings.map((meaning, j) => (
+                        <Text key={j} style={[s.meaning, { color: theme.text }]}>• {meaning}</Text>
+                      ))}
+                    </View>
+                  ))}
+                  {japaneseEntry.alternatives.length > 0 && (
+                    <View style={{ marginTop: 12 }}>
+                      <Text style={{ color: theme.textMuted, fontSize: 12 }}>Other readings and entries</Text>
+                      {japaneseEntry.alternatives.map((alternative, i) => (
+                        <Pressable
+                          key={i}
+                          accessibilityRole="button"
+                          accessibilityLabel={`Use ${alternative.reading}: ${alternative.senses[0]?.meanings[0] ?? alternative.dictionaryForm}`}
+                          onPress={() => {
+                            setReadingChoice({ key: choiceKey, entryId: alternative.entryId, reading: alternative.reading });
+                          }}
+                          style={{ paddingVertical: 6 }}
+                        >
+                          <Text style={[s.meaning, { color: theme.accent }]}>
+                            {alternative.reading} · {alternative.senses.flatMap((sense) => sense.meanings).slice(0, 2).join('; ')}
+                          </Text>
+                        </Pressable>
+                      ))}
+                    </View>
+                  )}
+                </View>
+              ) : entry ? (
                 <View style={s.meanings}>
                   {entry.meanings.map((m, i) => (
                     <Text

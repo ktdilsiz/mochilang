@@ -7,7 +7,8 @@ import {
   type LayoutChangeEvent,
 } from 'react-native';
 import { isReadableWord, type Token } from '@mochilang/dict';
-import { paginate } from '../lib/paginate';
+import { paginateLines, tokenWidth } from '../lib/paginate';
+import { speechSegments } from '../lib/reading';
 import { speakAsync, stop as stopSpeech } from '../lib/tts';
 import {
   FONT_SIZE_VALUES,
@@ -54,6 +55,13 @@ export function Reader({
   const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const playbackRun = useRef(0);
+  const stopPlayback = () => {
+    playbackRun.current++;
+    setIsPlaying(false);
+    setPlayingIndex(null);
+    stopSpeech();
+  };
   const [revealed, setRevealed] = useState<Set<string>>(() => new Set());
   const [selection, setSelection] = useState<{
     start: number;
@@ -77,8 +85,8 @@ export function Reader({
   }, [tokens]);
 
   const pages = useMemo(() => {
-    if (layout.width <= 0 || layout.height <= 0) return [tokens];
-    return paginate({
+    if (layout.width <= 0 || layout.height <= 0) return [[tokens]];
+    return paginateLines({
       tokens,
       hanziSize,
       pinyinSize,
@@ -90,25 +98,29 @@ export function Reader({
 
   const pageCount = pages.length;
   const safePage = Math.min(Math.max(0, page), pageCount - 1);
-  const currentTokens = pages[safePage] ?? [];
+  const currentLines = pages[safePage] ?? [];
+  const currentTokens = useMemo(() => currentLines.flat(), [currentLines]);
 
   // Stop playback on unmount or when the page / tokens change.
   useEffect(() => {
     if (!isPlaying) return;
+    const run = ++playbackRun.current;
     let cancelled = false;
     let i = 0;
     (async () => {
-      while (!cancelled && i < currentTokens.length) {
-        const t = currentTokens[i];
-        if (!isReadableWord(t.word, language)) {
-          i++;
-          continue;
-        }
-        setPlayingIndex(i);
-        await speakAsync(t.word, language);
+      const segments = speechSegments(currentTokens, language);
+      while (!cancelled && run === playbackRun.current && i < segments.length) {
+        const segment = segments[i];
+        setPlayingIndex(segment.start);
+        await speakAsync(segment.text, language, (charIndex) => {
+          if (cancelled || run !== playbackRun.current) return;
+          let relative = 0;
+          while (relative + 1 < segment.offsets.length && segment.offsets[relative + 1] <= charIndex) relative++;
+          setPlayingIndex(segment.start + relative);
+        });
         i++;
       }
-      if (!cancelled) {
+      if (!cancelled && run === playbackRun.current) {
         setPlayingIndex(null);
         setIsPlaying(false);
       }
@@ -133,26 +145,12 @@ export function Reader({
     }
   };
 
-  const togglePlay = () => setIsPlaying((p) => !p);
+  const togglePlay = () => isPlaying ? stopPlayback() : setIsPlaying(true);
 
   // Split the page's tokens into "logical lines" delimited by \n. Each line
   // becomes its own row View; tokens within a line still wrap on overflow.
   // This is more reliable than trying to force a flex break with width:100%.
-  const lines = useMemo(() => {
-    const out: { tokens: typeof currentTokens; index: number }[] = [
-      { tokens: [], index: 0 },
-    ];
-    let cursor = 0;
-    for (const t of currentTokens) {
-      if (t.word === '\n') {
-        cursor++;
-        out.push({ tokens: [], index: cursor });
-        continue;
-      }
-      out[out.length - 1].tokens.push(t);
-    }
-    return out;
-  }, [currentTokens]);
+  const lines = currentLines.map((line) => ({ tokens: line }));
 
   // Map each rendered token back to its position in `currentTokens` so the
   // play loop can highlight the right one across split lines.
@@ -175,6 +173,7 @@ export function Reader({
     rect: WordRect,
     tokenIndex: number
   ) => {
+    stopPlayback();
     if (selection) {
       // While selecting, taps extend the range instead of opening the bubble.
       setSelection({ start: selection.start, end: tokenIndex });
@@ -191,6 +190,7 @@ export function Reader({
   };
 
   const handleTokenLongPress = (tokenIndex: number) => {
+    stopPlayback();
     setSelection({ start: tokenIndex, end: tokenIndex });
   };
 
@@ -209,9 +209,10 @@ export function Reader({
             // Each \n we encountered earlier in currentTokens advances the
             // running index too.
             const lineNode = (
-              <View key={`line-${lineIdx}`} style={s.line}>
+              <View key={`line-${lineIdx}`} style={[s.line, { minHeight: lineHeight + (reservePinyinRow ? pinyinSize + 2 : 0) + 8 }]}>
                 {line.tokens.map((t) => {
                   const tokenIndex = runningIndex++;
+                  if (t.word === '\n') return null;
                   const selected = isSelected(tokenIndex);
                   if (!isReadableWord(t.word, language)) {
                     return (
@@ -248,6 +249,7 @@ export function Reader({
                       showToneColors={language === 'zh' && showToneColors}
                       isPlaying={playingIndex === tokenIndex}
                       isSelected={selected}
+                      maxWidth={Math.max(30, layout.width - PAGE_PADDING * 2 - line.tokens.filter((other) => other !== t).reduce((sum, other) => sum + tokenWidth(other, hanziSize, pinyinSize, reservePinyinRow), 0))}
                       theme={theme}
                       onPress={handleTokenPress}
                       onLongPress={handleTokenLongPress}
@@ -257,7 +259,6 @@ export function Reader({
               </View>
             );
             // Account for the \n token that separated this line from the next.
-            if (lineIdx < lines.length - 1) runningIndex++;
             return lineNode;
           })}
         </View>
@@ -413,6 +414,7 @@ function WordChip({
   showToneColors,
   isPlaying,
   isSelected,
+  maxWidth,
   theme,
   onPress,
   onLongPress,
@@ -427,6 +429,7 @@ function WordChip({
   showToneColors: boolean;
   isPlaying: boolean;
   isSelected: boolean;
+  maxWidth: number;
   theme: Theme;
   onPress: (token: Token, rect: WordRect, tokenIndex: number) => void;
   onLongPress: (tokenIndex: number) => void;
@@ -440,10 +443,15 @@ function WordChip({
   };
 
   const showPinyinRow = pinyinMode !== 'off';
+  const estimated = tokenWidth(token, hanziSize, pinyinSize, showPinyinRow);
+  const scale = Math.min(1, (maxWidth - 6) / Math.max(1, estimated - 6));
+  const ruby = token.japanese?.ruby;
 
   return (
     <Pressable
       ref={ref}
+      accessibilityRole="button"
+      accessibilityLabel={token.word}
       onPress={handle}
       onLongPress={() => onLongPress(tokenIndex)}
       delayLongPress={350}
@@ -456,6 +464,20 @@ function WordChip({
           !isSelected && { backgroundColor: theme.highlight },
       ]}
     >
+      {ruby ? (
+        <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
+          {ruby.map((part, i) => (
+            <View key={i} style={{ alignItems: 'center' }}>
+              {showPinyinRow && (
+                <View style={{ height: pinyinSize + 2, borderBottomWidth: !isRevealed && part.reading ? 1 : 0, borderBottomColor: theme.pinyin }}>
+                  <Text style={{ fontSize: pinyinSize * scale, lineHeight: pinyinSize + 2, color: isRevealed ? theme.pinyin : 'transparent' }}>{part.reading || ' '}</Text>
+                </View>
+              )}
+              <Text style={{ fontSize: hanziSize * scale, lineHeight, color: theme.hanzi }}>{part.text}</Text>
+            </View>
+          ))}
+        </View>
+      ) : <>
       {showPinyinRow && (
         <View style={[s.pinyinRow, { minHeight: pinyinSize + 2 }]}>
           {token.syllables.map((syl, i) => {
@@ -472,7 +494,8 @@ function WordChip({
                 style={[
                   s.pinyin,
                   {
-                    fontSize: pinyinSize,
+                    fontSize: pinyinSize * scale,
+                    lineHeight: pinyinSize + 2,
                     color: isRevealed ? color : 'transparent',
                     textDecorationLine: isRevealed ? 'none' : 'underline',
                     textDecorationColor: color,
@@ -489,11 +512,12 @@ function WordChip({
       <Text
         style={[
           s.hanzi,
-          { fontSize: hanziSize, lineHeight, color: theme.hanzi },
+          { fontSize: hanziSize * scale, lineHeight, color: theme.hanzi },
         ]}
       >
         {token.word}
       </Text>
+      </>}
     </Pressable>
   );
 }
@@ -508,7 +532,7 @@ const s = StyleSheet.create({
   column: { flexDirection: 'column' },
   line: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
+    flexWrap: 'nowrap',
     alignItems: 'flex-end',
     width: '100%',
   },
@@ -519,9 +543,9 @@ const s = StyleSheet.create({
     borderRadius: 6,
   },
   pinyinRow: { flexDirection: 'row' },
-  pinyin: { marginBottom: 2 },
+  pinyin: {},
   hanzi: {},
-  plain: { alignSelf: 'flex-end' },
+  plain: { alignSelf: 'flex-end', paddingBottom: 4 },
   footer: {
     height: FOOTER_HEIGHT,
     flexDirection: 'row',

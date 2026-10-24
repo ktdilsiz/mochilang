@@ -45,7 +45,7 @@ export function AboutScreen({ onBack }: Props) {
 
         <Section title="Japanese dictionary" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
-            Japanese readings and English definitions use the common-word edition
+            Japanese readings and English definitions use the full English edition
             of JMdict, copyright the Electronic Dictionary Research and Development
             Group (EDRDG), under CC BY-SA 4.0. The data is converted from
             scriptin/jmdict-simplified. Readings use dictionary defaults; names

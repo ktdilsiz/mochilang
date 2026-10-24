@@ -9,11 +9,11 @@ type Props = {
 const TIPS: { title: string; body: string }[] = [
   {
     title: 'Tap a word',
-    body: 'A thought bubble pops up with pinyin or Japanese kana readings, English meanings, and a 🔊 button to hear it. Uncommon Japanese words may have no dictionary entry.',
+    body: 'A thought bubble shows pinyin or Japanese readings, English meanings, and a 🔊 button. Japanese entries show grammar, the dictionary form of conjugated words, and alternate readings separately.',
   },
   {
     title: 'Save to vocab',
-    body: 'In the bubble, tap ★ to save a word. Find it later under Vocabulary in the menu.',
+    body: 'In the bubble, tap ★ to save a word. Japanese cards save the dictionary form with your original sentence. Find them under Vocabulary in the menu.',
   },
   {
     title: 'Translate a passage',

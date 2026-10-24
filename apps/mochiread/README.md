@@ -4,21 +4,31 @@ Chinese and Japanese reading app: choose a language, paste text, see pinyin
 or kana readings, tap a word for English definitions, and review flashcards.
 Chinese also supports character decomposition and writing practice.
 
-Japanese uses an offline common-word JMdict dictionary and TinySegmenter word
-boundaries, with lookup for common verb/adjective inflections. Names, rare
-words, and context-dependent readings may be missing or ambiguous. Passage
+Japanese uses the full English JMdict dictionary, compressed in the bundle and
+loaded on first Japanese lookup. Statistical word boundaries are reconciled
+with dictionary compounds, grammar and inflections. Particle senses lead their
+homographs; other entries/readings can be selected separately in the popup. Names and
+context-dependent readings may still be missing or ambiguous. Passage
 translation requires the network; dictionary lookup and readings do not.
-Saved texts and vocabulary remember their language; existing data migrates as
-Chinese. Voice choices are saved separately for Chinese and Japanese.
+Japanese furigana sits over kanji runs; kana/okurigana stay unannotated. Half-width
+kana is normalized for lookup while original text is retained. Passage audio
+speaks sentences, including punctuation. Vocabulary saves dictionary forms
+with the original sentence; old conjugated cards merge without losing review
+counts. Saved texts and vocabulary remember their language; legacy data defaults
+to Chinese. Voice choices are saved separately for Chinese and Japanese.
 
 Rebuild the pinned Japanese dataset from the repository root:
 
 ```bash
 pnpm --filter @mochilang/dict build:japanese
 pnpm --filter @mochilang/dict test
+pnpm --filter mochiread test:web
 ```
 
 See [JMDICT-NOTICE.md](./JMDICT-NOTICE.md) for source and licence details.
+The browser regression command exports the app to a temporary directory and
+uses headless Chrome. Set `MOCHIREAD_BROWSER_CHANNEL` for another Playwright
+browser channel, or `MOCHIREAD_WEB_DIR` to test an existing web export.
 
 Built with Expo + React Native, runs on iOS, Android, and the web.
 
@@ -96,5 +106,5 @@ This rewrites `app.json` with a fresh project ID under your Expo account.
 - **Pinyin & segmentation:** [pinyin-pro](https://github.com/zh-lx/pinyin-pro) · MIT
 - **Speech:** the OS Mandarin voice via `expo-speech`. No audio leaves the device.
 - **Japanese definitions/readings:** JMdict · EDRDG · CC BY-SA 4.0, converted
-  from scriptin/jmdict-simplified's common-English edition.
+  from scriptin/jmdict-simplified's full English edition.
 - **Japanese segmentation:** TinySegmenter · BSD.

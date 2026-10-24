@@ -15,7 +15,9 @@
  */
 import { pinyin, getNumOfTone } from 'pinyin-pro';
 import { isJapanese, tokenizeJapanese } from './japanese';
-export { isJapanese, isJapaneseGlyph, tokenizeJapanese, lookupJapanese } from './japanese';
+import type { JapaneseDefinition } from './japanese';
+export { isJapanese, isJapaneseGlyph, tokenizeJapanese, lookupJapanese, normalizeJapanese, alignJapaneseReading } from './japanese';
+export type { JapaneseDefinition, JapaneseSense, RubyPart } from './japanese';
 
 // --- Dictionary lookup -------------------------------------------------------
 
@@ -246,6 +248,7 @@ export type Token = {
   pinyin: string;
   /** Per-syllable pinyin + tone for CJK tokens; empty for plain text. */
   syllables: Syllable[];
+  japanese?: JapaneseDefinition;
 };
 
 export function tokenize(text: string, language: TextLanguage = 'zh'): Token[] {

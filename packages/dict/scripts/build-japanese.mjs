@@ -2,42 +2,38 @@ import { mkdtemp, readFile, writeFile, mkdir } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { gzipSync } from 'node:zlib';
 
-// Pin the dataset so a clean rebuild is reproducible. Use the common-word
-// edition to keep offline mobile startup/memory bounded.
+// Pin the full English edition. Store senses once per entry rather than
+// duplicating them for every spelling/reading combination.
 const release = '3.6.2+20261019180022';
-const name = `jmdict-eng-common-${release}.json`;
+const name = `jmdict-eng-${release}.json`;
 const url = `https://github.com/scriptin/jmdict-simplified/releases/download/${encodeURIComponent(release)}/${encodeURIComponent(name)}.tgz`;
 const temporary = await mkdtemp(join(tmpdir(), 'mochiread-jmdict-'));
 execFileSync('curl', ['-fL', '--retry', '2', url, '-o', join(temporary, 'source.tgz')], { stdio: 'inherit' });
-execFileSync('tar', ['-xzf', join(temporary, 'source.tgz'), '-C', temporary]);
 const members = execFileSync('tar', ['-tzf', join(temporary, 'source.tgz')], { encoding: 'utf8' }).trim().split('\n');
 const jsonFile = members.find((member) => member.endsWith('.json'));
-if (!jsonFile) throw new Error('JMdict archive contains no JSON dataset');
+if (!jsonFile || jsonFile.includes('/') || jsonFile.includes('..')) throw new Error('Unexpected JMdict archive');
+execFileSync('tar', ['-xzf', join(temporary, 'source.tgz'), '-C', temporary, jsonFile]);
 const source = JSON.parse(await readFile(join(temporary, jsonFile), 'utf8'));
-const rows = [];
+const entries = [];
 for (const word of source.words) {
-  for (const form of [...word.kanji.map((k) => k.text), ...word.kana.map((k) => k.text)]) {
-    for (const kana of word.kana) {
-      if (kana.appliesToKanji && !kana.appliesToKanji.includes('*') && !kana.appliesToKanji.includes(form) && form !== kana.text) continue;
-      if (word.kana.some((k) => k.text === form) && form !== kana.text) continue;
-      const senses = word.sense.filter((s) =>
-        (s.appliesToKanji.includes('*') || s.appliesToKanji.includes(form) || form === kana.text) &&
-        (s.appliesToKana.includes('*') || s.appliesToKana.includes(kana.text))
-      );
-      const meanings = [...new Set(senses.flatMap((s) => s.gloss.filter((g) => g.lang === 'eng').map((g) => g.text)))];
-      const pos = [...new Set(senses.flatMap((s) => s.partOfSpeech))];
-      if (meanings.length) rows.push({
-        value: [form, kana.text, meanings, pos],
-        // Prefer a common reading of the entry's primary spelling over an
-        // alternate spelling of another entry (本: ほん before 元/本: もと).
-        priority: (word.kanji[0]?.text === form ? 2 : 0) + (kana.common ? 2 : 0),
-      });
-    }
-  }
+  let inheritedPos = [];
+  const senses = word.sense.map((sense) => {
+    if (sense.partOfSpeech.length) inheritedPos = sense.partOfSpeech;
+    return [inheritedPos, sense.gloss.filter((g) => g.lang === 'eng').map((g) => g.text), sense.appliesToKanji, sense.appliesToKana];
+  }).filter((sense) => sense[1].length);
+  if (!senses.length) continue;
+  const forms = word.kanji.map((kanji, i) => [
+    kanji.text,
+    word.kana.filter((kana) => kana.appliesToKanji.includes('*') || kana.appliesToKanji.includes(kanji.text)).map((kana) => kana.text),
+    (kanji.common ? 8 : 0) + (i === 0 ? 2 : 0),
+  ]);
+  for (const kana of word.kana) forms.push([kana.text, [kana.text], kana.common ? 8 : 0]);
+  entries.push([word.id, forms.filter((form) => form[1].length), senses]);
 }
 const output = new URL('../src/data/japanese.json', import.meta.url);
 await mkdir(new URL('../src/data/', import.meta.url), { recursive: true });
-rows.sort((a, b) => b.priority - a.priority);
-await writeFile(output, JSON.stringify(rows.map((row) => row.value)));
-console.log(`Built ${rows.length} Japanese spelling/reading entries from JMdict ${release}.`);
+const compressed = gzipSync(JSON.stringify(entries), { level: 9 }).toString('base64');
+await writeFile(output, JSON.stringify({ release, compressed }));
+console.log(`Built ${entries.length} Japanese entries with separate senses/readings from JMdict ${release}.`);

@@ -70,7 +70,7 @@ export function FlashcardsScreen({ onBack }: Props) {
       <DeckRunner
         deck={deck}
         theme={theme}
-        onResult={(card, remembered) => recordReview(card.word, remembered, card.language)}
+        onResult={(card, remembered) => recordReview(card.word, remembered, card.language, card.entryId)}
       />
     </View>
   );
@@ -292,7 +292,7 @@ function SwipeCard({
         <Pressable
           onPress={(e) => {
             e.stopPropagation();
-            speak(card.word, card.language);
+            speak(card.language === 'ja' ? card.pinyin || card.word : card.word, card.language);
           }}
           hitSlop={8}
           style={({ pressed }) => [
@@ -316,6 +316,7 @@ function SwipeCard({
                 </Text>
               ))}
             </View>
+            {card.examples?.[0] && <Text style={{ color: theme.textMuted, fontSize: 14 }}>{card.examples[0].sentence}</Text>}
           </View>
         ) : (
           <Text style={[s.hint, { color: theme.textSubtle }]}>
