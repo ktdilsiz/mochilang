@@ -13,6 +13,7 @@ import { Hedgehog } from '../components/Hedgehog';
 import { useStore, type VocabEntry } from '../state';
 import { speak } from '../lib/tts';
 import { useTheme, type Theme } from '../theme';
+import { Pronunciation } from '../components/Pronunciation';
 
 type Props = {
   onBack: () => void;
@@ -200,6 +201,7 @@ function SwipeCard({
   onTap: () => void;
   onSwipe: (remembered: boolean) => void;
 }) {
+  const { prefs } = useStore();
   const pan = useRef(new Animated.ValueXY()).current;
   const exiting = useRef(false);
 
@@ -306,9 +308,7 @@ function SwipeCard({
         <Text style={[s.hanzi, { color: theme.text }]}>{card.word}</Text>
         {revealed ? (
           <View style={s.back}>
-            <Text style={[s.pinyin, { color: theme.textMuted }]}>
-              {card.pinyin}
-            </Text>
+            <Pronunciation reading={card.pinyin} language={card.language} mode={prefs.japaneseReadingMode} word={card.word} entryId={card.entryId} style={[s.pinyin, { color: theme.textMuted }]} />
             <View style={s.meanings}>
               {card.meanings.slice(0, 4).map((m, i) => (
                 <Text key={i} style={[s.meaning, { color: theme.text }]}>

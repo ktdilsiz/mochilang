@@ -10,8 +10,13 @@ with dictionary compounds, grammar and inflections. Particle senses lead their
 homographs; other entries/readings can be selected separately in the popup. Names and
 context-dependent readings may still be missing or ambiguous. Passage
 translation requires the network; dictionary lookup and readings do not.
-Japanese furigana sits over kanji runs; kana/okurigana stay unannotated. Half-width
-kana is normalized for lookup while original text is retained. Audio defaults
+
+In Display, choose Kana, Romaji, or Both (the Japanese default). Kana keeps
+aligned furigana; Romaji and Both show the full word's pronunciation, including
+kana-only words. For example, 小さな shows ちいさな / chiisana. Long vowels use
+plain spellings such as gakkou and koohii. Readings are derived for display;
+Japanese speech and saved cards retain their original kana readings.
+Half-width kana is normalized for lookup while original text is retained. Audio defaults
 to Read along: one spoken word and one highlight at a time, including Japanese
 particle pronunciations. Choose Natural sentences in Audio for continuous
 speech; it highlights the sentence unless the voice reports word boundaries.
@@ -116,3 +121,4 @@ This rewrites `app.json` with a fresh project ID under your Expo account.
 - **Japanese definitions/readings:** JMdict · EDRDG · CC BY-SA 4.0, converted
   from scriptin/jmdict-simplified's full English edition.
 - **Japanese segmentation:** TinySegmenter · BSD.
+- **Romaji:** WanaKana · MIT.

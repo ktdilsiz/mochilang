@@ -10,13 +10,14 @@ import { Hedgehog } from '../components/Hedgehog';
 import { useStore } from '../state';
 import { useTheme } from '../theme';
 import { speak } from '../lib/tts';
+import { Pronunciation } from '../components/Pronunciation';
 
 type Props = {
   onBack: () => void;
 };
 
 export function VocabularyScreen({ onBack }: Props) {
-  const { vocab, removeWord } = useStore();
+  const { vocab, removeWord, prefs } = useStore();
   const theme = useTheme();
 
   return (
@@ -52,9 +53,7 @@ export function VocabularyScreen({ onBack }: Props) {
                   pressed && { backgroundColor: theme.surfaceAlt },
                 ]}
               >
-                <Text style={[s.pinyin, { color: theme.textMuted }]}>
-                  {item.pinyin}
-                </Text>
+                <Pronunciation reading={item.pinyin} language={item.language} mode={prefs.japaneseReadingMode} word={item.word} entryId={item.entryId} style={[s.pinyin, { color: theme.textMuted }]} />
                 <Text style={[s.word, { color: theme.text }]}>
                   {item.word}
                 </Text>

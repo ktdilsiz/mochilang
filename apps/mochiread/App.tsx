@@ -185,6 +185,7 @@ function AppRoot() {
             language={language}
             fontSize={prefs.fontSize}
             pinyinMode={prefs.pinyinMode}
+            japaneseReadingMode={prefs.japaneseReadingMode}
             showToneColors={prefs.showToneColors}
             pagePlayback={prefs.pagePlayback}
             page={readingPage}

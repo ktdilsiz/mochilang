@@ -87,9 +87,11 @@ const server = http.createServer((request, response) => {
     assert.equal(await page.evaluate(() => localStorage.getItem('mochiread:reading:language')), 'ja');
 
     await menu('Display');
+    assert.equal(await page.getByRole('radio', { name: 'Both', exact: true }).getAttribute('aria-checked'), 'true');
     assert.equal(await page.getByText('Tone colors', { exact: true }).count(), 0);
     await page.getByText('Always show', { exact: true }).click();
     await page.getByLabel('Back', { exact: true }).click();
+    await page.getByRole('button', { name: '学校', exact: true }).getByText('gakkou', { exact: true }).waitFor();
     await edit('私は学校に行こう。今日は一日中雨です。生ビールとｺｰﾋｰを飲む。食べられなかった。');
     await page.getByRole('button', { name: 'は', exact: true }).first().click();
     await page.getByText('Particle', { exact: true }).first().waitFor();
@@ -181,6 +183,7 @@ const server = http.createServer((request, response) => {
     await page.getByText('Japanese test voice', { exact: true }).click();
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs')).japaneseVoiceId), 'test-ja');
     await page.getByLabel('Back', { exact: true }).click();
+    await edit('学校で食べられなかった。');
     await menu('Display');
     await page.getByText('XL', { exact: true }).click();
     await page.getByLabel('Back', { exact: true }).click();
@@ -194,6 +197,49 @@ const server = http.createServer((request, response) => {
     }
     await page.setViewportSize({ width: 430, height: 932 });
     await page.screenshot({ path: path.join(root, 'japanese-reader.png') });
+
+    // Beginner reading styles apply to the reader, popup, vocabulary and
+    // flashcards; only kana stays in storage and is sent to Japanese speech.
+    await edit('小さな猫です。');
+    const small = () => page.getByRole('button', { name: '小さな', exact: true });
+    await small().getByText('ちいさな', { exact: true }).waitFor();
+    await small().getByText('chiisana', { exact: true }).waitFor();
+    await menu('Display');
+    await page.getByRole('radio', { name: 'Kana', exact: true }).click();
+    await page.getByLabel('Back', { exact: true }).click();
+    assert.equal(await small().getByText('chiisana', { exact: true }).count(), 0);
+    await menu('Display');
+    await page.getByRole('radio', { name: 'Romaji', exact: true }).click();
+    await page.getByLabel('Back', { exact: true }).click();
+    await small().getByText('chiisana', { exact: true }).waitFor();
+    assert.equal(await small().getByText('ちいさな', { exact: true }).count(), 0);
+    await small().click();
+    await page.getByLabel('Save word', { exact: true }).click();
+    const smallCard = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')).find((entry) => entry.word === '小さな'));
+    assert.equal(smallCard.pinyin, 'ちいさな');
+    await page.mouse.click(410, 850);
+    await menu('Vocabulary');
+    await page.getByText('chiisana', { exact: true }).waitFor();
+    assert.equal(await page.getByText('ちいさな', { exact: true }).count(), 0);
+    await page.getByLabel('Back', { exact: true }).click();
+    await menu('Flashcards');
+    await page.getByText('Show', { exact: true }).click();
+    await page.getByText('taberu', { exact: true }).waitFor();
+    await page.getByText('Got it', { exact: true }).click();
+    await page.getByText('Show', { exact: true }).click();
+    await page.getByText('chiisana', { exact: true }).waitFor();
+    await page.getByLabel('Back', { exact: true }).click();
+    await menu('Display');
+    await page.getByRole('radio', { name: 'Both', exact: true }).click();
+    await page.getByLabel('Back', { exact: true }).click();
+    await menu('Flashcards');
+    await page.getByText('Show', { exact: true }).click();
+    await page.getByText('ちいさな', { exact: true }).waitFor();
+    await page.getByText('chiisana', { exact: true }).waitFor();
+    await page.reload();
+    await small().getByText('chiisana', { exact: true }).waitFor();
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs')).japaneseReadingMode), 'both');
+    await page.screenshot({ path: path.join(root, 'japanese-romaji.png') });
 
     if (process.env.MOCHIREAD_LIVE_TRANSLATION === '1') {
       await page.unroute('**/api/v1/**');

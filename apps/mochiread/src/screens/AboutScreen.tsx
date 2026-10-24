@@ -64,6 +64,10 @@ export function AboutScreen({ onBack }: Props) {
           </Text>
         </Section>
 
+        <Section title="Japanese romaji" theme={theme}>
+          <Text style={[s.copy, { color: theme.text }]}>Latin-letter readings use WanaKana (MIT), with pronunciation spellings for particles and greetings. Source: github.com/WaniKani/WanaKana</Text>
+        </Section>
+
         <Section title="Character decomposition" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
             The Explore view uses data from{' '}

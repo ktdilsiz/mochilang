@@ -16,12 +16,14 @@ export type SpeechRate = 'slow' | 'normal' | 'fast';
 export type PagePlayback = 'word' | 'sentence';
 export type PinyinMode = 'on' | 'off' | 'hint';
 export type ReadingLanguage = 'zh' | 'ja';
+export type JapaneseReadingMode = 'kana' | 'romaji' | 'both';
 
 export type ThemeMode = 'system' | 'light' | 'dark';
 
 export type Preferences = {
   fontSize: FontSize;
   pinyinMode: PinyinMode;
+  japaneseReadingMode: JapaneseReadingMode;
   showToneColors: boolean;
   themeMode: ThemeMode;
   speechRate: SpeechRate;
@@ -74,6 +76,7 @@ export type VocabEntry = {
 const DEFAULT_PREFS: Preferences = {
   fontSize: 'md',
   pinyinMode: 'hint',
+  japaneseReadingMode: 'both',
   showToneColors: true,
   themeMode: 'system',
   speechRate: 'normal',
@@ -93,6 +96,7 @@ function migratePrefs(raw: unknown): Partial<Preferences> {
     next.pinyinMode = next.showPinyin === false ? 'off' : 'hint';
   }
   delete next.showPinyin;
+  if (!['kana', 'romaji', 'both'].includes(String(next.japaneseReadingMode))) next.japaneseReadingMode = 'both';
   return next as Partial<Preferences>;
 }
 

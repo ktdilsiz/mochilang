@@ -18,6 +18,7 @@ import { isJapanese, tokenizeJapanese } from './japanese';
 import type { JapaneseDefinition } from './japanese';
 export { isJapanese, isJapaneseGlyph, tokenizeJapanese, lookupJapanese, normalizeJapanese, alignJapaneseReading } from './japanese';
 export type { JapaneseDefinition, JapaneseSense, RubyPart } from './japanese';
+export { romanizeJapanese } from './romaji';
 
 // --- Dictionary lookup -------------------------------------------------------
 

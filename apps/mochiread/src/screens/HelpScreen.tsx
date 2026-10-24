@@ -25,7 +25,7 @@ const TIPS: { title: string; body: string }[] = [
   },
   {
     title: 'Adjust display',
-    body: 'Open Display in the menu to change font size, theme, or hide readings. Character exploration and writing practice are available for Chinese.',
+    body: 'Open Display to change font size, theme, or hide readings. Japanese offers Kana, Romaji (Latin letters), or Both. Both is the default; choose Always show to keep readings visible. Character exploration and writing practice are available for Chinese.',
   },
   {
     title: 'New text',

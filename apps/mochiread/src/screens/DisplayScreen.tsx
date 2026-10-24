@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Switch, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
 import {
   useStore,
@@ -44,7 +44,7 @@ export function DisplayScreen({ language, onBack }: Props) {
   return (
     <View style={[s.root, { backgroundColor: theme.bg }]}>
       <AppHeader title="Display" leading="back" onLeadingPress={onBack} />
-      <View style={s.body}>
+      <ScrollView contentContainerStyle={s.body}>
         <Section title="Theme" theme={theme}>
           <View style={s.chipRow}>
             {THEME_OPTIONS.map((opt) => {
@@ -106,6 +106,28 @@ export function DisplayScreen({ language, onBack }: Props) {
         </Section>
 
         <Section title={language === 'ja' ? 'Readings' : 'Pinyin'} theme={theme}>
+          {language === 'ja' && (
+            <>
+              <Text style={{ color: theme.textMuted, fontSize: 13 }}>Reading style</Text>
+              <View style={s.chipRow}>
+                {(['kana', 'romaji', 'both'] as const).map((mode) => (
+                  <Pressable
+                    key={mode}
+                    accessibilityRole="radio"
+                    accessibilityLabel={mode === 'kana' ? 'Kana' : mode === 'romaji' ? 'Romaji' : 'Both'}
+                    accessibilityState={{ checked: prefs.japaneseReadingMode === mode }}
+                    aria-checked={prefs.japaneseReadingMode === mode}
+                    onPress={() => setPrefs({ japaneseReadingMode: mode })}
+                    style={[s.chip, { backgroundColor: prefs.japaneseReadingMode === mode ? theme.accent : theme.surfaceAlt }]}
+                  >
+                    <Text style={[s.chipText, { color: prefs.japaneseReadingMode === mode ? '#fff' : theme.text }]}>{mode === 'kana' ? 'Kana' : mode === 'romaji' ? 'Romaji' : 'Both'}</Text>
+                  </Pressable>
+                ))}
+              </View>
+              <Text style={{ color: theme.textMuted, fontSize: 12 }}>Kana: ちいさな · Romaji: chiisana. Both shows the two together.</Text>
+              <View style={[s.divider, { backgroundColor: theme.border }]} />
+            </>
+          )}
           <View style={s.pinyinList}>
             {PINYIN_OPTIONS.map((opt) => {
               const selected = prefs.pinyinMode === opt.id;
@@ -173,7 +195,7 @@ export function DisplayScreen({ language, onBack }: Props) {
             </>
           )}
         </Section>
-      </View>
+      </ScrollView>
     </View>
   );
 }

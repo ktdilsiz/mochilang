@@ -266,6 +266,9 @@ importers:
       tiny-segmenter:
         specifier: 0.2.0
         version: 0.2.0(patch_hash=596166e0bb0bf1886510eb4da996dce4a175bf3458f8374a6fbba66de031a209)
+      wanakana:
+        specifier: 5.3.1
+        version: 5.3.1
     devDependencies:
       '@types/tiny-segmenter':
         specifier: 0.2.0
@@ -4613,6 +4616,10 @@ packages:
 
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
+
+  wanakana@5.3.1:
+    resolution: {integrity: sha512-OSDqupzTlzl2LGyqTdhcXcl6ezMiFhcUwLBP8YKaBIbMYW1wAwDvupw2T9G9oVaKT9RmaSpyTXjxddFPUcFFIw==}
+    engines: {node: '>=12'}
 
   warn-once@0.1.1:
     resolution: {integrity: sha512-VkQZJbO8zVImzYFteBXvBOZEl1qL175WH8VmZcxF2fZAoudNhNDvHi+doCaAEdU2l2vtcIwa2zn0QK5+I1HQ3Q==}
@@ -10124,6 +10131,8 @@ snapshots:
   walker@1.0.8:
     dependencies:
       makeerror: 1.0.12
+
+  wanakana@5.3.1: {}
 
   warn-once@0.1.1: {}
 

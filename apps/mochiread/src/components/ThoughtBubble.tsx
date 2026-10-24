@@ -15,6 +15,8 @@ import { speak, stop } from '../lib/tts';
 import { useStore } from '../state';
 import type { ReadingLanguage } from '../state';
 import { useTheme } from '../theme';
+import { Pronunciation } from './Pronunciation';
+import { readingLines } from '../lib/reading-presentation';
 
 export type WordRect = { x: number; y: number; width: number; height: number };
 
@@ -122,7 +124,7 @@ export function ThoughtBubble({
 
   // Reserve space for the panel's header (pinyin + word + buttons) and
   // padding so the inner ScrollView gets the right amount to scroll within.
-  const HEADER_AND_PADDING = 110;
+  const HEADER_AND_PADDING = language === 'ja' && prefs.japaneseReadingMode === 'both' ? 128 : 110;
   const scrollMaxHeight = Math.max(60, availableHeight - HEADER_AND_PADDING);
 
   const entry = language === 'zh' ? lookup(word) : japaneseEntry;
@@ -189,9 +191,7 @@ export function ThoughtBubble({
           >
             <View style={s.headerRow}>
               <View style={s.headerText}>
-                <Text style={[s.pinyin, { color: theme.textMuted }]}>
-                  {displayReading}
-                </Text>
+                <Pronunciation reading={displayReading} language={language} mode={prefs.japaneseReadingMode} word={word} definition={japaneseEntry ?? undefined} style={[s.pinyin, { color: theme.textMuted }]} />
                 <Text style={[s.word, { color: theme.text }]}>{word}</Text>
                 {japaneseEntry?.conjugation && (
                   <Text style={{ color: theme.textMuted, fontSize: 12 }}>
@@ -266,7 +266,7 @@ export function ThoughtBubble({
                           style={{ paddingVertical: 6 }}
                         >
                           <Text style={[s.meaning, { color: theme.accent }]}>
-                            {alternative.reading} · {alternative.senses.flatMap((sense) => sense.meanings).slice(0, 2).join('; ')}
+                            {readingLines(alternative.reading, 'ja', prefs.japaneseReadingMode, alternative.dictionaryForm, alternative.entryId).join(' / ')} · {alternative.senses.flatMap((sense) => sense.meanings).slice(0, 2).join('; ')}
                           </Text>
                         </Pressable>
                       ))}

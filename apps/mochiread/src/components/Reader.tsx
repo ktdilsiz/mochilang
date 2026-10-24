@@ -9,6 +9,7 @@ import {
 import { isReadableWord, type Token } from '@mochilang/dict';
 import { paginateLines, tokenWidth } from '../lib/paginate';
 import { speechSegments, readAlongSegments, boundaryRange } from '../lib/reading';
+import { tokenReadingLines } from '../lib/reading-presentation';
 import { speakAsync, stop as stopSpeech } from '../lib/tts';
 import {
   FONT_SIZE_VALUES,
@@ -17,6 +18,7 @@ import {
   type PinyinMode,
   type ReadingLanguage,
   type PagePlayback,
+  type JapaneseReadingMode,
 } from '../state';
 import { useTheme, type Theme } from '../theme';
 import type { WordRect } from './ThoughtBubble';
@@ -26,6 +28,7 @@ type Props = {
   language: ReadingLanguage;
   fontSize: FontSize;
   pinyinMode: PinyinMode;
+  japaneseReadingMode: JapaneseReadingMode;
   showToneColors: boolean;
   pagePlayback: PagePlayback;
   page: number;
@@ -42,6 +45,7 @@ export function Reader({
   language,
   fontSize,
   pinyinMode,
+  japaneseReadingMode,
   showToneColors,
   pagePlayback,
   page,
@@ -54,6 +58,8 @@ export function Reader({
   const pinyinSize = PINYIN_SIZE_VALUES[fontSize];
   const lineHeight = Math.round(hanziSize * 1.25);
   const reservePinyinRow = pinyinMode !== 'off';
+  const readingMode = language === 'ja' ? japaneseReadingMode : undefined;
+  const readingRows = readingMode === 'both' ? 2 : 1;
 
   const [layout, setLayout] = useState({ width: 0, height: 0 });
   const [playingRange, setPlayingRange] = useState<[number, number] | null>(null);
@@ -94,10 +100,11 @@ export function Reader({
       hanziSize,
       pinyinSize,
       reservePinyinRow,
+      japaneseReadingMode: readingMode,
       viewWidth: layout.width - PAGE_PADDING * 2,
       viewHeight: layout.height - PAGE_PADDING * 2,
     });
-  }, [tokens, hanziSize, pinyinSize, reservePinyinRow, layout.width, layout.height]);
+  }, [tokens, hanziSize, pinyinSize, reservePinyinRow, readingMode, layout.width, layout.height]);
 
   const pageCount = pages.length;
   const safePage = Math.min(Math.max(0, page), pageCount - 1);
@@ -212,7 +219,7 @@ export function Reader({
             // Each \n we encountered earlier in currentTokens advances the
             // running index too.
             const lineNode = (
-              <View key={`line-${lineIdx}`} style={[s.line, { minHeight: lineHeight + (reservePinyinRow ? pinyinSize + 2 : 0) + 8 }]}>
+              <View key={`line-${lineIdx}`} style={[s.line, { minHeight: lineHeight + (reservePinyinRow ? (pinyinSize + 2) * readingRows : 0) + 8 }]}>
                 {line.tokens.map((t) => {
                   const tokenIndex = runningIndex++;
                   if (t.word === '\n') return null;
@@ -248,11 +255,12 @@ export function Reader({
                       pinyinSize={pinyinSize}
                       lineHeight={lineHeight}
                       pinyinMode={pinyinMode}
+                      readingMode={readingMode}
                       isRevealed={isRevealed}
                       showToneColors={language === 'zh' && showToneColors}
                       isPlaying={!!playingRange && playingRange[0] <= tokenIndex && tokenIndex <= playingRange[1]}
                       isSelected={selected}
-                      maxWidth={Math.max(30, layout.width - PAGE_PADDING * 2 - line.tokens.filter((other) => other !== t).reduce((sum, other) => sum + tokenWidth(other, hanziSize, pinyinSize, reservePinyinRow), 0))}
+                      maxWidth={Math.max(30, layout.width - PAGE_PADDING * 2 - line.tokens.filter((other) => other !== t).reduce((sum, other) => sum + tokenWidth(other, hanziSize, pinyinSize, reservePinyinRow, readingMode), 0))}
                       theme={theme}
                       onPress={handleTokenPress}
                       onLongPress={handleTokenLongPress}
@@ -413,6 +421,7 @@ function WordChip({
   pinyinSize,
   lineHeight,
   pinyinMode,
+  readingMode,
   isRevealed,
   showToneColors,
   isPlaying,
@@ -428,6 +437,7 @@ function WordChip({
   pinyinSize: number;
   lineHeight: number;
   pinyinMode: PinyinMode;
+  readingMode?: JapaneseReadingMode;
   isRevealed: boolean;
   showToneColors: boolean;
   isPlaying: boolean;
@@ -446,7 +456,7 @@ function WordChip({
   };
 
   const showPinyinRow = pinyinMode !== 'off';
-  const estimated = tokenWidth(token, hanziSize, pinyinSize, showPinyinRow);
+  const estimated = tokenWidth(token, hanziSize, pinyinSize, showPinyinRow, readingMode);
   const scale = Math.min(1, (maxWidth - 6) / Math.max(1, estimated - 6));
   const ruby = token.japanese?.ruby;
 
@@ -469,7 +479,19 @@ function WordChip({
           !isSelected && { backgroundColor: theme.highlight },
       ]}
     >
-      {ruby ? (
+      {readingMode && readingMode !== 'kana' ? (
+        <View style={{ alignItems: 'center' }}>
+          {showPinyinRow && Array.from({ length: readingMode === 'both' ? 2 : 1 }, (_, i) => {
+            const reading = tokenReadingLines(token, readingMode)[i] ?? '';
+            return (
+              <View key={i} style={{ height: pinyinSize + 2, borderBottomWidth: !isRevealed && reading ? 1 : 0, borderBottomColor: theme.pinyin }}>
+                <Text style={{ fontSize: pinyinSize * scale, lineHeight: pinyinSize + 2, color: isRevealed ? theme.pinyin : 'transparent' }}>{reading || ' '}</Text>
+              </View>
+            );
+          })}
+          <Text style={{ fontSize: hanziSize * scale, lineHeight, color: theme.hanzi }}>{token.word}</Text>
+        </View>
+      ) : ruby ? (
         <View style={{ flexDirection: 'row', alignItems: 'flex-end' }}>
           {ruby.map((part, i) => (
             <View key={i} style={{ alignItems: 'center' }}>
