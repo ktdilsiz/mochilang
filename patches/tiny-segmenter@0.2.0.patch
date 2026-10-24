@@ -1,0 +1,14 @@
+diff --git a/lib/index.js b/lib/index.js
+index 0000000..1111111 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -15,8 +15,7 @@ function TinySegmenter() {
+     }
+     this.chartype_ = [];
+     for (var i in patterns) {
+-        var regexp = new RegExp;
+-        regexp.compile(i)
++        var regexp = new RegExp(i);
+         this.chartype_.push([regexp, patterns[i]]);
+     }
+ 

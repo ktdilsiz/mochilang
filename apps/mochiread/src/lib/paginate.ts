@@ -1,5 +1,5 @@
 import type { Token } from '@mochilang/dict';
-import { isCJK } from '@mochilang/dict';
+import { isCJK, isJapaneseGlyph } from '@mochilang/dict';
 
 type Args = {
   tokens: Token[];
@@ -69,7 +69,10 @@ export function paginate({
       }
       continue;
     }
-    const w = estimateWidth(t.word, hanziSize);
+    const w = Math.max(
+      estimateWidth(t.word, hanziSize),
+      reservePinyinRow ? estimateWidth(t.pinyin, pinyinSize) : 0
+    );
     if (w + lineWidth > viewWidth && lineBuf.length > 0) {
       finishLine();
     }
@@ -87,7 +90,7 @@ export function paginate({
 function estimateWidth(word: string, hanziSize: number): number {
   let w = 0;
   for (const ch of word) {
-    w += isCJK(ch) ? hanziSize : hanziSize * 0.55;
+    w += isCJK(ch) || isJapaneseGlyph(ch) ? hanziSize : hanziSize * 0.55;
   }
   return w + TOKEN_HORIZONTAL_PADDING;
 }

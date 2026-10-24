@@ -7,17 +7,25 @@ import {
   View,
 } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import type { ReadingLanguage } from '../state';
 import { useTheme } from '../theme';
 
 type Props = {
   initialText: string;
+  initialLanguage: ReadingLanguage;
   onCancel: () => void;
-  onCommit: (text: string) => void;
+  onCommit: (text: string, language: ReadingLanguage) => void;
 };
 
-export function EditorScreen({ initialText, onCancel, onCommit }: Props) {
+export function EditorScreen({
+  initialText,
+  initialLanguage,
+  onCancel,
+  onCommit,
+}: Props) {
   const theme = useTheme();
   const [draft, setDraft] = useState(initialText);
+  const [language, setLanguage] = useState<ReadingLanguage>(initialLanguage);
   const isEmpty = !draft.trim();
 
   return (
@@ -28,7 +36,7 @@ export function EditorScreen({ initialText, onCancel, onCommit }: Props) {
         onLeadingPress={onCancel}
         trailing={
           <Pressable
-            onPress={() => !isEmpty && onCommit(draft)}
+            onPress={() => !isEmpty && onCommit(draft, language)}
             disabled={isEmpty}
             hitSlop={8}
           >
@@ -44,13 +52,43 @@ export function EditorScreen({ initialText, onCancel, onCommit }: Props) {
         }
       />
       <View style={s.body}>
+        <View style={s.languageRow}>
+          {(['zh', 'ja'] as const).map((id) => {
+            const selected = language === id;
+            return (
+              <Pressable
+                key={id}
+                onPress={() => setLanguage(id)}
+                style={[
+                  s.languageButton,
+                  {
+                    backgroundColor: selected
+                      ? theme.accent
+                      : theme.surface,
+                    borderColor: selected ? theme.accent : theme.border,
+                  },
+                ]}
+              >
+                <Text
+                  style={{ color: selected ? '#fff' : theme.text }}
+                >
+                  {id === 'zh' ? 'Chinese' : 'Japanese'}
+                </Text>
+              </Pressable>
+            );
+          })}
+        </View>
         <Text style={[s.label, { color: theme.textMuted }]}>
-          Paste Chinese text to read
+          Paste {language === 'ja' ? 'Japanese' : 'Chinese'} text to read
         </Text>
         <TextInput
           multiline
           autoFocus
-          placeholder="例如：你好，世界！"
+          placeholder={
+            language === 'ja'
+              ? '例：こんにちは、世界！'
+              : '例如：你好，世界！'
+          }
           placeholderTextColor={theme.textSubtle}
           style={[
             s.input,
@@ -64,7 +102,9 @@ export function EditorScreen({ initialText, onCancel, onCommit }: Props) {
           onChangeText={setDraft}
         />
         <Text style={[s.attribution, { color: theme.textSubtle }]}>
-          Definitions: CC-CEDICT · CC BY-SA 4.0
+          {language === 'ja'
+            ? 'Definitions: JMdict · EDRDG · CC BY-SA 4.0'
+            : 'Definitions: CC-CEDICT · CC BY-SA 4.0'}
         </Text>
       </View>
     </View>
@@ -74,6 +114,13 @@ export function EditorScreen({ initialText, onCancel, onCommit }: Props) {
 const s = StyleSheet.create({
   root: { flex: 1 },
   body: { flex: 1, padding: 20, gap: 12 },
+  languageRow: { flexDirection: 'row', gap: 8 },
+  languageButton: {
+    borderWidth: 1,
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+  },
   label: { fontSize: 14 },
   input: {
     flex: 1,

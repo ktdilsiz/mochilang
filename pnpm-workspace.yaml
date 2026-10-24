@@ -1,11 +1,14 @@
 packages:
   - "apps/*"
   - "packages/*"
+patchedDependencies:
+  tiny-segmenter@0.2.0: patches/tiny-segmenter@0.2.0.patch
 overrides:
   react: 19.3.0
   react-dom: 19.3.0
 allowBuilds:
   dtrace-provider: true
+  esbuild@0.28.2: true
 minimumReleaseAgeExclude:
   - '@expo/cli@58.1.15'
   - '@expo/config@58.0.8'

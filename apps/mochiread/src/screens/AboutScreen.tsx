@@ -24,7 +24,7 @@ export function AboutScreen({ onBack }: Props) {
           <Hedgehog size={108} color={theme.text} strokeWidth={3.5} />
           <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
           <Text style={[s.tagline, { color: theme.textMuted }]}>
-            Read Chinese, tap a word.
+            Read Chinese or Japanese, tap a word.
           </Text>
           <Text style={[s.version, { color: theme.textSubtle }]}>
             Version {VERSION}
@@ -40,6 +40,19 @@ export function AboutScreen({ onBack }: Props) {
           </Text>
           <Text style={[s.copy, { color: theme.text }]}>
             Source: mdbg.net/chinese/dictionary?page=cc-cedict
+          </Text>
+        </Section>
+
+        <Section title="Japanese dictionary" theme={theme}>
+          <Text style={[s.copy, { color: theme.text }]}>
+            Japanese readings and English definitions use the common-word edition
+            of JMdict, copyright the Electronic Dictionary Research and Development
+            Group (EDRDG), under CC BY-SA 4.0. The data is converted from
+            scriptin/jmdict-simplified. Readings use dictionary defaults; names
+            and readings that depend on context may differ.
+          </Text>
+          <Text style={[s.copy, { color: theme.text }]}>
+            Source: edrdg.org · github.com/scriptin/jmdict-simplified
           </Text>
         </Section>
 
@@ -66,7 +79,7 @@ export function AboutScreen({ onBack }: Props) {
 
         <Section title="Speech" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
-            Spoken Chinese uses your device's built-in Mandarin voice via the
+            Chinese and Japanese use your device's language voices via the
             system text-to-speech engine. No audio is sent to any server.
           </Text>
         </Section>

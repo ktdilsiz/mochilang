@@ -35,7 +35,7 @@ export function VocabularyScreen({ onBack }: Props) {
       ) : (
         <FlatList
           data={vocab}
-          keyExtractor={(e) => e.word}
+          keyExtractor={(e) => `${e.language}:${e.word}`}
           contentContainerStyle={s.list}
           ItemSeparatorComponent={() => <View style={s.sep} />}
           renderItem={({ item }) => (
@@ -46,7 +46,7 @@ export function VocabularyScreen({ onBack }: Props) {
               ]}
             >
               <Pressable
-                onPress={() => speak(item.word)}
+                onPress={() => speak(item.word, item.language)}
                 style={({ pressed }) => [
                   s.body,
                   pressed && { backgroundColor: theme.surfaceAlt },
@@ -66,7 +66,7 @@ export function VocabularyScreen({ onBack }: Props) {
                 </Text>
               </Pressable>
               <Pressable
-                onPress={() => removeWord(item.word)}
+                onPress={() => removeWord(item.word, item.language)}
                 hitSlop={10}
                 style={({ pressed }) => [
                   s.trash,

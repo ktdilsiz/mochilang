@@ -7,7 +7,16 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "scripts": {
+    "build:japanese": "node scripts/build-japanese.mjs",
+    "test": "tsx --test src/*.test.ts"
+  },
   "dependencies": {
-    "pinyin-pro": "^3.28.1"
+    "pinyin-pro": "^3.28.1",
+    "tiny-segmenter": "0.2.0"
+  },
+  "devDependencies": {
+    "@types/tiny-segmenter": "0.2.0",
+    "tsx": "^4.23.15"
   }
 }

@@ -13,6 +13,7 @@ import { HSK4_SENTENCES } from './data/hsk4-sentences';
 export type FontSize = 'sm' | 'md' | 'lg' | 'xl';
 export type SpeechRate = 'slow' | 'normal' | 'fast';
 export type PinyinMode = 'on' | 'off' | 'hint';
+export type ReadingLanguage = 'zh' | 'ja';
 
 export type ThemeMode = 'system' | 'light' | 'dark';
 
@@ -24,6 +25,7 @@ export type Preferences = {
   speechRate: SpeechRate;
   autoPlay: boolean;
   voiceId?: string;
+  japaneseVoiceId?: string;
 };
 
 export const SPEECH_RATE_VALUES: Record<SpeechRate, number> = {
@@ -36,6 +38,7 @@ export type LibraryEntry = {
   id: string;
   title: string;
   text: string;
+  language: ReadingLanguage;
   createdAt: number;
 };
 
@@ -48,6 +51,7 @@ export type DayStats = {
 
 export type VocabEntry = {
   word: string;
+  language: ReadingLanguage;
   pinyin: string;
   meanings: string[];
   savedAt: number;
@@ -118,14 +122,14 @@ type Store = {
   prefs: Preferences;
   setPrefs: (patch: Partial<Preferences>) => void;
   library: LibraryEntry[];
-  saveText: (text: string) => LibraryEntry;
+  saveText: (text: string, language: ReadingLanguage) => LibraryEntry;
   removeText: (id: string) => void;
   reorderLibrary: (next: LibraryEntry[]) => void;
   vocab: VocabEntry[];
-  saveWord: (entry: Pick<VocabEntry, 'word' | 'pinyin' | 'meanings'>) => void;
-  removeWord: (word: string) => void;
-  isWordSaved: (word: string) => boolean;
-  recordReview: (word: string, remembered: boolean) => void;
+  saveWord: (entry: Pick<VocabEntry, 'word' | 'language' | 'pinyin' | 'meanings'>) => void;
+  removeWord: (word: string, language?: ReadingLanguage) => void;
+  isWordSaved: (word: string, language?: ReadingLanguage) => boolean;
+  recordReview: (word: string, remembered: boolean, language?: ReadingLanguage) => void;
   stats: DayStats[];
   recordWordTap: () => void;
   recordReadingTime: (seconds: number) => void;
@@ -177,7 +181,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
           ORIGINAL_SEED_IDS.forEach((id) => introduced.add(id));
         }
 
-        const existingLibrary: LibraryEntry[] = l ? JSON.parse(l) : [];
+        const parsedLibrary = (l ? JSON.parse(l) : []) as Partial<LibraryEntry>[];
+        const existingLibrary = parsedLibrary.map(
+          (entry: Partial<LibraryEntry>): LibraryEntry => ({
+            id: entry.id ?? String(Date.now()),
+            title: entry.title ?? makeTitle(entry.text ?? ''),
+            text: entry.text ?? '',
+            language: entry.language === 'ja' ? 'ja' : 'zh',
+            createdAt: entry.createdAt ?? Date.now(),
+          })
+        );
         // Drop any deprecated seed entries we no longer want.
         const deprecatedSet = new Set(DEPRECATED_SEED_IDS);
         const cleaned = existingLibrary.filter(
@@ -208,6 +221,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
               .filter((e): e is Partial<VocabEntry> & { word: string } => !!e?.word)
               .map((e) => ({
                 word: e.word,
+                language: e.language === 'ja' ? 'ja' : 'zh',
                 pinyin: e.pinyin ?? '',
                 meanings: e.meanings ?? [],
                 savedAt: e.savedAt ?? Date.now(),
@@ -245,13 +259,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       prefs,
       setPrefs: (patch) => setPrefsState((prev) => ({ ...prev, ...patch })),
       library,
-      saveText: (text) => {
-        const existing = library.find((e) => e.text === text);
+      saveText: (text, language) => {
+        const existing = library.find(
+          (e) => e.text === text && e.language === language
+        );
         if (existing) return existing;
         const entry: LibraryEntry = {
           id: String(Date.now()) + Math.random().toString(36).slice(2, 6),
           title: makeTitle(text),
           text,
+          language,
           createdAt: Date.now(),
         };
         setLibrary((prev) => [entry, ...prev]);
@@ -262,7 +279,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       vocab,
       saveWord: (entry) =>
         setVocab((prev) => {
-          if (prev.some((v) => v.word === entry.word)) return prev;
+          if (
+            prev.some(
+              (v) => v.word === entry.word && v.language === entry.language
+            )
+          )
+            return prev;
           const now = Date.now();
           return [
             {
@@ -277,12 +299,19 @@ export function StoreProvider({ children }: { children: ReactNode }) {
             ...prev,
           ];
         }),
-      removeWord: (word) =>
-        setVocab((prev) => prev.filter((v) => v.word !== word)),
-      isWordSaved: (word) => vocab.some((v) => v.word === word),
-      recordReview: (word, remembered) =>
+      removeWord: (word, language = 'zh') =>
         setVocab((prev) =>
-          prev.map((v) => (v.word === word ? applySm2(v, remembered) : v))
+          prev.filter((v) => v.word !== word || v.language !== language)
+        ),
+      isWordSaved: (word, language = 'zh') =>
+        vocab.some((v) => v.word === word && v.language === language),
+      recordReview: (word, remembered, language = 'zh') =>
+        setVocab((prev) =>
+          prev.map((v) =>
+            v.word === word && v.language === language
+              ? applySm2(v, remembered)
+              : v
+          )
         ),
       stats,
       recordWordTap: () =>
@@ -423,28 +452,34 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
     {
       title: 'Greeting',
       text: '你好，世界！我喜欢吃苹果。今天天气很好。',
+      language: 'zh',
     },
     {
       title: 'Coffee with a friend',
       text: '今天我去咖啡店喝咖啡。我的朋友也来了。我们一起聊天，很开心。',
+      language: 'zh',
     },
     {
       title: 'About me',
       text: '我叫小明，是中国人。我在北京工作，做老师。我喜欢看书和听音乐。',
+      language: 'zh',
     },
     {
       title: 'Proverb · 路遥知马力',
       text: '路遥知马力，日久见人心。',
+      language: 'zh',
     },
     {
       title: '静夜思 · Li Bai',
       text: '床前明月光，疑是地上霜。举头望明月，低头思故乡。',
+      language: 'zh',
     },
   ];
   const baseSeeds = items.map((item, i) => ({
     id: `seed-${i + 1}`,
     title: item.title,
     text: item.text,
+    language: item.language,
     createdAt: now - i * 60_000,
   }));
 
@@ -452,6 +487,7 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
     id: 'seed-hsk3-all',
     title: `HSK 3 · 300 example sentences`,
     text: HSK3_SENTENCES.join('\n'),
+    language: 'zh',
     createdAt: now - (items.length + 1) * 60_000,
   };
 
@@ -459,10 +495,19 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
     id: 'seed-hsk4-all',
     title: `HSK 4 · 600 example sentences`,
     text: HSK4_SENTENCES.join('\n'),
+    language: 'zh',
     createdAt: now - (items.length + 2) * 60_000,
   };
 
-  return [...baseSeeds, hsk3All, hsk4All];
+  const japaneseWelcome: LibraryEntry = {
+    id: 'seed-ja-1',
+    title: 'Japanese welcome',
+    text: 'こんにちは、世界！私は日本語を勉強しています。今日はいい天気です。',
+    language: 'ja',
+    createdAt: now - (items.length + 3) * 60_000,
+  };
+
+  return [...baseSeeds, japaneseWelcome, hsk3All, hsk4All];
 })();
 
 export const FONT_SIZE_VALUES: Record<FontSize, number> = {

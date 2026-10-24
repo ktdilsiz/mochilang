@@ -25,7 +25,8 @@ export function FlashcardsScreen({ onBack }: Props) {
   const { vocab, recordReview } = useStore();
   const theme = useTheme();
 
-  const deck = useMemo(() => buildDeck(vocab), [vocab]);
+  // Keep the session stable while each review moves a card's due date.
+  const [deck] = useState(() => buildDeck(vocab));
 
   if (deck.length === 0) {
     const hasAnyVocab = vocab.length > 0;
@@ -69,7 +70,7 @@ export function FlashcardsScreen({ onBack }: Props) {
       <DeckRunner
         deck={deck}
         theme={theme}
-        onResult={(word, remembered) => recordReview(word, remembered)}
+        onResult={(card, remembered) => recordReview(card.word, remembered, card.language)}
       />
     </View>
   );
@@ -82,7 +83,7 @@ function DeckRunner({
 }: {
   deck: VocabEntry[];
   theme: Theme;
-  onResult: (word: string, remembered: boolean) => void;
+  onResult: (card: VocabEntry, remembered: boolean) => void;
 }) {
   const [index, setIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
@@ -140,7 +141,7 @@ function DeckRunner({
   }
 
   const handleResult = (remembered: boolean) => {
-    onResult(card.word, remembered);
+    onResult(card, remembered);
     setStats((s) => ({
       remembered: s.remembered + (remembered ? 1 : 0),
       forgotten: s.forgotten + (remembered ? 0 : 1),
@@ -155,7 +156,7 @@ function DeckRunner({
         {index + 1} / {deck.length}
       </Text>
       <SwipeCard
-        key={card.word + index}
+        key={card.language + card.word + index}
         card={card}
         revealed={revealed}
         theme={theme}
@@ -291,7 +292,7 @@ function SwipeCard({
         <Pressable
           onPress={(e) => {
             e.stopPropagation();
-            speak(card.word);
+            speak(card.word, card.language);
           }}
           hitSlop={8}
           style={({ pressed }) => [

@@ -4,11 +4,13 @@ import {
   useStore,
   type FontSize,
   type PinyinMode,
+  type ReadingLanguage,
   type ThemeMode,
 } from '../state';
 import { useTheme } from '../theme';
 
 type Props = {
+  language: ReadingLanguage;
   onBack: () => void;
 };
 
@@ -35,7 +37,7 @@ const PINYIN_OPTIONS: { id: PinyinMode; label: string; hint: string }[] = [
   { id: 'off', label: 'Hide', hint: 'No pinyin row. Hanzi only.' },
 ];
 
-export function DisplayScreen({ onBack }: Props) {
+export function DisplayScreen({ language, onBack }: Props) {
   const { prefs, setPrefs } = useStore();
   const theme = useTheme();
 
@@ -103,7 +105,7 @@ export function DisplayScreen({ onBack }: Props) {
           </View>
         </Section>
 
-        <Section title="Pinyin" theme={theme}>
+        <Section title={language === 'ja' ? 'Readings' : 'Pinyin'} theme={theme}>
           <View style={s.pinyinList}>
             {PINYIN_OPTIONS.map((opt) => {
               const selected = prefs.pinyinMode === opt.id;
@@ -129,7 +131,12 @@ export function DisplayScreen({ onBack }: Props) {
                     <Text
                       style={[s.pinyinHint, { color: theme.textMuted }]}
                     >
-                      {opt.hint}
+                      {language === 'ja'
+                        ? opt.hint
+                            .replace(/pinyin/gi, 'reading')
+                            .replace(/Hanzi/g, 'Japanese text')
+                            .replace('colored underline', 'underline')
+                        : opt.hint}
                     </Text>
                   </View>
                   <View
@@ -153,14 +160,18 @@ export function DisplayScreen({ onBack }: Props) {
               );
             })}
           </View>
-          <View style={[s.divider, { backgroundColor: theme.border }]} />
-          <ToggleRow
-            label="Tone colors"
-            hint="Color each pinyin syllable (or its underline hint) by its tone."
-            value={prefs.showToneColors}
-            onChange={(v) => setPrefs({ showToneColors: v })}
-            theme={theme}
-          />
+          {language === 'zh' && (
+            <>
+              <View style={[s.divider, { backgroundColor: theme.border }]} />
+              <ToggleRow
+                label="Tone colors"
+                hint="Color each pinyin syllable (or its underline hint) by its tone."
+                value={prefs.showToneColors}
+                onChange={(v) => setPrefs({ showToneColors: v })}
+                theme={theme}
+              />
+            </>
+          )}
         </Section>
       </View>
     </View>

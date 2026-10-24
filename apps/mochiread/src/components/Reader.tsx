@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, type ComponentRef } from 'react';
 import {
   Pressable,
   StyleSheet,
@@ -6,7 +6,7 @@ import {
   View,
   type LayoutChangeEvent,
 } from 'react-native';
-import { isChinese, type Token } from '@mochilang/dict';
+import { isReadableWord, type Token } from '@mochilang/dict';
 import { paginate } from '../lib/paginate';
 import { speakAsync, stop as stopSpeech } from '../lib/tts';
 import {
@@ -14,12 +14,14 @@ import {
   PINYIN_SIZE_VALUES,
   type FontSize,
   type PinyinMode,
+  type ReadingLanguage,
 } from '../state';
 import { useTheme, type Theme } from '../theme';
 import type { WordRect } from './ThoughtBubble';
 
 type Props = {
   tokens: Token[];
+  language: ReadingLanguage;
   fontSize: FontSize;
   pinyinMode: PinyinMode;
   showToneColors: boolean;
@@ -34,6 +36,7 @@ const FOOTER_HEIGHT = 44;
 
 export function Reader({
   tokens,
+  language,
   fontSize,
   pinyinMode,
   showToneColors,
@@ -68,6 +71,9 @@ export function Reader({
   // Reset per-word reveals when the underlying text changes.
   useEffect(() => {
     setRevealed(new Set());
+    setIsPlaying(false);
+    setPlayingIndex(null);
+    stopSpeech();
   }, [tokens]);
 
   const pages = useMemo(() => {
@@ -94,12 +100,12 @@ export function Reader({
     (async () => {
       while (!cancelled && i < currentTokens.length) {
         const t = currentTokens[i];
-        if (!isChinese(t.word)) {
+        if (!isReadableWord(t.word, language)) {
           i++;
           continue;
         }
         setPlayingIndex(i);
-        await speakAsync(t.word);
+        await speakAsync(t.word, language);
         i++;
       }
       if (!cancelled) {
@@ -111,7 +117,7 @@ export function Reader({
       cancelled = true;
       stopSpeech();
     };
-  }, [isPlaying, currentTokens]);
+  }, [isPlaying, currentTokens, language]);
 
   // Stop & reset when the page changes.
   useEffect(() => {
@@ -207,7 +213,7 @@ export function Reader({
                 {line.tokens.map((t) => {
                   const tokenIndex = runningIndex++;
                   const selected = isSelected(tokenIndex);
-                  if (!isChinese(t.word)) {
+                  if (!isReadableWord(t.word, language)) {
                     return (
                       <Text
                         key={tokenIndex}
@@ -239,7 +245,7 @@ export function Reader({
                       lineHeight={lineHeight}
                       pinyinMode={pinyinMode}
                       isRevealed={isRevealed}
-                      showToneColors={showToneColors}
+                      showToneColors={language === 'zh' && showToneColors}
                       isPlaying={playingIndex === tokenIndex}
                       isSelected={selected}
                       theme={theme}
@@ -425,7 +431,7 @@ function WordChip({
   onPress: (token: Token, rect: WordRect, tokenIndex: number) => void;
   onLongPress: (tokenIndex: number) => void;
 }) {
-  const ref = useRef<View>(null);
+  const ref = useRef<ComponentRef<typeof View>>(null);
 
   const handle = () => {
     ref.current?.measureInWindow((x, y, width, height) => {
@@ -451,7 +457,7 @@ function WordChip({
       ]}
     >
       {showPinyinRow && (
-        <View style={s.pinyinRow}>
+        <View style={[s.pinyinRow, { minHeight: pinyinSize + 2 }]}>
           {token.syllables.map((syl, i) => {
             const color = showToneColors
               ? theme.tones[syl.tone] ?? theme.pinyin

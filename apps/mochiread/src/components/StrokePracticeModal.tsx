@@ -378,9 +378,9 @@ const s = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.4)',
     zIndex: 100,
   },
-  backdrop: { ...StyleSheet.absoluteFillObject, zIndex: 1 },
+  backdrop: { ...StyleSheet.absoluteFill, zIndex: 1 },
   center: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,

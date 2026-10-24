@@ -21,12 +21,12 @@ type Item = {
 };
 
 const ITEMS: Item[] = [
-  { id: 'editor', label: 'New text', hint: 'Paste or type Chinese to read' },
+  { id: 'editor', label: 'New text', hint: 'Read Chinese or Japanese' },
   { id: 'library', label: 'Library', hint: 'Saved & recent texts' },
   { id: 'vocab', label: 'Vocabulary', hint: 'Words you’ve saved' },
   { id: 'flashcards', label: 'Flashcards', hint: 'Swipe-to-review your words' },
   { id: 'stats', label: 'Stats', hint: 'Streak & reading activity' },
-  { id: 'display', label: 'Display', hint: 'Font size & pinyin' },
+  { id: 'display', label: 'Display', hint: 'Font size & readings' },
   { id: 'audio', label: 'Audio', hint: 'Voice, rate & auto-play' },
   { id: 'help', label: 'Help' },
   { id: 'about', label: 'About' },
@@ -85,7 +85,7 @@ export function HamburgerMenu({ open, onClose, onSelect }: Props) {
             <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
           </View>
           <Text style={[s.subBrand, { color: theme.textMuted }]}>
-            Read Chinese, tap a word.
+            Read Chinese or Japanese, tap a word.
           </Text>
           <View style={[s.divider, { backgroundColor: theme.border }]} />
           <View style={s.list}>
@@ -129,7 +129,7 @@ export function HamburgerMenu({ open, onClose, onSelect }: Props) {
 const s = StyleSheet.create({
   root: { flex: 1 },
   backdrop: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     backgroundColor: 'rgba(0,0,0,0.32)',
   },
   drawer: {

@@ -7,16 +7,26 @@ import {
 } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
 import { Hedgehog } from '../components/Hedgehog';
-import { useStore, type LibraryEntry } from '../state';
+import {
+  useStore,
+  type LibraryEntry,
+  type ReadingLanguage,
+} from '../state';
 import { useTheme, type Theme } from '../theme';
 
 type Props = {
   currentText: string;
+  currentLanguage: ReadingLanguage;
   onBack: () => void;
-  onLoad: (text: string) => void;
+  onLoad: (text: string, language: ReadingLanguage) => void;
 };
 
-export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
+export function LibraryScreen({
+  currentText,
+  currentLanguage,
+  onBack,
+  onLoad,
+}: Props) {
   const { library, removeText, reorderLibrary } = useStore();
   const theme = useTheme();
 
@@ -51,7 +61,9 @@ export function LibraryScreen({ currentText, onBack, onLoad }: Props) {
           renderItem={({ item, index }) => (
             <Row
               item={item}
-              isCurrent={item.text === currentText}
+              isCurrent={
+                item.text === currentText && item.language === currentLanguage
+              }
               isFirst={index === 0}
               isLast={index === library.length - 1}
               theme={theme}
@@ -83,14 +95,14 @@ function Row({
   isFirst: boolean;
   isLast: boolean;
   theme: Theme;
-  onLoad: (text: string) => void;
+  onLoad: (text: string, language: ReadingLanguage) => void;
   onRemove: (id: string) => void;
   onMoveUp: () => void;
   onMoveDown: () => void;
 }) {
   return (
     <Pressable
-      onPress={() => onLoad(item.text)}
+      onPress={() => onLoad(item.text, item.language)}
       style={({ pressed }) => [
         s.row,
         {
@@ -121,7 +133,9 @@ function Row({
           {item.title}
         </Text>
         <Text style={[s.meta, { color: theme.textMuted }]}>
-          {isCurrent ? 'Currently reading' : formatDate(item.createdAt)}
+          {isCurrent
+            ? 'Currently reading'
+            : `${item.language === 'ja' ? 'Japanese' : 'Chinese'} · ${formatDate(item.createdAt)}`}
         </Text>
       </View>
       <Pressable

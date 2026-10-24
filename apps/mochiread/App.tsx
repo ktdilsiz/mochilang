@@ -16,9 +16,17 @@ import { ThoughtBubble, type WordRect } from './src/components/ThoughtBubble';
 import { ExploreModal } from './src/components/ExploreModal';
 import { StrokePracticeModal } from './src/components/StrokePracticeModal';
 import { TranslationSheet } from './src/components/TranslationSheet';
-import { tokenize, type Token } from '@mochilang/dict';
-import { configureTTS } from './src/lib/tts';
-import { StoreProvider, useStore, SPEECH_RATE_VALUES } from './src/state';
+import {
+  tokenize,
+  type Token,
+} from '@mochilang/dict';
+import { configureTTS, stop as stopSpeech } from './src/lib/tts';
+import {
+  StoreProvider,
+  useStore,
+  SPEECH_RATE_VALUES,
+  type ReadingLanguage,
+} from './src/state';
 import { useTheme } from './src/theme';
 import { EditorScreen } from './src/screens/EditorScreen';
 import { LibraryScreen } from './src/screens/LibraryScreen';
@@ -35,6 +43,7 @@ const SAMPLE = '你好，世界！我喜欢吃苹果。今天天气很好。';
 
 const KEY_TEXT = 'mochiread:reading:text';
 const KEY_PAGE = 'mochiread:reading:page';
+const KEY_LANGUAGE = 'mochiread:reading:language';
 
 export default function App() {
   return (
@@ -48,6 +57,7 @@ export default function App() {
 
 function AppRoot() {
   const [text, setText] = useState(SAMPLE);
+  const [language, setLanguage] = useState<ReadingLanguage>('zh');
   const [readingPage, setReadingPage] = useState(0);
   const [hydrated, setHydrated] = useState(false);
   const [screen, setScreen] = useState<Screen>('reader');
@@ -68,7 +78,7 @@ function AppRoot() {
     recordReadingTime,
   } = useStore();
   const theme = useTheme();
-  const tokens = useMemo(() => tokenize(text), [text]);
+  const tokens = useMemo(() => tokenize(text, language), [text, language]);
 
   // If the persisted text matches a library entry modulo whitespace (meaning
   // we updated a seed's formatting), promote the saved currentText to the
@@ -78,22 +88,27 @@ function AppRoot() {
     const stripped = text.replace(/\s+/g, '');
     if (!stripped) return;
     for (const entry of library) {
-      if (entry.text === text) return;
+      if (entry.text === text && entry.language === language) return;
+      if (entry.language !== language) continue;
       if (entry.text.replace(/\s+/g, '') === stripped) {
         setText(entry.text);
         return;
       }
     }
-  }, [storeHydrated, hydrated, library, text]);
+  }, [storeHydrated, hydrated, library, text, language]);
 
   useEffect(() => {
     (async () => {
       try {
-        const [savedText, savedPage] = await Promise.all([
+        const [savedText, savedPage, savedLanguage] = await Promise.all([
           AsyncStorage.getItem(KEY_TEXT),
           AsyncStorage.getItem(KEY_PAGE),
+          AsyncStorage.getItem(KEY_LANGUAGE),
         ]);
         if (savedText) setText(savedText);
+        if (savedLanguage === 'ja' || savedLanguage === 'zh') {
+          setLanguage(savedLanguage);
+        }
         if (savedPage) {
           const n = parseInt(savedPage, 10);
           if (Number.isFinite(n) && n >= 0) setReadingPage(n);
@@ -113,11 +128,16 @@ function AppRoot() {
   }, [readingPage, hydrated]);
 
   useEffect(() => {
+    if (hydrated) AsyncStorage.setItem(KEY_LANGUAGE, language);
+  }, [language, hydrated]);
+
+  useEffect(() => {
     configureTTS({
       rate: SPEECH_RATE_VALUES[prefs.speechRate],
       voice: prefs.voiceId,
+      japaneseVoice: prefs.japaneseVoiceId,
     });
-  }, [prefs.speechRate, prefs.voiceId]);
+  }, [prefs.speechRate, prefs.voiceId, prefs.japaneseVoiceId]);
 
   // Track time on the reader screen in 30s ticks. Foreground-only because JS
   // intervals are paused when the app goes to background.
@@ -134,11 +154,17 @@ function AppRoot() {
     setScreen(target);
   };
 
-  const openText = (next: string) => {
+  const openText = (next: string, nextLanguage: ReadingLanguage) => {
     const trimmed = next.trim();
-    if (trimmed && trimmed !== text) {
-      saveText(trimmed);
+    if (trimmed && (trimmed !== text || nextLanguage !== language)) {
+      stopSpeech();
+      setSelected(null);
+      setExploring(null);
+      setPracticing(null);
+      setTranslating(null);
+      saveText(trimmed, nextLanguage);
       setText(trimmed);
+      setLanguage(nextLanguage);
       setReadingPage(0);
     }
     setScreen('reader');
@@ -155,6 +181,7 @@ function AppRoot() {
           />
           <Reader
             tokens={tokens}
+            language={language}
             fontSize={prefs.fontSize}
             pinyinMode={prefs.pinyinMode}
             showToneColors={prefs.showToneColors}
@@ -172,6 +199,7 @@ function AppRoot() {
       {screen === 'editor' && (
         <EditorScreen
           initialText=""
+          initialLanguage={language}
           onCancel={goReader}
           onCommit={openText}
         />
@@ -180,6 +208,7 @@ function AppRoot() {
       {screen === 'library' && (
         <LibraryScreen
           currentText={text}
+          currentLanguage={language}
           onBack={goReader}
           onLoad={openText}
         />
@@ -188,8 +217,10 @@ function AppRoot() {
       {screen === 'vocab' && <VocabularyScreen onBack={goReader} />}
       {screen === 'flashcards' && <FlashcardsScreen onBack={goReader} />}
       {screen === 'stats' && <StatsScreen onBack={goReader} />}
-      {screen === 'display' && <DisplayScreen onBack={goReader} />}
-      {screen === 'audio' && <AudioScreen onBack={goReader} />}
+      {screen === 'display' && (
+        <DisplayScreen language={language} onBack={goReader} />
+      )}
+      {screen === 'audio' && <AudioScreen language={language} onBack={goReader} />}
       {screen === 'about' && <AboutScreen onBack={goReader} />}
       {screen === 'help' && <HelpScreen onBack={goReader} />}
 
@@ -201,6 +232,7 @@ function AppRoot() {
 
       <ThoughtBubble
         word={selected?.token.word ?? null}
+        language={language}
         pinyin={selected?.token.pinyin ?? ''}
         rect={selected?.rect ?? null}
         onClose={() => setSelected(null)}
@@ -226,6 +258,7 @@ function AppRoot() {
 
       <TranslationSheet
         text={translating}
+        language={language}
         onClose={() => setTranslating(null)}
       />
       <ExpoStatusBar style={theme.isDark ? 'light' : 'dark'} />

@@ -1,7 +1,24 @@
 # Mochiread
 
-Chinese-reading app: paste text, see pinyin, tap a word for definitions, swipe
-flashcards, decompose characters into their components.
+Chinese and Japanese reading app: choose a language, paste text, see pinyin
+or kana readings, tap a word for English definitions, and review flashcards.
+Chinese also supports character decomposition and writing practice.
+
+Japanese uses an offline common-word JMdict dictionary and TinySegmenter word
+boundaries, with lookup for common verb/adjective inflections. Names, rare
+words, and context-dependent readings may be missing or ambiguous. Passage
+translation requires the network; dictionary lookup and readings do not.
+Saved texts and vocabulary remember their language; existing data migrates as
+Chinese. Voice choices are saved separately for Chinese and Japanese.
+
+Rebuild the pinned Japanese dataset from the repository root:
+
+```bash
+pnpm --filter @mochilang/dict build:japanese
+pnpm --filter @mochilang/dict test
+```
+
+See [JMDICT-NOTICE.md](./JMDICT-NOTICE.md) for source and licence details.
 
 Built with Expo + React Native, runs on iOS, Android, and the web.
 
@@ -78,3 +95,6 @@ This rewrites `app.json` with a fresh project ID under your Expo account.
   · LGPL / Arphic Public License
 - **Pinyin & segmentation:** [pinyin-pro](https://github.com/zh-lx/pinyin-pro) · MIT
 - **Speech:** the OS Mandarin voice via `expo-speech`. No audio leaves the device.
+- **Japanese definitions/readings:** JMdict · EDRDG · CC BY-SA 4.0, converted
+  from scriptin/jmdict-simplified's common-English edition.
+- **Japanese segmentation:** TinySegmenter · BSD.

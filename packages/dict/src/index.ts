@@ -14,6 +14,8 @@
  * code runs in mochiread (Expo) and mochilang (Vite/web).
  */
 import { pinyin, getNumOfTone } from 'pinyin-pro';
+import { isJapanese, tokenizeJapanese } from './japanese';
+export { isJapanese, isJapaneseGlyph, tokenizeJapanese, lookupJapanese } from './japanese';
 
 // --- Dictionary lookup -------------------------------------------------------
 
@@ -21,6 +23,8 @@ export type Definition = {
   word: string;
   meanings: string[];
 };
+
+export type TextLanguage = 'zh' | 'ja';
 
 /**
  * CC-CEDICT after adding Traditional aliases has ~197k entries,
@@ -165,6 +169,10 @@ export function isChinese(s: string): boolean {
   return isCJK(s[0] ?? '');
 }
 
+export function isReadableWord(s: string, language: TextLanguage): boolean {
+  return language === 'ja' ? isJapanese(s) : isChinese(s);
+}
+
 // --- Segmentation ------------------------------------------------------------
 
 const MAX_WORD_LEN = 8;
@@ -240,7 +248,8 @@ export type Token = {
   syllables: Syllable[];
 };
 
-export function tokenize(text: string): Token[] {
+export function tokenize(text: string, language: TextLanguage = 'zh'): Token[] {
+  if (language === 'ja') return tokenizeJapanese(text);
   const segments = segmentText(text);
   return segments.map((seg) => {
     if (!isCJK(seg[0] ?? '')) {

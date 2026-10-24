@@ -9,16 +9,18 @@ import {
   Text,
   View,
 } from 'react-native';
-import { lookup } from '@mochilang/dict';
+import { lookup, lookupJapanese } from '@mochilang/dict';
 import { hasExploreData } from '../lib/decomp';
 import { speak, stop } from '../lib/tts';
 import { useStore } from '../state';
+import type { ReadingLanguage } from '../state';
 import { useTheme } from '../theme';
 
 export type WordRect = { x: number; y: number; width: number; height: number };
 
 type Props = {
   word: string | null;
+  language: ReadingLanguage;
   pinyin: string;
   rect: WordRect | null;
   onClose: () => void;
@@ -33,6 +35,7 @@ const EDGE_PADDING = 8;
 
 export function ThoughtBubble({
   word,
+  language,
   pinyin,
   rect,
   onClose,
@@ -71,9 +74,9 @@ export function ThoughtBubble({
         useNativeDriver: true,
       }),
     ]).start();
-    if (word && prefs.autoPlay) speak(word);
+    if (word && prefs.autoPlay) speak(word, language);
     return () => stop();
-  }, [visible, word, prefs.autoPlay]);
+  }, [visible, word, language, prefs.autoPlay]);
 
   if (!visible) return null;
 
@@ -109,15 +112,16 @@ export function ThoughtBubble({
   const HEADER_AND_PADDING = 110;
   const scrollMaxHeight = Math.max(60, availableHeight - HEADER_AND_PADDING);
 
-  const entry = lookup(word);
-  const saved = isWordSaved(word);
+  const entry = language === 'zh' ? lookup(word) : lookupJapanese(word);
+  const saved = isWordSaved(word, language);
 
   const toggleSave = () => {
     if (saved) {
-      removeWord(word);
+      removeWord(word, language);
     } else {
       saveWord({
         word,
+        language,
         pinyin,
         meanings: entry?.meanings ?? [],
       });
@@ -198,7 +202,7 @@ export function ThoughtBubble({
                   </Text>
                 </Pressable>
                 <Pressable
-                  onPress={() => speak(word)}
+                  onPress={() => speak(word, language)}
                   hitSlop={10}
                   style={({ pressed }) => [
                     s.iconBtn,
@@ -232,7 +236,7 @@ export function ThoughtBubble({
                   No definition found.
                 </Text>
               )}
-              {hasExploreData(word) && (
+              {language === 'zh' && hasExploreData(word) && (
                 <Pressable
                   onPress={() => onExplore(word)}
                   style={({ pressed }) => [
@@ -246,7 +250,7 @@ export function ThoughtBubble({
                   </Text>
                 </Pressable>
               )}
-              <Pressable
+              {language === 'zh' && <Pressable
                 onPress={() => onPractice(word)}
                 style={({ pressed }) => [
                   s.exploreBtn,
@@ -257,7 +261,7 @@ export function ThoughtBubble({
                 <Text style={[s.exploreText, { color: theme.accent }]}>
                   Practice writing ✎
                 </Text>
-              </Pressable>
+              </Pressable>}
             </ScrollView>
           </View>
         </Animated.View>

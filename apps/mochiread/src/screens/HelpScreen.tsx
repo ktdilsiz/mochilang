@@ -9,7 +9,7 @@ type Props = {
 const TIPS: { title: string; body: string }[] = [
   {
     title: 'Tap a word',
-    body: 'A thought bubble pops up with pinyin, English meanings, and a 🔊 button to hear it.',
+    body: 'A thought bubble pops up with pinyin or Japanese kana readings, English meanings, and a 🔊 button to hear it. Uncommon Japanese words may have no dictionary entry.',
   },
   {
     title: 'Save to vocab',
@@ -25,11 +25,11 @@ const TIPS: { title: string; body: string }[] = [
   },
   {
     title: 'Adjust display',
-    body: 'Open Display in the menu to change font size, theme, or hide pinyin.',
+    body: 'Open Display in the menu to change font size, theme, or hide readings. Character exploration and writing practice are available for Chinese.',
   },
   {
     title: 'New text',
-    body: 'Open New text in the menu to paste fresh Chinese text and start reading it.',
+    body: 'Open New text, choose Chinese or Japanese, then paste your text. Each library entry remembers its language.',
   },
 ];
 

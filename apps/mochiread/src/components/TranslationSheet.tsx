@@ -7,16 +7,18 @@ import {
   Text,
   View,
 } from 'react-native';
-import { translateChinese } from '@mochilang/translate';
+import { translate } from '@mochilang/translate';
 import { speak } from '../lib/tts';
+import type { ReadingLanguage } from '../state';
 import { useTheme, type Theme } from '../theme';
 
 type Props = {
   text: string | null;
+  language: ReadingLanguage;
   onClose: () => void;
 };
 
-export function TranslationSheet({ text, onClose }: Props) {
+export function TranslationSheet({ text, language, onClose }: Props) {
   const fade = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -36,13 +38,21 @@ export function TranslationSheet({ text, onClose }: Props) {
     >
       <Pressable style={s.backdrop} onPress={onClose} />
       <View style={s.center} pointerEvents="box-none">
-        <Sheet text={text} onClose={onClose} />
+        <Sheet text={text} language={language} onClose={onClose} />
       </View>
     </Animated.View>
   );
 }
 
-function Sheet({ text, onClose }: { text: string; onClose: () => void }) {
+function Sheet({
+  text,
+  language,
+  onClose,
+}: {
+  text: string;
+  language: ReadingLanguage;
+  onClose: () => void;
+}) {
   const theme = useTheme();
   const [state, setState] = useState<
     | { kind: 'loading' }
@@ -53,7 +63,10 @@ function Sheet({ text, onClose }: { text: string; onClose: () => void }) {
   const fetchTranslation = async () => {
     setState({ kind: 'loading' });
     try {
-      const { translation } = await translateChinese(text);
+      const { translation } = await translate(text, {
+        from: language,
+        to: 'en',
+      });
       setState({ kind: 'ok', translation });
     } catch (e) {
       setState({
@@ -65,7 +78,7 @@ function Sheet({ text, onClose }: { text: string; onClose: () => void }) {
 
   useEffect(() => {
     fetchTranslation();
-  }, [text]);
+  }, [text, language]);
 
   return (
     <Pressable
@@ -91,10 +104,10 @@ function Sheet({ text, onClose }: { text: string; onClose: () => void }) {
         <View style={s.section}>
           <View style={s.sectionHeader}>
             <Text style={[s.sectionLabel, { color: theme.textMuted }]}>
-              Chinese
+              {language === 'ja' ? 'Japanese' : 'Chinese'}
             </Text>
             <Pressable
-              onPress={() => speak(text)}
+              onPress={() => speak(text, language)}
               hitSlop={6}
               style={({ pressed }) => [
                 s.speakBtn,
@@ -181,9 +194,9 @@ function TranslationView({
 
 const s = StyleSheet.create({
   overlay: { backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 100 },
-  backdrop: { ...StyleSheet.absoluteFillObject, zIndex: 1 },
+  backdrop: { ...StyleSheet.absoluteFill, zIndex: 1 },
   center: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     justifyContent: 'flex-end',
     padding: 16,
     zIndex: 2,
