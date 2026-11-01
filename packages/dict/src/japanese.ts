@@ -65,6 +65,8 @@ function ichidan(stem: string, base: string, tag: string, prefix = '') {
 ichidan('', 'る', 'v1');
 ichidan('られ', 'る', 'v1', 'potential / passive');
 ichidan('させ', 'る', 'v1', 'causative');
+// A causative stem can precede auxiliaries or ながら without a final る.
+add('させ', 'る', 'v1', 'causative stem');
 ichidan('させられ', 'る', 'v1', 'causative passive');
 for (const [ending, i, a, e, o, te, ta, tag] of [
   ['う', 'い', 'わ', 'え', 'お', 'って', 'った', 'v5u'],
@@ -86,6 +88,7 @@ for (const [ending, i, a, e, o, te, ta, tag] of [
   ichidan(e, ending, tag, 'potential');
   ichidan(a + 'れ', ending, tag, 'passive');
   ichidan(a + 'せ', ending, tag, 'causative');
+  add(a + 'せ', ending, tag, 'causative stem');
 }
 for (const [surface, label] of [['かった', 'past'], ['くない', 'negative'], ['くなかった', 'past negative'], ['くて', 'te-form'], ['ければ', 'conditional']]) add(surface, 'い', 'adj-i', label);
 
