@@ -75,6 +75,9 @@ function voiceScore(voice: ReadingVoice, language: ReadingLanguage) {
   if (/natural|neural|premium/iu.test(voice.name)) score += 40;
   if (voice.quality === Speech.VoiceQuality.Enhanced || /enhanced/iu.test(voice.name)) score += 30;
   if (/google/iu.test(voice.name)) score += 20;
+  // Prefer standard language voices over macOS character variants when none
+  // advertise a quality tier. Keep every variant available for manual choice.
+  if (/^(ting[ -]?ting|meijia|kyoko|otoya)$/iu.test(voice.name)) score += 10;
   return score;
 }
 
