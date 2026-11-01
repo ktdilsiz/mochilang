@@ -8,6 +8,7 @@ const path = require('node:path');
 
 // Run against a supplied export, or build a fresh one in an isolated folder.
 const root = process.env.MOCHIREAD_WEB_DIR || fs.mkdtempSync(path.join(os.tmpdir(), 'mochiread-japanese-test-'));
+if (!process.env.MOCHIREAD_WEB_DIR) execFileSync('node', ['scripts/build-web-dictionaries.mjs'], { cwd: path.resolve(__dirname, '..'), stdio: 'inherit' });
 if (!process.env.MOCHIREAD_WEB_DIR) execFileSync('pnpm', ['exec', 'expo', 'export', '--platform', 'web', '--output-dir', root], { cwd: path.resolve(__dirname, '..'), stdio: 'inherit' });
 const server = http.createServer((request, response) => {
   const relative = decodeURIComponent(request.url.split('?')[0]);

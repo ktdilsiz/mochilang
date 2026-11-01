@@ -13,6 +13,39 @@ fresh launch. Existing saved texts and vocabulary are retained; legacy entries
 without a language remain Chinese. Existing mixed activity totals are retained
 under Chinese because older records did not identify a language.
 
+## Faster website startup
+
+The web app loads the language picker without downloading dictionaries. After
+you choose a language it downloads only that language's compressed dictionary;
+Chinese also includes character decomposition. A loading message and retryable
+error cover slow or failed downloads. Once loaded, lookups stay on the device.
+The other Mochilang apps and native builds keep their existing bundled data.
+
+`pnpm -C apps/mochiread build:web` generates content-hashed dictionary assets and
+exports the website. `web`, `test:web`, and `test:backup` also refresh these
+assets; GitHub Pages regenerates them before deployment. Generated assets are
+excluded from Git to avoid duplicating the source dictionaries. Use `build:web`
+for fresh exports, or generate assets before a direct Expo export command:
+
+```bash
+pnpm -C apps/mochiread build:web-data
+```
+
+## Backup and restore
+
+Open **Backup & restore** from the menu and choose **Download backup**. Move
+the JSON file to another device, then choose it from the same screen. Backups
+include both languages' texts, vocabulary, flashcard schedules, preferences,
+reading positions, and activity. No account or backend is required.
+
+Importing first shows a preview. **Restore this backup** replaces this browser's
+MochiRead data for both languages; **Cancel restore** makes no changes. A pasted
+JSON backup is also supported. Invalid files are rejected before writing.
+Failed restores roll back, and a browser closed mid-restore recovers its previous
+data the next time a language is selected. Dictionaries are not part of backups.
+
+Run the backup checks with `pnpm -C apps/mochiread test:backup`.
+
 Japanese writing data is loaded on demand from this website, so opening an
 uncached character needs a network connection. The pinned AnimCJK dataset
 covers 7,457 kanji and kana; unsupported characters are omitted from the writing
@@ -25,12 +58,13 @@ Rebuild the Japanese writing dataset:
 python3 apps/mochiread/scripts/build-japanese-writing.py
 ```
 
-Japanese uses the full English JMdict dictionary, compressed in the bundle and
-loaded on first Japanese lookup. Statistical word boundaries are reconciled
+Japanese uses the full English JMdict dictionary, downloaded when Japanese is
+selected on the website and bundled for native builds. Statistical word boundaries are reconciled
 with dictionary compounds, grammar and inflections. Particle senses lead their
 homographs; other entries/readings can be selected separately in the popup. Names and
 context-dependent readings may still be missing or ambiguous. Passage
-translation requires the network; dictionary lookup and readings do not.
+translation requires the network; after the selected dictionary has loaded,
+dictionary lookup and readings run locally.
 
 In Display, choose Kana, Romaji, or Both (the Japanese default). Kana keeps
 aligned furigana; Romaji and Both show the full word's pronunciation, including

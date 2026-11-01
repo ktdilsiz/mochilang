@@ -18,6 +18,7 @@ import { StrokePracticeModal } from './src/components/StrokePracticeModal';
 import { TranslationSheet } from './src/components/TranslationSheet';
 import {
   tokenize,
+  prepareDictionary,
   type Token,
 } from '@mochilang/dict';
 import { configureTTS, stop as stopSpeech } from './src/lib/tts';
@@ -39,6 +40,8 @@ import { AudioScreen } from './src/screens/AudioScreen';
 import { AboutScreen } from './src/screens/AboutScreen';
 import { HelpScreen } from './src/screens/HelpScreen';
 import { LanguageScreen } from './src/screens/LanguageScreen';
+import { BackupScreen } from './src/screens/BackupScreen';
+import { recoverInterruptedRestore } from './src/lib/backup';
 import type { Screen } from './src/screens/types';
 
 const SAMPLE = '你好，世界！我喜欢吃苹果。今天天气很好。';
@@ -49,16 +52,32 @@ const KEY_LANGUAGE = 'mochiread:reading:language';
 
 export default function App() {
   const [language, setLanguage] = useState<ReadingLanguage | null>(null);
+  const [loadingLanguage, setLoadingLanguage] = useState<ReadingLanguage | null>(null);
+  const [loadError, setLoadError] = useState('');
+  const [restoreVersion, setRestoreVersion] = useState(0);
+  const selectLanguage = async (next: ReadingLanguage | null) => {
+    if (!next) { setLanguage(null); return; }
+    if (loadingLanguage) return;
+    setLoadError('');
+    setLoadingLanguage(next);
+    try {
+      await recoverInterruptedRestore();
+      await prepareDictionary(next);
+      setLanguage(next);
+    } catch {
+      setLoadError('Couldn’t download the reading dictionary. Check your connection and choose the language again to retry.');
+    } finally { setLoadingLanguage(null); }
+  };
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <StoreProvider key={language ?? 'choose'} language={language ?? 'zh'}>
-        <AppRoot initialLanguage={language} onSelectLanguage={setLanguage} />
+      <StoreProvider key={`${language ?? 'choose'}:${restoreVersion}`} language={language ?? 'zh'} enabled={language !== null}>
+        <AppRoot initialLanguage={language} onSelectLanguage={selectLanguage} loadingLanguage={loadingLanguage} loadError={loadError} onRestored={() => setRestoreVersion((value) => value + 1)} />
       </StoreProvider>
     </GestureHandlerRootView>
   );
 }
 
-function AppRoot({ initialLanguage, onSelectLanguage }: { initialLanguage: ReadingLanguage | null; onSelectLanguage: (language: ReadingLanguage | null) => void }) {
+function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError, onRestored }: { initialLanguage: ReadingLanguage | null; onSelectLanguage: (language: ReadingLanguage | null) => void; loadingLanguage: ReadingLanguage | null; loadError: string; onRestored: () => void }) {
   const language = initialLanguage ?? 'zh';
   const [text, setText] = useState(language === 'ja' ? 'こんにちは、世界！今日はいい天気です。日本語を読んでみましょう。' : SAMPLE);
   const [readingPage, setReadingPage] = useState(0);
@@ -81,7 +100,7 @@ function AppRoot({ initialLanguage, onSelectLanguage }: { initialLanguage: Readi
     recordReadingTime,
   } = useStore();
   const theme = useTheme();
-  const tokens = useMemo(() => tokenize(text, language), [text, language]);
+  const tokens = useMemo(() => initialLanguage ? tokenize(text, language) : [], [text, language, initialLanguage]);
 
   // If the persisted text matches a library entry modulo whitespace (meaning
   // we updated a seed's formatting), promote the saved currentText to the
@@ -173,7 +192,7 @@ function AppRoot({ initialLanguage, onSelectLanguage }: { initialLanguage: Readi
     setScreen('reader');
   };
 
-  if (!initialLanguage) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}><LanguageScreen onSelect={onSelectLanguage} /></SafeAreaView>;
+  if (!initialLanguage) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}><LanguageScreen onSelect={onSelectLanguage} loadingLanguage={loadingLanguage} error={loadError} /></SafeAreaView>;
   if (!hydrated || !storeHydrated) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]} />;
 
   return (
@@ -225,6 +244,7 @@ function AppRoot({ initialLanguage, onSelectLanguage }: { initialLanguage: Readi
       {screen === 'vocab' && <VocabularyScreen onBack={goReader} />}
       {screen === 'flashcards' && <FlashcardsScreen onBack={goReader} />}
       {screen === 'stats' && <StatsScreen onBack={goReader} />}
+      {screen === 'backup' && <BackupScreen onBack={goReader} onRestored={() => { stopSpeech(); onRestored(); }} />}
       {screen === 'display' && (
         <DisplayScreen language={language} onBack={goReader} />
       )}

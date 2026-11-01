@@ -151,7 +151,7 @@ type Store = {
 
 const Ctx = createContext<Store | null>(null);
 
-export function StoreProvider({ children, language = 'zh' }: { children: ReactNode; language?: ReadingLanguage }) {
+export function StoreProvider({ children, language = 'zh', enabled = true }: { children: ReactNode; language?: ReadingLanguage; enabled?: boolean }) {
   const [hydrated, setHydrated] = useState(false);
   const [prefs, setPrefsState] = useState<Preferences>(DEFAULT_PREFS);
   const [library, setLibrary] = useState<LibraryEntry[]>([]);
@@ -159,6 +159,7 @@ export function StoreProvider({ children, language = 'zh' }: { children: ReactNo
   const [stats, setStats] = useState<DayStats[]>([]);
 
   useEffect(() => {
+    if (!enabled) return;
     (async () => {
       try {
         const [p, l, v, seeded, introducedRaw, statsRaw] = await Promise.all([
@@ -230,7 +231,7 @@ export function StoreProvider({ children, language = 'zh' }: { children: ReactNo
         if (!seeded) AsyncStorage.setItem(KEY_SEEDED, '1');
         if (v) {
           const parsed = JSON.parse(v) as Partial<VocabEntry>[];
-          setVocab(migrateVocabulary(parsed));
+          setVocab(migrateVocabulary(parsed, language));
         }
       } finally {
         setHydrated(true);

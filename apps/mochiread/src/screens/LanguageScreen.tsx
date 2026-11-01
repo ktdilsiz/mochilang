@@ -3,7 +3,7 @@ import { Hedgehog } from '../components/Hedgehog';
 import type { ReadingLanguage } from '../state';
 import { useTheme } from '../theme';
 
-export function LanguageScreen({ onSelect }: { onSelect: (language: ReadingLanguage) => void }) {
+export function LanguageScreen({ onSelect, loadingLanguage, error }: { onSelect: (language: ReadingLanguage) => void; loadingLanguage: ReadingLanguage | null; error: string }) {
   const theme = useTheme();
   return <ScrollView contentContainerStyle={[s.page, { backgroundColor: theme.bg }]}>
     <View style={s.content}>
@@ -15,7 +15,7 @@ export function LanguageScreen({ onSelect }: { onSelect: (language: ReadingLangu
         { id: 'ja', name: 'Japanese', script: '日本語', detail: 'Kanji, kana, and romaji · Japanese reading and writing' },
         { id: 'zh', name: 'Chinese', script: '中文', detail: 'Pinyin and tones · Chinese reading and writing' },
       ] as const).map((option) => <Pressable key={option.id} accessibilityRole="button" accessibilityLabel={`Choose ${option.name}`}
-        onPress={() => onSelect(option.id)}
+        onPress={() => onSelect(option.id)} disabled={loadingLanguage !== null} accessibilityState={{ disabled: loadingLanguage !== null }}
         style={({ pressed }) => [s.card, { backgroundColor: pressed ? theme.accentBg : theme.surface, borderColor: theme.border }]}>
         <View style={s.row}>
           <Text style={[s.script, { color: theme.accent }]}>{option.script}</Text>
@@ -24,6 +24,8 @@ export function LanguageScreen({ onSelect }: { onSelect: (language: ReadingLangu
         </View>
         <Text style={[s.detail, { color: theme.textMuted }]}>{option.detail}</Text>
       </Pressable>)}
+      {loadingLanguage && <Text accessibilityLiveRegion="polite" style={[s.hint, { color: theme.accent }]}>Loading {loadingLanguage === 'ja' ? 'Japanese' : 'Chinese'} dictionary…{`\n`}The first download may take a moment.</Text>}
+      {!!error && <Text accessibilityRole="alert" style={[s.hint, { color: theme.destructive }]}>{error}</Text>}
       <Text style={[s.hint, { color: theme.textSubtle }]}>Switch languages anytime from the menu.</Text>
     </View>
   </ScrollView>;

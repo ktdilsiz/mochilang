@@ -7,12 +7,12 @@ export function sameVocabWord(entry: VocabEntry, word: string, language: Reading
 }
 
 /** Canonicalize old surface-form cards while retaining their review history. */
-export function migrateVocabulary(raw: Partial<VocabEntry>[]): VocabEntry[] {
+export function migrateVocabulary(raw: Partial<VocabEntry>[], activeLanguage?: ReadingLanguage): VocabEntry[] {
   const migrated = new Map<string, VocabEntry>();
   for (const value of raw) {
     if (!value?.word) continue;
     const language = value.language === 'ja' ? 'ja' : 'zh';
-    const match = language === 'ja' && !value.entryId ? lookupJapanese(value.word) : null;
+    const match = language === 'ja' && (!activeLanguage || activeLanguage === 'ja') && !value.entryId ? lookupJapanese(value.word) : null;
     const entry: VocabEntry = {
       word: match?.dictionaryForm ?? value.word,
       language,

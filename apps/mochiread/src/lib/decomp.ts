@@ -1,4 +1,4 @@
-import data from '../data/decomp.json';
+import { getDecomposition } from './decomp-data';
 import { lookup } from '@mochilang/dict';
 import { isCJK } from '@mochilang/dict';
 import { pinyin } from 'pinyin-pro';
@@ -10,10 +10,8 @@ export type DecompEntry = {
   raw?: string;
 };
 
-const DECOMP = data as Record<string, DecompEntry>;
-
 export function getDecomp(char: string): DecompEntry | null {
-  return DECOMP[char] ?? null;
+  return (getDecomposition() as Record<string, DecompEntry>)[char] ?? null;
 }
 
 export type ExploreItem = {

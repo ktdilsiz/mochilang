@@ -14,6 +14,8 @@
  * code runs in mochiread (Expo) and mochilang (Vite/web).
  */
 import { pinyin, getNumOfTone } from 'pinyin-pro';
+import { getChineseData, getBilingualData } from './data-source';
+export { prepareDictionary, getChineseDecomposition } from './data-source';
 import { isJapanese, tokenizeJapanese } from './japanese';
 import type { JapaneseDefinition } from './japanese';
 export { isJapanese, isJapaneseGlyph, tokenizeJapanese, lookupJapanese, normalizeJapanese, alignJapaneseReading } from './japanese';
@@ -43,12 +45,7 @@ export type TextLanguage = 'zh' | 'ja';
 let _cedictMap: Map<string, string[]> | null = null;
 function loadCEDICT(): Map<string, string[]> {
   if (_cedictMap) return _cedictMap;
-  const shards: Record<string, string[]>[] = [
-    require('./data/dict-0.json'),
-    require('./data/dict-1.json'),
-    require('./data/dict-2.json'),
-    require('./data/dict-3.json'),
-  ];
+  const shards = getChineseData();
   const m = new Map<string, string[]>();
   for (const shard of shards) {
     for (const k of Object.keys(shard)) {
@@ -102,17 +99,13 @@ function getBilingual(from: string, to: string): BilingualMap | null {
       dict = loadCEDICT();
       break;
     case 'en-tr':
-      dict = objectToMap(require('./data/bilingual/en-tr.json'));
-      break;
     case 'es-en':
-      dict = objectToMap(require('./data/bilingual/es-en.json'));
-      break;
     case 'en-es':
-      dict = objectToMap(require('./data/bilingual/en-es.json'));
+    case 'en-zh': {
+      const data = getBilingualData(key);
+      dict = data ? objectToMap(data) : null;
       break;
-    case 'en-zh':
-      dict = objectToMap(require('./data/bilingual/en-zh.json'));
-      break;
+    }
     default:
       dict = null;
   }

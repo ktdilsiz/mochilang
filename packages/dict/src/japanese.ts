@@ -1,6 +1,6 @@
 import type { Token } from './index';
 import TinySegmenter from 'tiny-segmenter';
-import { gunzipSync, strFromU8 } from 'fflate';
+import { getJapaneseRows } from './data-source';
 
 export type RubyPart = { text: string; reading: string };
 export type JapaneseSense = { partsOfSpeech: string[]; meanings: string[] };
@@ -25,22 +25,9 @@ type Entry = [string, [string, string[], number][], Sense[]];
 type IndexedForm = { entry: Entry; form: Entry[1][number] };
 let dictionary: Map<string, IndexedForm[]> | undefined;
 
-function decodeBase64(text: string) {
-  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-  const bytes = new Uint8Array(Math.floor(text.length * 3 / 4) - (text.endsWith('==') ? 2 : text.endsWith('=') ? 1 : 0));
-  let buffer = 0, bits = 0, offset = 0;
-  for (let i = 0; i < text.length && text[i] !== '='; i++) {
-    buffer = (buffer << 6) | alphabet.indexOf(text[i]);
-    bits += 6;
-    if (bits >= 8) { bits -= 8; bytes[offset++] = (buffer >> bits) & 255; }
-  }
-  return bytes;
-}
-
 function entries() {
   if (!dictionary) {
-    const data = require('./data/japanese.json') as { compressed: string };
-    const rows = JSON.parse(strFromU8(gunzipSync(decodeBase64(data.compressed)))) as Entry[];
+    const rows = getJapaneseRows() as Entry[];
     dictionary = new Map();
     for (const entry of rows) {
       for (const form of entry[1]) {

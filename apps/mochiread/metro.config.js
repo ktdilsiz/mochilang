@@ -19,4 +19,12 @@ config.resolver.nodeModulesPaths = [
 
 config.resolver.unstable_enablePackageExports = true;
 
+config.resolver.resolveRequest = (context, moduleName, platform) => {
+  const result = context.resolveRequest(context, moduleName, platform);
+  if (platform === 'web' && result.type === 'sourceFile' && result.filePath === path.join(workspaceRoot, 'packages/dict/src/data-source.ts')) {
+    return { type: 'sourceFile', filePath: path.join(workspaceRoot, 'packages/dict/src/data-source.mochiread.ts') };
+  }
+  return result;
+};
+
 module.exports = config;
