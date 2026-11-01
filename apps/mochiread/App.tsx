@@ -49,9 +49,11 @@ const SAMPLE = '你好，世界！我喜欢吃苹果。今天天气很好。';
 const KEY_TEXT = 'mochiread:reading:text';
 const KEY_PAGE = 'mochiread:reading:page';
 const KEY_LANGUAGE = 'mochiread:reading:language';
+const KEY_PREFERRED_LANGUAGE = 'mochiread:preferred-language';
 
 export default function App() {
   const [language, setLanguage] = useState<ReadingLanguage | null>(null);
+  const [restoringLanguage, setRestoringLanguage] = useState(true);
   const [loadingLanguage, setLoadingLanguage] = useState<ReadingLanguage | null>(null);
   const [loadError, setLoadError] = useState('');
   const [restoreVersion, setRestoreVersion] = useState(0);
@@ -64,14 +66,33 @@ export default function App() {
       await recoverInterruptedRestore();
       await prepareDictionary(next);
       setLanguage(next);
+      // A failed preference write must not block opening the reader.
+      AsyncStorage.setItem(KEY_PREFERRED_LANGUAGE, next).catch(() => {});
     } catch {
       setLoadError('Couldn’t download the reading dictionary. Check your connection and choose the language again to retry.');
     } finally { setLoadingLanguage(null); }
   };
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      try {
+        const saved = await AsyncStorage.getItem(KEY_PREFERRED_LANGUAGE);
+        if (active && (saved === 'ja' || saved === 'zh')) {
+          await selectLanguage(saved);
+        }
+      } catch {
+        // If storage is unavailable, show the normal language picker.
+      } finally {
+        if (active) setRestoringLanguage(false);
+      }
+    })();
+    return () => { active = false; };
+  }, []);
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StoreProvider key={`${language ?? 'choose'}:${restoreVersion}`} language={language ?? 'zh'} enabled={language !== null}>
-        <AppRoot initialLanguage={language} onSelectLanguage={selectLanguage} loadingLanguage={loadingLanguage} loadError={loadError} onRestored={() => setRestoreVersion((value) => value + 1)} />
+        {restoringLanguage ? <View style={{ flex: 1 }} /> : <AppRoot initialLanguage={language} onSelectLanguage={selectLanguage} loadingLanguage={loadingLanguage} loadError={loadError} onRestored={() => setRestoreVersion((value) => value + 1)} />}
       </StoreProvider>
     </GestureHandlerRootView>
   );
