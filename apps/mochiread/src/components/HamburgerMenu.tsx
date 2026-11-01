@@ -103,15 +103,17 @@ export function HamburgerMenu({ open, language, onSwitchLanguage, onClose, onSel
                 onPress={() => onSelect(item.id)}
                 style={({ pressed }) => [
                   s.item,
-                  pressed && { backgroundColor: theme.surfaceAlt },
+                  item.id === 'editor'
+                    ? { backgroundColor: pressed ? '#1e40af' : '#2563eb', marginBottom: 6 }
+                    : pressed && { backgroundColor: theme.surfaceAlt },
                 ]}
               >
                 <View style={s.itemText}>
-                  <Text style={[s.itemLabel, { color: theme.text }]}>
+                  <Text style={[s.itemLabel, { color: item.id === 'editor' ? '#ffffff' : theme.text }]}>
                     {item.label}
                   </Text>
                   {item.hint && (
-                    <Text style={[s.itemHint, { color: theme.textMuted }]}>
+                    <Text style={[s.itemHint, { color: item.id === 'editor' ? '#dbeafe' : theme.textMuted }]}>
                       {item.hint}
                     </Text>
                   )}
