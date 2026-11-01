@@ -57,20 +57,20 @@ const server = http.createServer((request, response) => {
     };
     const edit = async (text) => {
       await menu('New text');
-      await page.getByText('Japanese', { exact: true }).click();
       await page.getByPlaceholder('例：こんにちは、世界！').fill(text);
       await page.getByText('Read', { exact: true }).click();
     };
     await page.goto(`http://127.0.0.1:${server.address().port}`);
+    await page.getByRole('button', { name: 'Choose Japanese', exact: true }).click();
     await edit('今日は学校に行きました。コーヒーを飲んだ。');
     await page.getByRole('button', { name: '学校', exact: true }).click();
     await page.getByText('• school', { exact: true }).waitFor();
     await page.getByText('がっこう', { exact: true }).last().waitFor();
-    assert.equal(await page.getByText('Practice writing ✎', { exact: true }).count(), 0);
+    assert.equal(await page.getByText('Practice writing ✎', { exact: true }).count(), 1);
     await page.getByLabel('Save word', { exact: true }).click();
     await page.mouse.click(410, 850);
     await menu('Vocabulary');
-    assert.equal(await page.getByText('学校', { exact: true }).count(), 2);
+    assert.equal(await page.getByText('学校', { exact: true }).count(), 1);
     const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')));
     assert.equal(stored[0].language, 'ja');
     assert(stored[0].entryId);
@@ -80,14 +80,14 @@ const server = http.createServer((request, response) => {
     await page.getByLabel('Back', { exact: true }).click();
     await menu('Flashcards');
     await page.getByText('Got it', { exact: true }).click();
-    await page.getByText('Got it', { exact: true }).click();
     await page.getByText('Session complete', { exact: true }).waitFor();
     const reviewed = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')));
     assert.equal(reviewed.find((entry) => entry.language === 'ja').remembered, 1);
-    assert.equal(reviewed.find((entry) => entry.language === 'zh').remembered, 4);
+    assert.equal(reviewed.find((entry) => entry.language === 'zh').remembered, 3);
     await page.reload();
+    await page.getByRole('button', { name: 'Choose Japanese', exact: true }).click();
     await page.getByRole('button', { name: '学校', exact: true }).waitFor();
-    assert.equal(await page.evaluate(() => localStorage.getItem('mochiread:reading:language')), 'ja');
+    assert.equal(await page.evaluate(() => localStorage.getItem('mochiread:reading:text:ja')), '今日は学校に行きました。コーヒーを飲んだ。');
 
     await menu('Display');
     assert.equal(await page.getByRole('radio', { name: 'Both', exact: true }).getAttribute('aria-checked'), 'true');
@@ -119,7 +119,7 @@ const server = http.createServer((request, response) => {
 
     // Natural sentences are the default; explicit word mode remains available.
     await menu('Audio');
-    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs')).pagePlayback), 'sentence');
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:ja')).pagePlayback), 'sentence');
     await page.getByText('Read along', { exact: true }).click();
     await page.getByLabel('Back', { exact: true }).click();
     // Word tracking works even when the voice supplies no word events.
@@ -190,7 +190,7 @@ const server = http.createServer((request, response) => {
     await page.getByLabel('Close', { exact: true }).click();
     await menu('Audio');
     await page.getByText('Japanese test voice', { exact: true }).click();
-    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs')).japaneseVoiceId), 'test-ja');
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:ja')).japaneseVoiceId), 'test-ja');
     await page.evaluate(() => { window.testSpeech = []; });
     await page.getByText('Preview · こんにちは。今日はいい天気です。', { exact: true }).click();
     await page.waitForFunction(() => window.testSpeech.length === 1);
@@ -250,16 +250,77 @@ const server = http.createServer((request, response) => {
     await page.getByText('ちいさな', { exact: true }).waitFor();
     await page.getByText('chiisana', { exact: true }).waitFor();
     await page.reload();
+    await page.getByRole('button', { name: 'Choose Japanese', exact: true }).click();
     await small().getByText('chiisana', { exact: true }).waitFor();
-    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs')).japaneseReadingMode), 'both');
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:ja')).japaneseReadingMode), 'both');
     await page.screenshot({ path: path.join(root, 'japanese-romaji.png') });
+
+    // Japanese writing uses Japanese stroke data, including joined pen strokes.
+    await edit('あ。学校。ア。');
+    await page.getByRole('button', { name: 'あ', exact: true }).click();
+    await page.getByText('Practice writing ✎', { exact: true }).click();
+    await page.getByText('3 strokes', { exact: true }).waitFor();
+    await page.getByText('Watch', { exact: true }).click();
+    await page.getByText('Stop', { exact: true }).click();
+    await page.getByText('Trace', { exact: true }).click();
+    const kana = JSON.parse(fs.readFileSync(path.join(root, 'writing/ja/30.json'), 'utf8'))['あ'];
+    const canvas = await page.getByTestId('writing-canvas').locator('svg').first().boundingBox();
+    for (const median of kana.medians) {
+      const points = median.map(([x, y]) => ({ x: canvas.x + x * 300 / 1024, y: canvas.y + (900 - y) * 300 / 1024 }));
+      await page.mouse.move(points[0].x, points[0].y);
+      await page.mouse.down();
+      for (const point of points.slice(1)) await page.mouse.move(point.x, point.y, { steps: 5 });
+      await page.mouse.up();
+      await page.waitForTimeout(150);
+    }
+    await page.getByText('✓ Done · 0 mistakes', { exact: true }).waitFor().catch(async (error) => {
+      console.log((await page.locator('body').innerText()).slice(-1300));
+      await page.screenshot({ path: path.join(root, 'writing-debug.png') });
+      throw error;
+    });
+    await page.getByText('Test', { exact: true }).click();
+    await page.getByText('Stroke 1 / 3 · 0 mistakes', { exact: true }).waitFor();
+    await page.getByText('Stop quiz', { exact: true }).click();
+    await page.getByLabel('Close', { exact: true }).click();
+    await page.getByRole('button', { name: '学校', exact: true }).click();
+    await page.getByText('Practice writing ✎', { exact: true }).click();
+    await page.getByText('8 strokes', { exact: true }).waitFor();
+    await page.getByText('›', { exact: true }).click();
+    await page.getByText('10 strokes', { exact: true }).waitFor();
+    await page.getByLabel('Close', { exact: true }).click();
+
+    // Switching languages isolates library, vocabulary, settings, and reading.
+    await menu('Switch language');
+    await page.getByRole('button', { name: 'Choose Chinese', exact: true }).click();
+    await menu('Library');
+    await page.getByText('Legacy text', { exact: true }).waitFor();
+    assert.equal(await page.getByText('あ。学校。ア。', { exact: true }).count(), 0);
+    await page.getByLabel('Back', { exact: true }).click();
+    await menu('Vocabulary');
+    await page.getByText('xuéxiào', { exact: true }).waitFor();
+    assert.equal(await page.getByText('chiisana', { exact: true }).count(), 0);
+    await page.getByLabel('Back', { exact: true }).click();
+    await menu('Display');
+    await page.getByText('Tone colors', { exact: true }).waitFor();
+    assert.equal(await page.getByRole('radio', { name: 'Both', exact: true }).count(), 0);
+    await page.getByText('S', { exact: true }).click();
+    await page.getByLabel('Back', { exact: true }).click();
+    await menu('Switch language');
+    await page.getByRole('button', { name: 'Choose Japanese', exact: true }).click();
+    await page.getByRole('button', { name: '学校', exact: true }).waitFor();
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:ja')).fontSize), 'xl');
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:zh')).fontSize), 'sm');
+    await menu('Library');
+    assert.equal(await page.getByText('Legacy text', { exact: true }).count(), 0);
+    await page.getByLabel('Back', { exact: true }).click();
 
     if (process.env.MOCHIREAD_LIVE_TRANSLATION === '1') {
       await page.unroute('**/api/v1/**');
       await page.unroute('https://api.mymemory.translated.net/**');
       for (const language of ['ja', 'zh']) {
+        await menu('Switch language');
+        await page.getByRole('button', { name: language === 'ja' ? 'Choose Japanese' : 'Choose Chinese', exact: true }).click();
         await menu('New text');
-        await page.getByText(language === 'ja' ? 'Japanese' : 'Chinese', { exact: true }).click();
         const source = language === 'ja' ? '今日はいい天気です。' : '今天天气很好。';
         await page.locator('textarea').fill(source);
         await page.getByText('Read', { exact: true }).click();
@@ -276,7 +337,7 @@ const server = http.createServer((request, response) => {
       }
     }
     assert.deepEqual(errors, []);
-    console.log('PASS: migration, dictionary, vocabulary, furigana, widths, per-word tracking without boundary events, sentence mode/cancel, voice settings, translation echo rejection/fallback/retry.');
+    console.log('PASS: language selection/isolation, migration, Japanese writing/trace/test, dictionary, vocabulary, furigana, widths, per-word tracking, sentence mode/cancel, voice settings, translation fallback/retry.');
     console.log(`Preview screenshot: ${path.join(root, 'japanese-reader.png')}`);
   } finally { await browser.close(); }
 })().catch((error) => { console.error(error); process.exitCode = 1; }).finally(() => server.close());

@@ -17,6 +17,7 @@ import type { ReadingLanguage } from '../state';
 import { useTheme } from '../theme';
 import { Pronunciation } from './Pronunciation';
 import { readingLines } from '../lib/reading-presentation';
+import { japaneseWritingCharacters } from '../lib/japanese-writing';
 
 export type WordRect = { x: number; y: number; width: number; height: number };
 
@@ -303,7 +304,7 @@ export function ThoughtBubble({
                   </Text>
                 </Pressable>
               )}
-              {language === 'zh' && <Pressable
+              {(language === 'zh' || japaneseWritingCharacters(word).length > 0) && <Pressable
                 onPress={() => onPractice(word)}
                 style={({ pressed }) => [
                   s.exploreBtn,

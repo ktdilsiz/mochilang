@@ -38,6 +38,7 @@ import { DisplayScreen } from './src/screens/DisplayScreen';
 import { AudioScreen } from './src/screens/AudioScreen';
 import { AboutScreen } from './src/screens/AboutScreen';
 import { HelpScreen } from './src/screens/HelpScreen';
+import { LanguageScreen } from './src/screens/LanguageScreen';
 import type { Screen } from './src/screens/types';
 
 const SAMPLE = '你好，世界！我喜欢吃苹果。今天天气很好。';
@@ -47,18 +48,19 @@ const KEY_PAGE = 'mochiread:reading:page';
 const KEY_LANGUAGE = 'mochiread:reading:language';
 
 export default function App() {
+  const [language, setLanguage] = useState<ReadingLanguage | null>(null);
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <StoreProvider>
-        <AppRoot />
+      <StoreProvider key={language ?? 'choose'} language={language ?? 'zh'}>
+        <AppRoot initialLanguage={language} onSelectLanguage={setLanguage} />
       </StoreProvider>
     </GestureHandlerRootView>
   );
 }
 
-function AppRoot() {
-  const [text, setText] = useState(SAMPLE);
-  const [language, setLanguage] = useState<ReadingLanguage>('zh');
+function AppRoot({ initialLanguage, onSelectLanguage }: { initialLanguage: ReadingLanguage | null; onSelectLanguage: (language: ReadingLanguage | null) => void }) {
+  const language = initialLanguage ?? 'zh';
+  const [text, setText] = useState(language === 'ja' ? 'こんにちは、世界！今日はいい天気です。日本語を読んでみましょう。' : SAMPLE);
   const [readingPage, setReadingPage] = useState(0);
   const [hydrated, setHydrated] = useState(false);
   const [screen, setScreen] = useState<Screen>('reader');
@@ -101,15 +103,17 @@ function AppRoot() {
   useEffect(() => {
     (async () => {
       try {
-        const [savedText, savedPage, savedLanguage] = await Promise.all([
+        const [currentText, currentPage, savedLanguage, legacyText, legacyPage] = await Promise.all([
+          AsyncStorage.getItem(`${KEY_TEXT}:${language}`),
+          AsyncStorage.getItem(`${KEY_PAGE}:${language}`),
+          AsyncStorage.getItem(KEY_LANGUAGE),
           AsyncStorage.getItem(KEY_TEXT),
           AsyncStorage.getItem(KEY_PAGE),
-          AsyncStorage.getItem(KEY_LANGUAGE),
         ]);
+        const matchesLegacy = (savedLanguage === 'ja' ? 'ja' : 'zh') === language;
+        const savedText = currentText ?? (matchesLegacy ? legacyText : null);
+        const savedPage = currentPage ?? (matchesLegacy ? legacyPage : null);
         if (savedText) setText(savedText);
-        if (savedLanguage === 'ja' || savedLanguage === 'zh') {
-          setLanguage(savedLanguage);
-        }
         if (savedPage) {
           const n = parseInt(savedPage, 10);
           if (Number.isFinite(n) && n >= 0) setReadingPage(n);
@@ -121,16 +125,12 @@ function AppRoot() {
   }, []);
 
   useEffect(() => {
-    if (hydrated) AsyncStorage.setItem(KEY_TEXT, text);
+    if (hydrated && initialLanguage) AsyncStorage.setItem(`${KEY_TEXT}:${language}`, text);
   }, [text, hydrated]);
 
   useEffect(() => {
-    if (hydrated) AsyncStorage.setItem(KEY_PAGE, String(readingPage));
+    if (hydrated && initialLanguage) AsyncStorage.setItem(`${KEY_PAGE}:${language}`, String(readingPage));
   }, [readingPage, hydrated]);
-
-  useEffect(() => {
-    if (hydrated) AsyncStorage.setItem(KEY_LANGUAGE, language);
-  }, [language, hydrated]);
 
   useEffect(() => {
     configureTTS({
@@ -143,10 +143,12 @@ function AppRoot() {
   // Track time on the reader screen in 30s ticks. Foreground-only because JS
   // intervals are paused when the app goes to background.
   useEffect(() => {
-    if (screen !== 'reader') return;
+    if (!initialLanguage || !hydrated || !storeHydrated || screen !== 'reader') return;
     const interval = setInterval(() => recordReadingTime(30), 30_000);
     return () => clearInterval(interval);
-  }, [screen, recordReadingTime]);
+  }, [screen, recordReadingTime, initialLanguage, hydrated, storeHydrated]);
+
+  useEffect(() => () => stopSpeech(), []);
 
   const goReader = () => setScreen('reader');
 
@@ -156,6 +158,7 @@ function AppRoot() {
   };
 
   const openText = (next: string, nextLanguage: ReadingLanguage) => {
+    if (nextLanguage !== language) return;
     const trimmed = next.trim();
     if (trimmed && (trimmed !== text || nextLanguage !== language)) {
       stopSpeech();
@@ -165,18 +168,20 @@ function AppRoot() {
       setTranslating(null);
       saveText(trimmed, nextLanguage);
       setText(trimmed);
-      setLanguage(nextLanguage);
       setReadingPage(0);
     }
     setScreen('reader');
   };
+
+  if (!initialLanguage) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}><LanguageScreen onSelect={onSelectLanguage} /></SafeAreaView>;
+  if (!hydrated || !storeHydrated) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]} />;
 
   return (
     <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}>
       {screen === 'reader' && (
         <View style={s.flex}>
           <AppHeader
-            title="Mochiread"
+            title={`MochiRead · ${language === 'ja' ? 'Japanese' : 'Chinese'}`}
             leading="menu"
             onLeadingPress={() => setMenuOpen(true)}
           />
@@ -224,11 +229,13 @@ function AppRoot() {
         <DisplayScreen language={language} onBack={goReader} />
       )}
       {screen === 'audio' && <AudioScreen language={language} onBack={goReader} />}
-      {screen === 'about' && <AboutScreen onBack={goReader} />}
-      {screen === 'help' && <HelpScreen onBack={goReader} />}
+      {screen === 'about' && <AboutScreen language={language} onBack={goReader} />}
+      {screen === 'help' && <HelpScreen language={language} onBack={goReader} />}
 
       <HamburgerMenu
         open={menuOpen}
+        language={language}
+        onSwitchLanguage={() => { stopSpeech(); onSelectLanguage(null); }}
         onClose={() => setMenuOpen(false)}
         onSelect={handleMenuSelect}
       />
@@ -258,6 +265,7 @@ function AppRoot() {
 
       <StrokePracticeModal
         word={practicing}
+        language={language}
         onClose={() => setPracticing(null)}
       />
 

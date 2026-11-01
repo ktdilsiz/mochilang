@@ -12,21 +12,24 @@ import {
 } from '@jamsch/react-native-hanzi-writer';
 import { isCJK } from '@mochilang/dict';
 import { useTheme } from '../theme';
+import type { ReadingLanguage } from '../state';
+import { japaneseWritingCharacters, loadJapaneseStrokes } from '../lib/japanese-writing';
 
 type Props = {
   /** A character or word; multi-character words are practiced one char at a time. */
   word: string | null;
+  language: ReadingLanguage;
   onClose: () => void;
 };
 
 const DATA_URL = 'https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0';
 
-export function StrokePracticeModal({ word, onClose }: Props) {
+export function StrokePracticeModal({ word, language, onClose }: Props) {
   const fade = useRef(new Animated.Value(0)).current;
 
   const chars = useMemo(
-    () => (word ? [...word].filter((c) => isCJK(c)) : []),
-    [word]
+    () => (word ? language === 'ja' ? japaneseWritingCharacters(word) : [...word].filter((c) => isCJK(c)) : []),
+    [word, language]
   );
 
   useEffect(() => {
@@ -47,7 +50,7 @@ export function StrokePracticeModal({ word, onClose }: Props) {
     >
       <Pressable style={s.backdrop} onPress={onClose} />
       <View style={s.center} pointerEvents="box-none">
-        <PracticeDeck chars={chars} onClose={onClose} />
+        <PracticeDeck key={`${language}:${word}`} chars={chars} language={language} onClose={onClose} />
       </View>
     </Animated.View>
   );
@@ -55,9 +58,11 @@ export function StrokePracticeModal({ word, onClose }: Props) {
 
 function PracticeDeck({
   chars,
+  language,
   onClose,
 }: {
   chars: string[];
+  language: ReadingLanguage;
   onClose: () => void;
 }) {
   const [index, setIndex] = useState(0);
@@ -65,8 +70,9 @@ function PracticeDeck({
   const char = chars[safeIndex];
   return (
     <Practice
-      key={char}
+      key={`${safeIndex}:${char}`}
       char={char}
+      language={language}
       indexInfo={
         chars.length > 1
           ? { current: safeIndex, total: chars.length }
@@ -87,12 +93,14 @@ type QuizMode = 'trace' | 'test';
 
 function Practice({
   char,
+  language,
   indexInfo,
   onPrev,
   onNext,
   onClose,
 }: {
   char: string;
+  language: ReadingLanguage;
   indexInfo?: { current: number; total: number };
   onPrev?: () => void;
   onNext?: () => void;
@@ -106,7 +114,7 @@ function Practice({
 
   const writer = useHanziWriter({
     character: char,
-    loader: (c) =>
+    loader: (c) => language === 'ja' ? loadJapaneseStrokes(c) :
       fetch(`${DATA_URL}/${encodeURIComponent(c)}.json`).then((res) => {
         if (!res.ok) throw new Error('Stroke data unavailable');
         return res.json();
@@ -218,7 +226,7 @@ function Practice({
         )}
       </View>
 
-      <View style={s.canvasWrap}>
+      <View style={s.canvasWrap} testID="writing-canvas">
         <HanziWriter
           writer={writer}
           loading={
@@ -300,6 +308,10 @@ function Practice({
         )}
       </View>
 
+      {language === 'ja' && <Text style={[s.status, { color: theme.textMuted, textAlign: 'center', marginTop: 10 }]}
+        onPress={() => { if (typeof window !== 'undefined') window.open('./writing/ja/NOTICE.txt', '_blank', 'noopener'); }}>
+        Japanese strokes · AnimCJK © FM&amp;SH · Arphic Public License · No warranty
+      </Text>}
       <View style={s.actions}>
         {quizActive ? (
           <Action

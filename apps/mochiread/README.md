@@ -1,8 +1,29 @@
 # Mochiread
 
-Chinese and Japanese reading app: choose a language, paste text, see pinyin
+Chinese and Japanese reading app: choose a language on the startup page, paste text, see pinyin
 or kana readings, tap a word for English definitions, and review flashcards.
-Chinese also supports character decomposition and writing practice.
+Chinese also supports character decomposition. Both languages support writing
+practice: Watch, Trace, and Test. Japanese uses its own kanji, hiragana, and
+katakana stroke data, not Chinese stroke forms.
+
+Each language has its own library view, vocabulary, flashcards, display/audio
+preferences, reading position, and activity stats. Use **Switch language** in
+the menu to return to the selection page. The selection page appears on each
+fresh launch. Existing saved texts and vocabulary are retained; legacy entries
+without a language remain Chinese. Existing mixed activity totals are retained
+under Chinese because older records did not identify a language.
+
+Japanese writing data is loaded on demand from this website, so opening an
+uncached character needs a network connection. The pinned AnimCJK dataset
+covers 7,457 kanji and kana; unsupported characters are omitted from the writing
+deck. Half-width kana is normalized for writing practice. See
+[JAPANESE-WRITING-NOTICE.md](./JAPANESE-WRITING-NOTICE.md).
+
+Rebuild the Japanese writing dataset:
+
+```bash
+python3 apps/mochiread/scripts/build-japanese-writing.py
+```
 
 Japanese uses the full English JMdict dictionary, compressed in the bundle and
 loaded on first Japanese lookup. Statistical word boundaries are reconciled

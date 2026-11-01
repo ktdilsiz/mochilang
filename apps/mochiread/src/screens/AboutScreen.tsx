@@ -2,14 +2,16 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
 import { Hedgehog } from '../components/Hedgehog';
 import { useTheme, type Theme } from '../theme';
+import type { ReadingLanguage } from '../state';
 
 type Props = {
+  language: ReadingLanguage;
   onBack: () => void;
 };
 
 const VERSION = '0.1.0';
 
-export function AboutScreen({ onBack }: Props) {
+export function AboutScreen({ language, onBack }: Props) {
   const theme = useTheme();
   return (
     <View style={[s.root, { backgroundColor: theme.bg }]}>
@@ -24,14 +26,14 @@ export function AboutScreen({ onBack }: Props) {
           <Hedgehog size={108} color={theme.text} strokeWidth={3.5} />
           <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
           <Text style={[s.tagline, { color: theme.textMuted }]}>
-            Read Chinese or Japanese, tap a word.
+            Read {language === 'ja' ? 'Japanese' : 'Chinese'}, tap a word.
           </Text>
           <Text style={[s.version, { color: theme.textSubtle }]}>
             Version {VERSION}
           </Text>
         </View>
 
-        <Section title="Dictionary" theme={theme}>
+        {language === 'zh' && <Section title="Dictionary" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
             English definitions come from the{' '}
             <Text style={[s.bold, { color: theme.text }]}>CC-CEDICT</Text>{' '}
@@ -41,9 +43,9 @@ export function AboutScreen({ onBack }: Props) {
           <Text style={[s.copy, { color: theme.text }]}>
             Source: mdbg.net/chinese/dictionary?page=cc-cedict
           </Text>
-        </Section>
+        </Section>}
 
-        <Section title="Japanese dictionary" theme={theme}>
+        {language === 'ja' && <Section title="Japanese dictionary" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
             Japanese readings and English definitions use the full English edition
             of JMdict, copyright the Electronic Dictionary Research and Development
@@ -54,21 +56,21 @@ export function AboutScreen({ onBack }: Props) {
           <Text style={[s.copy, { color: theme.text }]}>
             Source: edrdg.org · github.com/scriptin/jmdict-simplified
           </Text>
-        </Section>
+        </Section>}
 
-        <Section title="Pinyin & segmentation" theme={theme}>
+        {language === 'zh' && <Section title="Pinyin & segmentation" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
             Word splitting and pinyin generation are handled by{' '}
             <Text style={[s.bold, { color: theme.text }]}>pinyin-pro</Text>{' '}
             (MIT).
           </Text>
-        </Section>
+        </Section>}
 
-        <Section title="Japanese romaji" theme={theme}>
+        {language === 'ja' && <Section title="Japanese romaji" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>Latin-letter readings use WanaKana (MIT), with pronunciation spellings for particles and greetings. Source: github.com/WaniKani/WanaKana</Text>
-        </Section>
+        </Section>}
 
-        <Section title="Character decomposition" theme={theme}>
+        {language === 'zh' && <Section title="Character decomposition" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
             The Explore view uses data from{' '}
             <Text style={[s.bold, { color: theme.text }]}>
@@ -79,12 +81,17 @@ export function AboutScreen({ onBack }: Props) {
           <Text style={[s.copy, { color: theme.text }]}>
             Source: github.com/skishore/makemeahanzi
           </Text>
-        </Section>
+        </Section>}
+
+        {language === 'ja' && <Section title="Japanese writing" theme={theme}>
+          <Text style={[s.copy, { color: theme.text }]}>Japanese stroke shapes and order: AnimCJK © 2016–2026 FM&amp;SH, derived from Arphic fonts and Make Me a Hanzi. Converted and grouped for MochiRead. Freely available under the Arphic Public License. No warranty.</Text>
+          <Text style={[s.copy, { color: theme.accent }]} onPress={() => { if (typeof window !== 'undefined') window.open('./writing/ja/NOTICE.txt', '_blank', 'noopener'); }}>View source and license</Text>
+        </Section>}
 
         <Section title="Speech" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
-            Chinese and Japanese use your device's language voices via the
-            system text-to-speech engine. No audio is sent to any server.
+            Reading uses your browser or device's {language === 'ja' ? 'Japanese' : 'Chinese'} voices.
+            Online voices may send text to the browser's speech provider.
           </Text>
         </Section>
       </ScrollView>

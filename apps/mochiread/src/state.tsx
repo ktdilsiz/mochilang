@@ -147,7 +147,7 @@ type Store = {
 
 const Ctx = createContext<Store | null>(null);
 
-export function StoreProvider({ children }: { children: ReactNode }) {
+export function StoreProvider({ children, language = 'zh' }: { children: ReactNode; language?: ReadingLanguage }) {
   const [hydrated, setHydrated] = useState(false);
   const [prefs, setPrefsState] = useState<Preferences>(DEFAULT_PREFS);
   const [library, setLibrary] = useState<LibraryEntry[]>([]);
@@ -158,12 +158,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     (async () => {
       try {
         const [p, l, v, seeded, introducedRaw, statsRaw] = await Promise.all([
-          AsyncStorage.getItem(KEY_PREFS),
+          AsyncStorage.getItem(`${KEY_PREFS}:${language}`).then((saved) => saved ?? AsyncStorage.getItem(KEY_PREFS)),
           AsyncStorage.getItem(KEY_LIBRARY),
           AsyncStorage.getItem(KEY_VOCAB),
           AsyncStorage.getItem(KEY_SEEDED),
           AsyncStorage.getItem(KEY_INTRODUCED),
-          AsyncStorage.getItem(KEY_STATS),
+          AsyncStorage.getItem(`${KEY_STATS}:${language}`).then((saved) => saved ?? (language === 'zh' ? AsyncStorage.getItem(KEY_STATS) : null)),
         ]);
         if (statsRaw) {
           const parsed = JSON.parse(statsRaw) as Partial<DayStats>[];
@@ -235,7 +235,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (hydrated) AsyncStorage.setItem(KEY_PREFS, JSON.stringify(prefs));
+    if (hydrated) AsyncStorage.setItem(`${KEY_PREFS}:${language}`, JSON.stringify(prefs));
   }, [prefs, hydrated]);
   useEffect(() => {
     if (hydrated) AsyncStorage.setItem(KEY_LIBRARY, JSON.stringify(library));
@@ -244,7 +244,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     if (hydrated) AsyncStorage.setItem(KEY_VOCAB, JSON.stringify(vocab));
   }, [vocab, hydrated]);
   useEffect(() => {
-    if (hydrated) AsyncStorage.setItem(KEY_STATS, JSON.stringify(stats));
+    if (hydrated) AsyncStorage.setItem(`${KEY_STATS}:${language}`, JSON.stringify(stats));
   }, [stats, hydrated]);
 
   const value = useMemo<Store>(() => {
@@ -252,7 +252,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       hydrated,
       prefs,
       setPrefs: (patch) => setPrefsState((prev) => ({ ...prev, ...patch })),
-      library,
+      library: library.filter((entry) => entry.language === language),
       saveText: (text, language) => {
         const existing = library.find(
           (e) => e.text === text && e.language === language
@@ -269,8 +269,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         return entry;
       },
       removeText: (id) => setLibrary((prev) => prev.filter((e) => e.id !== id)),
-      reorderLibrary: (next) => setLibrary(next),
-      vocab,
+      reorderLibrary: (next) => setLibrary((previous) => {
+        let index = 0;
+        return previous.map((entry) => entry.language === language ? next[index++] ?? entry : entry);
+      }),
+      vocab: vocab.filter((entry) => entry.language === language),
       saveWord: (entry) =>
         setVocab((prev) => {
           if (

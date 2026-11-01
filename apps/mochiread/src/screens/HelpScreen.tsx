@@ -1,19 +1,21 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
 import { useTheme } from '../theme';
+import type { ReadingLanguage } from '../state';
 
 type Props = {
+  language: ReadingLanguage;
   onBack: () => void;
 };
 
-const TIPS: { title: string; body: string }[] = [
+const tips = (language: ReadingLanguage): { title: string; body: string }[] => [
   {
     title: 'Tap a word',
-    body: 'A thought bubble shows pinyin or Japanese readings, English meanings, and a 🔊 button. Japanese entries show grammar, the dictionary form of conjugated words, and alternate readings separately.',
+    body: language === 'ja' ? 'A thought bubble shows kana and romaji readings, English meanings, grammar, alternate readings, and a 🔊 button.' : 'A thought bubble shows pinyin, English meanings, and a 🔊 button.',
   },
   {
     title: 'Save to vocab',
-    body: 'In the bubble, tap ★ to save a word. Japanese cards save the dictionary form with your original sentence. Find them under Vocabulary in the menu.',
+    body: language === 'ja' ? 'Tap ★ to save the dictionary form with your original sentence. Find saved words under Vocabulary.' : 'Tap ★ in the bubble to save a word. Find saved words under Vocabulary.',
   },
   {
     title: 'Translate a passage',
@@ -25,21 +27,22 @@ const TIPS: { title: string; body: string }[] = [
   },
   {
     title: 'Adjust display',
-    body: 'Open Display to change font size, theme, or hide readings. Japanese offers Kana, Romaji (Latin letters), or Both. Both is the default; choose Always show to keep readings visible. Character exploration and writing practice are available for Chinese.',
+    body: language === 'ja' ? 'Open Display to change font size, theme, or hide readings. Choose Kana, Romaji (Latin letters), or Both. Both is the default.' : 'Open Display to change font size, theme, pinyin visibility, or tone colors. Explore characters from a word bubble to see their components.',
   },
   {
     title: 'New text',
-    body: 'Open New text, choose Chinese or Japanese, then paste your text. Each library entry remembers its language.',
+    body: `Open New text and paste ${language === 'ja' ? 'Japanese' : 'Chinese'} text. Your library, vocabulary, and settings stay within this language. Use Switch language in the menu to change languages.`,
   },
+  { title: 'Practice writing', body: language === 'ja' ? 'Tap Practice writing in a word bubble to watch stroke order, trace, or test yourself on kanji and kana. Use the arrows to move through the characters.' : 'Tap Practice writing in a word bubble to watch stroke order, trace, or test yourself. Use the arrows to move through the characters.' },
 ];
 
-export function HelpScreen({ onBack }: Props) {
+export function HelpScreen({ language, onBack }: Props) {
   const theme = useTheme();
   return (
     <View style={[s.root, { backgroundColor: theme.bg }]}>
       <AppHeader title="Help" leading="back" onLeadingPress={onBack} />
       <ScrollView contentContainerStyle={s.body}>
-        {TIPS.map((tip) => (
+        {tips(language).map((tip) => (
           <View
             key={tip.title}
             style={[

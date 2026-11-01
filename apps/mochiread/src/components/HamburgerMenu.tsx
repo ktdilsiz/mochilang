@@ -5,6 +5,7 @@ import {
   Easing,
   Modal,
   Pressable,
+  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -12,6 +13,7 @@ import {
 import type { Screen } from '../screens/types';
 import { useTheme } from '../theme';
 import { Hedgehog } from './Hedgehog';
+import type { ReadingLanguage } from '../state';
 
 type Item = {
   id: Screen;
@@ -21,7 +23,7 @@ type Item = {
 };
 
 const ITEMS: Item[] = [
-  { id: 'editor', label: 'New text', hint: 'Read Chinese or Japanese' },
+  { id: 'editor', label: 'New text', hint: 'Paste something to read' },
   { id: 'library', label: 'Library', hint: 'Saved & recent texts' },
   { id: 'vocab', label: 'Vocabulary', hint: 'Words you’ve saved' },
   { id: 'flashcards', label: 'Flashcards', hint: 'Swipe-to-review your words' },
@@ -34,13 +36,15 @@ const ITEMS: Item[] = [
 
 type Props = {
   open: boolean;
+  language: ReadingLanguage;
+  onSwitchLanguage: () => void;
   onClose: () => void;
   onSelect: (screen: Screen) => void;
 };
 
 const DRAWER_WIDTH = Math.min(320, Dimensions.get('window').width * 0.84);
 
-export function HamburgerMenu({ open, onClose, onSelect }: Props) {
+export function HamburgerMenu({ open, language, onSwitchLanguage, onClose, onSelect }: Props) {
   const theme = useTheme();
   const slide = useRef(new Animated.Value(-DRAWER_WIDTH)).current;
   const fade = useRef(new Animated.Value(0)).current;
@@ -85,10 +89,13 @@ export function HamburgerMenu({ open, onClose, onSelect }: Props) {
             <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
           </View>
           <Text style={[s.subBrand, { color: theme.textMuted }]}>
-            Read Chinese or Japanese, tap a word.
+            {language === 'ja' ? 'Japanese · 日本語' : 'Chinese · 中文'}
           </Text>
+          <Pressable accessibilityRole="button" onPress={onSwitchLanguage} style={s.item}>
+            <Text style={{ color: theme.accent, fontWeight: '600' }}>Switch language</Text>
+          </Pressable>
           <View style={[s.divider, { backgroundColor: theme.border }]} />
-          <View style={s.list}>
+          <ScrollView contentContainerStyle={s.list}>
             {ITEMS.map((item) => (
               <Pressable
                 key={item.id}
@@ -119,7 +126,7 @@ export function HamburgerMenu({ open, onClose, onSelect }: Props) {
                 )}
               </Pressable>
             ))}
-          </View>
+          </ScrollView>
         </Animated.View>
       </View>
     </Modal>
