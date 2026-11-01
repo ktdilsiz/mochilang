@@ -68,6 +68,24 @@ pnpm -C apps/mochiread start         # local network
 pnpm -C apps/mochiread start:tunnel  # works from anywhere
 ```
 
+## Website on GitHub Pages
+
+MochiRead is published at https://ktdilsiz.github.io/mochilang/.
+The `Deploy MochiRead` workflow exports only this app and its shared packages,
+then deploys the static output to GitHub Pages. Pushes to `main` affecting
+MochiRead or shared dependencies deploy automatically; the workflow can also
+be run manually. Repository Settings → Pages must use GitHub Actions.
+
+To reproduce the production export locally:
+
+```bash
+MOCHIREAD_BASE_URL=/mochilang pnpm -C apps/mochiread exec expo export --platform web
+```
+
+The base URL applies only when supplied, so local development stays at `/`.
+Texts, vocabulary, and preferences are stored in each browser. Translation
+and Chinese stroke data use external services.
+
 ## Publish an OTA update via EAS
 
 The project is already linked to the EAS project — you just need to
