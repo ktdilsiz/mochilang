@@ -24,3 +24,10 @@ test('accepts legacy data for migration and counts untagged entries as Chinese',
   const backup = parseBackup(make({ 'mochiread:vocab': '[{"word":"你好"}]', 'mochiread:prefs': '{"showPinyin":false}', 'mochiread:reading:text': '你好' }));
   assert.equal(summarizeBackup(backup)[1].words, 1);
 });
+
+test('accepts slider sizes alongside legacy presets and rejects out-of-range sizes', () => {
+  for (const fontSize of [18, 31, 48, 'sm', 'md', 'lg', 'xl']) {
+    assert.equal(JSON.parse(parseBackup(make({ 'mochiread:prefs:ja': JSON.stringify({ fontSize }) })).data['mochiread:prefs:ja']).fontSize, fontSize);
+  }
+  for (const fontSize of [0, 17, 49, '31']) assert.throws(() => parseBackup(make({ 'mochiread:prefs:ja': JSON.stringify({ fontSize }) })));
+});

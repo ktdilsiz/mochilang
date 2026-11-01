@@ -39,7 +39,7 @@ const server = http.createServer((request, response) => {
         { word: '你好', language: 'zh', pinyin: 'nǐ hǎo', meanings: ['hello'], remembered: 3, forgotten: 1, dueAt: 1000 },
       ]));
       localStorage.setItem('mochiread:prefs:ja', JSON.stringify({ fontSize: 'xl', autoPlay: false }));
-      localStorage.setItem('mochiread:prefs:zh', JSON.stringify({ fontSize: 'lg', autoPlay: false }));
+      localStorage.setItem('mochiread:prefs:zh', JSON.stringify({ fontSize: 31, autoPlay: false }));
       localStorage.setItem('mochiread:stats:ja', JSON.stringify([{ date: '2026-10-30', wordTaps: 12, secondsRead: 100 }]));
       localStorage.setItem('mochiread:reading:text:ja', '学校に行きます。');
       localStorage.setItem('mochiread:reading:text:zh', '你好，世界！');
@@ -104,7 +104,7 @@ const server = http.createServer((request, response) => {
     const after = await snapshot(target);
     assert(!after['mochiread:restore-journal']);
     assert.deepEqual(JSON.parse(after['mochiread:vocab']), JSON.parse(backup.data['mochiread:vocab']));
-    assert.equal(JSON.parse(after['mochiread:prefs:zh']).fontSize, 'lg');
+    assert.equal(JSON.parse(after['mochiread:prefs:zh']).fontSize, 31);
     assert.equal(JSON.parse(after['mochiread:prefs:ja']).fontSize, 'xl');
     assert.equal(after['mochiread:reading:text:ja'], '学校に行きます。');
     await menu(target, 'Library');

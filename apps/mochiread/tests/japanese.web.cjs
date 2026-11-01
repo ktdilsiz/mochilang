@@ -68,7 +68,8 @@ const server = http.createServer((request, response) => {
     await page.getByText('• school', { exact: true }).waitFor();
     await page.getByText('がっこう', { exact: true }).last().waitFor();
     assert.equal(await page.getByText('Practice writing ✎', { exact: true }).count(), 1);
-    await page.getByLabel('Save word', { exact: true }).click();
+    // The popup springs into place; allow clicks while its transform settles.
+    await page.getByLabel('Save word', { exact: true }).click({ force: true });
     await page.mouse.click(410, 850);
     await menu('Vocabulary');
     assert.equal(await page.getByText('学校', { exact: true }).count(), 1);
@@ -110,7 +111,7 @@ const server = http.createServer((request, response) => {
     await page.getByRole('button', { name: 'ｺｰﾋｰ', exact: true }).waitFor();
     await page.getByRole('button', { name: '食べられなかった', exact: true }).click();
     await page.getByText('食べる · potential / passive · past negative', { exact: true }).waitFor();
-    await page.getByLabel('Save word', { exact: true }).click();
+    await page.getByLabel('Save word', { exact: true }).click({ force: true });
     const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')));
     const eat = saved.find((entry) => entry.word === '食べる');
     assert.equal(eat.pinyin, 'たべる');
@@ -199,7 +200,12 @@ const server = http.createServer((request, response) => {
     await page.getByLabel('Back', { exact: true }).click();
     await edit('学校で食べられなかった。');
     await menu('Display');
-    await page.getByText('XL', { exact: true }).click();
+    const fontSlider = () => page.getByRole('slider', { name: 'Font size', exact: true });
+    await fontSlider().focus();
+    await fontSlider().press('Home');
+    for (let i = 0; i < 24; i++) await fontSlider().press('ArrowRight');
+    assert.equal(await fontSlider().inputValue(), '42');
+    assert.equal(await page.getByTestId('font-size-preview').first().evaluate((node) => getComputedStyle(node).fontSize), '42px');
     await page.getByLabel('Back', { exact: true }).click();
     for (const width of [360, 430, 1280]) {
       await page.setViewportSize({ width, height: 932 });
@@ -228,7 +234,7 @@ const server = http.createServer((request, response) => {
     await small().getByText('chiisana', { exact: true }).waitFor();
     assert.equal(await small().getByText('ちいさな', { exact: true }).count(), 0);
     await small().click();
-    await page.getByLabel('Save word', { exact: true }).click();
+    await page.getByLabel('Save word', { exact: true }).click({ force: true });
     const smallCard = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')).find((entry) => entry.word === '小さな'));
     assert.equal(smallCard.pinyin, 'ちいさな');
     await page.mouse.click(410, 850);
@@ -304,13 +310,15 @@ const server = http.createServer((request, response) => {
     await menu('Display');
     await page.getByText('Tone colors', { exact: true }).waitFor();
     assert.equal(await page.getByRole('radio', { name: 'Both', exact: true }).count(), 0);
-    await page.getByText('S', { exact: true }).click();
+    await fontSlider().focus();
+    await fontSlider().press('Home');
+    for (let i = 0; i < 4; i++) await fontSlider().press('ArrowRight');
     await page.getByLabel('Back', { exact: true }).click();
     await menu('Switch language');
     await page.getByRole('button', { name: 'Choose Japanese', exact: true }).click();
     await page.getByRole('button', { name: '学校', exact: true }).waitFor();
-    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:ja')).fontSize), 'xl');
-    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:zh')).fontSize), 'sm');
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:ja')).fontSize), 42);
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:zh')).fontSize), 22);
     await menu('Library');
     assert.equal(await page.getByText('Legacy text', { exact: true }).count(), 0);
     await page.getByLabel('Back', { exact: true }).click();

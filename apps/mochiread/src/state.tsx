@@ -11,7 +11,7 @@ import { HSK3_SENTENCES } from './data/hsk3-sentences';
 import { HSK4_SENTENCES } from './data/hsk4-sentences';
 import { migrateVocabulary, sameVocabWord } from './lib/vocabulary';
 
-export type FontSize = 'sm' | 'md' | 'lg' | 'xl';
+export type FontSize = 'sm' | 'md' | 'lg' | 'xl' | number;
 export type SpeechRate = 'slow' | 'normal' | 'fast';
 export type PagePlayback = 'word' | 'sentence';
 export type PinyinMode = 'on' | 'off' | 'hint';
@@ -492,16 +492,23 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
   return [...baseSeeds, japaneseWelcome, hsk3All, hsk4All];
 })();
 
-export const FONT_SIZE_VALUES: Record<FontSize, number> = {
+export const FONT_SIZE_VALUES: Record<Exclude<FontSize, number>, number> = {
   sm: 22,
   md: 28,
   lg: 34,
   xl: 42,
 };
 
-export const PINYIN_SIZE_VALUES: Record<FontSize, number> = {
+export const PINYIN_SIZE_VALUES: Record<Exclude<FontSize, number>, number> = {
   sm: 11,
   md: 13,
   lg: 16,
   xl: 19,
 };
+
+export function getFontSizes(value: FontSize) {
+  const text = typeof value === 'number'
+    ? Math.round(Math.max(18, Math.min(48, Number.isFinite(value) ? value : 28)))
+    : FONT_SIZE_VALUES[value] ?? 28;
+  return { text, reading: Math.round(11 + (text - 22) * 0.4) };
+}

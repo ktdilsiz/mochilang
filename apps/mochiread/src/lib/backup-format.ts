@@ -35,8 +35,9 @@ function validValue(key: string, raw: string): boolean {
     object(day) && typeof day.date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(day.date) && number(day.wordTaps) && number(day.secondsRead));
   if (key.startsWith('mochiread:prefs')) {
     if (!object(value)) return false;
-    const choices: Record<string, string[]> = { fontSize: ['sm', 'md', 'lg', 'xl'], pinyinMode: ['on', 'off', 'hint'], japaneseReadingMode: ['kana', 'romaji', 'both'], themeMode: ['system', 'light', 'dark'], speechRate: ['slow', 'normal', 'fast'], pagePlayback: ['word', 'sentence'] };
-    return Object.entries(choices).every(([field, values]) => optional(value[field], (v) => values.includes(String(v)))) &&
+    const choices: Record<string, string[]> = { pinyinMode: ['on', 'off', 'hint'], japaneseReadingMode: ['kana', 'romaji', 'both'], themeMode: ['system', 'light', 'dark'], speechRate: ['slow', 'normal', 'fast'], pagePlayback: ['word', 'sentence'] };
+    return optional(value.fontSize, (v) => ['sm', 'md', 'lg', 'xl'].includes(String(v)) || typeof v === 'number' && Number.isFinite(v) && v >= 18 && v <= 48) &&
+      Object.entries(choices).every(([field, values]) => optional(value[field], (v) => values.includes(String(v)))) &&
       ['showToneColors', 'autoPlay', 'showPinyin'].every((field) => optional(value[field], (v) => typeof v === 'boolean')) &&
       ['voiceId', 'japaneseVoiceId'].every((field) => optional(value[field], (v) => string(v, 2000)));
   }

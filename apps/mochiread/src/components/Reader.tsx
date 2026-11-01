@@ -12,8 +12,7 @@ import { speechSegments, readAlongSegments, boundaryRange } from '../lib/reading
 import { tokenReadingLines } from '../lib/reading-presentation';
 import { speakAsync, stop as stopSpeech } from '../lib/tts';
 import {
-  FONT_SIZE_VALUES,
-  PINYIN_SIZE_VALUES,
+  getFontSizes,
   type FontSize,
   type PinyinMode,
   type ReadingLanguage,
@@ -54,8 +53,7 @@ export function Reader({
   onTranslate,
 }: Props) {
   const theme = useTheme();
-  const hanziSize = FONT_SIZE_VALUES[fontSize];
-  const pinyinSize = PINYIN_SIZE_VALUES[fontSize];
+  const { text: hanziSize, reading: pinyinSize } = getFontSizes(fontSize);
   const lineHeight = Math.round(hanziSize * 1.25);
   const reservePinyinRow = pinyinMode !== 'off';
   const readingMode = language === 'ja' ? japaneseReadingMode : undefined;

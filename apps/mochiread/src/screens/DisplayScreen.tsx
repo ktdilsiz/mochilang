@@ -1,8 +1,10 @@
 import { Pressable, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
 import { AppHeader } from '../components/AppHeader';
+import { FontSizeSlider } from '../components/FontSizeSlider';
+import { Pronunciation } from '../components/Pronunciation';
 import {
   useStore,
-  type FontSize,
+  getFontSizes,
   type PinyinMode,
   type ReadingLanguage,
   type ThemeMode,
@@ -13,13 +15,6 @@ type Props = {
   language: ReadingLanguage;
   onBack: () => void;
 };
-
-const SIZE_OPTIONS: { id: FontSize; label: string }[] = [
-  { id: 'sm', label: 'S' },
-  { id: 'md', label: 'M' },
-  { id: 'lg', label: 'L' },
-  { id: 'xl', label: 'XL' },
-];
 
 const THEME_OPTIONS: { id: ThemeMode; label: string }[] = [
   { id: 'system', label: 'System' },
@@ -40,6 +35,10 @@ const PINYIN_OPTIONS: { id: PinyinMode; label: string; hint: string }[] = [
 export function DisplayScreen({ language, onBack }: Props) {
   const { prefs, setPrefs } = useStore();
   const theme = useTheme();
+  const sizes = getFontSizes(prefs.fontSize);
+  const preview = language === 'ja'
+    ? [{ word: '日本語', reading: 'にほんご' }, { word: 'を', reading: 'を' }, { word: '読む', reading: 'よむ' }]
+    : [{ word: '你好', reading: 'nǐ hǎo' }, { word: '世界', reading: 'shì jiè' }];
 
   return (
     <View style={[s.root, { backgroundColor: theme.bg }]}>
@@ -76,32 +75,24 @@ export function DisplayScreen({ language, onBack }: Props) {
         </Section>
 
         <Section title="Font size" theme={theme}>
-          <View style={s.chipRow}>
-            {SIZE_OPTIONS.map((opt) => {
-              const selected = prefs.fontSize === opt.id;
-              return (
-                <Pressable
-                  key={opt.id}
-                  onPress={() => setPrefs({ fontSize: opt.id })}
-                  style={({ pressed }) => [
-                    s.chip,
-                    { backgroundColor: theme.surfaceAlt },
-                    selected && { backgroundColor: theme.accent },
-                    pressed && { opacity: 0.85 },
-                  ]}
-                >
-                  <Text
-                    style={[
-                      s.chipText,
-                      { color: theme.text },
-                      selected && { color: '#ffffff' },
-                    ]}
-                  >
-                    {opt.label}
-                  </Text>
-                </Pressable>
-              );
-            })}
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Text style={{ color: theme.textMuted }}>Drag to adjust</Text>
+            <Text style={{ color: theme.accent, fontWeight: '700' }}>{sizes.text} px</Text>
+          </View>
+          <FontSizeSlider value={sizes.text} onChange={(fontSize) => setPrefs({ fontSize })} />
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+            <Text style={{ color: theme.textMuted }}>Small</Text>
+            <Text style={{ color: theme.textMuted }}>Large</Text>
+          </View>
+          <View style={{ backgroundColor: theme.bg, borderRadius: 12, padding: 16, gap: 12 }}>
+            <Text style={{ color: theme.textMuted, fontSize: 12 }}>Live preview</Text>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-end', gap: 12 }}>
+              {preview.map((item) => <View key={item.word} style={{ alignItems: 'center' }}>
+                {prefs.pinyinMode !== 'off' && <Pronunciation reading={item.reading} language={language} mode={prefs.japaneseReadingMode} word={item.word}
+                  style={{ fontSize: sizes.reading, lineHeight: sizes.reading + 2, color: theme.pinyin, textAlign: 'center' }} />}
+                <Text testID="font-size-preview" style={{ color: theme.hanzi, fontSize: sizes.text, lineHeight: Math.round(sizes.text * 1.25) }}>{item.word}</Text>
+              </View>)}
+            </View>
           </View>
         </Section>
 

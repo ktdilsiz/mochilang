@@ -13,6 +13,10 @@ fresh launch. Existing saved texts and vocabulary are retained; legacy entries
 without a language remain Chinese. Existing mixed activity totals are retained
 under Chinese because older records did not identify a language.
 
+In **Display**, drag the font-size slider (18–48 px) to resize the live sample
+and its readings immediately. Sizes are saved separately for each language.
+Existing S/M/L/XL preferences and backups remain supported.
+
 ## Faster website startup
 
 The web app loads the language picker without downloading dictionaries. After
