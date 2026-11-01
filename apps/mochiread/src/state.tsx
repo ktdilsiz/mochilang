@@ -115,6 +115,10 @@ const ORIGINAL_SEED_IDS = ['seed-1', 'seed-2', 'seed-3', 'seed-4', 'seed-5'];
  * received them get the cleanup automatically.
  */
 const DEPRECATED_SEED_IDS = [
+  'seed-2',
+  'seed-3',
+  'seed-4',
+  'seed-5',
   'seed-hsk3-1',
   'seed-hsk3-2',
   'seed-hsk3-3',
@@ -449,26 +453,6 @@ const SEED_LIBRARY: LibraryEntry[] = (() => {
     {
       title: 'Greeting',
       text: '你好，世界！我喜欢吃苹果。今天天气很好。',
-      language: 'zh',
-    },
-    {
-      title: 'Coffee with a friend',
-      text: '今天我去咖啡店喝咖啡。我的朋友也来了。我们一起聊天，很开心。',
-      language: 'zh',
-    },
-    {
-      title: 'About me',
-      text: '我叫小明，是中国人。我在北京工作，做老师。我喜欢看书和听音乐。',
-      language: 'zh',
-    },
-    {
-      title: 'Proverb · 路遥知马力',
-      text: '路遥知马力，日久见人心。',
-      language: 'zh',
-    },
-    {
-      title: '静夜思 · Li Bai',
-      text: '床前明月光，疑是地上霜。举头望明月，低头思故乡。',
       language: 'zh',
     },
   ];
