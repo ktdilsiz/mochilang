@@ -96,6 +96,21 @@ test('layered conjugations resolve to their verb with the complete surface readi
   }
 });
 
+test('causative stems before ながら resolve to their dictionary verbs', () => {
+  for (const [surface, base, reading] of [
+    ['磨かせ', '磨く', 'みがかせ'],
+    ['読ませ', '読む', 'よませ'],
+    ['食べさせ', '食べる', 'たべさせ'],
+  ]) {
+    const result = lookupJapanese(surface);
+    assert.equal(result?.dictionaryForm, base, surface);
+    assert.equal(result?.reading, reading, surface);
+    assert.match(result?.conjugation ?? '', /causative/, surface);
+  }
+  const tokens = tokenize('夜風に髪を磨かせながら', 'ja');
+  assert(tokens.some((token) => token.word === '磨かせ' && token.japanese?.dictionaryForm === '磨く'));
+});
+
 test('compounds can span or split statistical chunks without swallowing particles', () => {
   const tokens = tokenize('今日は一日中雨です。生ビールを飲む。', 'ja');
   assert.deepEqual(tokens.slice(0, 4).map((token) => token.word), ['今日', 'は', '一日中', '雨']);
