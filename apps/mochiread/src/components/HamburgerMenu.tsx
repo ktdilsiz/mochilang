@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   Animated,
   Dimensions,
@@ -47,10 +47,12 @@ const DRAWER_WIDTH = Math.min(320, Dimensions.get('window').width * 0.84);
 
 export function HamburgerMenu({ open, language, onSwitchLanguage, onClose, onSelect }: Props) {
   const theme = useTheme();
+  const [hoveredItem, setHoveredItem] = useState<Screen | 'language' | null>(null);
   const slide = useRef(new Animated.Value(-DRAWER_WIDTH)).current;
   const fade = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
+    setHoveredItem(null);
     Animated.parallel([
       Animated.timing(slide, {
         toValue: open ? 0 : -DRAWER_WIDTH,
@@ -92,7 +94,9 @@ export function HamburgerMenu({ open, language, onSwitchLanguage, onClose, onSel
           <Text style={[s.subBrand, { color: theme.textMuted }]}>
             {language === 'ja' ? 'Japanese · 日本語' : 'Chinese · 中文'}
           </Text>
-          <Pressable accessibilityRole="button" onPress={onSwitchLanguage} style={s.item}>
+          <Pressable accessibilityRole="button" onPress={onSwitchLanguage}
+            onHoverIn={() => setHoveredItem('language')} onHoverOut={() => setHoveredItem(null)}
+            style={({ pressed }) => [s.item, { backgroundColor: pressed ? theme.surfaceAlt : hoveredItem === 'language' ? theme.accentBg : 'transparent' }]}>
             <Text style={{ color: theme.accent, fontWeight: '600' }}>Switch language</Text>
           </Pressable>
           <View style={[s.divider, { backgroundColor: theme.border }]} />
@@ -100,12 +104,15 @@ export function HamburgerMenu({ open, language, onSwitchLanguage, onClose, onSel
             {ITEMS.map((item) => (
               <Pressable
                 key={item.id}
+                accessibilityRole="button"
                 onPress={() => onSelect(item.id)}
+                onHoverIn={() => setHoveredItem(item.id)}
+                onHoverOut={() => setHoveredItem(null)}
                 style={({ pressed }) => [
                   s.item,
                   item.id === 'editor'
-                    ? { backgroundColor: pressed ? '#1e40af' : '#2563eb', marginBottom: 6 }
-                    : pressed && { backgroundColor: theme.surfaceAlt },
+                    ? { backgroundColor: pressed ? '#1e40af' : hoveredItem === item.id ? '#1d4ed8' : '#2563eb', marginBottom: 6 }
+                    : { backgroundColor: pressed ? theme.surfaceAlt : hoveredItem === item.id ? theme.accentBg : 'transparent' },
                 ]}
               >
                 <View style={s.itemText}>
