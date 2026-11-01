@@ -17,9 +17,14 @@ kana-only words. For example, 小さな shows ちいさな / chiisana. Long vowe
 plain spellings such as gakkou and koohii. Readings are derived for display;
 Japanese speech and saved cards retain their original kana readings.
 Half-width kana is normalized for lookup while original text is retained. Audio defaults
-to Read along: one spoken word and one highlight at a time, including Japanese
-particle pronunciations. Choose Natural sentences in Audio for continuous
-speech; it highlights the sentence unless the voice reports word boundaries.
+to Natural sentences for continuous speech; it highlights the sentence unless the
+voice reports word boundaries. Read along in Audio speaks and highlights one word
+at a time, including Japanese particle pronunciations. Existing playback choices
+are preserved. Automatic voice selection prefers the requested locale and voices
+advertised as Natural, Neural, Premium, or Enhanced, followed by Google voices.
+These names are heuristics; actual quality depends on the browser and device.
+Choose a specific voice and use Preview in Audio to compare. Online browser
+voices may send text to their speech provider.
 Vocabulary saves dictionary forms
 with the original sentence; old conjugated cards merge without losing review
 counts. Saved texts and vocabulary remember their language; legacy data defaults
@@ -135,7 +140,8 @@ This rewrites `app.json` with a fresh project ID under your Expo account.
 - **Character decomposition:** [Make Me a Hanzi](https://github.com/skishore/makemeahanzi)
   · LGPL / Arphic Public License
 - **Pinyin & segmentation:** [pinyin-pro](https://github.com/zh-lx/pinyin-pro) · MIT
-- **Speech:** the OS Mandarin voice via `expo-speech`. No audio leaves the device.
+- **Speech:** browser or device Chinese/Japanese voices via `expo-speech`.
+  Online browser voices may send text to their speech provider.
 - **Japanese definitions/readings:** JMdict · EDRDG · CC BY-SA 4.0, converted
   from scriptin/jmdict-simplified's full English edition.
 - **Japanese segmentation:** TinySegmenter · BSD.

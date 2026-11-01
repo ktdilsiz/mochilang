@@ -80,7 +80,7 @@ const DEFAULT_PREFS: Preferences = {
   showToneColors: true,
   themeMode: 'system',
   speechRate: 'normal',
-  pagePlayback: 'word',
+  pagePlayback: 'sentence',
   autoPlay: true,
 };
 

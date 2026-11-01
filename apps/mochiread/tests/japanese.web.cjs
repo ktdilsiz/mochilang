@@ -23,14 +23,17 @@ const server = http.createServer((request, response) => {
     const page = await browser.newPage({ viewport: { width: 430, height: 932 } });
     page.setDefaultTimeout(15000);
     const errors = [];
-    page.on('pageerror', (error) => errors.push(error.message));
+    page.on('pageerror', (error) => { errors.push(error.message); console.error('Browser error:', error.message); });
     await page.addInitScript(() => {
       // Mock speech transport, not the app: verify the utterances it sends,
       // language, boundaries and cancellation without relying on PC voices.
       window.testSpeech = [];
+      // Synthetic voices cannot be assigned to the browser's native utterance.
+      window.SpeechSynthesisUtterance = class {};
       let timer;
       window.speechSynthesis.getVoices = () => [
         { voiceURI: 'test-ja', lang: 'ja-JP', name: 'Japanese test voice', localService: true },
+        { voiceURI: 'natural-ja', lang: 'ja-JP', name: 'Japanese Natural', localService: false },
         { voiceURI: 'test-zh', lang: 'zh-CN', name: 'Chinese test voice', localService: true },
       ];
       window.speechSynthesis.speak = (message) => {
@@ -114,6 +117,11 @@ const server = http.createServer((request, response) => {
     assert.equal(eat.examples[0].sentence, '食べられなかった。');
     await page.mouse.click(410, 850);
 
+    // Natural sentences are the default; explicit word mode remains available.
+    await menu('Audio');
+    assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs')).pagePlayback), 'sentence');
+    await page.getByText('Read along', { exact: true }).click();
+    await page.getByLabel('Back', { exact: true }).click();
     // Word tracking works even when the voice supplies no word events.
     await page.getByLabel('Play page', { exact: true }).click();
     await page.waitForFunction(() => window.testSpeech.length === 1 && document.querySelector('[aria-label="私"]')?.getAttribute('aria-selected') === 'true').catch(async (error) => {
@@ -121,6 +129,7 @@ const server = http.createServer((request, response) => {
       throw error;
     });
     assert.equal((await page.evaluate(() => window.testSpeech))[0].text, 'わたし');
+    assert.equal((await page.evaluate(() => window.testSpeech))[0].voice, 'natural-ja');
     await page.waitForFunction(() => window.testSpeech.length === 2 && document.querySelector('[aria-label="は"]')?.getAttribute('aria-selected') === 'true');
     await page.getByLabel('Pause', { exact: true }).click();
     await page.waitForTimeout(500);
@@ -182,6 +191,10 @@ const server = http.createServer((request, response) => {
     await menu('Audio');
     await page.getByText('Japanese test voice', { exact: true }).click();
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs')).japaneseVoiceId), 'test-ja');
+    await page.evaluate(() => { window.testSpeech = []; });
+    await page.getByText('Preview · こんにちは。今日はいい天気です。', { exact: true }).click();
+    await page.waitForFunction(() => window.testSpeech.length === 1);
+    assert.equal((await page.evaluate(() => window.testSpeech))[0].voice, 'test-ja');
     await page.getByLabel('Back', { exact: true }).click();
     await edit('学校で食べられなかった。');
     await menu('Display');
