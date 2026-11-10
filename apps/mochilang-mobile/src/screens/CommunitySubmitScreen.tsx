@@ -17,7 +17,7 @@ import {
   ApiError,
   COMMUNITY_PACK_SCHEMA_VERSION,
   type CommunityPackEnvelope,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 

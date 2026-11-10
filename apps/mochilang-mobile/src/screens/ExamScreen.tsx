@@ -8,8 +8,8 @@ import {
   View,
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import type { Exercise } from '@mochilang/shared'
-import { matchesSequenceAnswer } from '@mochilang/shared'
+import type { Exercise } from '@mochilang/core'
+import { matchesSequenceAnswer } from '@mochilang/core'
 import LedgeButton from '../components/LedgeButton'
 import FillBlank, {
   checkAnswer as checkFillBlank,
@@ -22,7 +22,7 @@ import Translate, {
 } from '../components/exercises/Translate'
 import { sfx } from '../lib/sfx'
 import { localeForOption, speak, targetLocaleForCourse } from '../lib/tts'
-import { parseCourseId } from '@mochilang/shared'
+import { parseCourseId } from '@mochilang/core'
 import TappableText from '../components/TappableText'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 

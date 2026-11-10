@@ -3,7 +3,7 @@ import {
   type Level,
   collectMistakeExercises,
   locateExercise,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import ExamScreen from './ExamScreen'
 
 interface Props {

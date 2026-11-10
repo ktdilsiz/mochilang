@@ -23,7 +23,7 @@ import {
   type OfflineBot,
   type ProfileState,
   type ProgressState,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { useOfflineLeague } from '../state/useOfflineLeague'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 

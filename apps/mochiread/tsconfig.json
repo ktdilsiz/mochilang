@@ -1,7 +1,14 @@
 {
   "extends": "expo/tsconfig.base",
-  "include": ["**/*.ts", "**/*.tsx", "../../packages/dict/src/data-source.mochiread.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "types": [
+      "react-native",
+      "node"
+    ]
   }
 }

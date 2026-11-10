@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import type { LevelExamsPassed } from '@mochilang/shared'
+import type { LevelExamsPassed } from '@mochilang/core'
 
 /**
  * Mobile mirror of apps/web/src/levelExams.ts. Tracks which level-skip

@@ -12,7 +12,7 @@
  */
 
 import { useCallback, useEffect, useState } from 'react'
-import { api, ApiError, type ProgressResponse } from '@mochilang/shared'
+import { api, ApiError, type ProgressResponse } from '@mochilang/core'
 
 const STORAGE_KEY = 'mochilang:progress:v1'
 

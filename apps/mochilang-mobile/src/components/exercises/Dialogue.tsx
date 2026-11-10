@@ -10,8 +10,8 @@ import {
 import type {
   DialogueExercise,
   DialogueTurn,
-} from '@mochilang/shared'
-import { parseCourseId } from '@mochilang/shared'
+} from '@mochilang/core'
+import { parseCourseId } from '@mochilang/core'
 import LedgeButton from '../LedgeButton'
 import TappableText from '../TappableText'
 import { speak, stopSpeaking } from '../../lib/tts'

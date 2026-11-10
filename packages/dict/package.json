@@ -5,7 +5,9 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./core": "./src/core.ts",
+    "./build-data": "./src/build-data.mjs"
   },
   "scripts": {
     "build:japanese": "node scripts/build-japanese.mjs",

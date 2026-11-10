@@ -1,4 +1,4 @@
-import type { Lesson, LessonTheme } from '@mochilang/shared'
+import type { Lesson, LessonTheme } from '@mochilang/core'
 import { LessonIcon } from './lessonIcons'
 
 export function iconForLesson(lesson: Lesson, opts?: { completed?: boolean }): React.ReactNode {

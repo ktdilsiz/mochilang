@@ -3,7 +3,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import {
   DOUBLE_XP_DURATION_MS,
   MAX_STREAK_FREEZES,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { usePowerups } from '../state/usePowerups'
 import { useSettings } from '../state/useSettings'
 import LedgeButton from '../components/LedgeButton'

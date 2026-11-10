@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import type { MistakeRecord, MistakesState } from '@mochilang/shared'
+import type { MistakeRecord, MistakesState } from '@mochilang/core'
 
 /**
  * Web hook tracking mistakes per course. Keyed by exerciseId at the

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import type { TopicExamsPassed } from '@mochilang/shared'
+import type { TopicExamsPassed } from '@mochilang/core'
 
 /**
  * Web hook tracking which topic-skip exams the user has passed.

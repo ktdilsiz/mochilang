@@ -14,7 +14,7 @@ import {
   findLanguage,
   parseCourseId,
   type CourseSummary,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { BUNDLED_COURSE_IDS } from '../data/courseBundles'
 import LedgeButton from '../components/LedgeButton'

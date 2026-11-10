@@ -1,4 +1,4 @@
-import type { Level } from '@mochilang/shared'
+import type { Level } from '@mochilang/core'
 import courseEnEs from '../../assets/course-en-es.json'
 import courseEnTr from '../../assets/course-en-tr.json'
 import courseEnZh from '../../assets/course-en-zh.json'

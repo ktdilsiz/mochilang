@@ -14,6 +14,6 @@ export default defineConfig({
   // directory; vite needs to know it's safe to dependency-optimize the
   // member but stay out of the local source resolution.
   optimizeDeps: {
-    exclude: ['@mochilang/shared'],
+    exclude: ['@mochilang/core'],
   },
 })

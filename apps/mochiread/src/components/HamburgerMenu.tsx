@@ -10,10 +10,10 @@ import {
   Text,
   View,
 } from 'react-native';
-import type { Screen } from '../screens/types';
+import type { Screen } from '../app/navigation';
 import { useTheme } from '../theme';
 import { Hedgehog } from './Hedgehog';
-import type { ReadingLanguage } from '../state';
+import type { ReadingLanguage } from '../storage/schema';
 
 type Item = {
   id: Screen;

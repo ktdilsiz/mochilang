@@ -5,7 +5,7 @@ import {
   communityLessonId,
   type CommunityPack,
   type Level,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { COURSE_BUNDLES, type CourseEnvelope } from '../data/courseBundles'
 
 /**

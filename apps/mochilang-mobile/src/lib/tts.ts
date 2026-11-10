@@ -1,6 +1,6 @@
 import * as Speech from 'expo-speech'
 import type { Voice } from 'expo-speech'
-import { parseCourseId, type VoiceGender } from '@mochilang/shared'
+import { parseCourseId, type VoiceGender } from '@mochilang/core'
 import { getSettings } from '../state/useSettings'
 
 /**

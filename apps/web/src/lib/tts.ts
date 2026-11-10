@@ -8,7 +8,7 @@
  * every utterance.
  */
 
-import type { VoiceGender } from '@mochilang/shared'
+import type { VoiceGender } from '@mochilang/core'
 import { getSettings } from '../settings'
 
 const voiceCache: Partial<Record<VoiceGender, SpeechSynthesisVoice | null>> = {}

@@ -8,8 +8,7 @@ katakana stroke data, not Chinese stroke forms.
 
 Each language has its own library view, vocabulary, flashcards, display/audio
 preferences, reading position, and activity stats. Use **Switch language** in
-the menu to return to the selection page. The selection page appears on each
-fresh launch. Existing saved texts and vocabulary are retained; legacy entries
+the menu to return to the selection page. Your selection is remembered on the next launch. Existing saved texts and vocabulary are retained; legacy entries
 without a language remain Chinese. Existing mixed activity totals are retained
 under Chinese because older records did not identify a language.
 
@@ -117,7 +116,7 @@ From the repo root:
 pnpm install
 ```
 
-That's it for the JS side. The bundled CC-CEDICT (`src/data/dict.json`) and
+That's it for the JS side. The bundled CC-CEDICT (`packages/dict/src/data/dict-*.json`) and
 Make Me a Hanzi decomposition (`src/data/decomp.json`) are committed to the
 repo, so the app works without re-running any data scripts.
 
@@ -143,7 +142,7 @@ be run manually. Repository Settings → Pages must use GitHub Actions.
 To reproduce the production export locally:
 
 ```bash
-MOCHIREAD_BASE_URL=/mochilang pnpm -C apps/mochiread exec expo export --platform web
+MOCHIREAD_BASE_URL=/mochilang pnpm -C apps/mochiread build:web
 ```
 
 The base URL applies only when supplied, so local development stays at `/`.
@@ -205,3 +204,22 @@ This rewrites `app.json` with a fresh project ID under your Expo account.
   from scriptin/jmdict-simplified's full English edition.
 - **Japanese segmentation:** TinySegmenter · BSD.
 - **Romaji:** WanaKana · MIT.
+
+## Code organization and checks
+
+- `src/app`: startup, navigation and provider composition.
+- `src/features`: reading, library, vocabulary, writing, settings, backup, activity and help.
+- `src/components`: shared UI controls.
+- `src/platform`: dictionary loading, decomposition data and speech adapters.
+- `src/storage`: schemas, defaults, persisted keys, migrations, repositories and backups.
+
+Preferences, library, vocabulary and activity expose separate providers/hooks.
+Storage retains the existing keys and backup version 1. Failed hydration does
+not write default values over the failed domain's saved data. The remembered
+language remains a device preference outside the transferable backup.
+
+Run `pnpm --filter mochiread test:unit` for pure app checks and
+`pnpm --filter mochiread test:e2e` for the reading/writing and backup browser
+suites. CI builds one export and supplies `MOCHIREAD_WEB_DIR` to both suites.
+The app TypeScript check covers runtime source and unit tests; Node unit tests
+run with `tsx`.

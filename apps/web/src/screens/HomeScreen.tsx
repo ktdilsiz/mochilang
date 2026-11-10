@@ -7,7 +7,7 @@ import type {
   MistakesState,
   Topic,
   TopicExamsPassed,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import {
   isLevelCleared,
   isTopicCleared,
@@ -16,7 +16,7 @@ import {
   mistakesForLevel,
   mistakesForTopic,
   previousTopic,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import type { ProgressState } from '../state'
 import { useSettings } from '../settings'
 import { iconForLesson } from '../components/lessonIconForLesson'

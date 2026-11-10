@@ -5,7 +5,7 @@ import {
   SETTINGS_DEFAULT,
   SETTINGS_STORAGE_KEY,
   mergeSettings,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 
 /**
  * Mobile useSettings — mirrors the web hook so the same SettingsScreen

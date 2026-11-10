@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import type { ProfileState, ProgressState } from '@mochilang/shared'
+import type { ProfileState, ProgressState } from '@mochilang/core'
 import LeagueScreen from './LeagueScreen'
 import FriendsScreen from './FriendsScreen'
 import { useT } from '../lib/i18n'

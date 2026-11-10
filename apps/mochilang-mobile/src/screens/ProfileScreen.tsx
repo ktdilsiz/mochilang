@@ -15,8 +15,8 @@ import type {
   Level,
   ProfileState,
   ProgressState,
-} from '@mochilang/shared'
-import { pickReviewSuggestions, tierAt } from '@mochilang/shared'
+} from '@mochilang/core'
+import { pickReviewSuggestions, tierAt } from '@mochilang/core'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import LedgeButton from '../components/LedgeButton'
 import { AVATAR_OPTIONS, avatarById } from '../data/avatars'

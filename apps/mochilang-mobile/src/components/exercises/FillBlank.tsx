@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
-import type { FillBlankExercise } from '@mochilang/shared'
-import { matchesAnswer } from '@mochilang/shared'
+import type { FillBlankExercise } from '@mochilang/core'
+import { matchesAnswer } from '@mochilang/core'
 import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 
@@ -78,8 +78,8 @@ export default function FillBlank({ exercise, value, locked, onChange }: Props) 
 }
 
 /**
- * Re-exported from @mochilang/shared so existing call sites keep
- * compiling. See packages/shared/src/answers.ts for the rules.
+ * Re-exported from @mochilang/core so existing call sites keep
+ * compiling. See packages/mochilang-core/src/answers.ts for the rules.
  */
 export function checkAnswer(value: string, exercise: FillBlankExercise): boolean {
   return matchesAnswer(value, exercise)

@@ -3,15 +3,15 @@ import { createHash } from 'node:crypto';
 import { gzipSync } from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { readChineseDictionaries, readCompressedJapanese } from '@mochilang/dict/build-data';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
-const shared = path.resolve(root, '../../packages/dict/src/data');
 const output = path.join(root, 'public/dictionaries');
 mkdirSync(output, { recursive: true });
 const read = (file) => JSON.parse(readFileSync(file, 'utf8'));
 const data = {
-  ja: Buffer.from(read(path.join(shared, 'japanese.json')).compressed, 'base64'),
-  zh: gzipSync(JSON.stringify({ dictionaries: [0, 1, 2, 3].map((i) => read(path.join(shared, `dict-${i}.json`))), decomposition: read(path.join(root, 'src/data/decomp.json')) }), { level: 9 }),
+  ja: readCompressedJapanese(),
+  zh: gzipSync(JSON.stringify({ dictionaries: readChineseDictionaries(), decomposition: read(path.join(root, 'src/data/decomp.json')) }), { level: 9 }),
 };
 const manifest = {};
 for (const [language, bytes] of Object.entries(data)) {

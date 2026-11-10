@@ -1,6 +1,6 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import type { GuideExample, GuideSection, Topic } from '@mochilang/shared'
+import type { GuideExample, GuideSection, Topic } from '@mochilang/core'
 import { speak } from '../lib/tts'
 import { colors, fontSizes, radius, space, tintForTheme } from '../lib/theme'
 import LedgeButton from '../components/LedgeButton'

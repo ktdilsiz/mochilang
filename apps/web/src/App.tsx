@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import type { Lesson, Level, Topic } from '@mochilang/shared'
-import { findLanguage, parseCourseId } from '@mochilang/shared'
+import type { Lesson, Level, Topic } from '@mochilang/core'
+import { findLanguage, parseCourseId } from '@mochilang/core'
 import { useCourse } from './data/lessons'
 import LanguageSelectScreen from './screens/LanguageSelectScreen'
 import LoginScreen from './screens/LoginScreen'
@@ -28,8 +28,8 @@ import {
   mistakesForLesson,
   mistakesForLevel,
   mistakesForTopic,
-} from '@mochilang/shared'
-import { api, ApiError, setOfflineMode } from '@mochilang/shared'
+} from '@mochilang/core'
+import { api, ApiError, setOfflineMode } from '@mochilang/core'
 
 /**
  * Auth states:

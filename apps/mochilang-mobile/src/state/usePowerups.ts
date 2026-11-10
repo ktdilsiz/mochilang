@@ -22,7 +22,7 @@ import {
   xpMultiplier as xpMultiplierPure,
   ymd,
   type PowerupsState,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 
 const STORAGE_KEY = 'mochilang:powerups:v1'
 

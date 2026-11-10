@@ -7,10 +7,12 @@
     "packages/*"
   ],
   "scripts": {
-    "check": "pnpm run check:web && pnpm run check:mobile && pnpm run check:mochiread && pnpm run check:api",
+    "check": "pnpm check:boundaries && pnpm test:unit && pnpm check:web && pnpm check:mobile && pnpm check:mochiread && pnpm check:api",
     "check:web": "pnpm --filter web lint && pnpm --filter web build",
     "check:mobile": "pnpm --filter mochilang-mobile exec tsc --noEmit",
     "check:mochiread": "pnpm --filter mochiread exec tsc --noEmit",
-    "check:api": "cd apps/api && go test ./..."
+    "check:api": "cd apps/api && go test ./...",
+    "check:boundaries": "node scripts/check-boundaries.mjs",
+    "test:unit": "pnpm --filter @mochilang/dict test && pnpm --filter @mochilang/translate test && pnpm --filter @mochilang/srs test && pnpm --filter mochiread test:unit"
   }
 }

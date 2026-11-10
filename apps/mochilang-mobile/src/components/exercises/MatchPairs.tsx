@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import type { MatchPairsExercise } from '@mochilang/shared'
+import type { MatchPairsExercise } from '@mochilang/core'
 import TappableText from '../TappableText'
 import { localeForOption, speak } from '../../lib/tts'
 import { colors, fontSizes, radius, space } from '../../lib/theme'

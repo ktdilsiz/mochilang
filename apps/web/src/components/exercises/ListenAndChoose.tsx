@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import type { ListenAndChooseExercise } from '@mochilang/shared'
+import type { ListenAndChooseExercise } from '@mochilang/core'
 import { speak } from '../../lib/tts'
 import { useSettings } from '../../settings'
 import './exercise.css'

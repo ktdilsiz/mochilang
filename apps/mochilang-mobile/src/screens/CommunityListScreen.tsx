@@ -15,7 +15,7 @@ import {
   findLanguage,
   LANGUAGES_REGISTRY,
   type CommunityPackSummary,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
 interface Props {
@@ -424,4 +424,3 @@ const styles = StyleSheet.create({
   sheetNative: { fontSize: fontSizes.xs, color: colors.textSubtle },
   sheetCheck: { fontSize: 20, color: colors.primary500, fontWeight: '900' },
 })
-

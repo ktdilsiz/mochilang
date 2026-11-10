@@ -23,7 +23,7 @@ import {
   type MochiSpec,
   countUnlockedMochis,
   nextMochi,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { useCourse } from '../state/useCourse'
 import { useLevelExams } from '../state/useLevelExams'
 import { useProgress } from '../state/useProgress'

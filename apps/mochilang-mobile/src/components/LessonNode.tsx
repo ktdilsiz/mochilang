@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Animated, Pressable, StyleSheet, Text, View } from 'react-native'
-import type { Lesson } from '@mochilang/shared'
+import type { Lesson } from '@mochilang/core'
 import { colors, radius, tintForTheme } from '../lib/theme'
 
 interface Props {

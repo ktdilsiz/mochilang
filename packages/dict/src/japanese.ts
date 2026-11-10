@@ -1,4 +1,4 @@
-import type { Token } from './index';
+import type { Token } from './core';
 import TinySegmenter from 'tiny-segmenter';
 import { getJapaneseRows } from './data-source';
 

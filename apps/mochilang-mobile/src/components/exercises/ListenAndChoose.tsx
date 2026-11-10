@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
-import type { ListenAndChooseExercise } from '@mochilang/shared'
+import type { ListenAndChooseExercise } from '@mochilang/core'
 import { localeForOption, speak, targetLocaleForCourse } from '../../lib/tts'
 import TappableText from '../TappableText'
 import { colors, fontSizes, radius, space } from '../../lib/theme'

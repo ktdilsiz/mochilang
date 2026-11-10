@@ -19,7 +19,7 @@ import {
   type CommunityComment,
   type CommunityPack,
   type CommunityReportReason,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 

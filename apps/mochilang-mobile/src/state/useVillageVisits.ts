@@ -13,7 +13,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { MOCHI_ROSTER_SIZE } from '@mochilang/shared'
+import { MOCHI_ROSTER_SIZE } from '@mochilang/core'
 import { isVisitingNow } from '../data/villageSchedule'
 
 const STORAGE_KEY = 'mochilang:villageInvitations:v1'

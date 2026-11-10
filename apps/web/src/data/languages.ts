@@ -2,7 +2,7 @@
  * App-specific language constants.
  *
  * The full language registry + course-id helpers live in
- * `@mochilang/shared` (`languages.ts`) so web and mobile share the same
+ * `@mochilang/core` (`languages.ts`) so web and mobile share the same
  * names, flags, and parse rules. This file is now just for the app's
  * branding strings.
  */

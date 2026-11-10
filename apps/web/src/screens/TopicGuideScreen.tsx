@@ -1,4 +1,4 @@
-import type { GuideExample, GuideSection, Topic } from '@mochilang/shared'
+import type { GuideExample, GuideSection, Topic } from '@mochilang/core'
 import { speak } from '../lib/tts'
 import './TopicGuideScreen.css'
 

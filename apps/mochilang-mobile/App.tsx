@@ -26,7 +26,7 @@ import {
   type Lesson,
   type Level,
   type Topic,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import HomeScreen from './src/screens/HomeScreen'
 import LessonScreen from './src/screens/LessonScreen'
@@ -57,7 +57,7 @@ import {
   mistakesForLesson,
   mistakesForLevel,
   mistakesForTopic,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { colors } from './src/lib/theme'
 
 const SELECTED_COURSE_KEY = 'mochilang:selectedCourse'

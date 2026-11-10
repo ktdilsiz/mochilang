@@ -15,7 +15,7 @@ import {
   PROGRESS_DEFAULT,
   type ProgressResponse,
   type ProgressState,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 
 const STORAGE_KEY = 'mochilang:progress:v1'
 

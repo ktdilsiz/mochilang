@@ -6,7 +6,7 @@ import {
   findLanguage,
   parseCourseId,
   type CourseSummary,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { coursesFallback } from '../data/generated'
 import { APP_NAME, MASCOT_NAME } from '../data/languages'
 import { mochiMain } from '../assets'

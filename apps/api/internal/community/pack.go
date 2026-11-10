@@ -35,7 +35,7 @@ type PackEnvelope struct {
 	Level         Level  `json:"level"`
 }
 
-// Level mirrors packages/shared `Level`. Kept as a Go struct (not
+// Level mirrors packages/mochilang-core `Level`. Kept as a Go struct (not
 // json.RawMessage) for strict validation at submit time.
 type Level struct {
 	ID          string  `json:"id"`
@@ -64,7 +64,7 @@ type Lesson struct {
 	WordTranslations map[string]string `json:"wordTranslations,omitempty"`
 }
 
-// Allowed values from packages/shared `LessonTheme`. Keep these in sync
+// Allowed values from packages/mochilang-core `LessonTheme`. Keep these in sync
 // when shared adds a theme. Wrong themes fail validation rather than
 // silently rendering with a fallback color.
 var allowedThemes = map[string]struct{}{

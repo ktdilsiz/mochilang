@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import type { TopicExamsPassed } from '@mochilang/shared'
+import type { TopicExamsPassed } from '@mochilang/core'
 
 /**
  * Mobile mirror of apps/web/src/topicExams.ts. Tracks which topic-skip

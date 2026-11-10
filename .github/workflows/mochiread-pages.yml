@@ -39,7 +39,7 @@ jobs:
       - uses: actions/configure-pages@v5
         id: pages
       - run: pnpm --filter mochiread exec tsc --noEmit
-      - run: pnpm --filter mochiread exec node --experimental-strip-types --test tests/backup-format.test.mjs
+      - run: pnpm --filter mochiread test:unit
       - run: node apps/mochiread/scripts/build-web-dictionaries.mjs
       - run: pnpm --filter mochiread exec expo export --platform web
         env:

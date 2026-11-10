@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "test:web": "node tests/japanese.web.cjs",
-    "test:backup": "node --experimental-strip-types --test tests/backup-format.test.mjs && node tests/backup.web.cjs",
+    "test:web": "node tests/e2e/japanese.web.cjs",
+    "test:backup": "tsx --test tests/unit/backup-format.test.ts && node tests/e2e/backup.web.cjs",
     "build:web-data": "node scripts/build-web-dictionaries.mjs",
     "build:web": "node scripts/build-web-dictionaries.mjs && expo export --platform web",
     "start": "expo start",
@@ -18,7 +18,9 @@
     "eas:login": "eas login",
     "eas:whoami": "eas whoami",
     "eas:setup": "eas init --non-interactive --force && eas update:configure --non-interactive --platform all",
-    "publish": "eas update --branch production --message \"$(git log -1 --pretty=%s 2>/dev/null || echo 'manual publish')\""
+    "publish": "eas update --branch production --message \"$(git log -1 --pretty=%s 2>/dev/null || echo 'manual publish')\"",
+    "test:unit": "tsx --test tests/unit/*.test.ts",
+    "test:e2e": "node tests/e2e/japanese.web.cjs && node tests/e2e/backup.web.cjs"
   },
   "dependencies": {
     "@expo/metro-runtime": "~58.0.15",
@@ -32,6 +34,7 @@
     "expo-splash-screen": "~58.0.11",
     "expo-status-bar": "~58.0.4",
     "expo-updates": "~58.0.18",
+    "fflate": "0.8.2",
     "pinyin-pro": "^3.28.1",
     "react": "19.3.0",
     "react-dom": "19.3.0",
@@ -44,9 +47,11 @@
   },
   "devDependencies": {
     "@expo/ngrok": "^4.1.3",
+    "@types/node": "^22.20.5",
     "@types/react": "~19.3.0",
     "babel-preset-expo": "58.0.20",
     "playwright": "1.61.1",
+    "tsx": "4.23.15",
     "typescript": "~6.0.3"
   },
   "private": true

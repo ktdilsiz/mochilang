@@ -27,7 +27,7 @@ import {
   type OfflineLeagueState,
   type ProfileState,
   type ProgressState,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 
 // v2 is the archetype-aware schema. Older blobs are abandoned so the
 // regenerator can lay down the new shape without merging logic.
@@ -202,4 +202,3 @@ function addDaysLocal(dateYMD: string, delta: number): string {
   dt.setDate(dt.getDate() + delta)
   return ymd(dt)
 }
-

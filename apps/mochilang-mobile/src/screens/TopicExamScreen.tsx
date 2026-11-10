@@ -4,7 +4,7 @@ import {
   EXAM_PASS_THRESHOLD,
   EXAM_QUESTION_COUNT,
   pickExamQuestions,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import ExamScreen from './ExamScreen'
 
 interface Props {

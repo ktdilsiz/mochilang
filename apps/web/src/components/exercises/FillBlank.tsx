@@ -1,4 +1,4 @@
-import type { FillBlankExercise, TranslateExercise } from '@mochilang/shared'
+import type { FillBlankExercise, TranslateExercise } from '@mochilang/core'
 import { checkTypedAnswer } from '../../lib/answers'
 import './exercise.css'
 

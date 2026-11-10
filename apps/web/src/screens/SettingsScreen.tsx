@@ -6,7 +6,7 @@ import {
   SPEECH_RATE_LABELS,
   THEME_LABELS,
   VOICE_LABELS,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { useSettings } from '../settings'
 import './SettingsScreen.css'
 

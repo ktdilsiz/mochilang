@@ -9,7 +9,7 @@ offline course bundles, and a small hedgehog with strong opinions about XP.
 - `apps/mochilang-mobile` — Expo mobile app for iOS and Android.
 - `apps/mochiread` — Expo reading companion.
 - `apps/api` — Go + SQLite API for accounts, progress, social features, and course delivery.
-- `packages/shared` — types and learning rules shared by web and mobile.
+- `packages/mochilang-core` — types and learning rules shared by web and mobile.
 - `packages/dict`, `packages/translate`, `packages/srs` — language data and learning utilities.
 
 ## Getting started
@@ -49,8 +49,24 @@ Run the repository checks before opening a pull request:
 pnpm check
 ```
 
-This runs the web lint/build, TypeScript checks for both Expo apps, and the API
-test suite. GitHub Actions runs the same command for pushes and pull requests.
+This runs import-boundary checks, dictionary/translation/SRS and MochiRead unit
+tests, web lint/build, TypeScript checks for both Expo apps, and the API tests.
+GitHub Actions runs these as independent jobs and adds MochiRead browser
+regressions. The aggregate `check` status requires every job to pass.
+
+MochiRead keeps startup/navigation in `src/app`, domain UI and state in
+`src/features`, reusable controls in `src/components`, device/browser adapters
+in `src/platform`, and persisted schemas, keys, migrations, repositories and
+backup handling in `src/storage`. Feature providers expose independent hooks;
+storage does not import feature or app code.
+
+`@mochilang/dict/core` consumes an explicitly registered data source without
+bundling datasets. MochiRead's platform adapters supply downloaded web data or
+bundled native data. Other apps can use `@mochilang/dict` for bundled defaults.
+Asset builders use `@mochilang/dict/build-data`; packages must not import apps
+and apps must use package exports. `pnpm check:boundaries` enforces these rules.
+`@mochilang/core` contains MochiLang course and product rules; dictionary,
+translation and SRS packages stay independent of that product.
 
 ## Content and offline data
 

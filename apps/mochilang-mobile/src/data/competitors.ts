@@ -5,7 +5,7 @@
  * bit-for-bit aligned with the server (apps/api/internal/league).
  */
 
-import { seededRng } from '@mochilang/shared'
+import { seededRng } from '@mochilang/core'
 import competitorsData from '../../assets/competitors.json'
 
 export interface Competitor {

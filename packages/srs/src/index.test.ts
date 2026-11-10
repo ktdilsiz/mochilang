@@ -1,0 +1,31 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { newCard, applySm2, dueCards, sortByOverdue } from './index';
+const day = 86400000;
+test('review schedule progresses and a failed review returns tomorrow without losing metadata', () => {
+  const original = { ...newCard(0), word: '学校', language: 'ja' };
+  const first = applySm2(original, true, 100);
+  const second = applySm2(first, true, 200);
+  const third = applySm2(second, true, 300);
+  assert.equal(first.intervalDays, 1);
+  assert.equal(second.intervalDays, 6);
+  assert.equal(third.intervalDays, Math.round(6 * second.ease));
+  const failed = applySm2(third, false, 400);
+  assert.equal(failed.dueAt, 400 + day);
+  assert.equal(failed.remembered, 3);
+  assert.equal(failed.forgotten, 1);
+  assert.equal(failed.lastReviewedAt, 400);
+  assert.equal((failed as typeof original).word, '学校');
+  assert.equal(original.remembered, 0);
+});
+test('ease stays bounded and due filtering includes the current instant', () => {
+  let card = newCard(0);
+  for (let i = 0; i < 30; i++) card = applySm2(card, false, 0);
+  assert.equal(card.ease, 1.3);
+  for (let i = 0; i < 40; i++) card = applySm2(card, true, 0);
+  assert.equal(card.ease, 3);
+  const cards = [{ dueAt: 20 }, { dueAt: 10 }, { dueAt: 30 }];
+  assert.deepEqual(dueCards(cards, 20), cards.slice(0, 2));
+  assert.deepEqual(sortByOverdue(cards).map(c => c.dueAt), [10, 20, 30]);
+  assert.equal(cards[0].dueAt, 20);
+});

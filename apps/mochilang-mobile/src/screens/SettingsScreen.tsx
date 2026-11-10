@@ -17,7 +17,7 @@ import {
   LOCALE_LABELS,
   SPEECH_RATE_LABELS,
   SUPPORTED_LOCALES,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { useSettings } from '../state/useSettings'
 import { useT } from '../lib/i18n'
 import LedgeButton from '../components/LedgeButton'

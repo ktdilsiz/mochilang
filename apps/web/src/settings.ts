@@ -4,7 +4,7 @@ import {
   SETTINGS_DEFAULT,
   SETTINGS_STORAGE_KEY,
   mergeSettings,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 
 /**
  * Hook + module-level cache for app settings.

@@ -55,7 +55,7 @@ src/
 
 ## Shared with web
 
-Everything in `packages/shared/` — types, API client, league math, date helpers, review-suggestion picker, store-state types. Web's `apps/web/` and this RN app both import the same code paths from `@mochilang/shared`.
+Everything in `packages/mochilang-core/` — types, API client, league math, date helpers, review-suggestion picker, store-state types. Web's `apps/web/` and this RN app both import the same code paths from `@mochilang/core`.
 
 ## Constraints worth knowing
 

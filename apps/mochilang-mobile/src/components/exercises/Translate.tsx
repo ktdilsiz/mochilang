@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
-import type { TranslateExercise } from '@mochilang/shared'
-import { matchesAnswer } from '@mochilang/shared'
+import type { TranslateExercise } from '@mochilang/core'
+import { matchesAnswer } from '@mochilang/core'
 import { speak } from '../../lib/tts'
 import { colors, fontSizes, radius, space } from '../../lib/theme'
 

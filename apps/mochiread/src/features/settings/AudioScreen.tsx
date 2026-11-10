@@ -1,0 +1,301 @@
+import { usePreferences } from './state';
+import { useEffect, useState } from 'react';
+import {
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Switch,
+  Text,
+  View,
+} from 'react-native';
+import { AppHeader } from '../../components/AppHeader';
+import { type ReadingLanguage, type SpeechRate } from '../../storage/schema';
+import { listVoices, speak, type ReadingVoice } from '../../platform/speech/tts';
+import { useTheme, type Theme } from '../../theme';
+
+type Props = {
+  language: ReadingLanguage;
+  onBack: () => void;
+};
+
+const RATE_OPTIONS: { id: SpeechRate; label: string }[] = [
+  { id: 'slow', label: 'Slow' },
+  { id: 'normal', label: 'Normal' },
+  { id: 'fast', label: 'Fast' },
+];
+
+export function AudioScreen({ language, onBack }: Props) {
+  const { prefs, setPrefs } = usePreferences();
+  const theme = useTheme();
+  const [voices, setVoices] = useState<ReadingVoice[] | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    const refresh = () => { void listVoices(language).then((next) => { if (active) setVoices(next); }); };
+    setVoices(null);
+    refresh();
+    const synth = typeof window !== 'undefined' ? window.speechSynthesis : undefined;
+    synth?.addEventListener('voiceschanged', refresh);
+    return () => { active = false; synth?.removeEventListener('voiceschanged', refresh); };
+  }, [language]);
+
+  const previewText =
+    language === 'ja' ? 'こんにちは。今日はいい天気です。' : '你好，今天天气很好';
+  const languageName = language === 'ja' ? 'Japanese' : 'Chinese';
+  const voiceId = language === 'ja' ? prefs.japaneseVoiceId : prefs.voiceId;
+  const selectVoice = (id: string | undefined) =>
+    setPrefs(language === 'ja' ? { japaneseVoiceId: id } : { voiceId: id });
+
+  return (
+    <View style={[s.root, { backgroundColor: theme.bg }]}>
+      <AppHeader title="Audio" leading="back" onLeadingPress={onBack} />
+      <ScrollView contentContainerStyle={s.body}>
+        <Section title="Page playback" theme={theme}>
+          <VoiceRow
+            label="Read along"
+            hint="Speak and highlight one word at a time. Works with every voice."
+            selected={prefs.pagePlayback === 'word'}
+            onPress={() => setPrefs({ pagePlayback: 'word' })}
+            theme={theme}
+          />
+          <VoiceRow
+            label="Natural sentences"
+            hint="Continuous speech. Highlights the sentence, or words when supported by the voice."
+            selected={prefs.pagePlayback === 'sentence'}
+            onPress={() => setPrefs({ pagePlayback: 'sentence' })}
+            theme={theme}
+          />
+        </Section>
+        <Section title="Speech rate" theme={theme}>
+          <View style={s.chipRow}>
+            {RATE_OPTIONS.map((opt) => {
+              const selected = prefs.speechRate === opt.id;
+              return (
+                <Pressable
+                  key={opt.id}
+                  onPress={() => setPrefs({ speechRate: opt.id })}
+                  style={({ pressed }) => [
+                    s.chip,
+                    { backgroundColor: theme.surfaceAlt },
+                    selected && { backgroundColor: theme.accent },
+                    pressed && { opacity: 0.85 },
+                  ]}
+                >
+                  <Text
+                    style={[
+                      s.chipText,
+                      { color: theme.text },
+                      selected && { color: '#ffffff' },
+                    ]}
+                  >
+                    {opt.label}
+                  </Text>
+                </Pressable>
+              );
+            })}
+          </View>
+          <Pressable
+            onPress={() => speak(previewText, language)}
+            style={({ pressed }) => [s.preview, pressed && { opacity: 0.7 }]}
+          >
+            <Text style={s.previewIcon}>🔊</Text>
+            <Text style={[s.previewText, { color: theme.accent }]}>
+              Preview · {previewText}
+            </Text>
+          </Pressable>
+        </Section>
+
+        <Section title="Auto-play" theme={theme}>
+          <View style={s.toggleRow}>
+            <View style={s.toggleText}>
+              <Text style={[s.toggleLabel, { color: theme.text }]}>
+                Speak words on tap
+              </Text>
+              <Text style={[s.toggleHint, { color: theme.textMuted }]}>
+                When you open a thought bubble, the word plays automatically.
+              </Text>
+            </View>
+            <Switch
+              value={prefs.autoPlay}
+              onValueChange={(v) => setPrefs({ autoPlay: v })}
+            />
+          </View>
+        </Section>
+
+        <Section title="Voice" theme={theme}>
+          {voices === null ? (
+            <Text style={[s.muted, { color: theme.textMuted }]}>
+              Looking for installed voices…
+            </Text>
+          ) : voices.length === 0 ? (
+            <Text style={[s.muted, { color: theme.textMuted }]}>
+              No {languageName} voice was found. Install a {languageName} voice
+              in your device's speech settings, then reopen Audio.
+            </Text>
+          ) : (
+            <View style={s.voiceList}>
+              <VoiceRow
+                label="Automatic · recommended"
+                hint={voices[0] ? `Uses ${voices[0].name}` : 'Chooses an available voice for this language'}
+                selected={!voiceId}
+                onPress={() => selectVoice(undefined)}
+                theme={theme}
+              />
+              {voices.map((v) => (
+                <VoiceRow
+                  key={v.identifier}
+                  label={v.name ?? v.identifier}
+                  hint={`${v.language}${v.localService === false ? ' · Online voice' : v.localService === true ? ' · Device voice' : ''}`}
+                  selected={voiceId === v.identifier}
+                  onPress={() => selectVoice(v.identifier)}
+                  theme={theme}
+                />
+              ))}
+            </View>
+          )}
+        </Section>
+
+        <View style={s.footer}>
+          <Text style={[s.footerText, { color: theme.textSubtle }]}>
+            For smoother reading, choose Natural sentences. Voice quality depends
+            on your browser and device. Online voices may send text to the browser's
+            speech provider. On Mac or iPhone, download an Enhanced or Premium
+            {` ${languageName}`} voice in system accessibility settings for more options.
+          </Text>
+        </View>
+      </ScrollView>
+    </View>
+  );
+}
+
+function Section({
+  title,
+  theme,
+  children,
+}: {
+  title: string;
+  theme: Theme;
+  children: React.ReactNode;
+}) {
+  return (
+    <View style={s.section}>
+      <Text style={[s.sectionTitle, { color: theme.textMuted }]}>{title}</Text>
+      <View
+        style={[
+          s.card,
+          { backgroundColor: theme.surface, borderColor: theme.border },
+        ]}
+      >
+        {children}
+      </View>
+    </View>
+  );
+}
+
+function VoiceRow({
+  label,
+  hint,
+  selected,
+  onPress,
+  theme,
+}: {
+  label: string;
+  hint?: string;
+  selected: boolean;
+  onPress: () => void;
+  theme: Theme;
+}) {
+  return (
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => [s.voiceRow, pressed && { opacity: 0.7 }]}
+    >
+      <View style={s.voiceText}>
+        <Text style={[s.voiceLabel, { color: theme.text }]}>{label}</Text>
+        {hint && (
+          <Text style={[s.voiceHint, { color: theme.textMuted }]}>{hint}</Text>
+        )}
+      </View>
+      <View
+        style={[
+          s.radio,
+          { borderColor: selected ? theme.accent : theme.border },
+        ]}
+      >
+        {selected && (
+          <View style={[s.radioDot, { backgroundColor: theme.accent }]} />
+        )}
+      </View>
+    </Pressable>
+  );
+}
+
+const s = StyleSheet.create({
+  root: { flex: 1 },
+  body: { padding: 16, gap: 20, paddingBottom: 40 },
+  section: { gap: 8 },
+  sectionTitle: {
+    fontSize: 12,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    letterSpacing: 0.6,
+    paddingHorizontal: 4,
+  },
+  card: {
+    borderRadius: 12,
+    padding: 14,
+    borderWidth: StyleSheet.hairlineWidth,
+    gap: 12,
+  },
+  chipRow: { flexDirection: 'row', gap: 8 },
+  chip: {
+    flex: 1,
+    paddingVertical: 12,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
+  chipText: { fontSize: 15, fontWeight: '600' },
+  preview: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    paddingVertical: 8,
+  },
+  previewIcon: { fontSize: 16 },
+  previewText: { fontSize: 14, fontWeight: '600' },
+  toggleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  toggleText: { flex: 1 },
+  toggleLabel: { fontSize: 15, fontWeight: '600' },
+  toggleHint: { fontSize: 12, marginTop: 2 },
+  voiceList: { gap: 4 },
+  voiceRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+    gap: 12,
+  },
+  voiceText: { flex: 1 },
+  voiceLabel: { fontSize: 15, fontWeight: '500' },
+  voiceHint: { fontSize: 12, marginTop: 2 },
+  radio: {
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    borderWidth: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  radioDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+  },
+  muted: { fontSize: 14, lineHeight: 20 },
+  footer: { paddingHorizontal: 4 },
+  footerText: { fontSize: 12, lineHeight: 18 },
+});

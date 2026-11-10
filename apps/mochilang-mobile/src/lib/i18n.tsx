@@ -15,7 +15,7 @@ import {
   type UiLocale,
   api,
   ApiError,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import { useSettings } from '../state/useSettings'
 
 /**

@@ -1,5 +1,6 @@
+import { usePreferences } from './features/settings/state';
 import { useColorScheme } from 'react-native';
-import { useStore, type ThemeMode } from './state';
+import { type ThemeMode } from './storage/schema';
 
 export type Theme = {
   isDark: boolean;
@@ -95,6 +96,6 @@ export function resolveTheme(mode: ThemeMode, system: 'light' | 'dark' | null): 
 
 export function useTheme(): Theme {
   const system = useColorScheme() ?? 'light';
-  const { prefs } = useStore();
+  const { prefs } = usePreferences();
   return resolveTheme(prefs.themeMode, system);
 }

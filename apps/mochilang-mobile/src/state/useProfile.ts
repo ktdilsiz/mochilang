@@ -14,7 +14,7 @@ import {
   PROFILE_DEFAULT,
   type ProfileResponse,
   type ProfileState,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 
 const STORAGE_KEY = 'mochilang:profile:v1'
 

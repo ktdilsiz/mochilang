@@ -1,7 +1,7 @@
 import { Text, View, type StyleProp, type TextStyle } from 'react-native';
-import type { JapaneseDefinition } from '@mochilang/dict';
-import { readingLines } from '../lib/reading-presentation';
-import type { JapaneseReadingMode, ReadingLanguage } from '../state';
+import type { JapaneseDefinition } from '@mochilang/dict/core';
+import { readingLines } from '../features/reading/reading-presentation';
+import type { JapaneseReadingMode, ReadingLanguage } from '../storage/schema';
 
 type Props = {
   reading: string;

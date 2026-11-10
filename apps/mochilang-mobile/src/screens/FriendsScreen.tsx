@@ -15,7 +15,7 @@ import {
   friendWeekActivity,
   mondayOf,
   type FriendResponse,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import friendsFallback from '../../assets/friends.json'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'

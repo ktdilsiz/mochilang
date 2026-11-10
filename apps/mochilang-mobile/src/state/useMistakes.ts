@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import type { MistakeRecord, MistakesState } from '@mochilang/shared'
+import type { MistakeRecord, MistakesState } from '@mochilang/core'
 
 /**
  * Mobile mirror of apps/web/src/mistakes.ts. Persists per-course

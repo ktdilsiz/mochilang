@@ -11,7 +11,7 @@ import {
   type Level,
   LEVEL_EXAM_PASS_THRESHOLD,
   LEVEL_EXAM_QUESTION_COUNT,
-} from '@mochilang/shared'
+} from '@mochilang/core'
 import LedgeButton from '../components/LedgeButton'
 import { colors, fontSizes, radius, space } from '../lib/theme'
 
