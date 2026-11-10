@@ -3,6 +3,7 @@ import { usePreferences } from '../settings/state';
 import { useEffect, useRef, useState } from 'react';
 import {
   Animated,
+  Linking,
   Dimensions,
   Modal,
   Pressable,
@@ -11,7 +12,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { lookup, lookupJapanese, type JapaneseDefinition } from '@mochilang/dict/core';
+import { lookup, lookupSpanish, lookupJapanese, type JapaneseDefinition } from '@mochilang/dict/core';
 import { hasExploreData } from '../writing/decomp';
 import { speak, stop } from '../../platform/speech/tts';
 
@@ -131,8 +132,9 @@ export function ThoughtBubble({
   const HEADER_AND_PADDING = language === 'ja' && prefs.japaneseReadingMode === 'both' ? 128 : 110;
   const scrollMaxHeight = Math.max(60, availableHeight - HEADER_AND_PADDING);
 
-  const entry = language === 'zh' ? lookup(word) : japaneseEntry;
-  const savedWord = japaneseEntry?.dictionaryForm ?? word;
+  const spanishEntry = language === 'es' ? lookupSpanish(word) : null;
+  const entry = language === 'es' ? spanishEntry : language === 'zh' ? lookup(word) : japaneseEntry;
+  const savedWord = japaneseEntry?.dictionaryForm ?? (language === 'es' ? word.normalize('NFC').toLocaleLowerCase('es') : word);
   const entryId = japaneseEntry?.entryId;
   const saved = isWordSaved(savedWord, language, entryId);
 
@@ -145,7 +147,7 @@ export function ThoughtBubble({
         language,
         pinyin: japaneseEntry?.dictionaryReading ?? pinyin,
         entryId,
-        examples: language === 'ja' && sentence ? [{ sentence, surface: word }] : undefined,
+        examples: language !== 'zh' && sentence ? [{ sentence, surface: word }] : undefined,
         meanings: entry?.meanings ?? [],
       });
     }
@@ -293,6 +295,7 @@ export function ThoughtBubble({
                   No definition found.
                 </Text>
               )}
+              {language === 'es' && <Text accessibilityRole="link" style={{ color: theme.accent, marginTop: 8 }} onPress={() => { void Linking.openURL(`https://en.wiktionary.org/wiki/${encodeURIComponent(spanishEntry?.lemmas[0] ?? word)}#Spanish`); }}>Source: Wiktionary · CC BY-SA 4.0</Text>}
               {language === 'zh' && hasExploreData(word) && (
                 <Pressable
                   onPress={() => onExplore(word)}
@@ -307,7 +310,7 @@ export function ThoughtBubble({
                   </Text>
                 </Pressable>
               )}
-              {(language === 'zh' || japaneseWritingCharacters(word).length > 0) && <Pressable
+              {(language === 'zh' || (language === 'ja' && japaneseWritingCharacters(word).length > 0)) && <Pressable
                 onPress={() => onPractice(word)}
                 style={({ pressed }) => [
                   s.exploreBtn,

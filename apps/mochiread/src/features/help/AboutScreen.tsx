@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../../storage/languages';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { AppHeader } from '../../components/AppHeader';
 import { Hedgehog } from '../../components/Hedgehog';
@@ -26,7 +27,7 @@ export function AboutScreen({ language, onBack }: Props) {
           <Hedgehog size={108} color={theme.text} strokeWidth={3.5} />
           <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
           <Text style={[s.tagline, { color: theme.textMuted }]}>
-            Read {language === 'ja' ? 'Japanese' : 'Chinese'}, tap a word.
+            Read {LANGUAGE_INFO[language].name}, tap a word.
           </Text>
           <Text style={[s.version, { color: theme.textSubtle }]}>
             Version {VERSION}
@@ -45,6 +46,10 @@ export function AboutScreen({ language, onBack }: Props) {
           </Text>
         </Section>}
 
+        {language === 'es' && <Section title="Spanish dictionary" theme={theme}>
+          <Text style={[s.copy, { color: theme.text }]}>English definitions and word forms come from English Wiktionary contributors via Kaikki and Wiktextract (CC BY-SA 4.0). Includes inflected forms and dictionary-form links. Coverage and accuracy vary by entry.</Text>
+          <Text style={[s.copy, { color: theme.accent }]} onPress={() => { if (typeof window !== 'undefined') window.open('./dictionaries/SPANISH-NOTICE.txt', '_blank', 'noopener'); }}>View source and license</Text>
+        </Section>}
         {language === 'ja' && <Section title="Japanese dictionary" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
             Japanese readings and English definitions use the full English edition
@@ -90,7 +95,7 @@ export function AboutScreen({ language, onBack }: Props) {
 
         <Section title="Speech" theme={theme}>
           <Text style={[s.copy, { color: theme.text }]}>
-            Reading uses your browser or device's {language === 'ja' ? 'Japanese' : 'Chinese'} voices.
+            Reading uses your browser or device's {LANGUAGE_INFO[language].name} voices.
             Online voices may send text to the browser's speech provider.
           </Text>
         </Section>

@@ -11,8 +11,8 @@ type Args = {
   viewHeight: number;
   japaneseReadingMode?: JapaneseReadingMode;
 };
-const OPENING = new Set([...'（(「『【〈《〔｛{［[']);
-const CLOSING = new Set([...'、。，．！？!?：；:;)]}）」』】〉》〕］｝ーぁぃぅぇぉっゃゅょァィゥェォッャュョ']);
+const OPENING = new Set([...'¿¡（(「『【〈《〔｛{［[']);
+const CLOSING = new Set([...'.,、。，．！？!?：；:;)]}）」』】〉》〕］｝ーぁぃぅぇぉっゃゅょァィゥェォッャュョ']);
 export function textWidth(text: string, size: number): number {
   let width = 0;
   for (const char of text) width += (isCJK(char) || isJapaneseGlyph(char) || /[\u3000-\u303f\uff01-\uff60]/.test(char) || char.codePointAt(0)! > 0xffff) ? size : size * 0.55;
@@ -27,7 +27,7 @@ export function tokenWidth(token: Token, size: number, readingSize: number, show
     : ruby
     ? ruby.reduce((sum, part) => sum + Math.max(textWidth(part.text, size), showReadings ? textWidth(part.reading, readingSize) : 0), 0)
     : Math.max(textWidth(token.word, size), showReadings ? textWidth(token.pinyin, readingSize) : 0);
-  return width + (isCJK(token.word[0] ?? '') || isJapaneseGlyph(token.word[0] ?? '') ? 6 : 0);
+  return width + (isCJK(token.word[0] ?? '') || isJapaneseGlyph(token.word[0] ?? '') || (!token.pinyin && /[\p{Script=Latin}]/u.test(token.word)) ? 6 : 0);
 }
 
 /** Layout and rendering share these exact lines; punctuation travels with its

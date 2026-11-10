@@ -5,7 +5,8 @@ import { gunzipSync, strFromU8 } from 'fflate';
 type Chinese = { dictionaries: Record<string, string[]>[]; decomposition: unknown };
 let chinese: Chinese | undefined;
 let japanese: unknown[] | undefined;
-let manifest: Promise<Record<'ja' | 'zh', string>> | undefined;
+let spanish: unknown[] | undefined;
+let manifest: Promise<Record<'ja' | 'zh' | 'es', string>> | undefined;
 const pending = new Map<string, Promise<void>>();
 
 async function request(path: string, binary = false): Promise<unknown> {
@@ -20,17 +21,20 @@ async function request(path: string, binary = false): Promise<unknown> {
   } finally { clearTimeout(timer); }
 }
 
-export function prepareDictionary(language: 'ja' | 'zh'): Promise<void> {
-  if ((language === 'ja' && japanese) || (language === 'zh' && chinese)) return Promise.resolve();
+export function prepareDictionary(language: 'ja' | 'zh' | 'es'): Promise<void> {
+  if ((language === 'ja' && japanese) || (language === 'zh' && chinese) || (language === 'es' && spanish)) return Promise.resolve();
   const existing = pending.get(language);
   if (existing) return existing;
   const load = (async () => {
-    manifest ??= (request('manifest.json') as Promise<Record<'ja' | 'zh', string>>).catch((error) => { manifest = undefined; throw error; });
+    manifest ??= (request('manifest.json') as Promise<Record<'ja' | 'zh' | 'es', string>>).catch((error) => { manifest = undefined; throw error; });
     const files = await manifest;
     const filename = files[language];
-    if (!/^(ja|zh)-[a-f0-9]{16}\.json\.gz$/.test(filename)) throw new Error('Invalid dictionary manifest');
+    if (!/^(ja|zh|es)-[a-f0-9]{16}\.json\.gz$/.test(filename)) throw new Error('Invalid dictionary manifest');
     const data = await request(filename, true);
-    if (language === 'ja') {
+    if (language === 'es') {
+      if (!Array.isArray(data) || !data.length) throw new Error('Invalid Spanish dictionary');
+      spanish = data;
+    } else if (language === 'ja') {
       if (!Array.isArray(data) || !data.length) throw new Error('Invalid Japanese dictionary');
       japanese = data;
     } else {
@@ -55,4 +59,5 @@ export function getJapaneseRows(): unknown[] {
 export function getChineseDecomposition(): unknown { return chinese?.decomposition ?? {}; }
 export function getBilingualData(_pair: string): Record<string, string[]> | null { return null; }
 
-configureDictionaryData({ getChineseData, getJapaneseRows, getBilingualData });
+const getSpanishRows = () => { if (!spanish) throw new Error('Spanish dictionary is not ready'); return spanish; };
+configureDictionaryData({ getChineseData, getJapaneseRows, getSpanishRows, getBilingualData });

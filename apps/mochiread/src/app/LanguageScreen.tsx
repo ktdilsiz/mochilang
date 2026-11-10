@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../storage/languages';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Hedgehog } from '../components/Hedgehog';
 import type { ReadingLanguage } from '../storage/schema';
@@ -13,6 +14,7 @@ export function LanguageScreen({ onSelect, loadingLanguage, error }: { onSelect:
       <Text style={[s.hint, { color: theme.textMuted }]}>Choose your language to get started.</Text>
       {([
         { id: 'ja', name: 'Japanese', script: '日本語', detail: 'Kanji, kana, and romaji · Japanese reading and writing' },
+        { id: 'es', name: 'Spanish', script: 'Español', detail: 'English definitions · Spanish audio and flashcards' },
         { id: 'zh', name: 'Chinese', script: '中文', detail: 'Pinyin and tones · Chinese reading and writing' },
       ] as const).map((option) => <Pressable key={option.id} accessibilityRole="button" accessibilityLabel={`Choose ${option.name}`}
         onPress={() => onSelect(option.id)} disabled={loadingLanguage !== null} accessibilityState={{ disabled: loadingLanguage !== null }}
@@ -24,7 +26,7 @@ export function LanguageScreen({ onSelect, loadingLanguage, error }: { onSelect:
         </View>
         <Text style={[s.detail, { color: theme.textMuted }]}>{option.detail}</Text>
       </Pressable>)}
-      {loadingLanguage && <Text accessibilityLiveRegion="polite" style={[s.hint, { color: theme.accent }]}>Loading {loadingLanguage === 'ja' ? 'Japanese' : 'Chinese'} dictionary…{`\n`}The first download may take a moment.</Text>}
+      {loadingLanguage && <Text accessibilityLiveRegion="polite" style={[s.hint, { color: theme.accent }]}>Loading {LANGUAGE_INFO[loadingLanguage].name} dictionary…{`\n`}The first download may take a moment.</Text>}
       {!!error && <Text accessibilityRole="alert" style={[s.hint, { color: theme.destructive }]}>{error}</Text>}
       <Text style={[s.hint, { color: theme.textSubtle }]}>Switch languages anytime from the menu.</Text>
     </View>

@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../../storage/languages';
 import { useState } from 'react';
 import {
   Pressable,
@@ -53,13 +54,13 @@ export function EditorScreen({
       />
       <View style={s.body}>
         <Text style={[s.label, { color: theme.textMuted }]}>
-          Paste {language === 'ja' ? 'Japanese' : 'Chinese'} text to read
+          Paste {LANGUAGE_INFO[language].name} text to read
         </Text>
         <TextInput
           multiline
           autoFocus
           placeholder={
-            language === 'ja'
+            language === 'es' ? 'Por ejemplo: ¡Hola, mundo!' : language === 'ja'
               ? '例：こんにちは、世界！'
               : '例如：你好，世界！'
           }
@@ -76,7 +77,7 @@ export function EditorScreen({
           onChangeText={setDraft}
         />
         <Text style={[s.attribution, { color: theme.textSubtle }]}>
-          {language === 'ja'
+          {language === 'es' ? 'Definitions: Wiktionary via Kaikki · CC BY-SA 4.0' : language === 'ja'
             ? 'Definitions: JMdict · EDRDG · CC BY-SA 4.0'
             : 'Definitions: CC-CEDICT · CC BY-SA 4.0'}
         </Text>

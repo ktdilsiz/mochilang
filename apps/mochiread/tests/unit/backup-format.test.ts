@@ -8,7 +8,7 @@ test('retains both languages and review scheduling without rewriting data', () =
   const text = { id: 'custom', title: 'My text', text: '你好', language: 'zh', createdAt: 1 };
   const backup = parseBackup(make({ 'mochiread:library': JSON.stringify([text]), 'mochiread:vocab': JSON.stringify([word]), 'mochiread:reading:page:ja': '4' }));
   assert.deepEqual(JSON.parse(backup.data['mochiread:vocab'])[0], word);
-  assert.deepEqual(summarizeBackup(backup), [{ language: 'ja', texts: 0, words: 1 }, { language: 'zh', texts: 1, words: 0 }]);
+  assert.deepEqual(summarizeBackup(backup), [{ language: 'ja', texts: 0, words: 1 }, { language: 'zh', texts: 1, words: 0 }, { language: 'es', texts: 0, words: 0 }]);
 });
 test('rejects malformed files, unrelated keys, unsupported versions, and invalid progress/settings', () => {
   for (const bad of [

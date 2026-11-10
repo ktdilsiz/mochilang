@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../../storage/languages';
 import { usePreferences } from './state';
 import { useEffect, useState } from 'react';
 import {
@@ -40,8 +41,8 @@ export function AudioScreen({ language, onBack }: Props) {
   }, [language]);
 
   const previewText =
-    language === 'ja' ? 'こんにちは。今日はいい天気です。' : '你好，今天天气很好';
-  const languageName = language === 'ja' ? 'Japanese' : 'Chinese';
+    language === 'es' ? 'Hola. Hoy hace buen tiempo.' : language === 'ja' ? 'こんにちは。今日はいい天気です。' : '你好，今天天气很好';
+  const languageName = LANGUAGE_INFO[language].name;
   const voiceId = language === 'ja' ? prefs.japaneseVoiceId : prefs.voiceId;
   const selectVoice = (id: string | undefined) =>
     setPrefs(language === 'ja' ? { japaneseVoiceId: id } : { voiceId: id });

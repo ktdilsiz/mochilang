@@ -1,8 +1,8 @@
 # Mochiread
 
-Chinese and Japanese reading app: choose a language on the startup page, paste text, see pinyin
+Chinese, Japanese, and Spanish reading app: choose a language on the startup page, paste text, see pinyin
 or kana readings, tap a word for English definitions, and review flashcards.
-Chinese also supports character decomposition. Both languages support writing
+Chinese also supports character decomposition. Chinese and Japanese support writing
 practice: Watch, Trace, and Test. Japanese uses its own kanji, hiragana, and
 katakana stroke data, not Chinese stroke forms.
 
@@ -38,11 +38,11 @@ pnpm -C apps/mochiread build:web-data
 
 Open **Backup & restore** from the menu and choose **Download backup**. Move
 the JSON file to another device, then choose it from the same screen. Backups
-include both languages' texts, vocabulary, flashcard schedules, preferences,
+include all languages' texts, vocabulary, flashcard schedules, preferences,
 reading positions, and activity. No account or backend is required.
 
 Importing first shows a preview. **Restore this backup** replaces this browser's
-MochiRead data for both languages; **Cancel restore** makes no changes. A pasted
+MochiRead data for all languages; **Cancel restore** makes no changes. A pasted
 JSON backup is also supported. Invalid files are rejected before writing.
 Failed restores roll back, and a browser closed mid-restore recovers its previous
 data the next time a language is selected. Dictionaries are not part of backups.
@@ -86,7 +86,7 @@ voices may send text to their speech provider.
 Vocabulary saves dictionary forms
 with the original sentence; old conjugated cards merge without losing review
 counts. Saved texts and vocabulary remember their language; legacy data defaults
-to Chinese. Voice choices are saved separately for Chinese and Japanese.
+to Chinese. Voice choices are saved separately for each language.
 
 Rebuild the pinned Japanese dataset from the repository root:
 
@@ -229,3 +229,24 @@ in memory. Keep the app open until retry succeeds. Backup/restore stays accessib
 when writing fails, and the load-error screen also provides recovery controls.
 Returning users see dictionary download progress while their remembered language
 loads.
+
+## Spanish reading
+
+Choose Spanish for Latin-script reading, English definitions, Spanish browser
+voices, passage translation, vocabulary and flashcards. Spanish has its own
+library, settings, activity and reading progress. CJK reading/writing controls
+are hidden. Existing Japanese/Chinese data and version-1 backups are retained;
+new backups also carry Spanish data.
+
+Spanish uses the full English Wiktionary Spanish extraction from Kaikki, plus
+forms listed in its paradigms: 1,221,600 normalized lookup forms. Inflected and
+alternative forms link to dictionary forms and their English meanings, including
+ambiguous forms such as `fui`. Explicit entries take precedence over generated
+paradigm links. Dictionary coverage and accuracy are community-maintained;
+missing entries are possible. No curated vocabulary cap is applied.
+
+The approximately 7.45 MiB compressed dictionary downloads only when Spanish is
+selected. It does not increase the initial JavaScript bundle. See
+[SPANISH-DICTIONARY-NOTICE.md](./SPANISH-DICTIONARY-NOTICE.md) for the pinned source,
+license, changes and rebuild instructions. Run `pnpm --filter mochiread test:spanish`
+for browser coverage; it is also included in `test:e2e` and CI.

@@ -5,7 +5,14 @@ export function getChineseData(): Record<string, string[]>[] {
 }
 
 export function getJapaneseRows(): unknown[] {
-  const { compressed } = require('./data/japanese.json') as { compressed: string };
+  return decompress(require('./data/japanese.json').compressed);
+}
+
+export function getSpanishRows(): unknown[] {
+  return decompress(require('./data/spanish.json').compressed);
+}
+
+function decompress(compressed: string): unknown[] {
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
   const bytes = new Uint8Array(Math.floor(compressed.length * 3 / 4) - (compressed.endsWith('==') ? 2 : compressed.endsWith('=') ? 1 : 0));
   let buffer = 0, bits = 0, offset = 0;

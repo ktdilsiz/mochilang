@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../../storage/languages';
 import { useLibrary } from './state';
 import {
   FlatList,
@@ -132,7 +133,7 @@ function Row({
         <Text style={[s.meta, { color: theme.textMuted }]}>
           {isCurrent
             ? 'Currently reading'
-            : `${item.language === 'ja' ? 'Japanese' : 'Chinese'} · ${formatDate(item.createdAt)}`}
+            : `${LANGUAGE_INFO[item.language].name} · ${formatDate(item.createdAt)}`}
         </Text>
       </View>
       <Pressable

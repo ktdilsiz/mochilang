@@ -13,6 +13,9 @@
  * Pure data + functions, no React / RN / DOM dependencies, so the same
  * code runs in mochiread (Expo) and mochilang (Vite/web).
  */
+import { tokenizeSpanish } from './spanish';
+export { lookupSpanish, normalizeSpanish } from './spanish';
+export type { SpanishDefinition } from './spanish';
 import { pinyin, getNumOfTone } from 'pinyin-pro';
 import { getChineseData, getBilingualData } from './data-source';
 export { configureDictionaryData } from './data-source';
@@ -30,7 +33,7 @@ export type Definition = {
   meanings: string[];
 };
 
-export type TextLanguage = 'zh' | 'ja';
+export type TextLanguage = 'zh' | 'ja' | 'es';
 
 /**
  * CC-CEDICT after adding Traditional aliases has ~197k entries,
@@ -167,7 +170,7 @@ export function isChinese(s: string): boolean {
 }
 
 export function isReadableWord(s: string, language: TextLanguage): boolean {
-  return language === 'ja' ? isJapanese(s) : isChinese(s);
+  return language === 'es' ? /[\p{Script=Latin}]/u.test(s) : language === 'ja' ? isJapanese(s) : isChinese(s);
 }
 
 // --- Segmentation ------------------------------------------------------------
@@ -247,6 +250,7 @@ export type Token = {
 };
 
 export function tokenize(text: string, language: TextLanguage = 'zh'): Token[] {
+  if (language === 'es') return tokenizeSpanish(text);
   if (language === 'ja') return tokenizeJapanese(text);
   const segments = segmentText(text);
   return segments.map((seg) => {

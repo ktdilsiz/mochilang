@@ -2,7 +2,7 @@ import { lookupJapanese, romanizeJapanese, type JapaneseDefinition, type Token }
 import type { JapaneseReadingMode, ReadingLanguage } from '../../storage/schema';
 
 export function readingLines(reading: string, language: ReadingLanguage, mode: JapaneseReadingMode, word?: string, entryId?: string, definition?: JapaneseDefinition): string[] {
-  if (!reading) return [];
+  if (!reading || language === 'es') return [];
   if (language === 'zh') return [reading];
   const entry = definition ?? (word && ['は', 'へ', 'を'].includes(word) ? lookupJapanese(word, { entryId }) : null);
   const particle = entry?.senses.some((sense) => sense.partsOfSpeech.includes('prt')) ?? false;

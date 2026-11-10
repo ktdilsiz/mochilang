@@ -10,7 +10,7 @@ export function readAlongSegments(tokens: Token[], language: TextLanguage): Spee
   tokens.forEach((token, index) => {
     const readable = isReadableWord(token.word, language) || (language === 'ja' && /[\p{L}\p{N}]/u.test(token.word));
     if (!readable) {
-      if (/^[「『（(【]+$/u.test(token.word)) prefix += token.word;
+      if (/^[¿¡「『（(【]+$/u.test(token.word)) prefix += token.word;
       else if (segments.length) segments[segments.length - 1].text += token.word;
       else prefix += token.word;
       return;
@@ -57,7 +57,7 @@ export function speechSegments(tokens: Token[], language: TextLanguage): SpeechS
     current.offsets.push(current.text.length);
     current.text += token.word;
     current.end = index;
-    sentenceEnded ||= /[。！？!?]/u.test(token.word);
+    sentenceEnded ||= /[。！？!?.]/u.test(token.word);
     const nextIsClosingQuote = /^[」』）)】〉》]+$/u.test(tokens[index + 1]?.word ?? '');
     if (/\n/u.test(token.word) || (sentenceEnded && !nextIsClosingQuote)) finish();
   });

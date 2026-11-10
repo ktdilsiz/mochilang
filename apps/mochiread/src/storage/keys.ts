@@ -1,4 +1,5 @@
 import type { ReadingLanguage } from './schema';
+import { READING_LANGUAGES } from './languages';
 
 // Persisted names are a compatibility contract with existing browser data.
 export const KEYS = {
@@ -17,6 +18,6 @@ export const readingPageKey = (language: ReadingLanguage) => `${KEYS.readingPage
 // Preserve the version-1 backup contract. Language preference is device-local.
 export const BACKUP_KEYS = [
   KEYS.library, KEYS.vocab, KEYS.prefs, KEYS.stats, KEYS.seeded, KEYS.introduced, KEYS.readingLanguage,
-  ...(['zh', 'ja'] as const).flatMap((language) => [preferencesKey(language), activityKey(language), readingTextKey(language), readingPageKey(language)]),
+  ...READING_LANGUAGES.flatMap((language) => [preferencesKey(language), activityKey(language), readingTextKey(language), readingPageKey(language)]),
   KEYS.readingText, KEYS.readingPage,
 ];

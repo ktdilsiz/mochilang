@@ -1,3 +1,4 @@
+import { isReadingLanguage } from './languages';
 import { lookupJapanese } from '@mochilang/dict/core';
 import type { VocabEntry, ReadingLanguage } from './schema';
 
@@ -6,7 +7,7 @@ export function migrateVocabulary(raw: Partial<VocabEntry>[], activeLanguage?: R
   const migrated = new Map<string, VocabEntry>();
   for (const value of raw) {
     if (!value?.word) continue;
-    const language = value.language === 'ja' ? 'ja' : 'zh';
+    const language = isReadingLanguage(value.language) ? value.language : 'zh';
     const match = language === 'ja' && (!activeLanguage || activeLanguage === 'ja') && !value.entryId ? lookupJapanese(value.word) : null;
     const entry: VocabEntry = {
       word: match?.dictionaryForm ?? value.word,

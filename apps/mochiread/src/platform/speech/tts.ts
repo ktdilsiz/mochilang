@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../../storage/languages';
 import * as Speech from 'expo-speech';
 import { Platform } from 'react-native';
 import type { ReadingLanguage } from '../../storage/schema';
@@ -43,7 +44,7 @@ export async function speakAsync(
     };
     finishPending = finish;
     try { Speech.speak(text, {
-      language: language === 'ja' ? 'ja-JP' : 'zh-CN',
+      language: LANGUAGE_INFO[language].locale,
       rate: config.rate,
       pitch: 1.0,
       voice,
@@ -70,7 +71,7 @@ export type ReadingVoice = Speech.Voice & { localService?: boolean };
 // then explicitly advertised higher-quality voices and browser Google voices.
 function voiceScore(voice: ReadingVoice, language: ReadingLanguage) {
   const locale = voice.language.toLowerCase().replace(/_/g, '-');
-  let score = locale === (language === 'ja' ? 'ja-jp' : 'zh-cn') ? 100 : 0;
+  let score = locale === LANGUAGE_INFO[language].locale.toLowerCase() ? 100 : 0;
   if (language === 'zh' && locale.startsWith('zh-hk')) score -= 100;
   if (/natural|neural|premium/iu.test(voice.name)) score += 40;
   if (voice.quality === Speech.VoiceQuality.Enhanced || /enhanced/iu.test(voice.name)) score += 30;

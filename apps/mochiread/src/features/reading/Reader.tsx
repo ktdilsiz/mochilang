@@ -49,7 +49,8 @@ export function Reader({
   const theme = useTheme();
   const { text: hanziSize, reading: pinyinSize } = getFontSizes(fontSize);
   const lineHeight = Math.round(hanziSize * 1.25);
-  const reservePinyinRow = pinyinMode !== 'off';
+  const effectivePinyinMode = language === 'es' ? 'off' : pinyinMode;
+  const reservePinyinRow = effectivePinyinMode !== 'off';
   const readingMode = language === 'ja' ? japaneseReadingMode : undefined;
   const readingRows = readingMode === 'both' ? 2 : 1;
 
@@ -246,7 +247,7 @@ export function Reader({
                       hanziSize={hanziSize}
                       pinyinSize={pinyinSize}
                       lineHeight={lineHeight}
-                      pinyinMode={pinyinMode}
+                      pinyinMode={effectivePinyinMode}
                       readingMode={readingMode}
                       isRevealed={isRevealed}
                       showToneColors={language === 'zh' && showToneColors}

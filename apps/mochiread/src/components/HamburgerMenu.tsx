@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../storage/languages';
 import { useEffect, useRef, useState } from 'react';
 import {
   Animated,
@@ -92,7 +93,7 @@ export function HamburgerMenu({ open, language, onSwitchLanguage, onClose, onSel
             <Text style={[s.brand, { color: theme.text }]}>Mochiread</Text>
           </View>
           <Text style={[s.subBrand, { color: theme.textMuted }]}>
-            {language === 'ja' ? 'Japanese · 日本語' : 'Chinese · 中文'}
+            {`${LANGUAGE_INFO[language].name} · ${LANGUAGE_INFO[language].script}`}
           </Text>
           <Pressable accessibilityRole="button" onPress={onSwitchLanguage}
             onHoverIn={() => setHoveredItem('language')} onHoverOut={() => setHoveredItem(null)}

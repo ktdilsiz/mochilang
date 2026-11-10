@@ -20,7 +20,8 @@
     "eas:setup": "eas init --non-interactive --force && eas update:configure --non-interactive --platform all",
     "publish": "eas update --branch production --message \"$(git log -1 --pretty=%s 2>/dev/null || echo 'manual publish')\"",
     "test:unit": "tsx --test tests/unit/*.test.ts",
-    "test:e2e": "node tests/e2e/japanese.web.cjs && node tests/e2e/backup.web.cjs"
+    "test:e2e": "node tests/e2e/japanese.web.cjs && node tests/e2e/backup.web.cjs && node tests/e2e/spanish.web.cjs",
+    "test:spanish": "node tests/e2e/spanish.web.cjs"
   },
   "dependencies": {
     "@expo/metro-runtime": "~58.0.15",

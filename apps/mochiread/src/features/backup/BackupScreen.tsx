@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../../storage/languages';
 import { useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { AppHeader } from '../../components/AppHeader';
@@ -59,7 +60,7 @@ export function BackupScreen({ onBack, onRestored }: { onBack: () => void; onRes
     <AppHeader title="Backup & restore" leading="back" onLeadingPress={() => { if (!busy) onBack(); }} />
     <ScrollView contentContainerStyle={s.body} keyboardShouldPersistTaps="handled">
       <Text style={[s.title, { color: theme.text }]}>Take your reading with you</Text>
-      <Text style={[s.copy, { color: theme.textMuted }]}>Back up both languages: saved texts, vocabulary and flashcard progress, settings, reading positions, and activity. Dictionaries are downloaded separately and aren’t included. No account is needed.</Text>
+      <Text style={[s.copy, { color: theme.textMuted }]}>Back up all languages: saved texts, vocabulary and flashcard progress, settings, reading positions, and activity. Dictionaries are downloaded separately and aren’t included. No account is needed.</Text>
       {button('Download backup', download)}
       {!!exportText && <TextInput accessibilityLabel="Backup JSON to copy" multiline editable={false} value={exportText} style={[s.input, { color: theme.text, borderColor: theme.border }]} />}
       <Text style={[s.title, { color: theme.text, marginTop: 16 }]}>Restore on this device</Text>
@@ -73,9 +74,9 @@ export function BackupScreen({ onBack, onRestored }: { onBack: () => void; onRes
         <Text style={[s.title, { color: theme.text }]}>Review backup</Text>
         <Text style={[s.copy, { color: theme.textMuted }]}>Created {new Date(candidate.createdAt).toLocaleString()}</Text>
         {summarizeBackup(candidate).map((summary) => <Text key={summary.language} style={[s.copy, { color: theme.text }]}>
-          {summary.language === 'ja' ? 'Japanese' : 'Chinese'}: {summary.texts} texts · {summary.words} saved words
+          {LANGUAGE_INFO[summary.language].name}: {summary.texts} texts · {summary.words} saved words
         </Text>)}
-        <Text style={[s.copy, { color: theme.text }]}>Restoring replaces this browser’s saved data for both languages, including settings and review progress. Download a backup of this browser first if you want to keep it.</Text>
+        <Text style={[s.copy, { color: theme.text }]}>Restoring replaces this browser’s saved data for all languages, including settings and review progress. Download a backup of this browser first if you want to keep it.</Text>
         {button('Restore this backup', restore, true)}
         {button('Cancel restore', () => setCandidate(null))}
       </View>}

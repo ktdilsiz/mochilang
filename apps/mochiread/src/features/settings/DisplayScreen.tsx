@@ -32,7 +32,7 @@ export function DisplayScreen({ language, onBack }: Props) {
   const { prefs, setPrefs } = usePreferences();
   const theme = useTheme();
   const sizes = getFontSizes(prefs.fontSize);
-  const preview = language === 'ja'
+  const preview = language === 'es' ? [{ word: 'Hola,', reading: '' }, { word: 'mundo', reading: '' }] : language === 'ja'
     ? [{ word: '日本語', reading: 'にほんご' }, { word: 'を', reading: 'を' }, { word: '読む', reading: 'よむ' }]
     : [{ word: '你好', reading: 'nǐ hǎo' }, { word: '世界', reading: 'shì jiè' }];
 
@@ -92,7 +92,7 @@ export function DisplayScreen({ language, onBack }: Props) {
           </View>
         </Section>
 
-        <Section title={language === 'ja' ? 'Readings' : 'Pinyin'} theme={theme}>
+        {language !== 'es' && <Section title={language === 'ja' ? 'Readings' : 'Pinyin'} theme={theme}>
           {language === 'ja' && (
             <>
               <Text style={{ color: theme.textMuted, fontSize: 13 }}>Reading style</Text>
@@ -181,7 +181,7 @@ export function DisplayScreen({ language, onBack }: Props) {
               />
             </>
           )}
-        </Section>
+        </Section>}
       </ScrollView>
     </View>
   );

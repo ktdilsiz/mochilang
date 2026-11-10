@@ -7,7 +7,7 @@ import { SEED_LIBRARY } from './seeds';
 import type { Preferences, LibraryEntry, VocabEntry, DayStats, ReadingLanguage } from './schema';
 
 export async function readPreferences(language: ReadingLanguage): Promise<Preferences> {
-  const raw = await storage.getItem(preferencesKey(language)) ?? await storage.getItem(KEYS.prefs);
+  const raw = await storage.getItem(preferencesKey(language)) ?? (language === 'es' ? null : await storage.getItem(KEYS.prefs));
   return { ...DEFAULT_PREFS, ...migratePrefs(raw ? JSON.parse(raw) : null) };
 }
 export const writePreferences = (language: ReadingLanguage, value: Preferences) => storage.setItem(preferencesKey(language), JSON.stringify(value));

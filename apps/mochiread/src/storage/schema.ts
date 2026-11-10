@@ -2,7 +2,8 @@ export type FontSize = 'sm' | 'md' | 'lg' | 'xl' | number;
 export type SpeechRate = 'slow' | 'normal' | 'fast';
 export type PagePlayback = 'word' | 'sentence';
 export type PinyinMode = 'on' | 'off' | 'hint';
-export type ReadingLanguage = 'zh' | 'ja';
+export type { ReadingLanguage } from './languages';
+import type { ReadingLanguage } from './languages';
 export type JapaneseReadingMode = 'kana' | 'romaji' | 'both';
 
 export type ThemeMode = 'system' | 'light' | 'dark';

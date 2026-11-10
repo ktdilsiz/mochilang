@@ -68,5 +68,5 @@ export const SEED_LIBRARY: LibraryEntry[] = (() => {
     createdAt: now - (items.length + 3) * 60_000,
   };
 
-  return [...baseSeeds, japaneseWelcome, hsk3All, hsk4All];
+  return [...baseSeeds, japaneseWelcome, hsk3All, hsk4All, { id: 'seed-es-1', title: 'Spanish welcome', text: '¡Hola! Me llamo Ana. Vivo en una casa cerca del parque. Estoy aprendiendo español y leo un libro cada día.', language: 'es', createdAt: now - 600000 }];
 })();

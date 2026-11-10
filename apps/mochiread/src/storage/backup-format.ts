@@ -1,3 +1,4 @@
+import { READING_LANGUAGES, isReadingLanguage } from './languages';
 import { KEYS, BACKUP_KEYS } from './keys';
 export { BACKUP_KEYS } from './keys';
 export const MAX_BACKUP_SIZE = 20 * 1024 * 1024;
@@ -6,13 +7,13 @@ export type Backup = { format: 'mochiread-backup'; version: 1; createdAt: string
 const object = (value: unknown): value is Record<string, unknown> => !!value && typeof value === 'object' && !Array.isArray(value);
 const string = (value: unknown, max = 1000000): value is string => typeof value === 'string' && value.length <= max;
 const number = (value: unknown) => typeof value === 'number' && Number.isFinite(value) && value >= 0;
-const language = (value: unknown) => value === undefined || value === 'zh' || value === 'ja';
+const language = (value: unknown) => value === undefined || isReadingLanguage(value);
 const optional = (value: unknown, check: (value: unknown) => boolean) => value === undefined || check(value);
 
 function validValue(key: string, raw: string): boolean {
   if (key.startsWith(KEYS.readingText)) return string(raw);
   if (key.startsWith(KEYS.readingPage)) return /^\d+$/.test(raw) && Number.isSafeInteger(Number(raw));
-  if (key === KEYS.readingLanguage) return raw === 'ja' || raw === 'zh';
+  if (key === KEYS.readingLanguage) return isReadingLanguage(raw);
   if (key === KEYS.seeded) return raw === '1';
   const value: unknown = JSON.parse(raw);
   if (key === KEYS.introduced) return Array.isArray(value) && value.length <= 10000 && value.every((id) => string(id, 200));
@@ -55,7 +56,7 @@ export function parseBackup(text: string): Backup {
 export function summarizeBackup(backup: Backup) {
   const texts = JSON.parse(backup.data[KEYS.library]) as { language?: string }[];
   const words = JSON.parse(backup.data[KEYS.vocab]) as { language?: string }[];
-  return (['ja', 'zh'] as const).map((language) => ({
+  return READING_LANGUAGES.map((language) => ({
     language, texts: texts.filter((entry) => (entry.language ?? 'zh') === language).length,
     words: words.filter((entry) => (entry.language ?? 'zh') === language).length,
   }));

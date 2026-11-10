@@ -2,6 +2,7 @@
 export type DictionaryDataSource = {
   getChineseData: () => Record<string, string[]>[];
   getJapaneseRows: () => unknown[];
+  getSpanishRows?: () => unknown[];
   getBilingualData: (pair: string) => Record<string, string[]> | null;
 };
 let source: DictionaryDataSource | undefined;
@@ -16,3 +17,9 @@ function configured() {
 export const getChineseData = () => configured().getChineseData();
 export const getJapaneseRows = () => configured().getJapaneseRows();
 export const getBilingualData = (pair: string) => configured().getBilingualData(pair);
+
+export const getSpanishRows = () => {
+  const get = configured().getSpanishRows;
+  if (!get) throw new Error('Spanish dictionary is not configured');
+  return get();
+};

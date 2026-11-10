@@ -1,3 +1,4 @@
+import { isReadingLanguage } from './languages';
 import type { Preferences, LibraryEntry } from './schema';
 import { ORIGINAL_SEED_IDS, DEPRECATED_SEED_IDS, SEED_LIBRARY } from './seeds';
 
@@ -26,7 +27,7 @@ export function migrateLibrary(raw: unknown, seeded: string | null, introducedRa
   const seeds = new Map(SEED_LIBRARY.map((entry) => [entry.id, entry]));
   const existing = (raw as Partial<LibraryEntry>[]).map((entry): LibraryEntry => ({
     id: entry.id ?? String(Date.now()), title: entry.title ?? makeTitle(entry.text ?? ''),
-    text: entry.text ?? '', language: entry.language === 'ja' ? 'ja' : 'zh', createdAt: entry.createdAt ?? Date.now(),
+    text: entry.text ?? '', language: isReadingLanguage(entry.language) ? entry.language : 'zh', createdAt: entry.createdAt ?? Date.now(),
   })).filter((entry) => !deprecated.has(entry.id)).map((entry) => {
     const seed = seeds.get(entry.id);
     if (!seed) return entry;

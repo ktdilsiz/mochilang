@@ -1,3 +1,4 @@
+import { isReadingLanguage, LANGUAGE_INFO } from '../storage/languages';
 import { usePreferences } from '../features/settings/state';
 import { useLibrary } from '../features/library/state';
 import { useActivity } from '../features/activity/state';
@@ -48,8 +49,6 @@ import { BackupScreen } from '../features/backup/BackupScreen';
 import { recoverInterruptedRestore } from '../storage/backup';
 import type { Screen } from './navigation';
 
-const SAMPLE = '你好，世界！我喜欢吃苹果。今天天气很好。';
-
 
 export default function App() {
   const [language, setLanguage] = useState<ReadingLanguage | null>(null);
@@ -79,7 +78,7 @@ export default function App() {
         const saved = await getPreferredLanguage();
         if (!active) return;
         setRestoringLanguage(false);
-        if (saved === 'ja' || saved === 'zh') {
+        if (isReadingLanguage(saved)) {
           await selectLanguage(saved);
         }
       } catch {
@@ -101,7 +100,7 @@ export default function App() {
 
 function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError, onRestored }: { initialLanguage: ReadingLanguage | null; onSelectLanguage: (language: ReadingLanguage | null) => void; loadingLanguage: ReadingLanguage | null; loadError: string; onRestored: () => void }) {
   const language = initialLanguage ?? 'zh';
-  const initialText = language === 'ja' ? 'こんにちは、世界！今日はいい天気です。日本語を読んでみましょう。' : SAMPLE;
+  const initialText = LANGUAGE_INFO[language].sample;
   const loadSession = useCallback(async () => {
     const saved = await readReadingSession(language);
     return { text: saved.text || initialText, page: saved.page ?? 0 };
@@ -207,7 +206,7 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
       {screen === 'reader' && (
         <View style={s.flex}>
           <AppHeader
-            title={`MochiRead · ${language === 'ja' ? 'Japanese' : 'Chinese'}`}
+            title={`MochiRead · ${LANGUAGE_INFO[language].name}`}
             leading="menu"
             onLeadingPress={() => setMenuOpen(true)}
           />

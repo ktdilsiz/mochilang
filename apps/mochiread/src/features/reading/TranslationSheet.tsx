@@ -1,3 +1,4 @@
+import { LANGUAGE_INFO } from '../../storage/languages';
 import { useEffect, useRef, useState } from 'react';
 import {
   Animated,
@@ -100,7 +101,7 @@ function Sheet({
         <View style={s.section}>
           <View style={s.sectionHeader}>
             <Text style={[s.sectionLabel, { color: theme.textMuted }]}>
-              {language === 'ja' ? 'Japanese' : 'Chinese'}
+              {LANGUAGE_INFO[language].name}
             </Text>
             <Pressable
               onPress={() => speak(text, language)}
