@@ -3,6 +3,7 @@ import { KEYS, preferencesKey, activityKey, readingTextKey, readingPageKey } fro
 import { migratePrefs, migrateLibrary } from './migrations';
 import { migrateVocabulary } from './vocabulary-migration';
 import { DEFAULT_PREFS } from './defaults';
+import { SEED_LIBRARY } from './seeds';
 import type { Preferences, LibraryEntry, VocabEntry, DayStats, ReadingLanguage } from './schema';
 
 export async function readPreferences(language: ReadingLanguage): Promise<Preferences> {
@@ -14,13 +15,17 @@ export const writePreferences = (language: ReadingLanguage, value: Preferences) 
 export async function readLibrary(): Promise<LibraryEntry[]> {
   const values = Object.fromEntries(await storage.multiGet([KEYS.library, KEYS.seeded, KEYS.introduced]));
   const next = migrateLibrary(values[KEYS.library] ? JSON.parse(values[KEYS.library]!) : [], values[KEYS.seeded], values[KEYS.introduced]);
-  // Save entries before introduction metadata so an interrupted first launch
-  // cannot mark starter texts as introduced without actually saving them.
-  await storage.setItem(KEYS.library, JSON.stringify(next.library));
-  await storage.multiSet([[KEYS.introduced, JSON.stringify(next.introduced)], [KEYS.seeded, '1']]);
   return next.library;
 }
-export const writeLibrary = (value: LibraryEntry[]) => storage.setItem(KEYS.library, JSON.stringify(value));
+export async function writeLibrary(value: LibraryEntry[]) {
+  const raw = await storage.getItem(KEYS.introduced);
+  const introduced = new Set<string>(raw ? JSON.parse(raw) : []);
+  SEED_LIBRARY.forEach((entry) => introduced.add(entry.id));
+  // Save entries before metadata. A failed write remains retryable without
+  // blocking hydration or marking absent starter texts as introduced.
+  await storage.setItem(KEYS.library, JSON.stringify(value));
+  await storage.multiSet([[KEYS.introduced, JSON.stringify([...introduced])], [KEYS.seeded, '1']]);
+}
 export async function readVocabulary(language: ReadingLanguage): Promise<VocabEntry[]> {
   const raw = await storage.getItem(KEYS.vocab);
   return migrateVocabulary(raw ? JSON.parse(raw) : [], language);

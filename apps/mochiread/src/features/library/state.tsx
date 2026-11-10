@@ -1,14 +1,14 @@
 import { createContext, useContext, useCallback, useMemo, type ReactNode } from 'react';
-import { usePersistentState } from '../../storage/usePersistentState';
+import { usePersistentState, type PersistenceStatus } from '../../storage/usePersistentState';
 import { readLibrary, writeLibrary } from '../../storage/repository';
 import { makeTitle } from '../../storage/migrations';
 import type { LibraryEntry, ReadingLanguage } from '../../storage/schema';
 
-type LibraryState = { library: LibraryEntry[]; saveText: (text: string, language: ReadingLanguage) => LibraryEntry; removeText: (id: string) => void; reorderLibrary: (entries: LibraryEntry[]) => void; hydrated: boolean; error: Error | null };
+type LibraryState = { library: LibraryEntry[]; saveText: (text: string, language: ReadingLanguage) => LibraryEntry; removeText: (id: string) => void; reorderLibrary: (entries: LibraryEntry[]) => void; } & PersistenceStatus;
 const Context = createContext<LibraryState | null>(null);
 const EMPTY: LibraryEntry[] = [];
 export function LibraryProvider({ children, language, enabled }: { children: ReactNode; language: ReadingLanguage; enabled: boolean }) {
-  const { value: entries, setValue, hydrated, error } = usePersistentState(EMPTY, readLibrary, writeLibrary, enabled);
+  const { value: entries, setValue, hydrated, error, saveError, retrySave } = usePersistentState(EMPTY, readLibrary, writeLibrary, enabled);
   const library = useMemo(() => entries.filter((entry) => entry.language === language), [entries, language]);
   const saveText = useCallback((text: string, language: ReadingLanguage) => {
     const existing = entries.find((entry) => entry.text === text && entry.language === language);
@@ -22,7 +22,7 @@ export function LibraryProvider({ children, language, enabled }: { children: Rea
     let index = 0;
     return previous.map((entry) => entry.language === language ? next[index++] ?? entry : entry);
   }), [language, setValue]);
-  const value = useMemo(() => ({ library, saveText, removeText, reorderLibrary, hydrated, error }), [library, saveText, removeText, reorderLibrary, hydrated, error]);
+  const value = useMemo(() => ({ library, saveText, removeText, reorderLibrary, hydrated, error, saveError, retrySave }), [library, saveText, removeText, reorderLibrary, hydrated, error, saveError, retrySave]);
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }
 export function useLibrary() {

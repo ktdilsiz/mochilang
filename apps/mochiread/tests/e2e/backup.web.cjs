@@ -157,11 +157,102 @@ const server = http.createServer((request, response) => {
         window.restoreStorageReads();
         return localStorage.getItem(key) === window.expectedSavedValue;
       }, failedKey), `Failed read overwrote ${failedKey}`);
+      await blocked.getByRole('button', { name: 'Retry loading', exact: true }).click();
+      await blocked.getByLabel('Open menu', { exact: true }).waitFor();
       await blocked.close();
     }
+    // Returning users must see progress while their remembered dictionary loads.
+    const remembered = await browser.newPage();
+    await remembered.addInitScript(() => localStorage.setItem('mochiread:preferred-language', 'ja'));
+    let releaseManifest;
+    const manifestGate = new Promise((resolve) => { releaseManifest = resolve; });
+    await remembered.route('**/dictionaries/manifest.json', async (route) => {
+      await manifestGate;
+      await route.fulfill({ status: 503, body: 'Offline' });
+    });
+    await remembered.goto(url);
+    await remembered.getByText(/Loading Japanese dictionary/).waitFor();
+    assert(await remembered.getByRole('button', { name: 'Choose Japanese', exact: true }).isDisabled());
+    releaseManifest();
+    await remembered.getByRole('alert').waitFor();
+    await remembered.unroute('**/dictionaries/manifest.json');
+    await remembered.getByRole('button', { name: 'Choose Japanese', exact: true }).click();
+    await remembered.getByLabel('Open menu', { exact: true }).waitFor();
+    await remembered.close();
+
+    // All persisted domains expose write failures and can retry without reload.
+    for (const failedKey of ['mochiread:library', 'mochiread:vocab', 'mochiread:prefs:zh', 'mochiread:stats:zh', 'mochiread:reading:text:zh', 'mochiread:reading:page:zh']) {
+      const writable = await browser.newPage();
+      await writable.addInitScript((key) => {
+        localStorage.setItem('mochiread:library', JSON.stringify([{ id: 'safe', title: 'Keep my text', text: '你好', language: 'zh', createdAt: 1 }]));
+        window.failWrites = true;
+        const set = Storage.prototype.setItem;
+        Storage.prototype.setItem = function (name, value) {
+          if (window.failWrites && name === key) throw new DOMException('Storage full', 'QuotaExceededError');
+          return set.call(this, name, value);
+        };
+      }, failedKey);
+      await writable.goto(url);
+      await writable.getByRole('button', { name: 'Choose Chinese', exact: true }).click();
+      await writable.getByRole('alert').filter({ hasText: 'Changes couldn’t be saved' }).waitFor();
+      await menu(writable, 'Backup & restore');
+      // A write failure during startup must not block exporting existing data.
+      const [safeDownload] = await Promise.all([writable.waitForEvent('download'), writable.getByRole('button', { name: 'Download backup', exact: true }).click()]);
+      const safeBackup = JSON.parse(fs.readFileSync(await safeDownload.path(), 'utf8'));
+      assert(JSON.parse(safeBackup.data['mochiread:library']).some((entry) => entry.id === 'safe'));
+      await writable.getByRole('button', { name: 'Retry saving', exact: true }).click();
+      await writable.getByRole('alert').filter({ hasText: 'Changes couldn’t be saved' }).waitFor();
+      await writable.evaluate(() => { window.failWrites = false; });
+      await writable.getByRole('button', { name: 'Retry saving', exact: true }).click();
+      await writable.getByRole('alert').filter({ hasText: 'Changes couldn’t be saved' }).waitFor({ state: 'detached' });
+      assert.notEqual(await writable.evaluate((key) => localStorage.getItem(key), failedKey), null);
+      await writable.close();
+    }
+
+    const unsaved = await browser.newPage();
+    await unsaved.addInitScript(() => {
+      const set = Storage.prototype.setItem;
+      Storage.prototype.setItem = function (name, value) {
+        if (window.failWrites && name === 'mochiread:library') throw new DOMException('Storage full', 'QuotaExceededError');
+        return set.call(this, name, value);
+      };
+    });
+    await unsaved.goto(url);
+    await unsaved.getByRole('button', { name: 'Choose Chinese', exact: true }).click();
+    await unsaved.getByLabel('Open menu', { exact: true }).waitFor();
+    await unsaved.evaluate(() => { window.failWrites = true; });
+    for (const text of ['这是第一篇文章。', '这是第二篇文章。']) {
+      await menu(unsaved, 'New text');
+      await unsaved.locator('textarea').fill(text);
+      await unsaved.getByText('Read', { exact: true }).click();
+      await unsaved.getByRole('alert').filter({ hasText: 'Changes couldn’t be saved' }).waitFor();
+    }
+    await unsaved.evaluate(() => { window.failWrites = false; });
+    await unsaved.getByRole('button', { name: 'Retry saving', exact: true }).click();
+    await unsaved.getByRole('alert').waitFor({ state: 'detached' });
+    await unsaved.reload();
+    await menu(unsaved, 'Library');
+    await unsaved.getByText('这是第一篇文章。', { exact: true }).waitFor();
+    await unsaved.getByText('这是第二篇文章。', { exact: true }).waitFor();
+    await unsaved.close();
+
+    // A persistent read error still lets users restore a healthy backup.
+    const damaged = await browser.newPage();
+    await damaged.addInitScript(() => localStorage.setItem('mochiread:prefs:zh', '{broken json'));
+    await damaged.goto(url);
+    await damaged.getByRole('button', { name: 'Choose Chinese', exact: true }).click();
+    await damaged.getByRole('alert').filter({ hasText: 'Couldn’t load saved data' }).waitFor();
+    await damaged.getByRole('button', { name: 'Backup & restore', exact: true }).click();
+    await damaged.getByLabel('Paste backup JSON', { exact: true }).fill(backupText);
+    await damaged.getByRole('button', { name: 'Review pasted backup', exact: true }).click();
+    await damaged.getByRole('button', { name: 'Restore this backup', exact: true }).click();
+    await damaged.getByLabel('Open menu', { exact: true }).waitFor();
+    await menu(damaged, 'Library');
+    await damaged.getByText('My Chinese passage', { exact: true }).waitFor();
+    await damaged.close();
     const files = fs.readdirSync(path.join(root, '_expo/static/js/web')).filter((file) => file.endsWith('.js'));
     const bytes = files.reduce((total, file) => total + fs.statSync(path.join(root, '_expo/static/js/web', file)).size, 0);
     assert(bytes < 4 * 1024 * 1024, `Initial JavaScript unexpectedly large: ${bytes}`);
-    console.log(`PASS: ${(bytes / 1024 / 1024).toFixed(2)} MB initial JS; per-language downloads/retry; backup transfer, validation, preview/cancel, scheduling, rollback, interrupted-restore recovery, failed-read protection`);
+    console.log(`PASS: ${(bytes / 1024 / 1024).toFixed(2)} MB initial JS; per-language downloads/retry; backup transfer, validation, preview/cancel, scheduling, rollback, interrupted-restore recovery, failed-read protection, visible loading, save retries and recovery access`);
   } finally { await browser.close(); server.close(); }
 })().catch((error) => { console.error(error); process.exitCode = 1; server.close(); });

@@ -223,3 +223,9 @@ Run `pnpm --filter mochiread test:unit` for pure app checks and
 suites. CI builds one export and supplies `MOCHIREAD_WEB_DIR` to both suites.
 The app TypeScript check covers runtime source and unit tests; Node unit tests
 run with `tsx`.
+
+Storage write failures show a warning and **Retry saving** while retaining edits
+in memory. Keep the app open until retry succeeds. Backup/restore stays accessible
+when writing fails, and the load-error screen also provides recovery controls.
+Returning users see dictionary download progress while their remembered language
+loads.

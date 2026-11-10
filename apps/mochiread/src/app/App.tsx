@@ -2,10 +2,12 @@ import { usePreferences } from '../features/settings/state';
 import { useLibrary } from '../features/library/state';
 import { useActivity } from '../features/activity/state';
 import { useHydration } from './StoreProvider';
+import { usePersistentState } from '../storage/usePersistentState';
 import { prepareDictionary } from '../platform/dictionaries';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Platform,
+  Pressable,
   SafeAreaView,
   StatusBar,
   StyleSheet,
@@ -75,12 +77,13 @@ export default function App() {
     (async () => {
       try {
         const saved = await getPreferredLanguage();
-        if (active && (saved === 'ja' || saved === 'zh')) {
+        if (!active) return;
+        setRestoringLanguage(false);
+        if (saved === 'ja' || saved === 'zh') {
           await selectLanguage(saved);
         }
       } catch {
         // If storage is unavailable, show the normal language picker.
-      } finally {
         if (active) setRestoringLanguage(false);
       }
     })();
@@ -90,7 +93,7 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StoreProvider key={`${language ?? 'choose'}:${restoreVersion}`} language={language ?? 'zh'} enabled={language !== null}>
-        {restoringLanguage ? <View style={{ flex: 1 }} /> : <AppRoot initialLanguage={language} onSelectLanguage={selectLanguage} loadingLanguage={loadingLanguage} loadError={loadError} onRestored={() => setRestoreVersion((value) => value + 1)} />}
+        {restoringLanguage ? <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}><Text>Opening MochiRead…</Text></View> : <AppRoot initialLanguage={language} onSelectLanguage={selectLanguage} loadingLanguage={loadingLanguage} loadError={loadError} onRestored={() => setRestoreVersion((value) => value + 1)} />}
       </StoreProvider>
     </GestureHandlerRootView>
   );
@@ -98,10 +101,19 @@ export default function App() {
 
 function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError, onRestored }: { initialLanguage: ReadingLanguage | null; onSelectLanguage: (language: ReadingLanguage | null) => void; loadingLanguage: ReadingLanguage | null; loadError: string; onRestored: () => void }) {
   const language = initialLanguage ?? 'zh';
-  const [text, setText] = useState(language === 'ja' ? 'こんにちは、世界！今日はいい天気です。日本語を読んでみましょう。' : SAMPLE);
-  const [readingPage, setReadingPage] = useState(0);
-  const [hydrated, setHydrated] = useState(false);
-  const [sessionError, setSessionError] = useState<Error | null>(null);
+  const initialText = language === 'ja' ? 'こんにちは、世界！今日はいい天気です。日本語を読んでみましょう。' : SAMPLE;
+  const loadSession = useCallback(async () => {
+    const saved = await readReadingSession(language);
+    return { text: saved.text || initialText, page: saved.page ?? 0 };
+  }, [language, initialText]);
+  const saveSession = useCallback(async (value: { text: string; page: number }) => {
+    await writeReadingText(language, value.text);
+    await writeReadingPage(language, value.page);
+  }, [language]);
+  const { value: session, setValue: setSession, hydrated, error: sessionError, saveError: sessionSaveError, retrySave: retrySessionSave } = usePersistentState({ text: initialText, page: 0 }, loadSession, saveSession, initialLanguage !== null);
+  const { text, page: readingPage } = session;
+  const setText = useCallback((text: string) => setSession((previous) => ({ ...previous, text })), [setSession]);
+  const setReadingPage = useCallback((page: number) => setSession((previous) => ({ ...previous, page })), [setSession]);
   const [screen, setScreen] = useState<Screen>('reader');
   const [menuOpen, setMenuOpen] = useState(false);
   const [selected, setSelected] = useState<{ token: Token; rect: WordRect; sentence: string } | null>(
@@ -113,7 +125,7 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
 
   const { prefs } = usePreferences();
   const { saveText, library } = useLibrary();
-  const { hydrated: storeHydrated, error: storageError } = useHydration();
+  const { hydrated: storeHydrated, error: storageError, saveError: storeSaveError, retrySave: retryStoreSave } = useHydration();
   const { recordWordTap, recordReadingTime } = useActivity();
   const theme = useTheme();
   const tokens = useMemo(() => initialLanguage ? tokenize(text, language) : [], [text, language, initialLanguage]);
@@ -133,29 +145,7 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
         return;
       }
     }
-  }, [storeHydrated, hydrated, library, text, language]);
-
-  useEffect(() => {
-    if (!initialLanguage) return;
-    let active = true;
-    void readReadingSession(language).then((saved) => {
-      if (!active) return;
-      if (saved.text) setText(saved.text);
-      if (saved.page !== undefined) setReadingPage(saved.page);
-      setHydrated(true);
-    }).catch((cause: unknown) => {
-      if (active) setSessionError(cause instanceof Error ? cause : new Error('Could not read saved progress'));
-    });
-    return () => { active = false; };
-  }, [language, initialLanguage]);
-
-  useEffect(() => {
-    if (hydrated && initialLanguage) void writeReadingText(language, text).catch((cause) => console.error('Could not save reading text', cause));
-  }, [text, hydrated, initialLanguage, language]);
-
-  useEffect(() => {
-    if (hydrated && initialLanguage) void writeReadingPage(language, readingPage).catch((cause) => console.error('Could not save reading page', cause));
-  }, [readingPage, hydrated, initialLanguage, language]);
+  }, [storeHydrated, hydrated, library, text, language, setText]);
 
   useEffect(() => {
     configureTTS({
@@ -199,11 +189,21 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
   };
 
   if (!initialLanguage) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}><LanguageScreen onSelect={onSelectLanguage} loadingLanguage={loadingLanguage} error={loadError} /></SafeAreaView>;
-  if (storageError || sessionError) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}><Text accessibilityRole="alert" style={{ color: theme.text, padding: 24 }}>Couldn’t load saved data. Please reload MochiRead to try again.</Text></SafeAreaView>;
+  if (storageError || sessionError) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}>
+    {screen === 'backup' ? <BackupScreen onBack={goReader} onRestored={onRestored} /> : <View style={{ padding: 24, gap: 16 }}>
+      <Text accessibilityRole="alert" style={{ color: theme.text }}>Couldn’t load saved data. You can retry or restore a backup.</Text>
+      <Pressable accessibilityRole="button" accessibilityLabel="Retry loading" onPress={onRestored}><Text style={{ color: theme.accent }}>Retry loading</Text></Pressable>
+      <Pressable accessibilityRole="button" accessibilityLabel="Backup & restore" onPress={() => setScreen('backup')}><Text style={{ color: theme.accent }}>Backup & restore</Text></Pressable>
+    </View>}
+  </SafeAreaView>;
   if (!hydrated || !storeHydrated) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]} />;
 
   return (
     <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}>
+      {(storeSaveError || sessionSaveError) && <View style={{ padding: 12, gap: 8, backgroundColor: theme.surface }}>
+        <Text accessibilityRole="alert" style={{ color: theme.destructive }}>Changes couldn’t be saved on this device. Keep MochiRead open and retry saving before leaving or reloading.</Text>
+        <Pressable accessibilityRole="button" accessibilityLabel="Retry saving" onPress={() => { retryStoreSave(); retrySessionSave(); }}><Text style={{ color: theme.accent }}>Retry saving</Text></Pressable>
+      </View>}
       {screen === 'reader' && (
         <View style={s.flex}>
           <AppHeader
