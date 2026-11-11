@@ -6,7 +6,7 @@ import { useTheme } from '../../theme';
 import { createBackup, restoreBackup } from '../../storage/backup';
 import { MAX_BACKUP_SIZE, parseBackup, summarizeBackup, type Backup } from '../../storage/backup-format';
 
-export function BackupScreen({ onBack, onRestored }: { onBack: () => void; onRestored: () => void }) {
+export function BackupScreen({ onBack, onRestored, getSnapshot }: { onBack: () => void; onRestored: () => void; getSnapshot?: () => Record<string, string> }) {
   const theme = useTheme();
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState('');
@@ -21,7 +21,8 @@ export function BackupScreen({ onBack, onRestored }: { onBack: () => void; onRes
   const download = async () => {
     setBusy(true); setError(''); setMessage('');
     try {
-      const backup = await createBackup();
+      const snapshot = getSnapshot?.() ?? {};
+      const backup = await createBackup(snapshot);
       const text = JSON.stringify(backup, null, 2);
       if (Platform.OS === 'web') {
         const url = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
@@ -29,7 +30,7 @@ export function BackupScreen({ onBack, onRestored }: { onBack: () => void; onRes
         link.href = url; link.download = `mochiread-backup-${new Date().toISOString().slice(0, 10)}.json`;
         document.body.appendChild(link); link.click(); link.remove();
         setTimeout(() => URL.revokeObjectURL(url), 60000);
-        setMessage('Backup file prepared. Keep it somewhere you can access on your other device.');
+        setMessage(Object.keys(snapshot).length ? 'Backup file prepared, including unsaved changes from this tab. Keep it somewhere safe before leaving.' : 'Backup file prepared. Keep it somewhere you can access on your other device.');
       } else { setExportText(text); }
     } catch (e) { setError((e as Error).message); } finally { setBusy(false); }
   };

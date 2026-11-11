@@ -3,11 +3,14 @@ import { usePreferences } from '../features/settings/state';
 import { useLibrary } from '../features/library/state';
 import { useActivity } from '../features/activity/state';
 import { useHydration } from './StoreProvider';
+import { readingTextKey, readingPageKey } from '../storage/keys';
+import { StorageConflictError } from '../storage/concurrency';
 import { usePersistentState } from '../storage/usePersistentState';
 import { prepareDictionary } from '../platform/dictionaries';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Platform,
+  Modal,
   Pressable,
   SafeAreaView,
   StatusBar,
@@ -109,12 +112,13 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
     await writeReadingText(language, value.text);
     await writeReadingPage(language, value.page);
   }, [language]);
-  const { value: session, setValue: setSession, hydrated, error: sessionError, saveError: sessionSaveError, retrySave: retrySessionSave } = usePersistentState({ text: initialText, page: 0 }, loadSession, saveSession, initialLanguage !== null);
+  const { value: session, setValue: setSession, hydrated, error: sessionError, saveError: sessionSaveError, retrySave: retrySessionSave, dirty: sessionDirty, getUnsavedData: getSessionDraft } = usePersistentState({ text: initialText, page: 0 }, loadSession, saveSession, initialLanguage !== null, (value) => ({ [readingTextKey(language)]: value.text, [readingPageKey(language)]: String(value.page) }));
   const { text, page: readingPage } = session;
   const setText = useCallback((text: string) => setSession((previous) => ({ ...previous, text })), [setSession]);
   const setReadingPage = useCallback((page: number) => setSession((previous) => ({ ...previous, page })), [setSession]);
   const [screen, setScreen] = useState<Screen>('reader');
   const [menuOpen, setMenuOpen] = useState(false);
+  const [switchPending, setSwitchPending] = useState(false);
   const [selected, setSelected] = useState<{ token: Token; rect: WordRect; sentence: string } | null>(
     null
   );
@@ -124,8 +128,20 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
 
   const { prefs } = usePreferences();
   const { saveText, library } = useLibrary();
-  const { hydrated: storeHydrated, error: storageError, saveError: storeSaveError, retrySave: retryStoreSave } = useHydration();
+  const { hydrated: storeHydrated, error: storageError, saveError: storeSaveError, retrySave: retryStoreSave, dirty: storeDirty, getUnsavedData: getStoreDraft } = useHydration();
   const { recordWordTap, recordReadingTime } = useActivity();
+  const dirty = storeDirty || sessionDirty;
+  const saveError = storeSaveError ?? sessionSaveError;
+  const getSnapshot = () => ({ ...getStoreDraft(), ...getSessionDraft() });
+  useEffect(() => {
+    if (!dirty && !saveError || Platform.OS !== 'web') return;
+    const protect = (event: BeforeUnloadEvent) => { event.preventDefault(); event.returnValue = ''; };
+    window.addEventListener('beforeunload', protect);
+    return () => window.removeEventListener('beforeunload', protect);
+  }, [dirty, saveError]);
+  useEffect(() => {
+    if (switchPending && !dirty && !saveError) onSelectLanguage(null);
+  }, [switchPending, dirty, saveError, onSelectLanguage]);
   const theme = useTheme();
   const tokens = useMemo(() => initialLanguage ? tokenize(text, language) : [], [text, language, initialLanguage]);
 
@@ -189,7 +205,7 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
 
   if (!initialLanguage) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}><LanguageScreen onSelect={onSelectLanguage} loadingLanguage={loadingLanguage} error={loadError} /></SafeAreaView>;
   if (storageError || sessionError) return <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}>
-    {screen === 'backup' ? <BackupScreen onBack={goReader} onRestored={onRestored} /> : <View style={{ padding: 24, gap: 16 }}>
+    {screen === 'backup' ? <BackupScreen onBack={goReader} onRestored={onRestored} getSnapshot={getSnapshot} /> : <View style={{ padding: 24, gap: 16 }}>
       <Text accessibilityRole="alert" style={{ color: theme.text }}>Couldn’t load saved data. You can retry or restore a backup.</Text>
       <Pressable accessibilityRole="button" accessibilityLabel="Retry loading" onPress={onRestored}><Text style={{ color: theme.accent }}>Retry loading</Text></Pressable>
       <Pressable accessibilityRole="button" accessibilityLabel="Backup & restore" onPress={() => setScreen('backup')}><Text style={{ color: theme.accent }}>Backup & restore</Text></Pressable>
@@ -200,7 +216,7 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
   return (
     <SafeAreaView style={[s.root, { backgroundColor: theme.bg }]}>
       {(storeSaveError || sessionSaveError) && <View style={{ padding: 12, gap: 8, backgroundColor: theme.surface }}>
-        <Text accessibilityRole="alert" style={{ color: theme.destructive }}>Changes couldn’t be saved on this device. Keep MochiRead open and retry saving before leaving or reloading.</Text>
+        <Text accessibilityRole="alert" style={{ color: theme.destructive }}>{saveError instanceof StorageConflictError ? saveError.message : 'Changes couldn’t be saved on this device. Keep MochiRead open and retry saving before leaving or reloading.'}</Text>
         <Pressable accessibilityRole="button" accessibilityLabel="Retry saving" onPress={() => { retryStoreSave(); retrySessionSave(); }}><Text style={{ color: theme.accent }}>Retry saving</Text></Pressable>
       </View>}
       {screen === 'reader' && (
@@ -250,7 +266,7 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
       {screen === 'vocab' && <VocabularyScreen onBack={goReader} />}
       {screen === 'flashcards' && <FlashcardsScreen onBack={goReader} />}
       {screen === 'stats' && <StatsScreen onBack={goReader} />}
-      {screen === 'backup' && <BackupScreen onBack={goReader} onRestored={() => { stopSpeech(); onRestored(); }} />}
+      {screen === 'backup' && <BackupScreen onBack={goReader} onRestored={() => { stopSpeech(); onRestored(); }} getSnapshot={getSnapshot} />}
       {screen === 'display' && (
         <DisplayScreen language={language} onBack={goReader} />
       )}
@@ -261,10 +277,23 @@ function AppRoot({ initialLanguage, onSelectLanguage, loadingLanguage, loadError
       <HamburgerMenu
         open={menuOpen}
         language={language}
-        onSwitchLanguage={() => { stopSpeech(); onSelectLanguage(null); }}
+        onSwitchLanguage={() => { stopSpeech(); setMenuOpen(false); if (dirty || saveError) setSwitchPending(true); else onSelectLanguage(null); }}
         onClose={() => setMenuOpen(false)}
         onSelect={handleMenuSelect}
       />
+
+      <Modal visible={switchPending} transparent animationType="fade" onRequestClose={() => setSwitchPending(false)}>
+        <View style={{ flex: 1, justifyContent: 'center', padding: 24, backgroundColor: 'rgba(0,0,0,0.45)' }}>
+          <View accessibilityRole="alert" style={{ backgroundColor: theme.surface, padding: 24, borderRadius: 16, gap: 18 }}>
+            <Text style={{ color: theme.text, fontSize: 20, fontWeight: '700' }}>Unsaved changes</Text>
+            <Text style={{ color: theme.text }}>Save your changes before switching languages, or explicitly discard them.</Text>
+            {saveError && <Text style={{ color: theme.destructive }}>{saveError.message}</Text>}
+            <Pressable accessibilityRole="button" accessibilityLabel="Save and switch" onPress={() => { retryStoreSave(); retrySessionSave(); }}><Text style={{ color: theme.accent }}>Save and switch</Text></Pressable>
+            <Pressable accessibilityRole="button" accessibilityLabel="Keep editing" onPress={() => setSwitchPending(false)}><Text style={{ color: theme.accent }}>Keep editing</Text></Pressable>
+            <Pressable accessibilityRole="button" accessibilityLabel="Discard changes and switch" onPress={() => { setSwitchPending(false); onSelectLanguage(null); }}><Text style={{ color: theme.destructive }}>Discard changes and switch</Text></Pressable>
+          </View>
+        </View>
+      </Modal>
 
       <ThoughtBubble
         word={selected?.token.word ?? null}

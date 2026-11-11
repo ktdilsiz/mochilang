@@ -70,6 +70,14 @@ const server = http.createServer((request, response) => {
         assert(box && box.x >= 19 && box.x + box.width <= width - 19, `Spanish word overflow at ${width}: ${word}`);
       }
     }
+    await page.route('**/api/v1/es/en/**', (route) => route.fulfill({ json: { translation: decodeURIComponent(new URL(route.request().url()).pathname.split('/').at(-1)) } }));
+    await page.route('https://api.mymemory.translated.net/**', (route) => route.fulfill({ json: { responseStatus: 200, responseData: { translatedText: 'I am reading books.' } } }));
+    await page.getByRole('button', { name: 'Estoy', exact: true }).click({ delay: 500 });
+    await page.getByRole('button', { name: 'libros', exact: true }).click();
+    await page.getByText('Translate', { exact: true }).click();
+    await page.getByText('I am reading books.', { exact: true }).waitFor();
+    await page.getByText('Translation via MyMemory.', { exact: true }).waitFor();
+    await page.getByLabel('Close', { exact: true }).click();
     await menu('Display');
     assert.equal(await page.getByText('Pinyin', { exact: true }).count(), 0);
     assert.equal(await page.getByRole('radio', { name: 'Both', exact: true }).count(), 0);
@@ -85,6 +93,7 @@ const server = http.createServer((request, response) => {
     await menu('Flashcards');
     await page.getByText('Got it', { exact: true }).click();
     await page.getByText('Session complete', { exact: true }).waitFor();
+    await page.waitForFunction(() => JSON.parse(localStorage.getItem('mochiread:vocab') || '[]').some(word => word.language === 'es' && word.remembered === 1));
     const vocab = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')));
     assert.equal(vocab.find((word) => word.language === 'es').remembered, 1);
     assert.equal(vocab.find((word) => word.language === 'zh').remembered, 7);

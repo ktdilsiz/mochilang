@@ -76,6 +76,7 @@ const server = http.createServer((request, response) => {
     await page.mouse.click(410, 850);
     await menu('Vocabulary');
     assert.equal(await page.getByText('学校', { exact: true }).count(), 1);
+    await page.waitForFunction(() => JSON.parse(localStorage.getItem('mochiread:vocab') || '[]').some(entry => entry.language === 'ja' && entry.word === '学校'));
     const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')));
     assert.equal(stored[0].language, 'ja');
     assert(stored[0].entryId);
@@ -86,6 +87,7 @@ const server = http.createServer((request, response) => {
     await menu('Flashcards');
     await page.getByText('Got it', { exact: true }).click();
     await page.getByText('Session complete', { exact: true }).waitFor();
+    await page.waitForFunction(() => JSON.parse(localStorage.getItem('mochiread:vocab') || '[]').some(entry => entry.language === 'ja' && entry.remembered === 1));
     const reviewed = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')));
     assert.equal(reviewed.find((entry) => entry.language === 'ja').remembered, 1);
     assert.equal(reviewed.find((entry) => entry.language === 'zh').remembered, 3);
@@ -115,6 +117,7 @@ const server = http.createServer((request, response) => {
     await page.getByRole('button', { name: '食べられなかった', exact: true }).click();
     await page.getByText('食べる · potential / passive · past negative', { exact: true }).waitFor();
     await page.getByLabel('Save word', { exact: true }).click({ force: true });
+    await page.waitForFunction(() => JSON.parse(localStorage.getItem('mochiread:vocab') || '[]').some(entry => entry.word === '食べる'));
     const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')));
     const eat = saved.find((entry) => entry.word === '食べる');
     assert.equal(eat.pinyin, 'たべる');
@@ -195,6 +198,7 @@ const server = http.createServer((request, response) => {
     await page.getByLabel('Close', { exact: true }).click();
     await menu('Audio');
     await page.getByText('Japanese test voice', { exact: true }).click();
+    await page.waitForFunction(() => JSON.parse(localStorage.getItem('mochiread:prefs:ja') || '{}').japaneseVoiceId === 'test-ja');
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:prefs:ja')).japaneseVoiceId), 'test-ja');
     await page.evaluate(() => { window.testSpeech = []; });
     await page.getByText('Preview · こんにちは。今日はいい天気です。', { exact: true }).click();
@@ -238,6 +242,7 @@ const server = http.createServer((request, response) => {
     assert.equal(await small().getByText('ちいさな', { exact: true }).count(), 0);
     await small().click();
     await page.getByLabel('Save word', { exact: true }).click({ force: true });
+    await page.waitForFunction(() => JSON.parse(localStorage.getItem('mochiread:vocab') || '[]').some(entry => entry.word === '小さな'));
     const smallCard = await page.evaluate(() => JSON.parse(localStorage.getItem('mochiread:vocab')).find((entry) => entry.word === '小さな'));
     assert.equal(smallCard.pinyin, 'ちいさな');
     await page.mouse.click(410, 850);

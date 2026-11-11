@@ -188,7 +188,7 @@ const server = http.createServer((request, response) => {
         window.failWrites = true;
         const set = Storage.prototype.setItem;
         Storage.prototype.setItem = function (name, value) {
-          if (window.failWrites && name === key) throw new DOMException('Storage full', 'QuotaExceededError');
+          if (window.failWrites && name === key) { window.failedWriteAttempts = (window.failedWriteAttempts || 0) + 1; throw new DOMException('Storage full', 'QuotaExceededError'); }
           return set.call(this, name, value);
         };
       }, failedKey);
@@ -200,7 +200,9 @@ const server = http.createServer((request, response) => {
       const [safeDownload] = await Promise.all([writable.waitForEvent('download'), writable.getByRole('button', { name: 'Download backup', exact: true }).click()]);
       const safeBackup = JSON.parse(fs.readFileSync(await safeDownload.path(), 'utf8'));
       assert(JSON.parse(safeBackup.data['mochiread:library']).some((entry) => entry.id === 'safe'));
+      const attempts = await writable.evaluate(() => window.failedWriteAttempts);
       await writable.getByRole('button', { name: 'Retry saving', exact: true }).click();
+      await writable.waitForFunction((previous) => window.failedWriteAttempts > previous, attempts);
       await writable.getByRole('alert').filter({ hasText: 'Changes couldn’t be saved' }).waitFor();
       await writable.evaluate(() => { window.failWrites = false; });
       await writable.getByRole('button', { name: 'Retry saving', exact: true }).click();
@@ -213,7 +215,7 @@ const server = http.createServer((request, response) => {
     await unsaved.addInitScript(() => {
       const set = Storage.prototype.setItem;
       Storage.prototype.setItem = function (name, value) {
-        if (window.failWrites && name === 'mochiread:library') throw new DOMException('Storage full', 'QuotaExceededError');
+        if (window.failWrites && name === 'mochiread:library') { window.failedWriteAttempts = (window.failedWriteAttempts || 0) + 1; throw new DOMException('Storage full', 'QuotaExceededError'); }
         return set.call(this, name, value);
       };
     });
@@ -222,9 +224,11 @@ const server = http.createServer((request, response) => {
     await unsaved.getByLabel('Open menu', { exact: true }).waitFor();
     await unsaved.evaluate(() => { window.failWrites = true; });
     for (const text of ['这是第一篇文章。', '这是第二篇文章。']) {
+      const attempts = await unsaved.evaluate(() => window.failedWriteAttempts || 0);
       await menu(unsaved, 'New text');
       await unsaved.locator('textarea').fill(text);
       await unsaved.getByText('Read', { exact: true }).click();
+      await unsaved.waitForFunction((previous) => window.failedWriteAttempts > previous, attempts);
       await unsaved.getByRole('alert').filter({ hasText: 'Changes couldn’t be saved' }).waitFor();
     }
     await unsaved.evaluate(() => { window.failWrites = false; });

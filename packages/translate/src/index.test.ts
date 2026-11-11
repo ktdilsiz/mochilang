@@ -117,3 +117,30 @@ test('disabling the fallback still reports the rejected echo', async (t) => {
   t.mock.method(globalThis, 'fetch', async () => json({ translation: '今日はいい天気です。' }));
   await assert.rejects(translate('今日はいい天気です。', { from: 'ja', disableMyMemoryFallback: true }), /untranslated source/);
 });
+
+test('Spanish echoes fall through to English, including punctuation-normalized echoes', async (t) => {
+  const calls: string[] = [];
+  t.mock.method(globalThis, 'fetch', async (url: string) => {
+    calls.push(String(url));
+    const source = decodeURIComponent(new URL(url).pathname.split('/').at(-1)!);
+    return isMemory(url) ? memory('I am reading a book.') : json({ translation: source.replace(/[.!¡¿?]/g, '').toUpperCase() });
+  });
+  for (const text of ['Estoy leyendo un libro.', 'Hola', 'leer']) {
+    const result = await translate(text, { from: 'es' });
+    assert.equal(result.source, 'mymemory');
+    assert.equal(result.translation, 'I am reading a book.');
+  }
+  assert.equal(calls.length, 6);
+});
+test('Spanish echoed fallback fails while names, numbers, URLs and shared words stay valid', async (t) => {
+  t.mock.method(globalThis, 'fetch', async (url: string) => {
+    const request = new URL(url);
+    const source = isMemory(url) ? request.searchParams.get('q')! : decodeURIComponent(request.pathname.split('/').at(-1)!);
+    return isMemory(url) ? memory(source) : json({ translation: source });
+  });
+  await assert.rejects(translate('Estoy leyendo un libro.', { from: 'es' }), /untranslated source/);
+  for (const text of ['123', 'Madrid', 'New York', 'José', 'NASA', 'hotel', 'taxi', 'café', 'https://example.com']) {
+    assert.equal((await translate(text, { from: 'es' })).translation, text);
+  }
+  assert.equal((await translate('Hola', { from: 'es', to: 'es' })).source, 'identity');
+});

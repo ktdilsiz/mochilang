@@ -25,14 +25,27 @@ function decodedText(text: string): string {
   }).trim();
 }
 
+// Spanish/English share words and names; preserve ordinary invariant tokens
+// while refusing an echoed Spanish sentence or vocabulary word as English.
+const SHARED_SPANISH_WORDS = new Set(['hotel', 'taxi', 'radio', 'actor', 'chocolate', 'animal', 'hospital', 'piano', 'doctor', 'color', 'error', 'motor', 'virus', 'metal', 'internet', 'wifi', 'café', 'cafe', 'menu', 'menú', 'bar', 'solo', 'total', 'idea', 'normal', 'popular', 'original', 'legal', 'local', 'social', 'capital', 'central', 'digital', 'natural', 'general', 'ideal', 'final', 'formal', 'informal', 'similar', 'superior', 'inferior', 'exterior', 'interior', 'regular', 'particular']);
+const SPANISH_NAME_EXCEPTIONS = new Set(['hola', 'adiós', 'gracias', 'buenos', 'buenas', 'estoy', 'estás', 'está', 'estamos', 'están', 'soy', 'eres', 'somos', 'tengo', 'tiene', 'quiero', 'puedo', 'dónde', 'cómo', 'qué', 'el', 'la', 'los', 'las', 'un', 'una']);
+function spanishInvariant(text: string): boolean {
+  if (/^(?:https?:\/\/|www\.)\S+$/i.test(text) || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(text)) return true;
+  const words = text.normalize('NFC').match(/[\p{L}\p{M}]+/gu) ?? [];
+  if (!words.length) return true;
+  if (words.length === 1 && SHARED_SPANISH_WORDS.has(words[0].toLowerCase())) return true;
+  return words.every((word) => !SPANISH_NAME_EXCEPTIONS.has(word.toLowerCase()) && /^(?:\p{Lu}\p{Ll}+|\p{Lu}{2,})$/u.test(word));
+}
+
 function validate(value: unknown, text: string, from: string, to: string): string {
   if (typeof value !== 'string' || !value.trim()) throw new Error('Empty or malformed translation');
   const result = decodedText(value);
   const cjk = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
   // CJK text echoed under an English heading is not a translation. Preserve
   // valid invariants such as numbers, Latin proper names and same-language text.
-  if (from !== to && to.split('-')[0] === 'en' && cjk.test(text) &&
-      (comparable(result) === comparable(text) || (cjk.test(result) && !/[a-z]/i.test(result)))) {
+  const spanishEcho = from.split('-')[0] === 'es' && comparable(result) === comparable(text) && !spanishInvariant(text);
+  if (from !== to && to.split('-')[0] === 'en' && (spanishEcho || cjk.test(text) &&
+      (comparable(result) === comparable(text) || (cjk.test(result) && !/[a-z]/i.test(result))))) {
     throw new Error('Provider returned untranslated source text');
   }
   return result;

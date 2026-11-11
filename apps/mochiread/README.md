@@ -250,3 +250,21 @@ selected. It does not increase the initial JavaScript bundle. See
 [SPANISH-DICTIONARY-NOTICE.md](./SPANISH-DICTIONARY-NOTICE.md) for the pinned source,
 license, changes and rebuild instructions. Run `pnpm --filter mochiread test:spanish`
 for browser coverage; it is also included in `test:e2e` and CI.
+
+## Saving safely across tabs
+
+Writes compare the loaded document with current storage before replacing it.
+Modern browsers use Web Locks to serialize those checks, writes, backups and
+restores across tabs. A stale tab shows a conflict warning instead of replacing
+newer saved data. Export its pending edits before reloading to load the latest
+saved version. Browsers without Web Locks use version checks and serialize
+operations within the tab; cross-tab atomicity requires Web Locks.
+
+Switching languages with pending edits asks whether to keep editing, save and
+switch, or discard explicitly. The browser also prompts before closing or
+reloading a tab with pending changes (subject to browser support).
+
+Backups read stored data under the same lock and overlay a frozen copy of this
+tab's unsaved documents. The download confirmation identifies backups containing
+unsaved edits. Export still works when storage is full; it does not require a
+successful save first. Restoring remains an explicit replacement of saved data.
